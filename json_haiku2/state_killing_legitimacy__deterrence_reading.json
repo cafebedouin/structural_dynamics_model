@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "state_killing_legitimacy__deterrence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "c6c36ad8-5034-4ab1-b4fe-92c59048b420"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.79,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Execution Justified as Deterrent Signal",
+    "topic_domain": "criminal_justice/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "potential_future_murder_victims"
+    ],
+    "victims": [
+      "condemned_offender"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_enforcement_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets the legal framework that authorizes, sentences, and executes convicted murderers. Justifies execution as a rational deterrent signal to potential murderers. Administers the apparatus that carries out the sentence. Benefits from the constraint by centralizing state authority over the ultimate sanction and by framing state killing as rational crime prevention. Can change the law unilaterally; not bound by the constraint if political will shifts."
+    },
+    {
+      "name": "condemned_offender",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The convicted murderer executed under the deterrence framework. Their death is inflicted as a signal to potential murderers; they are instrumentalized as a means to communicate threat. No meaningful participation in the justification; legal appeal processes are exhausted. No exit except through executive clemency (rare and often politically contingent). The offender bears the full cost of the constraint without negotiating its terms."
+    },
+    {
+      "name": "potential_future_murder_victims",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The unnamed, counterfactual beneficiary class: any person who would be murdered but is protected (in deterrence theory) by the credible threat of state execution. They benefit from the deterrent signal without organizing, participating, or being named. Their benefit is passive and requires the empirical premise that execution deters murder. No seat negotiates on their behalf in real time."
+    },
+    {
+      "name": "would_be_murderers",
+      "role": "beneficiary",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The theoretical audience for the deterrent signal: persons who would commit murder absent the threat of execution but refrain because they believe execution risk is real. They are beneficiaries of the constraint only by counterfactual avoidance (murders not committed). They are excluded from the legal conversation—the deterrence theory assumes they will be deterred by observing executions without participating in a justification dialogue. Their 'benefit' (life preservation through avoided crime) is assumed rather than negotiated."
+    },
+    {
+      "name": "victims_families_original",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Families of the original murder victim and the condemned offender both occupy this seat structurally. Original victims' families may perceive execution as closure or justice, though they are not the primary beneficiaries under the deterrence reading (the theory benefits future victims, not the present ones). Offender families perceive additional loss. They are often offered procedural participation (victim impact statements, witness attendance) but occupy a secondary role in the deterrence framework."
+    },
+    {
+      "name": "criminal_justice_professionals",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Judges, prosecutors, and executing officers who carry out the legal process and execution. They administer the deterrence framework without necessarily endorsing the empirical premises (whether execution actually deters). Their role is enforcement of the constraint; the deterrence theory's truth is presumed by the legal system they inhabit. Many carry professional conflict between the deterrence justification and personal moral or empirical doubts. They are essential to the constraint's maintenance but are excluded from choosing whether to enforce it (structural role is agenda-setter, not independent evaluator)."
+    },
+    {
+      "name": "criminology_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the empirical relationship between execution risk and homicide rates. Under the deterrence reading, they are the analytic seat that could verify or falsify the core justification. Their findings are used by both deterrence defenders and abolitionists. Their seat is structurally excluded from the enforcement decision (judges do not defer execution pending criminological consensus), but analytically central to whether the constraint's justification is sound. Mixed findings in the literature reflect genuine empirical uncertainty about deterrence magnitude."
+    },
+    {
+      "name": "abolition_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that state execution violates human dignity regardless of deterrent effect, and that framing murder prevention in deterrence terms obscures the real issue: whether the state has the right to kill. They are structurally excluded from the legal conversation in retentionist jurisdictions; their objections are treated as policy disagreement rather than constitutional constraint. In abolitionist jurisdictions, this seat is dominant. They represent an alternative reading of the kernel (abolition) that renders the deterrence reading illegitimate by rejecting the premise that deterrence justifies state killing."
+    },
+    {
+      "name": "retributive_justice_theorists",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Argue that the state's authority to execute derives from proportional desert—the offender forfeits the right to life through the gravity of murder—not from deterrent utility to future victims. They occupy a different committer axis (deontological proportionality vs. utilitarian deterrence). Under retribution, the offender is a subject of judgment, not a means to an end. They are excluded from the deterrence-reading framework but remain available as an alternative reading within the same kernel. Retributive and deterrence readings offer different grounds for the same legal rule but rest on incommensurable first principles."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a centralized state authority to signal credibly to potential murderers that homicide risks capital punishment, thereby preventing future murders through rational fear of death. The coordination problem solved is: how does a legal system establish a deterrent signal strong enough to modify behavior at the threshold of lethal violence? The solution is maximal-penalty execution—the state matches lethal violence with lethal response, communicating inevitability and severity.",
+    "transfer_function": "Transfers the condemned offender's life to the state enforcement apparatus as the means by which a credible deterrent signal is broadcast to the broader population of would-be murderers. The offender pays with death; the unnamed future victim class receives theoretical protection (murders prevented through fear). No actual victim negotiates or consents to the exchange; the future benefit is counterfactual (murders that do not occur).",
+    "absent_voices": "Would-be murderers whose behavior the system assumes will be deterred are excluded from the legal conversation—they are the theoretical audience for the deterrent signal but have no seat in the justification or enforcement process. Abolition advocates are excluded in retentionist jurisdictions: they would argue that human dignity imposes a non-negotiable constraint on state killing that overrides any deterrence calculus. Criminologists who find weak or no deterrent effect are excluded from the enforcement decision: judges do not postpone execution pending empirical consensus on deterrence, so dissenting research findings do not feed back into the legal process. Retributive justice theorists occupy a different framing and are not present to argue that proportionality, not deterrence, should ground execution authority.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the state ceased executing murderers overnight and the deterrent signal vanished, the would-be murderer population would recalculate risk; homicide rates would shift (deterrence theory predicts they would rise; abolitionists predict they would not, or would fall if alternative public health measures were taken). The arrangement's persistence depends on the credibility of the execution threat. Removal would unmake a central institution of criminal-justice signaling and would force the state to rely on alternative deterrents (long prison sentences, certainty of apprehension, social stigma) or alternative crime-prevention theories (rehabilitation, incapacitation, retribution). The entire rational-deterrence framework would be disabled.",
+    "founding_problem": "Early modern criminal law lacked a credible response to lethal violence. Without severe and visible sanction, murder would proliferate unchecked. Execution emerged as the maximal signal: the state matches lethal violence with lethal response, communicating to potential murderers that homicide is met with death. The founding problem is: how does a legal system deter murder through rational fear and calculation of consequences?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The deterrence thesis rests on disputed empirical claims about behavioral deterrence. Criminological research from outside the justice system shows mixed results: Ehrlich (1975) found deterrent effects (3-18 murders prevented per execution), but replication efforts (Baldus & Cole 1975, Yunker 1976, Zeisel 1976) contested methodology and found negligible effects. Meta-analyses and subsequent studies (Bailey 1998, Donohue & Wolfers 2005, Nagin 2013, Sharkey 2010) show no consensus: some find small effects, others find none; heterogeneity near zero across methods. The state enforcement system asserts the founding problem is live and deterrence response effective; major criminological organizations (American Society of Criminology, Criminology & Public Policy consensus) state the evidence for deterrence is inconclusive. Abolitionists argue the founding problem is misdiagnosed: execution does not reliably deter and does not prevent murder through rational fear; the real function is retribution or state dominance dressed as rational policy. No corroborating voice from outside the justice system affirms that execution reliably prevents future murders."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.76,
+      "basis": "projected"
+    }
+  ],
+  "omegas": [],
+  "commentary": {
+    "narrative_context": "The deterrence reading of state execution authority justifies capital punishment as a rational signal to potential murderers that homicide risks maximal state response (death), thereby preventing future murders through fear. Under this reading, the condemned offender is instrumentalized—their execution is the means by which the state communicates threat to the broader population of would-be murderers. The beneficiary is the unnamed class of potential future murder victims protected by the deterrent effect. This is one of three readings of the contested kernel 'state killing legitimacy'; the other readings are retributive (execution as proportional desert) and abolition (execution categorically violates human dignity). The deterrence reading is empirically vulnerable: if execution does not reliably deter, the constraint becomes pure extraction without the coordination justification. The extraction measured here (0.58) reflects contested empirical premises and rising theater ratio over time as the deterrence claim faces skepticism.",
+    "key_agents": [
+      "state_enforcement_apparatus: institutional agenda-setter, administers legal framework that executes and justifies via deterrence",
+      "condemned_offender: powerless payer, instrumentalized as signal, trapped exit, immediate time horizon",
+      "potential_future_murder_victims: powerless, unnamed, diffuse beneficiary, counterfactual benefit (murders prevented)",
+      "would-be murderers (criminogenic): theoretical audience for deterrent signal, excluded from legal conversation, benefit through deterred action",
+      "empirical_criminology_researchers: analytical observer, central to verifying whether deterrence thesis is sound",
+      "abolition_advocates: excluded in retentionist jurisdictions, would argue dignity violation overrides deterrence calculus",
+      "retributive_justice_theorists: excluded from deterrence framing, offer alternative grounding (proportional desert rather than utility)"
+    ],
+    "logic_rationale": "Extractiveness (0.58) reflects the empirical contest: the deterrence thesis rests on measurable deterrent effects, but criminology literature is mixed (some studies show small effects, meta-analyses show heterogeneity near zero, replication concerns are substantial). Extractiveness is not at snare-level because the constraint has a genuine coordination function (centralized state authority that prevents some murders), but it is elevated from pure rope because the offender bears the cost without meaningful participation in the justification and the future beneficiaries are unnamed and counterfactual. Suppression (0.72) is high because the constraint's persistence depends on preventing exit (abolition advocates cannot leave the jurisdiction; would-be offenders are presumed deterred by observation, not by choice to participate; criminological dissent is excluded from enforcement decisions). Theater_ratio rises from 0.25 to 0.44 over the interval, suggesting that as empirical doubts about deterrence accumulate, more enforcement energy goes into theatrical justification (ritual appeals to deterrence) rather than functional deterrence. The time series reflects a widening gap between the deterrence claim and observable compliance with it. Accessibility_collapse (0.62) is moderate: alternatives to capital punishment exist and are visible (life imprisonment, jurisdictions without execution), but the deterrence framing presents execution as uniquely effective, collapsing alternatives if the empirics hold. Resistance (0.79) is high: abolitionists, many criminologists, and significant populations in retentionist jurisdictions actively resist the legitimacy of execution, and this resistance has grown over the interval (rising theater_ratio indicates the state defending rather than demonstrating deterrence).",
+    "perspectival_gap": "The state enforcement apparatus (agenda-setter) perceives the constraint as justified coordination: it establishes a credible signal that prevents murders. Potential victims perceive abstract protection (deterred murders). The condemned offender perceives instrumentalization: their death is inflicted to communicate to others, not for their own restoration or proportional judgment. Abolition advocates perceive human rights violation. Criminologists perceive empirical uncertainty masquerading as settled fact. The engine will compute these seats as arriving at different type classifications from the same structural data: the agenda-setter may perceive rope (genuine coordination), the payer may perceive snare (pure extraction via state power), and the observer (researcher) may perceive contested constraint whose type depends on unresolved empirical questions. This perspectival divergence is the measurable gap the constraint story captures.",
+    "directionality_logic": "The state enforcement apparatus has institutional power, arbitrage-level exit (can change the law unilaterally), and benefits from the constraint (centralizes authority, collects legitimacy from deterrence theory, maintains capital punishment apparatus). Directionality near 0.0 (beneficiary). The condemned offender has powerless status, trapped exit (no legal recourse after conviction), and bears the cost (death). Directionality near 1.0 (full target). Potential future victims have powerless status, trapped exit (cannot opt out of murder risk), and receive counterfactual benefit (protection from murders that don't occur). Directionality near 0.5 with downward bias (beneficiary in theory, but unnamed and counterfactual). Would-be murderers are assumed deterred by observing executions; their exit is constrained by the belief that execution is inevitable, which makes them structurally targeted (high d) even though the enforcement contact is avoided if deterrence works. The measurement grid shows increasing suppression_requirement from 0.65 to 0.76, indicating the constraint requires more active coercive effort to maintain its coherence as deterrence empirics face skepticism.",
+    "mandatrophy_analysis": "The constraint is classified as tangled_rope because it combines a genuine coordination function (centralized state authority to signal deterrent threat) with asymmetric extraction (the condemned offender bears the full cost; future beneficiaries are unnamed and diffuse). This prevents mislabeling as pure snare (which would ignore the real coordination benefit to the system) and as pure rope (which would ignore the instrumentalization and absence of offender consent). The tangled_rope classification holds as long as the deterrent effect is presumed; if empirical evidence settles that deterrence is negligible, the constraint loses its coordination justification and becomes pure snare. The rising theater_ratio (0.25 to 0.44) is a leading indicator of mandatrophy drift: as the empirical deterrence claim faces skepticism, the constraint shifts from demonstrating deterrence (functional) to asserting deterrence (theatrical), which is the classic piton signature. The constraint may be approaching mandatrophy resolution: if deterrence is empirically false, the founding problem (how to prevent murder through rational fear) is moot, and the constraint persists as ritual (maintaining execution law despite failed justification). This is noted in the founding_problem_status field as 'contested' and will be tracked through T17 (abductive trigger for extraction accumulation without functional foundation).",
+    "kernel_context": "This constraint instantiates the DETERRENCE READING of the contested kernel 'state killing legitimacy'. The kernel is the standing arrangement: the state executes murderers. Three readings coexist and contend: (1) DETERRENCE READING (this constraint): execution is justified as a rational signal preventing future murders through fear. The offender is instrumentalized as a means to protect potential future victims. (2) RETRIBUTIVE READING: execution is justified as proportional desert—the murderer forfeits the right to life through the gravity of the crime (lex talionis). The offender is adjudged, not instrumentalized. (3) ABOLITION READING: execution is categorically impermissible because it violates human dignity regardless of desert or deterrent effect. All three readings ground themselves in the same formal kernel (state authority to execute) but derive fundamentally different interpretations of that authority's legitimacy. The deterrence reading treats execution as a utilitarian instrument; retribution treats it as a deontological judgment; abolition treats it as a violation of a non-negotiable constraint (human dignity). Within a single legal system, a jurisdiction may hold the deterrence reading as primary (as deterrence-era death-penalty statutes do), but as empirical doubts about deterrence accumulate, some jurisdictions migrate toward retributive framing or abolition. The three readings do not coexist perfectly—deterrence and retribution offer different grounds for the same rule, but both are exclusionary against abolition (if one holds that execution is justified, abolition is ruled out for that party). However, they coexist across different parties in pluralistic systems. The deterrence reading is distinctive because it is the most empirically vulnerable: if deterrent effects do not obtain, the reading loses its justification entirely. The retributive and abolition readings rest on normative claims (desert, dignity) that are not empirically falsifiable in the same way."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_killing_legitimacy__retributive_reading",
+      "state_killing_legitimacy__abolition_reading"
+    ],
+    "dual_formulation_note": "The constraint 'state_killing_legitimacy' decomposes into three structurally distinct claims under the ε-invariance principle. The deterrence reading (this story) justifies execution as a rational signal to would-be murderers; the retributive reading justifies execution as proportional desert; the abolition reading forbids execution as violating human dignity. Each reading instantiates a different constraint with different ε values, different stakeholder structures, different empirical vulnerabilities, and different coexistence relationships. All three share the same formal kernel (state authority to execute) but derive incompatible interpretations. The three constraints are linked via network.affects_constraints to capture the kernel contest structure: if one reading's empirics collapse or normative ground is rejected, the pressure propagates to the siblings (e.g., if deterrence fails empirically, retribution becomes the primary available justification; if retribution is abandoned, abolition gains force)."
+  },
+  "directionality_overrides": [],
+  "gain_flow": "state_enforcement_apparatus",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "retributive_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "abolition_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "execution_credibly_signals_murder_deterrent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "state_may_instrument_offender_for_future_victim_protection",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "utilitarian_crime_prevention_rationality",
+    "drift_state": {
+      "moment": "contemporary_empirical_challenge_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

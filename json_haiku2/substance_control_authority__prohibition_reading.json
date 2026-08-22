@@ -1,0 +1,397 @@
+{
+  "header": {
+    "constraint_id": "substance_control_authority__prohibition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "9a11e6c1-37c5-4bcc-8555-2e8d08bd863b"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.87,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.76,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Criminalization of Drug Possession to Protect Third Parties (Prohibition Reading)",
+    "topic_domain": "criminal_justice/public_health/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "property_crime_victims",
+      "disorder_affected_communities",
+      "law_enforcement_institutions"
+    ],
+    "victims": [
+      "drug_users_criminalized",
+      "incarcerated_drug_offenders",
+      "low_income_communities_over_policed"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_enforcement_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets criminalization policy, controls drug scheduling, prosecutes drug possession, administers incarceration and parole systems. Justifies enforcement as deterrence, market disruption, and protection of third parties from drug-driven crime and disorder. Receives budgetary expansion, institutional legitimacy, civil asset forfeiture revenue, and personnel justification from the drug war infrastructure. Maintains monopoly over enforcement authority and controls prioritization of which drugs and which users to criminalize."
+    },
+    {
+      "name": "drug_users_criminalized",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Face criminal penalties for possession and use, including arrest, prosecution, incarceration, and collateral consequences (employment barriers, housing discrimination, loss of parental rights, voting disenfranchisement, educational exclusion). Their drug use is typically driven by poverty, trauma, disability, or addiction; criminalization does not address underlying causes. Their exit options are not genuinely available: geographical relocation may temporarily reduce arrest risk but does not eliminate exposure; stopping use is constrained by addiction and by lack of treatment access in criminalized contexts; using privately entails ongoing criminal liability regardless of behavior. The constraint operates entirely at their expense."
+    },
+    {
+      "name": "incarcerated_drug_offenders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the concentrated extraction mechanism: loss of liberty, institutional violence exposure, family separation, economic devastation, and permanent social marking via criminal record. Their incarceration is justified as protecting third parties, but they themselves are third parties whose protection is deemed secondary to the deterrent and incapacitative value of their imprisonment. During incarceration, exit options are non-existent. Post-release, collateral consequences (employment barriers, housing discrimination, surveillance monitoring) perpetuate extraction indefinitely."
+    },
+    {
+      "name": "low_income_communities_over_policed",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the enforcement burden disproportionately. Racial minorities, particularly Black and Latino communities, experience drug-related arrest and incarceration at rates 5–10 times higher than white communities despite similar or lower drug use prevalence. These communities pay through criminalization of their own members, intensified police presence, police violence risk, community degradation, surveillance infrastructure concentrated in their neighborhoods, lost economic productivity, and intergenerational incarceration. Exit is geographically constrained by poverty and housing discrimination. The enforcement apparatus concentrates enforcement in these communities partly because open-air markets are more visible in low-income areas, partly because police discretion is exercised against minoritized populations."
+    },
+    {
+      "name": "property_crime_victims",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Nominally benefit from deterrence that is supposed to reduce property crime associated with drug use and market activity. The criminalization authority is partly justified as protecting their safety and property from theft and burglary. However, their benefit is mixed and indirect: they experience protection via incapacitation of criminalized users, but also incur costs of intensified policing, police violence risk in their own communities, and the diffuse social costs of mass incarceration. Their exit options are constrained by geography and housing costs; they cannot easily relocate to communities with lower crime and lower policing."
+    },
+    {
+      "name": "disorder_affected_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Experience open-air drug markets, associated public intoxication, public drug use and associated paraphernalia, and overdose deaths. Criminalization is framed as protecting them through market disruption and user incapacitation. However, enforcement is implemented through intensified police presence concentrated in their communities, which criminalizes their own residents and creates social distrust and community degradation. The nominal protection from market disruption is offset by the actual harm of criminalization of their neighbors and family members, creating a dual burden: nominal benefit, concentrated extraction cost."
+    },
+    {
+      "name": "law_enforcement_institutions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Police departments, prosecutors' offices, and correctional agencies benefit from drug criminalization through budget allocation, personnel expansion, civil asset forfeiture revenue, surveillance infrastructure expansion, and institutional legitimacy. They coordinate with the state enforcement apparatus and have both authority and financial incentive to expand criminalization scope. Police departments use drug arrests as high-volume enforcement metrics to justify budget increases and staffing; prosecutors build career advancement on drug conviction numbers; correctional agencies justify facility expansion and staffing through incarceration rates driven by drug offenses (25–30% of incarcerated persons in the US are in prison for drug-only offenses)."
+    },
+    {
+      "name": "harm_reduction_practitioners",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are structurally excluded from policy authority because harm-reduction interventions (syringe exchange, medication-assisted treatment, supervised consumption sites, naloxone access) are criminalized or severely restricted under the prohibition framework. They would argue that criminalization increases harms (overdose deaths rising 5x in US 1999–2020, disease transmission risk from contaminated supplies, community distrust of institutions preventing treatment-seeking). Their voice is marginalized in the policy process despite epidemiological evidence supporting their claims."
+    },
+    {
+      "name": "medical_and_public_health_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Scientific evidence from addiction medicine, epidemiology, and public health demonstrates that criminalization does not reduce drug use and amplifies harms. The American Medical Association, World Health Organization, American Public Health Association, and national public health agencies attest that drug addiction is a health condition requiring medical treatment, not primarily a criminal matter. They observe but are constrained in policy influence by the criminalization framework's institutional dominance and the enforcement apparatus's vested interests."
+    },
+    {
+      "name": "competing_jurisdictions",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Jurisdictions adopting harm-reduction (Portugal decriminalized in 2001) or legalization frameworks (Canada, parts of Europe) experience different outcomes: lower overdose deaths, reduced incarceration, improved treatment access, but are internationally constrained by drug treaties (UN Convention on Narcotic Drugs, 1961) that mandate criminalization. The prohibition reading's framework is enforced through international legal instruments that make alternative readings formally illegal in treaty-signatory nations. Trapped between domestic evidence suggesting alternatives work better and international treaty obligations mandating prohibition."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes criminal law as the primary tool for managing drug use and markets; coordinates state enforcement institutions around a unified drug control mission; creates deterrent threat and incapacitation mechanisms to disrupt open-air drug markets and reduce user visibility in public spaces; establishes shared state authority over drug scheduling, enforcement prioritization, and incarceration decisions.",
+    "transfer_function": "Transfers liberty, economic opportunity, family relationships, and social standing from drug users and low-income communities (via arrest, prosecution, incarceration, collateral consequences, and disproportionate policing) to law enforcement institutions (budgetary expansion, personnel justification, civil asset forfeiture revenue, institutional legitimacy) and nominally to communities protected from drug-driven crime (though the protection is diffuse and uncertain while the enforcement burden concentrates on the payer communities themselves).",
+    "absent_voices": "Harm-reduction practitioners, people with lived addiction experience, medical and public health authorities, civil rights advocates documenting racial disparities in enforcement, incarcerated persons and their families, and competing-jurisdiction policymakers practicing decriminalization or legalization are structurally excluded from the policy-setting process. Their objection is that criminalization increases harms (overdose, disease, incarceration trauma, community degradation) and that alternatives (treatment, harm reduction, regulated markets) are more effective for the stated goal (protecting third parties) and for the primary victims (people struggling with addiction). They are kept out by the framework itself, which treats drug use as a crime problem rather than a health problem and criminalizes their very participation in alternative solutions (harm reduction is criminalized in most jurisdictions under prohibition).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the criminalization authority vanished overnight, drug markets would reorganize (toward legalization, decriminalization, or harm-reduction frameworks administered by health rather than criminal-justice authorities). Incarceration would cease, criminal enforcement would redirect, and the extraction mechanisms (arrest, prosecution, incarceration, collateral consequences) would stop. The absence of criminalization would structurally transform the drug market, law enforcement institutions and funding, the status of current and future drug users, and the role of incarcerated populations in the labor and social system.",
+    "founding_problem": "Drug use creates public disorder (open-air drug markets, public intoxication, visible drug use and paraphernalia in shared spaces) and endangers third parties through drug-driven property crime and associated violence. Non-users experience threat, property loss, and community degradation associated with visible drug markets. Criminalization was adopted to deter use, disrupt markets, incapacitate users via incarceration, and protect non-users through legal threat and market disruption.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Law enforcement and law-and-order constituencies attest the founding problem is live and criminalization is necessary. However, medical authorities (American Medical Association, World Health Organization), epidemiological research (50+ years of prevalence data), and harm-reduction jurisdictions (Portugal, Switzerland, Canada) attesting from outside the enforcement beneficiary set report that: (1) drug use persists under criminalization at similar or rising rates; (2) property crime and public disorder blamed on drugs are often better explained by poverty and inequality; (3) criminalization itself creates harms (overdose deaths rising due to supply unpredictability, incarceration trauma, community distrust of institutions) that exceed harms it prevents; (4) alternative frameworks (decriminalization with treatment, harm reduction, legalization with regulation) achieve better outcomes for public safety, public health, and third-party protection. The empirical dispute over whether criminalization actually reduces drug use, disorder, or crime — the persistence of the founding problem — is one of the central contested facts in public policy."
+  },
+  "interval": {
+    "start": 1971,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1971,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.77,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.81,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1971,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.84,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.86,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.87,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.87,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1971,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the PROHIBITION READING of the contested kernel 'substance_control_authority' — the framework in which the state's legitimate role is to criminalize drug use and possession in order to protect third parties from drug-related crime and social disorder. Users of criminalized drugs enter the victim set through the mechanism of enforcement itself; protection of third parties (communities experiencing drug-driven crime, overdose deaths, disorder) is the stated coordination function. The reading is contested against two sibling readings: the HARM-REDUCTION reading (which accepts drug use while minimizing health harms through public health interventions) and the LEGALIZATION reading (which regulates drug markets as legal commerce). This story models the prohibition reading as a TANGLED ROPE: genuine coordination (establishing market disruption and deterrence as shared goods for communities) combined with asymmetric extraction (incarceration and collateral consequences concentrated on users and low-income communities). The claim/metric gap is structural: the prohibition reading frames the constraint as protecting third parties (coordination narrative), while the authored metrics describe high extraction, rising suppression requirement (indicating enforcement intensification), and rising theater ratio (indicating an increasing gap between publicly stated function and actual enforcement focus). The engine's computation of this divergence — claimed rope, computed tangled rope or snare, depending on directionality — is the measurement the corpus exists to take.",
+    "key_agents": [
+      "State enforcement apparatus (institutional power, agenda-setter) — sets criminalization policy, controls enforcement prioritization, receives institutional benefits from drug-war infrastructure",
+      "Drug users criminalized (powerless, trapped exit) — face criminal penalties, incarceration, collateral consequences",
+      "Incarcerated drug offenders (powerless, trapped exit) — concentrated extraction victims bearing liberty loss, family separation, economic devastation",
+      "Low-income communities over-policed (powerless, trapped exit) — disproportionately subject to enforcement; experience racial disparities in arrest and incarceration",
+      "Property crime victims and disorder-affected communities (moderate power, constrained exit) — nominally protected by market disruption and user incapacitation; also subject to intensified policing that creates community degradation",
+      "Law enforcement institutions (institutional power, beneficiary/agenda-setter) — benefit from budget expansion, personnel justification, civil asset forfeiture, surveillance infrastructure expansion",
+      "Harm-reduction advocates and medical authorities (moderate/institutional power, excluded) — would claim criminalization increases harms; structurally excluded from policy process"
+    ],
+    "logic_rationale": "Extractiveness is high (0.81 at interval end) and rising over the 1971–2024 span (from 0.45 to 0.81) because incarceration rates, collateral consequence scope, and carceral infrastructure have expanded dramatically while the founding problem (drug use, disorder) has not been solved by criminalization. The extraction rises not as a price for a coordination function that works but as institutional expansion of the enforcement apparatus itself — a rent-seeking dynamic. Suppression is very high (0.87) because persistence of the constraint depends entirely on active enforcement: absent police activity, incarceration, and collateral-consequence regimes, criminalization would not persist. Suppression requirement rises sharply 1971–2000 (from 0.68 to 0.84), indicating that the enforcement apparatus had to be built and hardened during the drug war escalation; post-2000 it plateaus, indicating the enforcement machinery has stabilized at a high level. Theater ratio rises consistently (0.35 to 0.62) because an increasing share of enforcement targets low-level possession and low-level dealers, not major traffickers — the publicly stated mission (protecting from major drug-driven crime) diverges from the actual distribution of enforcement (quantity-of-arrests metrics that incentivize low-level charges). The measured rising theater ratio models the growing rhetorical gap between the stated goal (protecting third parties) and the actual enforcement pattern (mass low-level criminalization). All measurements are authored on a single shared time grid (1971, 1985, 2000, 2010, 2020, 2024) so every metric has values at every examined time point.",
+    "perspectival_gap": "The state enforcement apparatus and law-and-order constituencies, in their seat, perceive the constraint as a genuine coordination tool: an authority to establish and maintain deterrence, disrupt markets, and protect communities. From the powerless and trapped seats (criminalized users, low-income over-policed communities, incarcerated persons), the same constraint appears as enforcement apparatus expansion and extraction. From the moderate-power beneficiary seats (property-crime victims, disorder-affected communities), the constraint offers nominal protection via incapacitation but at the cost of intensified policing that stigmatizes and degrades their own communities. From the excluded observer seats (harm-reduction practitioners, medical authorities), the constraint's entire logic is defeated by empirical reality: criminalization does not reduce drug use, increases harms via overdose and disease transmission risk, and trades one set of harms (drug-driven crime) for another set (incarceration trauma, community distrust, intergenerational poverty). The engine should compute dramatically different types from different seats: the enforcement apparatus seat may compute as rope (coordination with net benefits from their position); the powerless and incarcerated seats compute as snare (pure extraction with trapped exits); the disorder-affected moderate seats compute as tangled rope (some coordination benefit mixed with disproportionate enforcement burden).",
+    "directionality_logic": "Directionality varies by stakeholder power and exit options. The state enforcement apparatus (institutional, arbitrage exit) has d near 0.0 (full beneficiary): they set the agenda, receive institutional expansion and legitimacy, control enforcement prioritization, and can exit into other enforcement domains. Drug users criminalized (powerless, trapped exit) have d near 1.0 (full target): criminalization itself is the extraction mechanism; they cannot exit legally or geographically without continuing exposure; the constraint operates entirely at their expense. Incarcerated drug offenders have d = 1.0 (perfect target): they are the extraction mechanism concentrated as incarceration. Low-income over-policed communities (powerless, trapped exit) have d ≈ 0.85–0.95 (strong target): they experience disproportionate enforcement and community degradation; exit is geographically constrained by poverty. Property-crime victims and disorder-affected communities (moderate power, constrained exit) have d ≈ 0.5–0.65 (mixed beneficiary/payer): they receive nominal protection but also incur policing burden; their exit is constrained by geography. Law-enforcement institutions (institutional, arbitrage exit) have d near 0.0–0.2 (beneficiary to ambiguous beneficiary): they collect expansion, funding, civil asset forfeiture; some institutional actors (prosecutors) may compute closer to 0.3 if they perceive reputational cost from mass incarceration. Harm-reduction advocates and medical authorities are excluded, not seated, so directionality does not apply to them.",
+    "mandatrophy_analysis": "The mandate was to protect third parties from drug-related crime and social disorder through deterrence and market disruption. The founding_problem_status = contested because empirical research increasingly shows that criminalization has not achieved meaningful reduction in drug use (prevalence stable or rising), that drug-driven crime is often better explained by poverty than by drug markets themselves, and that criminalization's own harms (overdose risk from unpredictable supply, incarceration trauma, community distrust) are substantial. The theater ratio rise (0.35 to 0.62) indicates functional drift: an increasing share of enforcement is low-level quantity-of-arrests policing (incentivized by arrest metrics) rather than targeted market disruption. The disappearance_verdict = world_rearranges indicates the constraint is not a natural fact — it is sustained by active choice and enforcement, not by necessity. The combination (mandated to solve a now-disputed problem, enforced through mechanisms showing increasing functional drift, persists through pure enforcement not through problem-solving) indicates mandatrophy: the original mandate has outlived its credibility and its effectiveness, but the constraint persists because the enforcement institutions have become self-sustaining. The extraction (rising over 53 years) and suppression (high and stable) are consistent with a snare dressed in rope language: the coordination function is contested/dissolved, but the extraction mechanism is robust.",
+    "kernel_context": "This constraint is the PROHIBITION READING of the contested kernel 'substance_control_authority'. The kernel is the state's legitimate role in managing drug use and drug markets. Three readings instantiate three different claims: (1) PROHIBITION: criminalize possession/use to protect third parties via deterrence and incapacitation; (2) HARM-REDUCTION: accept drug use while minimizing health harms through public health interventions; (3) LEGALIZATION: regulate drug markets as legal commerce with quality/access controls. The prohibition reading assumes the founding problem (drug use, disorder, crime) is live and that criminalization solves it. The harm-reduction reading disputes whether criminalization solves the problem and claims criminalization creates additional harms. The legalization reading treats the drug market as a normal commodity market whose harms are better managed through regulation than prohibition. These three readings are not observations of a single external constraint; they are three competing framings of what the kernel authorizes and how that authorization should be exercised. The prohibition reading is the one authored here — as a tangled rope with rising extraction and contested mandate."
+  },
+  "omegas": [
+    {
+      "id": "deterrence_empirical_truth",
+      "question": "Does criminalization actually reduce drug use prevalence, or does it merely displace use geographically and shift consumption patterns without reducing net consumption?",
+      "resolution_mechanism": "Cross-national comparison of drug prevalence trends in criminalized vs. decriminalized jurisdictions controlling for socioeconomic factors; time-series analysis of US drug prevalence before and after major enforcement escalations (1980s drug war, 2010s opioid enforcement).",
+      "impact": "If criminalization does not reduce prevalence, the founding problem (drug use) persists despite the constraint, and the constraint's function becomes maintenance of authority and extraction rather than problem-solving. Classification shifts from rope (solves coordination problem) toward snare (persists by extraction despite problem unsolved).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether criminalization achieves its stated deterrent goal of reducing drug use."
+    },
+    {
+      "id": "third_party_protection_mechanism",
+      "question": "Is the protection of third parties from drug-driven crime and disorder best achieved through criminalization of users, through treatment and harm reduction, through addressing poverty and inequality, or through some combination? Is criminalization a necessary condition for third-party protection?",
+      "resolution_mechanism": "Comparative policy analysis across jurisdictions with different drug policy frameworks; longitudinal analysis of crime, overdose, public health, and social outcomes under different approaches; controlled policy experiments (e.g., supervised consumption sites, medication-assisted treatment expansion in otherwise criminalized contexts).",
+      "impact": "If third-party protection is achievable or more effective under alternative frameworks, the criminalization constraint loses its sole justification. The 'protection' benefit concentrates in the moderate-power beneficiary seats and may vanish or invert (if alternatives provide better protection at lower social cost). The constraint recomputes as pure extraction with nominal coordination cover.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether criminalization is necessary or effective for protecting third parties from drug-related harms."
+    },
+    {
+      "id": "racial_disparity_mechanism",
+      "question": "Are racial disparities in drug enforcement (arrest, prosecution, incarceration rates 5–10x higher for Black/Latino communities despite similar prevalence) a product of enforcement discretion and bias, or do they reflect different rates of drug market activity (open-air markets more prevalent in low-income communities)?",
+      "resolution_mechanism": "Analysis of arrest rates for drug use with vs. without market-structural controls; audit studies testing identical behavior across racial groups in police interactions; historical analysis of drug-schedule decisions (cocaine vs. crack disparities, opioid crisis response disparities).",
+      "impact": "If disparities are primarily enforcement bias rather than market-structural differences, the constraint functions as a race-targeted extraction mechanism regardless of stated intent. Directionality for low-income and minority communities shifts further toward target (d approaching 1.0), and suppression mechanisms shift from legal penalty (prison) toward surveillance and control as primary functions.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether racial disparities in drug enforcement reflect bias or market structure."
+    },
+    {
+      "id": "founding_problem_decomposition",
+      "question": "The stated founding problem (drug use, disorder, crime) is actually three claims: that drug use exists, that it causes crime and disorder, and that criminalization reduces all three. Which parts are true? If drug use persists but crime/disorder attributed to it are actually driven by poverty and inequality, is the founding problem solved or merely misdiagnosed?",
+      "resolution_mechanism": "Econometric analysis decomposing drug-driven crime from poverty-driven crime; time-series analysis of drug use, incarceration, and crime rates under different policy regimes; longitudinal community studies tracking residents' perception of disorder vs. actual crime rates.",
+      "impact": "If the founding problem is primarily poverty-driven disorder falsely attributed to drugs, criminalization has solved the wrong problem and the actual coordination function collapses. The constraint becomes pure extraction framed in false-problem language. Classification reverts to snare with false-summit features.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint solves its stated founding problem or misattributes different social harms to drug use."
+    },
+    {
+      "id": "suppression_internalization_ambiguity",
+      "question": "The measured suppression (0.87) reflects active enforcement machinery (police, courts, prisons). But for drug users in over-policed communities, is suppression sustained by external enforcement or by internalized fear/shame that persists even absent enforcement activity? Do users exit when enforcement is removed, or do they remain trapped by internalized constraints?",
+      "resolution_mechanism": "Post-decriminalization trajectory studies in jurisdictions that removed criminalization (Portugal, Switzerland, parts of Canada): do users remain isolated from treatment and community? Do they exhibit behavioral change only in enforcement presence, or do beliefs/shame perpetuate the constraint after formal enforcement removal?",
+      "impact": "If suppression is primarily internalized (identity-fusion, shame, belief in criminality), the constraint becomes structurally more durable — removing enforcement does not remove the constraint because the target population has absorbed it. If suppression is primarily external, decriminalization paired with treatment and social reintegration would substantially reduce suppression. This affects whether the constraint can be reformed (external suppression, reformable) or whether cultural reparation is necessary (internalized suppression).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether drug criminalization's suppression mechanism is structural/external or internalized."
+    },
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Is the prohibition reading a live, internally coherent framework, or has it been substantially undermined by accumulating countervailing evidence (rising overdose deaths, stable prevalence, racial disparities, failed policy experiments) such that it is now a framework held primarily by institutional beneficiaries rather than by reasoned commitment to its core premises?",
+      "resolution_mechanism": "Genealogical analysis of policy justifications over time: do prohibition advocates still claim deterrence works, or have they shifted to incapacitation and retribution as primary justifications (indicating the founding problem claim has been abandoned)? Survey data on whether law enforcement and policy communities still endorse the founding problem or acknowledge it as unsolved.",
+      "impact": "If the prohibition reading's core premises have been substantially undermined within its own tradition (law enforcement acknowledges deterrence doesn't work but continues enforcement anyway), the reading reverts to pure authority-extraction dressed in outdated language. This would place it in the 'overridden' status for axioms, indicating the reading's own tradition has abandoned its founding logic.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the prohibition reading's core premises remain coherent or have been abandoned by its practitioners."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_authority__harm_reduction_reading",
+      "substance_control_authority__legalization_reading",
+      "racial_disparity_in_criminal_enforcement",
+      "incarceration_industrial_complex",
+      "collateral_consequences_of_criminalization"
+    ],
+    "dual_formulation_note": "The substance_control_authority kernel decomposes into three constraint stories, each instantiating a different reading of the state's legitimate role. This story (prohibition_reading) models criminalization as deterrence/protection. The harm_reduction_reading models accepting drug use while minimizing health harms; the legalization_reading models regulation as legal commerce. Each reading has its own epsilon, its own beneficiary/victim structure, and its own type classification. The three stories are linked via network.affects_constraints to represent their structural relationships as competing framings of the same kernel. The prohibition reading influences (but does not foreclose) the other two by establishing criminalization as the institutional baseline that competing readings must work against."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ],
+  "gain_flow": "law_enforcement_institutions",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "criminal_deterrence_doctrine",
+    "drift_state": {
+      "moment": "opioid_crisis_era_2010_2024",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "legalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "criminalization_deters_drug_use",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "incapacitation_through_incarceration_protects_third_parties",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "substance_control_authority__kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

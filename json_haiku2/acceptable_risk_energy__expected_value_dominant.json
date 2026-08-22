@@ -1,0 +1,396 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "24a37f47-2a10-41fb-b98a-08471b6e397a",
+    "created_at": "2026-06-11T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Expected-Value Risk Minimization in Energy Policy (Expected-Value Dominant Reading)",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "fossil_fuel_industry",
+      "expected_value_framework_advocates"
+    ],
+    "victims": [
+      "fossil_fuel_exposed_workers",
+      "air_pollution_affected_populations",
+      "mining_community_residents"
+    ],
+    "vindicated_propositions": [
+      "expected_utility_maximization_doctrine",
+      "probabilistic_risk_neutrality"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "fossil_fuel_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The expected-value framework, by discounting catastrophic nuclear outcomes by their (low) probability, renders fossil fuel's chronic, distributed harms (air pollution, occupational disease) as numerically dominant under aggregate mortality metrics only at very high confidence thresholds. The framework's acceptance allows continued fossil deployment where the alternative (nuclear or rapid renewables transition) would be framed as riskier per expected-value calculation. The industry benefits from the framework's institutional adoption because it sustains the policy environment that permits incremental fossil expansion under risk-minimization rhetoric."
+    },
+    {
+      "name": "energy_policy_decision_makers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Adopt the expected-value framework as the decision standard for energy infrastructure investment and decommissioning. They enforce it by excluding alternative framings (tail-risk prioritization, option-value preservation) from impact assessments and regulatory approval processes. They justify the framework as objective, science-based, and maximally efficient. They bear the political cost if a low-probability catastrophe occurs under their framework (though the framework's ex-ante logic would still vindicate the choice)."
+    },
+    {
+      "name": "fossil_fuel_exposed_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Face occupational mortality and morbidity (mining accidents, coal dust disease, oil-field injuries) that are continuous and well-documented. Under expected-value framing, their deaths appear as inevitable baseline costs of energy production, weighted at full probability (they happen every year). The framework does not distinguish chronic, localized, inescapable exposure from probabilistic catastrophic risk. Their exit is trapped: dependence on mine or field employment for survival, limited geographic mobility, few alternative livelihoods."
+    },
+    {
+      "name": "air_pollution_affected_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Populations downwind and downwind-over-decades from coal, gas, and oil combustion sites experience elevated respiratory disease, cardiovascular mortality, and reduced life expectancy. These harms are quantified in mortality-per-TWh metrics but are diffuse, chronic, and politically invisible relative to spectacular accidents. Their geographic constraint (living in industrial regions) and economic constraint (jobs, housing proximity) mean exit is costly. The framework counts their deaths but renders them as baseline costs of incumbent energy systems."
+    },
+    {
+      "name": "mining_community_residents",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Face environmental degradation, water contamination, subsidence, and community dissolution from coal, uranium, and rare-earth mining. They organize resistance but operate at a power disadvantage relative to the institutional decision-makers and industry. Under expected-value framing, mining deaths and environmental costs are counted but rendered as distributed costs of energy production. Relocation is costly and culturally dislocating; staying means accepting environmental risk."
+    },
+    {
+      "name": "nuclear_industry_and_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The expected-value framework, by probability-discounting catastrophic accidents, renders nuclear's per-TWh mortality as competitive with or superior to fossil alternatives in aggregate expected-harm calculations. This framework sustains policy space for nuclear expansion in regions where catastrophic-tail concerns would otherwise dominate. They benefit from the framework's institutional legitimacy as the decision standard, even as they also advocate for higher nuclear deployment under alternative readings."
+    },
+    {
+      "name": "alternative_pathway_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for rapid renewable deployment, demand-side management, and distributed generation as pathways to reduce energy mortality without either fossil or nuclear reliance. The expected-value framework constrains their policy space by requiring that any alternative pathway must show lower expected aggregate mortality under probabilistic weighting. Their exit from the framework is constrained by the institutional dominance of expected-value reasoning in regulatory bodies; they can present alternative analyses but operate within a decision structure that privileges expected-value aggregation."
+    },
+    {
+      "name": "risk_assessment_scientific_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produces the mortality-per-TWh metrics and risk calculations that feed the expected-value framework. They document the empirical facts (fossil chronic harms, nuclear accident probabilities) but do not author the normative choice to aggregate by expected value rather than alternative criteria. Their analytical seat provides the data; the framework choice sits with decision-makers."
+    },
+    {
+      "name": "catastrophic_tail_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that low-probability, high-impact outcomes (nuclear meltdown, solar minimum disruption, cascading grid failure) should be prioritized in energy risk assessment even if they reduce expected aggregate mortality. They are structurally excluded from regulatory approval processes that adopt the expected-value standard as the decision criterion. Their voice would argue for constraining nuclear deployment, preserving options, or accepting higher expected mortality to avoid tail risks—a fundamentally different risk calculus that the expected-value framework is designed to override."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a quantitative, aggregatable decision criterion for comparing heterogeneous energy pathways on a single mortality scale: expected value of harm per unit energy. Solves the problem of comparing fatal occupational hazards, chronic pollution exposure, and low-probability catastrophic events on a common numeraire, enabling policy optimization under uncertainty.",
+    "transfer_function": "Moves policy legitimacy and resource allocation from lower-probability-but-catastrophic pathways (nuclear, concentrated-risk renewables) toward higher-probability-but-distributed-harm pathways (fossil fuel) by weighting fossil chronic deaths at full probability (1.0) and nuclear catastrophes at their empirical probability (0.01–0.0001). This transfer occurs as a reallocation of acceptable risk burden: fossil-exposed workers and pollution-affected populations bear the full, continuous cost; nuclear communities bear a discounted catastrophic risk. The framework itself collects no direct rents but sustains the institutional legitimacy of fossil deployment by rendering the decision 'scientific' and 'objective.'",
+    "absent_voices": "Populations with moral frameworks that reject probabilistic aggregation of deaths (those who hold that causing ten certain deaths is categorically different from causing one death at 10x probability) are structurally excluded from regulatory decision-making under this framework. Communities bearing chronic fossil harm (mining residents, air-pollution-exposed) have limited voice in the framework's adoption because decision-making occurs at national/global scale while their experience is local. Catastrophic-tail advocates (who prioritize avoiding low-probability catastrophic outcomes) are excluded by the framework's design. Beneficiaries of the framework (fossil industry, some policy-makers) set the terms and close the deliberative space.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expected-value-dominant framework disappeared as a policy standard, decision-making would fracture into competing criteria: some jurisdictions would adopt tail-risk prioritization (constraining nuclear and concentrated risks, accepting higher expected aggregate mortality); others would preserve option-value reasoning (deploying diverse pathways to hedge deep uncertainty); still others might return to ad-hoc political contestation over energy risk. Energy infrastructure deployment patterns would shift—nuclear might face higher approval barriers in some regions, fossil deployment might be further constrained where catastrophic risks are politically salient, renewable deployment might accelerate in uncertainty-preserving jurisdictions. The framework's disappearance would reallocate policy risk and disallow aggregation across heterogeneous harm types.",
+    "founding_problem": "Energy infrastructure imposes mortality risk across all pathways (fossil occupational hazards and pollution, nuclear accident probability, renewable manufacturing and deployment risks). Early energy policy lacked a quantitative framework for comparing these incommensurable harms on a single scale. The expected-value framework was adopted to solve the problem: apply probabilistic reasoning to make risk commensurable, enabling rational choice among pathways.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Energy policy analysts and risk assessment communities attest the founding problem is solved and the expected-value framework is the scientifically justified standard (published in journals, adopted by regulatory bodies). Fossil-exposed workers and mining communities attest the framework has shifted policy risk onto their shoulders by rendering chronic harms as baseline and catastrophic risks as discounted. Catastrophic-tail advocates and some climate scientists attest that the founding problem—comparing incommensurable harms—cannot be solved by expected-value aggregation alone; they argue the framework is a policy choice masquerading as scientific objectivity. Academic literature on decision theory (Sunstein, Morgenstern, Taleb) documents the normative choice embedded in expected-value maximization: it is not a neutral fact, but a framework that privileges certain value functions (aggregate harm minimization) over others (tail-risk aversion, option preservation)."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "probabilistic_aggregation_axiom_contestation",
+      "question": "Is aggregating deaths probabilistically (counting one certain death and one 1%-probability death as equivalent to 1.01 expected deaths) a neutral technical choice or a normative claim about acceptable risk that privileges certain value functions over others?",
+      "resolution_mechanism": "Philosophical and decision-theoretic analysis of alternative aggregation schemes (tail-risk prioritization, option-value, minimax). This is not empirically resolvable but is conceptually clarifiable: document whether expected-value maximization is THE rational choice or A choice among normatively distinct alternatives.",
+      "impact": "If aggregation is revealed as normative (not technical), the framework's claim to objectivity collapses and alternative readings (catastrophic-tail-dominant, option-value-preserving) become structurally on equal footing. The framework shifts from being 'the right answer' to being 'one contested decision criterion.'",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether expected-value aggregation is a neutral technical method or embeds a normative value choice."
+    },
+    {
+      "id": "commensurability_across_harm_types",
+      "question": "Can occupational hazards (which workers enter knowingly, with some compensatory benefit), chronic pollution exposure (which is imposed non-consensually on third parties), and low-probability catastrophic accidents (which disrupt entire regions) be meaningfully aggregated on a single mortality scale without losing critical distinctions?",
+      "resolution_mechanism": "Ethical analysis and empirical research on how affected populations experience and trade off different harm types. Do communities actually regard 100 occupational deaths as equivalent to 100 air-pollution deaths at the population level?",
+      "impact": "If these harm types are incommensurable on the relevant moral/decision-theoretic grounds, the mortality-per-TWh metric becomes a category error, and the framework's aggregation becomes indefensible regardless of empirical accuracy. Classification could shift from Tangled Rope (coordination + extraction) to Snare (pure extraction masquerading as coordination).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether different types of energy harm are commensurable on a single mortality scale or require separate decision criteria."
+    },
+    {
+      "id": "distributional_asymmetry_visibility",
+      "question": "Are the suppressed voices and excluded framings of this constraint known and deliberately overridden, or are they simply absent from the deliberative space such that decision-makers genuinely believe the framework is unopposed?",
+      "resolution_mechanism": "Documentary analysis of regulatory proceedings, policy papers, and stakeholder comments. If catastrophic-tail and option-value readings appear in the record but are explicitly rejected, suppression is active. If they are absent, suppression is structural (the framework closes the conversation before alternatives are articulated).",
+      "impact": "If suppression is structural rather than active, the constraint's classification remains Tangled Rope (coordination + asymmetric extraction) but the theater_ratio interpretation shifts: the performance is unintentional (decision-makers believe they are applying neutral science) rather than deliberate. If suppression is active, theater_ratio interpretation becomes harder—the constraint knowingly overrides alternatives, which is more extraction-like.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of alternative framings is active enforcement or structural inevitability."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE reading of a contested kernel: 'acceptable risk in energy policy.' The kernel itself is a commitment to making energy infrastructure decisions under uncertainty using some risk calculus. This reading—expected-value-dominant—asserts that acceptable risk means minimizing aggregate expected harm (mortality-per-TWh), computed by probability-weighting all outcomes. Under this reading, fossil fuel's chronic, continuous harms (occupational mortality, air pollution) are counted at full probability (they happen every year); nuclear catastrophic accidents are counted at their empirical probability (0.0001–0.01). The calculation yields a ranking of pathways by expected aggregate mortality, which guides policy. The reading's core benefit is commensurability: it provides a single numerical basis for comparing incommensurable harm types. Its core burden is borne by populations subject to chronic, certain harm (fossil workers and air-pollution-exposed communities), whose deaths are weighted at 100% while catastrophic risks are discounted. Sibling readings (catastrophic-tail-dominant, option-value-preserving) contest this weighting, arguing it misses critical distinctions between certain chronic harm and low-probability catastrophic risk, or that deep uncertainty demands flexibility rather than optimization. This story describes the expected-value-dominant reading as structurally instantiated—the framework that dominates energy policy institutions, the suppression required to maintain it, and the distribution of extraction burden it imposes.",
+    "key_agents": [
+      "Energy policy decision-makers (institutional agenda-setters): adopt and enforce expected-value framework",
+      "Fossil fuel industry (institutional beneficiary): benefits from chronic-harm-as-baseline legitimacy",
+      "Fossil-exposed workers (powerless payers): bear full probability of occupational mortality",
+      "Air-pollution-affected populations (powerless payers): bear full probability of chronic health harms",
+      "Mining community residents (organized payers): bear environmental costs of resource extraction",
+      "Nuclear industry and advocates (organized beneficiaries): benefit from catastrophe-probability discounting",
+      "Alternative pathway advocates (moderate payers): constrained by framework's decision priority",
+      "Risk assessment scientific community (institutional observers): produce metrics but do not author framework choice",
+      "Catastrophic-tail advocates (excluded): would argue for tail-risk prioritization but are structurally excluded from decision-making"
+    ],
+    "logic_rationale": "Extractiveness (0.68) reflects the framework's core mechanism: it aggregates away from the visible, certain harms borne by powerless populations and renders them as baseline costs, while discounting catastrophic risks that would otherwise dominate policy. The framework is extractive because it systematically weights fossil chronic harms at full probability while nuclear catastrophes are discounted—the aggregate effect is to sustain fossil deployment by making the decision appear mathematically rather than politically justified. Suppression (0.72) is high because the framework's persistence depends on active maintenance of the expected-value calculation as THE decision standard and exclusion of alternative framings (tail-risk, option-value) from regulatory approval processes. Without active suppression of alternatives, the framework would face immediate challenge from catastrophic-tail advocates and option-value preservationists. Theater (0.41) is moderate: the framework IS performing real coordination work (providing a single quantitative basis for comparing pathways), but roughly 41% of the effort is theater—presenting the decision as objective and mathematical when the choice to aggregate by expected value rather than tail-risk or option-value is itself a normative commitment that is not empirically discovered but politically selected. Accessibility collapse (0.58) is moderate: the framework's logic is publicly available and understood by policy professionals, but once it is adopted as the institutional standard, alternatives become harder to access—deliberative space closes around the expected-value calculus. Resistance (0.64) is substantial: fossil-exposed workers organize, mining communities resist, catastrophic-tail advocates publish, alternative frameworks are debated in academic literature—but the framework's institutional embeddedness means resistance does not dislodge it. Measurements track rising extractiveness and suppression requirement over the 40-year interval as the framework becomes more institutionalized and more actively defended against challenges.",
+    "directionality_logic": "Fossil fuel industry occupies the beneficiary seat (d near 0.2): the framework legitimates continued fossil deployment by rendering chronic harms as inevitable baseline. Expected-value framework advocates occupy an agenda-setter seat (d near 0.4–0.5): they implement and enforce the framework but also bear political exposure if a catastrophe occurs under their chosen standard. Fossil-exposed workers occupy the target seat (d near 0.85–0.9): their deaths are counted at full probability under the framework, their exit options are trapped (occupational dependence, geographic constraint), and they are not consulted on the framework choice. Air-pollution-affected populations are similar (d near 0.80): chronic exposure with constrained exit options. Mining communities are organized but still powerless relative to institutional decision-makers (d near 0.75). Nuclear advocates occupy a mixed seat (d near 0.35–0.45): they benefit from probability discounting but also face elevated scrutiny and deployment constraints in many jurisdictions. Alternative pathway advocates face mild extraction (d near 0.55–0.65): the framework constrains their policy space but does not eliminate it entirely. The divergence in directionality across seats should produce different computed classifications: from the beneficiary seat (fossil industry, policy-makers), the constraint may appear as rope (genuine coordination solving an incommensurability problem); from the payer seat (exposed workers), it appears as snare (pure extraction, suppression, constrained exit). The engine computes these per-seat differences from the structural data; the claimed type is Tangled Rope (both coordination function and asymmetric extraction present).",
+    "perspectival_gap": "From the policy-maker seat and the expected-value advocate seat, the framework appears to solve a genuine problem: energy infrastructure decision-making under uncertainty with heterogeneous harm types. The framework's adoption is justified as scientific rationality—applying probability theory to make risk commensurable. From this seat, alternatives (tail-risk, option-value) appear as departures from rationality, special pleading for particular pathways, or failure to optimize. From the fossil-exposed worker seat and mining community seat, the framework appears as a mechanism for legitimating their chronic sacrifice. Their deaths are rendered as baseline costs (probabilities: 1.0 for occupational hazard, 1.0 for air pollution) while nuclear catastrophes are discounted (probabilities: 0.0001). The mathematical appearance of objectivity masks a political choice to prioritize expected aggregate harm over fairness, precaution, or consent. These perspectives cannot be reconciled within the framework itself because they disagree on the normative priority: the framework embeds expected-value maximization as THE decision criterion; alternative seats would choose differently. The engine captures this divergence through directionality: beneficiary seats get lower d (toward 0), payer seats get higher d (toward 1), and per-seat types diverge as a result.",
+    "mandatrophy_analysis": "The founding problem (commensurability of heterogeneous energy harms) is CONTESTED in status. Decision-makers and framework advocates attest the problem is solved: the framework provides a single numerical basis for comparing occupational hazards, pollution, and catastrophic risks. Fossil-exposed populations, catastrophic-tail advocates, and alternative pathway scholars attest the founding problem is NOT solved—it is relocated. The framework achieves aggregation by discarding normative distinctions (certain vs. probable harm, concentrated vs. distributed risk) that are morally and decision-theoretically relevant. Under this reading, the constraint's mandate has not been fulfilled; instead, it has been substituted. The original mandate was to make commensurable incommensurable harms. The framework's response is to impose a single metric (expected mortality per TWh) that renders the incommensurability invisible rather than resolved. This is mandate drift—the original problem persists but is now hidden under the guise of solution. Classification as Tangled Rope (not Snare) reflects the constraint's real coordination component: it DOES provide a decision criterion that enables policy choices that were otherwise paralyzed by incommensurability. But the extraction component is substantial: the framework systematically weights certain chronic harms at full probability while discounting catastrophic risks, which benefits pathways (fossil fuel, some forms of nuclear) that would lose if tail-risk or option-value reasoning were applied. The two-components reading (coordination + extraction) is more accurate than pure extraction, but the mandatrophy analysis makes clear that the coordination component is illusory—it solves a false version of the problem.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'acceptable risk in energy policy.' The kernel is a stabilized commitment: energy systems impose mortality risk across all pathways, and policy-makers must choose among them. The kernel itself does not specify WHICH risk calculus to use. This reading (expected-value-dominant) instantiates the kernel by asserting: acceptable risk means minimizing aggregate expected harm using mortality-per-TWh metrics, with outcomes probability-weighted. Sibling reading catastrophic_tail_dominant instantiates the same kernel differently: acceptable risk means avoiding low-probability catastrophic outcomes even at cost of higher expected aggregate harm—probability discounting runs in the opposite direction. Sibling reading option_value_preserving instantiates it as: acceptable risk means maintaining multiple energy pathways to hedge deep uncertainty, accepting higher expected mortality to preserve decision flexibility. All three readings interpret the same kernel commitment (policy-makers must choose among energy pathways under uncertainty) but apply different risk calculi, producing different rankings of acceptable pathways. Each reading has distinct ε, distinct beneficiary/victim sets, and would compute differently across the six seats (policy-makers, fossil industry, nuclear advocates, workers, communities). This story describes ONLY the expected-value-dominant reading."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__catastrophic_tail_dominant",
+      "acceptable_risk_energy__option_value_preserving"
+    ],
+    "dual_formulation_note": "This constraint is part of a kernel family decomposed per the ε-invariance principle (OQ-26). The contested kernel 'acceptable risk in energy policy' instantiates three structurally distinct constraints, each with its own ε, beneficiary/victim set, and classification. The expected-value-dominant reading (this story) discounts catastrophic probability; the catastrophic-tail-dominant reading priority-weights low-probability outcomes; the option-value-preserving reading preserves flexibility. Each reading is ε-invariant (does not change how the constraint is measured); together they form a constraint family linked by network.affects_constraints and representing institutional contestation over which risk calculus is legitimate."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.87
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "option_value_preserving",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "probabilistic_harm_aggregation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "expected_value_maximization_criterion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "commensurable_energy_risk_ranking",
+    "drift_state": {
+      "moment": "contemporary_climate_urgency_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "fossil_fuel_industry",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

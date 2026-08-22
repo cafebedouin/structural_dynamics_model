@@ -1,0 +1,371 @@
+{
+  "header": {
+    "constraint_id": "woman_category__gender_identity_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "e8413dc1-918d-47f9-b58c-ef752611c9e6",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Gender Identity as Woman-Category Membership Criterion",
+    "topic_domain": "political_philosophy/law/social_policy/bioethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "transgender_women",
+      "non_binary_people_claiming_woman_identity",
+      "civil_rights_advocates_for_gender_identity"
+    ],
+    "victims": [
+      "people_in_sex_segregated_spaces_seeking_exclusion",
+      "female_athletes_competing_in_sex_based_categories",
+      "people_relying_on_sex_based_protections"
+    ],
+    "vindicated_propositions": [
+      "internal_gender_identity_is_self_determined",
+      "gender_identity_deserves_legal_recognition"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "reading_boundary_definition",
+      "question": "What constitutes 'internal gender identity' as a criterion for category membership—subjective self-report, persistent psychological claim, clinical diagnosis, or lived social expression?",
+      "resolution_mechanism": "Jurisprudential coherence across jurisdictions: different readings produce different legal tests (self-identification-only vs. clinical-gatekeeping vs. lived-history thresholds). The specificity chosen determines ε by changing who counts as a victim or beneficiary.",
+      "impact": "A pure self-report reading (identity = reported identity) produces lower suppression but higher victim-count (exclusion-seekers bear higher costs). A clinical-gatekeeping reading produces higher suppression (psychology professionals retain veto power) and narrower victim/beneficiary sets. This reading-internal ambiguity is the primary structural uncertainty.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which operationalization of 'internal gender identity' grounds this reading—self-report, clinical, social-practice, or some hybrid."
+    },
+    {
+      "id": "sex_based_protections_incompatibility",
+      "question": "Can sex-based legal protections (in sports, sex-segregated spaces, reproductive healthcare) coexist with gender-identity-as-membership in a single framework, or does the identity reading structurally foreclose sex-based protections?",
+      "resolution_mechanism": "Three-layer test: (1) logical incompatibility—can a framework state both 'woman = identity' AND 'this domain applies sex-based rules'? (2) Institutional precedent—how courts and legislatures treat conflicts between these readings in actual cases. (3) Theoretical coherence—whether a party can endorse identity-membership while carving out domain-specific sex-based exceptions without internal contradiction.",
+      "impact": "If logically compatible, the readings coexist (coexists_with relation holds). If logically incompatible, the gender-identity reading forecloses sex-based protections reading in that domain (forecloses relation applies). If institutionally separated (different jurisdictions adopt different answers), both remain live but influence each other.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether gender-identity membership and sex-based legal protections are logically compatible or structurally foreclosing."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.71) of exclusion-seeking agents structural (legal barriers, institutional rules, resource access restrictions) or internalized (social stigma, identity-fusion barriers, epistemic isolation)?",
+      "resolution_mechanism": "Post-exit trajectory: if exclusion-seeking agents move to jurisdictions with sex-based enforcement and suppression persists (social/institutional exile), reclassify as partially internalized. If suppression drops (structural removal resolves it), classify as purely structural.",
+      "impact": "If internalized: effective suppression is higher than the structural measure (targets carry suppression with them across jurisdictions), and identity-fusion mechanisms are the enforcing infrastructure, not just legal rules. If structural: the measure is accurate as a raw descriptor of enforcement intensity.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression of exclusion-seeking agents operates via structural barriers or internalized identity-fusion."
+    },
+    {
+      "id": "extractive_vs_coordinative_core",
+      "question": "Does the gender-identity reading primarily solve a coordination problem (unified category membership across domains for legal consistency and dignity) or primarily extract exclusionary power (closing off alternative categorizations that would accord sex-based protections)?",
+      "resolution_mechanism": "Comparative institutional analysis: compare jurisdictions where identity-based membership is enforced (coordination story: enables legal coherence, reduces administrative complexity, unifies protection scope) versus those where sex-based and identity-based coexist with domain-specific rules (hybrid story: shows coordination is possible without full exclusion, suggesting the enforcement is extracting something beyond coordination).",
+      "impact": "Pure coordination → rope or scaffold. Coordination with asymmetric exclusionary effect → tangled rope. Pure extraction dressed as coordination → snare. The measured extractiveness (0.62) suggests tangled rope, but the underlying structural intent (whether the coordination could be achieved without foreclosing sex-based protections) determines if this is correct.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the reading's primary structural function is coordination (unified membership) or extraction (exclusion of alternative framings)."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates the gender-identity reading of the contested woman-category kernel: category membership is determined by internal gender identity, such that a person who identifies as a woman is a woman regardless of sex assigned at birth. This reading sits in direct structural tension with the sex-biology reading (which grounds membership in chromosomal, anatomical, or reproductive facts) and the intersex-accommodation reading (which treats biological sex as a non-binary spectrum). The tension manifests in four domains: identity documents (moderate extractiveness), sports eligibility (high extractiveness for female athletes), sex-segregated spaces (high extractiveness for exclusion-seeking populations), and reproductive healthcare (moderate extractiveness depending on jurisdiction). This story describes the identity reading's operation as a legal/policy constraint; the sibling readings are other constraints instantiating the same kernel under different readings.",
+    "key_agents": [
+      "transgender_women: seek recognition of gender identity as legal category membership; face variable social and institutional recognition depending on jurisdiction",
+      "non_binary_people_claiming_woman_identity: occupy an identity position the sex-biology reading does not accommodate; benefit from identity-based membership but face high suppression in enforcement contexts",
+      "civil_rights_advocates_for_gender_identity: institutional seats (advocacy organizations, legal scholars, some judicial bodies) advancing the reading's legitimacy through litigation and legislative change",
+      "people_in_sex_segregated_spaces_seeking_exclusion: experience the constraint as foreclosing their ability to maintain sex-based boundaries; bear the extractive cost of the identity reading's enforcement",
+      "female_athletes_competing_in_sex_based_categories: face a bifurcated eligibility picture: identity-based membership rules expand the pool, creating competitive asymmetry; the constraint extracts athletic advantage from this asymmetry",
+      "people_relying_on_sex_based_protections: reproductive healthcare access, sexual violence prevention services, workplace protections tied to sex category; the identity reading's enforcement changes the beneficiary set and may reduce coverage specificity",
+      "sex_biology_reading_adherents: institutional seats (some sports bodies, biological sciences, religious traditions) maintaining the competing reading; suppressed by the identity reading's enforcement",
+      "legal_systems_and_record_keepers: implement the reading operationally; the suppression metric reflects enforcement intensity required to maintain category coherence across administrative systems"
+    ],
+    "logic_rationale": "Extractiveness measures how much the constraint shifts resources or access from one seat to another beyond coordination cost. At time 0 (early adoption in progressive jurisdictions), ε is low (0.38) because the reading is embraced by beneficiaries and enforcement is light—the constraint feels like coordination for the seats advancing it. As time progresses and adoption widens to mixed-position jurisdictions, extractiveness rises. By time 25, it stabilizes around 0.62 because: (1) in high-stakes domains (sports, sex-segregated spaces), the identity reading's enforcement visibly forecloses the sex-based reading, creating identifiable victims; (2) in lower-stakes domains (identity documents), the coordination function is clearer and ε drops. Theater ratio starts low and rises moderately (0.28 at end) because enforcement rhetoric emphasizes inclusivity and dignity while enforcement action focuses on category-boundary maintenance against exclusion-seeking populations—a divergence consistent with a tangled rope's partial performative maintenance. Suppression rises throughout because achieving category coherence under the identity reading requires actively suppressing the sex-biology reading's operationalization in overlapping domains.",
+    "directionality_logic": "Directionality differs steeply across seats. Transgender women and non-binary people claiming woman identity (beneficiaries) sit at d near 0.0 (full beneficiary end): the constraint directly recognizes their identity, opens institutional access, and incurs minimal cost for them. Civil-rights advocates (powerful/institutional beneficiaries) sit similarly low—the reading advances their legal and philosophical project. People seeking sex-based exclusion (victims) sit near d = 1.0 (full target end): they cannot exit the constraint's domain (sex-segregated spaces, sports, reproductive healthcare remain jurisdictionally required), their exclusionary category membership is actively suppressed, and they receive nothing from the constraint's operation. Female athletes sit at intermediate d (~0.65): they receive some coordination benefit (unified eligibility criteria) but face extractive pressure (competitive asymmetry from the expanded eligibility pool). People relying on sex-based protections sit at d ~0.70 (mostly targets): they experience category collapse (protection specificity is reduced when 'woman' includes people with a broader range of biological histories), but some benefit from expanded alliance-building within the unified category. The engine derives these d values from the structural data; they are not authored directly.",
+    "perspectival_gap": "This constraint should compute to markedly different types from different seats. From the beneficiary seats (transgender women, civil-rights advocates, institutional bodies advancing the reading), it computes as rope or scaffold: genuine coordination achieving recognition and legal coherence with minimal enforcement overhead and no identifiable victims. From the exclusion-seeking seats, it computes as snare: identifiable victims (exclusion seekers), high suppression, and persistence dependent on actively defending category boundaries against the competing sex-biology reading. From the female-athlete and sex-based-protection seats, it should compute as tangled rope: genuine coordination (unified category, legal coherence) yoked to asymmetric extraction (competitive or protective harm). The gap between the beneficiary and victim seats is structural: the readings themselves are incompatible on the core question of what grounds membership. The engine's per-seat computation reveals this incompatibility.",
+    "mandatrophy_analysis": "The constraint is not mandatrophic in the sense of being a degraded former function. Rather, it is a *live reading of a persistent kernel* where the mandate (to determine who counts as a woman) remains contested. The sex-biology reading would say the identity reading's mandate is obsolete (biology is the mandate; identity is a subjective add-on). The identity reading would say its mandate is foundational (identity is the true ground; biology is a contingent property some women have). Mandatrophy language ('founding problem is dead, constraint persists') does not fit. What fits is: the three readings represent three competing operative answers to a single kernel question; all three remain live; the identity reading's operation enforces its answer by suppressing the others. This is not inertia or theater—it is active interpretive competition within a commitment system (the kernel).",
+    "kernel_context": "This constraint is the gender_identity_reading of the woman_category kernel, contested among three readings: (1) gender_identity_reading (instantiated here): membership by internal gender identity; (2) sex_biology_reading: membership by chromosomal/anatomical/reproductive biology; (3) intersex_accommodation_reading: membership by spectrum of biological sex including non-binary variation. The readings diverge on the referent of 'woman' and on which properties matter for legal recognition. The identity reading treats gender identity as the primary grounding; the sex-biology reading treats sex as primary and identity as secondary; the intersex reading treats biological sex as non-binary and accommodates both typical female biology and intersex variation. These are not measurement perspectives on a stable referent—they are competing readings of what the kernel (the legal/policy category) should recognize. Each reading instantiates a different constraint with different beneficiary/victim sets, different ε values, and different classified types depending on the seat."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "woman_category__sex_biology_reading",
+      "woman_category__intersex_accommodation_reading"
+    ],
+    "dual_formulation_note": "This constraint is part of the woman_category kernel family. All three readings (gender_identity_reading, sex_biology_reading, intersex_accommodation_reading) share a kernel but instantiate different constraints with different ε values, beneficiary/victim sets, and per-seat classifications. The gender_identity_reading enforces unified membership by identity, which structurally influences the sex_biology_reading (by making sex-based membership harder to operationalize in overlapping domains) and coexists with the intersex_accommodation_reading (both accommodate gender-identity-adjacent categories, but differ on biological variation treatment). Each reading is a separate constraint story; the network links show their kernel kinship and structural interaction."
+  },
+  "stakeholders": [
+    {
+      "name": "transgender_women",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Seek recognition that internal gender identity determines woman-category membership. This reading directly affirms their identity; they receive legal recognition, institutional access (healthcare, documentation, facilities aligned with gender), and social legitimacy through the constraint's enforcement. Their exit would require denying their own identity, making exit identity-locked. They face suppression in jurisdictions enforcing the competing sex-biology reading."
+    },
+    {
+      "name": "non_binary_people_claiming_woman_identity",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Occupy an identity position (neither fully binary woman nor man) that the sex-biology reading does not accommodate. The identity reading provides category membership and institutional access. They pay a diffuse cost: in sex-segregated spaces and competitive contexts, they may face residual suspicion or exclusion despite the reading's enforcement, suggesting the suppression required to maintain category coherence is imperfect. They are identity-locked—exit would require identity denial."
+    },
+    {
+      "name": "civil_rights_advocates_for_gender_identity",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Institutional seats (legal advocacy organizations, some judicial bodies, civil-rights commissions, academic disciplines treating gender identity as primary) advancing the reading's legitimacy through litigation, legislation, policy guidance, and cultural change. They set the agenda for category membership rules; they benefit from the reading's adoption (professional authority, institutional power, ideological alignment). They have arbitrage options: if the reading loses political support, they can shift focus to other domains or retrench into progressive jurisdictions."
+    },
+    {
+      "name": "people_in_sex_segregated_spaces_seeking_exclusion",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Experience the constraint as foreclosing their ability to maintain sex-based boundaries in bathrooms, shelters, prisons, changing facilities, and other spaces organized around sex. They want membership criteria based on sex biology; the identity reading actively suppresses that operationalization. They face suppression in the form of institutional rules, legal liability, and social stigma if they enforce sex-based exclusion. Their exit options are constrained: they cannot simply opt out of using these spaces, and jurisdiction-shopping is costly."
+    },
+    {
+      "name": "female_athletes_competing_in_sex_based_categories",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Face bifurcated eligibility rules where the identity reading expands the pool of women competitors, creating competitive asymmetry for athletes who entered competition under sex-based membership. They receive coordination benefit (unified category, administrative coherence) but pay an extractive cost (competitive disadvantage from expanded pool, potential harm from athletes with different strength profiles). They are constrained: leaving the sport means forgoing career, and most jurisdictions are converging toward the identity reading."
+    },
+    {
+      "name": "people_relying_on_sex_based_protections",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Access reproductive healthcare, sexual violence prevention services, and workplace protections designed around sex. The identity reading changes the beneficiary set for these protections (now extends to all who identify as woman, not just those with female reproductive biology), which can reduce protection specificity (e.g., reproductive healthcare access becomes blurred when the category includes people with male reproductive anatomy). They rely on these protections institutionally and cannot easily exit."
+    },
+    {
+      "name": "sex_biology_reading_adherents",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Institutional seats (some sports bodies, biological sciences, religious traditions, some judicial interpretations) maintaining the sex-biology reading are actively suppressed by the identity reading's enforcement. Their reading is marginalized or prohibited in institutional contexts advancing the identity reading. They are trapped: their core institutional commitments (sports eligibility structures, reproductive biology frameworks) are directly threatened by the identity reading's enforcement, and they lack exit options within their own institutional domains."
+    },
+    {
+      "name": "legal_systems_and_record_keepers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Implement the reading operationally: change identity documents to reflect gender identity, update eligibility criteria in services tied to woman-category membership, enforce category coherence across administrative systems. This role requires active suppression (preventing document standards from reverting to sex-based systems, enforcing uniformity across agencies). The high suppression metric (0.71) reflects the enforcement intensity required to maintain category coherence when the kernel is contested."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "External position from which to measure the constraint's operation and structure. Can assess whether the reading achieves its stated coordination goals, what costs it imposes, and how it structurally relates to the sibling readings. This seat sees the entire kernel contest and the three competing instantiations."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Achieves unified legal recognition for people who identify as women, regardless of sex assigned at birth. Solves the coordination problem of administrative coherence: if a person is recognized as a woman for identity documents, they are recognized across institutional domains (healthcare, facilities, legal status, employment). Without unified membership, the same person would face contradictory rules (woman for identity purposes, not-woman for healthcare, not-woman for facilities, etc.).",
+    "transfer_function": "Transfers institutional access and legal recognition from a category bounded by sex biology to a category bounded by gender identity. The constraint moves recognition, status, and institutional benefits from seats that maintain sex-based boundaries to seats that accept identity-based membership. It also moves suppressive power from exclusion-seeking populations (who lose the ability to enforce sex-based boundaries) to civil-rights advocates (who gain authority to enforce identity-based membership).",
+    "absent_voices": "Sex-biology-reading adherents and people seeking sex-based exclusion are structurally excluded from advancing their reading in contexts where the identity reading dominates. Their voices are not absent in the full kernel contest (they maintain competing readings in other jurisdictions and institutions), but they are excluded from advancing their position in jurisdictions enforcing the identity reading. They would argue that biology-based membership preserves sex-specific protections and boundaries; they are kept out by the identity reading's enforcement framework.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "The identity-reading adherents assert that if the identity reading disappeared overnight, the world would rearrange: people would lose legal recognition, institutional access would collapse, and administrative systems would revert to sex-based categorization. The sex-biology-reading adherents and exclusion-seeking populations would argue the world would rearrange the other way: sex-based protections and boundaries would restore themselves. The contestation is fundamental—different seats have genuinely opposed interests in whether the constraint persists.",
+    "founding_problem": "The founding problem, as articulated by the identity reading, is that legal and institutional category membership grounded in sex assigned at birth fails to recognize people whose internal gender identity diverges from that assignment, creating legal invisibility, institutional erasure, and denial of services and recognition to transgender and non-binary people.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Identity-reading advocates and many civil-rights organizations attest the founding problem is live and urgent. Clinical psychology and psychiatry bodies (APA, AMA, WHO-DSM-5) have shifted toward recognizing gender identity as central to wellbeing. However, sex-biology-reading adherents contest the problem statement itself: they argue that biological sex is immutable and that building legal categories on subjective identity creates different problems (confusion, loss of sex-based protections, contradictory institutional rules). There is no external corroboration of the problem's existence that would satisfy both readings—the founding problem is part of the kernel contest. Corroboration from outside the benefiting parties exists: jurisdictions that have adopted identity-based membership report reduced legal conflicts and improved health outcomes for transgender people (medical literature); jurisdictions that have rejected it report concerns about protection specificity and boundary collapse (conservative policy literature). Neither corroborates the problem in a reading-neutral way."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "sex_biology_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "intersex_accommodation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "gender_identity_determines_category_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "identity_based_membership_enables_dignity_and_recognition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "identity_based_woman_category",
+    "drift_state": {
+      "moment": "contemporary_jurisdictional_fragmentation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "civil_rights_advocates_for_gender_identity",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate_to_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "woman_category__sex_biology_reading",
+      "woman_category__intersex_accommodation_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

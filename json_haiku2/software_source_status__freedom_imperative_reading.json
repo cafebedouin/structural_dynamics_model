@@ -1,0 +1,369 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__freedom_imperative_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "ed85d8d6-58de-40e4-89a4-69d27e01b014"
+  },
+  "base_properties": {
+    "extractiveness": 0.92,
+    "suppression": 0.88,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.79,
+    "resistance": 0.71,
+    "claimed_type": "snare",
+    "human_readable": "Proprietary Software as Imposed Injustice (Freedom-Imperative Reading)",
+    "topic_domain": "software_engineering/political_economy/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_software_vendors"
+    ],
+    "victims": [
+      "software_users",
+      "developers_restricted_from_modification",
+      "downstream_innovation_ecosystem"
+    ],
+    "vindicated_propositions": [
+      "software_freedom_as_fundamental_right",
+      "commons_superiority_for_digital_goods"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_software_vendors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set licensing terms that restrict source code access, modification, and distribution. Justify restrictions as protecting investment, ensuring quality control, and maintaining business model viability. Actively enforce via legal instruments (copyright, patent, DMCA), technical measures (obfuscation, DRM), and contractual terms. Collect rents from licensing, support, and vendor lock-in."
+    },
+    {
+      "name": "software_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Cannot inspect the code they run, cannot modify it to fix bugs or remove surveillance, cannot redistribute it to others. Dependent on vendor decisions for security patches, feature development, and software lifetime. Digital existence is increasingly mandatory (work, finance, health, civic participation), making exit a form of social exclusion. Their powerlessness is structural: no individual user has negotiating leverage; the license is a take-it-or-be-excluded offer."
+    },
+    {
+      "name": "developers_restricted_from_modification",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Cannot legally study, modify, or redistribute the software they depend on or build atop. Restricted to the vendor's development roadmap; cannot fix bugs that affect their use cases or remove features that conflict with their values. Professional and ethical autonomy is constrained by licensing. Can theoretically exit to open-source alternatives, but switching costs are high and coverage is often incomplete (no open-source equivalent exists for critical domains)."
+    },
+    {
+      "name": "downstream_innovation_ecosystem",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Innovation is slowed by inability to build on proprietary software, by reinvention of solved problems, by lock-in that fragments development effort. Communities that would otherwise contribute to shared infrastructure cannot because the primary implementations are proprietary. Collective human knowledge and capability are artificially restricted at the point where they should accumulate most freely."
+    },
+    {
+      "name": "open_source_developers",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build and maintain software under freedom-respecting licenses, making source available and modification possible. Operate outside the proprietary constraint and demonstrate the viability of the alternative model. Often viewed as the analytical seat that tests the freedom-imperative claim empirically — they show that software development works without source-code restriction."
+    },
+    {
+      "name": "corporate_profit_capture_apparatus",
+      "role": "agenda_setter",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The institutional apparatus that vindicates and enforces proprietary software licensing: venture capital, intellectual property law, patent offices, the DMCA, contract enforcement machinery. Not an actor itself, but the structure that sustains the constraint's operation and prevents its dissolution even when alternatives exist."
+    },
+    {
+      "name": "societies_dependent_on_digital_infrastructure",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Societies cannot audit or control their own digital infrastructure because it rests on proprietary software they cannot inspect or modify. National sovereignty and collective self-determination are compromised when critical infrastructure is controlled by foreign vendors answerable only to shareholders. Would benefit from open-source infrastructure but are excluded from the decision-making that shapes current software stacks."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Proprietary software licensing appears to coordinate developer incentives and quality assurance: vendors invest in development, users get finished products with vendor accountability. The freedom-imperative reading denies this is genuine coordination — it is extraction disguised as governance.",
+    "transfer_function": "Transfers control, autonomy, and knowledge from software users and developers to proprietary vendors. Users surrender the ability to audit, modify, and distribute code; vendors extract monopoly rents on the output and maintain permanent control over its evolution. Developers give up the right to study and improve the tools they use.",
+    "absent_voices": "The voices absent are those silenced by the constraint itself: the user who discovers a security vulnerability but cannot fix it; the developer in the Global South who cannot afford the licensing fees for tools that are otherwise free elsewhere; the society that would choose open infrastructure but finds it already locked into proprietary stacks; the future generations who would inherit software they cannot understand or modify.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If proprietary software licensing disappeared overnight, the software stack would reorganize around open-source implementations. Some vendors would collapse; others would shift to service-based models. Users would gain the ability to audit, modify, and redistribute. The ecosystem would experience transient pain as proprietary systems were replaced, but the underlying capability to develop and maintain software would not disappear — it would decentralize and spread. The constraint exists not because software cannot be made without it, but because vendors extract more by restricting it than by selling it openly.",
+    "founding_problem": "Early computing lacked business models for software development; vendors needed to recoup R&D and ensure revenue streams. Proprietary licensing and copyright restriction were adopted as a mechanism to create artificial scarcity and extract rents from software's ability to be freely reproduced.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Open-source development has demonstrated for 30+ years that software is produced at scale, at quality, and at innovation speed without proprietary licensing restrictions. Linux, Apache, Firefox, Kubernetes, the entire web infrastructure — all prove the founding problem is solved. The constraint persists not because the problem is live but because vendors benefit from continuing it. Software companies themselves (Amazon, Google, Microsoft) use open-source internally while selling proprietary offerings externally, proving they understand the model's viability but choose extraction over contribution."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.85,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.88,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.91,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.92,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.92,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.84,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.87,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.88,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.88,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "freedom_vs_pragmatic_empirical_boundary",
+      "question": "Is the claim that software freedom is a fundamental ethical right grounded in deontological principle (inalienable, prior to utility), or is it instrumentally grounded in empirical claims about innovation and quality outcomes?",
+      "resolution_mechanism": "Decompose the freedom-imperative reading into its foundational axioms: if the core claim survives disproof of the empirical outcomes (code quality, innovation speed, security), the grounding is deontological; if the reading collapses when empirical outcomes favor proprietary models, the grounding is instrumental and the reading collapses into the pragmatic reading.",
+      "impact": "If deontological, the reading is foreclosed only by logical contradiction (another axiom denying freedom as inalienable), not by evidence of pragmatic inferiority. If instrumental, the pragmatic_development_reading could supersede this one if empirical data shifts — the reading's survival depends on outcome evidence, not principle. This determines whether the reading can be refuted or only disagreed with.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the freedom-imperative grounding is deontological or empirically contingent."
+    },
+    {
+      "id": "inalienable_rights_implementation_gap",
+      "question": "If software freedom is an inalienable right, who or what enforces it, and how is it distinguished from other claims to inalienable rights that remain unforced?",
+      "resolution_mechanism": "Map the enforcement pathway: does the reading rely on legal reform (new legislation mandating open source), market pressure (consumers choosing open source), or a philosophical claim that cannot be enforced (a 'right' that exists regardless of enforcement, like dignity under oppression)? If the first, the reading enters a contest with property-rights reading over legitimate legislative authority. If the second, the reading predicts market dynamics that can be tested empirically. If the third, clarify the reading's actual claim boundary.",
+      "impact": "If enforcement-dependent, the reading becomes a normative position competing with others for political power — not a claim about what IS but what SHOULD be. If market-dependent, the reading can be falsified by market outcomes. If philosophical, the reading makes a claim immune to verification but also less actionable, shifting the constraint into the conceptual rather than the structural domain.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "How the claimed inalienable right to software freedom would be enforced or distinguished from unenforced claims."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.88) structural (users cannot exit because of technical, legal, and economic barriers) or internalized (users have accepted proprietary software as legitimate and would not exit even if barriers dissolved)?",
+      "resolution_mechanism": "Post-barrier dissolution test: if proprietary software licensing were made illegal and users were given costless access to equivalent open-source alternatives, how many would switch? If most remained on proprietary software, suppression is substantially internalized. If most switched, suppression is structural. Partial switching indicates mixed mechanism.",
+      "impact": "If internalization is high, the constraint operates through captured values and normalized practices — users believe in property rights for code even though the reading claims they should not. The reading's claim that proprietary software is an injustice would then meet internalized acceptance of the injustice itself, requiring cultural re-education, not just legal reform. If structural, legal and market reforms would be sufficient to dissolve the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether measured suppression is structural or internalized in user practices and beliefs."
+    },
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "This constraint is one reading of the software_source_status kernel. How does the freedom-imperative reading's axioms and reference frame differ from the property_rights_reading and pragmatic_development_reading?",
+      "resolution_mechanism": "Comparative structural analysis: the freedom-imperative reading grounds legitimacy in inalienable user rights and the deontological claim that source access is non-negotiable; the property_rights_reading grounds legitimacy in creator authority and incentives; the pragmatic_development_reading grounds legitimacy in empirical software quality outcomes. These are not mere disagreements about the same fact — they are incommensurable reference frames over what makes a licensing regime legitimate.",
+      "impact": "The reading_relations and axioms fields in cs_structure record this structural distinction: freedom-imperative forecloses property_rights (their foundational axioms directly contradict), coexists_with pragmatic_development (both could be held by different parties), and influences utilitarian_hybrid (by establishing freedom as a value that utilities must trade off against). Understanding the committer structure prevents misclassifying disagreement as empirical when it is foundational.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The committer-frame structure of this reading relative to its siblings in the software_source_status kernel."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the freedom-imperative reading of the software_source_status kernel: the claim that software freedom is a fundamental ethical requirement and proprietary software licensing is an injustice. Under this reading, all proprietary software is classified as an extractive snare — users are trapped in dependency on vendors who restrict their ability to audit, modify, and distribute code. The reading treats source-code access as an inalienable right, placing all users and restricted developers in the victim set. The constraint operates through legal enforcement (copyright law, DMCA, licensing contracts) and technical suppression (DRM, obfuscation, copyright restrictions on reverse-engineering). The founding problem (creating incentives for software development) is recognized as dead — open-source development has demonstrated for decades that software is produced at quality and scale without proprietary restrictions — yet the constraint persists because vendors extract monopoly rents from artificial scarcity. The reading does NOT claim proprietary software is a mountain or a genuine natural law; it claims it is a constructed extractive system maintained by concentrated institutional power.",
+    "key_agents": [
+      "Proprietary software vendors: institutional power, agenda-setter, collects rents through licensing restrictions, enforces via copyright and contract law",
+      "Software users (globally, all skill levels): powerless, identity-locked (digital infrastructure mandatory), cannot inspect or modify code they depend on",
+      "Developers restricted from modification: moderate power, constrained exit, cannot legally study or improve foundational software",
+      "Open-source development communities: organized, demonstrate viability of freedom-respecting model",
+      "Intellectual property law and corporate profit apparatus: non-agent, structural substrate that sustains the constraint"
+    ],
+    "logic_rationale": "The extractiveness score (0.92) reflects the reading's axiom: proprietary software, under this reading, extracts nearly total control from users — they surrender autonomy, transparency, and modification rights in exchange for access to functionality. The suppression score (0.88) reflects high enforcement intensity: copyright law, DMCA, contractual terms, and technical DRM all actively prevent users and developers from exercising freedom. Theater ratio (0.42) is moderate because the constraint operates on a mix of genuine governance (quality assurance, security review) and pure extraction (lock-in, rent collection); as the interval progresses, theater rises because companies adopt open-source components while maintaining proprietary wrapping, performing 'openness' while preserving control. Accessibility collapse (0.79) reflects that alternatives do exist (open source), so the collapse is substantial but not complete — identity lock and economic dependence on proprietary ecosystems reduce realistic exit. Resistance (0.71) reflects significant push-back from open-source communities and policy advocates, but institutional power of vendors maintains the constraint. The measurements show steady extraction increase over the 40-unit interval: base extractiveness rises from 0.78 to 0.92 as cloud computing and SaaS deepen vendor control (software-as-a-service eliminates even the option to run local modified versions); suppression requirement rises from 0.75 to 0.88 as anti-modification tooling (DRM, cloud-only architecture) intensifies; theater rises from 0.28 to 0.42 as vendors adopt ceremonial open-source commitments while their core products remain proprietary.",
+    "perspectival_gap": "The constraint should compute differently from vendor vs. user seats. From the vendor's institutional position, the constraint is genuine coordination: they fund development, maintain code quality, provide support, and deserve compensation via licensing revenue — the structure looks like rope or even natural market equilibrium. From the user's powerless, identity-locked position, the same structure is pure extraction: mandatory dependency on proprietary tools, inability to audit or modify, control held indefinitely by a vendor answerable only to shareholders. The engine computes this divergence from the structural data: vendors have arbitrage exit (they can shift to alternative profit models, have leverage to negotiate), high power (institutional), and are beneficiaries; users have identity-locked exit (digital infrastructure is mandatory), powerless status, and are payers. The divergence is structural, not perceptual — the constraint genuinely operates as coordination-from-above and extraction-from-below simultaneously. The claimed_type (snare) reflects the freedom-imperative reading's interpretation: the coordination function is cover; the real operation is extraction masked as governance.",
+    "directionality_logic": "Beneficiaries: proprietary_software_vendors (d = 0.0, full beneficiary — they collect the rents, control the rules, have exit options). Payers: software_users (d = 0.95, near-full target — powerless, identity-locked, trapped in mandatory digital infrastructure, pay through licensing fees and vendor lock-in, cannot exit without social exclusion), developers_restricted_from_modification (d = 0.8, high target — constrained exit, moderate power, pay through inability to study/improve/modify), downstream_innovation_ecosystem (d = 0.75, substantial target — organized power mitigates slightly, but constrained by inability to build on proprietary foundations). No directionality overrides are needed; the canonical derivation from beneficiary/victim + power + exit produces appropriate d values. The asymmetry is extreme because the constraint is designed to concentrate gains (vendors) and distribute costs (users across the globe, each individually powerless).",
+    "mandatrophy_analysis": "The founding problem (lack of business models for software development) is classified as DEAD: open-source software has demonstrated at scale that development is viable without proprietary licensing — Linux, Apache, the entire modern web stack, all prove the original problem is solved. Yet the constraint persists. This is the mandatrophy signature: the arrangement was built to solve a problem that no longer exists, and it persists because those who benefit from it (vendors) have the power to maintain it, while those who would dissolve it (users) do not. The founding_problem_status (dead) + disappearance_verdict (world_rearranges) mismatch signals mandatrophy: if the constraint disappeared, the software ecosystem would not collapse (alternatives exist), but vendors would lose substantial revenue. The constraint is not held in place by necessity; it is held by force. This classification prevents misreading proprietary software as a natural law or genuine coordination — it identifies it as a constructed extraction mechanism justified by a founding problem that is no longer live.",
+    "kernel_context": "This constraint instantiates the freedom-imperative reading of the software_source_status kernel. The kernel is contested across four readings: (1) freedom-imperative (THIS reading) — software freedom is an inalienable right, proprietary software is injustice; (2) pragmatic_development — open-source is superior methodology, freedom is instrumental to quality; (3) property_rights — software is legitimate intellectual property, creators have rights to restrict; (4) utilitarian_hybrid — licensing should maximize aggregate welfare, different models serve different contexts. These readings share the same phenomenon (software licensing practices) but instantiate incommensurable reference frames about what makes a licensing regime legitimate. The freedom-imperative reading grounds legitimacy in deontological user rights; property_rights grounds it in creator authority; pragmatic grounds it in empirical outcomes; utilitarian grounds it in welfare aggregation. See cs_structure.reading_relations and cs_structure.axioms for the structural analysis of how these readings relate."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__property_rights_reading",
+      "software_source_status__pragmatic_development_reading",
+      "software_source_status__utilitarian_hybrid_reading"
+    ],
+    "dual_formulation_note": "The software_source_status kernel decomposes into four constraint stories, one per reading. Each reading instantiates a different constraint because the ε-referent (the standing proprietary arrangement under contest) is assessed differently by each reading: freedom-imperative reads it as nearly total extraction (ε=0.92), property_rights reads it as legitimate coordination (ε~0.3), pragmatic reads it as suboptimal methodology (ε~0.5), utilitarian reads it as context-dependent (ε ranges). These are not the same constraint viewed from different angles — they are structurally distinct constraints because each reading carries an incommensurable reference frame about legitimacy. They are linked via network.affects_constraints because each reading's certification affects the others' credibility and the empirical evidence that would resolve their disagreement."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "property_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pragmatic_development_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "utilitarian_hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "software_freedom_inalienable_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "source_access_non_negotiable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "universal_software_commons",
+    "drift_state": {
+      "moment": "contemporary_proprietary_deepening",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "proprietary_software_vendors",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "very_high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "software_source_status__property_rights_reading",
+      "software_source_status__pragmatic_development_reading",
+      "software_source_status__utilitarian_hybrid_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

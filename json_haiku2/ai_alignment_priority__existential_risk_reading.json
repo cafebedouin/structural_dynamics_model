@@ -1,0 +1,365 @@
+{
+  "header": {
+    "constraint_id": "ai_alignment_priority__existential_risk_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "38af9b3f-2569-4a14-8abe-65b384ce0304",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Existential Risk Alignment Priority",
+    "topic_domain": "technology_ethics/ai_governance/risk_assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capability_research_institutions",
+      "long_term_future_advocates"
+    ],
+    "victims": [
+      "humanity_undifferentiated",
+      "present_harm_impacted_populations"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "capability_research_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Research organizations and their funders prioritize developing advanced AI capabilities under the frame that understanding and controlling future systems requires building them. They set the research agenda around existential risk reduction via capability research. They receive funding, research prestige, and directional influence over AI development priorities. Their justification is that existential risk dominates all other concerns."
+    },
+    {
+      "name": "alignment_researchers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Researchers in formal verification, interpretability, and control mechanisms receive funding, publication venues, and institutional status by adopting the existential-risk framing. They benefit from the resource flow and credibility granted to work that treats existential risk as primary. They can publish, fund junior researchers, and build careers around this priority ordering."
+    },
+    {
+      "name": "funding_bodies_longtermist",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Major philanthropic funders adopt existential-risk framing as their primary allocation criterion. They set grant priorities, convene researcher networks, and establish research agendas. They benefit from a coherent moral narrative and a measurable strategic mission. They actively enforce the priority by withholding funding from research they view as unaligned with existential-risk focus."
+    },
+    {
+      "name": "humanity_undifferentiated",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "All humans are posited as the beneficiary: existential-risk research claims to reduce catastrophic loss-of-control scenarios that would harm everyone. Simultaneously, the resource flow to existential-risk research is a cost borne by humanity's present opportunity set—funding directed to long-term speculative risks is capital unavailable for addressing present harms. The victim status is imposed by the constraint's framing; most people are not consulted on whether they accept this beneficiary/victim bundling."
+    },
+    {
+      "name": "present_harm_impacted_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Populations experiencing discriminatory AI deployment, economic displacement, and algorithmic harms in the present have claims on AI safety resources. The existential-risk priority systematically subordinates their harm to speculative future scenarios. They bear the cost of unfunded present-day harm mitigation and are often excluded from research agendas focused on long-term risk. Their exit options are structurally non-existent—the allocation decisions are made by institutions they do not control."
+    },
+    {
+      "name": "nearterm_harm_researchers",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers working on present-day discriminatory AI systems, labor displacement, and algorithmic bias face resource scarcity and lower institutional status under the existential-risk framing. They must either adopt existential-risk language to secure funding (identity lock) or remain under-resourced. Their exclusion from agenda-setting means their research priorities are not included in the constraint's core structure. They have exit options (alternative funding, policy work, industry positions) but constrained ones due to the prestige and grant economy favoring existential-risk framing."
+    },
+    {
+      "name": "ai_capability_labs",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Large AI labs benefit from the existential-risk framing because it legitimizes rapid capability development under the language of safety research. They can frame competitive capability advancement as necessary for understanding and controlling future systems. The constraint provides cover for scaling that would otherwise face scrutiny. They benefit from increased funding and reduced external pressure on capability timelines."
+    },
+    {
+      "name": "policy_makers_and_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government actors and regulators observe the research and funding priorities set by the existential-risk reading. They inherit the framing when designing policy: if existential risk dominates, policy focuses on preventing misaligned superintelligence rather than on regulating present-day harms. They take testimony from researchers, review funding priorities, and design governance accordingly. Their analytical position means they have the formal power to alter the constraint via policy but face institutional inertia and expert deference."
+    },
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Not an agent (no voice or agency in present decisions), but named as the beneficiary in the existential-risk framing. The constraint is justified as securing a future in which advanced AI does not destroy humanity. Future generations cannot participate in allocation decisions, consent to the trade-offs, or object to the present prioritization of speculative risks over known harms."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates research effort around a shared frame: existential risk from loss of control over advanced AI is the dominant moral concern. Researchers across institutions work toward the shared goal of understanding and preventing catastrophic misalignment. Funding bodies allocate resources around this unified priority. This coordination solves the problem of dispersed research effort by centralizing the objective.",
+    "transfer_function": "Moves research funding, institutional attention, publication prestige, and career opportunities from present-harm domains (algorithmic discrimination, labor displacement, surveillance harms) to long-term-risk domains (interpretability, formal verification, alignment research). The constraint transfers the moral and material priority status from present suffering to speculative future scenarios.",
+    "absent_voices": "Populations experiencing present algorithmic harms are structurally absent from the constraint's core research agendas and funding decisions. They would object that their documented suffering is subordinated to speculative scenarios. Global South populations affected by extractive AI-enabled labor systems and algorithmic bias are not represented in the institutions setting the existential-risk agenda. Future generations are represented only through the advocacy of present researchers; they have no seat at allocation decisions.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the existential-risk priority constraint vanished overnight, funding and research agendas would reorient toward present-harm mitigation and regulatory alignment with on-the-ground impacts. However, the claim itself is contested: advocates argue that without the long-term-risk focus, catastrophic loss of control becomes more likely—the world would not simply rearrange, it would become more fragile. Opponents argue that the world would rearrange to address known harms and that the existential-risk reading fabricates necessity where present-day precaution would suffice.",
+    "founding_problem": "Advanced AI systems with capabilities beyond human control pose an existential risk: if control is lost over systems more intelligent than humans, the outcomes are catastrophic and irreversible. The founding problem is the perceived inadequacy of present-day safety methods to handle future superintelligence. The constraint was built to prioritize research into control mechanisms before superintelligence arrives.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Researchers in the existential-risk community attest that loss of control over superintelligent systems remains a live problem requiring urgent research. Present-harm researchers and policy advocates attest that the founding problem is speculative and ungrounded in evidence about how capable systems will actually behave. Academic AI researchers hold mixed positions—many remain agnostic about superintelligence timelines. NO EXTERNAL CORROBORATION exists outside the existential-risk research community; the problem's status is self-attested by the institutions that benefit from prioritizing it."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the existential-risk reading of the contested kernel 'AI alignment priority.' Alignment, in this reading, means preventing catastrophic loss of control over advanced AI systems where the loss would be irreversible and humanity-ending. The priority is existential safety: research should focus on understanding and controlling future superintelligence before it arrives. This reading competes with the nearterm-harms reading (alignment as preventing present discriminatory/extractive harms) and the integrated reading (alignment as addressing both). The existential-risk reading dominates current funding and research agendas despite being contested on whether the founding problem (loss of control over superintelligence) is a live, addressable, or primary concern. The constraint operates by directing resources, prestige, and institutional legitimacy toward capability research and formal alignment work, subordinating present-harm mitigation in the process.",
+    "key_agents": [
+      "Capability research institutions: set research agenda around superintelligence control; receive funding and prestige",
+      "Alignment researchers: benefit from resource flow, publication venues, career opportunities under existential-risk framing",
+      "Longtermist funding bodies: allocate resources by existential-risk criterion; actively enforce priority via grant decisions",
+      "Present-harm researchers: structurally excluded, resource-constrained, must adopt existential-risk language to secure funding",
+      "Present harm impacted populations: posited as beneficiaries but bear cost of de-prioritized present-day safety work",
+      "AI capability labs: benefit from legitimation of rapid capability advancement under existential-risk language",
+      "Policy makers: inherit the existential-risk framing when designing governance; face institutional inertia and expert deference"
+    ],
+    "logic_rationale": "Extractiveness (0.68 at interval end, rising from 0.48) reflects the constraint's function: it transfers research funding and institutional status away from present-harm domains toward long-term-risk domains. The victim set is posited as humanity undifferentiated, but the actual cost is borne by present-harm researchers (constrained exit, excluded from agendas) and present-harm populations (trapped, powerless, bearing de-prioritized safety work). Suppression (0.71) is high because the constraint's persistence requires actively excluding alternative framings from funding, publication, and institutional legitimacy. The existential-risk priority is enforced through grant denial, hiring preferences, and editorial gatekeeping against nearterm-harm research. Theater (0.52 at interval end, rising from 0.38) reflects the growing gap between the constraint's stated function (preventing catastrophic risk) and its operational function (directing resources to capability research). As funding accumulates without evidence of harm reduction, the performative element grows—the constraint defends itself through rhetorical escalation rather than demonstrated impact. Accessibility collapse (0.62) is moderate: alternatives to the existential-risk reading exist and are articulated, but they face systematic resource and legitimacy barriers. Resistance (0.58) is moderate-high: present-harm researchers, policy advocates, and affected populations push back, but institutional momentum favors the existential-risk coalition.",
+    "perspectival_gap": "The constraint exhibits seat divergence because the beneficiary coalition (agenda-setters, alignment researchers) has institutional power and exit mobility, while the payer coalition (present-harm researchers, affected populations) has neither. An institutional actor at high power with mobile exit will classify the constraint differently than a powerless actor with trapped exit, even though they face the same structural arrangement. The gap is NOT a measurement error—it is the point. The engine's per-seat classification exposes that the constraint serves different structural functions for different seats.",
+    "directionality_logic": "Directionality for capability institutions: d ≈ 0.2 (full beneficiary, controls the constraint, mobile exit). Directionality for alignment researchers: d ≈ 0.25 (beneficiary via resource capture, powerful seats, arbitrage exit). Directionality for present-harm researchers: d ≈ 0.8 (target via resource constraint and agenda exclusion, moderate power, constrained exit—exit toward industry or policy exists but is costly). Directionality for present-harm populations: d ≈ 0.95 (full target, posited as beneficiaries but bear deferred safety costs, powerless, trapped exit). Directionality for humanity undifferentiated: d ≈ 0.6 (asymmetric: the constraint claims to benefit them but they bear the opportunity cost of de-prioritized present harm). These differences are structural, not normative—they reflect who controls the constraint and who pays for it.",
+    "mandatrophy_analysis": "The founding problem (loss of control over superintelligence) has no external corroboration outside the existential-risk research community. The community that benefits from prioritizing the problem is also the community that defines it. This is a mandatrophy candidate: the founding problem's status is contested because only its beneficiaries have institutional voice to attest to it. The constraint's persistence depends on maintaining this definition monopoly—alternative framings must be excluded from research agendas and funding. The rising theater ratio (0.38 → 0.52) reflects this mechanism: as the constraint runs without demonstrable impact on actual catastrophic loss-of-control events, the performative element grows. The constraint shifts from 'we are researching to prevent this outcome' to 'we are researching because this outcome is possible.' The mandatrophy resolution hinges on whether the founding problem can be examined by external arbiters (policy makers, affected populations) or remains self-adjudicated by the research community.",
+    "kernel_context": "This constraint instantiates the existential_risk_reading of the contested kernel ai_alignment_priority. The kernel is the contested definition of what AI alignment means and which harms it should prioritize. The existential_risk_reading defines alignment as preventing loss of control over superintelligent AI; siblings are the nearterm_harms_reading (alignment as preventing discriminatory/extractive present harms) and the integrated_reading (alignment as addressing both as complementary). The three readings share the kernel (a commitment to developing safe AI) but differ on which harms are primary, which populations have standing to define harms, and what research should be prioritized. The existential_risk_reading has achieved dominance in research funding and institutional structure, but this dominance is not universal—it is contested by the other readings held by different coalitions."
+  },
+  "omegas": [
+    {
+      "id": "superintelligence_timeline_uncertainty",
+      "question": "Are advanced AI systems with capabilities beyond human control likely to arrive within the timeframe of present research institutions (20–50 years), or is the timeline indefinitely far?",
+      "resolution_mechanism": "Track AI capability development against empirical benchmarks; examine historical predictions about AI timelines for track record; survey credentialed researchers outside the existential-risk coalition for timeline estimates.",
+      "impact": "If superintelligence timelines are short (< 20 years), the existential-risk framing is justified by urgency. If timelines are distant or indefinite, the research priority becomes speculative cover for capability advancement. The founding problem's status depends heavily on this.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether superintelligence is a near-term or indefinitely-distant concern."
+    },
+    {
+      "id": "foundational_problem_corroboration",
+      "question": "Is the loss-of-control scenario (the founding problem) a genuine technical challenge or a narrative justification for present-day research priorities? Can it be corroborated by researchers outside the existential-risk coalition?",
+      "resolution_mechanism": "Survey AI researchers in industry, policy, and nearterm-harm domains for independent assessment of loss-of-control probability and tractability. Examine whether the scenario makes predictions about present-day system behavior that can be empirically tested.",
+      "impact": "If corroborated externally, the founding problem is real and shared. If only self-attested by the existential-risk coalition, it is a mandatrophy candidate: a constraint whose founding problem is defined only by its beneficiaries.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the loss-of-control problem is externally corroborated or self-defined."
+    },
+    {
+      "id": "tradeoff_magnitude_between_risks",
+      "question": "How much present-day harm is deferred by prioritizing existential-risk research? Are the trade-offs commensurate with the existential-risk reduction gained?",
+      "resolution_mechanism": "Quantify funding flows to present-harm vs. existential-risk research; model outcomes under counterfactual funding allocation; estimate present harms deferred (discriminatory deployment, labor displacement, surveillance harms) vs. existential-risk reduction claimed.",
+      "impact": "If present harms far exceed existential-risk reduction, the constraint is highly extractive on present-harm populations. If existential-risk reduction is large enough to justify present deferral, the constraint has genuine coordination function. If trade-offs are asymmetric (large present-harm cost, speculative existential-risk benefit), the constraint tilts toward snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the prioritization trade-offs are justified by outcomes."
+    },
+    {
+      "id": "alternative_framings_feasibility",
+      "question": "Could alignment research address both present harms and long-term risks simultaneously, or are they structurally in tension? Is the choice between existential-risk and nearterm-harm focus a false binary?",
+      "resolution_mechanism": "Examine research directions that span both (interpretability for both present-system behavior understanding and future control; fairness as both present-harm prevention and long-term value alignment). Survey whether researchers face institutional pressure to choose or can operate across both.",
+      "impact": "If both can be addressed simultaneously, the constraint's suppression of nearterm-harm research is unjustified. If they are structurally in tension, the trade-off is unavoidable but the constraint's framing should be transparent about it.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether existential-risk and present-harm research are in tension or complementary."
+    },
+    {
+      "id": "reading_boundary_contestation",
+      "question": "Is the existential_risk_reading's claim to dominance based on the strength of its evidence and reasoning, or on institutional power and resource control? Could a reasoned agent adopt the nearterm_harms_reading as primary without irrationality?",
+      "resolution_mechanism": "Examine whether present-harm researchers are excluded due to weaker arguments or due to funding/publication gatekeeping. Survey whether the existential-risk reading's core premises are philosophically defensible or axiomatically imposed. Assess whether a reasonable actor with different values could prioritize present harms.",
+      "impact": "If the reading's dominance is institutional rather than evidential, it is maintained by suppression (high d for payers). If it is evidentially justified, the institutional structure reflects genuine belief. This affects whether the constraint is classified as snare (institutional capture) or tangled_rope (genuine coordination with extraction).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the reading's dominance is justified by evidence or maintained by institutional power."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_alignment_priority__nearterm_harms_reading",
+      "ai_alignment_priority__integrated_reading",
+      "ai_capability_development_governance",
+      "ai_research_funding_allocation"
+    ],
+    "dual_formulation_note": "The ai_alignment_priority kernel decomposes into three structurally distinct constraints: existential_risk_reading (this story), nearterm_harms_reading, and integrated_reading. Each reading instantiates a different constraint with a different ε, beneficiary/victim structure, and classification. The existential_risk_reading has high ε (0.68) on speculative future loss of control; the nearterm_harms_reading has high ε on documented present harms; the integrated_reading attempts both. They are not perspectives on one constraint; they are readings of one kernel instantiating three different constraints. The existential_risk_reading influences the other two by controlling funding and research agendas, establishing the terrain the others must respond to. The network edges record this structural dependency."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.8
+    }
+  ],
+  "gain_flow": "capability_research_institutions",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "nearterm_harms_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "integrated_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "existential_risk_is_primary_moral_concern",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "superintelligence_control_problem_tractable_via_capability_research",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "present_harms_secondary_to_existential_prevention",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "existential_risk_dominance_framework",
+    "drift_state": {
+      "moment": "contemporary_funding_and_research_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

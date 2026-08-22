@@ -1,0 +1,379 @@
+{
+  "header": {
+    "constraint_id": "substance_control_kernel__prohibition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_substance_control_kernel__prohibition_reading",
+    "story_uid": "d3778122-568a-4a2a-91d0-da01de7dbda3",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.87,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.73,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Substance Prohibition as Moral-Social Coordination (Prohibition Reading)",
+    "topic_domain": "criminal_justice/public_health/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "law_enforcement_apparatus",
+      "criminal_justice_institutions"
+    ],
+    "victims": [
+      "substance_users",
+      "marginalized_communities",
+      "affected_families"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "substance_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Face criminalization, incarceration, collateral sanctions (employment, housing, family custody loss), and social stigma. Under the prohibition reading, their use is framed as moral transgression rather than health condition, making exit through treatment participation structurally different from harm reduction framing — treatment is reframed as punishment/reformation rather than medical intervention. Trapped by neurobiological dependence, legal consequences, and the constraint's framing that defines use itself as criminal act."
+    },
+    {
+      "name": "law_enforcement_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets and enforces prohibition rules, determines enforcement priorities, administers arrest and prosecution authority. Collects institutional resources, budgets, political authority, and operational scope from enforcement activity. Can choose escalation or de-escalation of enforcement; maintains the constraint by active exclusion of alternative framings (harm reduction, treatment-first models). Benefits from the constraint's persistence through organizational expansion and resource allocation."
+    },
+    {
+      "name": "criminal_justice_institutions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Courts, corrections systems, and prosecutorial apparatus derive operational mandate, budgets, institutional prestige, and employment from prohibition enforcement. Collects revenue streams (fines, asset forfeiture, incarceration bed occupancy where private corrections operate), political legitimacy, and structural authority from the moral transgression framing. Can shift enforcement intensity but cannot unilaterally reframe substance use without institutional mandate loss."
+    },
+    {
+      "name": "marginalized_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Experience disproportionate enforcement targeting, higher arrest rates for equivalent use, longer sentences, and accumulated intergenerational incarceration burden. Bear diffuse costs of black market violence, neighborhood destabilization, and family separation. Lack resources to contest framing or exit enforcement spatially; trapped by geography, economic dependency, and racialized enforcement patterns."
+    },
+    {
+      "name": "affected_families",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear costs of family member incarceration (income loss, custody disruption, social stigma, emotional toll). Framed under prohibition reading as bearing collateral consequences of moral transgression, rather than as co-victims of enforcement policy. Constrained by economic dependency and social structure; excluded from policy-making seats even though the constraint's operation directly shapes their material conditions."
+    },
+    {
+      "name": "moral_conservatives",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Receive vindication of moral transgression framing and social-order protection narrative. Benefit from the constraint's operation as enforcement of their normative claims about substance use as moral failing. Possess political power and institutional voice to maintain the framing against alternative readings. Can shift enforcement intensity without reframing the core moral premise."
+    },
+    {
+      "name": "harm_reduction_practitioners",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are structurally excluded from primary policy-making roles under the prohibition reading. Their evidence base (overdose prevention, disease transmission reduction, cost-effectiveness) contradicts the moral transgression framing and is treated as undermining social order protection. Can operate in constrained spaces (syringe exchange, medication-assisted treatment) only where prohibition framework permits, and must justify services through criminalization premises rather than health outcomes."
+    },
+    {
+      "name": "commercial_drug_trafficking_organizations",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Pay enforcement costs (interdiction, prosecution, incarceration of lower-level operatives) but structurally benefit from prohibition via market power, pricing authority, violence-backed enforcement of supply monopolies, and the absence of regulated legitimate competition. Trapped by the constraint's creation of criminal markets with supernormal profits and dependence on violence rather than contract law for dispute resolution."
+    },
+    {
+      "name": "legislative_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enacts and maintains prohibition statutes, sets penalties, and can redefine the constraint's boundaries and enforcement intensity. Derives political legitimacy from social-order protection framing and moral transgression doctrine. Faces pressure from constituents bearing enforcement costs but maintains the framing against alternative readings through statute and resource allocation."
+    },
+    {
+      "name": "pharmaceutical_interests",
+      "role": "excluded",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Are excluded from substance market production by prohibition (with exceptions for opioid manufacturing under different regulatory frames that create parallel extraction). Experience both constraint enforcement (prosecution of diverted medications) and constraint benefits (protection of legitimate prescription market from low-cost generic drug competition). Mobile through regulatory arbitrage and can shift production to jurisdictions with different readings."
+    },
+    {
+      "name": "society_as_enforcer",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The prohibition reading claims that 'society' and 'social order' benefit from enforcement of the moral transgression doctrine. This is a vindicated proposition rather than a real actor; the constraint benefits named agents (law enforcement, criminal justice, moral conservatives) at the expense of others. Social order itself is not an agent that collects rents."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Under the prohibition reading, the constraint solves a coordination problem: how to maintain public commitment to a shared moral order that defines substance use as transgression and deems enforcement necessary to protect that order from erosion. The coordination is among those who hold the moral transgression premise; it requires state enforcement to maintain the shared framing against competing readings and to punish violators as a signal of commitment.",
+    "transfer_function": "Moves freedom, income, family stability, and bodily autonomy from substance users and marginalized communities to law enforcement and criminal justice institutions (in the form of operational budgets, political authority, and institutional expansion). Also transfers market power and pricing authority to criminal trafficking organizations (who benefit from prohibition's supply reduction and pricing effect). Transfers legitimacy claims to moral conservatives and social-order frameworks.",
+    "absent_voices": "Harm reduction practitioners and public health epidemiologists are structurally excluded — their evidence base contradicts the moral transgression framing and is suppressed as incoherent with social-order protection. Substance users themselves are excluded from policy-making roles, their experience reframed as evidence of moral failing rather than as testimony about the constraint's effects. Communities bearing disproportionate enforcement costs (marginalized populations) are excluded from primary policy seats.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the prohibition constraint and its enforcement vanished, substance use patterns would reorganize substantially — some toward treatment and harm reduction (now framed as health service rather than moral failure), some toward regulated legalization with taxation and age controls, some toward intermediate models. Criminal trafficking organizations would lose the monopoly pricing power prohibition creates. Law enforcement resource allocation would shift. The moral transgression framing would lose state enforcement backing and would compete openly with alternative framings rather than holding hegemonic status.",
+    "founding_problem": "The founding problem under this reading is the preservation of social moral order against erosion by individual transgression. Stated by the reading's own lights: substance use is framed as a moral transgression that, if unpunished, would signal to others that transgression is tolerable and would erode collective commitment to shared moral norms. The state's role is to enforce those norms through criminal punishment, making the cost of transgression higher than the benefit and thereby protecting the social order.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The reading's own adherents (moral conservatives, criminal justice agencies, legislative authorities) attest the founding problem is live. However, public health authorities, comparative public policy research from decriminalization jurisdictions (Portugal, Switzerland), and harm reduction practitioners attest the founding problem is either misidentified or superseded — that substance use epidemiology responds to availability, poverty, untreated trauma, and healthcare access far more than to punishment certainty, and that the moral order has not eroded in jurisdictions with decriminalized approaches. The competing readings (harm reduction, legalization) are attested by these outside voices as more accurately describing the structural dynamics."
+  },
+  "interval": {
+    "start": 1970,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.81
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.83
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.87
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates ONE READING of a contested kernel: the prohibition_reading of the substance_control_kernel. The kernel is the standing societal commitment to regulate substance use; this reading frames that regulation as punishment for moral transgression requiring state coercion to protect social order. Alternative readings (harm_reduction_reading, legalization_reading) instantiate different constraint structures from the same kernel commitment. This constraint story is ONLY this reading; the others are separate JSON files linked via network.affects_constraints. Do NOT conflate the three readings into one constraint — each reading produces a different ε, different victim sets, and different beneficiary structures. The prohibition reading's ε is high (0.81) because state punishment is the primary mechanism; the harm reduction reading's ε would be lower (punishment is not the mechanism); the legalization reading's ε would differ again (individual liberty with externality capture). The claimed_type (tangled_rope) reflects the prohibition reading's own logic: genuine coordination around moral order (coordination function) coupled with asymmetric extraction from substance users and marginalized communities (extraction function). The measurement series (1970-2026) tracks intensification of extractiveness and theater ratio over the prohibition era, indicating increasing disconnect between the moral-order framing and the constraint's actual operation as institutional rent-seeking and racialized enforcement.",
+    "kernel_context": "This constraint is the prohibition_reading of the substance_control_kernel. Sibling readings: harm_reduction_reading (substance use as health condition; state intervenes to reduce harm independent of use cessation) and legalization_reading (substance use as individual liberty; state intervenes only to prevent third-party harm and capture externality costs). The prohibition reading's core premise: substance use IS moral transgression; state punishment protects social order. This premise FORECLOSES the harm_reduction_reading's premise that substance use is primarily a health condition (health conditions are not moral transgressions); it COEXISTS_WITH the legalization_reading (both can be held by different political factions as live positions). The foundational axiom distinguishing this reading: substance_use_as_moral_transgression (status: holdable—it remains a live normative claim held by powerful constituencies, though it is contested by public health authorities and empirically challenged by decriminalization jurisdictions). Under this reading, the state's authority to punish is grounded in protection of moral order, not public health; this reverses the authority hierarchy of the harm_reduction_reading and displaces the legalization_reading's individual liberty claim.",
+    "logic_rationale": "Extractiveness is high (0.81) and rising from 0.55 in 1970. This trajectory reflects: (1) expansion of the carceral apparatus (incarceration rates rose 400%+ over the interval); (2) accumulation of collateral sanctions (employment restrictions, housing exclusions, family law impacts); (3) intensification of enforcement targeting marginalized communities (racialized disparities in arrest and sentencing); (4) creation of supernormal profits for criminal trafficking organizations. Suppression is higher (0.87) than extractiveness because maintaining the moral transgression framing requires active suppression of competing framings (harm reduction evidence, international decriminalization models, lived experience testimony from affected communities). Theater ratio (0.42, rising from 0.18) indicates increasing disconnect: criminal justice agencies justify operations through moral-order protection and social-safety rhetoric while actually enforcing institutional expansion, asset forfeiture, and racialized targeting. The rising theater ratio is diagnostic of constraint degradation toward piton-like operation — institutional maintenance through performance rather than genuine coordination. The measurement grid is authored on one shared timeline so every metric is assessed at every time point; this alignment enables the temporal analysis systems to detect that extraction and theater are co-rising, a signature of degradation.",
+    "directionality_logic": "Directionality diverges radically across seats. Law enforcement (institutional power, arbitrage exit) has d near 0.0 (full beneficiary): the constraint expands their budgets, authority, and operational scope; they can escalate or de-escalate while maintaining the constraint's basic frame. Substance users (powerless, trapped exit) have d near 1.0 (full target): they bear criminalization, incarceration, collateral sanctions, and their exit options are foreclosed by legal jeopardy and neurobiological dependence. Moral conservatives (powerful, arbitrage exit) have d near 0.2 (beneficiary): they collect vindication of their normative framing and political legitimacy from enforcement, and can modify enforcement intensity without losing the moral premise. Marginalized communities (powerless, trapped exit) have d above 1.0 structurally — higher extraction intensity than substance users due to racialized enforcement disparities, compounded by geographic trapping and economic dependency that preclude spatial exit. The engine computes these divergent directionalities from the authored beneficiary/victim/exit declarations; the story does not adjudicate them but supplies the structural data that generates the per-seat classifications.",
+    "perspectival_gap": "From the law enforcement and criminal justice seat, this constraint is a genuine coordination mechanism (maintaining moral order) that they conscientiously administer and for which they deserve institutional resources. From the substance-user and marginalized-community seats, the same constraint operates as coercive extraction dressed in moral language — the 'moral order' is a cover story for institutional expansion and racialized targeting. Neither seat is lying; they are observing the same constraint through different structural positions. The engine's per-seat classification is designed to capture this: what computes as rope (beneficial coordination) from the enforcement seat should compute as snare or tangled_rope from the user seat because the structural asymmetry (who benefits, who is trapped) is encoded in the authored power/exit/beneficiary data. The theater ratio rising over time indicates that from both seats, the performative maintenance of the moral-order justification has come to exceed the actual coordination function.",
+    "mandatrophy_analysis": "This constraint shows clear mandatrophy dynamics. The founding_problem (preservation of moral order against erosion by substance transgression) is contested as to whether it is still live. Evidence: (1) public health authorities argue substance use epidemiology is driven by availability and untreated trauma, not moral enforcement; (2) decriminalization jurisdictions (Portugal since 2001, Switzerland harm-reduction pilot, Netherlands policy shift) report stable or declining use rates despite reduced punishment, contradicting the mandate's enforcement justification; (3) arrest rates for drug possession have stabilized or declined in many US jurisdictions since 2012 despite rising incarceration for distribution, suggesting enforcement focus has shifted away from the foundational mandate; (4) rising theater ratio indicates institutional operation increasingly divorced from the stated purpose. Mandatrophy resolution: the constraint persists because it benefits institutional actors (law enforcement, criminal justice) who can maintain enforcement intensity even if the founding problem is no longer live. A mandatrophied constraint that should have sunset or reformulated (shifted to harm reduction framing) instead persists through institutional inertia and deliberate reframing of institutional expansion as social-order protection. The constraint should be classified as piton-candidate (persists by performance and institutional inertia rather than genuine coordination function) or as tangled_rope degrading toward snare (asymmetric extraction increasing as theater increases)."
+  },
+  "omegas": [
+    {
+      "id": "moral_transgression_vs_medical_condition",
+      "question": "Is substance use fundamentally a moral transgression, a medical condition, or a complex phenomenon spanning both framings?",
+      "resolution_mechanism": "Comparative epidemiology: do jurisdictions with high enforcement of moral-transgression framing show different prevalence, severity, or recovery outcomes than jurisdictions with health-condition framing? Do neurobiological markers, genetics, trauma history, and socioeconomic factors explain more variance in use onset than moral agency? Do punishment certainty predict abstinence independent of treatment access?",
+      "impact": "If substance use is primarily health condition: the entire constraint's moral transgression premise is foreclosed, and the beneficiary/victim structure reverses (users become treated as patients rather than criminals, enforcement apparatus loses mandate, harm reduction becomes primary function). If primarily moral transgression: the prohibition reading's core axiom holds, and the extracted rents are justified as social-order maintenance costs. This is the most consequential omega for the reading's validity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fundamental framing question for the reading's core axiom."
+    },
+    {
+      "id": "enforcement_efficacy_vs_cost",
+      "question": "Does prohibition enforcement reduce population substance use rates (net of harm), or does it increase incarceration and collateral harm while use persists independent of enforcement intensity?",
+      "resolution_mechanism": "Causal inference from jurisdictional variation: do US states with harsher penalties and higher enforcement show lower per-capita use than permissive jurisdictions, controlling for treatment access, poverty, and opioid supply? Do international comparisons (Portugal decriminalized in 2001; Netherlands harm-reduction dominant; US prohibition-heavy) show predicted divergence in use rates?",
+      "impact": "If enforcement reduces net harm: the theater ratio rise becomes misinterpretation (performance justified by efficacy), and the extraction may be necessary cost. If enforcement increases net harm: the rising theater ratio is diagnostic of mandatrophy (institutional operation persists despite failed founding problem), and the constraint should be reclassified as piton or snare rather than tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the constraint achieves its stated founding problem or persists through institutional inertia."
+    },
+    {
+      "id": "suppression_mechanism_internalized_vs_structural",
+      "question": "Is the suppression of competing readings (harm reduction, legalization) structural (law enforcement actively excludes alternatives via prosecution and policy capture) or internalized (populations absorbed the moral-transgression framing as common sense)?",
+      "resolution_mechanism": "Historical analysis of policy discourse: did harm-reduction frameworks emerge in academic/medical spaces first and then face active suppression by law enforcement and moral-conservative actors (structural suppression), or were they always absent from public discourse (internalized suppression of the alternative entirely)? Post-exit suppression trajectory: when individuals move from prohibition-heavy to harm-reduction-dominant jurisdictions, do their framing shifts follow legal change or lag it?",
+      "impact": "If structural: the suppression (0.87) is artificially elevated by active exclusion mechanisms; relaxing enforcement would lower suppression below the measured value. If internalized: suppression persists even after law relaxes, indicating deeper identity-fusion or institutional capture. This affects exit-option classification for affected constituencies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of competing framings is active institutional exclusion or internalized normalization."
+    },
+    {
+      "id": "reading_foreclosure_boundary",
+      "question": "Does the prohibition_reading's core premise (substance use IS moral transgression requiring state punishment) logically foreclose the harm_reduction_reading's premise (substance use is health condition), or can both framings coexist in a single policy framework?",
+      "resolution_mechanism": "Logical analysis: if substance use is moral transgression, can one simultaneously treat it as health condition without logical contradiction? Or does the moral framing necessarily entail punishment as the primary state response, foreclosing treatment-first, harm-reduction-centered approaches?",
+      "impact": "If foreclosed (they cannot coexist): the two readings are distinct constraints in a family where the prohibition reading FORECLOSES the harm_reduction reading—adoption of one precludes the other. If coexist (both can hold): different policy actors can simultaneously hold the moral transgression view while supporting harm reduction pragmatically, making them compatible positions within a single framework. This determines the network relation from this reading to harm_reduction_reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Core question for the reading_relations axiom structure."
+    },
+    {
+      "id": "institutional_capture_of_mandate",
+      "question": "Does law enforcement and criminal justice institutional inertia explain the persistence of the prohibition constraint despite contested founding_problem status, or does the moral transgression axiom remain a live shared value in the political constituency?",
+      "resolution_mechanism": "Political economy analysis: if the constraint were reframed (toward harm reduction or legalization), which constituencies would actively resist and which would accept? Do law enforcement budget increases correlate with substance-use prevalence (expected if efficacy drives resource allocation) or with political pressure from moral conservatives (expected if mandate justifies budgets independent of efficacy)?",
+      "impact": "If institutional capture: the constraint should be classified as piton (inertial, theatrically maintained). If moral consensus: it remains tangled_rope (genuine coordination on moral order, coupled with extraction). This affects classification and the mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint persists due to institutional inertia or genuine political consensus on the moral axiom."
+    },
+    {
+      "id": "kernel_reading_contest_frame",
+      "question": "Is the substance_control_kernel itself contested and under-specified (multiple readings are genuinely live and competing), or is the prohibition_reading the currently hegemonic instantiation with alternatives marginalized in policy discourse?",
+      "resolution_mechanism": "Meta-analysis of policy discourse: are harm_reduction and legalization readings live positions in legislative debates, judicial proceedings, and executive policy-making, or are they marginalized as fringe alternatives suppressed by prohibition hegemony? Do different jurisdictions genuinely instantiate different readings (Portugal's decriminalization = harm_reduction instantiation, Switzerland = hybrid instantiation, US = prohibition instantiation)?",
+      "impact": "If genuinely contested: the kernel is truly under-determined, and each reading is a distinct constraint family member. If hegemonic: the prohibition reading is THE constraint, and alternatives are not yet full readings but counter-framings being suppressed. This affects how the reading_relations edges are drawn and whether the siblings are peer constraints or subordinate counter-proposals.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the substance_control_kernel is genuinely multi-reading or prohibition-hegemonic with suppressed alternatives."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_kernel__harm_reduction_reading",
+      "substance_control_kernel__legalization_reading",
+      "black_market_violence_externality",
+      "incarceration_collateral_sanctions",
+      "drug_trafficking_organization_market_power"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the substance_control_kernel. The kernel represents the standing societal commitment to regulate substance use; this reading interprets that regulation as punishment for moral transgression. The harm_reduction_reading and legalization_reading instantiate the same kernel under different normative commitments, producing different constraint structures, beneficiary/victim sets, and extractiveness values. The three readings are NOT one constraint viewed from different angles—they are three structurally distinct constraints that share a contested kernel. Each has its own ε, its own stakeholder configuration, and its own type classification. The prohibition_reading's ε (0.81, high extraction via punishment) differs sharply from harm_reduction_reading's ε (lower, because health intervention is the mechanism, not punishment) and legalization_reading's ε (distinct again, because market regulation is the mechanism). The readings are linked via network.affects_constraints to enable contamination analysis: if decriminalization (legalization_reading) gains institutional traction, it creates structural pressure on the prohibition_reading by changing both the political legitimacy conditions and the enforcement resource availability for punishment-based systems."
+  },
+  "directionality_overrides": [],
+  "gain_flow": "law_enforcement_apparatus",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "legalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "substance_use_as_moral_transgression",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_punishment_protects_social_order",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "moral_order_preservation_mandate",
+    "drift_state": {
+      "moment": "contemporary_decriminalization_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "substance_control_kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

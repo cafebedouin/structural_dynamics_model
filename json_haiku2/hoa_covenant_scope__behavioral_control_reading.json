@@ -1,0 +1,400 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__behavioral_control_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_hoa_covenant_scope__behavioral_control_reading",
+    "story_uid": "737c50da-bbd0-465b-94fe-72ee113ec904"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "HOA Covenant Behavioral Control Reading",
+    "topic_domain": "property_law/collective_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "conformist_majority_homeowners",
+      "board_aligned_homeowners"
+    ],
+    "victims": [
+      "nonconformist_homeowners",
+      "marginal_aesthetic_households",
+      "speech_restricted_residents"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "conformist_majority_homeowners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Homeowners whose aesthetic preferences and lifestyle choices align with the covenant's standards. They benefit from the enforcement of uniformity without bearing enforcement costs directly, as their properties comply naturally. They perceive property value protection from strict conformity policing and form the coalition that sustains board enforcement."
+    },
+    {
+      "name": "board_aligned_homeowners",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Board members and their allied homeowners set covenant enforcement priorities, interpret vague aesthetic standards, and direct fines and remediation orders. They collect enforcement authority and determine whose properties trigger scrutiny. They benefit from the power to shape neighborhood character and from the deference of conforming majority."
+    },
+    {
+      "name": "nonconformist_homeowners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Homeowners whose aesthetic choices or lifestyle expressions deviate from covenant standards: unconventional landscaping, visible repairs, non-traditional exterior color, religious or political signage, or simply aging properties. They face selective enforcement, fines, remediation demands, and reputational targeting. Exit means selling at discount (buyer assumes covenant risk) or abandoning the property."
+    },
+    {
+      "name": "marginal_aesthetic_households",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Households whose aesthetic markers (cultural exterior decoration, multi-generational family gatherings, visible disability accommodations, or economic markers like weathered furnishings) fall outside the covenant's implicit class/cultural aesthetic. They face disproportionate enforcement because aesthetic judgment operates as proxy for social control. Many cannot afford to relocate or to comply with expensive remediation."
+    },
+    {
+      "name": "speech_restricted_residents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Residents who want to display political, religious, or solidarity signage (yard signs, flags, banners) but are blocked by covenant interpretation of 'aesthetic standards.' The covenant's vagueness allows selective enforcement: permitted signs for conformist causes, forbidden signs for marginal political positions. Speech suppression operates as de facto behavioral control."
+    },
+    {
+      "name": "hoa_board",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "The formal governing structure that interprets and enforces covenant language. The board controls which properties get inspected, which violations get enforced, which residents get fined, and how much remediation must cost. The board can defer enforcement selectively or escalate it strategically."
+    },
+    {
+      "name": "covenant_text",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "situation": "The codified rules and recorded language of the covenant runs. The text is rarely specific: 'aesthetic harmony,' 'in keeping with neighborhood character,' 'not detrimental to property values,' 'reasonable restrictions on use.' This vagueness is the structural enabler of behavioral control — the text does not constrain interpretation, it invites it."
+    },
+    {
+      "name": "prospective_buyers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Potential residents are told a covenant exists and shown recorded language, but the lived enforcement reality — which properties get targeted, how aggressively fines escalate, how far the board interprets aesthetic standards — is rarely transparent. Buyers discover enforcement intensity only after purchase, at which point exit costs are catastrophic."
+    },
+    {
+      "name": "nonconformist_buyers_excluded",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Prospective residents whose aesthetic or lifestyle preferences are known to deviate (multicultural households, disability-visible families, politically active residents) may be deterred from purchasing or may not be shown properties in covenant communities. The covenant's enforcement signals a narrowed acceptable population, excluding diversity preemptively."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enforces uniformity in property appearance and resident behavior as a claim about shared property value — coordinates resident expectations that neighbors' choices will not diminish resale value through aesthetic deviation or visible social difference.",
+    "transfer_function": "Moves aesthetic and behavioral control authority from individual property owners to the board; moves compliance costs (remediation, fines, legal defense) from the conformist majority to nonconformist payers; moves social legitimacy (whose aesthetic is default, whose is deviance) from the marginal households to the majority-aligned households.",
+    "absent_voices": "Prospective nonconformist buyers are excluded from the neighborhood before purchase. Renters (many in covenant communities) have no vote in covenant enforcement. Long-term residents who age in place and gradually fall out of conformity (weathered properties, disability-visible modifications) are structurally unable to contest enforcement escalation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If covenant enforcement disappeared, nonconformist and marginal households would cease paying fines and complying with remediation, visible diversity of aesthetic and cultural expression would increase sharply, and the board's authority to police resident behavior would collapse. The neighborhood appearance would become less uniform; property resale markets would reflect the constraint's removal in price negotiation and buyer composition.",
+    "founding_problem": "Early covenant language invoked 'protection of property values' through aesthetic control. The framing held that uniform, tidy neighborhoods commanded resale premiums and that individual owner choices threatened collective value — a genuine market claim in segregated mid-century real estate.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Real-estate economics research shows aesthetics DO influence property values, but the research is agnostic on whether strict uniformity maximizes value or whether diversity and mixed aesthetics correlate with value in contemporary markets. Board members and conformist homeowners attest the founding problem is live. Nonconformist residents and academic real-estate researchers attest the market has shifted and uniformity enforcement is now a proxy for social homogeneity control divorced from actual value dynamics."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "HOA covenants are enforced in the United States by homeowner associations that interpret vague aesthetic and behavioral language to police neighborhood conformity. This reading instantiates the covenant as a behavioral-control mechanism: a snare that extracts compliance with majority-aligned aesthetics and lifestyle norms from nonconformists and marginal residents, suppresses visible diversity, and operates under cover of property-value protection. The reading contests the 'coordination' framing (shared infrastructure, externality management) and the 'extraction' framing (pure rent-seeking via fine proliferation) by focusing on the covenant's function as a mechanism for enforcing social homogeneity and suppressing behavioral and aesthetic deviation. This is one reading of a contested kernel: the same covenant text is read by different communities as either coordination (keep the neighborhood maintained), extraction (board power consolidation), or behavioral control (suppress nonconformity). The claim and metrics are independent: the constraint is CLAIMED as snare; the metrics describe moderate-high suppression, rising extraction, and increasing theater (performative enforcement of aesthetic rather than functional standards).",
+    "key_agents": [
+      "Board-aligned homeowners: Interpret and enforce covenant language; benefit from control authority; form majority coalition that sustains enforcement",
+      "Nonconformist homeowners: Bear fines and remediation costs; face selective enforcement; trapped by high exit costs; structurally powerless",
+      "Marginal-aesthetic households: Face disproportionate enforcement due to implicit class/cultural aesthetic bias; identity-locked to properties they cannot afford to modify",
+      "Speech-restricted residents: Covenant vagueness enables selective suppression of political and religious signage; speech control operates as behavioral control proxy",
+      "Conformist majority: Benefit from uniformity without bearing enforcement costs; perceive property value protection from strict policing",
+      "Prospective buyers: Excluded from enforcement reality at purchase time; discover intensity only after commitment"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.48 at interval end) because the constraint moves compliance costs and aesthetic control authority, but does not generate direct financial revenue like fine proliferation (extraction reading) or solve major collective action problems (coordination reading). Suppression is high (0.71) because nonconformity faces active, escalating enforcement and payers have few exits: selling means accepting covenant-risk discount, staying means compliance. Theater rises from 0.25 to 0.42 over the interval because enforcement increasingly targets aesthetic appearance (yard signs, exterior colors, aging surfaces) rather than actual externalities (noise, safety, shared infrastructure). The measurement series tracks the constraint's drift from ostensible property-value protection toward behavioral and aesthetic control, with suppression rising faster than extractiveness — the constraint becomes more coercive before it becomes more extractive, a signature of snare emergence. All metrics are authored on one shared temporal grid: every metric carries every time point in the interval.",
+    "directionality_logic": "The reading's core premise is that the covenant function is behavioral and aesthetic control, not coordination or revenue extraction. From the board-aligned seat (institutional power, mobile exit, beneficiary role), the covenant is a legitimate expression of majority preference and property value protection — low directionality toward extraction, high directionality toward coordination benefit. From the nonconformist seat (powerless, trapped exit, payer role), the covenant is a mechanism of suppression and social homogeneity enforcement — high directionality toward extraction target. From the conformist majority seat (moderate power, constrained exit, beneficiary role), the covenant is collectively protective without visible cost (they comply naturally) — low directionality toward extraction. The engine computes these per-seat divergences from the structural data (power, exit, role); this reading's claim does not resolve them. The reading's strength is that it makes the divergence itself the analytical object: who benefits (majority, board) and who bears costs (nonconformists, marginal aesthetics) is exactly the axis this reading's frame highlights, whereas coordination reading minimizes it and extraction reading channels it through financial mechanisms.",
+    "perspectival_gap": "The agenda-setter seat (board-aligned, powerful, mobile exit) experiences the covenant as a legitimate governance mechanism and property protector; the constraint should compute as rope or low-grade tangled-rope from that seat. The payer seats (nonconformist, marginal, powerless, trapped) experience the covenant as suppressive and extractive; the constraint should compute as snare from those seats. The conformist-majority seat experiences genuine coordination benefit (property value protection) without visible extraction cost (natural compliance); the constraint should compute as rope from that seat. These three divergent computations ARE the measurement this reading enables — they arise directly from the structural data (different power atoms, different exit options, different role relationships) without the claim needing to adjudicate them. The reading's claim as snare focuses interpretation on the payer seats and highlights the suppression and behavioral-control mechanisms; the engine computes what each seat actually experiences.",
+    "mandatrophy_analysis": "The founding problem ('property value protection through uniformity') is contested because contemporary real-estate research shows aesthetic diversity does not uniformly damage values and may enhance them in mixed-use communities. The board and conformist majority assert the problem is live and enforcement is necessary. Nonconformist residents and academic researchers assert the founding problem is dead — property markets have shifted and enforcement now persists as social homogeneity control divorced from value dynamics. The snare classification requires both extraction (the constraint moves costs to payers) and suppression (payers have constrained exits). The behavioral-control reading emphasizes suppression over revenue extraction: the board's power and the conformist majority's control over neighborhood character are extracted, not primarily money. This distinguishes the reading from the 'extraction' reading (which centers fine proliferation and financial revenue). The reading avoids false-rope classification by naming suppression as the primary enforcement mechanism and behavioral/aesthetic conformity as the primary transfer function, not just property value or coordination.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'hoa_covenant_scope'. The kernel is the standing arrangement — the recorded covenant text and the HOA enforcement structure that interprets it. Three readings coexist: (1) coordination_reading: the covenant solves genuine collective action problems (shared infrastructure, externality management) through agreed aesthetic and behavioral standards; (2) extraction_reading: the covenant is primarily a revenue and power-consolidation mechanism, with fine proliferation as the functional form; (3) behavioral_control_reading (this one): the covenant enforces aesthetic uniformity and behavioral conformity as a mechanism for social homogeneity and suppression of nonconformist and marginal residents. The readings share the same text (the kernel) but interpret its function, beneficiaries, and costs differently. The behavioral-control reading forecasts that as enforcement intensifies, theater ratio rises faster than extractiveness — performative aesthetic policing becomes the visible function while behavioral suppression becomes the operative mechanism. This reading coexists with the coordination and extraction readings; no single reading logically forecloses the others. All three remain live in actual HOA disputes, held by different parties and constituencies."
+  },
+  "omegas": [
+    {
+      "id": "property_value_vs_social_conformity",
+      "question": "Is the covenant's enforcement genuinely driven by property-value protection, or is property-value protection a cover story for social conformity and homogeneity enforcement?",
+      "resolution_mechanism": "Comparative analysis: do covenants with relaxed aesthetic enforcement (but maintained functional standards for infrastructure and safety) show measurable value degradation relative to strict aesthetic-control covenants in similar markets? Do neighborhoods with diverse aesthetic markers maintain stable property values?",
+      "impact": "If property values are robust under relaxed aesthetic enforcement, the reading's core premise (behavioral control, not value protection) is strongly supported and the constraint should classify as pure snare. If aesthetic uniformity is empirically necessary for value, the classification becomes more ambiguous (snare with genuine value-protection function).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding problem (property value maximization via aesthetic uniformity) is real or a cover story for behavioral control."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.71) primarily structural (legal consequences, enforcement machinery) or internalized (residents have incorporated conformity into self-concept and identity)?",
+      "resolution_mechanism": "Post-exit interviews with former residents: do they report that suppression persists after leaving the covenant community (internalized), or does behavioral and aesthetic freedom resume immediately after exit (structural)?",
+      "impact": "If suppression is primarily structural, the constraint's effective suppression is the authored 0.71 and can potentially be dismantled by removing enforcement. If substantially internalized, residents carry the suppression with them and the constraint's true reach exceeds the mechanical measure.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in covenant behavioral control."
+    },
+    {
+      "id": "majority_preference_vs_minority_suppression",
+      "question": "Is the conformist majority's preference for aesthetic uniformity a genuine collective choice, or is it itself produced by covenant enforcement and social signaling that has made deviation costly?",
+      "resolution_mechanism": "Counterfactual analysis: remove enforcement and observe whether preference for uniformity persists or whether aesthetic diversity becomes the stable equilibrium within 3-5 years.",
+      "impact": "If majority preference is endogenous to enforcement (produced BY the constraint), the constraint is not expressing pre-existing consensus but rather creating and sustaining it through suppression. The reading's snare classification is reinforced — the constraint manufactures the majority it claims to serve.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether conformist majority preference is exogenous or endogenous to covenant enforcement."
+    },
+    {
+      "id": "reading_foreclosure_test",
+      "question": "Do the three readings (coordination, extraction, behavioral_control) logically foreclose each other, or do they coexist as different frames applied to the same kernel by different constituencies?",
+      "resolution_mechanism": "Structural analysis: does the behavioral_control reading's core claim (enforcement of social conformity) logically rule out the coordination reading's core claim (genuine collective-action solution)? Or can a single covenant both solve coordination problems AND enforce behavioral control?",
+      "impact": "If readings coexist (can both be true simultaneously), the kernel exhibits genuine interpretive under-determination and the three constraint stories form a family linked by network edges. If one reading forecloses another, the engine's signature detection should identify the foreclosing relation and the false reading as a cover story.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical independence or foreclosure among the three readings of the hoa_covenant_scope kernel."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "hoa_covenant_scope__coordination_reading",
+      "hoa_covenant_scope__extraction_reading"
+    ],
+    "dual_formulation_note": "The hoa_covenant_scope kernel decomposes into three distinct constraint stories, each with different ε, different beneficiary/victim structures, and different types. The behavioral_control_reading (this story) focuses on the enforcement of social conformity and aesthetic uniformity as mechanisms of suppression; the coordination_reading emphasizes genuine collective-action functions (infrastructure, shared amenities); the extraction_reading emphasizes revenue and power-consolidation through fine proliferation. All three readings share the same recorded covenant text and enforcement structure (the kernel), but interpret its function, beneficiaries, and mode of operation differently. Network links express the constraint family structure — changes in one reading's classification or corroboration affect the others' standing."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "gain_flow": "board_aligned_homeowners",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "behavioral_conformity_is_extractive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "aesthetic_uniformity_enforces_social_homogeneity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "majority_choice_aesthetic_governance",
+    "drift_state": {
+      "moment": "contemporary_diversity_governance_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,571 @@
+{
+  "header": {
+    "constraint_id": "npt_treaty_text__nws_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "fec85511-5c53-4bf9-88c3-4be3cba14eca"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NPT Non-Proliferation Binding on NNWS; Disarmament Aspirational (NWS Reading)",
+    "topic_domain": "international_law/arms_control/treaty_interpretation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_weapons_states"
+    ],
+    "victims": [
+      "non_nuclear_weapons_states",
+      "global_south_development_economies"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_weapons_states",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Interpret and administer the NPT through UN Security Council permanent membership, IAEA Board of Governors membership, and treaty negotiation leadership. Maintain nuclear arsenals while requiring NNWS non-acquisition. Control the meaning of 'at an early date' in Article VI disarmament language through interpretive practice and treaty review conference outcomes. Collect strategic advantage from the asymmetric legal structure: bound to aspire to disarmament (unenforceable), while enforcing non-proliferation (highly enforceable) against NNWS."
+    },
+    {
+      "name": "non_nuclear_weapons_states",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Renounce nuclear weapons acquisition in perpetuity under Article II. Subject to intrusive IAEA full-scope safeguards inspections (nuclear material accountancy, facility monitoring, environmental sampling). Forgo a credible deterrent against regional nuclear-armed states and great-power coercion. Their exit option is withdrawal under Article X, which requires three months' notice and carries the cost of international isolation, sanctions regime exposure, and permanent security disadvantage. Identity lock is profound: the NNWS designation becomes institutionalized in the regime and in geopolitical positioning; reverting to NWS status is treated as regime violation, not normative choice."
+    },
+    {
+      "name": "iaea_verification_community",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "IAEA inspectors and analysts conduct the verification labor that enforces non-proliferation: they have budgetary and operational constraints that concentrate verification effort on horizontal proliferation risk (Iraq, Iran, Libya precursors). Tasking is set by the Board of Governors (NWS-dominated); IAEA Director-General operates under effective veto from the Security Council permanent members on investigation scope and enforcement. They bear the cost of intrusive inspections and carry reputational stakes in verification failures. Secondary benefit: their institutional role and budget depend on the non-proliferation regime's persistence and their perceived competence within it."
+    },
+    {
+      "name": "regional_rivals_without_nukes",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "States like Japan, South Korea, Turkey, and Germany remain NNWS despite regional security threats (China, Russia, Iran). They are locked into conventional deterrence or extended nuclear umbrellas (US extended deterrence commitments), unable to acquire independent nuclear capacity for self-defense. The constraint transfers strategic vulnerability to them; their options are strengthening alliances with NWS patrons or challenging the regime (both costly)."
+    },
+    {
+      "name": "threshold_states_in_transition",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "States with advanced nuclear technology (Brazil, Argentina pre-1990s, South Africa pre-1991, Iran) that could acquire weapons but are constrained by the regime. They pay through technology restrictions, fuel bank dependencies, and external inspection. Their exclusion from NWS status is enforced; any move toward weaponization triggers international sanctions and isolation. Secondary role: they carry technological capacity that makes them potential threats, so their payer status arises from the regime's need to constrain them continuously."
+    },
+    {
+      "name": "global_south_development_economies",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "NNWS without advanced nuclear capacity or security alliance networks. They pay through: restricted access to peaceful nuclear energy (fuel supply control, technology transfer restrictions); resource diversion to verification compliance (hosting IAEA inspections, maintaining safeguards infrastructure); and permanent strategic subordination (no credible deterrent, vulnerability to coercion from NWS and regional powers). Exit is formally available but informationally and practically unavailable: withdrawal invokes international condemnation, sanctions, and development isolation; they lack the military capacity to create a credible deterrent anyway."
+    },
+    {
+      "name": "disarmament_advocacy_coalitions",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Civil society, humanitarian organizations, and NNWS-coalition diplomats advocate for NWS disarmament as binding obligation (not aspirational goal). They are excluded from treaty interpretation authority; their reading of Article VI is not incorporated into IAEA safeguards protocols, Security Council resolutions, or NPT review conference outcomes. They hold the opposite claim about what the treaty binds: they would say disarmament is mandatory and non-proliferation is conditional, whereas this reading inverts it. Their exclusion is structural, enforced through decision-making architecture (NWS vetoes in Security Council, NWS board control in IAEA)."
+    },
+    {
+      "name": "npt_review_conference_majority",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "NNWS and sympathetic observers at quinquennial NPT Review Conferences attempt to reframe the treaty toward disarmament as binding (shifting the interpretation axis). They have institutional presence (voting power in conference committees) but lack enforcement power: NWS can block consensus, veto resolutions on substantive matters, and hold veto threat over conference closure. The observer position captures this paradox: formal inclusion but structural impotence in outcome determination."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a binding legal architecture for horizontal non-proliferation: NNWS renounce weapons acquisition, agree to full-scope IAEA safeguards, and create an international verification infrastructure that deters or detects weapons programs across 191 countries. The NWS accept the same IAEA safeguards framework on civil nuclear materials only (not military arsenals), preserving asymmetry. The coordination solves: (a) mutual fear that without a binding regime, proliferation cascades and destabilizes global security; (b) verification infrastructure that was not coordinated before the NPT.",
+    "transfer_function": "Moves strategic capacity asymmetrically: from NNWS to NWS. The transfer mechanisms are: (1) permanent renunciation of weapons development for NNWS (strategic capacity transferred by forgoing it); (2) NWS retention of arsenals (strategic capacity retained by exemption); (3) IAEA inspection labor concentrated on NNWS (verification asymmetry, inspection frequency ratios 10:1+ favoring scrutiny of NNWS over NWS civil fuel); (4) UN Security Council permanent seat preservation and veto power for NWS (institutional decision-making power concentrated). The transfer is enforced through security dependence: NNWS depend on NWS extended deterrence or conventional alliances, which NWS can threaten to withdraw.",
+    "absent_voices": "Disarmament advocacy coalitions, humanitarian organizations, and NNWS blocs that read Article VI as binding are structurally excluded from interpretive authority. They cannot shape IAEA safeguards protocols, NPT review conference outcomes do not bind without NWS consensus, and Security Council resolutions (the only binding mechanisms) carry NWS vetoes. A reading that inverted this one—treating disarmament as mandatory and non-proliferation as conditional—would be held by many NNWS and civil society actors but is not present in the regime's interpretive machinery.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint and its enforcement machinery vanished, the international legal architecture for non-proliferation would collapse overnight. NNWS would no longer face legal or inspectorial obligation to forgo weapons; NWS arsenal retention would become purely de facto, not treaty-codified; IAEA safeguards would lose legal standing; and regional conflicts would accelerate toward proliferation (Israel, Iran, Pakistan, North Korea precedents establish that absent treaty constraint, weapons acquisition accelerates). NWS strategic leverage through the NPT would evaporate: the treaty is the instrument through which NWS enforce non-proliferation while preserving their own arsenals. A world without this constraint is a world without the current architecture of asymmetric arms control.",
+    "founding_problem": "The founding problem (1968) was the prospect of nuclear proliferation among non-aligned states during the Cold War: if every regional power acquired nuclear weapons, the calculus of deterrence would fragment, accidental escalation risks would multiply, and NWS strategic stability would erode. The NPT was built as a bargain: NNWS renounce weapons (horizontal non-proliferation secured), and NWS promise to disarm (the quid pro quo, Article VI). This reading interprets the bargain as: NWS purchase NNWS non-proliferation commitment with an aspirational disarmament pledge, which is not binding and carries no enforcement.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "NWS governments attest the founding problem (proliferation risk among non-aligned states) was the historical driver and remains a live concern, especially regarding Iran, North Korea, and other threshold states. NNWS and disarmament advocates contest this reading of the problem's status, arguing the founding problem INCLUDES NWS disarmament as a binding reciprocal obligation that has NOT been met and is now overdue (over 50 years of alleged non-compliance). Independent analyses (International Court of Justice advisory opinions on nuclear weapons, Comprehensive Nuclear-Test-Ban Treaty Organization, disarmament research institutes) document deep disagreement on whether the founding problem's solution includes binding NWS disarmament. The ICJ's 1996 advisory opinion stated that NWS are obligated to pursue disarmament 'in good faith' but did not require specific arsenals reductions or timelines—a formulation that preserves the ambiguity this reading relies on."
+  },
+  "interval": {
+    "start": 1968,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1968,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1968,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1968,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.68
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1968,
+    "tn": 2026,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1968,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1968,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1968,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1968,
+        "value": 0.25
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1968,
+        "value": 0.5
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1968,
+        "value": 0.45
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1968,
+        "value": 0.4
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1968,
+        "value": 0.3
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.6
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1968,
+        "value": 0.4
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1968,
+        "value": 0.35
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1968,
+        "value": 0.3
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1968,
+        "value": 0.2
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.7
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.65
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1968,
+        "value": 0.5
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1968,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1968,
+        "value": 0.6
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1968,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.73
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.78
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.7
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The Non-Proliferation Treaty (1968) contains two structural asymmetries read very differently across the fault line of this reading: Article II requires non-nuclear weapons states (NNWS) to renounce weapons 'in perpetuity' (binding, present tense, concrete), while Article VI requires nuclear weapons states (NWS) to pursue disarmament 'at an early date' (aspirational, future-oriented, undefined). This reading—instantiated by NWS governments, IAEA interpretation practice, UN Security Council resolutions, and most NPT Review Conference outcomes—treats non-proliferation as the binding quid pro quo and disarmament as a long-term aspiration without enforcement. The sibling nnws_reading inverts the normative priority: disarmament is the binding obligation (the payment NNWS purchase with their non-proliferation commitment), and non-proliferation is conditional on NWS compliance. The kernel itself is the treaty text and its formal authority structure; the reading is how NWS interpret that text to preserve asymmetry. This reading benefits NWS by freezing the strategic status quo (arsenals retained) while binding NNWS in perpetuity (no acquisition ever). The reading is not a lie about what the text says; it is a defensible but contestable interpretation of the text's legal force.",
+    "key_agents": [
+      "NWS (P-5 + France): interpret treaty, control IAEA Board, enforce Security Council vetoes on investigations and sanctions",
+      "NNWS: bound by Article II, subject to full-scope safeguards, locked into non-acquisition",
+      "IAEA: verifies NNWS compliance, safeguards budget concentrated on horizontal proliferation, operates under Board control (NWS-dominated)",
+      "Disarmament advocates / NNWS coalitions: excluded from interpretive authority, attempt Article VI reframing at Review Conferences",
+      "Threshold states: constrained by fuel supply, inspection regimes, and sanctions threat",
+      "Global South: powerless NNWS without advanced capacity or security alliances, permanently subordinated"
+    ],
+    "logic_rationale": "Extractiveness is high (0.72) because the constraint transfers strategic capacity asymmetrically: NWS retain arsenals while NNWS forgo them in perpetuity. The asymmetry is encoded in the treaty text itself, but this reading amplifies it by treating Article VI as non-binding aspiration. Suppression is substantial (0.68) because NNWS cannot exit without sanctions isolation and permanent security disadvantage (Article X withdrawal cost is prohibitive for most). Theater is moderate (0.42) and has risen over 58 years: the initial coordination function (preventing proliferation cascade during Cold War) was real, but as the founding problem has evolved (Cold War ended, proliferation did not cascade as feared, disarmament stalled indefinitely), a growing share of enforcement activity defends the asymmetry itself, not the original coordination goal. Accessibility collapse (0.58) reflects the regime's pervasive institutional structure: NNWS have limited technical or diplomatic paths to acquire weapons, verification is intrusive and continuous, and international isolation follows any attempt to weaponize. Resistance (0.71) is substantial because disarmament advocates, humanitarian organizations, many NNWS blocs, and Iran all contest this reading: Iran's position (disarmament is binding or I will pursue weapons anyway) is direct resistance to this reading's premise.",
+    "perspectival_gap": "From the NWS seat, the constraint is essential security architecture: NNWS renounce weapons, NWS maintain deterrence, proliferation is contained. From this reading, disarmament is aspirational because binding disarmament would require NWS arsenals to be eliminated—which NWS view as destabilizing and unilateral (Russia, China, others would not comply, leaving only Western NWS disarmed). From the NNWS seat, the constraint is asymmetric extraction: we renounce weapons permanently while you keep yours and offer no binding path to disarmament. The disarmament advocate seat reads the treaty as a broken bargain: the NWS bought NNWS non-proliferation with a disarmament promise that was never honored. The engine computes these divergences from the structural data: power asymmetry (institutional vs organized), exit options (arbitrage for NWS, identity-locked for NNWS), and beneficiary/victim declarations. The NWS agenda-setter seat and the NNWS payer seats should compute to different type assessments.",
+    "directionality_logic": "NWS directionality is near the beneficiary end (d~0.15-0.25): they set the rules, interpret the text, retain strategic capacity, and collect the benefit of NNWS renunciation without surrendering their own arsenals. Their exit options are arbitrage (they can withdraw, face some costs, but retain power and weapons; they can reinterpret the treaty in their favor). NNWS directionality is near the target end (d~0.80-0.90): they renounce weapons capacity forever, submit to intrusive inspections, and cannot exit without isolation. Identity-locked exit means withdrawal is not a real option for most NNWS—it means security abandonment. Threshold states (Iran, Pakistan precedents, Brazil pre-1990) have higher d than average NNWS (d~0.85) because they possess technical capacity and face higher stakes: the regime constrains them most directly. Disarmament advocates are excluded (d varies per seat, but their exclusion from decision-making is structural). IAEA carries d~0.70 on the enforcement side (they bear the labor cost and carry reputational stakes) but benefit modestly from institutional growth (d~0.40 on the coordination benefit side); the net is moderate to high d, making IAEA partially a payer, partially a beneficiary through institutional dependence on the regime.",
+    "mandatrophy_analysis": "This reading avoids Tangled Rope mandatrophy by anchoring the coordination function in real historical problem-solving: preventing proliferation cascades among non-aligned states during Cold War was a genuine coordination problem that the NPT solved. The foundational mandate (horizontal non-proliferation verification) remains active. However, mandatrophy is latent and rising: disarmament, the explicit reciprocal obligation in the treaty, has been abandoned as a binding mandate—it is now purely aspirational. The theater_ratio measurement shows this progression: starting at 0.15 in 1968 (real coordination work on both axes), rising to 0.42 by 2026 (disarmament theater persists at Review Conferences but enforcement is nil; non-proliferation enforcement intensifies). The gap between founding mandate (disarmament binding) and current function (disarmament abandoned) is growing. If disarmament theater vanishes entirely—if NWS stop even pretending to pursue disarmament—the regime would expose itself as pure NNWS constraint without reciprocal NWS obligation, which would collapse NNWS consent. The regime persists by maintaining the fiction of binding disarmament commitment while never acting on it. This is the Piton transition risk: the regime could degrade into inertial maintenance if the founding mandate is abandoned openly.",
+    "kernel_context": "This constraint instantiates the NWS reading of the NPT kernel (the treaty text and its formal authority structure). The kernel is contested between three readings: (1) nws_reading (this one): non-proliferation binding on NNWS, disarmament aspirational on NWS. (2) nnws_reading: disarmament binding on NWS, non-proliferation conditional on NWS compliance. (3) withdrawal_threshold_reading: Article X withdrawal rights interpreted by NWS as requiring high international threshold (regime stability) vs. NNWS claiming low threshold (sovereignty preservation). The NWS reading dominates current treaty interpretation practice (IAEA protocols, Security Council resolutions, NPT Review Conference outcomes are shaped by this reading), but is continuously contested by NNWS blocs and disarmament advocates at Review Conferences. The three readings do not coexist peacefully—they represent fundamentally different claims about what the treaty legally binds, what it aspirationally calls for, and who has the right to interpret the text."
+  },
+  "omegas": [
+    {
+      "id": "article_vi_binding_status",
+      "question": "Does Article VI's 'at an early date' language constitute a binding legal obligation on NWS to disarm, or merely a non-binding aspiration?",
+      "resolution_mechanism": "International Court of Justice binding interpretation (contentious case, not advisory opinion), or amendment to the treaty clarifying the text. Alternatively, settlement of the treaty dispute through an authoritative NWS-NNWS negotiation that formally declares the binding status.",
+      "impact": "If binding: the constraint becomes Snare (pure extraction under cover of broken reciprocal bargain); if aspirational (as this reading claims): the constraint is Tangled Rope (real coordination with asymmetric terms). The classification pivots entirely on this determination.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The legal force of Article VI disarmament language is the hinge the reading rests on."
+    },
+    {
+      "id": "nws_interpretation_authority",
+      "question": "Who has the authority to interpret the NPT binding text—NWS exclusively (as this reading assumes), NNWS-inclusive bodies (as nnws_reading claims), or the treaty text's plain language read by all parties equally?",
+      "resolution_mechanism": "Formal amendment to the NPT establishing an authoritative interpretation body with NNWS representation and NWS non-veto; or a new binding protocol clarifying that treaty interpretation is NNWS-inclusive. The current situation (NWS de facto control of interpretation through IAEA Board, Security Council vetoes, Review Conference veto threat) is path-dependent and not formally codified.",
+      "impact": "If NWS lose interpretive monopoly, this reading collapses and nnws_reading gains structural footing. The constraint would shift from NWS-beneficiary to NNWS-beneficiary or become a genuine Rope with symmetric terms.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the reading's authority claims are structurally entrenched or contingent on NWS institutional dominance."
+    },
+    {
+      "id": "proliferation_cascade_falsification",
+      "question": "Did the NPT actually prevent proliferation cascades among non-aligned states (founding problem solved), or did proliferation happen anyway despite the treaty, indicating the founding mandate was never effective?",
+      "resolution_mechanism": "Counterfactual historical analysis: if the NPT had not existed, would more countries have weaponized? Empirical research on threshold states (Brazil, Argentina, South Africa, Iraq, Iran, Libya, Syria) and their technology development paths. Expert assessment of whether treaty constraints or other factors (regional alliances, domestic politics, technology access limits) were the binding constraints on weaponization.",
+      "impact": "If proliferation was prevented: the coordination mandate is vindicated and the regime's persistence is justified. If proliferation happened anyway or was constrained by other factors: the founding mandate is partially failed, and the regime now functions as pure NNWS constraint without efficacy on the original problem, suggesting Piton degradation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding problem was solved by the treaty or by other factors, indicating whether the coordination function remains live."
+    },
+    {
+      "id": "iaea_safeguards_asymmetry_intentionality",
+      "question": "Is the concentration of IAEA safeguards budget and inspection effort on NNWS (10:1+ inspection ratios vs. NWS) an intentional design choice of this reading, or a neutral technical consequence of having more NNWS to verify?",
+      "resolution_mechanism": "Historical archive of IAEA Board decision-making on budget allocation (1968-present); NWS government statements on verification priorities; technical analysis of what symmetric inspection would require (NWS military arsenal accounting would be intrusive and difficult; is the asymmetry budget-neutral or by design?).",
+      "impact": "If intentional: the reading deliberately maximizes NNWS extraction by concentrating verification resources; if technical artifact: the asymmetry is a side effect of scope (more NNWS to verify). The intentionality distinction affects whether the reading represents NWS strategy or structural accident.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the verification asymmetry is a designed feature of this reading or a side effect of scope differences."
+    },
+    {
+      "id": "identity_lock_reversibility",
+      "question": "Is NNWS identity-locked status (once non-nuclear, permanently non-nuclear) reversible through state choice, or is it structurally irreversible?",
+      "resolution_mechanism": "Test case: if a current NNWS announced withdrawal and weaponization, what would the international response be? Could the state execute this choice, or would sanctions, military intervention, or regime collapse prevent it? North Korea's 2003 withdrawal provides one precedent; Iran's persistent threshold status provides another.",
+      "impact": "If reversible through state choice: NNWS exit_options are better than identity_locked (they are constrained or trapped). If irreversible: identity_locked is accurate, and the payer position is even more extractive than claimed. The exit classification affects directionality and whether the constraint is truly a Tangled Rope or a Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether NNWS identity-lock is a legal designation or a structural irreversibility, affecting the exit analysis."
+    },
+    {
+      "id": "reading_kernel_contest_scope",
+      "question": "Is the contest between these three readings primarily a matter of different interpretations of the same underlying treaty (all parties reading the fixed text), or a contest over WHAT COUNTS as authoritative interpretation in the first place?",
+      "resolution_mechanism": "Linguistic/textual analysis of Article II and Article VI plain language; historical intent reconstruction from drafting records; formal logic applied to the treaty's conditional structure (what does non-proliferation condition NNWS receiving? What does disarmament condition NWS?).",
+      "impact": "If primarily textual interpretation: the readings are all coherent readings of ambiguous text, and the classification as Tangled Rope vs. Snare depends on which reading you adopt. If primarily a contest over interpretive authority: the NWS reading wins not because it is more textually sound, but because NWS control the institutions that codify meaning. This affects whether the reading is a natural interpretation or an enforced one.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The nature of the kernel contest itself: textual ambiguity or institutional power over meaning."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "npt_treaty_text__nnws_reading",
+      "npt_treaty_text__withdrawal_threshold_reading",
+      "iaea_safeguards_asymmetry",
+      "un_security_council_veto_proliferation",
+      "fuel_supply_control_constraint"
+    ],
+    "dual_formulation_note": "The NPT kernel (treaty text and authority structure) is read three ways: nws_reading (this constraint, NWS-beneficiary) treats non-proliferation as binding and disarmament as aspirational. nnws_reading (sibling) inverts the priority. withdrawal_threshold_reading (sibling) focuses on Article X interpretation. These are not one constraint viewed from different angles—they are three distinct constraints arising from three incompatible readings of the same kernel. Each has its own epsilon, beneficiary/victim structure, and legal standing. The epsilon values differ substantially: nws_reading has high extractiveness (0.72, asymmetric), nnws_reading would have lower extractiveness (disarmament binding reduces NWS benefit), withdrawal_threshold_reading has different extractiveness (depends on whether high or low threshold). The framework model these as three stories linked via network.affects_constraints, not as one story with a measurement parameter. The kernel contest is real: no single NWS or NNWS party can hold both nws_reading and nnws_reading simultaneously as true, although different parties do hold different readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.84
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.76
+    }
+  ],
+  "gain_flow": "nuclear_weapons_states",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "nws_asymmetric_deterrence_preservation",
+    "drift_state": {
+      "moment": "contemporary_disarmament_abandonment",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "nnws_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "withdrawal_threshold_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "article_vi_non_binding_aspiration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "nws_arsenal_retention_justified_by_deterrence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "horizontal_proliferation_threat_primacy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "un_security_council_structure",
+      "iaea_board_governance"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

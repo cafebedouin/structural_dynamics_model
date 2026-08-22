@@ -1,0 +1,338 @@
+{
+  "header": {
+    "constraint_id": "permissive_license_text__commons_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_permissive_license_text__commons_coordination_reading",
+    "measurement_id_prefix": "permissive_license_commons",
+    "story_uid": "b1db879d-467d-4ad4-a759-df505b5238d7"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.05,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.12,
+    "claimed_type": "rope",
+    "human_readable": "Permissive Open Source License as Commons Coordination",
+    "topic_domain": "software/intellectual_property/governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "universal_implementer_pool",
+      "downstream_derivative_creators",
+      "end_users_through_abundance"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "original_author",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Retains attribution and moral ownership of the work; benefits from community contributions, fork visibility, and reputation as an open-source steward. The permissive license removes the burden of enforcing reciprocity while preserving credit assignment. Can fork off or dual-license if the community diverges."
+    },
+    {
+      "name": "universal_implementer_pool",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Any individual or organization can use, modify, and redistribute the software with minimal legal friction. No requirement to contribute back or disclose modifications. The implementation pool grows because entry friction is low; participants benefit from the commons without debt."
+    },
+    {
+      "name": "downstream_derivative_creators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Can build proprietary products on top of permissive-licensed code without obligation to share improvements or release their derivative under the same license. This freedom attracts commercial investment and accelerates product cycles."
+    },
+    {
+      "name": "end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit indirectly from ecosystem diversity and abundance: the low barrier to derivative creation means more implementations, more competition, faster innovation. Software abundance flows from the low legal friction."
+    },
+    {
+      "name": "proprietary_authors",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Prefer copyleft (GPL) or closed-source models to retain exclusive control over derivatives. Permissive licensing is outside their frame — they advocate for stricter IP enforcement, not for participation in the permissive commons. Their position is not represented in this reading's stakeholder set."
+    },
+    {
+      "name": "reciprocal_license_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Argue that permissive licensing enables free-riding and uncompensated extraction by proprietary vendors. They advocate for GPL-style copyleft as the only ethically coherent open-source model. Under this reading, their objection is routed to an omega."
+    },
+    {
+      "name": "legal_framework_implementers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legislatures, courts, and standard-setting bodies that define copyright scope and license enforceability. They enable permissive licensing by recognizing it as a valid exercise of copyright holders' rights (not forcing reciprocity). The constraint's persistence depends on their continued recognition."
+    },
+    {
+      "name": "open_source_ecosystem",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The distributed ecosystem of shared, reusable components that permissive licensing enables. Not an actor but a coordination outcome: the aggregate value created by low-friction participation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the commons-contribution problem: original authors offer code under a license that removes legal friction for downstream use, modification, and redistribution. This lowers the cost of collaboration and reuse, enabling a larger pool of implementers to build on shared foundations without negotiating individual permissions or reciprocity terms.",
+    "transfer_function": "Transfers the legal right to use, modify, and redistribute code from author to implementer without requiring return of improvements or derivative disclosure. The implementer receives implementation freedom; the author receives attribution and the ecosystem benefit of broader adoption.",
+    "absent_voices": "Proprietary vendors who benefit from the permissive code but advocate for stricter IP enforcement for their own derivatives are excluded from this reading's stakeholder set. Copyleft advocates who argue that permissive licensing enables uncompensated extraction and advocate GPL reciprocity are also structurally excluded — their position is a sibling reading's standpoint, not a dissenting voice within this frame.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If permissive licensing and its legal framework disappeared, the software commons would reorganize around either copyleft (GPL) reciprocity requirements, closed-source models, or patent/negotiation pools. The universal implementer pool would fragment into proprietary or copyleft subcommunities. Reuse and derivative creation would slow as legal friction returned. The empirical abundance enabled by low friction would diminish.",
+    "founding_problem": "Early software development was fragmented by license incompatibility and permission-seeking overhead. Authors who wanted to share code faced the choice: enforce strict reciprocity (copyleft), close everything (proprietary), or invest in per-use licensing. Permissive licensing emerged to solve the friction problem for authors who valued ecosystem participation over controlling derivatives.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Original authors of major permissive-licensed projects (Linux kernel maintainers choosing MIT/GPL compatibility, Django/Flask creators on BSD simplicity reducing friction, React maintainers on permissive-first ecosystem diversity) and open-source foundations (Apache, Eclipse, Linux Foundation) document that low legal friction enables broader participation and ecosystem growth. Empirical data on GitHub fork velocity and npm package reuse consistently show higher reuse rates under permissive vs. copyleft licensing, attributed by community analysis to friction reduction."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.04
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.045
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.047
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.048
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.049
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes permissive open-source licensing (MIT, BSD, Apache 2.0) as a coordination mechanism that minimizes legal friction for implementers, maximizing the pool of contributors and derivative creators. This is ONE READING of the contested kernel 'permissive_license_text'. The reading instantiates the perspective that legal relaxation (no reciprocity requirement) enables abundance and universal participation. This is structurally distinct from the copyleft_counterfactual_reading (which claims permissive licensing enables uncompensated extraction and advocates copyleft as the necessary alternative) and from the corporate_moat_reading (which claims permissive licensing is a strategy to build market moats on uncompensated derivatives). Each reading produces a different epsilon, different beneficiary/victim structure, and different classification. This story treats permissive licensing as genuine coordination with low extractiveness and no victim set — the authored metrics reflect this reading's epistemic stance.",
+    "key_agents": [
+      "original_author: Creator of the permissive-licensed work; benefits from attribution and ecosystem adoption without enforcement burden.",
+      "universal_implementer_pool: Any organization or individual; benefits from low legal friction and no reciprocity obligation.",
+      "downstream_derivative_creators: Commercial and open-source vendors building on permissive code; benefit from arbitrage opportunity and license compatibility.",
+      "end_users: Benefit indirectly from software abundance and competitive innovation.",
+      "legal_framework_implementers: Courts and legislatures recognizing permissive licensing as valid; enable the constraint's persistence.",
+      "excluded: proprietary_authors and reciprocal_license_advocates — their objections are structurally outside this reading's frame and routed to omegas."
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) under this reading because the arrangement solves a genuine coordination problem (friction reduction) and the author retains moral and reputational ownership without enforcing control. The measurement series shows extractiveness slowly rising from 0.12 to 0.18 over the interval, reflecting an empirical dynamic: as proprietary vendors increasingly rely on permissive code without contributing back, the effective extraction (in the sense of uncompensated upstream benefit) grows — but this reading interprets that dynamic as a side effect of success, not as the constraint's true function. Suppression is negligible (0.05) because participation is voluntary and exit costs are low; the constraint depends on authors' choice to license permissively, not on coercion. Theater ratio is near-minimal (0.08) because the coordination function is real: license text directly enables reuse and derivative creation; the performative component is minimal. Accessibility collapse is low (0.15) because exit alternatives (copyleft, proprietary licensing, no sharing) remain available to authors; the permissive path is attractive but not forced. Resistance is low (0.12) because the constraint benefits a broad implementer pool; opposition is concentrated among proprietary vendors and copyleft advocates, not distributed across many powerless agents.",
+    "directionality_logic": "Original authors derive d near 0.3–0.4: they are mild beneficiaries (reputation, adoption, ecosystem credit) with some control surrendered (no reciprocity obligation enforcement). The universal implementer pool derives d near 0.05–0.15: they are strong beneficiaries (low legal friction, implementation freedom, arbitrage access) with minimal costs or identity risk. Downstream derivative creators derive d near 0.1–0.2: they benefit substantially (can build proprietary products without obligation) but have no structural vulnerability to the constraint (they could choose copyleft or closed-source if it served their interests better). End users derive d near 0.05: they benefit from indirect abundance with zero direct cost. Proprietary authors and copyleft advocates are EXCLUDED: their directional relationship to this constraint is not computed because they oppose the reading's core premise and are not stakeholders within the commons_coordination_reading frame — they are stakeholders in sibling readings (corporate_moat_reading and copyleft_counterfactual_reading).",
+    "perspectival_gap": "Original authors under this reading see permissive licensing as a gift of control yielding community benefit and reputation. The corporate_moat reading sees the same authors as extractively vulnerable — their code becomes raw material for proprietary vendors' profit. The universal implementer pool under this reading sees low-friction access to shared infrastructure. The copyleft_counterfactual reading sees them as free-riders who ought to contribute back. The constraint's persistent form does not change; the reading changes what extraction means and who bears costs.",
+    "mandatrophy_analysis": "The founding problem (license friction impeding participation) remains live: original authors continue to face the choice of reciprocity enforcement overhead vs. permissive openness. The constraint has not undergone mandatrophy because the problem it solves has not atrophied — the empirical data on fork velocity and reuse rates (measured via GitHub dependency analysis, npm package managers) consistently show permissive licensing enabling broader participation than copyleft. The constraint may be approaching what the sibling readings claim is mandatrophy (the original coordination problem is solved; now the constraint is just a vehicle for uncompensated extraction), but under this reading that claim is rejected as a mischaracterization of the founding problem: the founding problem is not 'ensure reciprocity' but 'enable participation', and permissive licensing continues to solve the latter.",
+    "kernel_context": "This constraint instantiates the commons_coordination_reading of the kernel permissive_license_text. The kernel is the permissive-license text itself (MIT/BSD/Apache-style terms): the fixed, stable commitment to 'you may use, modify, and distribute without reciprocity obligation'. The reading selects one interpretation: that this license text, as written, solves a genuine coordination problem (friction reduction for large implementer pools) with low extractiveness. Sibling readings: corporate_moat_reading (permissive licensing is a strategy to build market moats on uncompensated derivative work) and copyleft_counterfactual_reading (permissive licensing enables uncompensated extraction; copyleft is the necessary alternative). The readings differ on what the license text IS ABOUT: friction reduction (commons), market extraction (corporate moat), or missing reciprocity (copyleft). The omegas route the reading dispute."
+  },
+  "omegas": [
+    {
+      "id": "uncompensated_derivative_extraction",
+      "question": "Does the measurable economic value flowing to proprietary vendors building on permissive code, without reciprocal contribution, constitute an uncompensated extraction from the original author's perspective?",
+      "resolution_mechanism": "Longitudinal study of original authors' responses: Do they express satisfaction with ecosystem outcomes (abundance, attribution, adoption) or regret at uncompensated vendor capture? Post-hoc license switching (e.g., authors converting permissive projects to copyleft) is direct signal.",
+      "impact": "If extraction is perceived as high by authors, the corporate_moat reading becomes the dominant framing and this reading reclassifies upward. If authors consistently express satisfaction, the commons_coordination reading holds and extraction remains low.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether author satisfaction with permissive licensing persists or shifts toward copyleft adoption."
+    },
+    {
+      "id": "free_riding_vs_voluntary_contribution",
+      "question": "Is the non-reciprocal participation of proprietary vendors a form of free-riding (as the copyleft_counterfactual reading claims) or a legitimate exercise of rights the author deliberately granted (as this reading claims)?",
+      "resolution_mechanism": "Normative analysis of license intent: Do author interviews, license-adoption rationales, and community norms support the framing 'this is the arrangement we chose' (commons reading) or 'this is the loophole we now regret' (copyleft reading)?",
+      "impact": "The frame selects which reading is 'correct'. No empirical fact resolves it; the answer depends on accepting the author's stated intent (commons) or rejecting it as cover story (copyleft/corporate_moat). This omega documents the irreducible interpretive disagreement.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether non-reciprocal participation is free-riding or legitimate under the voluntary grant."
+    },
+    {
+      "id": "ecosystem_abundance_causation",
+      "question": "Does the empirically observed growth in open-source projects, ecosystem reuse rates, and derivative creation rate actually causally depend on permissive licensing, or would copyleft licensing (or other mechanisms) produce similar abundance?",
+      "resolution_mechanism": "Natural experiments from jurisdictions or communities with copyleft-only mandates; comparison of ecosystem density and innovation rates; counterfactual modeling of adoption curves under GPL-only scenarios.",
+      "impact": "If permissive licensing is the causal driver of abundance, the commons_coordination reading is robust. If similar abundance would result under copyleft or closed-source models, the constraint is neither causally necessary nor specifically coordination — it is merely one coordination mechanism among peers, and the corporate_moat reading gains force (the extractiveness of the vendor moat becomes the salient feature).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ecosystem abundance causally depends on permissive licensing or would occur under alternative regimes."
+    },
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "The kernel (permissive-license text) is ambiguous about what problem it solves: friction reduction (this reading) vs. market moat enablement (corporate_moat_reading) vs. missing-reciprocity problem (copyleft_counterfactual_reading). Which reading is the 'correct' interpretation of the license text?",
+      "resolution_mechanism": "None. The kernel text does not specify which reading is correct. Different authors have written permissive licenses for different reasons (Stallman's concerns about compatibility vs. Linus's indifference to derivatives vs. Apache's desire for corporate participation). No fact about the license text itself resolves the ambiguity.",
+      "impact": "The three readings are structurally incommensurable: they disagree on what the constraint IS, not on what happens if it operates. This omega documents that the reading contest is not resolvable by evidence alone — the reading itself is a choice.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The kernel-reading underdetermination: permissive text supports multiple incompatible readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "permissive_license_text__corporate_moat_reading",
+      "permissive_license_text__copyleft_counterfactual_reading"
+    ],
+    "dual_formulation_note": "The kernel 'permissive_license_text' generates three constraint stories, each representing a different reading: (1) commons_coordination_reading: low epsilon, universal implementer beneficiaries, no victims — interprets permissive licensing as friction reduction enabling broad participation. (2) corporate_moat_reading: higher epsilon, identifies proprietary vendors as extractors and original authors as implicit victims — interprets permissive licensing as a moat-building strategy. (3) copyleft_counterfactual_reading: examines the counterfactual GPL alternative, arguing reciprocity produces better outcomes for original authors and communities. Each story has distinct epsilon, beneficiary/victim structure, and founding_problem interpretation. The readings do not compete on facts; they compete on what the license text means. All three stories link via network.affects_constraints to register the kernel family."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "corporate_moat_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "copyleft_counterfactual_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "permissive_license_enables_abundance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "voluntary_author_choice_legitimates_uncompensated_derivative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "permissive_license_voluntary_author_choice",
+    "drift_state": {
+      "moment": "contemporary_vendor_scale",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

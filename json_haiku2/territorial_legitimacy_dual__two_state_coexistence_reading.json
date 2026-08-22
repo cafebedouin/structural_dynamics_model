@@ -1,0 +1,602 @@
+{
+  "header": {
+    "constraint_id": "territorial_legitimacy_dual__two_state_coexistence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "f8cef50f-d02c-4dee-a7a3-2beb770a829c",
+    "created_at": "2026-06-15T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Two-State Coexistence: Dual Legitimacy with 1967 Boundaries",
+    "topic_domain": "political_theory/international_relations/territorial_sovereignty",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "israeli_state_apparatus",
+      "palestinian_state_apparatus",
+      "international_order_maintainers"
+    ],
+    "victims": [
+      "palestinian_refugee_diaspora",
+      "israeli_settlers_in_disputed_territories",
+      "left_behind_minorities_israel",
+      "left_behind_minorities_palestine"
+    ],
+    "vindicated_propositions": [
+      "self_determination_doctrine",
+      "territorial_compromise_feasibility",
+      "security_through_mutual_recognition"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "israeli_state_apparatus",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers and enforces the two-state framework: sets security parameters, negotiates borders based on 1967+swaps formula, controls military enforcement of territorial boundaries. Collects legitimacy from the framework (recognized by international community, Palestinian Authority acceptance), yet bears security costs of maintaining the compromise against rejection from both hardline settlers and Palestinian groups denying 1948 legitimacy."
+    },
+    {
+      "name": "palestinian_state_apparatus",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Co-administers the two-state framework from Palestinian side: negotiates territory claims, administers disputed zones where authority is split, enforces recognition of Israeli statehood in exchange for statehood recognition. Collects legitimacy (UN recognition as non-member state observer, Oslo Accords framework), yet bears costs of enforcing recognition of 1948 fact against Palestinian constituencies viewing Israel as occupier, not legitimate peer."
+    },
+    {
+      "name": "international_order_maintainers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "UN structures, regional powers (US, EU), and norm-setting bodies benefit from the two-state framework as a model for partition resolution: it instantiates self-determination, territorial integrity, and negotiated settlement norms. They support enforcement (Quartet mechanisms, Security Council resolutions) and collect diplomatic standing from successful conflict management."
+    },
+    {
+      "name": "palestinian_refugee_diaspora",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bears the cost of the framework's right-of-return limitation: the reading restricts return to Palestinian state territory, not to pre-1948 homes inside Israel proper. Diaspora communities in Lebanon, Jordan, Syria, Gulf states experience this as foreclosure of restoration claims. Exit from the constraint means either accepting permanent exile or abandoning the legitimacy framework itself (joining Palestinian-autochthony rejection of the 1948 partition)."
+    },
+    {
+      "name": "israeli_settlers_in_disputed_territories",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Bear costs of territorial compromise: settlement freezes, territorial withdrawals, security constraints, and eventual dismantling or relocation under the framework's logic. Exits from the constraint mean either: accept relocation (costly), join zionist-refuge reading (rejecting Palestinian legitimacy), or mount armed resistance. Identity-locking operates through religious/ideological fusion with the land (divine promise axiom) and community bonds."
+    },
+    {
+      "name": "left_behind_minorities_israel",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Palestinian citizens of Israel experience the framework as partial: they have civil citizenship but the state defines itself through Jewish legitimacy (Law of Return, Jewish majority maintenance). The two-state reading does not address their status within Israel's borders — they are neither returned (diaspora logic) nor fully integrated (state legitimacy logic). Officially included but structurally excluded from the framework's core legitimacy claim."
+    },
+    {
+      "name": "left_behind_minorities_palestine",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Jewish settlers and historic communities remaining in Palestinian-designated territories experience partial expulsion risk or minority status under Palestinian sovereignty. The framework does not guarantee their minority rights — they are neither fully protected (Israeli security logic) nor fully included (Palestinian legitimacy logic). Structurally excluded from the core compromise between two majoritarian claims."
+    },
+    {
+      "name": "zionist_refuge_reading_adherents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Constituency rejecting the two-state reading's acceptance of Palestinian legitimacy: view Israel's claim as unilateral (historical persecution justifies exclusive refuge) and see Palestinian acceptance of 1948 borders as illegitimate. Would reject the framework's foundational axiom (mutual_legitimacy_1948) and argue for zionist_refuge_reading instead. Structurally excluded from the consensus this framework requires."
+    },
+    {
+      "name": "palestinian_autochthony_reading_adherents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Constituency rejecting the two-state reading's acceptance of 1948 Israeli legitimacy: view Palestinian claim as prior (continuous habitation, displacement trauma) and see mutual recognition of 1948 borders as capitulation. Would reject the framework's foundational axiom (mutual_legitimacy_1948) and argue for palestinian_autochthony_reading instead. Structurally excluded from the consensus this framework requires."
+    },
+    {
+      "name": "humanitarian_norm_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Document and advocate for human rights compliance under the framework: monitor refugee conditions, settler displacement, minority protections, security force conduct. They hold the framework accountable to its own humanitarian commitments but do not set the agenda or collect extraction from the arrangement itself."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Resolves a territorial partition problem through mutual recognition: both peoples claim legitimacy on the same land; the framework partitions legitimacy (Israeli within 1967+swaps; Palestinian within 1967 minus swaps, plus right of return to Palestinian state only) so both can exercise self-determination without zero-sum conflict over boundaries.",
+    "transfer_function": "Transfers territorial claims: Palestinians relinquish claim to lands within 1967 Israeli boundaries and right of return to pre-1948 territory; Israelis relinquish claim to territories beyond 1967 boundaries and implicit claims to Palestinian self-determination. The arrangement moves legitimacy from universality (one people per territory) to partition (two peoples, two territories, shared status).",
+    "absent_voices": "Zionist-refuge adherents (view 1948 as unilateral legitimacy requiring no Palestinian recognition) and Palestinian-autochthony adherents (view Palestinian claim as prior, 1948 as illegitimate imposition) are excluded from the consensus this framework depends on. Structurally outside the conversation because accepting the framework requires abandoning their core axiom. Diaspora Palestinians rejected by the right-of-return limitation are also absent from formal negotiations, though their interests are claimed to be represented by Palestinian Authority.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Different parties give incompatible answers. International order maintainers and security-cooperation beneficiaries would see instability: territorial claims would reignite, refugee populations would have no negotiated status, security mechanisms would revert to military deterrence. Zionist-refuge adherents would see liberation (no forced recognition of Palestinian legitimacy). Palestinian-autochthony adherents would see return to direct struggle (no binding partition, no foreclosure of return claims). The constraint's disappearance is contested because the constraint's existence is contested.",
+    "founding_problem": "After 1948 partition attempt and subsequent military conflicts, both Israeli and Palestinian movements claimed total legitimacy over the same territory; continuing zero-sum competition had produced repeated wars, displacement, and failed negotiations. The two-state framework was built to solve: how can both peoples exercise self-determination without one negating the other?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Israeli state apparatus attests the problem is live: ongoing security threats justify continued enforcement. The Palestinian Authority attests the problem is live: occupation and unresolved status require negotiated settlement. However, zionist-refuge and palestinian-autochthony constituencies attest the founding problem is misconceived — the framework itself is the problem. Academic and humanitarian observers outside both benefiting parties note the founding problem is PARTIALLY solved (wars between state actors are reduced) and PARTIALLY persistent (displacement, refugee status, minority insecurity remain unresolved). No corroboration from outside the benefiting parties for the full-resolution reading; significant testimony that the framework is incomplete."
+  },
+  "interval": {
+    "start": 1994,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1994,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1994,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1994,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.48,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1994,
+    "tn": 2024,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1994,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.74
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1994,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1994,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1994,
+        "value": 0.78
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.69
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1994,
+        "value": 0.45
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1994,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1994,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1994,
+        "value": 0.42
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1994,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1994,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1994,
+        "value": 0.54
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1994,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1994,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1994,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1994,
+        "value": 0.64
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1994,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.42
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The two-state coexistence reading instantiates one interpretation of contested legitimacy over the former British Mandate for Palestine: mutual recognition that both Israeli (1948 statehood) and Palestinian (self-determination claim) legitimacies are valid, with territorial partition along 1967 boundaries (pre-1967 War lines) plus land swaps, security cooperation replacing zero-sum military deterrence, and right of return limited to Palestinian state territory. This reading is ONE of three structurally distinct constraint stories from the contested kernel 'territorial_legitimacy_dual.' The sibling readings (zionist_refuge_reading emphasizing historical persecution as sole legitimacy source; palestinian_autochthony_reading emphasizing continuous habitation and displacement as prior claim) are different constraints with different beneficiary structures and different ε values — not perspectives on this one. This story describes the two-state reading's own structural arrangement, extracted costs, and persistence mechanisms.",
+    "key_agents": [
+      "Israeli state apparatus: agenda-setter, beneficiary; institutional power; sets security rules, negotiates territorial swaps, enforces framework against settler rejection",
+      "Palestinian state apparatus: agenda-setter, beneficiary; institutional power; co-administers partition, enforces recognition of 1948 fact against autochthony rejection",
+      "International order maintainers: beneficiary; organized, mobile; UN structures, regional powers; collect standing from conflict management and partition success",
+      "Palestinian refugee diaspora: payer, powerless; trapped exit; bears cost of right-of-return limitation to Palestinian state only",
+      "Israeli settlers in disputed territories: payer, organized; identity-locked exit; bear costs of territorial withdrawal and settlement freezes",
+      "Left-behind minorities (Palestinian citizens of Israel, Jewish settlers in Palestinian territories): payer, moderately powered; constrained/identity-locked exit; structurally excluded from both legitimacy axioms",
+      "Zionist-refuge adherents: excluded, organized; identity-locked; would reject mutual_legitimacy_1948 axiom",
+      "Palestinian-autochthony adherents: excluded, organized; identity-locked; would reject mutual_legitimacy_1948 axiom"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.38) because the constraint solves a genuine coordination problem (territory partition, enabling both peoples to govern) while simultaneously benefiting state apparatus structures at the expense of refugee populations and territorial disputants. Suppression is elevated (0.62) because the framework's persistence depends on actively excluding and criminalizing competing legitimacy readings (rejecting both zionist-refuge and palestinian-autochthony adherents). Theater ratio rises from 0.32 to 0.48 over the interval (Oslo 1994 through 2024) because the framework's functional coordination erodes (security cooperation fails, territorial swaps stall) while theatrical maintenance intensifies (commemorations, agreements, 'peace process' language). The measurement series show extraction rising modestly through 2012 then plateauing, suppression rising to peak in 2012–2018 then declining slightly as state enforcement capacity faces growing resistance, and theater rising consistently as the performative share of institutional activity climbs. The shared time grid on 6-year intervals (aligned across all three metrics) enables temporal analysis of the constraint's lifecycle drift. Coercion grid shows: (1) accessibility_collapse is highest at individual level (settlers, refugees are trapped) and lowest at individual level by 2024 (some mobility options emerge as framework degradation opens alternatives); (2) suppression rises across all levels through 2024 but class-level suppression accelerates (institutional actors feel less pressure than organizational/population-level actors); (3) resistance remains strongest at organizational level (NGOs, political factions) and weakens at individual level (fatigue, normalized displacement).",
+    "perspectival_gap": "The two state apparatus seats (Israeli and Palestinian) should compute the constraint differently from the payer seats: from the state perspective, this is genuine coordination enabling mutual self-determination; from the refugee/settler perspective, it is enforced extraction — their legitimacy claims are foreclosed by the framework. The international maintainers compute it as successful norm-building (beneficiary frame); excluded constituencies compute it as imposed partition (victim frame). The engine derives directionality from beneficiary/victim declarations; the computed per-seat types should show state apparatus as moderate beneficiaries (d~0.25–0.35), diaspora as targets (d~0.85–0.90), settlers as partly-target/partly-trapped (d~0.65–0.75), excluded adherents as outside-the-constraint (not computed). This divergence IS the point: the framework produces different types from different seats because it is a compromise that coordinates some at the expense of others.",
+    "directionality_logic": "Beneficiaries: Israeli and Palestinian state apparatus (collect legitimacy, wield enforcement, set terms); international order maintainers (collect diplomatic standing, model for partition resolution). Victims: Palestinian refugee diaspora (foreclosed from return to pre-1948 territory); Israeli settlers in disputed territories (forced territorial withdrawal, identity-locked choices); left-behind minorities (structurally excluded from both legitimacy axioms — Palestinian citizens of Israel are not return-eligible, Jewish settlers in Palestinian areas face expulsion risk or minority status). The refugees sit at the high-target end (d~0.88) because exit means accepting permanent exile or abandoning legitimacy framework. Settlers sit near high-target (d~0.70) because exit is identity-locked (religious/ideological land claims) or requires joining excluded constituencies (zionist-refuge reading). International actors sit at low-target (d~0.10–0.15) — they benefit substantially and face no extraction themselves; exit would mean withdrawing diplomatic support but costs nothing directly. State apparatus sit at beneficiary end (d~0.12–0.20 for Israeli, d~0.18–0.25 for Palestinian) because they collect legitimacy and enforceability, though they bear security costs and suppression costs.",
+    "mandatrophy_analysis": "The constraint's founding problem was: how can both peoples exercise self-determination on the same territory without zero-sum military competition? The two-state framework attempted to solve this by partitioning: Israeli sovereignty over 1967+swaps, Palestinian sovereignty over 1967-swaps plus right of return to Palestinian state. The measurement series and coercion grid show rising theater_ratio (0.32→0.48) concurrent with stable-to-modest extractiveness, which is the mandatrophy signature: the framework's functional coordination (enabling both states to exist, reducing interstate wars) has been substantially achieved, but the framework persists through intensifying theatrical performance (annual agreements, 'peace process' negotiations, commemorations) without resolving the distributional problems (refugee status, settler evacuation, minority protections remain unresolved). The rising suppression_requirement through 2012 then plateau shows the state apparatus must expend growing effort to exclude and criminalize zionist-refuge and palestinian-autochthony readings — the framework is defended less by its coordination success and more by enforcement against competing legitimacy claims. This is classic mandatrophy: a constraint whose original mandate (partition enabling both sovereignties) has been mostly achieved, but whose persistence increasingly depends on theatrical maintenance and active suppression of alternatives rather than on the coordination it was built for. The framework is not dead (both states exist, interstate wars are rare) but is degraded from coordination function toward inertial extraction (state apparatus collecting legitimacy-based authority, international actors collecting norm-success standing, without addressing the distributional costs that motivated the original partition).",
+    "kernel_context": "This constraint is the two_state_coexistence_reading of the kernel territorial_legitimacy_dual. The kernel is the contested question: what grounds legitimate sovereignty over the former British Mandate for Palestine, and what territorial partition (if any) would honor all legitimate claims? Three readings instantiate this kernel as three different constraints: (1) zionist_refuge_reading: Israeli legitimacy alone is valid (historical persecution, UN partition acceptance, exclusive refuge), Palestinian presence is at sufferance. (2) palestinian_autochthony_reading: Palestinian legitimacy is prior (continuous habitation, displacement trauma, right of return to pre-1948 territory), Israeli statehood is colonial imposition. (3) two_state_coexistence_reading (this constraint): both legitimacies are valid from 1948 onward, partition along 1967 boundaries enables mutual self-determination, return rights limited to Palestinian state. Each reading has its own ε value, beneficiary structure, victim structure, and type. This reading accepts mutual legitimacy (axiom: mutual_legitimacy_1948) and mutual partition (axiom: territorial_partition_1967); rejecting either axiom forecloses this reading and selects into a sibling. The founding problem of this reading is: how to partition legitimacy so both peoples can govern without denying the other's statehood claim? Siblings' founding problems differ: zionist_refuge reading addresses 'how to secure Jewish refuge against persecution'; palestinian_autochthony reading addresses 'how to restore Palestinian self-determination against displacement'."
+  },
+  "omegas": [
+    {
+      "id": "axiom_mutual_legitimacy_1948_contested",
+      "question": "Is the axiom mutual_legitimacy_1948 (recognizing both Israeli and Palestinian statehood claims as valid from 1948 onward) a live normative commitment of this reading, or has it been substantially undermined by on-the-ground practice?",
+      "resolution_mechanism": "Text-analysis of state apparatus rhetoric (Israeli parliamentary record, Palestinian Authority declarations), treaty language (Oslo Accords, UN recognition votes), and institutional practice (degree to which each state recognizes the other's legitimacy in law, security cooperation, administrative contact). A substantial gap between declared commitment and institutional practice signals axiom degradation.",
+      "impact": "If mutual_legitimacy_1948 is substantially undermined, the reading's distinction from zionist_refuge_reading and palestinian_autochthony_reading collapses — the constraint would reclassify from tangled_rope (asymmetric coordination with extraction) toward snare (pure extraction hiding behind a dead coordination mandate). If axiom remains live, the reading remains structurally distinct.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the foundational axiom of mutual recognition is institutionally maintained or theatrically performed."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression of zionist_refuge and palestinian_autochthony readings structurally imposed (legal barriers, institutional censoring, security force prevention of speech/organizing) or internalized (the readings are culturally marginalized, diaspora-isolated, or intellectually incoherent within the dominant framework)?",
+      "resolution_mechanism": "Post-framework-collapse scenario: if suppression mechanisms are removed (state apparatus loses enforcement capacity, international order maintainers withdraw support), do excluded constituencies rapidly re-organize around zionist_refuge or palestinian_autochthony readings, or do the readings remain marginalized? Rapid re-organization indicates suppression is structural; continued marginalization indicates internalization.",
+      "impact": "If suppression is structural, the constraint's persistence depends on active state enforcement and international support — vulnerability to enforcement collapse. If suppression is internalized, the constraint is more resilient to enforcement decay because the readings lack cultural/intellectual traction independent of suppression. Mapping suppression mechanism affects prediction of the framework's stability under stress.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exclusion of competing readings is maintained by force or by cultural incoherence within the framework."
+    },
+    {
+      "id": "territorial_partition_1967_naturalness",
+      "question": "Is the 1967 boundary line a natural, inevitable, or mathematically optimal partition, or is it a historically contingent artifact of the 1967 War that appears inevitable only through familiarity?",
+      "resolution_mechanism": "Counterfactual historical analysis: what alternative boundary lines would have enabled mutual self-determination? If multiple boundary configurations could satisfy the founding problem, the 1967 line is contingent (not natural). If the 1967 line is unique or mathematically superior, it is closer to natural.",
+      "impact": "If the partition line is contingent, then the reading's second foundational axiom (territorial_partition_1967) is not structural to two-state coexistence — it is one political choice among many. This would weaken the reading's claim to naturalness and strengthen the argument that it is a particular extraction arrangement benefiting particular state apparatus, not an inevitable coordination solution. If the partition is optimal, the axiom is closer to structural.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the 1967 boundary has special status or is one arbitrary partition among many."
+    },
+    {
+      "id": "reading_relation_to_zionist_refuge_sibling",
+      "question": "What is the precise structural relationship from the two-state coexistence reading to the zionist_refuge reading: does mutual_legitimacy_1948 logically foreclose the zionist_refuge axiom (sole_Israeli_legitimacy), or do they coexist as incompatible but simultaneously-held positions by different actors?",
+      "resolution_mechanism": "Logical analysis: can a single institutional actor maintain both axioms without contradiction? If the answer is no (accepting mutual legitimacy precludes accepting sole legitimacy), the relation is forecloses. If yes (an actor can shift between them or hold them in different domains), the relation is coexists_with.",
+      "impact": "If forecloses: the engine will compute strong foreclosure when both readings' factbases are present, and the winning reading will be determined by cross-factbase coupling. If coexists_with: the readings are allowed to coexist as different institutional positions without logical conflict — the corpus will record both.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The logical structure of the relationship between this reading and the zionist-refuge-reading sibling."
+    },
+    {
+      "id": "reading_relation_to_palestinian_autochthony_sibling",
+      "question": "What is the precise structural relationship from the two-state coexistence reading to the palestinian_autochthony reading: does mutual_legitimacy_1948 logically foreclose the autochthony axiom (Palestinian_prior_legitimacy), or do they coexist as incompatible but simultaneously-held positions?",
+      "resolution_mechanism": "Logical analysis: can a single institutional actor maintain both axioms without contradiction? If the answer is no (accepting 1948 legitimacy for both precludes accepting Palestinian legitimacy as prior to 1948), the relation is forecloses. If yes (an actor can frame the legitimacies as sequential or domain-separated), the relation is coexists_with.",
+      "impact": "If forecloses: the engine will compute strong foreclosure and determine the winning reading by cross-factbase coupling. If coexists_with: the readings coexist as competing institutional positions without logical conflict.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The logical structure of the relationship between this reading and the palestinian-autochthony-reading sibling."
+    },
+    {
+      "id": "left_behind_minorities_status_ambiguity",
+      "question": "Are Palestinian citizens of Israel and Jewish settlers in Palestinian territories covered by the two-state framework's legitimacy partition, or are they structurally excluded by a framework designed for state-level legitimacy only?",
+      "resolution_mechanism": "Text analysis of framework documents, state practice, and institutional capacity: are minority-protection mechanisms built into the framework, or are minority statuses left to ad hoc state administration? If built-in, minorities are covered; if ad hoc, they are excluded.",
+      "impact": "If minorities are covered, the framework's victim set is smaller and extraction is more bounded. If minorities are excluded, they represent an unresolved distributional problem that the framework passes to state apparatus rather than solving — a sign of mandatrophy (the partition solves state-level legitimacy but leaves community-level legitimacy unresolved).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether minority protections are part of the framework's design or are left to ad hoc state administration."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "territorial_legitimacy_dual__zionist_refuge_reading",
+      "territorial_legitimacy_dual__palestinian_autochthony_reading"
+    ],
+    "dual_formulation_note": "The constraint territorial_legitimacy_dual instantiates THREE structurally distinct readings of the contested kernel: zionist_refuge_reading (Israeli legitimacy alone), palestinian_autochthony_reading (Palestinian prior legitimacy), and two_state_coexistence_reading (mutual recognition, this constraint). Each has its own ε value, beneficiary structure, type, and foundational axioms. They are linked through the kernel: accepting one reading's axioms forecloses or influences the others. The ε-invariance principle (DP-001) requires separate stories per distinct reading; they are unified by the network.affects_constraints edges, not by a single story with measurement parameters."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ],
+  "gain_flow": "israeli_state_apparatus",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "mutual_legitimacy_partition_1994",
+    "drift_state": {
+      "moment": "contemporary_2024",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "zionist_refuge_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "palestinian_autochthony_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mutual_legitimacy_1948",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "territorial_partition_1967",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "right_of_return_limited_to_palestinian_state",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

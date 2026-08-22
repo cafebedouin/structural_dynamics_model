@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "gold_fiat_transition_mechanism__creditor_discipline_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "5aa78254-08f4-4801-ad7a-cc3c2424721e",
+    "created_at": "2026-06-12T14:32:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.62,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bretton Woods to Fiat Transition: Creditor Discipline Mechanism Elimination",
+    "topic_domain": "monetary_economics/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "reserve_currency_issuer",
+      "debtor_nations"
+    ],
+    "victims": [
+      "creditor_nations",
+      "gold_reserve_holders"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "reading_vs_automatic_constraint",
+      "question": "Is the transition best understood as elimination of creditor disciplinary power (this reading's frame) or as replacement of a material constraint with an institutional discretion regime (the automatic_constraint_reading)?",
+      "resolution_mechanism": "Historical analysis of causal narratives in policy testimony and scholarly reconstruction: did policymakers frame the transition as restoring freedom from creditor pressure (creditor_discipline framing) or as replacing physical limits with central bank authority (automatic_constraint framing)? Do the two framings classify the same constraint or different constraints?",
+      "impact": "If this reading is correct, the constraint is high-ε extraction eliminating a balance-of-payments discipline mechanism; the beneficiary is the reserve issuer freed from discipline, the victim is the creditor nations losing veto leverage. If the automatic_constraint reading is correct, the constraint is a type change from material to institutional (different ε values, different victim structure). The framings may name different constraints entirely (ε-invariance test).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the transition eliminated creditor veto power or replaced a material constraint with discretionary institutional authority."
+    },
+    {
+      "id": "composite_overdetermination_vs_single_mechanism",
+      "question": "Did the creditor-discipline mechanism actually provide balance-of-payments discipline, or was the transition driven by multiple independent structural changes (telecommunications, capital flows, labor dynamics, legal tender enforcement) that happened to coincide at Nixon Shock?",
+      "resolution_mechanism": "Counterfactual analysis: if Nixon had not closed the gold window in 1971, would creditor-nation discipline have persisted (proving the mechanism was causal) or would other forces (capital mobility, wage pressure, technology) have forced the same outcomes independently?",
+      "impact": "If the mechanism was causal, this reading is structurally sound and the transition eliminated a real creditor veto. If overdetermined, the mechanism was already decaying; the reading misattributes agency to a constraint that was already becoming obsolete. The constraint's claimed_type and ε remain stable under this omega (both readings agree something changed), but the interpretation of what changed and why differs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether creditor discipline was a causal mechanism or a symptom of broader structural change."
+    },
+    {
+      "id": "reserve_currency_exceptionalism",
+      "question": "Did the transition eliminate creditor discipline uniformly for all nations, or only for the reserve-currency issuer (the US)?",
+      "resolution_mechanism": "Comparative historical analysis: trace balance-of-payments discipline for reserve-issuer (US) versus non-reserve debtor nations (UK, France, smaller debtors) through and after the transition. Do non-reserve nations retain balance-of-payments vulnerability to creditor pressure (through exchange-rate speculation, capital flight, foreign-exchange reserves requirements) while the reserve issuer escapes it?",
+      "impact": "If uniform elimination: this reading describes a global regime change with all debtor nations as beneficiaries. If selective: the constraint is tightened for non-reserve debtors (they remain disciplined via currency markets) while eliminated for the reserve issuer (it can print the reserve asset). The reading's ε and victim/beneficiary structure remain correct, but the spatial scope and directionality differentiation becomes sharper—non-reserve debtors may be victims of a different, market-based discipline replacing gold redemption.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the creditor-discipline elimination applied to all debtor nations or only reserve-currency issuers."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed",
+      "id_override": "creditor_discipline_extraction_t0_bretton_woods"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58,
+      "basis": "observed",
+      "id_override": "creditor_discipline_extraction_t4_late_sixties"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.71,
+      "basis": "observed",
+      "id_override": "creditor_discipline_extraction_t8_nixon_shock"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.76,
+      "basis": "observed",
+      "id_override": "creditor_discipline_extraction_t12_post_collapse"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.78,
+      "basis": "observed",
+      "id_override": "creditor_discipline_extraction_t16_petrodollar"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.78,
+      "basis": "observed",
+      "id_override": "creditor_discipline_extraction_t20_stabilized"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed",
+      "id_override": "creditor_discipline_suppression_t0_bretton_woods"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.48,
+      "basis": "observed",
+      "id_override": "creditor_discipline_suppression_t4_late_sixties"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.61,
+      "basis": "observed",
+      "id_override": "creditor_discipline_suppression_t8_nixon_shock"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.62,
+      "basis": "observed",
+      "id_override": "creditor_discipline_suppression_t12_post_collapse"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.62,
+      "basis": "observed",
+      "id_override": "creditor_discipline_suppression_t16_petrodollar"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62,
+      "basis": "observed",
+      "id_override": "creditor_discipline_suppression_t20_stabilized"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed",
+      "id_override": "creditor_discipline_theater_t0_bretton_woods"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.15,
+      "basis": "observed",
+      "id_override": "creditor_discipline_theater_t4_late_sixties"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.22,
+      "basis": "observed",
+      "id_override": "creditor_discipline_theater_t8_nixon_shock"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.26,
+      "basis": "observed",
+      "id_override": "creditor_discipline_theater_t12_post_collapse"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.28,
+      "basis": "observed",
+      "id_override": "creditor_discipline_theater_t16_petrodollar"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28,
+      "basis": "observed",
+      "id_override": "creditor_discipline_theater_t20_stabilized"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Bretton Woods system (1944–1971) anchored all currencies to the US dollar at fixed rates, and the dollar to gold at $35 per ounce. Nations accumulating dollar reserves could redeem them for gold, creating a creditor discipline mechanism: if a debtor nation (especially the US itself) ran persistent deficits, creditor nations could threaten or execute gold redemptions, forcing balance-of-payments correction. Nixon's suspension of gold redemption (August 1971) eliminated this mechanism, freeing the US and other reserve-currency issuers from the external discipline that had constrained fiscal policy. This reading frames that transition as a geopolitical power shift: creditor nations (especially France, Germany, and the UK) lost the veto power they had held over US monetary and fiscal autonomy; the reserve-currency issuer gained the ability to run deficits and monetize them without triggering a balance-of-payments crisis forced by gold runs. The constraint is understood as HIGH extractive because the discipline elimination enabled fiscal flexibility and seigniorage capture for the reserve issuer, while the same transition tightened financial discipline for non-reserve creditors (they could no longer rely on gold reserves to prevent currency speculation; they faced new currency-market-based discipline instead). This reading differs from the automatic_constraint_reading (which frames the transition as a replacement of physical constraint with institutional discretion) and the composite_overdetermination_reading (which denies Nixon Shock as causal, instead attributing the outcome to convergent structural forces). This is the CREDITOR_DISCIPLINE_READING: the focus is on who lost leverage, not on what physical constraint was replaced.",
+    "key_agents": [
+      "reserve_currency_issuer (US): The primary beneficiary — gains fiscal flexibility, loses gold redemption discipline, can print the reserve asset without balance-of-payments constraint",
+      "creditor_nations (France, Germany, UK): Primary victims — lose the gold redemption threat as leverage over US policy, face currency-market discipline instead",
+      "debtor_nations (non-reserve): Secondary beneficiaries (escape Bretton Woods peg discipline) but also secondary victims (become vulnerable to currency speculation, capital flight)",
+      "central_banks (as collective authority structure): The agenda-setter enforcing or dissolving the redemption mechanism",
+      "financial_markets (currency speculators): The excluded party that would have benefited from open capital flows; Bretton Woods peg maintained their exclusion"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.45 to 0.78 across the interval (t=0 Bretton Woods to t=20 post-Petrodollar regime). Early extractiveness is moderate because the creditor-discipline mechanism was still in force: yes, the US benefited from seigniorage, but the gold redemption threat constrained it. At t=8 (Nixon Shock), extractiveness jumps sharply to 0.71 as the redemption threat evaporates. At t=12–20, extractiveness stabilizes at 0.78 as the Petrodollar system (US deficits financed by oil-producer recycled petrodollars and recycled by US Treasury securities) replaces gold redemption as the mechanism for deficit financing—the extraction is now purely institutional, no longer constrained by a material redemption right. Suppression is moderate-high (0.38→0.62) because maintaining the system requires active enforcement: the US must deter creditor-nation currency diversification away from dollars, must maintain geopolitical dominance sufficient to make dollar hegemony credible, must suppress the emergence of alternative reserve assets (this is why the US blocked SDR expansion and later promoted petrodollar recycling). Theater is low-to-moderate (0.12→0.28) because the real function (enabling reserve-issuer fiscal autonomy) is straightforward; the performative layer is limited to the justification narratives (US Treasuries are safe, the dollar is stable, etc.) that maintain creditor-nation willingness to hold dollar reserves. The measured suppression is substantially lower than extractiveness because the system is not held together by force—it rests on the structural incentive for creditor nations to keep dollar reserves despite the discipline loss (they have no better alternative for capital deployment). Accessibility collapse is moderate (0.71) because creditor nations retain a theoretical exit (shift to an alternative reserve asset), but that exit is practically unavailable: no alternative asset had the scale, safety, or network liquidity of dollars in 1971. Resistance is moderate-high (0.55) because creditor nations resisted—France conducted a gold run in the 1960s, the Triffin dilemma was widely debated, there was serious discussion of alternative reserve arrangements—but the resistance failed because the reserve-issuer's dominance was too asymmetric.",
+    "directionality_logic": "The reserve_currency_issuer (US) is the primary beneficiary: it gains fiscal flexibility (can run deficits without gold-redemption discipline), retains seigniorage (the ability to mint the reserve asset), and captures the extraction through interest income on Treasury securities held by foreign governments and central banks. From this agent's position, d ≈ 0.2 (net beneficiary, though facing some currency-stability constraint). Creditor_nations (France, Germany, UK) are the primary victims: they lose the gold redemption leverage they had held over US monetary policy, must hold dollar reserves despite the discipline loss, and face the new currency-market-based discipline (speculation, capital flight risk) that the post-Bretton Woods regime introduced. From their position, d ≈ 0.85 (net targets, though they retain some choice in alternative assets and the choice to hold dollars). Debtor_nations (non-reserve issuers) experience the transition as mixed: they escape the Bretton Woods peg (which constrained them to fixed dollar exchange rates), so they gain short-term fiscal flexibility, but they immediately become vulnerable to currency-market discipline and capital flight (higher interest rates to defend currency). Their d is approximately 0.5 (symmetric: coordination benefit from reserve-asset existence, extraction cost from currency-market discipline). The analytical seat (competition authorities, academic economists, central bankers studying the transition) is observer. Suppression is higher for creditor nations than for non-reserve debtors: creditor nations cannot diversify away from dollars without losing geopolitical influence and market access; the US military and political dominance constrains their alternatives. Non-reserve debtors retain some exit (they can default on their debt, can dollarize—there is less suppression of their choice set). No directionality override is needed; the derived d values map cleanly from the beneficiary/victim declarations.",
+    "perspectival_gap": "From the reserve-issuer's seat (the US), the transition is a liberation: the constraint is understood as 'we gained fiscal autonomy and the ability to finance deficits through capital inflows rather than gold redemption.' From the creditor-nation seat (France, Germany), the same transition is a capture: 'we lost leverage over US policy and are now locked into dollar accumulation by the logic of capital markets.' The engine computes these as divergent directionality positions (d ≈ 0.2 for US, d ≈ 0.85 for France/Germany), which should produce different per-seat type classifications: the US might compute as snare-beneficiary or rope-beneficiary (depending on whether the suppression of alternatives is treated as part of the constraint), while France/Germany compute as snare-target (high extraction from holding unwanted dollars, no beneficial coordination function for them personally, constrained exit). The analytical seat—a central banker or economist observing the system—might classify the whole arrangement as a Tangled Rope: genuine coordination function (a stable reserve asset solves a real problem), but with extraction benefiting the issuer and victims among the dollar-hoarders. This perspectival divergence is not a flaw; it is exactly the signal the engine measures.",
+    "mandatrophy_analysis": "The founding problem was solved (in the automatic_constraint_reading framing): Bretton Woods was built to create predictable exchange rates and prevent the competitive devaluations of the 1930s. It succeeded: exchange rates were stable from 1944–1971. But its mandate was becoming obsolete by the 1960s—capital flows had grown larger than the fixed gold stock could support (the Triffin dilemma), and the original problem (1930s currency chaos) was no longer the driver of policy. In the creditor_discipline_reading framing, the founding problem was DIFFERENT: the constraint existed to discipline US deficits via the gold redemption threat. By that standard, the founding problem became politically CONTESTED in the 1960s (France questioned it publicly; US policymakers denied it existed) and was formally superseded in 1971 (Nixon closed the gold window). The base_properties.mandatrophy_resolved field should be TRUE: the Bretton Woods system was functionally obsolete by 1971, its founding mandate had shifted from 'prevent currency chaos' to 'discipline the reserve issuer,' and that shifted mandate was actively rejected. But the system persisted for several years after collapse in an informal fashion (dollar hegemony, petrodollar recycling), suggesting zombie institutional inertia. This reading resolves mandatrophy by acknowledging that the discipline function was the contested core, not the chaos-prevention function; once the discipline was eliminated, the system could no longer claim a mandate and devolved into pure extraction (dollar hegemony maintained by geopolitical dominance, not by any legitimate coordination function).",
+    "kernel_context": "This constraint is the CREDITOR_DISCIPLINE_READING of the contested kernel 'gold_fiat_transition_mechanism.' The kernel is the Bretton Woods system and its dissolution—a single persisting commitment (the dollar-gold peg, the fixed exchange-rate system, the redemption mechanism) that different parties read differently. The automatic_constraint_reading interprets the kernel as a MATERIAL CONSTRAINT (gold reserves limit money creation) being replaced by INSTITUTIONAL DISCRETION (central banks can print fiat). The composite_overdetermination_reading denies the kernel has any causal force—the transition was overdetermined by technology (capital mobility), politics (labor bargaining), and law (legal tender enforcement). The creditor_discipline_reading (this file) interprets the kernel as a GEOPOLITICAL DISCIPLINE MECHANISM (creditors can threaten gold redemption to constrain US deficits) being ELIMINATED (reserve issuer gains freedom, creditors lose leverage). Each reading names a different constraint: the automatic reading measures ε for 'material constraint replacement'; the overdetermination reading measures ε for 'technological/political convergence'; this reading measures ε for 'creditor-discipline elimination.' They are NOT three observations of the same constraint—they are three different constraints sharing a kernel. This reading's ε is high (0.78) because the discipline mechanism was effectively eliminated, enabling extractive fiscal flexibility for the reserve issuer. An alternative reading's ε would differ: if the automatic_constraint_reading is correct, its ε might be lower (the replacement of a physical constraint with discretionary authority is not inherently extractive—it could be coordination-enhancing). The sibling readings are documented in cs_structure.reading_relations below."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "gold_fiat_transition_mechanism__automatic_constraint_reading",
+      "gold_fiat_transition_mechanism__composite_overdetermination_reading",
+      "bretton_woods_fixed_exchange_rate_peg",
+      "petrodollar_recycling_regime",
+      "reserve_currency_seigniorage_extraction"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the gold-fiat transition kernel. The automatic_constraint_reading frames the same historical event as a replacement of material constraint with institutional discretion (different ε, different victim/beneficiary structure). The composite_overdetermination_reading denies the transition was caused by the discipline mechanism—it was overdetermined by capital mobility and labor dynamics. All three readings share the kernel (Bretton Woods system and its dissolution) but instantiate different constraints with different ε values and different structural interpretations. Network links document the family."
+  },
+  "stakeholders": [
+    {
+      "name": "reserve_currency_issuer",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The United States, as the issuer of the dollar and anchor of the Bretton Woods system. Sets the terms of monetary and fiscal policy, holds the gold reserve that backs the dollar, and ultimately makes the decision to suspend redemption. Under Bretton Woods, runs the risk of gold redemptions forcing policy correction. After 1971, gains the ability to run persistent deficits and finance them through capital inflows (Treasury securities held by foreign governments) without triggering a balance-of-payments crisis. The exit option is effectively irrelevant—the US cannot opt out of being the reserve issuer; instead, it captures or loses the extraction depending on whether the redemption mechanism exists."
+    },
+    {
+      "name": "creditor_nations",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "France, Germany, the UK, Japan, and other net creditors to the US. Under Bretton Woods, they accumulate dollar reserves and hold the implicit threat of gold redemption, which disciplines US fiscal policy. They experience the transition as loss of leverage: once Nixon closes the gold window, their threat is worthless, and they face a choice between holding dollars at below-market returns (financing US deficits) or diversifying into other currencies/assets (risking currency depreciation, market instability, and geopolitical tension with the US). Their exit is technically possible (they could refuse to hold dollars) but practically constrained (there is no alternative asset of sufficient scale and safety; refusing dollars risks economic isolation)."
+    },
+    {
+      "name": "debtor_nations_non_reserve",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Developing nations and non-reserve debtor nations. Under Bretton Woods, they are constrained to fixed exchange rates against the dollar, which limits their fiscal flexibility and forces balance-of-payments adjustment through deflation or capital inflows. After 1971, they gain the theoretical freedom to float their currencies, set independent monetary policy, and run deficits (financed by capital inflows). But they immediately face currency-market discipline: speculation, capital flight, and high interest rates to defend currency become the new constraining mechanism. Their exit is more mobile than creditor nations (they can dollarize, default, or float) but at the cost of reduced capital inflows and higher borrowing costs."
+    },
+    {
+      "name": "gold_reserve_holders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Private and institutional holders of gold (central banks, private investors, corporations). Under Bretton Woods, their gold holdings are implicitly backstopped by the US commitment to maintain the $35-per-ounce peg. After the suspension, the peg collapses, and the gold price floats. Holders with short positions or expectations of continued pegging lose wealth; holders with long positions gain. The key extraction is the destruction of the fixed-price option value—the certainty that gold is redeemable at $35/oz becomes worthless. They are trapped because reversing the transition would require re-establishing the Bretton Woods regime, which is economically and politically infeasible."
+    },
+    {
+      "name": "alternative_reserve_asset_proponents",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The International Monetary Fund (proposing Special Drawing Rights), the European Commission (later proposing the euro), and academic economists (proposing alternative reserve arrangements). They would have designed a multilateral reserve asset not tied to any single nation's currency, eliminating the reserve-issuer's exorbitant privilege and the creditor-nations' discipline loss. They are excluded because the reserve-currency issuer (US) has sufficient geopolitical power to suppress alternatives and because existing dollar-holder incentives favor maintaining the status quo (no better alternative exists). Their exclusion is the suppression mechanism: the reserve issuer prevents the emergence of competitive reserve assets through policy (US opposition to SDR expansion) and geopolitical leverage (dollar dominance reinforced by military/political power)."
+    },
+    {
+      "name": "currency_speculators",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Financial traders and capital-flow managers. Under Bretton Woods fixed rates, they are largely excluded from profitable arbitrage (rates are pegged, capital flows are controlled). After 1971, they become the NEW ENFORCEMENT MECHANISM for discipline: they can short currencies, force devaluations, and impose discipline through speculation that Bretton Woods creditor nations could never achieve through gold redemption. Their exclusion under Bretton Woods is the cost of the fixed-peg system; their inclusion after 1971 is both a liberation (new profit opportunities) and a new source of discipline for debtor nations."
+    },
+    {
+      "name": "central_banking_community",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The collective of central banks (Federal Reserve, Banque de France, Bundesbank, etc.) that collectively decide whether to defend the Bretton Woods peg. As gold reserves deplete and capital flows pressure the peg, they face a choice: collectively restore credibility (via massive intervention and policy coordination), or allow the system to collapse. They choose collapse—by refusing to intervene massively in 1971, they ratify Nixon's unilateral decision to suspend redemption. Their analytical stance reflects that they see the system as having become untenable; the transition is treated as inevitable, not engineered."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Stable exchange rates and a single trusted reserve asset eliminate currency chaos, reduce hedging costs, and enable confidence in international capital flows. The Bretton Woods system solves the problem of the 1930s (competitive devaluations, currency instability) by anchoring all currencies to a single asset (gold) and enforcing fixed parities through the commitment to redeem dollars for gold. This is a genuine coordination function—if the peg collapses, nations face uncertainty, hedging costs rise, and capital flows become unstable.",
+    "transfer_function": "Moves the benefit of seigniorage and capital inflows from the global system to the reserve-currency issuer (US). Under Bretton Woods, the US gains seigniorage (prints dollars backed by gold, issues them at face value) but loses credibility if the redemption threat is executed (gold runs drain reserves, forcing policy correction). After 1971, the US captures full seigniorage and can finance deficits through capital inflows (foreign governments and central banks hold dollars to solve their own reserve needs, funding US fiscal policy at below-market interest rates). Creditor nations transfer their accumulated dollar reserves into a below-market return asset, financing US deficits. The transfer is from creditor nations to the US reserve issuer, mediated by the elimination of the gold redemption threat.",
+    "absent_voices": "Alternative-reserve-asset proponents and currency speculators would object if invited to the original Bretton Woods design. The alternative proponents would argue for a multilateral reserve asset (SDR, etc.) that eliminates the reserve-issuer's exorbitant privilege. Currency speculators would argue for floating rates that allow arbitrage and eliminate the fixed-peg constraint. Both groups are structurally excluded under Bretton Woods: the reserve issuer (US) suppresses alternatives (opposes SDR expansion), and the fixed-peg system removes profitable speculation opportunities. After 1971, speculators enter the picture as the new enforcement mechanism (currency market discipline), while the alternative-reserve proponents remain excluded (the dollar re-establishes its dominance through geopolitical leverage and the petrodollar system).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the gold-redemption discipline mechanism had persisted (or if it were restored), the US would face severe balance-of-payments constraints. Persistent deficits would trigger gold runs; creditor nations could execute redemptions to drain US gold reserves, forcing massive policy correction (either through deflation, capital controls, or currency devaluation). This would have prevented the massive deficits and capital outflows that characterized US policy from 1971 onward. The post-Bretton Woods world (petrodollar recycling, US Treasury dominance, currency-market discipline replacing gold redemption) would not have emerged. Instead, either a reformed Bretton Woods peg (with expanded gold supplies or a different anchor asset) would have persisted, or nations would have floated to market-clearing exchange rates earlier (without the reserve-issuer's deficit financing).",
+    "founding_problem": "The gold-backed Bretton Woods system was designed to solve two problems: (1) eliminate the competitive devaluations and currency chaos of the 1930s (the stated founding problem), and (2) discipline the reserve-currency issuer by imposing a hard constraint on deficit spending (the implicit founding problem for creditor nations). By the 1960s, problem (1) had been solved—exchange rates were stable, currency speculation was minimal. But problem (2) became contested: the US began running persistent deficits (Vietnam War, Great Society spending), and creditor nations began to question whether continued dollar accumulation served their interests. The Triffin dilemma captured the tension: if the US ran deficits to supply the world with needed reserve currency, eventually creditors would accumulate so many dollars that redemption threats would become credible, forcing correction; but if the US ran surpluses to prevent inflation and maintain gold backing, the world would face insufficient reserve liquidity.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The finding problem is contested by all major parties. The US and academic economists sympathetic to the reserve-issuer argued that problem (1) was solved and the system should be reformed to allow larger capital flows and independent monetary policy (this group supported floating rates or a reformed Bretton Woods). European creditor nations argued that problem (2) remained live—the US was using its reserve-issuer privilege to run deficits at their expense, and the discipline mechanism should be strengthened (France and Germany advocated for alternative reserves or reformed pegging). International institutions (IMF, World Bank) documented both problems in contemporaneous reports and testimony. Non-aligned nations and academic development economists argued the system imposed discipline on all debtor nations and should be replaced with a truly multilateral reserve system. The consensus outside the US beneficiary seat was that the system's founding problem (currency chaos) had been solved, but its hidden purpose (reserve-issuer discipline via gold redemption) had become the real battleground. Scholarly sources outside the benefiting party: Triffin (1960), Kindleberger (1993), Steil (2013)—all confirm the shift from founding problem solved to mandate obsolete but extraction persisting."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "bretton_woods_creditor_discipline",
+    "drift_state": {
+      "moment": "post_nixon_shock_petrodollar_era",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "automatic_constraint_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "composite_overdetermination_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creditor_redemption_threat_disciplines_reserve_issuer",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "creditor_nations_lose_geoeconomic_leverage_post_1971",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "reserve_currency_issuer",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "bretton_woods_fixed_exchange_rate_peg",
+      "reserve_currency_seigniorage_extraction"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

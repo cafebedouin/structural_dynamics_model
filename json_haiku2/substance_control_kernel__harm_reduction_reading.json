@@ -1,0 +1,400 @@
+{
+  "header": {
+    "constraint_id": "substance_control_kernel__harm_reduction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "88b25551-3ece-4d42-b6ce-85ee2fabd956"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.41,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Harm Reduction Substrate Control (Health Paternalism + Supply Criminalization)",
+    "topic_domain": "public_health/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_institutions",
+      "harm_reduction_service_providers",
+      "treatment_infrastructure"
+    ],
+    "victims": [
+      "people_with_substance_use_disorder",
+      "informal_supply_operators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "people_with_substance_use_disorder",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Subject to health paternalism: mandatory treatment offers, surveillance via health systems, required participation in managed care to access medication-assisted treatment (MAT), needle exchange programs, overdose prevention services. Simultaneously, they are decriminalized at point of use — possession of small quantities for personal consumption is treated as health matter, not criminal offense. However, they remain trapped in the constraint because identity as 'person with addiction' is fused with the care system itself (treatment is the only path to managed use); exit would mean unmanaged use with higher overdose risk. They benefit from harm reduction services (overdose prevention, infection prophylaxis, MAT access) but at cost of lifelong managed status and intimate state surveillance."
+    },
+    {
+      "name": "public_health_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Set the harm reduction agenda: define what counts as acceptable intervention (MAT, naloxone distribution, supervised consumption sites, testing services), allocate funding to treatment and prevention, conduct surveillance of overdose mortality and disease transmission, and adjudicate which substances and which forms of use qualify as 'health problems' requiring intervention. They frame the arrangement as scientific and compassionate—evidence-based health response rather than punishment. They directly benefit from the growth in treatment infrastructure funding and institutional authority over addiction management."
+    },
+    {
+      "name": "harm_reduction_service_providers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "NGOs, clinics, and community health workers who operate needle exchange, overdose prevention sites, MAT clinics, and peer support services. They benefit from stable funding streams tied to harm reduction mandates, and they gain professional authority as experts in the field. Their work is meaningful and evidence-based, but their institutional survival depends on maintaining the harm reduction framing of substance use as a health problem requiring managed intervention rather than individual choice."
+    },
+    {
+      "name": "informal_supply_operators",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Street-level dealers, darknet vendors, unlicensed manufacturers of non-pharmaceutical substances. Under harm reduction reading, they remain criminalized—supply chain interdiction continues, manufacturing penalties remain severe, distribution is felony. The constraint decriminalizes use and treats users as health clients, but criminalizes supply to preserve public health authority. These operators have no exit: their activity is illegal by definition under this reading."
+    },
+    {
+      "name": "treatment_infrastructure",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The system of MAT clinics, supervised consumption sites, naloxone distribution networks, harm reduction training, and epidemiological monitoring. It is not an agent but a reified outcome of the constraint—it grows in capacity and legitimacy under the harm reduction reading. It would not exist at this scale under prohibition (minimized treatment offered) or legalization (treatment becomes market service, not public health mandate)."
+    },
+    {
+      "name": "criminal_justice_system",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Shifts from primary enforcement mechanism for user possession to supply chain interdiction and harm reduction surveillance. Police and prosecutors redirect prosecution toward suppliers; prisons redeploy capacity. Courts manage treatment-as-alternative-to-incarceration pathways. The system remains extractive (maintains arrest authority over users for violations of treatment conditions, probation conditions, or continued supply involvement) but reduces direct incarceration of users. CJ maintains control over coercive authority (treatment conditions, monitoring, breach penalties) while appearing to step back from punishment."
+    },
+    {
+      "name": "legalization_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that harm reduction is disguised paternalism—that users should decide their own risk management, and that treating use as a health problem requiring managed intervention is state overreach. They are excluded from setting the agenda (the harm reduction reading has institutional authority). Their position: decriminalization of supply and user autonomy in risk management would be more protective of freedom than health-mandated intervention."
+    },
+    {
+      "name": "prohibition_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that harm reduction normalizes addiction and that treatment should be coercive and abstinence-focused. They view supply criminalization alone as insufficient—users themselves should face arrest and mandatory abstinence-based treatment. They are excluded from the agenda under this reading (decriminalization of use is locked in). Their position: decriminalization enables continued substance use rather than driving treatment."
+    },
+    {
+      "name": "epidemiological_evidence",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The scientific data showing overdose mortality reduction, disease transmission reduction (HIV, hepatitis C), and treatment engagement rates under harm reduction versus abstinence-only or prohibition models. This evidence is cited as the legitimating frame for the entire reading: 'harm reduction works by the metrics we care about.' The evidence is interpreted through the reading itself (what counts as success is defined by harm reduction premises)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates public health response to substance use: centralizes treatment access, disease surveillance, overdose prevention, and medical management of addiction under unified health authority. Without the constraint, substance use management would fragment across underground markets (prohibition) or individualized medical/commercial markets (legalization), losing public health coordination of contagion risks and mortality.",
+    "transfer_function": "Transfers state authority and institutional legitimacy from criminal justice to public health: users are moved from criminal defendant status to health client status. Simultaneously, transfers resources (treatment funding, infrastructure investment) from enforcement budgets to health budgets, and transfers operational authority from police/prosecutors to clinicians and public health officials. Users remain subject to state intervention but the intervention mechanism shifts from punishment to paternalistic management.",
+    "absent_voices": "People who use drugs autonomously (not engaged in treatment) are excluded—they are the implicit problem the system is designed to intervene on and bring into managed care. Legalization advocates (who would argue for user autonomy in risk management) are structurally excluded by the reading's own premises. Informal supply operators have no seat at the table. Low-income communities where enforcement often recedes unevenly are not represented in agenda-setting.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If harm reduction infrastructure vanished overnight, overdose mortality would rise sharply (no naloxone distribution), disease transmission would accelerate (no needle exchange), treatment engagement would collapse (MAT clinics closed), and the arrangement of substance use management would revert either to prohibition (criminal enforcement surge) or fragmented legalization (market-based services). The entire coordination of public health response would reorganize.",
+    "founding_problem": "Injection drug use was causing epidemics of HIV and hepatitis C transmission; overdose mortality from heroin was rising; criminal punishment was failing to reduce use and was creating additional harms (incarceration, stigma, exclusion from treatment). Harm reduction emerged as a pragmatic public health response: keep people alive while managed, reduce disease transmission, increase treatment engagement by removing criminal barriers to accessing care.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Public health epidemiologists, harm reduction researchers, and addiction medicine physicians attest the founding problem remains live and that harm reduction interventions measurably reduce overdose mortality and disease transmission (comparative outcome data from harm reduction jurisdictions vs. prohibition-heavy jurisdictions). Legalization advocates contest the framing—arguing the problem is state overreach, not inadequate management. Prohibition advocates contest effectiveness, citing persistent use rates and arguing harm reduction enables continued addiction rather than driving recovery. Evidence base is cited by public health, but the interpretation of what counts as 'solving the problem' is reading-dependent."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.41,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "paternalism_vs_autonomy_kernel_contest",
+      "question": "Is treating substance use as a health problem requiring managed intervention a legitimate reading of public health authority, or is it disguised paternalism that violates user autonomy?",
+      "resolution_mechanism": "This ambiguity is CONSTITUTIVE of the kernel contest itself. The three readings (harm reduction, legalization, prohibition) each answer differently. No empirical resolution exists—the question is fundamentally about how much autonomy is owed to individuals and what role the state should play in managing risk on behalf of its citizens.",
+      "impact": "This is the core axis of the reading: harm reduction asserts health paternalism is justified by public health evidence and outcomes; legalization asserts user autonomy overrides health paternalism; prohibition asserts moral authority overrides autonomy. The reading's legitimacy depends on accepting the harm reduction answer.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Whether health paternalism in substance use management is a legitimate expression of state authority or an illegitimate override of individual autonomy."
+    },
+    {
+      "id": "supply_criminalization_persistence",
+      "question": "Why does harm reduction maintain criminal prohibition of supply while decriminalizing use? Is this structurally necessary or operationally convenient?",
+      "resolution_mechanism": "Compare jurisdictions with supply decriminalization (Portugal, Switzerland partial models) to those with supply criminalization + use decriminalization. Measure whether public health outcomes (overdose mortality, disease transmission, treatment engagement) differ materially based on supply criminalization status.",
+      "impact": "If supply decriminalization produces better public health outcomes, the continued supply criminalization is unwarranted paternalism. If outcomes are substantially equivalent, supply criminalization is revealed as enforcement convenience (maintaining police/prosecutor roles) rather than public health necessity. If outcomes are worse with supply decriminalization, supply criminalization is justified by empirical evidence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supply criminalization is public health necessity or enforcement inertia."
+    },
+    {
+      "id": "identity_lock_trajectory",
+      "question": "For individuals in long-term harm reduction management, does identity fusion with treatment ('person with addiction' as permanent status requiring managed care) perpetuate dependence on the system, or does it stabilize harm and enable autonomous functioning within the constraint?",
+      "resolution_mechanism": "Longitudinal studies of individuals exiting harm reduction systems: do they sustain autonomous unmanaged use, or do they return to treatment? Are there cohorts that achieve autonomous use without formal treatment engagement? Post-exit suppression measurements.",
+      "impact": "If identity lock perpetuates system dependence beyond clinical necessity, the extraction component of the constraint is higher than the public health benefit suggests. If exit outcomes show harm escalates, identity lock is protective even if it feels confining.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether lifelong managed status is necessary for harm reduction or is over-reach."
+    },
+    {
+      "id": "reading_instantiation__harm_reduction_vs_sibling_readings",
+      "question": "This constraint instantiates harm reduction as a specific reading of the substance control kernel. The sibling readings (legalization, prohibition) are distinct constraints with different ε values, different beneficiary/victim structures, and different type classifications. What structural features of THIS reading distinguish it from the siblings?",
+      "resolution_mechanism": "The reading defines its core commitments in cs_structure.axioms (health paternalism justified by evidence; user decriminalization with supply criminalization). The axioms are unique to this reading. Sibling readings hold different axioms. The engine computes per-reading type classifications from the structural data; divergence from the siblings is the measurement.",
+      "impact": "This omega documents the committer-frame structure (Rule 2): routing the contest into omega variables rather than inventing fields. The contest is real, the readings are distinct, and the engine's per-reading classification is the apparatus for measuring the structural differences.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel contest: harm reduction reading vs. legalization and prohibition readings."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Harm reduction is one reading of the contested kernel 'what is substance use and how should the state respond?' Under this reading, substance use is a health condition (not moral transgression, not purely individual choice matter). The state's role is pragmatic health intervention: reduce overdose mortality, disease transmission, and social harms; engage users in managed care; decriminalize possession; criminalize supply to preserve public health authority. Users are moved from criminal defendants to health clients, but this shift embeds them in lifelong paternalistic management. The constraint coordinates public health response but extracts from users through identity fusion with treatment status and from supply operators through continued criminalization. The claim is Tangled Rope: genuine coordination function (public health response) + asymmetric extraction (users and suppliers bear costs for health authority growth; public health institutions benefit from expanded mandate).",
+    "key_agents": [
+      "people_with_substance_use_disorder: Primary targets of the constraint; decriminalized but identity-locked to managed care",
+      "public_health_institutions: Agenda setter; benefits from expanded authority and treatment infrastructure",
+      "harm_reduction_service_providers: Beneficiaries; gain professional authority and stable funding",
+      "informal_supply_operators: Victims; remain criminalized under this reading",
+      "criminal_justice_system: Shifted role; maintains surveillance/coercion authority via treatment conditions",
+      "legalization_advocates: Excluded; argue for user autonomy",
+      "prohibition_advocates: Excluded; argue for abstinence-focused coercion"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.62 at interval end) because the constraint transfers authority and resources to health institutions while keeping users in managed status indefinitely (identity_locked exit prevents autonomous choice). The rising trajectory (0.45 → 0.62 over 40 years) models institutional mission creep: harm reduction infrastructure grows, managed care becomes more comprehensive, and the scope of 'health problems' requiring intervention expands (behavioral health, mental health co-morbidities, housing stability become conditions of treatment receipt). Suppression is moderate (0.41) because users are decriminalized at point of use, but this is offset by surveillance through health systems (data on prescribing, clinic attendance, urine screens) and coercive treatment conditions (breach penalties, probation conditions tied to treatment compliance). Theater is moderate-low (0.28) because the core public health interventions are evidence-based and functionally real (naloxone distribution demonstrably saves lives; MAT reduces relapse; needle exchange reduces disease transmission), but an increasing share of the constraint's operation is aesthetic ('treatment is the answer') rather than functional (users choosing to avoid treatment are sanctioned). Accessibility_collapse is moderate (0.48): alternatives exist (unmanaged use, black-market supplies, illicit manufacturing) but are risky and increasingly stigmatized once the health paternalism reading is institutionalized. Resistance is high (0.72): users resist treatment conditions, informal suppliers resist enforcement, legalization advocates and prohibition advocates both contest the reading's premises.",
+    "perspectival_gap": "From the public health institution's seat, harm reduction is clearly coordination—they solved a real epidemiological crisis (HIV transmission, overdose mortality) using evidence-based interventions. From the person with substance use disorder's seat, the same structure is extractive paternalism: decriminalization is offset by lifelong managed status, mandatory treatment participation, and intimate surveillance. From the informal supply operator's seat, it is pure snare—supply is criminalized while use is not, so the operator bears all enforcement costs for a market that public health claims to be managing. From the legalization advocate's seat, it is extractive overreach—users are denied autonomy in risk management. The engine computes these per-seat types from the structural data (power, exit_options, beneficiary/victim status). The authored claim (Tangled Rope) asserts genuine coordination function + extraction; the metrics (moderate-high ε, moderate suppression, moderate theater) are consistent with that claim; the per-seat computations will diverge (public health sits as beneficiary with low d; users sit as identity-locked payers with high d).",
+    "directionality_logic": "Public health institutions: Beneficiary role, institutional power, arbitrage exit (they can redefine the harm reduction agenda, shift resources between interventions, appeal to evidence to resist pressure). Directionality near 0.0 (full beneficiary). People with SUD: Payer role, powerless, identity_locked exit (their survival depends on engagement with the constraint; they cannot exit without reputational/medical/legal consequences). Directionality near 1.0 (full target). Harm reduction service providers: Beneficiary role, moderate power, constrained exit (they need the harm reduction mandate to fund their work, but they could in principle shift to legalization-model work or prohibition-model work). Directionality near 0.2 (strong beneficiary). Supply operators: Payer role, powerless, trapped exit (their activity is illegal by definition; no pathway to legitimacy under this reading). Directionality at 1.0 (full target). The overrides are not needed—the structural derivation from roles + exit handles the directionality accurately.",
+    "mandatrophy_analysis": "Mandatrophy is LIVE for this constraint. The founding problem (HIV epidemics, overdose mortality from prohibition-era heroin) is substantially solved in harm reduction jurisdictions (disease transmission has fallen, overdose mortality is manageable with naloxone and MAT, treatment engagement is higher than under prohibition). Yet the constraint persists and expands (treatment infrastructure grows, managed care mandates become more comprehensive, supply criminalization is maintained). The six_questions data shows founding_problem_status = contested; prohibition advocates argue the problem was exaggerated or solved by other means, legalization advocates argue the problem is paternalism not inadequate management. The divergence between (founding problem solved / contested) and (disappearance_verdict = world_rearranges) suggests the constraint has accumulated secondary functions (institutional authority, funding streams, surveillance capability) that now sustain it independently of the founding health emergency. Theater_ratio is moderate (0.28) consistent with partial mandatrophy—the core public health interventions work, but increasing share of enforcement is theatrical (treatment as condition of liberty, surveillance as health management rather than disease prevention). The constraint should be monitored for the type drift that marks true mandatrophy: if theater_ratio rises above 0.5 while base_extractiveness plateaus, the arrangement has inverted (maintenance of authority, not health coordination).",
+    "kernel_context": "This constraint is the 'harm_reduction_reading' of the contested kernel 'substance_control_kernel'. The kernel is the standing commitment: the state manages substance use in the public health interest. Three readings are live: (1) harm_reduction_reading (this constraint): substance use is health condition, users are decriminalized, supply is criminalized, intervention is managed care; (2) legalization_reading (sibling): substance use is individual liberty, state intervenes only on third-party harms, supply and use are market goods; (3) prohibition_reading (sibling): substance use is moral transgression, state enforces abstinence through criminal punishment for users and suppliers. Each reading has different ε (harm reduction is moderate-high; legalization is lower because it removes state extraction; prohibition is high because enforcement is maximized), different beneficiary structures (harm reduction benefits health institutions; legalization benefits suppliers and users; prohibition benefits enforcement and abstinence-focused institutions), and different type classifications (harm reduction is Tangled Rope; legalization is Rope or Mountain depending on how third-party harms are managed; prohibition is Snare). The readings coexist across jurisdictions (some places have harm reduction, some legalization, some prohibition) and across parties within jurisdictions (harm reduction advocates, legalization advocates, and prohibition advocates all hold live positions in public discourse). No single framework holds all three—they are fundamentally alternative commitments about the state's role in managing risk on behalf of citizens."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_kernel__prohibition_reading",
+      "substance_control_kernel__legalization_reading",
+      "opioid_supply_chain_criminalization",
+      "treatment_access_as_coercive_condition"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a three-way kernel contest (substance_control_kernel). The harm_reduction_reading (this file) treats substance use as health condition with managed intervention; the legalization_reading treats it as individual liberty; the prohibition_reading treats it as moral transgression requiring punishment. Each reading has distinct ε, beneficiary/victim structure, and type. The readings coexist—different jurisdictions and different parties within jurisdictions hold different readings simultaneously. They are linked via network.affects_constraints because the validity of one reading undermines the others' legitimacy claims (if harm reduction works by public health metrics, prohibition's claim that criminalization is necessary fails; if legalization produces better autonomy outcomes, harm reduction's paternalism is overreach). The constraint family is: three kerneled readings + two derivative constraints capturing the institutional lock-in (treatment as coercive condition, supply criminalization persistence)."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "legalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "substance_use_is_health_condition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "health_paternalism_justified_by_harm_evidence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "user_decriminalization_supply_criminalization",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "public_health_authority_harm_reduction_mandate",
+    "drift_state": {
+      "moment": "contemporary_expansion_of_managed_care_scope",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "public_health_institutions",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

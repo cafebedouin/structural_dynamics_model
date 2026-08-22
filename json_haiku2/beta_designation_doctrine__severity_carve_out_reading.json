@@ -1,0 +1,343 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__severity_carve_out_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a233e4f6-2512-49f2-94c3-b2dffc01fab9"
+  },
+  "base_properties": {
+    "extractiveness": 0.31,
+    "suppression": 0.18,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.58,
+    "claimed_type": "mountain",
+    "human_readable": "Beta Designation Severity Carve-Out: Unavailability in Critical Systems",
+    "topic_domain": "technology_law/product_liability/consumer_protection",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "consumer_safety_advocates",
+      "regulatory_authorities",
+      "critical_infrastructure_users"
+    ],
+    "vindicated_propositions": [
+      "harm_severity_principle",
+      "structural_duty_doctrine",
+      "non_contractable_safety"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "consumer_safety_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Argue that contractual liability waivers cannot override physical safety imperatives. Advance a normative doctrine that certain domain-specific harms (death, financial ruin, critical infrastructure failure) are categorically non-waivable. Their position is that beta status is a disclosure mechanism for genuine testing phases, not a universal shield against liability for known defects in critical systems. They benefit from a ruling that restricts beta availability in high-stakes domains because it re-anchors liability allocation to harm severity rather than contractual form."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce safety standards (FDA for medical devices, FAA for flight systems, SEC/OCC for financial services, NTSB for infrastructure). Each domain has discovered that beta designation can be abused to avoid accountability for foreseeable harm. They set the doctrine that beta is unavailable in their regulated domains regardless of the vendor's testing claim. Their authority derives from the standing legal principle that no contract can waive duty of care where systemic harm to third parties is at stake."
+    },
+    {
+      "name": "software_vendors",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Seek the ability to deploy experimental or incremental features under beta designation, with associated liability limitation, even in critical domains. They argue that the line between testing and production is economically arbitrary and that rapid iteration is the competitive necessity in software markets. The carve-out constrains their ability to limit liability in domains like medical software, aviation systems, and financial platforms. They remain subject to product liability even if they disclose the beta status."
+    },
+    {
+      "name": "critical_infrastructure_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate hospitals, power grids, financial networks, and transportation systems. They depend on software and cannot accept indefinite liability waivers for components that could fail catastrophically. They benefit from the rule that vendors cannot deploy untested or partially-tested code under beta designation in their critical paths. They also bear the cost of vetting software more carefully and of driving remediation when defects are discovered, because the liability cannot be waived."
+    },
+    {
+      "name": "end_users_critical_domains",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Have no choice in the software that runs their hospital systems, their financial accounts, their aviation systems, or their power supply. They cannot opt out of beta-deployed code even if they know it carries experimental risk. The carve-out prevents vendors from using beta designation to contractually escape liability for harm to them. They benefit because harm cannot be pre-waived; instead, the constraint forces vendors to meet a higher bar before deployment in critical domains."
+    },
+    {
+      "name": "competing_vendors_non_critical",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operate in non-critical domains (productivity software, entertainment, social platforms) where beta designation remains available. They are not directly constrained by the carve-out because it does not apply to their market. However, they are excluded from a voice in the kernel contest about what counts as critical and whether the carve-out should expand to their domains. They would argue for narrower definitions of criticality and longer beta windows."
+    },
+    {
+      "name": "liability_insurers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Provide product liability and professional liability coverage for vendors. They assess risk based on contractual carve-outs and liability waivers. The constraint forces them to price risk higher for vendors serving critical domains because beta designation is unavailable as a risk-allocation mechanism. They observe the doctrine but do not set it; their pricing adjusts to reflect the constraint."
+    },
+    {
+      "name": "legal_doctrine_traditionalists",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Represent a jurisprudential tradition holding that contractual freedom is paramount and that parties should be able to allocate any risk they agree to, even in critical domains. They argue the carve-out violates freedom of contract and creates an unjustifiable categorical exception. They are excluded from direct enforcement of the doctrine but contest it through litigation and scholarship."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Separates domains by risk severity and coordinates liability allocation so that harm severity takes precedence over contractual form. Software vendors can still use beta designation in non-critical domains; the carve-out is domain-specific. This enables rapid iteration in low-stakes markets while forcing due diligence in high-stakes ones.",
+    "transfer_function": "Moves liability (and the cost of managing it) from vendors to regulatory authorities and critical infrastructure operators in high-stakes domains. Vendors cannot contractually transfer the risk of harm; instead, they must manage the risk through more rigorous testing and vetting before deployment. The doctrine transfers authority to define criticality from vendors to domain regulators.",
+    "absent_voices": "Vendors in non-critical domains have limited incentive to contest the carve-out because it does not constrain them. However, upstream vendors (component manufacturers, platform providers) that sell into both critical and non-critical domains are partially constrained and excluded from the voice of smaller vendors whose only market is non-critical domains; their interests pull in different directions and the carve-out aggregates them all under one rule. The expansive_shield_reading represents the excluded vendor voice advocating for unlimited beta availability everywhere.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the carve-out vanished, vendors would deploy experimental software under beta designation in hospitals, financial systems, and power grids with full liability waivers. Critical infrastructure operators would face catastrophic risk they could not contractually escape. Regulatory authorities would lose the doctrinal anchor they use to enforce minimum safety standards. The deployment practices, insurance models, and regulatory enforcement would all reorganize around a contractual-freedom baseline.",
+    "founding_problem": "Beta designation was originally a disclosure mechanism for genuine testing phases, signaling incremental deployment and inviting user feedback. Over time, vendors in high-stakes domains (medical software, aviation systems, financial platforms) began using beta status indefinitely as a blanket liability waiver, creating a moral hazard where vendors could avoid accountability for foreseeable harm by simply labeling code as experimental. The doctrine emerged to restore beta to its original function: a time-bounded testing disclosure, not a universal liability shield.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Regulatory authorities (FDA, FAA, SEC, OCC) attest the founding problem is actively present: vendors routinely attempt to deploy substantially untested code in critical systems under beta designation with liability waivers. Consumer safety advocates cite case law and regulatory enforcement where courts and agencies have rejected beta status as a defense in critical domains. Independent analysis of failure reports in medical and aviation software shows patterns of vendors claiming beta status for code that caused foreseeable harm. No corroborating source from the vendor community attests the problem remains live; vendors argue instead that the problem is overstated and that contractual freedom should permit beta deployment everywhere."
+  },
+  "omegas": [
+    {
+      "id": "domain_criticality_boundary",
+      "question": "What metric or test determines whether a domain qualifies as critical for the purposes of the carve-out, and does that boundary hold across jurisdictions and over time?",
+      "resolution_mechanism": "Regulatory harmonization and comparative legal analysis: comparing how FDA, FAA, banking regulators, and infrastructure operators define criticality reveals whether the boundary is stable and coherent or contested and shifting. Future litigation over adjacent domains (AI systems, autonomous vehicles, medical IoT) will probe whether the carve-out applies or does not.",
+      "impact": "If the boundary is contested, the constraint's scope is ambiguous and vendors can argue beta should be available in newly-critical domains. If the boundary is stable and widely enforced, the constraint applies predictably and vendors cannot use marginal criticality arguments to escape it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether domain criticality is coherently defined and durably enforced."
+    },
+    {
+      "id": "harm_severity_vs_contractual_freedom",
+      "question": "Can harm severity genuinely override contractual freedom, or does the carve-out represent a value-preference masquerading as a natural constraint?",
+      "resolution_mechanism": "This is a jurisprudential question. The severability of the carve-out depends on whether one believes harm severity is a constraint on contract (physical reality: certain harms are non-waivable because they affect third parties) or a normative policy choice (legal tradition: we choose to override contractual freedom for critical domains). The reading presented here assumes the former; the expansive_shield_reading assumes the latter.",
+      "impact": "If harm severity is indeed a non-contractable constraint, the carve-out is a mountain and persists regardless of vendor preference. If it is a normative choice, the carve-out is a scaffold or temporary policy, subject to revision if the normative consensus shifts.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the carve-out is structurally necessary (harm-based) or normatively chosen (value-based)."
+    },
+    {
+      "id": "natural_law_vs_constructed_doctrine",
+      "question": "Is the carve-out a discovered law of liability (harm severity constrains contracts naturally) or a constructed legal doctrine (regulators and courts built this interpretation)?",
+      "resolution_mechanism": "Historical analysis: legal traditions and jurisdictions differ in whether they recognize a non-contractable safety duty. Some traditions ground duty in contract only; others ground it in tort and strict liability. No single universal answer exists across legal systems. The constraint is constructed by legal doctrine, not discovered in nature.",
+      "impact": "If constructed, the carve-out is vulnerable to reversal or narrowing by legal evolution or political change. If natural, it is durable because it reflects an irreducible feature of harm causation. The authoring here assumes it is a (culturally anchored) natural constraint within a particular legal tradition, triggering the mountain classification and FSM evaluation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the carve-out is a discovered constraint or a constructed legal doctrine."
+    },
+    {
+      "id": "beta_designation_kernel_ambiguity",
+      "question": "Is beta designation itself a liability mechanism or a disclosure mechanism, and does that distinction determine whether the carve-out applies?",
+      "resolution_mechanism": "Textual and historical analysis of how beta status originated and how it is used in practice. If it began as pure disclosure (announcing testing phase) and vendors later appropriated it as a liability shield, the question is whether the original function is the true referent or whether the appropriated function now defines it. This is the core dispute between the three readings of the kernel.",
+      "impact": "If beta is fundamentally a disclosure mechanism, the carve-out is correct: beta is unavailable in critical domains because disclosure alone cannot replace liability. If beta is fundamentally a liability shield, the carve-out is an overreach: vendors should be able to use it anywhere with proper disclosure. This omega sits at the center of the kernel contest.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether beta designation is intrinsically a disclosure or a liability mechanism."
+    }
+  ],
+  "interval": {
+    "start": 1995,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.08,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.62,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.05,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.18,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The beta designation doctrine governs when software vendors can deploy experimental or tested-but-not-production-ready code with associated liability limitations. This story instantiates ONE reading of a contested kernel: the severity-carve-out reading asserts that beta designation is categorically unavailable in life-safety, financial, and other critical systems, regardless of the vendor's testing status or disclosure. The sibling readings (expansive-shield and narrow-warning) dispute whether beta provides indefinite liability waiver vs. time-bounded testing disclosure, and whether criticality domains are exempt. This reading unites harm severity with non-contractable duty: beta cannot shield vendors from liability in domains where failure causes death, financial ruin, or systemic collapse. The constraint is authored as a mountain (natural law of liability grounded in harm severity) but declares beneficiaries and carries omegas to flag the natural-law vs. constructed-doctrine ambiguity per the FSM protocol.",
+    "key_agents": [
+      "regulatory_authorities: FDA, FAA, banking regulators; set and enforce the rule that beta is unavailable in their domains",
+      "software_vendors: powerful institutional actors; bear the cost of the carve-out by being unable to limit liability even under beta designation in critical domains",
+      "critical_infrastructure_operators: hospitals, power grids, financial networks; benefit from the rule because it forces vendors to meet higher vetting standards before deployment",
+      "end_users_critical_domains: powerless, trapped; benefit because their harm cannot be pre-waived",
+      "consumer_safety_advocates: organized, analytical; advance the normative doctrine that harm severity overrides contractual form"
+    ],
+    "logic_rationale": "Extractiveness is low (0.31 at 2026) because the constraint does not extract value from any stakeholder; instead, it reallocates liability and duty. Suppression is very low (0.18) because the constraint is enforced by regulatory authority and tort law, not by active coercive machinery — vendors simply cannot use beta as a valid defense in critical domains. Theater ratio is very low (0.08) because the constraint's function is direct and transparent: it separates domain criticality from contractual form. Accessibility collapse is very high (0.92) because once a domain is designated critical, the availability of beta as a liability shield completely collapses — there is no workaround, no contractual path around it. Resistance is moderate (0.58) because vendors mount real resistance through litigation and by pushing the boundary of what counts as critical, but the core constraint remains in place across major regulatory regimes. The measurement series traces the constraint's evolution: extractiveness rose from near-zero (1995, when beta was a pure disclosure) to 0.31 as vendors attempted to use it as a liability shield and regulators hardened the doctrine in response. Theater ratio fell sharply from 0.62 (1995, when beta appeared purely consensual) to 0.08 (2026, when its function as a domain-separator is clear). Suppression requirement rose as enforcement machinery (FDA approvals, FAA certifications, banking regulations) built up to prevent vendors from deploying critical software under beta.",
+    "perspectival_gap": "The vendor seat and the regulatory seat should compute very differently. From the vendor's perspective (institutional power, biographical horizon, constrained exit), the carve-out appears as an unfair restriction on contractual freedom and rapid iteration — they experience high directionality toward target (high d, high extraction). From the critical infrastructure operator's perspective (institutional power, generational horizon, constrained exit), the same rule appears as essential risk management — they experience low directionality (low d, subsidy). From the powerless end-user's perspective (trapped, immediate horizon, universal scope), the rule appears as protection against pre-waived harm — also subsidy. The engine should compute these divergences from the declared power, exit, and scope atoms; no override is needed.",
+    "directionality_logic": "Beneficiaries are: regulatory authorities (who gain enforcement authority), critical infrastructure operators (who gain vendor accountability), and end-users in critical domains (who gain protection from pre-waived harm). Victims are: software vendors (who lose a liability-limitation mechanism and bear higher vetting costs). The constraint does not extract value in the traditional sense; instead, it reallocates duty and liability. Vendors cannot contractually transfer risk; they must manage it through design and testing. This is not a zero-sum transfer but a structural reallocation that imposes costs on vendors in critical domains while protecting downstream parties.",
+    "kernel_context": "This is ONE reading of the contested beta-designation-doctrine kernel. The kernel is the stabilized commitment that beta designation can be used to manage liability in software deployment. Three readings of this kernel coexist: (1) expansive_shield_reading: beta constitutes comprehensive indefinite liability waiver, applies everywhere; (2) narrow_warning_reading: beta is time-bounded testing disclosure, base liability preserved, must be genuine phase; (3) severity_carve_out_reading: beta unavailable in critical systems. Each reading grounds itself in different axioms and creates different structural relationships with the others. This reading asserts that harm severity overrides contractual form — a non-contractable safety principle.",
+    "mandatrophy_analysis": "The founding problem (beta designation misused indefinitely as liability shield in critical domains) is live and actively contested. The carve-out persists not because the problem is solved but because regulators and courts continue enforcing it against vendor attempts to expand beta availability. Theater ratio decline (0.62 → 0.08) indicates the constraint's function has clarified over time: it is no longer performative disclosure but enforced domain-separation. The constraint does not risk mandatrophy because harm severity remains a persistent structural reality — vendors cannot escape liability in life-safety domains regardless of contractual form. However, the boundary between critical and non-critical domains is contested (omega: domain_criticality_boundary) and the doctrine is vulnerable to conceptual revision if the legal tradition shifts on whether harm severity is non-contractable or merely normatively chosen (omega: harm_severity_vs_contractual_freedom)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__expansive_shield_reading",
+      "beta_designation_doctrine__narrow_warning_reading"
+    ],
+    "dual_formulation_note": "The beta-designation-doctrine kernel decomposes into three structurally distinct constraint stories, one per reading. All three share the same kernel (beta's role in liability allocation) but diverge sharply on whether beta constitutes indefinite liability waiver, time-bounded testing disclosure, or categorical unavailability in critical domains. The severity_carve_out_reading presented here grounds itself in non-contractable harm duty and creates structural pressure on the other two readings by reframing the question as domain-dependent rather than universally contractual. Network edges link all three readings; comparative analysis across the constraint family reveals how the same kernel generates opposite classification outcomes depending on which axiom (contractual freedom vs. harm severity) is foundational."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "harm_severity_non_contractable_duty",
+    "drift_state": {
+      "moment": "contemporary_2026",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_shield_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "narrow_warning_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_severity_overrides_contract",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "critical_domain_categoricity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "regulatory_authorities",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

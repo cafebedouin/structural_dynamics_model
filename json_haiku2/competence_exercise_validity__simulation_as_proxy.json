@@ -1,0 +1,327 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__simulation_as_proxy",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "0b81b85c-ae48-4e1d-8d9c-d9872146d244",
+    "created_at": "2026-06-11T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Simulation as Valid Competence Exercise Proxy",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_regulator",
+      "operational_management"
+    ],
+    "victims": [
+      "competence_bearing_personnel"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "safety_regulator",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Writes standards requiring competence certification through simulation drills at prescribed intervals. Sets the pass/fail criteria for simulation performance. Enforces compliance through inspection and license suspension. Benefits from a lower-cost validation regime that requires no actual crisis events; avoids liability for catastrophe-only learning doctrine."
+    },
+    {
+      "name": "operational_management",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Uses simulation drills to satisfy regulatory compliance without triggering actual emergencies. Manages budgets and schedules around simulation calendars rather than unpredictable real events. Captures the cost savings and operational predictability of scheduled training versus reactive crisis response. Must implement the drills but captures the coordination benefit of predictable, measurable competence maintenance."
+    },
+    {
+      "name": "competence_bearing_personnel",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Must participate in simulation drills on the prescribed schedule regardless of whether they feel their competence is adequately exercised. Professionally bound to the organization and unable to exit without abandoning license and career. Their competence is validated via simulation metrics rather than tested through conditions they judge adequate. The constraint treats drill completion as equivalent to demonstrated readiness, even if they perceive simulation as insufficient stress to reveal real gaps."
+    },
+    {
+      "name": "crisis_event_analysts",
+      "role": "observer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study real-world accident sequences and competence failures. Can testify to whether simulation-trained personnel perform adequately when crises occur, or whether simulation-only training misses failure modes. Data from their investigations shapes the contested reading of whether simulation is a sufficient proxy."
+    },
+    {
+      "name": "simulation_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sell simulation equipment, software, and training services to organizations and regulators. Benefit directly from mandates that treat simulation as valid and require continuous drill cycles. Have economic incentive to maintain the simulation-as-proxy doctrine and resist alternative readings that would reduce drill frequency or shift to other validation methods."
+    },
+    {
+      "name": "competence_skeptics",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Include experienced practitioners and safety researchers who believe simulation inadequately exercises competence under true stress. Their objections are sidelined by regulatory adoption of the simulation-as-proxy reading; they operate under a regime they believe unsound but have limited power to change."
+    },
+    {
+      "name": "accident_survivors",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the consequences if simulation-trained personnel fail during real crises. Have strong incentive to voice skepticism of simulation sufficiency but are structurally absent from the regulatory conversation and expert testimony that sets the constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a predictable, measurable regime for certifying that personnel retain critical safety competencies without requiring organizations to trigger real crises or wait for them to occur naturally. Solves the scheduling and verification problem: how to test readiness without catastrophe.",
+    "transfer_function": "Moves institutional risk assumption from crisis response (unpredictable, high-cost, potentially catastrophic) to periodic simulation drills (predictable, budgetable, insurance-compatible). The regulator transfers liability risk to organizations, which transfer operational burden to personnel who must pass simulation metrics.",
+    "absent_voices": "Practitioners skeptical of simulation adequacy, personnel who perceive simulation as insufficient stress, accident survivors from scenarios where simulation-trained staff failed, and jurisdictions or safety traditions that maintain real-catastrophe-only or continuous-hybrid doctrines are structurally outside the regulatory conversation. Their objections would challenge the simulation-sufficiency axiom but are not heard in standard-setting bodies.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint vanished, organizations would revert to mixed regimes: some would increase simulation frequency and realism; others would rely more heavily on continuous operational practice and mentorship. The regulatory certainty that simulation 'counts' would be gone, forcing explicit justification of whatever competence regime was chosen. Insurance and liability law would fragment across jurisdictions and industries.",
+    "founding_problem": "Before simulation validation was codified, no scalable method existed to certify competence without waiting for actual crises. The founding problem was: how to know if personnel are ready without the catastrophic cost and unpredictability of real testing?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The regulator and management attest the founding problem remains live: real crises are still unpredictable and costly, simulation fills the gap. Crisis investigators and safety researchers attest the founding problem was solved PARTIALLY — a scalable method exists, but it does not test under true stress conditions. Accident reconstruction data from multiple jurisdictions (independent of the regulating body) shows a mixed picture: some simulation-trained personnel perform adequately; others fail in ways simulation did not surface."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A regulatory and organizational regime treats simulation-based drills as sufficient validation that personnel have exercised and retained critical competencies. The regime codifies simulation scores as adequate proxy for readiness, allowing organizations to certify competence on schedule rather than waiting for real crises. This reading instantiates one position in a contested kernel: whether simulation alone is sufficient (this reading: simulation_as_proxy) or whether continuous hybrid approaches or real-catastrophe testing are necessary. The constraint operates as rope to its internal logic (coordination benefit: predictable, budgetable competence certification) but carries extractive components to the skeptics' reading (theater rises as simulation metrics become the sole acceptable evidence, while actual readiness remains contested).",
+    "key_agents": [
+      "Safety Regulator: Sets and enforces the simulation-as-proxy standard (agenda_setter); benefits from avoiding catastrophe-dependent learning",
+      "Operational Management: Implements drills on schedule; benefits from predictable budgets and regulatory compliance without real-crisis triggers",
+      "Competence-Bearing Personnel: Perform in simulations; identity-locked into the regime; their competence is validated by metrics they may judge insufficient",
+      "Crisis Event Analysts: Provide independent evidence of whether simulation-trained personnel succeed or fail in real events (observer seat)",
+      "Simulation Vendors: Sell equipment and training; economically benefit from simulation-centric mandates",
+      "Competence Skeptics and Accident Survivors: Excluded from the regulatory conversation despite having strong incentive to voice doubts"
+    ],
+    "logic_rationale": "Extractiveness at 0.68 reflects the constraint's operation: the regulator and vendors extract regulatory authority and market share; management extracts operational certainty and cost control; personnel lose the ability to challenge the sufficiency of their own training under rules they didn't set. Suppression at 0.71 is high because the constraint depends on actively silencing the skeptical reading — alternative validation regimes are not merely discouraged, they are made non-compliant. Theater at 0.62 reflects the central dynamic: simulation compliance becomes ritual performance (pass the scenario, check the box) rather than authentic readiness testing. The measurement series shows theater rising from 0.48 to 0.62 over the interval, consistent with a constraint whose functional core (scheduling verification) is real but whose legitimacy claim (simulation equals readiness) drifts toward performance. Suppression stays elevated throughout, indicating constant effort to maintain the simulation-as-proxy reading against skeptical alternatives.",
+    "perspectival_gap": "The regulator and management seats compute as beneficiaries (low d) with access to predictable, budgetable regimes. The personnel seat computes as a target (high d, identity_locked) whose competence is defined by metrics they may not control. Simulation vendors compute as moderate beneficiaries (d ~0.25–0.35) with market insulation from alternative validation regimes. Crisis analysts compute as observers (analytical) whose findings challenge the reading but are not integrated into the constraint's enforcement. The divergence is structural: this reading benefits institutional actors and hardens access to power, while it constrains those whose competence is subject to validation.",
+    "directionality_logic": "Directionality for the regulator: d = 0.1 (full beneficiary — they set the standard and avoid liability for catastrophe-dependent learning). Directionality for management: d = 0.2 (strong beneficiary — they capture operational predictability and cost control). Directionality for personnel: d = 0.85 (strong target — identity-locked, constrained by simulation-as-proxy validation, no exit without career abandonment). Directionality for simulation vendors: d = 0.3 (beneficiary with mobile exit — they profit from simulation-centric mandates but could serve other regimes). Directionality for crisis analysts: d = 0.5 (symmetric, observer position — their analysis informs but does not control the constraint). The asymmetry is fundamental: institutional and vendor actors benefit from the simulation-as-proxy reading and can exit to other readings; personnel cannot exit without abandoning identity and career.",
+    "mandatrophy_analysis": "The mandatrophy surface is contested: the founding problem (how to certify competence without real crises) was real. The constraint's response (use simulation metrics) addresses part of it — it enables scheduling and budgeting. But the measured theater ratio (0.62, rising from 0.48) indicates a drift toward performance maintenance rather than functional validation. The constraint persists because regulators, management, and vendors benefit and want to maintain it; personnel bear the cost and cannot exit without career abandonment. The theater rise signals that simulation-as-proxy is increasingly a ritual than a truth-tracking mechanism — the regime is performing adequacy rather than assuring it. This does not trigger classical mandatrophy (where the founding problem vanished and the constraint became pure extraction) — the founding problem is still contested, so the constraint oscillates between coordination and extraction rather than degrading into pure performance.",
+    "kernel_context": "This constraint instantiates the 'simulation_as_proxy' reading of the contested kernel: competence_exercise_validity. The kernel itself is the foundational question: what counts as valid exercise that demonstrates and maintains critical competency? The kernel remains fixed (the same formal standard and organizational practice), but different readings emit different constraint structures. This reading (simulation_as_proxy) treats simulation completion and passing scores as sufficient evidence of readiness. Sibling readings instantiated as separate constraints are: (1) continuous_refresh_hybrid: simulation is necessary but not sufficient; continuous operational practice and mentorship are structurally required. (2) real_catastrophe_only: only actual crises, learned through retrospective analysis, truly exercise competence; simulation is a necessary but insufficient substitute. These readings are NOT different measurements of the same constraint — they are different constraints grounded in the same kernel, with different ε values, different beneficiary/victim structures, and different types."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_gap",
+      "question": "What is the measurable gap between stress, sensory input, and decision-making conditions in simulation versus real crises? Is the gap narrow enough that simulation adequately exercises the same competencies as real events?",
+      "resolution_mechanism": "Comparative analysis of decision latency, error rates, and physiological stress markers (heart rate, cortisol) in simulation versus high-fidelity naturalistic crises; post-incident analysis of whether simulation-trained personnel exhibited the same failure modes as those untrained.",
+      "impact": "If the gap is wide and simulation-trained personnel show failure modes not surfaced in drills, the constraint's ε rises sharply (higher extraction, lower accessibility of alternatives). If the gap is narrow and post-incident analysis shows no simulation-specific failures, ε stays low and the rope reading holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulation-induced stress and decision conditions adequately track real crises."
+    },
+    {
+      "id": "reading_foreclosure_via_regulation",
+      "question": "Does the regulatory adoption of simulation-as-proxy reading structurally foreclose the competing readings (continuous_refresh_hybrid, real_catastrophe_only), or do they coexist as live alternatives held by different organizational and cultural traditions?",
+      "resolution_mechanism": "Survey of jurisdictions and industries: Do alternatives persist as real options despite regulatory adoption of simulation-as-proxy? Or has regulatory standardization made them economically and politically inaccessible?",
+      "impact": "If readings coexist_with (different organizations and traditions maintain alternatives), the kernel remains genuinely contested and this constraint is one voice in an open debate. If this reading forecloses or influences the others through regulatory capture and market consolidation, the constraint becomes a monopoly-of-interpretation problem, shifting type and increasing extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether regulatory adoption of simulation-as-proxy has eliminated or suppressed alternative readings from live consideration."
+    },
+    {
+      "id": "theater_as_extraction_mechanism",
+      "question": "Does the rising theater_ratio (0.48→0.62) indicate that simulation-as-proxy is increasingly a performative regime where compliance and readiness have decoupled, allowing the constraint to persist even as participants lose faith in its sufficiency?",
+      "resolution_mechanism": "Post-incident interviews with personnel: Do they report that simulation and real readiness feel disconnected? Do near-misses and minor accidents correlate with simulation-identified gaps? Does organizational pressure to 'pass' drills incentivize gaming rather than authentic learning?",
+      "impact": "If theater is the extraction mechanism, the constraint has drifted from rope (coordination benefit: predictable competence certification) toward snare (pure extraction through performative compliance). The constraint persists not because simulation works but because institutional actors benefit from the appearance of validation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether theater ratio growth signals transformation from coordination to performative extraction."
+    },
+    {
+      "id": "identity_lock_persistence",
+      "question": "How binding is the identity_locked exit for competence-bearing personnel? Would changing simulation regimes or acknowledging simulation inadequacy cause mass exit, or is career identity sufficiently fused with organizational role that personnel stay despite doubts?",
+      "resolution_mechanism": "Natural experiment: organizations that shift from simulation-as-proxy to hybrid or continuous regimes; track whether personnel retention and satisfaction change. Survey of competence-locked professions (pilots, surgeons, emergency responders) on their belief in simulation adequacy versus their willingness to exit if it were challenged.",
+      "impact": "If identity is strongly locked (personnel stay despite doubts), the constraint's extraction is amplified — they have no real exit option even if they believe the regime is insufficient. If identity lock is weaker and people exit when regimes change, the constraint's hold is more brittle and alternative readings have more power to propagate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How strongly identity fusion to professional role locks personnel into simulation-as-proxy validation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__continuous_refresh_hybrid",
+      "competence_exercise_validity__real_catastrophe_only"
+    ],
+    "dual_formulation_note": "Part of the competence_exercise_validity constraint family (three readings of one kernel). This story models the 'simulation_as_proxy' reading. Sibling readings — continuous_refresh_hybrid and real_catastrophe_only — are separate constraint stories sharing the same kernel (competence_exercise_validity) but instantiating structurally different arrangements with different ε values, beneficiary/victim structures, and types. Network edges (affects_constraints) link all three; commentary.kernel_context names the shared kernel in each story."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "gain_flow": "operational_management",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "continuous_refresh_hybrid",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "real_catastrophe_only",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_metrics_validity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "scheduling_over_authenticity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "simulation_sufficient_for_certification",
+    "drift_state": {
+      "moment": "contemporary_post_incident_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "competence_exercise_validity__continuous_refresh_hybrid"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

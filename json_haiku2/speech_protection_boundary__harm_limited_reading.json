@@ -1,0 +1,398 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_boundary__harm_limited_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "87862d51-e14c-4c15-b0aa-a285a9f57813"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.64,
+    "resistance": 0.78,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Speech Protection Conditional on Harm Limitation (Dignity-Equality-Harassment Reading)",
+    "topic_domain": "constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "protected_minorities",
+      "historically_marginalized_groups"
+    ],
+    "victims": [
+      "speech_regulated_under_harm_criteria",
+      "speakers_subject_to_gatekeeping"
+    ],
+    "vindicated_propositions": [
+      "dignity_as_fundamental_right",
+      "equality_as_constitutional_value",
+      "freedom_from_harassment_as_liberty_interest"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "protected_minorities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Groups historically targeted by hate speech, harassment, and coded dog-whistle rhetoric (religious minorities, racial minorities, gender minorities, immigrants). This reading provides legal recourse against speech that degrades their dignity, undermines equal citizenship, or creates conditions of persistent harassment. They are insulated from harm-causing expression without needing to prove imminent violence. Their exit option is participation in civic life; the constraint narrows speech that drives them out."
+    },
+    {
+      "name": "state_gatekeepers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts, legislatures, and administrative agencies tasked with determining which speech crosses the harm threshold (dignity, equality, harassment). They adjudicate contested cases, define 'significant harm,' and set precedent. They hold the interpretive power to expand or contract the category of harm-limited speech. They bear the accountability risk if gatekeeping criteria are abused or applied asymmetrically."
+    },
+    {
+      "name": "speakers_subject_to_gatekeeping",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Speakers whose expression (hate speech, harassment, dehumanizing rhetoric, coded epithets) falls under the harm-limitation reading. They face legal liability, platforms removal, social sanction. Their exit option is self-censorship or migration to unregulated platforms. The constraint requires them to verify their speech does not cause significant harm before speaking publicly."
+    },
+    {
+      "name": "absolutist_civil_libertarians",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organizations and thinkers (ACLU civil liberties wing, originalist scholars, anti-censorship advocates) would argue that narrowing the harm exception to Brandenburg standard is essential to prevent state capture of speech regulation. They are excluded from the harm-limiting reading's legitimacy frame but actively contest it in litigation and policy discourse."
+    },
+    {
+      "name": "platform_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Social media and content platforms enforce harm-limitation rules via their terms of service, which typically track or exceed the legal threshold. They benefit from reduced liability exposure and community-trust credibility; they set and police the harm criteria operationally. Their enforcement is decentralized compared to state gatekeeping but follows the same conceptual framework."
+    },
+    {
+      "name": "regulatory_capture_risk",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The structural possibility that state gatekeepers asymmetrically apply harm criteria to suppress minority or dissenting speech while permitting majority or regime-aligned harm. This is an abstract risk, not an agent, but is central to the constraint's contestation."
+    },
+    {
+      "name": "harm_definition_philosophers",
+      "role": "observer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Theorists and empiricists who study whether dignity harm, equality-degradation, and harassment causally produce documented individual and social harms (mental health outcomes, civic withdrawal, educational disparities). Their evidence-gathering feeds the legitimacy of harm-limitation criteria but also surfaces evidentiary uncertainties and value-laden definitions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents speech-driven systemic harm to protected groups' dignity, equal citizenship standing, and freedom from targeted harassment. Solves the collective-action problem of individual speakers' autonomy competing with victims' safety and equal standing — a framework that coordinates protection without requiring unanimous consent from all speakers.",
+    "transfer_function": "Moves regulatory authority from speakers (who decide what to say) to state gatekeepers and platforms (who decide what speech is permissible). The arrangement also transfers reputational and social costs from speakers (who face legal or platform sanction) to targeted groups' accusers (who bear burden of proving significant harm). Transfers epistemic authority about what counts as 'dignity' or 'equal citizenship' from lived experience to legal definitions.",
+    "absent_voices": "Absolutist civil libertarians, speakers whose speech is caught by the harm net, and those concerned about state capture of definitional authority are structurally excluded from framing this reading's core legitimacy. They would testify that the gatekeeping criteria are vague, selectively enforced, and prone to suppressing minority dissent masked as 'harm reduction'. Speakers in marginalized groups who fear they will be weaponized against (minorities silenced by hostile gatekeeping of 'harm') would also object.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the harm-limitation reading vanished and absolute speech protection (Brandenburg standard) resumed, protected groups would lose statutory recourse against hate speech and harassment; civic participation would shift for targeted minorities; platform policies would revert to narrower liability exemptions; the court docket would reorganize around different speech disputes. The removal would be consequential and contested.",
+    "founding_problem": "Racist, misogynist, transphobic, and antisemitic speech caused documented cascading harms to dignity and equal citizenship: exclusion from civic spaces, targeted harassment, radicalization pipelines, and erosion of subordinated groups' sense of equal standing. Speech protection as written left these harms legal, creating a gap between formal equality and lived experience.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Civil rights organizations, targeted communities, and empirical researchers document the harms and testify the founding problem is live. Absolutist scholars and civil libertarians attest the problem is real but argue the cure (narrowed speech protection) is worse than the disease (state gatekeeping risk). Legislative history in EU jurisdictions that adopted harm-limitation frameworks (e.g., hate speech bans, harassment laws) provides corroboration from outside the US beneficiary set, though US absolutists contest the framing. Universities and corporate HR departments report that speech-harm incidents drive student/employee departures and affect equal access."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the 'harm-limited reading' of the contested speech-protection kernel: it holds that First Amendment protection does not extend to speech causing significant harm to dignity, equal citizenship, and freedom from harassment. This is one of three structurally distinct readings of the same constitutional commitment (the First Amendment text). The harm-limited reading narrows the protected set by requiring state gatekeepers to assess whether speech meets a harm threshold before constitutional protection applies. The reading vindicates dignity, equality, and harassment-freedom as fundamental values that can limit speech; the absolutist reading treats those values as subordinate to near-absolute speech protection; the balancing reading treats the relationship as case-by-case contestable. The claim/metric gap is intentional: this reading is CLAIMED as tangled_rope (coordination of protected-group safety and speaker regulation paired with asymmetric harm to gatekeeping subjects) while the metrics show substantial extractiveness (0.68 by interval end) and rising suppression (0.71), reflecting the structural concern that harm-limitation criteria are vague, unevenly enforced, and subject to state capture.",
+    "key_agents": [
+      "Protected minorities: benefit from recourse against harm-causing speech; face no legal barriers to participation",
+      "State gatekeepers (courts, legislatures, agencies): set and enforce harm criteria; bear accountability for asymmetric application",
+      "Speakers subject to gatekeeping: bear regulatory costs; constrained by harm-limitation threshold; face legal and social sanction",
+      "Platform operators: operationalize harm criteria; benefit from reduced liability and community trust; hold enforcement authority",
+      "Absolutist civil libertarians: excluded from this reading's legitimacy frame; actively contest the framework",
+      "Harm-definition philosophers: provide evidence for and against specific harm criteria; surface empirical and definitional uncertainties"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68) because state gatekeepers and platforms hold asymmetric authority to define 'significant harm' and enforce it, while speakers subject to the criteria have constrained exit (self-censorship or migration to unregulated spaces) and bear reputational/legal costs. Suppression is also high (0.71) because the constraint depends on actively excluding speech that falls below the harm threshold — the enforcement machinery sustains the boundary. Theater rises over the interval (0.25 to 0.42) because as harm-limitation criteria proliferate, definitional work increases: what counts as 'dignity harm' or 'coded dog whistle' becomes contested, and enforcement activity increasingly defends the gatekeeping authority itself rather than protecting the safety of targeted groups. Accessibility collapse is moderate (0.64): speakers can exit through self-censorship or code-switching, but meaningful alternatives (unregulated platforms, private speech) have lower reach and credibility. Resistance is high (0.78): absolutist legal scholars, civil libertarians, speakers, and regulatory-capture critics actively challenge the harm-limitation framework through litigation, legislation, and cultural contestation. The measurement series tracks the constraint over 40 units: extractiveness plateaus after t=30, theater stabilizes around 0.42, and suppression reaches steady-state 0.71 — the constraint matures into a stable institutional arrangement after initial phase-in.",
+    "directionality_logic": "Protected minorities have low directionality (near 0.0, beneficiary end): they gain direct safety and equal standing; exit is civic participation restored, not exit from the constraint. State gatekeepers and platforms sit near symmetric (d ≈ 0.5): they both coordinate protection and extract gatekeeping authority; they bear accountability risk proportional to their power. Speakers subject to the harm net have high directionality (near 1.0, target end): they pay regulatory costs, face constrained exit, and have their expression bounded; they gain no coordination benefit — the coordination is for protected groups' safety, not theirs. Absolutist civil libertarians, though excluded, would compute high d if included: the constraint directly contradicts their core premise (near-absolute speech protection). The divergence between agenda-setter seats (moderate d → moderate χ) and payer seats (high d → high χ) is the key perspectival gap: state gatekeepers experience the constraint as coordinating public safety; speakers experience it as enforced extraction.",
+    "perspectival_gap": "From the state gatekeeper's seat, this is genuine coordination: it protects vulnerable groups, upholds equal dignity, and solves the collective-action problem of individual speaker autonomy overwhelming targets' safety. From the speaker's seat (especially those whose speech is caught by the harm net), this is extractive state gatekeeping with vague criteria and asymmetric enforcement. From the protected-minority seat, it is coordination that restores their equal standing and safe civic participation. The engine computes these three divergent types from the structural data: agenda-setter/beneficiary seats compute lower χ; payer seats compute higher χ. No reconciliation is attempted — the divergence IS the measurement.",
+    "mandatrophy_analysis": "The founding problem (harm to dignity, equal citizenship, and safety from harassment) is live and widely corroborated by civil rights organizations and empirical researchers. However, the mandate of the harm-limitation reading has partially outlived its founding problem in contexts where it has matured into gatekeeping authority: enforcement activity increasingly concerns itself with policing the harm boundary itself rather than addressing concrete harms. Theater-ratio rise (0.25 to 0.42) reflects this: definitional work and contestation now consume more activity than the baseline protection. This is not mandatrophy resolution (the founding problem has not disappeared), but it signals scope-creep: the harm-limitation framework now regulates not just hate speech but coded language, satire, parody, and political opposition speech that falls ambiguously under 'dignity harm' or 'harassment.' The constraint remains justified by its founding problem but increasingly operates as a gatekeeper for ambiguous cases, extracting from speakers in the margin.",
+    "kernel_context": "This story instantiates the 'harm_limited_reading' of the contested kernel speech_protection_boundary. The kernel is the First Amendment commitment itself — the persistent constitutional text and tradition that authorizes speech protection. Three readings of this kernel are in contestation: (1) absolutist_reading holds that speech protection is near-absolute except for imminent lawless action; (2) balancing_reading treats the relationship as determined case-by-case through weighing competing constitutional values; (3) harm_limited_reading (this one) holds that speech protection is conditional on absence of significant harm to dignity, equality, and harassment-freedom. Each reading instantiates a different constraint with different ε, different beneficiary/victim structures, and different classification. This story does not describe a debate about which reading is correct — that is a question for philosophy and politics outside this constraint story. It describes what the harm_limited_reading commits the constraint to, structurally: narrowed protected speech, expanded gatekeeping authority, and asymmetric exposure of speakers to state/platform judgment of harm."
+  },
+  "omegas": [
+    {
+      "id": "harm_definition_contestation",
+      "question": "What counts as 'significant harm' to dignity, equal citizenship, and freedom from harassment? Is the threshold empirically determinable or fundamentally contested?",
+      "resolution_mechanism": "Empirical study of causal pathways from speech exposure to documented harms (psychological, civic, educational). Philosophical and political analysis of whether dignity and equality admit precise definitions or remain inherently contestable. Audit of gatekeeping decisions to assess whether harm criteria are applied consistently or vary with speaker identity and content politics.",
+      "impact": "If harm is empirically determinable and consistently applied, the constraint credibly balances speaker freedom and target safety. If harm is fundamentally contested or applied asymmetrically, gatekeeping becomes capture-prone and the constraint shifts toward snare classification (pure extraction masked as coordination). If thresholds vary with speaker identity, the constraint exhibits facially neutral rules applied with discriminatory effect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundaries of 'significant harm' and consistency of gatekeeper application."
+    },
+    {
+      "id": "state_capture_risk_structural",
+      "question": "Can harm-limitation criteria be administered without asymmetric or retaliatory application by state actors seeking to suppress minority or dissenting speech?",
+      "resolution_mechanism": "Historical audit of speech prosecutions and sanctions under harm-limitation regimes (EU hate-speech bans, platform moderation). Empirical measurement of whether speech by majority groups receives differential leniency. Analysis of feedback loops: if state applies criteria asymmetrically against minorities, does that fact itself become a harm justifying further speech restrictions (a ratchet)?",
+      "impact": "If state/platform capture is systemic (not occasional), the constraint functions as a snare: harm-limitation framing provides legitimacy cover for suppressing disfavored speech regardless of actual harm. If capture is marginal and correctable by oversight, the constraint credibly operates as tangled_rope (coordination with manageable extraction). If capture is absent, the harm-limitation reading succeeds structurally.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Asymmetric or retaliatory application of harm criteria by state/platform gatekeepers."
+    },
+    {
+      "id": "reading_foreclosure_test",
+      "question": "Does the harm-limited reading logically foreclose the absolutist reading within the same constitutional framework, or do they coexist as competing interpretations?",
+      "resolution_mechanism": "Close textual and originalist analysis of the First Amendment. Examination of whether the harm-limited reading can be squared with the original meaning or whether it requires departing from it. Historical survey of constitutional amendments or jurisprudential shifts that might have resolved the conflict.",
+      "impact": "If the readings foreclose each other (one cannot be both absolutist and harm-limited about the same speech), the contest is binary and one reading must be rejected. If they coexist as interpretive live options held by different constitutional actors (courts, legislatures, movements), the constraint remains in contestation. Foreclosure status affects the engine's reading_relations classification and omega probability.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether absolutist and harm-limited readings are logically incompatible or coexisting interpretive live options."
+    },
+    {
+      "id": "beneficiary_identity_lock",
+      "question": "Do protected minorities become identity-locked to the harm-limitation framework, such that exit (rejecting the constraint) would require abandoning their group identity or advocacy?",
+      "resolution_mechanism": "Survey and interview research on whether protected minorities perceive the constraint as liberatory (exit into harm) or coercive (trapped by the state's definition of their protection). Historical analysis of whether minority groups have chosen opt-out from legal protection (suggesting voluntary association) or have been forced to accept it.",
+      "impact": "If identity-lock is high, protected minorities compute as trapped/identity_locked on the exit dimension, raising directionality toward the payer end despite their nominal beneficiary role. This would reclassify the constraint as extractive toward those who are supposed to benefit (a false-beneficiary scenario). If minorities have agency in the framework and can navigate it or contest it, exit remains constrained but not identity-locked.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether protected minorities are identity-locked to the harm-limitation framework or retain agency to contest it."
+    },
+    {
+      "id": "absolutist_coexistence",
+      "question": "This reading coexists with the absolutist_reading as competing judicial and political factions hold each. Neither reading logically forecloses the other within the broad tradition of First Amendment interpretation — both are live options for US constitutional actors. What conditions would cause one to overcome the other?",
+      "resolution_mechanism": "Constitutional amendment, major jurisprudential shift (e.g., Supreme Court reversal), or institutional capture by one faction. Empirical measure of which reading gains ground in legislative, judicial, and public discourse over time.",
+      "impact": "If coexistence holds, the kernel remains in active contestation and both constraints remain live. If one reading is institutionally marginalized (loses court backing, legislative support, public credibility), the other may approach dominance, reducing the constraint's contested status and changing its effective classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Institutional stability of coexistence between harm-limited and absolutist readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_boundary__absolutist_reading",
+      "speech_protection_boundary__balancing_reading"
+    ],
+    "dual_formulation_note": "This constraint is part of a constraint family decomposing the contested kernel 'speech_protection_boundary' into three structurally distinct readings. The absolutist reading holds near-absolute speech protection (ε ≈ 0.15); the balancing reading treats speech protection as case-by-case contestable (ε ≈ 0.45, moderate extraction); the harm-limited reading (this one) narrows protected speech through harm criteria (ε ≈ 0.68, higher extraction). Each reading has different beneficiaries, victims, and gatekeeping mechanisms. They are linked by the shared kernel and compete for institutional dominance. The harm-limited reading influences both siblings by narrowing the speech space available to speak and the criteria by which absolutist and balancing arguments can be made."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "gain_flow": "state_gatekeepers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "balancing_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_to_dignity_limits_speech",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "equal_citizenship_constrains_harassment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "speech_protection_with_harm_exception",
+    "drift_state": {
+      "moment": "contemporary_capture_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "speech_protection_boundary__absolutist_reading",
+      "speech_protection_boundary__balancing_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

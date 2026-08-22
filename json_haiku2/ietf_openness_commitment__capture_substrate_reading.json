@@ -1,0 +1,343 @@
+{
+  "header": {
+    "constraint_id": "ietf_openness_commitment__capture_substrate_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a6a51767-1335-4fac-a8f1-214366e81b65"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.51,
+    "resistance": 0.59,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IETF Standards Process as Proprietary Extension Substrate",
+    "topic_domain": "technology/governance/institutional_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_platform_operators"
+    ],
+    "victims": [
+      "small_device_implementers",
+      "open_source_projects",
+      "end_users_interoperability_dependent"
+    ],
+    "vindicated_propositions": [
+      "rough_consensus_meritocracy"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "large_platform_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Major technology companies (Apple, Google, Amazon, Meta, Microsoft) participate heavily in IETF working groups, contribute substantial engineering resources, and propose extensions that lock interoperability features to their platforms. They can embed proprietary requirements into standards drafts and justify them as security, performance, or ecosystem necessity. Their market position means implementers must support their extensions or lose access to large user populations."
+    },
+    {
+      "name": "small_device_implementers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Makers of IoT devices, routers, embedded systems, and smaller consumer electronics must implement not only the published standard but also the vendor-specific extensions to interoperate meaningfully in deployed networks. They lack the resources to propose competing extensions or influence working group consensus. Implementing proprietary extensions adds engineering cost, testing burden, and technical debt."
+    },
+    {
+      "name": "open_source_projects",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Community-driven implementations (libcurl, OpenSSL, Chromium ecosystem) must support published standards plus proprietary extensions to remain viable in practice. Their contributors are ideologically committed to open development; they cannot refuse the extensions without losing interoperability, but implementing them contradicts their open-source mission. This creates moral hazard and contributor burnout as the project becomes a translation layer for proprietary constraints."
+    },
+    {
+      "name": "end_users_interoperability_dependent",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Users depend on the internet standards to work across devices. When extensions fragment the standard, users are trapped in platform silos or forced to adopt devices supporting the dominant extensions. They benefit from the coordinated baseline standard but bear the cost of its fragmentation through device choice restrictions and higher switching costs."
+    },
+    {
+      "name": "ietf_working_group_chairs",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Volunteer and employed chairs of standards working groups are responsible for driving consensus and advancing specifications. They face pressure from large implementers to accommodate their requirements, pressure from smaller players to resist lock-in, and incentive structures that reward productivity (specifications shipped) over interoperability robustness. Many chairs are employed by or maintain consulting relationships with large platform operators."
+    },
+    {
+      "name": "academic_researchers_internet_standards",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Internet researchers who study interoperability, standards processes, and their social/economic effects are largely absent from working group participation. They produce analyses showing how proprietary extensions undermine interoperability goals, but this voice is not seated at the consensus table and cannot directly influence standards drafts. Their insights are retrospective, not prospective."
+    },
+    {
+      "name": "ietf_governance_structure",
+      "role": "observer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The IETF's formal commitment to rough consensus, openness, and meritocracy operates as the legitimacy frame for the process. As a non-agent, it carries no interest of its own; it is the institutional form that claims to prevent the capture being analyzed."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "A volunteer-driven, open-participation standards process creates a single baseline protocol specification that millions of implementations can align on, avoiding Balkanization of the internet into incompatible networks. The process coordinates around technical merit and consensus-seeking rather than proprietary advantage.",
+    "transfer_function": "Large platform operators convert their resource advantage (dedicated engineering staff, deployed infrastructure, user populations) into the ability to encode platform-specific requirements into ostensibly open standards, creating de facto mandatory proprietary extensions. The transfer is from small implementers and open-source projects (who must incur implementation costs) to large operators (who gain lock-in leverage and interoperability control).",
+    "absent_voices": "Researchers studying the sociological and economic effects of standards capture, representatives of developing-world device makers, users themselves, and small implementers who lack IETF membership or working group participation are systematically absent or marginalized. Their testimony would argue that extension proliferation contradicts the openness principle.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the IETF process and its open-standards commitment were to collapse, large platform operators would impose their own interconnection protocols on smaller implementers directly through bilateral agreements and market power. The coordination substrate would fragment into managed oligopolistic silos. The disappearance would shift costs from distributed implementation burden to explicit gatekeeping licensing.",
+    "founding_problem": "In the early internet, incompatible proprietary protocols fragmented networks. A formal, open standards process was instituted to ensure anyone could implement interoperable systems without proprietary licensing, enabling decentralized growth and competition.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Large platform operators acknowledge the founding problem motivated their participation, but argue proprietary extensions are necessary for security and performance in modern deployments. Small implementers, open-source project maintainers, and interoperability researchers attest that the founding problem is being re-introduced within the standards process itself — the problem is being solved by the same institution that now instantiates it."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.58,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the CAPTURE SUBSTRATE reading of the IETF openness commitment kernel. The reading holds that the standards process, despite its formal commitment to rough consensus and openness, operates as a substrate enabling large platform operators to encode proprietary extensions into ostensibly open specifications. The mechanism is simple: resource advantage in participation translates directly to agenda-setting power, and the openness commitment itself prevents resistance from coalescing (dissent is framed as a violation of collaborative norms). Small implementers and open-source projects must implement these extensions to remain interoperable, creating a transfer of implementation cost from well-resourced operators to resource-constrained actors. The sibling readings (commons stewardship and legitimacy erosion) emphasize different aspects of the same institution — this reading emphasizes the extraction mechanism that the commitment's procedural guarantees enable rather than prevent.",
+    "key_agents": [
+      "large_platform_operators: institutional power, arbitrage exit, direct capture of extension requirements",
+      "small_device_implementers: moderate power, constrained exit, forced implementation of vendor requirements",
+      "open_source_projects: moderate power, identity-locked exit, moral hazard between mission and interoperability necessity",
+      "IETF working group chairs: powerful, mobile, structural position to amplify or resist large-operator agenda",
+      "end users: powerless, trapped, bearing cost of fragmented interoperability through device constraints"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.62 at interval end) because the transfer is real but mediated through technical requirements rather than explicit fees; small implementers incur measurable engineering burden, but the extraction is distributed and obscured by the openness frame. Suppression is moderate (0.58) because the mechanism operates through consensus norms and technical merit arguments rather than coercive exclusion; dissenters can participate, but their dissent is framed as rejecting openness itself. Theater ratio is high-moderate (0.48) because the standards working group maintains genuine technical discussion and peer review, but an increasing proportion of that discussion is dedicated to accommodating vendor extensions rather than solving coordination problems. The measurement trajectory shows extraction and theater ratio both rising: as proprietary extensions accumulate, more working-group time is spent on compatibility translation than on baseline interoperability. Resistance is moderate (0.59) because small implementers and open-source maintainers actively object to extension proliferation, but lack the structural power to block adoption. The temporal gradient shows extraction rising from 0.38 to 0.62: the capture is accelerating as large operators consolidate influence and smaller players exhaust their negotiating capacity.",
+    "perspectival_gap": "From the large-operator seat, the constraint is legitimate coordination: they argue their extensions solve real problems (security, performance, new capabilities) that the baseline standard cannot address, and their participation and resource contribution justify influence. From the small-implementer and open-source seat, the same structure is extractive capture: they see the extensions as bundling proprietary lock-in with technical necessity. The engine computes this divergence: the large-operator seat should compute near symmetric to beneficiary (they set the requirements and benefit from them), while the small-implementer seat should compute target (they must implement but do not set). The IETF governance structure, as a non-agent, cannot hold a seat — it is the institutional form the different seats use to justify their position.",
+    "directionality_logic": "Large platform operators are the structural beneficiaries: they propose extensions aligned with their platforms, engineer implementations in their deployed infrastructure, and shift the implementation burden to others. Exit for them is arbitrage — they can support open standards while maintaining proprietary extensions without contradiction, because their user base and market power create interoperability even without full standard compliance. Small implementers are the targets: they must implement both the open standard and the vendor extensions to reach the large-operator platforms' users, incurring implementation cost and technical debt. Exit for them is constrained — leaving the standard means isolation; refusing extensions means invisibility in deployed networks. Open-source projects face identity_locked exit: they are ideologically committed to open development, and refusing proprietary extensions is internally coherent, but doing so fragments the ecosystem they depend on for relevance and user base. End users are trapped — they bear the interoperability cost through device choice restrictions without making the architectural choices that generate the cost.",
+    "mandatrophy_analysis": "This constraint is NOT in mandatrophy — the founding problem (incompatible proprietary protocols) is actively being re-instantiated within the standards process, which means the process's original function is being overrun by the extraction it enables. A mandatrophy reading would require the founding problem to be dead (solved) while the arrangement persists for performance alone. Here the founding problem is contested: large operators claim the problem is solved and extensions are necessary for new capabilities; implementers claim the problem is being reborn as extension fragmentation. The mandatrophy analysis in this case is whether the process will eventually fail (small implementers abandon it for bilateral agreements with large operators) or be reformed (the capture substrate becomes explicit, and proprietary extensions are decoupled from standards status). The theater_ratio rise shows the process is spending increasing effort on capture-accommodation rather than baseline coordination, which is a drift signal but not mandatrophy per se.",
+    "kernel_context": "This constraint instantiates the CAPTURE SUBSTRATE reading of the ietf_openness_commitment kernel. The kernel is the IETF's formal commitment to rough consensus, open participation, and merit-based decision-making. The capture_substrate reading holds that this commitment, despite its procedural safeguards, operates as a substrate enabling large platform operators to encode proprietary extensions into ostensibly open standards. The sibling readings (commons_stewardship and legitimacy_erosion) contest different aspects: the commons_stewardship reading emphasizes the public-good infrastructure function and argues the constraint should preserve interoperability for all; the legitimacy_erosion reading focuses on the vulnerability of the rough-consensus mechanism itself to organized capture. The capture_substrate reading is distinct in emphasizing the MECHANISM: how resource advantage translates to agenda power within a procedurally open process."
+  },
+  "omegas": [
+    {
+      "id": "extension_necessity_vs_lock_in",
+      "question": "To what extent are vendor-specific extensions technically necessary (solving real security/performance gaps) versus strategically motivated (encoding platform lock-in)?",
+      "resolution_mechanism": "Empirical analysis of extension adoption patterns: do extensions address problems that smaller implementers also solve through open mechanisms, or do they solve problems unique to large-operator requirements? Do alternatives to proprietary extensions exist but are deprioritized in favor of vendor proposals?",
+      "impact": "If extensions are primarily lock-in, the extraction is transparent and the mandatrophy clock starts ticking (the founding problem is being reborn). If extensions are primarily necessary, part of the measured extractiveness is legitimate coordination cost, not pure transfer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extensions serve genuine technical gaps or are mechanisms for platform lock-in."
+    },
+    {
+      "id": "capture_mechanism_vs_norm_infection",
+      "question": "Is the large-operator influence exerted primarily through formal participation (working group contributions) or through normative capture (the procedural commitment to openness prevents organized resistance)?",
+      "resolution_mechanism": "Discourse analysis of rejected proposals and dissenting positions: when small implementers or researchers propose competing approaches, are they rejected on technical merit or on grounds of violating openness norms (e.g., being too divisive)? Do larger operators face different enforcement of consensus norms?",
+      "impact": "If normative capture is primary, the suppression score understates the constraint's coercive force — dissent is suppressed by reframing it as norm violation rather than by explicit exclusion. If formal participation is primary, the suppression score is more accurate and reform is possible through process change.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether large-operator influence operates through explicit participation or through normative redefinition of legitimate dissent."
+    },
+    {
+      "id": "commons_stewardship_coexistence",
+      "question": "Is the capture_substrate reading compatible with the commons_stewardship reading, or do they foreclose each other?",
+      "resolution_mechanism": "Logical examination: the commons_stewardship reading holds that standards are public infrastructure and should serve interoperability for all. The capture_substrate reading holds that the process enables large operators to encode private requirements. Can both be true simultaneously — i.e., is the constraint capturing public infrastructure or substituting for it?",
+      "impact": "If coexistent, both readings are live and the kernel exhibits institutional hybridity: a public-infrastructure commitment that is simultaneously being used for private extraction. If they foreclose, only one reading's structural analysis is valid, and the kernel is internally contradictory.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Compatibility of the capture reading with the public-infrastructure reading of the same kernel."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "ietf_openness_commitment__commons_stewardship_reading",
+      "ietf_openness_commitment__legitimacy_erosion_reading",
+      "browser_vendor_interoperability_lock_in",
+      "tls_extension_fragmentation"
+    ],
+    "dual_formulation_note": "This story is one of three readings of the ietf_openness_commitment kernel. The capture_substrate reading emphasizes how resource advantage converts to agenda power; the commons_stewardship reading emphasizes interoperability as public good; the legitimacy_erosion reading emphasizes vulnerability of the consensus mechanism itself. All three share the same referent (the IETF process and its openness commitment) but instantiate different structural analyses and ε values. Each reading is a separate constraint story with its own beneficiary/victim structure and type classification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "rough_consensus_open_participation_meritocracy",
+    "drift_state": {
+      "moment": "contemporary_large_operator_consolidation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "commons_stewardship_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "legitimacy_erosion_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "resource_advantage_converts_to_agenda_power",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "openness_commitment_prevents_coordinated_resistance",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "large_platform_operators",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "ietf_openness_commitment__commons_stewardship_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

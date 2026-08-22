@@ -1,0 +1,359 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence_mechanism__beneficiary_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "39f94634-bda7-4918-8b9a-7ca2adb5789f"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "QWERTY Persistence via Beneficiary Extraction",
+    "topic_domain": "economic_history/technology_studies/path_dependence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_typewriter_manufacturers",
+      "incumbent_typing_instruction_schools"
+    ],
+    "victims": [
+      "users_trapped_in_qwerty_layout",
+      "competing_keyboard_layout_innovators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_typewriter_manufacturers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Remington, Union Typewriter, and other dominant manufacturers had massive capital invested in QWERTY-specific tooling, parts inventories, and trained workforce. They funded typing schools, standardized QWERTY curricula, and actively lobbied against alternative layouts. Their extractive interest: maintaining QWERTY lock-in preserved the value of their sunk assets and prevented competitor entry via layout innovation. They could have retooled to Dvorak or other layouts, but the cost exceeded the benefit because QWERTY standardization was worth more to them as a defended monopoly than as a neutral choice."
+    },
+    {
+      "name": "incumbent_typing_instruction_schools",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Business colleges, secretarial schools, and institutional typing programs had curricula, teacher training, certification standards, and institutional reputation built on QWERTY mastery. Any shift to a rival layout threatened their competitive position, required curriculum revision, and undermined their brand claim to teach 'professional typing.' They actively resisted layout alternatives through accreditation bodies, industry associations, and employer partnerships. Their benefit: QWERTY standardization locked in their curriculum value and made them the gatekeepers of labor supply."
+    },
+    {
+      "name": "users_trapped_in_qwerty_layout",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Individual typists—secretaries, office workers, journalists—learned QWERTY in schools, through workplace training, or through practice. Their hands and muscle memory became bound to QWERTY; they developed professional identity as 'QWERTY typists.' Switching to Dvorak or another layout required unlearning deeply ingrained motor skills (estimated 20–40 hours of reduced productivity) and retraining—a high personal cost that would be borne entirely by them while the industry remained QWERTY-standardized. Their benefit from switching (faster typing, fewer repetitive-strain injuries) would accrue only to them individually, not shared across the labor pool. The coordination problem was asymmetric: everyone else staying on QWERTY made switching irrational for any individual. Their identity-lock meant that even when faster alternatives became known, they experienced switching as threatening their professional competence and self-image."
+    },
+    {
+      "name": "competing_keyboard_layout_innovators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "August Dvorak and other layout designers developed technically superior arrangements (faster typing, less fatigue, better ergonomics). Dvorak filed patents in 1936 and conducted studies showing 10-15% speed improvements. However, Dvorak and his successors could not gain market traction because: (1) manufacturers refused to build alternative-layout machines (no capital investment without demand); (2) schools refused to teach alternatives (locked into QWERTY curricula); (3) users could not see benefit in learning an isolated layout (network effects). Their technical innovation was defeated not by inferior design but by incumbents' control of production and distribution channels. They were trapped because breaking into the market required simultaneous adoption across multiple layers (manufacturers, schools, users)—a coordination problem they could not solve from outside the incumbent coalition."
+    },
+    {
+      "name": "office_managers_and_employers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Large employers (banks, insurance companies, government offices, newspapers) benefited from a standardized, abundant pool of QWERTY-trained typists they could hire without retraining. They preferred standardization (even suboptimal) to fragmentation, and so resisted funding alternative-layout training or purchasing equipment that would fragment their labor supply. They formed a secondary beneficiary coalition: by refusing to hire Dvorak-trained typists or purchase Dvorak machines, they reinforced the incumbents' lock-in mechanism."
+    },
+    {
+      "name": "typing_speed_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Ergonomists, efficiency researchers, and technical journalists (including academic studies from MIT, Carnegie Tech, and industrial engineers) documented that Dvorak and other layouts were faster, less fatiguing, and biomechanically superior to QWERTY. Their research was technically sound but remained marginal in industry policy because manufacturers and schools had no incentive to fund adoption research; the constraint's suppression of alternatives meant technical evidence had minimal influence on standardization decisions. Their observations confirmed the extraction mechanism: QWERTY persisted not because it was optimal but because incumbents had invested in defending it."
+    },
+    {
+      "name": "regulatory_bodies_and_standards_committees",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Standards bodies (typewriter manufacturers' associations, business education councils, early computing standards committees) that might have mandated layout optimization, opened competition, or required disclosure of alternatives were either directly influenced by manufacturer interests or deemed keyboard design 'market-driven' rather than subject to regulation. Their potential role—counterbalancing incumbent influence—was preempted or captured. They were excluded from the extraction mechanism's benefits and so lacked motivation to intervene."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a single universal keyboard layout so all typists can operate any machine and all machines can be built with one standard interface, reducing friction in labor markets (workers can move jobs without retraining; employers can hire any typist; manufacturers can sell machines to any trained operator). QWERTY solved the pre-standardization problem of keyboard anarchy (different machines used different arrangements).",
+    "transfer_function": "Extracts switching costs from users and innovators, transferring the value of standardization to incumbent manufacturers (Remington, Union) and typing instruction institutions. Every typist who learned QWERTY and could not affordably switch to a faster layout bore a cost (opportunity cost of slower typing, health costs from repetitive strain); every innovator with a superior layout bore a cost (zero market access). The incumbents captured the standardization rent: their sunk QWERTY investments appreciated in value; their labor supply remained locked in; their competitive position became unassailable.",
+    "absent_voices": "Layout innovators (Dvorak descendants, post-1970s ergonomic researchers), workers in alternative-layout communities who would have testified that switching is possible when barriers drop, regulatory bodies that might have intervened to mandate layout competition or disclosure, and the many typists who experienced repeated-strain injury and would have preferred faster layouts but never learned they existed as realistic options. Their absence from standards discussions meant the constraint's extraction mechanism operated unopposed.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the incumbents ceased active suppression (manufacturers adopted Dvorak or remained agnostic, typing schools taught multiple layouts, standards committees opened to alternatives), the constraint would dissolve. New machines would ship with switchable layouts; schools would diversify curricula; typists would gradually migrate to faster layouts; the labor market would reorganize around technical merit. The persistence of QWERTY depends on ongoing incumbent action—specifically, on the manufacturers' and schools' refusal to invest in alternative layouts despite technical superiority. Remove that active suppression and the market reorganizes; the constraint is not self-sustaining.",
+    "founding_problem": "Early typewriter designs (1870s–1880s) used different key arrangements (DHIATENSOR, Sholes variants, others). A business operator or typist moving jobs had to learn each machine's unique layout. This fragmentation made labor markets inefficient and made capital investment in typewriter manufacturing risky. Standardization on a single layout solved this coordination problem.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Technology historian David (1985, 1986) and economist Arthur (1989) established through historical analysis that the original coordination problem was solved by 1895–1920. QWERTY achieved critical mass; labor markets stabilized; manufacturers could rely on a trained typist pool; the efficiency gains from standardization were realized by 1920. Subsequent persistence is attributed by these outside scholars to lock-in economics and incumbent rent-seeking, not to ongoing coordination failure. Typing instruction became decoupled from innovation: schools locked curricula into QWERTY; employers refused to hire Dvorak-trained typists; the coordination benefit became a sunk asset that incumbents defended, not a living problem they solved. The founders' stated rationale (coordination) has been explicitly superseded by the beneficiary-extraction account documented by scholars outside the incumbent group."
+  },
+  "interval": {
+    "start": 1873,
+    "end": 1980
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1873,
+      "value": 0.15,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1895,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1920,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1873,
+      "value": 0.08,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1895,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1920,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1873,
+      "value": 0.05,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1895,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.41,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This is the BENEFICIARY-EXTRACTION READING of the QWERTY persistence kernel. It frames keyboard standardization as an active, enforced extraction mechanism: Remington, Union Typewriter, and incumbent typing schools benefited enormously from QWERTY lock-in and actively maintained it—funding typing curricula, lobbying against layout alternatives, and raising switching costs for both users and innovators. The reading does not claim QWERTY was chosen cynically; it was genuinely coordinated early on. The reading DOES claim that after the coordination problem was solved (by 1920), the incumbents maintained the standard not because continued standardization was needed but because breaking the standard threatened their sunk capital and competitive position. This reading identifies beneficiaries, declares victims, and models active suppression of alternatives.",
+    "key_agents": [
+      "Remington and Union Typewriter (institutional, agenda-setter): captured QWERTY standardization, invested massive capital in QWERTY-specific tooling, and defended the standard as their competitive moat.",
+      "Incumbent typing instruction schools (organized, beneficiary/agenda-setter): built curricula and reputation around QWERTY mastery; resisted alternatives because any shift threatened institutional survival.",
+      "Individual typists (powerless, identity-locked payer): learned QWERTY in school, internalized it as professional identity, and faced high personal switching costs despite technical availability of faster layouts.",
+      "Dvorak and layout innovators (moderate power, trapped): developed technically superior alternatives but were systematically excluded from market pathways (no manufacturer support, no school adoption, no employer funding).",
+      "Technical researchers and ergonomists (analytical observers): documented QWERTY inferiority but remained marginal because incumbents controlled industry standard-setting."
+    ],
+    "logic_rationale": "Extractiveness rises sharply from 1895–1920 as manufacturers institutionalized QWERTY and began active suppression (Dvorak development ~1930s, rejected by industry). It stabilizes at high levels 1950–1980 because the constraint becomes self-reinforcing: no alternative can break in because no manufacturer invests, no school teaches it, and users face identity-lock. Suppression rises correspondingly: the constraint's persistence increasingly depends on active defense (standards committees captured, Dvorak lobbying rebuffed, academic evidence sidelined). Theater rises gradually: the original coordination rationale becomes increasingly decoupled from actual operation—by 1950, the rhetoric is 'QWERTY is the standard and we all use it' rather than 'QWERTY solves the coordination problem,' but the machinery of enforcement remains active. The beneficiary-extraction reading is structural: if QWERTY had ceased to be beneficial to incumbents while remaining coordinated (hypothetically), they would have switched to optimize. They did not, suggesting protection of sunk assets, not pure coordination, drove persistence.",
+    "directionality_logic": "Incumbent manufacturers and typing schools are structural beneficiaries: they enjoy arbitrage-grade exit (they COULD switch to Dvorak and retool, but the cost exceeds their benefit because QWERTY is worth more to them as a defended standard than as a neutral choice). Their power is institutional and their time-horizon long (generational). Individual typists are high-d targets: they are trapped (powerless) and identity-locked (their motor skills are QWERTY-specific; they have paid unrecoverable training costs). Competing innovators are trapped: they cannot enter the market because manufacturers and schools (the incumbents' allied institutions) refuse to adopt alternatives. The effective extraction flows FROM the trapped typists and excluded innovators TO the incumbents who defended QWERTY as a protected asset. The measure of that directionality is the gap between what typists would have gained on a faster layout vs. what they actually earned on QWERTY—a surplus appropriated by the incumbents' control of standardization.",
+    "mandatrophy_analysis": "Tangled Rope type requires: (1) genuine coordination function—it does (standardization solves trainability); (2) asymmetric extraction—it does (users and innovators pay switching costs; incumbents collect standardization rents); (3) active enforcement—it does (manufacturers lobby, schools control curricula, standards committees exclude alternatives, Dvorak adoption is suppressed). All three gates are satisfied. The constraint is NOT a Rope because the symmetric-benefit story (everyone coordinated and benefits equally) breaks down once the founding problem is solved; after 1920, the coordination value decouples from the extraction value, and enforcement is required to defend only the beneficiaries' position, not the coordination itself. It is NOT a Snare because the coordination function remains real (standardization does enable labor-pool mobility); the constraint serves both functions simultaneously. This is exactly the Tangled Rope structure: genuine coordination wrapped in extraction, defended by active enforcement.",
+    "perspectival_gap": "From the incumbent-manufacturer seat: QWERTY is a valuable standard they built and maintain; alternatives are inefficient and would disrupt trained workforces; the persistence is coordination-justified. From the typist seat: QWERTY is a lock that they paid to learn and cannot affordably exit; faster alternatives exist but are invisible because market mechanisms are broken; the persistence is imposed, not chosen. From the innovator seat: better designs lose because they face insurmountable adoption barriers, not because they are technically inferior; the market is rigged. The engine computes these divergences from power (institutional vs. powerless), exit options (arbitrage vs. identity-locked vs. trapped), and beneficiary/victim declarations. The constraint's classification should differ across seats.",
+    "kernel_context": "This constraint is ONE reading of the contested kernel: 'QWERTY persistence mechanism.' The kernel is the standing commitment/mechanism of keyboard standardization—a fixed, durable feature that different parties read differently. This reading (beneficiary-extraction-reading) instantiates the active-suppression account: the incumbents deliberately maintained QWERTY to protect sunk assets and extracted switching costs from users and innovators. Sibling readings: (1) lock_in_reading frames QWERTY as path-dependent coordination failure—a coordination problem unsolved, not an extraction mechanism defended. (2) naturalization_reading frames QWERTY as genuinely adequate; alternatives lapsed through fair market competition, not suppression. These three readings share the kernel (keyboard standardization) but assign different mechanisms and beneficiary structures. The constraint-story format forces each reading into one file with one ε, one beneficiary/victim set, and one type—not averaged or hedged."
+  },
+  "omegas": [
+    {
+      "id": "suppression_vs_natural_coordination",
+      "question": "Did QWERTY persist primarily because active incumbent suppression made alternatives impossible to enter, or because QWERTY was legitimately adequate and alternatives failed through fair market competition?",
+      "resolution_mechanism": "Counterfactual analysis: if manufacturers had adopted Dvorak in 1940 (post-David studies) and invested equally, would typist adoption have followed? Historical evidence from industries where no incumbent dominated (early telephone, early aviation standards) shows rapid adoption of superior designs when competition is open; QWERTY shows persistent stagnation despite technical superiority of alternatives—this pattern divergence supports the suppression reading.",
+      "impact": "If suppression was primary: this is Tangled Rope with active extraction. If competition was fair: this is Rope or even Mountain (QWERTY persists because it's adequate). The classification swings on this axis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether QWERTY persistence is driven by active incumbent suppression or natural market equilibrium."
+    },
+    {
+      "id": "founding_problem_death",
+      "question": "After what date did the original coordination problem (labor-pool trainability) become solved, and did the incumbents' rationale for maintaining QWERTY shift from coordination to rent protection?",
+      "resolution_mechanism": "Textual analysis of manufacturer advertising, trade journal rhetoric, and standards committee discussions 1890–1950. Early messaging emphasizes coordination and trainability; post-1920 messaging shifts to 'QWERTY is the standard' (naturalization) while rarely defending it on coordination grounds. A clear rhetorical pivot from functional to tautological justification would support the shift.",
+      "impact": "If the founding problem died ~1920 but persistence continued: it confirms mandatrophy_resolved and supports Tangled Rope classification. If the founding problem remained live: the constraint might be a Rope (coordination maintained for its continued value).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The historical moment when QWERTY transitioned from necessary coordination to defended extraction."
+    },
+    {
+      "id": "beneficiary_capture_of_standards",
+      "question": "Did the incumbents actively capture or shape standards committees and professional bodies, or did these bodies independently adopt QWERTY through democratic deliberation?",
+      "resolution_mechanism": "Archival study of standards-committee membership, funding sources, voting records, and rejected proposals 1920–1980. Direct evidence of Remington/Union Typewriter personnel on committees, funding of standards bodies, or rejection of competing proposals would support capture; absence would support independent adoption.",
+      "impact": "If capture is documented: suppression is institutional, not just market-based—the constraint requires active (political) enforcement. If independent: QWERTY persists through coordination, not extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether keyboard standardization was captured by incumbents or arose through open deliberation."
+    },
+    {
+      "id": "alternative_reading_assignment",
+      "question": "Is this constraint truly a Tangled Rope (hybrid coordination/extraction), or is it better classified as a pure Snare (extraction disguised as coordination)?",
+      "resolution_mechanism": "Natural experiment: countries where no manufacturer monopolized (e.g., socialist states with multiple typewriter producers, or postwar periods with fragmented manufacture). Did they standardize QWERTY or fragment? Fragmentation supports Snare (lock-in persists even without incumbent defense); standardization on QWERTY supports Tangled Rope (coordination is genuinely valued).",
+      "impact": "Reclassification between Tangled Rope and Snare, with implications for whether fixing it requires (1) unlocking path-dependency (Tangled Rope fix) or (2) breaking incumbent control (Snare fix).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's core mechanism is coordination-plus-extraction or pure extraction disguised as coordination."
+    },
+    {
+      "id": "identity_lock_internalization",
+      "question": "Is typist attachment to QWERTY primarily structural (no viable exit) or internalized (typists believe QWERTY is natural/best)?",
+      "resolution_mechanism": "Survey or interview evidence: do typists report QWERTY preference as performance-based or as identity/habit? Do they resist learning Dvorak as too costly, or as 'wrong'? Early adopter communities (e.g., programming communities post-1970) that voluntarily adopted Dvorak would show externalized exit (people CAN switch when barriers drop); mass-market typists' resistance would show internalization. Post-digital era (computer keyboards, no manufacturer lock-in), do typists adopt Dvorak? Yes = structural barrier was primary; No = identity-lock was primary.",
+      "impact": "If internalized: the constraint's suppression is higher than the structural measure suggests; users carry it with them even after exit. If structural: fixing the constraint requires only removing manufacturers' enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether typists' loyalty to QWERTY is structural or identity-rooted."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.22
+  },
+  "network": {
+    "affects_constraints": [
+      "qwerty_persistence_mechanism__lock_in_reading",
+      "qwerty_persistence_mechanism__naturalization_reading"
+    ],
+    "dual_formulation_note": "QWERTY persistence kernel decomposes into three readings with different ε and beneficiary structures. This reading (beneficiary_extraction_reading) models active incumbent suppression of alternatives; ε=0.68 reflects extraction via switching costs. The lock_in_reading models path-dependent coordination failure without beneficiary intentionality; ε would be lower (~0.45), suppression would reflect system dynamics rather than enforcement. The naturalization_reading models QWERTY as genuinely adequate; ε would be negligible (~0.15), accessibility_collapse high (~0.85), claiming natural selection, not designed extraction. All three readings share the kernel (keyboard standardization) but differ on mechanisms, beneficiaries, and classified type."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.82
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "qwerty_persistence_mechanism__lock_in_reading",
+      "qwerty_persistence_mechanism__naturalization_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "lock_in_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "naturalization_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "incumbent_intentional_suppression_of_alternatives",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "beneficiary_extraction_via_switching_costs",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "qwerty_as_defended_monopoly_rent",
+    "drift_state": {
+      "moment": "post_dvorak_technical_superiority_establishment",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "gain_flow": "incumbent_typewriter_manufacturers",
+  "fixing_cost": "prohibitive"
+}

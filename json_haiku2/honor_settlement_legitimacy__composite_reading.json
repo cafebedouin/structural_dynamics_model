@@ -1,0 +1,541 @@
+{
+  "header": {
+    "constraint_id": "honor_settlement_legitimacy__composite_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_honor_settlement_legitimacy_composite_reading",
+    "story_uid": "43bf2996-1d28-4914-9303-44268557940f",
+    "created_at": "2026-06-12T14:22:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.21,
+    "accessibility_collapse": 0.91,
+    "resistance": 0.34,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Honor-Legitimacy Settlement Regime (Composite Reading: Overdetermined Decline)",
+    "topic_domain": "legal/social/cultural",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "emerging_bourgeois_legal_system",
+      "state_monopoly_authority"
+    ],
+    "victims": [
+      "honor_culture_adherents",
+      "gentry_with_status_capital"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "causality_attribution_ambiguity",
+      "question": "Is dueling's decline driven primarily by cultural unthinkability (contraction) or by converging material/institutional suppression mechanisms, or by genuine mutual reinforcement of both pathways?",
+      "resolution_mechanism": "Comparative historical analysis across jurisdictions with identical material/institutional changes but different cultural frameworks (where cultural unthinkability did NOT occur). Measurement: persistence of dueling among honor adherents in contexts of material suppression but intact cultural legitimacy vs. rapid abandonment where cultural delegitimation but weak material enforcement.",
+      "impact": "If primarily cultural: reading shifts toward pure contraction (contraction_reading dominates). If primarily material: composite reading becomes misattributed; the real constraint is institutional suppression riding on a vestigial honor culture that was already eroding. If genuine mutual reinforcement: composite_reading classification holds; neither pathway is sufficient alone.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether dueling's decline is overdetermined (all pathways independent + mutually reinforcing) or whether one pathway is sufficient and others are side effects."
+    },
+    {
+      "id": "fringe_persistence_mechanism",
+      "question": "Among residual honor-culture practitioners who continued dueling after the cultural/legal collapse (drop_reading adherents), what sustained the practice: institutional isolation, identity-locked commitment, or active underground organization?",
+      "resolution_mechanism": "Analysis of dueling incidents post-legal-prohibition in each jurisdiction: date of last recorded incidents, participant demographics, stated justifications, enforcement response intensity. Construct a coherence graph: did the practice disappear uniformly (simple collapse) or persist geographically/socially (residual subculture)? If persistent: interview/archival evidence on how practitioners sustained legitimacy.",
+      "impact": "If practice persisted only through identity-locked commitment (duelers could not escape without rejecting their self-concept), the composite reading holds: cultural unthinkability is the primary driver and material suppression of a residual fringe is secondary. If practice persisted through organized subculture with internal legitimacy structures, drop_reading is the correct frame and the composite reading underestimates fringe resilience.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The character of dueling's persistence (or absence) in the post-legal-prohibition era."
+    },
+    {
+      "id": "reading_frame_grid_selection",
+      "question": "This reading frames dueling as a constraint with composite decline mechanisms. An alternative framing treats each mechanism (cultural contraction, legal prohibition, social stratification change, economic transformation) as a separate constraint linked by contamination network edges. Which framing is more analytically tractable for predicting decline timing and residual adherence?",
+      "resolution_mechanism": "Construct both models: (1) composite_reading as a single ε-invariant constraint with coercion grid at (macro) structural level showing multiple mechanisms in concert; (2) decomposed-reading as a constraint family with separate stories per mechanism, linked via network.affects_constraints. Run prediction against historical data: which model better predicts (a) timing of legal prohibitions relative to cultural shifts, (b) geographic variation in persistence, (c) demographic patterns of last-wave practitioners.",
+      "impact": "If composite model predicts better: this reading's ε-invariance holds and the constraint is genuinely overdetermined. If decomposed model predicts better: the composite reading conflates separate constraints; rewrite as a family with explicit causality edges and reevaluate each member's ε independently.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether overdetermined decline should be modeled as a single composite constraint or decomposed into a linked family."
+    },
+    {
+      "id": "legitimacy_kernel_referent_drift",
+      "question": "The kernel 'honor_settlement_legitimacy' is ambiguous across readings: does it refer to (A) the institutional arrangement that allowed honor to settle interpersonal disputes without state intervention, (B) the cultural authority of honor-based settlement as legitimate compared to legal settlement, or (C) the cognitive schema that made honor settlement thinkable at all? The composite_reading frame selects (C); does this selection hide treatment of (A) or (B)?",
+      "resolution_mechanism": "For each reading, state explicitly which kernel referent it uses. If the sibling readings select different referents, each reading instantiates a different constraint (ε-invariance violation). If siblings select the same referent: declare this omega moot (resolved by the kernel structure itself).",
+      "impact": "If referents differ: each reading has a defensible ε but they are not true siblings — the contest is between separate constraints wearing the same label. Reclassify as constraint family rather than kernel-reading set and write separate network linkage. If referents align: the composite_reading's claim stands; sibling readings are competing causal stories of the same constraint's fate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel referent is stable across readings or whether readings instantiate different constraints."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "dueling_extractiveness_t0_early_modern"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.51,
+      "id_override": "dueling_extractiveness_t1_cultural_strain"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.56,
+      "id_override": "dueling_extractiveness_t2_legal_assault"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.62,
+      "id_override": "dueling_extractiveness_t3_composite_peak"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58,
+      "id_override": "dueling_extractiveness_t4_residual_fringe"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "id_override": "dueling_theater_t0_functional"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.11,
+      "id_override": "dueling_theater_t1_performative_onset"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.17,
+      "id_override": "dueling_theater_t2_ritual_emphasis"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.21,
+      "id_override": "dueling_theater_t3_pure_status_play"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.18,
+      "id_override": "dueling_theater_t4_spectral_performance"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "dueling_suppression_t0_minimal"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1,
+      "value": 0.24,
+      "id_override": "dueling_suppression_t1_legal_prohibition"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.41,
+      "id_override": "dueling_suppression_t2_enforcement_intensification"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.58,
+      "id_override": "dueling_suppression_t3_compound_enforcement"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.44,
+      "id_override": "dueling_suppression_t4_residual_enforcement"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 4,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 4,
+        "value": 0.91
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 4,
+        "value": 0.88
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.51
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 4,
+        "value": 0.92
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 4,
+        "value": 0.89
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 4,
+        "value": 0.74
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.32
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 4,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.41
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 4,
+        "value": 0.71
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.25
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 4,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.08
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 4,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.12
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 4,
+        "value": 0.61
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.18
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 4,
+        "value": 0.54
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.06
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 4,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 4,
+        "value": 0.18
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.74
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 4,
+        "value": 0.22
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.61
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 4,
+        "value": 0.31
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 4,
+        "value": 0.28
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Dueling as a status-settlement mechanism declined across Western Europe and North America between the 16th and 19th centuries through multiple reinforcing causal pathways: cultural delegitimation (honor became unthinkable as a rational basis for violence; Enlightenment redescription of honor as barbaric); legal prohibition and enforcement machinery (states imposed capital punishment for dueling and prosecuted it aggressively); economic transformation (rising bourgeoisie had status capital in wealth, not honor, making dueling unwinnable by their logic); institutional absorption (legal courts monopolized dispute settlement and delegitimized private remedies); religious delegitimation (churches reclassified honor-killing as mortal sin). This reading frames the decline as **composite and overdetermined**: no single pathway is sufficient; all pathways were independent material/institutional changes that converged on a shared outcome. Cultural unthinkability (contraction) is the primary terminal driver (alternatives became literally unimaginable within educated society), but it is causally intertwined with material suppression that would independently have undermined dueling even without cultural collapse. The constraint story describes the standing arrangement—the honor-settlement regime as it persisted in early modernity—assessed by this reading's own lights: high extractiveness because the regime extracted loyalty and life commitment from practitioners; high suppression because escaping the regime required cognitive/social/institutional impossibility, not mere legal barrier; low theater in the early period (the practice was functionally real) and rising theater as the practice persisted only through residual performance after legitimacy eroded.",
+    "key_agents": [
+      "gentry_with_status_capital: Practitioners of honor-settlement who depended on status-through-combat; held identity-locked commitment to dueling logic; bore the primary extraction (life, wealth, time) and faced rising suppression.",
+      "emerging_bourgeois_legal_system: Institutional beneficiary; state monopoly on dispute settlement; prosecuted dueling as crime; delegitimated private remedies; extracted legitimacy gain by absorbing settlement function.",
+      "state_monopoly_authority: Beneficiary and agenda-setter; enforced prohibition; built legal infrastructure that made dueling illegal and socially impossible; collected judicial authority as the only legitimate settlement mechanism.",
+      "religious_institutional_authority: Secondary beneficiary; delegitimated honor-killing as sin; reinforced cultural unthinkability through moral redescription.",
+      "merchant_and_professional_classes: Secondary beneficiaries; rose in social prominence with wealth-based status; had no interest in honor-settlement; contributed to cultural shift toward rational dispute resolution.",
+      "observers_enlightenment_intellectuals: Analytical seats; produced cultural redescription of honor as barbaric; framed dueling as irrational; provided legitimacy rationale for legal suppression."
+    ],
+    "logic_rationale": "Extractiveness rises from 0.48 (early modern: dueling was economically rational for gentry status competition) to 0.62 (composite peak: the regime persists only through cultural/institutional coercion after material incentives evaporate). The measurement series shows an inverted-U trajectory for extractiveness and theater, indicating the transition from functional practice to vestigial performance. Suppression begins near zero (early modernity: dueling was legal, culturally endorsed, organizationally enabled) and rises to 0.58 (late modern: dueling is illegal, criminally prosecuted, culturally unthinkable, economically pointless, religiously damned). The coercion grid reveals the composite mechanism: structural-level suppression (legal prohibition, institutional monopoly) rises from 0.08 to 0.58; organizational suppression (gentry status hierarchy reorganization around wealth, professionalization replacing combat-based rank) rises from 0.12 to 0.61; individual-level suppression (identity-lock erosion as practitioners aged without replacement, cognitive impossibility for younger cohorts) rises from 0.06 to 0.52. Resistance collapses at all four levels as cultural unthinkability combines with legal/material suppression: structural resistance (rival settling mechanisms available) falls from 0.68 to 0.18; organizational resistance (honor culture institutions) falls from 0.74 to 0.22; class resistance (gentry as a class defending dueling norms) falls from 0.61 to 0.31; individual resistance (practitioners' personal commitment to the practice) falls from 0.72 to 0.28. Theater rises from 0.08 (functional solution to status disputes) to 0.21 (the practice persists only as ritualized status-play after functional purpose evaporates).",
+    "perspectival_gap": "The gentry-practitioner seat experiences the constraint's decline as cognitive/social collapse (dueling becomes unthinkable despite their commitment; the regime they depended on evaporates across multiple registers simultaneously). The state-legal-system seat experiences it as institutional victory (the monopoly on settlement is consolidated; alternatives are eliminated; authority is concentrated). The merchant-professional seat experiences it as irrelevant background change (they never practiced dueling; they benefit from legal settlement machinery as a coordination mechanism). The analytical seat sees overdetermined decline: no single pathway is sufficient, but all pathways reinforce each other. The engine computes per-seat classifications: from the gentry-practitioner position, the regime computes as snare (high extraction, high suppression, identity-locked exit, high resistance that fails). From the state position, it computes as rope (coordination function—settling disputes without state machinery in early modernity—plus institutional benefit of consolidating settlement authority). From the merchant position, it computes as rope (the legal alternative is genuinely coordinating and beneficial). The divergence across seats is structural, not a measurement error.",
+    "directionality_logic": "Gentry practitioners: d ≈ 0.95 (full target). They bear extraction (time, wealth, life risk), face rising suppression (legal prohibition, cultural delegitimation, organizational isolation), and hold identity-locked exit (for early practitioners, dueling was constitutive of self-concept and social position; exit meant status death even if the person survived). State-legal-system: d ≈ 0.05 (full beneficiary). It collects institutional authority, faces minimal suppression (it is the suppression infrastructure itself), and has arbitrage-grade exit options (legal authority consolidation is institutionally profitable and can expand into other domains). Emerging bourgeoisie: d ≈ 0.25 (partial beneficiary). They benefit from legal settlement machinery but also experience modest suppression if they are socially pressured to duel; they have mobile exit options (refuse dueling on grounds of class/profession; legal system backs them up). Religious institutions: d ≈ 0.15 (minor beneficiary). They benefit from moral authority over settlement and life-or-death decisions; suppression is minimal (they are part of the suppressing coalition). Analytical observer: d ≈ 0.50 (symmetric). They neither collect nor bear extraction; they measure and report.",
+    "mandatrophy_analysis": "The founding problem—how to settle disputes between gentlemen without invoking state authority, preserving honor and status in the settlement process—is structurally DEAD by t=4 (interval end). Honor has been redescribed as barbaric; the state monopoly on dispute settlement is consolidated; legal courts have absorbed the settlement function; economic status no longer flows from combat capability. Yet the constraint persists in vestigial form: residual honor-culture practitioners continue sporadic dueling despite complete delegitimation. The theater_ratio rises (0.08 to 0.21) and then slightly declines (to 0.18) as the residual practice becomes pure spectral performance—aestheticized, identity-locked, functionally pointless. Mandatrophy exists but is **contested** in the reading terms: some observers claim dueling is functionally dead (mandatrophy resolved); others claim it persists in cultural/institutional residual form among subpopulations. The composite_reading declares mandatrophy exists but is **not yet fully resolved** at t=4 because the practice has not entirely disappeared—it persists as identity-locked fringe behavior. A full mandatrophy resolution would require either (a) the complete eradication of dueling practitioners, or (b) the cognitive impossibility of dueling even for identity-locked adherents (the human capacity to imagine and enact the practice must be erased, not merely legal/social pressure against it).",
+    "kernel_context": "This constraint instantiates the **composite_reading** of the kernel honor_settlement_legitimacy. The kernel is the standing arrangement that allowed private parties (gentlemen) to settle disputes through honor-based combat while retaining social legitimacy. The composite_reading frames dueling's decline as **overdetermined**: multiple independent causal pathways (cultural delegitimation, legal prohibition + enforcement, economic transformation, institutional absorption, religious delegitimation) converge on a shared outcome. Cultural contraction (honor became cognitively unthinkable) is the primary terminal driver, but it is causally intertwined with material/institutional suppression that would independently have undermined the practice. Sibling readings: (1) **contraction_reading** frames decline as driven primarily by cultural framework transformation (honor became barbaric); material/institutional changes are secondary effects or responses to the prior cultural shift. (2) **drop_reading** frames dueling as persisting among residual honor-culture practitioners despite legal/cultural collapse; the reading emphasizes fringe persistence rather than wholesale decline. The composite_reading differs from contraction_reading in positing genuine causal interdependence of multiple pathways (not one dominant cause with secondary effects). It differs from drop_reading in emphasizing the near-universality of decline despite pockets of residual practice. All three readings share the kernel referent: the standing arrangement that made honor-settlement legitimate. The readings diverge on **which causal pathway is primary** and **what the decline trajectory looks like** (sharp universal collapse vs. gradual contraction vs. fringe persistence)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "honor_settlement_legitimacy__contraction_reading",
+      "honor_settlement_legitimacy__drop_reading",
+      "status_competition_regime__genteel_period",
+      "legal_monopoly_on_dispute_settlement"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a contested kernel. The kernel honor_settlement_legitimacy has three competing readings: composite_reading (this story, framing decline as overdetermined), contraction_reading (decline driven by cultural delegitimation), and drop_reading (persistence of practice among residual adherents). Each reading instantiates a different constraint with different ε values and causal stories. They are linked as a constraint family via network.affects_constraints (each reading links to its siblings). The composite_reading differs from the others in positing genuine interdependence of multiple causal pathways rather than dominance of one pathway. To model the kernel dispute itself (not just the readings), author three separate constraint stories, one per reading, each with its own base_properties metrics and stakeholders. The three stories form a kernel family joined by reading_relations in cs_structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.92
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "gentry_with_status_capital",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "The practitioners and defenders of honor-settlement. Early modernity (t=0): dueling is a costly but rational strategy within status-competition among gentlemen; legal system does not yet monopolize dispute settlement; honor is culturally legitimate. As interval progresses (t=0 to t=4): dueling becomes legally prohibited, culturally delegitimated, economically pointless (wealth-based status replaces combat-based rank), religiously condemned, institutionally isolated. Gentry face rising suppression across all registers: legal penalties increase, cultural status of dueling plummets, merchant/professional classes (who do not duel) rise in social prominence, younger cohorts are socialized away from honor-settlement logic. Exit appears available (refuse to duel, accept legal settlement) but is identity-locked: for practitioners whose self-concept is constituted through honor and dueling prowess, exit means status death and self-dissolution. By t=4, surviving practitioners are almost entirely identity-locked (older cohorts, cultural holdouts); younger generations have escaped through cognitive/social impossibility rather than deliberate choice."
+    },
+    {
+      "name": "state_monopoly_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The beneficiary and administrator of the constraint's decline. The state builds legal authority over dispute settlement: legal courts absorb the settlement function, capital punishment is imposed for dueling, enforcement machinery is operationalized. Early modernity: state enforcement is present but spotty and culturally contested (dueling persists despite illegality because cultural legitimacy is strong). By t=4: state enforcement has hardened, cultural backup has eroded, legal monopoly is consolidated and uncontested. The state benefits by concentrating settlement authority, eliminating private remedies, and expanding its monopoly over legitimate violence. Exit options are arbitrage-grade: the state can extend settlement monopoly into other domains (blood feuds, private warfare, vendetta resolution) or relax enforcement if politically advantageous; it has institutional flexibility because it is not bound by commitment to dueling's survival."
+    },
+    {
+      "name": "emerging_bourgeois_legal_system",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The institutional and epistemic beneficiary of the shift from honor-settlement to legal settlement. As merchants and professionals rise in social prominence, legal dispute resolution becomes attractive (predictable, wealth-compatible, non-lethal, compatible with contractual economy). Legal system benefits by absorbing settlement authority, gaining legitimacy and jurisdiction, expanding its scope to regulate commercial disputes (which the honor-code could not handle). Early modernity: legal system competes with honor-settlement; lawyers and judges are building a rival authority structure. By t=4: legal system has won; honor-settlement is legal anachronism; legal dispute resolution is culturally normal. Exit options are mobile: the legal system can adapt to new dispute types, incorporate new stakeholders, evolve procedural norms; it is not bound to any particular settlement mechanism."
+    },
+    {
+      "name": "religious_institutional_authority",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Secondary beneficiary; reinforces cultural delegitimation of dueling. Religious institutions (Catholic and Protestant churches) reclassify honor-killing as mortal sin, deny sacraments to duelers, excommunicate participants. This reinforces cultural redescription of honor as barbaric and adds moral authority to legal prohibition. Early modernity: religious opposition to dueling is present but selective (some clerics are duelers themselves; religious authority is contested). By t=4: religious opposition is consolidated and culturally influential (younger cohorts are socialized away from dueling through religious education, moral frameworks). Exit options are constrained: religious institutions are bound to doctrinal positions on sin and violence; they can interpret doctrine flexibly but cannot simply abandon opposition to dueling without internal contradiction."
+    },
+    {
+      "name": "merchant_and_professional_classes",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Indirect beneficiaries of dueling's decline. Merchants and professionals rise in social prominence through wealth and expertise rather than combat prowess. They have no stake in honor-settlement (they cannot win duels through wealth, cannot compete in honor-status with military gentry). They benefit from legal settlement machinery as a coordination mechanism for commercial disputes. Early modernity: merchants are subordinate to gentry in status hierarchy; dueling is not available to them (some laws restrict dueling to nobility). By t=4: merchants are dominant in status hierarchy; legal settlement is normal and compatible with commercial economy; honor-settlement is residual. Exit options are mobile: merchant classes can shift their status-competition mechanisms, adopt new dispute-settlement norms, engage with legal system on favorable terms."
+    },
+    {
+      "name": "enlightenment_intellectuals",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Analytical seat; produces cultural redescription of dueling and honor. Enlightenment thinkers frame honor as barbaric, dueling as irrational, legal settlement as rational and civilized. This redescription provides intellectual legitimacy for legal prohibition and cultural delegitimation. Early modernity: Enlightenment criticism of dueling emerges but is contested (honor culture has its own intellectual defenders). By t=4: Enlightenment framing is culturally dominant (educated classes view honor-settlement as primitive). The intellectuals neither directly pay nor benefit (they are not practitioners); they produce the cultural framework that underpins both legal prohibition and gentry practitioners' own self-doubt."
+    },
+    {
+      "name": "residual_fringe_practitioners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "By t=4, the remaining practitioners are almost entirely identity-locked, older cohorts (those socialized in honor-culture before cultural collapse), or isolated subcultures. They continue dueling despite complete delegitimation, legal prohibition, social ostracism, and religious condemnation. Exit is impossible without self-dissolution. The practice persists only through cultural isolation and identity-fusion. This group is distinct from gentry_with_status_capital in being powerless at t=4 (no longer commanding institutional authority or social prominence); they are holdouts rather than practitioners-in-power."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Honor-settlement provided a mechanism for resolving disputes between gentlemen without invoking state authority or legal courts, while preserving the status and honor of both parties. The mechanism worked through institutionalized ritual (the duel) that allowed combatants to establish relative status through combat, then terminate the dispute and restore social relationships. This solved a genuine coordination problem in early modernity: legal courts were slow, expensive, inaccessible to most gentry, did not recognize status hierarchies, could not enforce outcomes against powerful actors, and did not provide the public ritual that restored honor after offense. Honor-settlement was faster, cheaper, accessible on demand, publicly performed, and culturally recognizable.",
+    "transfer_function": "Honor-settlement moved time, wealth, and life from practitioners to status competitors (the victor gained status, the loser lost status or lost his life). It also moved cultural authority from state authority to honor-community authority (the community that recognized honor settlements, not courts, defined the legitimacy of dispute outcomes). The mechanism was fundamentally about status transfer through combat; it worked by concentrating the cost (physical danger, death risk) on the participants and the benefit (status confirmation, honor restoration) on the survivor.",
+    "absent_voices": "Merchants and professionals who did not practice dueling (either because they were excluded by law/custom or because dueling did not serve their status-competition mechanisms) would have objected to the honor-settlement regime if their voices had been heard. They would have argued that honor-settlement was irrational, wasteful, incompatible with commercial activity, and that legal settlement was superior. Lower classes would have objected that honor-settlement was available only to the elite and preserved gentry privilege by allowing them to settle disputes outside legal courts. Women would have objected that honor-settlement was an exclusively male mechanism and that their disputes were not recognized as amenable to honor-settlement. Religious reformers would have objected that dueling was sinful and that religious authority, not honor-community authority, should govern disputes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If honor-settlement had completely and permanently disappeared without the material/institutional/cultural alternatives that actually emerged, the world would rearrange itself toward different dispute-settlement mechanisms. Gentry would have been forced to rely on legal courts (which would have expanded capacity and prestige to absorb the demand). Informal arbitration and mediation would have developed to fill the gap (community elders, guild arbiters, ecclesiastical courts). The status-competition mechanisms within the gentry would have reorganized around non-lethal forms of competition (wealth, educational credentials, bureaucratic position, patronage networks). The state legal system would have faced demand pressure to become more accessible and responsive to gentry disputes. The disappearance is not natural—it required active cultural work (delegitimation), institutional change (legal monopoly), and material transformation (status redistribution toward wealth). The arrangement matters because its absence would force reorganization.",
+    "founding_problem": "Early modernity had a genuine dispute-settlement problem: gentry-to-gentry conflicts (insults, property disputes, romantic rivalries) could not be reliably or honorably settled through legal courts that were slow, expensive, inaccessible, and did not recognize the status hierarchies the disputes embodied. The legal system also could not enforce outcomes against powerful gentry with independent resources and armed retainers. Honor-settlement solved this by providing an immediate, public, ritualized mechanism for resolving disputes and restoring social relationships while respecting status hierarchies.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem is corroborated by historical analysis from scholars OUTSIDE the benefiting parties (gentry, honor-community): legal historians document the slow/expensive/inaccessible character of early-modern courts; specialists in gentry culture document the centrality of honor-settlement to status competition; social historians document the gradual expansion and professionalization of legal systems that made state settlement faster and more accessible. By the 18th-19th centuries, independent observers (legal reformers, Enlightenment critics, merchants with commercial dispute needs) attest that the founding problem is SOLVED: legal courts are now faster, cheaper, accessible, and capable of enforcing outcomes. The founding problem is dead. The constraint persists despite the founding problem's resolution—this is the mandatrophy signal."
+  },
+  "gain_flow": "state_monopoly_authority",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "contraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "drop_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "multiple_causal_pathways_overdetermined",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "cultural_contraction_primary_terminal_driver",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "institutional_material_suppression_mutually_reinforcing",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "honor_settlement_as_legitimate_dispute_mechanism",
+    "drift_state": {
+      "moment": "post_enlightenment_legal_consolidation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "status_competition_regime__genteel_period",
+      "legal_monopoly_on_dispute_settlement"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

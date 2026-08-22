@@ -1,0 +1,369 @@
+% ============================================================================
+% CONSTRAINT STORY: employment_boundary__substantive_employment_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-11
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_employment_boundary__substantive_employment_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: employment_boundary__substantive_employment_reading
+ *   human_readable: Substantive Employment Boundary: Economic Dependence and Algorithmic Control
+ *   domain: labor/social_policy/economic
+ *
+ * SUMMARY:
+ *   The substantive employment reading defines employment by two observable
+ *   structural features: economic dependence (no alternative income source,
+ *   reliance on platform assignment) and algorithmic control (platform sets
+ *   tasks, pacing, compensation, and can terminate unilaterally through
+ *   rating deactivation). This reading asserts that workers exhibiting both
+ *   features are employees under employment law, regardless of contract
+ *   language or absence of formal supervision. The reading's core claim is
+ *   that the employment bundle — dependence paired with protections — is
+ *   violated when dependence persists without protections, eroding the social
+ *   insurance function employment provides. Platform operators resist this
+ *   reading through legal defense of contract form, regulatory advocacy, and
+ *   political investment in alternative framings. The measured extractiveness
+ *   (0.68) reflects the substantial labor cost differential platforms secure
+ *   by maintaining contractor status; the suppression (0.72) reflects active
+ *   enforcement through algorithmic rating systems, contract terms, and
+ *   legal/regulatory defense. The theater ratio (0.42) reflects partial
+ *   misalignment: platforms present the relationship as voluntary, flexible,
+ *   and mutually beneficial; the substantive reading reveals algorithmic
+ *   control and exit barriers that contradict the voluntary framing.
+ *
+ * KEY AGENTS:
+ *   - platform_operators: Institutional agenda_setter, powerless workers' structural antagonist; control algorithmic assignment, rating, compensation, and termination.
+ *   - platform_workers: Powerless payers, economically dependent on platform assignment, subject to algorithmic control, excluded from employer protections and collective voice.
+ *   - traditional_employers: Indirect beneficiaries, face competitive pressure from platform labor cost advantage.
+ *   - labor_standards_regulators: Observers whose interpretation determines whether substantive or formalist reading governs enforcement.
+ *   - worker_advocacy_organizations: Excluded from platform governance but represent worker interests externally.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(employment_boundary__substantive_employment_reading, 0.68).
+domain_priors:suppression_score(employment_boundary__substantive_employment_reading, 0.72).
+domain_priors:theater_ratio(employment_boundary__substantive_employment_reading, 0.42).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(employment_boundary__substantive_employment_reading, extractiveness, 0.68).
+narrative_ontology:constraint_metric(employment_boundary__substantive_employment_reading, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(employment_boundary__substantive_employment_reading, theater_ratio, 0.42).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(employment_boundary__substantive_employment_reading, accessibility_collapse, 0.48).
+narrative_ontology:constraint_metric(employment_boundary__substantive_employment_reading, resistance, 0.71).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(employment_boundary__substantive_employment_reading, tangled_rope).
+narrative_ontology:human_readable(employment_boundary__substantive_employment_reading, "Substantive Employment Boundary: Economic Dependence and Algorithmic Control").
+narrative_ontology:topic_domain(employment_boundary__substantive_employment_reading, "labor/social_policy/economic").
+
+domain_priors:requires_active_enforcement(employment_boundary__substantive_employment_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(employment_boundary__substantive_employment_reading, '97ba33cc-9acd-4b33-8916-7871801e393d').
+narrative_ontology:cs_kernel_codification('97ba33cc-9acd-4b33-8916-7871801e393d', fixed_text).
+narrative_ontology:cs_authority_grounding('97ba33cc-9acd-4b33-8916-7871801e393d', lineage).
+narrative_ontology:cs_interpretation_layer_present('97ba33cc-9acd-4b33-8916-7871801e393d').
+narrative_ontology:cs_reading_relation('97ba33cc-9acd-4b33-8916-7871801e393d', employment_boundary__formalist_employment_reading, forecloses).
+narrative_ontology:cs_reading_relation('97ba33cc-9acd-4b33-8916-7871801e393d', employment_boundary__hybrid_security_reading, influences).
+narrative_ontology:cs_axiom('97ba33cc-9acd-4b33-8916-7871801e393d', foundational, economic_dependence_plus_control_constitutes_employment).
+narrative_ontology:cs_axiom_status(economic_dependence_plus_control_constitutes_employment, holdable).
+narrative_ontology:cs_axiom_grounding('97ba33cc-9acd-4b33-8916-7871801e393d', economic_dependence_plus_control_constitutes_employment, deontological).
+narrative_ontology:cs_axiom('97ba33cc-9acd-4b33-8916-7871801e393d', foundational, employment_bundle_inseparable_from_protection_obligation).
+narrative_ontology:cs_axiom_status(employment_bundle_inseparable_from_protection_obligation, holdable).
+narrative_ontology:cs_axiom_grounding('97ba33cc-9acd-4b33-8916-7871801e393d', employment_bundle_inseparable_from_protection_obligation, deontological).
+narrative_ontology:cs_axiom('97ba33cc-9acd-4b33-8916-7871801e393d', secondary, algorithmic_assignment_functionally_equivalent_to_supervision).
+narrative_ontology:cs_axiom_status(algorithmic_assignment_functionally_equivalent_to_supervision, holdable).
+narrative_ontology:cs_axiom_grounding('97ba33cc-9acd-4b33-8916-7871801e393d', algorithmic_assignment_functionally_equivalent_to_supervision, empirically_contingent).
+narrative_ontology:cs_reference_frame('97ba33cc-9acd-4b33-8916-7871801e393d', employment_relationship_as_dependence_with_protections).
+narrative_ontology:cs_drift_state('97ba33cc-9acd-4b33-8916-7871801e393d', contemporary_algorithmic_labor, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_created_at('97ba33cc-9acd-4b33-8916-7871801e393d', '').
+narrative_ontology:cs_kernel_id(employment_boundary__substantive_employment_reading, employment_boundary).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(employment_boundary__substantive_employment_reading, platform_operators).
+narrative_ontology:constraint_victim(employment_boundary__substantive_employment_reading, platform_workers).
+narrative_ontology:constraint_victim(employment_boundary__substantive_employment_reading, wage_labor_system).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(employment_boundary__substantive_employment_reading, traditional_employers).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Operate labor marketplaces (rideshare, delivery, gig platforms) and maintain classification of workers as independent contractors. This classification allows them to avoid employer obligations: social insurance contribution, minimum wage guarantees, overtime pay, workplace safety regulations, unemployment insurance, and collective bargaining facilitation. They defend the classification through legal advocacy, regulatory lobbying, and contract terms that assert unilateral control over algorithmic assignment and termination. They benefit directly from the classification by reducing labor costs by 25-40% relative to employer obligations.
+narrative_ontology:constraint_stakeholder(employment_boundary__substantive_employment_reading, platform_operators, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% Work under algorithmic control (assignment, pacing, monitoring, rating-based deactivation) with economic dependence (no alternative income source, high platform fee retention). Lack access to unemployment insurance, paid sick leave, health insurance, workers' compensation, or collective representation. Subject to unilateral contract modification and termination without cause. Face the full burden of material risk (equipment, liability insurance) while exercising no meaningful control over conditions or compensation.
+narrative_ontology:constraint_stakeholder(employment_boundary__substantive_employment_reading, platform_workers, payer,
+    powerless, biographical, identity_locked, global).
+
+% The institutional arrangement that bundles economic dependence with employment protections. The substantive reading asserts this bundle is violated when dependence persists without protections, eroding the social insurance function the employment relationship was designed to provide.
+narrative_ontology:constraint_stakeholder(employment_boundary__substantive_employment_reading, wage_labor_system, payer,
+    analytical, civilizational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(employment_boundary__substantive_employment_reading, wage_labor_system).
+
+% Traditional employers face competitive pressure from platforms operating at lower labor cost under the contractor classification. They benefit indirectly from the precedent: the classification ceiling prevents mandatory reclassification from applying to them, and it creates regulatory and rhetorical ammunition against labor cost pressures (if platforms can maintain contractor status at scale, why should we bear employer obligations).
+narrative_ontology:constraint_stakeholder(employment_boundary__substantive_employment_reading, traditional_employers, beneficiary,
+    powerful, biographical, constrained, global).
+
+% The public safety net (unemployment insurance, workers' compensation, Medicaid) absorbs costs that employer obligations would otherwise distribute. Platform worker costs (emergency room visits, unemployment claims, disability support) flow to public systems, externalizing platform labor costs onto collective welfare budgets.
+narrative_ontology:constraint_stakeholder(employment_boundary__substantive_employment_reading, social_insurance_system, payer,
+    analytical, civilizational, analytical, national).
+narrative_ontology:stakeholder_non_agent(employment_boundary__substantive_employment_reading, social_insurance_system).
+
+% Enforce labor law by interpreting the employment boundary. Under the substantive reading, they investigate whether economic dependence + algorithmic control suffice to trigger employment status; under the formalist reading they defer to contract form. Their interpretation determines whether platforms must reclassify workers and provide protections.
+narrative_ontology:constraint_stakeholder(employment_boundary__substantive_employment_reading, labor_standards_regulators, observer,
+    institutional, generational, analytical, national).
+
+% Represent worker interests but are structurally excluded from platform internal governance: no seat at algorithmic policy, rate-setting, or dispute resolution. Their exclusion is maintained by the contractor classification, which frames individual-contract negotiation rather than collective representation as the legitimate voice.
+narrative_ontology:constraint_stakeholder(employment_boundary__substantive_employment_reading, worker_advocacy_organizations, excluded,
+    organized, biographical, constrained, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(employment_boundary__substantive_employment_reading, platform_operators).
+narrative_ontology:fixing_cost_class(employment_boundary__substantive_employment_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Allocates labor supply to location-specific, time-urgent demand (ride requests, delivery orders) at millisecond timescale by algorithmically matching available workers to tasks and pricing competitively. Solves a real coordination problem: pre-app, matching drivers to rides required dispatch infrastructure and communication overhead; the app automated this. Provides transparent, on-demand income opportunity where traditional employment offers fixed schedules.
+% TRANSFER_FUNCTION: Moves a substantial share of platform revenue (20-40%) from workers to platform operators and shareholders. Mechanism: workers are assigned tasks algorithmically (not chosen voluntarily), paid per task, and excluded from employer-provided insurance, benefits, and protections. Workers bear full capital cost (vehicle, maintenance) and operational risk (deactivation, demand fluctuation, liability).
+% ABSENT_VOICES: Unemployed workers unable to access platform work due to algorithmic exclusion or rating deactivation; workers who exited but bear ongoing injury, disability, or burnout costs; taxi drivers displaced by platform competition; public welfare systems absorbing unpaid leave and injury costs; workers in jurisdictions or platforms where app service does not reach.
+% DISAPPEARANCE_RATIONALE: If the substantive reading were adopted and enforced, platforms would face reclassification as employers, triggering 25-40% labor cost increases, reduced driver availability (some would exit due to insurance/liability burden), reduced service frequency (higher prices), and reallocation of capital from platform shareholders to worker benefits and wage floors. The labor market would reorganize around either formalized employment (reduced flexibility, more structured hours) or true independent-contractor relationships (workers command higher per-task rates, absorb all costs and risk).
+% FOUNDING_PROBLEM: Pre-app transportation labor coordination was friction-filled: matching supply and demand required expensive dispatch infrastructure, wage negotiation, and employment overhead. Algorithmic matching solved the coordination problem by automating dispatch and creating transparent on-demand opportunity.
+% FOUNDING_PROBLEM_CORROBORATION: Platforms attest the founding problem is live: algorithmic matching solves coordination and offers flexibility traditional employment cannot. Worker advocates and labor economists (Rosenblat & Stark, Rahman, Wood, Shapiro) attest the founding problem is substantially solved by the app technology itself; the remaining question is how to distribute the coordination gains — whether workers receive them as income and protection or platforms capture them as pure rent. No independent source corroborates the 'permanent need for unprotected labor' claim.
+narrative_ontology:disappearance_verdict(employment_boundary__substantive_employment_reading, world_rearranges).
+narrative_ontology:founding_problem_status(employment_boundary__substantive_employment_reading, contested).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(employment_boundary__substantive_employment_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku2', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
+narrative_ontology:story_seed(employment_boundary__substantive_employment_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(employment_boundary__substantive_employment_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(employment_boundary__substantive_employment_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(employment_boundary__substantive_employment_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(employment_boundary__substantive_employment_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness is high (0.68 at interval end) and rising because platforms capture 25-40% of platform revenue while workers bear capital cost, risk, and opportunity cost without receiving social insurance protections. The constraint persists because contract form is (still, as of the interval end) the binding legal criterion in most jurisdictions, allowing platforms to capture coordination gains as pure rent extraction. Suppression is also high (0.72) because platforms maintain contractor status through: algorithmic rating systems that function as concealed deactivation tools; contract terms that prohibit driver organizing or rate negotiation; legal investment in contract-form defense; and regulatory lobbying that has, to date, largely held the line. Theater ratio is moderate (0.42) and rising: platforms increasingly invest in narratives about flexibility and autonomy (theater) while tightening algorithmic control (function). The measurement series tracks this gap widening: extractiveness rises as platforms optimize commission structures and surge pricing; suppression rises as rating systems harden; theater rises as platform messaging emphasizes choice and independence despite evidence of control. Accessibility_collapse is moderate (0.48) because exit from platform dependency is structurally possible but practically difficult: workers can exit to other platforms, but those platforms operate under the same contractor classification and offer similar terms; exit to traditional employment requires different capital (vehicle ownership for rideshare), skills, or geographic opportunity. Resistance is high (0.71) because workers and advocates are actively contesting the classification (litigation, legislation, unionization organizing) and the substantive reading has genuine legal and economic grounding.
+ *
+ * PERSPECTIVAL GAP:
+ *   From the platform operator seat, the constraint solves a real coordination problem (matching supply to demand at scale) and offers workers flexibility and income opportunity they value. From the worker seat, the same structure functions as concealed employment: dependence, control, and vulnerability to deactivation. From the regulator seat, the constraint is a legal ambiguity: contract form nominally permits contractor classification, but substantive facts (dependence, algorithmic control) point toward employment. From the worker advocacy seat, the constraint is extractive by design: platforms deliberately structure relationships to capture coordination gains while externalizing labor costs to workers and the public safety net. The engine computes these divergences from the structural data (power, exit_options, role); the authored claim (Tangled Rope) does not adjudicate which seat's perception is correct — the classification is what the corpus is built to measure.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Platform operators sit at d ≈ 0.1 (full beneficiary): they set the rules, collect the rent, control the narrative, and face no structural consequence if the classification persists. Platform workers sit at d ≈ 0.95 (near-full target): they are economically dependent, structurally controlled, excluded from protections and voice, and bear the material risk. The identity_locked exit_options for workers (they have locked themselves into platform work as primary livelihood, developed reputational assets on the platform, and face switching costs if they exit) amplifies their directionality toward the target end — they cannot easily move to alternative income sources. Traditional employers sit at d ≈ 0.25 (moderate beneficiary): they benefit from the precedent and the competitive pressure it creates, but they are not the direct beneficiaries or architects. Labor regulators sit at d ≈ 0.5 (analytical, symmetric): their role is to interpret the law, not to be extracted from or to benefit directly. The claim/metric gap is intentional: the substantive reading CLAIMS this is a Tangled Rope (genuine coordination of matching supply and demand, asymmetric extraction of the gains), while the metrics describe high extractiveness and suppression that could support a Snare reading. The gap is precisely the measurement the corpus exists to take: does the coordination function justify the extraction asymmetry, or is the coordination function cover for pure rent-seeking?
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding problem was real: pre-app transportation labor coordination required expensive dispatch infrastructure and wage negotiation. The founding problem's status is contested: platforms claim it remains (flexibility requires contractor status), but worker advocates and labor economists attest it is substantially solved by the app technology itself, and the remaining question is distribution, not coordination necessity. If the founding problem is dead and the arrangement persists, the constraint exhibits mandatrophy: the employment precarity arrangement now functions primarily to extract rent, not to solve the coordination problem. The Tangled Rope classification (coordination + extraction) distinguishes this reading from a pure Snare reading: there IS a genuine coordination function, but asymmetric extraction dominates its operation. The measurement of theater ratio rising while extractiveness rises supports the mandatrophy reading: platforms are increasingly investing in performative narratives of flexibility (theater) while algorithmic control and extraction harden (function degradation). If the substantive reading were adopted in law, the classification would likely shift to Snare: the coordination would be relocated to standard employment terms, and the extraction protection (employer obligations) would remove the asymmetry.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    coordination_necessity_persistence,
+    'Is the algorithmic matching function genuinely inseparable from contractor classification, or can coordination and employment protections coexist?',
+    'Policy experiment: jurisdiction mandates employment classification for platform workers while preserving algorithmic assignment and on-demand work structure. Observe whether matching efficiency, worker availability, and service frequency change materially. International comparison: jurisdictions (EU, California) mandating benefits-adjacent protections under contractor status or employment status.',
+    'If coordination persists under employment classification, contractor status is revealed as purely extractive and the constraint reclassifies to Snare. If matching efficiency or service frequency collapse under employment classification, the coordination function defense gains structural support and the Tangled Rope classification holds.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(coordination_necessity_persistence, empirical, 'Whether algorithmic coordination and employment protections are structurally compatible.').
+
+omega_variable(
+    suppression_internalization_trajectory,
+    'Is the measured suppression (0.72) structural (external barriers, algorithmic deactivation risk) or internalized (workers accept platform control as legitimate, refuse to organize despite capacity to do so)?',
+    'Longitudinal study of exited workers: do they experience reduced suppression-adjacent psychological symptoms (anxiety, sleep disruption, diminished agency) after exit? Do they organize collectively with other exited workers at higher rates than incumbent workers? Do returnees report re-entry as compulsive or voluntary? Comparison: do workers in higher-exit-cost platforms (e.g., rideshare with vehicle depreciation) report higher internalized suppression than workers in lower-cost platforms (e.g., task delivery with minimal capital)?',
+    'If internalized: the substantive reading faces an omega regarding whether contractor classification is genuinely chosen or coerced via psychological capture. If structural: the classification is pure coercion and suppression persists as designed. If mostly structural with moderate internalization: the constraint is Tangled Rope with identity-fusion complications; reclassification to employment would not automatically restore full agency to internalized workers.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(suppression_internalization_trajectory, empirical, 'Degree to which suppression is structural vs. internalized in worker psychology.').
+
+omega_variable(
+    formalist_vs_substantive_framework_incompatibility,
+    'Are the formalist employment reading (contract form is definitive) and the substantive employment reading (economic dependence plus algorithmic control is definitive) logically incompatible within a single legal framework, or can both readings coexist as party-specific framings?',
+    'Judicial precedent and statutory amendment: can a jurisdiction adopt the substantive reading for platform workers while maintaining the formalist reading for other contractor classes (independent consultants, craftspeople, professional services)? Or does adoption of substantive criteria for one class logically require their application to all classes?',
+    'If incompatible (one reading forecloses the other): the employment_boundary kernel is fundamentally contested and resolution requires choosing one framework over the other. If compatible (can coexist): the readings influence but do not foreclose each other; hybrid regulatory regimes become possible (employment status for platform workers, contractor status for true independent service providers, validated by different structural criteria). The relational classification (forecloses vs. coexists_with) in cs_structure hinges on this resolution.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(formalist_vs_substantive_framework_incompatibility, conceptual, 'Whether formalist and substantive employment definitions are logically compatible in a single legal system.').
+
+omega_variable(
+    algorithmic_control_measurability,
+    'Can ''algorithmic control'' be operationalized consistently enough to serve as a legal criterion for employment status, or is it too context-dependent and evolving to function as law?',
+    'Regulatory implementation: jurisdictions that adopt substantive criteria must operationalize ''algorithmic control'' — what specific powers (assignment, pacing, compensation modification, deactivation) trigger employment status? Does the operational definition apply consistently across platforms with different technical architectures (rideshare algorithms vs. gig-task algorithms vs. content-moderation algorithms)?',
+    'If operationalizable: the substantive reading is legally implementable. If not: the reading''s conceptual coherence does not translate to enforceable law, and the formalist reading maintains practical advantage despite weaker grounding. This impacts whether the substantive reading can move from contestation to enforcement.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(algorithmic_control_measurability, empirical, 'Whether algorithmic control can be operationalized as a legal employment criterion.').
+
+omega_variable(
+    identity_locked_exit_mechanism,
+    'Is platform workers'' identity_locked exit status (inability to exit due to career-path dependence, reputational asset lock-in) a deliberate platform design or an emergent consequence of competitive labor market dynamics?',
+    'Design audit: examine platform terms of service, algorithm documentation (under regulatory discovery), and internal design documents (litigation discovery) for evidence of intentional reputation-lock mechanisms. Counterfactual: could platforms redesign reputational systems (transient reputation, portable reputation, credential modularity) to reduce lock-in without materially reducing quality control? Have any platforms attempted such redesigns?',
+    'If deliberate design: identity_locked exit is another dimension of suppression and platforms bear design responsibility for lock-in. If emergent: platforms are responding to incentives (quality control, fraud prevention) that would persist under employment status, and identity lock-in is a structural feature of labor markets, not platform-specific extraction. This affects whether reclassification alone would substantially reduce suppression or whether additional regulation (credential portability, reputation redesign) is necessary.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_locked_exit_mechanism, empirical, 'Whether platform identity-lock is deliberate design or emergent market response.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(employment_boundary__substantive_employment_reading, 0, 24).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(empl_tr_t0, employment_boundary__substantive_employment_reading, theater_ratio, 0, 0.28).
+narrative_ontology:measurement(empl_tr_t3, employment_boundary__substantive_employment_reading, theater_ratio, 3, 0.31).
+narrative_ontology:measurement(empl_tr_t6, employment_boundary__substantive_employment_reading, theater_ratio, 6, 0.34).
+narrative_ontology:measurement(empl_tr_t12, employment_boundary__substantive_employment_reading, theater_ratio, 12, 0.38).
+narrative_ontology:measurement(empl_tr_t18, employment_boundary__substantive_employment_reading, theater_ratio, 18, 0.41).
+narrative_ontology:measurement(empl_tr_t24, employment_boundary__substantive_employment_reading, theater_ratio, 24, 0.42).
+
+% Extraction over time
+narrative_ontology:measurement(empl_be_t0, employment_boundary__substantive_employment_reading, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(empl_be_t3, employment_boundary__substantive_employment_reading, base_extractiveness, 3, 0.52).
+narrative_ontology:measurement(empl_be_t6, employment_boundary__substantive_employment_reading, base_extractiveness, 6, 0.56).
+narrative_ontology:measurement(empl_be_t12, employment_boundary__substantive_employment_reading, base_extractiveness, 12, 0.62).
+narrative_ontology:measurement(empl_be_t18, employment_boundary__substantive_employment_reading, base_extractiveness, 18, 0.66).
+narrative_ontology:measurement(empl_be_t24, employment_boundary__substantive_employment_reading, base_extractiveness, 24, 0.68).
+
+% Suppression requirement over time
+narrative_ontology:measurement(empl_su_t0, employment_boundary__substantive_employment_reading, suppression_requirement, 0, 0.58).
+narrative_ontology:measurement(empl_su_t3, employment_boundary__substantive_employment_reading, suppression_requirement, 3, 0.62).
+narrative_ontology:measurement(empl_su_t6, employment_boundary__substantive_employment_reading, suppression_requirement, 6, 0.65).
+narrative_ontology:measurement(empl_su_t12, employment_boundary__substantive_employment_reading, suppression_requirement, 12, 0.69).
+narrative_ontology:measurement(empl_su_t18, employment_boundary__substantive_employment_reading, suppression_requirement, 18, 0.71).
+narrative_ontology:measurement(empl_su_t24, employment_boundary__substantive_employment_reading, suppression_requirement, 24, 0.72).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(employment_boundary__substantive_employment_reading, resource_allocation).
+narrative_ontology:boltzmann_floor_override(employment_boundary__substantive_employment_reading, 0.18).
+narrative_ontology:affects_constraint(employment_boundary__substantive_employment_reading, employment_boundary__formalist_employment_reading).
+narrative_ontology:affects_constraint(employment_boundary__substantive_employment_reading, employment_boundary__hybrid_security_reading).
+
+% DUAL FORMULATION NOTE:
+% The employment_boundary kernel decomposes into three structurally distinct constraint stories: substantive_employment_reading (economic dependence + algorithmic control = employment, moderate ε), formalist_employment_reading (contract form is definitive, contractor status valid, low ε), and hybrid_security_reading (third category distinct from both, ε depends on protection specification). Each story is self-contained; the network edges document that all three are readings of the same contested kernel. The substantive reading is the most extractive because it asserts that current platform arrangements violate employment protections; the formalist reading treats the same arrangements as legitimate; the hybrid reading splits the difference. The three stories do NOT converge — they represent different normative frameworks for interpreting the same relationship.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(employment_boundary__substantive_employment_reading, institutional, 0.08).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

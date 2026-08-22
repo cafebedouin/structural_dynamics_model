@@ -1,0 +1,396 @@
+{
+  "header": {
+    "constraint_id": "basic_law_interpretive_authority__parliamentary_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_basic_law_interpretive_authority__parliamentary_sovereignty_reading",
+    "story_uid": "f47b978a-2731-481a-bb8e-a3afb4a76c2b"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Parliamentary Sovereignty Constitutional Interpretation Reading",
+    "topic_domain": "constitutional/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "elected_legislature",
+      "executive_accountable_to_legislature"
+    ],
+    "victims": [
+      "judicial_independence",
+      "rights_minorities",
+      "separated_powers_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "elected_legislature",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets the interpretive frame through legislation, judicial appointment, budget control, and (in many systems) ability to amend the constitution or change the court structure. Enforces parliamentary sovereignty by overriding adverse judicial decisions and reshaping the judiciary's composition and jurisdiction. Benefits directly from the constraint's operation: unambiguous authority, no need to negotiate with courts over constitutional meaning, consolidated power. Faces minimal cost; the cost of maintaining the fiction that legislatures are interpreting, not making, the constitution is low."
+    },
+    {
+      "name": "judicial_independence",
+      "role": "payer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The institutional and structural capacity of courts to reach decisions independently of legislative or executive pressure. Under the parliamentary sovereignty reading, judicial independence is systematically subordinated: courts understand their role as interpretation (applying laws the legislature made) rather than arbitration (checking the legislature). When legislatures override decisions, threaten jurisdiction-stripping, or signal that certain judges will not be retained, judicial independence erodes. The constraint treats judicial independence as a permission grant from the legislature, not as a structural requirement. Independence is subordinated to electoral legitimacy."
+    },
+    {
+      "name": "rights_minorities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Groups whose interests are systematically disadvantaged by majoritarian legislation (religious minorities, ethnic minorities, unpopular groups, those with disability requiring accommodation that majorities prefer not to fund). Under the parliamentary sovereignty reading, their protection rests on legislatures enacting protective legislation—the same institutions that enacted the disadvantaging laws. Their recourse against legislative majorities is limited to electoral pressure (they are minorities, so electoral leverage is weak) or to seeking judicial protection (which is structurally subordinated to legislative override). Exit is impossible. Voice is weak by structural design of majoritarian systems."
+    },
+    {
+      "name": "separated_powers_doctrine",
+      "role": "payer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The constitutional principle that legislative, executive, and judicial powers should be dispersed and checked by each other—a co-equal constraint principle in many constitutional theories. Under the parliamentary sovereignty reading, this principle is treated as subordinate to majoritarian legitimacy. The legislature checks the courts, but the courts lack reciprocal check against the legislature (or their check is exercised only with legislative tolerance). The separation-of-powers principle is not abandoned but reinterpreted as a procedural guideline rather than a structural requirement."
+    },
+    {
+      "name": "judicial_review_institution",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from having a clear institutional mandate (interpret law, apply it, do not make it) and from legislative validation of its role. Does not compete with legislatures for supremacy; has a defined sphere. Pays the cost of subordination: cannot develop independent constitutional reasoning; must accept legislative override; faces appointment and discipline from legislatures. The benefit is institutional survival and clarity; the cost is subordinate status."
+    },
+    {
+      "name": "electoral_constituency",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The voters who elect legislatures benefit from government directly accountable to electoral pressure. Legislatures pass laws the constituency votes for; courts enforce those laws, not some other constitutional doctrine that majorities voted against. The benefit is democratic responsiveness: government follows the will of the (voting) people. The cost (not borne equally by all constituencies) falls on those whose interests the majority votes to disadvantage—diffuse for the electoral majority, concentrated for minorities."
+    },
+    {
+      "name": "executive_accountable_to_legislature",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "In parliamentary systems, the executive depends on legislative confidence; in presidential systems, the legislature controls the executive's budget and can impeach. Under parliamentary sovereignty reading, the executive benefits from judicial restraint—courts cannot restrain executive action that the legislature permits or enacts. The executive's accountability is to the legislature, not to courts. Benefits from consolidated authority; pays the cost of political dependence on the legislature."
+    },
+    {
+      "name": "constitutional_historians",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Study the origins and evolution of constitutional arrangements. Witness competing narratives about the founding: whether judicial usurpation (the parliamentary sovereignty founding story) or judicial UNDERenforcement (the judicial supremacy founding story) was the actual historical problem. Do not stake institutional survival on either reading but analyze how each reading selects and interprets historical evidence to legitimize itself."
+    },
+    {
+      "name": "international_human_rights_regime",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "International bodies (UN human rights committees, European Court of Human Rights, regional courts) monitor compliance with international human rights law. Within the bounded frame of the parliamentary sovereignty reading (national legislative supremacy), these bodies have no enforcement power: a legislature can violate international human rights commitments and override international court rulings through domestic legislation. International monitors are excluded from the interpretive conversation by the territorial and institutional scope of the reading. They can remonstrate but cannot override."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides unambiguous institutional location for constitutional interpretation: the legislature. Solves coordination problem of 'where does final authority reside' by answering: the elected branch. Eliminates gridlock from competing institutional claims to constitutional supremacy (no court-versus-legislature deadlock). Ensures constitutional meaning can be changed through the same democratic process that changes ordinary law—responsive to electoral pressure.",
+    "transfer_function": "Transfers the power to interpret and reshape constitutional meaning from courts (who claim expertise-based authority) to legislatures (who claim electoral authority). Transfers also the power to override adverse constitutional decisions, discipline courts, reshape the judiciary's composition and jurisdiction. Transfers the burden of minority rights protection from guaranteed judicial review to the electoral process, where minorities have structurally weak voice.",
+    "absent_voices": "Judicial independence advocates (courts themselves, separation-of-powers theorists, judicial independence organizations) would reject this reading if they had equal voice: they argue that unchecked legislatures become tyrannical majorities and judicial independence is essential to constitutional fidelity. Rights-minority advocates would argue that electoral protection is insufficient and that stable, judicially enforced rights are necessary to prevent majoritarian oppression. International human rights bodies would argue that national legislative supremacy enables human rights violations without external accountability. These voices are structurally excluded by the frame that privileges electoral democracy as the sole legitimacy source.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If parliamentary sovereignty as the interpretive principle disappeared (replaced by judicial supremacy or popular constitutionalism), the constitutional and institutional arrangement would reorganize: courts would gain independent authority to declare laws unconstitutional and refuse to apply them without legislative override. Rights-minorities would gain access to stable protection outside electoral cycles. Legislatures would lose unilateral authority to reshape constitutional meaning. The legislative-executive axis would face new judicial constraints. Institutional authority would disperse.",
+    "founding_problem": "Judicial overreach and usurpation: courts interpreting vague constitutional language (fundamental rights, due process, equal protection) as license to impose judge-made law and frustrate legitimate legislative will. The founding problem as this reading frames it is that courts lacking democratic accountability can frustrate the will of the people as expressed through their elected representatives, creating gridlock and imposing substantive law under the guise of interpretation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Legislatures and executive branches defending their authority attest the problem is live: courts interpret broadly, constrain legislation, and frustrate electoral mandates. Judicial independence advocates and constitutional scholars attest the problem is either overstated or misdescribed: courts actually exercise great restraint; the real problem is judicial UNDERenforcement of rights (minorities do not get protection they need). Comparative constitutional historians attest that different democracies have experienced different pathologies—some genuinely suffered judicial overreach, others suffered legislative supremacy enabling atrocities. Democratic theory scholars attest the contest is real: there is no consensus on which problem (judicial overreach or legislative supremacy) is the genuine threat. No corroboration from outside the competing institutional seats."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the parliamentary sovereignty reading of the contested kernel 'basic_law_interpretive_authority.' Under this reading, the elected legislature holds final interpretive authority over constitutional meaning by virtue of its democratic mandate and representative accountability. Courts are positioned as interpreters who apply law made by the legislature, not as co-equal arbiters of constitutional meaning. When the legislature and courts disagree on constitutional interpretation, the legislature's reading prevails through legislative override, appointment of compliant judges, jurisdiction-stripping, or constitutional amendment. The reading treats democratic election as the primary source of constitutional legitimacy and judicial independence as a subordinate good. Sibling readings (judicial supremacy, popular constitutionalism) contest this framing: one locates authority in courts; another locates it in ongoing democratic contestation outside institutional terminals. This story authors the parliamentary sovereignty reading as a clean, ε-invariant constraint with its own beneficiaries, victims, and institutional dynamics.",
+    "key_agents": [
+      "elected_legislature: Primary beneficiary and agenda-setter (holds final interpretive authority through override and appointment power)",
+      "judicial_independence: Primary victim (structurally subordinated to legislative will; retains only authority legislature permits)",
+      "rights_minorities: Primary victim (depend on judicial protection that can be overridden by legislature; electoral voice is weak)",
+      "separated_powers_doctrine: Subordinated principle (treated as procedural guideline, not co-equal constitutional constraint)",
+      "electoral_constituency: Secondary beneficiary (government directly responsive to electoral preference without judicial check)",
+      "international_rights_bodies: Excluded from interpretive authority (no standing within the frame)"
+    ],
+    "logic_rationale": "Extractiveness (0.68 at interval end) reflects the transfer of interpretive authority from courts to legislature: legislatures extract the power to say what the constitution means without independent judicial check. The transfer is asymmetric—legislatures gain unilateral override capability while courts lose interpretive autonomy. Suppression (0.71) is high because the constraint's persistence depends on actively suppressing judicial independence (through composition pressure, jurisdiction-stripping, and delegitimizing language about 'judge-made law'). Theater (0.42, moderate) reflects that legislatures do maintain formal respect for constitutional language and judicial roles—they do not openly claim unlimited power—but an increasing share of activity is devoted to managing courts' willingness to defer rather than engaging genuine constitutional interpretation. The measurement series shows extractiveness rising to asymptote at mid-interval (legislative authority settles around ≈0.67-0.68 after early consolidation), suggesting the constraint reaches a stable equilibrium where legislatures have successfully established override capability and courts have internalized subordination. Theater remains flat and moderate—neither rising toward piton (where performance would dominate) nor falling (where courts would regain visible independence). Suppression plateaus at ≈0.71, consistent with stable-state maintenance of judicial deference. The constrained (not volatile) trajectory indicates this reading, once institutionalized, produces a stable equilibrium rather than ongoing contestation.",
+    "perspectival_gap": "The elected legislature and the judicial system compute radically different types from the same structural facts. From the legislature's seat, the constraint is genuine coordination: unambiguous authority, democratic legitimacy, clear lines of accountability. Courts and rights-minority seats perceive the same constraint as extractive subordination: they have lost autonomy without gaining offsetting benefit. The separated powers doctrine seat perceives it as a constitutional reading that privileges one principle (majority rule through election) over a co-equal principle (institutional checks). The engine computes per-seat directionality from the beneficiary/victim declarations and power differentials: the legislature (institutional power, arbitrage-level exit) sits at low d; rights-minorities (powerless, trapped exit) sit at high d. This divergence is the core measurement the framework exists to take.",
+    "directionality_logic": "The elected legislature benefits from unambiguous interpretive supremacy (no need to negotiate with courts, direct enforcement through override). Its directionality is low (near full beneficiary, d ≈ 0.1-0.2): it controls the rule, defines what the constitution means, can reshape the judiciary at will, faces no judicial check. Judicial independence and rights-minorities are targets: they lose structural autonomy without compensating benefit. Judicial independence is trapped (cannot exit the constitutional frame) and its subordination is structural; d is high (≈0.75-0.85). Rights-minorities are powerless (no institutional seat) and trapped (cannot exit; voice limited to electoral cycles that do not prioritize them); their d is highest (≈0.85-0.95). The electoral constituency sits near symmetric (d ≈ 0.5): they get responsive government but bear diffuse cost in rights erosion. Separated powers doctrine is trapped and its subordination is permanent within this reading; it functions as a victim despite being non-agent. The directionality spread (legislature near beneficiary pole, minorities near target pole) is the structural engine of effective extraction even though base ε (0.68) is moderate.",
+    "mandatrophy_analysis": "The founding problem (judicial usurpation, gridlock) would have been 'live' at the moment of constitutional founding if the judicial institution existed and was indeed overreaching. The parliamentary sovereignty reading resolves that problem by subordinating courts to legislatures: courts no longer gridlock legislative action; they enforce what legislatures say the constitution means. However, the very mechanism that solves the judicial-overreach problem creates a new problem: rights-protection through courts becomes unreliable. The constraint is a tangled_rope (genuine coordination problem solved + asymmetric extraction realized through the same mechanism). The theater ratio plateaus at moderate levels (0.42) because legislatures and courts maintain elaborate justifications for the arrangement (constitutional fidelity, interpretive restraint) that are not entirely performative—legislatures do pay some cost in maintaining constitutional language—but increasingly divorced from courts' actual decision-making autonomy. Mandatrophy potential is modest: the constraint is actively maintained by legislatures with direct incentive to enforce it. Were the founding problem genuinely solved and legislatures no longer needed the override mechanism, theater_ratio would rise (maintenance would become pure performance). Currently, the moderate-flat trajectory suggests the constraint is still substantially functional for its beneficiaries; it is not yet a piton.",
+    "kernel_context": "This constraint instantiates the PARLIAMENTARY SOVEREIGNTY reading of the kernel 'basic_law_interpretive_authority.' The kernel is the contested question: WHO holds final authority to interpret what the basic law (constitution) means and how it constrains state action? Three major readings compete: (1) JUDICIAL SUPREMACY reading: Courts hold final authority through specialized legal expertise and independence from political pressure. (2) PARLIAMENTARY SOVEREIGNTY reading (this story): The elected legislature holds final authority through democratic mandate and representative accountability. (3) POPULAR CONSTITUTIONALISM reading: Constitutional meaning emerges from ongoing democratic contestation in society, not from any single institutional terminus. This story authors only the parliamentary sovereignty reading as a self-contained constraint. The other readings are separate constraint stories in the corpus; they share the same kernel but instantiate different ε values, different beneficiary/victim structures, and different constraint types. The reading_relations in cs_structure below specify how this reading relates structurally to its siblings."
+  },
+  "omegas": [
+    {
+      "id": "founding_problem_empirical_status",
+      "question": "Was judicial overreach (the founding problem as this reading frames it) a genuine, widespread historical phenomenon, or a selective narrative used to justify legislative supremacy?",
+      "resolution_mechanism": "Empirical analysis of judicial decisions in the interval: what percentage of legislative statutes did courts actually strike down? Did those strikes cluster in particular domains? Did legislatures perceive itself as constrained in practice, or primarily in theoretical rhetoric? Comparative constitutional history across democracies.",
+      "impact": "If judicial overreach was rare or concentrated in unrepresentative cases, the founding problem is overstated, and the constraint's framing as responding to a genuine coordination failure is weakened. The constraint recasts as pure legislative power-consolidation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether judicial review actually posed the threat this reading claims it did."
+    },
+    {
+      "id": "rights_protection_substitutability",
+      "question": "Can rights-minorities access substantive protection through the electoral process (legislation, constitutional amendment by majority vote) as effectively as through judicial enforcement, or is electoral protection fundamentally weaker?",
+      "resolution_mechanism": "Comparative case studies: jurisdictions where minorities have attempted rights-protection through legislative supermajority requirements vs. through judicial enforcement. Track outcome success rates, implementation fidelity, and persistence over time.",
+      "impact": "If electoral protection is as effective as judicial protection, the constraint imposes no net cost on minorities; rights-victims are mislabeled. If electoral protection is substantially weaker (minorities are systematically out-voted), the constraint is extractive from minorities regardless of legislative benefit.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether majoritarian democracy protects minorities as well as constitutionalism with judicial enforcement."
+    },
+    {
+      "id": "reading_contest_structure",
+      "question": "Do the three readings of this kernel (parliamentary sovereignty, judicial supremacy, popular constitutionalism) actually coexist as live positions held by different democratic constituencies, or does one reading functionally dominate and the others serve only as theoretical alternatives?",
+      "resolution_mechanism": "Political-institutional mapping: in contemporary democracies claiming all three readings as intelligible, which reading does the actual institutional structure instantiate? How stable is the arrangement? When readings collide (e.g., elected legislature overrides judicial constitutional decision), which reading's authority actually prevails in practice?",
+      "impact": "If one reading dominates in practice, the contest is not structurally live; the kernel is not genuinely contested. The parliamentary sovereignty reading would then be the instantiated constraint, and the others would be aspirational alternatives rather than coexisting readings. This changes the omega classification from conceptual (different readings) to empirical (which arrangement actually operates).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel admits genuinely coexisting readings or resolves to one dominant reading in practice."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured judicial deference (suppression = 0.71) structural (judges fear retaliation: appointment pressure, jurisdiction-stripping, budgetary cuts) or internalized (judges have internalized the norm that legislatures should be supreme and enforce it voluntarily)?",
+      "resolution_mechanism": "Jurisdictional natural experiments: when jurisdiction-stripping threats are removed (e.g., through reform or change of legislative party) do judges immediately reassert independent reasoning, or does deference persist? Survey judicial cognition: do judges describe their behavior as constrained externally or as reflecting genuine constitutional belief in legislative supremacy?",
+      "impact": "If suppression is purely structural, courts could regain independence rapidly if legislatures changed course. If suppression is internalized, courts have incorporated the reading into their judicial philosophy; independence would take generational change. This affects the constraint's reversibility and the costs of its removal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether judicial subordination to legislatures is enforced through external pressure or internalized belief."
+    },
+    {
+      "id": "sibling_reading_logical_status",
+      "question": "Can a single institutional framework coherently hold both parliamentary sovereignty and judicial supremacy as co-equal principles, or do they logically foreclose each other?",
+      "resolution_mechanism": "Formal constitutional analysis: attempt to construct a coherent institutional mechanism where both courts and legislatures hold 'final' authority. If the mechanism requires adjudicating conflicts between the two authorities, which authority decides? Does the framework implicitly defer to one over the other, effectively collapsing into a single reading?",
+      "impact": "If the readings logically foreclose each other, the cs_structure.reading_relations should list 'forecloses' (rare). If they can coexist (one reading controls in one domain, another in another), they 'coexist_with.' If the parliamentary sovereignty reading creates structural pressure that makes judicial supremacy harder to maintain (but not impossible), the relation is 'influences.'",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the two readings of who holds final authority are logically compatible."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "basic_law_interpretive_authority__judicial_supremacy_reading",
+      "basic_law_interpretive_authority__popular_constitutionalism_reading",
+      "legislative_override_mechanism",
+      "judicial_appointment_political_influence",
+      "minority_rights_protection_through_courts"
+    ],
+    "dual_formulation_note": "This constraint is ONE reading of the kernel 'basic_law_interpretive_authority.' The sibling readings are authored as separate constraint stories: judicial_supremacy_reading (ε ≈ 0.50, mountains judges as primary beneficiary) and popular_constitutionalism_reading (ε ≈ 0.45, diffuse institutional authority). All three readings share the same kernel (the contested question of interpretive authority) but produce different ε values, different beneficiary/victim sets, and different types because they make different empirical and normative claims about what the basic law requires. The ε-invariance principle (DP-001) requires separate stories; linking via network.affects_constraints models that these readings influence each other's operation (e.g., if parliamentary sovereignty becomes institutionalized, it creates pressure on courts that affects the viability of the judicial supremacy reading)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "gain_flow": "elected_legislature",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "judicial_supremacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "popular_constitutionalism_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "electoral_legitimacy_constitutes_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "majority_rule_primacy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "legislative_constitutional_supremacy",
+    "drift_state": {
+      "moment": "contemporary_judicial_assertiveness_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "basic_law_interpretive_authority__kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

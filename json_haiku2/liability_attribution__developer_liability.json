@@ -1,0 +1,322 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__developer_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "69d21a5b-9b60-43ee-a915-0799ad73ee07"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Developer Primary Liability for Underlying Capability",
+    "topic_domain": "legal/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "deployers",
+      "end_users",
+      "regulatory_authorities"
+    ],
+    "victims": [
+      "software_developers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "software_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Create software capabilities and release them. Under the developer-liability reading, they bear primary legal responsibility for all harms those capabilities cause, including harms from deployment configurations they did not design or control. They must manage or disclose risks, maintain liability insurance, implement defensive practices, and defend themselves in litigation. Their exit options are constrained: they can leave the market entirely, but cannot simply reduce liability by disclaiming responsibility. They have no control over deployment decisions yet bear the liability consequences of those decisions."
+    },
+    {
+      "name": "deployers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Integrate software into specific operational contexts, make deployment decisions (configuration, access controls, monitoring), and decide how to use the capability. Under this reading, they externalize risk: liability points upstream to developers, not to their own integration choices. They benefit from clear developer accountability without bearing comparable legal exposure for their deployment decisions. They retain high flexibility in deployment choices and can shift responsibility if harms occur. They have more context and control over deployment than developers do, but the liability regime does not reflect this."
+    },
+    {
+      "name": "end_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Use or are affected by deployed software systems. They benefit from the clarity that a developer is a named party liable for capability defects, giving them a potential defendant. They also bear some cost: they may experience harms, be subject to remediation burdens, or face restricted access if developers scale back risky capabilities. They lack visibility into developer design choices and deployer integration decisions, making it difficult for them to evaluate actual risk. They are trapped by their dependence on digital systems."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce liability through tort law, product liability statutes, regulatory mandates, and licensing requirements. They benefit by having a clear chain of responsibility and a named party (developers) they can compel to maintain standards, disclose risks, and respond to incidents. This reading gives regulatory authorities a lever to standardize developer obligations across markets. They set the rules and monitor developer compliance; they have institutional power and analytical perspective on the entire system."
+    },
+    {
+      "name": "liability_insurers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Provide professional liability and product liability coverage for developers. Under this reading, they bear residual risk: they must underwrite the developer's exposure and pay claims when harms are attributed to the underlying capability. Their premium structures reflect the breadth of the liability regime; when liability exposure broadens (new harm categories, lower causation thresholds), insurers must raise premiums or withdraw. They have constrained exit: they cannot easily exit the market because developers need coverage to operate. They face premium volatility driven by regulatory changes and liability jurisprudence."
+    },
+    {
+      "name": "open_source_contributors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Contribute code to open-source projects that may be deployed in sensitive contexts (critical infrastructure, security-sensitive applications). Under the developer-liability reading, they are creators of underlying capability and thus theoretically liable, despite having no deployment context, no enforcement capacity, and no insurance. They are trapped by the reading's attribution rule: any harm caused by their code, no matter how deployed, points back to them. They have minimal practical exit options and often no compensation for the liability exposure created by the reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a clear chain of responsibility for software harms: developers must certify capabilities as safe, disclose known risks, maintain standards, and respond to vulnerability reports. This solves the coordination problem of 'who is accountable when distributed software causes harm' by naming the creator as the responsible party. It enables regulatory bodies to set uniform developer obligations across markets and gives end-users a clear defendant.",
+    "transfer_function": "Transfers legal liability, insurance cost, disclosure burden, and regulatory compliance expense from deployers and end-users to software developers. Deployers benefit by externalizing risk; end-users benefit by having a named accountability point; regulatory authorities benefit by having a clear enforcement lever. Developers pay through insurance premiums, compliance budgets, litigation costs, and defensive documentation. Open-source contributors and individual developers face exposure without compensation.",
+    "absent_voices": "Deployers' causal contributions to harms and their risk-allocation choices are not centered in this reading. The deployer-liability and shared-liability readings would argue that deployment decisions, integration choices, and operational context are primary causal factors in many harms, and that holding only developers accountable is an incomplete and unfair attribution. Those arguments are structurally excluded from the developer-liability frame.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the developer-primary liability regime vanished and no alternative regime replaced it, deployers would bear uninsured risk for integration failures, end-users would have no clear defendant, regulatory authorities would lose their primary enforcement lever, and liability would either diffuse across the value chain or collapse onto deployers. Insurance markets would reorganize, development practices would shift (possibly toward greater conservatism or retreat), and the coordination problem of accountability would be reopened.",
+    "founding_problem": "Early software-caused harms were unattributable: when a deployed system failed, it was unclear whether responsibility lay with the original developer's design, the deployer's integration choices, or the operational context. Multiple parties contributed to the harm; no party bore clear accountability. End-users were left without effective recourse.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Regulatory agencies and consumer advocates attest that harms remain frequently unattributable and that developer-primary liability is necessary to force upstream accountability and care. Developers and deployers dispute this, citing numerous cases where deployer decisions (insufficient testing, misconfigurations, context mismatches) were the primary causal factors. Comparative legal analysis from jurisdictions with deployer-liability and shared-liability regimes (the European Union's shared-liability approach, some emerging AI governance frameworks) attests that the founding problem can be addressed under those regimes with different burden distributions."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The developer-liability reading holds that software developers, as creators of underlying capabilities, bear primary legal responsibility for harms those capabilities cause. This is a kernel reading instantiating one position within a contested liability-attribution domain. The referent is the doctrine-in-operation: the standing legal arrangement that places developers at the top of the causal and responsibility chain. The reading's endorsed alternative (deployer-liability or shared-liability regimes) is NOT the referent; ε measures the extraction the developer-liability arrangement itself exhibits. The claim is tangled_rope: it solves a genuine coordination problem (who is responsible?) while asymmetrically extracting from developers. The author's assessment is that this reading has come to operate as enforced extraction with growing performative justification, not pure coordination.",
+    "key_agents": [
+      "software_developers: primary payers, bear liability burden and compliance costs, trapped by constrained exit",
+      "deployers: institutional beneficiaries, externalize risk, retain arbitrage-grade exit",
+      "end_users: diffuse beneficiaries (clarity of defendant) and payers (distance from accountability)",
+      "regulatory_authorities: institutional beneficiaries and agenda-setters, enforce the doctrine, define developer obligations",
+      "liability_insurers: organized payers, bear residual risk and premium volatility"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.48 to 0.68 over the interval, indicating that the liability regime increasingly extracts from developers beyond the cost of genuine coordination. Suppression is high and rising (0.58→0.72), reflecting the growing enforcement machinery: regulatory mandates, tort doctrines, licensing requirements, and disclosure obligations that keep developers bound to the regime. Theater is moderate and rising (0.22→0.41): defensive documentation, risk management theater, and compliance performance grow as developers are pressured to manage or disclose all risks. The regime's original coordination function (clear attribution of accountability) is real but increasingly subordinated to extraction (cost-shifting to developers). Accessibility collapse is moderate (0.58): developers theoretically could exit by ceasing to develop, but the market structure constrains that exit (constrained exit_options assigned to software_developers). Resistance is moderate (0.64): developers mount real resistance through lobbying, liability caps, safe harbor arguments, and indemnification clauses, but institutional regulatory pressure overrides much of it.",
+    "perspectival_gap": "The payer seat (developers) and the agenda-setter seat (regulatory authorities) should compute to different classifications. From the developer position, this is enforced extraction riding on a real but now-attenuated coordination function; from the regulatory authority position, it is legitimate doctrine alignment with creator responsibility. The engine computes this gap from structural data: developers have constrained exit and bear the transfer; authorities have institutional power and set the rules. The measurement series documents how theater grows as compliance burdens mount, signaling the shift from coordination to extraction.",
+    "directionality_logic": "Developers sit at d≈0.85 (near full target): they are liability bearers, insurance payers, and compliance cost-bearers with no substantial benefit from the regime. Deployers sit at d≈0.15 (beneficiary end): they externalize risk and retain decision control. End-users and regulatory authorities sit between d≈0.4-0.6 (partial beneficiaries with some costs: users are distant from accountability, authorities must maintain the enforcement apparatus). Liability insurers sit at d≈0.75 (near targets, though organized): they underwrite developer liability and face premium volatility.",
+    "mandatrophy_analysis": "The founding problem (unattributable harm) remains contested—alternative liability regimes (deployer-primary, shared) claim to solve it equally well without centralizing burden on developers. The developer-liability doctrine persists not because it is uniquely effective at preventing harm, but because it is established in law and regulatory practice and because deployers benefit from externalizing risk. Mandatrophy is present in moderate form: the doctrine's original justification has been partly superseded by alternative causal theories (deployer decisions drive harm), yet the doctrine persists as institutional inertia and power distribution. The measurement of rising theater (compliance burdens without proportional safety gains) suggests the regime's function has decoupled from its founding justification.",
+    "kernel_context": "This constraint instantiates the developer-liability reading of the contested liability_attribution kernel. The sibling readings are deployer_liability (deployers bear primary responsibility as parties with deployment context and control) and shared_liability (joint responsibility distributed along the value chain by causal contribution and control). Each reading instantiates a different constraint with different victim/beneficiary sets and different ε values. The developer-liability reading places developers in the victim set and has high extraction (0.68); the deployer-liability reading would place deployers in the victim set and have different extraction metrics. These are not perspectives on the same constraint; they are separate constraints sharing a common kernel (the liability attribution question). The reading divergence is authored via omegas and cs_structure, not via averaging or hedging within this story."
+  },
+  "omegas": [
+    {
+      "id": "causal_contribution_vs_role_assignment",
+      "question": "What is the actual causal contribution of developers versus deployers to software-caused harms? Does liability follow causal contribution, or does it follow institutional role (creator vs. deployer)?",
+      "resolution_mechanism": "Post-incident forensic analysis: detailed case studies of software failures examining what fraction of causal weight rests on original design decisions versus deployment configuration and operation choices.",
+      "impact": "High developer causal weight supports developer-liability framing; high deployer causal weight supports shared or deployer-primary liability. A finding of heterogeneous contribution (varies by incident type) would support shared-liability reading. Current regime assumes liability follows role (creator) rather than measured causation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the developer-liability doctrine aligns with actual causal dynamics of software harms."
+    },
+    {
+      "id": "extractiveness_vs_coordination_boundary",
+      "question": "How much of the measured extractiveness (0.68) represents necessary coordination cost (clear accountability, incentive for developer care) versus opportunistic cost-shifting (liability externalization without proportional safety gain)?",
+      "resolution_mechanism": "Comparative analysis: jurisdictions with deployer-liability or shared-liability regimes—measure safety outcomes, incident attribution clarity, and developer compliance burden. If safety outcomes are equivalent or superior with lower developer burden, the excess burden in developer-liability regimes is extractive.",
+      "impact": "Evidence of equivalent safety under alternative regimes would support reclassification toward snare; evidence of better safety outcomes would support the rope classification. Current author assessment (tangled_rope) assumes substantial extraction beyond coordination necessity.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Boundary between coordination cost and extractive overhead in the developer-liability regime."
+    },
+    {
+      "id": "reading_foreclosure_or_coexistence",
+      "question": "Do the developer-liability, deployer-liability, and shared-liability readings logically foreclose one another within a single legal framework, or can they coexist as competing doctrines held by different jurisdictions and parties?",
+      "resolution_mechanism": "Legal-framework analysis: examine whether a single jurisdiction can adopt principles from multiple readings (e.g., developer-primary for some capability classes, deployer-primary for integration-failures), or whether the readings are fundamentally incompatible.",
+      "impact": "If coexistent, the engine relation is coexists_with; if foreclosing, is forecloses. This determines the reading_relations field in cs_structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical compatibility of the liability readings in a single legal system."
+    },
+    {
+      "id": "opacity_as_developer_burden",
+      "question": "Is developers' inability to observe deployment context and actual use a feature developers must manage (disclose uncertainty, refuse high-risk contexts), or is it a structural given that liability regimes must accommodate?",
+      "resolution_mechanism": "Examine developer disclosure and liability-cap practices under this reading: if developers are required to disclose unknowables and face liability for risks they cannot observe, suppression is higher and opacity becomes the burden. If the regime accommodates opacity (e.g., liability caps for emergent uses), opacity is treated as a shared constraint rather than a developer burden.",
+      "impact": "High developer burden for opacity management supports high suppression (0.72 is current measure); regime accommodation of opacity would lower suppression. Measurement trajectory (0.58→0.72) suggests rising burden, indicating suppression is driven by opacity expectations, not just legal accountability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether opacity obligation rests on developers or is distributed across the value chain."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__deployer_liability",
+      "liability_attribution__shared_liability",
+      "software_capability_disclosure_standards",
+      "liability_insurance_market_structure"
+    ],
+    "dual_formulation_note": "The liability_attribution kernel decomposes into three structurally distinct constraints: developer_liability (this story, high extraction, developers in victim set), deployer_liability (deployers in victim set, different ε), and shared_liability (distributed along value chain). Each reading instantiates a different constraint with different victim/beneficiary structures and ε values. The three constraints are linked via network.affects_constraints to indicate their kernel kinship; the reading_relations in cs_structure indicate the logical relationships (foreclosure, coexistence, influence) between the readings. A jurisdiction's shift from one reading to another reclassifies the constraint and redistributes liability burden, affecting dependent constraints (disclosure standards, insurance market pricing)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ],
+  "gain_flow": "deployers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "deployer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "shared_liability",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creator_bears_primary_responsibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "creator_controls_capability_definition",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "original_creator_accountability",
+    "drift_state": {
+      "moment": "contemporary_regulatory_expansion",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "liability_attribution__deployer_liability",
+      "liability_attribution__shared_liability"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

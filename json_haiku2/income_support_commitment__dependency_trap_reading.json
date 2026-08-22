@@ -1,0 +1,314 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "b68ce939-7b34-41bf-886d-83f005b5edaf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unconditional Income Support as Work-Disincentive Trap",
+    "topic_domain": "political_economy/social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ubi_recipients_exiting_labor_market"
+    ],
+    "victims": [
+      "remaining_working_taxpayers",
+      "poor_individuals_skill_atrophy"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ubi_recipients_exiting_labor_market",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Receive unconditional income sufficient to subsist without employment. Once enrolled in the UBI regime, face a marginal income cliff: returning to work means losing the unconditional grant and accepting employment conditions in a labor market where their skills may have degraded. They become structurally dependent on the state transfer for survival; exit into employment requires overcoming both the financial disincentive and the skill/credential gap that accumulated during non-participation."
+    },
+    {
+      "name": "remaining_working_taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the UBI program through payroll taxation and income tax. As more workers exit into the UBI subsidy, the tax base contracts while transfer costs remain fixed or grow, increasing the per-worker burden. They have constrained exit: emigration is possible but costly, reducing work hours faces its own penalties, and political opposition to the program is sporadic and ineffective."
+    },
+    {
+      "name": "poor_individuals_skill_atrophy",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "May initially benefit from income security but face long-term skill degradation if they remain outside the labor market. Extended non-participation erodes occupational credentials, leaves gaps in employment history that future employers interpret negatively, and atrophies domain-specific knowledge. When or if they attempt re-entry to work, they discover their earning potential has fallen and formal employment doors have narrowed. The income support solves immediate scarcity but creates a dependency path that makes future work more costly and less rewarding."
+    },
+    {
+      "name": "state_fiscal_administrator",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers and enforces the UBI program — determines eligibility, sets payment levels, collects taxation to fund it, monitors compliance with participation rules (if any). As the program operates, observes labor force participation falling, fiscal sustainability under pressure, and the political coalition supporting the program fragmenting under tax burden. Can adjust the program parameters, but faces political constraints on either raising taxes or reducing benefits."
+    },
+    {
+      "name": "employers_shrinking_labor_pool",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face a contracting labor pool as workers exit into UBI. Wage pressure rises as available workers become scarcer, but cannot easily pass this cost to consumers. Over time, some firms relocate to jurisdictions with higher labor force participation; others adjust production to lower labor intensity. They are affected by the constraint but not formally party to its administration."
+    },
+    {
+      "name": "excluded_policy_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocates for targeted, means-tested support (the targeting_efficiency_reading) or for stronger labor-participation requirements are structurally sidelined by the UBI commitment. Their evidence and recommendations about skill-atrophy dynamics and fiscal sustainability are framed as hostile to the program's foundational premises and are rarely admitted to policy discourse on equal terms. They would argue for conditioning support on engagement or concentration of transfers on those unable to work, but the commitment's universality excludes these voices from shaping actual policy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Removes the survival crisis from individual workers, solving the collective-action problem of subsistence security: each worker no longer faces the Hobbes choice between wage depression and destitution, enabling bargaining for better working conditions, transition support, and retraining without immediate hardship.",
+    "transfer_function": "Moves tax revenue collected from employed workers and capital holders to individuals who have exited or reduced participation in the labor market. The transfer is structured as unconditional — not tied to demonstrated need, employment effort, or skill maintenance — so it flows to both those genuinely unable to work and those choosing non-participation as a rational response to the payment structure.",
+    "absent_voices": "Workers in declining industries who might benefit from strong retraining conditions (conditional support) rather than income subsidy are partially excluded because the unconditional framing does not organize support around skill restoration. Poor individuals fearing long-term skill loss cannot easily voice concerns without being read as 'ungrateful' for the support. Fiscal conservatives and efficiency-focused policymakers are structurally excluded by the commitment's universality and inability to be easily reformed without triggering constituency backlash.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support disappeared, millions would return to labor market participation (some reluctantly, others seeking to avoid destitution), labor supply would expand sharply, wage pressure would ease, tax burdens would fall, and fiscal constraints would ease. The organizational structure around UBI administration would dissolve. The poor would face re-entry barriers (skill atrophy, credential gaps) that would require either independent resources or alternative support systems to overcome.",
+    "founding_problem": "Poverty and subsistence insecurity trap workers in wage-dependent vulnerability; employers extract rents from the desperation of those with no alternative income; workers lack bargaining power and cannot transition out of exploitative arrangements without facing immediate destitution.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "UBI advocates attest the founding problem remains live and that unconditional support is necessary to solve it. Labor economists and fiscal analysts from outside the beneficiary coalition attest that the founding problem is only partly solved by the program and that new problems (skill atrophy, labor-force shrinkage, fiscal unsustainability) are created as side effects. This reading endorses the fiscal/atrophy critique as the primary evidence."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Unconditional income support (UBI or similar arrangements) solves the founding problem of subsistence insecurity and enables workers to refuse exploitative employment — a genuine coordination function. However, this reading emphasizes the constraint's extractive dimension: the unconditional structure creates a financial incentive for exit from the labor market and does not organize around skill maintenance or retraining. Over time, this generates a victim class (remaining workers bearing rising tax burdens, poor individuals whose human capital erodes during non-participation) while the beneficiary class (those accepting the subsidy and exiting work) grows and becomes locked into dependency by the very income security that made exit rational. The founding problem is partially solved but a new problem is created: fiscal unsustainability and skill-based inequality. This reading coexists with the freedom_floor reading (which celebrates the same program's autonomy effects) and influences but does not foreclose the targeting_efficiency reading (which asks whether concentrated support on demonstrated need would achieve the same coordination function at lower extraction cost).",
+    "key_agents": [
+      "ubi_recipients_exiting_labor_market: Gain subsistence security but lose future labor-market value as skills atrophy; trapped in dependency by the same income floor that enabled exit",
+      "remaining_working_taxpayers: Fund the program; face rising per-capita tax burden as labor force participation shrinks; constrained exit via emigration or political opposition",
+      "poor_individuals_skill_atrophy: Dual position — immediate survival benefit, long-term earning potential erosion; identity-locked into non-participation as the default state becomes normalized",
+      "state_fiscal_administrator: Agenda-setter; manages the program under fiscal pressure; faces coalition fragmentation as burden becomes visible",
+      "employers_shrinking_labor_pool: Observe labor scarcity; pass cost to consumers or relocate; affected but not party to administration",
+      "excluded_policy_advocates: Advocates for conditional support or targeting are structurally sidelined by the commitment's universality"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.58 at interval end) because the program genuinely solves a coordination problem (subsistence security) but simultaneously creates asymmetric extraction from working taxpayers to non-participating beneficiaries. The extraction is not coercive in the sense of outright compulsion, but it is structurally enforced: workers must remain in employment to sustain the transfer, and recipients face a marginal income cliff that traps them outside employment. Suppression is lower (0.42) because the program operates through rational incentives rather than overt force — beneficiaries rationally choose non-participation given the payment structure, and workers have recourse to political opposition (though ineffective in practice). Theater is moderate-low (0.28): the program's coordination function is real, but growing administrative effort goes to justifying the program's fiscal sustainability rather than to solving the original problem. The measurement trajectory shows extractiveness rising over time as labor-force participation falls and the per-worker burden increases, while theater ratio rises as justificatory effort intensifies. Suppression remains relatively flat because the mechanism is incentive-based, not enforcement-intensive, though some suppression emerges as political opposition is marginalized. Accessibility collapse (0.52) reflects that alternatives exist (targeted programs, wage-floor mechanisms, retraining systems) but are politically foreclosed by the commitment to universality. Resistance (0.71) is moderately high because substantial constituencies (working taxpayers, fiscal conservatives, efficiency advocates) actively resist this configuration, even if their resistance is often ineffective at changing policy.",
+    "perspectival_gap": "The beneficiary seat (UBI recipients exiting labor market) experiences the arrangement as liberation — escape from wage-dependent vulnerability, freedom to refuse degrading work, dignity as a recognized community member receiving unconditional support. The agenda-setter seat (state administrator) experiences it as coordination of subsistence security on behalf of the polity. The victim seats experience it very differently: remaining workers see rising tax burdens and political powerlessness; poor individuals see initial relief but long-term skill erosion and reduced future earning capacity. From the remaining_working_taxpayers seat, the constraint computes as extractive (they pay without collecting); from the ubi_recipients seat, it computes as beneficent. The engine computes this divergence from the structural data — from who pays, who benefits, and the exit options that constrain each seat's agency. This reading's claim (tangled_rope: genuine coordination of subsistence security plus asymmetric extraction from worker to non-participant) honors that divergence rather than erasing it.",
+    "directionality_logic": "The ubi_recipients_exiting_labor_market seat has directionality near 0.0 (full beneficiary: collects the transfer, faces no cost, and rationally exits labor market once enrolled). The remaining_working_taxpayers seat has directionality near 1.0 (full target: bears the tax burden, constrained exit, no corresponding benefit in this reading). The poor_individuals_skill_atrophy seat is complex: they have directionality near 0.5 initially (genuine subsistence benefit) but drift toward 1.0 (target) as skill atrophy accumulates and their future earning potential is damaged by present non-participation. The state_fiscal_administrator seat is near 0.5 (coordinates the system, collects some legitimacy from administering it, but faces rising fiscal pressure and political backlash). Directionality is stable for most seats except poor_individuals where the identity-locked exit becomes a trap as time accumulates. No overrides are needed; the structural data (who pays, who benefits, exit constraints) naturally derives the stated d values.",
+    "mandatrophy_analysis": "The founding problem (subsistence insecurity, wage-dependent vulnerability) is partially solved by the program but the mandate has partly outlived its function in the sense that universality is not the only way to solve the founding problem, and the unconditional structure creates new problems (skill atrophy, fiscal pressure, labor-force shrinkage) that the original mandate did not anticipate. This is not classical mandatrophy (a tool maintaining itself after its reason for being disappears) because the founding problem partially persists — subsistence insecurity is real. Rather, it is a case where the mandate has calcified around a specific solution (universality) that creates side effects (extractive dependency) offsetting its coordination benefits. The program could be reformed to maintain subsistence security while adding retraining obligations, means-testing for those capable of work, or wage-supplementation rather than income replacement — changes that would address the side effects without abandoning the coordination function. The resistance to such reform is political, not structural.",
+    "kernel_context": "This constraint is the dependency_trap_reading of the income_support_commitment kernel. The kernel is the standing arrangement — unconditional income support as a policy commitment — which three different readings instantiate. This reading (dependency_trap_reading) emphasizes the constraint's extractive dimension: the unconditional structure creates incentives for labor-market exit and does not organize around skill maintenance, generating victim classes (remaining workers, individuals experiencing skill atrophy) distinct from beneficiary classes (those accepting subsidy and exiting work). It coexists with the freedom_floor_reading, which celebrates the same arrangement's autonomy and dignity effects, and influences the targeting_efficiency_reading, which asks whether concentrated support would achieve the same coordination function at lower extraction cost. The disagreement is not about whether the program exists or what it does (those facts are shared), but about what problem it solves and what new problems it creates — a difference of normative framing and empirical assessment, not competing facticity."
+  },
+  "omegas": [
+    {
+      "id": "skill_atrophy_empirical_magnitude",
+      "question": "How large is the empirical effect of extended labor-market non-participation on human capital degradation, credential obsolescence, and future earning capacity?",
+      "resolution_mechanism": "Longitudinal studies tracking individuals who accept UBI and exit work, measuring skill retention, re-entry wage penalties, and long-term earnings trajectories. Comparison with individuals who exit for other reasons (retirement, disability, family caregiving) to isolate the effect of non-participation duration from selection bias.",
+      "impact": "If atrophy effects are large, the reading's claim about victim-class creation is empirically grounded and the extractive component of the constraint is real. If atrophy effects are small (skills persist or are easily reacquired), the reading's framing is exaggerated and the constraint operates more as pure coordination than as masked extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of skill degradation in extended non-participation; critical to victim-class claim."
+    },
+    {
+      "id": "fiscal_sustainability_contingency",
+      "question": "At what labor-force participation rate does the UBI program become fiscally unsustainable, and what is the program's actual trajectory?",
+      "resolution_mechanism": "Fiscal modeling integrating labor-supply responses to UBI payment levels, demographic changes, and tax-base dynamics. Real-world observation of jurisdictions that have attempted UBI at varying payment levels.",
+      "impact": "If the program is on a trajectory toward fiscal unsustainability (declining labor force + fixed or rising transfers + fixed or declining tax base), the extraction becomes visible as the remaining working population perceives the burden, and the constraint's persistence depends increasingly on suppression of resistance. If the fiscal trajectory is stable, the constraint can operate indefinitely without extraction becoming apparent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the unconditional-support arrangement is fiscally sustainable over the long term."
+    },
+    {
+      "id": "reading_boundary_with_freedom_floor",
+      "question": "Is the autonomy benefit of unconditional income support logically separable from its skill-atrophy cost, or are they aspects of the same social process?",
+      "resolution_mechanism": "Philosophical/conceptual: If autonomy requires maintained capacity to earn (not just freedom from immediate coercion), then skill atrophy reduces autonomy even as income support increases it — the readings are not opposing but co-instantiating. If autonomy is freedom from wage dependence alone, irrespective of future earning capacity, the readings describe genuinely different states.",
+      "impact": "If autonomy and skill-atrophy are logically linked, the freedom_floor_reading and this dependency_trap_reading cannot both be fully true at once — the freedom_floor reading's liberation is shadowed by the trap_reading's erosion. If they are separable, both readings can be fully true simultaneously (one captures autonomy gains, one captures human-capital losses) and the program genuinely has both effects. This affects whether the readings foreclose each other or merely coexist.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether autonomy and skill maintenance are conceptually connected or separable in the UBI context."
+    },
+    {
+      "id": "suppression_mechanism_market_vs_political",
+      "question": "Is the measured suppression (0.42) of alternatives to the UBI regime primarily structural (market power, lack of alternatives) or internalized (beneficiaries accept the regime as necessary, taxpayers accept the burden as morally obligatory)?",
+      "resolution_mechanism": "Post-termination trajectory: if the program were ended, would resistance persist and rebuild support (indicating internalized acceptance), or would alternatives rapidly emerge and be adopted (indicating structural suppression of alternatives rather than consensus)?",
+      "impact": "If suppression is internalized, the constraint's persistence depends on maintenance of a narrative of necessity and dignity around UBI; loss of that narrative would reduce suppression sharply. If suppression is structural (lack of political will to fund alternatives), the constraint persists despite lower narrative agreement.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Composition of suppression: structural barriers vs. internalized acceptance."
+    },
+    {
+      "id": "universal_vs_targeted_kernel_closure",
+      "question": "Does the kernel (income-support commitment) require universal distribution, or is universality contingent to this particular instantiation?",
+      "resolution_mechanism": "Policy comparison across jurisdictions: can targeted, means-tested support solve the same founding problem (subsistence security, wage-bargaining power) at lower fiscal cost with similar autonomy outcomes? If yes, universality was not necessary to the kernel; if no, universality is intrinsic to the commitment.",
+      "impact": "If universality is intrinsic, this reading and the targeting_efficiency_reading foreclose each other — only one can be true. If universality is contingent, the readings coexist and the choice between them is empirical (which configuration better solves the founding problem with lower side effects).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether universality is essential to the income-support commitment or a policy choice that could be changed."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__freedom_floor_reading",
+      "income_support_commitment__targeting_efficiency_reading"
+    ],
+    "dual_formulation_note": "income_support_commitment kernel has three readings: dependency_trap_reading (this file), freedom_floor_reading (autonomy and dignity emphasis), and targeting_efficiency_reading (concentrated support on demonstrated need). Each reading instantiates a structurally distinct constraint with different ε values, victim/beneficiary structures, and types. The readings coexist as live positions in ongoing policy debate. This reading emphasizes extraction from working taxpayers and human-capital erosion; it influences but does not foreclose the targeting_efficiency reading (which asks whether the coordination function could be achieved with lower extractiveness via concentration rather than universality). See commentary.kernel_context for full framing."
+  },
+  "gain_flow": "state_fiscal_administrator",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "unconditional_subsistence_guarantee",
+    "drift_state": {
+      "moment": "labor_force_participation_crisis",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "targeting_efficiency_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditional_subsistence_necessary_to_escape_wage_desperation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "universal_distribution_prevents_stigma_and_maintains_dignity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

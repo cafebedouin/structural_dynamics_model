@@ -1,0 +1,349 @@
+{
+  "header": {
+    "constraint_id": "substance_control_legitimacy__harm_reduction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "054d7244-d3c2-4298-99fa-eb50b63a805c",
+    "created_at": "2026-06-12T14:32:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.48,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.64,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Medicalized Harm Reduction Authority (Non-Criminalization Reading)",
+    "topic_domain": "public_health/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "treatment_providers",
+      "public_health_agencies",
+      "harm_reduction_advocates"
+    ],
+    "victims": [
+      "substance_users",
+      "enforcement_workers"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "coercion_vs_care_boundary",
+      "question": "Does the constraint's enforcement infrastructure coerce treatment participation or genuinely offer care — and does the user experience distinguish them?",
+      "resolution_mechanism": "Longitudinal user interviews tracking voluntary vs. court-mandated treatment pathways; comparison of completion rates and self-reported harm reduction outcomes between cohorts with and without legal pressure.",
+      "impact": "If enforcement is experienced as coercive despite medicalized framing, the constraint's suppression is higher than authored (internalized enforcement); the effective extraction rises and the constraint may reclassify toward snare. If care infrastructure is genuinely accessible without legal pressure, the coercion is a separable enforcement layer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether medicalization decouples from actual coercion or merely relabels it."
+    },
+    {
+      "id": "black_market_persistence_function",
+      "question": "Does the persistent black market exist because treatment access is insufficient (coordination failure), because users prefer unregulated supply (autonomy preference), or because enforcement creates scarcity that the market fills?",
+      "resolution_mechanism": "Natural experiment from jurisdictions that expand treatment capacity without enforcement: if markets contract, the market persists due to access failure; if markets persist at scale, user preference or enforcement-induced scarcity is the driver.",
+      "impact": "If access-failure driven: the constraint's mandate is live but undersupported — medicalization is sound but incompletely implemented, and additional resources would reduce extraction. If preference or enforcement-driven: the black market is a structural feature of the reading itself, and the constraint carries systemic extraction by design.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "What perpetuates the coexisting black market under harm reduction authority."
+    },
+    {
+      "id": "reading_vs_prohibition_kernel_contest",
+      "question": "How does this reading's commitment to non-criminalization coexist with prohibition's core premise that criminalization is morally necessary?",
+      "resolution_mechanism": "The kernel (substance control legitimacy) admits both readings, but they hold incompatible axioms about state moral authority. No single unified framework can endorse both non-criminalization and mandatory criminalization simultaneously — the axioms foreclose each other at the framework level, but different jurisdictions/parties hold each simultaneously.",
+      "impact": "This declares the reading_relations edge to prohibition_reading as coexists_with (not forecloses), because different parties maintain the readings across time and space despite logical incompatibility. Within any single party's framework, one reading would foreclose the other; but the kernel sustains a multi-party contest without resolution.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The logical status of this reading relative to prohibition within the contested kernel."
+    },
+    {
+      "id": "legalization_boundary_ambiguity",
+      "question": "Does harm reduction's authorization of regulated treatment markets constitute a step toward legalization, or a structurally distinct arrangement that maintains state authority over supply?",
+      "resolution_mechanism": "Examine whether treatment-authorized supply is fully decriminalized, whether there are quantity limits or coercive monitoring, whether the supply infrastructure creates rents that benefit state or treatment sectors. If treatment monopolies extract comparable rents to prohibition-era enforcement, the boundary is pragmatic rather than principled.",
+      "impact": "If treatment supply is genuinely market-competitive and non-extractive, harm reduction is structurally distinct from legalization. If treatment supply creates new rents or is rationed by state authority, harm reduction may be a midpoint reading that maintains extraction under a different justification — reclassification toward snare if extraction is underestimated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether harm reduction's authority structure is distinct from legalization or a pragmatic intermediate step."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "Under the harm-reduction reading of substance control legitimacy, the state derives its authority to regulate substance use from a duty to minimize harm to users and communities, not from moral condemnation or paternalistic prohibition. Users are medicalized — treated as individuals with a medical condition requiring treatment access — rather than criminalized. The constraint operates by authorizing treatment providers, public health agencies, and harm-reduction organizations to intervene in substance use patterns, often involuntarily (court-mandated treatment, conditional release programs, mandatory monitoring). Simultaneously, the constraint permits a regulated market for harm-reducing practices (needle exchange, medication-assisted treatment with pharmaceutical opioids, supervised consumption sites) that prohibition-era authority would have criminalized. The reading is contestable because it retains significant state authority over substance supply and use patterns, creates new forms of coercion (treatment mandates), and coexists with a persistent black market for unregulated supply. The claim/metric gap is deliberate: this reading is authored as tangled_rope because it genuinely solves a coordination problem (users get access to treatment, providers get legitimacy, communities get public health infrastructure) but does so asymmetrically — substance users pay through coerced treatment participation and loss of autonomy, while treatment sectors and public health agencies benefit from expanded institutional authority and funding.",
+    "key_agents": [
+      "Substance users (powerless → moderate): targeted by treatment mandates, coercive monitoring; exit to unregulated markets remains available but carries legal and health risks; identity-locked by addiction and criminalized status.",
+      "Treatment providers (institutional): benefit from expanded authority, funding, and legitimacy; agenda-setters for treatment protocols; manage the medicalization infrastructure.",
+      "Public health agencies (institutional): set policy, define harm-reduction standards, coordinate enforcement; collect institutional legitimacy and budget authority.",
+      "Enforcement workers / drug courts (powerful → organized): administer treatment mandates, monitor compliance, bridge criminalization and medicalization; experience role ambiguity between enforcement and care.",
+      "Harm-reduction advocates (organized): demand non-criminalization, shape policy, benefit from legitimacy shift; may experience tension between advocacy for user autonomy and participation in coercive treatment systems.",
+      "Black market suppliers (excluded): would object to regulation but are functionally prevented from participating; their exclusion is what the enforcement infrastructure maintains.",
+      "Families and communities (powerless → organized): experience reduced crime/disorder if treatment succeeds; bear costs if enforcement is felt as intrusive or treatment is experienced as forced."
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.62) because the constraint moves agency from substance users to treatment/enforcement sectors and imposes mandatory participation in treatment systems, even when users did not request it. Suppression is moderate (0.48) because the constraint relies on legal enforcement (drug courts, conditional release) to mandate treatment, but suppression is lower than pure criminalization because users have access to treatment rather than purely carceral outcomes — the suppression is present but justified as medical necessity. Theater ratio rises from 0.22 to 0.41 over the interval, indicating growing performative activity: early expansion of harm-reduction infrastructure is genuine (low theater); later plateau suggests shift toward ritualized treatment compliance-checking and outcome theater (statistics, graduation ceremonies) as the system matures. Accessibility collapse is moderate (0.64) because users technically have alternatives (refuse treatment, use black market, migrate jurisdictions) but exercise of these alternatives carries severe penalties (incarceration, health risk, social loss). Resistance is high (0.72) because substance users, black-market participants, and autonomy-focused advocates mount real resistance — treatment non-compliance, black market persistence, policy contestation — and this resistance is visible in measurement drift where extractiveness plateaus rather than increasing. The shared time grid ensures all three measured metrics show convergence around t=15 and stabilization thereafter, consistent with a constraint whose initial expansion matured into an enforced steady state with internal limits.",
+    "directionality_logic": "From the user/payer seat: the constraint extracts agency and autonomy through treatment mandates; users are identity-locked (addiction + criminalized status make exit to unregulated use extremely costly). Directionality is high (0.8+) — users are full targets. From the treatment-provider/agenda-setter seat: the constraint provides legitimacy, institutional authority, funding, and professional expansion. Directionality is low (0.2–0.3) — they are beneficiaries. From the enforcement-worker seat: role ambiguity (moderately powerful but ideologically split between punishment and care; constrained exit because career depends on the system). Directionality is near-symmetric (0.5). From the harm-reduction advocate seat: mixed — they pushed for non-criminalization and achieved a policy victory, but sit inside a coercive system they partly oppose. Directionality is asymmetric (0.4–0.6 depending on whether they view medicalization as progress or capture). The structure produces per-seat divergence: users experience snare, treatment providers experience rope, enforcement sits between. The engine computes this divergence from the structural data (beneficiary/victim declarations + exit options + power); the authored claim (tangled_rope) reflects the system's aggregate behavior, not any single seat's experience.",
+    "perspectival_gap": "The payer seat (substance users) and the beneficiary seats (treatment providers, public health agencies) compute fundamentally different constraint types from the same structural facts. Users see coercive medicalization: they are mandated into treatment they may not want, monitored, and punished for non-compliance — snare-like. Treatment providers see expanded authority and resources: they serve a population with identifiable needs and state backing, legitimizing their work — rope-like. The gap exists because the constraint's beneficiaries designed and staff the coordination mechanism, creating asymmetry in who gains and who bears costs. The engine's per-seat computation captures this: from a powerless, identity-locked position with constrained exit, effective extraction is higher; from an institutional position with beneficiary role and expanded authority, effective extraction is lower or inverted into subsidy.",
+    "mandatrophy_analysis": "The constraint's founding problem is genuine and live: substance use causes individual and community harm, and prohibition-era criminalization increased that harm while failing to reduce use. The harm-reduction reading offers a legitimate alternative: treat it as a public health problem, provide treatment access, reduce criminalization. However, the measured extraction (0.62) is not trivial, and the divergence between the claim (tangled_rope) and user-seat experience (closer to snare) suggests potential mandatrophy risk. The rising theater ratio (0.22 → 0.41) indicates the system is increasingly performing harm reduction while extracting compliance — outcome metrics, graduation ceremonies, compliance statistics — rather than deepening actual treatment efficacy or user autonomy. This is mandatrophy warning: the founding problem (harm reduction) is being displaced by the institutional problem (system maintenance and extraction). However, the measured extraction plateaus rather than accelerating (t=15 onward), suggesting the system has reached an equilibrium where extraction is bounded by user resistance and black-market competition. The constraint avoids acute mandatrophy by maintaining a genuine (if limited) coordination function: users who engage with treatment do reduce harm; treatment providers do expand access; communities do see reduced crime. But the constraint is at risk of slow mandatrophy if extraction continues to rise while the founding problem's solution is increasingly performed rather than lived.",
+    "kernel_context": "This constraint instantiates the HARM_REDUCTION_READING of the contested kernel substance_control_legitimacy. The kernel is the persisting state authority to regulate substance use, grounded in various legitimacy claims. The harm-reduction reading grounds this authority in a duty to minimize individual and collective harm through public health intervention, explicitly rejecting criminalization as a mechanism. Sibling readings: (1) prohibition_reading grounds authority in moral duty to prevent harm through criminal law; (2) legalization_reading grounds authority only in preventing third-party harms, delegating first-party harm to individual autonomy. The harm-reduction reading coexists with both: different jurisdictions hold each simultaneously, and within-jurisdiction debates pit them against each other. The core disagreement is located in the axiom about what legitimates state authority — moral duty to criminalize (prohibition) vs. duty to minimize harm without criminalization (harm-reduction) vs. minimal duty constrained by autonomy (legalization)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_legitimacy__prohibition_reading",
+      "substance_control_legitimacy__legalization_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a three-way contested kernel. The prohibition_reading and legalization_reading are sibling constraints instantiating the same kernel with different legitimacy grounds. All three share referent (substance control authority) but differ in ε, beneficiary/victim structure, and type due to incompatible axioms about state authority. See the reading_relations and axioms in cs_structure for the logical map."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.48
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "substance_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Subject to treatment mandates via drug courts, conditional release, and probation conditions. Must participate in treatment programs to avoid incarceration or to regain custody/employment. Experience coercive monitoring and surveillance. Can exit by using black-market supply, migrating to permissive jurisdictions, or enduring criminal consequences. Addiction and criminalized status make identity-locked: they internalize the stigma and become bound to the role of 'substance abuser' requiring treatment."
+    },
+    {
+      "name": "treatment_providers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive expanded funding, legitimacy, and institutional authority under harm-reduction framing. Set treatment protocols, define recovery standards, control access to medication-assisted treatment. Benefit from both public funding and private insurance reimbursement. Can exit by opposing harm-reduction policy or specializing in prohibition-era criminal-justice treatment, but most have invested in the harm-reduction model."
+    },
+    {
+      "name": "public_health_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design harm-reduction policy, coordinate treatment networks, manage public-health epidemiology and outcomes. Expand institutional authority and budget allocation. Constrained exit because the agency mandate is now embedded in statute; exiting requires legislative change."
+    },
+    {
+      "name": "enforcement_workers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Drug court judges, probation officers, parole agents administer treatment mandates and monitor compliance. Experience role ambiguity: they are agents of both punishment and care, enforcing legal conditions while navigating therapeutic relationships. Career depends on the drug-court system, which benefits from harm-reduction funding and legitimacy. Constrained exit because specialization in this role is deep. Bear costs through ideological conflict (punishment vs. care), emotional labor, and low public status."
+    },
+    {
+      "name": "harm_reduction_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Pushed for non-criminalization and achieved policy shift. Benefit from legitimacy, advocacy funding, and policy influence. Also constrained by participation in coercive treatment systems: may experience tension between advocacy for user autonomy and participation in enforcement machinery. Mobile exit: can form alternative organizations, withdraw from policy engagement, or migrate to more permissive jurisdictions."
+    },
+    {
+      "name": "black_market_suppliers",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Functionally prevented from participating in regulated supply chains. Excluded from harm-reduction infrastructure. Would benefit from decriminalization or legalization but are trapped by criminalization and enforcement machinery. Their exclusion is what the constraint maintains."
+    },
+    {
+      "name": "families_and_communities",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Benefit from reduced visible drug use, crime, and disorder when users engage with treatment. Also bear costs through mandatory family involvement in treatment programs, loss of family member's autonomy, and surveillance of family dynamics. Constrained exit because community is geographic and family bonds are non-negotiable."
+    },
+    {
+      "name": "prohibition_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Oppose harm-reduction framing; argue substance use requires criminalization and moral condemnation. Excluded from policy-setting under harm-reduction regime. Can exit through jurisdictional migration, litigation, or legislative campaigns to restore prohibition."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of providing treatment access, reducing drug-related harms to individuals and communities, and maintaining public-health epidemiology without relying solely on criminalization. Creates a unified treatment infrastructure with standardized protocols, funding mechanisms, and monitoring systems that individual users or communities could not organize independently.",
+    "transfer_function": "Moves agency and autonomy from substance users to treatment/enforcement sectors. Users transfer control over their substance use, medical decisions, and monitoring to courts, treatment providers, and public-health agencies. In exchange, users receive access to treatment, reduced criminal penalties, and (potentially) reduced health harms. Treatment providers and agencies receive funding, professional expansion, and institutional authority. The transfer is asymmetric: users lose autonomy; providers gain authority and resources.",
+    "absent_voices": "Black-market suppliers, individuals who prefer unregulated substance use and refuse treatment, autonomy-focused critics who oppose involuntary medicalization, and those who experienced or anticipate harms from enforcement machinery (relatives of incarcerated users, disability advocates). These parties would object to treatment mandates and coercive monitoring but are structurally excluded from policy-setting; their objections appear in litigation, advocacy campaigns, and user-led movements.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If harm-reduction authority and treatment mandates disappeared overnight, the substance-use landscape would reorganize: black markets would expand, treatment infrastructure would collapse or privatize, criminalization might return, or legalization might advance. Communities would experience different visibility of drug use, different crime patterns, and different public-health epidemiology. The arrangements depend on this constraint being actively maintained.",
+    "founding_problem": "Substance use causes individual and community harm. Prohibition-era criminalization increased that harm by driving use underground, increasing overdose risk, adding carceral trauma, and failing to reduce use. The founding problem is: how to reduce harm and provide treatment access without relying on criminalization as the primary mechanism.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Epidemiologists, public-health researchers, and user-led harm-reduction organizations outside the treatment-provider sector attest the problem is live: substance use persists, overdose deaths rise and fall with enforcement patterns and treatment availability, and criminalization correlates with worse outcomes. Treatment providers also attest the problem is live but differ on whether non-criminalization is sufficient without mandatory treatment. Prohibition advocates attest the problem is criminalization-era policy failure, not the existence of substance use itself."
+  },
+  "gain_flow": "treatment_providers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "medicalized_harm_minimization_framework",
+    "drift_state": {
+      "moment": "contemporary_post_opioid_crisis_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "legalization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_duty_harm_minimization_without_criminalization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "substance_use_is_medical_condition_not_moral_failure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "treatment_access_reduces_individual_and_collective_harm",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "substance_control_legitimacy__prohibition_reading",
+      "substance_control_legitimacy__legalization_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

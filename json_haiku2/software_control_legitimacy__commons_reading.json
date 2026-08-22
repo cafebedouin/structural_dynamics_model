@@ -1,0 +1,420 @@
+{
+  "header": {
+    "constraint_id": "software_control_legitimacy__commons_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "b42795ec-16e9-40d3-b943-de0803a0542e"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Software Control as Commons Governance (Negotiated Collective Management)",
+    "topic_domain": "technological/political-economy/intellectual-property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "participatory_developer_communities",
+      "user_coalitions",
+      "downstream_ecosystem_actors"
+    ],
+    "victims": [
+      "absolutist_property_advocates",
+      "absolutist_freedom_advocates",
+      "excluded_governance_voices"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "participatory_developer_communities",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Developer collectives that participate in negotiating commons rules: license stewards, forge governance bodies, standards committees. They shape what 'collective management' looks like in practice—what modifications are permitted, what attribution is owed, how derivative works are treated. They benefit from shared infrastructure (version control, CI/CD, community support) and from the legitimacy of participatory governance itself. Exit: they can fork, start parallel governance structures, or migrate to different licensing frameworks."
+    },
+    {
+      "name": "user_coalitions",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organized user groups claiming stake in software governance: consumer rights advocates, disability access coalitions, privacy-focused users, workers in software-dependent sectors. Under commons framing they claim governance voice over interoperability, security disclosure, accessibility standards, and data-handling norms. The commons structure legitimates their participation in rule-setting. Exit: limited—they depend on the software ecosystem but can lobby for standards, fork projects, or migrate to alternatives."
+    },
+    {
+      "name": "downstream_ecosystem_actors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Enterprises, platforms, and service providers that build on shared software infrastructure (Linux kernel, web browsers, AI frameworks). Under commons governance they gain legitimacy to participate in design decisions affecting their dependencies and to benefit from stability guarantees negotiated through collective governance. Exit: they can maintain forks, invest in alternative stacks, or migrate platforms."
+    },
+    {
+      "name": "absolutist_property_advocates",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Commercial software firms and intellectual-property advocates who argue creators have unilateral authority to control software use. Under the commons reading, their position is reframed as one stakeholder claim among many, not a foundational principle. They are asked to justify restrictions within a governance negotiation rather than assert rights unilaterally. They experience the commons frame as denial of their legitimate authority. Exit: they can reject commons participation and assert property claims unilaterally (which some do), or invest in lobbying to reframe the kernel away from commons reading toward property reading."
+    },
+    {
+      "name": "absolutist_freedom_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Free software movement purists who argue proprietary software is ethically illegitimate and that all software must grant user freedom unconditionally. Under the commons reading, their position is reframed as one normative claim among many (valuable, but not exclusive). Commons governance permits negotiating which freedoms are mandatory (repair, audit, fork) and which are optional (commercial use, modification). Purists experience this negotiation as compromise away from principle. Exit: identity-locked—their worldview fuses freedom maximalism with their identity. They can exit by rejecting the commons frame entirely and asserting freedom unilaterally, but this dissolves their participation in pluralistic governance."
+    },
+    {
+      "name": "excluded_governance_voices",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Workers in software-dependent sectors (healthcare, education, public infrastructure, low-income users in the Global South) whose interests are materially affected by software control decisions but who have no structured voice in commons governance processes. They would object to privatization (which excludes them entirely) and to absolutist freedom maximalism (which assumes costless modification and audit capacity they do not have). They are structurally absent from governance tables where commons rules are negotiated."
+    },
+    {
+      "name": "standards_bodies_and_forge_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Technical governance institutions (IETF, W3C, Linux Foundation, GitHub, GitLab) that enforce and maintain commons rules. They adjudicate licensing disputes, set defaults for new repositories, manage fork coordination, and mediate between competing governance claims. They implement the commons frame operationally and have structural power over what 'collective management' requires in practice."
+    },
+    {
+      "name": "collective_software_commons",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The abstract entity: the negotiated body of rules, norms, and institutions that constitute commons governance. Not an actor, but the arrangement itself. Appears in the constraint because the reading vindicates a proposition: that software control is legitimately governed through collective negotiation rather than unilateral assertion."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a governance structure for shared digital infrastructure in which stakeholders with different interests (creators, users, downstream builders, workers, marginalized communities) negotiate rules about software control: what modifications are permitted, what freedoms are mandatory, what restrictions are legitimate, how disputes are arbitrated. Solves the legitimacy problem: who decides what software can do, and on what basis?",
+    "transfer_function": "Moves authority over software governance from unilateral assertion (property holders or freedom absolutists) to pluralistic negotiation. Transfers decision-making power from creators/commercial interests to multi-stakeholder governance bodies. Transfers a substantive claim: that legitimacy derives from participatory process, not from foundational principle unilaterally asserted.",
+    "absent_voices": "Workers and users from the Global South with stake in infrastructure governance; people with disabilities whose access needs require negotiated rather than unilateral design; marginalized communities whose interests are affected by software control decisions but who lack representation in technical governance institutions. They would object to both absolute property and absolute freedom framings, each of which excludes them—property because exclusion is its point; freedom because it assumes modification and audit capacity they do not have.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the commons reading and its governance infrastructure disappeared, the kernel would collapse into either property-rights framing or freedom-imperative framing or a pragmatic split without legitimacy negotiation. Institutions would revert to unilateral assertion. The distinction between 'software governed by consensus-building institutions' and 'software governed by creators' assertions or market forces' would dissolve. Billions of lines of infrastructure code would be re-contextualized either as legitimate property (if property reading dominated) or as illegitimate (if freedom reading dominated). The ecosystem's current mixed model—some proprietary, some open, all participating in standards bodies—relies on the commons frame to legitimate coexistence.",
+    "founding_problem": "Early software was written by individual programmers and researchers; control was incidental. As software became critical infrastructure and involved many stakeholders—users, downstream builders, companies, open communities, public interests—unilateral control became a coordination problem: one actor's choices imposed externalities on everyone else (security bugs, incompatibilities, withheld source, anticompetitive lock-in). The founding problem: how to govern shared infrastructure when many stakeholders have material stakes and no single party has the right to dictate terms.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The commons reading attests the problem is still live: software is infrastructure, stakes are real, and unilateral control produces externalities. Property-rights advocates argue the problem is solved by IP law and contracts (creators can choose governance, buyers consent). Freedom advocates argue the problem is solved by license mandates (all software must grant freedom). Outside the benefiting parties: infrastructure operators (cloud providers, telcos), public agencies (healthcare, education systems), and marginalized users testify that none of these framings alone governs the actual ecosystem—that mixed governance with negotiated rules is the de facto arrangement and the founding problem persists unsolved."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.52,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Software control is governed through a kernel claim—'who legitimately decides what software does?'—that multiple readings contest. This story instantiates the COMMONS READING: software control is neither absolute property nor absolute user freedom, but negotiated collective management of shared infrastructure. Under this reading, legitimacy derives from pluralistic governance processes (standards bodies, forge operators, license stewards) that include developers, users, downstream builders, and affected communities. The reading acknowledges extraction: absolutist positions are reframed as stakeholder claims requiring justification, not foundational principles; excluded communities remain outside governance tables; and governance institutions exercise power to enforce rules they set. The constraint is TANGLED ROPE: it coordinates shared-infrastructure management AND asymmetrically extracts through the reframing itself—absolutist advocates lose unilateral authority, identity-locked freedom advocates experience principled compromise as betrayal, and powerless workers remain excluded from tables that shape their infrastructure dependency.",
+    "key_agents": [
+      "Participatory developer communities: shape commons rules through license stewards and standards committees; benefit from shared infrastructure and participatory legitimacy.",
+      "User coalitions: claim governance voice over interoperability, security, accessibility; benefit from representation in rule-setting; constrained exit.",
+      "Downstream ecosystem actors: benefit from negotiated stability guarantees; institutional power to influence governance.",
+      "Absolutist property advocates: reframed as one stakeholder claim, not foundational authority; experience extraction as loss of unilateral control; mobile exit.",
+      "Absolutist freedom advocates: principled position reframed as negotiable claim; identity-locked—their worldview fuses with their identity; psychological extraction through forced compromise.",
+      "Standards bodies and forge operators: enforce commons rules operationally; institutional agenda-setters.",
+      "Excluded workers and marginalized users: structurally absent from governance tables despite infrastructure dependence."
+    ],
+    "logic_rationale": "Base extractiveness (0.48) is moderate because the commons frame genuinely coordinates stakeholders with conflicting interests—it solves a real problem (who governs shared infrastructure?). However, it extracts through reframing: absolutist advocates lose the authority they claimed; freedom maximalists lose the purity they demanded; and excluded voices remain shut out. Suppression (0.52) is moderate because commons rules require active enforcement—governance institutions must suppress absolute-property claims and absolute-freedom claims to maintain the negotiated framework. Theater (0.41) is moderate-high because governance institutions perform legitimacy: they stage participation (advisory boards, comment periods) while institutional power concentrates in standards bodies and forge operators. The measurement series show gentle increase in extractiveness through t=25 (accumulation of governance overhead, increasing scope of what requires governance negotiation), then plateau—a pattern consistent with a constraint that reaches steady state. Suppression requirement rises slightly and stabilizes similarly. Theater remains elevated and stable: the participatory performance is the infrastructure, not a temporary cover.",
+    "directionality_logic": "The reading reframes the authority structure. Under property reading, creators have d ≈ 0 (full beneficiaries of their own creation). Under commons reading, creators have d ≈ 0.75 (they benefit from participation, but lose unilateral control). This is not a measurement error; it is a different constraint. The commons reading's directionality is honest: it acknowledges extraction even as it justifies governance coordination. The property reading's directionality would be honest under property-rights reasoning (creation = unilateral authority). They are structurally different constraints reading the same kernel differently.",
+    "perspectival_gap": "The perspective gap is the reading itself. From the commons standpoint, the constraint coordinates legitimate governance. From the property-rights standpoint, it denies creators their legitimate authority. From the freedom-imperative standpoint, it compromises principle. The engine computes these divergences from the structural data: high d for absolutists reflects structural loss of unilateral authority; moderate d for participators reflects genuine coordination benefit coupled with suppression cost. The authored claim (tangled_rope) reflects the structure: coordination (multi-stakeholder governance of infrastructure) + asymmetric extraction (reframing of absolutist positions, exclusion of marginalized voices, institutional power concentration).",
+    "mandatrophy_analysis": "The founding problem—'how to govern shared infrastructure when many stakeholders have stakes'—is live and contested. Property advocates claim it is solved by IP law. Freedom advocates claim it is solved by license mandates. Commons advocates argue neither is sufficient and that the actual ecosystem operates through negotiated collective management. The commons constraint prevents mislabeling: it acknowledges both coordination function (genuine problem solved: multi-stakeholder governance) and extraction (reframing of absolutist claims, institutional power, exclusion of marginalized voices). If the founding problem were dead, the constraint would degrade to piton (performance of governance without real function); if it were solved, it would degrade to rope (pure coordination, no extraction). The 'contested' status and the moderate extractiveness both reflect the structural reality: governance is necessary, but contested.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'software_control_legitimacy'. The kernel admits four readings: (1) COMMONS READING (this story): software control is negotiated collective management of shared infrastructure, neither absolute property nor absolute freedom. (2) FREEDOM IMPERATIVE READING: software control is fundamentally about user freedom; proprietary software is ethically illegitimate. (3) PROPERTY RIGHTS READING: software control is creator property; commercial sustainability requires unilateral authority over use and distribution. (4) PRAGMATIC OPENNESS READING: software control is a development methodology choice; open source is superior for quality, but proprietary models are legitimate alternatives. Each reading instantiates a different constraint (different beneficiary/victim sets, different ε values, different types) from the same kernel. The commons reading is distinguished by its pluralism: it legitimates coexistence of multiple governance models through negotiated rules, rather than asserting one principle as foundational."
+  },
+  "omegas": [
+    {
+      "id": "commons_vs_capture_ambiguity",
+      "question": "Is the observed governance structure genuinely pluralistic negotiation, or is it captured by institutional gatekeepers who perform inclusion while concentrating power?",
+      "resolution_mechanism": "Trace decision-making processes in actual governance bodies (Linux Foundation, W3C, GitHub, etc.): do decisions reflect explicit negotiation among stakeholders with different interests, or do they track the preferences of institutional insiders? Survey stakeholders on perceived voice and influence.",
+      "impact": "If governance is captured, the constraint reclassifies as snare—pluralism is cover for institutional extraction. If genuinely pluralistic (different stakeholders win different decisions over time), the tangled_rope classification holds. If partially both (some domains genuinely negotiated, others captured), the constraint family decomposes into multiple per-domain stories.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commons governance is genuinely pluralistic or institutionally captured."
+    },
+    {
+      "id": "identity_locked_freedom_advocates_exit",
+      "question": "Can absolutist freedom advocates participate in commons governance without experiencing the frame itself as a betrayal of principle, or is the identity-lock so tight that commons participation is impossible?",
+      "resolution_mechanism": "Qualitative interviews with freedom-maximalist advocates in governance roles; analysis of discourse in FSM (Free Software Movement) communities about commons/negotiation participation; historical drift in identity-fusion intensity.",
+      "impact": "If exit is possible (identity-lock is not total), the directionality for freedom advocates is lower (d ≈ 0.65-0.75) and represents constrained participation in a framework they partly reject. If exit is impossible (total identity-fusion), d ≈ 0.85-0.95 and the constraint functions as coercive identity-reframing, reclassifying toward snare. If identity-lock loosens over time (younger developers less identity-fused), theater_ratio should rise and resistance should shift.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether identity-lock for freedom absolutists permits meaningful participation or forces performative exclusion."
+    },
+    {
+      "id": "excluded_workers_countervailing_power",
+      "question": "Do excluded workers and marginalized users have latent countervailing power to demand governance inclusion, or are they structurally powerless to participate?",
+      "resolution_mechanism": "Track organizing efforts among affected workers (healthcare IT, public sector, Global South); analyze outcomes of inclusion initiatives (disability access committees, labor representation proposals) in governance bodies; measure whether power dynamics shift when excluded voices mobilize.",
+      "impact": "If countervailing power exists but is latent, the constraint permits potential reclassification if power mobilizes (excluded → organized, trapped → mobile). If power is truly absent (structural powerlessness), the constraint traps marginalized voices indefinitely and the exclusion is built-in, supporting snare classification. The distinction matters for remediation: countervailing power suggests organizational scaffolding; structural absence suggests the commons frame itself may exclude (and alternative framings might not).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether excluded workers have latent power to shift governance participation or are structurally powerless."
+    },
+    {
+      "id": "committer_constraint_plurality",
+      "question": "This is one reading of the kernel 'software_control_legitimacy'. Are the sibling readings genuinely live positions in contemporary discourse, or have some been foreclosed by material conditions or intellectual drift?",
+      "resolution_mechanism": "Analysis of contemporary software policy discourse: how many parties actively defend property-rights reading? How many defend freedom-imperative reading? How many occupy pragmatic-openness reading? Do any readings show declining active defense (foreclosure in practice)?",
+      "impact": "If all four readings remain live, the kernel is genuinely contested (coexists_with relations are appropriate). If one or more have been abandoned, the kernel may have partially collapsed and the constraint family should be revisited—sibling constraints may transition from 'contested readings' to 'historically important but superseded positions'. If the commons reading specifically has been adopted as the dominant framework (all parties now negotiate within it), the kernel has resolved and the entire constraint family transitions from active contest to historical study.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether all sibling readings of the kernel remain live in contemporary discourse or some have been materially foreclosed."
+    },
+    {
+      "id": "suppression_internalization_mechanism",
+      "question": "Is the measured suppression (0.52) structural (active enforcement machinery required to maintain commons frame) or internalized (developers and advocates have internalized the negotiation norm such that suppression persists even in the absence of enforcement)?",
+      "resolution_mechanism": "Post-exit observation: if enforcement institutions were dismantled, would suppression persist or dissipate? Natural experiment from jurisdictions that reject commons governance (e.g., software policy regimes that mandate property-rights or freedom-imperative reading): what enforcement machinery is required to maintain the alternative frame?",
+      "impact": "If structural, suppression (0.52) is accurate and reflects real institutional cost of maintaining pluralism. If internalized, the effective suppression is higher than measured—the frame persists through cognitive capture, not just institutional coercion. If both, the relative proportion matters for understanding stability: high internalization suggests the constraint has successfully normalized; high structural suppression suggests it is maintained artificially and brittle.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commons-governance suppression is structural enforcement or internalized cognitive capture."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "software_control_legitimacy__property_rights_reading",
+      "software_control_legitimacy__freedom_imperative_reading",
+      "software_control_legitimacy__pragmatic_openness_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the kernel 'software_control_legitimacy'. The constraint family consists of four sibling readings, each instantiating a different constraint from the same kernel. Commons reading structures pluralistic governance; property reading asserts creator authority; freedom reading asserts user freedom; pragmatic reading treats licensing as methodology choice. Constraints linked by network.affects_constraints form the complete kernel contest. Each reading authors its own ε, beneficiary/victim set, and type; they are not perspectives on one constraint but distinct constraints reading the same kernel differently."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.82
+    }
+  ],
+  "gain_flow": "standards_bodies_and_forge_operators",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "property_rights_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "freedom_imperative_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "pragmatic_openness_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "software_governance_requires_pluralism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "governance_legitimacy_derives_from_inclusive_process",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "software_as_negotiated_collective_infrastructure",
+    "drift_state": {
+      "moment": "contemporary_institutional_gatekeeping_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

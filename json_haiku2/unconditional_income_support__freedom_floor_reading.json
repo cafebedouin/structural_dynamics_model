@@ -1,0 +1,370 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "de744592-ff6a-429f-8245-e85e9f49e275"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.15,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.22,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support as Autonomy-Enabling Floor",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "precarious_workers",
+      "unpaid_caregivers",
+      "artists_creators",
+      "abuse_survivors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "precarious_workers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Low-wage, irregular work, no benefits, facing employer leverage that suppresses bargaining power. UBI floor means they can refuse unacceptable terms without immediate destitution. Income volatility is absorbed by the floor, making labor market participation a choice rather than survival necessity."
+    },
+    {
+      "name": "unpaid_caregivers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Provide childcare, eldercare, or disability support outside the market. Currently trapped between unpaid family obligation and labor market exclusion. UBI enables them to sustain socially necessary care without forced wage labor or destitution, recognizing care as legitimate economic contribution."
+    },
+    {
+      "name": "artists_creators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Depend on intermittent, uncertain income from creative work. Often forced into wage labor that displaces creative time. UBI floor removes the subsistence crisis that forces them into unrelated work, enabling full-time creative practice without institutional gatekeepers' permission."
+    },
+    {
+      "name": "abuse_survivors",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Face economic entrapment in abusive relationships because leaving means destitution. UBI floor provides material ground for exit that did not require proving abuse, meeting institutional conditions, or finding new employment immediately—autonomy from economic coercion."
+    },
+    {
+      "name": "labor_market_employers",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Face higher labor costs if wage floors rise to offset UBI inflation, or alternatively face reduced bargaining power as workers gain exit alternatives. From this reading, the shift in power is the point—employers lose the leverage that comes from workers' desperation. Some sectors experience selective labor tightening; labor-intensive industries restructure toward higher productivity or automation."
+    },
+    {
+      "name": "general_taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the fiscal cost through expanded taxation. The transfer is distributed across the tax base; incidence depends on the tax structure (progressive vs. flat). This reading frames the transfer as enabling autonomy for those constrained by market coercion, not as subsidy to idleness—a different moral framing than dependency-trap reading suggests."
+    },
+    {
+      "name": "policy_advocates__freedom_reading",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocates for UBI on autonomy grounds: removal of coercion, dignity, recognition of unpaid work. Sets policy agenda by framing the problem as labor market coercion rather than individual deficiency. Builds coalition across ideological lines by emphasizing freedom (conservative libertarian strand) and justice (progressive strand), though the sibling readings contest whether this framing obscures incompatible implementation paths."
+    },
+    {
+      "name": "labor_organizing_movements",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "View UBI floor as a wedge that shifts power from employers to workers—workers can refuse bad terms because the floor removes desperation. This reading aligns UBI with union power: both remove coercive leverage from the employer side. Some labor traditions contest this (see dependency_trap_reading), fearing UBI crowds out labor organizing itself."
+    },
+    {
+      "name": "means_tested_welfare_administrators",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers conditional welfare (asset tests, behavioral conditions, ongoing verification). UBI replaces their gatekeeping role with automatic universality. They would argue UBI is wasteful (gives to non-needy) and loses targeting precision; from this reading their objection reflects institutional interest in maintaining the discretionary power that conditional programs grant."
+    },
+    {
+      "name": "dependency_trap_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocates who read UBI as incentive-distorting subsidy. They hold that unconditional transfer weakens labor supply incentives and crowds out targeted aid. Not in conversation with this reading's proponents at the empirical level (see omegas on labor supply effects and data interpretation). Their exclusion reflects disagreement on both values (what counts as autonomy) and facts (what labor supply effects empirically occur)."
+    },
+    {
+      "name": "universality_paradox_theorists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Observes that UBI's cross-ideological appeal masks conflicting implementation paths: libertarian UBI (replace all welfare, low flat rate) vs. social-democratic UBI (add to existing programs, higher rate) converge on similar fiscal outcomes while instantiating incompatible theories of justice. From this reading's seat, the paradox observers see either empirical vindication (the freedom floor works across multiple implementation frames) or a sign of theoretical incoherence."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a universal material floor decoupled from employment status or institutional gatekeeping, enabling voluntary labor market participation and unpaid social contribution (caregiving, creation) without destitution—solves the coordination problem of how to remove labor market coercion while maintaining economic participation.",
+    "transfer_function": "Transfers purchasing power from general taxation (incidence determined by tax structure) to all residents unconditionally. The transfer is distributed universally, not concentrated on the worst-off; the freedom-floor reading argues this universality is the point—removal of stigma, discretion, and conditionality.",
+    "absent_voices": "Means-tested welfare administrators are structurally excluded (their gatekeeping role dissolves under universality). Dependency-trap advocates are excluded (they contest the empirical premise that labor supply effects are minimal). Those whose labor market power depends on worker desperation are present but have incentives to downplay the power-shift effect.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If UBI disappeared, precarious workers would lose the exit option that weakens employer coercion; unpaid caregivers would return to forced trade-off between care and subsistence; abuse survivors would lose the material ground for exit without institutional gatekeeping. Labor supply would not collapse but labor market power distribution would shift back toward employers. The freedom-floor reading predicts labor-intensive sectors would face reduced willingness to accept bad terms; disappearance of UBI would rearrange that power dynamic.",
+    "founding_problem": "Labor market coercion: workers constrained by desperation accept unacceptable terms (wage, hours, conditions, dignity) that they would refuse if material survival were unconditioned. Unpaid work (caregiving, creation) is rendered invisible and undervalued. Welfare conditionality adds institutional coercion and stigma on top of market coercion. The founding problem is not poverty per se but the removal of choice from those constrained by it.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Labor economists studying wage-productivity gaps, bargaining theory literature on desperation as leverage, qualitative research on worker decision-making in low-wage sectors, testimonies from abuse survivors, and data on welfare conditionality burden all attest the founding problem is live. Dependency-trap reading contests the significance (argues incentive effects dominate), not the existence of coercive labor market dynamics; universality-paradox reading contests implementation coherence, not the coercion claim. The founding problem is corroborated across the contested readings despite disagreement on policy response."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This is the FREEDOM-FLOOR READING of unconditional income support as a policy constraint. In this reading, UBI operates as a removal of labor market coercion: by decoupling subsistence from employment, it enables workers, caregivers, and creators to participate voluntarily rather than under desperation-driven constraint. This reading frames the constraint as coordination that enables autonomy, not as redistribution that crowds out work incentives (the dependency-trap reading) or as a theoretically incoherent cross-partisan compromise (the universality-paradox reading). The three readings contest a shared kernel—what unconditional income support IS—but instantiate incompatible structural analyses and empirical predictions. This JSON instantiates ONLY the freedom-floor reading as a coherent, ε-invariant constraint.",
+    "key_agents": [
+      "precarious_workers: laborers dependent on employment for subsistence, experiencing employer bargaining leverage from desperation",
+      "unpaid_caregivers: those providing socially necessary care (children, elders, disabled people) outside the labor market, currently trapped between unpaid obligation and wage-labor requirement",
+      "artists_creators: those whose work is intermittent or non-market, forced into unrelated wage labor",
+      "abuse_survivors: those economically trapped in abusive relationships by lack of independent income",
+      "labor_market_employers: those who currently wield bargaining leverage deriving from workers' material desperation",
+      "general_taxpayers: those bearing the fiscal cost of UBI through expanded taxation",
+      "policy_advocates__freedom_reading: organized advocates framing UBI as autonomy-enabling, removing coercion",
+      "labor_organizing_movements: strategic ally seeing UBI floor as complementary to worker power",
+      "dependency-trap advocates: excluded (contest empirical premises about labor supply effects)",
+      "universality-paradox theorists: analytical observers documenting theoretical tensions across implementation paths"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.32 at interval end) because the transfer removes resources from those who currently benefit from labor market coercion (employers gaining desperation-leverage, means-tested welfare administrators maintaining gatekeeping power), but the constraint does not extract FROM beneficiaries—it removes extraction pressure on them. The transfer is a cost to general taxpayers, but this reading frames it as enabling choice, not subsidizing idleness, so the extractiveness ε is assessed as the coercion removed, not the fiscal cost. Suppression is very low (0.15) because the mechanism operates by removing suppression (the coercive pressure of desperation), not by imposing it. The constraint succeeds by removing barriers, not enforcing compliance. Theater is minimal (0.08) because the functional content (material support enabling voluntary participation) is the entire point; there is no performative layer masking different activity. Accessibility of alternatives is low (0.22) not because alternatives are unavailable but because the constraint itself is the alternative to desperation-driven labor market participation—it removes the most common coercive exit option. Resistance is substantial (0.58) because the dependency-trap reading challenges the empirical premise (labor supply effects) and the universality-paradox reading contests implementation coherence; employer interests align with suppression of UBI policy.",
+    "perspectival_gap": "The gap between the freedom-floor reading seat and the dependency-trap reading seat is profound and structural. From the freedom-floor seat, UBI removes coercion and enables autonomy—precarious workers, caregivers, and abuse survivors gain exit options they lacked. From the dependency-trap seat, UBI weakens labor supply incentives and crowds out targeted aid that reaches those truly in need. Both readings reference the same empirical claims (labor supply elasticity, redistribution mechanics) but interpret them through incompatible frameworks: one sees choice-enabling removal of desperation, the other sees incentive-distorting subsidy. The universality-paradox reading observes that libertarian and social-democratic versions of UBI have different justifications but similar fiscal outcomes, suggesting either empirical convergence or theoretical confusion—a different critique entirely. The engine computes each seat's type from its structural position: the freedom-floor reading instantiates a rope (genuine coordination enabling participation); the dependency-trap reading likely computes as tangled_rope or snare (extraction justified by behavior change claims); the universality-paradox reading likely computes as piton or tangled_rope (theoretical incoherence masked by political appeal). These are NOT ONE constraint from multiple angles—they are genuinely different constraints, each with its own ε and beneficiary/victim structure, linked by network relationship.",
+    "directionality_logic": "Precarious workers, unpaid caregivers, artists, and abuse survivors are the structural beneficiaries—the constraint removes coercive pressure on them. Their directionality is low (d near 0.0), indicating subsidy/benefit. General taxpayers are the payers—the fiscal cost lands on them—so their directionality is higher (d near 0.5–0.7 depending on progressivity of the tax structure). Employers lose bargaining leverage deriving from worker desperation, so they bear an opportunity cost; their directionality is positive but they are not listed as victims because the freedom-floor reading does not frame the power-shift as harm—it frames the prior desperation-leverage as coercive and its removal as restoring just terms. Labor organizers are beneficiaries (worker power increases) not payers. The key analytical move: the freedom-floor reading's beneficiary structure includes people who were already income-poor (precarious workers, caregivers) AND people who were not poor but constrained by bad options (abuse survivors, artists with adequate savings but forced into wage labor). This structure is importantly different from a poverty-reduction reading; it is a choice-enabling reading.",
+    "mandatrophy_analysis": "This constraint's founding problem is 'labor market coercion constraining choice'—a problem that is live in current labor market dynamics. The disappearance_verdict is 'world_rearranges'—if UBI disappeared, worker bargaining power would shift back to employers, unpaid caregivers would face renewed trade-offs, abuse survivors would lose material ground for exit. No mandatrophy signal here. The constraint's function is not orphaned; it directly addresses its stated founding problem. Where the danger of mandatrophy appears is in the CONTESTED EMPIRICAL CLAIMS: if labor supply effects turn out to be substantial (contrary to this reading's empirical hypothesis), the founding problem might be reframed (from 'coercion' to 'incentive distortion'), the beneficiaries might be reclassified (precarious workers no longer benefit if employment declines), and the type might shift to tangled_rope or snare (extraction justified by behavior-change claims that are failing). This is the research frontier captured by the omegas.",
+    "kernel_context": "This constraint instantiates the freedom-floor READING of the contested kernel 'unconditional_income_support'. The kernel is the standing commitment: that unconditional income support (UBI) should be implemented as policy. The kernel is contested because different parties read the same policy through incompatible frameworks: (1) freedom-floor reading (this constraint): UBI removes labor market coercion, enables autonomy, eliminates welfare stigma. (2) dependency-trap reading (sibling constraint): UBI distorts work incentives, crowds out targeted aid, redistributes upward. (3) universality-paradox reading (sibling constraint): UBI's cross-ideological appeal masks incompatible implementation paths that converge on similar outcomes. Each reading has its own ε, beneficiary structure, and type. This reading's core premise is that material security enables choice; the dependency-trap reading's core premise is that unconditional transfer weakens incentives. These coexist as live political positions held by different coalitions—neither rules out the other within a single framework, so the relation is 'coexists_with' rather than 'forecloses'. The universality-paradox reading is in observational relation to both, noting structural incoherence; it influences both by raising questions about implementation paths but does not foreclose either."
+  },
+  "omegas": [
+    {
+      "id": "labor_supply_elasticity_contestation",
+      "question": "What is the actual labor supply elasticity response to unconditional income support? Does UBI modestly reduce labor supply (as dependency-trap reading predicts) or leave it substantially unchanged (as freedom-floor reading hypothesizes)?",
+      "resolution_mechanism": "Long-term RCT data from comparable economies (Alaska Permanent Fund dividend, Kenya GiveDirectly, India randomized trials, proposed North American pilots). Measure employment, hours, wage levels, occupational mobility 3–5 years post-implementation across income and demographic groups.",
+      "impact": "If labor supply reduction is substantial (>5% overall, >15% for low-wage workers), the founding problem (coercion) may be reframed as incentive distortion, beneficiary structure shifts (precarious workers now 'harmed' by employment reduction), and type likely reverts to tangled_rope or snare. If minimal (<2%), freedom-floor reading is vindicated and the constraint remains rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Labor supply elasticity to unconditional income support is the core empirical crux between freedom-floor and dependency-trap readings."
+    },
+    {
+      "id": "bargaining_power_measurement",
+      "question": "Does UBI floor demonstrably shift labor market bargaining power away from employers toward workers, or does the effect dissolve in aggregate labor supply adjustment?",
+      "resolution_mechanism": "Measurement of wage growth, benefit adoption, occupational mobility, and employer concessions in low-wage sectors before and after UBI implementation. Compare against counterfactual (similar economy without UBI). Qualitative research on worker decision-making about work acceptance and negotiation.",
+      "impact": "If bargaining power shift is real and sustained, the freedom-floor reading's claim that UBI removes coercion is vindicated. If bargaining power shift is temporary (absorbed by labor supply responses), the constraint may be reclassified as tangled-rope (coordination effect is real but ephemeral, requiring active enforcement to sustain). If bargaining power does not shift at all, ε drops sharply (the removal of coercion that defines the reading is not happening) and type reverts to scaffolding or even piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether UBI's coercion-removal mechanism actually operates through bargaining power shift or whether the effect is illusory."
+    },
+    {
+      "id": "welfare_conditionality_elimination",
+      "question": "Does removing conditionality and means-testing (administrative gatekeeping) from income support actually reduce stigma and expand effective freedom, or does universality itself create different forms of stigma or administrative burden?",
+      "resolution_mechanism": "Comparative implementation data: measure stigma (survey self-reports, behavioral proxies like non-uptake), administrative cost, and perceived dignity across UBI (unconditional universal) vs. means-tested welfare systems. Track shifts in how recipients describe their participation.",
+      "impact": "If stigma is substantially reduced and freedom to exit bad situations is demonstrably enabled, the beneficiary group (abuse survivors, caregivers) experiences genuine autonomy gain, supporting the type as rope. If stigma is redirected (e.g., 'UBI recipient' becomes a status category) or administrative burden is replaced with different friction, the type may be tangled_rope (coordination achieved but with non-obvious extraction or complexity cost).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether unconditional universality actually removes welfare stigma or redistributes it."
+    },
+    {
+      "id": "caregiver_unpaid_work_recognition",
+      "question": "Does UBI floor genuinely enable and recognize unpaid caregiving as legitimate economic contribution, or does the universality structure (no distinction between work and non-work) obscure and erode the recognition claim?",
+      "resolution_mechanism": "Ethnographic and qualitative research on how caregivers describe their labor and social position under UBI. Measure care quality and intensity outcomes. Track whether caregiving remains undervalued or becomes socially recognized as necessary work.",
+      "impact": "If recognition increases and caregiver autonomy is substantially enabled, the beneficiary structure holds. If caregiving erodes (time spent on care decreases as other income options become available without institutional recognition) or social recognition does not materialize, the constraint may fail its founding problem for this constituency and reclassify.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether UBI enables caregiver autonomy or erodes unpaid work through invisible reallocation of time and social value."
+    },
+    {
+      "id": "kernel_reading_coherence",
+      "question": "Are the freedom-floor, dependency-trap, and universality-paradox readings genuinely distinct constraints, or do they decompose further into sub-readings with incompatible ε values within each framing?",
+      "resolution_mechanism": "Structural analysis of axioms, beneficiary claims, and empirical hypotheses within each reading. Test whether a single framing (e.g., 'freedom-floor') branches into incompatible sub-claims (e.g., 'UBI as worker power' vs. 'UBI as artist support' vs. 'UBI as abuse escape') that would yield different ε values if separated.",
+      "impact": "If the readings decompose further, the kernel is more complex than three constraints; the network.affects_constraints structure expands. If readings hold as coherent wholes, the three-constraint family is stable. This affects the scope of the freedom-floor constraint—is it only about labor coercion, or does it coherently span caregiver autonomy, artist support, and abuse survival?",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the freedom-floor reading is a single coherent constraint or a bundle of distinct constraints that should be decomposed per ε-invariance."
+    },
+    {
+      "id": "universality_vs_targeting_tradeoff",
+      "question": "Is there a genuine empirical tradeoff between universality (the defining feature of UBI) and targeting precision (means-tested welfare's defining feature), or can one design UBI that achieves both through income-tapering or phase-out structures?",
+      "resolution_mechanism": "Economic modeling and pilot data comparing pure universal UBI against tapered/phased designs. Measure redistribution efficiency, coverage of most-vulnerable populations, political sustainability, and administrative cost across designs.",
+      "impact": "If a tapered design can achieve both universality and targeting, the dependency-trap reading's 'crowd out' claim loses force (you can have UBI-like freedom with targeted support). If targeting undermines universality (re-introduces conditionality and stigma), the freedom-floor reading's core claim holds. This affects the boundary between the freedom-floor constraint and possible hybrid designs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the universality-paradox reading's observation of incompatibility between implementation paths is a real structural feature or a design artifact that can be resolved."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "unconditional_income_support__dependency_trap_reading",
+      "unconditional_income_support__universality_paradox_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel 'unconditional_income_support'. The freedom-floor reading frames UBI as autonomy-enabling (removal of labor market coercion); the dependency-trap reading frames it as incentive-distorting subsidy; the universality-paradox reading observes that both readings' implementations converge fiscally despite incompatible justifications. The three constraints share a kernel and affect each other through research evidence (labor supply data, bargaining power effects) and political framing (which reading dominates shapes policy design). Each has its own ε, beneficiary/victim structure, and type—they are genuinely distinct constraints, not perspectives on a single constraint. They are linked by network edges capturing structural influence (shared empirical facts, competing framings, implementation paths)."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reference_frame": "labor_market_coercion_framework",
+    "drift_state": {
+      "moment": "contemporary_welfare_state_contestation",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universality_paradox_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "material_autonomy_enables_choice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "labor_desperation_suppresses_bargaining",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "header": {
+    "constraint_id": "federation_membership_obligations__integration_primary",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "150d7523-a890-4a08-a349-243695dd47c9",
+    "created_at": "2026-06-12T14:32:15Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.64,
+    "resistance": 0.73,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Free Movement as Integration Primary: Welfare Boundaries Subordinate to Mobility Rights",
+    "topic_domain": "political_economy/federalism/welfare_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mobile_eu_workers",
+      "service_providers_across_borders",
+      "multinational_employers"
+    ],
+    "victims": [
+      "locally_rooted_low_skilled_workers",
+      "national_welfare_administrators",
+      "fiscally_strained_receiving_states"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "mobile_eu_workers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Can relocate to any EU member state and claim residence rights, access to employment, and (after eligible period) full welfare benefits including housing assistance, unemployment insurance, and child allowances at the receiving state's level. They gain labor market access and benefit portability without renouncing their home state citizenship. The constraint treats them as EU citizens first, resident location second."
+    },
+    {
+      "name": "locally_rooted_low_skilled_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Experience direct labor market pressure from expanded mobility: wage suppression in construction, hospitality, and care sectors; reduced bargaining power in industries with high cross-border worker inflows. They cannot easily relocate (language, family ties, lack of skills recognized across borders). Fiscal adjustment costs (from expanded welfare rolls) emerge in their home state's tax base without corresponding benefit to them. The constraint's enforcement (ECJ overturning member state restrictions) happens above their level of voice."
+    },
+    {
+      "name": "national_welfare_administrators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must absorb welfare claims from newly mobile EU citizens at the receiving state's full benefit level, with no corresponding adjustment to budget or to the sending state's contribution. They bear the cash cost of the constraint's operation. The ECJ's case law progressively narrows their discretion to means-test or residence-restrict benefits. They administer the rule but did not set it — the constraint operates above their authority."
+    },
+    {
+      "name": "fiscally_strained_receiving_states",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Experience budget pressure from expanded welfare eligibility (mobility + full benefit access) while retaining nominal authority over welfare system design. They set nominal rules but under hard ECJ constraints; their attempts to restrict access are regularly struck down. The tension between fiscal autonomy and mobility obligation is the core of this constraint's asymmetry: they bear costs they cannot unilaterally control."
+    },
+    {
+      "name": "service_providers_across_borders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Gain access to a labor market where workers are mobile and welfare-portable, reducing their hiring friction and labor cost volatility. Posted workers and cross-border service provision are expanded by the constraint's operation. They can arbitrage wage differences while relying on receiving-state welfare to maintain purchasing power and reduce pressure for wage adjustment."
+    },
+    {
+      "name": "multinational_employers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from integrated labor markets and reduced hiring constraints across member states. Mobility rights and welfare portability allow them to structure production across borders with flexible staffing; welfare systems in receiving states absorb adjustment costs (unemployment, housing support) that would otherwise pressure wage negotiations."
+    },
+    {
+      "name": "ecj_and_eu_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Enforce and expand free movement rights through case law (Directive 2004/38, ECJ jurisprudence on welfare access). They set the rule and its trajectory — progressively subordinating national welfare boundaries to EU citizenship. They do not face the fiscal or labor market pressure their rulings generate; their authority rests on the reading that integration is constitutive of EU membership."
+    },
+    {
+      "name": "sending_states_with_outflows",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from remittances and reduced domestic unemployment pressure when workers migrate outward. They also bear a loss: workers (often young, skilled) leave, drawing pensions and education investments elsewhere. The constraint creates an asymmetric brain-drain pattern where lower-income states export human capital while receiving no compensation in the EU budget (no explicit transfer follows mobility flows)."
+    },
+    {
+      "name": "low_mobility_workers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Workers without EU citizenship, refugees, and third-country nationals are structurally outside the free movement and welfare access frame. They face tighter borders and welfare restrictions even in the same labor markets where EU citizens have expansive rights. The constraint's beneficiaries operate under citizenship-based inclusion that excludes non-EU residents."
+    },
+    {
+      "name": "national_labor_unions",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face eroded bargaining power as labor supply becomes mobile and cross-border, while domestic wage standards and working conditions are subject to competition from posted workers and mobile labor willing to work at lower rates. Attempts to restrict posted-worker conditions or require equal treatment have been narrowed by ECJ rulings prioritizing free movement."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables integrated European labor and services markets by guaranteeing workers and businesses can move across borders without forfeiting welfare access or employment rights. Solves a genuine collective-action problem: without free movement guarantees, member states would each restrict entry to protect domestic workers, fragmenting the single market and reducing aggregate efficiency.",
+    "transfer_function": "Moves welfare costs and labor market adjustment burdens from beneficiary seats (mobile workers, multinational firms, service providers) to payer seats (local low-skilled workers through wage pressure, national welfare budgets through expanded eligibility, receiving-state treasuries through fiscal strain). The transfer is structured: receiving states assume full welfare obligations for new mobile residents while no fiscal adjustment mechanism compensates them, and sending states export human capital with no corresponding EU-level redistribution.",
+    "absent_voices": "Low-mobility workers (particularly third-country nationals and refugees) are structurally excluded from the free movement frame entirely — they experience tightened borders and welfare restrictions in the same labor markets where EU citizens have expansive access. National labor movements and local working-class constituencies are not at the EU bargaining table; their wage and employment pressure registers only through national governments' constrained attempts to restrict access (attempts regularly overturned by the ECJ). The constraint operates without the organized voice of its primary victims.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If free movement and welfare portability were removed, labor markets would immediately resegregate by nationality; wage pressure on low-skilled workers would ease; national welfare systems would close; multinational supply chains would face higher hiring and relocation frictions; remittance flows would reverse or shrink; and the EU's internal market architecture would fragment into bilateral labor agreements and national protections. The constraint is generative of the integrated European economy; removing it would unwind decades of cross-border integration.",
+    "founding_problem": "Post-WWII Europe needed a mechanism to prevent nationalist labor protectionism and tariff wars from recurring. Free movement of workers and services was conceived as a confidence-building device: if labor could move freely, competitive advantage would come from productivity rather than protectionism, and member states would cooperate rather than fragment. The welfare portability piece was added later (Directive 2004/38, post-2004 enlargement) to make mobility politically viable and to signal that EU citizenship carried real benefits.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "EU institutions and pro-integration voices attest the founding problem remains live: without guaranteed mobility, member states would backslide into protectionism; integration requires continuous deepening. Labor movements, national governments managing fiscal strain, and local worker constituencies attest the founding problem's original urgency (preventing nationalist fragmentation) has been substantially addressed; the continued enforcement now extracts rents from mobile workers' ability to arbitrage welfare and wages. Academic labor economists find wage suppression effects for low-skilled workers in receiving countries but efficiency gains at the EU aggregate level."
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.71,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The integration-primary reading of EU federation membership treats free movement and welfare portability as constitutive of EU citizenship, with the corollary that member state welfare boundaries must yield to mobility rights. Under this reading, a mobile worker from Bulgaria has the same claim to housing assistance in Germany as a long-term German resident — EU citizenship trumps national welfare closure. This generates asymmetric cost distribution: receiving states bear fiscal costs; mobile workers and multinational employers gain labor arbitrage; locally-rooted, low-mobility workers face wage pressure and reduced bargaining power. The ECJ enforces this reading through case law that progressively subordinates member state discretion to mobility rights. The constraint is claimed as tangled_rope because it solves a real coordination problem (integrated labor markets require mobility guarantees) while simultaneously extracting from non-mobile populations and fiscally strained states.",
+    "key_agents": [
+      "Mobile EU workers: Primary beneficiaries; gain unrestricted labor market access and welfare portability across member states.",
+      "Locally-rooted low-skilled workers: Primary victims; experience wage pressure and reduced bargaining power as labor supply becomes mobile.",
+      "National welfare administrators and fiscally strained receiving states: Secondary victims and nominal rule-setters; bear budget costs while ECJ constrains their discretion to restrict eligibility.",
+      "Multinational employers and service providers: Secondary beneficiaries; gain integrated labor markets with reduced hiring friction and arbitrage opportunities.",
+      "ECJ and EU institutions: Agenda-setters; enforce and expand free movement through case law, setting the trajectory of integration.",
+      "Sending states with high outflows: Dual-positioned; benefit from reduced unemployment and remittances, but lose young/skilled workers and corresponding tax base."
+    ],
+    "logic_rationale": "Extractiveness rises from 0.48 (t=0) to 0.68 (t=35) over the interval, reflecting the ECJ's progressive case law narrowing member states' discretion to restrict welfare access. Early cases (Martínez Sala, Grzelczyk) began subordinating residency requirements to EU citizenship; later cases (Dano, Alimanovic) created some residency duration thresholds but still prioritized free movement. Theater ratio (0.42 at endpoint) reflects that enforcement increasingly focuses on eliminating nationality-based restrictions, but the proportional activity spend on actual integration (as opposed to defending mobility rights against member state resistance) is approximately 40%. Suppression (0.71) is high because member state attempts to manage labor market or fiscal impacts through welfare restrictions are systematically overturned. Accessibility collapse (0.64) reflects that alternatives to the constraint (bilateral labor agreements, welfare closure) have been substantially eliminated through ECJ precedent, though some member states retain nominal tools. Resistance (0.73) is high: national labor movements, fiscally strained governments, and local working-class constituencies actively resist, but their resistance operates below the level of EU decision-making and takes the form of constrained negotiation within the ECJ framework rather than exit or override.",
+    "perspectival_gap": "The beneficiary seats (mobile workers, multinational firms) experience this as genuine coordination enabling economic integration and opportunity. The agenda-setter seat (ECJ/EU institutions) experiences it as necessary to prevent member state backsliding and to make EU membership real. The payer seats experience different types: locally-rooted workers experience it as pure extraction (wage suppression with no offsetting benefit); national welfare administrators experience it as tangled (they coordinate labor markets but extract from budgets); receiving states experience it as tangled (they participate in mobility coordination but are not compensated for fiscal costs). The engine should compute these divergent types from the stakeholder power and exit options: low-skill workers are powerless and trapped (full target), welfare administrators are institutional with constrained exit (high extraction), receiving states are institutional with constrained exit but retain nominal rule-setting authority (hybrid), mobile workers are moderate-powered and mobile (beneficiary end). This reading is deliberately authored without reconciling claim to metrics: the claim is tangled_rope (real coordination + asymmetric extraction); the metrics are substantially extractive for payers and suppressive of their alternatives, consistent with a constraint that may compute as snare from certain seats. The divergence is precisely the measurement the framework exists to take.",
+    "directionality_logic": "Directionality derives from beneficiary/victim declarations plus exit options. Mobile EU workers are beneficiaries with mobile exit (d ≈ 0.25–0.35); they can always return home or relocate. Locally-rooted low-skilled workers are victims with trapped exit (d ≈ 0.85–0.95); language barriers, family ties, and lack of EU-recognized credentials make mobility impractical for them. National welfare administrators and receiving states are listed as victims because they bear budget costs, but they also retain some institutional power; their d should reflect constrained exit and institutional power (d ≈ 0.60–0.70). Multinational employers are beneficiaries with arbitrage exit (d ≈ 0.10–0.20); they can shift operations within the EU or globally. The constraint's distributional asymmetry is fundamentally rooted in differential exit capacity: those who can move freely benefit; those locked in place pay. No directionality overrides are needed because the derivation chain (beneficiary/victim + exit → d) captures the structural truth.",
+    "mandatrophy_analysis": "The founding problem (preventing nationalist fragmentation through free movement) was substantially solved by the 1990s. The continued enforcement of the constraint after ~2010 shifted: the ECJ progressively expanded welfare portability (Directive 2004/38, later cases) to make mobility politically viable for lower-income workers. However, the expansion occurred in a context where receiving states, particularly those with fiscal constraints or high inflows, increasingly sought to restrict access. The tension between founding rationale (prevent protectionist backsliding) and current operation (enforce welfare portability without fiscal compensation) is a mandatrophy signal. The constraint persists because EU institutions benefit from deepening integration (institutional power gain) and mobile workers benefit from expanded access, but the founding coordination problem no longer drives the rule's expansion. A mandatrophy reading would note: if member states could unilaterally restrict welfare access, they would not re-fragment the labor market (the original fear); they would simply close welfare eligibility while keeping labor borders open for workers they want. The constraint's persistence in its expanded form (welfare portability, full access after residence periods) reflects extraction — the benefit to mobile workers and firms outweighs the coordination value to the union as a whole. This does NOT mean the constraint should be classified as snare instead of tangled_rope (the coordination value is real and substantial); it means the classification should note the expansion beyond founding rationale and the divergence between claim and operation.",
+    "kernel_context": "This constraint instantiates the 'integration-primary' reading of the contested kernel 'federation_membership_obligations.' The reading asserts that free movement and welfare portability are constitutive of EU citizenship, with the corollary that member state welfare boundaries must yield to mobility rights. The sibling readings are 'member_sovereignty_primary' (national welfare states retain closure authority; free movement is conditional on labor market protection) and 'selective_solidarity' (free movement rights are tiered by contribution history and economic activity status). This reading differs from member_sovereignty_primary in its core claim: integration-primary treats the subordination of welfare boundaries to mobility as non-negotiable; member_sovereignty_primary treats welfare closure as equally non-negotiable and mobility as conditional on it. These readings coexist across different EU member states and are the subject of ongoing ECJ case law and member state resistance. The integration-primary reading influences the selective_solidarity reading by establishing that some welfare portability is mandatory; selective_solidarity then disputes whether that portability applies equally to all mobile workers or only to those meeting contribution thresholds."
+  },
+  "omegas": [
+    {
+      "id": "founding_problem_resolution",
+      "question": "Has the founding problem (preventing nationalist labor protectionism and fragmentation) been substantially resolved, or does it remain live as a justification for expanded welfare portability?",
+      "resolution_mechanism": "Historical counterfactual: would member states move to reinstitute protectionist barriers if welfare portability were restricted? Post-2020 labor market data and survey evidence on member state intentions toward mobility restrictions; voting patterns in ECJ cases.",
+      "impact": "If the founding problem is dead, the constraint's expansion beyond original scope (to include welfare portability for economically inactive migrants) represents pure extraction masked as coordination; classification would shift toward snare from most seats. If live, the expansion is necessary insurance against member state backsliding; classification as tangled_rope holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding problem that justified free movement (preventing nationalist fragmentation) persists or has been substantially resolved."
+    },
+    {
+      "id": "welfare_cost_attribution",
+      "question": "What portion of welfare cost increases in receiving states can be attributed to free movement and welfare portability (vs. demographic aging, unemployment cycles, policy choices unrelated to mobility)?",
+      "resolution_mechanism": "Econometric decomposition of welfare roll composition and spending trends; cross-state comparisons with controls for economic shocks; analysis of fiscal transfers between member states and EU budget allocation to receiving states.",
+      "impact": "If mobility accounts for majority of cost growth in fiscally strained states, the extraction from local populations and state budgets is direct and substantial (supports snare classification from payer seats). If mobility is a small fraction, the constraint's extraction is modest and other policy levers are available (supports tangled_rope classification).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The causal attribution of welfare spending increases to free movement and mobility."
+    },
+    {
+      "id": "labor_market_wage_effects_heterogeneity",
+      "question": "Are wage suppression effects from mobility concentrated in specific low-skill sectors and geographies, or diffused across labor markets? Do these effects persist long-term or dissipate as complementarities emerge?",
+      "resolution_mechanism": "Longitudinal wage series by sector and skill level; analysis of complementarity effects (mobile workers increasing demand for services); comparison of wage trajectories in high-mobility vs. low-mobility regions; studies of adjustment costs and retraining success.",
+      "impact": "Concentrated, persistent effects would indicate trapped local workers (higher d, toward snare). Diffused, dissipating effects would indicate temporary adjustment (lower d, more consistent with tangled_rope as transient extraction). If complementarities dominate, the constraint may not be extractive for local workers at all (shifts classification toward genuine coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The heterogeneity and persistence of wage suppression effects on local workers."
+    },
+    {
+      "id": "alternative_coordination_mechanisms",
+      "question": "Could the single market's coordination benefits (integrated labor and services markets) be achieved with less welfare portability? Would bilateral labor agreements or tiered welfare access (conditional on contribution history) preserve integration while reducing fiscal extraction?",
+      "resolution_mechanism": "Historical comparison with earlier frameworks (pre-2004, pre-Directive 2004/38); analysis of non-EU federated systems (Switzerland, EEA) and their welfare portability rules; theoretical modeling of equilibrium outcomes under alternative frameworks.",
+      "impact": "If alternatives could preserve coordination with less extraction, the current constraint's expansion is not necessary; classification shifts toward pure snare (extraction riding on a coordination cover story). If alternatives fail (member states defect, integration fragments), the constraint's current form is structurally necessary; classification as tangled_rope holds.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's coordination and extraction components are structurally separable or inseparably linked."
+    },
+    {
+      "id": "reading_contest_location",
+      "question": "Where, in institutional terms, is the contest between integration_primary and member_sovereignty_primary readings located? Is it primarily a within-ECJ interpretive dispute, a member-state political dispute, or a constitutional/treaty-level dispute?",
+      "resolution_mechanism": "Mapping of ECJ case law trajectory, member state opt-out provisions and their usage, EU Charter and Treaty text evolution, academic jurisprudential analysis of reading authority.",
+      "impact": "If the contest is primarily within the ECJ, it is an interpretive question (authority_grounding=lineage, interpretation_layer_present=true). If primarily political, it is a distributed/contested reading (authority_grounding=distributed). This affects the cs_structure classification and the understanding of which seat controls the constraint's evolution.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The institutional location of the reading contest over federation membership obligations."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "federation_membership_obligations__member_sovereignty_primary",
+      "federation_membership_obligations__selective_solidarity",
+      "posted_worker_protection_regime",
+      "national_labor_market_closure_authority"
+    ],
+    "dual_formulation_note": "This constraint is part of a family decomposed from the contested kernel 'federation_membership_obligations'. The integration_primary reading asserts that free movement and welfare portability are constitutive of EU membership; the member_sovereignty_primary reading asserts that national welfare closure authority is constitutive. These are structurally distinct constraints with different beneficiary structures, different ε values, and different persistence mechanisms. They coexist across different member state governments and are resolved in the ECJ's case law trajectory, not by empirical measurement. Both readings are live positions in contemporary EU politics; neither logically forecloses the other within a single framework, though they create structural pressure on each other (integration_primary influences member_sovereignty_primary by narrowing its practical scope; member_sovereignty_primary influences integration_primary by generating political pressure for welfare restrictions)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.68
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "member_sovereignty_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "selective_solidarity",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "free_movement_constitutive_of_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "welfare_boundaries_subordinate_to_citizenship",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "unified_eu_citizenship_with_mobility_primacy",
+    "drift_state": {
+      "moment": "contemporary_fiscal_strain_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "multinational_employers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "header": {
+    "constraint_id": "software_control_legitimacy__property_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "769d5294-4cfc-4037-a4bf-6620d1a1e5d1"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Software as Property Right: Restricted Use and Distribution Authority",
+    "topic_domain": "economic/intellectual_property/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_software_vendors",
+      "venture_capital_investors",
+      "patent_holders"
+    ],
+    "victims": [
+      "foss_developers",
+      "security_researchers",
+      "interoperability_advocates"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "commercial_software_vendors",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sell proprietary software under restrictive licenses (EULAs, patent assertions). Receive licensing revenue, subscription fees, support contracts. Enforce licensing restrictions through legal mechanisms (DMCA, patent litigation). Justify restrictions as necessary to recoup R&D investment and sustain vendor support services over time."
+    },
+    {
+      "name": "venture_capital_investors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Fund software startups under the assumption that intellectual property protection (patents, copyrights, trade secrets) creates defensible market positions enabling venture returns. Benefit from IP-created moats and exit events (acquisitions, IPOs) where IP portfolios command premium valuations. Lobby for expanded patent scope and copyright duration."
+    },
+    {
+      "name": "foss_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Develop software under permissive (MIT, Apache) or copyleft (GPL) licenses that permit use, modification, and redistribution. Denied direct licensing revenue because their model explicitly rejects licensing restrictions. Must monetize through support contracts, consulting, hosted services, or embedded systems — alternative models that are inherently less scalable than vendor licensing. Face legal pressure when proprietary vendors claim patents cover their implementations."
+    },
+    {
+      "name": "security_researchers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Study software security by analyzing code, testing implementations, and discovering vulnerabilities. Restricted by reverse-engineering prohibitions (DMCA § 1201), license terms forbidding disassembly, and trade-secret law. Cannot examine proprietary software without vendor permission, slowing vulnerability discovery. Face legal exposure if they circumvent access controls even for legitimate research purposes."
+    },
+    {
+      "name": "interoperability_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Seek open data formats, published APIs, and interface specifications enabling software from different vendors to interoperate. Blocked by proprietary APIs, closed file formats, and licensing restrictions on reverse-engineering that prevent learning the specs needed for compatibility. Cannot build compatible implementations without violating licensing terms or trade-secret law."
+    },
+    {
+      "name": "end_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from stable, professionally maintained software with vendor support services. Pay through perpetual/subscription licensing fees. Experience restricted use (cannot inspect code, modify for local needs, share with unlicensed colleagues, or switch to competing implementations easily). Locked in by proprietary file formats and API dependencies."
+    },
+    {
+      "name": "enterprise_customers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Require source-code access, audit rights, and right-to-modify for compliance and security governance. Forced into expensive licensing modifications (source-code escrow, modification agreements) by vendors. Despite their volume and power, licensing restrictions prevent forking or employing alternative implementations if vendor support degrades. Constrained exit because switching costs (data migration, staff retraining) are prohibitive."
+    },
+    {
+      "name": "patent_law_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administer patent and copyright systems through which software control becomes legally enforceable. Define what 'software invention' qualifies for patenting, how long copyrights persist, what reverse-engineering and circumvention restrictions are permissible. Make enforcement decisions through litigation support and regulatory interpretation."
+    },
+    {
+      "name": "open_standards_bodies",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Develop interoperability standards (TCP/IP, HTML, XML, etc.) by consensus among vendors and technical community. Often excluded from designing standards around proprietary software because requiring implementations to be open-source violates vendor licensing preferences. Role is constrained to standardizing on terms proprietary vendors find acceptable."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aligns creator incentives (profitable software development) with funder interests (venture capital ROI through exits) and user interests (professional vendor support, long-term maintenance, security updates) by enabling exclusive revenue through licensing restrictions. The restriction prevents competitors from free-riding on development investment, creating defensible market positions that justify sustained funding.",
+    "transfer_function": "Moves wealth from end users, enterprises, alternative developers (FOSS), and interoperability advocates to commercial software vendors and their investors through licensing fees, subscription renewals, support contracts, and through the structural denial of alternative business models (FOSS cannot monetize licensing). Also transfers opportunity from security researchers and interoperability advocates to vendors through legal restrictions on reverse-engineering and API access.",
+    "absent_voices": "Users in resource-constrained regions (cannot afford licenses), downstream open-source projects and tools dependent on interoperability, researchers in jurisdictions with different IP preferences or enforcement capacity, future developers who might innovate on source code if accessible, and competing vendors who might enter markets if interoperability standards were open. These parties would argue for alternative property arrangements and are structurally excluded from the beneficiary set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If software property rights disappeared overnight, venture funding of closed-source software would sharply decline. Vendors would migrate to alternative revenue models (support/hosting fees, embedded systems, bundling with hardware). FOSS development and adoption would accelerate because the legal barriers to derivative works would lift. Security research would accelerate because reverse-engineering restrictions would vanish. Interoperability would increase because reimplementation would no longer risk legal liability. Markets would reorganize around network effects and reputation (as Linux, Apache, and Firefox ecosystems demonstrate) rather than IP-created scarcity.",
+    "founding_problem": "Early software markets (1970s-1980s) faced under-investment because software could be copied and redistributed costlessly once created, making it hard for developers to recoup development costs or for investors to see venture returns. This created a capital problem: complex software required upfront investment that only made sense if the creator could prevent others from copying the work.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Commercial vendors and venture capital attest the problem is still live, citing ongoing R&D costs of $1-10B+ for enterprise software and the need for exclusive revenue to justify that investment. FOSS advocates and independent economic researchers (O'Reilly 2021, Linux Foundation surveys) attest the founding problem is substantially solved by alternative funding models: support contracts (Red Hat, Canonical), cloud hosting revenue (Amazon, Google), embedded systems (Android, Chrome), and community-driven development (Linux kernel, Apache Foundation). Evidence from competing jurisdictions with weaker IP enforcement (China, India) shows some innovation flourishes under different property regimes. Peer-reviewed economic research shows open-source development produces stable, secure software comparable to proprietary at lower cost of capital."
+  },
+  "omegas": [
+    {
+      "id": "investment_recovery_necessity",
+      "question": "Is restricting source code access and modification rights necessary to recover software development investment, or can comparable investment be sustained through alternative revenue models (services, support, cloud hosting, embedded systems)?",
+      "resolution_mechanism": "Empirical comparison of investment levels and development stability between proprietary and open-source ecosystems across comparable software categories (databases, web servers, operating systems). Analysis of VC funding flows in open-source companies (Red Hat, Canonical, etc.).",
+      "impact": "If investment can be sustained through alternative models, the property-right claim's foundational justification weakens and the extracted benefit becomes harder to defend as necessary coordination cost. If investment genuinely requires licensing restrictions, the extraction is more defensible as incentive provision.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether licensing restrictions are structurally necessary for software development funding."
+    },
+    {
+      "id": "property_right_vs_monopoly_extraction",
+      "question": "Does this reading anchor property protection in genuine scarcity (ideas that require labor to create) or in artificial scarcity created by law (copyright term length, patent scope)?",
+      "resolution_mechanism": "Doctrinal analysis: compare the scope of protected rights (duration, derivative-work control, reverse-engineering prohibition) against labor required for original creation. Compare against historical justifications in patent/copyright law.",
+      "impact": "If the reading relies on artificial-scarcity expansion beyond original-labor justification, the property framing becomes a cover story for monopoly extraction. The constraint reclassifies from tangled_rope (coordination + asymmetric extraction) toward snare (pure extraction masked as coordination).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether software control is property protection or monopoly rent-seeking masquerading as such."
+    },
+    {
+      "id": "interoperability_suppression",
+      "question": "Is the suppression of interoperability (through proprietary APIs, closed file formats, license restrictions on reverse-engineering) a side effect of property protection or a primary target of control?",
+      "resolution_mechanism": "Historical analysis of vendor behavior: do vendors actively prosecute interoperability attempts beyond what is necessary to protect source code? Are vendors' pricing strategies aligned with the cost of development (suggesting genuine recovery) or with lock-in effects (suggesting extraction)?",
+      "impact": "If interoperability suppression is a primary target, the constraint is not merely protecting investment but also creating market lock-in beyond what property rights alone would justify. Suppression metric is accurate; extraction includes monopoly rent beyond recovery incentives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether property-right enforcement is the means or suppression of competition is the end."
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "Is software control fundamentally a property-rights question or fundamentally a commons-governance question or a user-freedom question?",
+      "resolution_mechanism": "No empirical resolution — this is the kernel itself. Different frameworks privilege different foundational claims. The property-rights reading makes assumptions about what constitutes legitimate authority that the freedom_imperative and commons readings reject at the foundation.",
+      "impact": "Classification depends on which kernel interpretation is accepted. The property-rights reading (this constraint) generates tangled_rope + moderate extraction. The freedom_imperative reading generates snare + high extraction (property restriction = oppression). The commons reading generates scaffold or rope + negotiated extraction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The foundational contest that cannot be resolved within a single reading."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint embodies the reading that software control is fundamentally a matter of property rights: creators have legitimate authority to restrict use, modification, and distribution of their software to protect investment and enable sustainable commercial development. Under this reading, licensing restrictions, source-code secrecy, reverse-engineering prohibitions, and patent enforcement are justified tools for aligning creator incentive (profitability) with funder interest (ROI) and user interest (vendor stability and support). The constraint operates through copyright law, patent systems, end-user licensing agreements (EULAs), and legal enforcement against circumvention (DMCA). This is ONE reading of a contested kernel (kernel_id: software_control_legitimacy). Sibling readings frame the same domain as user-freedom imperatives (freedom_imperative_reading), pragmatic development-methodology choices (pragmatic_openness_reading), or commons-governance problems (commons_reading). Each reading instantiates a different constraint with different victim sets, beneficiary structures, and ε values. This story generates the constraint as the property-rights reading sees it: moderate extraction from those denied access/modification rights, substantial enforcement machinery targeting interoperability and reverse-engineering, moderate theater ratio as the 'software innovation requires investment' justification increasingly competes with evidence of FOSS stability.",
+    "key_agents": [
+      "commercial_software_vendors: beneficiary (institutional power, global scope, arbitrage exits) — set licensing terms and enforce restrictions; receive revenue",
+      "venture_capital_investors: beneficiary (powerful, generational horizon) — fund software under assumption IP protection enables exits",
+      "FOSS developers: payer (moderate power, constrained exit) — denied licensing-revenue opportunity because their model permits redistribution",
+      "security_researchers: payer (powerful, constrained by legal restrictions) — blocked from analyzing proprietary code; research slowed",
+      "interoperability_advocates: payer (organized, constrained) — cannot build compatible tools without licensing permission",
+      "end_users: dual-positioned (beneficiary from stable support, payer through license fees and lock-in)",
+      "patent_law_institutions: agenda_setter (institutional power, analytical exit) — administer the enforcement framework that makes restrictions legal",
+      "open standards bodies: observer (excluded from design leverage because proprietary vendors dominate relevant markets)"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.58) rather than high because the constraint genuinely coordinates creator-funder-user interests (investment enables stability), not pure extraction. But it is measurably above zero because the reading excludes alternative coordination possibilities (FOSS models with support revenue, collective IP licensing) and creates lock-in beyond what investment recovery alone would justify. The measurement series shows modest growth from 0.38 to 0.58 over the interval: initial extractiveness was lower because the constraint competed with stronger FOSS alternatives and network-effects arguments. As commercial software vendors consolidated market power and successfully lobbied for extended IP protection (longer copyright terms, broader patent scope, DMCA enforcement), extraction increased. The trajectory plateaus at 0.58 because regulatory and public-opinion pressure around interoperability and security research began constraining further expansion. Suppression (0.62) is higher than extractiveness because the constraint's persistence requires active legal enforcement: reverse-engineering prohibitions, DMCA takedown actions, patent litigation. This enforcement target is not just source-code protection but the suppression of interoperability and derivative-work ecosystems. Theater ratio (0.28) is moderate-low because the 'software innovation requires investment' justification is real (R&D is capital-intensive) but increasingly ornamental: evidence of stable, well-funded FOSS ecosystems means the justification competes with alternative coordination stories. The engine computes per-seat type divergence from these metrics and structural data: vendors compute as ropish-to-tangled (coordination + asymmetric benefit); FOSS developers compute as snare-adjacent (restrictions target their model, not a necessary coordination function); security researchers compute as snare (restrictions actively harm their function). This divergence is exactly what the measurement apparatus exists to surface.",
+    "directionality_logic": "Directional treatment is asymmetric because the constraint's coordination and extraction functions fall on different agents. Commercial vendors and VC investors sit near d=0.0 (beneficiaries): the constraint subsidizes them by creating exclusive licensing revenue and defensible market positions that venture capital rewards with funding and exits. FOSS developers sit near d=1.0 (targets): the constraint specifically denies them a revenue model (licensing restrictions) and creates legal exposure (circumvention liability). Security researchers sit near d=0.8 (high targets): the constraint actively restricts their legitimate work (vulnerability research requires code access). Interoperability advocates sit near d=0.8: the constraint suppresses the standard-setting work they do. End users sit near d=0.5 (symmetric): they receive coordination benefit (stable vendor support, professional maintenance) but bear cost through licensing fees and lock-in, which roughly balances. Enterprise customers sit near d=0.65 (shifted toward target): despite their power, the constraint's restriction of modification rights and forced escrow agreements shift them toward extraction. Directionality was derived from the beneficiary/victim declarations and exit-options analysis; no override was needed because the structural positions map cleanly to the roles.",
+    "perspectival_gap": "The perspective divergence between beneficiaries and payers is substantial and intentional: this is exactly the seat divergence tangled_rope exhibits. From the vendor seat, the constraint is genuine coordination: it enables sustainable development funding by preventing competitors from copying their work, allowing them to invest in quality, security, and long-term maintenance. From the FOSS developer seat, the same constraint is opportunistic extraction: it denies them legitimate business models and creates legal barriers to their work. From the security-researcher seat, it is active obstruction: it slows the discovery and patching of vulnerabilities. From the end-user seat, it is a trade-off (professional support in exchange for restricted use and lock-in). The engine computes these different type-readings from the authored structural data (power, exit, beneficiary/victim, spatial scope). The claim/metric independence is deliberate: this story CLAIMS the constraint is tangled_rope (coordination + enforcement) while authoring metrics for moderate extraction + significant suppression. The engine determines whether the computed types align with or diverge from the claim; divergence is diagnostic, not error.",
+    "mandatrophy_analysis": "The constraint shows early mandatrophy signals: the founding problem (insufficient investment in software development) was substantially addressed by the 1980s-1990s for established vendors, yet the constraint persists and expands. The measurement series shows extractiveness plateauing at 0.58 despite decades of enforcement investment; this suggests the constraint is increasingly maintained for monopoly rent rather than incentive provision. The theater ratio (0.28) is low enough to suggest the 'innovation requires investment' narrative is becoming detached from actual vendor behavior (which increasingly emphasizes lock-in and interoperability suppression over R&D investment). However, mandatrophy is not declared as resolved because: (1) the founding problem is contested (some argue venture-funded software development still requires IP protection; open-source proponents argue it doesn't); (2) the constraint is still actively enforced, not yet degraded to theatrical performance; (3) alternative revenue models (support, cloud services, embedded systems) are proliferating but have not yet made IP-based licensing structurally optional for most vendors. The constraint sits in the mandatrophy-warning zone: the founding problem's status is increasingly contested, enforcement costs are rising, and theater is increasing — these are early signals that the original justification is weakening.",
+    "kernel_context": "This constraint instantiates the property_rights_reading of the contested kernel software_control_legitimacy. The kernel question is: what is the legitimate basis for controlling software — who has authority to decide what can be done with code? The property_rights_reading answers: creators, through copyright and patent law, have legitimate authority to restrict use, modification, and distribution. Sibling readings provide different answers: the freedom_imperative_reading holds that users have fundamental rights to control their own computing, making proprietary restrictions illegitimate; the pragmatic_openness_reading treats control as a methodology choice, not a legitimacy question, valuing open-source for its technical merits but allowing proprietary alternatives; the commons_reading frames control as a commons-governance problem requiring negotiated collective management rather than absolute property or absolute freedom. Each reading generates a different constraint with different ε values, beneficiary/victim structures, and type classifications. This reading (property_rights) produces moderate ε (0.58) and tangled_rope from the vendor seat because it must defend both genuine coordination (investment incentives) and asymmetric extraction (lock-in, interoperability suppression). The freedom_imperative reading would produce higher ε (0.75+) and snare from user seats because it frames the same restrictions as oppression, not coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "software_control_legitimacy__freedom_imperative_reading",
+      "software_control_legitimacy__pragmatic_openness_reading",
+      "software_control_legitimacy__commons_reading",
+      "software_patent_scope_expansion",
+      "dmca_reverse_engineering_prohibition",
+      "api_interoperability_suppression"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel software_control_legitimacy. All four readings (property_rights, freedom_imperative, pragmatic_openness, commons) share the same domain but instantiate different constraints with different ε values, beneficiary/victim sets, and computed types. Link via network.affects_constraints to enable contention analysis across readings. The property_rights_reading (this story) generates tangled_rope + moderate extraction from vendor seats; the freedom_imperative_reading generates snare + high extraction from user seats. The pragmatic_openness_reading generates rope + negotiated benefits. The commons_reading generates scaffold or piton depending on governance maturity. Scholars and practitioners disagreeing about software control are not disagreeing about a single constraint viewed from different angles — they are instantiating genuinely different constraints through their reading choices. Each reading is ε-invariant within itself but produces different χ across seats."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.65
+    }
+  ],
+  "gain_flow": "commercial_software_vendors",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "creator_investment_recovery_imperative",
+    "drift_state": {
+      "moment": "contemporary_open_source_maturity",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_imperative_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pragmatic_openness_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "commons_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creator_investment_protection_justifies_restriction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "licensing_revenue_necessary_for_venture_sustainability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

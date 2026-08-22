@@ -1,0 +1,359 @@
+{
+  "header": {
+    "constraint_id": "dignified_death__relational_autonomy",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_dignified_death__relational_autonomy",
+    "measurement_id_prefix": "dignified_death_relaut",
+    "story_uid": "346fb267-faad-4e2c-9a9b-cde24725553d"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Relational Autonomy in End-of-Life Decision Authority",
+    "topic_domain": "bioethics/medical_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "relational_network",
+      "clinical_governance_framework"
+    ],
+    "victims": [
+      "excluded_decision_participants",
+      "patients_with_no_family"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "patient_with_decision_authority",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Initiates the request for end-of-life decision within the triad framework but does not hold unilateral authority. Participates in deliberation with family and clinicians, influenced by relational context. Their situated autonomy is recognized but embedded in procedural obligations to the group. Exit means refusing the framework entirely, which forecloses institutional recognition of the decision."
+    },
+    {
+      "name": "family_members",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Hold formal decision-making power alongside patient and clinician; their voices are institutionally required. They carry relational knowledge (patient's values, family history, prior wishes) that the framework treats as legitimacy input. They may veto a decision or push for continuation when the patient wishes to stop. Their power is distributed across the triad, not held unilaterally."
+    },
+    {
+      "name": "clinical_team",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Provides medical expertise, prognosis, and procedural authority to determine whether a request is medically feasible, ethically sound within institutional protocol, and clinically appropriate. Enforces the procedural safeguards (capacity assessment, deliberation timeframes, documentation) that constitute the framework. Can refuse a request if it violates institutional standards or clinical judgment."
+    },
+    {
+      "name": "excluded_participants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals who would have input in the patient's end-of-life decision but are excluded by relational proximity rules or institutional access: estranged children, close friends not recognized as family, community elders, spiritual advisors without clinical credential. They bear the cost of exclusion (their voice is not heard, their relational knowledge is not solicited) and have no mechanism to enter the triad once it forms."
+    },
+    {
+      "name": "patients_without_family",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Lack the relational network the framework presumes; their autonomy is diminished by the distributed model because the triad cannot form. They must either submit to clinician-only decision-making (asymmetric power) or designate a proxy, which may not capture their relational context authentically. Their exit is identity-based: the constraint treats relationality as constitutive of dignity, making those without it structurally disadvantaged."
+    },
+    {
+      "name": "institutional_ethics_framework",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "The procedural model itself—triad authority, deliberation safeguards, documentation requirements—is vindicated by the constraint's operation. The framework distributes authority in a way that appears balanced but privileges institutions that can maintain the procedural overhead and relational assessment infrastructure."
+    },
+    {
+      "name": "autonomy_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that relational embedding of autonomy dilutes patient self-determination and allows family coercion or clinician paternalism to overrule individual choice. They are structurally excluded from the decision in any single case because the framework distributes authority away from the solitary patient to the triad. Their policy arguments contest the framework but do not appear in implementation."
+    },
+    {
+      "name": "sanctity_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that intentional life-termination violates transcendent moral law regardless of relational consensus; the triad framework grants authority to decide what they view as non-delegable. Their position is institutionally excluded—the framework does not recognize transcendent sanctity as a constraint on decision authority—though individual religious practitioners within the clinical system may embody this witness."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Oversee institutional protocols, audit compliance with procedural safeguards, investigate complaints from excluded parties or patients' survivors. They do not appear in individual decisions but set the rules that define the triad's legitimate operation and the triggers for their own intervention."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of end-of-life decision-making by distributing authority across patient, family, and clinician roles with procedural safeguards (capacity assessment, timeframes, documentation, ethics consultation). Instead of unilateral patient choice or pure clinician paternalism or familial override, the triad deliberates with institutionalized obligations to listen, document, and justify. This prevents isolated individual harm (patient coercion by family or clinician), uninformed choice (patient without medical facts), and clinician-only determination (loss of relational knowledge).",
+    "transfer_function": "Moves decision authority from the singular (patient alone, clinician alone) to the distributed (triad). Moves legitimacy from internal consent (patient's own will) and expertise (clinician's judgment) to relational vindication (family knowledge, clinical safeguards, institutional procedure all in alignment). Moves cost from individual to collective deliberation time and procedural overhead.",
+    "absent_voices": "Autonomy advocates who argue for individual choice supremacy and would contend that relational constraints dilute dignity. Sanctity advocates who argue that no human authority should decide death and would contest the framework's legitimacy on theological grounds. Excluded relational figures (estranged kin, spiritual advisors, close friends) who carry knowledge relevant to the patient's values but are barred by institutional proximity rules. Patients without family networks, who experience the framework as disabling rather than protective.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the relational-autonomy framework disappeared, end-of-life decision authority would revert to either unilateral patient choice (autonomy-primary reading), unilateral clinician judgment (paternalist default), or blanket prohibition (sanctity-primary reading). Family members would lose formal institutional standing; excluded parties would remain excluded but institutional legitimacy would no longer claim to represent relational context; patients without family would face even sharper power asymmetry with clinicians. The specific coordination problem—how to weigh individual will, relational knowledge, clinical expertise, and institutional safeguards simultaneously—would remain unsolved.",
+    "founding_problem": "Early modern medical practice treated end-of-life decisions as clinician-only (patient suffering was clinician problem to solve). Autonomy movements shifted toward patient choice as a corrective. But pure individual autonomy neglects relational context—patients are embedded in families, spiritual communities, and care networks whose knowledge of the patient's values is constitutive of good decisions. Pure patient choice also excludes family members who carry relational obligations (their grief, their previous promises to the patient, their presence at dying). Pure family authority risks coercion and override of patient wishes. The relational-autonomy framework emerged to integrate all three sources of legitimacy.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Clinical institutions and bioethicists within the relational-autonomy tradition attest the founding problem is live and the framework addresses it. Autonomy advocates from outside the benefiting circle attest the founding problem was solved better by patient-choice supremacy and that the framework reintroduces the family power they fought to exclude. Sanctity advocates attest the founding problem is misdefined—the true problem is that any framework delegating death authority to human choice violates moral law. Patients' rights organizations and excluded family members attest the framework privileges those with recognized family and marginalizes those without it. Regulatory audits and ethics consultations document instances of family-driven override and clinician-driven dismissal of patient wishes, suggesting the framework's safeguards are imperfectly enforced."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This constraint instantiates the relational-autonomy READING of the contested dignified_death kernel. The kernel is a fixed text: institutional end-of-life decision procedures, codified in hospital policy, state law, and professional ethics guidelines. Three structurally distinct readings coexist: (1) autonomy_primary reads the kernel as securing patient self-determination with family/clinician consultation; (2) relational_autonomy reads the kernel as distributing authority across the triad to integrate relational knowledge and prevent isolated harm; (3) sanctity_primary reads the kernel as inadequate precisely because it delegates death authority to human choice, which violates transcendent moral law. The three readings assess the same procedural kernel but instantiate different constraints—different ε, different beneficiary/victim sets, different types. They remain live in different institutional and advocacy jurisdictions: autonomy-primary advocates (patient-choice movements, some US states) and sanctity-primary advocates (religious institutions, some countries) contest this reading's framework. The relational-autonomy reading claims to transcend the autonomy/sanctity binary by making dignity relational, which integrates patient choice, family knowledge, and institutional safeguards without prioritizing any single source. The three readings coexist rather than foreclose because parties with different normative commitments can simultaneously hold them—they compete in policy discourse without one logically eliminating the other from a coherent framework. The relational-autonomy reading influences (but does not foreclose) the others by shifting legitimacy conditions: if relational dignity becomes institutionally dominant, autonomy-primary must argue against relationality and sanctity-primary must argue against human authority DESPITE relationality."
+  },
+  "omegas": [
+    {
+      "id": "relational_vs_autonomy_boundary",
+      "question": "Is dignity constituted through relational context (relational-autonomy reading), or does dignity reside in self-determination independent of relational embedding (autonomy-primary reading)? Can these be simultaneously true for different parties?",
+      "resolution_mechanism": "Empirical: observe outcomes where patients explicitly reject family input and insist on isolated choice vs. outcomes where relational deliberation prevents patient harm; assess whether good outcomes require relational integration or whether autonomy-only choice produces comparable safety and satisfaction. Conceptual: examine whether the two readings can coexist in a single ethical framework or whether they logically foreclose each other.",
+      "impact": "If autonomy-primary is empirically superior, this reading's claim of genuine coordination collapses into family/clinician override (snare-flavored). If relational-autonomy is empirically superior, autonomy-primary is foreclosed. If outcomes are equivalent, both readings coexist and the choice between them is normative (preference) not empirical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dignity is autonomy-constituted or relationality-constituted, and whether the two readings can coexist."
+    },
+    {
+      "id": "procedural_safeguard_enforcement",
+      "question": "Are the procedural safeguards (capacity assessment, deliberation timeframes, ethics consultation, documentation) actually enforced or do they function as legitimation theater while family/clinician override and patient coercion persist below the institutional surface?",
+      "resolution_mechanism": "Regulatory audit data, complaint logs, ethnographic observation of deliberation meetings, post-decision interviews with family and patients assessing whether procedures prevented or enabled harm.",
+      "impact": "If safeguards are consistently enforced and prevent family override and clinician coercion, the constraint's extractiveness is justified as coordination cost and theater_ratio stays low. If safeguards are selectively enforced or bypassed, extractiveness represents institutional inertia (mandatrophy) and theater_ratio should rise sharply; the constraint would reclassify toward snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether procedural safeguards function or are theater."
+    },
+    {
+      "id": "excluded_party_suppression_internalization",
+      "question": "Is suppression of excluded parties (relational proximity rules, institutional access barriers) entirely structural (external rules enforcing exclusion) or partially internalized (excluded parties have absorbed the belief that their voice 'does not belong')?",
+      "resolution_mechanism": "Post-removal suppression trajectory: if institutional barriers were removed (expanded family definition, open ethics committees, advocacy standing for excluded relatives), would suppression persist? If it drops sharply, suppression was structural. If it persists moderately, suppression has an internalized component.",
+      "impact": "Structural suppression is reversible by rule change; internalized suppression persists even after rule removal and requires identity reframing or therapeutic intervention. If internalized, the constraint's effective suppression is higher than the structural measure suggests—the excluded parties carry the suppression with them post-removal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of excluded parties is structural or partially internalized."
+    },
+    {
+      "id": "mandatrophy_risk_rising_theater",
+      "question": "Do rising measurements of theater_ratio (0.15→0.28 over the interval) signal mandatrophy onset—the founding coordination problem becoming dead while the constraint persists for institutional inertia—or are they consistent with routine institutional routinization of initial innovation?",
+      "resolution_mechanism": "Longitudinal analysis: compare theater_ratio trends against outcome data (actual prevention of patient harm, family override, clinician coercion) and institutional evolution (procedural safeguards strengthening vs. eroding). If outcomes degrade while theater increases, mandatrophy is signaled. If outcomes hold steady while theater increases, routinization is benign.",
+      "impact": "If mandatrophy is progressing, the constraint should eventually reclassify from rope to piton (genuinely protective coordination becomes institutional performance). Institutional remedies would require renewed focus on outcomes over procedure and possible sunset of ineffective safeguards.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether rising theater_ratio signals mandatrophy onset or routine routinization."
+    },
+    {
+      "id": "kernel_reading_foreclosure",
+      "question": "Do the relational-autonomy and autonomy-primary readings logically foreclose each other (impossible to hold both in one framework), or do they coexist as different parties' live commitments?",
+      "resolution_mechanism": "Logical analysis: can a framework hold both 'dignity emerges from relational context' AND 'dignity resides in self-determination independent of relational embedding'? Or does accepting one require rejecting the core premise of the other? If they coexist, they are different readings; if they foreclose, one reading's adoption eliminates the other's validity.",
+      "impact": "If readings foreclose, the relational-autonomy reading's relation to autonomy-primary should be 'forecloses,' not 'coexists_with.' If they coexist, both remain live policy options. The engine uses this distinction to assess whether jurisdictions can simultaneously adopt both readings or must choose.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the relational-autonomy and autonomy-primary readings logically foreclose or coexist."
+    },
+    {
+      "id": "beneficiary_capture_risk",
+      "question": "Does the institutional clinical team (agenda_setter seat with mobile exit and institutional power) gradually capture the relational-autonomy framework to expand its gatekeeping authority and extractive fees, even as the framework's nominal purpose remains protecting patient dignity?",
+      "resolution_mechanism": "Tracking institutional scope creep: do procedural requirements (ethics consultation, capacity assessment, documentation) expand over time, creating growing professional infrastructure and revenue streams? Do clinical teams gradually tighten criteria for 'adequate deliberation' or family 'competence,' narrowing who counts as legitimate decision-maker? Do regulatory audits document this pattern?",
+      "impact": "If capture is occurring, the framework's extractiveness is expected to rise faster than its protective efficacy, suggesting reclassification toward tangled_rope (coordination + asymmetric extraction) or snare (extraction with coordination cover). Institutional remedies would require constraining clinical authority and strengthening family/patient voice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether clinical institutional power gradually captures the framework for extraction."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "dignified_death__autonomy_primary",
+      "dignified_death__sanctity_primary"
+    ],
+    "dual_formulation_note": "The dignified_death kernel admits three structurally distinct readings: autonomy_primary (dignity in self-determination, patient final authority), relational_autonomy (dignity in relational context, distributed triad authority), and sanctity_primary (dignity in life's intrinsic value, no human authority to decide). Each reading instantiates a different constraint with different epsilon, beneficiary/victim sets, and type. The relational_autonomy reading decomposes the autonomy/sanctity binary by treating dignity as relational rather than individual or transcendent, and distributes authority to integrate multiple legitimate inputs. Each reading is filed as a separate constraint story linked via network.affects_constraints. The clarifying gap—ε values differ substantially across readings because the same kernel (dignified death) is assessed differently under each reading's values—is exactly why decomposition is necessary (DP-001 ε-invariance principle): no single ε captures the kernel's status under all readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "autonomy_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sanctity_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dignity_emerges_from_relationality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "distributed_authority_prevents_isolated_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "relational_dignity_integration",
+    "drift_state": {
+      "moment": "contemporary_institutional_routinization",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "clinical_team",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

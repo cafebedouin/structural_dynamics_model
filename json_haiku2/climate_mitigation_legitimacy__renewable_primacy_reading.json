@@ -1,0 +1,367 @@
+{
+  "header": {
+    "constraint_id": "climate_mitigation_legitimacy__renewable_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_climate_mitigation_legitimacy__renewable_primacy_reading",
+    "story_uid": "6404712a-3fd5-42d2-a5f8-1a47a1d0b18b"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Renewables-Plus-Storage Decarbonization Legitimacy (Renewable Primacy Reading)",
+    "topic_domain": "energy/climate/policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "distributed_renewable_developers",
+      "storage_technology_vendors",
+      "climate_urgency_advocates"
+    ],
+    "victims": [
+      "nuclear_industry_stakeholders",
+      "baseload_dependent_regions",
+      "long_cycle_capital_investors"
+    ],
+    "vindicated_propositions": [
+      "rapid_cost_decline_renewables",
+      "storage_scalability_thesis"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "grid_stability_empirical_frontier",
+      "question": "Can variable renewable generation plus storage physically achieve stable, dispatchable power at 100% decarbonization across diverse grid topologies (continental scale, seasonal storage depth, demand variability)?",
+      "resolution_mechanism": "Multi-year grid-integration studies with real operational data from high-renewable jurisdictions; engineering constraints on storage duration/cost at required scales; modeling of edge cases (prolonged continental anticyclones, winter demand peaks in temperate climates).",
+      "impact": "If unresolved negatively (storage costs remain prohibitive at required durations or stability cannot be achieved in practice), the reading's core extraction claim (nuclear as capital sink) inverts — nuclear becomes necessary cost, not extractive distraction. If resolved positively, the reading's structural classification remains tangled_rope but with lower extracted value; if resolved affirmatively with large margin, the constraint may compute as rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical feasibility of 100% renewable plus storage decarbonization at scale."
+    },
+    {
+      "id": "kernel_framing_underspecification",
+      "question": "Does 'decarbonization' in the founding mandate mean zero CO2 emissions, or economy-wide net-zero including offsets and carbon capture? Do 'faster' and 'cheaper' measure total system cost including storage and grid reinforcement, or generation-only costs?",
+      "resolution_mechanism": "Examine the kernel's original framing (climate policy documents, IPCC framings, national NDCs); if multiple framings coexist, declare which this reading adopts. Test whether sibling readings use different measurement boundaries.",
+      "impact": "A reading that measures only marginal generation cost will show renewable advantage; one that includes full system integration cost (transmission, storage, grid hardening, backup capacity) may show parity or nuclear advantage. Measurement boundary determines the constraint's ε and victim set.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "System boundary and cost accounting differences between readings."
+    },
+    {
+      "id": "capital_cycle_temporal_bias",
+      "question": "Is the 'faster' claim about time-to-operational deployment (shorter manufacturing/construction lead times for renewables), or time-to-climate-impact (when CO2 displacement begins flowing through the grid and atmosphere)?",
+      "resolution_mechanism": "Trace the claim through policy documents and advocacy literature; compare deployment clock (nuclear: 10-15yr construction, renewables: 1-3yr) vs. system-integration clock (both: years of grid adaptation required to reach equivalent displacement). If advocates cite only deployment clock while grid integration equally delays impact, the claim is misleading.",
+      "impact": "A true 'faster' finding strengthens the extraction claim (nuclear delays decarbonization timeline). A finding that both technologies face equivalent system-integration delays weakens it — the bottleneck is grid, not nuclear capital per se. This omega addresses whether the reading's victim-set classification (nuclear as bottleneck) is structurally defensible or rhetorical.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Temporal measurement scope bias in the 'faster' claim."
+    },
+    {
+      "id": "sibling_reading_foreclosure_status",
+      "question": "Does the renewable primacy reading's core empirical claim — storage costs + renewable cost curves enable 100% decarbonization cheaper than nuclear — logically foreclose the baseload_necessity_reading (which holds baseload is technically necessary), or do both remain live depending on grid topology and storage technology maturity?",
+      "resolution_mechanism": "Examine the baseload reading's core: if it asserts baseload is INHERENTLY necessary (immutable physics), the readings foreclose each other; if it asserts baseload is necessary under CURRENT technology and costs, both remain live (storage maturity is the differentiator). If the baseload reading's reference frame is 'contemporary grid' and this reading's is 'future-mature-storage grid,' they coexist across time rather than foreclosing.",
+      "impact": "If foreclosed, this reading's cs_structure.reading_relations should show forecloses:baseload_necessity_reading. If coexisting, the relation is coexists_with (different scenarios/time horizons). This determination shapes whether the kernel is resolvable-by-facts or permanently contested.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether sibling readings occupy different scenarios/time horizons or logically eliminate each other."
+    },
+    {
+      "id": "authority_grounding_shift_dynamics",
+      "question": "Who is the authority that adjudicates which reading is legitimate? Is it engineering consensus (IPCC, national grid operators, peer-reviewed modeling), policy bodies (energy ministries, regulatory commissions), or advocacy coalitions (climate NGOs, investor networks)?",
+      "resolution_mechanism": "Map which institutional seats endorse each reading; examine how authority shifted from 2010-2025 (engineering consensus on feasibility was lower; cost data was favorable to nuclear). Document whether this reading has gained authority through empirical maturation (falling battery costs, operational data from high-RE grids) or through advocacy-coalition mobilization (political shifts in funding priorities).",
+      "impact": "If this reading has gained authority through maturation of falsifiable empirical claims (storage cost curves, grid integration data), the extraction claim is stronger — nuclear is being delayed by legitimacy deficits in policy despite remaining technically defensible. If authority shifted through coalition mobilization without empirical resolution, the constraint may be political extraction masked as technical claim.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Authority grounding changes and their drivers."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "distributed_renewable_developers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Solar/wind/battery manufacturers and developers benefit directly from policy framing that privileges renewables-plus-storage as the decarbonization path. Their market expands, deployment accelerates, and capital flows to their sector. They have exit options (can serve other sectors or markets) but strong incentive to promote this reading through advisory, standards-setting, and policy engagement."
+    },
+    {
+      "name": "storage_technology_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Battery, thermal storage, and hydrogen producers benefit from the reading's core claim that storage is the scalable solution. Their technologies are positioned as essential infrastructure. They actively shape policy narratives and fund research supporting storage scalability claims."
+    },
+    {
+      "name": "climate_urgency_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Climate NGOs, youth movements, and rapid-decarbonization advocates benefit from the reading's framing that decarbonization can be achieved without the 10-15 year construction timelines of nuclear. The reading aligns with the urgency narrative. Their stakes are ideological and political rather than financial, but substantial in terms of policy influence."
+    },
+    {
+      "name": "nuclear_industry_stakeholders",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Nuclear utilities, reactor manufacturers, fuel suppliers, and skilled workforces bear the cost of this reading. Capital flows away from nuclear projects, policy support diminishes, and planned reactors are cancelled or delayed. Their long development timelines and asset lock-in make exit costly; many nuclear stakeholders are geographically concentrated in specific regions with limited alternative sectors."
+    },
+    {
+      "name": "baseload_dependent_regions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Jurisdictions with high winter heating demand, industrial baseload requirements, or geography unsuitable for distributed renewables (northern latitudes, limited wind/solar resource) are told decarbonization will be renewable-led, then face grid stability or affordability challenges. They pay through either accepting higher renewable cost for equivalent decarbonization or discovering their transition timeline extends despite the reading's 'faster' claim."
+    },
+    {
+      "name": "long_cycle_capital_investors",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pension funds, development banks, and long-term investors committed to nuclear projects face stranded assets, delayed returns, and policy shifts that reduce project viability. Their capital allocation horizons (30-50 years) match nuclear's development cycle, but this reading shifts policy toward shorter-cycle renewables, disrupting their portfolio planning."
+    },
+    {
+      "name": "grid_operators",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Grid operators (TSOs/system operators) are responsible for physical dispatch and stability but are not consulted in the policy framing of decarbonization pathways. They operate under constraints imposed by this reading but have limited voice in its formulation. Their operational reality (the feasibility omega) would inform the reading if they were included."
+    },
+    {
+      "name": "indigenous_and_local_communities",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Communities whose land hosts renewable infrastructure or whose water resources are affected by hydro/cooling demands of any generation type are often excluded from decarbonization reading debates. This reading privileges rapid deployment without necessarily centering community consent or benefit-sharing; local voices would contest extraction dynamics at the site level."
+    },
+    {
+      "name": "engineers_and_grid_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Independent researchers modeling grid integration, storage cost curves, and system reliability provide technical data consumed by multiple readings. They occupy an analytical seat and ideally constrain the readings toward empirical defensibility, though their findings are often selectively cited by advocacy coalitions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a genuine collective-action problem: rapid decarbonization requires alignment on technology pathways, investment prioritization, and infrastructure buildout. Coordinating globally on renewable-plus-storage architecture addresses capital misallocation and investor confusion about which technologies are worth funding.",
+    "transfer_function": "Moves policy preference, research funding, and capital deployment from long-cycle nuclear projects to short-cycle renewable and storage projects. Transfers opportunity cost (foregone nuclear sector growth, baseload-industry revenue) to renewable beneficiaries. Transfers construction-risk and grid-integration costs to whoever operates the resulting variability-heavy systems.",
+    "absent_voices": "Grid operators (TSO/system operators), baseload-dependent industrial users, and indigenous/local communities whose land and water serve renewable infrastructure buildout are structurally excluded or marginalized. They would object that the reading prioritizes speed and financial returns over grid stability, affordability for baseload-dependent sectors, and community benefit-sharing.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading disappeared overnight — i.e., if policy reverted to technology-neutral decarbonization — capital flows would reorganize, nuclear projects shelved would be revived, renewable buildout would slow, grid planners would adopt different architectures for seasonal/duration storage. Decarbonization timelines would extend or diversify by region.",
+    "founding_problem": "Climate change requires rapid, cost-effective decarbonization; historical consensus viewed nuclear as essential baseload and renewables as supplementary. This reading emerged as renewable costs fell exponentially (2010-2025) and battery storage became technically feasible; it reframes decarbonization to center the fastest-deploying, cheapest-at-scale technologies.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Renewable advocates (IRENA, BloombergNEF, some IPCC pathways) and cost analysts attest that the technical frontier has shifted and rapid renewable-plus-storage decarbonization is now feasible at lower cost. Nuclear industry, some energy economists, and grid operators attest that the founding problem persists — either storage is not yet proven at required scales, or grid integration costs neutralize renewable price advantage. Academic studies are divided; no consensus exists outside advocacy camps."
+  },
+  "interval": {
+    "start": 2010,
+    "end": 2045
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2035,
+      "value": 0.71,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2045,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2035,
+      "value": 0.46,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2045,
+      "value": 0.43,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2035,
+      "value": 0.73,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2045,
+      "value": 0.7,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates one reading of the contested 'climate_mitigation_legitimacy' kernel: the claim that renewables plus storage can achieve full decarbonization faster and cheaper than nuclear. The reading's beneficiaries are distributed renewable developers, storage vendors, and rapid-decarbonization advocates; its victims are nuclear stakeholders, baseload-dependent regions, and long-cycle capital investors. The constraint is claimed as Tangled Rope: it carries a genuine coordination function (alignment on technology pathways for capital flow and deployment) AND asymmetric extraction (capital moves away from nuclear, costs shift to grid operators and baseload-dependent sectors). Suppression is high because the reading's persistence depends on actively filtering out alternative framings and data that would support competing readings (baseload necessity, portfolio pragmatism). Theater is elevated because advocacy coalitions perform 'renewable inevitability' while grid-integration questions remain unresolved. This is one of four sibling readings of the same kernel; the others (baseload_necessity_reading, portfolio_pragmatism_reading, degrowth_sufficiency_reading) represent institutional competitors with different beneficiary/victim structures and measurement boundaries.",
+    "key_agents": [
+      "Distributed renewable developers (beneficiary, powerful, exit: mobile) — have incentive and capacity to advocate for renewable primacy; can shift investment to other sectors if blocked.",
+      "Storage technology vendors (beneficiary, organized, exit: mobile) — positions batteries/hydrogen as essential; funds research supporting scaling claims.",
+      "Climate urgency advocates (beneficiary, organized, exit: constrained) — NGOs and movements benefit from 'faster' narrative; politically invested; limited ability to shift priorities.",
+      "Nuclear industry stakeholders (payer, powerful, exit: trapped) — face capital starvation, delayed/cancelled projects, long timelines to pivot; geographically concentrated.",
+      "Baseload-dependent regions (payer, moderate, exit: constrained) — industrial heartlands, high winter demand regions, limited renewable resources; discover higher costs when renewable transition fails to deliver baseline power.",
+      "Long-cycle capital investors (payer, institutional, exit: constrained) — pension funds, development banks with 30-50yr horizons; face stranded assets from policy shifts.",
+      "Grid operators (excluded, institutional, exit: trapped) — TSOs responsible for dispatch and stability; not consulted in reading formulation; will bear operational cost of wrong choice.",
+      "Engineers/grid researchers (observer, analytical, exit: analytical) — provide empirical data; observations often selectively cited rather than driving consensus."
+    ],
+    "logic_rationale": "Extractiveness rose from 0.35 (2010) to 0.68 (2025) because the renewable cost curve and storage maturity claims moved from speculative to policy-normative — what was once a competitive hypothesis became a decision rule for capital allocation. Suppression rose from 0.4 to 0.71 over the same period as the constraint gained institutional backing (EU Green Deal, national net-zero commitments) and alternative readings were filtered from mainstream energy policy discourse. Theater rose from 0.25 to 0.42 as the constraint became more performative: renewable inevitability is asserted even where grid-integration or baseload studies suggest contingency. The metrics were authored at a shared time grid so every measurement appears at every time point examined; the interval spans 2010-2045 to capture the rise of the reading (2010-2025 observed) and its projected trajectory under continued policy lock-in (2025-2045 projected). The projection assumes the reading persists as policy orthodoxy without empirical resolution of the grid-stability omega.",
+    "perspectival_gap": "From the beneficiary seats (renewable developers, climate advocates), the constraint appears as coordination: alignment on the fastest-deploying, lowest-cost pathway, with extraction as a side effect of capital reallocation. From the payer seats (nuclear industry, baseload regions, grid operators), the constraint appears as pure extraction masked by coordination rhetoric: capital flight driven by advocacy coalitions and cost-curve extrapolation, with the cost of being wrong (grid instability, affordability failure, stranded renewable assets) borne by the latter. The engine should compute this divergence from the power atoms and exit options: beneficiaries have mobile exit, payers are trapped or constrained; the same constraint will classify differently across seats. The founder-problem_corroboration omega documents that no independent voice outside advocacy camps attests the reading's empirical claims are resolved.",
+    "directionality_logic": "Beneficiaries (distributed renewable developers, storage vendors) have d near 0.0-0.2 (full beneficiaries, mobile exit, powerful, no suppression felt). Climate urgency advocates have d near 0.1-0.3 (beneficiary, organized, but exit is ideological/political rather than economic). Nuclear stakeholders have d near 0.8-0.95 (full targets, trapped exit, powerful but powerless to redirect policy, bear extraction via capital starvation). Baseload-dependent regions have d near 0.6-0.75 (targets, constrained exit, moderate power, will discover costs downstream). Grid operators have d near 0.65-0.80 (targets without formal payer role, trapped, will absorb operational burden). Long-cycle investors have d near 0.75-0.85 (targets, constrained exit, institutional power insufficient to reverse policy flows). The directionality chain is derivable from beneficiary/victim declarations and exit options; no override is needed.",
+    "mandatrophy_analysis": "The founding problem (rapid decarbonization) is contested as 'dead' or 'live' depending on which reading adjudicates: the renewable reading asserts the problem is live and this pathway solves it; the baseload reading asserts the problem requires different tools; the portfolio reading asserts the problem requires both. The mandatrophy signal is NOT present yet because the reading's function (coordination on technology allocation) is still tied to its extraction (capital reallocation). If grid-integration fails, baseload shortages emerge, or storage costs remain prohibitive at scale, the constraint could flip toward Piton: coordination function dead, extraction persists via momentum and institutional inertia. That transition is captured by the theater-ratio rise and the grid-stability omega. The disappearance verdict (world_rearranges) confirms arrangements do depend on this reading's persistence, so mandatrophy is not yet resolved.",
+    "kernel_context": "This constraint is the renewable_primacy_reading of the climate_mitigation_legitimacy kernel. The kernel is the contested commitment: 'how should decarbonization be achieved?' Four readings coexist: (1) renewable_primacy_reading (this story) — renewables plus storage are fastest and cheapest; (2) baseload_necessity_reading — baseload power is physically necessary, renewables cannot provide it at scale; (3) portfolio_pragmatism_reading — optimal decarbonization requires mix of technologies including nuclear; (4) degrowth_sufficiency_reading — decarbonization requires demand reduction, not expansion of generation. This reading privileges short-cycle capital, distributed generation, and climate urgency. The sibling readings privilege long-cycle capital, centralized generation, or demand-side transformation. The kernel itself (climate mitigation) is fixed; the readings are different interpretations of what it demands and who should bear the costs."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_mitigation_legitimacy__baseload_necessity_reading",
+      "climate_mitigation_legitimacy__portfolio_pragmatism_reading",
+      "climate_mitigation_legitimacy__degrowth_sufficiency_reading"
+    ],
+    "dual_formulation_note": "The renewable_primacy_reading is one of four structurally distinct readings of the climate_mitigation_legitimacy kernel. Each reading has different beneficiary/victim sets, measurement boundaries, and extraction profiles. The sibling readings (baseload_necessity, portfolio_pragmatism, degrowth_sufficiency) are not alternative measurements of the same constraint; they are separate constraints with their own ε values and stakeholder situations. This story's network links establish that each reading structurally influences the others' policy viability and capital flows."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.78
+    }
+  ],
+  "gain_flow": "distributed_renewable_developers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "rapid_decarbonization_via_renewable_plus_storage_optimality",
+    "drift_state": {
+      "moment": "contemporary_grid_integration_pressure",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "baseload_necessity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "portfolio_pragmatism_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "degrowth_sufficiency_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "storage_scalability_sufficient_for_full_decarbonization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "renewable_cost_advantage_persists_including_system_integration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "rapid_deployment_timelines_are_binding_constraint_on_climate_outcomes",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

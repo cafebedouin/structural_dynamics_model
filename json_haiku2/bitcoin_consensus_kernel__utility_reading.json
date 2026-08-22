@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_consensus_kernel__utility_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "9142f074-d342-4c60-bc4d-c249f0e8b574",
+    "created_at": "2026-06-15T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.32,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.41,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Bitcoin Consensus as Evolving Minimum Viable Mechanism (Utility Reading)",
+    "topic_domain": "cryptoeconomics/monetary_systems",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "bitcoin_adopters",
+      "layer_two_developers",
+      "node_operators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "bitcoin_adopters",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Users and holders who benefit from a functioning, evolving consensus mechanism. They gain from network effects, market liquidity, and technological improvements that increase Bitcoin's utility as money and settlement layer. They can exit by divesting and moving to alternative chains or payment systems, but chose Bitcoin because its consensus model permits orderly improvement without requiring unanimous agreement on immutable rules."
+    },
+    {
+      "name": "layer_two_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Developers building on layer-2 systems (Lightning Network, Liquid, sidechains, rollups) who depend on the base-layer consensus permitting their existence and evolution. They benefit because soft forks and consensus-layer flexibility allow them to extend Bitcoin's capability without forking away. They have exit options (build on Ethereum, other L1s) but chose Bitcoin because its governance framework treats improvements as legitimate."
+    },
+    {
+      "name": "node_operators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individuals and institutions running full nodes and validating consensus. They participate in signaling acceptance of soft forks and in validating hard-fork readiness. They benefit from a mechanism that permits gradual, backward-compatible upgrades (soft forks) without forcing every node to upgrade immediately or fracturing the network. They are somewhat constrained by Bitcoin's base layer if they want to participate; exit means ceasing to run a node."
+    },
+    {
+      "name": "protocol_researchers",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Academics, cryptographers, and core developers who research and propose improvements to the consensus mechanism. Under this reading, they are treated as legitimate architects whose proposals (BIPs, research papers) advance Bitcoin's function. They have high exit options (other projects, academia, finance) and choose to engage because Bitcoin's consensus model treats iterative improvement as valid."
+    },
+    {
+      "name": "monetary_maximalists",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Holders and advocates committed to the reading that Bitcoin's founding rules are immutable covenants. They would argue that any change to consensus rules—even soft forks, even layer-2 protocols—violates the founding commitment and represents a theft of the original monetary guarantee. They are excluded from the primary decision-making if their frame is that consensus rules cannot be touched; their objections are heard but treated as objections to evolution, not vetos."
+    },
+    {
+      "name": "bitcoin_consensus_maintainers",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The informal governance structure (core developers, major miners, institutional custodians, researchers) that stewards consensus changes. Under the utility reading, they are legitimated to propose, debate, and implement soft forks and protocol upgrades on the grounds that the whitepaper describes a minimum viable consensus mechanism, not a finished product. They cannot unilaterally fork; changes require signaling and broad adoption."
+    },
+    {
+      "name": "ossification_purists",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individuals and groups who believe Bitcoin's monetary properties derive from rule immutability and who interpret any consensus change—however marginal—as a betrayal of the founding commitment. They view soft forks as creeping normalization of rule mutation. Under this reading, their objection is valid but does not block evolution; they can exit to a fork (Bitcoin Cash, etc.) or to another consensus model."
+    },
+    {
+      "name": "proof_of_work_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Miners and the ecosystem of hardware/energy suppliers whose incentives are aligned with Bitcoin's continued operation. They benefit from a consensus mechanism that permits efficiency improvements (e.g., Taproot, witness data optimization) because these lower validation costs without breaking their hash-commitment. They are somewhat constrained by Bitcoin's PoW commitment; moving to other chains means new hardware amortization."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a minimum viable consensus mechanism that permits iterative cryptographic, efficiency, and feature improvements without requiring unanimous agreement on immutable rules. The mechanism coordinates disagreement: soft forks (backward-compatible upgrades) and layer-2 protocols allow network evolution while nodes retain the power to reject changes by refusing to upgrade. Hard forks are exceptional and can splinter the network, which creates strong incentives for consensus but permits recourse when irreconcilable views arise.",
+    "transfer_function": "Moves legitimacy to define 'valid consensus' from a fixed, immutable ruleset to a living, signaled process. Adopters and builders transfer power to propose changes to protocol researchers and consensus maintainers; in return, they retain the power to reject changes by refusing to upgrade. Ossification guarantees (the belief that rules must never change) are transferred away: the utility reading does not treat immutability as a foundational property.",
+    "absent_voices": "Monetary maximalists and ossification purists would argue that consensus should be totally immutable and that treating the whitepaper as a minimum viable system—rather than a finished monetary constitution—is a betrayal of the founding covenant. They are structurally excluded by the utility reading's framing, though they can voice objections and can fork the network if consensus evolves in ways they reject.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the utility reading's legitimacy vanished—if the consensus culture reverted to strict immutabilism—Bitcoin's capacity to adapt to changing security landscapes, efficiency opportunities, and technological improvements would collapse. Layer-2 protocols would lose their evolutionary support; protocol researchers would redirect to other chains; node operators would face pressure to accept ossified rules or fork. The network would either splinter into maximalist-strict and pragmatic forks, or stagnate into a ceremonial network with declining utility.",
+    "founding_problem": "The Bitcoin whitepaper describes a minimum viable consensus mechanism (PoW, decentralized signaling, 51% attack resistance). It does not describe a finished monetary system with immutable rules. The founding problem is: how can a distributed network agree on changes to its rules without sacrificing decentralization or security? Answer: through soft forks (backward-compatible upgrades), hard forks (network-consensus decisions with exit by non-adopters), and layer-2 protocols (evolution outside the base consensus).",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Bitcoin Core developer community, the Lightning Network research and implementation teams, and academic researchers in distributed consensus (outside the maximalist camp) attest that the founding problem persists: Bitcoin must adapt to quantum threats, scaling pressures, and efficiency improvements. Mining pools and institutional custodians attest that soft-fork governance has proven viable over 15+ years of practice. Monetary maximalists attest the founding problem is to preserve immutability, not to improve functionality—but this corroboration comes from inside the maximalist reading, not independent. External corroboration comes from computer science literature on consensus evolution and from the empirical fact that every successful decentralized network (Ethereum, etc.) has implemented governance mechanisms for change."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.47,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.18,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.32,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.32,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Bitcoin consensus mechanism—described in the 2008 whitepaper as a 'minimum viable' system enabling decentralized agreement—sits at the center of a reading contest among the cryptocurrency community. The utility reading frames the consensus mechanism as designed for iterative improvement: soft forks permit backward-compatible upgrades (e.g., Taproot, witness data improvements); hard forks are exceptional democratic decisions (e.g., block size); layer-2 protocols (Lightning, Liquid) extend Bitcoin's capability without modifying base consensus. Under this reading, Bitcoin is a living system whose rules can change through transparent, signaled governance. The maximalist reading frames the whitepaper as an immutable covenant: any rule change—even soft forks—betrays the founding monetary guarantee. The pragmatic synthesis treats base-layer monetary rules (21M supply cap, PoW) as immutable while permitting upper-layer evolution. This constraint story instantiates ONLY the utility reading: Bitcoin's consensus is minimum viable, improvements are legitimate, beneficiaries are adopters/builders who gain from evolution, victims are those who hold absolute ossification guarantees.",
+    "key_agents": [
+      "Bitcoin adopters: users and holders who benefit from network effects and utility improvements",
+      "Layer-2 developers: architects of Lightning, sidechains, rollups who depend on consensus permission",
+      "Node operators: validators who run full nodes and signal soft-fork acceptance",
+      "Protocol researchers: cryptographers and core developers proposing consensus improvements",
+      "Consensus maintainers: informal governance structure (Core devs, major miners, institutional custodians)",
+      "Monetary maximalists: excluded advocates of absolute rule immutability",
+      "Ossification purists: identity-locked believers in rule stasis"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.48 at interval end) because under the utility reading, protocol changes are legitimated through consensus signaling, but the process concentrates power in researchers and maintainers who propose changes. Adopters retain exit via hard-fork rejection, but switching costs are substantial. Theater is low (0.18) because the governance process is transparent—BIPs are public, signaling is visible, implementation is code-reviewed—and the soft-fork mechanism is technically sound. Suppression is moderate (0.32) because ossification advocates and maximalists are structurally excluded from the primary decision frame; their objections are heard but treated as objections to evolution, not vetos. The measurement trajectory shows slow, modest growth in extractiveness and suppression over the interval (0 to 20), reflecting increasing institutional adoption and rising pressure to formalize governance as the network scales. Growth flattens by t=20 as the soft-fork pattern becomes entrenched and node-operator signaling stabilizes.",
+    "perspectival_gap": "The utility reading constructs a large perspectival divergence between agenda-setting seats (protocol researchers, consensus maintainers) and payer seats (ossification maximalists). From the agenda-setter seat, treating consensus as evolving is legitimate and necessary for Bitcoin to survive quantum threats and scaling challenges. From the maximalist seat, any change is theft of a monetary guarantee. The excluded position (maximalists) experiences high effective extraction because the utility frame treats their objections as opinions, not constraints. Node operators and adopters occupy a middle ground: they benefit from evolution but retain veto power via refusal to upgrade, making their directionality closer to d=0.5 than pure beneficiary or target.",
+    "directionality_logic": "Adopters (d near 0.2, beneficiaries): gain utility improvements and network growth without forced upgrade; mobile exit options to other chains reduce capture. Layer-2 developers (d near 0.15, beneficiaries): depend on consensus permission but retain mobile exit to other L1s; soft-fork mechanism legitimates their work. Node operators (d near 0.35, beneficiary+agenda-setter dual): benefit from evolution, signal acceptance of soft forks, but somewhat constrained to Bitcoin if they want base-layer participation. Protocol researchers (d near 0.25, agenda-setter): high power to propose changes but face community objection if changes are perceived as rent-seeking; mobile exit to other projects. Monetary maximalists (d near 0.78, excluded): experience the utility frame as extraction of their ossification guarantee; identity-locked exit because their belief system ties their identity to absolute immutability. Consensus maintainers (d near 0.55, agenda-setter): moderate extraction risk because they control proposal authority but lack veto power; community can fork away if they overreach.",
+    "mandatrophy_analysis": "The utility reading avoids mandatrophy by treating consensus evolution as a live, contentious problem with no settled answer. The founding problem (how to permit rule changes in a decentralized system) remains open; the utility reading proposes an answer (soft forks + hard-fork democracy + layer-2 freedom) but does not claim to have solved it permanently. The reading's strength is that it describes an actual governance mechanism (soft-fork signaling) with 15+ years of empirical track record. Mandatrophy pressure comes from the maximalist reading's claim that the whitepaper established immutable rules: if that reading were correct and Bitcoin acted on it, the consensus mechanism would become ceremonial (rules unchanged while technology evolved around it). The utility reading resists mandatrophy by treating the whitepaper as an open specification, not a closed constitution.",
+    "kernel_context": "This constraint instantiates the UTILITY READING of the bitcoin_consensus_kernel. The kernel is the 2008 whitepaper's consensus mechanism specification. Sibling readings are: (1) maximalist_reading—the whitepaper establishes immutable monetary policy; any change violates the founding covenant; (2) pragmatic_synthesis—base-layer monetary rules (21M cap, PoW) are immutable, but upper layers (soft forks, layer-2) permit innovation. The utility reading differs from maximalist by treating the whitepaper as minimum viable, not finished. It differs from pragmatic by not privileging the 21M cap as immutable; instead, it treats all consensus rules as subject to signaled evolution, with hard-fork democracy as the final arbiter. The empirical trajectory of Bitcoin (Segwit, Taproot, Lightning adoption) aligns with the utility reading's predictions."
+  },
+  "omegas": [
+    {
+      "id": "kernel_immutability_vs_evolution",
+      "question": "Does the 2008 whitepaper describe an immutable monetary covenant or a minimum viable consensus mechanism designed for iterative improvement?",
+      "resolution_mechanism": "Textual analysis of the whitepaper's language (e.g., 'initial' block reward, 'network adjusts', 'may follow other paths') and comparison with Satoshi Nakamoto's contemporaneous writings. Historical analysis of the original codebase (hardcoded constants, signal-readiness mechanisms) to determine whether the code was written for immutability or flexibility.",
+      "impact": "If the text is ambiguous but the code contains soft-fork readiness (version signaling, witness separation logic), the utility reading wins structurally. If the text is unambiguously 'this shall never change,' the maximalist reading wins. The pragmatic reading splits the difference (rules immutable, mechanisms flexible).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the whitepaper's foundational intent was monetary immutability or evolutionary capability."
+    },
+    {
+      "id": "soft_fork_legitimacy_under_consensus",
+      "question": "Is a soft fork (backward-compatible change that doesn't split the network) a 'true' consensus change or does treating it as consensual constitute rule violation when some nodes disagree?",
+      "resolution_mechanism": "Examine whether dissenting nodes (those that reject the soft fork) remain in consensus with non-dissenting nodes on the canonical ledger. If yes, the soft fork preserved consensus at the cost of some nodes' rules being stricter; if no, the network split, and the 'consensus' claim is false.",
+      "impact": "If soft forks preserve consensus, they are a legitimate expression of consensus-by-signaling. If they create invisible forks (dissenting nodes out of sync without realizing it), the utility reading's evolutionary mechanism breaks down and the reading becomes a snare (consensus maintainers enforce upgrades by silent forking).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether soft forks constitute true consensus or coercive rule change masked as compatibility."
+    },
+    {
+      "id": "ossification_guarantee_as_victim",
+      "question": "Is the 'immutable monetary policy' that maximalists believe they hold a genuine property of the Bitcoin system or a belief about how the system should operate?",
+      "resolution_mechanism": "Historical analysis: when consensus rules changed in Bitcoin's past (block subsidy schedule, transaction format, script capabilities), did the maximalists' belief system predict no change would occur? If the belief has repeatedly failed reality-testing, it is ideology, not property. If the belief has held in core monetary rules (21M cap, PoW) while failing on non-monetary features (script expansion, witness format), the boundary between 'true immutability' and 'feature flexibility' is real.",
+      "impact": "If the ossification guarantee is a belief, not a property, then maximalists are not 'victims' of consensus evolution—they are adherents of an ideology that the network rejected. If the guarantee is partially real (core money rules are stable, features change), then the utility reading extracts from maximalists by reframing what 'immutable' means (operational stability vs. code immutability).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether immutability is a technical property or an ideological reading of Bitcoin's history."
+    },
+    {
+      "id": "excluded_voice_representation",
+      "question": "Are monetary maximalists genuinely excluded from consensus decision-making, or do they have structural veto power (via refusing to upgrade, forcing a hard fork that splits the network)?",
+      "resolution_mechanism": "Examine past hard-fork events (Bitcoin Cash, etc.) to determine whether minority dissent forced a network split. If yes, dissent has veto power even if it is excluded from the primary decision frame. If no, dissent was overridden by the majority, confirming exclusion with power asymmetry.",
+      "impact": "If veto power exists, maximalists are constrained, not excluded—they have substantial leverage over consensus changes via the threat of forking. If no veto power exists, the utility reading's exclusion of their voice is genuine extraction: they lose the ability to enforce their reading of immutability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether network-splitting hard forks represent veto power for dissenting minorities."
+    },
+    {
+      "id": "layer_two_protocol_as_consensus_change",
+      "question": "Do layer-2 protocols (Lightning, sidechains) represent consensus-permitted evolution, or do they constitute de facto rule changes by routing around consensus constraints?",
+      "resolution_mechanism": "Analyze whether layer-2 protocols require base-layer consensus approval to operate (e.g., do they require new opcodes, witness data formats, or soft forks?). If they require approval, they are consensus evolution. If they operate without approval (purely on top of existing rules), they are end-run evolution that the utility reading mistakes for legitimate innovation.",
+      "impact": "If layer-2 requires soft forks, the utility reading's claim that layer-2 enables 'evolution outside consensus' is false—layer-2 is just another vector for consensus change. If layer-2 operates on top of unchanged rules, then the utility reading correctly identifies a mechanism for innovation that does not change core consensus.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether layer-2 protocols depend on base-layer consensus changes or can operate independently."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.22
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_consensus_kernel__maximalist_reading",
+      "bitcoin_consensus_kernel__pragmatic_synthesis"
+    ],
+    "dual_formulation_note": "The bitcoin_consensus_kernel contains three structurally distinct constraints corresponding to three readings: utility (this file), maximalist, and pragmatic. Each reading has a different ε, different beneficiary/victim structure, and different governance implications. The utility reading (this file) frames consensus as evolving and treats improvements as legitimate. The maximalist reading frames consensus as immutable and treats changes as covenant violation. The pragmatic reading splits the difference: immutable base layer, evolving upper layer. All three readings operate on the same technical system but instantiate different extractiveness profiles and governance legitimacies. Network edges link the three files bidirectionally; empirical and conceptual omegas in each file address sibling readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.78
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "maximalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "pragmatic_synthesis",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "whitepaper_minimum_viable_specification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "consensus_change_via_signaled_adoption",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "consensus_as_living_specification",
+    "drift_state": {
+      "moment": "institutional_adoption_phase",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

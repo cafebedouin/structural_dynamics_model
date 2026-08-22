@@ -1,0 +1,594 @@
+{
+  "header": {
+    "constraint_id": "cbdr_principle__historical_responsibility_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_cbdr_principle__historical_responsibility_reading",
+    "measurement_id_prefix": "cbdr_hist_resp",
+    "story_uid": "c83a4f9e-45db-4c6c-b590-f9d1750e63d7"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.52,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "CBDR Historical Responsibility Reading: Binding Emissions Reductions + Loss/Damage Finance",
+    "topic_domain": "international_climate_governance/treaty_law/development_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "least_developed_countries",
+      "vulnerable_island_states",
+      "climate_displaced_populations"
+    ],
+    "victims": [
+      "developed_nations",
+      "fossil_fuel_economies"
+    ],
+    "vindicated_propositions": [
+      "historical_responsibility_doctrine",
+      "common_but_differentiated_responsibilities"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "developed_nations",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Under this reading, developed nations bear binding, proportional emissions reductions indexed to their cumulative historical emissions since industrialization, plus mandatory loss/damage financing for vulnerable nations. They pay through domestic decarbonization costs, technology transfer, and direct adaptation transfers. Exit options are constrained by treaty obligation and reputational cost; sovereignty remains but delegation to UNFCCC accountability mechanisms limits policy discretion. The reading imputes responsibility for externalities generated across 150+ years of industrial activity."
+    },
+    {
+      "name": "least_developed_countries",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Receive binding commitments for emissions reductions from high-emitters plus dedicated loss/damage financing to cover adaptation costs and climate-induced displacement. They are the primary beneficiary of the reading's transfer mechanism. They also bear diffuse costs: adaptation financing is structured as a finite pool relative to estimated damages, and the reading does not eliminate their own climate vulnerability or development tradeoffs. Their exit is trapped—they cannot renegotiate the basic physics of climate change or their geographic exposure."
+    },
+    {
+      "name": "vulnerable_island_states",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Face existential threat from sea-level rise driven by accumulated developed-nation emissions. The reading grants them standing to claim loss/damage financing and binding reduction commitments. They remain trapped in geographic exposure and dependent on developed-nation compliance; they also face the secondary burden of adaptation costs that outpace available financing even under this reading's commitments."
+    },
+    {
+      "name": "fossil_fuel_economies",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Developed or middle-income economies whose comparative advantage and revenue base depend on fossil fuel extraction and export. Under this reading they are structured as payers via binding reduction commitments and finance obligations. Their exit options are constrained by treaty, market pressure for decarbonization, and the finality of historical responsibility allocations. They carry both the transition cost and the assignment of historical liability."
+    },
+    {
+      "name": "climate_displaced_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Populations displaced by climate impacts (sea-level rise, desertification, flooding) driven by developed-nation emissions. The reading allocates them standing to receive loss/damage finance and relocation support. They are trapped by geography and economic constraints; they have no exit but benefit from the reading's allocation of responsibility and transfer mechanism, though the actual funding is typically insufficient."
+    },
+    {
+      "name": "unfccc_secretariat",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administers the CBDR principle, negotiates and monitors compliance, adjudicates disputes about historical responsibility calculations and transfer adequacy. Sets the agenda for interpreting the reading through COPs and subsidiary bodies. Maintains the technical infrastructure for emissions accounting and finance tracking."
+    },
+    {
+      "name": "transition_finance_intermediaries",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Development banks, climate funds, and bilateral aid agencies that mediate the transfer. They benefit from being the conduit (institutional legitimacy, operational budgets, technical control), set terms for recipient access, and hold agency in how abstract financial commitments translate to actual deployment. They extract administrative rents and shape implementation narratives."
+    },
+    {
+      "name": "domestic_climate_constituencies",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Working-class and middle-income communities in developed nations who bear concentrated costs of rapid decarbonization (job loss in fossil fuel sectors, energy price inflation, industrial transition disruption) but are excluded from the primary CBDR negotiation. Their absence from the decision table allows developed-nation elites to commit to transfers without domestic political friction being surfaced in the treaty."
+    },
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Inherit either the climate-stabilized world that binding reductions enable, or the cascading damages from continued high-emission trajectories. They are voiceless in current negotiations and structurally trapped. The reading allocates them benefit (stabilization via binding reductions) but provides no direct agency or voice."
+    },
+    {
+      "name": "carbon_border_adjustment_economies",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Developed economies pursuing unilateral carbon border adjustment mechanisms (CBAM) as enforcement proxy. They carry the cost of implementing carbon pricing at borders, face retaliation risk, and claim to be payers under CBDR via these mechanisms. Their exit is relatively mobile (they can weaken CBAM enforcement); they function as enforcement agents for the reading's regime but extract rents through border mechanisms and face political pressure from export-oriented industries."
+    },
+    {
+      "name": "climate_research_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produces the emissions accounting, climate impact models, and responsibility metrics that make the reading's historical-responsibility calculations possible. They are analytical observers, neither collecting from nor paying into the constraint directly, but providing the epistemic infrastructure that grounds the reading's truth claims about cumulative emissions and attribution."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allocates responsibility for global emissions reduction and climate adaptation financing based on historical contribution to atmospheric carbon stock. Solves the collective-action problem of how to assign burdens when the harms are global, cumulative, and lagged, and when development capacity is unequally distributed. The reading specifically coordinates around the principle that nations responsible for the atmospheric excess should bear the cost of restoring the stable state.",
+    "transfer_function": "Transfers financial resources and technology from developed nations (high cumulative emissions) to vulnerable nations (climate-impact victims with low historical responsibility). Transfers domestic policy constraint (binding emissions reductions) from developed nations to developing nations via treaty obligation. Transfers adaptive capacity by allocating loss/damage financing pools. The net flow is North-to-South in finance; South-to-North in terms of the externalities already embedded in developed-nation wealth stocks.",
+    "absent_voices": "Domestic working-class constituencies in developed nations (who bear concentrated transition costs) are excluded from CBDR negotiation; future generations of all nations are voiceless; subnational climate-vulnerable populations within middle-income emitters (who face reduction obligations on behalf of their nation's historical emissions) are diffusely represented. Their absence allows developed-nation elites and developing-nation diplomatic representatives to settle allocations without surfacing the domestic political conflicts decarbonization triggers.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading disappeared—if the binding historical-responsibility allocation vanished and CBDR reverted to purely voluntary commitments—developed nations would externalize adaptation costs, atmospheric carbon would accumulate faster (no binding reduction teeth), and vulnerable nations would face unmitigated climate impacts without compensatory transfers. The global development trajectory and climate outcome would reorganize sharply: inequality would widen, adaptation financing would collapse, and emissions-reduction incentives would weaken.",
+    "founding_problem": "The atmospheric commons was degraded by a century of industrial emissions concentrated in the Global North. Developing nations face climate damages they did not cause. No mechanism existed to allocate responsibility for the stock problem or to finance adaptation in low-emission, high-vulnerability economies. The founding problem is the absence of a principle connecting historical emissions to present obligations.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Climate scientists and IPCC reports corroborate that atmospheric carbon is stock-accumulated and that the Global North accounts for ~80% of cumulative emissions. Small island states and least-developed-country negotiators corroborate that they face climate damages disproportionate to their historical emissions. Developed-nation negotiators and fossil-fuel-export economies contest whether historical responsibility should override current capacity and national sovereignty; they argue that forward-looking commitments (not retrospective liability) should govern. The founding problem is universally acknowledged; its normative weight and policy implication are contested."
+  },
+  "interval": {
+    "start": 1992,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1992,
+      "value": 0.15,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_extractiveness_1992_rio"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.32,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_extractiveness_2005_kyoto_post"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.55,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_extractiveness_2015_paris"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.68,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_extractiveness_2022_loss_damage_fund"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.68,
+      "basis": "projected",
+      "id_override": "cbdr_hist_resp_extractiveness_2030_cop28_trajectory"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.05,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_theater_1992_rio"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.18,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_theater_2005_kyoto"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.35,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_theater_2015_paris_ndc"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.41,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_theater_2022_loss_damage"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.41,
+      "basis": "projected",
+      "id_override": "cbdr_hist_resp_theater_2030_cop28"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1992,
+      "value": 0.25,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_suppression_1992_rio"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.38,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_suppression_2005_kyoto_enforcement"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.48,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_suppression_2015_paris_paris"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.52,
+      "basis": "observed",
+      "id_override": "cbdr_hist_resp_suppression_2022_loss_damage_negotiations"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.52,
+      "basis": "projected",
+      "id_override": "cbdr_hist_resp_suppression_2030_cop28_trajectory"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1992,
+    "tn": 2030,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1992,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1992,
+        "value": 0.25
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1992,
+        "value": 0.15
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1992,
+        "value": 0.1
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2030,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2030,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2030,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2030,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1992,
+        "value": 0.2
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1992,
+        "value": 0.15
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1992,
+        "value": 0.12
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1992,
+        "value": 0.08
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2030,
+        "value": 0.71
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2030,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2030,
+        "value": 0.65
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2030,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1992,
+        "value": 0.15
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1992,
+        "value": 0.18
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1992,
+        "value": 0.22
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1992,
+        "value": 0.28
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2030,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2030,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2030,
+        "value": 0.55
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2030,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1992,
+        "value": 0.32
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1992,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1992,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1992,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2030,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2030,
+        "value": 0.71
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2030,
+        "value": 0.74
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2030,
+        "value": 0.75
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The Common But Differentiated Responsibilities (CBDR) principle, as instantiated through the historical-responsibility reading, allocates binding emissions-reduction obligations to developed nations proportional to their cumulative historical greenhouse-gas emissions since industrialization, plus mandatory loss-and-damage financing for vulnerable nations. This reading treats atmospheric carbon as a stock externality: developed nations industrialized via fossil-fuel-driven accumulation; their wealth is in part a function of that externality; and their obligation to reduce emissions and finance adaptation flows from that historical responsibility. This is ONE reading of the CBDR kernel; the voluntary-commitment reading interprets CBDR differently, emphasizing nationally-determined contributions and technology transfer over binding historical allocations. The historical-responsibility reading is increasingly dominant in vulnerable-nation advocacy and UNFCCC COP discourse, though developed nations resist the normative implication of retrospective liability.",
+    "key_agents": [
+      "developed_nations: payer (institutional power, generational time horizon, constrained exit) — bear binding reduction and finance obligations",
+      "least_developed_countries + vulnerable island states: primary beneficiaries (powerless, trapped exit) — receive binding commitments and loss/damage financing",
+      "fossil_fuel_economies: secondary payers (organized power, biographical horizon) — carry reduction obligations and transition costs",
+      "UNFCCC_secretariat: agenda-setter (institutional power) — administers the reading, calculates responsibility metrics, monitors compliance",
+      "transition_finance_intermediaries: agenda-setter + beneficiary (institutional power, arbitrage exit) — mediate transfers, extract administrative rents",
+      "domestic_climate_constituencies: excluded (moderate power, constrained exit) — bear concentrated decarbonization costs but are absent from CBDR negotiation",
+      "climate_research_community: observer (analytical power) — provides epistemic infrastructure for emissions accounting and attribution"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68 at interval end) because the reading allocates binding, long-term financial and emissions-reduction obligations to developed nations without corresponding compensation, indexed to historical externalities they did not formally consent to remediate. The series shows extraction rising as the reading moves from rhetorical principle (1992, Rio) through implementation architecture (2015, Paris) to concrete fund operationalization (2022, COP27 loss/damage fund). Theater is moderate and rising (0.41 at interval end): early CBDR was mostly aspirational rhetoric; as mechanisms hardened, performative elements emerged — developed nations negotiate carbon-border mechanisms as enforcement proxies while maintaining policy discretion over domestic reduction pathways; intermediaries stage elaborate climate-finance conferences while actual disbursement lags commitments. Suppression is measured as the degree to which exit alternatives are eliminated: developed nations face reputational and legal pressure to comply, but sovereignty formally remains; they can (and do) weaken implementation through voluntary NDC revision and finance underfunding. The coercion grid shows that suppression operates primarily at the organizational and individual levels (domestic constituencies and subnational actors in developed nations bear the costs without formal voice); structural-level suppression is lighter (national governments retain policy discretion). Resistance is substantial and rising (0.71 at interval end): fossil-fuel economies, developed-nation industry associations, and excluded working-class constituencies actively resist the reading through lobbying, CBAM countermeasures, and domestic political mobilization.",
+    "perspectival_gap": "The developed-nation seat perceives retrospective liability and externalized obligation; the vulnerable-nation seat perceives corrective justice and overdue recompense; the intermediary seat perceives operational opportunity; the excluded domestic seat in developed nations perceives imposed sacrifice without voice. From the developed-nation negotiating perspective, the binding allocation of historical responsibility for centuries of industrial activity violates national sovereignty and retroactively condemns prior legal commercial activity; from the vulnerable-nation perspective, sovereignty claims are cover for climate-imperialism — the wealthy nations industrialized on the back of atmospheric dumping and now claim sovereign right to escape the cost. These are not bridgeable from a single normative seat; they are different constraint-classifications of the same rule.",
+    "directionality_logic": "Developed nations carry high directionality toward the constraint (d ~0.85): they are structural targets of an allocation mechanism they did not negotiate freely. Their exit is constrained (treaty obligation, reputational cost, market pressure); they cannot unilaterally exit CBDR without defecting from the climate treaty regime. Least-developed nations carry low directionality (d ~0.15): they are beneficiaries of the reading's allocation; the constraint subsidizes them (though insufficiently). Vulnerable island states carry very low d (~0.10) on the allocation dimension but moderate d (~0.45) when accounting for the inadequacy of actual transfers relative to claimed benefit — they are nominally beneficiaries but structurally underfunded, so the effective directionality is higher than the role would suggest. Fossil-fuel economies carry moderate-to-high d (~0.65): they are formally payers but retain policy discretion over how quickly to transition. The coercion grid reveals that suppression (the elimination of exit) is highest at the individual and class levels (domestic constituencies in developed nations cannot exit decarbonization costs) and lowest at the structural level (national governments retain formal policy autonomy).",
+    "mandatrophy_analysis": "The founding problem (atmospheric commons degradation, uncompensated climate damages in low-emission economies) remains live and pressing — there is no sense in which the CBDR reading has solved its mandate and outlived it. However, there is a significant mandatrophy signal: the reading's coordination function (allocating global emissions-reduction burden fairly) has become entangled with an extraction function (developed nations pay transfers without corresponding benefit or renegotiation). The rising theater_ratio (0.05 in 1992 → 0.41 in 2022) indicates that performative maintenance is replacing actual mechanism: developed nations negotiate carbon-border adjustments, stage climate conferences, and announce pledges while maintaining low implementation rates; vulnerable nations perform acceptance of inadequate financing while facing real adaptation gaps. The measurement series suggests the reading has drifted from a coordination mechanism (allocation of fair burden) toward a Tangled Rope (real coordination side-by-side with extraction side, sustained by enforcement pressure). The divergence between disappearance_verdict (world_rearranges) and founding_problem_status (contested) is itself mandatrophy signal: if the problem is contested, why does the world rearrange if the solution disappears? Answer: because the reading has become institutionally entrenched and politically salient independent of consensus on its problem definition — removing it would force renegotiation of global emissions architecture, not because there is agreement that it solves the problem, but because powerful institutional and vulnerable-nation coalitions are invested in maintaining it.",
+    "kernel_context": "This constraint is ONE READING of the contested CBDR kernel. The kernel is the Common But Differentiated Responsibilities principle itself — a foundational commitment in international climate governance stating that nations have responsibilities for climate action, but those responsibilities are differentiated based on their development status and historical contribution. The historical-responsibility reading instantiates one interpretation: CBDR requires binding, proportional emissions reductions indexed to cumulative historical emissions, plus mandatory loss-and-damage financing. The alternative sibling reading (voluntary-commitment reading) interprets CBDR as requiring voluntary, nationally-determined contributions with technology transfer as the primary developed-nation obligation. These readings coexist in UNFCCC discourse: vulnerable nations and climate-justice advocates endorse the historical-responsibility reading; developed nations and market-oriented economies endorse (or practice) the voluntary-commitment reading. Neither reading logically forecloses the other within a single nation's framework — they are competing interpretations that different national coalitions hold simultaneously. The historical-responsibility reading creates structural downstream pressure on the voluntary-commitment reading by raising the normative stakes of 'responsibility' (retroactive liability vs. forward-looking cooperation) and by mobilizing vulnerable-nation coalitions to demand binding rather than voluntary pathways."
+  },
+  "omegas": [
+    {
+      "id": "cumulative_responsibility_attribution",
+      "question": "What is the correct attribution of historical emissions responsibility across developed nations? Should responsibility be indexed to cumulative emissions since 1750 (pre-industrial period) or since 1990 (treaty baseline)? Should it include only direct national emissions or also embodied emissions in traded goods?",
+      "resolution_mechanism": "IPCC Working Group III emissions-inventory methodology; post-hoc attribution analysis from high-resolution historical climate-model runs; accounting-standards negotiations within UNFCCC.",
+      "impact": "Different attribution baselines shift which developed nations carry the highest responsibility (US vs. UK vs. Germany), how much total transfer is owed, and whether nations that industrialized recently (China, India if counted as developed) can claim lower responsibility. A narrow baseline favors recent developers; a wide baseline distributes burden toward historical leaders.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The temporal and scope boundary for cumulative emissions attribution"
+    },
+    {
+      "id": "historical_responsibility_foreclosure",
+      "question": "Does the historical-responsibility reading logically foreclose the voluntary-commitment reading within a single nation's decision framework, or can both readings coexist as competing strategic positions?",
+      "resolution_mechanism": "Normative analysis of the foundational axioms: if historical responsibility is held as deontological (a duty grounded in past wrongs), does it logically rule out a purely forward-looking voluntary framework? If both are held as instrumental (both are means to emissions reduction), can they coexist?",
+      "impact": "If the readings foreclose each other, one must eventually dominate UNFCCC consensus; if they coexist, CBDR remains permanently contested and implementation remains incoherent. The mismatch between the two readings is currently a feature of North-South negotiation friction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the historical-responsibility and voluntary-commitment readings are logically incompatible or merely strategically opposed"
+    },
+    {
+      "id": "loss_and_damage_financing_adequacy",
+      "question": "What is the adequate level of loss-and-damage financing? Vulnerable nations claim $100B+/year; developed nations have committed ~$10B/year (as of 2023). Is the gap a shortfall in implementation or a disagreement on what constitutes 'adequate'?",
+      "resolution_mechanism": "Cost-of-climate-adaptation studies from IPCC and UNCTAD; post-hoc measurement of actual adaptation outcomes in recipient nations; explicit renegotiation of financing targets.",
+      "impact": "If the gap is a shortfall, the reading is being underfunded and vulnerable nations are bearing residual climate risk despite the reading's allocation mechanism. If the gap reflects disagreement on adequacy, the reading itself is contested on what it requires.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether loss-and-damage financing commitments meet the adaptation needs of vulnerable nations"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the suppression of exit alternatives structural (treaty obligation, legal penalties, trade pressure) or internalized (developing nations believe they deserve the allocation, developed nations believe they bear responsibility)? If internalized, does removing the formal mechanism change behavior?",
+      "resolution_mechanism": "Post-exit-mechanism experiments: if developed nations formally withdrew from CBDR and removed legal penalties, would they maintain emissions reductions and financing? Polling of developed-nation elites on whether they believe historical responsibility is normatively binding.",
+      "impact": "If suppression is primarily structural, the reading is brittle — removing formal mechanisms allows exit. If internalized, the reading has captured normative commitment and persists even without enforcement infrastructure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's enforcement is structural coercion or internalized normative commitment"
+    },
+    {
+      "id": "excluded_domestic_constituencies_latent_veto",
+      "question": "Can developed nations maintain compliance with the historical-responsibility reading if domestic working-class constituencies (coal miners, auto workers, fossil-dependent communities) mount sufficient political resistance? Or is their exclusion stable because their interests are structurally submerged in national-diplomatic processes?",
+      "resolution_mechanism": "Historical analysis of coal-industry lobby power, election outcomes in fossil-dependent regions, success rate of working-class coalition building against climate policy; counterfactual: what if excluded constituencies were given voice in CBDR negotiations?",
+      "impact": "If excluded constituencies can mount a latent veto (e.g., through electoral pressure), the reading's stability is conditional on remaining exclusion. If their interests are permanently submerged, the reading is stable. The mechanism of their exclusion (diplomatic institutions, national sovereignty claims, elite coalition capture) is itself the subject.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether domestically-excluded constituencies retain latent power to veto the reading's implementation"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.22
+  },
+  "network": {
+    "affects_constraints": [
+      "cbdr_principle__voluntary_commitment_reading",
+      "paris_agreement_ndc_framework",
+      "carbon_border_adjustment_mechanism",
+      "loss_and_damage_fund_operationalization"
+    ],
+    "dual_formulation_note": "The CBDR principle instantiates two structurally distinct constraints depending on which reading is adopted: (1) historical_responsibility_reading — binding, retroactively-indexed emissions reductions and loss/damage financing (this file); (2) voluntary_commitment_reading — voluntary nationally-determined contributions with technology transfer as primary developed-nation obligation. These readings have different ε values, different beneficiary/victim structures, and different sustainability dynamics. They coexist in UNFCCC discourse and represent competing interpretations of the same kernel commitment. The historical-responsibility reading creates structural pressure on the voluntary-commitment reading by raising normative stakes and enabling vulnerable-nation coalition building; the voluntary-commitment reading creates counter-pressure by allowing policy discretion and reducing developed-nation exit costs. Both readings remain live."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ],
+  "gain_flow": "transition_finance_intermediaries",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "cbdr_principle__voluntary_commitment_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "voluntary_commitment_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "cumulative_emissions_impute_remedial_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "binding_reduction_commitments_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "atmospheric_commons_shared_responsibility",
+    "drift_state": {
+      "moment": "contemporary_cop28_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

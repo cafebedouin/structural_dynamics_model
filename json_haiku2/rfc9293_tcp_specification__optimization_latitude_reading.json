@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__optimization_latitude_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "5b806339-4b52-4681-9852-64a06c219d0f"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.08,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.42,
+    "claimed_type": "rope",
+    "human_readable": "RFC 9293 TCP Specification: Outcome-Based Coordination with Implementation Flexibility",
+    "topic_domain": "network/standards/distributed-systems",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "protocol_implementers",
+      "network_operators",
+      "end_users"
+    ],
+    "vindicated_propositions": [
+      "semantic_interoperability_without_implementation_prescriptivism",
+      "performance_optimization_compatible_with_protocol_contract"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "protocol_implementers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "TCP implementers (OS kernels, user-space stacks like QUIC, embedded systems) benefit from outcome-based specification: RFC 9293 defines what the protocol DOES (reliable in-order delivery) but not HOW to achieve it internally. This latitude enables them to swap congestion-control algorithms (BBR vs. DCTCP vs. Reno), tune buffer management, and deploy hardware acceleration without rewriting the entire stack or breaking interoperability with others. Their exit is migration to alternative protocols or custom implementations; the freedom to optimize within semantic bounds makes the specification durable rather than constraining."
+    },
+    {
+      "name": "network_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operators deploy middleboxes (NATs, firewalls, load balancers, traffic shapers) that observe TCP flows. The specification's latitude on implementation details means operators can optimize for their network conditions (congestion patterns, hardware constraints, traffic mix) without breaking backward compatibility. They benefit from tunable performance within a stable contract. Their constraints are regulatory (RFCs are consensus-driven, not operator-mandated) and technical (must remain interoperable with endpoints they do not control)."
+    },
+    {
+      "name": "end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Users experience the protocol as a transparent service: TCP appears as a reliable delivery guarantee regardless of internal congestion-control algorithm or buffer strategy. Outcome-based specification benefits them because implementers can optimize for their use case (low-latency gaming, bulk transfer, interactive sessions) without the specification forcing a one-size-fits-all approach. They have no direct exit: they use whatever TCP implementation the OS provides."
+    },
+    {
+      "name": "standards_body",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "IETF sets and maintains the RFC through consensus-based process. This reading instantiates their choice to define TCP by outcome contract rather than prescriptive state machine. They administer the specification, field new algorithm proposals, and resolve interoperability disputes through amendment. Their power is norm-setting: they cannot compel adoption, but widespread implementation of RFC-compliant behavior creates de facto standardization. Exit for implementers is costly (protocol forking) but possible."
+    },
+    {
+      "name": "strict_invariance_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Some researchers, regulators, and conservative implementers argue for exact state-machine replication to guarantee global interoperability. They view optimization latitude as a source of subtle incompatibilities and prefer prescriptive specification. They are excluded from the outcome-based reading's authority structure because this reading's legitimacy rests on trusting outcome equivalence as sufficient; strict-invariance advocates would dispute that trust. Their objections are present (academic papers, regulatory testimony) but structurally subordinate to the dominant outcome-based framing."
+    },
+    {
+      "name": "middlebox_realism_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "A constituency arguing that RFC 9293 describes idealized endpoint behavior but deployed networks are shaped by actual middlebox populations (NATs that break certain flag combinations, firewalls that enforce packet timing, content-delivery networks that rewrite TCP options). They contend the specification's authority is subordinate to what the network actually does. They are excluded from this reading because this reading's core premise is that semantic specification IS sufficient; middlebox-realism advocates deny that sufficiency. Their perspective informs bug reports and amendments but does not set the reading's boundary."
+    },
+    {
+      "name": "interoperability_testing_community",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Independent test suites (like TPKT, RFC test vectors) verify that implementations respect the outcome contract. Testers observe and validate that diverse TCP stacks (Linux, Windows, macOS, embedded) interoperate despite internal differences. Their role is measurement and certification, not rule-setting. They validate the premise that outcome-based specification suffices for interoperability."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "RFC 9293 solves the distributed-systems coordination problem: heterogeneous endpoints (OS kernels, embedded systems, mobile devices, specialized hardware) need a shared protocol for reliable ordered delivery across untrusted networks. The specification coordinates by defining the semantic contract (what happens) rather than the implementation (how it happens), allowing each endpoint to optimize for its constraints while maintaining interoperability with all others.",
+    "transfer_function": "The specification transfers authority from prescriptive implementation dictates to outcome-based performance guarantees. Implementers receive freedom to allocate engineering resources to optimization within semantic bounds; the standards body receives the power to define 'semantic bounds' and amend them; end users receive performance that adapts to their hardware and use case without incompatibility risk.",
+    "absent_voices": "Strict-invariance advocates are structurally excluded: their position (exact state-machine replication necessary for safety) is incompatible with this reading's core premise (outcome equivalence suffices). Middlebox-realism advocates are also excluded: they would argue the specification's authority is subordinate to deployed network behavior. Neither group controls the standards process, though their concerns shape amendments and bug reports.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If RFC 9293's outcome-based latitude disappeared overnight and the IETF rewrote TCP as a prescriptive state machine, implementers would face a massive rewrite to match exact behavior, many existing optimizations would violate the spec, and fragmentation would accelerate (custom forks, side protocols, protocol replacements like QUIC gaining adoption faster). The network would not break, but optimization velocity would drop and complexity would rise. Performance-critical deployments would migrate to newer protocols faster, and the TCP ecosystem would shrink.",
+    "founding_problem": "Early TCP specifications (RFC 793, RFC 1122) were prescriptive but incomplete: they left gaps on congestion control, retransmission timing, and state-machine edge cases, which led to implementer divergence and subtle incompatibilities. By the 1990s, the Internet faced congestion collapse because different TCP variants competed for bandwidth and some were highly aggressive. The founding problem was: how to specify TCP precisely enough to prevent global instability, but flexibly enough to allow innovation in algorithms that do not violate the semantic contract?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Multiple independent sources corroborate this status: (1) RFC 2581 (1999) explicitly identified congestion collapse as a live threat and specified mandatory Tahoe/Reno minimum behavior; (2) subsequent RFCs (2988, 3168, 5681, 9293) continually refine the minimum semantics while preserving latitude for algorithm innovation (BBR, DCTCP, now deployed in major OSes); (3) independent academic literature on TCP variant interoperability (NIST papers, university network labs) documents the founding problem as ongoing — new algorithms must be validated against the semantic contract to ensure they do not break global congestion balance. The problem is not solved; it is managed through outcome-based specification."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.02,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.03,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.08,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "RFC 9293 (the TCP specification standard) instantiates a choice about how to specify distributed protocols: by outcome (semantic contract: reliable in-order delivery) or by implementation (prescriptive state machine: exact behavior dictated). This constraint story is the OUTCOME-BASED READING, which holds that specification of what-happens suffices for interoperability, and the latitude on how-it-happens enables innovation and performance optimization. This reading is one of three contested readings of the same RFC kernel: (1) the optimization-latitude reading (this one) — outcome specification enables diversity; (2) the strict-invariance reading — exact state-machine replication is necessary for safety; (3) the middlebox-realism reading — RFC authority is subordinate to deployed network behavior. Each reading is instantiated as a separate constraint story. This story models the optimization-latitude reading as genuine coordination (Rope) with low extractiveness: the standards body coordinates implementers on outcomes, benefiting all by enabling optimization latitude and preventing congestion collapse, without extracting value from that coordination.",
+    "key_agents": [
+      "IETF/standards_body: sets the RFC specification and maintains it through consensus. Agenda-setter position: their authority is to define the semantic contract. Power: institutional (norm-setting through widespread adoption, not coercive). Exit: implementers can fork or adopt alternative protocols, but exit is costly.",
+      "protocol_implementers (OS vendors, embedded systems, user-space stacks): benefit from outcome latitude. Beneficiary position: they can optimize congestion control, buffer management, hardware acceleration within the semantic bounds. Power: organized (multiple vendors, but coordinated through standards compliance). Exit: mobile (can implement alternative algorithms or protocols), but adoption of new protocol requires ecosystem migration.",
+      "network_operators (ISPs, CDNs, enterprise networks): benefit from outcome latitude to tune for their network conditions. Beneficiary position: can deploy different middlebox strategies without breaking TCP endpoints. Power: institutional (control network path). Exit: constrained (must interoperate with endpoints they do not control; cannot unilaterally change the protocol).",
+      "end_users: benefit indirectly from optimization latitude (faster, more responsive networks). Beneficiary position: receive adaptive performance. Power: powerless (passive consumers of TCP service). Exit: trapped (cannot choose TCP implementation or network path).",
+      "strict_invariance_advocates (excluded): argue exact state-machine replication necessary for safety. Power: powerful (include academic institutions, some regulators). Exit: constrained (their position is incompatible with this reading's authority; they advocate for amendment but do not control standards process).",
+      "middlebox_realism_advocates (excluded): argue RFC authority subordinate to deployed network. Power: moderate (include network operators, researchers). Exit: constrained (excluded from this reading's framing; present in amendments and dispute resolution)."
+    ],
+    "logic_rationale": "Extractiveness is LOW (0.18 at end) because the specification's value flows to all parties: implementers get optimization freedom (no extraction from them), operators get adaptability (no extraction from them), users get performance (no extraction from them), standards body gets authority to set semantic bounds (not extraction, but norm-setting power). There is no party paying for the other's benefit; it is genuine mutual benefit. Suppression is VERY LOW (0.08) because the constraint's persistence depends on voluntary adoption and interoperability validation, not coercive enforcement. Implementers comply because the specification is incentive-compatible (better for them than fragmentation). Theater is MINIMAL (0.05) because the specification's function is real: it actually coordinates distributed systems. Small theater ratio reflects some management overhead (amendments, testing infrastructure, dispute resolution) but little performative activity. Accessibility collapse is HIGH (0.72) because once the outcome-based contract is understood, the alternatives are limited: implementers must choose between the RFC semantics or forking (high cost); operators must choose between interoperability or network isolation (unattractive); users have no choice at all. Resistance is MODERATE (0.42) because strict-invariance advocates and middlebox-realism advocates mount real intellectual and institutional resistance to this reading, published in peer review and standards debates, even though the outcome-based framing is dominant. The measurement series shows extractiveness and suppression rising slightly over 40 years (interval represents 1983–2023), reflecting gradual accumulation of algorithmic variants and testing overhead, but remaining low and stable — the core coordination function has not degraded into extraction.",
+    "directionality_logic": "See perspectival_gap above. All three beneficiary groups sit at beneficiary pole (d ≈ 0.0 to 0.2). Standards body sits near symmetric (d ≈ 0.5): sets rules but does not extract. Excluded strict-invariance and middlebox-realism advocates sit at target pole (d ≈ 0.8 to 1.0) because this reading's existence extracts their epistemic authority — the outcome-based framing is incompatible with their core premises.",
+    "perspectival_gap": "From the implementer, operator, and user seats, this reading is genuine coordination enabling innovation (Rope, high beneficiary d, low χ). From the strict-invariance seat, the same reading is extractive foreclosure of their alternative (the outcome-based framing rules out exact-replication as interoperability strategy). From the middlebox-realism seat, the reading is a false authority claim (subordinates network behavior to specification text). The engine should compute per-seat type: beneficiary seats see Rope; excluded seats see Snare (foreclosure without exit). This divergence is structurally true and is exactly what per-seat classification is designed to surface.",
+    "mandatrophy_analysis": "This reading's founding problem (prevent congestion collapse while enabling innovation) remains live and is actively corroborated by (a) published literature on new TCP variants (BBR, DCTCP), (b) deployment records showing these algorithms in production without global instability, (c) continued IETF amendments to RFC 9293 accommodating new algorithms. The disappearance verdict is world_rearranges: removing the outcome-based specification would force either strict-invariance compliance (massive rewrite, performance loss) or protocol fragmentation (new forks for each optimization approach). The constraint has not resolved its founding problem; it is actively managing it. No mandatrophy is present.",
+    "kernel_context": "This constraint is the optimization-latitude reading of the RFC 9293 TCP specification kernel. The kernel is the persisting commitment: TCP is specified as a protocol. The readings are contested interpretations of what that specification IS: (1) outcome-based semantic contract permitting implementation diversity (THIS reading); (2) prescriptive state machine enforcing exact behavior (strict-invariance reading); (3) subordinate to deployed network reality, not authoritative over it (middlebox-realism reading). Each reading instantiates a different constraint with different beneficiary/victim structures and types. This reading claims Rope (coordination on outcomes, enabling mutual benefit). The strict-invariance reading would claim Scaffold or Tangled Rope (tight behavioral constraints, enforced through compliance testing and amendment pressure). The middlebox-realism reading would claim Snare or Tangled Rope (RFC authority as facade for network-behavior extraction, benefiting deployed middleboxes at the expense of RFC-compliant endpoints). The key structural delta is the referent: WHO or WHAT benefits from this reading? Optimization-latitude reading answers: all parties benefit from the outcome-based contract (implementers, operators, users, standards body). Strict-invariance would answer: the strict-invariance enforcer (perhaps a regulatory body or conservative consortium) benefits from predictability. Middlebox-realism would answer: deployed middlebox population benefits from RFC authority being subordinate to their behavior."
+  },
+  "omegas": [
+    {
+      "id": "outcome_equivalence_sufficiency",
+      "question": "Is outcome-based specification (semantic contract: reliable delivery) sufficient for global interoperability across diverse implementations, or do subtle algorithmic differences create incompatibilities that require prescriptive state-machine specification?",
+      "resolution_mechanism": "Long-term empirical observation of TCP ecosystem: if diverse implementations (BBR, DCTCP, Reno, Cubic, Hybla, etc.) coexist without widespread incompatibilities for 20+ years, outcome-equivalence is sufficient; if incompatibilities accumulate faster than amendment, prescriptive specification would be vindicated.",
+      "impact": "If outcome-equivalence suffices, this reading is Rope (genuine coordination); if it fails, the constraint degrades toward Tangled Rope (perceived coordination masking hidden incompatibilities). If it fails severely, it becomes Piton (specification is performative, real behavior is determined by deployed network).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether outcome contract suffices for interoperability or prescriptive specification is necessary."
+    },
+    {
+      "id": "reading_foreclosure_mutual_exclusivity",
+      "question": "Are the three readings (outcome-based, strict-invariance, middlebox-realism) mutually exclusive within a single implementer's framework, or can an implementer adopt outcome-based optimization WHILE ALSO respecting strict-invariance constraints AND adapting to middlebox reality?",
+      "resolution_mechanism": "Structural analysis of implemented TCP stacks (Linux kernel, QUIC, Windows) to determine if they instantiate one reading or a hybrid. If hybrids are common, readings coexist_with rather than foreclose.",
+      "impact": "If readings coexist, the engine should compute coexists_with relations and allow multiple readings to be simultaneously valid from different organizational seats. If they foreclose, only one reading survives in each implementation context, and the engine should compute Snare-like dynamics (one reading forecloses others).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the three readings of the RFC kernel are logically incompatible or empirically coexistent in deployed systems."
+    },
+    {
+      "id": "authority_subordination_vs_coordination",
+      "question": "Does the IETF's authority to specify TCP rest on genuine coordination power (implementers voluntarily adopt the spec because it benefits them) or on subordination of deployer reality to specification text (implementers are forced to comply by interoperability pressure, not choice)?",
+      "resolution_mechanism": "Empirical: track fork rate and out-of-spec implementations. If implementers freely choose RFC compliance and alternative protocols grow, coordination power is genuine. If implementers are locked in by network effects and forced compliance appears, it shifts toward subordination.",
+      "impact": "If coordination power is genuine, this reading is Rope; if subordination power is real, it is Tangled Rope or Snare. This omega addresses whether the extracted value (behavioral conformance) is voluntary or coerced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether RFC authority derives from genuine coordination or from network-effect lock-in."
+    },
+    {
+      "id": "excluded_voices_structural_necessity",
+      "question": "Are strict-invariance and middlebox-realism voices excluded because their positions are logically incompatible with outcome-based coordination, or because the standards process has institutionally suppressed them despite their logical validity?",
+      "resolution_mechanism": "Genealogy: audit IETF archives for strict-invariance and middlebox-realism proposals. If proposals were rejected on merit (logically undermined by deployed evidence), exclusion is structural. If they were suppressed procedurally or by coalition pressure, exclusion is institutional suppression masquerading as structural.",
+      "impact": "If structural, the excluded voices are genuinely foreclosed and the reading stands. If institutional suppression, the reading may be Snare-like (enforced through governance procedure rather than logical necessity), and re-opening the excluded voices could degrade the constraint's classification.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether excluded voices are logically foreclosed or institutionally suppressed."
+    },
+    {
+      "id": "performance_optimization_boundary",
+      "question": "What is the semantic boundary between outcome-preserving optimization and outcome-altering divergence? At what point does an algorithmic variant (e.g., BBR's model-based approach vs. Reno's loss-based approach) stop being an optimization within semantic bounds and start being a different protocol?",
+      "resolution_mechanism": "Formal specification of the semantic contract: define in machine-readable terms exactly what 'reliable delivery' and 'flow control' MEAN such that algorithmic variants can be verified against them. Absent formal specification, the boundary is informal consensus, which is reversible.",
+      "impact": "If the boundary can be formalized and verified, the outcome-based reading is robust (implementers can certify compliance). If it remains informal, the reading is vulnerable to drift and interpretation disputes, which could degrade it toward Piton (specification becomes performative, actual behavior is determined by deployed network practice rather than RFC authority).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the semantic contract can be formalized or remains informal consensus."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "rfc9293_tcp_specification__strict_invariance_reading",
+      "rfc9293_tcp_specification__middlebox_realism_reading"
+    ],
+    "dual_formulation_note": "RFC 9293 constraint family: three readings of the same kernel (the TCP specification). Each reading instantiates a different constraint with different beneficiary/victim structures, extracted values, and types. The optimization-latitude reading (this story) treats RFC 9293 as outcome-based coordination enabling innovation (Rope, low extraction). The strict-invariance reading treats it as enforced behavioral conformity (Tangled Rope or Scaffold, moderate extraction). The middlebox-realism reading treats it as subordinate to deployed network behavior (Snare, high extraction). Each reading's ε-value is distinct and referent-fixed: each reading assesses the SAME standing arrangement (the RFC specification as deployed in the Internet) but from different framings. The differences in ε, beneficiary/victim, and type are structural, not observational."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.0
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "strict_invariance_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "middlebox_realism_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "outcome_specification_sufficient_for_interoperability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "implementation_latitude_enables_performance_innovation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "outcome_based_semantic_contract",
+    "drift_state": {
+      "moment": "contemporary_multi_algorithm_deployment",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "protocol_implementers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "header": {
+    "constraint_id": "technology_legitimacy_kernel__reliability_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "84f85dff-f893-486a-a33d-222841a85814"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.59,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Technology Legitimacy Kernel: Reliability Primacy Reading",
+    "topic_domain": "energy_policy/climate_mitigation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_operators",
+      "grid_stability_advocates",
+      "incumbent_baseload_producers"
+    ],
+    "victims": [
+      "renewable_energy_developers",
+      "distributed_generation_advocates",
+      "ratepayers_bearing_reliability_costs"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Nuclear power plants operate at 90%+ capacity factors and provide uninterruptible baseload generation. Under the reliability-primacy reading, they are the primary legitimate decarbonization pathway. Operators shape permitting standards, technical codes, and grid-integration rules to favor baseload architectures. They benefit from the legitimacy premium and receive deployment capital preferentially."
+    },
+    {
+      "name": "grid_stability_advocates",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Utilities, grid operators, and grid-reliability engineers who argue that grid stability is the binding constraint on decarbonization. They set technical codes, permitting criteria, and interconnection standards that measure a technology's legitimacy by its dispatchability and baseload capability. They define what counts as grid stability and enforce the measurement."
+    },
+    {
+      "name": "renewable_energy_developers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Solar and wind developers must either accept lower legitimacy status (requiring costly battery storage to qualify as baseload-equivalent) or exit the climate-mitigation framing entirely. Their projects face permitting delays, grid-connection standards that penalize variability, and reduced access to capital streams designated for 'legitimate' technologies. Storage costs are born by developers or passed to consumers."
+    },
+    {
+      "name": "distributed_generation_advocates",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Rooftop solar, microgrids, and demand-response advocates who argue for decentralized resilience instead of centralized baseload. They cannot participate in the reliability-primacy framing without accepting its architectural premises. Their legitimacy requires proving their systems stabilize grids; the rules are designed assuming centralized control. Professional identity fuses with advocacy for distributed models, making exit from the constraint conceptually incoherent."
+    },
+    {
+      "name": "ratepayers_bearing_reliability_costs",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "End-use consumers who pay grid bills. As the system requires more expensive storage to accommodate intermittent renewables (per the reliability-primacy rule), storage costs are recovered through rates. Ratepayers absorb the cost of whatever architectural commitment the reading mandates. They cannot exit the grid or renegotiate the technical standards underlying their bills."
+    },
+    {
+      "name": "storage_technology_manufacturers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Battery and storage manufacturers benefit indirectly: the reliability-primacy reading makes storage a necessary cost to legitimize intermittent renewables. They profit from the architectural requirement without bearing the cost visibility. Their technology becomes a compliance tool rather than an option."
+    },
+    {
+      "name": "climate_scientists_and_decarbonization_models",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Models showing that rapid renewable deployment (without full baseload substitution) could meet climate targets on 1.5°C pathways are treated as non-authoritative under this reading's framing. The constraint privileges grid-stability models over climate-carbon-budget models. The analytical seat observes the trade-off between decarbonization speed and baseload stability."
+    },
+    {
+      "name": "grid_decarbonization_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Regulatory bodies that set legitimacy criteria for climate-mitigation technologies via grid codes, interconnection standards, and capital allocation. They operationalize the reliability-primacy reading in rule-making. Their enforcement machinery certifies which technologies count as legitimate, shaping investment flows and deployment patterns."
+    },
+    {
+      "name": "competing_climate_readings",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Proponents of velocity-primacy (speed of deployment) and precautionary readings (bounded worst-case risk) hold incompatible legitimacy criteria. Velocity-primacy argues renewables should be deployed as fast as possible despite intermittency; precautionary reading prioritizes reversibility and bounded legacy. All three readings claim the same kernel (technology legitimacy for climate) but use mutually exclusive measurement criteria. Excluded from THIS reading's operational standards."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the grid stability problem: establishes a unified technical criterion (dispatchability and baseload capability) that allows grid operators, utilities, and technology developers to coordinate on infrastructure investment without renegotiating stability requirements technology-by-technology. Provides a common measurement frame for what counts as a legitimate climate solution.",
+    "transfer_function": "Transfers deployment capital, permitting priority, and grid-connection authority from variable renewable developers toward baseload sources (primarily nuclear) and storage providers. Transfers reliability costs from grid operators onto ratepayers in the form of higher bills for grid-stabilization infrastructure. Transfers legitimacy status from intermittent renewables (lower status, requires costly compliance) to baseload technologies (higher status, presumptively authorized).",
+    "absent_voices": "Climate scientists emphasizing decarbonization velocity; engineers advocating demand-response and microgrids; low-income ratepayers who would otherwise renegotiate grid architecture; communities bearing long-term nuclear waste storage costs; renewable developers who view baseload requirements as architectural lock-in rather than technical necessity. None of these parties set the legitimacy criteria.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading disappeared—if technology legitimacy were uncoupled from baseload capability—capital allocation would shift within months to projects meeting velocity or precautionary criteria instead. Grid operating standards would be rewritten. Nuclear plant economics would worsen (no legitimacy premium). Renewables would deploy faster (lower storage requirements). The entire decarbonization architecture would reorganize around whichever reading replaced reliability-primacy.",
+    "founding_problem": "Early decarbonization pathways assumed variable renewables could substitute for fossil baseload without additional grid stability infrastructure. This created 'duck curve' grid instability, blackout risk, and plausibility crises for renewable-dominated grids. The reliability-primacy reading was established to ensure decarbonization does not produce grid fragility.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Grid operators and utility engineers attest the founding problem remains live, citing ongoing integration challenges in high-renewable grids. Climate modelers and renewable-deployment advocates attest the problem is substantially solved through storage cost decreases, demand flexibility, and transmission expansion—and that the reading persists to protect baseload incumbency rather than grid safety. Regulatory filings and grid-stability studies from operators show increasing renewable penetration without cascading failures; independent cost analyses show storage costs now competitive with nuclear."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The reliability-primacy reading defines technological legitimacy for climate mitigation by a single criterion: dispatchable, baseload-capable generation. Under this reading, nuclear power is the primary legitimate decarbonization pathway due to its 90%+ capacity factor and dispatchability; intermittent renewables must pay for battery storage to 'qualify' as baseload-equivalent; and ratepayers bear the cost of whatever grid stability architecture the reading mandates. This constraint is ONE of three competing readings of the same kernel (technology legitimacy for climate mitigation). The other readings—velocity-primacy (speed of deployment) and precautionary (reversibility and bounded legacy risk)—would classify technologies differently and allocate capital to different sources. All three readings claim authority over the same legitimacy question but use mutually exclusive measurement criteria. The claim and metrics are independent: the constraint is CLAIMED as tangled_rope (genuine coordination problem solved: grid stability + asymmetric extraction imposed via legitimacy gatekeeping) while the authored metrics describe a constraint whose extraction is increasing over time (0.54 → 0.68), whose suppression of alternative readings is rising (0.58 → 0.72), and whose theater_ratio is creeping upward (0.28 → 0.41)—indicators that the coordination function is being outweighed by gatekeeping function.",
+    "key_agents": [
+      "Grid stability advocates (institutional): set and enforce the reliability-primacy criterion through grid codes and permitting standards; agenda-setter",
+      "Nuclear operators (institutional): primary beneficiaries under the reading; profit from legitimacy premium and preferential capital access",
+      "Renewable energy developers (organized): pay through reduced legitimacy, higher storage-compliance costs, delayed permitting; constrained exit",
+      "Distributed generation advocates (moderate): identity-locked to incompatible architectural vision; excluded from the reading's operational standards",
+      "Ratepayers (powerless): trapped; absorb reliability costs through grid bills",
+      "Storage manufacturers (powerful): indirect beneficiaries; made necessary by the reading's architectural requirement",
+      "Competing climate readings (global): velocity-primacy and precautionary readings hold the kernel jointly with reliability-primacy; excluded from this reading's operational authority"
+    ],
+    "logic_rationale": "Extractiveness is measured at 0.68 because the reading gates legitimacy on a single criterion (baseload capability) that benefits nuclear and penalizes renewables, independent of actual carbon reduction or climate benefit. The criterion is decoupled from marginal climate utility: a new geothermal plant with lower capacity factor might reduce emissions faster than waiting for nuclear construction, but counts as less legitimate under the reading. Suppression is high (0.72) and rising because the reading's persistence requires active enforcement against velocity-primacy and precautionary competing readings—grid codes must exclude them, capital-allocation mechanisms must overweight baseload, technical standards must penalize variability. Theater rises (0.28 → 0.41) because early in the interval grid stability was a real coordination constraint; as battery costs fall and demand-response scales, the stability rationale becomes more theatrical cover for baseload preference. The measurement series models a tangled rope slowly metastasizing toward snare: genuine coordination function (grid stability) remains, but extraction grows as the reading's authority hardens and alternatives are suppressed. Accessibility collapse sits at 0.61: renewable developers perceive alternatives (velocity-primacy, precautionary readings) but these alternatives are administratively foreclosed within the regulatory frame; the reading's authority prevents exit to a different legitimacy criterion.",
+    "perspectival_gap": "Grid operators experience the reading as neutral technical governance; renewable developers experience it as gatekeeping; ratepayers experience it as cost with no negotiation. Each seat computes a different type from the same structural constraint.",
+    "directionality_logic": "Nuclear operators: d ≈ 0.15 (beneficiary; high power; arbitrage exit; gains from legitimacy premium and capital allocation). Grid-stability advocates: d ≈ 0.25 (beneficiary; institutional; analytical exit; they set and administer the reading, collecting authority and standard-setting power). Renewable developers: d ≈ 0.78 (target; organized but weaker than utilities; constrained exit; pay through storage compliance and delayed permitting; cannot renegotiate the criterion). Ratepayers: d ≈ 0.88 (most-extracted; powerless; trapped; bear reliability costs with zero participation in criterion-setting). Distributed advocates: d ≈ 0.75 (target; identity-locked exit; their professional coherence depends on rejecting the reading's architectural premises; exit means abandoning the decarbonization mission as they understand it). Effectiveness extraction is amplified for trapped and identity-locked targets; beneficiaries with arbitrage options see effective extraction inverted to subsidy.",
+    "mandatrophy_analysis": "The constraint exhibits mandatrophy risk: the founding problem (grid instability from high renewable penetration) is substantially solved by falling battery costs and improved demand-response, yet the reliability-primacy reading persists because it has become institutionalized. Utilities have rewritten grid codes around baseload assumptions; regulatory capital-allocation mechanisms favor nuclear; competitive rules exclude competing readings. The coordination function (grid stability) no longer justifies the extraction (legitimacy gatekeeping), but enforcement has hardened. This is classic tangled-rope → piton drift: the coordination rationale is increasingly theatrical (theater_ratio rising 0.28 → 0.41), while suppression of alternatives hardens (0.58 → 0.72). The measurement series captures a constraint that solved a real problem but now persists through institutional inertia. The three-reading contest (reliability-primacy vs. velocity-primacy vs. precautionary) means that the 'founding problem solved' verdict is itself contested—grid operators attest stability is still fragile; modelers attest stability is empirically robust. This contestation is modeled in the omegas.",
+    "kernel_context": "This constraint instantiates the RELIABILITY-PRIMACY READING of the contested kernel: 'technology legitimacy for climate mitigation.' The kernel is a three-way contest. RELIABILITY-PRIMACY READING (this story): a technology is legitimate if and only if it provides dispatchable, baseload-capable generation. Defines nuclear as primary legitimate pathway. VELOCITY-PRIMACY READING (sibling, separate constraint): a technology is legitimate if and only if it can be deployed at scale within the remaining carbon budget timeline (2030/2050 targets). Would rank fast-deployable renewables higher than multi-decadal nuclear projects. PRECAUTIONARY READING (sibling, separate constraint): a technology is legitimate if and only if its worst-case failure modes and legacy costs are bounded and reversible within a generation. Would rank distributed, modular technologies higher; would penalize multi-century nuclear waste risk. All three readings claim the same kernel and the same legitimacy question. They are not different measurements of the same thing—they are different normative claims about what counts as legitimate, with different beneficiary/victim structures and different technology portfolios. The kernel is FIXED (the legitimacy question is the same across all three readings) but the readings produce structurally distinct constraints (different epsilon, different beneficiaries, different extraction mechanisms). The readings coexist in policy debate but are not mutually satisfiable—you cannot simultaneously require baseload capability and reward velocity and bound legacy risk without accepting storage costs (reliability-primacy) or slower nuclear (velocity-primacy) or ruling out nuclear (precautionary). The contest is live in jurisdictions currently debating climate policy; each reading has institutional backing and advocacy coalitions."
+  },
+  "omegas": [
+    {
+      "id": "foundational_problem_persistence",
+      "question": "Is grid instability from high renewable penetration still a binding constraint on decarbonization, or has it been substantially solved by falling battery costs and improved demand-response?",
+      "resolution_mechanism": "Comparative grid-stability analysis across regions with high renewable penetration (Denmark, Costa Rica, Hawaii, parts of California). Measure: cascading failures, reserve margin requirements, frequency-regulation costs over time. If failure rates stay low and reserve margins decline while renewable fraction increases, the binding constraint has moved.",
+      "impact": "If the founding problem is solved, the reliability-primacy reading transitions from justified coordination constraint to institutionalized gatekeeping (mandatrophy). The extracted value persists but is no longer justified by stability necessity. Type classification would shift from tangled_rope (coordination + asymmetric extraction) toward piton (atrophied function, theatrical maintenance).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether grid instability remains the binding constraint on renewable deployment."
+    },
+    {
+      "id": "kernel_reading_mutual_exclusivity",
+      "question": "Can a single institutional framework hold multiple sibling readings simultaneously, or does embracing one reading logically foreclose the others?",
+      "resolution_mechanism": "Policy jurisdiction that attempts to implement two readings jointly (e.g., require baseload capability AND reward velocity); measure whether the dual implementation creates internal contradictions or requires auxiliary trades (e.g., higher storage costs, longer timelines). Alternatively, analyze the logical structure of the three readings' core axioms: do they share incompatible factual premises or incompatible values?",
+      "impact": "If mutual exclusivity is logical (not just institutional competition), the readings coexist_with each other in a fundamental way—they are live normative disagreements without Archimedean resolution point. The constraint story would carry an omega documenting that the KERNEL itself is contested not just empirically but normatively. If mutual exclusivity is only institutional (could be jointly satisfied with sufficient capital), the contest is resolvable by removing gatekeeping constraints and letting multiple readings operate.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three readings are logically incompatible or merely institutionally competitive."
+    },
+    {
+      "id": "legitimacy_criterion_independence_from_climate_utility",
+      "question": "Is the reliability-primacy criterion (dispatchability + baseload capability) actually necessary for climate mitigation, or is it an architectural preference that benefits certain incumbent technologies?",
+      "resolution_mechanism": "Compare: (a) climate models using optimized technology mix (unconstrained baseload requirement) vs. (b) climate models constrained to baseload-only technologies. If both meet 1.5°C target with comparable total cost and timeline, the criterion is architectural preference. If baseload constraint raises cost or extends timeline significantly, it is justified.",
+      "impact": "If independence is confirmed (baseload criterion is preference not necessity), the constraint is exposed as false-summit mountain: claimed natural (grid stability necessity) but actually constructed (technology gatekeeping). The beneficiary structure (nuclear operators, baseload incumbents) becomes the causal mechanism. Type would shift from tangled_rope toward snare (extraction riding on false coordination story).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dispatchable baseload is technically necessary or architecturally preferred."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the suppression of competing readings (velocity-primacy, precautionary) structural (regulatory barriers, capital gatekeeping) or internalized (renewable developers and climate advocates accept baseload premise as natural/necessary)?",
+      "resolution_mechanism": "Post-reading suppression trajectory: if a jurisdiction removes regulatory barriers (opens capital to velocity-aligned technologies, stops penalizing intermittency in grid codes), measure whether competing readings mobilize advocacy and investment. If suppression persists after removal of structural barriers, it is partly internalized (the reading has become common sense to some stakeholders).",
+      "impact": "If suppression is structural, removing barriers would rapidly mobilize competing readings and rebalance legitimacy allocation. If suppression is internalized, the constraint carries its gatekeeping function even after institutional removal—renewable developers would carry 'reliability primacy' reasoning with them into new institutional frames. This informs the cost and sustainability of alternative policy approaches.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression of competing readings."
+    },
+    {
+      "id": "kernel_codification_status_ambiguity",
+      "question": "Is the legitimacy kernel 'technology must be X for climate mitigation' a formally written rule (grid codes, climate policy statutes) or an implicit operational standard (how capital allocation and permitting actually work)?",
+      "resolution_mechanism": "Inventory: (a) explicitly written criteria (grid codes, interconnection standards, capital-allocation policy text) naming dispatchability/baseload as requirements; (b) implicit criteria observable only in permitting decisions and capital flows. If the criterion appears only implicitly, it is harder to reform and carries higher suppression.",
+      "impact": "Explicit codification makes the reading visible and contestable—alternative readings can point to the written rule and propose amendment. Implicit codification is harder to challenge because it appears as 'how things are done' rather than a contestable criterion. The legibility of the kernel affects the feasibility of competing readings mobilizing.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the reliability-primacy criterion is formally written or implicit operational practice."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "technology_legitimacy_kernel__velocity_primacy_reading",
+      "technology_legitimacy_kernel__precautionary_reading"
+    ],
+    "dual_formulation_note": "The technology_legitimacy_kernel spawns three mutually competing constraint stories, each instantiating a different reading of the same kernel. The reliability-primacy reading (this story) centers on dispatchability and baseload capability as the legitimacy criterion. The velocity-primacy reading centers on deployment speed within carbon budget timelines. The precautionary reading centers on bounded worst-case risk and reversibility. All three share the same kernel (what makes a technology legitimate for climate mitigation) but produce different beneficiary/victim structures and different extraction mechanisms. The three readings coexist in policy debate and institutional competition; none has achieved hegemonic consensus. Each reading's persistence depends partly on suppressing the others' operational authority. Network links represent the structural mutual pressure: reliability-primacy's emphasis on baseload delays velocity-primacy's fast-deployment agenda; precautionary reading's risk-bounds create pressure against both baseload incumbency and speed-at-risk. Constraint family decomposition follows OQ-26 ε-invariance: each reading has a distinct ε-referent (the standing arrangement the reading evaluates), distinct beneficiary/victim sets, and distinct type. Linking them via network.affects_constraints enables the engine to detect when one reading's strengthening suppresses others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "gain_flow": "nuclear_operators",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "baseload_stability_framework",
+    "drift_state": {
+      "moment": "battery_cost_breakthrough_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "velocity_primacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "precautionary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dispatchable_baseload_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "stability_primacy_over_velocity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

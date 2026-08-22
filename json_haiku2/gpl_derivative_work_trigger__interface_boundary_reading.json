@@ -1,0 +1,315 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__interface_boundary_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "1e0e9d1d-5977-415c-9823-7cb242d4f983"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.72,
+    "claimed_type": "scaffold",
+    "human_readable": "GPL Derivative Work Trigger: Clean API Boundary Reading",
+    "topic_domain": "legal/licensing/open-source",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "ecosystem_integrators",
+      "proprietary_downstream_vendors"
+    ],
+    "victims": [
+      "gpl_copyleft_advocates",
+      "open_source_users_expecting_full_disclosure"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ecosystem_integrators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Companies like Google (Android), embedded system vendors, and firmware developers that build ecosystems combining GPL-licensed components (Linux kernel, GPL drivers) with proprietary layers (HAL, firmware, closed applications). They benefit from the interface-boundary reading because it permits them to satisfy GPL obligations at the boundary (releasing kernel + drivers) while keeping their proprietary integration layer closed. This reading is their de facto license compliance strategy. They have arbitrage-grade exit: if the interface-boundary reading were foreclosed, they could switch to non-GPL kernels or fully proprietary stacks, though at significant switching cost."
+    },
+    {
+      "name": "proprietary_downstream_vendors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Software and hardware companies shipping products that use GPL libraries at clean boundaries (Qt, Apache, web-server stacks). They benefit because they can use GPL components without disclosing their proprietary code. They have mobile exit: they can substitute non-GPL libraries, pay for proprietary licenses, or rewrite components, though at development cost. Their beneficiary status is stable across jurisdictions because the interface-boundary reading is de facto global in practice."
+    },
+    {
+      "name": "gpl_copyleft_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Free Software Foundation, GPL stewards, open-source governance bodies, and copyleft-philosophy advocates. They hold the GPL as a tool to preserve software commons and ensure full-stack source disclosure. The interface-boundary reading contradicts their stated intent: they argue that tight integration with GPL components should trigger full copyleft regardless of API formalism. They bear the cost of defending the broad-copyleft reading in litigation and lobbying. Their exit is constrained: they are locked into the copyleft mandate by their organizational mission; they cannot easily switch to a different license philosophy without betraying their founding principles."
+    },
+    {
+      "name": "open_source_users_expecting_full_disclosure",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "End users of devices and software incorporating GPL components who reasonably expect, under the GPL's spirit and stated terms, that the entire work will be source-disclosed. Examples: Android phone users, IoT device owners, embedded Linux system users. They are trapped: they depend on products using the GPL, but the interface-boundary reading permits vendors to keep user-facing code proprietary. They have no exit: they cannot easily choose alternative products, and they have no say in license interpretation decisions."
+    },
+    {
+      "name": "courts_and_legal_arbiters",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts, arbitration bodies, and legal authorities in different jurisdictions (US Federal Courts, German BGH, French courts, EU authorities) that adjudicate GPL license disputes. They set which reading governs through precedent. The interface-boundary reading is their construction: they must interpret the GPL text in context of specific cases (e.g., Android litigation, embedded firmware disputes). Different jurisdictions have different precedents and standards. They have analytical exit: their role is to apply law, not to choose it; they are constrained by precedent and legal doctrine."
+    },
+    {
+      "name": "gpl_license_stewards",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "FSF, GPL maintainers, and open-source governance bodies. They author and maintain the GPL text and provide official guidance. Under the current reading, they are observers: courts enforce the interface-boundary reading despite FSF's stated preference for broad copyleft. FSF guidance (published interpretations) favors the broad reading, but courts and vendors treat it as advisory, not canonical. Their analytical exit is limited: they can revise the GPL (GPL v4), but that requires adoption by courts and vendors, which is not guaranteed."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a legal framework for modular software architecture with mixed licensing: GPL-licensed components can be integrated with proprietary code at clean API boundaries without forcing the entire stack into a single license. Solves the problem of software composition across license regimes—how to build ecosystems combining open and proprietary code.",
+    "transfer_function": "Transfers legal risk and compliance burden from ecosystem integrators and proprietary vendors to GPL copyleft advocates and end users. Integrators and vendors gain freedom to keep their code closed while using GPL components; advocates and users lose the ability to require full-stack source disclosure through GPL propagation. The transfer is enforced through the reading's standing interpretation—vendors adopt it as their license compliance strategy.",
+    "absent_voices": "Technical standardization bodies (IEEE, ISO, W3C, IETF) that could formally define 'clean API boundary' are largely absent from the dispute. Device manufacturers operating the tightest GPL/proprietary boundaries (firmware developers, embedded systems integrators) are present as defendants in litigation but not as equal participants in the interpretive conversation. Downstream users are structurally excluded: they are not parties to license negotiations and have no formal voice in how the GPL is interpreted.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the interface-boundary reading were invalidated overnight (e.g., by a broad-copyleft court ruling or GPL v4 revision), major technology ecosystems would require immediate redesign. Android and embedded Linux stacks would face the choice: disclose proprietary firmware/integration layers or remove GPL components. Many vendors would choose non-GPL kernels or full proprietary alternatives. The modular architecture that currently depends on the interface-boundary reading would fracture. Current business models built on this reading would become unviable without relicensing or redesign.",
+    "founding_problem": "GPL v2 (1991) and v3 (2007) do not formally define the boundary between derivative works (triggering copyleft obligations) and aggregations (remaining independent licenses). Early GPL enforcement focused on direct source modification. As embedded systems, dynamic linking, and complex integration architectures became standard, the ambiguity sharpened: does linking or integration with a GPL component across a clean API boundary constitute derivation (triggering full copyleft) or aggregation (preserving independence)?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Both FSF (GPL v3 preamble, official guidance) and major technology companies (Android developers, embedded vendors) acknowledge the ambiguity. Academic analyses (law review articles, GPL expert witnesses in litigation) confirm the text is structurally under-determined. Judicial opinions (German BGH cases, U.S. cases citing GPL, European authorities) document the unresolved status and different interpretations applied in different jurisdictions."
+  },
+  "interval": {
+    "start": 1991,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.16
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2007,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the interface-boundary reading of GPL derivative-work trigger: the legal and technical claim that clean API boundaries between GPL-licensed and proprietary software components constitute non-derivative aggregation even under tight runtime coupling. The reading emerges as a de facto standard in major technology ecosystems (Android, embedded Linux, proprietary firmware). It is ONE of three competing readings of the GPL kernel—each reading defines a different constraint with a different beneficiary/victim structure and different persistence mechanism. The broad-copyleft reading holds that any substantial linking propagates GPL obligations; the narrow-linking-permissive reading treats linking itself as neutral aggregation and only source modification as triggering copyleft. This constraint (interface-boundary) sits between them: API cleanliness is the trigger, not linking per se and not modification per se.",
+    "key_agents": [
+      "Ecosystem integrators (Android, embedded manufacturers): benefit from interface-boundary reading; defend clean-API doctrine",
+      "Proprietary downstream vendors: benefit from interface-boundary reading; adopt it as license compliance strategy",
+      "GPL copyleft advocates (FSF, open-source governance): bear the cost; argue the broad reading captures the GPL's intent",
+      "Open-source users expecting full disclosure: trapped; their reasonable expectations are violated by the reading",
+      "Courts and arbitration bodies: agenda-setters; their rulings instantiate which reading governs in jurisdiction-specific cases"
+    ],
+    "logic_rationale": "This is authored as a SCAFFOLD because the interface-boundary reading is structurally a transitional accommodation: it enables current modular architectures but carries a sunset condition (either the broad-copyleft reading will eventually win through case law and license revision, or the narrow-linking-permissive reading will crystallize as the new consensus). The reading is not self-justifying; it is justified by a specific historical moment—mixed proprietary/open ecosystems—and will not survive the next legal clarification or license revision. Extractiveness is moderate (0.38 at interval end) because the beneficiaries (ecosystem integrators, proprietary vendors) do extract legal optionality by avoiding full-stack GPL obligations, but the extraction is bounded: they must still comply with GPL terms for the components they use, and the arrangement does solve a genuine technical problem (modular architecture). Suppression is low (0.22) because copyleft advocates can and do argue the alternative reading; litigation is open and hostile. Theater is low (0.18) because the justification ('clean API boundaries preserve aggregation') is genuinely applied, not purely performative, though it is applied selectively (a vendor can call their boundary 'clean' even when the proprietary layer tightly couples to GPL internals). The measurement series show gradual accumulation of extractiveness from 1991–2007 (the embedded Linux explosion) and slower growth 2007–2025 as the interface-boundary reading becomes entrenched through practice despite FSF's stated broad-copyleft preference. Theater_ratio rises slowly because vendors gradually invent 'API cleanliness' justifications for designs that are technically or legally questionable, but the core technical claim (clean boundaries enable modular licensing) remains honest.",
+    "perspectival_gap": "The beneficiary seats (ecosystem integrators, proprietary vendors) experience this reading as stabilizing, enabling their business model. From their seat, the interface-boundary reading is a clarification that resolves ambiguity in their favor. The payer seats (copyleft advocates, end users) experience the same reading as a betrayal: the GPL was meant to propagate; the interface-boundary reading permits vendors to nullify GPL's primary covenant (source disclosure). The courts, as agenda-setters, occupy a different seat altogether: they are not beneficiaries or payers but adjudicators who must decide which reading is 'correct' under the text. The engine will compute different per-seat types: from the integrator's seat, this may compute as a rope (solving genuine coordination); from the advocate's seat, as a snare (extracting legal freedom while suppressing the copyleft alternative). The claimed type (scaffold) asserts the structural fact that the reading is transitional, not a permanent settlement.",
+    "directionality_logic": "Ecosystem integrators and proprietary vendors are beneficiaries (d near 0.0): they gain legal optionality and freedom to keep their stacks closed-source. Copyleft advocates bear the cost (d near 1.0): their ability to enforce full-stack disclosure is curtailed, and they must continuously defend the broad reading in litigation and governance forums. End users are victims of a different order (d near 1.0): they are trapped in the reading's outcome without having authored it or chosen it; their reasonable expectation of transparency is violated. Courts are agenda-setters (power=institutional, exit=analytical): they set the reading through adjudication. No beneficiary has 'mobile' exit here because all exit routes converge on the same reading: a vendor cannot easily abandon the interface-boundary interpretation without redesigning their entire product. No payer has arbitrage-grade exit because the reading is globally entrenched in major ecosystems; a single advocate cannot switch to a different reading without litigation or regulatory intervention.",
+    "mandatrophy_analysis": "The founding problem (GPL ambiguity on derivatives) is live—courts and companies still dispute it. The interface-boundary reading persists because it serves the current epoch's technology architecture (mixed proprietary/open ecosystems, embedded systems with firmware/driver boundaries). However, the reading is not self-justifying as a permanent settlement: it is a compromise that benefits one party (vendors) at the cost of another (advocates). The classification as SCAFFOLD captures this: the reading solves a real problem (how to modularize with mixed licenses) but is not a stable equilibrium. Either the next license revision will explicitly close or open the boundary (invalidating the reading's force), or case law will accumulate enough precedent to settle the question canonically. The mandatrophy signal is weak but present: the reading is maintained through vendor practice and selective enforcement, not through universal acceptance of its justice.",
+    "kernel_context": "This constraint instantiates the INTERFACE_BOUNDARY_READING of the GPL_DERIVATIVE_WORK_TRIGGER kernel. The kernel is the GPL v2/v3 text's under-determined boundary between derivative works (triggering copyleft) and aggregations (remaining independent). The sibling readings are: (1) BROAD_COPYLEFT_READING (linking and substantial coupling = derivation), (2) NARROW_LINKING_PERMISSIVE_READING (only source modification = derivation). These three readings coexist in contemporary open-source governance: different jurisdictions, companies, and factions hold different readings as canon. The interface-boundary reading is the de facto standard in industry but is challenged by FSF-affiliated actors who hold the broad reading. No single framework has yet unified all three readings into a canonical settlement—they remain live, contested interpretations of the same GPL text."
+  },
+  "omegas": [
+    {
+      "id": "api_boundary_formalism",
+      "question": "What makes an API boundary 'clean' enough to constitute aggregation rather than derivation? No formal definition exists; vendors, lawyers, and courts apply different standards.",
+      "resolution_mechanism": "A license revision or authoritative court ruling defining 'clean boundary' formally (e.g., requiring IDL specs, defined ABI, no private-header access). Or technical standardization bodies (ISO, W3C, IETF) establishing formal API boundary criteria.",
+      "impact": "If boundaries are formalized strictly, fewer integrations qualify as aggregation, and the broad-copyleft reading gains ground. If formalized permissively, the interface-boundary reading is strengthened as standard.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The absence of formal definition for 'clean API boundary' is the reading's structural vulnerability."
+    },
+    {
+      "id": "intent_vs_text_gpl_interpretation",
+      "question": "Does the GPL's canonical intent (FSF's stated goal of full-stack copyleft) override the text's ambiguity, or does the text's ambiguity permit the interface-boundary reading as a valid interpretation?",
+      "resolution_mechanism": "GPL v4 license revision clarifying derivative-work definition. Or accumulated case law establishing whether intent or text governs in specific jurisdictions.",
+      "impact": "If intent governs, the broad-copyleft reading becomes canonical and the interface-boundary reading is overridden. If text governs, the interface-boundary reading persists as a legitimate interpretation until the text is clarified.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The hermeneutic question of whether GPL interpretation privileges FSF intent or textual ambiguity."
+    },
+    {
+      "id": "tight_coupling_as_derivative_trigger",
+      "question": "Does tight runtime coupling (deep function calls, shared memory, intimate internal-API use) across an API boundary constitute practical derivation even if the formal interface is clean?",
+      "resolution_mechanism": "Case law establishing thresholds for 'tight coupling' (e.g., German BGH precedent on embedded systems, U.S. CFAA derivative-work standards). Or technical analysis of specific products (Android, firmware stacks) establishing whether their coupling depth violates the spirit of the GPL.",
+      "impact": "If tight coupling overrides formal API cleanliness, the broad-copyleft reading gains ground and the interface-boundary reading is limited to loosely-coupled aggregations. If coupling is irrelevant to the copyleft question, the interface-boundary reading persists regardless of coupling depth.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The empirical question of whether technical coupling is a relevant copyleft trigger."
+    },
+    {
+      "id": "reading_stability_vs_ecosystem_dependence",
+      "question": "The interface-boundary reading is entrenched in major ecosystems (Android, embedded Linux). If the reading is invalidated by new case law or license revision, how many deployed products become non-compliant?",
+      "resolution_mechanism": "A hypothetical broad-copyleft court ruling followed by empirical measurement of vendor compliance: how many products would be forced to disclose or redesign?",
+      "impact": "If massive compliance disruption would result, courts and license stewards have incentive to preserve the reading despite FSF preference for broad copyleft. If minimal disruption, the reading is more vulnerable to override.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The economic and technical path-dependence that sustains the reading despite contrary FSF intent."
+    },
+    {
+      "id": "committer_kernel_reading_instability",
+      "question": "The interface-boundary reading exists BECAUSE the GPL text is ambiguous. If one of the sibling readings becomes dominant through case law or license revision, this reading becomes either canonical (integrated into the settled text) or foreclosed (ruled out). Which outcome is structurally likely?",
+      "resolution_mechanism": "Historical trend analysis: GPL v3 revision (2007) attempted to clarify but left the ambiguity partially unresolved. Next license revision (GPL v4 or successor) will either formalize the interface-boundary reading or foreclose it. Case law accumulation may stabilize one reading before license revision.",
+      "impact": "If the reading is foreclosed, this constraint becomes a zombie—maintained by practice but contradicted by canonical authority. If canonicalized, the reading transitions from SCAFFOLD to ROPE (a permanent coordination mechanism). If another reading (broad or narrow) becomes dominant, this reading's extractive benefits are nullified.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The kernel-reading lifecycle question: will the interface-boundary reading persist, be canonicalized, or be foreclosed?"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_derivative_work_trigger__broad_copyleft_reading",
+      "gpl_derivative_work_trigger__narrow_linking_permissive_reading"
+    ],
+    "dual_formulation_note": "The GPL derivative-work trigger decomposes into three structurally distinct constraints, one per reading of the ambiguous GPL text. The interface-boundary reading (this constraint) sits between the broad-copyleft reading (tightest interpretation, highest extraction from vendors) and the narrow-linking-permissive reading (most permissive, lowest extraction). All three readings share the same referent (the GPL text) but instantiate different ε values, different beneficiary/victim structures, and different persistence mechanisms. They form a constraint family linked by network.affects_constraints. Each reading competes for canonical status in different jurisdictions and governance forums."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "broad_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "narrow_linking_permissive_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "api_boundary_suffices_for_aggregation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "technical_clean_boundary_gates_copyleft",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "gpl_text_as_written_v2_v3",
+    "drift_state": {
+      "moment": "contemporary_embedded_linux_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "ecosystem_integrators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

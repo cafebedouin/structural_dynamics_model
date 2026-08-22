@@ -1,0 +1,390 @@
+{
+  "header": {
+    "constraint_id": "animal_status__welfare_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "f4aa1ff3-bed1-429a-b960-bb8750bf0d65",
+    "created_at": "2026-06-12T14:23:47Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.62,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Animal Sentience with Instrumental Use Exemption (Welfare Reading)",
+    "topic_domain": "applied_ethics/legal_philosophy/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "animal_users",
+      "welfare_enforcement_bodies"
+    ],
+    "victims": [
+      "farmed_animals",
+      "experimental_animals",
+      "entertainment_animals"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "farmed_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Sentient beings bred, raised, and killed for food production. Their interests in avoiding pain, maintaining social bonds (separated at birth or regularly), and expressing natural behaviors (grazing, roaming, social hierarchies) are acknowledged in the welfare reading but systematically overridden through confinement, transportation, and slaughter. They bear the direct costs of animal agriculture without voice in the use-justification calculation. Exit is impossible — the constraint defines their entire existence as a resource."
+    },
+    {
+      "name": "experimental_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Sentient beings used in laboratory research for medical, pharmaceutical, cosmetic, and behavioral science purposes. The welfare reading acknowledges their capacity for pain and distress but authorizes suffering when institutional review boards determine the expected human benefit justifies it. They have no representation in the benefit calculation; their suffering is a cost authorized by others' judgment of necessity. Exit from research protocols is impossible by definition."
+    },
+    {
+      "name": "entertainment_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Sentient beings confined and trained for human amusement in zoos, circuses, rodeos, racing, and performance. Their interests in natural behavior, autonomy, and freedom of movement are constrained by enclosure and training regimes. Welfare rules govern the style of constraint (minimum enclosure size, training methods) but the fact of constraint is non-negotiable. Confinement persists throughout their biological lifespan."
+    },
+    {
+      "name": "animal_users",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Agricultural producers, pharmaceutical and cosmetic companies, research institutions, zoos, entertainment operators, and other industries that extract economic value from animal bodies and labor. They set the boundaries of permissible use by determining what counts as 'necessary' or 'justified' — the exemption that allows instrumental use under the welfare reading. They benefit from a framework that acknowledges animal sentience (preventing moral blank-checks and abolitionist pressure) while authorizing continued use under welfare constraints. They operate within welfare rules but do not operate under them — the rules constrain their methods, not their ability to use animals."
+    },
+    {
+      "name": "welfare_enforcement_bodies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Regulatory agencies, inspection authorities, and non-profit animal welfare organizations that administer and enforce welfare standards. They derive institutional authority and operational budgets from governing the use-permissibility boundary. They set inspection standards, issue certifications, and manage enforcement priorities. They benefit from the welfare framework by occupying a governance niche that would not exist if animals had full rights (abolition) or no standing (property). They enforce welfare constraints but do not question the exemption itself."
+    },
+    {
+      "name": "individual_consumers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Consumers of animal-derived products (meat, dairy, eggs, leather, cosmetics, entertainment, medicine). They benefit from access to these products at prices justified by the welfare exemption — production costs are lower when welfare standards are regulatory minima rather than market-driven. They have some choice to consume alternatives but face cultural, economic, and convenience constraints on exit. They do not directly set welfare rules but benefit from the framework that makes such products available."
+    },
+    {
+      "name": "abolitionist_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Animal rights advocates, liberation organizations, and philosophers who argue that sentience entails prohibition of instrumental use, not merely welfare constraints. They argue the welfare reading is incoherent — acknowledging that animals suffer and have interests should prohibit overriding those interests for human convenience. Their position is structurally excluded from most policy conversations; welfare advocates and industry users do not treat abolition as a live policy option worthy of serious engagement. Excluding abolition from the legitimate policy space is part of how the welfare exemption is maintained."
+    },
+    {
+      "name": "comparative_biology",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The scientific community studying animal behavior, cognition, and neurobiology — primatology, cetology, ornithology, entomology, and comparative neuroscience. They provide empirical grounds for the welfare reading's core claim that animals are sentient, that they feel pain, that they have social bonds and cognitive sophistication. Their research enables the acknowledgment of sentience but does not determine how that sentience should be interpreted normatively. They do not set policy or benefit from use, but their evidence constrains the available readings — the property reading becomes increasingly indefensible as evidence of sentience accumulates."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the moral coordination problem created by conflicting imperatives: acknowledge empirical evidence of animal sentience (scientifically unavoidable) while preserving economically and culturally embedded animal-use systems (agriculture, research, entertainment). The welfare reading coordinates around a shared framework: animals matter morally, but instrumental uses can be justified when deemed necessary, and welfare standards can govern the treatment within those uses. This allows diverse users to operate under a single rule-set that prevents moral blank-checks (pure property use) while preventing moral prohibition (abolition) from foreclosing animal-based industries.",
+    "transfer_function": "Transfers animal bodies, labor, reproductive capacity, and suffering from animals to human users across three domains: agricultural production (for food, fiber, labor), scientific research (for medical and behavioral study), and entertainment (for amusement and competition). The welfare standards that govern the transfer do not eliminate it — they regulate how animals are confined, transported, used, and killed. Welfare enforcement bodies extract administrative value and institutional authority from managing the use-permissibility boundary. Users extract economic and scientific value from animal bodies. Individual consumers extract use-value from animal-derived products at prices that reflect the welfare exemption rather than prohibition.",
+    "absent_voices": "Animals themselves have no representation in the discourse that defines what uses count as 'necessary' or 'justified.' Their interests are supposedly 'represented' by welfare bodies, but those bodies have institutional incentives to permit the uses they regulate — an inherent conflict of interest. Abolitionist advocates argue that their position is not merely absent but structurally excluded from legitimacy: the welfare framework treats abolition as categorically off the table rather than as a live policy option worthy of engagement. The scientific evidence of animal sentience is present, but animal agency in the conversation is wholly absent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the welfare reading's constraint vanished overnight, the global agriculture, research, entertainment, and consumer-product industries would face immediate reorganization under one of two alternatives: either reversion to the property reading (unrestricted use, sentience irrelevant to permissibility) or shift to the abolitionist reading (prohibition of instrumental use, sentience entails rights). Supply chains, research protocols, regulatory frameworks, and consumer practices are built around the sentience-with-exemption framework. Its disappearance would force realignment across all three industries, with economic disruption in agriculture (diet changes, alternative production methods) and research (alternative methodologies, reduced animal use, or shift to unrestricted property rules). The constraint is not a natural fact — removing it would cause observable rearrangement of human and animal life arrangements.",
+    "founding_problem": "Industrial animal use proceeded for centuries with little recognition of animal suffering. As zoological and ethological research accumulated evidence of animal consciousness, pain perception, social intelligence, and emotional sophistication, legal and ethical systems faced a legitimacy crisis: how to acknowledge empirically evident sentience while preserving animal-based industries that predated that acknowledgment? The constraint emerged as a compromise: yes, animals are sentient and deserve protection from gratuitous harm, but no, sentience does not entail prohibition of instrumental use — it entails welfare constraints on the conduct of use.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The welfare reading attests the founding problem is live: comparative biology continues to generate evidence of animal sentience, and welfare standards must continuously evolve to reflect new understanding of animal needs and capacities. Animal users and welfare bodies attest that the problem has been solved through the welfare framework — sentience is acknowledged, suffering is minimized, use is justified and constrained. Abolitionist critics and philosophers attest the problem has NOT been solved but rather captured: we now know with overwhelming clarity that animals feel pain and have interests in self-direction, and those facts should entail prohibition of instrumental use, not merely welfare constraints. The empirical core of the founding problem (animals are sentient) is now uncontested; the contested element is its normative interpretation (does sentience entail constraint or prohibition?)."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The welfare reading of animal status acknowledges that animals are sentient beings with morally relevant interests in avoiding suffering, maintaining social bonds, and expressing natural behaviors. However, it exempts instrumental human uses from the prohibition that would normally follow from such sentience when those uses are deemed 'necessary' or 'justified' by human benefit. This reading sits between the property reading (no independent moral standing) and the abolitionist reading (sentience entails prohibition of all instrumental use). The welfare reading's core structural feature is the exemption: animals have interests that matter morally, but their interests can be overridden when human benefit clears an institutional threshold. This creates a tangled rope — genuine coordination function (acknowledging sentience prevents moral blank-checks) coupled with asymmetric extraction (animals bear the costs of the exemption, users collect the benefits). The constraint is extractive (ε = 0.45) because the exemption structures allow systematic use of sentient beings in ways those beings would not consent to if they had exit options.",
+    "key_agents": [
+      "farmed_animals: sentient victims of the arrangement, trapped without exit, bearing bodily and social costs",
+      "experimental_animals: sentient victims used in research, immediate time-horizon, suffering authorized by benefit calculus",
+      "entertainment_animals: sentient victims confined for amusement, constrained within the bounds set by welfare rules",
+      "animal_users (agricultural, research, entertainment industries): institutional agenda-setters and primary beneficiaries, operating within welfare exemption boundaries",
+      "welfare_enforcement_bodies: secondary beneficiaries, derive institutional authority from governing the use-permissibility boundary",
+      "individual_consumers: tertiary beneficiaries, access cheap animal-derived products via the exemption",
+      "abolitionist_advocates: excluded voice, argue the reading is incoherent — sentience that can be overridden is not genuine moral standing",
+      "comparative_biology: observer providing empirical grounds for sentience claims"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.45) because the constraint operates through exemption: animals' acknowledged interests are systematically overridden for human benefit. The exemption is not justified by animal consent (they have no voice in setting the threshold) or by symmetry (users benefit while animals bear costs) — it is justified by a human-determined calculation that the instrumental use is 'necessary' or 'justified.' Suppression is high (0.62) because the reading requires active enforcement to maintain the boundary between permitted and prohibited uses; without consistent enforcement, the exemption would collapse into either unrestricted use (property reading) or prohibition (abolitionist reading). Theater is moderate (0.41) because welfare enforcement generates real constraints on use styles (confinement size, slaughter methods, etc.) but also performs legitimacy for the exemption itself: welfare improvements are publicly visible signs that the system cares about animal interests, which forestalls the abolitionist critique that acknowledging sentience requires abolition. Accessibility collapse is moderate-high (0.68) because once the sentience-with-exemption reading is established as the legal and ethical framework, alternatives (property, abolition) appear either incoherent (property denies evident sentience) or radically disruptive (abolition). Resistance is moderate (0.58) because abolitionist and animal-rights advocates mount sustained resistance to the exemption, but their counterargument (sentience should prohibit use, not merely constrain it) is structurally excluded from the frameworkmakers' considered options. The measurement series show extractiveness rising slightly in the early interval and plateauing (0.38 → 0.45 over 25 time units, then stable), reflecting incremental welfare improvements that modestly reduce extraction without eliminating the exemption itself. Theater_ratio rises throughout (0.28 → 0.41), indicating more regulatory and certification activity relative to functional constraint — the welfare apparatus has become increasingly visible and complex relative to the actual reduction in animal suffering achieved.",
+    "perspectival_gap": "From the institutional users' and welfare bodies' seats, the reading is a genuine coordination achievement: it acknowledges sentience (avoiding moral blank-checks) while preserving economically vital uses under rational constraints. From the animals' seats (if we could occupy them), the reading is extractive structure dressed as constraint: their interests are recognized and then systematically overridden for others' benefit. From the abolitionist observer's seat, the reading is logically incoherent — sentience that justifies 'welfare constraints' should justify prohibition, not merely regulated use. The engine should compute different types from these three positions: a beneficiary seat (users, welfare bodies) may see rope-like genuine coordination; victim seats (farmed, experimental animals) compute the extraction directly; excluded seats (abolitionists) see the incoherence of the framework itself. The authored metrics reflect the structure as the animals and abolitionists perceive it — a tangled rope where coordination functions (preventing moral blank-checks) are coupled with systematic extraction (overriding interests for human benefit).",
+    "directionality_logic": "Directionality flows from beneficiary/victim declarations and exit options. Farmed, experimental, and entertainment animals are trapped victims: they bear bodily costs (confinement, pain, death), have no voice in the exemption calculation, and have no exit options. Their directionality is near 1.0 (full targets). Animal users and welfare bodies are beneficiaries with strong exit options (they can shift to alternative business models, though at cost; they can relocate to jurisdictions with weaker welfare rules). Their directionality is near 0.0 (beneficiaries). Individual consumers are organized moderate-power actors with constrained exit — they benefit from cheap animal products but have some choice to consume alternatives; their d sits near 0.3-0.4 (slight net benefit). Abolitionist advocates are explicitly excluded from the frameworkmaking, trapped at the boundary by the constraint's definitional choice to exempt uses. Their exit would require changing the entire framework, so they are also trapped, but in a different way — they cannot exit the conversation, only be unheard within it.",
+    "mandatrophy_analysis": "The founding problem — how to acknowledge emerging evidence of animal sentience while preserving animal-based industries — has NOT been resolved. The welfare reading solves it only through an exemption that declares the problem solved by definition: 'We acknowledge sentience and permit use through welfare constraints; therefore the coordination is achieved.' But the abolitionist critique identifies a mandatrophy: if sentience truly matters morally, then welfare constraints are not a solution — they are a perpetuation of the problem under a new name. The constraint persists not because the founding problem lives (it has evolved; the evidence of sentience is now overwhelming), but because the industries built on the exemption have political and economic power to maintain the boundary. The theater_ratio rise (0.28 → 0.41) models this: as abolitionists mount increasing pressure, the system responds not by reconsidering the exemption but by performing welfare improvements. These improvements are real in their effect on animal suffering but also functional in their effect on the constraint's legitimacy: each welfare certification, each inspection, each cruelty prosecution becomes a visible sign that 'the system cares,' which forestalls the deeper question of whether sentience-based exemptions are coherent at all.",
+    "kernel_context": "This constraint is the WELFARE_READING of the animal_status kernel. The kernel is the persisting question: What is the moral and legal status of animals in a world where we have overwhelming evidence of sentience? Three readings compete. The PROPERTY_READING treats animals as objects without independent moral standing — use is unrestricted except by human welfare statutes (which govern treatment but not use itself). The ABOLITIONIST_READING treats animals as rights-holders whose sentience entails that instrumental use is categorically impermissible. The WELFARE_READING (this file) treats animals as sentient beings whose interests matter morally but can be overridden when uses are deemed 'necessary' or 'justified.' All three readings acknowledge the same kernel (animal sentience, established by science) but interpret its implications differently. The welfare reading is the reading dominant in most contemporary jurisdictions — it has become the default policy framework globally. However, it remains contested by abolitionist advocates who argue it is incoherent (how can sentience justify constraint but not prohibition?) and by legal scholars who argue it is a historical compromise that will eventually shift as the logical force of sentience evidence accumulates."
+  },
+  "omegas": [
+    {
+      "id": "sentience_vs_exemption_coherence",
+      "question": "Is the reading logically coherent? Can a being be genuinely sentient (capable of suffering, having interests in self-direction and social bonds) and yet have those interests systematically overridable for others' convenience?",
+      "resolution_mechanism": "Philosophical analysis of the sentience concept and its moral implications. Abolitionist and welfare advocates disagree on whether acknowledging sentience logically entails prohibition or permits welfare-constrained use. No empirical test resolves this — it is a question of moral reasoning.",
+      "impact": "If the reading is incoherent (sentience entails prohibition), the constraint is a false-summit mountain or a snare (using sentience acknowledgment as cover for continued use). If coherent, it is a genuine tangled rope (coordination function + asymmetric extraction both real). This omega fundamentally determines the type classification.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether acknowledgment of animal sentience is logically compatible with instrumental use exemptions."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.62) primarily structural (external barriers preventing use-prohibition from becoming policy) or internalized (the framework has become naturalized in how people think about animal interests)?",
+      "resolution_mechanism": "Post-shift studies: in jurisdictions that moved to abolition or stricter property readings, did suppression persist after legal barriers were removed? If suppression persists after structural barriers fall, internalization is substantial.",
+      "impact": "High internalization means the constraint's effective suppression is higher than the 0.62 measure suggests — the victims and excluded voices carry the suppression with them even when structural barriers dissolve. Low internalization suggests the suppression is primarily institutional, maintainable through policy and enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the welfare exemption framework."
+    },
+    {
+      "id": "necessity_calculation_opacity",
+      "question": "What counts as a 'necessary' or 'justified' use under the welfare reading? Is the boundary set by explicit principle, or determined ad-hoc by frameworkmakers?",
+      "resolution_mechanism": "Comparative policy analysis across jurisdictions: are necessity thresholds consistent, derivable from stated principles, or do they vary according to industry pressure and political economy?",
+      "impact": "If ad-hoc and pressure-responsive, the exemption is indefensible on principled grounds and the constraint is more snare-like (cover story justifying continued use). If explicit and principled, the tangled-rope framing holds and the extraction is at least bounded by stated rules.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the necessity exemption is principle-based or pressure-responsive."
+    },
+    {
+      "id": "welfare_improvements_actual_impact",
+      "question": "Do measured welfare improvements actually reduce animal suffering, or do they primarily serve a legitimacy function, generating the appearance of constraint while use patterns persist unchanged?",
+      "resolution_mechanism": "Comparative ethological and welfare-science studies: do animals subject to improved welfare regulations show measurable reductions in stress markers, behavioral abnormality, and suffering relative to pre-improvement baselines?",
+      "impact": "If welfare improvements materially reduce suffering, extraction is modestly lower than the ε metric suggests. If improvements are primarily theatrical, theater_ratio is understated and the constraint is closer to piton (institutional performance with minimal functional effect). The trajectory matters: rising theater_ratio with stagnant extraction suggests the latter.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual vs. performative welfare improvement outcomes."
+    },
+    {
+      "id": "alternative_reading_foreclosure",
+      "question": "Are the property and abolitionist readings genuinely excluded from consideration in policy discourse, or are they live alternatives that the welfare reading is competing with?",
+      "resolution_mechanism": "Discourse analysis of policy forums, legislative debates, and institutional standard-setting: how often do property and abolitionist readings appear as serious policy options versus rhetorical strawmen dismissed without engagement?",
+      "impact": "If excluded (treated as non-starters rather than live options), the constraint involves higher suppression than 0.62 (active foreclosure of alternatives). If in live competition, the suppression is lower (the alternatives are available for choice; the welfare reading wins because it is preferred, not because others are unavailable).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative readings are structurally excluded or live policy options."
+    },
+    {
+      "id": "kernel_reading_identity",
+      "question": "Which reading of the animal_status kernel is this constraint instantiating, and how does the welfare reading's core axiom differ structurally from the abolitionist and property readings' axioms?",
+      "resolution_mechanism": "Defined by design: this constraint is the welfare reading. The distinction is ontological — a reading is a way of interpreting a single persisting kernel such that different interpretations emit different constraint structures. The welfare reading's axiom is: 'Sentience generates moral constraints on use, but not prohibition of use.' The abolitionist axiom is: 'Sentience entails prohibition of instrumental use.' The property axiom is: 'Sentience generates no independent moral constraints on use; only human-imposed welfare statutes matter.' These three axioms are mutually exclusive interpretations of what the same empirical fact (sentience) entails normatively.",
+      "impact": "This omega serves documentation rather than resolution — it records that the committer-frame structure is in place and that this story is one reading among three siblings. The engine will compute relative positioning across the three stories' metrics to test whether the readings do indeed instantiate the structural delta expected (abolitionist: high extraction + no use victims; property: high extraction + no sentience acknowledgment; welfare: moderate extraction + sentience + use exemption).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identity and structural distinction of the welfare reading within the animal_status kernel."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_status__abolitionist_reading",
+      "animal_status__property_reading"
+    ],
+    "dual_formulation_note": "The animal_status kernel decomposes into three constraint stories, each instantiating a different reading of what animal sentience entails. The welfare reading (this file) acknowledges sentience and permits instrumental use under welfare constraints (ε ≈ 0.45). The abolitionist reading treats sentience as entailing prohibition of all instrumental use (expected ε higher, ≈0.65+, with animals not in victim set for any institutional use). The property reading treats sentience as generating no independent moral standing, only human-welfare statutes (expected ε high, ≈0.70+, with no animal interest acknowledgment). All three readings share the kernel (empirical fact of sentience) but diverge on its normative implications. The three stories are linked via network.affects_constraints to show they are competing interpretations of a single contested claim, not independent constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "gain_flow": "animal_users",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "abolitionist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "property_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sentience_generates_moral_constraints",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "instrumental_use_compatible_with_sentience",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "sentience_with_justified_exemption",
+    "drift_state": {
+      "moment": "contemporary_post_cognitive_revolution",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "animal_status__kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

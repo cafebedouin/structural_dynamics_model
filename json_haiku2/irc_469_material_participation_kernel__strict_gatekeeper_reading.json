@@ -1,0 +1,409 @@
+{
+  "header": {
+    "constraint_id": "irc_469_material_participation_kernel__strict_gatekeeper_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_irc_469_material_participation_kernel__strict_gatekeeper_reading",
+    "story_uid": "ed2cc02b-7425-4c18-8638-4a1634899608",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.63,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IRC 469 Material Participation Requirement (Strict Gatekeeper Reading)",
+    "topic_domain": "tax_law/real_estate_investment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tax_authority",
+      "w2_wage_earners"
+    ],
+    "victims": [
+      "passive_real_estate_investors",
+      "independent_business_owners"
+    ],
+    "vindicated_propositions": [
+      "tax_shelter_prevention_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "internal_revenue_service",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers and enforces the material participation standard through regulatory interpretation, examination protocols, and dispute resolution. Issues guidance, trains revenue agents, disallows passive losses failing documentation, and defends positions in litigation. Maintains gatekeeping authority through ongoing regulatory refinement and audit strictness."
+    },
+    {
+      "name": "passive_real_estate_investors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Engage in real estate syndication, partnerships, and REITs without active management. Even with 60+ annual hours on partnership affairs, the IRS scrutinizes whether this qualifies as material participation under the narrow reading. Must maintain contemporaneous documentation; absent compliant records, cannot offset ordinary income with passive losses. Exit options: litigate (expensive, low win rate), reorganize to qualify as real estate professionals (requires restructuring), or accept the loss disallowance."
+    },
+    {
+      "name": "independent_business_owners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operate rental car fleets, laundry facilities, equipment leasing, and other passive businesses through pass-through entities where labor is genuine and substantial. Must maintain daily time logs, time-tracking systems, and contemporaneous written documentation of all management activities. Absent formalized records, IRS disallows passive loss claims even if hours and activities are real. The constraint creates compliance friction that smaller businesses absorb as administrative overhead."
+    },
+    {
+      "name": "w2_wage_earners",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Earn ordinary income from employment without ability to shelter via passive losses. The strict material participation requirement prevents higher-income neighbors from offsetting wage income with passive losses, preserving tax base on wages and reducing cross-income-class arbitrage. Benefit indirectly through lower effective tax rates on wage income."
+    },
+    {
+      "name": "tax_authority",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Collects higher revenue through disallowed passive losses, translating to higher taxable income for affected taxpayers. Revenue from accuracy-related penalties and interest on underpaid taxes when disallowances are contested. The constraint's enforcement directly increases annual revenue collection."
+    },
+    {
+      "name": "tax_shelter_promoters",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would design and sell aggressive passive loss strategies (grouping elections, hour-counting regimes, related-party partnerships) that exploit permissive material participation thresholds. The strict reading constrains their business model by raising qualifying bar. Have opposed the reading through litigation, technical commentary, and legislative advocacy but are excluded from IRS regulation-writing."
+    },
+    {
+      "name": "real_estate_professional_designation_holders",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Real estate agents, developers, and property managers qualify as real estate professionals and can deduct passive losses against ordinary income via IRC 469(c)(7) exemption. The strict reading benefits them by making the base category narrow and defensible — the exemption becomes valuable precisely because the base rule is stringent. Pay in documentary compliance and organizational overhead to maintain professional status eligibility."
+    },
+    {
+      "name": "congress",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enacted IRC 469 with directive to Treasury to define material participation via regulation. Does not directly administer the constraint but retains power to amend the statute, overriding the regulatory reading. Legislative record shows intent to prevent tax-shelter abuse; both interpretive readings claim fidelity to that intent."
+    },
+    {
+      "name": "tax_court_judges",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Review disputes between taxpayers and IRS over material participation determinations. The strict reading shifts litigation advantage toward the IRS — taxpayers must produce contemporaneous records to rebut disallowances; absent such records, burden disadvantages the taxpayer. Tax Court precedent has upheld strict documentation requirements and rejected post-hoc testimony as insufficient."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents income-class arbitrage and tax-shelter abuse by imposing a uniform, high-friction standard for claiming passive losses: all taxpayers seeking to offset ordinary income with passive activity losses must meet the same documentary evidence standard, reducing distortions where sophisticated investors shelter income while wage-earners cannot.",
+    "transfer_function": "Moves deductibility rights (and hence after-tax income) from passive investors and business owners who cannot meet documentation requirements to the tax authority (via disallowed losses) and indirectly to wage-earners (via preserved tax base on ordinary income). The constraint transfers compliance cost (time, administrative overhead, documentation systems) from the IRS to taxpayers attempting to claim passive losses.",
+    "absent_voices": "Tax-shelter promoters and permissive-reading advocates (e.g., real estate industry associations, passive investment syndicators) would argue for narrower documentation standards and easier grouping elections; they are excluded from IRS regulation-writing but participate through litigation and legislative advocacy channels. Small business owners and passive investors without professional accounting infrastructure are similarly excluded from the informal regulatory consensus-building that favors large, sophisticated operators.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strict documentation bar disappeared and material participation reverted to a permissive interpretation, passive loss deductions would surge, tax revenue from high-income investors would fall sharply, and the tax system would face pressure to raise rates on ordinary wage income to maintain revenue neutrality. Real estate and passive business investment structures would proliferate; the architectural incentive to shelter income through passive losses would re-emerge; the IRS's enforcement discretion would widen.",
+    "founding_problem": "In the 1980s, sophisticated investors used passive loss strategies to shelter ordinary income through real estate and commodity partnerships, reducing the effective tax rate on high earners relative to wage-earners and eroding the tax base. The Tax Reform Act of 1986 enacted IRC 469 to prevent this arbitrage by limiting passive losses — the 'founding problem' is tax-shelter abuse that widens after-tax inequality.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The IRS and Treasury affirm the founding problem is live: passive loss shelter strategies re-emerge whenever documentation standards relax (e.g., real estate professional designation expansions have repeatedly sparked IRS crackdowns). Independent tax policy analysts (e.g., Treasury research staff, academic tax economists) affirm that absent strict enforcement, passive loss arbitrage persists. Industry advocates (real estate syndicators, tax-shelter promoters) dispute that the problem persists at scale, citing modern market efficiency and IRS enforcement; however, their attestation is from the beneficiary side of the strict reading (they would benefit from a permissive reading). Neutral corroboration (legislative history, prior Treasury analyses, published Tax Court precedent trends) supports that the founding problem remains live."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "IRC § 469 Material Participation Requirement under the strict gatekeeper reading: The Internal Revenue Service, through Treasury regulation (Treas. Reg. § 1.469-5T) and examination practice, interprets 'material participation' narrowly — requiring verifiable, contemporaneous documentation of substantial personal labor (typically 100+ hours/year in real estate contexts). Under this reading, passive losses are rarely deductible against ordinary income, and the burden of proof on taxpayers is high. The strict reading emerged as the dominant IRS interpretation post-1986 and solidified through Tax Court precedent; its primary effect is to prevent high-income passive investors and business owners from sheltering ordinary income. The sibling reading (strategic_shelter_reading) interprets material participation permissively, permitting hour-counting aggregation and grouping elections that widen the qualifying population.",
+    "key_agents": [
+      "Internal Revenue Service: Agenda-setter; maintains the documentation bar through regulatory interpretation and audit enforcement",
+      "Passive real estate investors and independent business owners: Payers; bear the extraction of disallowed passive losses and compliance friction",
+      "W2 wage earners and the tax authority: Beneficiaries; collect from the preserved tax base and reduced cross-income-class arbitrage",
+      "Tax-shelter promoters and permissive-reading advocates: Excluded; would argue for wider qualifying standards but have no voice in IRS regulation-writing",
+      "Congress: Observer; retains power to amend the statute and override the regulatory reading",
+      "Tax Court: Observer; legitimizes the strict interpretation through precedent and shifts litigation advantage to the IRS"
+    ],
+    "logic_rationale": "Extractiveness is measured at 0.68: the constraint transfers real economic value (deductibility, after-tax income) from passive investors to the tax authority and wage-earners. The transfer is substantial because passive loss disallowances can run to six figures in high-income scenarios. Suppression is higher (0.72) because the constraint's persistence depends on IRS enforcement discretion and the high documentation bar — it is not self-enforcing through market mechanism or taxpayer preference. Theater ratio is moderate (0.41) because roughly 40% of IRS examination activity around passive losses involves validating documentation compliance rather than substantive economic analysis — the form of compliance crowds out content. Accessibility_collapse is moderate (0.63): alternatives to the strict reading exist (permissive interpretation, legislative amendment, real estate professional exemption) but are high-friction to access and require either litigation risk or Congressional action. Resistance is moderate (0.58): tax-shelter promoters, real estate industry associations, and affected passive investors mount continuous resistance through litigation, technical commentary, and legislative advocacy, but lack the power to overturn the IRS interpretation unilaterally.",
+    "perspectival_gap": "From the IRS seat, the constraint is coordination and enforcement: a uniform standard preventing tax-shelter abuse, protecting the tax base, and preserving the progressivity of the income tax system. From the passive investor seat, the constraint is extractive: a high-friction documentation requirement that disallows legitimate business deductions and forces administrative overhead. From the wage-earner seat, it is protective: a constraint preventing their wealthier neighbors from sheltering income. The engine computes directionality from the structural data: IRS holds d near 0.0 (full beneficiary, sets the rules), passive investors near 1.0 (full target, constrained and documented), wage-earners near 0.3 (moderate beneficiary, benefit indirectly but carry no direct cost). The perspectival gap is the divergence between the IRS's coordination narrative and the payer seats' extraction experience.",
+    "directionality_logic": "The IRS is the agenda-setter and beneficiary (d ≈ 0.1): it collects from disallowed losses and maintains regulatory authority. Passive investors and independent business owners are the primary targets (d ≈ 0.85): they bear the extraction (disallowed losses, compliance cost, uncertainty) and have constrained exit (cannot avoid passive participation structures without abandoning investment strategies, and cannot easily relocate to a permissive jurisdiction). W2 wage earners are secondary beneficiaries (d ≈ 0.25): they benefit from the preserved tax base but carry no direct cost and have mobile exit (they can shift income sources or seek deductions in other areas). Tax-shelter promoters are excluded (d not computed): they cannot participate in the constraint's operation, though they would shift to d ≈ 1.0 if the permissive reading prevailed.",
+    "mandatrophy_analysis": "The strict material participation reading demonstrates genuine mandatrophy risk. The founding problem (1980s tax-shelter abuse through passive loss arbitrage) is contested: the tax authority and neutral analysts affirm it remains live, but real estate industry advocates dispute the scale and argue modern enforcement is sufficient. If the founding problem is deemed dead or substantially solved, the constraint's continued strict enforcement becomes inertial rather than justified-by-problem-solving — it would reclassify from tangled_rope (coordination + extraction) to piton (inert extraction maintained by theater and institutional path-dependency). The measurement series shows theater_ratio rising from 0.28 to 0.41 over the interval, consistent with a pattern of documentation compliance becoming a ritualistic end-in-itself rather than a means of substantive shelter prevention. If theater_ratio continues to rise above 0.5, it signals the constraint is increasingly maintained by form rather than function.",
+    "kernel_context": "This constraint instantiates the strict_gatekeeper_reading of the IRC 469 material participation kernel. The kernel is the statutory directive in IRC § 469 (Tax Reform Act of 1986) to Treasury: define material participation via regulation. The strict reading operationalizes this directive narrowly — contemporaneous documentation, high hour thresholds, burden of proof on taxpayers, limited grouping elections. The sibling strategic_shelter_reading operationalizes the same directive permissively — aggressive hour-counting, broad grouping elections, post-hoc evidence admissibility, burden of proof on IRS. Both readings claim fidelity to Congressional anti-shelter intent; they differ on which operational regime prevents abuse most effectively. The contest is primarily an IRS interpretation choice (Treasury authority to define via regulation) but has been litigated in Tax Court and influenced by legislative advocacy. The strict reading has been the dominant interpretation since the late 1980s; the permissive reading resurges when real estate industry advocates successfully press Congress for relief provisions or regulatory relaxation."
+  },
+  "omegas": [
+    {
+      "id": "founding_problem_persistence_empirical",
+      "question": "Does tax-shelter abuse through passive loss arbitrage remain a live problem at economically significant scale, or has it been substantially controlled and the constraint now persists primarily by institutional inertia?",
+      "resolution_mechanism": "Treasury analysis of Form 8582 (Passive Activity Loss Limitation) filings and IRS enforcement data: track the volume and magnitude of disallowed passive losses over time, and cross-reference litigation trends. If disallowances flatten while theater_ratio rises, the founding problem is dead.",
+      "impact": "If dead: constraint reclassifies from tangled_rope (justifiable extraction) to piton (inert extraction maintained by theater). Mandatrophy is resolved in favor of the payers. If live: the strict reading remains justified as anti-abuse coordination, and no mandatrophy verdict applies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the 1980s founding problem (tax-shelter abuse) persists as a live threat or has been substantially contained."
+    },
+    {
+      "id": "real_estate_professional_exemption_scope",
+      "question": "Does the real estate professional exemption (IRC 469(c)(7)) narrow the strict reading's victim class to an economically small group, or does it function as a broad escape hatch for organized investors?",
+      "resolution_mechanism": "IRS data on real estate professional status claims and Tax Court litigation: track the population qualifying for the exemption relative to passive investors, and examine whether the exemption has been subject to narrowing or broadening interpretations.",
+      "impact": "If the exemption is narrow and tightly enforced, the strict reading's payer class is small and self-selected (sole proprietors, unorganized investors lacking professional designation). If the exemption is broad, sophisticated investors can escape the constraint by organizing as real estate professionals, concentrating the extraction on less-organized passive investors — this would increase the snare-character of the constraint relative to its coordinative function.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the real estate professional exemption is a narrow carve-out or a broad escape hatch."
+    },
+    {
+      "id": "regulatory_reading_vs_statutory_authority",
+      "question": "Does Treasury's authority to define 'material participation' via regulation (IRC 469(b)) permit the strict gatekeeper reading, or does the statutory language permit a wider range of defensible interpretations?",
+      "resolution_mechanism": "Tax Court de novo review of Treasury Regulation § 1.469-5T under Administrative Procedure Act standards: would a reviewing court uphold the strict reading as within Treasury's Chevron deference zone, or would it be overturned as an unreasonable interpretation of the statutory term?",
+      "impact": "If de novo review would overturn the reading: the constraint is vulnerable to legal defeat and the committer framing is unstable (either reading would be equally defensible). If upheld: the strict reading has strong legal grounding and the committer choice (strict vs. permissive) is a Treasury discretionary judgment, not a statutory mandate.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the strict reading is the only defensible interpretation or one of several within Treasury's discretion."
+    },
+    {
+      "id": "documentation_burden_internalization",
+      "question": "To what extent is the suppression (0.72) structural (external IRS enforcement) vs. internalized (taxpayers have accepted the compliance regime as legitimate and maintain documentation practices voluntarily)?",
+      "resolution_mechanism": "Post-removal scenario: if the IRS announced abandonment of strict documentation requirements and switched to permissive interpretation, would passive investors continue maintaining contemporaneous records, or would documentation practices collapse? Real-world signal: observe whether voluntary compliance with documentation standards persists when enforcement slack is visible.",
+      "impact": "If internalized: the suppression is lower than measured (it persists even without enforcement). If structural: the suppression reflects active enforcement and would drop sharply if enforcement ceased. The reclassification would affect whether the constraint is sustainable long-term.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is maintained by external enforcement or has become internalized norm."
+    },
+    {
+      "id": "kernel_reading_contest_framing",
+      "question": "Is the contest between strict and permissive readings a genuine disagreement about the best means to prevent tax-shelter abuse (both readings claim fidelity to the same Congressional anti-shelter intent), or are the readings grounded in fundamentally opposed axioms about the relationship between government revenue and private income security?",
+      "resolution_mechanism": "Textual analysis of Treasury regulatory guidance, IRS Chief Counsel memoranda, and Congressional record: do both readings cite the same anti-shelter legislative intent, or do they invoke different foundational premises about what counts as legitimate tax-benefit design?",
+      "impact": "If the readings coexist within a shared frame (both anti-shelter, disagreeing on means): the committer structure is coexists_with, and regulatory negotiation or legislative compromise could produce a middle reading. If the readings rest on opposed axioms: the committer structure is forecloses (the readings cannot both be true in a single framework), and the contest is irreducible to technocratic compromise.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the strict/permissive contest is a disagreement about means (within shared anti-shelter frame) or reflects opposed foundational axioms."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "irc_469_material_participation_kernel__strategic_shelter_reading"
+    ],
+    "dual_formulation_note": "The IRC 469 material participation kernel decomposes into two structurally distinct constraint stories: strict_gatekeeper_reading (this story) and strategic_shelter_reading. Both instantiate the same statutory kernel (IRC 469(b) and Treasury Regulation § 1.469-5T) but operationalize 'material participation' differently, yielding different ε values, beneficiary/victim structures, and classifications. The strict reading extracts from passive investors through high documentation bars and narrow qualifying thresholds; the permissive reading extracts from the tax authority through aggressive loss-offsetting. The two readings coexist as live positions held by different parties (Treasury/IRS holding strict, passive investor advocates holding permissive); neither logically forecloses the other within a shared anti-shelter frame, though they compete for regulatory authority. The stories are linked via network.affects_constraints to enable constraint-family analysis and cross-reading comparison."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "gain_flow": "tax_authority",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "strategic_shelter_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "material_participation_requires_contemporaneous_documentation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "passive_loss_deductibility_narrowly_constrained",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "tax_shelter_prevention_via_documentation_enforcement",
+    "drift_state": {
+      "moment": "contemporary_post_tax_litigation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "irc_469_statutory_kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

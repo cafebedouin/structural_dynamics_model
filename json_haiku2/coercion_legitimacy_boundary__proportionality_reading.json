@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "coercion_legitimacy_boundary__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "5fff2d95-f55c-42fd-80ba-2f5c8aee3a07"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.74,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Disease-Proportional Coercion Legitimacy (Proportionality Reading)",
+    "topic_domain": "public_health/constitutional/medical_ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_authorities",
+      "immunologically_vulnerable_populations",
+      "outbreak_threat_communities"
+    ],
+    "victims": [
+      "vaccine_hesitant_individuals",
+      "medical_exemption_seekers",
+      "treatment_refusers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set disease-control policy, declare which pathogens justify mandatory vaccination or quarantine, determine the R0/mortality threshold that triggers coercion. Claim the authority to balance individual autonomy against collective harm. Implement and enforce the constraint through school attendance rules, employment requirements, travel restrictions. Assess disease severity and transmission parameters scientifically and translate those assessments into legal mandates."
+    },
+    {
+      "name": "immunologically_vulnerable_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cannot mount immune response to many pathogens (infants, immunocompromised, elderly). Depend entirely on herd immunity thresholds maintained by coercion of others. A high-severity, high-transmission disease poses direct existential threat; without vaccination mandates on others, they have zero exit options. The constraint protects them through the coerced compliance of surrounding populations."
+    },
+    {
+      "name": "outbreak_threat_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Communities in the path of a high-R0 outbreak (measles: R0~12-18; flu: R0~1-3). Face rapid disease spread if coercion is absent. When a severe pathogen circulates, the constraint prevents exponential infection growth. When a mild pathogen circulates, the benefit is marginal—most unvaccinated survive—and the coercion cost outweighs it. The reading frames the constraint's legitimacy as proportional to this epidemiological fact."
+    },
+    {
+      "name": "vaccine_hesitant_individuals",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Refuse vaccination on grounds of medical liberty, bodily autonomy, risk assessment, or religious belief. Face employment loss, school exclusion, travel restrictions when a pathogen is declared high-severity. Under this reading, they bear the extraction cost when the disease meets the proportionality threshold (measles) but not when it does not (seasonal flu). The legitimacy of the coercion is contingent on external epidemiological facts, not their consent."
+    },
+    {
+      "name": "medical_exemption_seekers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Have documented medical contraindications to certain vaccines (severe allergies, prior adverse events). Seek exemption from mandates and protection through herd immunity on others' compliance. Under high-severity-disease scenarios, they are caught: the coercion falls on others (who must vaccinate to protect them), and they are forced to rely on the collective's immunity. Under low-severity scenarios, exemptions are often granted more liberally. Identity-locked because their medical history becomes administratively visible and defines their legal status in outbreak scenarios."
+    },
+    {
+      "name": "treatment_refusers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Refuse quarantine, isolation, or antiviral treatment during active infection, claiming freedom of movement or medication choice. During high-severity outbreaks (smallpox, measles), are compelled into isolation to prevent transmission. During low-severity outbreaks (seasonal flu), isolation orders are inconsistently enforced or absent. The reading ties the legitimacy of the coercion to whether the disease parameters justify it."
+    },
+    {
+      "name": "infectious_disease_epidemiologists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Provide the empirical basis for proportionality adjudication: R0 estimates, case fatality rates, hospitalization curves, population-level immunity thresholds. Their measurements are the primary input to the question 'does this disease justify coercion under the proportionality reading?' They do not decide policy, but the constraint's application depends on the data they produce."
+    },
+    {
+      "name": "bodily_autonomy_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Argue that medical autonomy is categorically inalienable—no pathogen severity justifies compelled medical intervention. They contest the proportionality reading on foundational grounds (axiom_overriding). Would argue that measles does not justify mandates if bodily autonomy is the core principle. Excluded from the policy conversation because the proportionality reading has been institutionalized; their objection would reframe the entire kernel."
+    },
+    {
+      "name": "state_legislatures",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enact laws that grant public health authorities coercion power and establish exemption criteria (religious, philosophical, medical). Some legislatures have delegated threshold-setting to health authorities; others have constrained it by statute. Serve as the final institutional gate for constraint enforcement. Can reshape or repeal the constraint via legislation, but rarely do so except in response to large outbreaks or political pressure."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains herd immunity thresholds for high-transmission, high-severity pathogens (measles, smallpox, pertussis). Solves the free-rider problem: individuals have weak incentive to vaccinate when disease prevalence is low, but collective protection requires threshold coverage. Coercion overcomes the incentive gap by enforcing participation when epidemiological parameters make collective protection a justified state interest.",
+    "transfer_function": "Moves bodily autonomy (the right to refuse medical intervention) from vaccine hesitants, refusers, and treatment refusers to immunologically vulnerable populations and outbreak-threatened communities. The transfer is framed as legitimate and proportional when epidemiological severity is high (measles: CFR~0.2%, R0~12-18), and contested or withdrawn when severity is low (flu: CFR~0.1%, R0~1.5).",
+    "absent_voices": "Those who hold bodily medical autonomy as categorically inalienable—libertarian activists, some religious communities, and bodily-autonomy-primary jurists—are excluded from the proportionality framework itself. They would object that the entire proportionality premise is wrong: no pathogen severity justifies medical coercion. This is a structural exclusion from the reading's logic, not a negotiable policy disagreement.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If coercion disappeared, high-R0 outbreaks would occur without herd immunity suppression (measles elimination would reverse); low-severity diseases would circulate without mandated vaccination (flu would persist endemically with low but nonzero hospitalizations). Vulnerable populations would face uncontrolled risk. The proportionality reading accepts this outcome for low-severity pathogens but not for high-severity ones—the verdict is contested because the reading itself is contested.",
+    "founding_problem": "Historical measles and smallpox epidemics demonstrated exponential spread when vaccination fell below herd immunity thresholds, causing mass mortality particularly in vulnerable populations (infants, immunocompromised). Vaccination itself creates free-rider incentives: if most are vaccinated, unvaccinated individuals gain protection without risk. Early vaccination campaigns faced participation gaps because individual incentives diverged from collective interests. The constraint was built to overcome this free-rider problem by mandating coverage when disease severity made collective protection a state interest.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Epidemiologists corroborate that measles (R0~12-18, CFR~0.2%) requires ~95% herd immunity to prevent outbreaks, and that voluntary vaccination alone does not achieve this threshold in all populations (founding problem is live for high-severity pathogens). Public health authorities argue the founding problem persists for any high-R0 disease. Bodily autonomy advocates dispute whether the problem justifies coercion—they argue voluntary vaccination plus education and outreach can achieve thresholds without mandate. Historical data on smallpox elimination (through coercion-backed campaigns) support the empirical link between coercion and threshold achievement. Contemporary data on measles elimination in countries with high-uptake voluntary programs show mixed results—some achieve elimination without coercion, others require it. The founding problem status is live for high-severity pathogens but contested for low-severity ones where voluntary programs often suffice."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.68
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Public health authorities claim the right to mandate vaccination or quarantine when a pathogen meets certain epidemiological thresholds: high basic reproduction number (R0), high case fatality rate (CFR), or rapid transmission dynamics. Measles (R0~12-18, CFR~0.2%) is presented as justifying mandates; seasonal influenza (R0~1.5, CFR~0.1%) is not. This constraint embodies the proportionality reading: coercion legitimacy scales with disease severity and transmission dynamics. Victims include vaccine hesitants, refusers, and exemption-seekers, who bear autonomy costs when a pathogen crosses the threshold. Beneficiaries include immunologically vulnerable populations (who depend on others' compliance for herd immunity) and public health authorities (who gain enforcement power). The constraint is contested by those who hold bodily autonomy as categorically inalienable—they reject the proportionality frame itself. The measurement series track extractiveness rising during outbreak scenarios and falling when diseases become endemic or understood as low-risk.",
+    "key_agents": [
+      "Public health authorities (institutional, agenda-setter): set and enforce the R0/CFR threshold for coercion; declare which pathogens justify mandates.",
+      "Vaccine hesitants and refusers (moderate power, constrained exit): bear autonomy costs when pathogens cross the threshold; face employment loss, school exclusion, travel restriction.",
+      "Immunologically vulnerable populations (powerless, trapped exit): benefit from herd immunity maintained by coercion on others; have no alternative protection.",
+      "Bodily autonomy advocates (organized, excluded): argue that no pathogen severity justifies medical coercion; contest the proportionality frame itself.",
+      "Epidemiologists (analytical seat): produce the R0/CFR data that trigger coercion; define what 'severity' means.",
+      "State legislatures (institutional, dual setter/observer): enact laws granting coercion power; can reshape the threshold via legislation."
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.52) because the constraint genuinely solves a coordination problem for high-severity pathogens, but its legitimacy depends on factual assessments (R0, CFR) that are contingent and contestable. When applied to low-severity pathogens, the extraction becomes visible as coercion without corresponding collective benefit. Suppression is substantial (0.68) because the constraint requires active enforcement: school exclusion, employment mandates, quarantine powers. Theater ratio is moderate (0.42) because the public health justification is real for high-severity diseases (epidemiological benefit is genuine) but becomes performative for low-severity diseases (the disease is endemic, risk is low, but coercion persists through institutional inertia). Accessibility collapse is high (0.71) because once a pathogen is designated 'high-severity,' alternatives collapse: you cannot opt out of herd immunity thresholds; vaccination or quarantine become the only path to participation in schools, employment, or travel. Resistance is high (0.74) because substantial populations contest the proportionality frame itself—bodily autonomy advocates, religious exemption-seekers, and those skeptical of government medical authority resist the constraint's legitimacy. The measurement series show extractiveness and suppression rising during outbreak scenarios (when the proportionality justification is strongest) and stabilizing once threats recede—a cyclical pattern where the constraint persists beyond epidemiological necessity.",
+    "perspectival_gap": "Public health authorities and immunologically vulnerable populations see the constraint as legitimate coordination: a necessary harm-prevention mechanism. Vaccine hesitants and refusers see it as illegitimate extraction: coercion without consent, justified by shifting risk assessments. Bodily autonomy advocates reject the proportionality frame itself—they see no level of disease severity that justifies medical mandate. The engine should compute different types from these positions: from the vulnerable-population seat, it is genuine rope (coordination benefit outweighs autonomy cost); from the refuser seat, it is tangled_rope or snare (coordination function is decoupled from the extraction—herd immunity could be achieved through incentives or education, and coercion appears purely extractive). From the bodily-autonomy seat, it is categorical snare (autonomy extraction is the entire point, and disease severity is irrelevant). The proportionality reading claims tangled_rope, acknowledging both coordination (herd immunity for vulnerable populations) and asymmetric extraction (burden on refusers); the threshold mechanism is meant to limit extraction to cases where benefit is high.",
+    "directionality_logic": "Beneficiaries (vulnerable populations, health authorities) have low directionality (d near 0) because the constraint delivers benefit without burden. Payers (refusers, hesitants) have high directionality (d near 1) because they bear autonomy costs. For high-severity pathogens (measles), the beneficiary case is strong—herd immunity prevents exponential spread and protects those who cannot vaccinate. For low-severity pathogens (flu), the beneficiary case is weak—herd immunity thresholds are lower, individual risk is low, and coercion produces little coordination benefit. The proportionality reading embeds this directionality asymmetry: it acknowledges that refusers bear real extraction costs, but claims those costs are justified by proportional collective benefit. Directionality overrides are not needed here because the structural derivation (beneficiary/victim + exit options) maps correctly: vulnerable populations have zero exit (trapped) and genuine benefit (low d); refusers have constrained exit and pure cost-bearing (high d).",
+    "mandatrophy_analysis": "The constraint avoids mandatrophy classification by maintaining a live founding problem: measles elimination requires sustained coercion to maintain herd immunity thresholds. The founding problem is NOT obsolete for high-severity pathogens. However, there is mandatrophy risk for low-severity pathogens: seasonal flu coercion persists despite low CFR and endemic equilibrium—the founding problem has been solved (voluntary vaccination is available, hospital capacity exists) but the coercion machinery remains, now maintained by institutional inertia. The proportionality reading is meant to prevent this mandatrophy by tying legitimacy to epidemiological fact: if the founding problem dies (disease becomes endemic and low-risk), coercion should be withdrawn. Empirically, the theater_ratio measurement series track this risk: as outbreaks subside and understanding of disease risk grows, the share of enforcement activity devoted to theater (reassuring the public, maintaining institutional appearance) grows relative to functional harm-prevention. The mandatrophy_analysis should note that the proportionality reading is vulnerable to institutional capture: once the enforcement machinery is built, it persists regardless of epidemiological change, and the constraint drifts toward pure extraction.",
+    "kernel_context": "This constraint instantiates the proportionality reading of the contested kernel coercion_legitimacy_boundary. The kernel governs whether and when the state may compel medical intervention (vaccination, quarantine, treatment). Three readings contend: (1) bodily_autonomy_primary: medical autonomy is categorically inalienable, no pathogen severity justifies coercion; (2) proportionality_reading (THIS ONE): coercion legitimacy scales with disease severity and transmission dynamics; measles justifies mandates, flu does not; (3) public_health_primary: state may compel medical intervention whenever collective harm-prevention outweighs individual autonomy, with no severity threshold. The proportionality reading occupies the middle ground: it acknowledges that coercion can be legitimate, but ties legitimacy to specific epidemiological facts (R0, CFR, population immunity thresholds). This reading is held by most contemporary public health authorities, medical associations, and moderate courts. The bodily_autonomy_primary reading is held by libertarian activists, some religious communities, and a minority of jurists. The public_health_primary reading is held by some public health advocates and emergency-management authorities (who argue that any novel pathogen, even with uncertain severity, justifies precautionary coercion). The three readings coexist as live positions in contemporary discourse, each held by different institutional and ideological factions. They are not negotiable within a single institutional framework—adopting one forecloses the others within that framework's operation."
+  },
+  "omegas": [
+    {
+      "id": "threshold_parameterization_ambiguity",
+      "question": "What specific R0 and CFR values constitute the proportionality threshold? Is it R0>10, CFR>0.1%, hospitalization burden >X% of capacity, or some other metric?",
+      "resolution_mechanism": "Examination of actual policy documents and threshold-setting by public health authorities across jurisdictions; comparison to case law that enforces the proportionality constraint.",
+      "impact": "If thresholds are ambiguous or variable across jurisdictions, the proportionality reading loses coherence—it becomes a heuristic covering different underlying policies rather than a principled boundary. Different thresholds yield different victim sets and different legitimacy verdicts for the same pathogen.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Parameter specification for the proportionality boundary"
+    },
+    {
+      "id": "institutional_drift_toward_low_severity_coercion",
+      "question": "Does the enforcement machinery built for high-severity pathogens persist and expand to low-severity pathogens over time?",
+      "resolution_mechanism": "Historical analysis of coercion policies: did seasonal flu, chickenpox, or other endemic low-severity diseases face increasing mandates after the institutional framework was established for measles/smallpox? Does theater_ratio increase as disease severity falls?",
+      "impact": "If institutional drift occurs, the proportionality reading devolves into mandatrophy: coercion persists after the founding problem is solved, and the constraint becomes pure extraction masked by epidemiological theater. The reading's failure would support either bodily_autonomy_primary (reject all coercion) or regulatory reform (tighten the threshold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional tendency to expand coercion scope beyond the proportionality boundary"
+    },
+    {
+      "id": "reading_incompatibility_with_bodily_autonomy",
+      "question": "Can the proportionality reading and the bodily_autonomy_primary reading coexist within a single institutional framework, or does adoption of proportionality foreclose bodily autonomy?",
+      "resolution_mechanism": "Constitutional and jurisprudential analysis: do courts that adopt the proportionality reading explicitly reject the categorical bodily-autonomy claim, or do they leave room for both? Can an individual refuse mandated vaccination on autonomy grounds while conceding the proportionality principle?",
+      "impact": "If the readings foreclose each other, the kernel contest is genuinely binary—institutional commitment to proportionality forecloses the bodily-autonomy frame and vice versa. If they coexist, they are alternative frameworks held by different parties rather than logically incompatible positions. This determines whether the relationship is forecloses vs. coexists_with.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between proportionality and bodily-autonomy readings"
+    },
+    {
+      "id": "epidemiological_contingency_of_legitimacy",
+      "question": "Is the proportionality reading's legitimacy claim truly contingent on epidemiological fact, or is epidemiological assessment itself embedded in the reading's authority structure and thus subject to motivated reasoning?",
+      "resolution_mechanism": "Case analysis: when epidemiological assessment changes (e.g., new evidence on CFR, discovery of unexpected transmission routes), does public health authority legitimacy and coercion enforcement change accordingly? Or is the epidemiological assessment treated as fixed by the authority's declaration?",
+      "impact": "If assessment is truly contingent, the proportionality reading is transparent and revisable: disease severity claims are empirical questions subject to evidence. If assessment is fixed by authority declaration, the reading becomes a rhetorical cover for political choices—the proportionality mask hides discretionary coercion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proportionality legitimacy is genuinely contingent on epidemiological fact or fixed by institutional authority"
+    },
+    {
+      "id": "kernel_reading_versus_bodily_autonomy_foreclosure",
+      "question": "Does the adoption of the proportionality reading as the binding institutional norm logically foreclose the bodily_autonomy_primary reading, or do the readings remain held simultaneously by different factions?",
+      "resolution_mechanism": "Institutional sociology: trace which jurisdictions have adopted which reading as binding law; examine whether adopting proportionality legally prevents individuals from making bodily-autonomy-grounded objections, or merely denies those objections force in the coercion decision.",
+      "impact": "If proportionality forecloses bodily autonomy (within a single legal framework), the relation is forecloses; if both remain live positions held by different parties (even where proportionality is the law), the relation is coexists_with. This affects how the engine models the kernel contest.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Logical foreclosure vs. institutional coexistence of kernel readings"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "coercion_legitimacy_boundary__bodily_autonomy_primary",
+      "coercion_legitimacy_boundary__public_health_primary"
+    ],
+    "dual_formulation_note": "This story is one reading of the contested kernel coercion_legitimacy_boundary. Two sibling stories instantiate the bodily_autonomy_primary and public_health_primary readings. All three share a single referent (the state's power to mandate medical intervention) but author different ε values and victim/beneficiary structures, depending on which reading is adopted. The proportionality_reading (this story) claims moderate extraction (0.52) because the constraint genuinely solves coordination for high-severity pathogens but becomes illegitimate for low-severity ones. The bodily_autonomy_primary reading would author high extraction (ε~0.8+) by rejecting the proportionality frame entirely. The public_health_primary reading would author similar or lower extraction (ε~0.45) by accepting coercion for any pathogen with collective-harm potential, dissolving the severity boundary. The three stories are linked by network.affects_constraints to enable cross-kernel comparison."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "medical_autonomy_with_proportionality_exception",
+    "drift_state": {
+      "moment": "contemporary_institutional_expansion",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "coercion_legitimacy_scales_with_epidemiological_severity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "herd_immunity_justifies_autonomy_constraint_for_high_r0_disease",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "public_health_authorities",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "coercion_legitimacy_boundary__bodily_autonomy_primary",
+      "coercion_legitimacy_boundary__public_health_primary"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

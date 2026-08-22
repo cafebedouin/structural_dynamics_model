@@ -1,0 +1,341 @@
+{
+  "header": {
+    "constraint_id": "church_turing_thesis__epistemological_boundary_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "710cbfb2-11bf-48b3-a9e6-5569a01cc5a3"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Church-Turing Thesis as Epistemological Boundary (Proof-Theoretic Reading)",
+    "topic_domain": "philosophy_of_mathematics/foundations_of_computation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proof_theory_methodology",
+      "computability_textbook_canon"
+    ],
+    "victims": [
+      "non_constructive_computability_claims",
+      "hypercomputation_research_programs",
+      "quantum_computational_advantage_claims"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "proof_theory_methodology",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The thesis operationalizes proof-theoretic work by providing a canonical boundary for what counts as computable. Researchers in mathematical logic, recursion theory, and computability theory use the thesis as the baseline against which all other claims are measured. It enables reproducible, comparable results across research groups and institutions. The methodology benefits from the thesis's stability — changing the definition would require renegotiating the entire field's foundations."
+    },
+    {
+      "name": "computability_textbook_canon",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The thesis is embedded in canonical textbooks (Sipser, Hopcroft & Ullman, Rogers, Odifreddi) that define the graduate-level curriculum in computability theory, complexity theory, and algorithmic foundations. Students learn the thesis as a settled fact. Degree programs, professional certifications, and hiring rubrics reference the thesis and its textbook formulations. Changing the canon would require coordinated curricular revision across hundreds of institutions — the institutional cost is prohibitive."
+    },
+    {
+      "name": "non_constructive_computability_claims",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers working with intuitionistic logic, constructive mathematics, or domain-specific computational frameworks face the burden of reconciling their work with the canonical thesis. They must either (a) show that their model is subsumed within Turing-computability, (b) argue that they are studying a different concept of 'computability' and accept its non-canonical status, or (c) directly challenge the thesis and accept the legitimacy cost. The thesis constrains their research framing and publication options."
+    },
+    {
+      "name": "hypercomputation_research_programs",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Hypercomputation researchers (Copeland, Shagrir, Etesi, others pursuing super-Turing computation) operate at the periphery of legitimate computer science and mathematical logic. The thesis is deployed against them: their work is dismissed as 'not really computable' or 'not formally provable' because it falls outside the Church-Turing boundary. They face barriers to publication in mainstream journals, difficulty securing funding, and professional marginalization. Many hypercomputation researchers identify their work as their core professional project, making exit costly in identity terms. The thesis directly excludes their research program from the definition of 'formally knowable computation.'"
+    },
+    {
+      "name": "quantum_computational_advantage_claims",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Quantum computing researchers (IBM, Google, others) occupy a complex structural position. They benefit from the thesis's definition of 'computable' — it provides the baseline against which quantum advantage is measured. However, they are constrained by skeptics who deploy the thesis to argue that quantum computers cannot compute functions beyond Turing-computable ones, only implement Turing-computable functions faster. When quantum advantage claims are dismissed as 'just polynomial speedup, still within BQP ⊂ PSPACE,' the thesis is the gatekeeping mechanism. Quantum researchers have high exit options (can pivot to quantum simulation, optimization, or other applications) and powerful institutional backing (major corporate funding), so they are less suppressed than hypercomputation researchers but still face constraint."
+    },
+    {
+      "name": "constructive_mathematicians",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Constructive mathematics (intuitionism, finitism, Bishop's constructivism) would argue that the thesis conflates proof-theoretic Turing-computability with existence and knowability, erasing a distinction they hold as foundational. A constructivist would say: 'A function is constructively computable if we have an algorithm to compute it; a function is Turing-computable if it satisfies the Church-Turing thesis's definition. These are not the same. The thesis imposes a classical framework on constructive mathematics.' Constructivists are present in mathematics (Bishop schools, intuitionist logic communities) but absent from canonical computability discourse. Their objections are rarely engaged in mainstream computer science curricula."
+    },
+    {
+      "name": "analog_computation_theorists",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Researchers studying continuous computation (differential analyzers, analog circuits, neural networks, dynamical systems) cannot represent their work in the Turing-machine framework without discretizing and potentially losing essential continuous properties. They would advocate for a broader definition of computation that includes continuous models. However, they are systematically absent from computability theory textbooks and courses. The thesis forecloses their voice: if all computation is discrete Turing-computation, then continuous models are not 'really' computing in the canonical sense."
+    },
+    {
+      "name": "mathematical_logicians",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Mathematical logicians and proof theorists set the agenda for what the thesis means and how it is applied. They write the textbooks, referee the papers, control the journals, and set the hiring standards. They administer the thesis's scope: is it a proof-theoretic boundary, a claim about all mathematics, a physical claim? They have high institutional power and can reshape the constraint, but they face strong inertial pressure to maintain the canonical framing. Changing the thesis would require them to acknowledge that decades of textbooks and curricula over-claimed its scope — a legitimacy cost they prefer to avoid."
+    },
+    {
+      "name": "empirical_physics_community",
+      "role": "observer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Physicists study what the universe actually does. They operate semi-independently of the thesis's proof-theoretic reading: quantum mechanics, relativity, and cosmology are developed and tested on their own merits. However, the thesis affects physics interpretively: physicists debate whether quantum mechanics violates Church-Turing, whether relativistic computation is possible, whether the universe is a giant Turing machine (digital physics). Physicists can contest the thesis's physical reading and do empirical work to test it, giving them high authority at this boundary. They are not trapped by the thesis because their primary authority comes from empirical observation and theory, not from canonical proof-theoretic definitions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared, formal criterion for what counts as 'computable' in proofs and theorems: researchers working in computability theory, complexity theory, and logic can align on a single boundary, making results comparable and debates tractable. Without this common referent, each researcher could stipulate their own notion of computability, fragmenting the field.",
+    "transfer_function": "Moves authority from individual research programs' self-defined computability models into the canonical Turing-machine framework. Researchers pursuing non-Turing models (hypercomputation, analog computation, quantum advantage) must bear the burden of proof and legitimacy cost; canonical researchers inherit the thesis's legitimacy without having to defend it. The thesis transfers credibility asymmetrically: toward the center (Turing framework) and away from the periphery (alternative models).",
+    "absent_voices": "Constructivist mathematicians, analog computation theorists, and hypercomputation researchers would contest the thesis's claim that proof-theoretic Turing-computability is coextensive with mathematical knowability. They argue the thesis illicitly restricts the epistemology of computation by excluding non-classical logics, continuous models, and unconventional physical substrates. Their absence from canonical textbooks and theorem-proving institutions means their objections are not systematically addressed in the field's pedagogy.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the thesis vanished (i.e., if the field abandoned Church-Turing as the canonical boundary), the immediate world would not reorganize — the Turing machine would remain a historically important model and a useful reference point. However, research trajectories would shift: hypercomputation programs would gain legitimacy, quantum advantage claims would stop being contested by the thesis, and constructive mathematics would no longer need to frame itself as a minority position. The field's institutional structure (hiring, funding, canonical curricula) would need to pluralize what counts as 'knowably computable.' The deeper question — whether the thesis *must* disappear or can be reframed as one boundary among several — divides the stakeholders.",
+    "founding_problem": "In the 1930s, the recursion theorists (Church, Gödel, Turing, Post) faced a problem: 'effective computability' was used intuitively in metamathematics and logic, but the term lacked a formal definition. Different researchers were using it differently. The thesis (Church's conjecture, Turing's formulation) proposed that the intuitive notion matches the formal class of Turing-computable functions, providing a common language.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem (need for a formal boundary on 'effective computability') was real in 1936 — Gödel and others document the definitional ambiguity. Church and Turing's solution (equating intuitive with formal) solved the immediate problem within proof theory and enabled Gödel's incompleteness proofs and Turing's halting theorem to be stated precisely. However, by the 1980s, the problem had shifted: physical processes (quantum, analog, optical) began raising the question of whether the thesis claims something about physics or only about formal proof-theoretic boundaries. Non-canonical researchers (hypercomputation, constructive mathematics) attest the founding problem is solved narrowly (for proof-theoretic recursion) but that the thesis's scope has been overextended to claim authority over all computability concepts. Mainstream logicians attest the founding problem remains live (definitional clarity is still needed), which justifies the thesis's continued canonical status."
+  },
+  "interval": {
+    "start": 1936,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1936,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1936,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1936,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Church-Turing thesis, in this epistemological reading, asserts that the class of functions provably computable in formal systems is exactly the class of Turing-computable functions — it marks a boundary between what we can formally know to be computable and what lies outside that boundary. This reading treats the thesis as a methodological gate: it defines what counts as a valid computability proof, not as a claim about the physical universe or as a pure mathematical definition. The constraint operates because the thesis has become embedded in curriculum, hiring, and publication norms such that research pursuing alternative models of computation (hypercomputation, analog computation, quantum advantage) must either align with Church-Turing or bear the burden of arguing outside 'formally knowable computation.' The reading is contested by the mathematical-definition reading (which treats the thesis as true by convention, not by epistemic necessity) and the physical reading (which makes empirical claims about what nature can compute). This story focuses on the epistemological reading's operation as a boundary-setting constraint within mathematics and computer science.",
+    "key_agents": [
+      "proof_theory_methodology: Institutional beneficiary — the thesis stabilizes proof-theoretic methodology and makes it reproducible across researchers",
+      "computability_textbook_canon: Institutional beneficiary — the thesis crystallizes into pedagogical and research canon, making it the default framework taught and applied",
+      "hypercomputation_research_programs: Powerless victim — facing systematic exclusion from mainstream legitimacy because the thesis defines their work as outside 'formally knowable computation'",
+      "quantum_computational_advantage_claims: Powerful victim with mobility — operate within Church-Turing but are constrained when the thesis is deployed to dismiss quantum advantage as 'not really more computable'",
+      "non_constructive_computability_claims: Moderate victim — intuitionistic, constructive, and unconventional models bear the burden of reconciling with or arguing against the thesis",
+      "mathematical_logicians: Institutional agenda-setter — administer the thesis through textbooks, journals, and professional standards; could reformulate but face inertial pressure",
+      "constructive_mathematicians: Excluded voice — would contest the thesis's conflation of proof-theoretic computability with mathematical knowability but are absent from canonical discourse",
+      "empirical_physics_community: Observer seat — tests the thesis's physical reading against empirical data; retains authority to contest at boundaries"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.38): the thesis does extract legitimacy and credibility from alternative models and concentrates it toward the canonical Turing framework. However, the extraction is not pure — it does solve a genuine coordination problem (common language for computability proofs). Over the interval from 1936 to 2024, extractiveness rose from ~0.15 (when the thesis was newly proposed and still contested) to 0.38 (where it has stabilized as institutionalized canon). The rise reflects the thesis becoming embedded in curriculum and hiring. Suppression is moderately high (0.52): the constraint persists partly because the thesis is actively reinforced in textbooks and professional standards, but also because researchers in non-Turing models face real barriers (funding, publication, legitimacy). The barrier is not primarily external coercion but rather the internalization of the thesis's authority. Theater ratio is modest (0.22): the security/coordination function is real (proof-theoretic researchers genuinely benefit from a common boundary), but a growing share of the constraint's enforcement activity defends the thesis's scope beyond where the proof-theoretic case is strongest (e.g., applying it to physical systems or dismissing hypercomputation without engagement with the technical arguments). Accessibility collapse is high (0.71): once researchers understand the thesis's canonical status, alternatives seem closed off — you can work within Turing-computability, or you can step outside and lose legitimacy. Resistance is moderate (0.48): some researchers actively contest the thesis's scope (especially in quantum computing and hypercomputation), but they face suppression (publication barriers, funding scarcity) and internalized doubt (the thesis's long institutional history makes challenging it seem audacious).",
+    "perspectival_gap": "This reading's operation as a constraint is most visible from the powerless and identity-locked research programs (hypercomputation). From their perspective, the thesis is an enforcement mechanism that uses mathematical prestige to foreclose legitimate inquiry. From the agenda-setter's perspective, the thesis is a tool for maintaining rigor and coherence in the field. The quantum computing community occupies an intermediate position: they benefit from the thesis's legitimacy (it provides the standard definition of 'computable' that their work must relate to) and are harmed by its extension (the thesis is used to argue that quantum advantage is 'not really computational,' just faster implementation of Turing-computable functions). This perspectival divergence is where the tangled-rope classification emerges: the same constraint provides genuine coordination for the center and real extraction for the periphery.",
+    "directionality_logic": "Proof-theory-methodology and computability-textbook-canon are beneficiaries (d near 0.0): they collect the thesis's benefits directly — stability, pedagogical authority, institutional embedding. Mathematical logicians as agenda-setters are near-beneficiaries (d ~0.1-0.2): they administer the constraint and benefit from its stability but do not extract rents in the economic sense; their power comes from the constraint's existence, not from personal gain. Hypercomputation researchers are victims (d near 1.0): their identity is fused with their research program (identity_locked exit), they bear the cost of exclusion and delegitimation, and they have very low power (powerless) and constrained exit. Quantum researchers are partial victims (d ~0.7): they are powerful and have mobile exit options, so their d is lower than for powerless victims, but they still bear suppression when the thesis is deployed against quantum advantage claims. Constructive mathematicians and analog theorists are excluded but would be high-d victims (identity_locked, trapped exit) if they were seated. No directionality overrides are needed; the structural data (power, exit, beneficiary/victim roles) derives the directionality naturally.",
+    "mandatrophy_analysis": "The founding problem (definitional clarity on 'effective computability') was solved in the 1930s within proof theory — Church and Turing provided a formal boundary that enabled Gödel's incompleteness proofs and the development of computability theory. The thesis served its founding function through the mid-20th century. By the 1980s–2000s, the problem had morphed: the rise of quantum computing, analog computation, and hypercomputation research raised the question of whether the thesis's scope should be extended to physical processes or remain proof-theoretic. The field did not resolve this; instead, the thesis remained canonical in textbooks while the scope-extension question was left informal and contested. The constraint now persists partly by inertia (it is what was taught in textbooks; changing it requires coordinated curricular revision) and partly by active enforcement (hypercomputation and alternative models face publication and funding barriers that reinforce the thesis's gatekeeping role). This is a classic mandatrophy pattern: the founding problem is substantially solved for the proof-theoretic domain, but the constraint's scope has been informally extended beyond that domain without institutional renegotiation. The field would benefit from clarifying whether the thesis is meant to be a proof-theoretic boundary (narrow scope, uncontested) or a constraint on all computability concepts (broad scope, highly contested). This story does not resolve the mandatrophy; it documents it as an omega variable.",
+    "kernel_context": "This constraint is the epistemological-boundary reading of the Church-Turing thesis kernel. The reading instantiates one specific interpretation: the thesis marks a boundary between what we can formally prove computable (within proof theory and logic) and what lies outside that boundary. Sibling readings instantiate different structural claims: the mathematical-definition reading treats the thesis as a convention (true by stipulation, not by epistemic necessity) with a different victim set and no asymmetric extraction; the physical-claim reading treats the thesis as an empirical hypothesis about what physical processes can compute, with a different ε and different stakeholder structure. Each reading has its own constraint story with its own ε, beneficiary/victim structure, and type classification. The engine should compute per-seat classifications for each reading separately, and compare them to detect how the readings converge or diverge."
+  },
+  "omegas": [
+    {
+      "id": "proof_theoretic_vs_semantic_scope",
+      "question": "Does the thesis's scope extend only to proof-theoretic decidability (what can be proven in formal systems) or to all mathematical knowability (what functions exist or are well-defined)?",
+      "resolution_mechanism": "Formalize the thesis's quantification explicitly: is it '∀f: f is provably computable ↔ f is Turing-computable' (proof-theoretic scope) or '∀f: f is mathematically knowable ↔ f is Turing-computable' (maximal scope)? If proof-theoretic, the thesis does not foreclose constructivist or intuitionistic computability; if maximal, it does.",
+      "impact": "A narrow interpretation leaves room for alternative computability concepts within mathematics; a maximal interpretation uses the thesis to suppress or exclude them. The type classification (tangled-rope vs. snare) depends on whether the extractiveness is from scope-overreach or from legitimate methodological gatekeeping.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the thesis is a proof-theoretic boundary or a maximal boundary on all mathematical computability."
+    },
+    {
+      "id": "institutional_embedding_vs_epistemic_necessity",
+      "question": "Is the thesis's canonical status in textbooks and curricula a reflection of its epistemological correctness, or is it an institutional path-dependency that has made revision costly?",
+      "resolution_mechanism": "Compare historical curricula from institutions that adopted the thesis early vs. those that resisted; examine whether the thesis's canonical status in hiring and funding correlates with its empirical defensibility or with sunk institutional costs (textbooks, degree requirements, hiring rubrics).",
+      "impact": "If institutional embedding is independent of epistemic necessity, the suppression metric is higher than the constructive value of the boundary would justify — the constraint is more Snare-like than Rope-like. If embedding follows from defensibility, it is lower.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the thesis's institutional canonical status reflects justified epistemology or path-dependent embedding."
+    },
+    {
+      "id": "alternative_computability_legitimacy",
+      "question": "Are hypercomputation, analog computation, and quantum computational advantage meaningfully different models of computation, or are they all subsumed within Turing-computability at the right level of abstraction?",
+      "resolution_mechanism": "Rigorous technical analysis of whether the Turing-Church thesis applies to each alternative model when the model is formalized precisely. Do hypercomputation theorists have coherent formal definitions of what they mean by 'hypercomputable'? Can analog computation be discretized without losing essential properties?",
+      "impact": "If the alternatives have coherent formal definitions and are genuinely distinct from Turing-computability, the thesis's gatekeeping role is unjustified and the constraint is extractive. If the alternatives collapse into Turing-computability under formalization, the thesis's scope is correct and the constraint is justified methodological gatekeeping.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative computational models are genuinely distinct or subsumable within Church-Turing."
+    },
+    {
+      "id": "physical_realizability_separation",
+      "question": "Is the epistemological boundary (what we can formally prove computable) independent of the physical claim (what physical systems can compute)?",
+      "resolution_mechanism": "Formalize the thesis with explicit quantifiers distinguishing the proof-theoretic claim from physical claims. Show whether a function can be proven Turing-computable without assuming anything about physical processes that might realize it.",
+      "impact": "If the claims are separable, then the epistemological reading avoids making false claims about physics, and the thesis is defensible within proof theory regardless of quantum mechanics or relativity. If they are entangled, the thesis is making physical claims it does not overtly acknowledge, and its institutional authority is partly illegitimate.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the epistemological boundary is independent of or entangled with physical claims about computation."
+    },
+    {
+      "id": "non_constructive_mathematics_exclusion",
+      "question": "Does the thesis's limitation to proof-theoretic Turing-computability exclude legitimate mathematical reasoning from non-classical logics (intuitionistic, paraconsistent, relevant logic)?",
+      "resolution_mechanism": "Examine whether theorems proved in intuitionistic or constructive logic can be translated into equivalent theorems in Turing-computability without loss of content. Do non-classical frameworks generate computability concepts that Turing-computability does not capture?",
+      "impact": "If non-classical frameworks generate genuinely distinct computability concepts, the thesis's canonical status wrongly monopolizes the epistemic authority for defining 'computability.' If the frameworks reduce to Turing-computability, the thesis's scope is correct.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-classical mathematical logic generates computability concepts genuinely distinct from Church-Turing."
+    },
+    {
+      "id": "reading_boundary_vs_reading_entanglement",
+      "question": "Is this epistemological reading (the thesis marks a proof-theoretic boundary) coherently separable from the mathematical-definition and physical-claim readings, or do they interweave such that the boundary reading presupposes one of the other readings?",
+      "resolution_mechanism": "Analyze whether a consistent epistemological reading can be maintained without taking a position on whether the thesis is (a) true by convention or (b) an empirical claim about nature. If the epistemological boundary requires resolving one or both of those questions, the reading is not independent.",
+      "impact": "If the readings are separable, each can be formalized as a distinct constraint with independent type classifications. If they are entangled, one reading over-determines the others, and the kernel is not truly three-way contested but rather one reading that encompasses the others.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the epistemological boundary reading is logically independent or entangled with the definitional and physical readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "church_turing_thesis__mathematical_definition_reading",
+      "church_turing_thesis__physical_claim_reading",
+      "godel_incompleteness_proof_structure",
+      "turing_halting_problem_decidability"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the Church-Turing thesis kernel. The mathematical-definition reading treats the thesis as a convention (true by stipulation, not empirically testable) and generates a different victim set (non-conventional computability models) and lower extractiveness. The physical-claim reading treats the thesis as an empirical hypothesis about the universe and generates quantum-mechanics and relativistic-computing as victims. All three readings share the kernel (the historical thesis-statement) but instantiate different constraint structures. The epistemological reading focuses on the thesis's role in defining the boundary between formally knowable and unknowable computation within proof-theoretic systems. Network edges represent downstream causal influence: the epistemological reading influences (but does not foreclose) the physical reading because accepting the epistemological boundary makes the physical reading's empirical claim harder to sustain — if formal proof-theoretic computability is the boundary, what grounds a physical claim that exceeds it?"
+  },
+  "gain_flow": "computability_textbook_canon",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "mathematical_definition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "physical_claim_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "formal_proof_exhausts_computability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "turing_machine_adequacy_for_proof_systems",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "proof_theoretic_computability_equivalence",
+    "drift_state": {
+      "moment": "quantum_and_analog_emergence_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,374 @@
+% ============================================================================
+% CONSTRAINT STORY: eternal_marriage_covenant__prophetic_override_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-12
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_eternal_marriage_covenant__prophetic_override_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: eternal_marriage_covenant__prophetic_override_reading
+ *   human_readable: Prophetic Authority Override of Eternal Marriage Doctrine
+ *   domain: religious_law/political_theology
+ *
+ * SUMMARY:
+ *   This constraint story instantiates the PROPHETIC_OVERRIDE_READING of the
+ *   eternal_marriage_covenant kernel. The kernel is a persisting commitment:
+ *   D&C 132 (the Doctrine and Covenants revelation on celestial marriage and
+ *   plurality of wives), which the church treats as foundational scripture.
+ *   Three readings (sibling constraints) dispute what that kernel mandates:
+ *   immutable_commandment_reading treats it as eternally binding and
+ *   inalienable; temporal_accommodation_reading treats the 1890 Manifesto as
+ *   a suspension of practice while doctrine remains true;
+ *   prophetic_override_reading treats continuing revelation doctrine as a
+ *   legitimate mechanism by which the living prophet can supersede prior
+ *   revelation when institutional survival requires it. This story generates
+ *   the prophetic_override_reading alone, as a self-contained constraint with
+ *   its own ε-invariance, beneficiary/victim structure, and type
+ *   classification. The sibling readings are other constraints (other JSON
+ *   files); their relationships are declared in
+ *   cs_structure.reading_relations, not embedded here.
+ *
+ * KEY AGENTS:
+ *   - prophetic_authority_office: Sets the framework for new revelation; claims continuing revelation doctrine permits supersession of prior doctrine when survival circumstances demand it
+ *   - institutional_church_administration: Primary beneficiary; retains theological authority while adapting to legal pressure; benefits from the mechanism's flexibility
+ *   - practitioners_of_plural_marriage: Primary victims; must abandon mandated practice or leave institutional community; identity-locked exit
+ *   - doctrine_fundamentalists: Secondary victims; view override as negation of eternal law; split into independent groups
+ *   - federal_government_pressure: Structural excluded actor; external coercive force that activates the override mechanism without participating in revelation
+ *   - mainstream_church_membership: Secondary beneficiaries; benefit from institutional survival and legal compliance without personal practice disruption
+ *   - interpretation_traditionalists: Excluded from authority; would argue immutable doctrine cannot be suspended by prophetic fiat alone
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(eternal_marriage_covenant__prophetic_override_reading, 0.68).
+domain_priors:suppression_score(eternal_marriage_covenant__prophetic_override_reading, 0.72).
+domain_priors:theater_ratio(eternal_marriage_covenant__prophetic_override_reading, 0.48).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(eternal_marriage_covenant__prophetic_override_reading, extractiveness, 0.68).
+narrative_ontology:constraint_metric(eternal_marriage_covenant__prophetic_override_reading, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(eternal_marriage_covenant__prophetic_override_reading, theater_ratio, 0.48).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(eternal_marriage_covenant__prophetic_override_reading, accessibility_collapse, 0.64).
+narrative_ontology:constraint_metric(eternal_marriage_covenant__prophetic_override_reading, resistance, 0.71).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(eternal_marriage_covenant__prophetic_override_reading, tangled_rope).
+narrative_ontology:human_readable(eternal_marriage_covenant__prophetic_override_reading, "Prophetic Authority Override of Eternal Marriage Doctrine").
+narrative_ontology:topic_domain(eternal_marriage_covenant__prophetic_override_reading, "religious_law/political_theology").
+
+domain_priors:requires_active_enforcement(eternal_marriage_covenant__prophetic_override_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(eternal_marriage_covenant__prophetic_override_reading, '65c55df5-2b72-4454-81e0-b8205f3527bc').
+narrative_ontology:cs_kernel_codification('65c55df5-2b72-4454-81e0-b8205f3527bc', fixed_text).
+narrative_ontology:cs_authority_grounding('65c55df5-2b72-4454-81e0-b8205f3527bc', extraction).
+narrative_ontology:cs_interpretation_layer_present('65c55df5-2b72-4454-81e0-b8205f3527bc').
+narrative_ontology:cs_reading_relation('65c55df5-2b72-4454-81e0-b8205f3527bc', eternal_marriage_covenant__immutable_commandment_reading, forecloses).
+narrative_ontology:cs_reading_relation('65c55df5-2b72-4454-81e0-b8205f3527bc', eternal_marriage_covenant__temporal_accommodation_reading, coexists_with).
+narrative_ontology:cs_axiom('65c55df5-2b72-4454-81e0-b8205f3527bc', foundational, continuing_revelation_supersedes_prior_scripture).
+narrative_ontology:cs_axiom_status(continuing_revelation_supersedes_prior_scripture, holdable).
+narrative_ontology:cs_axiom_grounding('65c55df5-2b72-4454-81e0-b8205f3527bc', continuing_revelation_supersedes_prior_scripture, deontological).
+narrative_ontology:cs_axiom('65c55df5-2b72-4454-81e0-b8205f3527bc', foundational, prophetic_authority_interprets_divine_will).
+narrative_ontology:cs_axiom_status(prophetic_authority_interprets_divine_will, holdable).
+narrative_ontology:cs_axiom_grounding('65c55df5-2b72-4454-81e0-b8205f3527bc', prophetic_authority_interprets_divine_will, conventional).
+narrative_ontology:cs_reference_frame('65c55df5-2b72-4454-81e0-b8205f3527bc', eternal_doctrine_subject_to_prophetic_override).
+narrative_ontology:cs_drift_state('65c55df5-2b72-4454-81e0-b8205f3527bc', post_federal_pressure_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('65c55df5-2b72-4454-81e0-b8205f3527bc', '2026-06-12T14:32:00Z').
+narrative_ontology:cs_kernel_id(eternal_marriage_covenant__prophetic_override_reading, eternal_marriage_covenant).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(eternal_marriage_covenant__prophetic_override_reading, institutional_church_administration).
+narrative_ontology:constraint_beneficiary(eternal_marriage_covenant__prophetic_override_reading, prophetic_authority_office).
+narrative_ontology:constraint_victim(eternal_marriage_covenant__prophetic_override_reading, practitioners_of_plural_marriage).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(eternal_marriage_covenant__prophetic_override_reading, mainstream_church_membership).
+narrative_ontology:constraint_victim(eternal_marriage_covenant__prophetic_override_reading, doctrine_fundamentalists).
+narrative_ontology:constraint_vindicates(eternal_marriage_covenant__prophetic_override_reading, living_prophet_doctrine).
+narrative_ontology:constraint_vindicates(eternal_marriage_covenant__prophetic_override_reading, continuing_revelation_principle).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The office responsible for receiving and interpreting new revelation from the divine. Under this reading's framework, the prophet's authority to receive continuing revelation is absolute and cannot be questioned. The office gains authority from the override doctrine: the ability to change doctrine is presented as responsiveness to divine will, not institutional capitulation. Controls the narratization of whether a new revelation has been received.
+narrative_ontology:constraint_stakeholder(eternal_marriage_covenant__prophetic_override_reading, prophetic_authority_office, agenda_setter,
+    institutional, generational, analytical, global).
+
+% The administrative structure of the church (councils, general authorities, organizational hierarchy). Directly benefits from the override doctrine: it permits the administration to adapt to federal pressure (suspending prosecutions by ceasing to mandate plural marriage) without admitting prior doctrine was false or that civil law supersedes divine authority. The doctrine permits the administration to maintain institutional control while appearing to respond to divine guidance rather than legal coercion. Retains the ability to govern members' spiritual status even as the practice is suspended.
+narrative_ontology:constraint_stakeholder(eternal_marriage_covenant__prophetic_override_reading, institutional_church_administration, beneficiary,
+    institutional, civilizational, analytical, global).
+narrative_ontology:stakeholder_secondary_role(eternal_marriage_covenant__prophetic_override_reading, institutional_church_administration, agenda_setter).
+
+% Those who were living plural marriage under the prior doctrine (immutable_commandment_reading) when the override is issued. They face a double bind: the practice they understood as eternally required for salvation is now prohibited, yet the doctrine still claims to exist. Compliance with the override requires either dissolving plural families or accepting institutional disapproval. Resistance means excommunication or separation into fundamentalist groups. Their exit is identity-locked: exaltation (the highest Mormon salvific goal) is understood to require plural marriage; accepting that the prophet can suspend the requirement undermines the foundation of that understanding.
+narrative_ontology:constraint_stakeholder(eternal_marriage_covenant__prophetic_override_reading, practitioners_of_plural_marriage, payer,
+    moderate, biographical, identity_locked, national).
+
+% Members who reject the override doctrine and maintain that D&C 132 establishes an immutable eternal law that cannot be suspended by any living prophet. They are forced to choose between institutional affiliation and doctrinal conviction. Many leave to form or join fundamentalist communities that continue plural marriage practice and maintain the immutable_commandment_reading. Their identity fusion is with the immutable doctrine; accepting the override is a form of apostasy from their perspective.
+narrative_ontology:constraint_stakeholder(eternal_marriage_covenant__prophetic_override_reading, doctrine_fundamentalists, payer,
+    moderate, biographical, identity_locked, national).
+
+% Members who either never practiced plural marriage or who support the institutional adaptation to federal pressure. They benefit from the override mechanism: the church gains legal legitimacy, their own doctrinal commitments are unaffected, and they can understand the override as evidence of ongoing divine guidance and institutional responsiveness. The constraint operates as a benefit to them: institutional survival without personal cost.
+narrative_ontology:constraint_stakeholder(eternal_marriage_covenant__prophetic_override_reading, mainstream_church_membership, beneficiary,
+    organized, biographical, constrained, global).
+
+% Federal authorities who criminalize polygamy and prosecute the church (Reynolds decision, Edmunds Act, Edmunds-Tucker Act). They are excluded from the revelation interpretation process; the prophetic override mechanism does not include federal input. The federal pressure is external to the constraint's operation, even though the pressure is structurally what activates the override. Federal actors would argue the override is capitulation to legal pressure; church authorities claim it is divine guidance. The exclusion of federal actors from revelation participation is structural to this reading.
+narrative_ontology:constraint_stakeholder(eternal_marriage_covenant__prophetic_override_reading, federal_government, excluded,
+    institutional, biographical, trapped, national).
+narrative_ontology:stakeholder_non_agent(eternal_marriage_covenant__prophetic_override_reading, federal_government).
+
+% Theologians, scholars, and members within and adjacent to the church who maintain that divine law (D&C 132) cannot be suspended by prophetic decision alone. They would argue that either (a) the prior revelation was not actually divine, (b) the new revelation is not actually divine, or (c) both revelations can coexist without the new one superseding the old. They are systematically excluded from the official revelation interpretation process; the church's teaching authority does not credit their objections.
+narrative_ontology:constraint_stakeholder(eternal_marriage_covenant__prophetic_override_reading, interpretation_traditionalists, excluded,
+    moderate, generational, constrained, national).
+
+% Historians, comparative religion scholars, and social scientists who analyze the constraint from outside the church's authority structure. They observe the prophetic override as a case of institutional adaptation under legal pressure and analyze whether the continuing revelation doctrine describes genuine divine communication or a mechanism for institutional flexibility. They take no position on the divine status of the revelation but examine the structural patterns.
+narrative_ontology:constraint_stakeholder(eternal_marriage_covenant__prophetic_override_reading, historical_observers, observer,
+    analytical, civilizational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(eternal_marriage_covenant__prophetic_override_reading, institutional_church_administration).
+narrative_ontology:fixing_cost_class(eternal_marriage_covenant__prophetic_override_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The continuing revelation doctrine coordinates institutional theological authority with legal and political adaptation. It solves the problem: how can an institution claiming divine authority change doctrine without admitting prior revelation was false? The solution coordinates the church's survival under legal pressure with its continued claim to divine guidance. Members can accept doctrinal change as evidence of ongoing divine communication rather than institutional capitulation. The coordination function is internal: it permits the institution to maintain unity and authority across doctrinal shifts.
+% TRANSFER_FUNCTION: Transfers the cost of institutional adaptation from the authority structure onto practitioners and fundamentalists: their sacrifice of practice or community affiliation is the price the institution pays for legal survival. Transfers the legitimacy claim from scripture (D&C 132) to living authority (the prophet's ability to receive new revelation). Transfers the authority to interpret divine will from the written word to the living institution.
+% ABSENT_VOICES: Joseph Smith (who received D&C 132) cannot speak to whether the revelation is mutable or immutable. Practitioners and fundamentalists are included in the church but excluded from the revelation interpretation process. Non-member federal authorities whose prosecution activates the override are explicitly excluded from the mechanism that responds to their pressure. Scholars who argue continuing revelation doctrine is a post-hoc narrative are systematically excluded from authoritative teaching.
+% DISAPPEARANCE_RATIONALE: If the prophetic override doctrine were unavailable, the church would face stark alternatives: either continue to mandate plural marriage and face federal destruction, or publicly renounce D&C 132 as error. The override doctrine enables a third path: maintain that the doctrine is eternally true while the living prophet can suspend practice. Without it, the institutional crisis would be much sharper, and the schism between those accepting adaptation and those maintaining the original doctrine would likely be more severe and more formally recognized. The constraint's existence permits institutional continuity.
+% FOUNDING_PROBLEM: Federal pressure (Reynolds decision 1879, territorial laws against polygamy, Edmunds Act 1882, Edmunds-Tucker Act 1887) made the church's mandated plural marriage practice illegal and threatened institutional existence through property seizure, disincorporation, and prosecution. The problem: how to respond to legal pressure without admitting doctrinal error or subordinating divine authority to civil law.
+% FOUNDING_PROBLEM_CORROBORATION: Federal prosecution records and legislation (Reynolds v. United States, Edmunds Act, Edmunds-Tucker Act statutes) document the external pressure. The institutional church's own correspondence and minutes document internal struggle with federal pressure. Fundamentalist splinter groups document that the original problem (being required to practice plural marriage) was real. Independent historians confirm federal pressure was sustained and threatened institutional survival. No outside observer attests that continuing revelation doctrine is legitimate divine mechanism; that remains intra-church theological claim.
+narrative_ontology:disappearance_verdict(eternal_marriage_covenant__prophetic_override_reading, world_rearranges).
+narrative_ontology:founding_problem_status(eternal_marriage_covenant__prophetic_override_reading, live).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(eternal_marriage_covenant__prophetic_override_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku2', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
+narrative_ontology:story_seed(eternal_marriage_covenant__prophetic_override_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(eternal_marriage_covenant__prophetic_override_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(eternal_marriage_covenant__prophetic_override_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(eternal_marriage_covenant__prophetic_override_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(eternal_marriage_covenant__prophetic_override_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness is high (0.68 at interval end) because the constraint transfers the cost of institutional adaptation from the authority structure onto practitioners and fundamentalists: their sacrifice of practice or community is the price the institution pays for survival. Suppression is high (0.72) because those who reject the override — practitioners and fundamentalists — face systematic institutional exclusion and are barred from the revelation interpretation process itself. The constraint's persistence depends on actively maintaining prophetic authority's monopoly on revelation interpretation; fundamentalist splinters that claim continuing revelation for themselves are suppressed as inauthentic. Theater ratio rises from 0.30 to 0.50 and stays elevated (0.48 at interval end): the continuing revelation doctrine, while real theological machinery within the church, increasingly serves a performative function — it performs institutional flexibility while the underlying mechanism (prophetic authority interpretation) remains closed to outside accountability. The measurement series reflect escalating federal pressure (1880 Reynolds decision, 1887 Edmunds-Tucker Act) driving the extractiveness and suppression upward, peaking around 1905 (post-Smoot hearings), and slightly declining by 1920 as institutional accommodation become normalized and fundamental opposition splits away. One shared time grid: every metric measured at every temporal point (1880, 1887, 1890, 1905, 1920).
+ *
+ * PERSPECTIVAL GAP:
+ *   From the prophetic authority seat: the constraint is genuine coordination — continuing revelation solves the problem of institutional flexibility under unchanging divine truth; the prophet's new revelation is the mechanism, and its closure to outside input is necessary for authority. From the practitioners' and fundamentalists' seats: the constraint is extractive override — their prior understanding of eternal doctrine is invalidated, their practice is forbidden, and they have no voice in the revelation process that displaced their understanding. The engine computes both seats' classifications from the structural data: the agenda-setter benefits from flexibility and authority, the victims bear the cost of adaptation and lose recourse. The divergence is structural, not observational.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Prophetic authority and institutional administration are both institutional-power actors with broad exit options (analytical): they experience low directionality toward the constraint (d near 0.2), treating it as a tool they control. Practitioners and fundamentalists are moderate-power actors with identity-locked exit (exaltation only through plural marriage in their understanding): they experience high directionality (d near 0.85), bearing the constraint's cost while unable to exit. Mainstream members are organized-power with constrained exit: they benefit from the constraint (institutional survival, their own practices unaffected), so directionality is moderate-low (d near 0.35). The override mechanism is what drives the directionality asymmetry: institutional actors can invoke continuing revelation to change doctrine; practitioners cannot invoke it to preserve their understanding. No directionality override is needed; the structural derivation from beneficiary/victim + exit captures the true relationships.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding problem (federal pressure on polygamy) is LIVE at interval end: the church continues to navigate American legal environment, which continues to prohibit plural marriage. The constraint does not become mandatrophic. However, the theater ratio and the excluded voices suggest that the prophetic override mechanism itself is increasingly performative: by 1920, the doctrine's flexibility has been demonstrated (the override occurred in 1890), and what remains is primarily institutional performance of continuing revelation authority rather than active problem-solving. The constraint is tangled_rope (genuine coordination function + asymmetric extraction + active enforcement) rather than piton because the coordination problem is still live for the institution: it still needs flexibility to navigate the legal environment, and the override doctrine still performs that function. However, the theater ratio's sustained elevation (0.48) signals that performativity is becoming the dominant mode rather than functional problem-solving.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    divine_authority_vs_institutional_adaptation,
+    'Is the prophetic override doctrine a legitimate mechanism for receiving new divine guidance that supersedes prior revelation, or is it a post-hoc narrative covering institutional capitulation to federal pressure?',
+    'Comparative analysis of revelation patterns: does the church receive new revelations when external pressure demands adaptation (institutional pressure theory) or independently of external circumstances (divine guidance theory)? Do sibling churches with similar theological frameworks (continuing revelation) show the same adaptation pattern, or different patterns?',
+    'If institutional pressure theory holds, the constraint is revealed as Snare (pure extraction with coordination cover narrative). If divine guidance theory holds, the constraint is Tangled_Rope (genuine coordination + asymmetric extraction in how the adaptation is implemented). The classification hinges on whether the override is authentic revelation or narrative device.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(divine_authority_vs_institutional_adaptation, empirical, 'Whether continuing revelation doctrine describes genuine divine communication or institutional adaptation mechanism.').
+
+omega_variable(
+    identity_lock_permanence,
+    'Do practitioners and fundamentalists who reject the override experience permanent identity-locked exit (unable to return even after religious identity reformation), or do some find pathways to reconciliation with the institutional framework?',
+    'Genealogical and sociological tracking of fundamentalist converts'' descendants: do they maintain fundamentalist affiliation across generations, or do later generations reconcile with mainstream church? What fraction of practitioners who initially rejected the override eventually accepted it, and what mechanisms enabled reconciliation (if any)?',
+    'If identity lock is permanent, suppression is structurally high and the constraint operates as pure extraction for a permanent victim class. If reconciliation pathways exist (theological reframing, generational distance from original practice), suppression becomes lower and the constraint approaches Tangled_Rope with time-dependent victim status. High permanent lock favors Snare classification; pathways toward reconciliation reduce extractiveness.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(identity_lock_permanence, empirical, 'Whether identity fusion prevents exit or permits reconciliation pathways.').
+
+omega_variable(
+    continuing_revelation_doctrine_scope,
+    'Does the continuing revelation doctrine (axiom in this reading) apply to other doctrines beyond marriage, or is it selectively invoked only for this constraint? If selectively applied, what distinguishes the marriage override from other doctrines?',
+    'Historical record of other attempted doctrinal overrides via continuing revelation: plural marriage override occurred in response to federal pressure. Have other doctrines similarly pressured (e.g., racial priesthood restrictions, gender roles in institutional hierarchy) received new revelations when legal or social pressure mounted, or do those doctrines persist without override claims?',
+    'If continuing revelation is applied equally across doctrines under pressure, it is a coherent institutional mechanism (supports Tangled_Rope). If applied selectively only to marriage, it is a narrative device tailored to this case (supports Snare). Selective application would suggest the axiom is not genuinely foundational but instrumentally deployed.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(continuing_revelation_doctrine_scope, conceptual, 'Whether continuing revelation doctrine is a general institutional mechanism or a specific narrative for marriage override.').
+
+omega_variable(
+    kernel_identity_across_readings,
+    'Do all three readings (immutable_commandment, prophetic_override, temporal_accommodation) claim the same kernel (D&C 132 as eternally valid revelation), or does each reading redefine what the kernel fundamentally is?',
+    'Textual analysis of each reading''s framing of D&C 132: does the reading treat the text as self-identical across time, or does the reading''s interpretation of what the text means change when the reading is invoked? Do believers in each reading agree on what words D&C 132 contains, but disagree on what they mean, or do they disagree on the text''s fundamental status?',
+    'If all three readings affirm the same kernel (text identity, meaning contested), the readings are genuinely sibling positions in a framework. If each reading redefines the kernel''s status (one makes it eternal law, one makes it suspended, one makes it subject to prophetic revision), the readings do not share a kernel — they are reframings of different kernels. If the readings do not share a kernel, this constraint is not a kernel reading in the committer sense; it is a different constraint whose framing happens to invoke D&C 132.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_identity_across_readings, conceptual, 'Whether the three readings contest the meaning of a shared kernel or redefine the kernel''s fundamental identity.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(eternal_marriage_covenant__prophetic_override_reading, 1880, 1920).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(eter_tr_t1880, eternal_marriage_covenant__prophetic_override_reading, theater_ratio, 1880, 0.3).
+narrative_ontology:measurement_basis(eter_tr_t1880, observed).
+narrative_ontology:measurement(eter_tr_t1887, eternal_marriage_covenant__prophetic_override_reading, theater_ratio, 1887, 0.38).
+narrative_ontology:measurement_basis(eter_tr_t1887, observed).
+narrative_ontology:measurement(eter_tr_t1890, eternal_marriage_covenant__prophetic_override_reading, theater_ratio, 1890, 0.45).
+narrative_ontology:measurement_basis(eter_tr_t1890, observed).
+narrative_ontology:measurement(eter_tr_t1905, eternal_marriage_covenant__prophetic_override_reading, theater_ratio, 1905, 0.5).
+narrative_ontology:measurement_basis(eter_tr_t1905, observed).
+narrative_ontology:measurement(eter_tr_t1920, eternal_marriage_covenant__prophetic_override_reading, theater_ratio, 1920, 0.48).
+narrative_ontology:measurement_basis(eter_tr_t1920, observed).
+
+% Extraction over time
+narrative_ontology:measurement(eter_be_t1880, eternal_marriage_covenant__prophetic_override_reading, base_extractiveness, 1880, 0.55).
+narrative_ontology:measurement_basis(eter_be_t1880, observed).
+narrative_ontology:measurement(eter_be_t1887, eternal_marriage_covenant__prophetic_override_reading, base_extractiveness, 1887, 0.63).
+narrative_ontology:measurement_basis(eter_be_t1887, observed).
+narrative_ontology:measurement(eter_be_t1890, eternal_marriage_covenant__prophetic_override_reading, base_extractiveness, 1890, 0.68).
+narrative_ontology:measurement_basis(eter_be_t1890, observed).
+narrative_ontology:measurement(eter_be_t1905, eternal_marriage_covenant__prophetic_override_reading, base_extractiveness, 1905, 0.7).
+narrative_ontology:measurement_basis(eter_be_t1905, observed).
+narrative_ontology:measurement(eter_be_t1920, eternal_marriage_covenant__prophetic_override_reading, base_extractiveness, 1920, 0.68).
+narrative_ontology:measurement_basis(eter_be_t1920, observed).
+
+% Suppression requirement over time
+narrative_ontology:measurement(eter_su_t1880, eternal_marriage_covenant__prophetic_override_reading, suppression_requirement, 1880, 0.58).
+narrative_ontology:measurement_basis(eter_su_t1880, observed).
+narrative_ontology:measurement(eter_su_t1887, eternal_marriage_covenant__prophetic_override_reading, suppression_requirement, 1887, 0.68).
+narrative_ontology:measurement_basis(eter_su_t1887, observed).
+narrative_ontology:measurement(eter_su_t1890, eternal_marriage_covenant__prophetic_override_reading, suppression_requirement, 1890, 0.72).
+narrative_ontology:measurement_basis(eter_su_t1890, observed).
+narrative_ontology:measurement(eter_su_t1905, eternal_marriage_covenant__prophetic_override_reading, suppression_requirement, 1905, 0.74).
+narrative_ontology:measurement_basis(eter_su_t1905, observed).
+narrative_ontology:measurement(eter_su_t1920, eternal_marriage_covenant__prophetic_override_reading, suppression_requirement, 1920, 0.72).
+narrative_ontology:measurement_basis(eter_su_t1920, observed).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(eternal_marriage_covenant__prophetic_override_reading, identity_coordination).
+narrative_ontology:boltzmann_floor_override(eternal_marriage_covenant__prophetic_override_reading, 0.12).
+narrative_ontology:affects_constraint(eternal_marriage_covenant__prophetic_override_reading, eternal_marriage_covenant__immutable_commandment_reading).
+narrative_ontology:affects_constraint(eternal_marriage_covenant__prophetic_override_reading, eternal_marriage_covenant__temporal_accommodation_reading).
+
+% DUAL FORMULATION NOTE:
+% This constraint is one reading of the contested kernel eternal_marriage_covenant (D&C 132 on celestial marriage and plurality of wives). The ε-invariance principle requires separate stories for readings that produce different extractiveness values from the same kernel. The prophetic_override_reading treats the override mechanism itself as extractive (high ε: 0.68) because it asymmetrically benefits the institutional authority while imposing costs on practitioners and fundamentalists who reject it. The immutable_commandment_reading treats D&C 132 as a mountain (low ε: extraction is natural law outcome, not institutional choice). The temporal_accommodation_reading treats the Manifesto as a compromise coordinate (moderate ε: negotiation between doctrine and law). All three readings refer to the same scriptural text; each reading instantiates a different constraint because each reading produces a different structural beneficiary/victim configuration and a different ε. Network edges link the readings via affects_constraints so the constraint family is visible to cross-indexing analysis.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

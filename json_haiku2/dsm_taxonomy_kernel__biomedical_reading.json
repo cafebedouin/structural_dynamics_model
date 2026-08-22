@@ -1,0 +1,409 @@
+{
+  "header": {
+    "constraint_id": "dsm_taxonomy_kernel__biomedical_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "c2ad58cb-b5c7-458f-b0ca-86f6418f778b"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "DSM Biomedical Taxonomy Kernel — Disease Discovery Reading",
+    "topic_domain": "medical_epistemology/psychiatric_taxonomy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "psychiatric_establishment",
+      "pharmaceutical_manufacturers",
+      "institutional_conformity_enforcers"
+    ],
+    "victims": [
+      "diagnostic_threshold_population",
+      "involuntary_treatment_subjects"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "psychiatric_establishment",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "DSM committees authoritatively define diagnostic categories, set threshold criteria, and revise the manual every ~5–10 years. Frames categories as discovered disease entities grounded in emerging neurobiology. Controls research funding, training curricula, and professional legitimacy through gatekeeping who gets credentialed to diagnose and treat. Collects prestige, career advancement, and gatekeeping power over the category system itself."
+    },
+    {
+      "name": "pharmaceutical_manufacturers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Each newly formalized DSM category creates a patient population for targeted drug development and marketing. Fund psychiatric research, sponsor medical education, and shape diagnostic framing toward pharmacological intervention. Their business model depends on DSM categories remaining stable enough to support treatment indications while new categories emerge to open new markets. Direct beneficiary of the category expansion trajectory."
+    },
+    {
+      "name": "diagnostic_threshold_population",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individuals who meet diagnostic criteria (or are borderline) under current DSM thresholds. Once diagnosed, subject to pharmacological intervention, loss of legal capacity (driver's license, custody, employment), mandatory treatment in institutional settings, and permanent record annotations that shape access to employment, housing, and social participation. Exit from the diagnosed category requires disproving the diagnosis itself—a structural impossibility if the category is treated as objective fact."
+    },
+    {
+      "name": "involuntary_treatment_subjects",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals involuntarily committed, medicated without consent, or subjected to restraint/seclusion on grounds that their diagnosed condition justifies coercive intervention. The DSM diagnosis is the legal and clinical justification for removing bodily autonomy. Exit requires proving non-dangerousness or restoration of competency—thresholds the treatment system itself controls."
+    },
+    {
+      "name": "institutional_conformity_enforcers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Schools, workplaces, military, prisons, family courts use DSM diagnoses to justify behavioral intervention: medicalization of noncompliance, allowing coercive correction without legal authorization as punishment. A child diagnosed with ADHD or ODD becomes medicatable rather than disciplinable; a worker with depression or anxiety becomes treatable rather than resistant; a prisoner with antisocial personality disorder becomes incapacitating rather than rebellious. The DSM provides a legitimacy frame for conformity enforcement."
+    },
+    {
+      "name": "research_community",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Neuroscientists, geneticists, and neuroimaging researchers whose funding, publication prestige, and career advancement depend on finding biological markers for DSM categories. Frames categories as yet-to-be-fully-understood neurobiological disorders amenable to empirical discovery. Publishes studies claiming to locate neural correlates, genetic loci, or biomarkers. Career incentive is maximum: funding follows disease discovery; funding is unavailable for social construction hypotheses."
+    },
+    {
+      "name": "neurodiversity_advocates",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individuals diagnosed with autism, ADHD, dyslexia, and other neurodevelopmental variations who reject the disease framing and argue for acceptance of neurological diversity as natural human variation rather than pathology. Their frame (natural variation) contradicts the biomedical reading's core premise (objective disease). Systematically excluded from DSM revision committees and research agendas; their testimony appears as advocacy, not science."
+    },
+    {
+      "name": "critical_psychiatry_scholars",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Psychiatrists and social scientists who argue DSM categories are reverse-engineered from drug availability (pharmaceutical influence) rather than discovered through biology; that the category system serves market expansion and institutional control more than patient welfare. Systematically underfunded; excluded from major psychiatric publications and professional leadership; reframed as ideological rather than scientific."
+    },
+    {
+      "name": "service_users_seeking_explanation",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Individuals experiencing suffering, distress, or behavioral difficulty who seek explanation and intervention. The DSM reading offers a coherent narrative: your suffering is a disease, it has a biological basis, treatment can fix it. This framing can be genuinely relieving (disease externalizes blame, reduces stigma) and genuinely harmful (disease legitimizes coercive intervention, permanence of diagnosis, side effects of medication). They bear the cost of living inside the framing whether it helps or harms."
+    },
+    {
+      "name": "competition_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Pharmaceutical regulatory agencies (FDA, EMA) and antitrust bodies. Evaluate whether DSM categories are scientifically grounded or marketing tools; whether psychiatric diagnostic authority is independent or captured by pharmaceutical interests; whether exclusion of alternative readings from professional legitimacy constitutes anticompetitive gatekeeping."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a unified, standardized language for clinicians, researchers, and institutions to communicate about mental distress and behavioral difficulty; enables research coordination across sites; centralizes training in psychiatric diagnosis under one authoritative framework rather than dozens of idiosyncratic local approaches.",
+    "transfer_function": "Moves bodily autonomy, legal capacity, and freedom from coercive intervention FROM diagnosed individuals and involuntary treatment subjects TO the psychiatric establishment, pharmaceutical manufacturers, and institutional conformity enforcers. Moves research funding and prestige FROM funding bodies TO the psychiatric research community and DSM-aligned investigators. Moves market share FROM generic behavioral support TO branded pharmaceutical products.",
+    "absent_voices": "Neurodiversity advocates and critical psychiatry scholars are structurally excluded from DSM revision committees and major psychiatric publications. They would testify that the biomedical reading misframes social suffering as individual disease, that pharmaceutical influence shapes category construction, and that alternative readings exist with different implications for treatment and social policy. Their absence from the table means disagreement is defined out of science.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the DSM biomedical reading disappeared overnight—replaced by explicit acknowledgment that categories are socially constructed, that alternative readings exist (neurodiversity, critical psychiatry), and that diagnosis does not warrant involuntary treatment—psychiatry would bifurcate: voluntary supportive interventions for those seeking help, and profound contraction of involuntary commitment and coercive medication. Pharmaceutical markets would shrink as diagnostic expansion slowed. Institutional conformity enforcement would lose its medical legitimacy frame. The world would rearrange around explicit negotiation of treatment goals rather than default-to-pharmacology-as-cure.",
+    "founding_problem": "In mid-20th century, psychiatry lacked a unified diagnostic framework: clinicians used different terminology, hospitals operated under different classification systems, research was fragmented and incomparable. The DSM was created to solve this coordination problem—a single, authoritative manual that would enable training, research, and clinical communication across institutions.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The psychiatric establishment attests the founding problem (fragmentation) was real and remains partially unsolved; coordination via DSM is essential for modern psychiatry. However, neurodiversity advocates, critical psychiatry scholars, and independent epidemiologists outside the psychiatric discipline attest that (1) the founding problem of fragmentation has been substantially solved (ICD codes provide sufficient clinical communication), and (2) the DSM has evolved beyond coordination toward market expansion and institutional control—the founding problem is no longer the primary function the system serves."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.77,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "biomarker_discovery_frontier",
+      "question": "Are DSM categories mapping to discoverable neurobiological entities, or are researchers finding correlates of the social construction (diagnosis → behavior change → neural adaptation → observed correlation)?",
+      "resolution_mechanism": "Prospective neuroimaging studies on pre-diagnosis, undiagnosed individuals meeting symptom criteria who receive no intervention; comparison of neural patterns across cultures where the same behaviors are not medicalized; longitudinal tracking of whether neural differences precede diagnosis or follow it.",
+      "impact": "If neurobiological differences precede diagnosis, the biomedical reading's core claim holds. If neural correlates emerge post-diagnosis (via behavioral feedback, medication effects, identity integration), the reading conflates observation with causation and becomes a critical psychiatry reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether observed neural correlates represent discovered disease entities or constructed artifacts of the diagnostic process itself."
+    },
+    {
+      "id": "kernel_contest_framing",
+      "question": "Is the DSM a discovered taxonomy of objective disease entities, a socially constructed category system serving institutional and pharmaceutical interests, or a natural-variation framework pathologizing human diversity?",
+      "resolution_mechanism": "This is the irreducible committer-frame ambiguity: three different readings of the same kernel (DSM manual) instantiate three different constraints with different ε, beneficiary/victim structures, and policy implications. No empirical test resolves which reading is 'correct'—the contest is over what counts as disease, who gets to decide, and whether diagnosis warrants coercion.",
+      "impact": "The biomedical reading alone justifies involuntary treatment, pharmaceutical intervention, and loss of legal capacity. The neurodiversity reading justifies accommodations and support without pathology framing. The critical psychiatry reading justifies regulatory scrutiny of pharmaceutical influence and DSM revision process transparency. The reading adopted shapes institutional power, harm distribution, and treatment policy.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The kernel contest: which reading of the DSM—biomedical, neurodiversity, or critical psychiatry—instantiates the true constraint."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.72) structural—external barriers to alternative treatment, loss of legal capacity—or internalized—diagnosed individuals internalizing disease identity, absorbing shame, losing belief in alternative possibilities?",
+      "resolution_mechanism": "Post-diagnosis qualitative research on how long internalized suppression persists after individuals exit the diagnostic category or gain access to alternative frameworks; longitudinal tracking of self-efficacy and identity shift in individuals who reject DSM diagnosis after initial acceptance.",
+      "impact": "Structural suppression is imposed externally and can be removed by changing institutions. Internalized suppression persists after external barriers dissolve; it represents a deeper form of identity-lock and would require identity-reconstruction work to reverse.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression in the diagnostic context is structural (legal/institutional) or internalized (identity/belief)."
+    },
+    {
+      "id": "pharmaceutical_capture_degree",
+      "question": "To what degree does pharmaceutical industry influence shape DSM category definitions, threshold criteria, and revision priorities?",
+      "resolution_mechanism": "Financial disclosure analysis (researcher funding from manufacturers), publication bias analysis (likelihood of publication by finding direction), natural experiment from jurisdictions that exclude pharmaceutical industry from DSM-equivalent processes, longitudinal tracking of category expansion aligned with drug availability.",
+      "impact": "High pharmaceutical influence would reclassify the constraint from tangled_rope (genuine coordination + extraction) to snare (extraction disguised as coordination). Low influence would support the biomedical reading's independence claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of pharmaceutical industry capture in DSM category construction and revision."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The DSM (Diagnostic and Statistical Manual) is a contested kernel: a standardized psychiatric taxonomy defended as a discovered classification of objective neurobiological disease entities. Under the biomedical reading instantiated here, DSM categories map to real, discoverable disorders (depression, schizophrenia, ADHD, etc.) grounded in neurobiology; diagnosis is the recognition of an objective fact; treatment—especially pharmacological—is the appropriate response. This reading justifies involuntary commitment, coercive medication, and loss of legal capacity for diagnosed individuals. It benefits the psychiatric establishment (gatekeeping authority), pharmaceutical manufacturers (diagnostic expansion creates patient populations), and institutional conformity enforcers (behavioral noncompliance becomes medicatable rather than disciplinable). The reading extracts from those meeting diagnostic criteria, who become subject to coercive intervention, permanent record annotation, and identity-lock as diseased. This story instantiates ONLY the biomedical reading; the neurodiversity reading and critical psychiatry reading are sibling constraints in the same kernel family, with different ε values and beneficiary/victim structures. The claim/metric gap is by design: the constraint is CLAIMED as tangled_rope (coordination + enforcement) under the biomedical reading's own frame; the authored metrics (high extractiveness, high suppression, rising theater_ratio over time) describe a constraint that increasingly operates as extraction despite coordination justification—the engine measures that divergence.",
+    "key_agents": [
+      "Psychiatric establishment: institutional agenda-setter, defines diagnostic categories, revises DSM every 5–10 years, controls professional legitimacy and training gatekeeping.",
+      "Pharmaceutical manufacturers: institutional beneficiary and secondary payer, funds research and medical education, benefits directly from category expansion and diagnostic threshold preservation.",
+      "Diagnostic threshold population: powerless victims subject to pharmacological intervention, loss of legal capacity, permanent record annotations, and identity-lock preventing exit from diagnosed category.",
+      "Involuntary treatment subjects: trapped victims subject to coercive medication and restraint justified by DSM diagnosis; exit requires proving non-dangerousness (controlled by the treatment system).",
+      "Institutional conformity enforcers (schools, workplaces, prisons): institutional beneficiaries using DSM diagnoses to legitimize behavioral intervention without legal authorization for punishment.",
+      "Research community: institutional beneficiary and secondary agenda-setter; career advancement depends on discovering biological markers for DSM categories; funding follows disease discovery, not social construction.",
+      "Neurodiversity advocates: excluded powerless seat that would dispute the disease framing and argue for natural variation acceptance instead of pathology.",
+      "Critical psychiatry scholars: excluded moderate-power seat that would argue pharmaceutical influence shapes category construction and that alternative readings exist.",
+      "Service users seeking explanation: powerless beneficiary/payer who gains relief from disease narrative (externalized blame) but bears cost of living inside constraining framing.",
+      "Competition regulators: observer institutional seat evaluating whether DSM authority is independent or captured, whether gatekeeping is anticompetitive."
+    ],
+    "logic_rationale": "Extractiveness reaches 0.78 at interval end because the biomedical reading justifies removing autonomy (involuntary treatment, coercive medication, loss of driver's license/custody/employment access) from individuals deemed to meet diagnostic criteria—the extraction is authorized by the diagnosis itself. The constraint is active enforcement: thresholds must be maintained, alternatives excluded, diagnostic expansion controlled to sustain beneficiary rents. Suppression is high (0.72) because the reading persists despite contradictory evidence (neural correlates appear post-diagnosis, not pre-diagnosis; alternative frameworks exist but are excluded from professional legitimacy; pharmaceutical influence shapes category boundaries) and despite harm documented by excluded voices. Theater_ratio rises from 0.18 to 0.41 over the interval because scientific justification (biomarker discovery) increasingly fails to match the category expansion trajectory—the system continues category proliferation and diagnostic broadening despite lack of neurobiological discovery, suggesting theatrical maintenance (going through the motions of biological research while the actual function is institutional control and pharmaceutical market expansion). The measurement series track a constraint whose extractive function increasingly dominates its coordination function. All metrics authored on a single shared time grid (intervals 0, 5, 10, 15, 20, 25, 30, 40) so temporal analysis has coherent data across all three series.",
+    "perspectival_gap": "From the psychiatric establishment and research community seats, the DSM is genuine coordination (unified language for communication, standardized training, comparable research)—they experience it as a professional achievement and increasingly accurate description of neurobiological reality. From the diagnostic threshold population and involuntary treatment subjects, the same structure operates as enforced extraction: diagnosis → loss of autonomy → coercive intervention → permanent status → identity-lock. The engine computes this divergence from the structural data: different power atoms (institutional vs. powerless), different exit_options (arbitrage vs. identity_locked/trapped), and opposite roles (agenda_setter vs. payer) automatically produce different directionality values, hence different per-seat type computations. The payer seat experiences snare; the agenda_setter seat experiences rope. This divergence is the measurement the corpus exists to take.",
+    "directionality_logic": "Psychiatric establishment and research community: d near beneficiary end (0.1–0.2 range). They set the agenda, collect prestige and resources, face no extraction. Their exit_options are arbitrage (can leave psychiatry and join other profitable fields; no identity-lock). Power is institutional. Pharmaceutical manufacturers: d near beneficiary end (0.15–0.25). They collect directly from market expansion driven by DSM categories; their exit is arbitrage (can leave pharmaceuticals for other markets). Power is institutional. Diagnostic threshold population: d near target end (0.8–0.9). They are subject to coercive intervention authorized by diagnosis; their exit_options are identity_locked (diagnosis becomes their permanent status; disproving it is structurally impossible if the category is treated as objective fact). Power is powerless. Involuntary treatment subjects: d at full target end (0.95–1.0). They face immediate coercive removal of bodily autonomy; their exit_options are trapped (legal and institutional barriers to leaving treatment, with exit conditions controlled by the treatment system). Power is powerless. Institutional conformity enforcers: d in moderate-beneficiary range (0.25–0.35). They benefit from DSM diagnosis as a legitimacy frame for behavioral intervention without legal authorization for punishment; they are not direct extractors but secondary beneficiaries of the constraint's enforcement machinery. Power is institutional. Research community and neurodiversity advocates: moderate-to-low power; moderate exit_options (constrained mobility in their fields if they adopt alternative readings). Service users: d in symmetric range (0.45–0.55). They receive genuine benefit (explanation, relief from blame externalization) and genuine cost (living inside disease narrative, exposure to pharmacological side effects, permanent record annotations). Power is powerless but exit_options are somewhat more mobile than the diagnostic threshold population because they may still have choice about treatment uptake (not always true for involuntary subjects). No directionality overrides are needed; the structural derivation from beneficiary/victim + exit + power produces accurate directionality values.",
+    "mandatrophy_analysis": "The founding problem (diagnostic fragmentation across institutions) was real and justified DSM creation. However, founding_problem_status is contested: the psychiatric establishment claims the problem is live (fragmentation persists, standardization is ongoing), while critical psychiatry scholars and epidemiologists outside the discipline attest the problem is substantially solved (ICD codes provide sufficient coordination; DSM expansion beyond coordination toward market expansion and institutional control is the contemporary function). The disappearance_verdict is world_rearranges—the constraint is not natural law; it is a social/institutional arrangement whose persistence depends on active enforcement by the psychiatric establishment and pharmaceutical industry. This divergence (founding problem status=contested, disappearance_verdict=world_rearranges) indicates the constraint may be experiencing mandatrophy: its original justification no longer tracks its actual operation. The theater_ratio rise from 0.18 to 0.41 supports this: more of the constraint's operation is theatrical (going through the motions of biological research, revision process, professional legitimacy maintenance) rather than functional (solving the founding coordination problem). The classification remains tangled_rope (genuine coordination function + asymmetric extraction) rather than piton (atrophied function maintained purely theatrically) because the coordination benefit to the psychiatric establishment and research community is substantial and real—it is not purely theatrical for them. But from the payer seats (diagnostic threshold population, involuntary treatment subjects), the constraint increasingly operates as snare (extraction disguised as coordination). This per-seat divergence is exactly what the mandatrophy analysis should detect: a constraint whose stated function (coordination) no longer explains its persistence for certain seats, while other seats continue collecting real benefits.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel dsm_taxonomy_kernel. The reading instantiated here is biomedical_reading: DSM categories map to objective neurobiological disease entities discoverable through empirical research. Sibling readings are neurodiversity_reading (DSM categories pathologize natural neurological variation conflicting with institutional norms) and critical_psychiatry_reading (DSM categories are reverse-engineered from pharmaceutical availability to construct drug markets). The three readings share the same kernel (the DSM manual, the institutional authority structure, the diagnostic criteria) but instantiate different constraints because they make different claims about what the kernel IS, what counts as disease, and whether diagnosis warrants coercion. The biomedical reading claims the kernel is a discovered taxonomy; the critical psychiatry reading claims it is a manufactured one; the neurodiversity reading claims it is a pathologizing framework applied to natural variation. Each reading produces a different ε (extractiveness), different victim sets, and different policy implications. The kernel contest is irreducible—no empirical data resolves which reading is correct because the contest is over what counts as disease, not over empirical facts about neurobiology."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "dsm_taxonomy_kernel__neurodiversity_reading",
+      "dsm_taxonomy_kernel__critical_psychiatry_reading"
+    ],
+    "dual_formulation_note": "The DSM taxonomy kernel decomposes into three constraint stories per ε-invariance principle: biomedical_reading (objective disease discovery, high extractiveness), neurodiversity_reading (natural variation pathologized, high institutional control), critical_psychiatry_reading (pharmaceutical market construction, high capture). These are not the same constraint viewed from different angles—they are different claims about what the kernel IS, with structurally different beneficiary/victim configurations and ε values. The three readings coexist in academic/clinical discourse but instantiate incompatible constraints. Network edges link them as a constraint family; each story's cs_structure.reading_relations entries document the structural relationships between readings (coexists_with, influences, forecloses)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ],
+  "gain_flow": "psychiatric_establishment",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "objective_neurobiological_disease_classification",
+    "drift_state": {
+      "moment": "contemporary_neuroscience_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "neurodiversity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "critical_psychiatry_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dsm_categories_map_neurobiological_entities",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "diagnosis_justifies_medical_intervention",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

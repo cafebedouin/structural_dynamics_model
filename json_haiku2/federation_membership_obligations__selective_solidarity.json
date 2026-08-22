@@ -1,0 +1,360 @@
+{
+  "header": {
+    "constraint_id": "federation_membership_obligations__selective_solidarity",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "e067f48c-f0f1-41ab-882d-db82cf118061"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.52,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Federation Selective Solidarity: Tiered Free Movement by Contribution Status",
+    "topic_domain": "political_economy/federalism/migration_policy/welfare_state",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employed_mobile_workers",
+      "high_contribution_states",
+      "fiscal_administration"
+    ],
+    "victims": [
+      "economically_inactive_migrants",
+      "low_contribution_history_workers",
+      "asylum_and_family_reunification_applicants"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "employed_mobile_workers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Workers with continuous employment history and documented contribution records gain unrestricted intra-federation movement, access to member state welfare on parity with citizens, and rapid family reunification approval. Their mobility is the justified core of the arrangement; they collect full rights."
+    },
+    {
+      "name": "economically_inactive_migrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Workers between jobs, career changers, retirees, students, and family members of mobile workers face tiered restrictions: limited duration of residence, conditional welfare access (must demonstrate financial self-sufficiency or prior contribution), mandatory health insurance, and return-home requirements if welfare dependence accrues. Legal presence is contingent, not assured. Movement between member states is permitted but welfare access is not guaranteed to follow."
+    },
+    {
+      "name": "high_contribution_states",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Wealthy member states with strong fiscal capacity and high per-capita contribution rates set and enforce the tiering rules through selective welfare eligibility, contribution history documentation requirements, and bilateral labor agreements. They frame the arrangement as protecting welfare sustainability against foreseeable fiscal stress; they administer the enforcement machinery (contribution tracking, eligibility verification, deportation authority)."
+    },
+    {
+      "name": "low_contribution_history_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Workers from lower-income member states, or those with interrupted employment histories, face escalating scrutiny: longer residency requirements before welfare eligibility (5–10 years vs. 0 for citizens), higher proof-of-contribution thresholds, and social benefit restrictions even after the waiting period. Career interruption (illness, caregiving, retraining) is treated as contribution gap. Structural economic inequality maps directly onto tiered mobility and welfare access."
+    },
+    {
+      "name": "low_gdp_member_states",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Lower-income member states lose workers to migration (brain drain, labor drain) yet their citizens face contribution-history stigma in high-income destinations. They are excluded from setting tiering rules (those are set by high-contribution states unilaterally or through coalitions) but bear the externality of losing productive workers and having their citizens' contribution records systematically discounted. They retain nominal sovereignty but face structural pressure to accept asymmetric terms."
+    },
+    {
+      "name": "asylum_and_family_reunification_applicants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Non-worker migrants (family members, asylum seekers, humanitarian applicants) are entirely dependent on the sponsoring worker's contribution status. A spouse's welfare eligibility is derivative of the worker's contribution record; an asylum seeker has no independent claim. Contribution-based tiering extends to humanitarian migration, converting a membership claim into a transaction validated by prior fiscal performance. Their residence and welfare access are proxies for their sponsor's labor history."
+    },
+    {
+      "name": "fiscal_administration",
+      "role": "agenda_setter",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "The administrative doctrine that welfare is a fiscal liability that must be managed through eligibility restrictions. The doctrine treats free movement (a citizenship claim) as conditional on economic contribution (a labor-market claim). Tiering is administratively simpler than universal eligibility, reducing welfare fraud risk and enabling fine-grained cost control — the administrative good that the constraint vindicates."
+    },
+    {
+      "name": "integration_advocate_coalition",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Civil-rights organizations, labor unions, and some member state governments argue that tiering violates federation constitutive principles: free movement and welfare access are membership rights, not labor-market transactions; contribution history is an instrumentality that converts citizenship into a commodity. They are excluded from the default frame (the tiering rules are authored in fiscal/administrative language) but constitute the primary resistance."
+    },
+    {
+      "name": "federation_legislative_body",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Inter-member supranational authority that ratifies and can modify the tiering rules. In practice constrained by high-contribution state pressure (which can exit or defund the federation if tiering is dismantled); formal authority exceeds actual discretion. Observes contests between other seats."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents uncontrolled welfare-seeking migration by limiting welfare access to those who have demonstrated capacity for economic self-sufficiency or prior fiscal contribution; solves coordination of open labor mobility with closed welfare systems by tiering rights accordingly. Enables high-income states to set welfare eligibility rules defensively while maintaining nominally open borders for mobile workers.",
+    "transfer_function": "Moves welfare access rights selectively from economically inactive people and low-contribution-history workers to employed workers and citizens. Transfers administrative burden of contribution-history tracking to individual migrants and lower-income member states. Transfers control of welfare access from federation-level principle to member state discretion, indexed by prior fiscal performance.",
+    "absent_voices": "Workers in precarious employment (gig, seasonal, informal) have no auditable contribution history and are treated as economically inactive despite working; they are excluded from welfare debate because they are administratively invisible. Non-worker migrants (family members, students, humanitarian applicants) are excluded from the mobility/welfare framing entirely; their situation is treated as dependent, not as an independent membership question.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the tiering enforcement vanished, welfare access would become universal within the federation regardless of contribution history; employers would face wage pressure (workers no longer gatekept by contribution requirements); low-income workers would have portable welfare claims; labor mobility would decouple from economic status. The distribution of welfare access and the gatekeeping power would shift from member states to federation-level principle.",
+    "founding_problem": "Large-scale free movement combined with national welfare systems creates fiscal exposure: member states cannot control in-migration and thus cannot reliably constrain welfare-claim volume; a state's fiscal capacity to provide welfare is no longer bounded by its own population. Tiering was built to allow mobility while preserving member state fiscal autonomy.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "High-contribution states attest the founding problem is live and acute, citing empirical data on welfare-claim growth correlating with migration. Integration advocates (civil-rights organizations, labor unions, some member states) attest the founding problem is either fabricated (migration's net fiscal effect is positive) or solved (labor-market demand manages selection without welfare gatekeeping). The contest is over whether the founding problem statement itself is accurate or is a cover story for contribution-based discrimination."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Federation member states have adopted a tiered free-movement and welfare-access regime indexed to contribution history and economic activity status. Workers with documented employment and fiscal contribution gain unrestricted intra-federation movement and welfare parity with citizens; economically inactive people (between jobs, retirees, students, family members, asylum applicants) face escalating restrictions: conditional welfare, proof-of-funds requirements, mandatory return-home provisions if welfare dependence accrues, and longer waiting periods before access. The regime is framed as protecting fiscal sustainability and preventing welfare-seeking migration; critics frame it as converting citizenship membership into a market transaction gated by prior economic performance. This constraint instantiates the SELECTIVE SOLIDARITY reading of the federation-membership-obligations kernel: free movement is preserved in principle but welfare access is decoupled from citizenship and reattached to contribution status. This reading coexists with the integration-primary reading (which treats free movement and welfare as indivisible citizenship entitlements) and the member-sovereignty-primary reading (which treats both as conditional on member state welfare-system protection). The constraint is CLAIMED as tangled_rope (real coordination of labor mobility with fiscal limits, plus asymmetric extraction from inactive migrants); the authored metrics (extractiveness 0.68, suppression 0.52, theater 0.41) describe a regime that actively enforces contribution-based gatekeeping. The claim-metric divergence is intentional; the engine measures whether the real operation aligns with the coordination framing or runs as pure extraction.",
+    "key_agents": [
+      "employed_mobile_workers (beneficiary; moderate power; mobile exit): gain unrestricted movement and welfare parity",
+      "economically_inactive_migrants (victim; powerless; trapped exit): face conditional welfare, proof-of-funds, return-home risk",
+      "high_contribution_states (agenda_setter; institutional power; arbitrage exit): set and enforce the tiering rules unilaterally",
+      "low_contribution_history_workers (victim; powerless; identity-locked exit): face escalating scrutiny and longer waiting periods despite employment",
+      "low_gdp_member_states (excluded; powerful but constrained): lose workers to migration and have their citizens' contribution records discounted",
+      "asylum_and_family_reunification_applicants (victim; powerless; trapped exit): welfare access is entirely derivative of sponsoring worker's contribution",
+      "integration_advocate_coalition (excluded; powerful but constrained): argue tiering violates federation constitutive principles; not in the default frame",
+      "federation_legislative_body (observer; institutional power; constrained exit): formal authority to modify rules but constrained by high-contribution state defection threat"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68 at interval end) because the constraint decouples welfare access from citizenship membership and reattaches it to prior fiscal contribution — a transaction rather than an entitlement. The constraint operates asymmetrically: employed workers gain; economically inactive people and low-contribution-history workers lose. Suppression is moderate (0.52) because the regime uses administrative gatekeeping (contribution tracking, eligibility verification, residency waiting periods) rather than direct coercion; the suppression is structural (economic dependency on employment, documentation requirements, welfare conditionality) rather than violent. However, the regime actively enforces return-home provisions and eligibility denials, which constitutes active enforcement machinery. Theater is moderate-low (0.41): the fiscal-sustainability framing is partly genuine (welfare systems are fiscally constrained) but increasingly defensive (the net fiscal effect of low-contribution workers is empirically contested). The measurement series tracks extraction and suppression rising over the interval as the tiering rules are refined and made more granular — contribution-history thresholds tighten, waiting periods lengthen, and administrative burden on workers increases. Suppression requirement (the active force needed to maintain the constraint) is lower than base extractiveness because many workers voluntarily (or strategically, given trapped alternatives) internalize the tiering logic — 'I should wait until I am employed before moving' becomes self-policing rather than externally enforced.",
+    "perspectival_gap": "The high-contribution states' seat (agenda_setter) experiences the constraint as coordinating legitimate security against fiscal overload; the constraint is rationally necessary. The economically_inactive_migrants' seat experiences it as arbitrary gatekeeping; the same rule structure appears as pure extraction. The employed_mobile_workers' seat experiences it as beneficial (they gain full rights); low-contribution-history workers' seat experiences it as discriminatory (they work but are treated as risks). The federation_legislative_body observes all these gaps but is structurally constrained by the threat of high-contribution state defection if tiering is dismantled — formal authority diverges from practical discretion. The engine computes per-seat directionality from these structural asymmetries; the agenda_setter seat's d is near 0 (full beneficiary), while the victim seats' d approaches 1.0 (full target). The constraint's computed type may differ by seat: from the high-contribution state view, tangled_rope (coordination + asymmetric extraction); from the economically_inactive migrants' view, snare (pure extraction, no meaningful coordination benefit).",
+    "directionality_logic": "High-contribution states are structural beneficiaries: they retain effective control over welfare access despite nominally open borders, they shift administrative burden to workers and lower-income states, and they collect the fiscal discipline dividend (lower welfare claims per capita). Their directionality is near 0.1 (full beneficiary). Employed mobile workers gain full movement and welfare parity; their directionality is near 0.2 (beneficiary with some cost). Economically inactive migrants are the clear targets: they lose welfare access, face proof-of-funds burden, and carry return-home risk; their directionality is near 0.95 (full target). Low-contribution-history workers are targets despite being employed: their directionality is near 0.85 (substantial target) because employment alone does not secure access — contribution history and economic-status stigma persist. Low-gdp member states are payers in an inter-state sense: they lose workers and have their citizens' contribution records systematically discounted; their directionality is near 0.7 (asymmetric target). The integration_advocate_coalition is excluded rather than directed; their seat does not appear in directionality calculations (it is observer-like) but constitutes high resistance (0.71), which indexes the strength of contestation. Federation_legislative_body's directionality is analytic (the role is observer); it computes no extraction because it neither collects nor bears the constraint's costs directly.",
+    "mandatrophy_analysis": "The founding problem (free movement + national welfare = fiscal exposure) is contested. High-contribution states attest it is live and acute; integration advocates attest it is either fabricated (the empirical finding is that migration's net fiscal effect is positive, not negative) or already solved (competitive labor markets select for employed workers without gatekeeping). The constraint persists despite this contest because high-contribution states have structural power: they control welfare eligibility rules unilaterally, they can threaten defection from the federation, and they have administrative capacity to implement tiering. The contest is not over whether the founding problem exists but over whether it is *characterized correctly* — is it a fiscal problem (requiring tiering) or a discrimination problem (requiring integration)? The mismatch vector is: founding_problem_status = contested (parties dispute the facts) + disappearance_verdict = world_rearranges (the constraint structures welfare access; removing it would cause reorganization). This combination suggests the constraint is not a false summit (which would require status=dead + verdict=world_rearranges, indicating a zombie rule). Instead, the constraint is a tangled_rope with unresolved founding-problem contestation: the coordination story (protecting fiscal sustainability) coexists with the extraction story (gatekeeping welfare access by prior contribution status) and neither has resolved decisively. Mandatrophy is not present because the founding problem is still contested; if the problem were demonstrably dead (empirical consensus that migration's net effect is positive), the persistence of tiering would indicate mandatrophy (the rule persists despite its founding justification evaporating). Current state: the contest persists, the constraint persists, the founding problem status remains contested.",
+    "kernel_context": "This constraint instantiates the SELECTIVE_SOLIDARITY reading of the federation_membership_obligations kernel. The kernel is the standing arrangement under contest: open intra-federation movement combined with national welfare systems. Three readings are in play: (1) integration_primary — free movement and welfare are indivisible citizenship entitlements; member state welfare boundaries must yield to mobility rights; (2) member_sovereignty_primary — national welfare states retain closure authority; free movement is conditional on labor-market protection and welfare-system sustainability; (3) selective_solidarity (this reading) — free movement is preserved in principle but welfare access is tiered by contribution history and economic-activity status; it is a hybrid of (1) and (2) that attempts to preserve both mobility and fiscal closure by decoupling welfare access from citizenship. The selective_solidarity reading forecloses neither sibling strictly (no single logical principle rules out the alternatives within the same framework), but it coexists with them as a distinct policy option. The reading influences member_sovereignty_primary (if tiering is adopted, the pressure on member states to prove welfare sustainability is reduced, lowering the case for movement restrictions) and is influenced by integration_primary (the more strongly the integration frame is asserted in federation jurisprudence, the more selective_solidarity must show that tiering is compatible with citizenship, not a violation of it)."
+  },
+  "omegas": [
+    {
+      "id": "founding_problem_empirical_status",
+      "question": "Is the founding problem (free movement + national welfare = fiscal overload) empirically real, or is it a constructed threat narrative?",
+      "resolution_mechanism": "Systematic analysis of migration flows, welfare-claim rates, and net fiscal impact of mobile workers across member states. Comparison with counterfactual: what would welfare claims be under full open access (no tiering)?",
+      "impact": "If the founding problem is empirically confirmed as acute, tiering is justified as coordination. If the founding problem is disproven or overstated, tiering becomes pure extraction using fiscal narrative as cover; the constraint reclassifies from tangled_rope to snare (or piton if the threat becomes widely discredited but tiering persists theatrically).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding problem is real or a constructed threat narrative."
+    },
+    {
+      "id": "contribution_history_as_proxy_for_sustainability",
+      "question": "Does contribution history (prior employment and fiscal payment) actually predict welfare-claim restraint, or is it a proxy that embeds existing inequality into tiering rules?",
+      "resolution_mechanism": "Cohort analysis: compare welfare-claim trajectories of economically inactive migrants who do eventually gain access (after tiering waiting period expires) vs. those who are never active. If claim rates are similar (high) regardless of contribution history, the premise fails; contribution history is proxy, not predictor.",
+      "impact": "If contribution history predicts restraint, it is a defensible selection mechanism (coordination). If it does not predict restraint, it is a discrimination mechanism (tiering becomes a tool for wealth-based welfare gatekeeping, reclassifying as snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether contribution history predicts welfare-claim restraint or is a proxy for wealth-based gatekeeping."
+    },
+    {
+      "id": "federation_commitment_to_solidarity_vs_closure",
+      "question": "Is the federation constitutively committed to welfare-access universalism (solidarity principle), or is selective gatekeeping a legitimate reading of federation authority?",
+      "resolution_mechanism": "Treaty interpretation, jurisprudence from federation supreme court, and member state negotiation outcomes. Does federation founding text support universal welfare claims for members, or does it preserve member state discretion?",
+      "impact": "If founded on solidarity (universal principle), selective_solidarity forecloses integration_primary by attempting to preserve gatekeeping within a solidarity framework — a contradictory reading that can only persist if the founding text is genuinely ambiguous. If founded on sovereignty (member state discretion), selective_solidarity is a defensible intermediate position between integration_primary and member_sovereignty_primary.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the federation is constitutively committed to welfare universalism or selective gatekeeping."
+    },
+    {
+      "id": "identity_lock_mechanism_in_low_contribution_workers",
+      "question": "Is the suppression of low-contribution-history workers structural (economic dependency, documentation barriers, waiting periods) or internalized (they have accepted the tiering logic as legitimate)?",
+      "resolution_mechanism": "Post-access trajectory: if workers gain full access after waiting period and then show high welfare-claim rates, suppression was purely structural; if they show restraint even after access is secured, suppression is partly internalized. Also: surveys of workers' perception of tiering legitimacy vs. coercion.",
+      "impact": "If suppression is purely structural, removing tiering rules would immediately change behavior (workers would move earlier). If suppression is internalized, removing rules would have delayed effects as workers unlearn the tiering logic. Internalized suppression makes the constraint more extractive (higher effective χ) because it persists even when formal barriers are removed.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression of low-contribution workers is structural or internalized."
+    },
+    {
+      "id": "selective_solidarity_vs_member_sovereignty_boundary",
+      "question": "Is selective_solidarity structurally distinct from member_sovereignty_primary, or does selective_solidarity collapse into member_sovereignty once the fiscal justification is accepted?",
+      "resolution_mechanism": "Test case: if high-contribution states adopt selective_solidarity tiering, do they resist member_sovereignty arguments (which would allow more aggressive closure)? Or does accepting tiering as legitimate open the door to further restrictions justified on fiscal grounds (member_sovereignty_primary reading)?",
+      "impact": "If selective_solidarity is a stable intermediate reading, it can coexist with integration_primary as a contested position. If it collapses into member_sovereignty, it is a stepping stone to more aggressive closure and becomes a rhetorical fig leaf rather than a distinct principle. The constraint's long-term classification (piton vs. tangled_rope) depends on whether it settles as a stable compromise or drifts toward member_sovereignty.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether selective_solidarity is a stable reading or collapses into member_sovereignty_primary."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "integration_primary",
+      "member_sovereignty_primary"
+    ],
+    "dual_formulation_note": "The federation_membership_obligations kernel has three structurally distinct readings: integration_primary (welfare access is a citizenship entitlement, mobility trumps fiscal closure), member_sovereignty_primary (welfare systems retain closure authority, mobility is conditional), and selective_solidarity (this story — tiering by contribution history as a hybrid attempt to preserve both). The three readings share a common kernel (the standing arrangement: open movement + national welfare systems) but instantiate different constraint structures with different beneficiaries, victims, and mechanisms. Each reading is a separate constraint story with its own ε, its own stakeholders, and its own computed type. The three are linked via network.affects_constraints so that analysis of one reading (e.g., observing that tiering is increasingly extractive) can propagate to hypothesis about the others (e.g., whether member_sovereignty is the attractor state for selective_solidarity drift)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.75
+    }
+  ],
+  "gain_flow": "high_contribution_states",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "fiscal_sustainability_framework",
+    "drift_state": {
+      "moment": "contemporary_welfare_pressure_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "integration_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "member_sovereignty_primary",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "welfare_access_contingent_on_contribution_history",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "fiscal_sustainability_permits_selective_solidarity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "federation_membership_obligations"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

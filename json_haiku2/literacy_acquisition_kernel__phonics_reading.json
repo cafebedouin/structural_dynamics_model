@@ -1,0 +1,410 @@
+{
+  "header": {
+    "constraint_id": "literacy_acquisition_kernel__phonics_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "91d6a693-29f9-4f1b-bb73-2751f5b400b8"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Explicit Phonics-First Reading Instruction Mandate",
+    "topic_domain": "educational/cognitive/pedagogical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "students_with_weak_phonological_awareness",
+      "struggling_early_readers",
+      "dyslexic_students"
+    ],
+    "victims": [
+      "classroom_teachers",
+      "teacher_professional_autonomy"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "students_with_weak_phonological_awareness",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Receive explicit, structured instruction in phoneme-grapheme mapping that makes decoding transparent and learnable. Without this systematic sequence, these students face persistent reading failure and often internalize a fixed-mindset belief about their reading ability. The systematic progression prevents the accumulation of unaddressed skill gaps that cascade through subsequent grades."
+    },
+    {
+      "name": "struggling_early_readers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Benefit from decoding-before-comprehension sequencing because it removes ambiguity about how to extract sound from print. They experience earlier success with decodable texts, building confidence and fluency before encountering literature with irregular orthography."
+    },
+    {
+      "name": "dyslexic_students",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Require explicit, cumulative phonological instruction as a structural accommodation; for this population, meaning-first approaches systematically fail. The phonics-first mandate operationalizes the finding that dyslexic learners need orthographic mapping made explicit to rewire phonological processing."
+    },
+    {
+      "name": "classroom_teachers",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Implement scripted, sequenced phonics curricula that remove instructional judgment about pacing, progression, and content selection. They bear the cost of loss of pedagogical autonomy and face surveillance (lesson observations, fidelity audits) to ensure compliance. Some teachers experience this as deskilling and professionally demoralized; others experience scripting as liberating (removing uncertainty about what to teach). The constraint operates differently depending on the teacher's pre-mandate instructional practice and epistemic frame."
+    },
+    {
+      "name": "teacher_professional_autonomy",
+      "role": "payer",
+      "agent": false,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The capacity to adjust instruction in real time based on student response, to select texts that motivate and engage specific learner communities, to make diagnostic inferences about reading difficulty independent of the scripted sequence. This autonomy is structurally constrained by the mandate's fidelity requirements."
+    },
+    {
+      "name": "curriculum_publishers_structured_literacy",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sell structured literacy and phonics-based curricula (Fundations, Wilson Reading System, Orton-Gillingham adaptations, Phonics First) to school districts implementing the mandate. The mandate creates guaranteed market demand for their products and reduces competition from meaning-first or balanced-literacy publishers."
+    },
+    {
+      "name": "reading_scientists_phonics_camp",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Frame decoding-centric reading science (cognitive load theory, orthographic mapping, phonological deficit hypothesis) as consensus empirical fact and architect policy/mandate language that operationalizes this reading of the evidence. They hold interpretive authority over what 'science-based reading instruction' means, and the mandate embeds their frame into law and practice."
+    },
+    {
+      "name": "whole_language_educators",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would argue that meaning-centered engagement with authentic texts supports reading development and that systematic phonics instruction undermines motivation and treats reading as a mechanical code-cracking exercise. They are excluded from curriculum adoption decisions and teacher training, and their published research on literature-based and meaning-first approaches is reframed in mandate discourse as pedagogically harmful."
+    },
+    {
+      "name": "balanced_literacy_practitioners",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Implement instruction that integrates systematic phonics WITH meaningful text and student choice, arguing that both components are necessary and that the sequence is learner-responsive rather than universally fixed. The mandate's scripted, phonics-before-meaning requirement forecloses this hybrid approach and treats integrated instruction as insufficiently rigorous or evidence-based."
+    },
+    {
+      "name": "students_from_literacy_rich_homes",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Often benefit from explicit phonics instruction but would succeed in a variety of instructional approaches because they arrive at school with rich oral language, phonological awareness, and print exposure. The mandate is partly defensive against them (their success was the cover story for meaning-first instruction); partly beneficial (ensuring their phonological skills are formalized, not assumed)."
+    },
+    {
+      "name": "school_administrators",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enforce the phonics mandate through curriculum adoption, professional development requirements, lesson observations, and fidelity metrics. They face pressure from reading scientists (who claim the science is settled), policymakers (who legislate the mandate), parents of struggling readers (who demand systematic intervention), and teachers (who resist deskilling). Administrators operationalize the mandate as a structural requirement independent of local context."
+    },
+    {
+      "name": "policymakers_accountability_state",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Legislate or mandate phonics-first instruction through science of reading laws, teacher training requirements, and accountability frameworks tied to reading achievement data. The mandate is presented as protecting vulnerable students and fixing reading failure; it is enforced through funding contingencies and teacher evaluation metrics."
+    },
+    {
+      "name": "reading_research_community_contested",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produces evidence that the mandate interprets and frames. The phonics-reading observes the constraint's operation and produces measurement data (literacy outcome data, reading fluency metrics, comprehension assessments) that the mandate uses to adjudicate its own performance. Some researchers question the reading's framing of the evidence; they are marginalized as ideologically opposed to science or protecting failed approaches."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the early-literacy skill-building problem for populations with weak phonological awareness by making decoding instruction explicit, sequential, and standards-based. Ensures a common, systematic progression through phoneme-grapheme correspondences before students encounter irregular text or meaning-centered reading. Creates a shared framework so that all teachers, regardless of prior training or implicit theories, deploy the same skill sequence.",
+    "transfer_function": "Transfers instructional autonomy and professional judgment from individual teachers to mandated curricula and scripted sequences. Teachers cede real-time pedagogical decision-making (when to introduce new phonemes, which texts to use for practice, whether a student needs more time on a particular correspondence) in exchange for systematic organization and (theoretically) improved outcomes for struggling readers. Curriculum publishers and reading scientists benefit from guaranteed market adoption and policy-institutionalized authority. Students with weak phonological awareness receive explicit instruction; students from literacy-rich homes experience less individualized engagement.",
+    "absent_voices": "Whole-language educators and balanced-literacy practitioners are structurally excluded from curriculum adoption, policy formation, and professional development. They would argue that the mandate's strict phoneme-first, decodable-text-only sequence undermines motivation, reduces engagement with authentic literature, and treats reading as a mechanical exercise rather than a meaning-making one. Teachers who integrate systematic phonics with student choice and meaningful text are positioned as insufficiently evidence-based. Students who thrive in literature-rich, meaning-centered environments (including students of color in communities with strong oral-tradition literacy practices) are not present in mandate discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the phonics mandate disappeared, schools would revert to a mix of instructional approaches—some returning to balanced literacy, some to meaning-first engagement, some to teacher-designed hybrid sequences. Students with weak phonological awareness would face re-exposure to unstructured, inconsistent instruction and likely experience returning reading gaps. Curriculum publishers would lose guaranteed adoption revenue. Teachers would regain instructional autonomy and reduce fidelity audits. The elimination would immediately raise contention about whether reading instruction is a science problem (settled by neuroscience) or an art problem (requiring teacher judgment).",
+    "founding_problem": "Early reading failure, particularly for students with dyslexia and weak phonological awareness, persisted despite decades of teacher training and meaning-centered instruction. Students who could not decode by sound were trapped in reading failure, unable to access comprehension and knowledge. The organizing claim: explicit instruction in phoneme-grapheme mapping directly addresses the decoding deficit that blocks reading acquisition.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Reading scientists (Dehaene, Moats, Scarborough) and neuroscience-informed researchers attest that the phonological deficit is foundational and requires explicit remediation; intervention studies on phonics-based programs (DIBELS benchmarks, Wilson Reading outcomes) show improved decoding for explicitly taught phoneme patterns. Teachers and whole-language researchers contest that the founding problem overstates the gap and ignores students who develop reading fluency through meaning-centered approaches; they cite longitudinal studies and case evidence from literature-rich classrooms where all students, including those with weak phonological awareness, develop reading competence without front-loaded phoneme instruction. Policymakers cite reading failure rates and grade-level retention as evidence the founding problem is live. Independent meta-analyses (National Reading Panel, Rose Report, NRP-update reviews) are divided on whether phoneme-first sequencing is necessary for all students or primarily beneficial for students with identified phonological deficits."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The phonics-reading instantiates one interpretation of how reading acquisition works: explicit, systematic instruction in phoneme-grapheme correspondence is both necessary and sufficient for reading competence; decoding skill is foundational and precedes comprehension. This reading frames early literacy as a skill-building problem with a known technical solution, accessible through structured, sequence-driven instruction. The constraint's beneficiaries are students with weak phonological awareness (who genuinely struggle without systematic decoding support) and students with dyslexia (for whom the Orton-Gillingham-derived phonological approach is empirically supported). The constraint's victims are teachers (whose professional autonomy is scripted away) and the construct 'teacher professional judgment' (which is structural casualties of fidelity enforcement). The measurement series shows rising extractiveness over the first 15 time points (as the mandate moves from policy to classroom implementation) and then plateaus, indicating the constraint has stabilized into institutional practice. Rising theater ratio indicates growing emphasis on performative fidelity metrics (lesson observations, curriculum adherence checklists) independent of student literacy outcomes.",
+    "key_agents": [
+      "Students with weak phonological awareness: beneficiaries receiving explicit, systematic decoding instruction",
+      "Dyslexic students: beneficiaries for whom phoneme-centric instruction is structurally necessary",
+      "Classroom teachers: payers bearing loss of real-time instructional autonomy and increased surveillance",
+      "Reading scientists (phonics camp): agenda-setters framing decoding-centric evidence as empirical consensus",
+      "Curriculum publishers (structured literacy): beneficiaries gaining guaranteed adoption markets",
+      "Whole-language educators: excluded from curriculum adoption and policy formation",
+      "Policymakers/school administrators: agenda-setters enforcing fidelity and accountability metrics"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68 endpoint) because the constraint extracts instructional autonomy from teachers and concentrates interpretive authority (what 'science-based reading instruction' means) in the reading scientists and publishers who authored the phonics frame. Teachers face surveillance (fidelity audits, lesson observations) to ensure compliance; they cannot adjust pacing or select texts based on student response without risking accountability consequences. Suppression is high (0.71) because the mandate operates through accountability infrastructure: teachers who do not adhere to scripted sequences face evaluation penalties, students cannot be placed in meaning-centered or balanced-literacy settings without pressure to return to phonics-first, and alternative research is reframed as ideologically motivated or outdated. Theater ratio rises from 0.25 to 0.42 over the interval, indicating a shift: early in implementation (t0), the constraint is primarily functional (teachers learning and applying a new instructional method); by t25, growing emphasis on compliance documentation, fidelity checklists, and reading-level data collection (often disconnected from whether individual students are reading widely or with engagement) suggests performative maintenance of the mandate independent of actual literacy outcome gains. Accessibility collapse is moderate (0.62): alternatives (whole-language, balanced literacy, student-directed reading) exist and remain live in teachers' awareness, but they are not available within the mandate's constraints—exit requires either changing schools, working outside the curriculum, or leaving the profession. Resistance is moderate (0.58): teachers push back through informal adaptation (supplementing decodable texts with literature, loosening fidelity to allow student choice), through union advocacy for autonomy, and through continued published debate from balanced-literacy and whole-language researchers—but the resistance does not yet destabilize the mandate's institutional grip.",
+    "perspectival_gap": "The beneficiary seats (struggling students with weak phonological awareness) and the payer seats (teachers) experience this constraint at opposite directionalities. From the student's perspective (especially students with dyslexia), the constraint is life-changing: explicit, sequential phoneme instruction finally makes decoding teachable and learnable, lifting a barrier that meaning-centered approaches left in place. From the teacher's perspective, the constraint is a loss of professional judgment and an increase in compliance burden; teachers report feeling deskilled and observed, and their capacity to respond to individual learner variation is constrained by scripting. The payer's directionality (d high, near 1.0) should compute a Snare-like type at the teacher seat; the beneficiary's directionality (d low, near 0.0) should compute a Mountain-like or Rope-like type at the struggling-student seat. The engine should compute both, showing the constraint's type diverges by seat—a tangled-rope structure with genuine coordination benefit (decoding skill-building works) AND asymmetric extraction (teacher autonomy is the cost borne by a different set of stakeholders). The secondary_role pairing on classroom_teachers (both payer and agenda_setter) captures the dual position: teachers enforce the mandate they also experience as constraining—a nested asymmetry within a single institutional seat.",
+    "directionality_logic": "Struggling readers with weak phonological awareness are the structural beneficiaries: they receive explicitly scaffolded instruction that removes the cognitive load of figuring out decoding rules implicitly. Their directionality is low (d ≈ 0.1–0.2): they benefit substantially (early skill-building success, reduced reading failure), have minimal exit options (trapped in the reading difficulty; the instruction is offered to them, not optional), and experience the constraint as enabling. Teachers are the structural payers: they lose real-time instructional judgment, face surveillance through fidelity audits, and experience deskilling (the constraint replaces their professional inference with scripted sequences). Their directionality is high (d ≈ 0.75–0.85): they bear the autonomy cost, can exit only through changing careers or schools (constrained), and experience the constraint as coercive even when they cognitively endorse the phonics evidence. Reading scientists and curriculum publishers are beneficiaries with organized power: they gain institutional authority and market revenue. Their directionality is low (d ≈ 0.05–0.15). Students from literacy-rich homes are asymmetrically positioned: they benefit from the systematic phoneme instruction but would succeed in other approaches too; they experience less loss from narrowed text selection because their home literacy environment compensates. Their directionality is near-symmetric (d ≈ 0.4–0.5): genuine benefit, but not extraction-dependent. Whole-language educators and balanced-literacy practitioners are excluded; they would experience the mandate as victimization (foreclosure of their instructional approaches, reframing of their research as harmful), but are not named as victims in base_properties because they are excluded from the direct constraint structure.",
+    "mandatrophy_analysis": "The constraint is classified as Tangled Rope because it possesses both genuine coordination function AND asymmetric extraction. The coordination is real: systematic, explicit phoneme-grapheme instruction does improve decoding skill for students with weak phonological awareness, and decoding skill is foundational to reading comprehension. The extraction is real: teachers' instructional autonomy is systematically constrained, and the constraint persists through active enforcement (accountability measures, surveillance, curriculum mandates) rather than through teacher or student preference. The tangled-rope classification prevents mislabeling this as either a pure Rope (which would ignore the autonomy extraction) or a pure Snare (which would ignore the genuine decoding benefit). The 'tangled' nature is the point: the constraint genuinely solves a coordination problem AND systematically extracts a cost from a different stakeholder set. Mandatrophy resolution: The founding problem is whether early literacy failure in specific populations is a skill-building gap (technical problem, solved by systematic decoding instruction) or a systemic inequality gap (a resource and social capital problem, where meaning-centered engagement in literacy-rich environments prevents failure). If the first is true and decoding skill is foundational for all students, the mandate is a rope solving a real collective-action problem (everyone benefits from systematic progression). If the second is true and many students develop reading competence through meaning-centered approaches, the mandate is a snare using decoding-science framing as a cover story for deskilling teachers and privatizing reading instruction. The contested founding-problem status maps to this ambiguity: reading scientists attest the skill-building frame is empirically true (longitudinal phoneme studies, orthographic mapping evidence); whole-language researchers attest the systemic inequality frame is empirically true (meta-analyses on engagement and motivation, longitudinal case evidence from literature-rich schools with diverse students). The tangled-rope type sits at the intersection: the constraint is neither purely functional nor purely extractive; it contains both.",
+    "kernel_context": "This constraint is the phonics_reading instantiation of the literacy_acquisition_kernel, a contested foundational commitment about how reading development works. The kernel question: Is reading acquisition primarily a skill-learning problem (decoding is foundational) or a meaning-making problem (engagement with authentic text is foundational)? The phonics_reading claims decoding-first, systematic phoneme instruction is necessary and sufficient. Its sibling readings—whole_language_reading (meaning-first emergence), balanced_literacy_reading (systematic phonics + meaningful engagement are complementary), and structured_literacy_reading (cumulative, phonologically-indexed instruction designed for dyslexia but applicable universally)—offer different answers to the same kernel question. The phonics_reading's core axiom is systematic_phoneme_instruction_foundational; whole_language's core axiom is meaningful_text_engagement_foundational; balanced_literacy's core axiom is phonics_and_meaning_complementary_not_sequential; structured_literacy's core axiom is cumulative_multimodal_literacy_instruction_developmentally_scaffolded. These axioms coexist in the reading science and education literature; no single party holds all four simultaneously. The phonics_reading forecloses whole_language only at the logical level (one cannot simultaneously hold 'decoding-first is necessary' and 'decoding instruction is unnecessary'); both readings coexist in policy and practice because different districts and schools implement different mandates. The phonics_reading influences balanced_literacy (by claiming that meaning engagement without systematic phoneme instruction is pedagogically inferior and empirically less effective for specific populations) and influences whole_language (by reframing meaning-centered instruction as a luxury affordable only to students who arrive with phonological awareness—a move that stratifies instructional approach by student deficit/competence). This reading's reference frame is phoneme_instruction_sequence_established (the systematic progression from initial phoneme correspondences through complex orthography is treated as objective, fixed, independent of instructional context); its drift state is toward practice_drift and interpretation_layer_present (teachers adapt phoneme sequencing to student response, textbook publishers create 'phonics' materials that supplement rather than replace diverse texts), which creates pressure on the mandate's fidelity claims."
+  },
+  "omegas": [
+    {
+      "id": "phonological_deficit_vs_systemic_inequity",
+      "question": "Is early reading failure in specific student populations caused by a phonological processing deficit (a cognitive architecture gap) or by systemic inequity in literacy exposure and engagement (a resource and social capital gap)?",
+      "resolution_mechanism": "Longitudinal comparison of reading outcomes in meaning-centered, engagement-rich literacy programs serving low-literacy-exposure populations versus phoneme-first programs serving the same populations. If meaning-centered programs produce equivalent or superior outcomes with equivalent investment, the phonological deficit frame is overstated; if phoneme-first programs consistently outperform meaning-centered approaches for weak-phonological-awareness students specifically, the deficit frame is validated.",
+      "impact": "If systemic inequity is the primary driver, the mandate's phoneme-first approach may be a technically correct solution to a wrongly-diagnosed problem; the real remedy is literacy-rich classrooms and engagement with authentic texts. If phonological deficit is primary, the mandate is appropriately targeted. The classification changes from Tangled Rope (genuine coordination benefit + extraction cost) to Snare (extraction with a cover story) in the first case, and holds as Tangled Rope in the second.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether early reading failure is a skill-learning gap or a resource-exposure gap."
+    },
+    {
+      "id": "scripted_autonomy_loss_vs_liberation_from_uncertainty",
+      "question": "Is the loss of real-time instructional autonomy experienced by teachers an extraction (deskilling, surveillance, professional disempowerment) or a liberation from uncertainty and an equalization of instructional quality across teachers with different prior training?",
+      "resolution_mechanism": "Qualitative longitudinal study of teacher experience pre- and post-mandate, with attention to teachers' reported sense of agency, confidence, and professional identity. Comparison of instructional quality (measured by phoneme-sequencing consistency, scaffolding appropriateness, student engagement) across high-autonomy, low-structure classrooms versus scripted, high-structure classrooms in comparable student populations. Teacher attrition and career-continuation data to assess whether scripting increases or decreases teacher persistence.",
+      "impact": "If scripting is experienced as deskilling by most teachers and does not improve instructional consistency, the extraction cost is higher than supposed (more like Snare). If scripting is experienced as liberating by teachers new to literacy instruction and improves consistency without reducing teacher satisfaction, the extraction cost is justified as coordination overhead (holds as Tangled Rope). If scripting produces divergent experiences (some teachers liberated, some deskilled), the constraint's distributional effects are non-uniform and depend on baseline teacher confidence and training.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether autonomy loss is experienced as extraction or as helpful constraint."
+    },
+    {
+      "id": "kernel_reading_alternative_frames",
+      "question": "Does the foundational kernel claim 'reading acquisition requires systematic, explicit phoneme instruction' refer to an empirical claim about cognitive necessity (decoding skill is cognitively foundational for ALL readers) or a prescriptive claim about instructional design (explicit phoneme instruction is the MOST EFFICIENT way to teach decoding, but other paths exist)?",
+      "resolution_mechanism": "Close reading of the reading scientists' published work distinguishing empirical claims (what is true about reading development) from prescriptive claims (what instruction is best for different populations). Examination of whether the evidence base supports a universal claim (phoneme-first is necessary for all students) or a population-specific claim (phoneme-first is necessary for students with dyslexia and weak phonological awareness, beneficial for most others, and compatible with but not required for students from high-literacy backgrounds).",
+      "impact": "If the claim is empirically universal, the mandate is a justified boundary condition (Rope or Tangled Rope with legitimate universal scope). If the claim is population-specific and prescriptive, the mandate's application to all students (including those who develop reading competence through other approaches) is overgeneralization and may constitute Snare-class extraction (imposing an inefficient solution on populations for whom it is not necessary). The classification implications are consequential: a universal Mountain-claim would prevent alternatives by necessity; a population-specific claim should permit instruction to be tailored, and universal mandates override this tailoring.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the phoneme-instruction necessity claim is universal or population-specific."
+    },
+    {
+      "id": "measurement_basis_outcome_vs_fidelity_drift",
+      "question": "As theater_ratio rises over the measurement interval (0.25 to 0.42), does the rising ratio reflect a genuine increase in performative-over-functional activity (Goodhart drift, where fidelity metrics replace learning outcomes), or does it reflect an honest increase in the administrative overhead necessary to maintain instructional consistency as the mandate matures?",
+      "resolution_mechanism": "Longitudinal study of how classroom time is allocated across phoneme instruction, practice, assessment, and documentation. Measurement of correlation between fidelity-audit compliance and student literacy outcomes; if correlation weakens over time, theater_ratio rise reflects Goodhart drift. If correlation remains strong, the rise reflects maturing administrative infrastructure.",
+      "impact": "If Goodhart drift is occurring, the constraint is degrading toward Piton status: the original coordination function (systematic decoding skill-building) persists, but a growing share of enforcement energy is devoted to performative compliance metrics decoupled from literacy outcomes. This would support a future reclassification from Tangled Rope to Piton once the coordination function atrophies. If the rise reflects necessary infrastructure, the constraint's type remains stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rising theater_ratio indicates Goodhart drift or maturing administrative infrastructure."
+    },
+    {
+      "id": "whole_language_sibling_foreclosure_or_coexistence",
+      "question": "Does the phonics_reading logically foreclose the whole_language_reading (making both non-simultaneously-holdable in a single coherent framework), or do the two readings coexist as different parties' live positions in an ongoing unresolved dispute?",
+      "resolution_mechanism": "Logical analysis of the core axioms: systematic_phoneme_instruction_foundational (phonics) vs. meaningful_text_engagement_foundational (whole_language). If 'foundational' means 'necessary and sufficient,' the axioms contradict and foreclose. If 'foundational' means 'primary' or 'sufficient for many learners,' the axioms can coexist in different populations or instructional contexts. Examination of whether any published researcher or educator holds BOTH axioms in integrated form (e.g., 'phoneme instruction is foundational for some students; meaningful engagement is foundational for others').",
+      "impact": "If foreclosure holds, the constraint's type should reflect that one reading has eliminated the other from the coherent-framework space—a structural victory for phonics_reading. If coexistence holds, the readings remain in live dispute, and mandates enforcing one reading are suppression of the other (higher suppression metric, more Snare-ish classification). This omega determines the reading_relations entry for the whole_language_reading sibling.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether phonics and whole-language readings are logically contradictory or empirically different."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "literacy_acquisition_kernel__whole_language_reading",
+      "literacy_acquisition_kernel__balanced_literacy_reading",
+      "literacy_acquisition_kernel__structured_literacy_reading"
+    ],
+    "dual_formulation_note": "The literacy_acquisition_kernel decomposes into four structurally distinct constraint stories, each instantiating a different reading of the foundational kernel commitment about how reading development works. phonics_reading frames reading acquisition as skill-learning (decoding-first, explicit phoneme instruction necessary and foundational); whole_language_reading frames it as meaning-emergence (engagement with authentic text necessary and foundational); balanced_literacy_reading frames it as complementary integration (phonics and meaning both necessary, sequence learner-responsive rather than universal); structured_literacy_reading frames it as cumulative-scaffolded-multimodal instruction (phonological + orthographic + fluency + comprehension in integrated sequence, designed for dyslexia but applicable universally). The four readings coexist in educational policy, research, and practice; they have different beneficiary/victim structures, different ε values, and different strategic interests. Linking them via network.affects_constraints enables contamination analysis: how the cognitive/empirical status of one reading (e.g., evidence accumulation against whole_language) affects the justification and sustainability of another reading (e.g., strengthens mandated phonics). The four readings form the literacy_acquisition_kernel constraint family; all members must be linked to at least one sibling."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.78
+    }
+  ],
+  "gain_flow": "curriculum_publishers_structured_literacy",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "whole_language_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "balanced_literacy_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "structured_literacy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "systematic_phoneme_instruction_foundational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "decoding_precedes_comprehension_logically",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "phoneme_instruction_sequence_established",
+    "drift_state": {
+      "moment": "contemporary_practice_divergence_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "header": {
+    "constraint_id": "ai_risk_governance_priority__bridge_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "d7be3f6d-8807-45e8-8ecd-a37fa84cfa10"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.51,
+    "resistance": 0.67,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unified AI Risk Governance: Present Harms + Existential Risk Integration",
+    "topic_domain": "governance/technology_ethics/risk_assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "bridging_research_institutions"
+    ],
+    "victims": [
+      "present_marginalized_populations",
+      "future_humanity"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "bridging_research_institutions",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "5% of the research institutions publishing across both near-term AI ethics and existential risk domains. They set agenda by choosing which research gets funding, which papers are highlighted, which collaborations are brokered. They benefit from resource concentration: grants, talent, and citations flow to those who can translate between the two fields. They are simultaneously constrained by the need to maintain credibility in both communities, which have partially divergent incentives."
+    },
+    {
+      "name": "present_marginalized_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Subject to documented present harms: algorithmic bias in hiring and lending, surveillance targeting of marginalized communities, content moderation errors affecting vulnerable speech, labor displacement in service sectors. They bear the costs of ongoing deployment and optimization of AI systems while governance frameworks debate long-term existential risk. Their exit from AI-mediated systems is not possible; they absorb harms as systems are deployed and modified in real time."
+    },
+    {
+      "name": "existential_risk_researchers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Research community focused on long-horizon superintelligence scenarios and global catastrophic risk. They benefit from governance frameworks that prioritize existential scenarios; such prioritization justifies their research agenda and attracts resources. They are constrained by the need to maintain scientific standing in the face of near-term researchers' arguments that present harms are immediate and more tractable."
+    },
+    {
+      "name": "near_term_ai_ethics_researchers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Research community focused on documented algorithmic bias, fairness, safety, and social impact of deployed systems. They benefit from governance frameworks that prioritize present harms; such prioritization justifies their research agenda and attracts resources. They are constrained by the need to engage with long-horizon scenarios or appear parochial and reactive."
+    },
+    {
+      "name": "ai_industry_developers",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "For-profit AI companies deploying systems at scale. They would prefer governance frameworks that defer to their internal safety practices and voluntary commitments. The bridge reading that demands unified frameworks threatens to impose stricter, more coordinated oversight. They are excluded from the governance-setting conversation in the bridge reading's framing (present only as subjects of regulation, not as agenda-setters), though they have substantial influence in practice."
+    },
+    {
+      "name": "future_humanity",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Not an agent, but a non-agent entity the constraint references. Future people would bear costs of existential risks or permanent values-lock scenarios if they occur. They cannot participate in current governance decisions and carry the largest potential downside."
+    },
+    {
+      "name": "funding_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Government, foundation, and corporate entities controlling research funding. They operationalize the governance framework by choosing which research proposals to fund, whether to fund bridging work or siloed work, and what metrics determine success. They are constrained by public pressure (from marginalized populations affected by present harms) and by philanthropic mandate alignment (some funders are committed to near-term, others to long-horizon scenarios)."
+    },
+    {
+      "name": "policy_makers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legislatures and regulatory bodies tasked with setting AI governance rules. They observe the research community's frame wars and try to synthesize a unified policy. They are pressured by both harms-focused constituents (present injuries) and by deferential-to-industry actors (who worry about existential risk being used to block innovation). Their challenge is balancing a governance framework the research community cannot itself agree on."
+    },
+    {
+      "name": "ml_safety_community",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers and practitioners working on technical safety and alignment. They sit at the structural intersection: benefit from unified frameworks (which legitimize their work as addressing both horizons), but also bear the cost of maintaining that bridge (high collaborative burden, needing expertise in both technical safety and social impacts). Divided internally on whether bridging is coherent or diluting."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Operates a shared research and governance infrastructure connecting near-term AI ethics (addressing present harms from deployed systems) with existential-risk research (addressing long-horizon alignment and control problems). Solves the coordination problem of fragmentation: researchers in each domain work in isolation, develop incompatible safety vocabularies, compete for funding, and fail to notice that present practices (how systems are trained, what metrics are optimized for, who participates in safety decisions) shape future capability and risk profiles.",
+    "transfer_function": "Moves research funding, institutional prestige, and agenda-setting authority from broadly distributed researchers toward a concentrated set of bridging institutions that can credibly operate in both domains. Moves researcher attention from single-domain questions to integration questions (how do bias mitigation practices inform alignment research; how do long-horizon control constraints reshape deployment safety). Moves governance legitimacy from industry self-regulation toward academic/policy frameworks claiming to integrate both timeframes.",
+    "absent_voices": "Present marginalized populations affected by algorithmic bias, surveillance, and labor displacement are absent from research governance conversations (they are CLAIMED as concern objects in the bridge reading but do not set research agenda). AI industry developers are structurally excluded from the bridge reading's governance framing (positioned as subjects of regulation, not as participants in agenda-setting). Within the research community, early-career researchers are underrepresented in bridging institutions, and researchers from the Global South are absent from governance conversations despite experiencing different risk profiles for both present and future AI systems.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the bridge reading's unified-governance framework disappeared overnight, research would likely re-stratify into separate near-term and existential-risk pipelines. Funding agencies would sort grants into two buckets rather than seeking bridging proposals. Conferences would re-specialize; journals would return to single-domain focus. The integration would not persist—bridging institutions would lose their comparative advantage and researchers would follow funding back to single-domain careers. Marginalized populations would lack the existential-risk credibility currently used to justify attention to present harms in long-horizon discussions, and existential-risk researchers would lack the evidence base from present-system safety practices that informs control problems. The world would rearrange into the separate governance structures the bridge reading claims are inadequate.",
+    "founding_problem": "AI systems are causing documented present harms (bias in hiring, lending, criminal justice; surveillance targeting; content moderation errors; labor displacement affecting marginalized communities) while simultaneously advancing toward capability levels that could pose existential risks if unaligned. Traditional governance approaches treating present harms and existential risks as separate problems fail to address their structural coupling: present deployment practices (what features are optimized for, who participates in safety reviews, which errors are tolerated) establish the baseline assumptions future systems inherit; long-horizon safety research (interpretability, control, alignment) generates insights that would prevent present-harm modes if integrated into current systems. The founding problem is the need for governance that treats present safety practices as foundational constraints for future scenarios and existential-risk research as informing present baseline safety standards.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The existence of present documented harms is corroborated by independent audits, affected-community testimony, and academic research from outside the benefiting parties (civil rights organizations, affected workers, journalists). The existence of existential risks from advanced AI is corroborated by academic research and some policy analysts, though less independently (most corroboration comes from researchers in the field itself). The claim that these problems are STRUCTURALLY ENTANGLED (not merely coexistent) is corroborated only by bridging institutions and a minority of policy analysts. Independent corroboration from sources outside the research communities themselves is weak: industry developers, policy makers, and affected communities are largely absent from the corroboration set. This is the weakest point of the bridge reading's founding problem: while both the present-harms problem and the existential-risk problem are independently attested, the structural entanglement claim rests primarily on self-corroboration within the research community making the claim."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.59,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.49,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.48,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.64,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.62,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the BRIDGE READING of the contested kernel of AI risk governance priorities. The reading holds that present documented harms (algorithmic bias, surveillance, labor displacement affecting marginalized populations) and existential risks from advanced AI are structurally entangled and require unified governance frameworks. This reading differs from the existential_risk_reading (which prioritizes superintelligence scenarios as the primary governance concern) and the near_term_harms_reading (which prioritizes immediately observable harm reduction). The bridge reading claims both harms-and-risks are necessary framing for legitimate AI governance, and that frameworks treating them separately fail to address the dependency structure: present safety practices shape future training; existential-risk research informs baseline safety requirements for today. The engine will compute per-seat classification from the structural data; this reading's claim is TANGLED ROPE: it coordinates genuine research and resource sharing (coordination function) while extracting through institutional prestige and resource concentration (extraction function). The bridging institutions benefit from being the seats that can translate between vocabularies; present marginalized populations bear costs both as deployment targets and as governance outsiders.",
+    "key_agents": [
+      "bridging_research_institutions: agenda-setter and structural beneficiary (control research framing, concentrated grants/talent). Institutional power, high arbitrage (can shift between communities), global scope.",
+      "present_marginalized_populations: payer and victim (bear ongoing harms from deployed systems, excluded from governance conversations). Powerless, trapped exit, biography scope.",
+      "future_humanity: non-agent victim (designated concern object in the bridge reading, but cannot participate). Universal scope, civilizational time horizon.",
+      "existential_risk_researchers: beneficiary under existential_risk_reading, constrained under bridge_reading (their agenda is legitimized but must now justify to near-term community). Moderate power, constrained exit.",
+      "near_term_ai_ethics_researchers: beneficiary under near_term_harms_reading, constrained under bridge_reading (their agenda is legitimized but must now justify to existential-risk community). Moderate power, constrained exit.",
+      "ai_industry_developers: excluded from bridge reading's governance framing, though they have substantial shadow influence. Powerful, mobile, biographical.",
+      "funding_agencies: agenda-setters who operationalize the bridge framework by allocating resources to bridging institutions. Institutional power, generational horizon, mobile.",
+      "policy_makers: observers attempting to synthesize governance from the contested research landscape. Institutional power, analytical exit, national scope."
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.58) because the bridge reading's coordination function is genuine—governance fragmentation is a real coordination problem—but so is the extraction: the constraint concentrates resources and agenda-setting in a small set of institutions. Suppression is similarly moderate (0.62): the constraint's persistence depends on maintaining that the two research communities must cooperate (soft enforcement), and on gatekeeping at conferences, journals, and funding agencies (institutional enforcement). The pressure to suppress is real but not totalizing—dissenting researchers in both near-term and existential-risk camps continue publishing under their original framings. Theater is high-moderate (0.48): significant effort is devoted to demonstrating conceptual unity (linking papers, joint conferences, interdisciplinary grad programs) but the underlying research incentives remain partly divergent; when funding dried up, several bridging initiatives shrank, suggesting some theatricality in the unity display. Accessibility collapse is modest (0.51): researchers unhappy with the bridge framework retain exits (publish in single-domain venues, join single-domain institutions, move to industry or policy). Resistance is high (0.67): existential-risk researchers argue the bridge reading diffuses focus on catastrophic scenarios; near-term researchers argue it legitimizes hand-waving about futuristic risks at the expense of tractable present problems. Both communities have mounted strong resistance to the prioritization logic the bridge reading imposes.",
+    "perspectival_gap": "From the bridging institutions' seat, the unified framework is a solution to research fragmentation that improves resource efficiency and cross-pollination. From the near-term harms researchers' seat, it is a dilution of urgency: existential scenarios remain speculative while people are suffering now. From existential-risk researchers' seat, it is a distraction: present-harm mitigation does not address the alignment problem and may give false confidence in incremental safety. From present marginalized populations' seat (largely outside the conversation), it is irrelevant theater: governance research disputes do not address their actual exposure to algorithmic harm. From the industry's seat, the bridge framework is more dangerous than either siloed approach because unified governance could impose tighter coordination on safety standards across the industry. The engine will compute these divergences from the structural positions (power, exit options, time horizon, spatial scope) declared for each stakeholder; the bridge reading's claim does not adjudicate which perspective is correct—only that the framework demands all be considered together.",
+    "directionality_logic": "Present marginalized populations carry directionality toward the target end (d near 1.0): they are powerless, trapped, immediate-horizon, and bear extraction in the form of governance externality (decisions made about them without their participation) plus ongoing harm from systems being governed. Future humanity is a non-agent placeholder, assigned d as a maximally extractive position (universal scope, no exit, no voice). Bridging institutions carry directionality toward the beneficiary end (d near 0.0): institutional power, arbitrage exit (can leave either community), and direct extraction of resources and prestige. Existential and near-term researchers are symmetric-to-moderate (d near 0.5): moderate power, constrained exit (must maintain credibility in their home field), biography horizon. Funding agencies are moderate-to-beneficiary (d near 0.3): they benefit from the constraint's ability to channel resources through unified governance, but must navigate political pressure from both directions. The bridge reading's asymmetry is stark: present marginalized populations and future humanity on the extraction end; bridging institutions on the concentration end; both research communities in the middle bearing pressure to integrate. This asymmetry is what makes the classification TANGLED ROPE rather than ROPE: genuine coordination (bringing two siloed fields together solves a real research bottleneck) coexists with structural extraction (institutional prestige and resource concentration in bridging nodes).",
+    "mandatrophy_analysis": "The bridge reading's founding problem (governance fragmentation + need for integrated baseline safety) is live (the separation between near-term and existential risk research is documented and ongoing). The disappearance verdict is world_rearranges (the constraint's removal would allow refragmentation into two pipelines). The mandatrophy test: does the founding problem's liveness match the constraint's persistence? YES—the constraint persists because the founding problem is still live and both research communities see value (though contested value) in some integration. There is no mandatrophy yet. However, the constraint is at risk of future mandatrophy if: (1) one research community decisively establishes credibility and draws all resources, leaving the other unable to argue for integration; or (2) the bridging institutions become permanent power nodes and the coordination function atrophies into pure institutional theater (bridges maintained for prestige even if collaboration declines). The measurement trajectory is slightly declining in extractiveness (0.48→0.58→down to 0.58) with high theater throughout, which could signal early mandatrophy drift: extractiveness rising-then-plateauing while theater stays elevated suggests institutional maintenance rather than functional deepening. Watch whether bridging institutions begin to lose comparative advantage if single-domain research becomes more prestigious or better-funded.",
+    "kernel_context": "This constraint is the BRIDGE READING instantiation of kernel ai_risk_governance_priority. The contested kernel is: 'What should AI governance prioritize?' Three readings are live. (1) BRIDGE READING (this file): prioritize both present harms and existential risks as non-mutually-exclusive, requiring unified frameworks. (2) EXISTENTIAL_RISK_READING (sibling file): prioritize superintelligence scenarios and alignment failure as the paramount concern; present harms are implementation details for a hypothetical future. (3) NEAR_TERM_HARMS_READING (sibling file): prioritize demonstrated present injuries from deployed systems; existential speculation distracts from tractable interventions. The three readings coexist across different research communities; they are not resolved by evidence (all three claim empirical support), but rather reflect different prioritization axioms and time horizons. The bridge reading's distinctive claim is that the three are structurally entangled (present practices shape future risks; existential constraints motivate present safety standards), not independent. This entanglement claim is the reading's distinguishing premise and is what makes it COEXIST with rather than FORECLOSE the siblings—each reading can be held without logical contradiction within its home community, but they diverge on whether integration is necessary."
+  },
+  "omegas": [
+    {
+      "id": "structural_entanglement_vs_factual_independence",
+      "question": "Are present AI harms and existential risks structurally entangled (such that governance of one constrains the other) or factually independent (such that optimizing for one does not help or hinder the other)?",
+      "resolution_mechanism": "Empirical: tracing the dependency chain—do present safety practices (e.g., bias mitigation, transparency requirements) demonstrably influence how future systems are trained and deployed? Do long-horizon constraints (e.g., interpretability research, control problems) generate insights that reduce present harms? Counterfactual: comparing governance outcomes in jurisdictions/institutions that treat the problems as unified vs. siloed.",
+      "impact": "If truly entangled, the bridge reading's unified-governance claim becomes necessary (siloed approaches will miss critical dependencies). If independent, the constraint's coordination function disappears and it collapses into pure institutional extraction (power concentration without functional gain). If partially entangled, the bridge reading partially succeeds—coordination is real but incomplete.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether present harms and existential risks are governance-coupled or independent."
+    },
+    {
+      "id": "bridging_institution_brittleness",
+      "question": "Is the constraint's integration function dependent on a small set of highly-credentialed brokers, or is it distributable across the research community? What happens if the 5% of bridging institutions lose funding or credibility?",
+      "resolution_mechanism": "Network analysis of citation patterns, funding flows, and collaboration networks: do bridging institutions remain central, or has distributed bridging grown? Historical test: did the 2023 AI pause debate and EXO debate fragment bridging, or did it strengthen it? Stress test: funding withdrawal from bridging institutions to observe whether integration collapses or self-organizes.",
+      "impact": "High brittleness (concentration in few nodes) makes the constraint fragile to institutional disruption and more clearly extractive (power in few hands). Distributed brittleness (function survives node loss) would suggest the coordination function is real and resilient, downgrading the extraction classification. This omega directly feeds the PITON risk: if bridging is pure theater sustained by institutional inertia, it will show as high brittleness + high theater + declining extractiveness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Structural resilience of the bridging function to disruption of bridging institutions."
+    },
+    {
+      "id": "representation_of_present_harms_stakeholders",
+      "question": "Are governance frameworks determined by researchers, or do affected populations (those experiencing algorithmic bias and surveillance harms) have genuine participatory voice in setting research priorities and safety standards?",
+      "resolution_mechanism": "Institutional audit: membership of governance committees, funding agencies, policy bodies—what proportion of seats are held by representatives of affected populations vs. researchers? Process audit: do governance deliberations include testimony and evidence from affected communities, or only from the research/industry/policy elite? Outcome audit: do governance decisions reflect constraints and priorities stated by affected populations, or only those framed by researchers?",
+      "impact": "If affected populations are genuinely participatory, the constraint's structure shifts: they move from 'payer' to 'beneficiary' or 'co-agenda-setter' (governance reflects their priorities, not just researcher-optimized integration). If they remain excluded, the constraint remains extractive from their perspective (they pay the costs of governance fragmentation without setting its agenda). This is an R3 check on absent voices: the six_questions field names them as absent; this omega asks whether genuine participation would change the classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether marginalized populations have participatory voice in AI governance priorities."
+    },
+    {
+      "id": "kernel_foreclosure_risk",
+      "question": "Is the bridge reading genuinely holding together, or is one sibling reading in the process of foreclosing the others through institutional dominance?",
+      "resolution_mechanism": "Citation dominance: is the existential-risk reading or near-term-harms reading increasingly cited and funded at the expense of the bridge reading? Institutional drift: are bridging institutions beginning to specialize (some turning primarily existential, some turning primarily near-term) rather than maintaining integration? Policy direction: are governing bodies converging on one reading's priority framing?",
+      "impact": "If one reading is foreclosing the others, the kernel contest is shifting from 'three readings coexist' to 'one is dominating.' This would make the bridge reading transitional (a SCAFFOLD rather than TANGLED ROPE) if it represents a temporary coalition that will fragment when institutional pressure settles. It would be a sign of approaching mandatrophy if the bridge reading's integration function becomes obsolete because one community's framing won.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the bridge reading is stable or in process of being foreclosed by institutional drift toward one sibling."
+    },
+    {
+      "id": "unified_framework_vs_coordination_theater",
+      "question": "Is the declared 'unified framework' a genuine coordination solution, or primarily institutional theater—the appearance of integration without substantive collaboration?",
+      "resolution_mechanism": "Behavioral: do researchers claiming the bridge reading actually collaborate across communities (co-author papers, share methods, cite each other's results) or do they cite the 'unified framework' as justification while remaining siloed in practice? Incentive: do universities and funders reward genuine cross-domain work, or reward claiming cross-domain work while actually maintaining single-domain metrics (publications, citations)? Stress test: when resources tighten or one community's work becomes more prestigious, does cross-domain collaboration persist or does it disappear?",
+      "impact": "High theater + low genuine collaboration = the constraint is closer to PITON (performative maintenance of unity for institutional standing) than TANGLED ROPE (real coordination with embedded extraction). This would suggest the extraction is cleaner (power concentration without much functional gain) and the theater metric should be higher than authored. This omega directly tests the authored theater_ratio (0.48) plausibility.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether 'unified frameworks' are genuine coordination or institutional theater."
+    },
+    {
+      "id": "committer_kernel_contest_reading_stability",
+      "question": "Are the three readings (bridge, existential, near-term) genuinely coexistent without foreclosure, or does the bridge reading's framing (structural entanglement) logically require or foreclose certain positions from the other readings?",
+      "resolution_mechanism": "Logical: if the bridge reading is correct that present harms and existential risks are structurally entangled, does the existential-risk reading's claim that existential risk is the paramount concern become internally contradictory (since paramount priority must account for entanglement)? Can the near-term-harms reading's prioritization of tractable present problems coexist with bridge-reading governance if the governance assumes non-separability? This is a conceptual test, not empirical—it asks whether the three readings are stable coexisters or whether one reading's truth would logically eliminate another.",
+      "impact": "If the bridge reading logically FORECLOSES one of the siblings, the reading_relations should shift from coexists_with to forecloses, and the kernel itself is less deeply contested (one reading has hidden dominance in the argument space). If all three genuinely coexist, the kernel is deeply contested and the bridge reading is one legitimate position among three. This affects whether the constraint should be classified as TANGLED ROPE (unstable coexistence, extraction) or as a SCAFFOLD (transitional coalition waiting for conceptual resolution).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Logical stability of the three readings as coexistent alternatives."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_risk_governance_priority__existential_risk_reading",
+      "ai_risk_governance_priority__near_term_harms_reading"
+    ],
+    "dual_formulation_note": "The bridge reading instantiates one interpretation of the contested kernel ai_risk_governance_priority. The existential_risk_reading and near_term_harms_reading are sibling constraints representing alternative framings of the same governance domain. All three readings share the same referent (the space of AI governance institutions and research prioritization) but author different ε values, different victim/beneficiary structures, and different claimed types. The readings are linked because institutional dominance by one reading affects the others' operating environment: if existential-risk framing becomes predominant, near-term harm research loses funding and legitimacy (influence relation). If near-term harm prioritization becomes policy-dominant, existential-risk researchers are marginalized (influence relation). The bridge reading is neither a median nor a synthetic compromise—it is an independent claim about structural entanglement that coexists with the other two. All three readings are authored from the bridge_reading seat's perspective (per Rule 1: generate only this reading as a clean ε-invariant constraint)."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "existential_risk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "near_term_harms_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "present_harms_existential_risks_structurally_entangled",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "governance_integration_necessary_for_safety",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "fragmented_research_communities",
+    "drift_state": {
+      "moment": "contemporary_ai_governance_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ],
+  "gain_flow": "bridging_research_institutions",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "ai_risk_governance_priority__existential_risk_reading",
+      "ai_risk_governance_priority__near_term_harms_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

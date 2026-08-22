@@ -1,0 +1,380 @@
+{
+  "header": {
+    "constraint_id": "ietf_openness_commitment__commons_stewardship_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_ietf_openness_commons_stewardship",
+    "story_uid": "9afb1ac4-54f9-4c9d-92b6-bf775721b61b",
+    "created_at": "2026-06-11T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.14,
+    "claimed_type": "rope",
+    "human_readable": "IETF Open Standards Commitment — Commons Stewardship Reading",
+    "topic_domain": "institutional/technology governance/commons",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "ietf_working_groups",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Author standards through open working groups using rough consensus. Participants come from competing implementer organizations but work toward specification that all can implement without gatekeeping. The group's work is the constraint's operation — no individual agent profits from the standard; the standard's value accrues to all implementers equally."
+    },
+    {
+      "name": "large_technology_firms",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Have resources to participate in standards-setting and to implement standards once finalized. Under open standards constraint, they cannot use control of standards process to encode proprietary gatekeeping into the specification. They benefit from interoperability with competitors (larger market, reduced fragmentation costs) and bear the cost of not being able to lock in through standards capture."
+    },
+    {
+      "name": "small_and_startup_implementers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Depend on open standards to enter markets where large firms already operate. Without openness commitment, they would face proprietary standards locked in by large firms, making interoperability impossible. The constraint's core function is to preserve their exit option into standardized markets. Participate in standards-setting to protect this interest, but have less technical capacity than large firms to influence outcomes."
+    },
+    {
+      "name": "end_users_and_network_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Depend on interoperability across implementations for internet function. Open standards mean they can choose implementations from competing vendors without lock-in to proprietary extensions. Lock-in to single vendors or incompatible extensions would fragment the internet and raise their costs or reduce their choice."
+    },
+    {
+      "name": "implementer_development_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Engineers, researchers, and open-source developers who build implementations (libraries, servers, clients, routers, etc.). Open standards enable them to build without reverse-engineering proprietary systems. The accessibility and patent-clarity commitments are core to their ability to contribute."
+    },
+    {
+      "name": "ietf_iesg_and_governance",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Stewards the standards process rules and rough consensus principle. Maintains the procedural openness that prevents capture by organized factions. Has the formal authority to block standards that violate IPR commitments or exclude required implementers."
+    },
+    {
+      "name": "patent_holders_with_essentials",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold patents essential to standards implementation. Under the open commitment, they must license on FRAND (fair, reasonable, and non-discriminatory) terms rather than being able to set exclusive terms or block competitors. This is a real cost: they cannot maximize extraction from their patent position when the standard is open."
+    },
+    {
+      "name": "proprietary_technology_vendors",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Would benefit from proprietary standards that encode their technical approach and lock in users. The openness commitment excludes this strategy — they can participate, but cannot control outcomes to encode their advantages. Some choose not to participate or participate minimally, treating standards as constraints on their business model rather than opportunities."
+    },
+    {
+      "name": "open_source_communities",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Depend on standards that permit free implementation and modification. Open standards with permissive patent licensing enable open-source projects to implement without legal risk. Proprietary or restricted standards would exclude them or require expensive licensing."
+    },
+    {
+      "name": "academic_and_research_institutions",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Use and extend standards in research and education. Open standards enable freely available implementations and documentation. Proprietary or licensing-restricted standards would create barriers to research and teaching."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the fragmentation problem: without coordination on standards, each implementer would develop proprietary extensions, incompatible protocol variants, and enclosed ecosystems. Open standards specify a shared technical target that all implementers can reach, enabling interoperability across independently developed systems. The rough consensus process distributes technical authority across all participants rather than concentrating it in any single vendor's hands.",
+    "transfer_function": "The constraint moves authority and gate-control AWAY from any single actor. Large firms transfer the ability to encode their technical approach into the spec (which they could do through a proprietary standard) and patent holders transfer exclusive licensing control (which they could exert through a proprietary standard). In exchange, all implementers receive the ability to operate in markets without proprietary lock-in. The transfer is asymmetric in scope but symmetric in direction: everyone loses exclusive control, everyone gains market access.",
+    "absent_voices": "Proprietary technology vendors who view open standards as hostile to their business model often opt out of participation. The internet standards process is deeply embedded in the open-source and academic communities; some corporate R&D groups and technology vendors view it as structurally biased against proprietary approaches. Their objection would be that the 'openness' requirement itself is a form of gatekeeping that excludes non-open business models.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the IETF's openness commitment disappeared overnight — if standards could be captured by organized factions and proprietary patent licensing could control implementer access — the internet would fragment into incompatible protocol ecosystems controlled by individual technology vendors. Users and operators would lose the ability to mix-and-match implementations. Interoperability would collapse to vendor-sanctioned combinations. The global internet's architecture depends on the assumption that core protocols are open and royalty-free.",
+    "founding_problem": "Early internet growth created ad-hoc protocols and incompatible systems. TCP/IP won not because of technical superiority alone but because it was open, royalty-free, and implementable by anyone. As the internet grew commercially, pressure mounted to capture standards for competitive advantage — to encode proprietary approaches and extract licensing rents from implementers. The openness commitment was established to prevent standards from becoming vehicles for competitive capture.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Multiple attempts at proprietary standards (ATM, some wireless protocols, cell-phone standards) demonstrate the founding problem's persistence: when openness is not enforced, technology vendors do encode their approaches into standards and extract licensing rents. Internet operators and equipment manufacturers testify repeatedly that open standards reduce their costs and preserve their choice set. Academic networks and open-source communities attest that proprietary standards would exclude them from participation. The only dissenting voices are vendors who profit from proprietary standards — and they do not claim the problem is solved, only that their model is preferable."
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.19
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.08
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Internet Engineering Task Force operates under an explicit openness commitment: standards are developed through open, public working groups using rough consensus decision-making; all implementations must be royalty-free; standards cannot encode proprietary gatekeeping. This constraint story instantiates the COMMONS STEWARDSHIP READING of the contested IETF openness kernel. In this reading, open standards function as public infrastructure that preserves interoperability for all implementers — large and small — and prevents any single vendor from using standards capture to lock in competitive advantage. The constraint is examined from the perspective that sees open standards as a coordination mechanism WITH NO STRUCTURAL BENEFICIARY CLASS: the rules apply equally to all implementers; no party collects rents from the constraint's operation; the value accrues to interoperability itself. This contrasts sharply with the CAPTURE SUBSTRATE READING (where standards are seen as coordination surfaces that large vendors use to encode their technical advantages) and the LEGITIMACY EROSION READING (where rough consensus is seen as vulnerable to organized capture despite procedural safeguards). The claim/metric gap is deliberate: extractiveness is CLAIMED as rope (genuine coordination) and the authored metrics confirm low extraction (0.18), low suppression (0.12), low theater (0.08) — the metrics and claim align because this reading's structural analysis sees no hidden extraction. That alignment does not mean the other readings are wrong; it means the engine will show per-seat classification divergence depending on the actor's power level and position in the standards process.",
+    "key_agents": [
+      "IETF Working Groups: distributed technical authority; no single actor controls outcomes",
+      "Large Technology Firms: cannot use capture to lock in advantages; must compete on implementation quality",
+      "Small and Startup Implementers: gain preservation of market access; benefit from equal procedural standing",
+      "End Users and Network Operators: depend on interoperability; openness secures their choice set",
+      "Implementer Development Community: open standards enable free implementation and modification",
+      "IETF/IESG Governance: stewards the procedural openness that prevents organized capture",
+      "Patent Holders with Essentials: cannot demand exclusive licensing; bound by FRAND commitments",
+      "Proprietary Vendors: excluded from capturing the standard to encode their approaches; may view openness as hostile"
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) under this reading because the constraint's operation does not concentrate gains in any seat: the standard specifies a technical target; all implementers reach it; no one collects rents from the constraint's operation. The value is public (interoperability) not private (captured by an agenda-setter). Suppression is very low (0.12) because the rough consensus rule does not suppress alternatives — it prevents any faction from suppressing other factions' participation. Patent holders and large firms are constrained (they cannot license exclusively or capture the standard), but constraint is not suppression; suppression would require active coercion to prevent exit or preserve alternatives. The theater ratio is minimal (0.08) because the working group's actual function (writing interoperable specifications) is identical to its stated function; there is minimal performative overhead. The measurement series shows slight upward drift in extraction (0.14 to 0.18-0.19 mid-interval, settling at 0.18) driven by increasing standardization complexity and the growing resource advantage of large firms in working group participation — a real dynamic, but within the low-extraction zone. Suppression stays constant because the procedural safeguards (openness requirement, rough consensus, IPR policies) persist unchanged across the interval.",
+    "perspectival_gap": "This reading predicts minimal seat divergence: from all seats (large firms, small firms, users, operators, open-source community), the constraint appears as coordination that enables rather than extracts. The small firms and open-source community see it as enabling; large firms see it as preventing capture but accept it as the cost of operating in internet standards. From the CAPTURE SUBSTRATE READING, divergence would be sharp: large firms would compute as beneficiaries (their technical advantage encodes into the standard even if they cannot formally lock it); small firms would compute as targets (they cannot compete with large-firm technical resources in working groups). From the LEGITIMACY EROSION READING, the divergence would center on whether procedural safeguards actually prevent capture or merely disguise it — that reading would see suppression and extraction hidden within the rough consensus process itself. The commons-stewardship reading sees no such hidden structure; the engine will compute whether that is correct by examining how actual working-group decisions distribute across power classes and how small-firm input translates to standard content.",
+    "directionality_logic": "The constraint is truly non-extractive under this reading because there is no structural beneficiary extracting value from constrained actors. Large firms are not beneficiaries collecting rents — they are constrained actors who cannot use the standard to lock in advantages, and they also gain from interoperability. Small firms and users are beneficiaries who gain interoperability preservation. Patent holders are constrained but not suppressed — they can still participate; they cannot extract exclusive licensing value. No actor sits at d ≈ 1.0 (full target). All actors sit in the d ∈ [0.1, 0.4] zone (mild constraint with offsetting benefit, or modest benefit with modest constraint). This distribution — no clear target, no concentrated beneficiary — is exactly what rope-with-no-extraction looks like.",
+    "mandatrophy_analysis": "This reading's mandate is live: the founding problem (vendors capturing standards for competitive advantage) remains live; the interoperability-preservation function still solves a real coordination problem. The founding_problem_status is live (not dead or contested in this reading's frame). The rough consensus rule still operates as intended: it distributes technical authority, prevents factions from unilaterally controlling outcomes, and preserves the possibility of dissent-and-fork if rough consensus collapses. There is no mandatrophy in this reading. The LEGITIMACY EROSION READING would claim mandatrophy (rough consensus is theatrically maintained but actually captured by organized factions) — that is a different claim requiring a different constraint story. This story does not resolve the mandatrophy claim; it denies it on structural grounds: if rough consensus were captured, the standards would encode vendor-specific advantage, which they do not systematically (interoperable implementations exist from multiple vendors with incompatible business models).",
+    "kernel_context": "This constraint is ONE READING of the contested IETF OPENNESS KERNEL. The kernel is the standing procedural commitment to open, royalty-free standards development. Three readings instantiate three different constraints: (1) COMMONS STEWARDSHIP READING (this constraint): Open standards as public infrastructure with low extractiveness, no structural beneficiary, equal constraint on all implementers. (2) CAPTURE SUBSTRATE READING: Standards process as coordination surface where resource advantage translates to encoded gatekeeping; high extractiveness favoring large firms. (3) LEGITIMACY EROSION READING: Rough consensus mechanism itself as contested and vulnerable to organized capture despite procedural safeguards; extractiveness hidden in procedural capture rather than overt. Each reading instantiates a different ε (0.18 vs. high, vs. moderate-with-hidden extraction), different beneficiary structures, and different resistance profiles. The three readings are NOT three perspectives on the same constraint; they are three structurally distinct constraints that ride on the same kernel (the openness commitment). This constraint-story embodies the commons-stewardship reading's full structural claim and makes no concession to the capture-substrate or legitimacy-erosion framings; those are other constraints."
+  },
+  "omegas": [
+    {
+      "id": "rough_consensus_capture_vulnerability",
+      "question": "Does the rough consensus rule actually prevent organized factions from controlling outcomes, or is it structurally vulnerable to capture by coordinated working-group participants?",
+      "resolution_mechanism": "Post-hoc analysis of working-group decision records: do small-firm and open-source-community proposals survive rough consensus, or are they consistently displaced by large-firm consensus-blocking? Do organizational affiliations of consensus-declaring chairs bias outcomes? Do documented dissents change outcomes when raised?",
+      "impact": "If rough consensus proves vulnerable to organized capture, the extractiveness estimate would rise substantially (0.18 → 0.40+) and the beneficiary structure would shift (no current beneficiary → large firms). The constraint would reclassify from rope to tangled_rope or snare depending on the degree of suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether rough consensus procedurally prevents capture or provides theatrical concealment of capture."
+    },
+    {
+      "id": "patent_licensing_frand_enforcement",
+      "question": "Are FRAND commitments from patent holders actually enforced, or are they routinely evaded through discriminatory licensing terms, blocking, or design-around requirements?",
+      "resolution_mechanism": "Analysis of licensing disputes and enforcement actions; survey of implementers about actual licensing experience vs. committed FRAND terms; legal precedent from patent litigation against standards implementers.",
+      "impact": "If FRAND commitments are evaded, the extractiveness estimate would rise (0.18 → 0.35+) because patent holders are extracting more value than the constraint's nominal structure allows. Suppression would rise as well if licensing disputes create barriers to implementation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether FRAND patent commitments function as nominal vs. enforced constraints on licensing extraction."
+    },
+    {
+      "id": "participation_equity_vs_resource_advantage",
+      "question": "Does technical resource advantage (large firms' ability to field more engineers, more expensive analysis tools, more time) systematically translate to disproportionate influence on standard content, or are standards robust to resource asymmetry?",
+      "resolution_mechanism": "Meta-analysis of technical proposals by firm size and affiliation: do large-firm proposals receive more adoption? Do small-firm edge cases and use cases get included in specifications? Post-standardization implementation success rates by firm size (smaller firms' interoperability with large-firm implementations).",
+      "impact": "If resource advantage translates systematically to disproportionate influence, the commons-stewardship reading's core claim (equal constraint on all implementers) would weaken. Extractiveness would rise modestly (0.18 → 0.25+) and small firms would compute as mild targets rather than beneficiaries. The constraint would be rope-with-extraction rather than pure rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open procedures equalize influence despite resource asymmetry, or whether large firms' technical resources translate to structural advantage."
+    },
+    {
+      "id": "commons_stewardship_vs_capture_kernel_framing",
+      "question": "Is the IETF openness commitment grounded in a genuine shared commitment to open standards as public infrastructure, or is it primarily a legitimation cover for a deeper arrangement where large firms accept openness procedurally in exchange for technical complexity that de facto requires their resources to navigate?",
+      "resolution_mechanism": "History of IETF governance decisions: have working groups ever rejected proposals from large firms on procedural openness grounds? Have standards been simplified or kept accessible to small-firm implementers when doing so would benefit large firms? Do large firms participate in 'defeating' rival large firms' proposals (cross-firm alliance against single-firm capture attempts)?",
+      "impact": "If the commitment proves to be primarily legitimation cover, the commons-stewardship reading would degrade and the capture-substrate reading would strengthen. Extractiveness would rise (0.18 → 0.35+), the beneficiary structure would shift toward large firms, and the constraint would reclassify as tangled_rope (coordination function + asymmetric extraction).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the openness commitment reflects genuine shared commitment to commons stewardship or functions as legitimation cover for resource-advantage-based gatekeeping."
+    },
+    {
+      "id": "kernel_reading_foreclosure_test",
+      "question": "Can the commons-stewardship reading and the capture-substrate reading coherently coexist within a single party's commitment framework, or do they logically foreclose each other?",
+      "resolution_mechanism": "Examine whether the two readings can both be held by the same actor (e.g., a large firm) as empirical hypotheses about the same procedural mechanism. If they can (the firm can honestly say 'openness is real procedurally but resource advantage translates to influence'), they coexist; if the firm must choose one or the other, they foreclose.",
+      "impact": "If the readings foreclose each other, the kernel reading_relations should declare forecloses rather than coexists_with. This affects how the engine's kernel analysis treats the three readings: mutual exclusion vs. live parallelism.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the commons-stewardship and capture-substrate readings logically foreclose each other or represent live alternative hypotheses."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "ietf_openness_commitment__capture_substrate_reading",
+      "ietf_openness_commitment__legitimacy_erosion_reading"
+    ],
+    "dual_formulation_note": "The IETF openness kernel admits three structurally distinct constraint stories. The commons-stewardship reading (this constraint) models open standards as public infrastructure with low extractiveness and no structural beneficiary. The capture-substrate reading models the same procedural mechanism as a coordination surface where resource advantage encodes gatekeeping — same kernel, different ε, different beneficiary structure. The legitimacy-erosion reading models rough consensus as vulnerable to organized capture despite procedural safeguards — same kernel, extractiveness hidden within procedure. The three constraints are linked because any empirical resolution of the ambiguities in omegas 1, 4, and 5 would differentially support one reading over the others. Network directionality: commons-stewardship is the baseline coordination claim; capture-substrate and legitimacy-erosion are both 'counterfactual' hypotheses that require the baseline to exist before they can challenge it. Empirically, all three remain live — the corpus exists to measure which reading's structural account is more accurate."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "capture_substrate_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "legitimacy_erosion_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "open_procedures_equalize_influence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "interoperability_is_nonexcludable_public_good",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "open_participation_procedural_authority",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

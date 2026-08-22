@@ -1,0 +1,517 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__continuous_refresh_hybrid",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "7780a566-82af-40a0-a185-27081039d99e"
+  },
+  "base_properties": {
+    "extractiveness": 0.61,
+    "suppression": 0.54,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.67,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Continuous Simulation Refresh Requirement for Competence Retention",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_regulators",
+      "institutional_risk_managers"
+    ],
+    "victims": [
+      "operational_personnel",
+      "training_administrators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Mandate continuous simulation-based competence validation for critical-risk personnel (pilots, nuclear operators, hazmat handlers). Justify the requirement as insurance against catastrophic failure due to skill atrophy. Enforce via audit, licensing sanctions, and incident investigation. Collect regulatory authority and institutional credibility from the rule."
+    },
+    {
+      "name": "institutional_risk_managers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Adopt continuous simulation protocols as their own risk-mitigation policy. Compliance with the mandate defends them against liability if an incident occurs—they can demonstrate 'best practice' adherence. The requirement outsources the competence judgment to regulators, reducing organizational liability exposure."
+    },
+    {
+      "name": "operational_personnel",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Must participate in recurring simulation cycles, often at time cost (time away from operational duties, off-shift training, travel to simulation centers). The cycles keep them operationally current and reduce their own catastrophic-failure risk. But the continuous cycle itself is a disciplinary machinery: it validates competence through perpetual re-examination rather than through demonstrated safe performance."
+    },
+    {
+      "name": "training_administrators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the cost of scheduling, operating, and maintaining simulation infrastructure. Must ensure compliance across dispersed personnel. Face regulatory sanctions for non-compliance. The continuous requirement justifies their budget and staffing; removing it would eliminate their function entirely."
+    },
+    {
+      "name": "real_incident_data_holders",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Possess empirical records of accident causation: what percentage of failures are competence-degradation, what are system or communication failures, what is the predictive validity of simulation performance for actual catastrophe avoidance. Their analysis could establish or refute whether continuous cycles are necessary, sufficient, or both."
+    },
+    {
+      "name": "alternate_validation_communities",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Advocates for competence validation through demonstrated safe performance, peer evaluation, or less-frequent high-fidelity scenarios rather than continuous low-stakes drills. Are structurally excluded from the regulatory definition of 'valid exercise' and have no formal standing to propose alternatives."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes shared standards for what constitutes adequate competence refresh in high-risk domains: when, how often, and in what fidelity must personnel exercise skills to remain operationally sound. Coordinates organizational training infrastructure, regulatory expectations, and professional identity around common validation rhythm.",
+    "transfer_function": "Transfers time and administrative burden (cost of continuous drills, travel, off-shift training) from operational personnel and training departments to simulation infrastructure providers and regulatory oversight. Transfers competence judgment from demonstrated performance to periodic examination results. Transfers professional authority from local peer evaluation to centralized regulatory standards.",
+    "absent_voices": "Practitioners and methodologists advocating performance-based validation (demonstrated safe conduct, peer review, distributed informal learning) are not seated in regulatory standard-setting. Real-incident investigators whose data would establish whether continuous simulation actually prevents catastrophes are not consulted in mandate design. Personnel who have left operational fields (retired pilots, former nuclear operators) whose perspective on whether continuous validation was necessary to competence are not heard.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the continuous-refresh requirement vanished, regulatory frameworks would shift to alternative validation approaches (periodic high-stakes testing, performance-based evidence over intervals, extended observation windows). Organizations would rationalize training infrastructure. Personnel would face less continuous surveillance and periodic re-examination. The regulatory authority structure would need to reground competence judgment in demonstrated operational performance rather than exercise frequency. Professional identity would reorient from continuous-validation-as-proof-of-competence to performance-in-operation-as-proof-of-competence.",
+    "founding_problem": "Competence in critical-risk domains degrades through disuse; operators who do not continuously exercise their skills face elevated failure risk when actual emergencies occur. Periodic testing is insufficient to maintain skill at operational levels because decay is ongoing, not episodic.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Cognitive science and human factors literature attests that skill decay accelerates over time and distributed practice outperforms massed practice; aviation regulators cite accident data correlating simulator training frequency with safety performance. However, systematic accident-database analysis by NTSB, ICAO, and academic safety researchers indicates that operator competence decay accounts for <15% of accidents in well-structured operational domains; system failures, communication breakdowns, and organizational errors dominate. Regulators interpret this incomplete causation as evidence FOR (competence is one of multiple failure modes, so continuous drill prevents at least that mode) while independent safety scientists interpret it as evidence competence decay is over-weighted as a regulatory target relative to system design and organizational factors. The founding problem is attested by some evidence (cognitive decay is real) but contested in scope (how much of actual catastrophe does it explain)."
+  },
+  "interval": {
+    "start": 1980,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.54
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1980,
+    "tn": 2026,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.28
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.7
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.15
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.22
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.45
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.3
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.18
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.1
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.55
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.12
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.18
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.6
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.08
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.05
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.75
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.82
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "competence_decay_causation_in_accidents",
+      "question": "What fraction of actual catastrophic failures in critical-risk domains are caused by individual competence decay vs. system/organizational/communication failures?",
+      "resolution_mechanism": "Systematic retrospective analysis of accident databases (NTSB, ICAO, NRC, OSHA incident records) classifying accident root causes and the role of operator competence decay in each. Requires clear distinction between competence gaps identifiable post-incident and competence gaps present at time of incident.",
+      "impact": "If competence decay causes <10% of failures, continuous simulation is addressing a secondary failure mode; the constraint's extraction and suppression would be largely directed at a minor risk factor. If >40%, continuous simulation is addressing a primary risk driver. This resolves the kernel contest between 'necessary but not sufficient' and 'insufficient substitute for system design.'",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "What role competence decay plays in actual accident causation."
+    },
+    {
+      "id": "simulation_fidelity_vs_performance_correlation",
+      "question": "Does simulation performance (passing scores on high-fidelity sims) predict actual catastrophe avoidance better than demonstrated safe operational performance or interval-based refresher testing?",
+      "resolution_mechanism": "Prospective cohort study: track personnel with varying simulation frequency and quality; compare accident rates (actual incidents where the operator's decision was tested) against simulation scores. Compare accident-rate variation explained by continuous-sim metrics vs. by operational-performance metrics.",
+      "impact": "If simulation correlation is weak or non-monotonic (beyond a threshold, more drills don't predict fewer failures), the constraint's empirical foundation shifts from 'continuous is necessary' to 'continuous provides ritual confirmation.' If strong, the constraint's necessity claim is strengthened. This is the core of the reading disagreement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether continuous simulation predicts actual safety."
+    },
+    {
+      "id": "reading_identity_competence_lock",
+      "question": "To what extent is operational personnel's identity fused with the continuous validation apparatus? Is identity_locked exit in this reading produced by professional commitment ('this is my competence domain') or by the constraint's enforcement machinery ('I am competent only if this system says so')?",
+      "resolution_mechanism": "Qualitative interviews with personnel who have left operational roles (retirement, job change, departure from field); analysis of stated reasons for exit and whether competence validation anxiety was a barrier or accelerant. Post-exit trajectory of competence confidence and skill maintenance.",
+      "impact": "If identity fusion is primarily organizational (the constraint produces internalized competence-checking), suppression is substantially internalized and persists after constraint removal. If fusion is primary (the person's self-concept as an operator is constituted by continuous validation), exit_options should be marked identity_locked rather than constrained, raising d and effective extraction on this population. If weak, the constraint is more easily removed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether identity fusion with validation is structural or produced by the constraint."
+    },
+    {
+      "id": "reading_boundary_continuous_vs_periodic_necessity",
+      "question": "This reading claims continuous (distributed over time) is necessary; sibling 'real_catastrophe_only' claims only real-world emergence is sufficient; sibling 'simulation_as_proxy' claims one-time or infrequent simulation is adequate. Are these genuinely foreclosing, or do they describe a continuum where the key disagreement is the minimum interval?",
+      "resolution_mechanism": "Operationalize 'competence retention' as measurable performance decrement over time, with attention to: (a) rate of decay by domain (some skills decay faster than others); (b) threshold intervention points (at what decay level does risk rise dangerously); (c) relearning cost (can competence be restored with minimal retraining if it decays). This transforms the reading contest from philosophical into empirical.",
+      "impact": "If the readings are actually describing different intervention thresholds on a continuum (this reading: refresh when decay reaches X%; 'as_proxy': refresh when decay reaches Y% or annually; 'catastrophe_only': refresh via incident), the kernel is NOT genuinely contested — it is a calibration disagreement. If they describe genuinely incommensurable standards (continuous vs. never vs. only-real), the readings foreclose each other. This affects whether the constraint is naturally unstable (three coexisting readings) or logically structured.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the reading contest is philosophical or empirical."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Safety regulators mandate continuous simulation-based competence validation for critical-risk personnel (pilots, nuclear operators, hazmat handlers, etc.), claiming that competence degrades through disuse and periodic testing is insufficient. Operational personnel and training administrators bear the cost of continuous cycles. The constraint simultaneously provides genuine safety coordination (establishes shared standards for competence validation) and extracts time and administrative burden while expanding regulatory surveillance. The foundational claim of this reading is that competence retention is PROCESS-DEPENDENT — continuous exercise is structurally necessary because skill decay is continuous. The sibling reading 'simulation_as_proxy' treats simulation as ONE adequate form of exercise (role-playing catastrophe). The sibling reading 'real_catastrophe_only' treats only real incidents as sufficient exercise. This reading's empirical claim differs from its siblings: that the continuous rhythm itself—not just the existence of exercise—is what retention requires.",
+    "key_agents": [
+      "safety_regulators: Institutional agenda-setter. Sets the validation standard, enforces via audit and licensing. Collects regulatory authority from the rule. Benefits from being seen as preventing catastrophes.",
+      "operational_personnel: Moderate-power payers. Must participate in recurring cycles. Identity-locked to the profession; cannot exit without career cost. Face continuous competence re-examination.",
+      "training_administrators: Moderate-power payers. Bear operational and scheduling costs. Their function is justified by continuous-refresh requirement.",
+      "institutional_risk_managers: Institutional beneficiaries. Adopt the standard as their own risk mitigation. Compliance defends them against liability.",
+      "real_incident_data_holders: Analytical observers. Possess empirical records of what actually causes catastrophes. Could resolve the reading contest if consulted."
+    ],
+    "logic_rationale": "Extractiveness is 0.61 at interval end (2026) because the constraint genuinely coordinates validation standards (reducing it below 0.4) BUT also extracts time and administrative burden from personnel and administrators in a way decoupled from demonstrated necessity (raising it above 0.5). The measurement series shows rise from 0.25 (1980) to 0.61 (2026) as simulation infrastructure expanded and regulatory requirements tightened, indicating the constraint evolved from loosely-enforced guidance toward institutional machinery. Theater is 0.48 because while the coordination function is real, a significant share of continuous-cycle activity is defensive (demonstrating compliance for audit and liability purposes) rather than knowledge-based. Suppression is 0.54: the constraint operates by excluding alternative validation approaches (performance-based, distributed, peer-review) from the regulatory definition of 'valid exercise,' and by making non-compliance a licensing and career threat (moderate active enforcement, not extreme). Accessibility_collapse and resistance show leveled divergence: at structural level, regulators and risk managers have found alternatives (litigation liability, performance-based regulation) and resistance is moderate (0.58 at tn); at individual level, operational personnel face near-total collapse of alternatives (0.68) and highest resistance (0.82) because they cannot easily exit the profession. Suppression at organizational level (0.60) reflects institutional capture: risk managers adopt the constraint as 'best practice' to defend liability, making institutional exit costlier than compliance. The divergence across levels is the evidence of tangled_rope structure: genuine coordination at system level, extraction at personnel level.",
+    "perspectival_gap": "The payer seats (operational_personnel, training_administrators) and the agenda-setter (safety_regulators) should compute to different types. From the regulator's institutional seat, the constraint is genuine coordination: establishing shared standards for competence validation, reducing certification fragmentation, defending against catastrophic failures due to skill decay. From operational_personnel's identity-locked seat, the constraint is extractive: continuous cycle demonstrates institutional control over competence-checking, validates the system's authority to judge competence, and generates disciplinary cycles without clear correlation to improved safety. From training_administrators' seat, it is beneficial: the requirement justifies their budget and function, but the burden falls as well (they must operate the machinery). The engine computes these divergences from power (institutional vs. moderate), exit_options (arbitrage vs. identity_locked vs. constrained), and role (agenda_setter vs. payer vs. beneficiary). The authored claim/metric gap reflects this: the constraint is CLAIMED as necessary coordination but MEASURED as substantially extractive. The claim is what regulators assert; the metrics describe what the constraint actually does.",
+    "directionality_logic": "Safety_regulators: d ≈ 0.1 (full beneficiary). They set the rule, collect authority from its operation, face no exit cost. Institutional_risk_managers: d ≈ 0.2 (beneficiary with modest cost). They adopt compliance as their liability defense, but must update practices and infrastructure. Operational_personnel: d ≈ 0.8 (target). They bear time cost, continuous re-examination, and identity-lock prevents exit. Training_administrators: d ≈ 0.75 (target). They bear operational cost, but the requirement justifies their existence (slight beneficiary offset). Real_incident_data_holders: d = 0.5 (analytical symmetric). They have no stake in the outcome; their role is observation. Alternate_validation_communities: d ≈ 0.85 (excluded target). They would benefit from the constraint's removal but are trapped outside the regulatory definition of 'valid exercise.'",
+    "mandatrophy_analysis": "The constraint is NOT mandatropic (mandate-dead but function persisting). The founding problem—competence decay causes accidents—is contested but live. Regulators attest it is live and critical; safety scientists (reading empirical accident causation data) attest it is live but secondary; operational personnel attest the system works but is overbuilt. The disappearance_verdict is world_rearranges: if the continuous-refresh requirement vanished, regulatory frameworks would shift, organizations would rationalize training, and personnel would face less surveillance. The constraint's mandate (competence retention through continuous exercise) is actively contested and its validity is under challenge (hence founding_problem_status = contested). No mandatrophy signal here.",
+    "kernel_context": "This constraint instantiates the 'continuous_refresh_hybrid' reading of the contested kernel 'competence_exercise_validity.' The kernel is: what constitutes valid competence exercise to maintain skills in critical-risk domains? Three readings contend: (1) continuous_refresh_hybrid (THIS one): Competence is process-dependent; continuous, distributed exercise is structurally necessary because skill decay is continuous. Simulation is necessary but not sufficient — the continuous cycle itself matters. (2) simulation_as_proxy: Simulation counts as a valid proxy for catastrophe; a one-time or infrequent high-fidelity simulation is adequate exercise. The constraint conflates frequency with necessity. (3) real_catastrophe_only: Only actual real-world emergence truly exercises competence; simulation is an insufficient substitute. The constraint treats fake-catastrophe as competence-maintaining when only real stakes produce real learning. This reading differs from its siblings in that it claims the TIMING and RHYTHM of exercise is structurally necessary, not just the existence of exercise or its fidelity to reality. The disagreement is over whether competence is state-maintained (it either is or is not; simulation either proves it or doesn't) or process-dependent (it requires continuous reinvestment). This reading reads competence as fundamentally process-dependent: you are not competent because you passed a test; you are competent because you continuously exercise. The empirical dispute (omegas 1–2) is whether continuous simulation actually predicts safety. The conceptual dispute (omega 4) is whether the readings describe a continuum or genuinely foreclosing alternatives."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__simulation_as_proxy",
+      "competence_exercise_validity__real_catastrophe_only"
+    ],
+    "dual_formulation_note": "The competence_exercise_validity kernel decomposes into three structurally distinct constraint stories, each instantiating a different reading of what constitutes valid competence exercise. This constraint (continuous_refresh_hybrid) claims competence is process-dependent and continuous exercise is necessary. The simulation_as_proxy reading claims simulation is adequate substitute for catastrophe and frequency is secondary. The real_catastrophe_only reading claims only actual emergence exercises competence. The three readings coexist as live institutional positions held by different professional communities (regulators, training industry, post-incident investigators). All three share the referent (standing arrangement: simulation-based competence validation) but author different ε values reflecting their different readings of the arrangement's extractiveness and its necessity. Link the sibling stories with bidirectional affects_constraints entries."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.8
+    }
+  ],
+  "gain_flow": "safety_regulators",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "medium_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "competence_exercise_validity__simulation_as_proxy",
+      "competence_exercise_validity__real_catastrophe_only"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_proxy",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "real_catastrophe_only",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_is_process_dependent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "continuous_timing_is_structurally_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "continuous_skill_maintenance_required",
+    "drift_state": {
+      "moment": "contemporary_post_regulatory_capture",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

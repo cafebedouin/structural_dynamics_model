@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence_mechanism__lock_in_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "18f44906-9519-46b1-a293-0a055efdae7d"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.41,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.44,
+    "claimed_type": "tangled_rope",
+    "human_readable": "QWERTY Lock-In via Path-Dependent Coordination Failure",
+    "topic_domain": "economic/technological/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "installed_base_users",
+      "keyboard_manufacturers",
+      "typist_trainers"
+    ],
+    "victims": [
+      "alternative_standard_advocates",
+      "new_system_adopters"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "installed_base_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Have invested decades learning QWERTY touch-typing; their muscle memory and professional identity are fused with the layout. They benefit from the coordination value (everyone types QWERTY; no switching costs for shared devices) but also carry the cost of suboptimal ergonomics and speed constraints. Exit is cognitively framed as impossible despite being technically available — retraining would cost time and professional credibility within a QWERTY-normalized workplace."
+    },
+    {
+      "name": "keyboard_manufacturers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from coordination on a single standard: no need to produce and inventory multiple layouts or negotiate compatibility. The installed base's learned behavior locks in their production process. They do not actively extract from QWERTY; the arrangement simply reduces their costs. Could arbitrage by producing alternative-layout keyboards at competitive prices, but do not, because the demand signal is shaped by the lock-in itself."
+    },
+    {
+      "name": "typist_trainers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Curriculum, textbooks, and professional teaching materials are standardized on QWERTY. Teaching anything else requires creating new materials, retraining themselves, and overcoming student resistance from their typed-before experience. They benefit from the coordination (no need to teach multiple standards) and have structurally weak incentive to switch, though they could collectively pressure for alternatives."
+    },
+    {
+      "name": "alternative_standard_advocates",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Include ergonomists, efficiency researchers, and small communities that have developed superior layouts (Dvorak, Colemak, Workman). They advocate for switching despite overwhelming coordination inertia. Switching costs are borne entirely by early adopters: retraining required, isolation from shared keyboards, material and cognitive investment with no guarantee of mainstream adoption. The more superior their alternative, the clearer the social loss — but the coordination failure is structural, not individual."
+    },
+    {
+      "name": "new_system_adopters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Anyone learning to type in the post-QWERTY era: children, non-native typists, users entering the profession. They have no choice but to learn QWERTY regardless of its inferior ergonomics because every shared device, every training program, every professional expectation assumes QWERTY. The constraint operates as a coordinated standard they did not choose and cannot exit without bearing all switching costs alone."
+    },
+    {
+      "name": "computer_hardware_designers",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Could design keyboards optimized for non-QWERTY layouts (ergonomic, language-specific, accessibility-focused) but do not, because the demand is shaped by the trained installed base. They would enter the market if lock-in broke, but the lock-in itself is what suppresses the market signal."
+    },
+    {
+      "name": "economic_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze whether QWERTY persists because of market failure (path-dependent lock-in with no individual beneficiary actively defending it) or because of deliberate beneficiary extraction. The reading they adopt changes the constraint's classification and the policy implications of breaking it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the multi-party coordination problem of having one shared standard for keyboard layout. Every keyboard produced, every typing curriculum taught, every workplace tool configured assumes a single expected layout — switching costs for any party alone are prohibitive, but if everyone switched together, efficiency gains could be large.",
+    "transfer_function": "Moves the accumulated learning burden and ergonomic cost from the beneficiary seats (installed-base users, trainers, manufacturers who optimized for QWERTY) to the victim seats (new learners, alternative advocates, and the global economy in aggregate through suboptimal input speed and repetitive strain). The transfer is not rent — no party captures it — but a diffuse collective cost.",
+    "absent_voices": "The alternative-standard community (Dvorak advocates, ergonomic researchers, accessibility specialists) has seats at the table but faces overwhelming coordination-inertia resistance. Participants who would benefit from switching if it could happen collectively (users with RSI, languages with non-Latin scripts, accessibility-optimized designs) are not organized as a constituency and do not appear in the decision structure.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If QWERTY lock-in broke overnight (e.g., if a critical mass of devices shipped with remappable defaults or if a major platform defaulted to an alternative), new devices would gradually shift to ergonomically optimized layouts, training programs would diversify, and installed-base muscle memory would remain but cease to determine the standard for new entrants. The economy would reorganize around multiple competing layouts with emerging-user preference driving adoption.",
+    "founding_problem": "The telegraph, typewriter, and early computing were fragmented — manufacturers used different layouts, typists had to learn multiple standards or were locked to one device. QWERTY (or whichever layout) became the dominant standard through path-dependent adoption during the typewriter era (early mechanical constraints, network effects around training and shared devices), not through any clear technical superiority.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Technology historians (David Liebowitz, Stephen Margolin, Paul David) attest that the original fragmentation problem is solved: QWERTY dominates globally. The question is now whether the standard persists because it is adequate (naturalization reading) or because lock-in prevents switching (lock-in reading, this one) or because incumbents defend it for rent (extraction reading). No party claims QWERTY was technically optimal even at the start; the historical consensus is that alternatives were viable but happened to lose the path-dependent race."
+  },
+  "interval": {
+    "start": 0,
+    "end": 120
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 120,
+      "value": 0.41,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "QWERTY keyboard layout persists globally despite documented ergonomic and speed inferiority to alternatives (Dvorak, Colemak). This constraint story instantiates the LOCK-IN READING: QWERTY persists through path-dependent coordination failure, not through active beneficiary extraction or technical adequacy. The original choice was contingent and mechanically driven (typewriter design constraints of the 1870s); alternatives became viable but faced a coordination problem — switching benefits accrue only if enough users switch together, so each actor individually prefers the status quo despite collective suboptimality. This reading differs from the extraction reading (manufacturers actively defended QWERTY to protect training investments and market lock-in) and the naturalization reading (QWERTY won fair competition and is adequate). The lock-in reading attributes persistence to structural coordination failure, not to beneficiary extraction or settled sufficiency.",
+    "key_agents": [
+      "installed_base_users: 1.4 billion touch-typists trained on QWERTY; muscle memory identity-fused; benefit from coordination, bear ergonomic cost",
+      "keyboard_manufacturers: produce QWERTY because demand is shaped by the installed base; benefit from standardization, do not actively extract",
+      "alternative_standard_advocates: powerless to overcome coordination inertia; bear all switching costs if they pioneer; research shows alternatives superior but market does not reward them",
+      "new_system_adopters: children and new professionals learning to type; must learn QWERTY despite inferiority, trapped by coordination on an inherited standard",
+      "economic_historians: analytical seat; study whether QWERTY is an instance of market failure without deliberate beneficiary defense"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.62) because the global economy bears a measurable efficiency cost (typing speed reduction estimated at 5-10%, ergonomic injury burden, language-specific inefficiency), but this cost is NOT collected by any identifiable beneficiary — it accumulates as diffuse collective loss. Suppression is moderate (0.41) not because of active coercion but because the coordination-dependent lock-in makes alternatives inaccessible: every keyboard, every training program, every workplace tool assumes QWERTY; switching costs are borne entirely by pioneers with no guarantee of adoption. Theater is very low (0.12) because there is minimal performative maintenance — the standard is simply assumed and inherited, not defended through narrative or institutional theater. Accessibility collapse is high (0.78) because once the standard is established, alternatives are essentially unavailable at any individual's switching point; the collapse is structural coordination geometry, not enforced suppression. Resistance is moderate (0.44) because alternatives are advocated (Dvorak has had decades of research support, modern layouts like Colemak are empirically designed) but cannot overcome the coordination barrier. The measurement series shows stable metrics over a 120-year interval (0-120), reflecting the persistence of lock-in without accumulating extraction: no rent capture, no intensifying suppression, no rising theater — just coordination failure.",
+    "kernel_context": "This constraint is ONE READING of the contested QWERTY persistence kernel. The kernel is the stable fact: QWERTY keyboard layout persists globally. Three distinct readings decompose this fact into three different constraints with different ε values, different victim structures, and different policy implications. THIS READING (lock-in_reading) attributes persistence to path-dependent coordination failure without identifiable beneficiary extraction or deliberate suppression. The beneficiary_extraction_reading attributes it to incumbent manufacturers and trainers actively maintaining QWERTY to protect training investments and market position (high extraction, high suppression, identifiable payers). The naturalization_reading attributes it to QWERTY's adequacy and the fair elimination of inferior alternatives (low extraction, emergent from competition, not coordination failure). The three readings share a referent (QWERTY persists) but author different ε values (0.62 lock-in, higher for extraction, lower for naturalization) because they diagnose different structural mechanisms driving the same observable persistence.",
+    "directionality_logic": "In the lock-in reading, directionality is paradoxical: there is NO individual beneficiary extracting from the arrangement, yet collective suboptimality emerges. Installed-base users benefit from the coordination value (everyone types QWERTY) but bear the ergonomic cost, placing them near d=0.5 (symmetric). Keyboard manufacturers benefit costlessly from standardization (reduced SKU burden) without bearing any switching cost, placing them near d=0.0-0.2 (beneficiary, but weakly). Alternative advocates and new learners bear the efficiency cost and switching-cost entrapment without any compensating benefit, placing them near d=0.8-0.95 (target). The paradox is that the constraint persists even though no actor has sufficient power or motive to actively defend it — the mechanism is structural coordination geometry, not power asymmetry. An override is not needed because the structural data (beneficiaries without strong power, victims without exit) correctly derives the directionality; what the data reveals is that extraction without an active extractor is possible (a path-dependent institutional failure state). This reading's seat divergence is: from manufacturers' seat, the arrangement is pure coordination (low extraction, equilibrium); from new learners' seat, it is a coordination trap (moderate extraction, suboptimal equilibrium). The engine should compute these divergently.",
+    "mandatrophy_analysis": "The founding problem (fragmented keyboard standards, competing layouts in the typewriter era) is DEAD: QWERTY dominates globally. The constraint persists not because the problem is still being solved but because the path-dependent solution locked in before alternatives could prove superior. This is mandatrophy in the lock-in reading: the original founding function (coordination on a single standard during fragmented market) is solved and no longer operates; what remains is inertia. The distinction from extraction reading is critical: in the extraction reading, beneficiaries MAINTAIN the constraint actively (it is not mandatrophy, it is deliberate rent defense). In the lock-in reading, the constraint is NOT maintained by any actor — it persists through structural default (no actor has enough power to shift to an alternative even if they wanted to). This is textbook mandatrophy: the constraint survives its function through coordination-barrier inertia. The policy implication: fixing extraction requires regulating beneficiaries; fixing lock-in requires solving the coordination problem (e.g., providing default-remappable keyboards, supporting training in alternatives at critical decision points)."
+  },
+  "omegas": [
+    {
+      "id": "beneficiary_extraction_vs_coordination_failure",
+      "question": "Does QWERTY persist because incumbents actively defend it (extraction reading) or because the coordination barrier prevents switching despite no active defender (lock-in reading)?",
+      "resolution_mechanism": "Historical evidence on manufacturer behavior: Did keyboard manufacturers invest in suppressing alternatives, lobby against alternative-friendly policies, or resist remappable hardware? Did training institutions deliberately exclude alternatives from curriculum? Or did they simply continue standard practice without deliberate defense?",
+      "impact": "If extraction is verified, the constraint moves closer to snare (active rent-defense required for persistence). If coordination failure is verified, it stays tangled_rope (mixed coordination benefit and efficiency loss without intentional extraction). The policy remedy is entirely different: anti-monopoly enforcement vs. coordination problem-solving.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incumbent active defense or structural coordination failure drives persistence."
+    },
+    {
+      "id": "switching_cost_distribution_asymmetry",
+      "question": "Are switching costs borne equally by all parties, or do they concentrate on a subset while others enjoy benefits without cost?",
+      "resolution_mechanism": "Cost-benefit audit of switching to an alternative layout: What would current typists lose (retraining time, professional credibility, device incompatibility)? What would manufacturers gain/lose (reduced SKU complexity, potential market differentiation)? What would new learners gain/lose (no sunk cost, but still locked to QWERTY by installed base)?",
+      "impact": "If costs are symmetric, QWERTY is a symmetric coordination problem with no extraction. If costs are asymmetric (early adopters bear all cost, incumbents gain free benefits), the constraint has distributive injustice even without beneficiary extraction (it is the lock-in structure itself that allocates harm).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "How switching costs distribute across the party set."
+    },
+    {
+      "id": "keyboard_remappability_market_failure",
+      "question": "Why do hardware manufacturers not produce keyboards with easy remapping or defaults for alternative layouts, if demand for alternatives is genuine?",
+      "resolution_mechanism": "Market investigation: Do Dvorak/Colemak keyboard sales exist? Are they priced as niche products or absent entirely? Have touchscreen devices (where remapping is costless) shifted layout adoption? If remappable hardware is technologically trivial but not produced, is the barrier demand-side (lock-in suppresses demand) or supply-side (manufacturers refuse)?",
+      "impact": "If the market failure is in demand suppression (users do not ask for alternatives because QWERTY is the only thing they know how to type), this verifies the lock-in reading. If manufacturers actively refuse to produce alternatives despite demand, the extraction reading gains weight.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative-layout keyboards are unavailable due to demand suppression or supply-side refusal."
+    },
+    {
+      "id": "naturalness_of_path_dependence_vs_constructed_lock_in",
+      "question": "Is the coordination problem natural (emerges inevitably from network effects) or constructed (contingent historical choices that could have been different)?",
+      "resolution_mechanism": "Counterfactual history: Were there critical junctures where a different standard could have emerged? Did mechanical typewriter design FORCE QWERTY layout, or was QWERTY one viable among several layouts that happened to win by path-dependent accident? Did digital devices inherit QWERTY from inertia or from deliberate choice?",
+      "impact": "If constructed contingency (could have been Dvorak or any other layout), the lock-in is not natural law but an institutional artifact that could theoretically be dismantled. If natural inevitability (network effects guarantee lock-in regardless of which layout wins), the constraint approaches mountain classification (any standard must lock in; QWERTY just happened to arrive first). Lock-in reading assumes CONTINGENT, not NATURAL, path dependence.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the path-dependent lock-in is natural coordination geometry or contingent historical accident."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "qwerty_persistence_mechanism__extraction_reading",
+      "qwerty_persistence_mechanism__naturalization_reading"
+    ],
+    "dual_formulation_note": "QWERTY persistence decomposes into three structurally distinct constraints: (1) lock-in_reading (this one) attributes persistence to path-dependent coordination failure without beneficiary extraction; (2) beneficiary_extraction_reading attributes persistence to incumbent defense of training investments and market lock-in; (3) naturalization_reading attributes persistence to adequacy and fair competitive elimination of alternatives. The three readings share a referent (QWERTY persists) but author different ε values, different victim structures, and different policy implications. Each reading is a separate constraint story. Links: lock-in_reading influences both siblings by establishing the empirical baseline (what QWERTY's function is). Extraction_reading forecloses naturalization_reading if verified (you cannot simultaneously claim QWERTY won fair competition AND that incumbents defended it against better alternatives). All three coexist as live interpretations of the same historical fact."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "diffuse_epistemic",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "qwerty_persistence_mechanism__extraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "naturalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "coordination_failure_without_active_extractor",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "path_dependence_contingent_not_inevitable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "single_standard_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "keyboard_standard_coordination",
+      "training_investment_lock_in"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "header": {
+    "constraint_id": "gpl_copyleft_scope__enforcement_vacuum_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "301b6a60-634a-4b9b-859c-be39d0092d96"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.31,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Copyleft Scope Under Enforcement Vacuum",
+    "topic_domain": "intellectual_property/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "fsf_aligned_enforcement_community"
+    ],
+    "victims": [
+      "pragmatic_adopters_seeking_flexibility",
+      "plugin_ecosystem_developers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "fsf_aligned_enforcement_community",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Interprets GPL Section 2(b) maximally: copyleft extends to all derivative works including dynamic linking, plugin interfaces, and distributed systems. Enforces through community pressure, license review infrastructure, and selective litigation support. Benefits from maximalist interpretation because it advances software freedom ideology and forces adoption of GPL-licensed dependencies. Their enforcement capacity is organizational (FSF itself, Software Freedom Law Center) and community-based (license compliance monitoring networks)."
+    },
+    {
+      "name": "industry_pragmatists",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Interprets GPL Section 2(b) narrowly: copyleft applies only to direct derivative works in traditional copyright sense; plugin architectures, dynamic linking, and aggregation are exempt. Their enforcement capacity is their market position and ability to absorb or reframe GPL obligations. They pay through uncertainty costs and occasional strategic licensing decisions, but exploit the vacuum to maintain proprietary extensions and derivative plugin ecosystems."
+    },
+    {
+      "name": "clarity_seeking_adopters",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Want GPL scope to be clearly defined so they can design systems with confidence. The absence of definitive precedent creates transaction costs: they must commission legal analysis, implement conservative compliance strategies, and sometimes reject GPL integration entirely. They bear the cost of navigating between the two readings without authoritative resolution."
+    },
+    {
+      "name": "plugin_ecosystem_developers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develop third-party extensions and plugins for systems with GPL core codebases. The vacuum allows them to operate under the narrower reading (claiming exemption from copyleft via plugin interface isolation) but exposes them to enforcement risk from the FSF-aligned community. They benefit from the flexibility the vacuum allows, but pay through legal uncertainty and potential community sanctions."
+    },
+    {
+      "name": "large_platform_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate distributed systems and cloud platforms that incorporate GPL software. They exploit the enforcement vacuum by adopting narrow-reading compliance strategies: using GPL software in backend infrastructure while keeping proprietary services legally isolated. Their scale gives them resources to navigate both readings simultaneously and choose the interpretation advantageous in each context."
+    },
+    {
+      "name": "individual_foss_contributors",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Contribute code to GPL projects and value software freedom. They benefit from the copyleft concept (ensures their work stays free) but pay through the enforcement vacuum: their copyrighted contributions are deployed in systems they cannot control, and the lack of clear scope means they cannot reliably assert copyleft intent. Identity-locked: they are committed to the FOSS mission and cannot exit the governance structure without betraying their values."
+    },
+    {
+      "name": "courts_and_legislators",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Have the capacity to close the enforcement vacuum through binding precedent or statutory clarification. Notably absent: no major jurisdiction has produced definitive case law on GPL copyleft scope in derivative works or plugin architecture contexts. Their exclusion is structural — FOSS licensing disputes are rarely litigated to judgment (settlements dominate, legal costs are prohibitive), and legislators have not intervened to clarify software derivative-work boundaries."
+    },
+    {
+      "name": "fsf_board_and_counsel",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administers the GPL text and could issue authoritative guidance that would narrow the enforcement vacuum. Notably does not: FSF officially maintains that Section 2(b) is intentionally broad, but does not enforce maximally in practice, allowing interpretive space for the narrower reading. Acts as a referee rather than absolute judge, sustaining the vacuum."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared textual baseline (GPL Section 2(b)) that all software developers must navigate when combining code. The vacuum allows decentralized interpretation: each project, ecosystem, and community can apply the reading that fits its values, enforced by social and organizational pressure rather than courts. This permits FOSS governance to adapt without central authority.",
+    "transfer_function": "Moves legal risk and transaction costs from clear compliance pathways to adopters and contributors. FSF-aligned communities transfer their enforcement preferences to downstream users by establishing de facto copyleft norms; pragmatists transfer their narrow-reading advantages to proprietary extension ecosystems. Large platforms transfer their expertise advantage into the ability to navigate both readings simultaneously. Individual contributors transfer their copyrighted work into systems governed by interpretive pluralism they cannot control.",
+    "absent_voices": "Courts and legislators are structurally excluded: their capacity to close the vacuum through binding precedent or statutory clarification would end the licensed plurality, and their absence permits the interpretive vacuum to persist. Open-source ethics communities advocating for universal strong copyleft and commercial actors seeking absolute legal clarity are both absent from authoritative resolution.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the enforcement vacuum closed — through binding precedent, statutory clarification, or FSF board action establishing authoritative scope — software ecosystems would reorganize. A strong-copyleft verdict would force proprietary extensions into separate legal entities and cloud service isolation (Amazon's approach requires GPL compliance rework). A narrow-scope verdict would accelerate plugin and modular architecture adoption and reduce GPL enforcement tension. The vacuum's absence would eliminate the transaction costs clarity-seekers currently bear and remove the strategic flexibility pragmatists exploit.",
+    "founding_problem": "GPL Section 2(b)'s language ('derivative work') was inherited from copyright law, which has never defined 'derivative' precisely for software combining forms (static linking, dynamic linking, plugin interfaces, distributed systems, cloud services). The FSF drafted GPL to maximize copyleft scope and preserve software freedom, but did not anticipate the technological forms (cloud, microservices, plugin ecosystems) that would later challenge whether coupling creates 'derivative works' in GPL terms.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "FSF's own licensing guidance (GPL-FAQ, later GPL-3.0 elaborations) attests that the founding problem exists and that the answer remains intentionally ambiguous. Pragmatic industry adopters and plugin ecosystem advocates attest that the lack of clarity is a problem they face daily. No corroboration from courts or academic legal consensus — the absence of external vindication is itself the corroboration: no authoritative outside seat has resolved the founding problem."
+  },
+  "interval": {
+    "start": 1991,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.31
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The GPL's copyleft clause (Section 2(b)) requires derivative works to be licensed under GPL. But the term 'derivative work' has never been judicially defined for modern software integration forms: dynamic linking, plugin architectures, cloud services, and distributed systems. Two readings coexist: the FSF-aligned strong-copyleft reading (copyleft extends to all forms of coupling) and the industry-pragmatist narrow reading (copyleft applies only to traditional source-level derivative works). No binding precedent exists. Judicial and legislative venues that could close this interpretive vacuum are effectively excluded from the governance structure. The absence of authoritative resolution becomes the constraint's defining feature: adopters must navigate licensed pluralism, bearing transaction costs and regulatory risk. This reading instantiates the constraint AS IT EXISTS — the uncertainty itself — rather than either of the sibling readings' clearer claims.",
+    "key_agents": [
+      "FSF-aligned enforcement community: organizational agenda-setter, enforces strong-copyleft interpretation through community pressure and selective litigation support",
+      "Industry pragmatists: powerful payers, exploit narrow-scope reading to maintain proprietary extensions and derivative ecosystems",
+      "Clarity-seeking adopters: moderate-power payers, bear transaction costs of navigating unresolved scope",
+      "Plugin ecosystem developers: moderate-power payers, operate under narrow reading with residual enforcement risk",
+      "Large platform operators: institutional beneficiaries, navigate both readings simultaneously using scale and expertise",
+      "Individual FOSS contributors: powerless, identity-locked beneficiary-payers, value software freedom but cannot control enforcement of their copyrighted work",
+      "Courts and legislators: excluded institutional observers, could resolve the vacuum but do not intervene"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.42) because the constraint's operation is fundamentally asymmetric: FSF-aligned communities extract through norm enforcement and interpretive authority, pragmatists extract through strategic interpretation flexibility, large platforms extract through expertise advantage. But extractiveness plateaus (stayed flat from 2015–2026) because the vacuum has reached equilibrium — no actor has achieved dominance that would drive further extraction increase. Suppression is lower (0.31) because the constraint does not foreclose exit via judicial relief or legislative action; pragmatists and large platforms can adopt narrow readings with calculated risk rather than full coercion. Theater ratio rises from 0.15 to 0.48 because enforcement has increasingly become performative: FSF-aligned communities issue compliance guidance and conduct license audits, but actual litigation is rare, and compliance is often staged-managed through community relations rather than applied as strict rule. The rising theater ratio over time reflects the hardening of community enforcement rituals without judicial enforcement power to back them. Accessibility collapse is high (0.65) because once you understand the GPL exists and that derivative work scope is contested, your technical options (how to link, how to distribute, what counts as coupling) are substantially constrained by the need to navigate both possible readings. Resistance is high (0.72) because pragmatists actively resist strong-copyleft interpretation through architectural choices, litigation defense, and reframing of technical coupling as non-derivative; individual contributors resist through repeated questioning of FSF guidance; courts implicitly resist by declining to litigate the scope. The measurement series traces the historical trajectory: low extractiveness in 1991 (GPL was new, few were subject to it) through 2026 (extractiveness stabilized once major platforms adopted pragmatist strategies). Theater ratio's rise reflects the growth of enforcement infrastructure without parallel growth in judicial or binding resolution.",
+    "perspectival_gap": "From the FSF-aligned community's seat, the constraint is coordination: a shared textual anchor (GPL Section 2(b)) that enables decentralized enforcement of software freedom principles. From the pragmatist and plugin-developer seats, the same constraint is asymmetric extraction: FSF-aligned communities impose interpretive burdens and legal risk without clear boundaries or authoritative consequences. Large platforms compute it as exploitable ambiguity (low directionality toward target, because their resources permit navigation of both readings). Individual contributors compute it as uncontrollable: they generate copyrighted work deployed under uncertain licensing terms. The engine should derive high directionality variance across seats from this structural asymmetry: agenda-setters near beneficiary end, payers near target end, large platforms near symmetric, individual contributors trapped by identity.",
+    "directionality_logic": "FSF-aligned community (agenda_setter, institutional power, generational horizon): derives low d (near beneficiary) — sets the agenda, enforces through organizational capacity, extracts compliance through norm authority. Industry pragmatists (payer, powerful, biographical horizon): derives high d (near target) — constrained by GPL text and social pressure, bear transaction costs of dual-reading navigation, limited exit because GPL is already embedded in their dependencies. Clarity-seeking adopters (payer, moderate, biographical): very high d — bear transaction costs directly, cannot resolve the ambiguity through their own authority, stuck in the uncertainty. Plugin developers (payer + beneficiary, moderate, mobile exit): moderately high d — exploit flexibility of narrow reading (benefit) but exposed to enforcement risk (cost). Large platforms (beneficiary, institutional, arbitrage exit): low d — possess enough expertise and scale to navigate both readings, access to proprietary alternatives, genuine strategic flexibility. Individual contributors (beneficiary + payer, powerless, identity_locked): moderately high d — benefit from copyleft principle but cannot control how their work is licensed in composite systems. Courts/legislators (excluded, institutional, analytical): neutral analytical seat, no directionality (no structural relationship to extraction or benefit from the constraint's operation).",
+    "mandatrophy_analysis": "This constraint exhibits Mandatrophy: the founding problem (unclear scope of derivative works under GPL) remains live and contested, but the constraint's persistence depends increasingly on its UNSOLVED status. If courts or FSF resolved the scope definitively, the constraint would transform: strong-copyleft resolution would make the constraint clearer, more enforceable, and more extractive; narrow-scope resolution would dissolve much of the FSF-aligned enforcement pressure. The equilibrium depends on the vacuum's continuation. FSF-aligned communities benefit from interpretive authority in the absence of judicial override; pragmatists benefit from the ambiguity permitting flexibility. Both seats have incentive to sustain the unresolved state. The mandate (GPL Section 2(b) shall govern derivative works) has outlived its original purpose (clear rule for combining GPL software) because the rule is no longer clear and the constraint persists as political stalemate rather than functional coordination. Theater ratio's rise (0.15 to 0.48) traces the replacement of rule with ritual: enforcement becomes performative (audit statements, guidance documents, occasional license reviews) rather than decisive (judicial remedies, binding interpretations). The constraint meets the piton pattern at the organizational level (FSF maintains enforcement infrastructure that could be disbanded without loss of function, because the vacuum would persist anyway), but stays tangled_rope at the adoption level (adopters genuinely need guidance on how to comply, and the FSF provides a real coordination service even if enforcement is theatrical).",
+    "kernel_context": "This constraint instantiates the 'enforcement_vacuum_reading' of the gpl_copyleft_scope kernel. The kernel is GPL Section 2(b)'s definition of 'derivative work' — a text that two incompatible readings inhabit: strong_copyleft_reading (copyleft extends to all forms of code coupling) and narrow_scope_reading (copyleft applies only to traditional copyright derivative works). The enforcement_vacuum_reading is neither of those readings; it is the state of licensed pluralism that exists in the absence of binding precedent. The constraint's referent is the standing arrangement under contest: the operating reality that developers and projects navigate uncertainty about copyleft scope by choosing interpretive alignment (FSF-aligned or pragmatist) without authoritative resolution. The sibling readings (strong_copyleft and narrow_scope) are counterfactuals: what the constraint would be if resolved. This reading describes what the constraint IS while unresolved."
+  },
+  "omegas": [
+    {
+      "id": "interpretive_authority_source",
+      "question": "Which interpretive community's reading of GPL Section 2(b) will achieve institutional dominance: FSF-aligned maximalism, industry pragmatism, or will the vacuum persist indefinitely as a permanent feature of FOSS governance?",
+      "resolution_mechanism": "Binding judicial precedent from a major jurisdiction (EU, US), authoritative statutory clarification via copyright law reform, or explicit FSF board action establishing a canonical reading and enforcing it through license-stewardship power.",
+      "impact": "Strong-copyleft dominance would increase extractiveness to ~0.75, eliminate theater ratio rise (enforcement would become legally binding), and force proprietary ecosystems into architectural isolation or GPL adoption. Narrow-scope dominance would drop extractiveness to ~0.15, eliminate suppression entirely, and permit integration without copyleft friction. Vacuum persistence would continue current equilibrium.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the enforcement vacuum will be judicially closed or remain structurally open."
+    },
+    {
+      "id": "derivative_work_boundary_in_software",
+      "question": "Is there a coherent definition of 'derivative work' in software that distinguishes GPL-triggering coupling from non-triggering aggregation, and does that definition follow traditional copyright law or require new legal frameworks?",
+      "resolution_mechanism": "Comparative legal analysis across jurisdictions that have litigated software licensing disputes (EU Copyright Directive cases, GPL litigation outcomes if any reach appellate judgment, empirical survey of how courts have treated software combination cases in other licensing contexts).",
+      "impact": "If a coherent boundary exists and follows copyright law, the narrow reading wins de facto. If coupling-based definitions (dynamic linking as derivative, plugin architectures as separable) become accepted, pragmatism wins. If no coherent boundary exists, the vacuum is irresolvable without statutory innovation — forcing choice between clarity-at-cost and pluralism-at-uncertainty.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether software derivative-work scope can be legally resolved within copyright doctrine."
+    },
+    {
+      "id": "enforcement_vacuum_as_feature",
+      "question": "Is the interpretive vacuum a defect in GPL design that should be closed, or is it a structurally functional feature that permits decentralized FOSS governance without central authority?",
+      "resolution_mechanism": "Qualitative research on how projects and adopters actually navigate the ambiguity: do they experience it as costless flexibility (feature) or costly uncertainty (defect)? Do FOSS governance outcomes improve or degrade under pluralism vs. under a definitive reading?",
+      "impact": "If the vacuum is a feature, attempts to close it would harm FOSS governance and should be resisted. If it is a defect, FSF and institutional actors have incentive to resolve it. This axiom determines whether silence from courts/legislators reflects neutral exclusion or strategic choice by FSF.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether the enforcement vacuum serves or harms FOSS governance values."
+    },
+    {
+      "id": "suppression_internalization_in_adopters",
+      "question": "Do adopters who navigate the GPL scope ambiguity under the narrow-reading interpretation experience suppression as structural (external legal risk from FSF enforcement) or as internalized (they have incorporated GPL risk management into their own design norms)?",
+      "resolution_mechanism": "Post-resolution experiment: if precedent closes the vacuum toward narrow-scope, do pragmatist adopters change their technical practices, or have they already baked GPL-aware design into their systems? If practices do not change, suppression was internalized; if they do, it was structural.",
+      "impact": "If internalized, pragmatists have absorbed copyleft norms into their own values and cannot easily exit even if legal pressure disappears — the constraint is more persistent than legal enforcement alone suggests. If structural, removing legal pressure would permit rapid technical and architectural reversion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of proprietary design patterns is external or internalized in pragmatist ecosystems."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_copyleft_scope__strong_copyleft_reading",
+      "gpl_copyleft_scope__narrow_scope_reading"
+    ],
+    "dual_formulation_note": "This story is one reading of the contested kernel gpl_copyleft_scope. The strong_copyleft_reading and narrow_scope_reading are sibling constraints under the same kernel. All three stories share the referent (GPL Section 2(b)'s scope) but author different ε values because they describe different readings of the same text. The enforcement_vacuum_reading describes the constraint as it exists while unresolved — the actual operating reality of licensed pluralism. The siblings describe what the constraint would be if resolved toward strong or narrow scope. The network edges represent structural dependence: enforced resolution of the kernel (toward strong or narrow scope) would eliminate the enforcement_vacuum_reading and instantiate one of the siblings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.58
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "strong_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "narrow_scope_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "derivative_work_scope_is_indeterminate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "interpretive_pluralism_licenses_decentralized_governance",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "interpretive_pluralism_licensed",
+    "drift_state": {
+      "moment": "contemporary_cloud_and_microservices_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

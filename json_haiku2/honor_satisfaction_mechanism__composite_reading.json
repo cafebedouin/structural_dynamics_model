@@ -1,0 +1,614 @@
+{
+  "header": {
+    "constraint_id": "honor_satisfaction_mechanism__composite_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "4a4ce60c-dbef-44c0-8514-5f5a88d37793"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.64,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Honor Satisfaction Mechanism (Composite: State Monopoly + Normative + Insurance + Recategorization)",
+    "topic_domain": "legal/social/normative",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_monopoly_enforcement",
+      "bourgeois_honor_keepers",
+      "insurance_underwriters"
+    ],
+    "victims": [
+      "duelers",
+      "affected_families",
+      "working_classes"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_monopoly_enforcement",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The state, particularly through legal and military apparatus, claims a monopoly on legitimate violence and honor satisfaction. Enforces laws against dueling while simultaneously defending its own honor through military action and capital punishment. Benefits from the contradiction: criminal law prosecutes duelers while state violence remains authorized as justice. Maintains the category-shift by defining dueling as criminal homicide rather than honorable satisfaction."
+    },
+    {
+      "name": "bourgeois_honor_keepers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Upper-class men whose honor status depends on adherence to dueling norms but who face prosecution if they duel. Solve the tension through theater: ceremonies of honor (formal insult protocols, seconds, code-of-honor invocation) that enact the honor satisfaction WITHOUT dueling. Collect honor through normative recognition while the constraint's suppression protects them from criminal liability. Dependent on widespread agreement that honor can be satisfied through ritual without lethal combat."
+    },
+    {
+      "name": "insurance_underwriters",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Insurance firms that profit from uncertainty about dueling mortality. As the constraint suppresses actual dueling, dueling-mortality insurance becomes lower-risk and more profitable (lower payout rate, higher premiums). Benefit from the constraint's success in shifting dueling into theater while holding formal policies that would still pay out if dueling occurred. Extract rents from the cognitive tension."
+    },
+    {
+      "name": "duelers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Men whose professional or social identity is constituted through honor and martial competence. Face a binding choice: renounce honor (professional/social death in some circles) or risk criminal prosecution. Duelers who engage pay with criminal liability, social exclusion from respectable society, or military discharge. Those who comply with the theater pay through subordination to bourgeois norms they may not endorse. Identity-locked because for many (military officers, aristocrats, professionals with reputation-based careers), exiting the honor framework means exiting the career itself."
+    },
+    {
+      "name": "affected_families",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Families of men killed in duels or imprisoned for dueling. Bear the generational cost: loss of breadwinner, legal liability, social stigma, economic impoverishment. Trapped because they neither set the honor norms nor control the legal framework; they carry the cost of the men's choices within both constraints simultaneously."
+    },
+    {
+      "name": "working_classes",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Working people have no access to the theater solution (bourgeois honor rituals) and face harsher prosecution for violence. If they fight over honor, they are prosecuted as common criminals; if they internalize the state's criminalization of honor satisfaction, they have no legal recourse for insult. Excluded from both the dueling norm AND the bourgeois theater. Trapped by double suppression: state law + class-based exclusion from the honor framework itself."
+    },
+    {
+      "name": "military_institutions",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Military maintains internal officer culture where honor and martial courage are foundational virtues. Simultaneously subordinate to state law and state monopoly on legitimate violence. Benefit from dueling suppression (reduces loss of trained officers, maintains discipline), but pay through the cognitive contradiction: official doctrine values honor while official law criminalizes honor satisfaction. Enforce the contradiction internally (secret dueling alongside court-martial for dueling)."
+    },
+    {
+      "name": "legal_establishment",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Judges, prosecutors, and legal scholars who prosecute dueling as criminal homicide while the category itself depends on normative acceptance (honor satisfaction as a distinct moral category) that law simultaneously denies. Enforce the category-shift by refusing to recognize dueling as a legal defense (honor is not a mitigating factor; the kill is homicide). Theater in doctrine: the law recategorizes murder as a technical matter, severing dueling from the moral framework that originally sustained it."
+    },
+    {
+      "name": "foreign_honor_systems",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Regimes or cultures where dueling remains legal or normatively endorsed. Excluded from the reading's constraint system; their persistence is evidence of the constraint's contingency. Would constitute a competing frame in which honor satisfaction via dueling is coherent; their exclusion allows the composite constraint to operate."
+    },
+    {
+      "name": "sociological_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "External analyst tracking the constraint's operation across multiple mechanisms. Observes that the constraint's persistence depends simultaneously on state enforcement, bourgeois normative theater, insurance risk-shifting, and category-shift in law. Documents how the constraint operates differently across classes and institutions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinate violence monopoly: redirect honor satisfaction from private dueling (decentralized, lethal, fragmenting authority) to state institutions and authorized substitutes (centralized, rule-governed, authority-preserving).",
+    "transfer_function": "Transfers authority over honor satisfaction from individuals and communities to the state and to bourgeois normative authority. Transfers risk (insurance firms shift dueling mortality risk to premiums). Transfers the capacity to respond to insult from the insulted person to courts, military discipline, or ceremonial protocol. Working classes experience extraction without transfer — their insult-response options collapse without a substitute.",
+    "absent_voices": "Men from lower classes whose honor disputes have no legal recourse and cannot access bourgeois ceremonial theater. Military officers whose professional culture valorizes honor combat but whose institutional loyalty forbids it. Families of duelists whose generational costs are borne without representation in either state or bourgeois forums. Foreign regimes and non-Anglophone honor systems where dueling remains coherent and legal.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "The entire institutional architecture of state monopoly on legitimate violence, bourgeois honor theater, and insurance risk structures depends on the constraint. If it vanished, dueling would likely resume in aristocratic and military circles, state violence would need to assert its legitimacy through alternative means, and insurance would face sudden mortality spikes. The modern legal category of homicide itself presupposes that honor is not a legitimate defense — removing the constraint would require categorical legal reconstruction.",
+    "founding_problem": "Private dueling fragmented state authority, created unacceptable loss of trained personnel (especially military officers), and threatened the state monopoly on legitimate violence.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "State legal and military establishments attest the problem remains live — periodic dueling revivals occur when suppression weakens. Bourgeois historians and etiquette literature attest the problem is substantially solved through theater and social reorganization. Military historians document the transition from dueling culture to professional discipline (confirming the founding problem was acute). Families of executed duelists and working-class historians attest the problem was never solved for them — they experienced only criminalization without the coordination benefit. No corroboration from outside the state/bourgeois coalition supporting the constraint's founding framing."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 40,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.78
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.4
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.65
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.78
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.75
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.38
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The constraint governing honor satisfaction evolved through multiple simultaneous mechanisms rather than a single suppressive force. This composite reading argues that the honor-satisfaction mechanism (initially legitimizing dueling as the proper response to insult) eroded through: (1) state monopolization of legitimate violence (law criminalizes dueling, reserves justice-execution to the state); (2) bourgeois normative innovation (theater: formal insult protocols, ceremonial satisfaction without combat, honor codes that perform satisfaction theatrically); (3) insurance recalibration (commercial risk-shifting creates profit from dueling suppression); and (4) categorical recasting in law (dueling redefined as homicide, severing it from the moral framework that sustained it). These four mechanisms are not substitutes — they operate simultaneously and asymmetrically across social classes. The constraint is CLAIMED as tangled_rope (coordination of monopoly violence PLUS asymmetric extraction of honor from lower classes) while metrics reflect high suppression, moderate theater, and persistent resistance. The claim/metric independence principle applies: the claim is structural, the metrics are descriptive; divergence is the signal the engine measures.",
+    "key_agents": [
+      "state_monopoly_enforcement: Controls criminal law, military discipline, capital punishment; monopolizes legitimate violence; benefits from elimination of dueling as rival authority",
+      "bourgeois_honor_keepers: Upper-class men who solve the honor tension through ceremonial theater; collect honor through recognition while law protects from prosecution",
+      "insurance_underwriters: Profit from dueling-suppression via lower mortality and higher premiums; risk-shifting incentivizes constraint enforcement",
+      "duelers: Identity-locked men (military, aristocrats, professionals) who face criminal liability or social death; most constrained by the composite mechanism",
+      "affected_families: Powerless, generationally impoverished by losses to dueling deaths and legal consequences; trapped by double suppression",
+      "working_classes: Doubly suppressed — no access to bourgeois theater and face harsher prosecution for honor-violence; excluded from coordination benefit"
+    ],
+    "logic_rationale": "The composite reading is extractive (0.68 at interval end) because the four mechanisms together suppress honor-satisfaction alternatives for most populations while creating escape routes (theater) only for the bourgeoisie. Suppression rises from 0.45 to 0.72 across the interval — modeling the hardening of enforcement infrastructure (both legal machinery and normative codification). Theater ratio rises from 0.25 to 0.58 — modeling the shift from actual dueling to ceremonial honor satisfaction in bourgeois circles; the ratio plateaus at 0.58 because theater never fully replaces the coordination function for identity-locked duelers (they experience theater as subordination to norms they may reject). Accessibility_collapse is leveled because the constraint operates differently at different scales: individual duelers face high collapse (nearly all alternatives blocked), organizational (military) faces moderate collapse (official doctrine vs. private culture), class (working) faces low collapse (they were already excluded; the constraint doesn't narrow further), structural (state monopoly) approaches totality. Resistance is high initially (0.68 individual) and declines as normative internalization occurs (0.52 by interval end) — modeling the transition from active resistance to internalized suppression. The plateau in base_extractiveness (0.65–0.68) after time point 15 reflects the constraint reaching its steady state: actual dueling becomes rare (no further suppression gains are achievable), but the extraction persists through theater and category-shift.",
+    "perspectival_gap": "The bourgeois beneficiary and the state monopoly setting see coordination (violence monopolization, honor alternative, risk management). The duelers and families see tangled_rope with heavy extraction. The working classes see snare — they have no coordination benefit and face harsher suppression. The legal establishment sees category-shift as neutral reclassification (dueling as homicide), not as extraction. The military institution sits between beneficiary and payer: benefits from officer retention via dueling suppression, but pays through the institutional contradiction (doctrine valorizes honor while discipline criminalizes honor satisfaction). The engine should compute these divergences from the structural data (power, exit, beneficiary/victim declarations) — the perpective gap is structural, not a matter of opinion.",
+    "directionality_logic": "State monopoly and legal establishment have d near 0.0 (full beneficiary: control the rules, monopolize legitimate violence, extract capacity). Bourgeois honor keepers have d near 0.1–0.2 (net beneficiary: honor recognized via theater, protected from prosecution, but subordinate to state authority). Insurance underwriters have d near 0.15 (beneficiary: profit from suppression, though mobile enough to exit if dueling resumed). Duelers have d near 0.85–0.95 (near full target: identity-locked, criminalized, suppressed, offered only the subordinate alternative of theater). Affected families have d = 1.0 (full target: no benefit, total generational cost, trapped). Working classes have d near 0.9 (near full target: double suppression, excluded from coordination, no theater escape). Military institution has d near 0.55 (symmetric, pulled both ways: benefits from officer retention, pays through contradiction). Foreign honor systems and excluded voices: d = 1.0 from the reading's frame (they are barred from participating in the constraint). The directionality derivation chain flows from beneficiary/victim declarations + power + exit, confirmed by these qualitative d positions.",
+    "mandatrophy_analysis": "The composite reading is mandatrophy-CONTESTED. The founding problem (private violence threatens state monopoly) was live at constraint inception and remains contested: the state attests it is still live (dueling would resume if suppression weakened); bourgeois society claims it is substantially solved via theater; families and working-class historians claim it was never solved for them. The disappearance_verdict (world_rearranges) confirms arrangements depend on the constraint. The constraint is NOT a piton (theater ratio stabilizes at 0.58, not crescendoing toward pure performance; suppression remains functional, not theatrical). The constraint is NOT a scaffold (no sunset clause; state monopoly on violence is intended as permanent). The constraint is tangled_rope: coordination of monopoly violence (real problem solved) PLUS asymmetric extraction (suppression of lower-class honor alternatives, forcing them into state-adjudicated justice with no theater escape). The mandatrophy window opens at the intersection of (status: contested, verdict: rearranges, extraction: high). A mandatrophy resolution would require either: (1) resolution of the founding problem dispute (empirical: does dueling resurge if suppression relaxes?), or (2) dissolution of the constraint (explicitly political: end state monopoly on violence, legalize dueling, or universalize theater to all classes). Neither has occurred; the reading is intentionally mandatrophy-unresolved.",
+    "kernel_context": "This constraint is the composite_reading of the honor_satisfaction_mechanism kernel. The kernel is the stabilized cultural commitment to honor as a fundamental social value and the mechanisms by which insult is answered. The reading I am instantiating argues that the constraint eroded via multiple independent mechanisms (state monopoly, bourgeois theater, insurance risk-shifting, legal category-shift) operating simultaneously and asymmetrically. The sibling reading decline_reading frames the same historical process as dueling persisting at declining frequency until fringe status — a fundamentally different structural account (gradual attrition vs. simultaneous multiple pressures). The sibling reading contraction_reading argues dueling became cognitively unthinkable at the category level — a cognitive impossibility rather than legal suppression or normative theater. The core difference is the location of erosion: composite (multiple mechanisms simultaneously), decline (frequency attrition), contraction (category-level foreclosure). Each reading implies different policy implications: composite suggests the constraint is fragile (multiple mechanisms required to hold it) and could shift if any mechanism fails; decline suggests durable norm change through repeated failure; contraction suggests permanent category-shift (dueling is literally unthinkable, not just suppressed). The readings coexist in different historiographical and sociological camps — they are not logically exclusive within single frameworks, but they structure explanation differently."
+  },
+  "omegas": [
+    {
+      "id": "bourgeois_theater_vs_actual_suppression",
+      "question": "Is the ceremonial theater of honor satisfaction (formal insult protocols, seconds, codes) genuinely a substitute for dueling that satisfies the honor framework, or a cover story masking the suppression of genuine honor satisfaction?",
+      "resolution_mechanism": "Ethnographic and historical evidence from bourgeois spaces where theater operates: do participants report that honor is genuinely satisfied through ceremony, or do they report subordination/internalization of suppression? Cross-cultural comparison: where theater mechanisms exist without legal suppression (e.g., aristocratic traditions), do actual duels still occur, or does theater substitute on its own merit?",
+      "impact": "If theater is genuine substitute, the constraint is coordination (upper classes have exit via theater). If theater is a cover story, the constraint is snare for all classes — the bourgeoisie merely have more convincing propaganda. This distinction affects classification: rope vs. tangled_rope vs. snare depending on seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bourgeois honor theater is genuine coordination or suppression theater."
+    },
+    {
+      "id": "state_monopoly_vs_protection",
+      "question": "Does the state monopoly on legitimate violence protect citizens from private violence (coordination benefit), or does it primarily extract capacity to satisfy honor disputes according to private-justice logic (extraction mechanism)?",
+      "resolution_mechanism": "Comparative legal history: in jurisdictions where dueling was decriminalized or de-enforced, did private violence increase, remain constant, or decrease? Did state courts experience increases in assault/battery petitions? Do victims in dueling-legal regimes seek state intervention or accept private settlement?",
+      "impact": "If monopoly protects, it is coordination (all seats benefit from reduced private violence). If monopoly primarily extracts capacity, it is extraction (state collects the power to decide honor disputes, suppresses private alternatives). This affects whether the constraint is rope vs. tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether state monopoly primarily protects or extracts."
+    },
+    {
+      "id": "category_shift_reversibility",
+      "question": "Is the legal recategorization of dueling from honorable satisfaction to criminal homicide reversible through legal amendment, or has it become so cognitively embedded that dueling could not be recriminalized without fundamental social reorganization?",
+      "resolution_mechanism": "Historical test: have any jurisdictions successfully recriminalized dueling after decriminalization, or re-legalized it after full criminalization? Do legal scholars or judges treat dueling as a potential legal category, or as conceptually eliminated by modern law?",
+      "impact": "If reversible, the constraint depends on continuous political enforcement of the category. If cognitively embedded, the category-shift is itself a constraint mechanism (contraction_reading territory). This affects whether the composite mechanisms are independent or whether category-shift is downstream of the others.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether legal category-shift is reversible or cognitive-level constraint."
+    },
+    {
+      "id": "multiple_mechanisms_independence",
+      "question": "Are the four mechanisms (state monopoly, bourgeois theater, insurance, category-shift) structurally independent, or are they expressions of a single underlying shift (e.g., modernization, rationalization, commodification)?",
+      "resolution_mechanism": "Causal analysis: which mechanisms came first historically? Do they reinforce each other, or could one persist without the others? Counterfactual: if state monopoly had been enforced without insurance incentives, would the constraint have held?",
+      "impact": "If independent, the composite reading is correct — the constraint is fragile and could fail if any mechanism weakens. If dependent (all expressions of modernization), the constraint is more durable — attacking one mechanism does not loosen the others. This affects the reading's claim that multiple mechanisms are necessary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the four mechanisms are structurally independent or expressions of a unified process."
+    },
+    {
+      "id": "working_class_suppression_mechanism",
+      "question": "Is working-class exclusion from the bourgeois honor theater itself a suppression mechanism (the constraint operating differently at different class levels), or are working-class suppression and bourgeois theater two separate constraints?",
+      "resolution_mechanism": "Historical evidence: did working-class honor violence decline at the same rate as bourgeois dueling, or on a different timeline? Did working-class violence respond to legal suppression or to normative recategorization? Are working-class insult-violence and bourgeois dueling treated the same by courts?",
+      "impact": "If same constraint operating differently: the composite mechanism is what holds the reading together, and class is a leveled-coercion axis. If separate constraints: the composite reading conflates two distinct mechanisms and should decompose into class-specific stories (ε-invariance principle). This affects whether the composite reading is coherent or should split.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether class-differentiated suppression is one constraint or multiple constraints."
+    },
+    {
+      "id": "contraction_vs_composite_boundary",
+      "question": "At what point, if any, did the cognitive impossibility of dueling (contraction_reading) become operative? Is this a separate phase transition, or is it the endpoint of the composite mechanisms operating over sufficient time?",
+      "resolution_mechanism": "Historiographical evidence: when did elite sources stop treating dueling as conceptually thinkable (even while illegal)? When did legal categories begin to treat honor-defense as incoherent rather than merely punishable? Do these transitions coincide with the implementation of the composite mechanisms, or do they precede or follow?",
+      "impact": "If cognitive impossibility is the endpoint, the readings describe the same constraint at different timescales (composite describes mechanism, contraction describes outcome). If they are distinct processes, the constraint kernel has genuinely different readings that could coexist. This affects whether contraction_reading forecloses composite_reading or coexists_with it.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether contraction and composite mechanisms describe the same process or distinct constraint dynamics."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "honor_satisfaction_mechanism__contraction_reading",
+      "honor_satisfaction_mechanism__decline_reading"
+    ],
+    "dual_formulation_note": "The honor_satisfaction_mechanism kernel has three constraint readings: composite (multiple independent mechanisms), contraction (cognitive impossibility), and decline (frequency attrition). The composite reading models simultaneous operation of state monopoly, normative theater, insurance incentives, and legal category-shift. The contraction reading models the cognitive-level endpoint where dueling becomes unthinkable as a category. The decline reading models persistent but declining frequency until fringe status. Each reading has a different ε, beneficiary/victim structure, and classification. They coexist in historiographical discourse; no single framework forecloses another. This story (composite) influences both siblings by modeling the mechanisms that could produce contraction (if all four operate long enough) or decline (if mechanisms are weaker than claimed)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "honor_satisfaction_as_private_right",
+    "drift_state": {
+      "moment": "industrial_rationalization_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "contraction_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "decline_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "honor_satisfiable_via_multiple_mechanisms",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "mechanism_independence_required_for_persistence",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "state_monopoly_enforcement",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

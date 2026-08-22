@@ -1,0 +1,403 @@
+{
+  "header": {
+    "constraint_id": "animal_status_kernel__welfare_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "8f3ad50b-5b33-4ccf-83d6-1409890eee2a"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Animal Sentience + Regulated Use (Welfare Reading)",
+    "topic_domain": "moral_philosophy/animal_ethics/legal_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "animal_agriculture_industry",
+      "animal_research_institutions",
+      "consumers_of_animal_products"
+    ],
+    "victims": [
+      "domesticated_animals",
+      "wild_animals_displaced_by_agriculture"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "domesticated_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Sentient beings whose suffering is recognized as morally relevant under this reading, but whose property status remains unchanged. Welfare regulations constrain the conditions of their use but do not prohibit use itself. They cannot exit the relationship; their suffering is acknowledged but instrumentally subordinated to human interests."
+    },
+    {
+      "name": "animal_agriculture_industry",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Sets welfare standards, enforces compliance through certification and audit, and argues that regulated use is the pragmatic alternative to prohibition. Bears the costs of welfare compliance (larger enclosures, slower growth rates, less dense stocking) but retains the primary economic benefit of animal commodification. Collects rents from labeling animals as 'humanely' produced."
+    },
+    {
+      "name": "animal_research_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from continued animal research under welfare constraints (institutional review boards, pain-minimization protocols). Retain research productivity while operating within acknowledged suffering-minimization frameworks. Face reduced regulatory pressure compared to prohibition scenarios."
+    },
+    {
+      "name": "consumers_of_animal_products",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from continued access to animal products at reduced moral cost through welfare labeling and assurance. Pay marginally higher prices for 'humanely' produced goods, which resolves their moral discomfort without requiring dietary change. Their consumption practices remain substantively unchanged."
+    },
+    {
+      "name": "animal_welfare_advocates",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Win recognition of sentience and welfare constraints, which validates their advocacy and resources their organizational work. But their victory is constrained: use persists, suffering continues. They remain locked in perpetual reform cycles (larger cages, better slaughter methods) rather than achieving categorical change."
+    },
+    {
+      "name": "wild_animals_displaced_by_agriculture",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the costs of agricultural expansion (habitat destruction, displacement, starvation) that the welfare reading does not address. The sentience-based framework recognizes their capacity to suffer but welfare regulations focus on managed animals, leaving wild-animal suffering unregulated and often invisible in welfare discourse."
+    },
+    {
+      "name": "abolitionist_moral_theorists",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Are structurally excluded from the welfare reading's authority structure. They argue the reading is a false compromise that legitimates continued use under the guise of sentience recognition ('new welfarism'). Their core claim—that property status itself is the injustice—is ruled out of order in welfare-constrained frameworks."
+    },
+    {
+      "name": "property_theorists",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Also excluded from the welfare reading's framework. They argue welfare constraints on property are incoherent—that sentience-based constraints on use constitute a category mistake (property relations do not carry moral obligations to the property itself). Their position denies the reading's foundational premise."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Codify and enforce welfare standards (animal protection laws, slaughter regulations, research protocols). Operate within the welfare reading's framework, treating sentience as morally relevant but property status as retained. Enforce the boundary between permissible and impermissible use."
+    },
+    {
+      "name": "sentience_moral_relevance",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The welfare reading vindicates and institutionalizes the proposition that animal sentience is morally relevant. This consensus object does not collect rents but legitimates the entire constraint structure."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Resolves a moral coordination problem: how to acknowledge animal sentience as morally relevant while preserving the economic and cultural systems that depend on animal use. The welfare reading coordinates around suffering-minimization as the implementable middle ground between prohibition and unrestricted use.",
+    "transfer_function": "Moves moral acknowledgment (recognition of sentience, suffering-capacity as relevant) from animals to the use framework itself. Animals gain formal recognition as subjects of moral concern; humans retain the authority to determine whether and how that concern is overridable by other interests. Use permissions flow from industry to consumers; welfare costs flow from industry (and marginally from consumers) back to compliance infrastructure.",
+    "absent_voices": "Abolitionists and property theorists are excluded from the welfare reading's authority structure—they would argue the reading is either false compromise (abolitionists) or category mistake (property theorists). Non-human animals themselves cannot voice whether welfare constraints adequately address their interests; their suffering is recognized but they remain unable to consent to continued use or refuse it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the welfare reading and its enforcement infrastructure disappeared, the constraint structure would shift: property law would revert to unqualified ownership (property reading) or move toward rights-based abolition (abolitionist reading). The recognition of sentience as morally relevant would be suspended, animal agriculture would operate under fewer welfare obligations, and the moral validation consumers receive from 'humane' labels would evaporate. Institutional practices in research and agriculture would reorganize around whichever reading replaced this one.",
+    "founding_problem": "How can a society that has come to recognize animal sentience morally continue practices that cause animal suffering? The welfare reading was constructed to resolve the cognitive dissonance between sentience-recognition and continued use: by acknowledging suffering as morally relevant while establishing that use is acceptable under welfare constraints.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Welfare advocates and parts of the regulatory apparatus attest the founding problem is live and the reading solves it. Abolitionists attest the reading solves only the cognitive dissonance for humans, not the underlying injustice—and that welfare reforms may have intensified the problem by making continued use more socially acceptable. Property theorists attest there is no foundational problem (sentience does not generate moral obligation on property). Independent philosophical analysis (Singer, Regan, Adams) documents the historical emergence of the problem in late-20th-century ethics; corroborating sources outside the welfare benefiting parties point to the problem's reality."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.42
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the welfare reading a distinct philosophical position or a unstable compromise between property and abolitionist readings?",
+      "resolution_mechanism": "Philosophical analysis of whether sentience-recognition plus property-retention form a stable equilibrium or necessarily collapse into one of the sibling readings under pressure. Empirical observation of whether welfare frameworks expand toward abolition or contract toward property-dominance over time.",
+      "impact": "If the welfare reading is inherently unstable, the constraint may reclassify as a transitional framework (scaffold) rather than a stable tangled-rope. This would affect long-term classification and policy interpretation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether welfare reading is philosophically stable or inherently transitional."
+    },
+    {
+      "id": "new_welfarism_mechanism",
+      "question": "Do welfare regulations legitimize continued use in a way that increases social comfort with animal agriculture ('happy meat' effect), thereby actually increasing total animal suffering by expanding consumption?",
+      "resolution_mechanism": "Empirical time-series analysis: does welfare certification correlate with expansion of animal agriculture, or does it reduce consumption relative to counterfactual unregulated industry? Experimental studies on consumer behavior and moral disengagement.",
+      "impact": "If welfare reforms increase consumption more than they decrease suffering-per-animal, the constraint's effective extractiveness could be substantially higher than the authored 0.58—the regulation mechanism would amplify rather than constrain harm. This would argue for reclassification as snare (extraction camouflaged as welfare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether welfare regulations reduce or increase total animal suffering through consumption effects."
+    },
+    {
+      "id": "wild_animal_scope_gap",
+      "question": "Does the welfare reading's focus on domesticated animals systematically exclude consideration of wild animals displaced by agriculture, creating a hidden victim set?",
+      "resolution_mechanism": "Scope expansion: does the welfare reading's sentience-based framework logically commit to addressing wild-animal suffering from agricultural habitat destruction, or does it treat wild animals as outside the domain of welfare regulation?",
+      "impact": "If wild-animal suffering is systematically excluded despite falling within the sentience framework, the reading's coherence is compromised. This would support an omega about the reading's internal logical consistency and whether it should be reclassified as snare (selective inclusion of victims).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether sentience-based framework includes wild animals or systematically excludes them."
+    },
+    {
+      "id": "suppression_internalization",
+      "question": "Is the measured suppression (0.42) structural (external enforcement, legal barriers to exit) or partly internalized (animals have been shaped by domestication to accept confinement, humans have internalized the acceptability of use)?",
+      "resolution_mechanism": "Post-domestication trajectory analysis: if animals were released from agricultural systems, would they resist or accept confinement? Cognitive science on learned helplessness in confined animals; historical analysis of how domestication shapes behavioral adaptation.",
+      "impact": "If suppression is substantially internalized, the constraint's effective suppression may be lower than 0.42 (the scaffolding is internal, not external), which could lower the tangled-rope classification toward rope. If suppression is structural, the 0.42 is appropriate. This affects whether the constraint is self-maintaining or dependent on external enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of structural vs. internalized suppression in animal confinement."
+    },
+    {
+      "id": "welfare_reading_vs_sibling_coverage",
+      "question": "This constraint instantiates one reading of the animal_status_kernel. The property_reading (animals are property with no intrinsic moral obligations) and abolitionist_reading (animals have rights not to be property) are OTHER constraints. Does the welfare reading coexist with the property reading in contemporary regulatory practice, or has welfare recognition begun to foreclose property-absolutism in actual institutions?",
+      "resolution_mechanism": "Institutional analysis of regulatory frameworks: do jurisdictions hold both welfare constraints AND unqualified property-law status simultaneously, or is property status being legally modified by welfare obligations? Compare legal doctrine across jurisdictions (EU, US, emerging animal-law scholarship).",
+      "impact": "If welfare recognition is beginning to foreclose unqualified property status in practice, the reading_relations should shift from coexists_with to influences on the property reading. This would affect how the constraint family evolves and whether the welfare reading is a stable equilibrium or a ratchet toward abolition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether welfare reading coexists with property reading or has begun to foreclose it."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the welfare reading of the contested animal_status_kernel. Under this reading, animals are recognized as sentient beings whose capacity to suffer is morally relevant, but their property status is retained and use is permitted if regulated to minimize suffering. The welfare reading creates a hybrid structure: it includes animals in the moral status framework (acknowledging sentience) while excluding them from rights frameworks (retaining property status). This generates the characteristic tangled_rope structure: genuine coordination (suffering-minimization) combined with asymmetric extraction (continued use despite recognized capacity to suffer). The constraint sits between the property reading (which treats animal interests as irrelevant) and the abolitionist reading (which treats property status itself as the injustice). The welfare reading is contested—abolitionists argue it legitimizes continued use under a false moral cover ('new welfarism'); property theorists argue it is conceptually incoherent (property status is categorically exempt from the obligations welfare imposes).",
+    "key_agents": [
+      "domesticated_animals: sentient victims whose suffering is acknowledged but use permitted (power: powerless, exit: trapped)",
+      "animal_agriculture_industry: institutional agenda-setter that enforces welfare standards while retaining use profits (power: institutional, exit: constrained)",
+      "animal_welfare_advocates: organized beneficiary locked in perpetual reform cycles (power: organized, exit: mobile)",
+      "abolitionist_moral_theorists: excluded analytical seat that argues the reading is false compromise (power: analytical, exit: analytical)",
+      "consumers_of_animal_products: organized beneficiaries who resolve moral discomfort through welfare certification (power: organized, exit: mobile)"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.58 at interval end) because the welfare reading acknowledges animal suffering as morally relevant and imposes costs on the industry (larger enclosures, slower growth, welfare compliance infrastructure). However, the constraint PERMITS continued use, which prevents extractiveness from reaching the high levels of pure property readings or pure predation. The trajectory shows slight increase from 0.45 to 0.58 over the interval, reflecting intensifying industry costs as welfare standards tighten and consumer expectations rise—but the curve flattens after t=25, suggesting a plateau where welfare costs stabilize. Suppression is moderate-low (0.42) because the constraint does not require hiding animal use; rather, it requires acknowledging it within welfare parameters. The suppression is primarily directed at excluding abolitionist readings (keeping them out of the regulatory frame) and at suppressing industry resistance to welfare costs. Theater_ratio rises from 0.32 to a plateau around 0.48, reflecting the growth of welfare labeling and public-facing narratives ('humane,' 'ethical,' 'sustainable') that perform moral seriousness while use persists. This is neither pure theater (welfare constraints are real, impose costs) nor purely functional (much energy goes to consumer reassurance rather than animal outcome improvement). The measurement series is authored on a single shared time grid: every metric is valued at every time point, enabling phase-coherent analysis.",
+    "perspectival_gap": "The industry seat (agenda-setter) and the animal victims seat compute sharply different types from the structural data. From the industry perspective, the welfare reading is genuine coordination: it solved the moral problem that was beginning to constrain their business model, provided a framework for continued operation, and transformed moral pressure into a market segment ('premium humane products'). From the trapped-animal perspective, sentience recognition without use permission is false benefit—the reading creates the appearance of moral consideration while use persists. From the welfare-advocate perspective (excluded but organized), the reading is half-victory: sentience is vindicated but use is not prohibited, leaving them in perpetual lobbying cycles. The engine computes these divergent d values from the structural data (beneficiary vs. victim vs. excluded roles, power atoms, exit options)—the authored claim does not presuppose which computation is correct; it names the reading that the story instantiates.",
+    "directionality_logic": "The domesticated_animals bear the asymmetry: they are the identified victims (included in the victim-set via sentience-recognition) but lack directionality toward change (trapped exit, powerless position). Their d is near 1.0 (full target). The animal_agriculture_industry benefits from the welfare reading (it solved their moral legitimacy crisis) while bearing regulatory costs—their d is intermediate, between moderate and powerful positions, perhaps 0.35-0.45. Welfare_advocates sit in the beneficiary role (sentience vindicated, their positions institutionalized) but remain structurally excluded from agenda-setting—their d is moderate, perhaps 0.4-0.5 (they won something but retained no power to enforce it). Consumers gain cheap moral resolution without behavioral change—their d is low, near 0.2-0.3 (subsidized beneficiaries). The abolitionist_theorists are excluded from the frame entirely (role: excluded, power: analytical), so their d is not computed from the structural data—they sit outside the constraint's derivation chain. This mosaic of d values emerges from the beneficiary/victim declarations and exit modulation without additional override.",
+    "mandatrophy_analysis": "The founding_problem (how to acknowledge sentience while continuing use) is still LIVE and the reading still addresses it—but the reading's success at resolving the problem is CONTESTED. Abolitionists argue the reading doesn't solve the problem but camouflages it ('new welfarism'—welfare reforms make people comfortable with continued use, thereby increasing consumption and total suffering). If abolitionists are correct and welfare reforms increase total suffering, the founding_problem has not actually been solved, just restyled. This mandatrophy candidate (a mandate to minimize suffering that results in increased suffering via consumption expansion) drives the new_welfarism_mechanism omega. The constraint avoids full mandatrophy because welfare regulations DO impose costs on the industry and DO constrain the worst practices—they are not purely theatrical. But the gap between mandated outcome (minimized suffering) and actual outcome (possibly increased total suffering) is real and unresolved, which justifies the contested status on founding_problem_status.",
+    "kernel_context": "This constraint instantiates the welfare_reading of the animal_status_kernel. The kernel is the standing commitment about animals' moral and legal status, contested across three major readings: (1) property_reading: animals are property; moral considerability derives from ownership; (2) abolitionist_reading: animals are moral persons with rights not to be property; property status itself is the injustice; (3) welfare_reading (THIS CONSTRAINT): animals are sentient beings whose suffering is morally relevant; use is acceptable if regulated to minimize pain; property status retained but constrained by welfare obligations. The welfare reading coexists with the property reading in contemporary practice (both operate in most jurisdictions simultaneously, enforced by different institutional actors and constituencies). The welfare reading influences the abolitionist reading by institutionalizing sentience-recognition, which expands the logical pressure toward rights-based frameworks. The abolitionist reading forecloses the welfare reading's core claim that property status is compatible with sentience-recognition—if animals have rights not to be property, then property-status-with-constraints is not a coherent stable position. This kernel has distributed authority: no single institution adjudicates across the readings; they are held by different constituencies (industry, welfare organizations, rights organizations, property-law professionals, animal-rights philosophers) and compete in law, policy, and public discourse."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_status_kernel__property_reading",
+      "animal_status_kernel__abolitionist_reading"
+    ],
+    "dual_formulation_note": "The animal_status_kernel decomposes into three readings, each a distinct constraint with different ε values and victim/beneficiary structures. property_reading has low ε (property interests override animal interests, no extraction from the property frame itself). abolitionist_reading has high ε (property status is the injustice, use categorically impermissible, complete extraction from the animal perspective). welfare_reading has moderate ε (sentience acknowledged, use constrained but permitted, partial extraction). These are NOT the same constraint viewed from different angles—their ε values differ substantially because they have different assessments of what the standing arrangement permits and requires. The welfare reading coexists with the property reading in practice and influences the abolitionist reading by expanding sentience-recognition pressure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "gain_flow": "animal_agriculture_industry",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "property_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "abolitionist_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sentience_generates_moral_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "property_status_compatible_with_moral_constraint",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "suffering_minimization_implementable_middle_path",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "sentience_constrained_property",
+    "drift_state": {
+      "moment": "contemporary_regulation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "animal_sentience_recognition",
+      "property_law_foundations"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_commandment__study_as_performance",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "c7d73581-d539-4c1d-9956-2f3ed5aa0143",
+    "created_at": "2026-06-12T14:23:45Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.0,
+    "suppression": 0.0,
+    "theater_ratio": 0.0,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Sacrifice Commandment Fulfillment through Textual Study",
+    "topic_domain": "religious/halakhic",
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "halakhic_scholar"
+    ],
+    "vindicated_propositions": [
+      "torah_study_as_worship",
+      "intellectual_engagement_fulfills_mitzvot"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "halakhic_scholar",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "situation": "Engages in intensive study of the sacrificial commandments and their legal requirements. In this reading, the study itself constitutes the performance of the commandment; intellectual mastery of the sacrificial system IS the fulfillment of the divine obligation. The scholar benefits intrinsically through this act of worship, which is held to be equivalent to, or a legitimate substitute for, physical performance."
+    },
+    {
+      "name": "divine_authority",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The grounding of the commandment itself. The reading asserts that the divine intention embedded in the command is satisfied by intellectual engagement with the commanded act."
+    },
+    {
+      "name": "temple_restoration_awaiter",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "situation": "One who expects the physical Temple to be rebuilt and who might hold a different reading (performance_only or archive_maintenance) of how the commandment obligates them in the interim. Present here only to note their absence from the active structure of this reading's logic."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains and perpetuates mastery of sacrificial law within a scholarly community; coordinates intergenerational transmission of a complete legal tradition.",
+    "transfer_function": "No transfer function. The constraint moves nothing from one agent to another; it describes the condition under which intellectual engagement itself becomes an act of worship.",
+    "absent_voices": "Those who hold performance_only readings of the same kernel (arguing the commandment cannot be fulfilled without the Temple's physical existence) are excluded from the logic of this reading. Also absent: practical communities whose oral traditions emphasize physical restoration over textual study.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "If this reading of how the commandment obligates one ceased to be held, the world's material arrangements would not shift—no physical infrastructure, no institution, no enforcement mechanism, no resource flow depends on it. The constraint describes an internal state (the validity of study as worship), not an external structure. The disappearance would be theological/philosophical, not institutional.",
+    "founding_problem": "How does one fulfill the commandment to offer sacrifices in a post-Temple world when the central institution (the Temple) no longer exists?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Medieval and early modern halakhic authorities (Maimonides, Rabbenu Asher, and subsequent decisors) explicitly address this problem and develop the principle that study of the sacrificial laws constitutes a legitimate fulfillment of the commandment. Contemporary Jewish philosophers and scholars in the academic study of halakhah (Isadore Twersky, David Halivni, and others outside the communities most committed to any single reading) document this as a live interpretive tradition, not a settled consensus."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.0
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.0
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_interpretation",
+      "question": "Is the claim that study fulfills the commandment a natural law (an intrinsic property of how divine commandments operate independent of human consensus) or a constructed reading that benefits scholars who practice textual engagement?",
+      "resolution_mechanism": "Cross-reading comparison: identify whether all three sibling readings of the sacrifice_commandment kernel claim to discover a natural fact about how commandments obligate, or whether they are explicitly authored as competing interpretations where only one can be doctrine. If the kernel itself is framed as a site of genuine dispute between equally-valid readings, the 'natural law' framing of this reading becomes contestable.",
+      "impact": "If the reading is shown to be a constructed choice among alternatives (all benefiting different communities differently), the extracted τ_eff should include an identity-lock component: the scholar benefits intrinsically from the reading because the reading constitutes their practice as worship. The constraint would remain zero-extractive but would shift from mountain to rope: genuine coordination around textual transmission, not a natural fact.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether study-as-worship is a natural property of how divine commandments operate or a constructed reading specific to textual learning communities."
+    },
+    {
+      "id": "beneficiary_identity_fusion",
+      "question": "The halakhic scholar is listed as a beneficiary. Is the scholar's interest in validating study-as-worship independent of their identity as a scholar, or is their benefit inseparable from their scholarly identity?",
+      "resolution_mechanism": "Empirical: track whether scholars who cease to engage in halakhic study experience a shift in how they understand the commandment's applicability to them. Conceptual: examine whether the reading's endorsement by scholarly authorities constitutes evidence of its truth or evidence of its fitness to the interests of those authorities.",
+      "impact": "If the benefit is fused to scholarly identity, the beneficiary cannot exit without identity dissolution—a sign of identity_locked constraint rather than a freely-chosen arrangement. This would not change the zero-extractiveness metric but would flag a constraint structure where perceived voluntary participation masks identity capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the scholar's benefit is intrinsic to the reading or bound to their scholarly identity."
+    },
+    {
+      "id": "sibling_reading_foreclosure",
+      "question": "Do the three readings (study_as_performance, performance_only, archive_maintenance) genuinely coexist as live positions within halakhic tradition, or does adoption of one reading logically foreclose the others within a unified framework?",
+      "resolution_mechanism": "Textual analysis: survey whether post-Talmudic authorities endorse multiple readings simultaneously, treat them as genuinely contestable alternatives, or present one as discovered truth. Empirical: track whether contemporary communities hold multiple readings or enforce exclusive adoption.",
+      "impact": "If readings coexist without foreclosure, the relationship is coexists_with. If study_as_performance's adoption of the principle that intellectual engagement fulfills mitzvot logically rules out the performance_only claim (that commandments require physical enactment), the relationship is forecloses. This determines the cs_structure.reading_relations encoding and flags the kernel contest as either genuine pluralism or zero-sum.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the three readings are genuinely coexistent or logically foreclosing."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In post-Temple Rabbinic Judaism, the commandments to offer sacrifices can no longer be performed in their original physical form. One established reading holds that study of the sacrificial laws constitutes the exercise of the commandment itself: intellectual engagement with the legal texts is held to be a form of worship that fulfills the obligation. This reading instantiates a constraint with zero extractiveness—the scholar who studies sacrificial law experiences intrinsic benefit (the performance of worship through learning), no victim set exists (no one is targeted for extraction), and the arrangement is presented as emerging from the logic of how divine commandments operate rather than from human construction. However, this reading is contested: alternative readings argue that (a) study preserves knowledge for messianic Temple restoration without constituting present-day worship (archive_maintenance), or (b) the commandment remains suspended without the Temple's existence and cannot be fulfilled by study alone (performance_only). The zero-extractiveness claim rests on treating the reading as a discovery of natural law; the omegas flag the possibility that it is a constructed reading whose adoption benefits scholarly identity and textual communities.",
+    "key_agents": [
+      "halakhic_scholar: the agent whose practice of study is framed as the commandment's fulfillment; benefits intrinsically through this reading.",
+      "divine_authority: the non-agent grounding (the commandment's source and intention); treated as observer-position for analytical clarity.",
+      "temple_restoration_awaiter: noted to indicate whose voice is excluded or alternative in this reading's logic."
+    ],
+    "logic_rationale": "The constraint is authored with extractiveness=0.0 and suppression=0.0 because the reading asserts an intrinsic identity between study and worship: no transfer of resources occurs, no coercion enforces participation, no external barriers prevent exit. The scholar who engages in sacrificial study does so as an internal act of worship, framed as fulfilling a divine obligation. The accessibility_collapse is high (0.95) because the reading claims that alternatives to this interpretation are logically or textually foreclosed within the halakhic tradition itself—once the principle that intellectual engagement fulfills mitzvot is accepted, the necessity of study becomes evident. Resistance is minimal (0.05) because, within the communities that endorse this reading, it is treated as a discovered truth rather than a contested position, so resistance takes the form of holding alternative readings rather than active opposition. The measured claim/metric alignment is deliberate: the reading claims mountain status (emerges naturally from the logic of commandments and their fulfillment) while the omegas document irreducible uncertainties about whether the reading is discovered truth or constructed benefit.",
+    "directionality_logic": "The halakhic_scholar is the sole beneficiary in the base_properties. The reading asserts that this agent benefits intrinsically through the act of study itself, which is held to be worship. No victim class exists—no agent bears a cost to enable the scholar's benefit. The scholar's directionality is therefore at the beneficiary end (d ≈ 0.0), with mobile exit options (the scholar can cease studying and the constraint no longer applies to them). The divine_authority stakeholder is listed as observer (not agent) because the constraint describes how a pre-given commandment obligates; the divine source is not a party to an arrangement but the grounding of the constraint itself.",
+    "perspectival_gap": "No significant perspectival gap exists in this reading because there is no structural asymmetry between parties. The scholar-worshipper is the sole relevant agent, and they are framed as a beneficiary of the arrangement (worship through study). Alternative readings (performance_only, archive_maintenance) would produce different perspectival gaps from different seats—but those are separate constraints instantiating different readings of the same kernel. This reading models a constraint where all seated parties (here, just the scholar and the divine grounding) are aligned on the constraint's meaning and function.",
+    "mandatrophy_analysis": "The founding problem—how to fulfill sacrifice commandments post-Temple—is framed as live and unresolved. The reading answers it by redefining fulfillment from physical to intellectual. No mandatrophy is present: the reading's coordinate claim (study IS the exercise of the commandment) is presented as still-operative doctrine, endorsed by halakhic authorities across centuries. The constraint is not an attenuated remnant of a function; rather, it instantiates an ongoing theological commitment. However, the omega on beneficiary_identity_fusion flags a deeper ambiguity: if the reading's adoption is bound to scholars' identity and authority, the constraint might performatively serve to validate scholarly practice regardless of its truth-value—a form of inertial theater dressed as theological discovery.",
+    "kernel_context": "This constraint instantiates the reading that study of sacrifice law IS the exercise of the commandment. The kernel is the sacrifice commandment itself (one of the 613 commandments in Jewish law, binding after the Second Temple's destruction in 70 CE). Two sibling readings exist: (1) performance_only: the commandment requires physical execution and cannot be fulfilled by study, so it remains suspended until Temple restoration; (2) archive_maintenance: study preserves knowledge for future restoration but does not constitute present worship. This reading uniquely claims that intellectual engagement with sacrificial law fulfills the divine obligation. The three readings are held by different exegetical traditions and contemporary scholars; whether they coexist as genuinely live alternatives or whether adoption of one forecloses the others is itself contested (tracked in the sibling_reading_foreclosure omega)."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "intellectual_engagement_as_worship",
+    "drift_state": {
+      "moment": "contemporary_halakhic_discourse",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "performance_only",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "archive_maintenance",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "intellectual_engagement_fulfills_mitzvot",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "study_as_intrinsic_worship",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "sacrifice_commandment__performance_only",
+      "sacrifice_commandment__archive_maintenance"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested sacrifice_commandment kernel. The kernel describes how post-Temple Jewish communities understand their obligation to fulfill the sacrificial commandments. Three structurally distinct constraints instantiate three readings: (1) study_as_performance asserts study fulfills the obligation (zero extractiveness, mountain type); (2) performance_only asserts the obligation remains suspended without the Temple (creates a snare-adjacent framing where the commandment obligates but cannot be fulfilled); (3) archive_maintenance asserts study preserves knowledge for restoration, not present worship (tangled rope: coordinates tradition preservation while extracting scholarly authority). Each reading has its own ε, beneficiary/victim structure, and type classification. They are linked here as a constraint family sharing the same kernel and alternative readings."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.0
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

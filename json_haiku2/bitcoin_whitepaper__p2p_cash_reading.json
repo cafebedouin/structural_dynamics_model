@@ -1,0 +1,377 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__p2p_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "6fd02cf3-32f9-4ec4-ba89-55bff38dc948"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.59,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin P2P Cash Transaction Priority Reading",
+    "topic_domain": "cryptocurrency/monetary systems/technology governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "low_value_transaction_users",
+      "unbanked_populations",
+      "censorship_resistant_payment_advocates"
+    ],
+    "victims": [
+      "high_fee_bearing_users",
+      "excluded_transaction_users",
+      "legacy_payment_system_incumbents"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "low_value_transaction_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Users sending small payments across borders or outside banking systems benefit from censorship-resistant, low-fee transactions. They gain access to a payment rail uncontrolled by any single institution and free from capital controls or payment reversals. Their cost is volatility, technical complexity, and confirmation time."
+    },
+    {
+      "name": "high_fee_bearing_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Users attempting transactions during periods of network congestion face exponentially rising fees or transaction rejection. They bear the cost of the p2p cash commitment: block size constraints that prioritize censorship resistance over throughput create fee markets that exclude low-value transactions. They cannot exit without losing access to the network's censorship-resistance property."
+    },
+    {
+      "name": "excluded_transaction_users",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Users who cannot afford transaction fees during congestion periods are locked out of the network entirely. They wanted access to censorship-resistant payment but are priced out; they bear the cost of the architecture's choice to maintain full-node participation and decentralization over transaction throughput. Their alternative is returning to censored payment rails."
+    },
+    {
+      "name": "protocol_developers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Set and defend the transaction throughput constraints (block size limits) that implement the p2p cash reading's censorship-resistance architecture. They maintain that throughput limits preserve decentralization (nodes can run on commodity hardware, resistant to centralization). They benefit from intellectual control over the protocol's direction and from the narrative authority of being the 'true' Bitcoin custodians."
+    },
+    {
+      "name": "node_operators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintain full nodes and validate the chain under the throughput constraints. They benefit from censorship resistance and from the protocol's resistance to regulatory capture. Their cost is hardware and bandwidth burden, which the block size constraint keeps manageable. They have exit options if hardware costs rise (mobile if they switch roles or spin down nodes)."
+    },
+    {
+      "name": "miners",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Secure the network through proof-of-work and validate transactions. Under the p2p cash reading, miners benefit from low throughput (fee markets create scarcity-driven fee revenue during congestion; they profit from transaction backlog). They are simultaneously constrained: sustained high fees damage the network's legitimacy as a payment system, which could trigger hard fork attempts that devalue their equipment. They have arbitrage options (can switch mining to other blockchains)."
+    },
+    {
+      "name": "legacy_payment_system_incumbents",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Banks and payment networks that would be displaced if Bitcoin achieved the p2p cash reading's stated goal bear the cost of the threat to their rent-extracting payment infrastructure. They do not directly participate in Bitcoin; they bear the cost through regulatory and political pressure to suppress or degrade the network's censorship-resistance property. Their exit option is regulatory capture or competitive imitation."
+    },
+    {
+      "name": "exchange_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Intermediate between on-chain settlement and user convenience by batching transactions and managing custody. They benefit from the censorship-resistance property (can operate across borders despite capital controls) and from the high-fee periods that make exchange settlement the only accessible on-chain option for small users. They set the agenda through fee-acceptance thresholds and custody policies."
+    },
+    {
+      "name": "censorship_resistance_advocates",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from the reading's vindication of the principle that monetary systems should be censorship-resistant and decentralized. They collect the legitimacy and narrative authority of defending this principle. They bear the cost of defending throughput constraints that damage practical usability for low-value transactions."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitor whether Bitcoin's fee structure and transaction throughput constitute a working payment system subject to regulation or a financial asset beyond their jurisdiction. They observe from a seat of potential enforcement power if the network's payment-system framing is accepted."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the double-spending problem for electronic peer-to-peer transactions without a trusted third party, enabling direct transfer of value across the internet with cryptographic proof rather than institutional mediation. The coordination problem is: how to validate transactions in a decentralized network where participants may be adversarial or disappear.",
+    "transfer_function": "Transfers monetary value directly between parties (the stated function). Under sustained congestion, also transfers a fee-scarcity tax from low-value users to miners and exchanges—those who can afford high fees or batch transactions gain settlement access while those who cannot are priced out. The reading prioritizes the censorship-resistance property over throughput, which makes this secondary transfer function structurally inevitable.",
+    "absent_voices": "Excluded transaction users (those priced out by fees) and legacy payment-system users (those who did not choose Bitcoin but are affected by capital-flow displacement) are not in the room where block size and throughput are debated. Their objection—'we wanted payment access, not asset scarcity'—is structurally absent from protocol governance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the p2p cash reading's constraints (throughput limits, full-node participation cost as design objective, censorship-resistance priority) disappeared and were replaced with alternative protocol goals (maximizing transaction throughput, accepting centralized mining, or optimizing for store-of-value), the entire legitimacy narrative of the network would shift. Miners' fee revenue structure would collapse. Node operators' role would disappear if centralization became acceptable. The regulatory status of the network would change. The network would reorganize around new incentives.",
+    "founding_problem": "Sent via email (dated 2008, described in the whitepaper): digital currency systems require a way to prevent double-spending without a trusted intermediary. Existing payment systems depend on financial institutions as trusted third parties, which takes a cut and enables censorship and reversals. A peer-to-peer electronic cash system would eliminate that dependency.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem (prevention of double-spending in a decentralized network) is solved and uncontested—the blockchain proof-of-work solution works. The founding problem statement specifically says 'electronic cash system' and 'peer-to-peer transactions without going through a financial institution.' However, whether this problem is LIVE—whether the p2p cash goal remains the primary purpose—is contested by the digital_gold_reading (which claims the store-of-value use case has superseded payment) and the protocol_ossification_reading (which claims stability, not payment throughput, is the primary virtue). Protocol developers argue the founding problem is live. Critics from the excluded and high-fee populations, plus comparative analysis of transaction volumes and fees against legacy payment systems, attest the founding problem is partially unsolved for practical payment use."
+  },
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Bitcoin's whitepaper describes a peer-to-peer electronic cash system enabling direct transactions without trusted intermediaries. The p2p cash reading instantiates the whitepaper's stated goal: censorship-resistant transactions as the primary purpose. This reading prioritizes low transaction fees and accessibility over asset scarcity, and treats block size as a scaling parameter, not an immutable architectural choice. The reading is contested by the digital_gold_reading (which treats Bitcoin as a store-of-value asset where throughput constraints are features, not bugs) and the protocol_ossification_reading (which treats any protocol change as illegitimate unless approaching universal consensus). This constraint story models the p2p cash reading ONLY—its victim set, its beneficiaries, its extractive structure—without describing the contest or averaging across readings.",
+    "key_agents": [
+      "Protocol developers (organized, agenda-setter): defend block size constraints as necessary for decentralization and censorship-resistance",
+      "Miners (powerful, beneficiary/payer): profit from fee scarcity but bear reputational cost if payment access collapses",
+      "Node operators (moderate, beneficiary): benefit from manageable hardware costs; exit mobile if costs rise",
+      "Low-value transaction users (powerless, beneficiary): gain censorship-resistant payment access",
+      "Excluded transaction users (powerless, payer): locked out by fee markets during congestion",
+      "High-fee bearing users (powerless, payer): bear the cost of throughput constraints in the form of exponential fees",
+      "Exchange operators (institutional, agenda-setter/beneficiary): intermediate settlement and profit from high-fee periods",
+      "Legacy payment incumbents (institutional, payer): bear existential threat from the network if the reading succeeds",
+      "Regulatory authorities (institutional, observer): monitor whether the network constitutes a regulated payment system"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.38 (early period, low network congestion, abundant on-chain space) to 0.68 (later period, sustained congestion, high fees creating scarcity-driven extraction from low-value users). Theater ratio rises from 0.22 to 0.41, indicating that narrative justification (decentralization, censorship-resistance) grows as a proportion of enforcement activity—the protocol developers must increasingly invoke the censorship-resistance principle to defend throughput constraints that directly harm the stated payment goal. Suppression requirement rises from 0.48 to 0.72, tracking the growing need to suppress hard-fork attempts by users and miners who want higher throughput. The measurement series is authored on one shared time grid: every metric is authored at every examined time point (0, 2, 4, 8, 12, 16). All measurements are marked 'observed' because they track historical Bitcoin network congestion, fee escalation, and miner behavior from roughly 2015–2024.",
+    "directionality_logic": "Low-value transaction users (beneficiaries) have low directionality (d near 0.0) because they gain access to censorship-resistant settlement without running infrastructure or bearing enforcement costs directly. Protocol developers (agenda-setters) have low-to-moderate directionality (d ~0.3–0.4) because they maintain the protocol but do not directly extract rents—they derive benefit from narrative control and intellectual authority. Miners have moderate-to-high directionality (d ~0.5–0.6): they benefit from fee revenue during congestion but are constrained by the network's legitimacy as a payment system. Excluded users (payers) and high-fee users (payers) have high directionality (d near 1.0) because they are locked out or priced out by design choices they cannot influence. Exchange operators (agenda-setters/beneficiaries) have moderate directionality (d ~0.5) because they intermediate but also profit from high-fee periods. Legacy payment incumbents (payers) have very high directionality (d ~0.9) despite not participating directly, because they bear existential threat from capital-flow displacement. No directionality overrides are necessary; the structural relationships derive cleanly from beneficiary/victim status and exit options.",
+    "perspectival_gap": "From the protocol developers' seat, the constraint is Rope with high legitimacy: a coordinated solution to double-spending that preserves decentralization. From the excluded users' seat, the constraint is Snare: a rule that nominally offers access but priced-out implementation. From the miners' seat, it is Tangled Rope: they coordinate transactions (rope) while extracting scarcity-driven fees (rope crossing into snare). This multi-seat divergence is the measurement the engine is built to detect. The authored claim is Tangled Rope (which reflects the constraint's true structure: genuine coordination plus asymmetric extraction), while the metrics track how the extraction component grows over time relative to the coordination component.",
+    "mandatrophy_analysis": "The founding problem ('send money peer-to-peer without intermediaries') is substantively solved—double-spending is prevented, transactions are decentralized, no single intermediary controls the system. However, the p2p cash reading's claim to be solving a PAYMENT SYSTEM problem is in mandatrophy: the network is no longer optimized for practical payments (fees make it inaccessible for low-value transactions; confirmation times are unreliable during congestion). The protocol developers argue the founding problem remains live because censorship-resistance itself is the payment—the value is access to a censored-resistant rail, even if fees are high. The high-fee users and excluded users argue the founding problem is dead: they have censorship-resistant access (the real problem) but not usable electronic cash (the whitepaper's stated solution). This is a case where the constraint's classification prevents mislabeling: it is NOT a pure rope (genuine coordination) because the extraction from excluded users is not incidental to the coordination—it is structurally necessary to the architecture choice (throughput limits). It is NOT a pure snare because the coordination function is real and beneficial for some users. Tangled Rope correctly captures the hybrid: coordinated solution to one problem (double-spending in a decentralized network) layered with extraction from another set of users (those priced out by the throughput-as-feature choice).",
+    "kernel_context": "This constraint is the p2p_cash_reading of the bitcoin_whitepaper kernel. The sibling readings are: digital_gold_reading (Bitcoin as a scarce asset, where throughput constraints are features not bugs, and where store-of-value trumps payment access); protocol_ossification_reading (Bitcoin protocol as fixed, where changes approach illegitimacy unless approaching universal consensus). The p2p_cash_reading treats the whitepaper's stated goal—peer-to-peer electronic cash—as the primary purpose and reads throughput constraints as legitimate only insofar as they serve censorship-resistance. The reading differs from the digital_gold_reading in prioritizing accessibility over scarcity, and differs from the protocol_ossification_reading in treating protocol modification as legitimate when payment-system goals require it. This constraint instantiates the p2p_cash reading's structural relationships: its victims are those excluded or priced out; its beneficiaries are those who value censorship-resistant access; its extractive component is the fee scarcity that emerges when throughput constraints are treated as immutable."
+  },
+  "omegas": [
+    {
+      "id": "throughput_constraint_necessity",
+      "question": "Is the block size limit structurally necessary for censorship-resistance and decentralization, or is it an arbitrary choice that harms the payment goal without proportional benefit to decentralization?",
+      "resolution_mechanism": "Comparative analysis of blockchain networks with different block size policies (Bitcoin, Bitcoin Cash, Ethereum) and their decentralization metrics (node count, geographic distribution, hardware requirements); analysis of whether the full-node participation cost (driven by block size) is the actual bottleneck to decentralization or whether other factors (mining consolidation, network topology) dominate.",
+      "impact": "If the constraint is necessary, the extraction from high-fee users is coordination cost, not extractive overhead. If arbitrary, the constraint is a pure snare hiding as rope, and the protocol developers' beneficiary seat is fraudulent. The classification would shift from Tangled Rope to Snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the throughput constraint serves decentralization or merely extracts rents."
+    },
+    {
+      "id": "payment_system_definition",
+      "question": "Does a payment system require practical, everyday usability for low-value transactions, or can censorship-resistant access to settlement (regardless of fee) count as payment-system functionality?",
+      "resolution_mechanism": "Comparative standards analysis: how do regulatory bodies and monetary-system scholars define 'payment system' for Bitcoin; what does the whitepaper's technical definition imply; do transaction volumes and user behavior in the p2p cash reading align with payment-system patterns or asset-market patterns.",
+      "impact": "If payment systems require practical usability, the founding problem is dead (the p2p cash reading has failed to solve it), and the constraint is mandatrophied extraction. If censorship-resistant access alone counts as payment-system status, the founding problem is live, and the fee extraction is legitimate coordination cost.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "What definition of 'payment system' applies to the p2p cash reading's claims."
+    },
+    {
+      "id": "exit_option_collapse_mechanism",
+      "question": "Are high-fee users genuinely unable to exit (trapped) because the network's censorship-resistance property is irreplaceable, or are they identity-locked to the network by ideological commitment to Bitcoin maximalism?",
+      "resolution_mechanism": "Survey of user behavior during congestion: do users migrate to alternative censorship-resistant systems (Monero, Zcash, Lightning Network), or do they remain on-chain despite high fees; do they cite technical irreplaceability or ideological commitment to Bitcoin specifically.",
+      "impact": "If trapped (no alternative), the constraint's extraction is maximum—there is no competing supply. If identity-locked (ideological commitment), the constraint's effective extraction is lower because exit is possible but psychologically costly; the suppression is partly internalized (users accept fees as the price of 'real' Bitcoin). A true identity-lock would be captured by an omega on internalized suppression, below.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Why high-fee users remain in the network despite pricing pressure."
+    },
+    {
+      "id": "internalized_suppression_vs_structural",
+      "question": "Is the suppression of hard-fork attempts and high-throughput alternatives driven by structural barriers (mining consolidation, exchange listing requirements) or by internalized commitment to the p2p cash reading's principles?",
+      "resolution_mechanism": "Post-fork empirical analysis: when hard forks occur (Bitcoin Cash, 2017; protocol contentions 2015–2017), do users and miners show measurable switching costs (structural suppression) or ideological resistance (internalized suppression). Do they cite technical reasons or normative reasons for rejection.",
+      "impact": "If structural, the suppression metric (0.72 at interval end) reflects real barriers and enforcement cost. If internalized, the true suppression is lower on paper but effective in practice (users carry the suppression with them even if exit barriers fall). This affects the reading's terminal classification: high structural suppression → Tangled Rope; high internalized suppression → Snare with identity lock.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of alternatives is structural or internalized."
+    },
+    {
+      "id": "kernel_reading_foreclosure",
+      "question": "Does the p2p_cash_reading logically foreclose the digital_gold_reading, or can both readings coexist in different parties' frameworks simultaneously?",
+      "resolution_mechanism": "Examine whether a single protocol instantiation can satisfy both goals (censorship-resistant payment AND scarce asset), or whether optimizing for one necessarily damages the other. The digital_gold_reading claims throughput constraints are features; the p2p_cash reading claims they are bugs. Can both be true?",
+      "impact": "If foreclosed, one reading must eventually dominate and the other's adherents face hard exit. If coexist, the constraint family contains genuinely incompatible equilibria and institutional pressure will determine which reading wins institutional power. This omega is routed to cs_structure.reading_relations as a check on the declared relation type.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the p2p cash and digital gold readings are logically incompatible."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper__digital_gold_reading",
+      "bitcoin_whitepaper__protocol_ossification_reading"
+    ],
+    "dual_formulation_note": "The bitcoin_whitepaper kernel is decomposed into three readings: p2p_cash_reading (this constraint), digital_gold_reading (store-of-value optimization), and protocol_ossification_reading (protocol immutability as primary virtue). Each reading instantiates different ε values (extractiveness referents differ: the p2p_cash reading measures extraction from payment-access denied users; the digital_gold reading measures extraction from those holding inflationary fiat; the protocol_ossification_reading measures extraction from those wanting protocol changes). These are not the same constraint viewed from three angles—they have different victim sets, different beneficiary structures, and different terminal classifications. They are linked as a constraint family through network.affects_constraints to enable cross-reading comparative analysis and to document the kernel decomposition."
+  },
+  "gain_flow": "miners",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "digital_gold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "protocol_ossification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "payment_system_censorship_resistance_primary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "throughput_scaling_legitimate_for_payment_access",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "peer_to_peer_electronic_cash_system",
+    "drift_state": {
+      "moment": "contemporary_high_fee_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

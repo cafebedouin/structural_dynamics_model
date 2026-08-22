@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_authority__autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "737daaf2-855b-4eda-8529-5496fcc2a323",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.72,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.71,
+    "claimed_type": "rope",
+    "human_readable": "Autonomy-Grounded End-of-Life Authority (Contested Reading)",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "competent_patients_facing_terminal_suffering"
+    ],
+    "victims": [
+      "patients_denied_autonomy_choice",
+      "families_prevented_supporting_choice"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "competent_patients_facing_terminal_suffering",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals with capacity to make medical decisions facing terminal illness or unbearable suffering who, under this reading's framework, possess the right to determine the timing and circumstances of their own death. They exercise this right within jurisdictions or institutional contexts that recognize autonomy-based end-of-life authority. The constraint benefits them by validating their self-determination and enabling exit from suffering."
+    },
+    {
+      "name": "patients_denied_autonomy_choice",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals in jurisdictions or institutions where autonomy-based end-of-life authority is NOT recognized or is severely restricted — where paternalistic medical and legal frameworks prevent patients from controlling the timing/circumstances of death despite capacity and unbearable suffering. They bear the cost of suppression: continuation of suffering against their explicit wishes, loss of autonomy over the final period of life, vulnerability to state/medical coercion to continue living despite their rational choice."
+    },
+    {
+      "name": "families_prevented_supporting_choice",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Family members and caregivers in restrictive jurisdictions who wish to support a loved one's autonomous choice to end unbearable suffering but are legally/institutionally prevented from doing so. They bear the psychological cost of witnessing suffering they could alleviate, legal jeopardy if they assist, and moral injury from being forced to violate their own ethical commitments to respect their loved one's autonomy."
+    },
+    {
+      "name": "palliative_care_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Medical professionals providing end-of-life care in jurisdictions recognizing autonomy-based authority. The constraint clarifies their role: they coordinate with patients on symptom management and offer all available options, including patient-controlled death where criteria are met. Some benefit from reduced moral ambiguity; others bear stress from implementing a controversial practice."
+    },
+    {
+      "name": "religious_and_sanctity_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Individuals and organizations committed to doctrines of human sanctity and the intrinsic value of life who are structurally excluded from the conversation about end-of-life authority once the autonomy reading is institutionalized. Their voices — arguing that autonomy cannot override the duty to preserve life — are not invited into the deliberation; they are presented with a legal/institutional fait accompli."
+    },
+    {
+      "name": "patients_with_diminished_capacity",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals with cognitive impairment, dementia, mental illness, or developmental disability who cannot participate in autonomy-based decision-making frameworks. They are structurally excluded from the autonomy reading's protective scope, leaving them vulnerable to either continued suffering (if protective restrictions apply) or to surrogate decisions on their behalf (if the framework expands to allow substituted judgment)."
+    },
+    {
+      "name": "bioethics_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Legislatures, medical boards, institutional ethics committees, and courts that establish and enforce the criteria for autonomy-based end-of-life authority. They define what constitutes 'terminal illness,' 'unbearable suffering,' 'competence,' and the procedural safeguards (waiting periods, physician evaluation, witness requirements). They actively enforce the constraint through licensing decisions, criminal law, and institutional policy."
+    },
+    {
+      "name": "patients_without_access",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals in jurisdictions where the autonomy reading is not institutionalized (the global majority), or those with socioeconomic barriers to accessing the procedure even where legal. They bear the cost of non-implementation: continued suffering without recourse, no legal option for self-determination at end of life."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers, ethicists, and policy analysts who examine the autonomy reading's structural properties, empirical outcomes, and contradictions with competing readings. They measure drift in eligibility criteria over time, track outcome heterogeneity across jurisdictions, and assess whether the autonomy framing is sustainable or empirically pressured toward expansion."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a transparent, procedurally uniform framework for end-of-life decision-making in the face of terminal illness or unbearable suffering, replacing ad hoc, covert practices with formalized patient-physician dialogue, multiple verification steps, and institutional oversight. Coordinates the interests of patients (control), families (participation), medical staff (liability protection), and society (prevention of abuse) around explicit criteria.",
+    "transfer_function": "Transfers authority over end-of-life decisions from paternalistic medical/state authority to individual competent patients. What moves: the right to determine the timing and circumstances of death. From: institutional gatekeepers (medical boards, legal prohibition, family override). To: the individual facing unbearable suffering.",
+    "absent_voices": "Patients with diminished decision-making capacity; individuals from religious/sanctity traditions who hold that autonomy cannot override the duty to preserve life; jurisdictions where the autonomy reading has never been institutionalized and where alternative frameworks (sanctity-based, suffering-alleviation-only) are still dominant; future potential beneficiaries if the eligibility criteria expand beyond terminal illness.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the autonomy-grounded end-of-life authority vanished overnight, patients currently exercising it would face continued suffering without legal recourse; medical practice would revert to paternalistic frameworks; end-of-life decision-making would become covert and irregular again; institutional oversight and procedural protections would collapse. The world does not remain unchanged because real people's final months are structured around this authority.",
+    "founding_problem": "Patients facing terminal illness or unbearable suffering were trapped in a system where their own rational choices about death were overridden by medical paternalism, legal prohibition, and religious doctrine — even when competent, even when suffering was extreme, even when they explicitly refused continuation. The founding problem: how to respect individual self-determination in the face of death without abandoning all protective guardrails.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Patients' families, palliative care ethics committees, and court testimony from outside the benefiting parties (judges ruling on constitutional grounds, independent medical ethicists, human rights organizations) attest that the founding problem was real and urgent. However, proponents of the sanctity reading and religious advocates dispute the problem's framing — they deny the premise that autonomy should override life-preservation duty, so they challenge the problem's legitimacy rather than its empirical reality."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "omegas": [
+    {
+      "id": "kernel_contest_autonomy_vs_sanctity",
+      "question": "Does individual autonomy ground a right that overrides doctrines of human sanctity and the duty to preserve life? Or does sanctity override autonomy in the end-of-life context?",
+      "resolution_mechanism": "This is a kernel-level conceptual dispute between two incommensurable normative frameworks. No empirical data will resolve it — the frameworks make different foundational claims about what matters morally. Resolution would require either meta-ethical agreement on which framework takes precedence, or political/institutional choice to privilege one framework within a jurisdiction.",
+      "impact": "If sanctity is held to override autonomy, the constraint should be reclassified as a snare (suppression of autonomy by paternalistic authority). If autonomy is held to override sanctity, this reading stands as rope. If neither framework is privileged (genuine pluralism), the constraint is best analyzed as contested terrain — multiple readings of the same kernel coexist.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Kernel-level foundational normative conflict between autonomy and sanctity doctrines."
+    },
+    {
+      "id": "eligibility_expansion_mechanism",
+      "question": "Will eligibility criteria for autonomy-based end-of-life authority empirically expand beyond competent, terminal cases to include incompetent individuals, chronic (non-terminal) suffering, and mental illness?",
+      "resolution_mechanism": "Historical/comparative analysis of jurisdictions where the autonomy reading has been institutionalized (Netherlands, Belgium, Canada, Oregon) showing whether eligibility thresholds have narrowed, remained stable, or expanded over time. Interviews with policymakers about the normative logic pulling toward expansion.",
+      "impact": "If expansion occurs, the constraint exhibits the slippery-slope mechanism identified in the sibling reading — the autonomy framework itself generates pressure toward broader application. This would suggest the autonomy reading is less stable than presented, or that foundational tensions exist between the reading's core premise and its boundaries. If expansion is resisted and eligibility remains narrow, the reading's stability is higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether autonomy-based end-of-life authority empirically expands beyond its founding scope."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.72) structural (external legal/institutional barriers preventing patient choice) or partially internalized (patients internalizing paternalistic messaging and autonomy-denying norms even where legal barriers weaken)?",
+      "resolution_mechanism": "Post-legalization study design: measure decision-making patterns and patient narratives in jurisdictions before and after legal authorization of autonomy-based end-of-life authority. If suppression persists even after barriers are removed (patients continue to accept paternalistic override despite legal permission for autonomy), the suppression is substantially internalized. If suppression drops sharply after legalization, it was primarily structural.",
+      "impact": "High internalization would suggest the constraint's persistence depends on deep cultural/religious normative capture, not just legal coercion. This would elevate the constraint's effective extractiveness — the target carries the suppression with them even after institutional barriers dissolve. Low internalization suggests structural barriers are the primary lever; removing them would substantially alter the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in end-of-life autonomy denial."
+    },
+    {
+      "id": "reading_framing_dependence",
+      "question": "Is the autonomy reading's classification as rope (coordination + some extraction) dependent on framing the 'problem' as patient suffering and autonomy denial? If the problem were framed as 'preservation of life against premature death wishes,' would the reading necessarily shift to snare?",
+      "resolution_mechanism": "Alternative framing analysis: restate the same institutional arrangement (regulatory authority over end-of-life decisions) but frame the problem as 'how to prevent suicide contagion and protect vulnerable populations.' Under that framing, the same constraint's ε and suppression values might look like pure extraction of life-extension against patient wishes — a snare, not a rope.",
+      "impact": "If the classification is highly sensitive to problem framing, the reading's objectivity is questionable — it becomes more a reflection of the analyst's normative commitments than of the constraint's structural properties. This omega documents that framing-neutrality is not achieved, and that sibling readings (sanctity, slippery-slope) are partially powered by alternative problem framings, not just different empirical claims.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Dependence of autonomy-reading classification on the problem's normative framing."
+    },
+    {
+      "id": "competence_assessment_boundary",
+      "question": "Where is the boundary between 'competent patient making an autonomous choice' and 'depressed patient making a coerced/irrational wish'? How is that boundary drawn, and who draws it?",
+      "resolution_mechanism": "Audit of institutional gatekeeping practices: how do medical boards and ethics committees evaluate competence? What proportion of requests are denied on competence grounds? Longitudinal analysis: do patients denied on competence grounds experience changed circumstances/preferences over time, validating the denial? Or does denial prevent patients from exercising a genuine autonomous choice?",
+      "impact": "If the competence boundary is drawn permissively (most requests approved), the constraint operates as a genuine autonomy-honoring framework and suppression is lower. If drawn restrictively (most requests denied on competence grounds), the constraint is substantially gatekeeping autonomy under the cover of competence assessment — effectively a snare with medical legitimation. The boundary is where agenda-setters exercise greatest extractive power.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Competence-assessment gatekeeping in autonomy-based end-of-life authority."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.84
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This is the autonomy-grounded reading of the contested end-of-life authority kernel. The reading instantiates individual autonomy as the foundational moral claim: competent patients facing unbearable suffering possess a right to control the timing and circumstances of their own death, and this right overrides paternalistic medical and legal prohibitions. The constraint's operation: regulatory authorities (medical boards, legislatures, ethics committees) establish criteria (terminal illness, unbearable suffering, decisional capacity) and procedural safeguards (waiting periods, multiple physician consultations, witness requirements), then enforce patient access to end-of-life options meeting those criteria. Suppression operates in two directions: (1) where autonomy-based authority is NOT institutionalized, suppression blocks patients from autonomous choice; (2) where it IS institutionalized, suppression of religious/sanctity objections occurs — alternative readings are excluded from the governing framework. The claim/metric independence is intentional: the constraint is CLAIMED as rope (coordination + modest extraction) while measurements document substantial suppression and rising theater (eligibility-expansion debates increasingly divorced from the founding coordination problem). The engine's per-seat computation will show divergence: patients benefiting from autonomy protection experience low/negative extraction; gatekeepers and restricted populations experience high suppression; sanctity advocates experience exclusion.",
+    "key_agents": [
+      "competent_patients_facing_terminal_suffering: Primary beneficiaries (powerless, immediate horizon, trapped exit — autonomy authority benefits them directly)",
+      "patients_denied_autonomy_choice: Primary victims in restrictive jurisdictions (powerless, immediate horizon, identity-locked exit — suppression prevents autonomous choice)",
+      "bioethics_regulators: Agenda-setters (institutional power, generational horizon, arbitrage exit — they set and enforce criteria)",
+      "religious_and_sanctity_advocates: Excluded from the autonomy-reading framework (organized power, generational horizon, constrained exit — their voices are not invited into deliberation once autonomy reading is institutionalized)",
+      "analytical_observer: Measurement seat (analytical power, generational horizon — tracks whether the autonomy reading is stable or pressured toward expansion)"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.38 at interval end) because the constraint coordinates genuine patient benefit (autonomy, suffering relief) but simultaneously extracts compliance with eligibility/procedural criteria that gatekeepers control. Suppression is high (0.72) because paternalistic restrictions on autonomy persist in most jurisdictions, identity-locking patients to roles as passive recipients of medical decisions. Theater is low-to-moderate (0.28) because the autonomy reading's procedural apparatus is partly functional (genuine deliberation, multiple safeguards) but increasingly shows performative elements (eligibility debates that expand scope without changing the core coordination problem). The measurement series show suppression DECLINING over the interval (0.88 → 0.72) as legalization spreads and paternalistic barriers erode, while extractiveness PLATEAUS after initial rise (0.22 → 0.38 → stable), suggesting gatekeeping stabilizes at moderate intensity rather than intensifying. Theater RISES slightly (0.08 → 0.28) as the constraint's scope expands and legitimation narratives proliferate. This trajectory is consistent with the constraint stabilizing in rope territory after a transition from suppression-dominated snare-like operations to coordinated autonomy-plus-gatekeeping.",
+    "directionality_logic": "Patients benefiting from autonomy protection (competent, in jurisdictions with legalization) are at d ≈ 0.25 (beneficiaries; the constraint subsidizes their autonomy). Patients denied autonomy choice (trapped in restrictive jurisdictions or failed competence assessments) are at d ≈ 0.85 (targets; suppression extracts their self-determination). Bioethics regulators are at d ≈ 0.35 (modest asymmetry: they set the rules and extract gatekeeping authority, but they also bear enforcement costs and legitimation burden). Families are at d ≈ 0.70 (substantial targets: prevented from supporting loved one's choice, bearing psychological/legal costs). The divergence between beneficiary and victim seats is the core structural fact: from one position the constraint is liberation; from another it is suppression. This is not a defect in the story — it is the measurement the asymmetry test exists to capture.",
+    "perspectival_gap": "The beneficiary seat and the victim seat should compute to fundamentally different types: a patient in a jurisdiction where autonomy is recognized and death options are available experiences this as rope or even benevolent coordination — suffering ends, autonomy is honored, the constraint enables rather than restricts. The same regulatory framework, viewed from a victim seat (restrictive jurisdiction, or failed competence assessment), operates as snare — suppression of autonomous choice by paternalistic authority, with procedural theater ('we respect autonomy, but competence is lacking') masking denial. The analytical observer sees both simultaneously and measures the divergence as structural fact. This is not indeterminacy; it is multivalent organization — the constraint genuinely produces different types from different seats, and that multiplicity is what asymmetric extraction looks like.",
+    "mandatrophy_analysis": "The founding problem (patients trapped by paternalistic override of their autonomous wishes) is CONTESTED in status. The autonomy reading says the problem is live and growing — more patients face terminal suffering without recourse; the problem is urgent. The sanctity reading says the 'problem' is a false framing — the real problem is the erosion of life-protection duties, and autonomy-based authority makes it worse, not better. The slippery-slope reading says the founding problem TRANSFORMS as the constraint operates: eligibility expands, and the problem shifts from 'how to respect terminal patients' autonomy' to 'how to prevent life-ending from spreading beyond terminal cases to chronic/mental conditions.' These are genuinely different problem claims, not disagreements about facts. The mandatrophy test: does the autonomy reading persist in defending its founding problem, or has function drifted? Evidence suggests moderate drift — early institutionalization focused narrowly on terminal illness and severe suffering; contemporary debates include chronic conditions, mental illness, and assisted suicide for existential suffering. The theater metric (rising to 0.28) reflects this: more conversation about eligibility expansion, less about the founding coordination problem itself. Moderate theater suggests the constraint has not yet reached piton status (purely performative), but it is moving in that direction if expansion continues.",
+    "kernel_context": "This constraint is ONE READING of the contested end-of-life authority kernel. The reading instantiates INDIVIDUAL AUTONOMY as the foundational normative claim: a competent person's right to control the timing and circumstances of death, grounded in self-determination ethics and overriding paternalistic medical/legal authority. SIBLING READINGS: (1) sanctity_reading — intrinsic value of human life prohibits intentional life-ending regardless of individual preference (core premise: life has inalienable moral status that cannot be waived by individual choice); (2) slippery_slope_mechanism — empirical observation that autonomy-based frameworks tend to expand beyond initial scope (competent terminal cases) toward incompetent individuals, chronic conditions, and existential suffering (core mechanism: autonomy logic contains no principled stopping point). These are fundamentally different constraints (different ε, beneficiary/victim sets, suppression profiles) organized around a SHARED KERNEL: the question of what authority grounds end-of-life decisions in the face of suffering. The autonomy reading answers: the individual's own autonomous choice, constrained only by competence. The sanctity reading answers: the intrinsic value of life, which overrides individual choice. The slippery-slope reading does not answer the normative question directly; instead, it documents an empirical pattern that suggests the autonomy reading's normative stability may be illusory. Each reading is a complete, ε-invariant constraint story; the kernel is what ties them together and enables comparison."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_authority__sanctity_reading",
+      "end_of_life_authority__slippery_slope_mechanism"
+    ],
+    "dual_formulation_note": "The end-of-life authority kernel decomposes into three structurally distinct constraints: (1) autonomy_reading (this story) — individual autonomy grounds the right to control death circumstances; substantially extractive suppression of paternalistic restrictions; beneficiaries = patients exercising choice; victims = denied/suppressed patients. (2) sanctity_reading — intrinsic life value overrides autonomy; beneficiaries = institutional gatekeepers maintaining paternalism; victims = patients denied autonomous choice; opposite normative foundation, different ε and victim set. (3) slippery_slope_mechanism — empirical drift in scope as autonomy logic expands; documents that the autonomy reading's apparent stability may be illusory; feeds into mandatrophy analysis. All three readings are live simultaneously in different jurisdictions and institutional contexts. The ε-invariance principle requires separate story files: a welfarist reading and a sanctity reading of the same kernel would both use the same referent (the standing arrangement under contest) but author different ε values reflecting different structural assessments. This decomposition ensures each reading's classification is independent; the engine computes per-seat types without averaging across readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "individual_autonomy_framework",
+    "drift_state": {
+      "moment": "contemporary_post_legalization_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sanctity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "slippery_slope_mechanism",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_autonomy_overrides_paternalism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "competence_sufficient_for_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "bioethics_regulators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

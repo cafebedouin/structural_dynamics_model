@@ -1,0 +1,335 @@
+{
+  "header": {
+    "constraint_id": "bretton_woods_treaty_substrate__sovereignty_defense",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_bretton_woods_sovereignty_defense",
+    "measurement_id_prefix": "bw_sovereign",
+    "story_uid": "7d6c00a9-45ea-48dd-8da5-dc9010a72a5c"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bretton Woods Monetary Sovereignty Defense Constraint",
+    "topic_domain": "international_political_economy/monetary_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "united_states_monetary_authority",
+      "reserve_currency_issuers"
+    ],
+    "victims": [
+      "non_reserve_currency_states",
+      "peripheral_economies",
+      "gold_standard_adherent_states"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "united_states_monetary_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Establishes reserve currency status and enforces gold peg at $35/ounce. Sets the framework governing capital flows and sets monetary policy without external constraint. Collects seigniorage on reserve balances held globally and benefits from ability to finance deficits in own currency. Enforces the treaty rules that bind others while maintaining exemption from external discipline."
+    },
+    {
+      "name": "non_reserve_currency_states",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Must maintain fixed exchange rates to the dollar and hold gold/dollar reserves to back their currencies. Cannot pursue independent monetary policy divergent from dollar conditions without depleting reserves or triggering capital flight. Face external discipline whenever internal policy objectives conflict with maintaining the peg. Exit requires either defaulting or breaking the treaty, both carrying severe international consequences."
+    },
+    {
+      "name": "peripheral_economies",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Locked into the Bretton Woods system with minimal discretion. Must keep dollar reserves even when domestic inflation demands credit expansion. Transmission of U.S. monetary shocks arrives as imported inflation or forced reserve depletion. Have no seat at treaty administration and cannot modify the terms; exit is economically impossible as it means exclusion from international capital markets."
+    },
+    {
+      "name": "reserve_currency_issuers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Holds anchor position in the monetary hierarchy. Benefits from seigniorage and from ability to set rates for the entire system. Credibility anchored by gold standard commitment, but gold commitment is asymmetric: the reserve issuer can always demand gold at peg price (deflationary option), while others cannot force conversion if reserves are depleted."
+    },
+    {
+      "name": "gold_standard_adherent_states",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Publicly committed to gold standard to signal monetary discipline and attract capital inflows. Must actually surrender gold if reserves drain, which forces deflationary policy. The gold anchor is the source of their credibility (they cannot inflate) but also their constraint; reserve depletion triggers hard adjustment while the U.S. (as gold standard issuer, not holder) can inflate and let the gold constraint break asymmetrically."
+    },
+    {
+      "name": "international_monetary_fund",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administers Bretton Woods rules, adjudicates disputes over exchange rate adjustments, provides temporary bridge financing. Acts as the enforcement arm of the treaty, but the U.S. holds veto power over major decisions; IMF authority is real but structurally subordinate to the reserve currency issuer's interests."
+    },
+    {
+      "name": "capital_account_speculators",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Would be excluded from participation in treaty enforcement, but are the mechanism that enforces it: expectations of exchange rate stability or collapse drive capital flows and discipline member states' policy choices. Their exclusion from the rule-setting framework means treaty architects cannot bind speculative behavior; speculators effectively veto monetary independence by threatening capital flight."
+    },
+    {
+      "name": "political_economists_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyzes whether the constraint protects national sovereignty (sovereignty defense reading: pegged rates prevent competitive devaluation and give discipline-seekers credible commitment) or undermines it (embedded liberalism reading: capital flows restrict policy space; neoliberal reading: intervention is restricted, freeing markets). The reading disputed determines which observation is true."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Bretton Woods solves a coordination problem among trading nations: prevent competitive devaluation spirals from the interwar period, provide a common unit of account for international commerce, create a stable framework for capital movements that permits trade finance without constant renegotiation of exchange rates.",
+    "transfer_function": "Transfers policy autonomy from peripheral economies to the center (U.S./reserve-currency issuers). Non-reserve states must maintain pegged rates and hold dollar reserves, which constrains their independent monetary policy. The center (U.S.) obtains the benefit of being able to set monetary policy for the whole system and collect seigniorage; peripheral states pay by surrendering policy discretion and absorbing transmitted shocks.",
+    "absent_voices": "Domestic constituencies in non-reserve states that would want monetary independence, full-employment policymakers in peripheral economies, capital speculators (excluded from rule-making but de facto enforcement agents). These voices are locked out: they cannot modify the treaty framework, cannot represent alternative monetary visions (e.g. full employment over price stability), and in the case of speculators, are blamed for crisis transmission rather than consulted about the system's design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Bretton Woods vanished, exchange rates would float, monetary policies would diverge, capital would reallocate to reflect risk differentials rather than fixed-parity expectations. Peripheral economies would regain discretion to pursue full employment or developmentalist policies without external discipline; the U.S. would lose seigniorage and the ability to finance deficits in its own currency without inflation transmission. The entire architecture of post-war economic governance reorganizes.",
+    "founding_problem": "Prevent return to 1930s competitive devaluation and competitive blocs; create stable exchange rates and common pricing for international trade; provide a framework where countries can maintain capital controls to pursue domestic policy objectives without destabilizing the international system.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Keynes and White, the founders, emphasized the commitment to national policy autonomy within a stable external framework. However, post-war peripheral economists and 1960s-1970s development theorists attested that the actual constraint operated to foreclose autonomy. IMF structural adjustment conditionality (post-Bretton Woods but continuous with its logic) and the Triffin dilemma evidence both the founding intention (stability + autonomy) and its failure (stability required subordination to the center)."
+  },
+  "interval": {
+    "start": 1944,
+    "end": 1971
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1944,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1956,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1963,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1968,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1971,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1944,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1956,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1963,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1968,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1971,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1944,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1956,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1963,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1968,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1971,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Bretton Woods, established at the 1944 conference, created a monetary system where national currencies were pegged to the U.S. dollar at fixed rates, and the dollar was pegged to gold at $35/ounce. This reading — the 'sovereignty defense' reading — frames the constraint as operating to defend national monetary sovereignty by providing a stable anchor that permits countries to maintain capital controls and pursue domestic policy objectives without constant renegotiation of exchange rates. However, the structural data reveals a different pattern: the constraint operates asymmetrically. The U.S., as the reserve-currency issuer and gold-peg anchor, retains substantial monetary autonomy (it can inflate the dollar without being forced to surrender gold, while others must surrender gold if reserves drain). Non-reserve-currency states experience the constraint as external discipline: they must maintain fixed pegs, hold dollar reserves, and surrender independent monetary policy if it diverges from U.S. conditions. The sovereignty being defended is primarily that of the reserve-currency center; peripheral economies experience it as sovereignty forfeited. This reading interprets the constraint as deliberately structured to preserve U.S. monetary dominance while legitimating it under the language of 'international stability' and 'national autonomy.' The constraint is authored as tangled_rope because it genuinely solves a coordination problem (preventing competitive devaluation, establishing a common unit of account) AND asymmetrically extracts from non-reserve states to the benefit of the reserve-currency issuer.",
+    "kernel_context": "This constraint is ONE READING of the contested Bretton Woods kernel (bretton_woods_treaty_substrate). This reading instantiates the 'sovereignty_defense' reading: the reading that interprets Bretton Woods as constraining national monetary discipline to preserve national monetary sovereignty. Sibling readings instantiate different interpretations of the same treaty text: 'keynesian_embedded_liberalism' reads it as constraining international capital flows to protect domestic policy space; 'neoliberal_convertibility' reads it as constraining government intervention to enable free capital markets. The three readings share a common referent (the treaty and its mechanisms) but author different ε values because they identify different structural effects as the constraint's primary operation. This reading's ε focuses on the asymmetric discipline imposed on non-reserve states and the U.S. exemption, making the constraint substantially extractive; a keynesian reading would focus on the capital controls regime and its protection of policy space, making extraction lower; a neoliberal reading would focus on the constraints imposed on domestic monetary manipulation, making extraction lower still by different logic (extraction of intervention, not extraction of policy). Each reading is a coherent, ε-invariant constraint story; they are not one story viewed three ways.",
+    "logic_rationale": "Extractiveness runs at 0.68 at interval end (1971), having risen from 0.42 at treaty inception (1944). This rising trajectory reflects accumulating extraction as the system matured: in 1944, it was genuinely a negotiated coordination framework with mutual commitments. By 1971, the U.S. had grown into exorbitant privilege (ability to finance deficits in its own currency, collect seigniorage, maintain inflation while forcing deflationary adjustment on others), while peripheral economies faced increasingly binding external discipline as dollar reserves proved inadequate during the Korean War, Suez crisis, and Vietnam War spending. Suppression runs parallel to extractiveness (0.48→0.71) because the constraint's persistence depends on enforcing the fixed-peg commitment: IMF conditionality, capital controls to prevent runs, and ultimately the credible threat of expulsion from the dollar zone. Theater rises more gradually (0.18→0.42) because the coordination narrative remained partially real (trade did stabilize, competitive devaluation did not return) even as the extraction function grew. The constraint never becomes pure snare because the coordination gains are genuine; but as extractiveness rises and suppression hardens, the coordination function increasingly serves as cover for the extraction. Accessibility collapse is moderate (0.58) because alternatives existed theoretically (floating rates, regional blocs, gold standard revival) but were actively suppressed and politically expensive; resistance is high (0.64) because peripheral economists, full-employment advocates, and French policymakers actively questioned the regime, though they lacked the power to modify it.",
+    "directionality_logic": "The U.S./reserve-currency-issuer seat experiences the constraint as near-beneficiary (d ≈ 0.15): it sets the rules, collects seigniorage, exempts itself from external discipline, and retains monetary autonomy. Non-reserve-currency-state seats experience it as near-target (d ≈ 0.82): they pay through policy subordination, reserve holding, and transmitted shocks, with minimal discretion to modify the peg. Peripheral economies (d ≈ 0.88) experience it as nearly full extraction: trapped by capital-account pressure, unable to pursue independent policy without immediate crisis, unable to exit without severe international consequences. The IMF seat (d ≈ 0.35) sits in a hybrid position: it administers the rules (beneficiary-adjacent) but is structurally subordinate to the reserve-currency issuer's veto power and enforces discipline it did not originate (payer-adjacent). Gold-standard-adherent states (d ≈ 0.58) sit nearest symmetric: they gain credibility from the gold commitment but lose autonomy when reserves drain; the U.S. gains exorbitant privilege precisely by inverting this trade-off (committing to gold convertibility in principle while retaining the option to default). Speculators (d ≈ 0.05) are excluded from decision-making but are the de facto enforcement agents; their exclusion from the rule set while their behavior enforces compliance is the mechanism by which peripheral states experience suppression.",
+    "mandatrophy_analysis": "This reading resolves a key mandatrophy tension: was Bretton Woods a genuine coordination mechanism whose founding mandate (prevent competitive devaluation, enable full employment with capital controls, stabilize trade) persisted, or did it become a snare whose founding mandate died while the extraction persisted? Under the 'sovereignty defense' reading, the mandate is CONTESTED: the founding problem (preventing competitive devaluation) remains live for the benefiting states (the U.S. benefits from a stable dollar peg as the anchor); but the founding problem (enabling national monetary autonomy) is dead for peripheral states by 1971 (autonomy is impossible under the peg, and the IMF's conditional loans require surrendering autonomy further). This is not pure mandatrophy because one beneficiary (the reserve-currency issuer) continues to benefit from the founding mandate's stability, while the payers (peripheral states) experience the mandate as obsolete while the constraint persists. The classification as tangled_rope captures this: genuine coordination function (trade stabilization, preventing devaluation races) AND asymmetric extraction (policy subordination, seigniorage transfer) are both structurally real. Neither is cover for the other — they coexist in the same constraint. The rising theater ratio (0.18→0.42) indicates growing theatricality as the coordination function becomes a smaller share of the total activity and more of the energy goes to maintaining the peg and enforcing discipline; but theater never reaches piton levels because the coordination function remains partially real and institutionally necessary.",
+    "perspectival_gap": "The reserve-currency-issuer seat and the peripheral-economy seat should compute radically different types from the same structural data. From the U.S. seat, looking at 0.68 extractiveness, this appears to be the price of coordinating a stable global monetary system in which the U.S. can project power and finance its deficits — a snare-to-rope computation on the beneficiary end (low d means high/negative χ). From the peripheral seat, the same 0.68 extractiveness is the price of subordination to an external master — a pure snare or tangled-rope computation on the payer end (high d means high χ). The engine's per-seat computation should capture this divergence: one seat (U.S.) sees 'we're maintaining order,' another seat (peripheral) sees 'we're being disciplined.' The engine computes this from the stakeholder positions and directionality; I author the structural data that makes this divergence predictable."
+  },
+  "omegas": [
+    {
+      "id": "exorbitant_privilege_symmetry",
+      "question": "Is the U.S. ability to finance deficits in its own currency a structural feature of the gold-exchange standard or a contingent policy choice the U.S. made within the system?",
+      "resolution_mechanism": "Historical counterfactual: did the treaty text permit the U.S. to run persistent deficits, or did the U.S. choose to do so and force the system to accommodate? Compare drafting records (Keynes vs. White) against actual policy (Eisenhower administrations, Vietnam War spending).",
+      "impact": "If structural, the constraint was designed to extract from the periphery; if contingent, the U.S. violated the treaty's terms and the extraction is a breach, not a feature. Different classified types flow from each resolution: designed-extraction (snare) vs. treaty-violation (rope with false-flag beneficiary).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exorbitant privilege is intrinsic to Bretton Woods or a violation."
+    },
+    {
+      "id": "reading_counterfactual_autonomy",
+      "question": "Under this reading's own frame (sovereignty defense), would non-reserve states actually have gained monetary autonomy without the peg, or would they have faced worse external discipline (capital flight, competitive devaluation) under floating rates?",
+      "resolution_mechanism": "Natural experiment: examine the monetary autonomy of states that exited or partially exited Bretton Woods (Britain 1976, France 1960s, development economists' proposals for alternative blocs).",
+      "impact": "If floating would have been worse, the constraint's extraction enables a form of sovereignty (security against chaos). If floating would have been better, the constraint's extraction purely subordinates. This modifies the ε interpretation without changing the measured value.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's discipline is the price of sovereignty or the denial of it."
+    },
+    {
+      "id": "reading_sibling_foreclosure",
+      "question": "Do the three Bretton Woods readings (sovereignty_defense, keynesian_embedded_liberalism, neoliberal_convertibility) represent logically incompatible claims about the same system, or different aspects of a single complex system that can all be true simultaneously?",
+      "resolution_mechanism": "Formal analysis: do the core premises of each reading logically contradict each other (e.g., 'national autonomy preserved' vs. 'national autonomy constrained')? If so, foreclosure applies. If the readings dispute a factual question (does the system preserve autonomy? does it constrain capital?) rather than a logical one, they coexist.",
+      "impact": "Determines the reading_relations classification: forecloses (mutual logical exclusivity) vs. coexists_with (factual dispute within a shared framework). Different impacts on how the corpus models kernel contests and reading decomposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Bretton Woods readings are logically incompatible or factually disputed."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_ideological",
+      "question": "Is the measured suppression (0.71) structural (capital flight risk, balance-of-payments crisis mechanics) or ideological (belief in gold standard necessity, acceptance of external discipline as legitimate)?",
+      "resolution_mechanism": "Post-exit observation: after Bretton Woods collapsed and the constraint ceased to bind, did the same states retain the suppressive beliefs and maintain internal discipline (ideological) or did they immediately pursue divergent policies (structural)?",
+      "impact": "If ideological, the suppression might be internalized and persist after formal exit, requiring deeper institutional reform to overcome. If structural, removal of the external constraint suffices. Affects piton classification and theater interpretation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of monetary independence is mechanical or internalized."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "bretton_woods_treaty_substrate__keynesian_embedded_liberalism",
+      "bretton_woods_treaty_substrate__neoliberal_convertibility",
+      "international_monetary_fund_conditionality",
+      "triffin_dilemma_dollar_glut"
+    ],
+    "dual_formulation_note": "This constraint is ONE READING of the contested Bretton Woods kernel. The kernel (bretton_woods_treaty_substrate) is interpreted by three distinct readings, each instantiating a different constraint with different ε values, beneficiary/victim sets, and classifications. The three readings are: (1) sovereignty_defense (this story) — emphasizes asymmetric external discipline imposed on non-reserve states; (2) keynesian_embedded_liberalism — emphasizes capital controls' protection of policy space; (3) neoliberal_convertibility — emphasizes constraints on monetary intervention. Each reading is a coherent constraint story with its own structural data. They are linked via network.affects_constraints to enable the corpus to model kernel contests and comparative reading analysis. Do NOT merge the three readings into one constraint with a 'measurement basis' or 'reading parameter' — each is a separate story with its own ε, claims, and metrics. The three stories together demonstrate the ε-invariance principle: the same treaty text (the kernel) is a different constraint under each reading because each reading identifies a different structural effect as primary."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "gain_flow": "united_states_monetary_authority",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "keynesian_embedded_liberalism",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "neoliberal_convertibility",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "fixed_peg_enables_national_monetary_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "gold_anchor_requires_discipline_asymmetry",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "stable_multilateral_monetary_order_with_capital_controls",
+    "drift_state": {
+      "moment": "dollar_gold_convertibility_breakdown_1971",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "bretton_woods_treaty_substrate__keynesian_embedded_liberalism",
+      "bretton_woods_treaty_substrate__neoliberal_convertibility"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

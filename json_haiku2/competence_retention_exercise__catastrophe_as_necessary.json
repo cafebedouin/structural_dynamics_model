@@ -1,0 +1,366 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__catastrophe_as_necessary",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_competence_retention_exercise__catastrophe_as_necessary",
+    "story_uid": "23f8666c-96c2-4567-a02b-c389ccf520d4"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Catastrophe-as-Necessary Competence Maintenance Constraint",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incident_response_regulators",
+      "safety_culture_advocates"
+    ],
+    "victims": [
+      "operational_organizations",
+      "public_at_large"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "operational_organizations",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate high-reliability systems and bear the direct costs of the constraint: organizational trauma, reputational damage, litigation, and regulatory penalties following catastrophic events. They cannot exit the domain and must demonstrate competence under regulatory frameworks that implicitly require real-catastrophe validation."
+    },
+    {
+      "name": "regulatory_framework",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Administers the constraint through accident investigations, root-cause analyses, incident-response protocols, and certification standards. Post-catastrophe investigations implicitly validate the catastrophe-as-necessary framing by treating real events as the authoritative test of competence and organizational learning."
+    },
+    {
+      "name": "incident_response_regulators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Safety regulators, accident investigators, and incident-review boards gain institutional authority, expanded jurisdiction, and justified funding through investigation and analysis of catastrophic events. The constraint validates their role and creates institutional demand for their expertise."
+    },
+    {
+      "name": "safety_culture_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Safety professionals, human-factors researchers, and organizational behavior consultants benefit from endorsing the constraint. It validates their expertise, justifies expanded safety budgets in operational organizations, and creates demand for their post-incident recovery consulting services."
+    },
+    {
+      "name": "public_at_large",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bears the direct harm of catastrophic events: casualties, environmental damage, infrastructure destruction, and long-term trauma. Under this reading, these harms are reframed as necessary learning moments rather than preventable failures. They have no exit from reliance on high-reliability systems and no participation in regulatory framing."
+    },
+    {
+      "name": "simulation_training_industry",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Flight simulators, nuclear plant simulators, surgical simulations, and other high-fidelity training platforms are structurally delegitimized under this reading as 'mere rehearsal' and sources of false confidence. Their competence validation outputs are excluded from the decision-making frame that determines whether competence is adequately maintained."
+    },
+    {
+      "name": "near_miss_researchers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Organizational researchers and safety scientists arguing that near-miss incidents provide sufficient real-world feedback are structurally excluded from framing the competence question under this reading. Their research is treated as secondary evidence, not 'real' enough to count as genuine competence testing."
+    },
+    {
+      "name": "operational_leadership",
+      "role": "observer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Leadership teams within operational organizations observe the constraint from high power but limited agency. They can absorb the regulatory framing (catastrophes are necessary) or advocate for alternatives (simulation, near-miss learning), but the professional and regulatory consensus increasingly enforces the catastrophe-as-necessary reading. They face legal and reputational consequences if catastrophes occur after they had publicly advocated that simulation or near-miss learning were sufficient."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a unified, institutionally consistent framework for validating organizational competence in high-stakes domains: a single, rigorous test (real catastrophic pressure) that demonstrates whether organizations have maintained genuine, embodied competence and situational awareness. Rather than competing validation systems (simulator performance scores, near-miss incident counts, training metrics), the constraint establishes one canonical test.",
+    "transfer_function": "Transfers organizational and public risk from regulatory bodies and safety professionals to operational organizations and the public at large. Regulatory agencies gain institutional authority, expanded jurisdiction, and justified budget increases through investigation and remediation of catastrophes. Operational organizations and affected populations bear the direct cost: organizational trauma, reputational damage, litigation, casualties, and infrastructure destruction, reframed as necessary learning rather than preventable harm.",
+    "absent_voices": "Simulation industry participants who argue that high-fidelity simulation equals real-event training are structurally excluded. Near-miss researchers and continuous-improvement advocates advocating that minor failures and near-misses provide sufficient real-world feedback are delegitimized as offering secondary evidence. Operational employees and community members who have survived catastrophic events and contest the framing ('this was preventable, not necessary') lack institutional standing in the regulatory discourse that affirms the constraint. Prevention-focused safety advocates who prioritize avoiding all catastrophes (rather than using them as learning moments) are excluded from the frame.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished — if regulators accepted that high-fidelity simulation, continuous near-miss learning, and ongoing competence monitoring were sufficient — operational organizations would shift investment from catastrophe-response planning and post-incident remediation to prevention infrastructure. Regulatory bodies would redirect toward continuous monitoring and real-time intervention rather than post-catastrophe investigation and authority expansion. The institutional power of incident-response bodies would diminish. Simulation and near-miss research would become the dominant validation mechanisms. Organizational learning apparatus would reorganize around preventing catastrophes rather than treating them as necessary competence tests.",
+    "founding_problem": "In the 1970s–1980s, investigations of major catastrophes (Tenerife aviation disaster, Three Mile Island, Bhopal) revealed that operator knowledge, procedural discipline, decision-making capability, and situational awareness had degraded invisibly during long incident-free periods, despite certification and training records showing compliance. Organizations appeared safest when they had become most vulnerable. The founding problem: how can regulators and operational leadership validate that competence is genuinely maintained when no incidents occur to test it? Simulation training scores and procedural compliance records did not capture this invisible decay.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "High-reliability-organization researchers (LaPorte, Roberts, Weick) documented the original finding from multiple catastrophe investigations. However, contemporary organizational learning literature contests whether the founding problem persists: researchers in resilience engineering, continuous-improvement systems, and simulator-based training argue that modern high-fidelity simulation with continuous refresher training, near-miss learning systems, and ongoing competence monitoring can detect and correct competence decay without requiring real catastrophes. Regulatory agencies and incident-response bodies affirm the founding problem as persistent and justify the catastrophe-as-necessary reading through post-catastrophe investigations. Safety researchers and simulation advocates dispute whether the founding problem has been solved by modern continuous-monitoring infrastructure; they argue it has, and that catastrophes are now preventable harms rather than necessary learning events."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates one reading of a contested kernel about how organizational competence in high-reliability domains is validated and maintained. The reading claims: only actual catastrophic events provide the organizational learning and visceral stakes required to maintain genuine competence; simulation is rehearsal but not the real thing. Under this reading, organizations become vulnerable precisely when they appear safest — during long incident-free periods — and competence decay becomes visible only catastrophically. The regulatory framework, incident-response profession, and safety-culture literature increasingly embed this reading, creating institutional incentives that treat real catastrophes as necessary system resets rather than preventable failures. Sibling readings contest this frame: one argues that near-miss incidents and minor failures provide sufficient real-world feedback; another claims that high-fidelity simulation constitutes genuine competence validation. This story authors ONLY the catastrophe-as-necessary reading as a structurally distinct constraint with its own beneficiaries, victims, and ε value.",
+    "key_agents": [
+      "Operational organizations (aviation, nuclear, chemical, medical): pay the direct cost of the constraint — organizational disruption, trauma, reputational damage, litigation following catastrophic events",
+      "Regulatory framework and incident-response bodies: agenda-setters and beneficiaries — enforce the constraint by investigating catastrophes and implicitly validating it as the competence test",
+      "Safety-culture advocates and incident-response professionals: beneficiaries — gain institutional authority, consulting demand, and expanded jurisdiction through the constraint's operation",
+      "Public at large: powerless payers — bear casualties, infrastructure damage, and environmental harm treated as necessary learning moments",
+      "Simulation training industry: excluded — delegitimized under this reading as 'mere rehearsal' rather than genuine competence testing",
+      "Near-miss researchers: excluded — their evidence is reframed as secondary, not 'real' enough to validate competence"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68) because the constraint transfers organizational and public risk to operational organizations and affected populations, while concentrating institutional authority and funding expansion in the regulatory apparatus. This transfer is presented as coordination (unified competence testing) but operates asymmetrically: regulators gain legitimacy and jurisdiction through catastrophes, while operational organizations bear the actual cost. Suppression is higher (0.71) because the constraint actively excludes alternative validation mechanisms (simulation, near-miss learning) from the professional and regulatory discourse. Theater ratio rises over the interval (0.32 → 0.52) as the constraint's operation shifts from genuine competence validation toward performance of regulatory authority: post-catastrophe investigations become increasingly theatrical — they affirm the constraint's necessity while regulatory bodies extract authority and expanded jurisdiction. The measurement grid is shared across all three metrics at every time point. Accessibility collapse (0.61) reflects that alternative competence-validation mechanisms are suppressed but not completely unavailable — organizations can still advocate for simulation-based approaches, but the institutional consensus delegitimizes them. Resistance (0.58) is moderate: operational organizations resist the constraint's framing, as do simulation advocates and near-miss researchers, but the regulatory consensus is sufficiently entrenched that resistance operates at the margins.",
+    "perspectival_gap": "The regulatory agenda-setter and safety-culture beneficiary seats experience this constraint as coordination with high legitimacy — a unified, rigorous competence-testing standard. The operational organization seat and public-at-large seats experience it as enforced extraction: the cost of demonstrating competence is paid by those who suffer catastrophes, while the institutional benefits accrue to regulators. The engine computes per-seat directionality from this structural asymmetry: regulators face low d (beneficiary directionality) while operational organizations and the public face high d (target directionality). The simulation industry and near-miss researchers experience it as institutional delegitimization — exclusion from the frame that determines competence validity. The divergence between the claimed type (tangled rope — coordination with extraction) and the measured metrics reflects the structural reality: the constraint does coordinate competence validation (genuine coordination function, beneficiaries exist), but it does so through mechanisms (real catastrophes as the test) that extract from non-beneficiaries as the price of that coordination.",
+    "directionality_logic": "The regulatory framework and incident-response bodies are the structural beneficiaries: they gain institutional authority, jurisdiction expansion, and justified funding increases through investigation and remediation of catastrophic events. Their directionality is low (near 0.0 — full beneficiary). The safety-culture advocates and consulting industry are secondary beneficiaries with somewhat higher directionality (constrained mobile organizations with generational time horizons). Operational organizations are the primary targets: they pay through operational disruption, organizational trauma, reputational damage, and litigation following real catastrophes. Their directionality is high (near 1.0 — full target), modulated slightly downward because they are 'organized' power (not 'powerless'); organized actors retain more leverage than individual actors. The public at large are powerless targets: they bear casualties and infrastructure damage with 'trapped' exit options (no exit from reliance on high-reliability systems, no participation in regulatory framing). Their directionality approaches 1.0 (full target). The simulation industry and near-miss researchers are excluded rather than coordinated — their directionality is neither beneficiary nor target but 'excluded' (not a directionality value per se, but structurally relevant: exclusion is a form of suppression that prevents alternative framings from competing).",
+    "mandatrophy_analysis": "This constraint resolves via the tangled-rope classification: it genuinely coordinates competence validation (the founding problem — how to validate competence during incident-free periods — is real, and the constraint's founding response was a legitimate coordination solution). Simultaneously, it asymmetrically extracts from operational organizations and the public: the cost of catastrophic events is borne by those organizations and affected populations, while regulatory authority and institutional expansion flow to beneficiaries. The classification prevents the false positive of reading this as pure coordination (rope) by naming the victim structure: operational organizations and the public bear real costs, not in payment for a service but as the price of the constraint's enforcement mechanism. It also prevents the false positive of reading this as pure extraction (snare) by acknowledging the genuine coordination function: a unified competence-testing framework is valuable, and the founding problem was real. The tangled-rope classification captures that this is coordination with asymmetric enforcement — the constraint solves a genuine problem and extracts through its solution mechanism.",
+    "kernel_context": "This constraint instantiates the 'catastrophe_as_necessary' reading of the contested kernel 'competence_retention_exercise'. The kernel is the standing commitment: how should organizations validate that competence in high-reliability domains is genuinely maintained? Three readings compete: (1) catastrophe-as-necessary: only real catastrophes provide the visceral stakes and organizational learning required; simulation creates false confidence. (This constraint.) (2) near-miss-as-bridge: near-miss incidents and minor failures provide sufficient real-world feedback without requiring full catastrophes. (3) simulation-as-sufficient: high-fidelity simulation constitutes genuine competence exercise; cognitive and procedural demands are structurally equivalent to real events. This story authors ONLY reading (1) as a clean, ε-invariant constraint. The sibling readings are separate stories in the constraint family, linked via network.affects_constraints. The ε value (0.68) is reading-specific: the extractiveness this reading instantiates (catastrophe treated as necessary, costs borne by operational organizations and public) is distinct from the ε values the sibling readings would author for their own mechanisms."
+  },
+  "omegas": [
+    {
+      "id": "kernel_boundary_ambiguity",
+      "question": "Is this constraint one reading of a unified kernel (competence validation standards), or are the three readings instantiating fundamentally incommensurable commitment systems (medical ethics vs. organizational efficiency vs. prevention philosophy)?",
+      "resolution_mechanism": "Structural analysis of whether the three readings can coexist in a single institutional framework (e.g., one organization holding all three readings for different functions) or whether adopting one reading logically foreclosed the others.",
+      "impact": "If readings coexist within one framework: the kernel is unified and the readings are policy options. If they are incommensurable: the kernel label is a misnomer and the constraint should be decomposed into three independent constraints with no shared identity. Current organizational practice (regulatory bodies de facto endorsing catastrophe-as-necessary while safety researchers advocate near-miss-as-bridge) suggests coexistence within institutionally segmented frames.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the three readings share a unified kernel or are incommensurable commitment systems."
+    },
+    {
+      "id": "competence_decay_invisibility",
+      "question": "Does competence actually decay invisibly during incident-free periods in modern, high-fidelity simulation-trained organizations, or has continuous monitoring and simulator-based refresher training eliminated this decay?",
+      "resolution_mechanism": "Longitudinal study of operator performance decay in organizations using modern continuous-competence monitoring vs. organizations using catastrophe-incident-based validation. Measure: hidden failures detected in simulations, near-miss incidents, and operator error rates during incident-free periods.",
+      "impact": "If decay persists despite continuous monitoring: the founding problem remains live and the catastrophe-as-necessary reading retains structural validity. If decay is adequately detected and corrected through simulation: the founding problem is dead and the constraint persists via mandatrophy (institutional inertia rather than functional necessity).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the original founding problem (invisible competence decay during incident-free periods) persists in contemporary high-reliability organizations with modern training infrastructure."
+    },
+    {
+      "id": "simulation_fidelity_threshold",
+      "question": "Is there a structural limit to how closely simulation can replicate the visceral, cognitive, and social-emotional pressure of real catastrophic events, or can sufficiently high-fidelity simulation equal real-event training?",
+      "resolution_mechanism": "Neuroscience and organizational psychology research on stress-induced learning, embodied cognition, and decision-making under maximal pressure. Empirical comparison: operator performance in post-catastrophe-incident contexts vs. operator performance in maximally realistic simulator scenarios.",
+      "impact": "If simulation cannot equal real-event pressure (structural limit): this reading's core premise holds (real events necessary). If simulation can approach parity (with sufficient investment in high-fidelity technology): this reading's framing is technology-contingent, not structurally necessary — the sibling simulation-as-sufficient reading becomes empirically plausible.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether simulation can replicate the cognitive and emotional pressure of real catastrophes sufficiently to equal real-event training at the threshold of genuinely high-fidelity technology."
+    },
+    {
+      "id": "regulatory_authority_incentive_alignment",
+      "question": "Do regulatory bodies and incident-response professionals benefit institutionally from catastrophes in ways that create bias toward catastrophe-as-necessary framing, independent of whether catastrophes are genuinely necessary for competence validation?",
+      "resolution_mechanism": "Institutional analysis: track expansion of regulatory jurisdiction, budget allocation, and personnel growth following major catastrophic events vs. following periods of incident-free safe operation. Survey incident investigators and regulators on the perceived legitimacy of alternative validation mechanisms (simulation, near-miss learning) independent of their institutional incentives.",
+      "impact": "If regulatory bodies benefit substantially from catastrophes in ways independent of competence validation: the constraint's persistence may be partly mandatrophy (institutional inertia and rent-seeking) rather than functional necessity. If regulators are structurally indifferent to whether catastrophes occur: the catastrophe-as-necessary framing is more likely reflecting genuine competence requirements.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether regulatory authority expansion incentives create bias in favor of catastrophe-as-necessary framing, independent of functional necessity."
+    },
+    {
+      "id": "near_miss_sufficiency_threshold",
+      "question": "Is there a quantitative threshold of near-miss incidents and minor failures that would provide equivalent learning to one major catastrophe for the purpose of competence validation?",
+      "resolution_mechanism": "Comparative analysis of organizational learning from near-miss datasets vs. learning from catastrophe incident investigations. Measure: systemic corrections implemented, competence improvements measured, behavioral change in personnel, and recurrence of similar failure modes.",
+      "impact": "If near-miss learning provides equivalent organizational learning per unit cost: the sibling near-miss-as-bridge reading becomes empirically superior and this reading's catastrophe-necessity becomes contingent on economics (catastrophes are necessary only if near-miss learning infrastructure is unavailable). If catastrophe learning provides disproportionate insight: the catastrophe-as-necessary reading is empirically validated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether near-miss incidents and minor failures can provide equivalent organizational learning to catastrophes for competence validation purposes."
+    },
+    {
+      "id": "reading_kernel_alternative_framing",
+      "question": "Is competence validation the correct kernel frame, or is the actual contested commitment 'how much organizational and public risk is acceptable to incur in service of maintaining regulatory authority'?",
+      "resolution_mechanism": "Genealogical analysis of how the three readings' origin narratives frame the problem they claim to solve. Interview stakeholders from each reading on the foundational problem the constraint addresses.",
+      "impact": "If the kernel is truly competence validation: the three readings address that problem differently. If the actual kernel is risk-authority tradeoff: the three readings mask a fundamental disagreement about institutional power and accountability that cannot be resolved by empirical competence data.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the contested kernel is genuinely competence validation or is actually a disagreement about institutional authority and acceptable risk."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.14
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__near_miss_as_bridge",
+      "competence_retention_exercise__simulation_as_sufficient"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel 'competence_retention_exercise'. The kernel family includes three structurally distinct constraint stories: catastrophe_as_necessary (this file — high extraction, asymmetric enforcement), near_miss_as_bridge (moderate extraction, continuous feedback mechanisms), and simulation_as_sufficient (low extraction, technology-based validation). Each reading instantiates a different ε value for the same kernel because each reading's mechanism of competence validation differs structurally. The three readings coexist in institutional practice (regulators de facto endorse catastrophe-as-necessary, safety researchers advocate near-miss-as-bridge, simulation industry pushes simulation-as-sufficient). No single reading has foreclosed the others; they compete via institutional influence, regulatory pressure, and resource allocation. This reading influences the others by establishing catastrophe investigation and incident-response authority as the institutional standard against which simulation fidelity and near-miss sufficiency are measured."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "near_miss_as_bridge",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "simulation_as_sufficient",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "catastrophe_necessity_for_visceral_stakes",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_false_confidence_generation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "real_catastrophe_as_competence_test",
+    "drift_state": {
+      "moment": "contemporary_simulation_advancement_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "incident_response_regulators",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "competence_retention_exercise__simulation_as_sufficient",
+      "competence_retention_exercise__near_miss_as_bridge"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

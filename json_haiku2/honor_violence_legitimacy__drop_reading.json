@@ -1,0 +1,296 @@
+{
+  "header": {
+    "constraint_id": "honor_violence_legitimacy__drop_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "e5f63207-e8cb-4348-901e-9b2487e8a3e3",
+    "created_at": "2026-06-15T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.51,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Honor-Violence Legitimacy (Drop Reading)",
+    "topic_domain": "social/legal/cultural",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "honor_bearing_elite"
+    ],
+    "victims": [
+      "duelists_paying_external_costs",
+      "societies_bearing_violence_externality"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_contest_legitimacy_vs_frequency",
+      "question": "Under the drop reading, does dueling remain thinkable-and-legitimate as an honor mechanism even as participation becomes practically rare, or does low frequency itself gradually erode the structural legitimacy of the claim?",
+      "resolution_mechanism": "Historical archive analysis: examine written defenses and legal challenges to dueling in periods of high vs. low practice frequency; assess whether advocates appeal to honor-mechanism principle or whether principle-language disappears as practice disappears.",
+      "impact": "If legitimacy persists independent of frequency, the drop reading holds and dueling is a structurally legitimate but economically suppressed coordination mechanism (tangled_rope at axis). If legitimacy erodes with frequency, the constraint drifts toward the contraction reading (where the principle itself is redefined out of play) or composite reading (both mechanisms operated).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether structural legitimacy of honor-violence mechanism persists when practice frequency drops."
+    },
+    {
+      "id": "external_cost_origin_and_applicability",
+      "question": "Are the external costs (legal liability, state monopoly on violence, social insurance loss) exogenous impositions that constrain a still-legitimate practice, or are they endogenous re-framings of what honor itself is supposed to accomplish?",
+      "resolution_mechanism": "Genealogical analysis of how honor-bearing groups narrate the cost boundary: do they claim the costs are obstacles imposed-from-outside (exogenous suppression), or do they claim the honor-mechanism itself should have never relied on violence (endogenous redefinition)? Track the rhetorical shift across the decline period.",
+      "impact": "If costs are narrated as exogenous, the drop reading holds: legitimacy survives, practice drops due to external constraint (pure tangled_rope). If costs are narrated as endogenous revisions to what honor means, the constraint drifts toward contraction reading (the principle itself has changed). Mixed narratives across different honor-bearing groups support the composite reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether suppression of dueling arises from external constraint or internal redefinition of honor."
+    },
+    {
+      "id": "dueling_cultural_availability_persistence",
+      "question": "In contemporary European/American contexts where dueling is legally prohibited and socially stigmatized, is dueling still conceptually available as a thinkable honor-mechanism (present in narrative, understood as an option even if not exercised), or has it become culturally opaque—no longer what 'honor' means?",
+      "resolution_mechanism": "Contemporary ethnographic or literary analysis: in modern honor-bearing subcultures (academic, military, gang-affiliated, professional), is dueling referenced, understood, or available as a conceptual option for honor satisfaction, even if not exercised? Or has the concept been entirely replaced by alternative honor mechanisms?",
+      "impact": "Persistent conceptual availability (even if practically rare) supports the drop reading. Complete cultural opacity (dueling no longer what honor means) supports the contraction reading. Scattered availability across some subcultures but not others supports the composite reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether dueling persists as thinkable honor-mechanism in contemporary cultures."
+    },
+    {
+      "id": "sibling_reading_framing_difference",
+      "question": "This constraint is one reading of the kernel 'honor_violence_legitimacy'; the competing readings (contraction, composite) make different claims about whether the kernel changed. Are the readings genuinely about different structural mechanisms, or do they represent different narratives imposed on the same facts?",
+      "resolution_mechanism": "Construct counterfactuals for each reading: what would have to be true for each reading to be correct? For drop: legitimacy persists, practice drops due to costs. For contraction: the honor-principle itself is redefined, making violence-dueling unthinkable. For composite: both operate simultaneously. Which counterfactual matches the historical evidence? Are the readings falsifiable, or do they post-hoc fit any historical outcome?",
+      "impact": "If readings are genuinely falsifiable (different mechanisms that exclude each other), the kernel framing is sound and the engine's reading_relations computation is meaningful. If they are post-hoc narratives that fit any outcome, the kernel framing itself is under-determined and the constraint should be decomposed or reframed at the story level.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the three readings of honor_violence_legitimacy kernel are genuinely distinct mechanisms or different post-hoc narratives of the same trajectory."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 32
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the drop reading of the honor_violence_legitimacy kernel: a commitment system in which dueling remained legitimated as an honor-satisfaction mechanism even as its practice became rare due to accumulating external costs (state monopoly on violence, legal liability, insurance loss, state-imposed liability for dueling deaths). The reading asserts that the legitimacy of dueling-as-honor persisted structurally during the decline period—the kernel itself did not change—but practice frequency fell because the external costs imposed by modernizing state structures made the exercise of the legitimate right economically irrational. The kernel is contested: a contraction reading argues the honor-principle itself was redefined to exclude violence; a composite reading argues both mechanisms operated. This story models the drop reading only.",
+    "kernel_context": "Kernel: honor_violence_legitimacy. This constraint instantiates the drop_reading: dueling remained legitimated as a honor mechanism but became practically rare due to external costs (state violence monopoly, legal liability, insurance exclusion). Sibling readings: contraction_reading (honor itself was redefined, making violence-dueling unthinkable); composite_reading (both drop and contraction mechanisms operated simultaneously). The drop reading's core claim: legitimacy persists independent of frequency; practice drops due to external constraint, not reframing of the principle.",
+    "logic_rationale": "Extractiveness at the interval endpoint (0.62) reflects a tangled_rope structure: honor-bearing elite benefit from the constraint's existence (the legitimate claim to duel provides status differentiation and conflict-resolution mechanism they control), while duelists pay the external costs (legal jeopardy, liability exposure, deaths). The constraint requires active enforcement: state legal apparatus must penalize dueling, insurers must exclude duel deaths, military or diplomatic honor codes must be enforced against violence. Suppression grows over the interval (0.35→0.58) as the external-cost apparatus hardens: statutes criminalizing dueling, liability doctrine, insurance exclusions, military codes. Theater ratio rises sharply (0.22→0.51) as the constraint's persistence becomes increasingly detached from actual practice—by the late interval, the legitimacy claim (honor-requirement-to-duel) is maintained in literary, rhetorical, and conceptual forms while actual dueling becomes performative, rare, or extinct. Accessibility collapse is low (0.48) because alternatives to honor-satisfaction emerge continuously throughout the interval: legislation offers formal justice, insurance socializes liability, military codes substitute for personal blood-honor. Resistance is high (0.71) because dueling is actively defended by status-dependent groups (aristocracy, military, certain professions) even as the broader population and state apparatus suppress it.",
+    "directionality_logic": "The honor-bearing elite (agenda_setter, beneficiary) establish and maintain the legitimacy claim—they set the cultural/legal standard for what honor requires and how it is discharged. Duelists (payer, identity_locked) bear the external costs: legal jeopardy, bodily risk, insurance loss. The state apparatus (agenda_setter, enforcer) works to suppress the practice through law and policy. Societies writ large (payer) bear the externality cost of violence that the honor-mechanism generates. The directionality for duelists is pushed toward the target end (d near 1.0) by identity_locked exit: a duelist's social position, professional standing, and self-conception may be fused with the honor-bearing identity such that exit is not available even when costs rise. The elite's directionality is beneficiary-end (d near 0.0) because they collect legitimacy and status from the arrangement without personally bearing the rising external costs.",
+    "perspectival_gap": "From the honor-bearing elite's seat, the constraint is a still-legitimate coordination mechanism for managing status and conflict resolution—practice is low but the principle remains. From the duelist's seat (especially if identity-fused to honor), the same constraint is increasingly irrational economic extraction dressed in legitimacy language, with exit unavailable due to identity lock. From the state's seat, the constraint is an atrophying holdout against the state monopoly on violence—enforcement activity increases precisely because the constraint persists despite low practice. The engine computes these divergences from the power/exit/beneficiary structural data; the reading does not adjudicate which seat is 'right'.",
+    "mandatrophy_analysis": "This constraint shows mandatrophy symptoms: the founding problem (honor-satisfaction, status-differentiation, private conflict resolution among elite groups) persists in the institutional sense—honor remains a social good—but the mechanism (dueling) has become practically obsolete due to external constraint. The constraint persists by inertia and legitimacy claim rather than by active utility. However, the tangled_rope classification is correct because the constraint still extracts (status, legitimacy, identity-value for the elite) from those who bear the cost (duelists, states), and that extraction requires active enforcement (law, policy, insurance exclusion). A piton classification would fit better if the beneficiaries themselves no longer benefited substantially—but the honor-bearing elite continue to benefit from the legitimacy claim's existence even as practice declines. The rising theater_ratio (0.22→0.51) indicates increasing performative maintenance, suggesting drift toward piton, but the interval endpoint shows the constraint still classifies as tangled_rope because extraction is still real, even if practice is rare."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "honor_violence_legitimacy__contraction_reading",
+      "honor_violence_legitimacy__composite_reading"
+    ],
+    "dual_formulation_note": "This constraint is part of a three-story constraint family instantiating different readings of the contested kernel 'honor_violence_legitimacy'. The drop reading models dueling as a structurally legitimate practice suppressed by external costs; the contraction reading models dueling as becoming structurally unthinkable through redefinition of honor; the composite reading models both mechanisms operating in parallel. Each reading has its own ε, beneficiary/victim structure, and classification. All three share the kernel contest and are linked via network.affects_constraints. The three stories enable analysis of how a commitment system (honor) can decay through different mechanisms—cost-suppression vs. principle-redefinition vs. both—and whether the three readings are empirically distinguishable."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.15
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "honor_bearing_elite",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Establish and maintain the legitimacy claim that honor requires readiness to duel and that dueling is a legitimate conflict-resolution mechanism for high-status disputes. They set cultural standards, literary norms, military honor codes, and diplomatic expectations. They benefit from the constraint's existence because it provides status differentiation, conflict resolution under their control, and identity validation. Their exit from the constraint is technically possible (they could redefine honor) but costly in social standing and institutional authority."
+    },
+    {
+      "name": "duelists_paying_external_costs",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Participate in or face pressure to participate in duels to maintain honor and social standing. They bear the immediate external costs: legal jeopardy (criminal prosecution, civil liability), bodily risk (death or injury), financial loss (liability exposure, insurance exclusions), and social/professional consequences (court-martial, loss of position). Their exit is constrained by identity-fusion: a military officer, aristocrat, or honor-bearing professional may see their self-concept and social role as inseparable from the duty to defend honor through combat. Even as costs rise, the identity lock makes exit psychologically unavailable or experienced as social death."
+    },
+    {
+      "name": "societies_bearing_violence_externality",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the externality costs of honor-violence: deaths, injuries, social instability from unresolved private conflicts that become public violence. They have no direct say in the honor-constraint's operation but pay in lives and social order. Their exit options are constrained by the constraint's persistence in high-status groups; they cannot unilaterally withdraw from bearing the externality. They can and do advocate for legal suppression, but that advocacy is the content of the state's enforcer role, not the societies' own independent action."
+    },
+    {
+      "name": "state_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforces the external costs through law (criminal statutes against dueling, homicide liability), policy (insurance exclusion standards, military codes prohibiting dueling), and institutional pressure. The state works to suppress dueling as part of the monopoly-on-violence project. The state's enforcement activity increases during periods of low practice frequency (high theater_ratio) because the constraint persists despite low legitimacy in the broader population—the state must work harder to prevent the honor-elite from reigniting the practice."
+    },
+    {
+      "name": "literary_and_cultural_carriers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Maintain and transmit the conceptual availability of dueling as an honor-mechanism through narrative, historical memory, literary tradition, and cultural mythology. They benefit from the constraint's legitimacy because it provides rich symbolic and narrative material. As practice declines, their role becomes increasingly theatrical and performative—they keep dueling 'thinkable' even as it becomes extinct. Their role distinguishes the drop reading from the contraction reading: their existence and function support the claim that legitimacy persists independent of practice frequency."
+    },
+    {
+      "name": "reform_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue for redefining honor away from violence, for legal suppression of dueling, and for alternative mechanisms of status and conflict resolution. They are structurally excluded from setting the honor standard during the decline period, though their advocacy is part of the causal pressure that generates external costs. Their position supports the contraction reading's claim that the honor-principle itself is under redefinition. Under the drop reading, they are obstacles to the perpetuation of the legitimate mechanism, not participants in its operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Dueling provides a private, elite-controlled mechanism for resolving high-status disputes, validating honor claims, and differentiating social rank through demonstrated willingness to risk death. It coordinates expectations among the honor-bearing elite about what honor requires and how conflicts are legitimately concluded—alternatives (legal courts, arbitration, negotiation) are available but are experienced as inadequate to honor-stakes questions.",
+    "transfer_function": "Transfers status, social position, and legitimacy from the challengers to the victors; transfers bodily risk, legal liability, and mortality to the duelists; transfers externality costs (violence, instability, social discord) to broader societies. The constraint also transfers legitimacy-value to the honor-bearing elite who maintain and enforce the standard.",
+    "absent_voices": "The dead (those killed in duels, whose voice is silenced by death), future generations (who inherit the institutional memory and normative framework), and those excluded by class or gender from participation in honor-dueling (who cannot voice their objections to the constraint within the system that defines honor). Reform advocates (reformers, legal scholars, physicians documenting duel casualties) are excluded from setting the honor standard, though their voices do appear in competing discourses during the decline period.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If dueling disappeared entirely overnight, the immediate world effect depends on which reading is true: under the drop reading, societies would rearrange their honor-satisfaction mechanisms (legal redress, formalized competition, alternative status displays), honor-bearing elite would lose a source of legitimacy and status differentiation, and the identity-fused duelists would face acute identity crisis. The external-cost apparatus would become unnecessary. Under the contraction reading, honor itself would have already rearranged (redefined away from violence), so dueling's disappearance would be an epilogue to a already-completed principle shift. The contest is real: the answer depends on whether the legitimacy claim persists or has been reframed.",
+    "founding_problem": "In hierarchical societies with dispersed power (pre-state or weak-state), the honor-duel solves the problem of how high-status individuals settle disputes and validate claims to authority without centralized legal recourse. It provides a recognized, rule-bound mechanism for private conflict resolution that does not require state intervention and validates status through demonstrated courage and skill. For the honor-bearing elite, it is a coordination mechanism that substitutes for state courts.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The honor-bearing elite and military/diplomatic traditions attest the founding problem is live: honor requires readiness to defend it through combat, and dueling provides that mechanism. Legal reformers, state apparatus, and insurance industries attest the founding problem is solved and the constraint has become vestigial: alternative conflict-resolution mechanisms (courts, arbitration, professional credentials, formalized competition) now adequately validate status and resolve disputes without violence. The contest cannot be resolved by appeal to a single authoritative voice; it is the substance of the kernel disagreement."
+  },
+  "gain_flow": "honor_bearing_elite",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "contraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "composite_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legitimacy_independent_of_frequency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "external_costs_suppress_but_do_not_invalidate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "aristocratic_honor_as_violence_readiness",
+    "drift_state": {
+      "moment": "contemporary_state_monopoly_enforcement",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "honor_violence_legitimacy__contraction_reading",
+      "honor_violence_legitimacy__composite_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

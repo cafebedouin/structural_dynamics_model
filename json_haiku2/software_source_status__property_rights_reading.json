@@ -1,0 +1,368 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__property_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "1dfc7f88-4719-4d8b-97e9-e6fda3fbc38d"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.52,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Software Source Code Property Rights and Licensing Restriction",
+    "topic_domain": "intellectual_property/economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_software_vendors",
+      "copyright_holders",
+      "intellectual_property_attorneys"
+    ],
+    "victims": [
+      "dependent_developers",
+      "end_users_seeking_modification",
+      "security_researchers"
+    ],
+    "vindicated_propositions": [
+      "intellectual_property_protection_doctrine",
+      "market_based_software_distribution"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_software_vendors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Control source code access, set licensing terms, enforce restrictions through legal and technical mechanisms (DRM, code signing, license verification). Derive revenue and strategic advantage from exclusive control of implementation details. Set and enforce the terms under which others may use, modify, or distribute software. Justify restrictions as protecting investment, maintaining quality control, and preventing unauthorized redistribution."
+    },
+    {
+      "name": "copyright_holders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Own legal title to source code and compiled artifacts. Collect licensing fees and maintain exclusive modification rights. Their interests are protected by international copyright treaties and patent frameworks. They benefit from the restriction mechanism without needing to enforce it directly in most cases."
+    },
+    {
+      "name": "dependent_developers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build applications using proprietary libraries, frameworks, or SDKs. Must pay licensing fees, respect usage restrictions, and accept the vendor's upgrade schedule and breaking changes. Cannot inspect or modify source to fix bugs or add features critical to their own work. Face lock-in: switching costs are high because their entire architecture depends on the licensed software."
+    },
+    {
+      "name": "end_users_seeking_modification",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Use proprietary software under restrictive end-user license agreements (EULAs) that prohibit reverse engineering, modification, or redistribution. Cannot customize the software to their needs, extend it for their use case, or repair it independently. Their only recourse is to request features from the vendor, creating a dependency relationship."
+    },
+    {
+      "name": "security_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Face legal restrictions on reverse engineering and vulnerability disclosure. Cannot publish detailed exploit analysis, create tools to audit security, or fix vulnerabilities independently. Must work through vendor-controlled disclosure processes. Restriction creates asymmetric information: vendors know their own vulnerabilities; researchers cannot independently verify claimed fixes."
+    },
+    {
+      "name": "open_source_developers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Operate under alternative licensing models that permit source inspection, modification, and redistribution. They are excluded from proprietary-enforced spaces by design: proprietary vendors explicitly prohibit mixing their code with open-source licensed code (GPL incompatibility clauses). This exclusion is maintained by licensing restrictions and legal enforcement."
+    },
+    {
+      "name": "intellectual_property_attorneys",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from the complexity and necessity of licensing frameworks. Provide legal services for contract negotiation, compliance auditing, and enforcement litigation. Their professional authority and fees increase with the system's complexity."
+    },
+    {
+      "name": "patent_offices_and_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administer and enforce copyright and patent law. Can modify scope of protection (patent duration, DMCA exemptions, fair use doctrine). Their decisions shape the effective strength of the constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aligns incentives for software development by guaranteeing creators exclusive rights to their work, enabling them to recover investment costs, fund continued development, and maintain strategic advantage through exclusive access to implementation details. Theoretically solves the underproduction problem: without exclusive rights, creators have reduced incentive to invest in software creation.",
+    "transfer_function": "Moves licensing fees, per-seat charges, and subscription revenue from dependent developers and end users to proprietary vendors and copyright holders. Moves time and effort from security researchers and end users (who cannot verify or fix code) to vendors (who control all modifications). Moves strategic advantage in competing products to vendors with closed implementations.",
+    "absent_voices": "Open-source developers and free-software advocates are structurally excluded by the licensing restrictions themselves and would argue that property-based software distribution is inefficient and unjust. Security researchers who face legal restrictions on disclosure would argue that source access is prerequisite to genuine security. Users in jurisdictions with weak enforcement (Global South) would argue the system preserves inequality of access.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If proprietary licensing enforcement disappeared, software development would not cease but would rapidly shift toward open-source and collaborative models (as witnessed historically: Linux, Apache, Wikipedia). Vendor revenues would collapse; dependent developers and users would gain modification rights; security would improve through transparency. The constraint's persistence depends on active enforcement of copyright law and DRM technology.",
+    "founding_problem": "Early software was often copied freely; creators had no mechanism to fund ongoing development or recover their investment. The copyright system was extended to software to establish property rights and enable creators to charge for their work, theoretically funding innovation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Vendors argue the problem is still live: software development requires massive capital investment and proprietary protection is necessary to fund R&D. Open-source communities and academic researchers cite decades of evidence that collaborative, source-transparent development produces high-quality, secure software with lower total cost-of-ownership. Economic analysis from sources outside the vendor ecosystem shows mixed results: some software markets (enterprise databases, business suites) show vendor-funded innovation, while others (operating systems, web servers, cloud infrastructure) show open-source-led innovation with comparable or superior outcomes."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The property-rights reading of software source code asserts that creators have legitimate ownership claims to their source code comparable to physical property ownership. Under this reading, licensing restrictions that prohibit reverse engineering, modification, and redistribution are legitimate exercises of ownership rights. This is one of four competing readings of the kernel 'software source code status': the freedom-imperative reading frames source access as a fundamental human right; the pragmatic-development reading treats open source as methodologically superior; the utilitarian-hybrid reading seeks to maximize aggregate welfare across contexts. This constraint story instantiates ONLY the property-rights reading, assessing the standing arrangement (proprietary licensing with restriction enforcement) as the property-rights reading sees it — high extractiveness, real coordination function, active suppression required to maintain.",
+    "key_agents": [
+      "proprietary_software_vendors: institutional power, arbitrage exit; set and enforce the licensing terms",
+      "dependent_developers: moderate power, constrained exit; must pay licensing fees and accept vendor control",
+      "end_users seeking modification: powerless, trapped exit; face legal barriers to customization",
+      "security researchers: moderate power, constrained exit; restricted by DMCA and vendor-controlled disclosure",
+      "open-source developers: moderate power, mobile exit; structurally excluded by licensing incompatibility",
+      "intellectual property attorneys: institutional power; benefit from system complexity"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68) because licensing fees, lock-in, and forced dependency on vendor upgrade schedules extract significant value from dependent users without tight coupling to marginal cost of serving them. Suppression is moderate (0.52) because the mechanism relies heavily on legal enforcement (copyright law, DRM prohibitions, DMCA) rather than purely technical barriers; exit is constrained but not completely trapped (open-source alternatives exist, though adoption costs are high). Theater is low-moderate (0.28): the 'investment protection' narrative is real (software development does require funding) but increasingly decoupled from actual enforcement (many core technologies are open-source; vendors increasingly adopt open-source foundations; licensing is often about market control rather than cost recovery). Temporal measurements show extraction rising steeply early (0-16 point interval) as digital markets grew and lock-in deepened, then plateauing (24-40 point interval) as open-source alternatives gained viability and regulatory pressure increased. Suppression requirement also plateaus: once legal frameworks are established, the active enforcement cost stabilizes.",
+    "perspectival_gap": "The property-rights reading asserts this constraint should compute as rope (genuine coordination for sustainable funding) from the vendor's seat. From the dependent-developer and security-researcher seats, the same structure computes as tangled rope or snare (enforced extraction riding on real coordination, but with asymmetric cost distribution and constrained alternatives). The engine computes seat divergence from the structural data: vendors are agenda-setters with arbitrage exit (beneficiary end of directionality), dependent developers and end users are targeted with constrained/trapped exit (target end). The difference in computed type reflects this structural asymmetry, which is analytically valid — the reading does not adjudicate which seat's type is 'correct', only that they differ.",
+    "directionality_logic": "Proprietary vendors occupy the beneficiary seat: they collect licensing fees, control modification rights, set upgrade paths, and benefit from lock-in without bearing the costs of customization or security vulnerability fixing by users. Their directionality d is near 0.0 (beneficiary end). Dependent developers and end users occupy the target seat: they pay licensing fees, face constraints on modification, accept vendor-imposed changes, and bear the costs of working around vendor limitations. Their directionality d is near 1.0 (target end). Security researchers are a mixed case: they benefit from the existence of software systems but are constrained by restriction enforcement. Intellectual property attorneys are beneficiaries: their professional value and fees increase with licensing system complexity. The property-rights reading itself assumes this distribution is legitimate (creators have property rights, users have contractual rights only); alternative readings would contest the beneficiary/victim labeling. This constraint story honors the property-rights framing without collapsing the structural asymmetry.",
+    "mandatrophy_analysis": "The founding problem (enabling cost recovery for software development) is contested. Vendors claim it is still live: without intellectual property protection, software companies cannot fund R&D. Outside observers (academic computer science, open-source projects, developing economies) increasingly argue the founding problem is dead: major software infrastructure (Linux, Apache, Kubernetes, TensorFlow) has demonstrated that high-quality, secure, economically-sustainable software can be developed collaboratively without proprietary protection. The question is whether the constraint persists because it still solves the founding problem or because the beneficiaries have captured the regulatory and legal frameworks. The 'diffuse accountability' omega below addresses this: if the founding problem is actually dead but vendors have successfully lobbied to maintain the constraint anyway, this would be mandatrophy (a constraint persisting without its justification). The theater_ratio measurements suggest increasing mandatrophy: the security/quality narrative (which was genuine in early eras) is increasingly performative as vendors adopt open-source internally and the constraint's main function becomes market gatekeeping rather than funding innovation.",
+    "kernel_context": "This constraint is the property-rights reading of the contested kernel 'software_source_status'. The kernel is the standing question: what is the epistemic and moral status of source code? The property-rights reading instantiates one answer: source code is intellectual property comparable to tangible goods; creators have legitimate rights to restrict access and modification; licensing restrictions are valid exercises of ownership. Sibling readings decompose as follows: (1) freedom_imperative_reading: source code access is a fundamental ethical and practical requirement for user autonomy and security — proprietary restrictions are categorically unjust. (2) pragmatic_development_reading: source code transparency and modification rights produce superior development outcomes (better security, faster innovation, lower cost-of-ownership) — this is primarily a methodological claim, instrumentally supporting access without necessarily foreclosing property frameworks. (3) utilitarian_hybrid_reading: different contexts call for different licensing models; the goal is to maximize aggregate welfare by choosing the right model for each domain — permits both proprietary and open approaches as complementary. The property-rights reading is distinct in grounding legitimacy in ownership rights rather than consequentialist outcomes or ethical imperatives."
+  },
+  "omegas": [
+    {
+      "id": "property_analogy_boundary",
+      "question": "Are software source code and intellectual property sufficiently analogous to tangible property to justify the same restriction mechanisms, or is source code fundamentally different in ways that invalidate the analogy?",
+      "resolution_mechanism": "Structural comparison: tangible property is rivalrous (use by one party excludes others) and exhaustible (consumption reduces availability); source code is non-rivalrous (reading/using does not prevent others from reading) and non-exhaustible (copying creates no scarcity). Empirical test: do the restriction mechanisms designed for tangible property (copyright, licensing, price-based allocation) actually solve the coordination problems they were designed for (underproduction, cost recovery) when applied to non-rivalrous goods?",
+      "impact": "If source code is fundamentally non-rivalrous, property-based restriction mechanisms may be structurally inefficient — solving a rivalrous-goods problem via a non-rivalrous medium. The constraint might then compute as pure extraction (snare) rather than legitimate property protection (tangled rope). Alternatively, the non-rivalrous character might justify even stronger restrictions (to prevent perfect price competition), amplifying extraction upward.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the tangible-property analogy holds for non-rivalrous goods."
+    },
+    {
+      "id": "funding_mechanism_necessity",
+      "question": "Is proprietary licensing necessary to fund software development and innovation, or can high-quality software be sustainably developed under alternative funding models (open source, public funding, volunteer communities)?",
+      "resolution_mechanism": "Empirical: compare software quality, security, innovation velocity, and cost-of-ownership across proprietary and open-source software in the same domain (operating systems, web servers, databases, cloud infrastructure, mobile development frameworks). Inspect funding sources for open-source projects (tech company R&D allocation, cloud service revenue, volunteer labor, public funding).",
+      "impact": "If open-source software demonstrates equal or superior outcomes with alternative funding mechanisms, the property-rights founding problem is partially or wholly solved by non-proprietary means. This would reclassify the constraint from tangled rope (real coordination need + asymmetric extraction) toward snare (extraction without genuine coordination necessity) or scaffold (coordination was necessary in the 1980s-2000s but is now unnecessary). The theater_ratio would rise as the 'investment protection' narrative becomes increasingly performative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proprietary licensing is necessary for sustainable software development."
+    },
+    {
+      "id": "restriction_enforceability_drift",
+      "question": "As technological barriers to enforcement decrease (cryptographic access control, DRM, code signing) while social barriers increase (global open-source adoption, security-through-transparency norms, antitrust enforcement), what is the effective enforcement cost and viability of licensing restrictions?",
+      "resolution_mechanism": "Time-series analysis of enforcement attempts: measure frequency and cost of legal actions (DMCA takedowns, GPL enforcement, patent litigation); measure adoption of enforcement technologies (code signing, DRM, license verification); measure successful circumvention (reverse engineering, open-source reimplementations); survey developer perception of restriction legitimacy across cohorts (older vendors vs. startups vs. research communities).",
+      "impact": "If enforcement cost rises while social legitimacy declines, the constraint may become increasingly piton-like (persists through inertia and legal frameworks rather than stakeholder acceptance). The suppression metric would show rising disconnection between legal enforcement and practical compliance, indicating growing theater. This would trigger mandatrophy analysis: a constraint whose enforcement burden exceeds its coordination benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether restriction enforcement remains viable under changing technological and social conditions."
+    },
+    {
+      "id": "kernel_reading_contention",
+      "question": "Which kernel reading — property-rights, freedom-imperative, pragmatic-development, or utilitarian-hybrid — best describes actual regulatory and industry practice?",
+      "resolution_mechanism": "Analysis of regulatory decisions (European software interoperability directives, DMCA exemptions, patent office guidance), vendor behavior (adoption of open-source components, open-source foundations, dual licensing), and legislative intent (antitrust enforcement, copyright reform debates). Check whether one reading's axioms have been formally adopted or rejected in law/policy.",
+      "impact": "The property-rights reading assumes source code IS property with legitimate restriction rights. If regulatory and industry practice increasingly adopt the utilitarian-hybrid or pragmatic-development readings (treating licensing as context-dependent, favoring open-source in some domains), the property-rights reading becomes a 'holdable but contested' axiom rather than the default framework. This would shift the reading's axiom.status from holdable to merely defended, and inform the drift_state analysis of the CS structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which kernel reading is instantiated by actual regulatory and industry practice."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__freedom_imperative_reading",
+      "software_source_status__pragmatic_development_reading",
+      "software_source_status__utilitarian_hybrid_reading"
+    ],
+    "dual_formulation_note": "The software_source_status kernel decomposes into four constraint stories, each instantiating a different reading with distinct ε values and beneficiary/victim structures. The property_rights_reading (this story) frames source code as property and licensing restrictions as legitimate; extractiveness is high (0.68) but justified by coordination function (funding development). The freedom_imperative_reading frames property restrictions as unjust suppression; extractiveness is even higher (~0.80+) with no coordination defense. The pragmatic_development_reading focuses on development outcomes; extractiveness is moderate-to-high (~0.55-0.65) but with open-source as viable alternative. The utilitarian_hybrid_reading permits both models; extractiveness varies by context. All four stories reference the same standing arrangement (proprietary licensing with restriction enforcement) but assess it through different normative frameworks. The kernel question is: what is the legitimate status of source code? The four readings give incompatible answers, none of which is derivable from the facts alone — the disagreement is located in the foundational axioms (property rights vs. human rights vs. development methodology vs. aggregate welfare). This family decomposition honors the ε-invariance principle: each reading gets its own stable ε (not a parameter of observer choice, but grounded in the reading's own axioms about what counts as extraction)."
+  },
+  "directionality_overrides": [],
+  "gain_flow": "proprietary_software_vendors",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_imperative_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pragmatic_development_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "utilitarian_hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "source_code_is_property",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "creator_ownership_rights_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "licensing_restriction_valid_ownership_exercise",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "intellectual_property_doctrine_framework",
+    "drift_state": {
+      "moment": "contemporary_open_source_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "software_development_funding_mechanisms",
+      "digital_market_lock_in_dynamics"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

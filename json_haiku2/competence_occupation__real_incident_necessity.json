@@ -1,0 +1,343 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__real_incident_necessity",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "37336608-721b-4d6d-b9d1-b7437fb100ea",
+    "created_at": "2026-06-12T14:32:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.61,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Real Incident Necessity for Competence Occupation in High-Reliability Organizations",
+    "topic_domain": "organizational_safety/training_management",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_regulators",
+      "organizational_learning_doctrine"
+    ],
+    "victims": [
+      "operating_personnel",
+      "incident_exposed_populations"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "operating_personnel",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Pilots, surgeons, nuclear operators, emergency responders, military personnel who must maintain high-stakes competence. Under the real-incident-necessity doctrine, they cannot prove to regulators that their training has adequately prepared them for genuine emergencies until actual emergencies occur. They invest heavily in training and certification, but the doctrine holds that the training's adequacy is unknowable until events validate or invalidate it. They bear the psychological and professional burden of this untestable standard and the liability risk when incidents expose competence gaps. Exit means leaving the profession entirely."
+    },
+    {
+      "name": "operating_organizations",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Airlines, hospitals, nuclear plants, military branches that employ high-stakes personnel and must maintain competence regimes. They cannot prove to regulators that their training is working — the doctrine offers no measurable success criteria. They defend their regimes through compliance with regulatory guidance and incident investigation, but the doctrine guarantees they will be found inadequate when incidents occur (the incidents prove the regime was insufficient). They absorb operational costs, liability, and regulatory scrutiny."
+    },
+    {
+      "name": "incident_exposed_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Members of the public in proximity to high-stakes operations: airline passengers, hospital patients, residents near nuclear facilities, civilians in combat zones. Under the real-incident-necessity reading, they are the involuntary evidence base for competence certification. They bear the risk that competence gaps go undetected until incidents expose them. They have no seat in competence-regime decisions and no exit from the constraint."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Federal and professional bodies that certify competence and oversee training regimes (FAA, NRC, medical licensing boards, etc.). They benefit from the real-incident-necessity doctrine because it provides explanatory coherence: incidents prove the framework is working (revealing true competence needs), absence of incidents is indeterminate. The doctrine legitimizes their authority to investigate and regulate. They set agenda for what counts as competence occupation and enforce compliance through inspection, audit, and incident investigation. Their legitimacy and mandate grow with each incident that reveals a competence gap."
+    },
+    {
+      "name": "incident_investigation_authorities",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Organizations that investigate accidents and incidents (NTSB, medical boards, military inspector-general offices). They benefit from the doctrine because incidents provide the evidence for competence certification. Their institutional mandate, prestige, and budget grow with each incident that reveals a competence gap framed as proof the framework is working. They investigate, report, and recommend training improvements, which are then framed as evidence that the competence regime is being refined."
+    },
+    {
+      "name": "simulation_technology_vendors",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Companies that design and sell high-fidelity simulation platforms for pilot training, medical simulation, military operations, nuclear operations. Their technologies are sophisticated and widely used, but under the real-incident-necessity reading they are systematically excluded from the competence-certification process. The doctrine asserts that simulation cannot authentically reproduce the stress and decision-context of real emergencies, so simulation counts as training but not as competence validation. They are trapped outside the decision frame; their voice is not heard in regulatory and institutional discussions of what counts as adequate competence maintenance."
+    },
+    {
+      "name": "international_hybrid_regimes",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Alternative institutional framings (simulation-sufficiency, hybrid multi-mechanism occupation, continuous-refresher models) that operate in other regulatory jurisdictions and are documented in international safety standards. They represent structural alternatives to real-incident-necessity but are not the authorized doctrine in this constraint's regulatory context."
+    },
+    {
+      "name": "training_program_designers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Aviation instructors, medical educators, military trainers, and simulation specialists who design and deliver competence training. They operate under the real-incident-necessity doctrine, which means their training regimes are evaluated as adequate or inadequate retroactively — only when incidents occur. They cannot design curricula confident in their own validity; they work within a framework that treats all non-incident training as potentially insufficient. They bear professional and legal exposure when their trainees are involved in incidents."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishing a shared doctrine for certifying that personnel in high-stakes operations (aviation, medicine, nuclear, military) have achieved and maintain competence to handle emergencies without exposing the public to untested personnel.",
+    "transfer_function": "Transfers the burden and cost of competence proof from regulators and organizations (who would need to demonstrate readiness through measurable means) to operating personnel and incident-exposed populations (who become the evidence base when incidents occur). Moves authority to interpret what counts as adequate competence from training designers and organizations to incident investigators and regulators.",
+    "absent_voices": "Simulation technology designers and international safety regimes using hybrid or simulation-sufficient approaches are excluded from this reading's framework. Their argument that sophisticated simulation can adequately test competence is foreclosed by the doctrine's core premise. Exposed populations are trapped: they bear the risk but have no seat in competence-certification decisions or regimen design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the real-incident-necessity reading of competence occupation vanished, organizations would adopt empirically testable regimes. Training would be validated through measurable criteria (simulation performance, procedural mastery, stress-response benchmarks) rather than incident interpretation. Competence maintenance would shift from an untestable doctrine to a continuous-validation framework. Incident rates would become interpretable as evidence for or against the adopted regime rather than as proof that the prior regime was inadequate.",
+    "founding_problem": "Discovered empirically in aviation and emergency medicine in the mid-20th century: personnel trained to expert level in simulators and classrooms sometimes performed inadequately or froze in genuine emergencies due to the incommensurable stress and cognitive load of real life-or-death situations. The question emerged: how can we know if someone is truly competent for emergencies without exposing them (and the public) to emergencies?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Aviation authorities (ICAO) and emergency medicine bodies (WHO) documented the problem's reality in their historical standards. However, contemporary high-reliability organization research (Weick, Roberts on organizational resilience; Dekker on safety culture) disputes the solution. International safety standards have shifted toward hybrid and simulation-sufficient regimes. Regulatory bodies in some jurisdictions (e.g., some U.S. FAA regions, some national aviation authorities) continue to endorse real-incident-necessity; others have adopted measurable alternatives. The problem is corroborated; the solution is contested."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.69
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.57
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "High-reliability organizations (aviation, nuclear power, emergency medicine, military operations) maintain personnel competence through training regimes. This constraint story instantiates ONE reading of a contested kernel: the claim that ONLY actual catastrophic incidents provide the authentic conditions necessary to occupy the competence kernel — to certify that personnel can handle genuine emergencies. Under this reading, simulation and drills, no matter how sophisticated, cannot truly test competence because they lack the physiological and cognitive stress of real stakes. The doctrine is self-validating: incidents prove competence gaps existed; absences prove nothing. Operating personnel and exposed populations bear the cost of this untestable doctrine; safety regulators and incident investigators benefit from its explanatory structure.",
+    "key_agents": [
+      "operating_personnel: high-stakes operators (pilots, surgeons, nuclear technicians) who must be certified competent but cannot be tested short of real incidents — trapped payers",
+      "safety_regulators: institutional beneficiaries who enforce competence regimes they cannot validate and whose authority strengthens when incidents occur",
+      "incident_exposed_populations: powerless members of the public (passengers, patients, nearby residents) who become evidence for competence certification when incidents happen",
+      "operating_organizations: institutional payers who must defend untestable training regimes and absorb liability when incidents expose competence gaps",
+      "simulation_technology_vendors: excluded by doctrine; their high-fidelity platforms are deemed insufficient despite technological sophistication"
+    ],
+    "logic_rationale": "Extractiveness (0.78 at interval end) is high because the doctrine transfers the burden of competence proof from authorities (who should demonstrate readiness) to personnel and populations (who must be exposed to incidents to validate regimes). The doctrine is self-protecting: it cannot be falsified by safe operation (absence of incidents proves nothing under this reading) and is validated by incidents (which appear to prove competence was inadequate, not that the doctrine itself is flawed). Suppression (0.72) is sustained because alternatives (simulation-sufficiency, hybrid regimes, continuous-refresher models) are actively excluded by regulatory authority; personnel cannot choose different training regimes. Theater (0.61, high but not dominant) reflects the substantial performative component: much training activity and incident investigation happens to vindicate the doctrine's logic rather than to improve safety directly. The measurement series document rising extractiveness and theater over the interval, consistent with the doctrine becoming more entrenched and more reliant on incident interpretation.",
+    "perspectival_gap": "Operating personnel and organizations perceive this constraint as an insoluble bind: they cannot prove competence is adequate (no untestable doctrine permits proof) and they are held liable when incidents occur as evidence they were inadequate. Safety regulators and incident investigators perceive it as a coherent doctrine: incidents reveal true competence needs, absence of incidents is indeterminate. The engine computes divergent types from the structural positions: personnel and organizations sit near the target end (high d, extraction amplified); regulators sit near the beneficiary end (low d, authority and explanatory power collected). This perspective gap is the point.",
+    "directionality_logic": "Operating personnel are victims (trapped, constrained exit, no authority over regime selection — high d toward 1.0, full target). Operating organizations are payers (institutional, but constrained by regulatory mandate, absorb liability — high d, 0.6–0.8 range). Incident-exposed populations are powerless victims (d near 1.0). Safety regulators are beneficiaries (institutional power, agenda-setting authority, explanatory authority strengthened by incidents — low d, 0.1–0.3 range). Incident investigation authorities are secondary beneficiaries (mandate and prestige grow with incidents). Simulation vendors are excluded, not coordinated; their exclusion is the enforcement object.",
+    "mandatrophy_analysis": "The founding problem (how to certify competence in high-stakes fields without real-incident testing) is LIVE in the sense that organizations continue to grapple with competence maintenance. However, the specific solution offered by the real-incident-necessity reading is increasingly questioned: hybrid regimes, continuous-refresher models, and simulation-sufficiency doctrines are live alternatives in international practice. The constraint persists in some regulatory regimes because its self-validating structure protects it: incidents prove it right; absences prove nothing. This is a strong candidate for mandatrophy: the founding problem persists but the solution (real-incident-necessity) is contested and may be atrophying in favor of measurable alternatives. If regulators shifted to hybrid regimes, this constraint would persist theatrically (incident investigation would still frame findings as proof of competence gaps) but would lose its primary justification.",
+    "kernel_context": "This constraint instantiates the 'real_incident_necessity' reading of the 'competence_occupation' kernel — the contested claim about what conditions are necessary to certify that high-stakes operational personnel maintain competence. The kernel is the commitment to competence occupation itself (uncontested: operators must be competent). The reading contests HOW competence is certified and maintained. Sibling readings include 'simulation_sufficiency' (simulation-based drills alone are sufficient) and 'hybrid_occupation' (multi-mechanism exercise without consensus on configuration). This reading foreclosure/coexistence status with siblings reflects the contested landscape: no single reading rules out the others logically; they coexist as live institutional positions held by different regulatory jurisdictions and safety cultures. The dispute is empirically resolvable (incident rates under different regimes could be compared) but is presently structured as a doctrinal contest rather than an empirical one."
+  },
+  "omegas": [
+    {
+      "id": "incident_causation_attribution",
+      "question": "When an incident occurs and investigation reveals a competence gap, is the gap evidence that competence occupation was never achieved (as the real-incident-necessity reading asserts), or evidence that the regime for maintaining competence was inadequate (as alternative readings assert)?",
+      "resolution_mechanism": "Comparative incident analysis across jurisdictions using different competence regimes (simulation-sufficient, hybrid, real-incident-necessary). If incident rates are similar, the reading is ambiguous; if rates differ systematically, attribution becomes clearer.",
+      "impact": "If incidents are attributed to regime inadequacy rather than proof-of-competence-gap, the self-validating structure of the real-incident-necessity reading collapses. Regulators lose their explanatory armor and must shift to measurable regimes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incidents reveal competence gaps or regime failures."
+    },
+    {
+      "id": "simulation_fidelity_boundary",
+      "question": "Is there a technological or cognitive boundary beyond which simulation cannot reproduce the authentic stress and decision context of real incidents? Or is any claimed boundary a rationalization for the doctrine rather than a structural feature?",
+      "resolution_mechanism": "Neurophysiological and cognitive-science research on stress response, decision-making under uncertainty, and transfer of training from high-fidelity simulation to live performance. Longitudinal tracking of personnel trained under different regimes.",
+      "impact": "If simulation can authentically reproduce competence-critical stress, the real-incident-necessity reading loses its core claim. If boundaries exist and are irreducible, the reading is vindicated but would need to articulate them precisely rather than invoking incidents as the sole test.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether authentic-stress boundaries are inherent or constructed."
+    },
+    {
+      "id": "self_validation_trap",
+      "question": "Is the real-incident-necessity reading's self-validating structure (incidents prove it right; absences prove nothing) a feature that captures genuine epistemological truth, or a feature that makes the doctrine unfalsifiable and therefore unscientific?",
+      "resolution_mechanism": "Philosophy of science and epistemology: comparison of the reading's logical structure with frameworks for falsifiability. Assessment of whether high-reliability organizations can operate without a falsifiable competence doctrine.",
+      "impact": "If the unfalsifiability is recognized as a flaw rather than a feature, the reading loses legitimacy within scientific and regulatory frameworks committed to empirical testing. The constraint would be recognized as extraction dressed in safety language.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether self-validation is epistemically sound or a protective mechanism."
+    },
+    {
+      "id": "beneficiary_structure_ambiguity",
+      "question": "Who benefits from the real-incident-necessity doctrine? Safety regulators gain explanatory authority and authority to investigate. Incident investigation authorities gain mandate and prestige. But do operating organizations or exposed populations benefit, or only incur costs?",
+      "resolution_mechanism": "Institutional analysis of regulatory capture: does the doctrine serve organizational learning and safety, or does it serve the bureaucratic interests of regulators and investigators?",
+      "impact": "If the doctrine is recognized as serving regulatory bureaucracy rather than safety, it becomes a snare rather than a tangled rope. The coordination function (competence occupation) is real, but the extraction mechanism (untestable doctrine that vindicates regulators when incidents occur) is pure rent-seeking.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the doctrine's beneficiaries include safety or only regulatory authority."
+    },
+    {
+      "id": "kernel_reading_stability",
+      "question": "Is the real-incident-necessity reading a stable, enduring position in the competence-occupation kernel, or is it historically contingent and eroding?",
+      "resolution_mechanism": "Historical and institutional analysis of competence-training doctrine across aviation, nuclear, emergency medicine, and military operations over the past 50 years. Tracking of shifts toward simulation-sufficiency and hybrid regimes.",
+      "impact": "If the reading is eroding and being displaced by measurable alternatives, the constraint itself is a piton — persisting theatrically while its primary justification atrophies. If it remains stable, it is an entrenched tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether real-incident-necessity is a durable doctrine or historically contingent."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__simulation_sufficiency",
+      "competence_occupation__hybrid_occupation",
+      "regulatory_authority_incident_framing"
+    ],
+    "dual_formulation_note": "The 'competence_occupation' kernel decomposes into three constraint stories with distinct ε values and beneficiary structures: real_incident_necessity (this story, ε=0.78, high extraction via untestable doctrine); simulation_sufficiency (ε~0.35, low extraction, empirically testable); hybrid_occupation (ε~0.55, moderate extraction, contested configuration). The readings are not alternative measurements of one constraint — they are structurally distinct constraints sharing a common kernel. Each reading instantiates a different causal mechanism for competence maintenance, different observable-set, and different beneficiary structure. ε-invariance principle: if changing the observable (incident vs. simulation vs. hybrid) changes ε materially, the observer is looking at different constraints. The three stories are linked via network edges (each affects the others) and the kernel context; they remain separate JSON files with independent classifications."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_sufficiency",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_occupation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "authentic_stress_incommensurability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "incident_necessity_for_validation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "untestable_competence_doctrine",
+    "drift_state": {
+      "moment": "contemporary_alternative_regimes",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "safety_regulators",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "competence_occupation__simulation_sufficiency",
+      "competence_occupation__hybrid_occupation"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

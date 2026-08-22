@@ -1,0 +1,387 @@
+{
+  "header": {
+    "constraint_id": "literacy_acquisition_kernel__balanced_literacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "81743cf5-5852-44c4-8739-816cd1018bf4"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "rope",
+    "human_readable": "Balanced Literacy Reading Acquisition Constraint",
+    "topic_domain": "education/cognitive_science/literacy_pedagogy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "education_schools",
+      "curriculum_publishers"
+    ],
+    "victims": [
+      "struggling_readers",
+      "low_income_students"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "balanced_literacy_advocates",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Education schools, teacher-training programs, and literacy researchers who have adopted and promote balanced literacy as the standard instructional framework. They set curriculum standards, publish widely-adopted textbooks, design teacher professional development, and defend the approach in policy forums. Institutional stake in method persistence and adoption breadth."
+    },
+    {
+      "name": "curriculum_publishers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Commercial textbook and curriculum-materials publishers who produce and sell balanced-literacy aligned lesson plans, basal readers, workbooks, and digital materials to schools. Collect revenue from repeated adoption cycles and material updates. Method stability is a revenue stream; method contestation can be a market opportunity (material churn)."
+    },
+    {
+      "name": "education_schools",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Public and charter schools adopting balanced literacy as their reading curriculum framework. They set instructional priorities, allocate teacher time across phonics and reading practice, purchase aligned materials, and report reading outcomes. They benefit from a coherent, recognized instructional standard but also face pressure to show reading gains and manage teacher retraining costs when methods shift."
+    },
+    {
+      "name": "classroom_teachers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Elementary teachers tasked with implementing balanced literacy in their classrooms. They learn the framework in professional development, manage two simultaneous instructional streams (phonics and connected text), assess student progress on both dimensions, and navigate contradictory demands when students struggle. They bear the instructional labor cost of balancing; they also benefit from a structured, recognized method that is recognized by peers and administrations."
+    },
+    {
+      "name": "struggling_readers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Students who have difficulty acquiring reading skills, including those with dyslexia, processing deficits, or limited early literacy exposure. Under balanced literacy they receive some phonics instruction but often insufficient systematicity or intensity; they also experience pressure to engage meaningfully with texts at grade level before fluency is established. Identity forms around reading ability; school setting (classroom, school) is the only context in which this constraint operates. No exit."
+    },
+    {
+      "name": "low_income_students",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Students from low-income backgrounds with limited home literacy exposure, fewer books at home, less parental reading modelling, and often less access to supplementary tutoring or intensive intervention. Balanced literacy's emphasis on meaning engagement and minimal explicit phonics instruction assumes literacy-rich home environments that low-income students often lack. They bear the cost of insufficient explicit instruction but cannot exit to better-resourced schools or private tutoring."
+    },
+    {
+      "name": "structured_literacy_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Researchers, dyslexia specialists, and educational psychologists advocating for Orton-Gillingham-derived structured literacy as superior to balanced literacy. They publish research, lobby policy makers, and train teachers, but operate outside the mainstream curriculum-adoption pipeline. Exclusion from curriculum standards and textbook markets limits their direct influence on classroom practice at scale."
+    },
+    {
+      "name": "whole_language_practitioners",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Teachers and educators who still practice more purely whole-language approaches (emphasis on meaning, minimal systematic phonics). They are not formally excluded but increasingly marginalized as balanced literacy has become the institutional standard. Some operate in progressive schools; many are aging out of the profession. Their voice in professional forums is diminished."
+    },
+    {
+      "name": "research_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Cognitive science researchers, literacy scientists, and educational researchers who study reading acquisition empirically. They produce evidence on phonics effectiveness, meaning engagement, cognitive load, and population-specific effects. Their role is to generate data; policy adoption lags evidence by years or decades."
+    },
+    {
+      "name": "policy_makers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "State and district education officials, legislatures, and education department administrators who set standards, approve curricula, and allocate funding. They broker between research, teacher practice, commercial interests, and public pressure. They observe the constraint but do not directly operate it; their decisions about standards and funding shape which methods persist."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a coherent, recognizable instructional framework that integrates explicit phonics instruction with meaningful connected-text engagement. Solves the coordination problem of how to structure reading instruction across heterogeneous classrooms and schools: both phonics and meaning-engagement happen; neither is supposed to dominate. Enables teacher training, material alignment, and outcome measurement within a unified standard.",
+    "transfer_function": "Transfers instructional time and attention from intensive, targeted phonics to a bifurcated approach; transfers revenue from single-method textbook series to publishers who produce both phonics materials and guided-reading collections; transfers students' cognitive effort to managing two simultaneous learning demands rather than a more unified pathway.",
+    "absent_voices": "Structured literacy specialists and dyslexia researchers are institutionally excluded from mainstream curriculum standard-setting; their evidence about systematic phonics effectiveness and cumulative sequencing for struggling readers sits outside the balanced framework's decision loops. Whole-language practitioners who still advocate for meaning-first approaches are marginalized. Struggling readers themselves cannot articulate their experience as instructional feedback that shapes method design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If balanced literacy disappeared, schools would reorganize around one of the sibling readings (structured literacy, phonics-first, or renewed whole-language emphasis), or would attempt to avoid an explicit method in favor of ad-hoc practice. Teachers would reallocate instructional time; publishers would reorient material production; outcome data would shift. The instructional landscape would change significantly.",
+    "founding_problem": "In the 1990s–2000s, reading instruction was polarized between phonics-only advocates and whole-language advocates, each claiming efficacy and criticizing the other's approach. Schools varied wildly; some students were taught phonics in isolation (demotivating, disconnected from meaning), others learned meaning without explicit decoding skills (struggling with fluency and multisyllabic words). Balanced literacy emerged as a proposed synthesis: both phonics AND meaning matter; both should be present.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The balanced literacy advocates attest the founding problem (polarization, instructional variance) was real and the synthesis is necessary. Structured literacy researchers and the National Institute of Child Health and Human Development (NICHD) reading research consensus attest that the founding problem was misdiagnosed—phonics effectiveness is well-established empirically; what was needed was systematic, intensive phonics for all, not a compromise between phonics and whole language. The contested status reflects the living research debate."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Balanced literacy is an institutional instructional framework adopted across most U.S. public school districts since the 2000s. It claims to synthesize phonics and meaning-engagement as equally necessary, complementary components of reading instruction. The constraint is the enforcement of this bifurcated instructional structure in classrooms. Research in cognitive science and dyslexia studies increasingly challenges the balanced framing, suggesting systematic phonics is the causal driver of reading acquisition and that meaning engagement emerges from fluency, not alongside it. The balanced reading represents one specific reading of a contested kernel: the question of how reading develops and what instruction produces it. This reading claims synthesis; sibling readings claim primacy (phonics-first, structured literacy) or emergence (whole language). The constraint story models balanced literacy as instantiated in practice: maintained by institutional adoption, school curricula, teacher training, and textbook publishing; generating extraction through method churn, insufficient intensity for struggling readers, and instructional load imposed on teachers and students.",
+    "key_agents": [
+      "balanced_literacy_advocates: institutional agenda-setters who have embedded the framework into standards and training",
+      "curriculum_publishers: institutional beneficiaries capturing revenue from material production and adoption cycles",
+      "education_schools: organized coordinating bodies that allocate time and resources according to balanced literacy structure",
+      "classroom_teachers: moderate-power payers bearing the instructional labor of managing two simultaneous streams",
+      "struggling_readers: powerless, identity-locked payers experiencing insufficient phonics intensity and premature meaning-engagement pressure",
+      "low_income_students: trapped powerless payers lacking home literacy resources to compensate for insufficient explicit instruction",
+      "structured_literacy_advocates: excluded powerful actors whose research evidence sits outside curriculum adoption pipelines",
+      "research_community: observers generating empirical evidence that increasingly contradicts the balanced framework's foundational claims"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.58 at interval end) because balanced literacy does provide a recognizable, coherent instructional standard (coordination function) but also generates extraction: publishers gain revenue from repeated material production cycles, schools gain alignment but lose flexibility, teachers gain a recognized framework but lose instructional autonomy and time. Struggling readers and low-income students bear the highest cost—insufficient phonics intensity and premature meaning-engagement pressure—without exit. Theater ratio is high (0.48) because the constraint's persistence partly depends on narrative maintenance: the 'balanced' framing requires continuous assertion that both streams are equally necessary (even as research evidence suggests phonics is causal and meaning-engagement is derivative). Suppression is moderate (0.42) because the constraint is not maintained primarily through coercive mechanisms; rather, it persists through institutional embedding, professional consensus, and textbook availability. But suppression does operate: structured literacy research is marginalized, whole-language practitioners are pushed out, and teachers who deviate from the framework face pressure. Measurement series show extractiveness and theater rising early (0–10 interval) as adoption accelerates, then plateauing as the method becomes normalized—a classic pattern of institutional drift toward institutional theater. Suppression remains stable, suggesting enforcement infrastructure neither hardens nor decays.",
+    "perspectival_gap": "From the balanced literacy advocates' position, the constraint is a genuine synthesis solving a real coordination problem (polarization, instructional variance). From the structured literacy advocates' position, the constraint is a false compromise that perpetuates the phonics-denial error of whole language, just with token phonics added—they see the two streams as fundamentally misaligned. From the struggling readers' and low-income students' positions, the constraint is oppressive: phonics instruction is neither systematic enough nor intense enough for them to catch up, but meaning-engagement pressure forces them to attempt grade-level texts before decoding fluency is established, generating frustration and identity-formed reading anxiety. From the teachers' position, the constraint is manageable but cognitively demanding: they have to design lessons that satisfy both phonics and meaning objectives, manage mixed-readiness classrooms under the constraint structure, and report progress on two axes. The engine computes these divergences from the power/exit/beneficiary/victim structural data; they emerge as different effective extraction scores per seat.",
+    "directionality_logic": "Balanced literacy advocates (institutional, mobile) have directionality near 0.0 (low d, beneficiaries): they designed the framework and maintain its institutional position; they can exit to other roles or methods. Curriculum publishers (institutional, arbitrage-capable) sit near 0.1–0.2 (beneficiaries): they capture revenue and can shift material production if markets change. Education schools (organized, constrained) sit near 0.3–0.4 (symmetric): they gain coordination structure but are locked into material purchases, teacher training, and outcome commitments that shift if methods change. Teachers (moderate power, constrained) sit near 0.5–0.6 (approaching targets): they gain a recognized framework but bear instructional labor and time costs without direct benefit. Struggling readers (powerless, identity-locked, trapped) and low-income students (powerless, trapped) sit near 0.85–0.95 (targets): they cannot exit, bear cognitive load and social costs from the constraint structure, and lack resources to access better-resourced alternative methods. Structured literacy advocates (excluded powerful) sit near 0.6–0.7: they are not formally victims but are structurally prevented from accessing the decision-making apparatus, so their directionality is constrained-to-powerful with exclusion as the suppression mechanism.",
+    "mandatrophy_analysis": "The balanced literacy constraint does not appear to satisfy the mandatrophy criterion (where the founding problem persists but the arrangement becomes pure inertia). The founding problem (polarization, instructional variance) has been solved in one dimension: schools are no longer chaotic; balanced literacy is the recognizable standard. But research evidence increasingly indicates that the constraint itself is misdiagnosed—the 'balance' is not the solution but part of the problem. Structured literacy research suggests the founding problem was not polarization but insufficient phonics, and that the solution is intensified phonics, not compromise. So the founding problem status is contested, not dead. If structured literacy evidence becomes overwhelming and schools begin to shift, the mandatrophy question would arise then: will schools rapidly adopt intensive phonics (solution-found), or will they persist with balanced literacy despite contradicting evidence (true mandatrophy)? At the present measurement interval, mandatrophy is not yet operative; contestation is.",
+    "kernel_context": "This constraint is one reading of the literacy_acquisition_kernel—the persistent institutional question of HOW reading development occurs and what instruction best supports it. The balanced_literacy_reading instantiates the claim that reading is fundamentally a multifaceted skill requiring both systematic phonics AND meaningful text engagement simultaneously, and that effective instruction balances both. Sibling readings: (1) phonics_reading—phonics must precede meaning-engagement; decoding fluency is the prerequisite for comprehension; phonics is causal, meaning-engagement emerges downstream. (2) structured_literacy_reading—an extended, systematic, cumulative framework encompassing phonological awareness, phonics, fluency, vocabulary, and comprehension in designed sequence; especially beneficial for dyslexia but universally applicable; based on Orton-Gillingham principles. (3) whole_language_reading—reading emerges naturally from meaning-engaged engagement with connected text; explicit phonics is unnecessary and can harm motivation; context and predication drive word recognition. The balanced reading differs from all three: it claims both phonics and meaning are coordinate principles, neither sufficient alone, synthesis required. The key structural difference from phonics_reading is the assertion of coordinate necessity (not sequential prerequisite); from structured_literacy_reading, the rejection of systematic cumulativity; from whole_language_reading, the insistence that phonics is not emergent but requires explicit instruction."
+  },
+  "omegas": [
+    {
+      "id": "synthesis_vs_rebranding",
+      "question": "Is balanced literacy a genuine synthesis of phonics and meaning-engagement as coordinate principles, or is it whole-language relabeled to accommodate post-2000 phonics advocacy?",
+      "resolution_mechanism": "Empirical analysis of classroom implementation: do teachers actually allocate time equally to both streams, or does one stream dominate? Do students receiving intensive phonics + meaning-engagement outperform students receiving only intensive phonics, or do the two groups show equivalent gains? Natural experiments from schools that shifted to structured literacy after balanced literacy adoption.",
+      "impact": "If true synthesis, balanced literacy's moderate extractiveness may be justified by genuine coordination benefit. If rebranding of whole-language, the extractiveness is closer to pure extraction—the meaning-engagement stream is sufficient, phonics is theater.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether balanced literacy is a genuine third position or a relabeling of whole language to accommodate phonics evidence."
+    },
+    {
+      "id": "causality_vs_correlation_phonics",
+      "question": "Is systematic phonics instruction the causal driver of reading acquisition, or is it a correlate of instructional time and intensity?",
+      "resolution_mechanism": "Controlled studies comparing equivalent instructional intensity in phonics vs. meaning-engagement only; meta-analysis of phonics intervention trials; neuroimaging studies of phonetic vs. semantic processing during reading acquisition.",
+      "impact": "If phonics is causal and sufficient, the balanced requirement for coordinate meaning-engagement is extractive—it imposes unnecessary cognitive load and dilutes phonics intensity. If phonics and meaning are truly interdependent, balanced literacy's structure is justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether phonics is the causal agent of reading acquisition or a necessary but not sufficient component."
+    },
+    {
+      "id": "home_literacy_resource_dependency",
+      "question": "Does balanced literacy's reliance on meaning-engagement assume home literacy resources (books, reading models, family print exposure) that low-income students systematically lack?",
+      "resolution_mechanism": "Comparative study of balanced literacy outcomes in high-literate vs. low-literate home environments; intervention studies providing intensive explicit phonics to low-literacy-background students and measuring reading growth independent of home resources.",
+      "impact": "If balanced literacy's efficacy is dependent on literacy-rich home environments, it systematically extracts from low-income students by imposing unequal instructional demands. Structured literacy's systematic, cumulative approach may better serve students without home literacy resources.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether balanced literacy's meaning-engagement component requires home literacy resources that low-income students lack."
+    },
+    {
+      "id": "dyslexia_and_struggling_reader_impact",
+      "question": "For students with dyslexia or reading disabilities, does the balanced literacy approach provide sufficient phonological and phonemic scaffolding, or does structured literacy's cumulative, explicit approach produce better outcomes?",
+      "resolution_mechanism": "Longitudinal studies comparing dyslexic students' reading trajectories under balanced vs. structured literacy; neuroimaging of phonological processing in both frameworks; intervention trials with identified dyslexic populations.",
+      "impact": "If structured literacy produces significantly better outcomes for struggling readers, balanced literacy extracts from the highest-need population by failing to provide sufficient intensity. This would reframe the constraint as a tangled rope serving institutional convenience at the cost of dyslex performance.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether balanced literacy adequately serves students with dyslexia or significant reading difficulties."
+    },
+    {
+      "id": "reading_versus_meaning_engagement_sequencing",
+      "question": "Does meaning-engagement with grade-level connected text before fluency is established harm or help reading acquisition? Is the cognitive load of decoding-plus-meaning-making optimal, or does it exceed working memory limits and reduce learning?",
+      "resolution_mechanism": "Cognitive load experiments comparing performance on meaning-comprehension tasks with vs. without fluency; eye-tracking studies of reading processing in fluent vs. non-fluent readers engaging with grade-level text; instructional experiments comparing early-fluency-building vs. early-meaning-engagement.",
+      "impact": "If premature meaning-engagement overloads working memory and reduces decoding skill acquisition, balanced literacy's requirement for coordinate engagement is extractive for all learners but especially for low-skilled students. A sequential approach (fluency-first, then meaning-engagement) might be more efficient.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simultaneous decoding-and-meaning-engagement optimizes learning or overloads cognitive resources."
+    },
+    {
+      "id": "reading_research_consensus_adoption_lag",
+      "question": "Why does balanced literacy persist as the institutional standard despite decades of cognitive science and dyslexia research pointing toward structured literacy?",
+      "resolution_mechanism": "Historical analysis of NICHD consensus on reading research, state standard adoptions, teacher-training curriculum evolution, and textbook publication timelines; interviews with policy makers on adoption lag and inertia factors.",
+      "impact": "If adoption lag is primarily institutional inertia and professional consensus lag, the constraint may degrade toward piton status as research evidence strengthens. If adoption lag reflects genuine alternative-pathway advocacy and distributive justice concerns (that structured literacy is viewed as potentially elitist or rigid), the persistence is more contestable. If adoption lag reflects commercial incentives favoring method churn, the extractiveness shifts toward pure rent collection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Why institutional reading standards lag behind research consensus, and whether this is inertia, ideology, or commercial incentive."
+    },
+    {
+      "id": "theater_ratio_interpretation",
+      "question": "As theater_ratio rises (measurement data suggests 0.35→0.48 from t0 to t25), does this reflect displacement of actual phonics/meaning instruction by performative assessment and reporting, or simply increasing public discourse about reading while actual instruction remains stable?",
+      "resolution_mechanism": "Classroom observation studies quantifying actual instructional minutes in phonics vs. meaning engagement vs. assessment/reporting; teacher surveys on time pressure and reporting burden; curriculum material analysis tracking balance of actual-practice content vs. reporting scaffolds.",
+      "impact": "If theater is rising because real instruction is being displaced by assessment burden, the constraint may be degrading toward piton (inert, performative). If theater rise is just increased public rhetoric without instructional change, it suggests theater is not the primary extraction driver—extraction is sustained by genuine bifurcated instruction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rising theater_ratio reflects growing performativity in reading instruction or just increased public discourse."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "literacy_acquisition_kernel__phonics_reading",
+      "literacy_acquisition_kernel__whole_language_reading",
+      "literacy_acquisition_kernel__structured_literacy_reading"
+    ],
+    "dual_formulation_note": "The literacy_acquisition_kernel decomposes into four constraint stories, each instantiating a different reading of the kernel claim about how reading develops and what instruction produces it. Each reading carries a different set of beneficiaries, victims, and institutional positions. Balanced literacy claims synthesis; phonics and structured literacy claim primacy of phonics; whole language claims natural emergence. The four constraints are linked because each reading's policy adoption affects the others: widespread balanced literacy adoption suppresses structured literacy advocacy; increasing research evidence favors structured literacy, pressuring balanced literacy; resurgent whole-language practice challenges balanced literacy's legitimacy on motivation grounds. The network captures these mutual pressures: balanced→others via institutional displacement; phonics/structured→balanced via research pressure; whole_language→balanced via ideological/pedagogical challenge."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "phonics_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "whole_language_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "structured_literacy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "phonics_and_meaning_coordinate_principles",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "reading_emerges_via_integration_not_sequence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "phonics_meaning_coordinate_synthesis",
+    "drift_state": {
+      "moment": "contemporary_research_environment",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "curriculum_publishers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
