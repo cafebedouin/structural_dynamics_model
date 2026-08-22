@@ -42,6 +42,11 @@ LIVE_LEGS = (
     "testsets_flash",
     "testsets_kimi",
     "testsets_sonnet",
+    # Added 2026-08-22 (KNOWN_STATE 2026-08-22 HANDOFF): OpenRouter legs. testsets_stealth is
+    # complete (1005, stealth/ox-alpha); testsets_nemotron is 852 and still growing (residue
+    # regenerates when the free-tier cap resets) — membership here is refusal scope, not size.
+    "testsets_stealth",
+    "testsets_nemotron",
 )
 
 # NOTE ON module_boundary_check.ALL_ARM_C_LEGS, which now references this
