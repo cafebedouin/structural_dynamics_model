@@ -17935,6 +17935,19 @@ the rebuild pins enums in-line everywhere.
 read on them is on half a leg. Every other leg is short its failing seeds (sonnet 4, haiku 17,
 flash 34, flash2 61, flash3 47, flash_think 17, flash_think2 13, nemotron 153).
 
+**Landed 2026-08-22.** Both drivers have the backfill mode (`--backfill-ids` + `--run-tag`; ids excluded
+from the uniqueness registry, ladder ignored, overwrite in place). Id lists:
+`prolog/kernels/rebuild_2026-06-13/{haiku,flash}_stakeholder_backfill_ids.json` (458 / 210 = the
+"no stakeholders AND has parties" stratum; the 7 / 2 party-less stories keep their originals).
+flash backfill COMPLETE 210/210 (~$2, commit 522def40); haiku backfill running (batch 019aWGkn…, ~$8).
+**The BEFORE arm for the §9 diff is preserved:** `outputs/pipeline_output.haiku.prebackfill.json`
+(HEAD 7597aa7, 960 stories) and `outputs/pipeline_output.flash.prebackfill.json` (f0ef08a, 960) —
+both engine-coherent with HEAD (no engine file changed in between; `outputs/` is gitignored, so if
+they are lost, rebuild by checking the pre-backfill files out of `522def40^` into a scratch corpus
+dir and classifying). The AFTER arm is the reclassification at HEAD after each backfill lands.
+Gate consequence witnessed: arm G of `module_boundary_check` fired the moment the backfill wrote
+`epsilon_provenance/5` into legs pinned `empty` — pin moved to `any` with the reason (schema_shape.txt:65).
+
 **Needs, before the first backfill.** A **backfill mode** in the Anthropic and Gemini drivers:
 take an explicit seed-id list, EXCLUDE those ids from the uniqueness registry (else
 `unique_constraint_id` appends `__<uuid8>` and the story stops pairing by filename), overwrite
