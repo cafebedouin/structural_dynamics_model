@@ -189,6 +189,29 @@ def run_sync(seeds, id_map, model, workers, reasoning_effort, temperature, cost_
     return out
 
 
+def results_from_responses(seeds, id_map, model):
+    """--from-responses: rebuild shim results from the PERSISTED raw bodies in RESPONSES_DIR
+    (no API call) so a changed repair/validation path can be re-applied to the same draws —
+    the offline half of the per-model A/B loop (runbook §9). A seed with no persisted body is
+    reported and counted errored. finish_reason/provider-error checks are applied as in
+    _one_sync, so a truncated draw is still refused."""
+    out = []
+    for key, cid in id_map.items():
+        p = RESPONSES_DIR / f"{cid}.json"
+        if not p.exists():
+            print(f"  [{cid}] no persisted response"); out.append(_Result(key, "errored", None)); continue
+        resp = json.loads(p.read_text(encoding="utf-8"))
+        if "error" in resp and not resp.get("choices"):
+            out.append(_Result(key, "errored", None)); continue
+        choice = (resp.get("choices") or [{}])[0]
+        if choice.get("finish_reason") != "stop":
+            out.append(_Result(key, "errored", None)); continue
+        text, it, ot = _extract(resp)
+        out.append(_Result(key, "succeeded", _Msg(text, resp.get("model") or model, _Usage(it, ot)))
+                   if text.strip() else _Result(key, "errored", None))
+    return out
+
+
 def estimate(seeds, model):
     static = _static_prefix()
     sample = next((s for s in seeds if s.get("kernel_id")), seeds[0])
@@ -239,13 +262,18 @@ def run(args):
     stamp = sampling_stamp(args.reasoning_effort, args.temperature)
 
     remaining = final_seeds
-    for attempt in range(1, 4):
+    for attempt in range(1, 2 if args.from_responses else 4):
         gen_by_id = {s["constraint_id"]: s for s in remaining}
         id_map = build_id_map(remaining)
-        print(f"\n[attempt {attempt}/3] sync {len(remaining)} requests ({args.model}, "
-              f"workers={args.workers}, {stamp})...")
-        wrapped = run_sync(remaining, id_map, args.model, args.workers,
-                           args.reasoning_effort, args.temperature, cost_acc)
+        if args.from_responses:
+            print(f"\n[from-responses] re-processing {len(remaining)} persisted draws from "
+                  f"{RESPONSES_DIR.relative_to(REPO_ROOT)} (no API calls; {stamp})...")
+            wrapped = results_from_responses(remaining, id_map, args.model)
+        else:
+            print(f"\n[attempt {attempt}/3] sync {len(remaining)} requests ({args.model}, "
+                  f"workers={args.workers}, {stamp})...")
+            wrapped = run_sync(remaining, id_map, args.model, args.workers,
+                               args.reasoning_effort, args.temperature, cost_acc)
         process_batch_results(
             _ShimClient(wrapped), "stealth-sync", STEALTH_JSON, STEALTH_TESTSETS, STEALTH_LADDER,
             gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
@@ -292,6 +320,9 @@ def main():
     ap.add_argument("--temperature", type=float, default=None,
                     help="override the model's default temperature (stamped in provenance)")
     ap.add_argument("--estimate", action="store_true", help="rough token count; no generation")
+    ap.add_argument("--from-responses", action="store_true",
+                    help="no API: re-process this leg's persisted raw responses for the seeds still "
+                         "pending on the ladder (offline A/B of repair/validation changes)")
     ap.add_argument("--leg-name", default="stealth",
                     help="model leg name: testsets_<name>/ (glm, nemotron, ...); pair with --model")
     ap.add_argument("--leg-suffix", default="",

@@ -257,6 +257,18 @@ attempt, which would make a leg mixed-regime). Log each change with its motivati
   draws, the only out-of-enum value (KNOWN_STATE 2026-08-22). Held until stealth #1 and nemotron
   exit. Repair already remaps `victim→payer`, so this is about authoring fidelity, not rescue.
 
+**Per-model A/B loop (operator, 2026-08-22).** The seed pool is shared, so every leg's failing
+seeds are a standing regression set for that model. Two halves: (1) **repair/validation changes
+are A/B'd OFFLINE at $0** — `python3 -m agent.run_no_scope_stealth --leg-name <leg> --model <id>
+--from-responses` re-processes the persisted raw draws for the seeds still pending on the ladder
+(the nemotron/stealth drivers persist every body; the Gemini driver does not — add that before
+relying on it there); the before/after pass count on the SAME inputs is the witness, with the
+old code as the control (the 2026-08-22 fix: 0/80 → 186/290). (2) **Prompt changes need a
+regeneration of the missed seeds** (`--n 0` after the prompt edit; free on stealth/nemotron,
+cents on Flash) — compare the pass rate on the failing-seed list before/after, and keep iterating
+until the residue is genuine drift the model will not fix. Never run (2) while another leg's
+driver is mid-run (prompt re-read per attempt).
+
 ## 8. Pointers
 
 - Drivers: `agent/generate_kernel_corpus.py` (`run_no_scope`), `agent/run_no_scope_gemini.py`,
