@@ -47,6 +47,9 @@ LIVE_LEGS = (
     # regenerates when the free-tier cap resets) — membership here is refusal scope, not size.
     "testsets_stealth",
     "testsets_nemotron",
+    # 2026-08-22 floors (same-model redraws at prompt e03e2210): sonnet2 1003, haiku2 996.
+    "testsets_sonnet2",
+    "testsets_haiku2",
 )
 
 # NOTE ON module_boundary_check.ALL_ARM_C_LEGS, which now references this
