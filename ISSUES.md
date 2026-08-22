@@ -17874,6 +17874,10 @@ suppression 0.55→0.64, powerless seat tangled_rope 28%→34–37% / snare 28%�
 institutional seat piton 0%→7–8%; paired Δε up on 38% of seeds, down on 10%. Thinking moves the seat
 TOWARD EXTRACTION, not just around. The generality arms below test whether that is reasoning-general.
 
+**Generality, first arm (stealth, reasoning mandatory, k=2 on 2026-08-22):** |Δε| ≥0.10 on 20% of seeds between
+draws (Flash thinking-on: 22%), seat-vector churn 66% — the thinking-on instability is not Flash-specific.
+Direction cannot be read on stealth (no thinking-off arm exists for it); that is the nemotron on/off pair.
+
 **(b) answered 2026-08-22 (WRITEUP addendum b):** a |Δε| ≥ 0.10 move changes the seat-type vector 73–91% of the
 time — not damped; AND with |Δε| < 0.10 the thinking-on floor still flips the type vector 44% vs 19%
 thinking-off, so the instability is broader than ε. Classification floor with ε pinned: type vector 19%,
@@ -17986,7 +17990,11 @@ prompt `e03e2210`; the July sonnet leg is at `becd0f87`, so **sonnet vs sonnet2 
 claimed_type 93% / ε exact 54%, |Δε| median 0.00, p90 0.10, 12% ≥0.10; seat-type vector changes on
 43% of seeds (38% even with |Δε| < 0.10) vs 22% on the Flash thinking-off floor. Haiku read (coherent): h1 53% / verdict 72% / signature 87% / claimed_type 87% / ε 49%, |Δε| p90 0.10,
 seat-vector churn 69% (67% with ε pinned) — the June haiku leg is at schema `2e9dff2f` (pre-gate,
-stakeholder-sparse), so haiku vs haiku2 is the LARGEST regime change in the set, not a floor. **Of the
+stakeholder-sparse), so haiku vs haiku2 is the LARGEST regime change in the set, not a floor. stealth2 (1005, free, 2026-08-22, prompt e03e2210) vs stealth (685ed7cf): h1 49% / verdict 65% /
+signature 83% / claimed_type 87%, |Δε| median 0.04, **20% ≥0.10** (Flash thinking-on floor: 22%),
+seat-vector churn 66%; marginals identical across the two draws (band-3 34%/34%, mean ε 0.546/0.540,
+paired Δε mean −0.007) — the thinking-on instability reproduced on a second reasoning model with no
+directional shift from the prompt change. stealth3 (launched 10:20, free) gives the pure pair. **Of the
 three 2026-08-22 pairs only flash2 vs flash3 is a pure floor; sonnet3 and haiku3 (`--leg-suffix 3`,
 same commit) launched 2026-08-22 ~10:15 to get the pure Anthropic floors (~$40 + ~$16). Cross-FAMILY ε
 exact-agreement is ~3% (Claude `.x8` vs Flash `.x5` rails) — use |Δε|, never exact match, across
