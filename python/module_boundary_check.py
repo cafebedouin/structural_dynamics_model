@@ -349,6 +349,7 @@ CORPUS_DIRS = {
     "testsets_kimi2":    "Same-model REDRAW of testsets_kimi (kimi-k2.6 batch; the kimi floor; 2026-08-22).",
     "testsets_sonnet2":  "Same-model REDRAW of testsets_sonnet (claude-sonnet-5 batch; the sonnet floor; 2026-08-22).",
     "testsets_haiku2":   "Same-model REDRAW of testsets_haiku (claude-haiku-4-5 batch, thinking disabled; the haiku floor; 2026-08-22).",
+    "testsets_stealth3": "Second same-commit redraw (stealth/ox-alpha; stealth2 vs stealth3 = the pure thinking-on floor; 2026-08-22).",
     "testsets_stealth2": "Same-model REDRAW of testsets_stealth at prompt e03e2210 (redraw + prompt change; 2026-08-22).",
     "testsets_glm":      "Model-named leg (z-ai/glm-5.2:free via OpenRouter, reasoning off; 2026-08-21).",
     "testsets_nemotron": "Model-named leg (nvidia/nemotron-3-ultra-550b-a55b:free via OpenRouter, reasoning off; 2026-08-21).",
