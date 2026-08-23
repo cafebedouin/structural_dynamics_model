@@ -160,6 +160,20 @@ run "tripwire hook"  "$PY" python/pretooluse_tripwires.py --selftest
 # is the filtered channel (OQ-96). Adds ~0.25s to a ~52s gate (0.5%).
 run "probe harness"  "$PY" python/probe_harness_gate.py --check
 
+# OQ-337. Grammar/uniqueness of the plan-review cost meter, `.claude/skills/plan-review/RUNS.md`
+# (which IS git-tracked -- `.gitignore` negates `!.claude/skills/`, so a repo gate can see it on
+# a fresh clone; the OQ's stated constraint to the contrary was stale and is corrected there).
+# Named `ledger grammar`, NOT `runs ledger`: a row named for the ledger reading green would be
+# skimmed as "the ledger is in good order", which is exactly the claim this check refuses to
+# make. It cannot see a MISSING append -- a run that never landed a row leaves the file
+# perfectly grammatical. The missing-append remedy is SKILL.md's landing-chain procedure.
+# The OQ's stated ABSENCE-detector control burden is therefore recorded UNMET, not covered.
+# R-B (operator, 2026-08-21): REPORTING-ONLY for the first live run, blocking thereafter. A
+# first-run red on the live file would couple the gate against pushes of unrelated work while
+# C5 simultaneously forbids repairing the offending row quietly -- a bad shape to discover
+# mid-execution. Drop `--reporting` in its own commit once the first live run is green.
+run "ledger grammar" "$PY" python/runs_ledger_check.py --check --reporting
+
 # Standing detection that OQ-277's FROZEN preregistration has not been altered — a run was
 # made under md5 4118f64e, so if the document changes, the stamp stops naming what is on
 # disk and every result loses its pre-registration. Gated rather than checked on request
