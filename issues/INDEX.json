@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "88527f946c686c3ae65e7da1df6b41e355d5b926",
+    "store_version": "bcf2905dc1fd4e91751a0b2855ca749fe70b1cee",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-22T22:32:24"
+    "generated_at": "2026-08-23T06:31:08"
   },
-  "issues_sha": "a063abc42704c41a38b96dccee45b603c42af9d0fe1929161c338b99d2e16a47",
-  "n_entries": 349,
+  "issues_sha": "be2a2f80eb4d12b563f3f299a48b55f3ca4c9ec8bc75059aa4dce45c8279f058",
+  "n_entries": 351,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 6,
     "future": 13,
-    "open": 137,
+    "open": 139,
     "partial": 5
   },
   "active": [
@@ -49,11 +49,16 @@
       "status": "open",
       "priority": 1,
       "summary": "Rope/snare ε boundary under feeding: the free decision boundary OQ-117 left untested",
-      "deps": [],
+      "deps": [
+        "splits_from OQ-117"
+      ],
       "cross_refs": [],
       "mentioned_in": [
         "OQ-78",
-        "OQ-117"
+        "OQ-117",
+        "OQ-347",
+        "OQ-350",
+        "OQ-351"
       ]
     },
     {
@@ -2037,6 +2042,35 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-343",
+        "OQ-347"
+      ]
+    },
+    {
+      "id": "OQ-350",
+      "status": "open",
+      "priority": 3,
+      "summary": "Four of six claimed types have NO `dr_claim_mismatch` clause: a weak backstop and an absent one, which are different defects",
+      "deps": [
+        "splits_from OQ-120"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-120",
+        "OQ-307"
+      ]
+    },
+    {
+      "id": "OQ-351",
+      "status": "open",
+      "priority": 2,
+      "summary": "Thinking-on vs thinking-off changes the ε-decisive transition RATE ~30× on gemini-2.5-flash (0.04% vs 1.28%): an authoring-regime effect, not an engine one",
+      "deps": [
+        "splits_from OQ-120"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-78",
+        "OQ-120",
         "OQ-347"
       ]
     }

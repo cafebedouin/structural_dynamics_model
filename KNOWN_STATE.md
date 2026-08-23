@@ -45,6 +45,62 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-23 — [tripwire] A gate criterion can be UNSATISFIABLE BY CONSTRUCTION and survive seven review rounds — two did, in one gate
+
+**Files:** `prolog/maxent_classifier.pl`, `prolog/drl_core.pl`, `prolog/constraint_indexing.pl`, `audits/2026-08-21_oq120_epsilon_boundary/`, `audits/2026-08-23_oq120_epsilon_boundary_v2/`, `ISSUES.md`
+**Tier:** tripwire
+
+**The tripwire, for anyone authoring a pre-registered gate.** OQ-120's Phase 0 gate was
+blind-reviewed six rounds plus a fresh-eyes pass. **Two of its criteria could not come out false**,
+and neither reviewer nor six negotiated revisions caught either:
+
+1. **G0 required "none attribute to `snare_epsilon_floor`" and never defined *attribute*.** The bit
+   flips at every ε = 0.46 crossing **by construction**, so the test was unsatisfiable wherever any
+   transition existed there. Repaired by the operator's MOVED-vs-DECISIVE ruling: *decisive* = the
+   bit changed **and** the type that gate's clause produces is an MT endpoint (read on MT — these
+   gates live in `classify_from_metrics/6`). The distinction is worth 5× on the headline count:
+   `snare_epsilon_floor` MOVED 4717, DECISIVE **1**, over 122,031 transitions.
+2. **A count-based floor (`N_rail ≥ 10`) authored for ~1,300 stories was run against ~17,100** and
+   cleared 900× over (observed 9,191). Replaced by a per-stratum **rate** (`≥10` ∧ ≥0.5% of
+   stories×4 seats, in ≥2 model strata), which 11 of 23 strata now fail. **A count scales with the
+   corpus and a rate does not** — that is the whole repair.
+
+**Rule: review a gate for FALSIFIABILITY, not only correctness.** For every criterion ask *what
+observation would make this line come out false?* Both defects were invisible to reading-for-
+correctness (each was a true sentence) and instant under that question. Corollary for this repo,
+where corpora grow continuously: **any absolute count in a threshold has a shelf life** — re-derive
+it against the current denominator or express it as a rate.
+
+**Second tripwire, same arc: a cascade-derived LABEL is a claim about the corpus, not the cascade.**
+`maxent_classifier.pl:591`'s `rope <-> snare` label was authored by reading the cascade; it is wrong
+(FT pair `{rope, snare}` observed **0×** in 122,031 live transitions) and it is what put "rope/snare
+boundary" into OQ-120's premise in the first place. The plan written to *correct* that class of
+error then prescribed `rope, naturalized` for `:593` **by the same cascade reasoning** — also
+unsupported (modal decisive pair is `piton → rope`, ~2:1, on two independent scorings). Never commit
+a `threshold_boundary/5` label without the observed pair distribution behind it. Neither label was
+committed: the gate scored **G1b** and `[G1-D]` blocked the relabel, which is the discipline working.
+
+**Third: `story_provenance/8` splits several legs, and `(model, regime)` is too coarse a stratum
+key.** Legs were **backfilled** — original pass, schema fix, then models re-did the failed stories.
+`testsets_haiku` is **505 @ prompt `22843cdf`/schema `2e9dff2f` (2026-06-13) + 455 @
+`e03e2210`/`685ed7cf` (2026-08-22)** — 47% re-authored 70 days later under a different prompt AND
+schema; `testsets_flash` 754/206, `testsets_nemotron` 664+188/144, `testsets_stealth` 968/36. OQ-78
+ruling 5 forbids pooling ε-keyed denominators across generation regimes within one model, so key
+strata on `(model, regime, prompt_hash, schema_hash)`, **per story, never per leg** (`testsets` is
+also mixed-model: sonnet-5 127 / sonnet-4.5 75 / haiku-4.5 28). **Honest caveat, recorded because
+the counterfactual was run:** the finer key changed **no** model-level verdict here — same 6 models
+pass the floor either way, two 55-and-18-story cells flip, branch identical. Keep it because the
+ruling requires it; do not cite it as having rescued a conclusion.
+
+**Substrate note.** v2 re-swept the identical corpus and reproduced v1's transition data **exactly**
+(0 of 19 legs differing), so v2 is the same dataset re-scored, not a second measurement — which is
+what lets v2's numbers be cited under v1's genuinely-prior prereg. v1's `WRITEUP.md` was **not**
+retro-edited; the reconciliation lives in `V2_ADDENDUM.md` beside it. Branch **G1b** both times.
+OQ-120 stays open and re-specified; mints OQ-350 (four of six claimed types have no
+`dr_claim_mismatch` clause) and OQ-351 (thinking-on/off ~30× ε-decisive rate gap on flash).
+
+---
+
 ## 2026-08-22 — [correction-key] "Flash omits `stakeholders`" was FALSE — `story_repair.py` had been deleting the whole stakeholder surface from every repaired story since 2026-06-07; fixed + witnessed
 **Files:** python/story_repair.py, agent/generate_kernel_corpus.py, prompts/constraint_story_generation_prompt_json.md, schemas/constraint_story_schema.json, prolog/testsets_flash2/, prolog/testsets_flash3/, prolog/testsets_flash_think/, prolog/testsets_flash_think2/, prolog/testsets_nemotron/, audits/2026-08-21_flash_regime_vs_redraw/WRITEUP.md, docs/technical/bulk_corpus_generation.md
 **Tier:** correction-key

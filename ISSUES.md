@@ -5155,19 +5155,108 @@ OQ-117 ((c) parent), OQ-83 (exemption deliberate).
 
 ## OQ-120 — Rope/snare ε boundary under feeding: the free decision boundary OQ-117 left untested
 
-**Ω-type:** Ω_E (measurable; lower-stakes than the mountain case).
+**Ω-type:** Ω_E (measurable; the "lower-stakes" framing is now contested — see the framing verdict).
 
-**Status:** open — filed 2026-06-13 from the OQ-117 (c) ruling (scope bound).
+**Status:** open — filed 2026-06-13 from the OQ-117 (c) ruling (scope bound); **RE-SPECIFIED
+2026-08-23** after Phase 0 measured the boundary (gate branch **G1b**, no spend).
 **Priority:** 1
+**Deps:** splits_from OQ-117
 
-OQ-117's engine run tested the fed claim = **mountain** only and ruled (c) document-as-condition for
-the false-foundational case. OQ-78's actual free ε decision boundary is the **rope/snare** split
-(0.45/0.46), the one ε gate no SCOPE bin edge touches. Feeding a rope or snare claim and reading
-whether the engine's seat-constituted type moves across that boundary is the remaining test — but it
-is **lower-stakes**: both rope and snare are non-mountain, and the dangerous concealment (a seat
-asserted as σ-fixed) is the mountain/false-foundational shape OQ-117 already covered. Pick up if a
-rope/snare concordance question arises; not gating anything. Direction-of-fix from OQ-78 binds (no
-numeric disclosure to authoring).
+**The boundary claim as filed, and why it is restated.** OQ-117's engine run tested the fed claim =
+**mountain** only and ruled (c) document-as-condition; its scope bound routed the rope/snare case
+here. The entry then asserted that *"OQ-78's actual free ε decision boundary is the **rope/snare**
+split (0.45/0.46), the one ε gate no SCOPE bin edge touches."* **Phase 0 measured that boundary and
+it is not what the claim says it is.**
+
+**Phase 0 result (2026-08-23, local, zero spend).** Two runs, and the relation between them is
+load-bearing: **v1** (`audits/2026-08-21_oq120_epsilon_boundary/`) swept the corpus under a prereg
+frozen before any sweep code existed; **v2**
+(`audits/2026-08-23_oq120_epsilon_boundary_v2/`) re-ran after the operator repaired four gate
+criteria that v1 proved unsatisfiable, vacuous, non-total or undefined. **v2 reproduced v1's
+transition data exactly — same rows, same ε brackets, same MT/FT pairs, same gate sets, 0 of 19
+legs differing — so v2 is not a second measurement but the same dataset re-scored; same rows,
+re-scored, branch invariant.** The headline numbers below are v2's; **the ordering witness is v1's
+prereg** (md5 `b181e1a2a9cd42b86d190be09f61d400`), which genuinely precedes the data, and the data
+is bit-identical. v2's prereg is the weaker instrument *for freezing* and says so on its face; it is
+not the weaker instrument *for scoring*. **The scoring definition (MOVED vs DECISIVE) was
+operator-ruled at v1's checkpoint, after both scorings were in hand** — post-hoc specification,
+labelled as such, and it survived its own tightening without moving the verdict.
+
+ε swept on the 0.01 rail + 1e-4 brackets with adaptive bisection over 18 live legs (17,104 stories)
+and `kernel_v1`, at all four canonical seats; **122,031** located type transitions on the live legs.
+Per transition the sweep emits the SET of gate bits that changed, scored **MOVED** (the bit changed)
+vs **DECISIVE** (the bit changed *and* the type that gate's clause produces is an MT endpoint).
+Decisive is the ruled reading: crossing 0.46 flips `snare_epsilon_floor` by construction, so a
+MOVED-based test cannot come out false wherever any transition exists there.
+
+- `rope_epsilon_ceiling` is **decisive at scale: 1936** live transitions.
+- `snare_epsilon_floor` is decisive **once in 122,031** — `testsets_haiku3`,
+  `equal_protection_kernel__antisubordination_reading`, analytical seat, ε 0.4599→0.4600,
+  `tangled_rope → snare`, χ steady at ≈0.680 (χ is not what moved). It does **not** replicate across
+  its own model's redraw triple (0 transitions at ≈0.46 on `testsets_haiku`/`haiku2`), and haiku is
+  the noisiest floor in OQ-347's table (65% seat-vector churn with ε pinned), so a draw artifact is
+  fully consistent. `kernel_v1`: 0 decisive in 10,215.
+- The FT pair **{rope, snare} is observed 0 times**, under both scorings. The modal MOVED pair is
+  `tangled_rope → naturalized` (4373/4717) — the coalition step at 0.46 upgrading
+  `powerless → organized`, dropping d, so **χ FALLS as ε rises**.
+- Pooled memo: `N_eps 1919 / N_reach 1917 / N_rail 1852` (decisive-scored; v1's MOVED-scored
+  figures were 9351/9344/9191 — the decisive filter cuts N_rail ~5×). **60.6%** of qualifying
+  transitions are MT-invariant, moving only in the signature layer.
+- The re-set per-stratum floor (`N_rail ≥ 10` ∧ rate ≥ 0.5% of stories×4 seats, in ≥2 model strata)
+  is **met in 12 of 23 strata across 6 models — and failed by 11**, which is the evidence it is a
+  criterion rather than decoration. The retired pooled `N_rail ≥ 10` had been cleared 900× over.
+- Controls C1–C4 all discriminated on all 19 corpora (C1 fires on a natural carrier, C2 makes the
+  transition vanish at floor 0.90, C3 declines under shadow, C4 declines 55/55 where its precondition
+  holds).
+
+**So the boundary as named does not exist.** The rope/snare ε split is not a free decision boundary:
+it is dominated by χ and by the coalition step at 0.46, which moves d rather than the gate. The one
+ε gate decisive at scale is `rope_epsilon_ceiling`, and the pair it separates is neither
+{rope, snare} nor the labelled {rope, tangled_rope} — the modal decisive pair is `piton → rope`.
+
+**Why this does NOT close the entry.** The gate scored **G1b — UNCORROBORATED** (floor met, ≥1
+decisive transition, but all from a single model stratum), under v1's gate and again under v2's
+repaired one. OR-1 makes a **G0** result closing, and G0 requires **zero** decisive transitions; one
+non-replicating case read substantively as a draw artifact is still not zero, and the gate was frozen
+precisely so a result that *looks* like G0 cannot be scored as one. What remains open is the
+**re-specification**: any future arm must be designed against `rope_epsilon_ceiling` and the
+coalition step, not against a rope/snare split.
+
+**Framing verdict on "lower-stakes... not gating anything" — REVISED, and the tension is real.**
+The entry filed itself lower-stakes while carrying **Priority 1**, the resolver's highest sort key;
+those do not sit together and the entry never said which governs. The backstop census produced by
+the same pass bears directly on it: `dr_claim_mismatch/4` has four clause heads over three mismatch
+types, and **four of the six claimed types have no clause in existence** — claimed `snare`,
+`tangled_rope`, `naturalized` (and `scaffold`/`piton` by consequence) raise nothing at all
+(re-derived from `outputs/pipeline_output.json`, manifest 2026-08-21T16:36:35Z / `885151b`:
+mountain 14/21 66.7%, rope 2/52 3.8%, snare 0/25, tangled_rope 0/143, scaffold 0/13, piton 0/4).
+That is *wider* than the rope/snare framing suggests, and it is a concealment surface, which is the
+thing the "lower-stakes" reasoning said was covered by the mountain case. **Executor's position:
+the framing is revised, not reaffirmed** — the stakes live in the backstop gap, not in the ε
+boundary, and the ε boundary is the part that turned out inert. Whether to formally rewrite the
+entry's own framing is **OR-6, the operator's seat** (open). Remediation is filed separately as
+OQ-350 (OR-2 ruled: new entry). A second, unrelated finding the same sweep produced — a ~30×
+thinking-on/off difference in the ε-decisive transition rate on gemini-2.5-flash — is **OQ-351**,
+filed separately rather than closed inside this entry: it is a statement about authoring regime,
+not about the rope/snare boundary.
+
+**Direction-of-fix from OQ-78 binds on Phase 0's OUTPUT, not only on generation** (operator,
+2026-08-21). The transition map contains exact ε values at which types flip — precisely the numeric
+disclosure OQ-78 ruling 3 forbids reaching an authoring stage. It is marked **non-authoring-facing**
+and must never feed a prompt, a seed file, or `epsilon_bin` (which stays a dangling wire on purpose
+— re-wiring it would manufacture the concordance this OQ measures).
+
+**On the `Deps:` line, authored 2026-08-23 by derivation.** The entry had none; the `OQ-78, OQ-117`
+pairing previously cited is the INDEX router's *derived cross-ref* column, not an authored field.
+Derived from the source text rather than pasted: OQ-117's own ruling (`ISSUES.md:4925-4926`) reads
+*"Scope bound: established for the mountain/false-foundational case only; rope/snare boundary →
+OQ-120"*, i.e. OQ-120 is the carved-out residue of OQ-117's scope — a **grouping** relation, and it
+must be grouping, since OQ-117 is resolved and nothing gates OQ-120. Hence `splits_from OQ-117`,
+which leaves OQ-120 on the workable frontier (correct — it is workable). **No OQ-78 edge is
+authored**, deliberately: OQ-78 ruling 2 (`:3577`) *supplies the premise* and ruling 3 (`:3585`)
+*constrains the output*, but neither is a dependency, OQ-78 is resolved, and the authored relator
+vocabulary (`omega_resolver.py:73-90`) has no relator for premise-supplier or output-constraint.
+An absent edge honestly declared beats a plausible one invented.
 
 ---
 
@@ -18069,6 +18158,128 @@ one engine commit; (3) `paired_agreement.py` + `epsilon_distance.py` over all pa
 the seat-theorem partition made concrete, and the seed set OQ-343/OQ-348 should be read on.
 **Resolution:** a floor table (per model × regime) and the core's size. **What it changes:** the
 five-leg writeup's claims get error bars; OQ-346's spend decision.
+
+---
+
+## OQ-351 — Thinking-on vs thinking-off changes the ε-decisive transition RATE ~30× on gemini-2.5-flash (0.04% vs 1.28%): an authoring-regime effect, not an engine one
+
+**Ω-type:** Ω_E (measurable, and already measured on one model; the open part is whether it
+generalises and what it means).
+
+**Status:** open — minted 2026-08-23 from the OQ-120 Phase 0 v2 per-stratum floor table. Filed
+separately **on operator instruction** rather than closed inside OQ-120: a difference in authoring
+regime is not a statement about the rope/snare ε boundary, and burying it in a closed entry about an
+ε gate is how a real finding becomes unfindable.
+**Priority:** 2
+**Deps:** splits_from OQ-120
+
+**The observation.** Sweeping ε over the 0.01 rail at all four canonical seats and counting
+transitions where an ε gate is **DECISIVE** (the bit changed *and* the type that gate's clause
+produces is an MT endpoint), stratified by
+`(model, thinking-regime, prompt_hash, schema_hash)`:
+
+| stratum | stories | N_rail | rate (of stories × 4 seats) |
+|---|---|---|---|
+| `gemini-2.5-flash\|off` (3 backfill cells pooled) | 2873 | **5** | **0.04%** |
+| `gemini-2.5-flash\|on` (`flash_think`, `flash_think2`) | 1980 | **101** | **1.28%** |
+
+**~30×**, in the one model where both regime arms are large. The thinking-off cells are near-total
+zeros: `gemini-2.5-flash|off|685ed7cf|685ed7cf` is **0 in 1902 stories**;
+`…|22843cdf|2e9dff2f` is 5 in 765; `…|e03e2210|685ed7cf` is 0 in 206. Full table:
+`audits/2026-08-23_oq120_epsilon_boundary_v2/gate_readout.md`.
+
+**Why it is a question.** Three readings are live and the sweep does not separate them:
+(a) thinking-on authoring places ε and the χ-side fields nearer the decision boundaries, so more
+seats sit where a small ε move crosses a gate — an authoring-idiom effect; (b) thinking-on produces
+*more internally varied* stories (OQ-347 already measures thinking-on ε instability at 17–25% of
+redraws moving ≥0.10 vs 4–9% thinking-off), so this is that instability seen through a different
+instrument; (c) something about the flash thinking-off cells specifically — note they span three
+prompt/schema regimes and are still uniformly near-zero, which argues against a single-batch
+artifact. **Only flash has two large arms**; `stealth`, `kimi` are thinking-on only, `sonnet`,
+`haiku`, `nemotron` thinking-off only, so the contrast is currently n=1 model.
+
+**Sibling: OQ-347**, which owns the within-model floor table and the thinking-on/off regime
+contrast. This is the same axis measured by a different observable — OQ-347 reads redraw agreement,
+this reads ε-boundary proximity — and the two should be read together. It is NOT a duplicate: a
+model could be redraw-stable and boundary-proximate, or the reverse.
+
+**⚠ OQ-78 ruling 3 binds this entry the same way it binds the transition map.** The **rate** is
+reportable. The **exact ε values** behind it are not authoring-facing and must never reach a prompt,
+a seed file, or `epsilon_bin`. Any future arm on this question inherits that constraint.
+
+**Resolution:** a second model with two large regime arms (the cheapest is a thinking-off nemotron
+vs the parked `testsets_nemotron_think`, both free), plus a decision on whether (a) and (b) are
+separable with the corpus we have. **What it changes:** whether "thinking on/off" is a variable the
+ε-perturbation apparatus has to stratify by — if it is, every ε-keyed cross-model claim needs a
+regime column, and OQ-347's floor table gains one.
+
+---
+
+## OQ-350 — Four of six claimed types have NO `dr_claim_mismatch` clause: a weak backstop and an absent one, which are different defects
+
+**Ω-type:** Ω_E (mechanically checkable census) + Ω_C (whether the rope/snare band *should* carry a
+backstop is a verdict-surface design call the engine cannot settle).
+
+**Status:** open — minted 2026-08-23 from the OQ-120 Phase 0 backstop census (OR-2 ruled by the
+operator 2026-08-21: **new entry**, not an OQ-120 amendment).
+**Priority:** 3
+**Deps:** splits_from OQ-120
+
+**Two distinct shapes, and they must not collapse into one fix.**
+
+**(a) NO BACKSTOP — the absence.** `dr_claim_mismatch/4` (`drl_core.pl:682-712`) has exactly four
+clause heads over three mismatch types: `type_1_false_summit` ×2 keyed on
+`constraint_claim(C, mountain)`, `type_3_snare_as_rope` keyed on `constraint_claim(C, rope)`, and
+`type_5_piton_as_snare` keyed on `constraint_claim(C, theater_ratio, TR)` (already known-dead,
+OQ-307). **Claimed `snare`, `tangled_rope` and `naturalized` have no clause in existence.** This is
+not a low firing rate; it is a missing surface. `naturalized` is the sharpest case: `drl_core.pl:467`
+names it *"the primary substrate for false_summit rhetoric"*, and all 15 `naturalized` seats on the
+live corpus come back yellow, `cap_applied: none`, alerts informational only.
+
+**(b) WEAK BACKSTOP — the low rates.** Where clauses exist they barely fire, and the per-seat
+enumeration is discarded at the consumer: `diagnostic_summary.pl:745` `join_alerts/2` calls
+`dr_mismatch/3`, which binds `default_context`, while `routing_sink.pl:141` taps the `/4` form
+*with* a seat. Separately, every type-changing clause of `resolve_modal_signature_conflict/3` is
+first-arg `mountain`/`unknown` except `coupling_invariant_rope` (`signature_detection.pl:995`, keyed
+`_`), which promotes **to** rope — an anti-backstop (its own question is OR-3, registered in
+`audits/INVESTIGATIONS.md`).
+
+**Census** — re-derived 2026-08-23 from `outputs/pipeline_output.json` (manifest
+`2026-08-21T16:36:35Z`, `code_commit_short 885151b`, `n_constraints 285`, `n_stories 258`), NOT
+recalled; records grouped by `claimed_type`, counting those whose `verdict_join.alerts` carry a
+`type_1_false_summit` / `type_3_snare_as_rope` / `type_5_piton_as_snare` alert:
+
+```
+claimed           n  claim_mm    rate   any  mod/sev  severe
+mountain         21        14   66.7%    18       14       4
+rope             52         2    3.8%    46       20       2
+snare            25         0    0.0%    22        0       0
+tangled_rope    143         0    0.0%   131        8       0
+scaffold         13         0    0.0%    11        5       0
+piton             4         0    0.0%     2        2       0
+(none)           27         0    0.0%     0        0       0   <- axiom_contradiction members
+```
+
+Observed alert-type census: `perspectival_incoherence 175, signature_correction 68,
+type_1_false_summit 14, type_3_snare_as_rope 2`. `type_5_piton_as_snare` fires **0×**, consistent
+with OQ-307.
+
+**Why it is a question and not a ticket.** Adding clauses changes a verdict surface, and whether a
+claimed-`tangled_rope`-that-computes-`naturalized` *should* raise a mismatch is a design call about
+what the mismatch family is for — concealment-detection (Corollary 2a) rather than
+truth-rejection. Shape (a) may be correct-as-designed for some of the four; that is exactly what
+needs ruling, per type, and the ruling differs for `naturalized` (a named concealment substrate)
+and for `scaffold` (arguably benign).
+
+**Priority rationale.** Deliberately **3**, not OQ-120's 1. Inheriting Priority 1 would launder a
+real verdict-surface change through a line filed as inert, which is the framing problem OQ-120's own
+Phase 0 flagged.
+
+**Resolution:** a per-claimed-type ruling on which of the four absences are defects, plus whichever
+clauses that licenses, plus a decision on the `/3`-vs-`/4` seat collapse at `join_alerts/2`.
+**What it changes:** the claim-mismatch alert surface, hence `verdict_join` headlines, on up to 185
+live constraints. Sibling: OQ-307 (the dead `type_5`). Read-site: the `omega_resolver` frontier.
+Evidence: `audits/2026-08-21_oq120_epsilon_boundary/WRITEUP.md`.
 
 ---
 
