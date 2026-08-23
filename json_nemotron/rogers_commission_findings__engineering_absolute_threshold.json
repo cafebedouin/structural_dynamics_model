@@ -1,0 +1,287 @@
+{
+  "header": {
+    "constraint_id": "rogers_commission_findings__engineering_absolute_threshold",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "084c6968-fe77-4894-bc9d-ffbd2c6d37a2"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.91,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.93,
+    "resistance": 0.07,
+    "claimed_type": "mountain",
+    "human_readable": "Rogers Engineering Absolute Threshold: O-Ring Redesign Required Before Flight",
+    "topic_domain": "organizational_safety/technology_governance/regulatory_compliance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "flight_crew"
+    ],
+    "victims": [
+      "launch_cadence"
+    ],
+    "vindicated_propositions": [
+      "physical_law_is_not_negotiable",
+      "engineering_judgment_supersedes_management_authority_in_flight_readiness"
+    ]
+  },
+  "interval": {
+    "start": 1986,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1986,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1996,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1986,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1996,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1986,
+      "value": 0.94
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1996,
+      "value": 0.92
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.91
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.91
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.91
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_law_vs_institutional_construct",
+      "question": "Is the engineering absolute threshold a discovery of physical law (temperature-dependent O-ring resiliency) or an institutional construct that benefits identifiable agents by freezing the design?",
+      "resolution_mechanism": "Counterfactual analysis: if NASA had accepted the risk with crew consent and full disclosure, would the physics have changed? If not, the threshold is institutional; if the physics would have killed crew regardless, the threshold reflects natural law.",
+      "impact": "If institutional, false_summit_mountain triggers (beneficiaries: flight_crew + NASA institutional reputation; victim: launch_cadence) and reclassifies to tangled_rope. If natural law, mountain classification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the engineering absolute threshold reflects immutable physics or a constructed safety standard"
+    },
+    {
+      "id": "committer_frame_reading_dispute",
+      "question": "This constraint is one reading (engineering_absolute_threshold) of the contested kernel rogers_commission_findings. Sibling readings (management_compliance_narrative, actuarial_risk_acceptance) would change the beneficiary/victim structure and suppression profile. Where exactly does the structural disagreement lie?",
+      "resolution_mechanism": "Map the three readings' structural parameters: engineering_absolute_threshold (suppression=0.91, victims={launch_cadence}, beneficiaries={flight_crew}); management_compliance_narrative (suppression≈0.3, victims={}, beneficiaries={NASA_management, contractor_management}); actuarial_risk_acceptance (suppression≈0.1, victims={flight_crew_if_consent_flawed}, beneficiaries={program_continuity}). The disagreement is located in the authority_grounding of the Flight Readiness Review veto.",
+      "impact": "If engineering_absolute_threshold forecloses management_compliance_narrative within a single framework (forecloses relation), the kernel has an unresolvable structural split. If they coexist_with, the kernel sustains multiple live institutional positions simultaneously.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural location of disagreement among sibling readings of the Rogers findings kernel"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Rogers Commission findings on the Challenger disaster established that O-ring failure at low temperatures was a known, documented physical phenomenon. This reading interprets the findings as establishing an absolute engineering threshold: flight operations must cease until the O-ring is redesigned and certified for the operational temperature envelope. The constraint is not a management decision but a recognition of physical law — rubber does not seal below its glass transition temperature regardless of organizational pressure. Engineers hold veto authority over Flight Readiness Reviews because they are the designated interpreters of physical reality for the program. The beneficiary is flight crew safety (and by extension, public trust in human spaceflight); the victim is launch cadence (schedule pressure, program momentum, political commitments).",
+    "key_agents": [
+      "flight_crew: Primary beneficiary (powerless/identity_locked) — lives depend on the threshold holding",
+      "launch_cadence: Primary victim (institutional/trapped) — schedule pressure bears the cost of the redesign pause",
+      "flight_readiness_review_engineers: Agenda setter (organized/constrained) — hold veto authority as designated interpreters of physical law",
+      "nasa_management: Secondary actor (institutional/constrained) — receives the constraint as external limit on authority",
+      "contractor_management_morton_thiokol: Secondary actor (organized/constrained) — bears redesign cost and certification burden",
+      "analytical_observer: Observer (analytical/analytical) — sees full structure"
+    ],
+    "logic_rationale": "Extractiveness is low (0.12) because the constraint primarily prevents catastrophe rather than extracting resources — the 'cost' to launch cadence is the price of not killing crew. Suppression is very high (0.91) because the constraint actively suppresses launch operations until a physical condition is met; alternatives (waivers, risk acceptance, management override) are structurally excluded. Theater ratio is very low (0.08) because the engineering review function is genuine and the veto is real — Challenger proved the cost of theater. Accessibility collapse is near-total (0.93): once the physics is understood, no alternative to redesign exists. Resistance is near-zero (0.07): the constraint meets almost no active resistance because the physics is not negotiable; resistance would be irrational.",
+    "directionality_logic": "Flight crew are full beneficiaries (d ≈ 0.0): the constraint subsidizes their survival. Launch cadence is the full target (d ≈ 1.0): it bears the entire schedule cost. Engineers at the FRR are symmetric (d ≈ 0.5): they hold authority but also bear responsibility — if they err on either side (false positive: unnecessary delay; false negative: catastrophe), they own the consequence. NASA management is near-target (d ≈ 0.8): they lose schedule control but gain a defensible boundary. The directionality derivation from beneficiary/victim declarations + power + exit captures this structure: flight_crew (beneficiary, powerless, identity_locked) → low d; launch_cadence (victim, institutional, trapped) → high d; engineers (neither beneficiary nor victim, organized, constrained) → mid d.",
+    "mandatrophy_analysis": "The constraint prevents mislabeling coordination as extraction by making the coordination function (preventing O-ring failure) structurally inseparable from the suppression mechanism (halting flight until physics is satisfied). A pure extraction reading would predict the constraint relaxes when political pressure mounts; the mountain reading predicts it does not — and Challenger validated the mountain reading. The mandate (prevent O-ring failure) has not atrophied; the physics remains the same.",
+    "kernel_context": "This constraint is the engineering_absolute_threshold reading of the contested kernel rogers_commission_findings. Sibling readings: management_compliance_narrative (the findings establish a compliance process: document risk awareness and mitigation efforts sufficient to proceed) and actuarial_risk_acceptance (the findings establish a risk quantification requirement: acceptable to fly if failure probability is documented and accepted by informed decision-makers). This reading asserts that the Rogers findings constitute a recognition of physical law that forecloses management discretion; the sibling readings treat the findings as creating procedural or quantitative obligations that management can satisfy without redesign. The structural disagreement is located in the authority_grounding of the Flight Readiness Review veto: this reading grounds it in expertise (physical law interpretation); management_compliance_narrative grounds it in lineage (compliance with documented process); actuarial_risk_acceptance grounds it in practice (quantified risk acceptance)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "rogers_commission_findings__management_compliance_narrative",
+      "rogers_commission_findings__actuarial_risk_acceptance",
+      "flight_readiness_review_veto_authority",
+      "o_ring_redesign_certification_requirement",
+      "challenger_lesson_institutionalization"
+    ],
+    "dual_formulation_note": "This constraint (engineering_absolute_threshold) and its siblings (management_compliance_narrative, actuarial_risk_acceptance) form a kernel family around rogers_commission_findings. They share the same empirical referent (the Rogers Commission report) but instantiate different constraints with different ε values, different beneficiary/victim structures, and different suppression profiles. engineering_absolute_threshold: ε≈0.12, suppression≈0.91, beneficiaries={flight_crew}, victims={launch_cadence}. management_compliance_narrative: ε≈0.35, suppression≈0.30, beneficiaries={NASA_management, contractor_management}, victims={}. actuarial_risk_acceptance: ε≈0.25, suppression≈0.10, beneficiaries={program_continuity}, victims={flight_crew_if_consent_flawed}. The ε-invariance principle requires separate stories because the extraction profile changes with the reading — this is not one constraint viewed from three angles."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "flight_crew",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Astronauts whose lives depend on the O-ring sealing at launch temperature. They cannot exit the constraint — their professional identity and survival are fused with the vehicle's integrity. They benefit from the absolute threshold because it prevents launch when physics says the seals will fail. They do not administer the constraint; they are its protected subjects."
+    },
+    {
+      "name": "launch_cadence",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The program's launch schedule, political commitments, and institutional momentum. Bears the full cost of the redesign pause (32 months for Challenger return-to-flight). Cannot exit the constraint because it is a physical boundary — no amount of schedule pressure changes the glass transition temperature of the O-ring material. The victim is not a person but an institutional imperative that the constraint suppresses."
+    },
+    {
+      "name": "flight_readiness_review_engineers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Engineers designated as the final technical authority in the Flight Readiness Review process. They hold veto power: if they do not sign, the vehicle does not fly. Their authority derives from expertise (they interpret physical law for the program), not hierarchy. They are constrained by professional ethics and the knowledge that a wrong sign-off kills crew. Their exit options are constrained — leaving the FRR means abandoning the protective function they embody."
+    },
+    {
+      "name": "nasa_management",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "NASA leadership that receives the constraint as an external limit on launch authority. They pay in schedule autonomy and political capital (explaining delays to Congress and the White House). They benefit secondarily: the constraint provides a defensible boundary against schedule pressure ('we cannot fly, physics says no'). Their exit is constrained — they could attempt to override the FRR (as occurred pre-Challenger) but the constraint's suppression mechanism (post-Challenger institutionalization) makes override structurally costly."
+    },
+    {
+      "name": "contractor_management_morton_thiokol",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Morton Thiokol management and engineering. Bears the redesign cost, certification burden, and contractual liability. Their engineers (notably Roger Boisjoly and Arnie Thompson) were the internal voices that the constraint vindicated. Exit is constrained — they hold the SRB contract and must deliver a certified redesign to continue; walking away means contract termination and reputational destruction."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The analytical seat that sees the full structure: the constraint is a recognition of physical law (rubber does not seal below Tg) institutionalized as a veto authority. From this seat, the constraint is a mountain — it would persist regardless of who defends it because the physics is invariant. The observer sees the beneficiary/victim structure as a consequence of the physics, not its cause."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates the recognition of physical law across the flight program: ensures that launch decisions are gated by engineering judgment about material behavior at temperature, not by schedule pressure or management preference. Solves the coordination problem of 'who decides when physics says stop' by designating FRR engineers as the authoritative interpreters.",
+    "transfer_function": "Moves launch authority from management discretion to engineering veto. The 'transfer' is not of resources but of decision-rights: the right to say 'fly' is transferred from program management to the engineers who certify the hardware. The cost (schedule delay) is borne by the program; the benefit (crew survival) accrues to the crew and the public trust.",
+    "absent_voices": "The pre-Challenger management chain that overrode engineering concerns (Lawrence Mulloy, George Hardy) — they would argue that risk acceptance is a management prerogative, not an engineering veto. They are absent because the constraint (post-Challenger institutionalization) structurally excluded their authority. Also absent: the crew of STS-51L, who had no voice in the launch decision that killed them — their absence is what the constraint was built to prevent recurring.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the engineering absolute threshold vanished overnight, launch decisions would revert to management discretion with engineering input as advisory only. The FRR veto would become consultative. Schedule pressure would again compete directly with technical concerns without a structural boundary. The physical law (O-ring temperature sensitivity) would not change, but the institutional mechanism that forces it to be respected would disappear — leading to a world where launch-on-schedule competes with launch-on-physics on equal footing.",
+    "founding_problem": "The Shuttle program had normalized deviance: O-ring erosion at low temperatures was observed repeatedly and treated as an acceptable risk rather than a design defect. Management overrode engineering objections (STS-51L FRR) because the risk was framed as probabilistic and manageable. The founding problem was the absence of a structural mechanism that made physical law non-negotiable in the launch decision chain.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Rogers Commission itself (chaired by William Rogers, with Feynman's minority report) attested that the founding problem was the normalization of deviance and the subordination of engineering to management. The Columbia Accident Investigation Board (2003) corroborated independently that the same organizational pattern (normalization of deviance, schedule pressure overriding technical concerns) recurred — confirming the founding problem remains live across generations of NASA human spaceflight. This corroboration comes from outside the benefiting parties (the CAIB was an external investigation, not a NASA self-assessment)."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "management_compliance_narrative",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "actuarial_risk_acceptance",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "physical_law_is_not_negotiable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "engineering_judgment_supersedes_management_authority_in_flight_readiness",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "rogers_commission_physical_law_recognition",
+    "drift_state": {
+      "moment": "post_columbia_institutionalization",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "mountain",
+    "downstream_of": [
+      "rogers_commission_findings"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

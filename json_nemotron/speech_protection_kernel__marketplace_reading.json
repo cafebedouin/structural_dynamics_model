@@ -1,0 +1,343 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_kernel__marketplace_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_speech_protection_kernel__marketplace_reading",
+    "measurement_id_prefix": "speech_protection_kernel__marketplace_reading",
+    "story_uid": "9d7fe7aa-8e79-4c94-8fae-bc209341214b"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Marketplace-of-Ideas Speech Protection",
+    "topic_domain": "constitutional_law/political_philosophy/communication_rights",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "public_sphere_participants",
+      "truth_seeking_institutions",
+      "minority_viewpoint_holders"
+    ],
+    "victims": [
+      "targeted_groups_under_harmful_speech",
+      "vulnerable_audiences"
+    ],
+    "vindicated_propositions": [
+      "marketplace_of_ideas_thesis",
+      "more_speech_remedy",
+      "collective_epistemic_benefit"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "Does this constraint instantiate one reading of the contested speech_protection_kernel, and how does that constrain its ε and structural data?",
+      "resolution_mechanism": "This reading commits to the marketplace-of-ideas justification (collective epistemic benefit, more-speech remedy). Other readings (absolutist, harm-threshold, dignity, democratic-participation) instantiate DIFFERENT constraints with different ε and different victim/beneficiary structures. Do not average across readings.",
+      "impact": "Treating the kernel as one constraint with multiple readings folded in would violate ε-invariance (DP-001). Each reading must be its own constraint story with its own ε, linked via network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer frame: this is the marketplace_reading of speech_protection_kernel"
+    },
+    {
+      "id": "marketplace_mechanism_empirical_validity",
+      "question": "Does the more-speech remedy actually correct false/harmful speech in practice, or does the mechanism fail under conditions of asymmetry, amplification, or epistemic closure?",
+      "resolution_mechanism": "Empirical study of correction dynamics in networked public spheres: measure retraction diffusion, belief updating after exposure to counter-speech, and conditions under which false claims persist despite countervailing speech.",
+      "impact": "If the mechanism systematically fails for structurally identifiable classes of speakers or claims, the constraint's coordination function is impaired and its extraction profile shifts — potentially from rope toward tangled_rope or snare for those seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the marketplace coordination mechanism operates as theorized"
+    },
+    {
+      "id": "harm_asymmetry_under_marketplace_logic",
+      "question": "When harmful speech disproportionately targets groups with less platform access or epistemic authority, does the marketplace reading's beneficiary structure conceal a snare dynamic?",
+      "resolution_mechanism": "Map speech harm incidence and counter-speech capacity by speaker/audience power position. If harm concentrates on low-power groups while counter-speech capacity concentrates on high-power groups, the 'more speech' remedy extracts from the harmed without providing functional coordination for them.",
+      "impact": "Would reclassify the constraint for targeted-group seats from rope/beneficiary toward snare/payer — seat divergence the engine computes from the structural data.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether asymmetric harm and asymmetric remedy capacity create extraction the marketplace framing obscures"
+    },
+    {
+      "id": "content_neutrality_vs_structural_bias",
+      "question": "Does the marketplace reading's rejection of content-based restrictions structurally entrench existing speech power distributions?",
+      "resolution_mechanism": "Analyze whether facially neutral speech rules (time/place/manner, platform architecture, amplification algorithms) produce systematically biased outcomes that the 'no content-based restrictions' premise prevents correcting.",
+      "impact": "If neutrality operates as a ratchet for existing advantage, the constraint's extraction is higher than the marketplace framing admits — especially for seats lacking amplification access.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether formal content-neutrality masks structural extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.22
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The marketplace-of-ideas reading justifies speech protection as a collective truth-discovery mechanism: false and harmful speech is best countered by more speech, not by state restriction. Content-based restrictions are rejected as distorting the epistemic process. The reading presents itself as a coordination solution (rope) — a genuine collective-action problem (how to discover truth in pluralistic discourse) solved with minimal coercion. But the coordination function depends on empirical conditions (roughly equal speech access, functional correction dynamics, absence of structural amplification bias) that may not hold. Where they fail, the constraint may operate as extraction for targeted groups (snare/tangled_rope seats) while presenting as coordination for dominant speakers. This story authors the marketplace reading as a single ε-invariant constraint; sibling readings are separate constraint stories linked via network.affects_constraints.",
+    "key_agents": [
+      "public_sphere_participants: Primary beneficiary (organized/constrained) — benefits from open discourse as truth-seeking mechanism",
+      "truth_seeking_institutions: Primary beneficiary (institutional/analytical) — universities, journals, courts rely on open contestation",
+      "minority_viewpoint_holders: Beneficiary (powerless/constrained) — protection enables dissenting views to enter marketplace",
+      "targeted_groups_under_harmful_speech: Victim (powerless/identity_locked) — bears disproportionate harm; counter-speech capacity limited by structural position",
+      "vulnerable_audiences: Victim (powerless/constrained) — lacks epistemic resilience against optimized persuasion/harm",
+      "platform_architects: Agenda setter (institutional/arbitrage) — designs amplification architecture that shapes marketplace dynamics",
+      "state_regulators: Observer (institutional/analytical) — monitors for market failure but constrained by content-neutrality premise"
+    ],
+    "logic_rationale": "Extractiveness (0.38) reflects the cost borne by targeted groups who absorb harm while the 'more speech' remedy fails to functionally protect them — the coordination mechanism extracts their dignity/safety for the collective epistemic benefit. Suppression (0.22) is low: the constraint itself is a protection against suppression; the measured suppression is the constraint's own restriction on content-based regulation. Theater ratio (0.18) captures the growing gap between the marketplace ideal and platform-mediated reality where amplification algorithms, not open contestation, determine speech reach. Accessibility collapse (0.25) is modest: alternative regulatory frameworks (European hate speech law, platform moderation) exist and operate. Resistance (0.55) is moderate: significant contestation from harm-threshold and dignity readings, plus platform governance struggles.",
+    "perspectival_gap": "From public_sphere_participants and truth_seeking_institutions seats: the constraint is a genuine rope — coordination with diffuse benefits, minimal coercion. From targeted_groups_under_harmful_speech: the constraint operates as a snare — they pay the cost of harmful speech while the 'more speech' remedy is structurally inaccessible (identity_locked exit, no amplification access). From minority_viewpoint_holders: the constraint is a vital rope — without it, their views are excluded entirely. The engine computes this seat divergence from the structural data (power, exit_options, spatial_scope, beneficiary/victim declarations).",
+    "directionality_logic": "Beneficiaries: public_sphere_participants, truth_seeking_institutions, minority_viewpoint_holders — they gain from the open contestation structure. Victims: targeted_groups_under_harmful_speech, vulnerable_audiences — they bear disproportionate harm when the marketplace mechanism fails. The marketplace reading's premise (counter-speech corrects harm) assigns low directionality to beneficiaries (they benefit from the arrangement) and high directionality to victims (the arrangement extracts from them by denying remedy). Platform_architects sit near d=0.15 (beneficiary: they control the architecture the constraint protects). State_regulators sit near d=0.5 (analytical: they bear enforcement costs but gain legitimacy).",
+    "mandatrophy_analysis": "The founding problem (how to discover truth in pluralistic discourse without state orthodoxy) remains live but contested. The marketplace reading claims the problem is still live and the arrangement still solves it. Harm-threshold and dignity readings claim the problem has shifted: the epistemic environment has changed (algorithmic amplification, epistemic closure, power asymmetry) such that the original mechanism no longer functions — the arrangement persists as extraction for some seats. The mandate has not atrophied to piton because the coordination function remains real for many seats; but seat divergence is widening.",
+    "kernel_context": "This constraint is the marketplace_reading of the speech_protection_kernel. Sibling readings: absolutist_reading (near-categorical protection, listener harm not grounds for restriction), democratic_participation_reading (protection strongest for political expression necessary for self-governance), dignity_reading (protection conditional on not functioning as structural subordination), harm_threshold_reading (protection conditional on absence of demonstrable harm). Each reading is a separate constraint story with its own ε. This reading's structural delta: justification is collective epistemic benefit, not individual autonomy; content-based restrictions rejected as distorting truth-discovery."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_kernel__absolutist_reading",
+      "speech_protection_kernel__harm_threshold_reading",
+      "speech_protection_kernel__dignity_reading",
+      "speech_protection_kernel__democratic_participation_reading"
+    ],
+    "dual_formulation_note": "Speech protection kernel decomposes into five constraint stories (one per reading) with different ε, different beneficiary/victim structures, and different claimed types. The marketplace reading claims rope (coordination for truth-discovery); absolutist likely claims mountain; harm_threshold and dignity readings likely claim tangled_rope or snare for targeted seats; democratic_participation likely claims scaffold or tangled_rope. All linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "public_sphere_participants",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Engage in public discourse expecting that false claims will be corrected through open contestation. Benefit from the epistemic commons the constraint maintains. Exit is constrained — leaving the public sphere means losing voice in collective truth-seeking."
+    },
+    {
+      "name": "truth_seeking_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Universities, scientific journals, courts, and investigative journalism depend on the marketplace constraint to protect the open contestation their methods require. They are institutional beneficiaries whose epistemic practices are structured by the constraint."
+    },
+    {
+      "name": "minority_viewpoint_holders",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold views outside the current consensus. The marketplace constraint is their primary protection against majoritarian suppression — without it, their views are excluded before they can be tested. Their exit is constrained: they cannot 'leave' the need for protection."
+    },
+    {
+      "name": "targeted_groups_under_harmful_speech",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Groups disproportionately targeted by hate speech, harassment, and structural vilification. The marketplace reading denies them content-based remedies ('more speech' is the only remedy). Their identity makes exit from the target position impossible — they cannot stop being the group that harmful speech targets. They pay the cost of the constraint's coordination function for others."
+    },
+    {
+      "name": "vulnerable_audiences",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals lacking epistemic resilience (children, cognitively impaired, information-poor environments) who absorb optimized harmful speech without functional capacity for counter-speech. They are trapped in the target position with no exit and no effective remedy under the marketplace logic."
+    },
+    {
+      "name": "platform_architects",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design and control the algorithmic amplification, recommendation, and moderation infrastructure that shapes the actual marketplace of ideas. The constraint protects their architectural choices from content-based regulation. They have arbitrage-grade exit: they can modify architecture, shift jurisdictions, or restructure platforms."
+    },
+    {
+      "name": "state_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitor the speech ecosystem for market failure (monopoly, amplification bias, harm concentration). Constrained by the marketplace reading's content-neutrality premise from using the most direct remedial tools. Their analytical seat sees the full structure but their remedial power is constrained by the constraint they observe."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the collective epistemic problem: how can a pluralistic society discover truth without a state orthodoxy? The marketplace constraint coordinates distributed truth-seeking by protecting all speech from content-based restriction, trusting that open contestation converges on truth better than any censor could.",
+    "transfer_function": "Moves the burden of harmful speech from the speaker (who faces no content-based penalty) to the targeted audience (who absorbs the harm and must generate counter-speech). Moves epistemic benefit from the open contestation to all participants, but the benefit is diffuse while the harm burden is concentrated on structurally vulnerable groups.",
+    "absent_voices": "Targeted groups who would argue for content-based remedies (hate speech bans, platform accountability) are structurally excluded by the marketplace reading's premise — their preferred remedy is defined as the distortion the constraint exists to prevent. Also absent: future generations who inherit the epistemic environment shaped by today's marketplace dynamics.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the marketplace constraint vanished overnight, content-based speech restrictions would proliferate (hate speech laws, platform liability regimes, state orthodoxy enforcement). The epistemic commons would fragment into regulated speech zones. Truth-seeking institutions would lose their protective framework. Targeted groups might gain direct remedies but at the cost of a general suppression infrastructure that could be turned against them.",
+    "founding_problem": "How to secure collective truth-discovery in a pluralistic society without empowering the state to designate orthodoxy? The marketplace reading was built to solve this by making speech protection structural rather than discretionary — the remedy for bad speech is more speech, not state silence.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Marketplace proponents (civil liberties organizations, press freedom groups, classical liberal theorists) attest the problem is live and the mechanism functions. Harm-threshold and dignity reading proponents (critical race theorists, feminist legal scholars, platform accountability advocates) attest the problem has shifted: algorithmic amplification and structural asymmetry mean the mechanism no longer functions as theorized. No consensus outside the benefiting parties."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "speech_protection_kernel"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "harm_threshold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dignity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "democratic_participation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "truth_discovery_requires_unrestricted_contestation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "more_speech_remedy_superior_to_state_restriction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "content_based_restrictions_distort_epistemic_process",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "classical_marketplace_of_ideas",
+    "drift_state": {
+      "moment": "algorithmic_amplification_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

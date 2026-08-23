@@ -1,0 +1,344 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_preparedness_persistence__hybrid_reading",
+    "measurement_id_prefix": "prep_pers_hybrid",
+    "story_uid": "af556983-06a9-4b1a-91bc-077922ac7a91",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.35,
+    "claimed_type": "piton",
+    "human_readable": "Stratified Disaster Preparedness: Competent Inspection, Ritualized Drills",
+    "topic_domain": "institutional/safety/governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "inspection_agencies",
+      "compliance_consultants",
+      "liability_insurers"
+    ],
+    "victims": [
+      "frontline_responders",
+      "vulnerable_communities",
+      "municipal_budgets"
+    ],
+    "vindicated_propositions": [
+      "institutional_continuity_doctrine",
+      "due_diligence_standard"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint is one reading (hybrid_reading) of the contested kernel 'preparedness_persistence'. What structural elements distinguish it from sibling readings competence_reading and husk_reading?",
+      "resolution_mechanism": "Compare the three readings' beneficiary/victim structures, extraction localization claims, and institutional memory trajectories. The hybrid reading asserts stratified competence — engineering inspection remains Mountain-like while evacuation drills degrade to Piton-like ritual.",
+      "impact": "If stratification cannot be empirically sustained, the reading collapses toward either competence_reading (all components competent) or husk_reading (all ritualized), changing the constraint's type profile and extraction distribution.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading identity and structural differentiation from siblings"
+    },
+    {
+      "id": "extraction_localization_boundary",
+      "question": "Is extraction truly localized to drill subsystems, or does inspection competence extract via credential gatekeeping and liability shielding?",
+      "resolution_mechanism": "Trace inspection fee flows, credential renewal revenue, and liability outcomes for inspected vs. non-inspected facilities. Compare municipal budget allocations for drill compliance vs. inspection compliance.",
+      "impact": "If inspection extracts via credential rents, the Mountain-like component carries hidden extraction, shifting the hybrid reading toward a more uniformly extractive profile (tangled_rope or snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extraction is genuinely stratified or merely appears so"
+    },
+    {
+      "id": "drill_ritualization_mechanism",
+      "question": "Is drill ritualization driven by internalized suppression (responders believe drills work) or structural suppression (budget/time constraints make realistic drills impossible)?",
+      "resolution_mechanism": "Post-drill surveys measuring perceived vs. actual readiness; track drill realism budgets over time; compare jurisdictions with mandated vs. voluntary drill regimes.",
+      "impact": "If internalized, suppression persists after budget relief — the constraint carries its own reproduction mechanism. If structural, suppression drops when resources return.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in drill ritualization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.22
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "Disaster preparedness regimes stratify into components that retain operational competence (engineering inspections of dams, bridges, nuclear facilities) and components that have degraded into ritual performance (mass evacuation drills, tabletop exercises, shelter-in-place simulations). The inspection regime is maintained by genuine technical necessity and external validation — a Mountain-like backbone. The drill regime persists through institutional inertia, compliance checkboxes, and liability theater — a Piton-like shell. The hybrid reading asserts this stratification is structural, not incidental: the same preparedness mandate produces both a competent core and a ritualized periphery, with extraction localized to the periphery via consultant fees, compliance software, and training contracts that have no operational payoff.",
+    "key_agents": [
+      "inspection_agencies: Primary agenda_setter (institutional/arbitrage) — sets standards, collects fees, shields liability",
+      "compliance_consultants: Primary beneficiary (organized/mobile) — sells drill packages, certification software, after-action reports",
+      "frontline_responders: Primary payer (organized/constrained) — performs drills, absorbs opportunity cost, bears ritual burden",
+      "vulnerable_communities: Secondary payer (powerless/trapped) — experiences drill theater as substitute for material mitigation",
+      "municipal_budgets: Secondary payer (moderate/constrained) — funds both competent inspection and ritualized drills from same line item",
+      "liability_insurers: Beneficiary (institutional/arbitrage) — uses drill completion as underwriting proxy regardless of realism",
+      "engineering_corps: Observer (analytical/analytical) — maintains inspection competence, watches drill degradation"
+    ],
+    "logic_rationale": "Base extractiveness (0.38) reflects the hybrid structure: inspection extraction is near-zero (genuine coordination), drill extraction is moderate (consultant fees, wasted staff hours) but localized. Suppression (0.22) is low overall because inspection is voluntary-adopted by facility operators and drills are rarely actively enforced against communities — the constraint persists through institutional habit, not coercion. Theater ratio (0.55) is the signal: drills are >50% performative (scripted scenarios, no-fail outcomes, after-action reports filed and ignored). Accessibility collapse (0.42) is moderate: communities cannot exit the drill mandate, but facilities can choose inspection regimes. Resistance (0.35) is meaningful but fragmented: responders complain, auditors note gaps, but no coalition forms to restructure the mandate.",
+    "directionality_logic": "Inspection agencies and liability insurers sit at d ≈ 0.15 (beneficiaries: collect fees/premiums, control standards, arbitrage-grade exit via jurisdictional choice). Compliance consultants sit at d ≈ 0.2 (beneficiaries with mobile exit — they sell into the mandate but could pivot). Frontline responders sit at d ≈ 0.75 (payers: constrained exit — job requires drill participation, identity_locked through professional role). Vulnerable communities sit at d ≈ 0.85 (payers: trapped — no exit from geographic risk, no voice in drill design). Municipal budgets sit at d ≈ 0.6 (payers: constrained — must fund both regimes, limited reallocation power). Engineering corps sits at d ≈ 0.5 (analytical: symmetric, sees both regimes).",
+    "perspectival_gap": "From the inspection agency seat, the constraint is a Mountain — technical standards, genuine coordination, negligible extraction. From the frontline responder seat, the drill component is a Piton — ritual maintained by institutional inertia, extracting time and credibility. From the vulnerable community seat, the whole preparedness edifice reads as a Snare — drills substitute for evacuation infrastructure, inspection ignores their housing stock. The engine computes these divergences from the structural data; the hybrid reading's claim (piton) captures the drill subsystem's degradation while the inspection subsystem remains Mountain-like.",
+    "mandatrophy_analysis": "The founding problem (credible disaster response capability) is partially live for inspection (dams still fail, bridges still collapse) but dead for mass drills (no evidence drills improve survival in actual events). The mandate persists because the inspection subsystem legitimizes the drill subsystem — 'we do preparedness' points to competent inspection to cover ritualized drills. This is mandatrophy: the drill component's function has atrophied but the unified mandate prevents its sunset. The hybrid reading detects this by refusing to classify the whole as Mountain (competence_reading) or the whole as Piton (husk_reading).",
+    "kernel_context": "This constraint instantiates the 'hybrid_reading' of the contested kernel 'preparedness_persistence'. Sibling readings: 'competence_reading' asserts all preparedness components remain live exercised knowledge; 'husk_reading' asserts all components are memorial performance. The hybrid reading's structural delta: stratification is real — engineering inspection (Mountain-like) and evacuation drills (Piton-like) coexist under one mandate, with extraction localized to the drill subsystem. The three readings coexist as live positions held by different institutional factions (inspection agencies vs. emergency managers vs. auditors)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_persistence__competence_reading",
+      "preparedness_persistence__husk_reading",
+      "infrastructure_inspection_mandate",
+      "emergency_management_funding"
+    ],
+    "dual_formulation_note": "This constraint decomposes the kernel 'preparedness_persistence' into stratified components. The competence_reading treats the kernel as uniformly Mountain (low extraction, negligible suppression). The husk_reading treats it as uniformly Piton (high theater, atrophied function). The hybrid reading asserts the kernel is not unitary — it contains a Mountain backbone (inspection) and a Piton shell (drills). Extraction (0.38) and theater (0.55) are composite metrics weighted by subsystem budgets and personnel-hours."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "inspection_agencies",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets engineering inspection standards for critical infrastructure (dams, bridges, nuclear). Collects fees for certification and renewal. Controls the technical criteria that define compliance. Shields liability for certified facilities. Can jurisdiction-shop or privatize functions if political pressure mounts."
+    },
+    {
+      "name": "compliance_consultants",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Sells evacuation drill packages, tabletop exercise facilitation, after-action report templates, and compliance tracking software to municipalities and agencies. Revenue scales with mandate scope, not drill realism. Can pivot to other compliance verticals (cyber, privacy, ESG) if preparedness market contracts."
+    },
+    {
+      "name": "frontline_responders",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Fire, EMS, and law enforcement personnel required to participate in mandated drills. Drills consume training hours that could go to operational skills. Professional identity fuses with 'being prepared' — refusing drills reads as dereliction. No individual exit without career exit. Collective bargaining has not secured drill reform."
+    },
+    {
+      "name": "vulnerable_communities",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Low-income, elderly, disabled, and non-English-speaking populations in hazard zones. Experience drills as disruption without material benefit — no evacuation transport, no shelter capacity, no communication in their languages. Inspection regime ignores their housing stock (unreinforced masonry, mobile homes). Cannot relocate; no political voice in drill design."
+    },
+    {
+      "name": "municipal_budgets",
+      "role": "payer",
+      "agent": false,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Single budget line funds both competent inspection (state-mandated, fee-supported) and ritualized drills (locally mandated, grant-dependent). Reallocation requires political will and inter-agency negotiation. Federal preparedness grants tie drill compliance to funding, creating perverse incentive to perform drills regardless of utility."
+    },
+    {
+      "name": "liability_insurers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Uses drill completion certificates and after-action reports as underwriting proxies for municipal and facility risk. Premium discounts awarded for compliance paperwork, not measured readiness. No incentive to audit drill realism — the paperwork is the product. Can reprice or withdraw coverage if mandate changes."
+    },
+    {
+      "name": "engineering_corps",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Maintains the inspection regime's technical competence through peer review, failure analysis, and standard evolution. Watches drill degradation from outside the emergency management hierarchy. Publishes post-event forensics showing drill assumptions falsified by reality. No authority to restructure mandates."
+    }
+  ],
+  "gain_flow": "compliance_consultants",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Engineering inspection coordinates genuine technical consensus on infrastructure failure modes, materials science, and risk thresholds — a real coordination problem solved by shared standards. Evacuation drills nominally coordinate multi-agency response and public familiarity, but the coordination function has atrophied: scripts are recycled, failures are not fed back, and no interoperability is tested.",
+    "transfer_function": "Moves municipal training budgets and responder hours from operational readiness to drill performance. Moves consultant fees from municipalities to compliance vendors. Moves liability risk from insurers to insureds via compliance proxies. Moves political credit from mitigation investment to drill participation counts.",
+    "absent_voices": "Disaster survivors who experienced drill failures (e.g., Paradise CA, Lahaina HI) — their testimony is excluded from after-action processes. Community organizations in hazard zones — not invited to drill design. Independent researchers studying drill effectiveness — findings not integrated into mandate revision.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mandate vanished overnight: inspection regime would persist via industry standards, insurance requirements, and tort liability (Mountain backbone). Drill regime would collapse within 2 budget cycles — no constituency funds it voluntarily (Piton shell). Municipalities would reallocate drill hours to operational training. Consultants would pivot. Vulnerable communities would lose even performative attention but gain no material mitigation. The world rearranges asymmetrically.",
+    "founding_problem": "Post-WWII civil defense and Cold War nuclear preparedness created a unified mandate: credible population protection through exercised readiness. Engineering inspection was added later for technological hazards (dams, nuclear). The unified mandate assumed drills and inspections were the same kind of activity — practiced competence.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The 2019 National Academies review 'Assessing Disaster Preparedness' found no correlation between drill frequency and survival outcomes. FEMA's own 2021 After-Action Reports for major disasters consistently note 'drill assumptions not met.' The inspection subsystem's founding problem (preventing catastrophic infrastructure failure) remains live per ASME and FERC testimony. No corroboration from outside the emergency management establishment supports the drill subsystem's founding problem."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "piton",
+    "downstream_of": [
+      "preparedness_persistence__competence_reading",
+      "preparedness_persistence__husk_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "husk_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "preparedness_is_stratified_not_unitary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "extraction_localizes_to_ritualized_subsystems",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "unified_preparedness_mandate",
+    "drift_state": {
+      "moment": "post_911_homeland_security_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

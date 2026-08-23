@@ -1,0 +1,339 @@
+{
+  "header": {
+    "constraint_id": "coercion_legitimacy_boundary__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "140f2be7-a4a3-443c-9eb7-fecd900da3d3"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proportionality Reading: Coercion Legitimacy Scales with Disease Severity and Transmission",
+    "topic_domain": "public_health_policy/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "public_health_authorities",
+      "vulnerable_populations"
+    ],
+    "victims": [
+      "mandate_subjects_high_r0",
+      "mandate_subjects_low_r0"
+    ],
+    "vindicated_propositions": [
+      "proportionality_doctrine",
+      "least_restrictive_means_principle"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design, implement, and enforce disease-specific mandates (school-entry requirements, healthcare worker mandates, emergency orders). Their legitimacy rests on demonstrating that each mandate is proportionate to the specific threat. They control the case-by-case adjudication process and define the metrics (R0, IFR, transmission dynamics) that trigger coercion."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Immunocompromised individuals, infants too young for vaccination, and others who rely on herd immunity. They benefit from mandates that achieve high coverage for high-R0 diseases (measles) but gain little from mandates for low-severity diseases (flu) where mandates are not justified. Their protection varies by pathogen."
+    },
+    {
+      "name": "mandate_subjects_high_r0",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Parents of school-age children, healthcare workers, and others subject to mandates for high-R0/high-mortality diseases (measles, polio). They bear the autonomy cost of compelled vaccination but face high exclusion costs (school exclusion, job loss) for noncompliance. The constraint extracts from them, but the proportionality reading treats this extraction as justified by the severity of the collective threat."
+    },
+    {
+      "name": "mandate_subjects_low_r0",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Individuals who would be subject to mandates for low-severity diseases (seasonal influenza, COVID-19 post-emergency) if such mandates existed. Under the proportionality reading, they are NOT currently extracted from — the reading denies legitimacy to such mandates. Their inclusion as payers reflects the structural position they would occupy if the reading were displaced by public_health_primary."
+    },
+    {
+      "name": "bodily_autonomy_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Organizations and individuals who hold that medical intervention without consent is categorically impermissible. They are excluded from the proportionality adjudication because their premise (categorical prohibition) is treated as foreclosed by the framework. They would object to any mandate, including measles."
+    },
+    {
+      "name": "courts_constitutional_law",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate challenges to specific mandates under the proportionality framework (strict scrutiny, least restrictive means, Jacobson v. Massachusetts lineage). They do not set policy but define the legal boundaries within which the proportionality reading operates. Their rulings determine which diseases meet the threshold."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective action problem of achieving herd immunity for diseases where voluntary uptake is insufficient to prevent outbreaks, while avoiding unnecessary coercion for diseases where the collective threat does not justify the autonomy intrusion.",
+    "transfer_function": "Moves autonomy/body-integrity interests from mandate_subjects (who bear compelled vaccination) to vulnerable_populations and public_health_authorities (who gain outbreak prevention and institutional legitimacy). The transfer is calibrated per pathogen: large for measles, near-zero for flu.",
+    "absent_voices": "Bodily autonomy absolutists who reject any calibration — they are structurally excluded because the proportionality framework treats categorical refusal as outside the legitimate range of debate. Also excluded: populations in jurisdictions without proportionality review where mandates are imposed by decree without case-by-case justification.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the proportionality reading vanished, the boundary between justified and unjustified mandates would collapse. Either public_health_primary would expand mandates to flu/COVID without individualized justification (increasing extraction on mandate_subjects_low_r0), or bodily_autonomy_primary would eliminate measles mandates (increasing risk to vulnerable_populations). The case-by-case adjudication infrastructure would dissolve.",
+    "founding_problem": "The Jacobson v. Massachusetts (1905) framework left an open question: how to distinguish diseases that justify compulsion from those that do not. The proportionality reading was built to answer that question without collapsing into either categorical authorization or categorical prohibition.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Constitutional law scholars outside the public health establishment (e.g., Gostin, Jacobson, contemporary law review literature) attest that the proportionality boundary remains contested and live. Public health authorities attest it is live but argue the threshold is met for expanding disease sets. No single tradition has settled it."
+  },
+  "interval": {
+    "start": 1905,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1905,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1977,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1905,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1977,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1905,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1977,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The proportionality reading of the coercion legitimacy boundary holds that state compulsion for medical intervention is legitimate only when the disease's severity (mortality, morbidity) and transmission dynamics (R0, mode of spread) cross a threshold that makes voluntary measures insufficient. Measles (R0 12-18, high complications) justifies school-entry mandates; seasonal influenza (R0 1.3, low mortality in general population) does not. This reading instantiates a case-by-case adjudication structure where each pathogen is evaluated against proportionality criteria (necessity, least restrictive means, balancing). The extraction is moderate (0.42) because the constraint operates selectively — it extracts from mandate subjects for high-threat diseases but denies extraction for low-threat diseases. Suppression is moderate (0.38) because enforcement is active (school exclusion, employment conditions) but bounded by judicial review. Theater is present (0.28) because the proportionality analysis can become performative — elaborate frameworks that consistently validate authority preferences.",
+    "logic_rationale": "Extractiveness is moderate because the constraint's victim set is pathogen-contingent: high for measles mandates, near-zero for flu. The case-by-case structure means the constraint does not universally extract; it calibrates. Suppression is lower than a categorical mandate because exit options exist (home schooling, religious exemptions in some jurisdictions, geographic mobility) and judicial review provides a check. Theater ratio reflects the risk that proportionality analysis becomes a ritual that always concludes the mandate is justified — the 2020 spike reflects pandemic emergency frameworks that dispensed with individualized proportionality review.",
+    "directionality_logic": "Public health authorities are agenda_setters with arbitrage-grade exit (they design the framework). Vulnerable populations are beneficiaries with constrained exit (they cannot individually secure herd immunity). Mandate_subjects_high_R0 are payers with constrained exit (school/job exclusion costs are high). Mandate_subjects_low_R0 are payers with mobile exit (they are not currently coerced; the reading protects them). Bodily autonomy advocates are excluded (their categorical premise is foreclosed by the framework). Courts are observers with analytical exit.",
+    "perspectival_gap": "From the public_health_authorities seat, the constraint is a rope — genuine coordination solving a collective action problem with minimal necessary coercion. From the mandate_subjects_high_R0 seat, it is a tangled_rope — they are coordinated (protected from outbreaks) but pay the autonomy cost. From the bodily_autonomy_advocates seat (excluded), it would read as a snare — any coercion is extraction. The engine computes this divergence from the structural data.",
+    "mandatrophy_analysis": "The founding problem (distinguishing justified from unjustified mandates) remains live. The constraint has not atrophied into a piton because the boundary is actively litigated (COVID mandates, measles outbreaks, flu mandate proposals). However, the rising theater_ratio and the 2020 spike in suppression_requirement suggest drift toward performative proportionality — frameworks that claim case-by-case review but functionally rubber-stamp. This is a mandatrophy risk, not a resolution.",
+    "kernel_context": "This constraint is the proportionality_reading of the coercion_legitimacy_boundary kernel. It reads the kernel as requiring pathogen-specific proportionality analysis. Sibling readings: public_health_primary (state may compel whenever collective benefit outweighs individual cost — lower threshold, broader victim set) and bodily_autonomy_primary (categorical prohibition on non-consensual medical intervention — zero victim set for mandates, but higher victim set for the unprotected). The structural delta: victim set varies by pathogen under this reading; it is expansive under public_health_primary and null under bodily_autonomy_primary."
+  },
+  "omegas": [
+    {
+      "id": "proportionality_threshold_location",
+      "question": "Where exactly does the proportionality threshold fall between measles (clearly justified) and flu (clearly not)? What about COVID-19, pertussis, mumps, rubella?",
+      "resolution_mechanism": "Systematic coding of judicial decisions, legislative mandates, and public health recommendations across jurisdictions and time, mapping each disease's epidemiological parameters to mandate status.",
+      "impact": "If the threshold is de facto elastic (expanding to include COVID, then perhaps RSV, then perhaps flu), the reading converges toward public_health_primary. If the threshold holds at measles-level severity, the reading maintains its distinguishing structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the proportionality boundary is stable or drifting toward categorical authorization"
+    },
+    {
+      "id": "adjudication_performativeness",
+      "question": "Does the case-by-case proportionality analysis genuinely constrain authority, or is it a ritual that produces the authority's preferred outcome?",
+      "resolution_mechanism": "Compare proportionality analyses for mandates that were upheld vs. struck down; measure independence of the reviewing body; track whether any proposed mandate has been rejected on proportionality grounds in the last 20 years.",
+      "impact": "If performative, the constraint's theater_ratio is understated and its effective type drifts toward snare (extraction disguised as coordination). If genuinely constraining, the tangled_rope classification holds.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether proportionality review is structural or theatrical"
+    },
+    {
+      "id": "kernel_reading_relations",
+      "question": "How does the proportionality reading structurally relate to the public_health_primary and bodily_autonomy_primary readings of the same kernel?",
+      "resolution_mechanism": "Analyze whether any legal framework can simultaneously hold the proportionality reading and a sibling reading, or whether adoption of one logically commits to rejection of the others.",
+      "impact": "If proportionality forecloses bodily_autonomy_primary (as the framework treats categorical refusal as outside legitimate debate), that is a structural foreclosure. If it merely coexists with public_health_primary as a higher threshold, the relation is influences. This determines the reading_relations in cs_structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relations between sibling readings of the coercion_legitimacy_boundary kernel"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "coercion_legitimacy_boundary__public_health_primary",
+      "coercion_legitimacy_boundary__bodily_autonomy_primary",
+      "school_entry_vaccine_mandates",
+      "healthcare_worker_vaccine_mandates",
+      "emergency_use_authorization_framework"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the coercion_legitimacy_boundary kernel. The public_health_primary reading has higher extractiveness (broader victim set) and lower suppression (less need for case-by-case justification). The bodily_autonomy_primary reading has near-zero extractiveness for mandates but creates a different victim set (the unprotected). The three readings form a constraint family linked by mutual structural influence."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.3
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "jacobson_proportionality_framework",
+    "drift_state": {
+      "moment": "post_covid_emergency_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "coercion_requires_proportional_threat",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "least_restrictive_means_applies_to_mandates",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

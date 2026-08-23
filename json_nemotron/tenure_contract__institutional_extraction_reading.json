@@ -1,0 +1,330 @@
+{
+  "header": {
+    "constraint_id": "tenure_contract__institutional_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "1570f9fb-c5da-4b56-af35-1b0c2562a48f"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.63,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Tenure as Permanent Rent Extraction (Institutional Extraction Reading)",
+    "topic_domain": "higher_education_governance / labor_economics / institutional_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "tenured_faculty",
+      "senior_administration"
+    ],
+    "victims": [
+      "contingent_faculty",
+      "graduate_students",
+      "undergraduate_students"
+    ],
+    "vindicated_propositions": [
+      "resource_allocation_stability_claim",
+      "institutional_memory_preservation_claim"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Does the tenure contract instantiate a genuine academic freedom protection, a demographic gatekeeping mechanism, or an institutional extraction arrangement — or all three simultaneously?",
+      "resolution_mechanism": "Structural decomposition: if removing the permanent claim on resources preserves academic freedom outcomes, the extraction reading is validated; if academic freedom collapses, the academic_freedom_reading holds; if demographic composition remains unchanged, the demographic_reproduction_reading is weakened.",
+      "impact": "If the extraction reading is structurally valid, the constraint classifies as tangled_rope with high ε for multiple victim groups; if academic_freedom_reading dominates, the constraint approaches rope with near-zero ε; if demographic_reproduction_reading dominates, it is a snare with identity-locked victims.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the tenure contract's kernel admits multiple simultaneous readings or a single true function."
+    },
+    {
+      "id": "extraction_vs_coordination_boundary",
+      "question": "How much of tenure's employment rigidity is necessary coordination (stabilizing long-term research, preserving institutional memory) versus pure rent extraction (preventing reallocation, loading costs onto contingent labor)?",
+      "resolution_mechanism": "Counterfactual analysis: jurisdictions with weaker tenure protections (e.g., UK post-1988, US community colleges, European fixed-term systems) compared on research output, instructional quality, and contingent labor share.",
+      "impact": "If rigidity is mostly coordination, ε drops and the constraint shifts toward rope; if mostly extraction, ε remains high and tangled_rope/snare classification holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The coordination-extraction boundary within the tenure constraint."
+    },
+    {
+      "id": "suppression_mechanism_tenure",
+      "question": "Is the suppression experienced by contingent faculty structural (contractual precarity, market structure) or internalized (professional identity fusion with the tenure-track ideal, belief that precarity is a meritocratic filter)?",
+      "resolution_mechanism": "Post-exit trajectory study: track contingent faculty who exit to non-academic roles — does suppression (precarity internalization, professional devaluation) persist after structural barriers are removed?",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests — targets carry the constraint with them after exit, amplifying χ for identity-locked agents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for contingent faculty under tenure regime."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 1970,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "Tenure is a permanent employment guarantee awarded after a probationary period, ostensibly to protect academic freedom. This reading (institutional_extraction_reading) interprets tenure as a mechanism where early winners — those who secured tenure during periods of expansion — capture a permanent claim on institutional resources (salary lines, laboratory space, governance power) that cannot be reallocated as priorities shift. The rigidity loads flexibility costs onto contingent faculty (adjuncts, lecturers, postdocs) who now perform 70%+ of instructional labor at a fraction of the compensation, and onto students via tuition increases that fund the tenured salary structure while instructional investment per student declines. The constraint persists through active enforcement: peer review gatekeeping, accreditation standards requiring tenure-line ratios, shared governance structures that give tenured faculty veto power over structural reform.",
+    "key_agents": [
+      "tenured_faculty: Primary beneficiary (institutional/powerful/arbitrage) — holds permanent resource claim, controls governance, faces near-zero exit cost",
+      "senior_administration: Secondary beneficiary (institutional/powerful/arbitrage) — uses tenure system to stabilize budgeting, legitimize hierarchy, deflect political pressure",
+      "contingent_faculty: Primary victim (organized/moderate/identity_locked) — bears instructional load, faces precarity, exit blocked by professional identity fusion",
+      "graduate_students: Secondary victim (moderate/identity_locked/trapped) — trained for tenure-track that largely doesn't exist, socialized into the system's logic",
+      "undergraduate_students: Diffuse victim (powerless/immediate/constrained) — pay rising tuition for declining instructional investment, no voice in governance",
+      "analytical_observer: Observer (analytical/civilizational/analytical) — sees full structure across readings"
+    ],
+    "logic_rationale": "Extractiveness is high (0.78) because tenure lines represent locked-in resource claims decoupled from marginal productivity — the permanent salary obligation cannot be adjusted when enrollment shifts, research fields wax/wane, or instructional needs change. Suppression is high (0.72) because the system actively prevents reallocation: accreditation standards, shared governance vetoes, and the tenure-track pipeline itself suppress alternatives (phasing out tenure lines, converting to teaching-focused contracts, modular credentialing). Theater ratio is moderate (0.41) — the academic freedom justification is real but increasingly performative as tenure lines shrink and the protected class becomes a minority of instructional labor. Accessibility collapse (0.63) reflects that alternatives (multi-year contracts, teaching-stream tenure, project-based funding) are structurally visible but institutionally blocked. Resistance (0.58) is substantial — contingent faculty unions, student debt movements, legislative pressure — but fragmented across jurisdictions.",
+    "perspectival_gap": "From the tenured faculty seat (beneficiary, institutional power, arbitrage exit), tenure appears as necessary coordination: it stabilizes long-term inquiry, protects dissent, and preserves institutional memory. From the contingent faculty seat (victim, organized power, identity_locked exit), the same structure operates as enforced extraction: their labor subsidizes the tenured salary structure, their professional identity is fused to a pipeline that excludes them, and exit means abandoning their vocational self-concept. From the student seat (diffuse victim, powerless, constrained exit), the constraint is invisible infrastructure — tuition funds a cost structure they cannot see or challenge. The engine computes these seat divergences from the structural data; the claimed_type (tangled_rope) captures the hybrid coordination/extraction nature from the analytical seat.",
+    "directionality_logic": "Tenured faculty are structural beneficiaries: they collect permanent resource claims (salary, space, governance weight) and face near-zero exit cost (d ≈ 0.1). Senior administration benefits indirectly: tenure stabilizes budgeting and provides a legitimating hierarchy (d ≈ 0.2). Contingent faculty are targets: they bear the flexibility costs (teaching overload, no research time, no benefits) with identity_locked exit — leaving academia means abandoning professional identity formed through years of training (d ≈ 0.85). Graduate students are targets with trapped/identity_locked exit: the tenure-track ideal structures their entire socialization (d ≈ 0.9). Undergraduate students are diffuse targets: they fund the system via tuition with no governance voice and constrained exit (transfer costs, credential dependence) (d ≈ 0.6). Rival claimants (would-be reform administrators, alternative credentialing providers) are excluded.",
+    "mandatrophy_analysis": "The founding problem (stabilizing inquiry against political/economic pressure) is contested — tenured faculty attest it remains live; contingent faculty, students, and independent analysts attest it has shifted to rent extraction. The arrangement persists despite the founding problem's contested status because the beneficiary coalition (tenured faculty + administration) controls the veto points. This is mandatrophy: the coordination function (academic freedom protection) has atrophied relative to the extraction function (resource capture), but the constraint persists because the beneficiaries administer it and the victims are identity-locked or diffuse. The classification prevents mislabeling by requiring both coordination beneficiaries AND extraction victims to be named — a pure snare reading would miss the genuine academic freedom coordination; a pure rope reading would miss the asymmetric extraction.",
+    "kernel_context": "This constraint is the institutional_extraction_reading of the contested kernel 'tenure_contract'. Sibling readings: academic_freedom_reading (tenure as truth-seeking protection), demographic_reproduction_reading (tenure as demographic gatekeeping). This reading emphasizes the resource-allocation rigidity and cost-loading onto contingent labor as the structurally dominant function. The three readings are not mutually exclusive in practice but instantiate different constraints with different ε values, beneficiary/victim structures, and classifications."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_labor_market_segmentation",
+      "university_cost_disease",
+      "credential_inflation",
+      "tenure_contract__academic_freedom_reading",
+      "tenure_contract__demographic_reproduction_reading"
+    ],
+    "dual_formulation_note": "Tenure contract decomposes into three constraint stories (a constraint family) per ε-invariance: academic_freedom_reading (low ε, rope/mountain), demographic_reproduction_reading (moderate ε, snare), institutional_extraction_reading (high ε, tangled_rope). This is the extraction reading; the academic freedom reading coordinates inquiry protection with minimal extraction; the demographic reading extracts via identity gatekeeping. All three share the same institutional kernel but differ in ε, victims, and type."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.65
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "tenured_faculty",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Hold permanent employment guarantees awarded after 6-7 year probationary period. Control departmental hiring, curriculum, and governance through shared governance structures. Receive salary, benefits, research support, and institutional prestige that cannot be reduced. Can move laterally to other institutions with tenure portability. The constraint subsidizes their position — they are net recipients of the locked-in resource allocation."
+    },
+    {
+      "name": "senior_administration",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Administer the tenure system: set probationary standards, allocate tenure lines, negotiate with accreditation bodies. Benefit from budgetary predictability (fixed salary obligations) and a hierarchy that legitimates administrative authority. Use tenure protections to deflect political pressure ('faculty governance protects academic freedom'). Could reform the system but face veto from tenured faculty governance bodies."
+    },
+    {
+      "name": "contingent_faculty",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Perform 70%+ of undergraduate instruction on semester-to-semester contracts, no research time, no benefits, pay 40-60% of tenure-line per-course equivalent. Professional identity is fused to the tenure-track ideal — 'adjunct' is a failed academic identity, not a chosen career. Exit means abandoning 7-10 years of doctoral training and vocational self-concept. Unionization efforts growing but fragmented across institutions and states."
+    },
+    {
+      "name": "graduate_students",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Train for 5-7 years in doctoral programs structured around the tenure-track model. Socialized into the system's norms: research productivity, grant capture, publication metrics. Face a job market where tenure-track positions are <20% of PhD output. Exit during or after training means identity rupture — 'leaving academia' is framed as failure, not pivot. Bear opportunity costs and debt while subsidizing the research output of tenured faculty."
+    },
+    {
+      "name": "undergraduate_students",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Pay tuition that has risen 3-4x inflation since 1980 while instructional spending per student has declined. Taught increasingly by contingent faculty with no office hours, no curriculum input, no long-term relationship. No governance voice — student representation is advisory only. Exit means transferring (credit loss, delay) or dropping out (credential loss, debt without degree)."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Sees the full constraint structure across all three kernel readings. Observes that the institutional_extraction_reading captures the resource-allocation rigidity and cost-loading that the academic_freedom_reading treats as epiphenomenal and the demographic_reproduction_reading treats as secondary to identity gatekeeping. The analytical seat computes per-seat classifications from the structural data without committing to any reading's normative frame."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Stabilizes long-term research commitments and preserves institutional memory by guaranteeing that faculty cannot be removed for unpopular findings or administrative convenience. Solves the hold-up problem in specialized human capital investment: researchers invest in field-specific skills that have no outside value; tenure protects that investment.",
+    "transfer_function": "Moves salary lines, laboratory space, governance authority, and instructional control from reallocation to permanent claim by tenured faculty. The flexibility cost (teaching load variance, enrollment shifts, field obsolescence) is transferred to contingent faculty (who absorb instructional volatility) and students (who pay tuition that funds the fixed cost structure). Resources that could fund new fields, expanded access, or instructional innovation are locked into the tenure salary structure.",
+    "absent_voices": "Would-be reform administrators (presidents, provosts, deans who see the rigidity but cannot overcome shared governance vetoes); alternative credentialing providers (bootcamps, microcredential platforms, apprenticeship models) excluded by accreditation gatekeeping; prospective faculty from underrepresented groups who would enter under different incentive structures; taxpayers in public university systems who fund the fixed cost structure without representation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If tenure and its enforcement vanished overnight, universities would immediately face pressure to reallocate salary lines to high-demand fields, convert instructional labor to flexible contracts, and reduce tuition or redirect funds to student services. Contingent faculty would gain bargaining power. The academic labor market would reorganize around multi-year renewable contracts, project-based funding, and teaching-stream careers. The transition would be disruptive — research continuity would suffer in some fields — but the world would rearrange, not stay the same.",
+    "founding_problem": "Early 20th century: faculty dismissed for political views (anti-war, socialist, evolution teaching), religious nonconformity, or administrative disfavor. The AAUP 1915 Declaration and 1940 Statement of Principles established tenure as protection against external and internal threats to inquiry. The problem was genuine: without protection, researchers cannot pursue unpopular or long-horizon truth-seeking.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "AAUP and tenured faculty organizations attest the problem remains live (citing political attacks on CRT, gender studies, climate research). Contingent faculty unions (AAUP-CBC, SEIU), student debt organizers (Debt Collective), and independent analysts (Delta Cost Project, AAUP's own contingent faculty reports) attest the founding problem has substantially shifted: the primary threat to inquiry is now structural precarity that prevents contingent faculty from pursuing any research at all, and the tenure system itself generates the rigidity that blocks adaptation. Legislative hearings in multiple states (Florida, Texas, Wisconsin) show political actors using tenure as a target while defunding public higher education — the threat has mutated, not persisted unchanged."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "tenure_contract"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "academic_freedom_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "demographic_reproduction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "permanent_resource_claim_is_extractive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "contingent_labor_subsidizes_tenure_structure",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "aaap_1940_principles_framework",
+    "drift_state": {
+      "moment": "contingent_majority_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

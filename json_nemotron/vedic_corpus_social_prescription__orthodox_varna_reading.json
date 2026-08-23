@@ -1,0 +1,404 @@
+{
+  "header": {
+    "constraint_id": "vedic_corpus_social_prescription__orthodox_varna_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-07",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_vedic_corpus_social_prescription__orthodox_varna_reading",
+    "story_uid": "af60d840-b1b6-40c2-a992-164aeed32f25"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.78,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Orthodox Varna Reading of Vedic Corpus",
+    "topic_domain": "religious/social/historical",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "brahmin_caste"
+    ],
+    "victims": [
+      "shudra_caste",
+      "dalit_communities"
+    ],
+    "vindicated_propositions": [
+      "varna_dharma_as_cosmic_order",
+      "brahmin_ritual_authority",
+      "ritual_purity_hierarchy"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the contested kernel 'vedic_corpus_social_prescription', and what does the sibling reading 'reformist_spiritual_reading' change structurally?",
+      "resolution_mechanism": "Committee analysis of reading relations: the reformist reading denies prescriptive social content entirely, removing the victim set and collapsing extraction to near-zero; the colonial reading codifies the hierarchy as fixed law for administration, shifting the agenda_setter to a colonial state apparatus.",
+      "impact": "If the reformist reading is structurally viable, this reading's high extractiveness is not intrinsic to the kernel but a property of this specific framing — the kernel does not uniquely determine ε.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee frame: this reading vs. sibling readings of the same kernel"
+    },
+    {
+      "id": "varna_ontology_ambiguity",
+      "question": "Does the Vedic corpus prescribe a fixed hereditary hierarchy (varna as birth-determined) or describe a functional/qualificational division (varna as guna-karma based)?",
+      "resolution_mechanism": "Philological comparison of Vedic vs. Dharmashastra textual strata; historical analysis of when hereditary closure became dominant.",
+      "impact": "If varna is originally qualificational, the hereditary hierarchy is a later accretion — this reading projects Dharmashastra closure back onto Vedic text, inflating extraction by naturalizing a constructed boundary.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Textual ontology: prescriptive hereditary hierarchy vs. descriptive functional division"
+    },
+    {
+      "id": "coercion_mechanism_ambiguity",
+      "question": "Is the suppression of Shudra/Dalit exit structural (state enforcement, economic dependency, ritual exclusion) or internalized (identity fusion with the hierarchy, belief in karmic justice)?",
+      "resolution_mechanism": "Post-exit trajectory study: if suppression persists after legal emancipation and economic mobility, the internalized component is significant; compare conversion movements (Buddhism, Bhakti, Christianity, Ambedkarite) where identity frame breaks.",
+      "impact": "If substantially internalized, effective suppression exceeds the structural measure — the constraint travels with the agent after formal exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for lower varna exit"
+    },
+    {
+      "id": "beneficiary_scope_ambiguity",
+      "question": "Does the Brahmin caste uniformly benefit, or do sub-groups (ritual specialists vs. landholding elites vs. state-servicing scribes) capture different rents?",
+      "resolution_mechanism": "Historical political economy of Brahmin sub-castes across regions and periods; analysis of who controls temple endowments, land grants, and administrative posts.",
+      "impact": "If benefits are concentrated in a sub-group, the beneficiary declaration 'brahmin_caste' aggregates distinct structural positions — the extraction flow may be narrower than the declared beneficiary set.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Internal differentiation of the declared beneficiary group"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1850,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.78,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the orthodox varna reading of the Vedic corpus: the claim that Vedic texts literally prescribe a fourfold hereditary hierarchy (Brahmin, Kshatriya, Vaishya, Shudra) as divinely mandated cosmic order (Rta/Dharma), with a fifth excluded category (Dalit/untouchable) outside the varna system. The reading treats the Purusha Sukta (RV 10.90) and subsequent Dharmashastra elaborations as prescriptive law rather than descriptive cosmology. The constraint operates through occupational closure, endogamy enforcement, ritual exclusion, and the ideological apparatus of karma/purity that naturalizes the hierarchy. Extraction flows as labor value (Shudra service castes, Dalit polluting labor), ritual monopoly (Brahmin control of sacrifice/knowledge), and status rents. The kernel 'vedic_corpus_social_prescription' is contested: the reformist_spiritual_reading denies prescriptive social content entirely; the colonial_orientalist_reading codifies the hierarchy as fixed Hindu law for administrative governance. This story generates ONLY the orthodox_varna_reading as a clean ε-invariant constraint.",
+    "key_agents": [
+      "brahmin_caste: Primary beneficiary (institutional/identity_locked) — controls ritual knowledge, temple endowments, and scriptural interpretation; collects status rents and material offerings",
+      "shudra_caste: Primary victim (powerless/trapped) — bound to service occupations, excluded from Vedic study and ritual participation, labor extracted via hereditary occupational closure",
+      "dalit_communities: Primary victim (powerless/trapped) — placed outside varna system entirely, assigned polluting labor, subjected to untouchability practices and spatial segregation",
+      "kshatriya_vaishya_castes: Secondary actors (moderate/constrained) — hold political/economic power but subordinate to Brahmin ritual authority; benefit from hierarchy above Shudras but pay ritual tribute",
+      "reformist_interpreters: Excluded (moderate/mobile) — Bhakti saints, Buddhist/Jain/Sikh traditions, modern reformers (Phule, Ambedkar, Vivekananda) who contest the reading's prescriptive claim",
+      "colonial_administrators: Observer/agenda_setter (institutional/analytical) — codified varna as fixed law for revenue and governance, freezing fluid identities into census categories",
+      "analytical_scholar: Observer (analytical/analytical) — sees full structure across readings"
+    ],
+    "logic_rationale": "Base extractiveness (0.82) reflects the scale of labor value extraction (Shudra service castes, Dalit polluting labor), ritual monopoly rents (Brahmin control of sacrifice, education, legitimacy), and status rents across ~2500 years. The slight dip at 1950 (0.65) captures the constitutional abolition of untouchability and affirmative action — formal legal extraction drops but the structural hierarchy persists. The rise back to 0.82 by 2025 captures the resurgence of orthodox assertion in contemporary politics, where the reading is weaponized for majoritarian mobilization. Suppression (0.78) is high: the constraint's persistence depends on active enforcement of endogamy, occupational barriers, and ritual exclusion, plus the internalized suppression of karma/purity ideology. Theater ratio (0.25) is moderate-low: the ritual/ideological apparatus has genuine coordination functions (social stability, knowledge transmission) but a growing share of activity defends the hierarchy's material benefits. Accessibility collapse (0.68) reflects that alternatives (Buddhism, Bhakti, Sikhism, constitutional equality) exist but are structurally marginalized or co-opted. Resistance (0.55) is substantial: continuous counter-traditions from Shramanic movements through Bhakti to Ambedkarite politics, but the constraint survives by absorbing and domesticating dissent.",
+    "perspectival_gap": "The Brahmin seat experiences this as a Mountain or Rope — divine order that coordinates society and preserves knowledge. The Shudra/Dalit seats experience it as a Snare — enforced extraction with identity-locked exit. The Kshatriya/Vaishya seats experience it as a Tangled Rope — they coordinate political/economic power but pay ritual tribute and accept Brahmin superiority. The reformist seat sees a false summit: a constructed hierarchy wearing Mountain's clothes. The colonial seat sees a Scaffold they mistakenly treated as a Mountain — they codified fluid practice into fixed law. The engine computes this divergence from the structural data; the authored claim (snare) reflects the victim seats' structural reality.",
+    "directionality_logic": "Brahmin_caste is the structural beneficiary (d ~ 0.15): collects ritual fees, dakshina, land grants, state patronage, and epistemic authority; controls the interpretation that legitimizes the hierarchy. Exit is identity_locked — Brahmin identity is constituted through the hierarchy; leaving it means ceasing to be Brahmin in the structural sense. Shudra_caste and dalit_communities are structural victims (d ~ 0.9): bear hereditary occupational closure, ritual exclusion, spatial segregation, and the ideological burden of pollution. Exit is trapped — legal exit exists (constitutional rights, conversion) but structural exit is blocked by endogamy enforcement, economic dependency, and internalized karma ideology. Kshatriya/Vaishya are symmetric (d ~ 0.5): gain status above Shudras but subordinate to Brahmins; their exit is constrained — they can contest Brahmin dominance but not the hierarchy itself without losing their own position. Reformist_interpreters are excluded (d ~ 0.7): they would object but are structurally kept out of the authoritative interpretation circuit. Colonial_administrators are agenda_setters for a period (d ~ 0.3): they benefit from the hierarchy as administrative infrastructure but do not originate it.",
+    "mandatrophy_analysis": "The founding problem (social coordination via functional division) is dead — modern economy and state have other coordination mechanisms. The arrangement persists as extraction: Brahmin ritual monopoly and status rents, Shudra/Dalit labor extraction. The mandate (cosmic order) has atrophied into a snare. The theater ratio rise after 1850 reflects the constraint's shift from coordination to extraction maintenance: colonial codification froze it, postcolonial politics reactivated it. The high resistance (0.55) is not enough to break it because the beneficiary captures the epistemic authority that defines what counts as legitimate resistance.",
+    "kernel_context": "This constraint is the orthodox_varna_reading of the contested kernel 'vedic_corpus_social_prescription'. Sibling readings: reformist_spiritual_reading (Vedic texts describe spiritual unity and metaphorical cosmology with no prescriptive social content — near-zero extraction, Mountain-like from all seats), colonial_orientalist_reading (Vedic/Dharmashastra texts constitute unified timeless 'Hindu law' system codified for administrative governance — extracts via state enforcement, beneficiary shifts to colonial apparatus). The three readings share the same textual corpus but instantiate structurally distinct constraints with different ε, different beneficiary/victim sets, and different types. This reading's ε is high because it takes the prescriptive claim literally and enforces it hereditarily; the reformist reading's ε would be near-zero because it denies the prescriptive content; the colonial reading's ε is high but with a different beneficiary (the colonial state) and different enforcement mechanism (census, law courts, revenue system)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "vedic_corpus_social_prescription__reformist_spiritual_reading",
+      "vedic_corpus_social_prescription__colonial_orientalist_reading",
+      "dharmashastra_codification",
+      "colonial_census_classification",
+      "postcolonial_reservation_policy",
+      "hindutva_mobilization"
+    ],
+    "dual_formulation_note": "Constraint family: vedic_corpus_social_prescription kernel with three readings. This reading (orthodox_varna) has high ε (0.82) because it enforces hereditary hierarchy as divine law. reformist_spiritual_reading has near-zero ε (denies prescriptive content). colonial_orientalist_reading has high ε but beneficiary is colonial state apparatus, not Brahmin caste. The readings are linked by affects_constraints in both directions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "brahmin_caste",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Controls Vedic interpretation, ritual performance, temple endowments, and scriptural education. Collects dakshina (ritual fees), land grants, state patronage, and epistemic authority that legitimizes the hierarchy. Brahmin identity is constituted through the hierarchy — leaving it means ceasing to be Brahmin structurally. Sub-groups (ritual specialists, landholders, scribes) capture different rents but share the identity lock."
+    },
+    {
+      "name": "shudra_caste",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Bound to hereditary service occupations (artisans, laborers, servants) serving the three higher varnas. Excluded from Vedic study, upanayana (sacred thread), and ritual participation. Labor value extracted via occupational closure and ritual subordination. Legal exit exists (constitutional rights, conversion) but structural exit blocked by endogamy enforcement, economic dependency, and internalized karma ideology that frames subordination as just desert."
+    },
+    {
+      "name": "dalit_communities",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Placed outside the varna system entirely (avarna/untouchable). Assigned polluting labor (scavenging, leather, cremation) and subjected to untouchability practices: spatial segregation, denial of water/temple access, violence for boundary transgression. Extractive intensity exceeds Shudra — not just service but pollution absorption. Exit is trapped: conversion movements (Buddhism, Christianity, Ambedkarite) break the identity frame but face violent backlash; constitutional protections exist but enforcement is captured by dominant castes."
+    },
+    {
+      "name": "kshatriya_vaishya_castes",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Hold political power (Kshatriya) and economic power (Vaishya) but subordinate to Brahmin ritual authority. Benefit from hierarchy above Shudras/Dalits — control land, trade, administration — but pay ritual tribute (dakshina, patronage) and accept Brahmin superiority as cosmic order. Exit is constrained: can contest Brahmin dominance (historical Kshatriya-Brahmin conflicts) but cannot reject the hierarchy itself without losing their own positional rents. Some sub-groups align with reformist movements for strategic advantage."
+    },
+    {
+      "name": "reformist_interpreters",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Bhakti saints (Basava, Kabir, Ravidas, Mirabai), Buddhist/Jain/Sikh traditions, modern reformers (Phule, Ambedkar, Vivekananda, Periyar). Contest the reading's prescriptive claim: argue Vedic texts describe spiritual unity, not social hierarchy; or that hierarchy is a later corruption. Structurally excluded from authoritative interpretation circuit — their readings are marginalized as heterodox, their institutions denied state recognition. Exit is mobile: they build alternative communities and interpretive traditions, but cannot displace the orthodox reading's institutional capture."
+    },
+    {
+      "name": "colonial_administrators",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "British colonial state codified varna as fixed 'Hindu law' for revenue collection, judicial administration, and census classification (1871 onward). Froze fluid, contextual identities (jati, gotra, regional variation) into four rigid varna categories. Benefited from the hierarchy as administrative infrastructure — Brahmin intermediaries facilitated rule. Exit is arbitrage: the colonial state could (and did) reshape the constraint for governance, but the reading it produced (colonial_orientalist_reading) became a sibling constraint that persists post-independence."
+    },
+    {
+      "name": "analytical_scholar",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Sees the full structure across readings: the kernel's textual ambiguity, the three readings' structural divergence, the extraction flows, the suppression mechanisms. Neither collects nor pays; provides the classification surface. Exit is analytical — the seat exists only in the analysis."
+    }
+  ],
+  "gain_flow": "brahmin_caste",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a stable, hereditary division of labor and ritual function across a vast, diverse subcontinent — solves the coordination problem of social order without a centralized bureaucratic state. The four varnas (plus excluded fifth) allocate occupational, ritual, and status roles in a self-reproducing system.",
+    "transfer_function": "Moves labor value (Shudra service, Dalit polluting labor), ritual fees and offerings (dakshina, dana), land grants (brahmadeya, agrahara), and epistemic authority (Vedic interpretation, teaching rights) from Shudra/Dalit/Kshatriya/Vaishya to Brahmin caste. Status deference flows upward; pollution burden flows downward.",
+    "absent_voices": "Shudra and Dalit voices are structurally excluded from the authoritative interpretive circuit — the very texts that prescribe their subordination deny them Vedic study and ritual speech. Bhakti and anti-caste traditions (Buddhism, Sikhism, Ambedkarism) are the excluded voices that would object; they exist but are kept out of the orthodox reading's authority structure. Women of all varnas are doubly excluded — from Vedic study and from independent ritual agency.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the orthodox varna reading vanished overnight, the hereditary occupational closure, endogamy enforcement, ritual exclusion, and untouchability practices would lose their cosmic justification. The material hierarchy (land, labor, temple control) would persist initially but its ideological armor would be gone — conversion movements, inter-caste marriage, and democratic politics would reorganize social relations rapidly. The world rearranges because arrangements depend on it: the constraint is the legitimating ideology of a material extraction system.",
+    "founding_problem": "Early Vedic society faced the coordination problem of integrating diverse tribal groups into a stable social order with functional specialization (priest, warrior, producer, servant) without a centralized state. The varna framework provided a cosmic template for this division, legitimated by the Purusha Sukta's sacrificial cosmology.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (stateless functional coordination) is dead — modern India has a centralized bureaucratic state, market economy, and constitutional democracy that solve coordination differently. The arrangement persists as extraction. Corroboration from outside beneficiaries: Ambedkar (Dalit leader, constitutional architect) attested the founding problem is dead and the arrangement is extraction; Phule (Shudra reformer) documented the hierarchy as Aryan conquest imposed on indigenous populations; Marxist historians (Kosambi, Sharma) analyze varna as class formation, not cosmic order; Buddhist texts (early, outside Brahmin tradition) describe varna as social convention, not divine law. No corroborating source outside the Brahmin tradition attests the founding problem as live."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "reformist_spiritual_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "colonial_orientalist_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "varna_hierarchy_divinely_mandated",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "brahmin_epistemic_authority_exclusive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "hereditary_varna_immutable",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "ritual_purity_ontologically_real",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ],
+    "reference_frame": "vedic_sacrificial_cosmology",
+    "drift_state": {
+      "moment": "contemporary_hindutva_mobilization",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "vedic_corpus_social_prescription__reformist_spiritual_reading",
+      "vedic_corpus_social_prescription__colonial_orientalist_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

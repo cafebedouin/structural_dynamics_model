@@ -1,0 +1,374 @@
+{
+  "header": {
+    "constraint_id": "ietf_openness_commitment__legitimacy_erosion_reading",
+    "version": "1.0",
+    "generated_date": "2026-07-28",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_ietf_openness_commitment__legitimacy_erosion_reading",
+    "measurement_id_prefix": "ietf_legitimacy_erosion",
+    "story_uid": "f2c0d1e3-ddea-4214-8c41-d2786c8ec574"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.55,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IETF Rough Consensus Legitimacy Erosion",
+    "topic_domain": "technology_governance/internet_standards/institutional_economics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "incumbent_standards_editors",
+      "large_tech_consortia",
+      "protocol_oss_maintainers_aligned_with_incumbents"
+    ],
+    "victims": [
+      "independent_implementers",
+      "emerging_standards_proponents",
+      "consensus_credibility_commons"
+    ],
+    "vindicated_propositions": [
+      "procedural_legitimacy_can_be_harvested_as_an_asset",
+      "rough_consensus_is_insufficient_against_organized_capture"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_standards_editors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold editorial control over working group charters, document progression, and consensus determination. They determine what counts as 'rough consensus' in practice. Their position depends on the legitimacy of the process they administer, yet they benefit from procedural flexibility that lets aligned proposals advance while blocking challengers. Exit means leaving the standards body entirely — they have high mobility but lose the authority that makes them valuable."
+    },
+    {
+      "name": "large_tech_consortia",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Deploy dedicated standards teams that attend every meeting, write reference implementations, and shape the 'running code' that rough consensus privileges. They extract value by encoding their proprietary architectures into standards, then claiming interoperability mandates as validation. They can exit to proprietary APIs or competing standards bodies, but the IETF's legitimacy commons makes their captured standards more valuable than alternatives."
+    },
+    {
+      "name": "protocol_oss_maintainers_aligned_with_incumbents",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Maintain the reference implementations that become de facto compliance tests. Their projects receive corporate funding and ecosystem adoption because they align with the consortia's architecture. They benefit from the legitimacy halo of 'IETF standard' while their exit is constrained by ecosystem lock-in — forking means losing the network effects the standard confers."
+    },
+    {
+      "name": "independent_implementers",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Must implement standards shaped by incumbent priorities to achieve interoperability. They bear the cost of conforming to architectures they had no meaningful voice in shaping — complex, over-specified, or encumbered by patent pools. Their exit options are constrained: non-compliance means market exclusion; clean-room alternatives require resources they lack. They pay in engineering effort and strategic dependency."
+    },
+    {
+      "name": "emerging_standards_proponents",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Propose alternatives that challenge incumbent architectures. They face procedural hurdles — charter scope objections, 'running code' requirements that favor incumbents with dedicated teams, consensus calls where volume of participation is mistaken for breadth. They are trapped: the only venue with global legitimacy is the one where the game is rigged. Their extraction is the opportunity cost of proposals that never reach RFC."
+    },
+    {
+      "name": "consensus_credibility_commons",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The shared epistemic asset that makes 'IETF standard' a meaningful quality signal. It is depleted each time rough consensus ratifies an outcome that serves a narrow coalition rather than the implementer commons. It cannot exit — it is the substrate being mined. Its degradation is the constraint's primary victim: when credibility collapses, the coordination function fails for everyone."
+    },
+    {
+      "name": "academic_internet_researchers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study standards governance, measure capture indicators, document legitimacy erosion. They have no formal role in the process but their analyses inform the external legitimacy that the IETF trades on. Their exit is analytical — they can shift attention to other venues, but their work constitutes the historical record of whether the mechanism works."
+    },
+    {
+      "name": "regulatory_competition_authorities",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitor whether standards bodies function as open coordination mechanisms or as cartel vehicles. They can impose remedies (mandating FRAND terms, blocking standard-essential patent abuse) that alter the constraint's enforcement. Their exit is analytical — they engage when the legitimacy signal degrades enough to trigger investigation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Rough consensus enables distributed technical coordination without formal voting: implementers signal support through participation and running code, allowing standards to emerge from operational experience rather than institutional fiat. It solves the problem of agreeing on protocols across organizational boundaries where no party has authority to compel.",
+    "transfer_function": "Moves procedural legitimacy — the credible signal that a specification reflects broad implementer agreement — from the consensus commons to specific proposals backed by well-resourced factions. The legitimacy is extracted by incumbent-aligned coalitions to ratify architectures that entrench their market position, while the cost (eroded credibility, excluded alternatives) is borne by the commons and independent implementers.",
+    "absent_voices": "Small implementers and users in the Global South who lack resources to sustain multi-year standards participation. Civil society groups advocating for privacy, accessibility, or human-rights-by-design in protocols — they are excluded by the resource intensity of effective participation, not by formal rules. Their absence is structural: the mechanism selects for actors who can afford sustained presence.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If rough consensus vanished overnight, the IETF would either adopt formal voting (shifting power to national bodies and corporate members), fragment into competing venues (W3C, IEEE, industry consortia), or collapse into de facto proprietary standardization. The global interoperability commons would reorganize around whatever coordination mechanism replaces it — likely less open, more fragmented, and more captured.",
+    "founding_problem": "Early Internet standardization needed a decision procedure that worked without centralized authority, accommodated diverse stakeholders (vendors, researchers, operators), and produced specifications that implementers would actually deploy. Formal voting was seen as vulnerable to block-voting by large organizations; rough consensus aimed to weight operational commitment over institutional headcount.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The IETF's own historical record (RFC 7282, RFC 5218) attests the founding problem as live — operational consensus remains the espoused ideal. Independent scholars (e.g., Russell 2006 'Open Standards and the Digital Age', DeNardis 2014 'The Global War for Internet Governance') document that the mechanism has always favored resource-rich participants; the 'running code' criterion was co-opted by those who could fund development teams. No corroborating source outside the beneficiary set affirms the mechanism works as originally envisioned."
+  },
+  "interval": {
+    "start": 1992,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1992,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1998,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2004,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2004,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1992,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2004,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The IETF's rough consensus mechanism — 'we reject kings, presidents, and voting; we believe in rough consensus and running code' — was designed as a lightweight coordination mechanism for protocol standardization. Over three decades, the mechanism itself has become a contested terrain: well-resourced actors (large tech consortia, incumbent editors, aligned open-source projects) have learned to harvest the procedural legitimacy of 'IETF consensus' to ratify outcomes that serve their architectural and commercial interests. The constraint is not the IETF as an institution, but the rough consensus mechanism as a legitimacy-generating device that can be gamed. This reading instantiates the legitimacy_erosion_reading of the ietf_openness_commitment kernel: the mechanism's credibility is the resource being extracted, and its erosion is the primary victim.",
+    "logic_rationale": "Extractiveness (0.68) is high because the legitimacy commons — the credible signal that a standard reflects broad implementer agreement — is being mined by coalitions that can simulate consensus through sustained participation, reference implementations, and editorial influence. Suppression (0.55) is moderate: the mechanism does not formally block alternatives, but the resource requirements for effective participation (travel, dedicated engineers, multi-year commitment) functionally suppress challengers. Theater ratio (0.42) is significant: the ritual of 'humming' and mailing list debate persists, but a growing share of the process is performative — the outcome is often determined before the hum by who wrote the running code and who chairs the working group. Accessibility collapse (0.38) is partial: alternatives exist (other SDOs, proprietary APIs) but the IETF's legitimacy halo makes them inferior substitutes for global deployment. Resistance (0.52) is real: independent implementers and emerging proponents do challenge capture, but their resistance is asymmetric — they must win every time; incumbents need only win once to encode their architecture.",
+    "directionality_logic": "Incumbent editors and large consortia sit at the beneficiary end (d ~0.15–0.25): they control the agenda, define what counts as consensus, and capture the legitimacy surplus. Independent implementers and emerging proponents sit at the target end (d ~0.75–0.85): they pay the cost of conformance without meaningful voice, and their exit is constrained by the network effects of the standard. The consensus_credibility_commons is a non-agent victim — it bears the extraction but has no voice. The derivation chain assigns low d to agenda_setters with arbitrage exit, high d to powerless/constrained payers, analytical d to observers. The structural asymmetry is genuine: the same procedural mechanism produces radically different lived experiences depending on resource position.",
+    "perspectival_gap": "From the incumbent editor's seat, rough consensus is a functional coordination mechanism that produces deployable standards — they see the successes (HTTP, TLS, DNS) and attribute them to the process. From the independent implementer's seat, the same process is a barrier that privileges architectures they had no say in — they see the failed proposals, the charter scope games, the 'running code' requirements that favor funded teams. The engine computes this divergence from the structural data; the authored claim (tangled_rope) reflects that both coordination and extraction are real and inseparable in the current mechanism.",
+    "mandatrophy_analysis": "The founding problem (coordination without central authority) is contested as live — the mechanism's defenders argue it still works, critics argue it has been captured. The mandate has not atrophied; rather, the mechanism has been repurposed. The coordination function persists (standards still get written and deployed) but the extraction function has grown to dominate. This is not mandatrophy (a former function persisting inertially) but functional capture: the coordination machinery is actively used to produce extractive outcomes. The theater ratio rise tracks this — more process energy goes into defending the legitimacy signal than into genuine coordination.",
+    "kernel_context": "This constraint is the legitimacy_erosion_reading of the ietf_openness_commitment kernel. Sibling readings: commons_stewardship_reading (open standards as public infrastructure preserving interoperability for all implementers) and capture_substrate_reading (standards process as coordination substrate where resource advantage translates to encoded gatekeeping). This reading focuses specifically on the rough consensus mechanism itself as the contested device — its credibility is the commons being mined. The other readings emphasize different structural layers: commons_stewardship_reading sees the kernel as a protective constraint; capture_substrate_reading sees it as an enabling substrate for gatekeeping. This reading sees the mechanism's legitimacy-generation as the extraction target."
+  },
+  "omegas": [
+    {
+      "id": "consensus_legitimacy_separability",
+      "question": "Can the legitimacy signal of 'rough consensus' be separated from the coordination function it was designed to serve, or are they structurally inseparable such that degrading legitimacy inevitably degrades coordination?",
+      "resolution_mechanism": "Natural experiment: observe coordination outcomes in venues that have adopted formal voting (e.g., W3C, IEEE) or in IETF working groups that have lost external credibility. If coordination persists without legitimacy, the signal is extractable; if coordination collapses with legitimacy, they are coupled.",
+      "impact": "If separable, the mechanism is a snare — legitimacy is pure extraction riding on a coordination function that could survive without it. If inseparable, it is a tangled rope — the extraction damages the very coordination it parasitizes, creating a self-limiting dynamic.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether legitimacy and coordination are separable in the rough consensus mechanism."
+    },
+    {
+      "id": "capture_threshold_identification",
+      "question": "At what level of resource asymmetry does rough consensus shift from functional coordination to capture substrate? Is there a measurable threshold (participation concentration, implementation funding share, editorial tenure) that predicts capture?",
+      "resolution_mechanism": "Longitudinal analysis of working group participation metrics, funding disclosures, and consensus outcomes correlated with post-standardization market concentration. Compare working groups with high vs. low resource concentration.",
+      "impact": "A measurable threshold would enable early-warning metrics for capture and structural reforms (quorum rules, funding transparency, editorial term limits). Absent a threshold, capture is a gradual degradation with no clear intervention point.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capture has a detectable structural threshold or is a continuous degradation."
+    },
+    {
+      "id": "reading_relation_to_commons_stewardship",
+      "question": "Does the legitimacy_erosion_reading foreclose the commons_stewardship_reading, or do they coexist as competing framings of the same kernel held by different factions?",
+      "resolution_mechanism": "Analyze whether any single institutional framework could simultaneously hold both: that the mechanism preserves the commons AND that its legitimacy is being extracted. If the IETF's own reform efforts (e.g., RFC 7282 updates, diversity initiatives) assume the commons is preservable while acknowledging erosion, they coexist. If reform is structurally impossible under the erosion reading, it forecloses.",
+      "impact": "If forecloses, the kernel has a logical fracture — one reading must be abandoned for the other to be maintained. If coexists_with, the dispute is political/institutional, not logical, and the engine should model them as simultaneous live positions.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between legitimacy_erosion_reading and commons_stewardship_reading."
+    },
+    {
+      "id": "reading_relation_to_capture_substrate",
+      "question": "Does the legitimacy_erosion_reading influence the capture_substrate_reading (creating downstream pressure) or coexist with it as a parallel framing?",
+      "resolution_mechanism": "Trace whether legitimacy erosion (this reading's focus) changes the conditions for resource-advantage gatekeeping (capture_substrate_reading's focus). If depleted legitimacy makes the process more vulnerable to gatekeeping (e.g., fewer independent participants, lower scrutiny), this reading influences the sibling.",
+      "impact": "If influences, the readings form a causal chain: legitimacy erosion enables deeper capture. If coexists_with, they are independent lenses on the same phenomenon.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relationship between legitimacy_erosion_reading and capture_substrate_reading."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "ietf_openness_commitment__commons_stewardship_reading",
+      "ietf_openness_commitment__capture_substrate_reading"
+    ],
+    "dual_formulation_note": "Part of the ietf_openness_commitment constraint family. This reading (legitimacy_erosion_reading) focuses on the rough consensus mechanism's credibility as the extraction target. The commons_stewardship_reading frames the kernel as a protective constraint preserving interoperability. The capture_substrate_reading frames it as an enabling substrate where resource advantage becomes encoded gatekeeping. The three readings share the kernel but instantiate different constraints with different ε values and victim structures. Legitimacy erosion (this reading) is upstream of capture substrate — depleted legitimacy lowers the cost of gatekeeping. Commons stewardship is the normative ideal both other readings reference as the degraded or captured state."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.22
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.78
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "commons_stewardship_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "capture_substrate_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legitimacy_is_extractable_resource",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "rough_consensus_mechanism_is_capture_vulnerable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "rough_consensus_as_functional_coordination",
+    "drift_state": {
+      "moment": "post_consolidation_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

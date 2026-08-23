@@ -1,0 +1,289 @@
+{
+  "header": {
+    "constraint_id": "state_killing_legitimacy__retributive_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "skl_ret",
+    "story_uid": "97cd9044-535a-4e9d-820e-292c235e59e3"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.9,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Retributive Legitimacy of State Killing (Lex Talionis Reading)",
+    "topic_domain": "criminal_justice/political_philosophy/legal_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "moral_order",
+      "victim_families_retributive"
+    ],
+    "victims": [
+      "condemned_offenders"
+    ],
+    "vindicated_propositions": [
+      "lex_talionis_principle",
+      "proportional_desert_doctrine",
+      "moral_order_restoration_through_punishment"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.89
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "condemned_offenders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals convicted of murder who face execution under this reading. They bear the ultimate cost — their lives — as the constraint's direct target. No exit exists once convicted and sentenced; the state's coercive apparatus ensures compliance. Their moral desert status under this reading is the justification for their total extraction."
+    },
+    {
+      "name": "moral_order",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The abstract normative structure that the retributive reading claims is restored or maintained through proportional punishment. It does not act or collect rents; it is the vindicated proposition given actor-like status in the constraint's own logic. The constraint's legitimacy derives from its service to this order."
+    },
+    {
+      "name": "victim_families_retributive",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Families of murder victims who experience the execution as morally required closure or justice. Their identity and moral framework are fused with the retributive logic; they cannot conceive of justice without proportional desert. They benefit psychologically and morally from the constraint's operation, but their position is not one of material extraction."
+    },
+    {
+      "name": "state_execution_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The legal and correctional institutions that administer capital punishment: legislatures that authorize it, courts that impose it, prisons that carry it out. They set the agenda for when and how the constraint operates. They have institutional exit options (moratoria, commutation powers, abolition votes) but exercise them rarely; the constraint's persistence serves institutional legitimacy and deterrence signaling."
+    },
+    {
+      "name": "abolitionist_civil_society",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Organizations, activists, and legal advocates who reject state killing categorically. They are structurally excluded from the constraint's internal logic — the retributive reading treats their objection as morally irrelevant because the offender's desert settles the matter. They operate outside the constraint, seeking to dismantle it through legal challenge, public opinion, and international pressure."
+    },
+    {
+      "name": "legal_philosophy_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars of criminal law, political philosophy, and ethics who analyze the constraint's structure without being subject to it. They map the conceptual architecture of desert-based legitimacy, track its empirical operation, and compare it across sibling readings. Their exit is analytical — they can adopt any reading's frame."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a principled, non-arbitrary limit on state violence by tying the ultimate penalty to a specific moral trigger (murder) and a proportionality principle (life for life). This coordinates social expectations about the boundaries of legitimate punishment and prevents escalation to excessive or discriminatory sanctions.",
+    "transfer_function": "Moves the offender's life from the offender to the moral order (as restoration) and to victim families (as vindication), mediated by the state's execution apparatus. The transfer is not material but normative: the constraint asserts that the offender's forfeiture *is* the transfer, and the state's role is to enact it.",
+    "absent_voices": "The condemned offender's own voice after sentencing is structurally silenced — the constraint's logic treats their subsequent preferences as morally void. Future generations who might inherit a different moral consensus about desert are also absent; the constraint locks in a civilizational-time commitment on their behalf.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the retributive legitimacy constraint vanished overnight, the legal architecture of capital punishment would lose its primary moral justification in jurisdictions that retain it. Abolitionist momentum would accelerate; moratoria would become abolition; the moral vocabulary of 'desert' would shift to deterrence or incapacitation rationales — or the practice would collapse entirely. The world of punishment would rearrange.",
+    "founding_problem": "The pre-modern problem of unbounded vengeance and arbitrary sovereign killing: without a proportionality principle, blood feuds and sovereign caprice made punishment unpredictable and often grossly disproportionate. Lex talionis was built to cap vengeance at equivalence — an eye for an eye, no more.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Legal historians (e.g., Foucault, Whitman) corroborate that proportionality principles emerged to limit sovereign arbitrariness and private vengeance. However, the same scholars note that modern state killing has reconstituted new forms of arbitrariness (racial disparity, geographic lottery, error rates) that the founding principle does not constrain. The retributive reading's beneficiaries (victim families, moral order advocates) assert the problem remains live; abolitionists and procedural critics attest it is dead in practice."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the state_killing_legitimacy kernel, or does it collapse into the deterrence_reading in practice?",
+      "resolution_mechanism": "Examine whether jurisdictions retaining capital punishment justify it primarily through desert language (retributive) or deterrence language (consequentialist) in statutes, judicial opinions, and public discourse. If the same actors deploy both rationales interchangeably, the readings may not be structurally distinct.",
+      "impact": "If the readings collapse, the kernel has fewer than three live readings; the retributive_reading's distinct ε and beneficiary structure would be an analytical artifact. The constraint family would need re-specification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the retributive reading is structurally distinct from deterrence in institutional practice"
+    },
+    {
+      "id": "moral_order_as_beneficiary_ontology",
+      "question": "Does 'moral_order' as a beneficiary represent a real structural position, or is it a personification of the constraint's own self-justification?",
+      "resolution_mechanism": "Trace whether any human or institutional actor collects rents, status, or power *because* the moral order is treated as a beneficiary. If the benefit accrues only to the state apparatus or victim families, 'moral_order' is a vindicated proposition misclassified as a beneficiary.",
+      "impact": "If moral_order is not a real beneficiary, the constraint's coordination function (beneficiary presence) is weaker than authored, potentially shifting classification toward snare (pure extraction) rather than tangled_rope. The False Summit logic would not apply since claimed_type is already snare.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ontological status of abstract normative structures as beneficiaries"
+    },
+    {
+      "id": "desert_based_extraction_measurement",
+      "question": "Can extractiveness be measured independently of the desert judgment that constitutes the constraint's legitimacy?",
+      "resolution_mechanism": "Compare ε across the three sibling readings using the same standing arrangement (state killing of murderers) as referent. If ε differs only because the desert judgment changes the *valuation* of the extraction (deserved vs. undeserved), then ε is reading-indexed in a way that violates ε-invariance unless each reading is a separate constraint (which they are, per kernel rules).",
+      "impact": "Confirms that the kernel-reading decomposition correctly isolates ε-invariant constraints. If ε cannot be stabilized per reading, the decomposition fails.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ε stabilizes per reading when referent is fixed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the retributive reading of state killing legitimacy: the claim that a murderer forfeits their right to life through proportional desert (lex talionis). The constraint operates as a snare from the analytical seat — it extracts the offender's life under a legitimacy claim that the offender morally deserves it. The coordination function (limiting state violence to proportional desert) is real but thin; the extraction (the offender's life) is total and irreversible. The beneficiary structure includes an abstract 'moral_order' (the vindicated proposition given actor status) and victim families whose identity is locked to the retributive frame. The agenda setter (state execution apparatus) maintains the constraint with high suppression (no exit for the condemned) and low theater (the machinery is brutally functional).",
+    "logic_rationale": "Extractiveness is high (0.82) because the constraint takes everything from the offender — their life — and the transfer is justified by a desert judgment that the offender cannot contest. Suppression is near-total (0.9) because the state's coercive apparatus allows no exit once the sentence is final; the condemned are trapped by definition. Theater is low (0.15) because the execution machinery is not performative — it is the constraint's real function. Accessibility collapse is moderate (0.65) because alternatives (life without parole, restorative justice) remain conceptually available but are politically and morally excluded by the desert logic. Resistance is high (0.75) because abolitionist movements, legal challenges, and international norms actively contest the constraint.",
+    "directionality_logic": "The condemned offender is the full target (d ≈ 1.0): powerless, trapped, immediate time horizon. The state execution apparatus is the agenda setter with institutional power and arbitrage-grade exit (it could abolish but chooses not to). Victim families are beneficiaries with identity-locked exit — their moral identity fuses with the constraint, making exit unthinkable. The moral_order is an abstract beneficiary with no exit (it is the constraint's own legitimating fiction). Abolitionists are excluded (mobile, organized) — they would object but are kept outside the constraint's logic. Observers are analytical.",
+    "mandatrophy_analysis": "The founding problem (limiting unbounded vengeance) is historically real but contested as live. Modern state killing exhibits the very arbitrariness the principle was built to prevent (racial disparity, error, geographic lottery). The constraint persists not because it solves the founding problem but because it serves as a legitimacy anchor for state power and a symbolic satisfier for retributive intuition. This is mandatrophy: the mandate (proportional desert) has outlived its function (limiting arbitrariness) but the constraint remains.",
+    "kernel_context": "This is the retributive_reading of the state_killing_legitimacy kernel. Sibling readings: deterrence_reading (execution as rational signal preventing future murders) and abolition_reading (state killing categorically violates human dignity). This reading instantiates a constraint where the offender enters the victim set as morally deserving, society/moral order is the beneficiary, and high ε derives from desert-based legitimacy. The deterrence_reading would shift beneficiary structure to 'future_potential_victims' and lower ε (instrumental, calibratable). The abolition_reading would eliminate the constraint entirely (ε ≈ 0 for state killing as such)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_killing_legitimacy__deterrence_reading",
+      "state_killing_legitimacy__abolition_reading"
+    ],
+    "dual_formulation_note": "This constraint is one member of the state_killing_legitimacy kernel family. The three readings decompose the natural-language concept 'death penalty legitimacy' into structurally distinct constraints with different ε, beneficiary/victim structures, and coordination functions. They are linked via affects_constraints. The retributive_reading claims the offender forfeits life-right through desert; deterrence_reading claims execution prevents future murders; abolition_reading claims state killing is categorically illegitimate. Each has its own ε and classification."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "deterrence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "abolition_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "murderer_forfeits_life_right_by_desert",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "proportional_punishment_restores_moral_order",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "classical_retributive_justice",
+    "drift_state": {
+      "moment": "contemporary_empirical_challenge_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 1.0
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.2
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

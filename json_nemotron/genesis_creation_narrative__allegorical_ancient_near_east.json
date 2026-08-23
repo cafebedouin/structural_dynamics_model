@@ -1,0 +1,303 @@
+{
+  "header": {
+    "constraint_id": "genesis_creation_narrative__allegorical_ancient_near_east",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "genesis_creation_narrative__allegorical_ancient_near_east",
+    "story_uid": "802d20cd-005c-4387-8973-2e601ac34837"
+  },
+  "base_properties": {
+    "extractiveness": 0.03,
+    "suppression": 0.05,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.2,
+    "claimed_type": "mountain",
+    "human_readable": "Genesis 1-2 as Ancient Near Eastern Mythopoetic Literature",
+    "topic_domain": "religious_studies/biblical_hermeneutics/science_religion_interface",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [],
+    "victims": [],
+    "vindicated_propositions": [
+      "ancient_near_eastern_literary_genre_interpretation",
+      "textual_autonomy_from_scientific_adjudication",
+      "theological_claims_independent_of_historical_chronology"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a kernel reading, and if so, which kernel and reading does it instantiate?",
+      "resolution_mechanism": "This omega records the committer structure: this constraint is the 'allegorical_ancient_near_east' reading of the 'genesis_creation_narrative' kernel. Sibling readings are 'literal_young_earth' and 'theistic_evolutionary'. The structural delta: text has no adjudicative authority over cosmology/biology; complete decoupling from science; dominion metaphor loses normative force.",
+      "impact": "Establishes this constraint as one instantiation of a contested kernel. Other readings instantiate different constraints with different ε, beneficiary/victim structures, and classifications. The kernel_id and reading_id are structural metadata, not analytical claims about the text.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the allegorical_ancient_near_east reading of the genesis_creation_narrative kernel"
+    },
+    {
+      "id": "reading_relation_to_literal_young_earth",
+      "question": "Does the allegorical reading foreclose, coexist with, or influence the literal young earth reading?",
+      "resolution_mechanism": "The allegorical reading's core premise (Genesis 1-2 is mythopoetic literature with no historical-scientific claims) directly contradicts the literal reading's core premise (Genesis 1-2 is inerrant historical-scientific chronicle). Within any single commitment framework, adopting one premise logically rules out the other. This is a forecloses relation.",
+      "impact": "If forecloses is correct, no single theological framework can hold both readings simultaneously. The engine will compute foreclosure from the axioms and drift_state. If coexist_with were correct, both readings could be held by different parties within the same broader tradition without logical contradiction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relation from allegorical reading to literal_young_earth reading: forecloses"
+    },
+    {
+      "id": "reading_relation_to_theistic_evolutionary",
+      "question": "Does the allegorical reading foreclose, coexist with, or influence the theistic evolutionary reading?",
+      "resolution_mechanism": "The allegorical reading (complete decoupling from science) and theistic evolutionary reading (theological framework compatible with science) occupy different parties' commitments. The allegorical reading denies the text has any scientific content to reconcile; theistic evolution affirms compatibility. They do not logically contradict — one denies scientific adjudication entirely, the other asserts compatibility. Different factions hold each. This is coexists_with.",
+      "impact": "If coexists_with is correct, both readings remain live positions in contemporary discourse. The engine will not compute foreclosure between them. The allegorical reading creates some downstream pressure (influences) by denying the reconciliation project's premise, but does not foreclose it.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relation from allegorical reading to theistic_evolutionary reading: coexists_with with influences pressure"
+    },
+    {
+      "id": "axiom_grounding_ambiguity",
+      "question": "Is the foundational axiom 'text_has_no_scientific_adjudicative_authority' grounded in empirical literary analysis (empirically_contingent) or a deontological hermeneutic principle (deontological)?",
+      "resolution_mechanism": "If grounded in genre analysis of Ancient Near Eastern texts (comparative literature, form criticism), it is empirically_contingent — falsifiable by evidence about genre conventions. If grounded in a hermeneutic principle that theological texts by nature make no scientific claims, it is deontological. The distinction matters for foreclosure computation under axiom_overriding drift.",
+      "impact": "If empirically_contingent and systematic evidence challenges the genre classification, the axiom could be overridden and foreclosure computed. If deontological, foreclosure never triggers regardless of drift. The allegorical reading typically cites both — comparative literature AND a hermeneutic principle — creating ambiguity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the epistemic grounding type of the allegorical reading's foundational axiom"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.03
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.04
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 250,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 250
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the reading of Genesis 1-2 as Ancient Near Eastern mythopoetic literature — a literary and theological text whose genre, cultural context, and authorial intent place it firmly within the mythic and liturgical traditions of the ancient Near East (e.g., Enuma Elish, Atrahasis, Egyptian cosmogonies). Under this reading, the text makes no historical or scientific claims about cosmology, geology, or biology. Its truth-claims are theological and anthropological: God as creator, humanity as image-bearers, creation as good and ordered. The constraint has negligible extractiveness because it imposes no demands on scientific inquiry, no suppression of alternative accounts, and no material transfer from any party to another. It is a Mountain: a structural feature of the interpretive landscape that persists regardless of enforcement, with no identifiable beneficiaries collecting rents. The kernel context: this is the 'allegorical_ancient_near_east' reading of the contested 'genesis_creation_narrative' kernel. Sibling readings: 'literal_young_earth' (inerrant historical-scientific chronicle) and 'theistic_evolutionary' (theological framework compatible with science).",
+    "key_agents": [
+      "biblical_scholars_historical_critical: scholarly community using historical-critical methods; power=analytical; exit=arbitrage",
+      "confessional_communities_allegorical: faith communities holding this reading; power=organized; exit=mobile",
+      "scientific_community: unaffected by this reading; power=institutional; exit=analytical",
+      "literalist_communities: hold competing reading; power=organized; exit=identity_locked",
+      "theistic_evolution_communities: hold sibling reading; power=organized; exit=mobile"
+    ],
+    "logic_rationale": "Base extractiveness is near-zero (0.03) because this reading makes no claims on material resources, institutional power, or scientific authority — it explicitly decouples the text from scientific adjudication. Suppression is negligible (0.05) because the reading does not suppress alternative interpretations; it coexists with them as a scholarly and ecclesial option. Theater ratio is low (0.10) because there is no performative maintenance of a decaying function — the reading's scholarly and theological coherence is genuine. Accessibility collapse is low (0.15) because alternatives (literal, theistic evolution) remain fully available and actively held. Resistance is low (0.20) because the constraint is not actively resisted — it is one live reading among others. The claimed_type 'mountain' reflects that this reading presents itself as a structural fact of the text's genre and cultural embeddedness, not a constructed imposition. The emerges_naturally flag is true because the reading follows from the text's literary and historical properties, not from a decision to impose it.",
+    "directionality_logic": "No beneficiaries or victims are declared because this reading extracts from no one and subsidizes no one. The scholarly community (analytical) observes the structure; confessional communities (organized) adopt it freely with mobile exit; scientific community (institutional) is unaffected; literalist communities (organized, identity_locked) hold a competing reading but are not targeted by this one. Directionality derivation is trivial: all seats are near-symmetric (d ≈ 0.5) because the constraint imposes no asymmetric costs or benefits.",
+    "perspectival_gap": "The literal_young_earth reading experiences the allegorical reading as a threat to its epistemic authority — from that seat, the allegorical reading feels like suppression (d → 1.0 for literalists). But structurally, the allegorical reading does not suppress the literal reading; it merely exists as an alternative. The engine computes per-seat types from structural data; the literalist seat's experience of threat is real but not structurally authored by this constraint. This is the perspectival gap: the constraint is a Mountain from the analytical seat, but may compute as extractive from the identity-locked literalist seat.",
+    "mandatrophy_analysis": "The founding problem (giving an account of origins that honors God as creator and orders human life) remains live — the reading continues to serve that function. No mandatrophy: the arrangement has not outlived its purpose. The reading's persistence is not inertial or theatrical; it is actively maintained by its scholarly and theological coherence.",
+    "kernel_context": "This constraint is the 'allegorical_ancient_near_east' reading of the 'genesis_creation_narrative' kernel. Sibling readings: 'literal_young_earth' (Genesis as inerrant historical-scientific chronicle) and 'theistic_evolutionary' (Genesis as theological framework compatible with science). Structural delta for this reading: text has no adjudicative authority over cosmology/biology; complete decoupling from science; dominion metaphor loses normative force as a warrant for human domination of nature."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "genesis_creation_narrative__literal_young_earth",
+      "genesis_creation_narrative__theistic_evolutionary"
+    ],
+    "dual_formulation_note": "The genesis_creation_narrative kernel decomposes into three constraint stories: (1) allegorical_ancient_near_east (this story) — Mountain, ε≈0.03, text as ANE mythopoetic literature; (2) literal_young_earth — Snare/Tangled Rope, high ε, text as scientific chronicle enforced on education/policy; (3) theistic_evolutionary — Rope/Tangled Rope, moderate ε, text as theological framework compatible with science. They differ in ε by wide margins (0.03 vs 0.6+ vs 0.2+), have different beneficiary/victim structures, and different failure modes. Linked via affects_constraints."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "biblical_scholars_historical_critical",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Scholarly community using historical-critical methods, comparative ANE literature, and form criticism. They assess the reading on evidentiary grounds. Their professional standing does not depend on this reading's truth — they can adopt, modify, or reject it based on evidence. Exit is arbitrage-grade: they can switch frameworks with minimal career cost."
+    },
+    {
+      "name": "confessional_communities_allegorical",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Faith communities (mainline Protestant, Catholic, Orthodox, some Jewish traditions) that hold this reading as theologically adequate and intellectually honest. They benefit from a coherent theology-science relation without conflict. Exit is mobile: they can change hermeneutics without losing communal identity, though with some liturgical and catechetical friction."
+    },
+    {
+      "name": "scientific_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scientific inquiry proceeds unaffected by this reading. The reading explicitly disclaims authority over cosmology, geology, biology. No scientist is constrained or benefited by it. Their exit is analytical — they simply do not engage the text as a scientific source."
+    },
+    {
+      "name": "literalist_communities",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Communities holding the literal_young_earth reading. They are not parties to this constraint — they hold a competing reading of the same kernel. Their exclusion from this reading's framework is structural: the two readings cannot coexist in one framework. Their exit from the allegorical reading is identity_locked: adopting it would dissolve their communal identity, which is fused to the literal reading."
+    },
+    {
+      "name": "theistic_evolution_communities",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Communities holding the theistic_evolutionary sibling reading. They are not parties to this constraint but observers of a related but distinct constraint. Their reading affirms compatibility with science; this reading denies scientific content exists to reconcile. They can engage or disregard this reading without identity threat — exit is mobile."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Provides a hermeneutical framework that allows faith communities to affirm the theological claims of Genesis 1-2 (God as creator, creation as good, humanity as image-bearers) without making falsifiable historical-scientific claims that conflict with established science. Coordinates theology and science by assigning them non-overlapping domains of discourse.",
+    "transfer_function": "Moves no material resources, authority, or status between parties. The reading transfers interpretive authority from the text as scientific source to the text as theological witness — but this is a transfer within the believing community, not an extraction from an external party.",
+    "absent_voices": "Communities for whom the text's authority *requires* historical-scientific inerrancy (literal_young_earth) — they are not absent from the conversation but structurally excluded from this reading's framework. Their objection is that this reading empties the text of its normative force. They are present in the broader discourse but cannot occupy a seat within this constraint without abandoning their reading.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "If this reading vanished overnight, the text would still exist, other readings would persist, scientific inquiry would be unaffected, and confessional communities holding this reading would adopt a sibling reading (likely theistic_evolutionary) or become literalist. The world does not rearrange — the constraint is an interpretive option, not a structural load-bearing arrangement.",
+    "founding_problem": "The problem of giving a coherent account of origins that honors God as creator and orders human life in relation to the created order, without requiring the text to function as a scientific textbook in conflict with empirical discovery.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated by the ongoing scholarly consensus in historical-critical biblical studies (outside the benefiting confessional communities) that Genesis 1-2 belongs to ANE mythopoetic literature. Also corroborated by the official positions of major mainline denominations and the Catholic Church (e.g., Pontifical Biblical Commission 1909, 1948; Pius XII Divino Afflante Spiritu 1943; John Paul II 1996) — institutional authorities not reducible to the benefiting communities."
+  },
+  "uke_scope": {
+    "epsilon_bin": "none",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "literal_young_earth",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "theistic_evolutionary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "text_has_no_scientific_adjudicative_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "theological_truth_independent_of_historical_chronology",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "ancient_near_eastern_literary_context",
+    "drift_state": {
+      "moment": "modern_scientific_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "header": {
+    "constraint_id": "supermajority_threshold__consensus_safeguard_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "8af7f4de-db0f-46bf-84bc-a5999132d556"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.35,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.28,
+    "claimed_type": "rope",
+    "human_readable": "Supermajority Threshold as Consensus Safeguard",
+    "topic_domain": "constitutional_theory/political_economy/institutional_design",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "constitutional_continuity",
+      "future_citizens",
+      "democratic_institutions"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "constitutional_stability_doctrine",
+      "deep_consensus_requirement"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "committer_reading_identity",
+      "question": "This constraint is one reading (consensus_safeguard_reading) of the supermajority_threshold kernel. What structural elements would change if the sibling readings (minoritarian_veto_reading, adaptive_gradient_reading) were instantiated instead?",
+      "resolution_mechanism": "Compare the three readings' beneficiary/victim structures, extractiveness referents, and claimed types. The consensus_safeguard_reading has diffuse beneficiaries and no victim set unless blocking occurs; minoritarian_veto_reading has identifiable victims (majoritarian will blocked); adaptive_gradient_reading has calibration-dependent extraction.",
+      "impact": "Confirms ε-invariance: each reading instantiates a different constraint with its own ε, beneficiary structure, and type. The kernel is the contested commitment; the readings are the constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-reading decomposition: this reading's structural identity vs. siblings"
+    },
+    {
+      "id": "diffuse_beneficiary_legitimacy",
+      "question": "Are the diffuse beneficiaries (constitutional continuity, future citizens, democratic institutions) genuine beneficiaries of a coordination function, or is this a false summit where identifiable actors (incumbent power holders, judicial elites, entrenched interests) capture the stability rent?",
+      "resolution_mechanism": "Empirical analysis of who actually benefits when amendments are blocked: trace blocked amendment history to identify systematic patterns of which groups' preferences are protected. Cross-reference with judicial review outcomes and institutional self-preservation cases.",
+      "impact": "If identifiable capture is demonstrated, the constraint reclassifies from rope toward tangled_rope or snare via FSM logic. If diffuse beneficiaries are genuine, rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether diffuse beneficiaries are structurally real or cover for concentrated capture"
+    },
+    {
+      "id": "blocking_as_extraction_trigger",
+      "question": "When does the constraint shift from passive stability filter to active extraction? The consensus_safeguard_reading declares victims only 'unless blocking occurs' — at what frequency and pattern of blocking does the victim set become structurally real rather than contingent?",
+      "resolution_mechanism": "Longitudinal study of supermajority threshold invocations: measure blocking frequency, the demographic/political profile of blocked majorities, and whether blocked proposals systematically disadvantage particular groups. Threshold: if blocking systematically protects the same interests, victim set is structural.",
+      "impact": "If blocking is rare and distributionally neutral, the reading's 'no victims unless blocking' claim holds. If blocking is systematic and distributionally biased, victims become a standing structural feature, shifting classification toward tangled_rope or snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Threshold at which contingent blocking becomes structural victimization"
+    },
+    {
+      "id": "calibration_uncertainty",
+      "question": "The adaptive_gradient_reading argues the threshold requires evidence-based calibration. Is the current threshold (e.g., 2/3, 3/4, constitutional convention requirement) calibrated to actual consensus formation rates, or is it a historical artifact that the consensus_safeguard_reading treats as natural law?",
+      "resolution_mechanism": "Comparative constitutional analysis: examine amendment success rates across different thresholds and political contexts. Test whether the threshold filters 'transient passion' or simply filters all change. Historical analysis of the threshold's origin: was it set by deliberation or by power?",
+      "impact": "If uncalibrated, the consensus_safeguard_reading's 'deep consensus' claim is a post-hoc rationalization; extraction may be higher than authored. If calibrated, the reading's coordination function is empirically grounded.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the threshold is functionally calibrated or a historical artifact"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.35,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the supermajority threshold as a consensus safeguard — a high barrier to constitutional amendment that filters out transient majoritarian passions and ensures changes reflect deep, persistent democratic consensus. The reading treats the threshold as a genuine coordination mechanism: it solves the problem of constitutional instability by requiring broad agreement for fundamental change, benefiting constitutional continuity, future citizens, and democratic institutions diffusely. No specific victim set exists unless the threshold actively blocks a majority will, at which point the blocked majority becomes a contingent victim. The claimed type is rope (pure coordination with minimal coercive overhead), while the authored metrics describe low but non-zero extraction, moderate suppression (the barrier itself), and rising theater over time — the engine measures the divergence. This is one reading of the supermajority_threshold kernel; the minoritarian_veto_reading and adaptive_gradient_reading instantiate different constraints from the same kernel.",
+    "logic_rationale": "Extractiveness is low (0.18) because the threshold's primary operation is filtering rather than transferring value; it does not systematically extract from a defined group. Suppression is moderate (0.35) because the barrier itself prevents action — but this is the coordination function, not coercive enforcement against alternatives. Theater ratio rises from 0.15 to 0.22 over the interval, reflecting increasing performative invocation of 'deep consensus' to justify blocking changes that may have genuine majority support. Accessibility collapse is high (0.72) because once the supermajority requirement is understood as legitimate, alternatives (simple majority amendment, legislative override) collapse conceptually — the constraint redefines what counts as legitimate constitutional change. Resistance is low (0.28) because the constraint is widely accepted as a constitutional design feature, though resistance rises when blocking occurs.",
+    "directionality_logic": "The beneficiaries are diffuse and structural: constitutional continuity (the system's persistence), future citizens (protected from transient majorities), and democratic institutions (stabilized against volatility). These are not actors who collect rents — they are the systemic goods the constraint coordinates. No standing victim set exists in this reading; victims appear only contingently when a majority is blocked. The agenda-setter seat (constitutional designers, amendment authorities) sits near symmetric: they bear the cost of the higher threshold (harder to pass desired amendments) but benefit from the stability it provides. The analytical observer sees the full structure: a coordination mechanism whose legitimacy depends on the 'deep consensus' claim remaining empirically grounded.",
+    "perspectival_gap": "From the consensus_safeguard_reading's seat, the constraint is a rope: genuine coordination with diffuse benefits and minimal extraction. From the minoritarian_veto_reading's seat, the same structure is a snare: identifiable minorities capture veto power to entrench privilege. From the adaptive_gradient_reading's seat, it is a tangled_rope or scaffold: coordination function exists but requires calibration, and miscalibration creates extraction. The engine computes these per-seat classifications from the structural data; this reading authors only its own structural view.",
+    "mandatrophy_analysis": "The founding problem (preventing constitutional instability from transient passions) remains contested — some argue it is live (polarization makes it more necessary), others argue it is dead (the threshold now blocks necessary adaptation), others that it was never the real problem (the threshold was always about entrenchment). This reading treats the problem as live but acknowledges the contestation. Mandatrophy is not resolved; the constraint's function is actively disputed.",
+    "kernel_context": "This constraint is the consensus_safeguard_reading of the supermajority_threshold kernel. Sibling readings: minoritarian_veto_reading (threshold empowers blocking minorities to entrench status quo), adaptive_gradient_reading (threshold is a functional tool requiring evidence-based calibration to consensus formation rates). This reading instantiates the threshold as a democratic quality filter with diffuse beneficiaries and contingent victims; the other readings instantiate different constraints with different beneficiary/victim structures and extractiveness profiles."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "supermajority_threshold__minoritarian_veto_reading",
+      "supermajority_threshold__adaptive_gradient_reading"
+    ],
+    "dual_formulation_note": "Constraint family decomposition of the supermajority_threshold kernel. This reading (consensus_safeguard) claims the threshold is a stability coordination mechanism (rope). The minoritarian_veto_reading claims it is a minority capture mechanism (snare). The adaptive_gradient_reading claims it is a calibration-dependent tool (tangled_rope or scaffold). The three readings have different ε values, different beneficiary/victim structures, and different claimed types — they are different constraints linked by the kernel."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "constitutional_designers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Designed the amendment threshold as part of the constitutional architecture. They bear the cost of a higher barrier when they seek amendments but benefit from the stability it provides to the system they created. Their exit is analytical — they observe the constraint's operation from the design perspective."
+    },
+    {
+      "name": "constitutional_continuity",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The systemic good of constitutional persistence and stability. Not an actor but the diffuse beneficiary the constraint coordinates around. Collects no rents; its 'benefit' is the prevention of constitutional churn."
+    },
+    {
+      "name": "future_citizens",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Citizens not yet born who inherit the constitutional order. They benefit from stability but cannot consent to or exit the constraint. Their 'exit' is trapped — they are born into the threshold's regime."
+    },
+    {
+      "name": "democratic_institutions",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legislatures, courts, and executive branches that operate within a stable constitutional framework. They benefit from predictable rules of the game but also face the constraint when seeking structural reforms."
+    },
+    {
+      "name": "blocked_majorities",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Contingent victims who emerge only when the threshold blocks a majority-supported amendment. They bear the cost of delayed or prevented change. Their exit is constrained — they can mobilize for a supermajority, wait for political realignment, or seek judicial reinterpretation, but all paths are costly and uncertain."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the threshold's empirical operation: amendment success rates, blocking patterns, distributional effects. They see the full structure across readings but do not collect from or pay into the constraint."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Prevents constitutional instability by requiring broad, persistent agreement for fundamental changes — solves the problem of transient majorities enacting changes that lack deep democratic legitimacy and may be reversed by the next majority.",
+    "transfer_function": "Moves amendment authority from simple majorities to supermajorities; the 'transfer' is the opportunity cost of amendments that fail to meet the threshold. No direct resource transfer; the constraint reallocates political power across time (present majority vs. future stability).",
+    "absent_voices": "Citizens in polities without supermajority requirements (who experience constitutional change more fluidly); historical majorities whose amendments were blocked and who left no institutional record of their objection; future citizens who cannot yet speak to whether the stability served them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the supermajority threshold vanished overnight, constitutional amendments would proceed by simple majority (or whatever lower rule applies), likely increasing amendment frequency and decreasing constitutional stability. The political system would reorganize around lower-threshold change, altering the strategic calculus of constitutional politics.",
+    "founding_problem": "Constitutional instability under simple majority amendment: frequent fundamental changes driven by transient majorities, undermining the constitution's function as a stable framework for democratic governance and intergenerational commitment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The consensus_safeguard_reading's proponents (constitutional designers, some political theorists) attest the problem is live — polarization makes stability more necessary. Critics (minoritarian_veto_reading proponents, adaptive_gradient_reading proponents) attest the problem is dead or misdiagnosed — the threshold now blocks necessary adaptation, or was never about stability but entrenchment. No neutral corroborator outside the beneficiary set is universally accepted; the founding problem's status is itself a site of contestation."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "minoritarian_veto_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "adaptive_gradient_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deep_consensus_as_legitimacy_condition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "constitutional_stability_as_intergenerational_obligation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "constitutional_continuity_framework",
+    "drift_state": {
+      "moment": "contemporary_polarization_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

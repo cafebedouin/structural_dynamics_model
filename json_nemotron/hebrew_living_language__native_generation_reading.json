@@ -1,0 +1,357 @@
+{
+  "header": {
+    "constraint_id": "hebrew_living_language__native_generation_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "story_uid": "35680d2a-b94f-4880-bdb6-7603b0d8b43e"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hebrew Living Language — Native Generation Requirement",
+    "topic_domain": "historical_linguistics/language_revitalization/commitment_systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "zionist_institutional_leadership",
+      "hebrew_education_establishment",
+      "new_yishuv_settler_population"
+    ],
+    "victims": [
+      "yiddish_speaking_communities",
+      "ladino_speaking_communities",
+      "mizrahi_arabic_speaking_jews",
+      "traditional_cheder_educators"
+    ],
+    "vindicated_propositions": [
+      "language_is_daily_speech",
+      "vernacular_revival_requires_native_acquisition"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the contested kernel 'hebrew_living_language', or does it exhaust the kernel's meaning?",
+      "resolution_mechanism": "Compare the structural metrics and victim/beneficiary sets of sibling readings: liturgical_continuity_reading and literary_revival_reading produce different ε profiles and different victim sets.",
+      "impact": "If the kernel supports multiple readings with different classifications, the constraint's type is reading-indexed, not kernel-indexed. This reading instantiates tangled_rope with moderate extraction; the liturgical reading may compute as mountain or rope with near-zero extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the native generation reading is the only valid reading of the Hebrew living language kernel."
+    },
+    {
+      "id": "yiddish_ladino_suppression_mechanism",
+      "question": "Was the suppression of Yiddish and Ladino structural (policy, schooling, public sphere exclusion) or internalized (speakers abandoning heritage languages voluntarily for Hebrew)?",
+      "resolution_mechanism": "Historical analysis of language policy in Mandate Palestine and early Israel: school curricula, street signage, workplace rules, youth movement pressure, and speaker testimony on language shift motivations.",
+      "impact": "If structural, suppression is higher and the constraint is more extractive; if internalized, the constraint's suppression metric reflects partly carried suppression after exit from the diaspora context.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression of diaspora vernaculars during Hebrew revival."
+    },
+    {
+      "id": "strict_reachability_break_nature",
+      "question": "Does the acknowledged break in native transmission (no native speakers 200–1700 CE) represent a true discontinuity or a transformed continuity?",
+      "resolution_mechanism": "Comparative historical linguistics: assess whether liturgical Hebrew competence provided sufficient structural scaffolding for generative revival, or whether the revival required de novo reconstruction from textual corpora.",
+      "impact": "If true discontinuity, the constraint's accessibility_collapse is higher (alternatives genuinely unavailable); if transformed continuity, the liturgical_continuity_reading has stronger structural claim.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the native transmission gap constitutes a strict reachability break or a continuity under transformation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1880,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1920,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1948,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1967,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1880,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1948,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1880,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1920,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1948,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1967,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 1880,
+    "end": 1990
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the 'native generation reading' of the Hebrew living language kernel: the claim that Hebrew becomes a living language only when native speakers produce daily speech generatively, not through memorized liturgical recitation or literary production alone. Historically, this reading powered the Zionist language revival (1880s–1948) and became state policy in early Israel. It coordinates a genuine collective action problem — creating a shared vernacular for a linguistically fragmented immigrant population — but extracts asymmetrically by suppressing Yiddish, Ladino, Judeo-Arabic, and other diaspora vernaculars. The constraint requires active enforcement (school systems, youth movements, public signage, workplace norms) and has no sunset clause. The metrics reflect the interval 1880–1990: extraction and suppression rise through the Mandate period and peak at state founding, then moderate slightly as Hebrew becomes entrenched. Theater ratio rises as ideological fervor shifts to institutional maintenance.",
+    "key_agents": [
+      "zionist_institutional_leadership: agenda_setter (institutional/generational/arbitrage/global) — sets revival policy, controls education and public institutions",
+      "hebrew_education_establishment: agenda_setter/beneficiary (organized/biographical/constrained/national) — implements Hebrew-only schooling, gains professional status",
+      "new_yishuv_settler_population: beneficiary (organized/biographical/mobile/national) — gains shared vernacular, participates in nation-building",
+      "yiddish_speaking_communities: payer (moderate/biographical/identity_locked/national) — lose intergenerational transmission, pressured to abandon Yiddish",
+      "ladino_speaking_communities: payer (moderate/biographical/identity_locked/national) — lose intergenerational transmission, pressured to abandon Ladino",
+      "mizrahi_arabic_speaking_jews: payer (powerless/biographical/trapped/national) — lose Judeo-Arabic vernaculars, marginalized in Hebrew-dominant public sphere",
+      "traditional_cheder_educators: payer (moderate/biographical/constrained/local) — lose pedagogical authority, curriculum replaced by Hebrew-language secular/Zionist schools",
+      "linguistic_scholars: observer (analytical/generational/analytical/universal) — analyze revival as case study in language planning"
+    ],
+    "logic_rationale": "Base extractiveness (0.48) reflects moderate but real extraction: the coordination function (shared vernacular for nation-building) is genuine, but the asymmetric suppression of existing vernaculars — especially Yiddish and Ladino which had millions of native speakers — constitutes extraction from those communities. Suppression (0.52) is structural: Hebrew-only policies in schools, workplaces, and public space actively marginalized alternatives. Theater ratio (0.28) reflects that early revival was ideologically driven (low theater), but post-1948 institutional maintenance developed performative elements (ceremonial Hebrew, 'purity' campaigns). Accessibility collapse (0.35) is moderate: Yiddish and Ladino persisted in enclaves and diaspora, but within the yishuv/Israel the vernacular space collapsed. Resistance (0.58) is significant: Yiddishists, Bundists, ultra-Orthodox, and Mizrahi communities resisted Hebrew monolingualism. The claim of tangled_rope fits: genuine coordination + asymmetric extraction + active enforcement.",
+    "perspectival_gap": "The agenda_setter seat (Zionist leadership) experiences this as rope: a coordination problem solved by collective will. The payer seats (Yiddish/Ladino/Mizrahi speakers) experience it as snare: their vernaculars are suppressed to make space for Hebrew. The engine computes this divergence from the structural data — beneficiary declarations for the leadership and education establishment, victim declarations for vernacular communities, and the identity_locked/constrained exit options for payers.",
+    "directionality_logic": "Zionist institutional leadership and Hebrew education establishment are beneficiaries: they gain institutional control, professional status, and nation-building coherence (d near 0.15–0.25). New Yishuv settlers are net beneficiaries: they gain a shared vernacular, though they bear learning costs (d ~ 0.35). Yiddish and Ladino speakers are primary victims: identity_locked exit (language fused to communal identity) makes exit near-impossible; they bear intergenerational transmission loss (d ~ 0.85). Mizrahi Arabic speakers are trapped: powerless, no institutional support for their vernaculars, exit blocked by structural marginalization (d ~ 0.95). Traditional cheder educators are constrained payers: their pedagogical role is displaced (d ~ 0.75). Scholars are analytical observers (d = 0.5).",
+    "mandatrophy_analysis": "The founding problem (creating a shared vernacular for a linguistically fragmented immigrant population building a polity) was live in 1880–1948. By 1990, Hebrew is the dominant native language of a sovereign state — the coordination problem is solved. Yet the constraint persists: Hebrew-only education, public signage laws, Academy of the Hebrew Language prescriptive authority. The mandate has outlived its founding function but is maintained by institutional inertia and ideological commitment — classic mandatrophy. The constraint does not declare mandatrophy_resolved because the arrangement persists without its founding justification.",
+    "kernel_context": "This constraint is the native_generation_reading of the contested kernel 'hebrew_living_language'. Sibling readings: liturgical_continuity_reading (Hebrew lives through unbroken liturgical recitation and textual study across diaspora) and literary_revival_reading (Hebrew lives through Haskalah literary production — written generative competence without native daily speech). This reading forecloses the liturgical reading's core premise (recitation suffices for 'living') but coexists with the literary reading (both require generative competence, differing on spoken vs. written modality). The foundational axiom distinguishing this reading: 'vernacular_revival_requires_native_acquisition' — a language is living only when acquired natively by children in daily life."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "hebrew_living_language__liturgical_continuity_reading",
+      "hebrew_living_language__literary_revival_reading"
+    ],
+    "dual_formulation_note": "Part of the Hebrew living language constraint family. This reading (native_generation) instantiates tangled_rope with moderate extraction (ε=0.48) and victims among diaspora vernacular speakers. The liturgical_continuity_reading likely computes as rope or mountain (near-zero extraction, no victims). The literary_revival_reading likely computes as scaffold (transitional coordination function, written modality). All three readings share the kernel but decompose into structurally distinct constraints per the ε-invariance principle."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "zionist_institutional_leadership",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sets Hebrew revival policy through the Jewish Agency, Histadrut, and later state institutions. Controls education curriculum, public sector language requirements, and immigration absorption programs. Gains nation-building coherence and institutional authority. Could pivot to multilingual policy but would lose ideological legitimacy."
+    },
+    {
+      "name": "hebrew_education_establishment",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Implements Hebrew-only schooling, teacher training, and curriculum design. Gains professional status and state funding tied to Hebrew monolingualism. Constrained exit: professional identity and livelihood depend on Hebrew-language education system."
+    },
+    {
+      "name": "new_yishuv_settler_population",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Immigrant communities adopting Hebrew as shared vernacular. Gain communicative unity, participation in public life, and national belonging. Mobile exit: could maintain diaspora languages in private or emigrate, but strong social pressure to adopt Hebrew."
+    },
+    {
+      "name": "yiddish_speaking_communities",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Historically the largest Jewish vernacular (millions of speakers). Pressured by 'Hebrew labor' ideology, school bans, street signage laws, youth movement shaming. Intergenerational transmission collapses within one generation in Palestine/Israel. Identity-locked: Yiddish is fused to Ashkenazi communal identity, religious practice, and socialist Bundist politics — abandoning it feels like betrayal."
+    },
+    {
+      "name": "ladino_speaking_communities",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Sephardi vernacular with centuries of literary and oral tradition. Marginalized in Zionist narratives as 'diaspora language.' Speakers pressured to Hebrewize names, abandon Ladino in public and schools. Identity-locked: Ladino carries Sephardi communal memory and religious practice."
+    },
+    {
+      "name": "mizrahi_arabic_speaking_jews",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Judeo-Arabic vernaculars (Baghdadi, Moroccan, Yemenite, etc.) with no institutional support in Zionist polity. Arrive as immigrants 1948–1950s, placed in transit camps, educated in Hebrew-only schools. No resources for vernacular maintenance. Trapped: powerless, no exit to diaspora communities (most left Arab countries), structural marginalization in Hebrew-dominant public sphere."
+    },
+    {
+      "name": "traditional_cheder_educators",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Teachers in traditional religious elementary schools (cheder) using Yiddish or Hebrew-as-holy-tongue pedagogy. Displaced by secular Hebrew-language school system. Constrained exit: can join new system (retraining) or retreat to ultra-Orthodox enclaves maintaining Yiddish."
+    },
+    {
+      "name": "linguistic_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze Hebrew revival as unique case of language planning and native acquisition revival. No material stake in outcome. Provide comparative data on language shift, revival mechanics, and policy outcomes."
+    }
+  ],
+  "gain_flow": "zionist_institutional_leadership",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Creates a shared vernacular for a linguistically fragmented immigrant population building a polity — solves the Babel problem of the yishuv where dozens of languages prevented common civic, military, and economic life.",
+    "transfer_function": "Moves communicative authority, educational resources, public sphere access, and intergenerational transmission from diaspora vernaculars (Yiddish, Ladino, Judeo-Arabic) to Hebrew. The transfer is effected through school policy, public employment requirements, signage laws, and youth movement socialization.",
+    "absent_voices": "Diaspora Jewish communities outside Palestine/Israel (especially American Yiddishists, European Bundists, North African Judeo-Arabic speakers who remained in situ) — they would object to the framing of their vernaculars as 'dead' or 'diaspora baggage' but were not present in the yishuv/Israeli policy arena. Ultra-Orthodox communities in Palestine/Israel who rejected Zionist Hebrew — they were present but structurally excluded from the consensus by the 'Hebrew labor' and state-building framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the native-generation requirement vanished overnight, Hebrew would remain the dominant language (entrenched native speaker base), but the ideological prohibition on diaspora vernaculars in education and public life would lift. Yiddish, Ladino, and Judeo-Arabic might see institutional support for heritage maintenance. The polity would reorganize toward multilingual citizenship — a substantial rearrangement of the linguistic architecture of the state.",
+    "founding_problem": "The yishuv (pre-state Jewish community in Palestine) faced a coordination crisis: immigrants from Europe, North Africa, the Middle East, and Yemen shared no common spoken language. Yiddish dominated numerically but was ideologically rejected by Zionist leadership as 'diaspora'; Arabic was the regional language but politically charged; no other vernacular had critical mass. A shared spoken language was needed for collective defense, labor organization, civic discourse, and nation-building.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (no shared vernacular for nation-building) is corroborated as dead by: (1) Hebrew is now the native language of ~7 million speakers in a sovereign state — the coordination problem is solved; (2) sociolinguistic surveys confirm Hebrew's dominance across all domains; (3) the Academy of the Hebrew Language and state education system maintain Hebrew not because fragmentation threatens, but as ideological and institutional continuity. The Zionist leadership's own documents (Ben-Gurion, 1950s) acknowledge the revival's success. No credible source outside the benefiting institutional structure argues the founding problem remains live."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "liturgical_continuity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "literary_revival_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "vernacular_revival_requires_native_acquisition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "liturgical_recitation_insufficient_for_living_language",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "pre_revival_diaspora_multilingualism",
+    "drift_state": {
+      "moment": "post_state_founding_hegemony",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -17919,6 +17919,11 @@ prompt said "victim" 10× and named the enum once. Prompt e03e2210 names `payer`
 stealth's 36 hardest seeds then passed 36/36. The repair now counts remaps in `stats`
 (`stakeholder_role_remapped`), so every future run reports the rate per model for free.
 
+**Observed 2026-08-22 (arm G of the boundary gate):** kimi-k2.6 under prompt e03e2210 writes NO
+`measurement_basis/2` in 1005 stories (kimi2), where the July kimi leg at becd0f87 did — a whole optional head
+dropped by a prompt change; the pin is now `testsets_kimi2:empty`. Add `measurement_basis` to the per-model
+table.
+
 **Open.** (a) Per-model remap rate under e03e2210 (does naming the enum once at the site fix
 prose-followers, or only reduce them?) — read off the rescue passes. (b) The other residual
 drift classes are the next enum/type sites: negative `time_horizon` (-500: years authored as a

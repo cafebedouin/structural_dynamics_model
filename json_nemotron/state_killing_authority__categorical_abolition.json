@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "state_killing_authority__categorical_abolition",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_state_killing_authority__categorical_abolition",
+    "measurement_id_prefix": "state_killing_authority__categorical_abolition",
+    "story_uid": "12256fc5-30c2-4241-997d-da258b064de0",
+    "created_at": "2026-08-10T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.05,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.22,
+    "resistance": 0.78,
+    "claimed_type": "mountain",
+    "human_readable": "Categorical Abolition of State Killing Authority",
+    "topic_domain": "criminal_justice/political_philosophy/constitutional_law",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "condemned_persons",
+      "abolitionist_families",
+      "human_rights_institutions"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "right_to_life_inalienable",
+      "state_monopoly_violence_limited_by_rights",
+      "proportionality_doctrine_excludes_killing"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a reading of the state_killing_authority kernel, and does its structural identity depend on that kernel membership?",
+      "resolution_mechanism": "Cross-reading structural comparison: if categorical_abolition, retributive_desert, and deterrence_instrument have fundamentally different victim/beneficiary structures and extractiveness profiles, they are distinct constraints linked by kernel_id, not measurement variants of one constraint.",
+      "impact": "Confirms ε-invariance principle: each reading is its own constraint with its own ε, not a single constraint measured differently. Prevents conflation of the kernel's contested readings into one story.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this constraint is one reading of a contested kernel rather than a standalone constraint."
+    },
+    {
+      "id": "natural_law_vs_constructed_norm",
+      "question": "Is the inalienability of life a natural law constraint (mountain) or a constructed normative commitment that could be revised?",
+      "resolution_mechanism": "Historical and cross-cultural survey: if no stable society has operated without some form of state killing authority (war, execution, police use of force), the claim of natural law faces empirical challenge. If the constraint is a normative achievement of specific historical struggles, it is constructed.",
+      "impact": "If constructed, the mountain claim is a false summit — beneficiaries (human rights institutions, abolitionist families) capture the constraint's authority while the underlying arrangement remains contestable. FSM signature would trigger reclassification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the categorical prohibition is a genuine natural law or a constructed norm with identifiable beneficiaries."
+    },
+    {
+      "id": "victim_family_exclusion_mechanism",
+      "question": "Are abolitionist victims' families structurally excluded from prosecutorial decision-making, or is their exclusion contingent on political circumstance?",
+      "resolution_mechanism": "Institutional analysis of victim impact statement procedures, prosecutorial discretion guidelines, and clemency processes across jurisdictions. Compare treatment of retributive vs. abolitionist family voices.",
+      "impact": "If exclusion is structural (prosecutors systematically marginalize abolitionist families), the constraint operates as a snare for that subgroup — the state kills over their objection. If contingent, the constraint's suppression profile is lower.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the marginalization of abolitionist victims' families is a structural feature of the constraint or a variable political outcome."
+    },
+    {
+      "id": "state_as_potential_violator",
+      "question": "Does this reading structurally position the state as a potential rights-violator when it executes, and does that positioning change the constraint's classification?",
+      "resolution_mechanism": "Analyze the directional reversal: in retributive/deterrence readings, the state is the legitimate enforcer; in this reading, the state becomes the threat. Trace how this reversal affects beneficiary/victim assignments and extraction directionality.",
+      "impact": "If the state is a structural violator, the constraint's suppression metric should reflect the state's coercive capacity to execute despite the prohibition. The reading's mountain claim requires that the prohibition holds even against state power.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "How the state-as-violator framing structurally inverts the standard enforcement relationship."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1948,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1972,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1984,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1998,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1948,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1972,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1984,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1948,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1972,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1984,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2007,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 1948,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the categorical_abolition reading of the state_killing_authority kernel. The reading asserts that state killing is inherently impermissible regardless of crime or consequence because life is inalienable — a right that cannot be forfeited, waived, or overridden by state authority. The condemned person remains a rights-holder; the state becomes a potential violator if it executes; victims' families are split, with abolitionist families systematically marginalized by prosecutorial structures that privilege retributive voices. The claim/metric independence is deliberate: the constraint is CLAIMED as mountain (natural law, inalienable right) while the authored metrics describe its historical trajectory — declining extraction and suppression as abolition spreads, but persistent resistance from retributive and deterrence readings. The engine measures the divergence between claim and metric profile; do not reconcile them.",
+    "key_agents": [
+      "condemned_persons: Primary beneficiary (powerless/trapped) — life inalienable, cannot be forfeited",
+      "state_execution_apparatus: Potential violator (institutional/arbitrage) — enters violator set if it kills",
+      "retributive_victims_families: Contested seat (moderate/constrained) — want execution, see abolition as denial of justice",
+      "abolitionist_victims_families: Excluded beneficiary (powerless/identity_locked) — oppose execution, marginalized by prosecutors",
+      "human_rights_institutions: Agenda setter (institutional/analytical) — codify and enforce the prohibition",
+      "retributive_desert_reading: Sibling reading (institutional/analytical) — claims murderers forfeit right to life",
+      "deterrence_instrument_reading: Sibling reading (institutional/analytical) — claims killing justified by future prevention"
+    ],
+    "logic_rationale": "Extractiveness is low (0.12) because the constraint primarily *prevents* extraction (state taking life) rather than extracting. The historical trajectory shows declining extraction as abolition spreads: 1948 (UDHR era, most states retain death penalty) to 2020 (144 abolitionist states). Suppression is low (0.05) because the constraint's persistence does not depend on coercion — it depends on normative recognition. Theater ratio (0.18) reflects performative compliance: some states retain death penalty on books but don't execute (moratorium states), or execute rarely while claiming deterrence. Accessibility collapse (0.22) is low because alternatives (life imprisonment, restorative justice) remain visible and practiced. Resistance (0.78) is high because retributive and deterrence readings remain politically potent — the constraint meets active opposition, not passive acceptance.",
+    "perspectival_gap": "The engine will compute different seat classifications: for condemned persons (powerless, trapped, identity_locked on right to life), the constraint is Mountain — their life cannot be taken. For the state execution apparatus (institutional, arbitrage exit), the constraint is experienced as Rope or Scaffold — a coordination limit they must work around. For retributive victims' families (moderate, constrained), the constraint may compute as Snare — it denies them what they see as justice. For abolitionist victims' families (powerless, identity_locked), the constraint is Mountain but they are excluded from its enforcement. The structural asymmetry is the point: the same constraint is Mountain for some seats, extractive for others.",
+    "directionality_logic": "Beneficiaries: condemned_persons (d ≈ 0.0 — full beneficiary, life inalienable), abolitionist_families (d ≈ 0.1 — benefit from prohibition, but excluded from enforcement), human_rights_institutions (d ≈ 0.05 — agenda setters who gain legitimacy from the norm). No victims declared in base_properties because the constraint's *primary* structural function is prevention of killing, not extraction from a victim group. The retributive and deterrence readings are SIBLING CONSTRAINTS (other kernel readings), not victims of this one. The state execution apparatus is a potential violator — its directionality would be high (d ≈ 0.9) if it attempted to execute, but the constraint's low suppression means it mostly complies without active coercion.",
+    "mandatrophy_analysis": "The founding problem (state killing as sovereign prerogative) is dead in abolitionist jurisdictions but live in retentionist ones. The constraint's mandate (abolition) remains live because the kernel (state killing authority) persists globally. No mandatrophy resolution: the constraint continues to serve its coordination function (normative prohibition) and has not atrophied into performance. Theater ratio decline (0.45→0.18) tracks genuine normative diffusion, not performative maintenance.",
+    "kernel_context": "This constraint is the categorical_abolition reading of the state_killing_authority kernel. Kernel contest: three readings instantiate different constraints from the same kernel. Categorical_abolition: life inalienable, state killing impermissible (this story, mountain claim). Retributive_desert: murderers forfeit right to life, lex talionis requires death for death (snare/tangled_rope profile — extracts life from condemned). Deterrence_instrument: killing justified iff it prevents future murders at acceptable cost (tangled_rope profile — coordination claim with extraction). Structural delta: condemned person stays in rights-holder set; state enters potential-violator set; victims' families split with abolitionist families marginalized. This reading coexists with siblings (different parties hold each) but forecloses the state's claim to legitimate killing authority within any framework that accepts inalienability."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "state_killing_authority__retributive_desert",
+      "state_killing_authority__deterrence_instrument"
+    ],
+    "dual_formulation_note": "Constraint family decomposition of state_killing_authority kernel. This reading (categorical_abolition) claims mountain with ε=0.12. Retributive_desert claims snare/tangled_rope with high ε (state extracts life from condemned). Deterrence_instrument claims tangled_rope with moderate ε (state kills for prevention). The ε values differ by >0.5 — they are structurally distinct constraints, not measurement variants. Network edges reflect upstream influence: this reading's normative diffusion creates legitimacy pressure on sibling readings (influences relation)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.05
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "condemned_persons",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Face execution by the state. Under this reading, their right to life is inalienable — it cannot be forfeited by crime, waived by choice, or overridden by state authority. They have no exit: they are physically confined, legally sentenced, and politically silenced. The constraint's prohibition is the only structural barrier between them and state killing. Their identity as rights-holders is fused to the claim that life cannot be taken — identity_locked on the inalienability premise."
+    },
+    {
+      "name": "state_execution_apparatus",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The institutional machinery that carries out executions: legislatures that authorize capital statutes, prosecutors who seek death sentences, courts that impose them, corrections departments that execute. Under this reading, the apparatus is not a legitimate enforcer but a potential rights-violator. Its exit options are arbitrage-grade: it can comply (abolish), evade (moratoriums, secret executions), or contest (retributive/deterrence justifications). It holds the coercive power to kill but faces normative pressure not to."
+    },
+    {
+      "name": "retributive_victims_families",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Families of murder victims who want the perpetrator executed. They experience the abolition constraint as denying them justice (lex talionis) and closure. Prosecutorial systems privilege their voices — victim impact statements, consultation on plea deals, notification of execution dates. Their exit is constrained: they cannot independently execute, but they can advocate politically, lobby legislators, and influence prosecutorial decisions. They are payers (bear the cost of the constraint denying their preferred outcome) and incidental beneficiaries (the constraint also prevents state killing of their loved ones, though they don't claim this)."
+    },
+    {
+      "name": "abolitionist_victims_families",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Families of murder victims who oppose execution of the perpetrator — on religious, moral, or principled grounds. They are structurally excluded from prosecutorial decision-making: victim impact statement procedures assume retributive stance; clemency processes weight retributive voices higher; media narratives frame 'victims' families' as monolithically pro-execution. Their identity as victims is fused to opposition to state killing — identity_locked because abandoning that opposition would feel like betraying their loved one's memory or their own conscience. They are the constraint's natural beneficiaries but are excluded from its enforcement."
+    },
+    {
+      "name": "human_rights_institutions",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International and regional bodies (UN Human Rights Committee, European Court of Human Rights, Inter-American Court, African Commission) that codify the right to life as inalienable and monitor abolition compliance. They set the agenda through treaty interpretation, general comments, and case law. They collect no rents from the constraint — their benefit is institutional legitimacy and normative authority. Exit is analytical: they observe and adjudicate, they do not participate in the constraint's operation."
+    },
+    {
+      "name": "retributive_desert_reading",
+      "role": "observer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The sibling reading that murderers forfeit their right to life; proportional punishment (lex talionis) requires death for death. This is not a human agent but a normative position institutionalized in retentionist legal systems, prosecutorial cultures, and public opinion. It coexists with this reading as a live competitor — different parties hold each, neither logically eliminates the other within a single framework. It claims the state_killing_authority kernel authorizes execution as justice."
+    },
+    {
+      "name": "deterrence_instrument_reading",
+      "role": "observer",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The sibling reading that capital punishment is justified if and only if it prevents future murders at acceptable cost. Institutionalized in policy debates, economic studies of deterrence, and legislative hearings. It coexists with this reading — different epistemic premises (empirical contingency vs. deontological absolute) but neither forecloses the other in public discourse. It claims the kernel authorizes killing as prevention."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a universal normative prohibition against state killing, replacing the sovereign prerogative of life-and-death with a rights-based limit that binds all states regardless of domestic law. Solves the coordination problem of preventing arbitrary state violence by establishing a non-derogable floor.",
+    "transfer_function": "Transfers the authority to kill from the state to no one — the power is extinguished, not redistributed. The condemned person retains their life (inalienable); the state loses its claim to legitimate killing. No recipient captures the transfer; it is a negative transfer (removal of a power).",
+    "absent_voices": "Abolitionist victims' families are structurally excluded from prosecutorial and clemency processes that assume retributive consensus. Future generations who would inherit a world without state killing are absent by definition. The global poor, disproportionately sentenced to death, are absent from the international treaty bodies that codify the prohibition.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the categorical prohibition vanished overnight, retentionist states would expand executions (more crimes, faster processes, fewer procedural barriers); abolitionist states would face immediate political pressure to reinstate; the normative floor preventing arbitrary state killing would collapse. The world rearranges because the constraint is the only structural barrier between condemned persons and state execution in 55+ retentionist jurisdictions.",
+    "founding_problem": "The sovereign's unlimited power over life and death — the historical state killing authority that treated execution as a prerogative of sovereignty, not a limited exception. The problem was built to solve: arbitrary monarchical killing, political executions, and the use of death as a tool of suppression rather than justice.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Abolitionist historiography (Hood & Hoyle, Schabas) attests the founding problem was arbitrary sovereign killing. Retentionist legal traditions (Scalia, Bork, contemporary prosecutors) attest the founding problem was inadequate punishment for heinous crimes — the sovereign power was the solution, not the problem. No neutral arbiter corroborates; the founding problem itself is the kernel's contested territory."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "retributive_desert",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "deterrence_instrument",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "life_inalienable_absolute",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_killing_never_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "right_to_life_non_derogable",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "inalienable_right_to_life_framework",
+    "drift_state": {
+      "moment": "contemporary_abolitionist_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

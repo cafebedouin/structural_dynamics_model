@@ -1,0 +1,341 @@
+{
+  "header": {
+    "constraint_id": "paris_article_4_ndc__sovereigntist_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_paris_article_4_ndc__sovereigntist_reading",
+    "measurement_id_prefix": "paris_ndc_sovereigntist",
+    "story_uid": "220a70ce-d829-41fa-84b5-f7d2cabeed72"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Paris Agreement Article 4 NDCs — Sovereigntist Reading",
+    "topic_domain": "international_climate_governance/treaty_law/political_economy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "fossil_dependent_economies",
+      "emerging_major_emitters",
+      "state_sovereignty_advocates"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "national_energy_sovereignty",
+      "voluntary_pledge_flexibility",
+      "common_but_differentiated_responsibilities_procedural",
+      "no_external_compliance_enforcement"
+    ]
+  },
+  "interval": {
+    "start": 2015,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2027,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2027,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.07
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2027,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.15
+    }
+  ],
+  "omegas": [
+    {
+      "id": "commitment_kernel_reading_frame",
+      "question": "Is the Paris Article 4 NDC framework a single kernel with multiple readings, or are the 'readings' distinct constraint systems?",
+      "resolution_mechanism": "Analyze whether the three readings (sovereigntist, equity, supranational) instantiate structurally different constraints with different ε values, beneficiary/victim structures, and enforcement logics — or whether they are merely interpretive emphases on one constraint.",
+      "impact": "If distinct constraints: each gets its own ε, stakeholders, and classification linked by network.affects_constraints. If one constraint: ε varies by measurement basis, violating ε-invariance and requiring decomposition.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel frame correctly identifies distinct constraints or a single constraint with measurement ambiguity."
+    },
+    {
+      "id": "sovereigntist_extraction_underestimation",
+      "question": "Does the low ε (0.08) for this reading mask extraction that materializes through the equity_reading's structural demands on the same states?",
+      "resolution_mechanism": "Track whether fossil-dependent economies that invoke sovereignty to resist supranational targets simultaneously extract climate finance and technology transfer under the equity_reading — making the combined extraction higher than either reading alone.",
+      "impact": "If the readings function as a coupled extraction system, the sovereigntist reading's low ε is an artifact of analyzing one strand of a multi-stranded constraint family.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the low extractiveness of this reading is an analytic artifact of decomposing a coupled constraint family."
+    },
+    {
+      "id": "ndc_voluntariness_vs_ratchet_mechanism",
+      "question": "Is the NDC revision freedom (Article 4.3 'ratchet') structurally voluntary or does the global stocktake create de facto compliance pressure?",
+      "resolution_mechanism": "Observe whether states that submit weaker successive NDCs face diplomatic, financial, or market consequences that function as enforcement without formal sanctions.",
+      "impact": "If ratchet pressure is real, the constraint has higher suppression and extraction than this reading claims — moving it toward tangled_rope. If purely voluntary, rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the 'voluntary' revision freedom is structurally maintained or eroded by soft enforcement."
+    },
+    {
+      "id": "fossil_economy_beneficiary_capture",
+      "question": "Do fossil-dependent economies genuinely benefit from sovereignty preservation, or are they locked into declining asset trajectories that the sovereignty claim obscures?",
+      "resolution_mechanism": "Compare long-term economic outcomes for states that maximized sovereignty flexibility vs. those that committed to early transition — measuring stranded asset exposure, technology lock-in, and competitiveness in decarbonizing markets.",
+      "impact": "If sovereignty preservation accelerates economic decline for fossil economies, the beneficiary claim is false — the constraint extracts from its purported beneficiaries via stranded assets and missed transition rents.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the declared beneficiaries actually benefit or are harmed by the sovereignty-preserving structure."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story represents the sovereigntist reading of the Paris Agreement Article 4 NDC framework. Under this reading, NDCs are voluntary, self-determined national pledges that preserve each state's energy sovereignty and development pathway autonomy. The global stocktake and ratchet mechanism (Article 4.3) are procedural — they create transparency and iterative updating but no binding enforcement. Fossil-dependent economies (Gulf states, Russia, Australia historically, coal-dependent emerging economies) and major emerging emitters (India, Indonesia, South Africa) are the primary beneficiaries: they retain exit options, revision freedom, and protection against externally imposed decarbonization timelines. The constraint coordinates through information-sharing and peer pressure rather than coercion. Theater ratio rises over time as procedural compliance (submitting NDCs, attending COPs) substitutes for emissions outcomes. Suppression remains low because no state is coerced into a target it did not set — though soft pressure from the stocktake process increases modestly. This reading coexists with the equity_reading (which demands structural differentiation of obligations) and the supranational_reading (which treats NDCs as binding ratchet commitments); none logically forecloses the others within a single party's framework, but they create competing legitimacy conditions.",
+    "key_agents": [
+      "fossil_dependent_economies: Primary beneficiaries (institutional/biographical/trapped) — preserve fossil revenue streams and development pathways",
+      "emerging_major_emitters: Primary beneficiaries (organized/biographical/constrained) — protect industrialization trajectory and energy access",
+      "state_sovereignty_advocates: Beneficiaries (institutional/generational/arbitrage) — advance sovereignty-as-shield doctrine in international law",
+      "climate_vulnerable_states: Excluded/payer (powerless/biographical/trapped) — bear climate impacts without enforcement leverage",
+      "eu_climate_leadership_bloc: Observer/agenda_setter (institutional/generational/analytical) — pushes for stronger interpretation",
+      "unfccc_secretariat: Observer (institutional/generational/analytical) — administers process without enforcement power"
+    ],
+    "logic_rationale": "The claimed type is rope: a genuine coordination mechanism (iterative pledge-and-review) with minimal coercion, where participants are net beneficiaries relative to a no-agreement baseline. Extraction is low (0.08) because the constraint does not transfer resources from targets to beneficiaries — it leaves each state's energy choices intact. Suppression is low (0.12) because no enforcement machinery compels compliance; the stocktake creates transparency and reputational pressure only. Theater ratio (0.22) reflects growing performative compliance: states submit NDCs and participate in reviews while emissions trajectories diverge from pledges. Accessibility collapse is low (0.15) because alternatives (withdrawal, weaker pledges, non-participation) remain fully open. Resistance is moderate (0.35) because the constraint faces opposition from both the supranational_reading bloc (demanding binding targets) and the equity_reading bloc (demanding differentiated obligations) — but this resistance is political contestation, not resistance to extraction.",
+    "perspectival_gap": "From the fossil-dependent economy seat, the constraint is a sovereignty shield — pure coordination benefit. From the climate-vulnerable state seat, the same constraint is a snare: it legitimizes inadequate action while blocking stronger frameworks. The engine computes this divergence from structural data (power, exit_options, spatial_scope). The equity_reading and supranational_reading are separate constraint stories with their own ε values and stakeholder structures, linked via network.affects_constraints.",
+    "directionality_logic": "Beneficiaries (fossil_dependent_economies, emerging_major_emitters, state_sovereignty_advocates) have institutional/organized power, biographical/generational horizons, and constrained-to-arbitrage exit — they can leave the agreement or weaken pledges with modest cost. Climate_vulnerable_states are powerless, trapped, with no exit from climate impacts — they are the implicit payers of the sovereignty preservation, though not formal victims under this reading (the constraint does not actively extract from them; it fails to protect them). The UNFCCC secretariat and EU bloc are analytical/institutional observers. Directionality derives from this structure: beneficiaries have low d (subsidized by the constraint's non-interference), vulnerable states have high d (bear costs without voice).",
+    "mandatrophy_analysis": "The founding problem (coordinating global climate action without sacrificing national sovereignty) remains live and contested. The arrangement has not resolved its mandatrophy because the coordination function (limiting warming to 1.5–2°C) is failing while the sovereignty-preserving structure persists. The theater ratio rise signals drift toward piton: procedural compliance replaces substantive coordination. But the constraint is not yet a piton because the pledge-and-review cycle still functions as designed — states do update NDCs, the stocktake operates, and the process continues. The mandate has not atrophied; it is being stress-tested.",
+    "kernel_context": "This constraint is the sovereigntist_reading of the kernel 'paris_article_4_ndc'. Sibling readings: equity_reading (NDCs must reflect CBDR with structural differentiation between developed/developing states) and supranational_reading (NDCs are binding commitments on a ratcheting trajectory to net-zero with international accountability). This reading declares that the NDC framework's core commitment is voluntary self-determination preserving national energy sovereignty. The three readings coexist as live positions held by different party coalitions in the UNFCCC process; none forecloses another within a single framework, but they create competing legitimacy conditions for the same treaty text."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "paris_article_4_ndc__equity_reading",
+      "paris_article_4_ndc__supranational_reading",
+      "paris_article_6_cooperative_approaches",
+      "paris_article_13_transparency_framework"
+    ],
+    "dual_formulation_note": "This story is one of three readings of the paris_article_4_ndc kernel. The sovereigntist reading (this file) treats NDCs as voluntary sovereignty-preserving pledges (rope, ε≈0.08). The equity_reading treats NDCs as differentiated obligations requiring structural transfer (tangled_rope, ε≈0.35). The supranational_reading treats NDCs as binding ratchet commitments (tangled_rope or snare, ε≈0.55). The three stories form a constraint family linked by affects_constraints. The upstream constraint (this reading's voluntary framework) enables the downstream readings' claims by providing the procedural substrate they interpret."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "fossil_dependent_economies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "States whose fiscal revenues and employment depend on fossil extraction (Saudi Arabia, Russia, UAE, Qatar, Kuwait, Iraq, Nigeria, Angola, Australia historically). They use NDC sovereignty to protect revenue streams, delay transition, and resist external timelines. Exit from the constraint means withdrawing from Paris — diplomatically costly but legally trivial. They are 'trapped' in the sense that their economic structure makes genuine transition costly, not that the constraint traps them."
+    },
+    {
+      "name": "emerging_major_emitters",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Rapidly industrializing states with large populations and coal-dependent energy systems (India, Indonesia, South Africa, Vietnam, Philippines). They benefit from the sovereignty shield to prioritize energy access and industrialization over early peaking. Exit is constrained: leaving Paris isolates them from climate finance and technology cooperation, but staying lets them set their own pace. They are organized as negotiating blocs (LMDC, BASIC, G77+China)."
+    },
+    {
+      "name": "state_sovereignty_advocates",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "States and legal scholars who advance the doctrinal position that climate cooperation must not compromise national sovereignty over energy, resources, and development choices. Includes US (variable by administration), Brazil (variable), China (on sovereignty grounds), and many Global South states. They have arbitrage-grade exit: they can invoke sovereignty in any forum, shift between readings, and are not bound by a single interpretation."
+    },
+    {
+      "name": "climate_vulnerable_states",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Small island states (AOSIS), least developed countries, and climate-exposed nations (Bangladesh, Philippines, Sahel states). They bear the physical impacts of inadequate global mitigation while having no leverage to compel stronger action under the sovereigntist reading. They are structurally excluded from shaping the constraint's operation. Their 'payment' is measured in existential risk, not financial transfer. They have no exit from climate impacts."
+    },
+    {
+      "name": "eu_climate_leadership_bloc",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "EU and aligned states (Nordics, UK, Canada, NZ, climate-ambitious Latin American states) that push for stronger interpretation of the ratchet mechanism, transparency framework, and global stocktake. They set the procedural agenda within UNFCCC but cannot enforce outcomes. They experience the constraint analytically — as a framework they try to steer toward the supranational_reading."
+    },
+    {
+      "name": "unfccc_secretariat",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The UNFCCC secretariat administers the NDC registry, global stocktake, and transparency reporting. It has no enforcement authority, no power to compel ambition, and no stake in outcomes — it services the process. Its situation is purely analytical: it observes whether the procedural machinery functions as designed."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a universal procedural framework for iterative national climate pledges — a common timeline, reporting format, and stocktake cycle that enables transparency, peer learning, and incremental ambition updating without surrendering national decision-making to an external authority.",
+    "transfer_function": "Moves diplomatic recognition and procedural legitimacy from the international community to states that submit and update NDCs. No financial or resource transfer is mandated by this reading; the transfer is symbolic (participation rights, good standing) rather than material. The equity_reading and supranational_reading each posit material transfers (finance, technology, binding targets) that this reading rejects.",
+    "absent_voices": "Future generations and non-human nature are structurally excluded — they bear the cumulative consequences of the sovereignty-preserving structure but have no seat in the UNFCCC. Fossil fuel workers and communities in transition are also absent: the sovereignty shield protects incumbent industries but does not fund just transition. These voices would object to the lock-in of fossil trajectories but are not in the room.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the NDC framework vanished overnight, the global climate regime would lose its only universal participation mechanism. States would revert to fragmented bilateral/regional deals or no coordination. The transparency infrastructure (reporting, review, stocktake) would collapse. Fossil-dependent economies would lose the legitimacy cover the framework provides. Climate-vulnerable states would lose even the weak procedural leverage they have. The world would rearrange into a less transparent, less universal, possibly more conflictual climate politics.",
+    "founding_problem": "How to achieve universal participation in climate action without requiring states to surrender sovereignty over energy systems, development pathways, and natural resources — the Copenhagen 2009 failure proved that top-down binding targets could not secure universal buy-in.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The sovereigntist coalition (fossil-dependent economies, emerging emitters, sovereignty advocates) attests the problem is live: sovereignty remains the price of participation. The supranational_reading coalition (EU, AOSIS, climate NGOs) attests the problem is solved in principle — the framework exists, now it must deliver outcomes — and that sovereignty is being weaponized as delay. The equity_reading coalition (G77+China, LMDC, LDCs) attests the problem is mischaracterized: it is not sovereignty vs. cooperation, but differentiated responsibility vs. false universalism. No single corroboration exists outside the benefiting parties; the founding problem is structurally contested."
+  },
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "paris_article_4_ndc__equity_reading",
+      "paris_article_4_ndc__supranational_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "equity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "supranational_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "national_energy_sovereignty_inviolable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "voluntary_pledge_as_only_legitimate_basis",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "ratchet_is_procedural_not_substantive",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "copenhagen_postmortem_sovereignty_salvage",
+    "drift_state": {
+      "moment": "post_glasgow_stocktake_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

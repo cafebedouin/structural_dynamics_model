@@ -1,0 +1,296 @@
+{
+  "header": {
+    "constraint_id": "lycurgan_laws__demographic_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lycurgan_laws_demo_trap",
+    "story_uid": "80d23276-2873-403e-8b0a-58ab25298845"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.88,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "claimed_type": "snare",
+    "human_readable": "Lycurgan Constitutional Unrevisability as Demographic Trap",
+    "topic_domain": "political_philosophy/constitutional_theory/commitment_systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "ephorate_elite",
+      "landed_spartiate_aristocracy"
+    ],
+    "victims": [
+      "declining_spartiate_population",
+      "helot_underclass",
+      "perioikoi_merchants"
+    ],
+    "vindicated_propositions": [
+      "constitutional_immutability_doctrine",
+      "mixed_regime_stability_theory"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the demographic trap a structural property of the Lycurgan kernel itself, or an artifact of the demographic_trap_reading's epistemic frame?",
+      "resolution_mechanism": "Compare institutional dynamics across sibling readings: if sacral_fidelity_reading predicts stability and adaptive_fiction_reading predicts covert adaptation, the trap is reading-dependent; if all three predict demographic collapse under different mechanisms, the trap is kernel-structural.",
+      "impact": "If reading-dependent, this constraint's ε (0.82) is an artifact of the demographic_trap_reading's focus on citizenship restrictions rather than the kernel's overall adaptive capacity. The sibling constraints would have different ε values.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the demographic trap is kernel-structural or reading-relative"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression preventing constitutional adaptation structural (ephorate veto, religious prohibition) or internalized (Spartiate identity fused with immutability)?",
+      "resolution_mechanism": "Counterfactual: if the ephorate veto were removed but Spartiate identity remained fused to 'unchanging laws,' would adaptation occur? Historical analog: Roman mos maiorum persisted without formal veto.",
+      "impact": "If internalized, suppression (0.88) understates the constraint's persistence — the target carries the suppression after formal mechanisms are removed. If structural, suppression is accurately measured by enforcement capacity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the constitutional freeze"
+    },
+    {
+      "id": "extractiveness_attribution",
+      "question": "Does the extraction flow primarily from the unrevisability itself, or from the specific citizenship/land tenure mechanisms that unrevisability protects?",
+      "resolution_mechanism": "Decompose ε: counterfactual where citizenship restrictions are relaxed but constitutional amendment remains forbidden vs. counterfactual where amendment is permitted but citizenship restrictions persist. Measure extraction differential.",
+      "impact": "If extraction is in the citizenship mechanisms, the snare classification applies to the specific provisions, not the meta-constraint of unrevisability. The kernel would decompose into multiple constraints with different ε.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether extraction resides in the meta-constraint or its protected provisions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 300,
+      "value": 0.88
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 300
+  },
+  "stakeholders": [
+    {
+      "name": "ephorate_elite",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "situation": "The five ephors hold the veto power over any proposed change to the Great Rhetra. They administer the kleros system, control the agoge, and interpret the oracle's pronouncements. Their authority derives entirely from the constitution's unrevisability — they are its guardians and its primary beneficiaries. Exit is arbitrage-grade: they could defect to Persian or Macedonian patronage networks, but doing so would collapse the system that empowers them."
+    },
+    {
+      "name": "landed_spartiate_aristocracy",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "The homoioi (peers) who retain full citizenship and land allotments. Their status depends on the frozen citizenship rolls and the inalienability of kleroi. They benefit from helot labor extraction and the exclusion of nouveaux riches. Exit is identity-locked: their self-concept is constituted by the Lycurgan order — to advocate change is to cease being Spartiate. They resist reform even as their class shrinks below military viability."
+    },
+    {
+      "name": "declining_spartiate_population",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Spartiates who fall below the property qualification for citizenship (through land subdivision, helot revolt losses, or Olympic victor dedications) and their descendants. The citizenship restriction — no admission of new Spartiates, no restoration of lost status — is structurally unrevisable. They bear the demographic collapse: from ~8000 peers at Leuctra to ~700 at Chaeronea. No exit: the helot population surrounds them, the perioikoi control commerce, and the ephorate blocks any constitutional remedy."
+    },
+    {
+      "name": "helot_underclass",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The enslaved Messenian and Laconian populations whose labor sustains the entire system. The constitutional freeze prevents any mechanism for manumission, integration, or rights expansion — the Lycurgan order defines them as permanent chattel. Their extraction is total: labor, military service (as light infantry), and periodic culling via krypteia. Exit is geographically and legally trapped; revolt is the only structural alternative, which the frozen constitution treats as existential threat requiring maximum suppression."
+    },
+    {
+      "name": "perioikoi_merchants",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Free but non-citizen inhabitants of the perioecic towns who control commerce, crafts, and maritime trade. They pay taxes and provide hoplites but have no voice in the apella or gerousia. The constitutional freeze blocks their natural path to integration (cf. Roman socii → citizens). Exit is constrained: they can emigrate to other Greek poleis but lose their commercial networks and face xenophobia. Some wealthy perioikoi effectively buy Spartiate patronage, but the citizenship barrier remains absolute."
+    },
+    {
+      "name": "plutarch_pausanias_tradition",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The literary-historical tradition that preserves the Lycurgan system as an object of study. Plutarch's Life of Lycurgus and Pausanias' Description of Greece encode the demographic_trap_reading's core observation: the laws' greatness contained the seeds of their destruction. This observer seat sees the full structural arc — the coordination function (military cohesion), the extraction mechanism (helot labor + citizenship rent), and the death spiral (unrevisability → demographic collapse → military irrelevance)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solved the archaic Greek problem of stasis (civil strife) by freezing the constitution, equalizing the peer class through common messes and inalienable land, and externalizing violence onto the helot population. Produced the most stable and militarily effective polis for two centuries.",
+    "transfer_function": "Moves labor and agricultural surplus from helots to Spartiates; moves political authority from the demos to the ephorate/gerousia; moves military risk from the landed aristocracy to the declining peer class and perioikoi; moves status rents from potential new citizens to existing Spartiates via the frozen citizenship rolls.",
+    "absent_voices": "The helot population (no literary voice, only archaeological trace), the hypomeiones (disenfranchised Spartiates — disappeared from the record), and the reformist faction (if any existed, they were silenced by the ephorate's veto and the religious prohibition on innovation). The adaptive_fiction_reading suggests a covert reformist current among the ephors themselves, but no direct evidence survives.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Great Rhetra's unrevisability clause vanished overnight, the citizenship restriction would face immediate pressure from the hypomeiones and perioikoi, the helot system would face manumission demands or revolt, and the ephorate's veto power would collapse. The Spartan polis would either reform into a conventional Hellenistic state or fracture — the demographic trap is the constitution's unrevisability itself.",
+    "founding_problem": "Archaic Sparta faced endemic stasis between aristocratic factions, land hunger driving colonization, and the threat of helot revolt. The Lycurgan settlement froze the constitution to end factional conflict, equalized the peer class to create military cohesion, and externalized the labor question onto a permanent helot underclass.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Aristotle (Politics 1269a-1270b) explicitly states the Lycurgan system solved stasis but created a demographic trap: the laws make men 'good' but not 'happy,' and the population decline is a direct consequence of the citizenship restriction. Xenophon (Constitution of the Lacedaemonians 14) confirms the system's military purpose but notes the citizen body had shrunk catastrophically. Modern corroboration: Hodkinson (2000) and Cartledge (2002) demonstrate from archaeological and literary evidence that the citizen population fell from ~8000 to ~700 between 480-371 BCE while the constitution remained formally unchanged."
+  },
+  "commentary": {
+    "narrative_context": "The Lycurgan laws (the Great Rhetra) are the paradigmatic case of a constitutional system whose founding virtue — immutability as the guard against stasis — becomes its fatal vice when demographic and geopolitical conditions shift. The demographic_trap_reading reads the kernel's unrevisability not as sacred fidelity (sacral_fidelity_reading) nor as noble lie (adaptive_fiction_reading) but as a structural snare: the constitutional freeze prevents adaptation of the citizenship/land tenure system, causing the Spartiate population to collapse from military viability while the ephorate elite and landed aristocracy extract status rents from the freeze. The constraint is the meta-rule 'the laws shall not be changed' operating as a suppression mechanism that protects the specific extractive provisions (helot labor, citizenship rent, kleros inalienability) from revision.",
+    "key_agents": [
+      "ephorate_elite: Institutional agenda setter / beneficiary — holds veto power over constitutional change, extracts status rents from the freeze",
+      "landed_spartiate_aristocracy: Organized beneficiary — identity-locked into the Lycurgan order, resists reform even as class shrinks",
+      "declining_spartiate_population: Powerless payer — trapped by frozen citizenship rolls, bears demographic collapse",
+      "helot_underclass: Powerless payer — total extraction, geographically and legally trapped",
+      "perioikoi_merchants: Moderate payer — constrained exit, blocked from citizenship integration",
+      "plutarch_pausanias_tradition: Analytical observer — sees full structural arc across the interval"
+    ],
+    "logic_rationale": "Extractiveness (0.82) is high because the unrevisability clause protects a bundle of extractive provisions: helot labor extraction (near-total), citizenship rent (status monopoly for declining class), kleros inalienability (prevents land consolidation that might restore viability). Suppression (0.88) is higher still because the constraint's persistence depends on active enforcement: ephorate veto, religious prohibition on innovation (the oracle's authority), krypteia against helots, and the military mobilization that depends on the frozen order. Theater is low (0.15) — the system performs its stated function (military cohesion) genuinely, but the function itself is shrinking as the population collapses. Accessibility collapse (0.92) is near-total: once the Great Rhetra is accepted as unchangeable, no constitutional alternative exists within the system — reform requires revolution. Resistance (0.08) is near-zero: the payers are trapped (helots, hypomeiones) or identity-locked (landed Spartiates), and the only resistance events (Cinadon's conspiracy, helot revolts) are crushed without constitutional concession.",
+    "directionality_logic": "The ephorate elite are structural beneficiaries (d ≈ 0.1): they administer the constraint and collect its rents. The landed aristocracy are identity-locked beneficiaries (d ≈ 0.2): they benefit but cannot exit the identity that makes them beneficiaries. The declining Spartiate population are trapped payers (d ≈ 0.95): they bear the demographic collapse with no exit. The helots are trapped payers (d ≈ 1.0): total extraction, no exit. The perioikoi are constrained payers (d ≈ 0.7): they bear taxes and military service without voice, with limited emigration exit. The observer seat (analytical) sits at d = 0.5 by definition.",
+    "perspectival_gap": "From the ephorate seat, the constraint appears as successful coordination (the polis has not suffered stasis for centuries). From the declining Spartiate seat, it appears as a death sentence they cannot escape. From the helot seat, it appears as permanent enslavement sanctified by law. The engine computes these as different effective extractions from the same base ε — the claimed snare classification reflects the aggregate structural reality, but per-seat types will diverge.",
+    "mandatrophy_analysis": "The founding problem (stasis) is dead — Aristotle and Xenophon confirm the archaic crisis passed. The arrangement persists as a snare because the unrevisability clause has no sunset, the beneficiaries (ephorate, landed aristocracy) are institutionally empowered to block reform, and the payers are too trapped or identity-locked to force change. The constraint classifies as snare rather than piton because extraction is concentrated and active (ephorate veto, krypteia, citizenship enforcement), not inertial. The mandatrophy is resolved: the coordination function (ending stasis) was achieved, but the constraint lacks a sunset and has become a demographic death spiral.",
+    "kernel_context": "This constraint is the demographic_trap_reading of the lycurgan_laws kernel. The kernel is the Great Rhetra as a commitment system: a constitutional order claiming immutability. Sibling readings: sacral_fidelity_reading (the laws are divine ordinance requiring absolute adherence — reads unrevisability as sacred duty), adaptive_fiction_reading (the laws are a noble lie masking covert adaptation by the ephorate — reads unrevisability as performative). This reading asserts the unrevisability is structurally real and causally efficacious in producing demographic collapse."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "lycurgan_laws__sacral_fidelity_reading",
+      "lycurgan_laws__adaptive_fiction_reading"
+    ],
+    "dual_formulation_note": "The lycurgan_laws kernel decomposes into three constraint stories with different ε and classification: sacral_fidelity_reading → mountain (low ε, divine law frame), adaptive_fiction_reading → tangled_rope (moderate ε, covert coordination/extraction hybrid), demographic_trap_reading → snare (high ε, suppression prevents adaptation). The kernel's label 'Lycurgan laws' conflates these; the ε-invariance principle demands decomposition. This story's ε (0.82) measures the standing arrangement's extraction as seen from the demographic collapse frame."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "lycurgan_laws"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sacral_fidelity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "adaptive_fiction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "constitutional_unrevisability_causes_demographic_collapse",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "citizenship_restriction_without_sunset_is_extractive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "lycurgan_founding_settlement",
+    "drift_state": {
+      "moment": "post_leuctra_demographic_crisis",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

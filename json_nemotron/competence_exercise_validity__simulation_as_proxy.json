@@ -1,0 +1,344 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__simulation_as_proxy",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_competence_exercise_validity__simulation_as_proxy",
+    "measurement_id_prefix": "cev_sim_proxy",
+    "story_uid": "d1841625-0c84-4a7a-a1e5-e91c21994208"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.55,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation as Valid Proxy for Competence Exercise",
+    "topic_domain": "safety_engineering/organizational_learning/competence_retention",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "regulatory_bodies",
+      "safety_certification_authorities",
+      "training_simulation_vendors",
+      "operational_management"
+    ],
+    "victims": [
+      "frontline_operators",
+      "maintenance_crews",
+      "emergency_response_teams",
+      "public_safety"
+    ],
+    "vindicated_propositions": [
+      "simulation_fidelity_suffices_for_competence",
+      "regulatory_compliance_equals_safety",
+      "proxy_validation_is_valid"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "stakeholders": [
+    {
+      "name": "regulatory_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Write and enforce the rules that accept simulation hours as equivalent to live exercise for certification. They benefit from auditable, low-cost compliance metrics and avoid the political cost of mandating expensive live drills. Their authority rests on the proxy being accepted as valid."
+    },
+    {
+      "name": "safety_certification_authorities",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Issue certificates based on simulation completion records. They collect fees and institutional legitimacy from a process that is administratively clean and legally defensible. They have little incentive to challenge the proxy because their business model depends on its acceptance."
+    },
+    {
+      "name": "training_simulation_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sell simulation platforms, scenarios, and validation services. Their revenue scales with the regulatory mandate for simulation hours. They lobby for fidelity standards that favor their products and against live-drill requirements that would shrink their market."
+    },
+    {
+      "name": "operational_management",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Meet compliance targets with minimal disruption to production schedules. Simulation fits in shift gaps; live drills require shutdowns. They report 'competence maintained' to regulators and insurers while avoiding the operational cost and risk of realistic exercises."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Complete prescribed simulation hours to keep certification. They experience the gap between scripted scenarios and the ambiguity, time pressure, and physical consequence of real events. Their professional identity is fused to the certificate; leaving means losing license and community. They pay in unexercised edge-case competence."
+    },
+    {
+      "name": "maintenance_crews",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Train on simulated fault trees that rarely match the compound, cascading failures of reality. Their certification depends on simulation sign-off. When real degradation occurs, the mental models from simulation prove incomplete. They bear the risk when the proxy fails."
+    },
+    {
+      "name": "emergency_response_teams",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Drill against tabletop and VR scenarios that sanitize chaos, communication breakdown, and resource exhaustion. Their readiness is measured by simulation completion rates. In actual catastrophe, the coordination patterns rehearsed in the proxy degrade. They pay with untested integration."
+    },
+    {
+      "name": "public_safety",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Relies on the competence of operators, maintainers, and responders. The proxy regime creates a certification illusion: records show compliance, but the competence that would prevent or mitigate catastrophe has not been exercised at fidelity. They bear the consequence when the proxy fails — they cannot exit the system."
+    },
+    {
+      "name": "independent_safety_auditors",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze incident reports and near-miss data. They see the divergence between simulation-passing units and real-world performance. Their assessments challenge the proxy but lack enforcement power. They occupy the analytical seat seeing the full structure."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a standardized, auditable, low-cost mechanism for certifying that safety-critical personnel maintain baseline competence without requiring disruptive, expensive, and risky live exercises. Solves the coordination problem of 'how do we know everyone is trained?' across distributed organizations and regulators.",
+    "transfer_function": "Moves the burden of competence validation from high-fidelity live exercise (costly, risky, organizationally disruptive) to simulation completion metrics (cheap, auditable, schedulable). Transfers risk from operators/management/regulators (who avoid live-drill cost and liability) to frontline personnel and the public (who bear the competence gap when proxy fails). Transfers revenue to simulation vendors and certification authorities.",
+    "absent_voices": "Families of potential victims, communities downwind of high-hazard sites, and future operators who will inherit degraded competence norms. They would demand live validation but are structurally excluded from the certification rulemaking process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If simulation-equivalence vanished overnight, regulators would have to mandate live drills or accept decertification. Operational management would face shutdown costs and scheduling chaos. Simulation vendors would lose their regulatory moat. Frontline operators would face higher training burden but gain genuine competence exercise. The certification regime would reorganize around live exercise or collapse.",
+    "founding_problem": "After a series of incidents in the 1980s-90s attributed to operator error, regulators needed a scalable way to ensure ongoing competence without halting critical infrastructure. Live drills were too costly and risky for frequent repetition. Simulation offered a measurable, repeatable proxy.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Regulatory histories and vendor literature attest the founding problem was scalability and cost. Independent incident analyses (e.g., Chemical Safety Board reports, nuclear near-miss databases) and frontline operator testimony corroborate that the proxy has drifted from its founding justification — the competence gap it was meant to bridge has widened as simulation fidelity metrics replaced outcome validation."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Safety-critical industries (nuclear, chemical, aviation, rail) require certified competence. Over decades, regulators accepted high-fidelity simulation hours as equivalent to live drill requirements. The constraint is the rule that simulation completion counts as valid competence exercise. The arrangement coordinates a certification ecosystem: regulators get auditable compliance, vendors sell platforms, management meets targets cheaply. But the proxy has drifted — simulation metrics (scenario completion, score thresholds) have replaced the actual competence they were meant to proxy. Frontline operators train to the simulation, not the reality. The theater ratio rises as 'simulation fidelity' becomes a performative target. The claimed type is tangled_rope: genuine coordination (scalable certification) fused with asymmetric extraction (operators and public bear the competence gap).",
+    "logic_rationale": "Extractiveness (0.68) is substantial: the constraint extracts unexercised competence from operators and transfers risk to the public, while beneficiaries collect regulatory convenience and revenue. Suppression (0.55) is moderate: the constraint persists by making simulation the only compliant path — alternative validation (live drills, peer assessment, operational history) is suppressed by rule structure. Theater ratio (0.62) is high: a majority of enforcement activity now polices simulation metrics (hours, scores, scenario coverage) rather than competence outcomes. Accessibility collapse (0.48) is moderate: alternatives exist (live drills, mentored operations) but are structurally discouraged by cost and compliance rules. Resistance (0.42) is moderate: frontline operators and independent auditors resist but lack power to change the rule.",
+    "directionality_logic": "Regulatory bodies and certification authorities are structural beneficiaries (d near 0.0): they collect compliance ease and fee revenue. Training vendors are beneficiaries (d ~0.15): they capture the mandated market. Operational management are beneficiaries (d ~0.2): they avoid disruption. Frontline operators, maintenance crews, and emergency responders are payers (d ~0.8-0.9): identity-locked into certification, they bear the competence gap. Public safety is a trapped payer (d ~1.0): no exit, bears the consequence. Independent auditors are analytical observers (d=0.5). The engine computes per-seat χ from these structural positions.",
+    "perspectival_gap": "From the agenda-setter/beneficiary seats, the constraint is a rope: it solves a real coordination problem (scalable certification) with minimal coercion. From the payer seats, it is a snare: the coordination story is cover for extracting competence validation without paying for live exercise. The engine will compute this divergence. The claimed tangled_rope reflects the structural reality that both coordination and extraction are real and fused.",
+    "mandatrophy_analysis": "The founding problem (scalable competence validation) was live but has been substantially solved by simulation infrastructure. The mandate persists because the proxy regime now serves beneficiary interests (vendor revenue, regulatory convenience, management ease) more than the founding problem. The founding problem is contested: regulators and vendors claim it's live; incident data and frontline experience say it's dead for edge cases. Mandatrophy is unresolved — the arrangement has outlived its founding justification but is maintained by the coalition it created.",
+    "kernel_context": "This constraint is the 'simulation_as_proxy' reading of the contested kernel 'competence_exercise_validity'. The kernel is the persistent commitment: 'competence in safety-critical roles must be validated by exercise.' Three readings instantiate different constraints from this kernel: (1) simulation_as_proxy (this reading) — simulation metrics suffice; (2) continuous_refresh_hybrid — simulation necessary but insufficient, requires live drill cycles; (3) real_catastrophe_only — only real events truly exercise competence. This reading coexists with continuous_refresh_hybrid (different parties hold each) and influences real_catastrophe_only by setting the regulatory baseline that the latter must overcome. Foundational axiom: 'simulation_fidelity_metrics_validate_competence' (holdable, empirically_contingent)."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_threshold",
+      "question": "At what fidelity level does simulation cease to be a proxy and become a valid substitute for live exercise of competence?",
+      "resolution_mechanism": "Controlled studies comparing operators trained exclusively on simulation vs. those with live drill experience, measured against real incident performance. Requires ethical approval for high-hazard domains.",
+      "impact": "If a fidelity threshold exists and is measurable, the constraint could be a rope (coordination with a clear boundary). If no such threshold exists or is unverifiable, the constraint is structurally extractive — the proxy claim is unfalsifiable cover.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether a fidelity threshold for valid substitution exists and is knowable"
+    },
+    {
+      "id": "kernel_reading_disagreement_location",
+      "question": "Where exactly does the structural disagreement between simulation_as_proxy and real_catastrophe_only readings locate — in the definition of 'exercise', the definition of 'competence', or the evidentiary standard for validation?",
+      "resolution_mechanism": "Formal analysis of each reading's axioms: simulation_as_proxy axiom 'simulation_fidelity_metrics_validate_competence' vs. real_catastrophe_only axiom 'consequence_exposure_required_for_competence'. The disagreement is in the evidentiary standard for what counts as validation.",
+      "impact": "If the disagreement is in evidentiary standard, the readings coexist_with (different parties, different standards). If in definition of competence, they may foreclose (one competence concept rules out the other). This determines network.affects_constraints and cs_structure.reading_relations.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural locus of disagreement between kernel readings"
+    },
+    {
+      "id": "internalized_suppression_in_operators",
+      "question": "Do frontline operators internalize the simulation proxy as 'real training,' suppressing their own awareness of the competence gap?",
+      "resolution_mechanism": "Longitudinal interviews tracking operator confidence vs. assessed competence gap over career. Compare operators in simulation-only regimes vs. mixed regimes.",
+      "impact": "If suppression is internalized, the constraint's effective suppression is higher than structural measures suggest — operators carry the suppression with them, resisting live drill advocacy from within. This would increase the constraint's snare-like character from the payer seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression operates through internalized belief in the proxy"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__continuous_refresh_hybrid",
+      "competence_exercise_validity__real_catastrophe_only"
+    ],
+    "dual_formulation_note": "This constraint is one member of the competence_exercise_validity constraint family. The kernel 'competence must be validated by exercise' admits three readings with different ε values: simulation_as_proxy (ε=0.68, this story), continuous_refresh_hybrid (ε≈0.35, coordination-heavy), real_catastrophe_only (ε≈0.15, mountain-like). The simulation_as_proxy reading is downstream of the kernel's original formulation and upstream of the continuous_refresh_hybrid which attempts to correct its drift."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.98
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "continuous_refresh_hybrid",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "real_catastrophe_only",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_fidelity_metrics_validate_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "regulatory_compliance_suffices_for_safety_assurance",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_three_mile_island_certification_regime",
+    "drift_state": {
+      "moment": "contemporary_high_fidelity_simulation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

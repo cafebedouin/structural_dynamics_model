@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "substance_control_kernel__legalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_substance_control_kernel__legalization_reading",
+    "measurement_id_prefix": "sclr",
+    "story_uid": "89197bfe-1043-4a41-98f5-c5b01957f65a",
+    "created_at": "2026-08-15T14:22:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.18,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.08,
+    "claimed_type": "rope",
+    "human_readable": "Legalized Substance Market with Externality Taxation",
+    "topic_domain": "public_health/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "legal_substance_industry",
+      "state_tax_authority",
+      "consumer_adults"
+    ],
+    "victims": [
+      "third_parties_exposed_to_externalities",
+      "problematic_users_post_legalization"
+    ],
+    "vindicated_propositions": [
+      "bodily_autonomy_principle",
+      "harm_principle_mill",
+      "prohibition_failure_doctrine"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This constraint is one reading of the substance_control_kernel — does the legalization reading's structural profile (users exit victim set, industry emerges, state taxes) instantiate a genuinely different constraint from prohibition and harm reduction readings?",
+      "resolution_mechanism": "Cross-reading epsilon comparison: if prohibition_reading ε ≈ 0.75 (users as victims, state as enforcer) and harm_reduction_reading ε ≈ 0.35 (users as patients, state as service provider) while this reading ε = 0.22, the kernel decomposes into three structurally distinct constraints per ε-invariance principle.",
+      "impact": "Confirms the ε-invariance decomposition; if ε values cluster, the kernel may be one constraint with observational variance rather than three.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel decomposition into three ε-distinct constraints vs. observational variance on one constraint"
+    },
+    {
+      "id": "externality_capture_completeness",
+      "question": "Does the state's taxation regime actually capture the full marginal external cost of legalized substance use (DUI, secondhand exposure, healthcare externalities, productivity loss), or does legalization create a new extraction vector where industry profits exceed externality capture?",
+      "resolution_mechanism": "Longitudinal fiscal incidence study comparing tax revenue against quantified external costs over 10+ years in jurisdictions that legalized; industry profit margin analysis vs. externality cost curves.",
+      "impact": "If externality capture is incomplete, the constraint drifts from rope toward tangled_rope (industry as beneficiary extracting from third-party victims). If capture exceeds costs, the state becomes net extractor from users.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether legalization's fiscal design matches its stated externality-capture justification"
+    },
+    {
+      "id": "gray_market_persistence",
+      "question": "Does the black market collapse entirely post-legalization, or does it persist in gray areas (high-tax arbitrage, underage supply, unregulated potency) creating a dual-market structure that sustains extraction?",
+      "resolution_mechanism": "Market share tracking of legal vs. illicit channels over time; price gap analysis between legal and gray-market products; enforcement intensity correlation with gray market share.",
+      "impact": "Persistent gray market reintroduces prohibition-like extraction on residual illicit transactions while legal market extracts via taxation — potential tangled_rope dual structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether legalization eliminates or displaces illicit market extraction"
+    },
+    {
+      "id": "problematic_user_victim_status",
+      "question": "Post-legalization, are problematic users (addiction, dependence) genuinely liberated from victim status, or does commercial industry targeting recreate a victim relationship through engineered dependence?",
+      "resolution_mechanism": "Compare industry marketing spend, product design for dependence potential, and prevalence of use disorder in legal vs. prohibition regimes; longitudinal cohort studies of initiation and escalation.",
+      "impact": "If industry exploits dependence commercially, problematic_users_post_legalization remain victims — the constraint extracts from them via commercial predation, not state punishment.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether commercial legalization replaces state victimization with market victimization for dependent users"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.22,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.12,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "projected"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the legalization reading of the substance_control_kernel: substance use is an individual liberty issue where the state intervenes only to prevent third-party harm and capture externality costs via taxation. Users are no longer victims of state enforcement; instead, a legal industry emerges as beneficiary, the state collects tax revenue, and third parties exposed to externalities (DUI, secondhand smoke, healthcare costs) enter the victim set. The black market either collapses or persists in gray areas (high-tax arbitrage, underage supply). The interval T=0 represents the prohibition-to-legalization transition; T=20 represents a mature legal market. Extraction declines from prohibition levels as state enforcement against users ceases, but stabilizes above zero due to tax extraction from consumers and industry profit margins. Suppression requirement drops sharply as criminal penalties for possession are removed, leaving only regulatory enforcement (licensing, age verification, DUI). Theater ratio declines as performative 'war on drugs' apparatus is dismantled, though some regulatory theater persists.",
+    "key_agents": [
+      "consumer_adults: Primary beneficiary — gains legal access, bears tax cost (powerful/arbitrage)",
+      "legal_substance_industry: Primary beneficiary — captures market revenue, shapes regulation (institutional/arbitrage)",
+      "state_tax_authority: Beneficiary/agenda_setter — collects externality taxes, sets regulatory framework (institutional/analytical)",
+      "third_parties_exposed_to_externalities: Victim — bears DUI risk, secondhand exposure, healthcare externalities (powerless/constrained)",
+      "problematic_users_post_legalization: Victim — may face commercial predation via dependence-engineered products (moderate/identity_locked)",
+      "public_health_authorities: Observer — monitor population health outcomes, advise regulation (institutional/analytical)",
+      "criminal_justice_system_former: Excluded — loses enforcement role, budget, institutional purpose (institutional/trapped)"
+    ],
+    "logic_rationale": "Base extractiveness (0.22) reflects the mature legal market: tax incidence on consumers plus industry markup above marginal cost, but no state extraction from users via criminal penalties. Suppression (0.18) is low — only regulatory compliance (age gates, licensing, DUI enforcement) remains. Theater ratio (0.12) is low — the constraint performs its stated function (externality capture via tax) with minimal performative excess. Accessibility collapse (0.15) is low — alternatives (not using, using illegally, home production) remain accessible. Resistance (0.08) is minimal — the constraint is broadly accepted by its primary subjects (consumer adults) and its agenda setters (state, industry). The claimed type is rope: genuine coordination problem (safe supply, quality control, externality pricing) solved with minimal coercive overhead and net benefit to participants.",
+    "directionality_logic": "Consumer adults are structural beneficiaries (d ≈ 0.15) — they gain legal access and quality assurance, paying tax that approximates their externality cost. Legal substance industry is a strong beneficiary (d ≈ 0.05) — captures market surplus, influences regulation via lobbying, faces minimal exit constraints. State tax authority sits near symmetric (d ≈ 0.45) — collects revenue but bears enforcement and regulatory costs. Third parties exposed to externalities are targets (d ≈ 0.85) — bear DUI risk, secondhand harm, and healthcare cost externalities with no direct exit from the legal market's spillovers. Problematic users post-legalization are partial targets (d ≈ 0.65) — if industry exploits dependence, they bear commercial extraction; identity_locked exit due to dependence physiology and commercial targeting. Criminal justice system former actors are excluded (d ≈ 0.75) — lose institutional role but cannot exit the policy domain.",
+    "perspectival_gap": "From the consumer adult seat, this is a rope — genuine coordination gain (safe, legal access) with fair cost (tax ≈ externality). From the third-party victim seat, it is a snare — they bear externalities with no consent and no exit from spillover harm. From the problematic user seat, it may be a tangled rope — coordination benefit (safer supply) coexists with commercial extraction (dependence-engineered products). The engine computes this divergence from the structural data; the claimed type (rope) reflects the dominant coordination function from the agenda-setter's design intent.",
+    "mandatrophy_analysis": "The founding problem (prohibition's failure: criminalization of users, black market violence, enforcement corruption) is substantially resolved — prohibition's extraction from users is eliminated. However, a new mandatrophy risk emerges if the legal industry's commercial incentives create a new extraction vector from dependent users that mirrors the old prohibition extraction. The constraint resolves the original mandatrophy but must be monitored for successor mandatrophy.",
+    "kernel_context": "This constraint is the legalization_reading of the substance_control_kernel. The kernel is the contested commitment: 'How should the state relate to substance use?' Three readings instantiate three constraints: (1) prohibition_reading — substance use as moral transgression requiring state punishment (ε ≈ 0.75, users as victims, state as enforcer, snare/tangled_rope); (2) harm_reduction_reading — substance use as health condition requiring pragmatic intervention (ε ≈ 0.35, users as patients, state as service provider, rope/scaffold); (3) this legalization_reading — substance use as individual liberty issue with state intervention only for third-party harm and externality capture (ε ≈ 0.22, users as beneficiaries, industry and state as beneficiaries, third parties as victims, rope). The readings coexist as live positions in different jurisdictions and policy coalitions; none logically forecloses the others within a single framework, but they create competing institutional pressures."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_kernel__prohibition_reading",
+      "substance_control_kernel__harm_reduction_reading",
+      "traffic_safety_regulation",
+      "public_health_funding",
+      "commercial_regulation"
+    ],
+    "dual_formulation_note": "The substance_control_kernel decomposes into three ε-distinct constraints per the ε-invariance principle. Prohibition_reading (ε ≈ 0.75) extracts from users via criminal enforcement. Harm_reduction_reading (ε ≈ 0.35) extracts from users via medicalized coercion and from taxpayers via service provision. Legalization_reading (ε ≈ 0.22) extracts from consumers via taxation and from third parties via externalities, while industry captures market surplus. All three readings are live in contemporary policy discourse; jurisdictions instantiate different readings or hybrids."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "consumer_adults",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Adults who choose to use legalized substances. They gain legal access, product safety, quality consistency, and reliable supply. They pay excise taxes that approximate marginal external cost. They can exit by not purchasing, substituting other goods, or (where permitted) home production. Their choice set is broad and their power to shape the market through demand is significant."
+    },
+    {
+      "name": "legal_substance_industry",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Licensed producers, processors, distributors, and retailers of legalized substances. They capture the market revenue previously going to illicit markets. They shape regulation through lobbying, campaign contributions, and regulatory capture risk. They design products, set prices, and control marketing. Their exit options are strong — they can diversify, relocate, or shift product lines. They are the primary organized beneficiary of the constraint."
+    },
+    {
+      "name": "state_tax_authority",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government agencies that design and collect excise taxes on legalized substances, allocate revenue to externality mitigation (DUI enforcement, treatment, healthcare), and enforce regulatory compliance (licensing, age verification, product standards). They benefit from a new revenue stream but bear administrative and enforcement costs. They set the regulatory agenda. Their exit is analytical — they cannot exit the policy domain but can reform the tax/regulatory structure."
+    },
+    {
+      "name": "third_parties_exposed_to_externalities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Individuals and communities bearing the spillover costs of legalized substance use: victims of impaired driving, household members exposed to secondhand smoke/vapor, neighbors of retail outlets, taxpayers covering residual healthcare costs not fully offset by tax revenue. They did not consent to the legal market and have limited exit — they cannot avoid public roads, shared air, or fiscal exposure. Their power to influence the constraint is minimal."
+    },
+    {
+      "name": "problematic_users_post_legalization",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Users who develop dependence or use disorders in the legal market. They benefit from safer supply and reduced criminal risk but may face commercial predation: products engineered for dependence potential, marketing targeting heavy users, price structures that exploit inelastic demand. Their exit is identity-locked — dependence physiology fuses their self-concept with the substance, and commercial design exploits this. They bear the cost of their own consumption plus any industry-extracted surplus."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Health agencies monitoring population-level outcomes: use prevalence, use disorder rates, overdose mortality, youth initiation, health equity impacts. They advise regulatory adjustments, allocate treatment resources, and evaluate whether the legal market's externality capture is adequate. They neither collect nor pay the constraint's primary flows but shape its evolution through evidence."
+    },
+    {
+      "name": "criminal_justice_system_former",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Police, prosecutors, courts, and correctional institutions that previously enforced prohibition. They lose a major enforcement mission, associated budgets, asset forfeiture revenue, and institutional justification. They are structurally excluded from the legal market's governance but remain in the policy arena advocating for continued enforcement or expanded regulatory roles. Their exit is trapped — institutional identity and budget dependencies bind them to the drug policy domain."
+    }
+  ],
+  "gain_flow": "legal_substance_industry",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of safe, reliable substance supply for consenting adults: quality control, dose consistency, contamination prevention, and a legal market that displaces violent illicit trade. The state coordinates externality pricing through taxation rather than prohibition.",
+    "transfer_function": "Moves money from consumer adults (via retail price including tax and industry markup) to: (1) legal substance industry (profit margin above marginal cost), (2) state tax authority (excise tax revenue for externality mitigation and general fund), (3) regulatory compliance costs. Third parties bear non-monetary externalities (DUI risk, secondhand exposure) not fully captured by the tax.",
+    "absent_voices": "Future generations who will bear long-term public health consequences of normalized commercial substance markets; children of problematic users who have no voice in market design; communities disproportionately targeted by industry marketing (low-income, minority) who are underrepresented in regulatory capture analysis. These voices are absent because they are not organized, not yet born, or structurally excluded from the policy negotiation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the legal market and its tax/regulatory framework vanished overnight, the substance market would not disappear — it would revert to illicit or gray-market structures with higher violence, no quality control, no externality capture, and renewed criminalization of users. The world rearranges because the constraint actively structures the market's form; its removal changes the equilibrium.",
+    "founding_problem": "Prohibition's catastrophic failure: mass incarceration for possession, violent black markets corrupting institutions, racialized enforcement disparities, zero quality control causing overdose deaths, billions spent on enforcement with no reduction in availability, erosion of civil liberties through search/seizure expansion.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem (prohibition's failure) is corroborated by: (1) independent criminological consensus (National Research Council 2014, multiple meta-analyses) that prohibition fails to reduce supply/use and generates net social harm; (2) law enforcement leadership (Law Enforcement Action Partnership, former prosecutors) attesting to prohibition's institutional corruption; (3) public health data showing prohibition-era overdose mortality driven by supply adulteration; (4) fiscal analyses showing enforcement costs exceeding any measurable benefit. No credible source outside the prohibition-benefiting coalition claims prohibition succeeded."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "substance_control_kernel__prohibition_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bodily_autonomy_includes_substance_choice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_legitimacy_requires_harm_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "externality_taxation_sufficient_for_harm_internalization",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "prohibition_regime_collapse",
+    "drift_state": {
+      "moment": "mature_legal_market",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

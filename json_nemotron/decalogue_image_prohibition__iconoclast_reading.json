@@ -1,0 +1,370 @@
+{
+  "header": {
+    "constraint_id": "decalogue_image_prohibition__iconoclast_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_decalogue_image_prohibition__iconoclast_reading",
+    "measurement_id_prefix": "iconoclast_reading",
+    "story_uid": "bb0d985d-6f14-4765-984a-35821d036b01",
+    "created_at": "2026-06-12T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Iconoclast Reading of the Second Commandment: Total Prohibition of Religious Imagery",
+    "topic_domain": "theology/religious_authority/visual_culture",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "imperial_authority",
+      "iconoclast_hierarchy"
+    ],
+    "victims": [
+      "icon_producers",
+      "monastic_iconophile_communities",
+      "lay_devotional_practitioners",
+      "iconodule_clergy"
+    ],
+    "vindicated_propositions": [
+      "spiritual_worship_excludes_material_mediation",
+      "imperial_authority_over_religious_form",
+      "image_as_idolatry_doctrine"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Is this constraint one reading of a contested kernel (decalogue_image_prohibition) or an independent constraint?",
+      "resolution_mechanism": "Structural comparison with sibling readings (iconodule_reading, moderate_iconoclast_reading): if they share the same kernel_id but instantiate different beneficiary/victim structures and different ε, they are readings of the same kernel. The ε-invariance principle requires separate constraint stories.",
+      "impact": "If confirmed as a kernel reading, this constraint's ε and classification are reading-indexed, not kernel-indexed. The sibling readings generate their own constraints with their own metrics. Misidentifying this as an independent constraint would conflate the kernel's structural ambiguity with a single constraint's profile.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this is a kernel reading requiring committer-frame discipline."
+    },
+    {
+      "id": "imperial_beneficiary_intent",
+      "question": "Does the imperial authority genuinely benefit from the prohibition, or is the benefit incidental to theological conviction?",
+      "resolution_mechanism": "Historical analysis of imperial policy: correlate iconoclast edicts with centralization of religious authority, confiscation of monastic assets, and suppression of regional cults. If enforcement patterns track political consolidation more than theological debate, the beneficiary declaration is structural.",
+      "impact": "If imperial benefit is structural, the constraint is a snare with a clear coordination-extraction split. If benefit is incidental, the constraint may be a tangled rope where theological coordination and political extraction are inseparable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the imperial authority is a structural beneficiary or a coincidental one."
+    },
+    {
+      "id": "iconophile_resistance_nature",
+      "question": "Is the resistance from iconophile communities primarily theological conviction or defense of material practice?",
+      "resolution_mechanism": "Examine the arguments of iconodule theologians (John of Damascus, Theodore the Studite) vs. the material dependencies of monastic icon production. If resistance collapses when material practice is suppressed but theological arguments persist, the resistance is practice-anchored.",
+      "impact": "If resistance is practice-anchored, the constraint's suppression metric (0.85) reflects coercion of material life, not just belief. If resistance is purely theological, suppression may be overstated relative to the constraint's actual enforcement capacity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether resistance is anchored in material practice or abstract conviction."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 250,
+      "value": 0.85
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 250
+  },
+  "commentary": {
+    "narrative_context": "The iconoclast reading of the Second Commandment prohibits all religious imagery as idolatry, asserting that any material representation used in worship violates the commandment. This reading was enforced by Byzantine imperial authority during the first (726–787) and second (814–842) iconoclast periods. The constraint operates as a wall-type prohibition: it does not regulate imagery, it eliminates it. Victims include icon producers (artisans, monastic scriptoria), monastic communities organized around icon veneration, lay devotional practices dependent on imagery, and iconodule clergy. The beneficiary is centralizing imperial authority, which monopolizes religious form, confiscates monastic assets, and eliminates regional cult centers that competed with imperial orthodoxy. The iconodule reading (sibling) permits veneration of images (dulia) distinct from worship (latria), grounded in Incarnational theology. The moderate iconoclast reading permits two-dimensional images under regulation. This reading forecloses both: material mediation is categorically impermissible.",
+    "key_agents": [
+      "imperial_authority: Primary beneficiary (institutional/arbitrage) — monopolizes religious form, confiscates assets, centralizes orthodoxy",
+      "iconoclast_hierarchy: Agenda setter (institutional/identity_locked) — administers enforcement, defines orthodoxy, careers depend on the prohibition",
+      "icon_producers: Primary payer (organized/trapped) — artisans and monastic workshops whose livelihood and vocation are destroyed",
+      "monastic_iconophile_communities: Primary payer (organized/identity_locked) — communities constituted by icon veneration; suppression targets their corporate identity",
+      "lay_devotional_practitioners: Payer (powerless/trapped) — devotional life organized around domestic and public imagery; no exit from the constraint's reach",
+      "iconodule_clergy: Payer (moderate/constrained) — clergy who defend image veneration; face deposition, exile, or martyrdom",
+      "iconodule_reading: Excluded (observer/analytical) — the sibling reading that permits dulia; its adherents are the constraint's victims",
+      "moderate_iconoclast_reading: Excluded (observer/analytical) — the sibling reading permitting regulated 2D images; foreclosed by this reading's categorical prohibition"
+    ],
+    "logic_rationale": "Extractiveness (0.78) is high: the constraint extracts the entire material infrastructure of devotion (icons, workshops, monastic economies, lay devotional objects) and redirects control to imperial authority. Suppression (0.85) is very high: enforcement requires active destruction of images, persecution of producers and devotees, and policing of private devotion. Theater ratio (0.22) is low: the prohibition is not performative; the destruction is real and thorough. Accessibility collapse (0.92) is near-total: once the prohibition is understood, the alternative (image veneration) is not merely discouraged but structurally eliminated — no legal space, no institutional support, no public practice survives. Resistance (0.68) is substantial: iconophile resistance persisted for over a century, producing sophisticated theology, underground networks, and martyrdom. The resistance is practice-anchored (see omega) not merely theological.",
+    "perspectival_gap": "From the imperial/agenda-setter seat, the constraint appears as necessary theological purification — a coordination function (pure worship) that requires elimination of a corrupting practice. From the payer seats (icon producers, monastic communities, lay practitioners), the same structure operates as total extraction: their material-devotional world is dismantled, their vocation criminalized, their communities dispersed. The iconoclast hierarchy sits in a dual position: they administer the constraint (agenda_setter) but their institutional existence depends on it (identity_locked payer). The engine computes per-seat types from these structural asymmetries.",
+    "directionality_logic": "Imperial authority: d ≈ 0.1 (beneficiary — extracts control, assets, monopoly over religious form). Iconoclast hierarchy: d ≈ 0.25 (agenda_setter with identity lock — administers but depends on the constraint for institutional legitimacy). Icon producers: d ≈ 0.95 (trapped — livelihood and vocation destroyed, no exit). Monastic iconophile communities: d ≈ 0.9 (identity_locked — corporate identity constituted by icon veneration; exit means dissolution of the community). Lay practitioners: d ≈ 0.85 (trapped — devotional world dismantled, private practice policed). Iconodule clergy: d ≈ 0.75 (constrained — can recant or resist; some exit via exile). The beneficiary/victim declarations drive this derivation.",
+    "mandatrophy_analysis": "The founding problem (pagan idolatry contaminating Christian worship) was live in the 8th century but the prohibition's scope (all religious imagery) vastly exceeds it. The constraint persists by redefining all material mediation as idolatry, expanding the founding problem to cover the sibling readings' practices. Mandatrophy is unresolved: the arrangement has outlived its original function and now serves imperial centralization. The founding_problem_status is 'dead' (the specific pagan threat is gone) but the constraint persists — classic mandatrophy signature.",
+    "kernel_context": "This constraint is the iconoclast_reading of the decalogue_image_prohibition kernel. Sibling readings: iconodule_reading (permits dulia veneration of images, grounded in Incarnation theology), moderate_iconoclast_reading (permits regulated 2D images, forbids 3D statuary). This reading forecloses both siblings: its core premise (material mediation categorically impermissible) logically rules out any framework that permits any material mediation. The kernel is the Second Commandment text; the readings are distinct constraints with different ε, different victim sets, different beneficiaries."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "decalogue_image_prohibition__iconodule_reading",
+      "decalogue_image_prohibition__moderate_iconoclast_reading",
+      "byzantine_imperial_orthodoxy_enforcement",
+      "monastic_economy_icon_production",
+      "lay_devotional_practice_network"
+    ],
+    "dual_formulation_note": "This constraint is one member of the decalogue_image_prohibition constraint family. The kernel is the Second Commandment; the three readings instantiate three structurally distinct constraints with different ε values (iconoclast: high extraction, iconodule: low extraction, moderate: intermediate). They are linked via affects_constraints. The iconoclast reading forecloses the others; the iconodule reading coexists with the moderate reading; the moderate reading influences the iconoclast reading by offering a compromise that the iconoclast reading must actively suppress."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "imperial_authority",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Issues iconoclast edicts, confiscates monastic lands and icon workshops, appoints compliant patriarchs, and uses religious uniformity to consolidate political control over themes and provinces. The prohibition is the legal instrument for asset seizure and centralization. Exit is trivial — they write the rules."
+    },
+    {
+      "name": "iconoclast_hierarchy",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Patriarchs and bishops who enforce the prohibition: they preside over icon destruction, depose iconodule clergy, and define orthodoxy. Their ecclesiastical careers and institutional legitimacy are fused to the prohibition; recanting means deposition. They administer the constraint but are also trapped by it."
+    },
+    {
+      "name": "icon_producers",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Artisans, painters, mosaicists, and monastic workshops whose livelihood is icon production. The prohibition criminalizes their trade, destroys their works, and seizes their workshops. No alternative market exists; their skills are specific to the prohibited practice. Exit means abandonment of vocation and impoverishment."
+    },
+    {
+      "name": "monastic_iconophile_communities",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Monasteries organized around icon veneration, icon production, and pilgrimage. The prohibition dissolves their corporate identity: icons are destroyed, pilgrimage ends, endowments are confiscated. Monks who resist face exile or martyrdom. The community cannot 'exit' the constraint without ceasing to be what it is."
+    },
+    {
+      "name": "lay_devotional_practitioners",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Ordinary Christians whose devotional life centers on domestic icons, church images, and public processions. The prohibition reaches into homes (iconoclast patrols), churches (whitewashing), and public space. No theological alternative is offered; the devotional world is simply removed. Exit is impossible — the constraint governs the only religious world they know."
+    },
+    {
+      "name": "iconodule_clergy",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Clergy who defend image veneration theologically and pastorally. They face deposition, exile, imprisonment, or martyrdom. Some recant under pressure; others lead resistance networks. Exit options: recant (identity fracture), exile (loss of flock), or resistance (high risk). Their institutional position gives them voice but not protection."
+    },
+    {
+      "name": "iconodule_reading",
+      "role": "excluded",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The sibling reading that permits veneration (dulia) of images as honor to their prototypes, grounded in the Incarnation sanctifying matter. Its adherents are the constraint's primary victims. It is excluded from the iconoclast framework — not merely disagreed with but defined as heresy. The reading persists in exile and underground, re-emerging after 843."
+    },
+    {
+      "name": "moderate_iconoclast_reading",
+      "role": "excluded",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The sibling reading that forbids three-dimensional statuary but permits regulated two-dimensional images. It attempts a compromise position. The iconoclast reading forecloses it: any material mediation is idolatry. This reading is suppressed as 'half-measure' heresy by the iconoclast hierarchy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates religious practice around purely spiritual worship, eliminating material mediation that the reading identifies as idolatrous. Solves the problem of pagan syncretism and image worship by categorical prohibition.",
+    "transfer_function": "Moves control of religious form, monastic assets, icon workshop production, and devotional practice from distributed communities (monastic, lay, artistic) to centralized imperial authority. The extraction is total: the material culture of devotion is destroyed or confiscated; the regulatory monopoly is captured.",
+    "absent_voices": "Iconodule theologians (John of Damascus, Theodore the Studite), monastic communities in exile, lay practitioners driven underground, and the moderate iconoclast position. They are excluded by definition — the constraint's enforcement machinery exists to silence them. Their absence is not accidental; it is the constraint's function.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the prohibition vanished overnight, icon production would resume, monastic economies would rebuild, lay devotional practice would re-emerge publicly, iconodule clergy would return from exile, and imperial authority would lose its primary instrument of religious centralization. The visual culture of Byzantium would reorganize around image veneration within years — as it did in 843.",
+    "founding_problem": "The perceived contamination of Christian worship by pagan idolatry: the use of images in Christian practice was seen as indistinguishable from pagan cult statues, risking syncretism and violating the Second Commandment's prohibition of graven images.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (pagan idolatry threat) is attested as dead by the iconodule reading's own theologians (John of Damascus: 'In former times, God, who is without form or body, could never be depicted. But now that God has appeared in the flesh... I do not venerate matter, I venerate the Creator of matter'). The imperial authority's continued enforcement after the pagan threat receded is attested by the confiscation of monastic assets and the suppression of the moderate iconoclast compromise — actions that serve centralization, not theological purity. No source outside the iconoclast hierarchy attests the founding problem as live after c. 750."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "decalogue_image_prohibition__iconodule_reading",
+      "decalogue_image_prohibition__moderate_iconoclast_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "iconodule_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "decalogue_image_prohibition__moderate_iconoclast_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "material_mediation_categorically_impermissible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "image_as_idolatry_identical",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "imperial_authority_defines_orthodoxy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "apostolic_spiritual_worship",
+    "drift_state": {
+      "moment": "iconoclast_imperial_enforcement",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

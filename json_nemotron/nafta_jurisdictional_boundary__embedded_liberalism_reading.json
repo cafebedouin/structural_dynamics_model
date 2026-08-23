@@ -1,0 +1,368 @@
+{
+  "header": {
+    "constraint_id": "nafta_jurisdictional_boundary__embedded_liberalism_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nafta_el",
+    "story_uid": "48197fd7-c1be-4e16-817d-391d5fad1ec0"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NAFTA Jurisdictional Boundary — Embedded Liberalism Reading",
+    "topic_domain": "international_trade_law/political_economy/regulatory_federalism",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "export_oriented_corporations",
+      "trade_lawyers_arbitrators",
+      "investment_treaty_practitioners"
+    ],
+    "victims": [
+      "domestic_environmental_regulators",
+      "labor_standards_enforcement_agencies",
+      "subnational_governments_states_provinces",
+      "affected_communities_near_pollution_sources"
+    ],
+    "vindicated_propositions": [
+      "non_discrimination_principle",
+      "regulatory_autonomy_within_legitimate_objectives",
+      "embedded_liberalism_compromise"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disambiguation",
+      "question": "Is this constraint a distinct reading of the nafta_jurisdictional_boundary kernel, or a separate constraint with its own ε?",
+      "resolution_mechanism": "Test ε-invariance: if measuring the constraint via investor-state dispute outcomes vs. regulatory autonomy preservation yields different ε, the readings are structurally distinct constraints. The ε-invariance principle requires separate stories for each reading with distinct ε values.",
+      "impact": "If this is one reading of a contested kernel, the other readings (capital_supremacy_reading, sovereignty_primacy_reading) must be authored as separate constraint stories with their own ε values and linked via network.affects_constraints. If it is a standalone constraint, the kernel framing is analytical overlay only.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the embedded liberalism reading is a distinct constraint instantiation from the kernel"
+    },
+    {
+      "id": "legitimate_objectives_boundary_ambiguity",
+      "question": "Where does the 'legitimate objectives' boundary actually lie — is it a stable coordination line or an expanding extraction zone?",
+      "resolution_mechanism": "Track arbitration outcomes over time: if the scope of measures deemed 'necessary' or 'non-discriminatory' contracts while investor claims expand, the boundary functions as extraction. If the boundary holds and regulatory space is genuinely preserved, it functions as coordination.",
+      "impact": "Boundary stability determines whether the constraint is genuinely tangled_rope (coordination + extraction) or drifts toward snare (extraction masked by coordination language). Affects claimed_type validity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the legitimate objectives exception functions as genuine regulatory space or extraction cover"
+    },
+    {
+      "id": "litigation_cost_as_extraction_vector",
+      "question": "Is the moderate extraction through litigation costs a feature of genuine dispute resolution or a structural barrier that chills legitimate regulation?",
+      "resolution_mechanism": "Compare regulatory chill metrics (measures not enacted due to ISDS threat) against actual dispute filings. If chill exceeds filings by wide margin, litigation cost is an extraction vector, not a coordination cost.",
+      "impact": "If litigation costs primarily chill regulation rather than resolve disputes, the constraint's extraction is higher than the dispute count suggests — effective extraction amplified for regulators who face asymmetric cost of defense.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ISDS litigation costs function as regulatory chill mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1994,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1994,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1994,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 1994,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the 'embedded liberalism' reading of NAFTA's jurisdictional boundary (Chapter 11 investment + Chapter 19 dispute settlement + side agreements on labor/environment). The reading holds that trade agreement text creates a framework for market access while preserving legitimate domestic policy space for environmental, labor, and health regulation — provided measures are non-discriminatory and not disguised restrictions. The structural reality: partial jurisdictional overlap where regulatory agencies retain defensive authority within a contested 'legitimate objectives' boundary, but face moderate extraction through ISDS litigation costs and regulatory chill. This is one reading of a three-way kernel contest.",
+    "key_agents": [
+      "export_oriented_corporations: Primary beneficiary (institutional/arbitrage) — gain market access certainty and ISDS enforcement",
+      "trade_lawyers_arbitrators: Secondary beneficiary (organized/mobile) — capture recurring dispute resolution rents",
+      "investment_treaty_practitioners: Secondary beneficiary (professional/mobile) — career and revenue stream from treaty interpretation",
+      "domestic_environmental_regulators: Primary target (organized/constrained) — bear litigation costs and regulatory chill",
+      "labor_standards_enforcement_agencies: Primary target (organized/constrained) — face ISDS challenges to labor protections",
+      "subnational_governments_states_provinces: Target (powerless/constrained) — bound by federal treaty but lack voice in negotiation",
+      "affected_communities_near_pollution_sources: Target (powerless/trapped) — bear environmental harm when regulation is chilled",
+      "arbitral_tribunals: Agenda_setter (institutional/analytical) — adjudicate the legitimate objectives boundary",
+      "domestic_courts: Observer (institutional/analytical) — apply treaty as supreme law per constitutional hierarchy"
+    ],
+    "logic_rationale": "Base extractiveness (0.42) reflects the real but moderate transfer: investors gain enforceable expectations and occasional damages; regulators lose autonomy at the margin and bear defense costs. Suppression (0.38) is moderate — the constraint does not forbid regulation outright but raises its cost and creates chill. Theater ratio (0.28) captures the growing performative invocation of 'legitimate objectives' while the boundary contracts in practice. Accessibility collapse (0.45) is partial — alternatives (carve-outs, renegotiation, withdrawal) exist but are politically costly. Resistance (0.55) is significant — states have pushed back via renegotiation (USMCA), withdrawal threats, and carve-out proposals. The claimed_type tangled_rope fits: genuine coordination (market access framework) + asymmetric extraction (ISDS costs borne by regulators, benefits captured by investors).",
+    "perspectival_gap": "From the investor/arbitrator seat: the constraint is a rope — predictable rules, mutual gains from trade, legitimate disputes resolved neutrally. From the regulator/community seat: the constraint is a snare — asymmetric exposure, regulatory chill, extraction via litigation asymmetry. From the analytical seat: the constraint is a tangled_rope — both coordination and extraction are structurally real and inseparable in the same mechanism. The engine computes this divergence from the declared beneficiaries/victims and their exit/power profiles.",
+    "directionality_logic": "Export-oriented corporations and investment treaty practitioners are declared beneficiaries — they collect the gains of market access certainty and dispute resolution rents. Their exit options are arbitrage/mobile (capital can relocate, practitioners can shift forums). Domestic regulators, labor agencies, subnational governments, and affected communities are declared victims — they bear the litigation costs, regulatory chill, and environmental/health harms when regulation is deterred. Their exit options are constrained (bound by treaty) to trapped (communities cannot exit the pollution). Arbitral tribunals are agenda_setters — they define the legitimate objectives boundary. The directionality derivation from these structural positions yields the per-seat χ amplification the engine computes.",
+    "mandatrophy_analysis": "The founding problem (post-WWII trade regime balancing market access with domestic policy space) remains live but contested. The constraint has not resolved its mandatrophy — the coordination function (trade liberalization) persists but the extraction function (ISDS asymmetry) has grown. The embedded liberalism reading itself is the attempted resolution: rebalancing toward coordination. Whether it succeeds is the contested_status.",
+    "kernel_context": "This constraint instantiates the 'embedded_liberalism_reading' of the nafta_jurisdictional_boundary kernel. The kernel is the NAFTA jurisdictional boundary itself — the structural question of where treaty obligations end and domestic regulatory authority begins. Sibling readings: capital_supremacy_reading (treaty as supreme law overriding domestic standards, harmonization as mandatory) and sovereignty_primacy_reading (treaty as coordination subordinate to sovereign law, full domestic authority retained). This reading occupies the middle: partial overlap, legitimate objectives boundary, moderate extraction through litigation. The three readings are distinct constraints with distinct ε values — this story authors ε=0.42 for the embedded liberalism reading."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "nafta_jurisdictional_boundary__capital_supremacy_reading",
+      "nafta_jurisdictional_boundary__sovereignty_primacy_reading",
+      "usmca_investment_chapter_reform",
+      "icsid_reform_process",
+      "ceta_investment_court_system"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the nafta_jurisdictional_boundary kernel. The capital_supremacy_reading has higher ε (stronger investor rights, weaker regulatory space). The sovereignty_primacy_reading has lower ε (stronger regulatory space, weaker investor enforcement). All three share the same treaty text but instantiate different constraints with different beneficiary/victim structures and extraction profiles. The embedded_liberalism_reading is the negotiated middle — the only one that acknowledges both coordination and extraction as structurally real."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "export_oriented_corporations",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Multinational firms in manufacturing, energy, mining, and services that use NAFTA Chapter 11 to lock in market access and challenge environmental, health, and zoning regulations that affect expected profits. They initiate ISDS claims when domestic regulation reduces investment value. Their capital mobility gives them arbitrage-grade exit — they can relocate production, shift supply chains, or threaten to do so. They capture the primary gains: stable investment rules, compensation for regulatory change, and deterrence of future regulation."
+    },
+    {
+      "name": "trade_lawyers_arbitrators",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The specialized bar and arbitrator corps that has grown around investment treaty arbitration. They earn fees from representing investors and states, and arbitrators are paid per case. Their professional identity and revenue depend on the ISDS system's continuation and expansion. They have mobile exit — they can shift to other treaty regimes (ICSID, ICC, UNCITRAL) or commercial arbitration — but their specialized capital is tied to the investment treaty regime."
+    },
+    {
+      "name": "investment_treaty_practitioners",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Academics, consultants, NGO specialists, and government legal advisors whose careers revolve around investment treaty interpretation. They benefit from the regime's complexity and contestation — more disputes mean more demand for expertise. Mobile exit within the international law field, but their specific human capital is regime-specific."
+    },
+    {
+      "name": "domestic_environmental_regulators",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Federal and state/provincial agencies (EPA, Environment Canada, SEMARNAT, state DEQs) that must defend environmental regulations against ISDS claims. They bear the direct litigation costs (millions per case), the opportunity cost of diverted enforcement resources, and the regulatory chill — measures not proposed or weakened due to ISDS risk. Their exit is constrained: they are legally bound to implement treaty obligations and cannot opt out of defending challenged regulations."
+    },
+    {
+      "name": "labor_standards_enforcement_agencies",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Agencies enforcing labor standards (OSHA, NLRB, Canadian provincial labour ministries, Mexican STPS) that face ISDS challenges when labor protections affect investor returns. Same structural position as environmental regulators: bear defense costs, experience chill, constrained exit. The NAALC side agreement provides a weaker, state-to-state track that does not displace ISDS exposure."
+    },
+    {
+      "name": "subnational_governments_states_provinces",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "U.S. states, Canadian provinces, Mexican states bound by NAFTA obligations negotiated at federal level. They have no formal standing in ISDS proceedings (which are federal-state) but their laws are challenged and they bear implementation costs. Their exit is constrained — they cannot withdraw from the treaty and have limited influence on federal trade policy. They are the 'forgotten federalism' layer in the jurisdictional boundary."
+    },
+    {
+      "name": "affected_communities_near_pollution_sources",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Communities (often Indigenous, low-income, communities of color) located near industrial facilities whose pollution is regulated by the very measures vulnerable to ISDS challenge. When regulation is chilled or rolled back due to investment treaty risk, they bear the health and environmental costs directly. Their exit is trapped — they cannot relocate easily, and their political voice is minimal in treaty interpretation. They are not parties to the treaty but are structurally positioned as its ultimate victims."
+    },
+    {
+      "name": "arbitral_tribunals",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Ad hoc tribunals (ICSID, UNCITRAL, NAFTA Chapter 11) that interpret the treaty's jurisdictional boundary — defining 'investment', 'expropriation', 'fair and equitable treatment', and the 'legitimate objectives' / 'non-discriminatory' exceptions. Their rulings create the de facto boundary. They are not elected, not structurally accountable to affected communities, and their reasoning becomes precedent for future tribunals. They set the agenda for what counts as legitimate regulation."
+    },
+    {
+      "name": "domestic_courts",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "National supreme courts (U.S. Supreme Court, Supreme Court of Canada, Mexican SCJN) that apply the treaty as supreme law under their constitutional hierarchies. They review domestic implementing legislation and occasionally ISDS awards for enforcement. They observe the jurisdictional boundary from within the domestic legal order but cannot modify the treaty itself. Their role is interpretive and enforcement-oriented, not agenda-setting for the treaty's evolution."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Creates a predictable, rules-based framework for cross-border investment and trade across three asymmetric economies, reducing the risk of arbitrary expropriation and discriminatory treatment. Provides a dispute resolution mechanism (ISDS) that substitutes for diplomatic protection and domestic court bias. The side agreements (NAALC, NAAEC) create parallel cooperation tracks for labor and environment.",
+    "transfer_function": "Moves litigation costs, regulatory risk, and occasional damages awards from domestic regulators (and ultimately taxpayers and affected communities) to investors and their legal representatives. Moves regulatory autonomy at the margin from subnational and national governments to arbitral tribunals. The transfer is asymmetric: investors gain enforceable rights; regulators bear defense costs and chill.",
+    "absent_voices": "Affected communities (especially Indigenous and environmental justice communities) are structurally excluded from ISDS proceedings — no standing, no notice, no participation. Subnational governments have no formal voice in treaty interpretation despite bearing implementation costs. Future generations who inherit the regulatory constraints locked in by treaty precedent. These voices would object to the asymmetry but are not in the room.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the embedded liberalism reading vanished overnight, the jurisdictional boundary would be contested outright between capital_supremacy and sovereignty_primacy readings. Investors would lose the 'legitimate objectives' defense framework but keep ISDS access; regulators would lose the non-discrimination safe harbor but gain political space to assert sovereignty. The USMCA renegotiation shows the world rearranges: Chapter 11 gutted for US-Canada, reformed for US-Mexico, new labor/environment enforcement. The constraint's disappearance triggers institutional reorganization.",
+    "founding_problem": "Post-WWII trade regime needed to reconcile two imperatives: (1) open markets and investment flows for growth, and (2) domestic policy space for full employment, social protection, and environmental stewardship. The embedded liberalism compromise (Ruggie 1982) was the answer: international rules for market access, domestic autonomy for legitimate regulation. NAFTA (1994) extended this to investment via Chapter 11, with side agreements for labor/environment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The embedded liberalism framing is corroborated by Ruggie (1982), Kahler (2013), and the original NAFTA negotiating record (USTR archives, Canadian and Mexican government documents). The 'contested' status is corroborated by: (a) investor-state claimants and tribunals who read the treaty as stronger investor protection (capital_supremacy Reading); (b) labor/environmental NGOs and Global South governments who read it as sovereignty erosion (sovereignty_primacy Reading); (c) the USMCA renegotiation itself, which restructured the bargain because the founding problem's balance had broken down. No single party's self-assertion settles it."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "nafta_jurisdictional_boundary"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "capital_supremacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sovereignty_primacy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legitimate_objectives_exception_preserves_regulatory_space",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "non_discrimination_as_boundary_condition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "embedded_liberalism_compromise_1947",
+    "drift_state": {
+      "moment": "post_nafta_chapter11_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

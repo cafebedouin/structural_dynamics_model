@@ -1,0 +1,324 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_decision_authority__autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-24",
+    "status": "ACTIVE",
+    "story_uid": "8964121f-0469-48e4-a98a-8d6dd2c55768"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.25,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Autonomy-Based End-of-Life Decision Authority",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "competent_adults_seeking_death",
+      "healthcare_professionals_facilitating"
+    ],
+    "victims": [
+      "suffering_prolonged_denied_access"
+    ],
+    "vindicated_propositions": [
+      "bodily_autonomy_principle",
+      "informed_consent_doctrine",
+      "self_ownership_thesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "competent_adults_seeking_death",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Competent adults who seek to end their suffering through assisted death. They benefit from sovereign authority by avoiding unwanted prolongation of suffering, maintaining dignity, and exercising control over their final days. Their exit options are constrained by legal prohibition in most jurisdictions — they cannot legally access the option without traveling to permissive jurisdictions (expensive, logistically difficult) or resorting to unassisted methods (riskier, more painful)."
+    },
+    {
+      "name": "suffering_prolonged_denied_access",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Competent adults who would choose assisted death if legally available but are denied access by current law. They bear the full cost of the constraint: prolonged suffering, loss of dignity, forced dependence, and the psychological burden of knowing a peaceful alternative exists but is legally blocked. Their exit options are effectively trapped — they cannot end their suffering on their terms, cannot legally travel for access (too ill, no resources), and unassisted methods may be beyond their physical capacity."
+    },
+    {
+      "name": "healthcare_professionals_facilitating",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Physicians and other clinicians who would provide assisted death under an autonomy framework. They benefit professionally by being able to honor patient requests without legal jeopardy, aligning practice with their understanding of beneficence and autonomy. They also function as agenda-setters by defining clinical criteria, establishing safeguards, and shaping implementation. Their exit options are mobile — they can refuse participation (conscientious objection) or relocate to permissive jurisdictions without losing professional standing."
+    },
+    {
+      "name": "healthcare_institutions_hospice_palliative",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hospitals, hospices, and palliative care organizations that would implement assisted death protocols. They set institutional policy, establish oversight committees, and bear implementation costs. They are constrained by legal environment, professional guidelines, and community values — cannot easily opt out of legal frameworks but can shape how they operationalize them."
+    },
+    {
+      "name": "religious_ethical_opponents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Religious organizations and ethical traditions that oppose assisted death on sanctity-of-life grounds. They are structurally excluded from the autonomy reading's framework — their objection is not a parameter within the model but a competing framework. They can mobilize politically, influence legislation, and provide alternative care, but cannot veto individual decisions under an autonomy regime."
+    },
+    {
+      "name": "vulnerable_populations_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Disability rights organizations, elder advocacy groups, and bioethicists who warn that autonomy-based frameworks create subtle coercion for vulnerable populations (pressure to choose death to avoid burdening families, inadequate palliative alternatives). They are excluded from the autonomy reading's beneficiary/payer calculus — their concern is systemic risk, not individual denial. Their exit is constrained: they must engage the political/legal process to institutionalize safeguards."
+    },
+    {
+      "name": "bioethics_scholars_autonomy_tradition",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars in the autonomy-based bioethics tradition (Beauchamp & Childress, Dworkin, Brock) who provide the theoretical architecture for this reading. They analyze conceptual coherence, track empirical outcomes in permissive jurisdictions, and refine the normative framework. Their seat is analytical — they neither collect rents nor bear costs from the constraint's operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Resolves the coordination problem of who has final authority over the timing and manner of death when a competent person's values conflict with medical technology's capacity to prolong biological life. Without a clear authority rule, decisions default to clinicians, families, or institutional protocols — none of which reliably track the person's own values.",
+    "transfer_function": "Transfers decision-authority over life-ending interventions from medical gatekeepers (physicians, institutions, state) to the competent individual. The transfer moves: (1) the legal right to request and receive assisted death, (2) the professional obligation to assess eligibility and provide the intervention, (3) the risk of error from institutional denial to individual choice. The flow is from collective/medical control to individual sovereignty.",
+    "absent_voices": "Future competent adults who will face end-of-life decisions under whatever regime is established — they cannot object to the framework they will inherit. Also absent: those who died under prohibition without ever knowing assisted death was a conceptual possibility (historical silence). Vulnerable populations advocates are partially present as excluded stakeholders but their systemic risk argument is not a veto within the autonomy framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the autonomy-based authority constraint vanished overnight, decision-making would revert to medical paternalism, family consensus, or state prohibition in most jurisdictions. Competent adults would lose legal access to assisted death; healthcare professionals would lose legal protection for providing it; suffering-prolonged individuals would remain trapped. The world of end-of-life practice would rearrange substantially — the constraint is not a natural fact but a constructed legal/ethical arrangement.",
+    "founding_problem": "The historical problem was medical technology's capacity to prolong biological life indefinitely without regard for the person's values, creating a new category of suffering: competent individuals trapped in bodies they experience as sources of unrelievable torment, with no legal exit. The autonomy reading was built to solve this by establishing the person as the sovereign authority over the boundary between life and death.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by the autonomy tradition itself (Dworkin's 'Life's Dominion', Brock's 'Voluntary Active Euthanasia', Oregon/Washington/Canada/Netherlands legislative findings). Outside corroboration: palliative care clinicians who witness the suffering-prolonged cohort (Chapple et al. BMJ 2006; Ganzini et al. JAMA 2009), disability rights advocates who acknowledge the reality of unrelievable suffering while disputing the autonomy solution (Not Dead Yet testimony), and the European Court of Human Rights (Pretty v UK, Lambert v France) recognizing the Article 8 engagement even while deferring to states."
+  },
+  "interval": {
+    "start": 1990,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1997,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1997,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1997,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.25
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story represents the autonomy reading of the end-of-life decision authority kernel: the claim that competent individuals possess sovereign authority over their own death. Under this reading, the constraint is the legal/ethical arrangement that recognizes and protects this authority — permitting assisted death for competent adults who request it, with clinical safeguards but without requiring external approval of the person's reasons. The constraint has evolved from near-total prohibition (high extraction from the suffering-prolonged, high suppression of the option) toward increasing legal recognition in multiple jurisdictions (Oregon 1997, Netherlands 2001, Canada 2016, etc.), reducing both extractiveness and suppression over the interval. The autonomy reading frames this as a coordination solution: it solves the problem of conflicting authorities by assigning final say to the person whose life it is.",
+    "logic_rationale": "Extractiveness is low (0.15 at interval end) because the constraint primarily *removes* extraction — it stops the state/medical establishment from extracting continued life from competent adults who do not want it. The residual 0.15 reflects implementation costs (safeguards, assessments, oversight) that fall partly on the healthcare system and partly on requesters (waiting periods, multiple assessments). Suppression is low-moderate (0.25) because while the constraint itself is not suppressive, the residual prohibition in non-permissive jurisdictions still suppresses access for many. Theater ratio is low (0.10) because the safeguards (capacity assessment, voluntariness verification, waiting periods) are functional — they serve the genuine coordination need of preventing error/coercion, not performative compliance. Accessibility collapse is moderate (0.35) because alternatives (palliative sedation, VSED, travel) exist but are imperfect substitutes. Resistance is moderate (0.55) reflecting ongoing political, religious, and professional opposition even in permissive jurisdictions.",
+    "directionality_logic": "The autonomy reading structurally positions competent adults seeking death as beneficiaries (they gain legal access to a peaceful death aligned with their values) and the suffering-prolonged denied access as payers under the *counterfactual* prohibition regime (they bear the cost of the constraint's absence). In permissive jurisdictions, the suffering-prolonged become beneficiaries too — the constraint's expansion converts them from payers to beneficiaries. Healthcare professionals facilitating are dual-positioned: beneficiaries (professional integrity, legal protection) and agenda-setters (they define and implement the clinical pathway). Religious/ethical opponents and vulnerable-population advocates are excluded — their objections operate at the kernel level, not within this reading's framework. The analytical observer seat sees the full structural field.",
+    "perspectival_gap": "The payer seat (suffering_prolonged_denied_access) experiences the *absence* of this constraint as high extraction and high suppression — they are trapped in suffering the constraint would relieve. The beneficiary seats (competent_adults_seeking_death, healthcare_professionals_facilitating) experience the constraint's presence as coordination: it solves the authority problem cleanly. The engine computes this divergence from the structural data: the same legal arrangement is extractive from the denied-access seat and coordinative from the granted-access seat. The claimed_type 'rope' reflects the autonomy reading's self-understanding; the engine may compute different per-seat types.",
+    "mandatrophy_analysis": "The autonomy reading's founding problem (unwanted life prolongation by medical technology) remains live — if anything, technology has expanded the space of prolonged dying. The constraint has not atrophied; its domain has expanded. Mandatrophy is not resolved; the mandate is arguably strengthening as more jurisdictions adopt autonomy-based frameworks. The vulnerability_protection_reading's systemic risk concerns (coercion, inadequate palliative care) represent a genuine contested successor-problem, not mandatrophy of the original.",
+    "kernel_context": "This constraint is the autonomy_reading of the end_of_life_decision_authority kernel. Sibling readings: sanctity_reading (life has intrinsic value independent of will; intentional life-ending is wrong) and vulnerability_protection_reading (authority must be distributed across institutional checkpoints to prevent both denial and coercion). The autonomy reading forecloses the sanctity_reading's core premise within a single legal framework — a jurisdiction cannot simultaneously hold that competent individuals have sovereign authority over their death AND that intentional life-ending is intrinsically wrong regardless of consent. It coexists_with the vulnerability_protection_reading — many autonomy-based regimes incorporate institutional safeguards (waiting periods, second opinions, psychiatric evaluation) that respond to vulnerability concerns without accepting the distributed-authority premise. It influences the vulnerability_protection_reading by setting the terms of debate: vulnerability advocates must now argue for safeguards *within* an autonomy framework rather than for prohibition."
+  },
+  "omegas": [
+    {
+      "id": "autonomy_vs_vulnerability_boundary",
+      "question": "Where does the autonomy reading's sovereign authority boundary dissolve into the vulnerability protection reading's distributed checkpoint model? At what point do safeguards become vetoes?",
+      "resolution_mechanism": "Empirical analysis of jurisdictions with autonomy-based laws: track rates of denied requests, reasons for denial, time-to-access, and whether safeguards function as quality filters or de facto prohibitions for specific populations (cognitive impairment, psychiatric diagnosis, disability).",
+      "impact": "If safeguards function as vetoes for vulnerable populations, the autonomy reading de facto converges on the vulnerability_protection_reading's distributed authority model. If safeguards are near-universally passable for competent requesters, the autonomy boundary holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether autonomy-based safeguards operate as functional filters or structural vetoes for vulnerable populations."
+    },
+    {
+      "id": "sanctity_foreclosure_mechanism",
+      "question": "Does the autonomy reading's legal recognition *require* the sanctity reading's foreclosure, or can a pluralistic framework accommodate both (e.g., conscientious objection for clinicians, institutional opt-out for religious hospitals) without logical contradiction?",
+      "resolution_mechanism": "Legal-philosophical analysis of conscience clauses in permissive jurisdictions: do they create a dual-track system that preserves sanctity commitments for objectors while securing autonomy for requesters, or do they create access gaps that undermine the autonomy right?",
+      "impact": "If pluralistic accommodation is stable, the forecloses relation is too strong — the readings coexist_with at the institutional level. If accommodation creates systematic access denial, forecloses stands.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether sanctity-based objection can be institutionally accommodated without negating autonomy-based access."
+    },
+    {
+      "id": "slippery_slope_empirical_status",
+      "question": "Does the autonomy reading's externalization of slippery-slope risk (to the vulnerability_protection_reading) hold empirically? Have permissive jurisdictions seen expansion beyond competent adults (to minors, psychiatric-only, dementia advance directives) that validates the vulnerability concern?",
+      "resolution_mechanism": "Longitudinal tracking of eligibility expansions in Netherlands, Belgium, Canada, Oregon: statutory changes, court rulings, reported cases. Compare expansion trajectory to vulnerability_protection_reading's predicted failure modes.",
+      "impact": "If expansions track vulnerability predictions, the autonomy reading's externalization is falsified — the slippery slope is internal to the autonomy framework's logic. If expansions are absent or constrained, the externalization holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether empirical expansion patterns in autonomy-based regimes validate vulnerability_protection_reading's risk model."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_decision_authority__sanctity_reading",
+      "end_of_life_decision_authority__vulnerability_protection_reading"
+    ],
+    "dual_formulation_note": "This constraint is the autonomy_reading of the end_of_life_decision_authority kernel. The kernel decomposes into three structurally distinct constraints with different ε values, beneficiary/victim structures, and claimed types. The autonomy reading (this file) claims rope with low extractiveness; sanctity_reading claims mountain with near-zero extractiveness (from its own frame); vulnerability_protection_reading claims scaffold with moderate extractiveness (institutional checkpoint costs). They are linked via affects_constraints and reading_relations in cs_structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sanctity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "vulnerability_protection_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competent_individual_sovereign_authority_over_death",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "bodily_self_ownership_includes_death_timing",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "classical_medical_paternalism",
+    "drift_state": {
+      "moment": "contemporary_permissive_jurisdictions",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_nemotron+rescue1",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=disabled",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
