@@ -138,32 +138,20 @@ determinism-boundary "floor" (priority/type stay a declared seat), and the gotch
 
 **Hooks are versioned project apparatus — `.claude/settings.json`, `.claude/agents/` and
 `.claude/skills/` are ALL COMMITTED; the rest of `.claude/` is machine-local** (`.gitignore` uses
-`.claude/*` + three negations; the bare `.claude/` form makes a negation silently inert — the
-comment there explains why). **So files under `agents/`/`skills/` ARE git-witnessable and a fresh
-clone HAS them — a gate row over one is legitimate** (corrected 2026-08-23: the old "everything
-else under `.claude/` is machine-local" wording was stale, and had already talked a planner out of
-a gate row as impossible-by-construction — OQ-337). Three hooks
-fire on their own, so expect them rather than being surprised: `SessionStart` prints the
-activation menu; `PostToolUse` re-runs the `ISSUES.md` grammar gate whenever you edit that file;
-`PreToolUse` injects the KNOWN_STATE `tripwire`/`correction-key` entries naming any file you are
-about to `Edit`/`Write` (`python/pretooluse_tripwires.py`, selftest in the gate). **Consequence
-when you author a KNOWN_STATE entry: `Tier:` is now a ROUTING decision — a standing warning filed
-as `landed` is never delivered to an editor.** **AND the PreToolUse matcher is `Edit|Write` ONLY
-(2026-08-20), so an edit made through the Bash tool — `sed`, a heredoc, a short script, which is
-what auto mode instructs — NEVER fires the hook and produces the same silence as a clean query.**
-Hook silence therefore means "queried, matched nothing" *only when you actually used Edit/Write*;
-after a Bash-driven edit it means **never queried**, which is indistinguishable at the read site.
-Editing `ISSUES.md`, `KNOWN_STATE.md` or a high-traffic engine file through Bash: run
-`python3 python/known_state_status.py --file <path>` yourself, BEFORE the edit. (A query that
-cannot run still says so loudly; a query never dispatched says nothing at all. Witnessed with a
-two-sided control — the script fires on `ISSUES.md`/`README.md`, declines on `LICENSE`; the hole is
-in the matcher, not the code. **The one witnessed near-miss came out CLEAN BY LUCK, not by a
-control** — OQ-329 was minted at the tail of `ISSUES.md` hours after the tripwire warning about
-exactly that was written, and the footer survived only because the mint happened to anchor above
-`*Last updated:`; `grep -c` returning 1 is therefore a success-shaped reading with nothing behind
-it, and must not be cited as evidence the channel works. Provenance + the operator's ruling —
-**build the hook's call-witness first, rule coverage second** (OQ-330): KNOWN_STATE 2026-08-20.) To
-add or change one, edit `.claude/settings.json` and commit it with the change it serves.
+`.claude/*` + three negations — the bare `.claude/` form makes a negation silently inert). Files
+under `agents/`/`skills/` are git-witnessable and a gate row over one is legitimate (OQ-337). Three
+hooks fire on their own: `SessionStart` prints the activation menu; `PostToolUse` re-runs the
+`ISSUES.md` grammar gate when you edit that file; `PreToolUse` injects the KNOWN_STATE
+`tripwire`/`correction-key` entries naming any file you `Edit`/`Write`
+(`python/pretooluse_tripwires.py`). **Two consequences.** (1) A KNOWN_STATE `Tier:` is a ROUTING
+decision — a standing warning filed as `landed` is never delivered to an editor. (2) **The
+PreToolUse matcher is `Edit|Write` ONLY, so a Bash-driven edit (`sed`, heredoc, script — what auto
+mode instructs) NEVER fires it, and that silence is indistinguishable from "queried, matched
+nothing."** Before editing `ISSUES.md`, `KNOWN_STATE.md` or a high-traffic engine file through
+Bash, run `python3 python/known_state_status.py --file <path>` yourself. (The one near-miss, OQ-329,
+came out clean by luck, not by a control — do not cite it as evidence the channel works; ruling
+*build the hook's call-witness first, rule coverage second*: OQ-330, KNOWN_STATE 2026-08-20.) To
+add or change a hook, edit `.claude/settings.json` and commit it with the change it serves.
 
 **Implementation wiring notes:** `docs/technical/` holds file-level notes on non-obvious wiring,
 operator-precedence bugs, fact-adapter patterns, and query gotchas — things that caused real bugs,
@@ -524,421 +512,189 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
 ## Build Discipline (recurring failure modes — check before declaring work done)
 
 These defects recur across unrelated subsystems because the producing step is interesting and the
-reconciling step is boring; each looks complete at the moment it's introduced. Full patterns,
-instances, and diagnostics: `docs/technical/build_discipline.md`.
-
-**Numbering is SETTLED (OQ-278, ruled 2026-08-14/17; the interim citation freeze is LIFTED).**
-Both documents publish the same member at the same index — seven members at eight slots, index 3
-a grave that is never reused — and that agreement is machine-checked per index, not per count:
-`python3 python/doc_pattern_check.py --check` (gate row `doc patterns`). Two residues survive the
-lift. **`Pattern N`/`PN` is still seven-way overloaded outside this taxonomy** (also
-`prolog/diagnostic_summary.pl`'s `P1`–`P10` conflict catalog, `Priority:` levels, the concealment
-paper's `CWC:P3`, essay/protocol enumerations, decompose-manifest `candidate_pattern`, a Prolog
-variable), so name the taxonomy whenever the surrounding text does not already say *build
-discipline*. And **a pre-2026-08-17 `Pattern 3`/`P3` in the record means the mechanism, not the
-index** — *bound-probe* (now 7) or the vacated *destructive-replace*; their swept population is
-declared in the `displaced cites` gate row, and an undeclared new one turns it red.
-
-**A denominator that silently admits non-members gets WORSE while reading STABLE (2026-08-17;
-OQ-306 RESOLVED 2026-08-21).** The sibling of *a gating count needs its composition*, on the other
-side of the fraction. Corpus membership is by FILENAME (`corpus_loader:corpus_constraint/1`), so
-`manifest.n_constraints` counts anything in `testsets/` — including the `*_contradictions.pl` axiom
-meta-files, which carry one predicate and no story blocks. **The pattern is the GROWTH, not the
-presence:** that stratum went **9 → 26** (live on-disk census, 2026-07-02 → 2026-08-17; 27 today)
-with nothing going red, and a *growing* contaminant silently rewrites a time series rather than
-biasing it constantly — historical rates stop being comparable to current ones even when each was
-correct when computed. **Count it live, NEVER from git** — git tracked 4 of those 9, and the
-tracking series (4 → 5 → 22 → 26) reads like growth while recording only when files got committed. It survived because
-four consumers each excluded it *locally* and no single fact said "these are not stories" (Pattern 2
-in its census form: canonicity of the POPULATION is a memory). **Rule: a published or gated
-denominator names a checked membership predicate — a fact-family test, not a filename convention —
-and the guard is on the share OVER TIME.** Diagnostic: count members lacking the numerator's
-precondition; if that count *changed* since the rate was last published, every cross-time
-comparison is invalid.
-
-**Now built, so USE IT rather than re-deriving:** `corpus_loader:corpus_story/1` and
-`corpus_member_kind/2` are the checked membership predicates; `manifest.n_stories` is the
-story-rate denominator (`n_constraints` still counts MEMBERS and is kept only as a same-run
-identity key — the naming debt is recorded at `build_manifest`); gate row **`corpus census`**
-guards the share over time. **Two live tripwires:** the stratum can move with **no commit at all**
-(a topic run's cid-scoped auto-commit does not cover the `*_contradictions.pl` it emits), so git
-history UNDERSTATES it and a `git ls-tree` reconstruction can be a corpus state that never existed;
-and `schema_version` is now **3**, which a `!= 2` reader refuses. Detail: `build_discipline.md` → *A
-denominator that silently admits non-members*; KNOWN_STATE 2026-08-21.
-
-**1. Produced-but-not-consumed (the dangling wire).** Data is generated and written, and nothing
-reads it back into the thing that needs it (unread `*_sensitivity_results.json`;
-`kernel_grouping.json` not stamped into the `.pl` files). **Rule: a producer is not done until
-something consumes its output** — wire the consumer in the same change or add a check that fails
-loudly. **But an absent consumer is not evidence of an unfinished build — it is equally consistent
-with a deliberate severance, and this rule applied blind PRODUCES that defect** (witnessed
-2026-08-15: an instance correctly found `epsilon_bin` consumerless and proposed wiring it to the
-authoring prompt, which OQ-34 forbids generally and OQ-117 specifically). **When you cut a channel
-on purpose, the marker goes on the field, at the site**, so the dangling producer carries its own
-history; grepping KNOWN_STATE/closed OQs before wiring is the fallback for pre-rule severances, not
-the rule — it burdens someone who does not yet know there is anything to find. Detail:
-`build_discipline.md` → *The wire that was cut ON PURPOSE*. **And consumed-once is not kept-fresh:** wire every new producer/consumer into
-`python/run_pipeline.py` in dependency order and re-certify the whole transitive chain downstream
-(`pipeline_output.json` → `enrich` → `enriched_pipeline.json` → `enhanced_report.py`); a
-post-process the orchestrator never re-runs goes silently stale (the `w1_sheaf_join` artifact
-froze at n=563 while the corpus grew to 772). Make freshness checkable: stamp the run manifest
-into co-produced artifacts (the `orbit_data.manifest.json` sidecar) and assert same-run before
-joining.
-
-**2. One-canonical-thing-became-two (the silent fork).** A file gets copied to a scratch/test
-location and edited; two versions exist with no queryable fact saying which is canonical (the
-duplicated `generate_kernel_corpus.py`; the old ISSUES/AGENDA/PRIORITIES/TODO tracker sprawl).
-**Rule: one canonical location per thing, and canonicity must be a checked fact (a path in docs,
-a CI check), not a memory.** Prefer a branch over a test copy. Resolve found forks by evidence
-(which path run-commands invoke, which imports resolve, git recency) — not preference — and
-record the verdict in KNOWN_STATE.md.
-
-**3. — VACATED 2026-08-11 (operator ruling). Index deliberately left EMPTY; do not reuse or
-renumber.** *Destructive-replace without proof* was demoted from a defect pattern to a **witness
-rule** (below) on four converging lines: no mechanism text in `build_discipline.md`; no dated
-exemplar in any version (alone among the six); a shared index (the number 3 then named a
-*different* mechanism in the detail doc — that mechanism is now **Pattern 7**, moved off the grave
-rather than left on it); and **no instance on a search built to find one** — the failure-shape
-sweep returned five post-discipline destructive commits, four prevention records, one non-deletion,
-and **zero** deletions that had to be undone, with the sweep's ability to find established
-independently (three real delete→restore episodes before the rule existed; fires when witness
-language is stripped). A loud failure is not a member of a taxonomy of absences-that-present-as-
-presences: **a deletion that gets undone announced itself — the restoration is the notice.** The
-index is not reused because every dated audit citing P4/P5/P6 would become ambiguous against its own
-history: *a visible gap is a checked fact; a silent renumber is a fork* (Pattern 2 applied to the
-numbering). The 2026-08-17 ruling honours that: nothing was shifted *down* into the grave — the one
-member that did move went **up** to a fresh index, and its stranded citations were swept and
-declared before the move (gate row `displaced cites`). Provenance:
-`amnesiac_institution_v0_6.md` §5.2, `d0c3c5fb`, ISSUES OQ-278.
-
-> **The rule itself survives intact, as a WITNESS RULE — prove before you replace.** Before
-> deleting, retiring, or overwriting any script, sweep, data file, or generator that something
-> relies on: run old and new, paste both outputs, diff them, show identity or justify every
-> difference in the same change. "Structurally equivalent" is a code-read, not proof — the diff is
-> proof. Consolidating N into one is N separate old-vs-new diffs, each before its standalone is
-> retired. It is a *discipline* (a thing one does), not a *defect shape* (a way systems fail
-> silently) — which is the whole content of the demotion.
-
-**4. Fabricated default (the missing-data fallback that emits a real-looking value).** A predicate
-whose input is absent binds a plausible constant instead of failing or returning `unknown`. **The
-tell is a catch-all clause binding a metric to a constant** — `(measurement(..., V) -> true ; V =
-0.5)`. Downstream receives a real-looking number and treats it as a measurement; nothing errors,
-warns, or flags coverage, so a fabrication is distinguishable from a genuine reading only by
-perturbation. **Rule: return `unknown`, never a plausible value** — an out-of-band token the caller
-is forced to handle. **Diagnostic: count how often the fallback actually fires on the corpus** — if
-more than a handful, it is a fabrication, not a safety net; then tripwire it (swap the constant for
-an obviously out-of-range value and count the flips). Witnessed LOAD-BEARING-WRONG:
-`classify_at_time`'s `Supp=0.5` fired on 190/190 live testsets, and 443/519 non-unknown temporal
-classifications flipped to `unknown` under a poisoned source (OQ-33) — while the static path
-fabricated the *same* gap as `0`, so two surfaces invented different fillers and their divergence
-was artifact, not signal. **Report two numbers, not one:** the flips are the *census* blast radius
-and systematically undercount the *input-exposure* (rows computed on the fallback at all). Full
-entry: `build_discipline.md` → *Pattern 4*.
-
-**5. Absence satisfies the gate (authored-zero vs absent).** A gate, threshold, or quantifier
-passes because its input is *missing*, not because a condition was *checked*: `Count == 0` is
-true when no facts exist; `forall(P, Q)` is vacuously true on an empty table; `V =< Ceil` passes
-on a fabricated default. Instance: `natural_law_signature`'s `BeneficiaryCount == 0` reads
-`intent_power_change`, empty corpus-wide — the 404 NL certifications mean "no beneficiary
-*authored*," not "none *exists*" (OQ-43). **Rule: a gate over a possibly-empty table must
-establish the datum was authored before it may pass — fail-closed on absence, not pass-open.**
-Diagnostic: count the source predicate's facts on the corpus; 0 ⇒ the gate is a no-op.
-Engine-wide audit: OQ-44. **The dual (OQ-178): before fail-closing on an absence, confirm it is
-GENUINE, not a probe landing off the authored grid.** A query at a synthetic key (e.g.
-`classify_at_time` at `Time=0`) against data authored on a *different* grid (a story whose ε series
-starts at 1900) reads as "absent" while the datum exists — fail-closing there *discards* authored
-data and can erase real signal (witnessed: erased a true snare/scaffold kernel divergence). If a
-probe ON the authored grid would find it, the fix is the probe, not the fail-close.
-
-**6. Success-shaped absorption (measured-empty vs didn't-look collapse at aggregation/channel
-boundaries).** An aggregation or channel that cannot distinguish *measured-empty* from
-*didn't-look* emits success-shaped output either way — and each component is individually sound,
-so no site-level check catches it; the absorption lives where they compose. Three instances
-witnessed in one day (2026-06-10): `system_gradient`'s `[] → 0.0` fallback (every gradient ever
-computed had failed via a cut bug; the fallback made failure byte-identical to measured-flat for
-the construct's whole life); `grep -v Warning` (a dead-module warning printed at every load for
-four months into a universally filtered channel, then crashed the suite — OQ-96); findall-over-
-partial-levels (an 8/32 one-level grid read as a full-system `increasing_coercion` verdict).
-**Rule: aggregates carry their COVERAGE to the read site; channels carry ALLOWLISTS
-(`python/load_warning_gate.py` is the template — never `grep -v Warning` over load output);
-defaults-on-empty return `unknown`/OPEN, never a plausible value. Sufficiency is a property of
-the QUESTION, not the dataset — fail-closed per-question (consumer-named requirements), not by
-global fraction.** Full entry + diagnostics: `build_discipline.md` → Pattern 6; candidate-site
-census: OQ-97.
-
-**7. Bound-probe bypasses clause-order (a BOUND selecting argument skips the cut — census
-unbound, or the count is manufactured).** `findall(C, constraint_signature(C, natural_law), Cs)`
-does **not** answer "the engine assigns `natural_law`"; earlier lock clauses fail to *unify* on
-the wrong atom, so their cuts never execute and the query falls through. It answers "satisfies
-that clause body in isolation." **Rule: any `findall`/`forall`/`aggregate_all` over a cut-ordered
-predicate with the *selecting* argument bound is suspect — re-run unbound with `once/1` +
-post-filter by equality.** Asymmetry worth knowing, because it says when you need not re-run: the
-bound form is **over-permissive**, so a bound-arg **zero is conservative and trustworthy**, while a
-bound-arg **nonzero is an artifact until checked**. Witnessed twice on the same predicate and the
-same atom — 2026-05-30 (bound 1 vs real 0) and 2026-08-17 (`constraint_signature(C, ambiguous)`
-276 vs real 0, which inflated a denominator and concealed that **67% of kernel_v1 signatures
-resolve to `unknown`**). For this rule class the documentation channel measured **dead** — six
-defect sites across five surface kinds found by one sweep — so the working guard is mechanical:
-gate row `bound selector` (`python/bound_selector_check.py`), with the incidence ledger kept at
-the rule. Full mechanism, worked example, diagnostic: `build_discipline.md` → *Pattern 7*.
-
-**8. Recap-as-witness substitution.** *Paste-or-untag* at the turn boundary: a turn reporting N
-edits done must paste N witnesses — M<N is the defect (observed: "three edits witnessed" with
-only the third pasted); the operator reads any done-claim lacking a same-turn paste as
-unverified, regardless of the recap.
-
-The first two share a root: **the corpus/codebase you are building for is not the one on disk
-now.** Build naming schemes, linkage rules, and reports correct for the corpus you intend
-(thousands of stories, regeneration under schema change, found-article ingestion). A scheme that
-*cannot* collide by construction beats one that *happens not to* collide today.
+reconciling step is boring; each looks complete at the moment it's introduced. **This section is
+the tripwire list; the case law — mechanism, dated instances, diagnostics, worked examples — is
+`docs/technical/build_discipline.md` (one `##` section per rule named below; its top carries a
+glossary for the project vocabulary).** Read the full entry before arguing a rule is inapplicable.
 
 **The spine: every defect here is an absence that presents as a presence.** Something is missing
 — a consumer, a canonical fact, a clause dispatch, an authored datum — and a success-shaped token
 (the producer ran; both copies parse; a plausible `0.5`; the gate passed) fills the hole so the
 read site can't tell it from the real thing. The single fix, everywhere: **carry the provenance
-bit with the value so absence and success stop collapsing to one token at the read site.**
-Concretely: wire-or-fail-loud, checked-canonicity, let the engine dispatch, return `unknown` not
-`0.5`, fail-closed-on-absence.
+bit with the value so absence and success stop collapsing to one token at the read site** —
+wire-or-fail-loud, checked canonicity, let the engine dispatch, return `unknown` not `0.5`,
+fail-closed on absence.
 
-**Diagnostics are not exempt — every probe needs a positive control.** An empty grep, a `findall`
-of `[]`, a count of `0`, an "I found it nowhere" each can mean "nothing there" or "didn't
-dispatch / queried wrong / never ran." This holds for *reasoning*, not just shell: "X appears
-nowhere / is unique" is an unfalsified diagnostic until run against a case you know it must flag.
-**A control demonstrates DISCRIMINATION, not detection (operator ruling, 2026-08-11):** planting the
-target only shows the instrument CAN fire — the witness that its firing carries information is a case
-it **DECLINED**; a control with no decline available is one-sided and licenses nothing, however well
-the plant worked. Grades, strongest first: a decline in the instrument's **own history** > a
-**naturally-arising negative** drawn from the population > an **authored decoy** (which shows only
-that authored decoys get rejected — a floor, report it at that altitude). The control attaches to the
-instrument's **discrimination record, not to each run** — cite the record and show this application is
-in distribution for it, rather than re-planting every turn (the record lapses when population, input
-shape, engine tokens, or role drift). **No decline available anywhere in the population ⇒ the question
-is UNANSWERABLE from this corpus** (a verdict — declare it / route to a typed Ω), not a caveat to ship
-under; **no possible control even in principle ⇒ a verdict on whether the CATEGORY may be added at
-all** (`design_discipline.md` §5). **Silent failure — an instrument validated in one ROLE and reused
-in another:** a matcher whose false positives were conservative as a *detector* becomes silently
-decisive as a *selection metric*; the error profile belongs to the role, not the instrument, so a
-cross-role reuse is a NEW instrument owing its own decline.
-**And a check that CANNOT fail witnesses nothing while looking exactly like one that passed** —
-before reporting any check, ask *what value would make this line fail?*; if none exists (sums
-that balance by construction, a partition built by set-difference, a total recomputed from its
-own parts) it is a *consistency* check, not verification, and the discriminating control is
-still owed (`build_discipline.md` → *A consistency check is not a discrimination check*;
-witnessed 2026-08-10 — "73 + 101 = 174, partition exact" concealed an uncontrolled census that
-proved to be a positional parse, so **pin `/usr/bin/grep`, not `grep`, in any script computing
-a reported count**). **And the control you ADD is itself a claim:** a positive control, canary, fallback, or
-perturbation harness introduced to discharge this discipline inherits it — same-path, two-sided,
-riskiest-shape, substrate-anchored, write-free-if-pre-write (the confound reopens at the level of
-the tool you closed it with). Full table: `docs/technical/build_discipline.md` → *The spine*,
-*Every diagnostic needs a positive control*, *A positive control demonstrates DISCRIMINATION, not
-detection*, and *An introduced instrument is itself a claim*.
+**Numbering is SETTLED (OQ-278, 2026-08-17): seven members at eight indices, index 3 a grave never
+reused; both documents publish the same member per index, gate-checked (`doc patterns` row).**
+`Pattern N`/`PN` is overloaded outside this taxonomy (`diagnostic_summary.pl`'s `P1`–`P10`,
+`Priority:` levels, `CWC:P3`, decompose `candidate_pattern`, …) — name the taxonomy when the
+surrounding text does not. A pre-2026-08-17 `Pattern 3`/`P3` means the *mechanism* (bound-probe,
+now 7, or the vacated destructive-replace), never the index; gate row `displaced cites`.
 
-**A verification section may not pre-authorize dismissal of a signal it has not re-witnessed
-(operator, 2026-08-20).** A plan's Verification block may say what to CHECK; it may not say what to
-**discount** ("expect the `gap surfaces` row red, it's pre-existing, don't attribute it to this
-change") unless the plan re-witnessed that condition at authoring time. An unverified *expect-X-red*
-is a standing licence to ignore X that does not know which X it will be used on. **Worse than an
-ordinary stale premise:** a wrong assertion is checkable the moment someone looks; a wrong dismissal
-suppresses the signal before it reaches a read site, so it leaves no trace in the artifact OR the
-transcript — Pattern 5 moved from the engine to the plan. Witnessed at zero cost 2026-08-20 (the
-baseline was fully GREEN; the KNOWN_STATE entry the instruction came from was two days stale) — but
-the same session DID produce a red that mattered. **Fix:** convert every dismissal into an
-instruction to check ("if X is red, confirm against KNOWN_STATE <date> before attributing it
-elsewhere") — that form survives its premise going stale. **Executor's half:** report the baseline
-you OBSERVED, not the one the plan predicted; the mismatch is a finding about the plan. Detail +
-the stale-commit-count sibling: `build_discipline.md` → *A verification section may not
-pre-authorize dismissal*.
+**1. Produced-but-not-consumed (the dangling wire).** Data is written and nothing reads it back
+into the thing that needs it. **A producer is not done until something consumes its output** —
+wire the consumer in the same change or add a check that fails loudly; wire it into
+`run_pipeline.py` in dependency order and re-certify the transitive chain (`pipeline_output.json`
+→ `enrich` → `enriched_pipeline.json` → `enhanced_report.py`), stamping the run manifest into
+co-produced artifacts so freshness is checkable. **But an absent consumer is equally consistent
+with a deliberate severance, and this rule applied blind PRODUCES that defect** (witnessed
+2026-08-15: `epsilon_bin`, which OQ-34/OQ-117 forbid wiring). When you cut a channel on purpose,
+the marker goes on the field, at the site. Detail: BD → *Pattern 1*, *The wire that was cut ON
+PURPOSE*.
 
-**Write the receiver's prompt before calling a design done — a handoff is a specification test
-(operator ruling, 2026-08-11).** Before declaring a plan, pre-registration, ruling, or design
-finished, write the prompt the next instance would need to execute it. Enumerating what a receiver
-must DO surfaces underspecification that re-reading the design does not: re-reading exercises
-*recognition* (a rule correct in prose passes every time), instructing forces the operational half
-the design never named. Witnessed 3× in one session (OQ-277): a prereg that pinned what is *judged*
-and never what is *shown*; a prose ruling that was confounded once written as an executable draw; a
-stated self-check command that could not consume its own specified format. **It only works if the
-prompt enumerates concrete actions** — "read the design and execute it" is a pointer wearing an
-instruction's clothes and catches nothing. Test: *could a receiver who read only my prompt take a
-wrong-but-reasonable action the design means to forbid?* — every yes is a gap in the DESIGN, not the
-prompt. Corollary: **the terminal is a channel** — when the receiver's output is visible to a party
-the design blinds (an assembler working in the judge's terminal), the prompt must say what may be
-PRINTED, not only what may be done. Detail + instances: `docs/technical/build_discipline.md` →
-*Write the receiver's prompt*.
+**2. One-canonical-thing-became-two (the silent fork).** Two versions exist with no queryable fact
+saying which is canonical. **One canonical location per thing, and canonicity is a checked fact
+(a path in docs, a CI check), not a memory.** Prefer a branch over a test copy; resolve found forks
+by evidence (which path run-commands invoke, which imports resolve, git recency), record the
+verdict in KNOWN_STATE.md. Detail: BD → *Pattern 2*.
 
-**When a defect is found, its BEFORE-COMMIT is a free negative control (operator ruling,
-2026-08-11).** Planted fixtures license only *"authored drift gets rejected"* — the top of the
-discrimination ladder is **a real defect and a real clean state, neither authored to be found**, and
-git already holds both: **the defect's commit is a naturally-arising POSITIVE, its parent a
-naturally-arising NEGATIVE.** So a detector built in response to a defect is not done when its
-fixture passes — run it against `N` and `N−1` and record *fires at N, declines at N−1* as its
-discrimination record (witnessed: `orphaned_controls()` names exactly the two orphaned assertions at
-`4e0d8725` and returns `[]` at `cb1b33e5`). **Availability is not automatic — CHECK, don't assume**
-(of five OQ-277 defects, three had pairs and two did not). **The tension:** the two missing pairs
-were missing *because the defect was caught before commit* — better engineering that destroys the
-free control; catching early is still right, so when a detector will be built in response, preserve
-the defective state deliberately (scratch copy or diff in the commit message). Detail:
-`docs/technical/build_discipline.md` → *When a defect is found, its before-commit is a free negative
-control*.
+**3. — VACATED 2026-08-11 (operator ruling). Index deliberately left EMPTY; do not reuse or
+renumber.** *Destructive-replace without proof* was demoted from defect pattern to the witness
+rule below (no silent mechanism, no exemplar, zero instances on a search built to find one — a
+deletion that gets undone announces itself). The index stays empty so dated audits citing P4/P5/P6
+keep their meaning: a visible gap is a checked fact, a silent renumber is a fork. Rationale: BD →
+*Pattern 3 — VACATED*; ISSUES OQ-278.
 
-**A control must witness that it is CALLED, not only that it works (operator ruling, 2026-08-11).**
-The selftest exercises the function; **something has to exercise the wiring** — a guarded function
-called only from the selftest is an ORPHAN and gets removed or re-wired, never left green.
-Witnessed: two assertions kept **four green selftest lines** after `run()` stopped calling them —
-code correct, assertions would have fired, selftests real, wired to nothing. **Worse than a red
-light**: a red light recruits attention, while green lines from a disconnected control are
-indistinguishable from connected ones AND *add to the control count*, so **control count rises
-while coverage falls**. **Orphaning arrives through REPAIRS** — a replacement lands, the old
-control stays because removal was not part of the fix (minting has a constituency; retirement does
-not), so treat every replacement as an orphaning event and retire in the same change. Forcing
-mechanism + its discrimination record (fires at the commit that created the defect, declines at the
-one before): `docs/technical/build_discipline.md` → *A control must witness that it is CALLED*.
+> **The witness rule survives intact — prove before you replace.** Before deleting, retiring, or
+> overwriting anything something relies on: run old and new, paste both outputs, diff them, show
+> identity or justify every difference in the same change. "Structurally equivalent" is a
+> code-read; the diff is proof. Consolidating N into one is N separate diffs.
 
-**Gate the output, not only the input (operator ruling, 2026-08-11, priced at 219 model calls).**
-**A pipeline verified end-to-end on what it CONSUMES can produce nothing and report green on every
-check.** Witnessed: a driver with three sound gates — count captured payloads before grepping,
-fixtures counted separately, then sweep — all of them **input** gates, and no code path that wrote
-responses at all; a live run made 219 calls, passed everything, printed its expected totals, and
-persisted nothing. **Persist the raw datum first** (before parsing/aggregating — labels are derived,
-text is the datum), **write-then-verify per unit** (a run dying at call 140 leaves 140 recoverable,
-not zero), and note the mirror gate is **necessary but not sufficient** — *captured == expected*
-passes when every file is written empty, so assert count AND non-emptiness AND parses-to-expected-
-vocabulary, reporting out-of-vocabulary values rather than coercing. **Count from the artifact, never
-from the loop** (`len(results)` as a persisted count is a claim about persistence sourced from the
-thing that is not persistence). Sub-shape worth its own tripwire: the driver's `--dry-run` help said
-*"do not write responses/"* and its console line said *"responses/ left empty"* — both **true
-sentences describing a distinction the code never implemented**, so a reader checking for persistence
-found two pieces of evidence that the question had been considered, and no persistence. **And audit
-by enumerating what a spend DEPENDS ON, not by following red lights** — in the same session the
-refusal path got the arc's strongest control because it was red, while the capture path got nothing
-because a writer that does not exist emits no signal. Detail:
-`docs/technical/build_discipline.md` → *Gate the output, not only the input*.
+**4. Fabricated default (the missing-data fallback that emits a real-looking value).** A predicate
+whose input is absent binds a plausible constant instead of failing or returning `unknown`. **The
+tell is a catch-all clause binding a metric to a constant** — `(measurement(..., V) -> true ; V =
+0.5)`. **Return `unknown`, never a plausible value.** Diagnostic: count how often the fallback
+fires on the corpus — more than a handful is a fabrication, not a safety net (`classify_at_time`'s
+`Supp=0.5` fired 190/190; OQ-33). Report both the flip census AND the input-exposure count.
+Detail: BD → *Pattern 4*.
 
-**The receiver's license to refuse — the same construction from the other side (operator ruling,
-2026-08-11).** If an instruction is **correct in prose and wrong when executed**, say so rather than
-comply: "the prompt said to" is not a witness, and a compliant receiver's output looks exactly like
-work while carrying the sender's authority into the substrate. Report the refusal at the volume of a
-completion, and route it back to the sender — silently repairing the instruction leaves the defect in
-the DESIGN, where it fires on the next receiver. **The finding both halves share: enumeration catches
-what recognition doesn't.** Re-reading a design exercises recognition (prose-correct passes every
-time); the receiver must *enumerate* the concrete actions to comply at all, which is where the gap
-shows — so the two constructions are just the two places to force enumeration, before the handoff
-(sender writes the prompt) and at it (receiver refuses). A handoff with neither is two recognitions in
-a row. Corollary: **the receiver's ignorance is load-bearing** — a receiver holding the sender's
-context supplies the missing halves silently and catches nothing; the handoff is the only place a spec
-is executed by someone who did not write it, which makes amnesia the instrument here, not only the
-cost. Scope is narrow — *executed as written, this produces what the design forbids* — not "hard,
-unclear, or I'd do it differently" (that is the *one-sentence flag*, which proceeds; this does not).
-**State the license in the handoff prompt** — an unstated license is not exercised. Five refusals in
-the OQ-277 arc, none caught by a sender re-reading. **Corollary — a running receiver holding
-`file:line` pins LOCKS that file: clearance means checking the whole PIN SET, not the pins you happen
-to know about.** Shifting a pin under a live receiver does not error — the receiver locates by content
-and records a correction with both line numbers, which is now a fabricated provenance note about churn
-that never happened. *One writer at a time* does not cover this: it protects shared trackers, not files
-under active reference, and a writer can obey it completely and still corrupt the receiver's record.
-Detail: `docs/technical/build_discipline.md` → *The receiver's license to refuse*.
+**5. Absence satisfies the gate (authored-zero vs absent).** A gate passes because its input is
+*missing*, not because a condition was checked: `Count == 0` on no facts, `forall` over an empty
+table, `V =< Ceil` on a fabricated default (`natural_law_signature` over the corpus-empty
+`intent_power_change`, OQ-43). **A gate over a possibly-empty table must establish the datum was
+authored before it may pass — fail-closed on absence.** Diagnostic: count the source predicate's
+facts; 0 ⇒ the gate is a no-op. **The dual (OQ-178): before fail-closing, confirm the absence is
+GENUINE, not a probe landing off the authored grid** — a query at a synthetic key against data on
+a different grid reads "absent" while the datum exists; fail-closing there erases real signal.
+Detail: BD → *Pattern 5*.
 
-**Unwired ≠ worthless — judge a subsystem by its contribution, not its consumers.** Pattern 1 is a
-*build-time* rule (finish the wire you create); it does NOT license the audit reflex of calling an
-unwired or zero-firing subsystem cruft. "Has a consumer / is wired into `run_pipeline` / fires on
-the corpus" answers *is it used*, not *is it useful* — the mechanical test every model reaches for,
-and the wrong one for worth. Each subsystem (Boltzmann, FPN, the signature taxonomy, the trajectory
-classifiers) was built to yield a specific analytical product; unwired = the *build* was left
-unfinished, not the *idea* worthless. Adjudicate by value: (1) what product does it yield? (2) does
-a live subsystem already yield it → **duplicate** (cruft); (3) else what would it add → **unique/
-refinement** = *unfinished value*, **wire it or log it in `design_gaps.md`, never retire on wiring
-grounds**. Only duplicate or yields-nothing-interpretable is genuine cruft. Liveness/firing/consumer
-sweeps are evidence that *feeds* this adjudication, not the adjudication. Asymmetry: retiring
-valuable-but-unwired silently destroys a capability; keeping a duplicate is mild clutter — when
-unsure, preserve and adjudicate. Full version + instances (the 8 zero-firing signatures; the
-`snapshot_type`/`degradation_chain` type-path vs `drift_trajectory` metric-series):
-`docs/technical/build_discipline.md` → *Unwired ≠ worthless*.
+**6. Success-shaped absorption (measured-empty vs didn't-look collapse at aggregation/channel
+boundaries).** Each component is sound; the absorption lives where they compose (`[] → 0.0`
+gradient fallback; `grep -v Warning` over load output, OQ-96; findall over partial levels read as
+a full-system verdict). **Aggregates carry their COVERAGE to the read site; channels carry
+ALLOWLISTS (`python/load_warning_gate.py` is the template); defaults-on-empty return
+`unknown`/OPEN. Sufficiency is a property of the QUESTION — fail-closed per consumer-named
+requirement, never by global fraction.** Detail: BD → *Pattern 6*; site census OQ-97.
 
-**Nobody reads a hammer's changelog — name the reader before you keep the record (operator,
-2026-08-12).** The standing question this project keeps asking — **is this history, this audit,
-this new idea load-bearing?** — belongs at *creation* time, where it is cheapest. Before minting any
-record about our own work (changelog, evidence base, provenance note, audit dir, outcome file),
-**name the reader and the decision it changes for them; if you cannot name both, it is cost that
-looks like diligence.** Records EARN their place when a future decider consults them before acting —
-KNOWN_STATE entries passing the promotion test, an audit's re-checkable witness, an ISSUES
-resolution note, amendment provenance in a *derivation* (load-bearing for a proof, academic for a
-tool). They earn NOTHING when the subject is validated by **use**: a tool's changelog, a provenance
-file for something whose proof is that it works, an outcome record justifying apparatus. **The proof
-of a tool is that it works when someone wants to use it** — whoever picks up a `uke_*` protocol or a
-Prolog module has a problem now and will test it on that problem, not read its history. Exception
-that looks like the ban: *forward-facing* version notes (what changed, where it is thin) serve the
-reader deciding whether to trust a section — the test is tense, not length. **This governs MINTING
-only** — *Unwired ≠ worthless* still governs removal, so the posture is reluctant to mint AND
-reluctant to delete. Tell: "provenance matters" / "for the record" with no named reader is the
-phrase doing a reason's work; often the honest home is the commit message. Full version:
-`docs/technical/build_discipline.md` → *Nobody reads a hammer's changelog*.
+**7. Bound-probe bypasses clause-order (a BOUND selecting argument skips the cut — census
+unbound, or the count is manufactured).** `findall(C, constraint_signature(C, natural_law), Cs)`
+answers "satisfies that clause body in isolation," not "the engine assigns `natural_law`" —
+earlier lock clauses fail to unify, so their cuts never run. **Any `findall`/`forall`/
+`aggregate_all` over a cut-ordered predicate with the selecting argument bound is suspect — re-run
+unbound with `once/1` + post-filter by equality.** Asymmetry: the bound form is over-permissive, so
+a bound-arg **zero is trustworthy** and a bound-arg **nonzero is an artifact until checked**.
+Witnessed twice on the same predicate (2026-05-30; 2026-08-17, 276 vs real 0, concealing that 67%
+of kernel_v1 signatures resolve `unknown`). Mechanical guard: gate row `bound selector`. Detail +
+incidence ledger: BD → *Pattern 7*.
 
-**Over-confident moves on the synthesis side — errors of *claiming*, each owes a witness before it
-ships** (full version + instances: `docs/technical/build_discipline.md` → *Over-confident moves on
-the synthesis side* and *When to stop verifying*):
-- **(1) False-absence.** Before any "absent / can't / unrepresentable / no X," owe a positive
-  control (grep a name you KNOW exists, or construct the case it must flag) — else tag it **OPEN**.
-  The headline carries the body's caveat ("proxy only" in the body ≠ "solved" in the title); control
-  the claim at its altitude (a probe over `f` licenses "absent in `f`," not "in the system"). **And
-  the concept→surface mapping is its own claim: a perfect control ladder on the WRONG predicate
-  still yields a false absence** — before "concept C has no live channel," sweep the sibling
-  surfaces, don't ladder one (witnessed: `coordination_vitality` genuinely 0-authored while the
-  concept's real carrier `founding_problem_status` sat at 164/199 — OQ-255 audit §8;
-  `build_discipline.md` → *False-absence* sub-rule (c)).
-- **(2) False-unification.** Before merging two things that share a vocabulary or dynamics, owe a
-  distinction-check — verify the architecture doesn't *mandate* their separation and cite the ruling
-  (observer/committer: `deferential_realism_paper_v7.md` Theorem 7 forbids the fold). Shared dynamics
-  across distinct objects is analogy, not a bridge.
-- **(3) Unguarded axis-swap.** Introducing or relabeling an axis owes a PRE-REGISTERED discriminating
-  control: construct the case where the new and nearest-prior axis come apart, write what each
-  outcome means *before* the run, then run it. This is the silent one — a quiet relabel writes no
-  file wrong and feels like no ruling. Under-claim: one witness earns "separable here," not
-  "orthogonal everywhere."
-- **(4) Hedging-as-rigor (the under-confident dual).** "Held open / both readings possible" is earned
-  only when no falsifier can be specified; if a kill condition is available, COMMIT and attach it
-  (prose commits; uncertainty lives in the falsification apparatus). Trigger: drafting a
-  both-readings passage IS the cue to check for commitment-plus-falsifier — don't wait for review.
-- **(5) When to stop verifying** (the Omega structural-convergence rule, `docs/omega_variables.md`).
-  "Verified enough" is a seat with no floor (Seat-Theorem §8); stop when the next pass costs more
-  than being wrong **AND every open is DECLARED, not concealed.** The checkable clause: for each
-  verdict/name emitted, name a tier-available falsifier or downgrade to OPEN (= route to a typed Ω,
-  **typed against `omega_variables.md`, not loosely**). The trap: an *orientation* gloss (enclosure
-  vs defense) is a **deferred Ω_E** (witnessable later by world-observation), NOT Ω_P — typing it Ω_P
-  lets the actor self-certify by fiat; a genuinely *contested origin* IS Ω_P/Ω_C (engine abstains).
-  Same surface OPEN, opposite type. Pass-count is not the variable; whether the stop is declared is.
-- **(6) Non-discriminating falsifier (the relocating confound).** A kill condition, gate, or
-  discriminating probe is not done when a control is attached — a control closes ONE channel and
-  the confound relocates rather than dies (witnessed 3× in one review arc, OQ-232: entrapment →
-  position → cancellation neighborhood). Before it ships: ask where the confound lands NOW, and
-  iterate until it lands nowhere or the landing is a declared scoped residue; sign-opposed
-  hypotheses cancel — "flat" is the cancellation signature, so assert over swept intervals, not
-  points; check feasibility at the position the claim NAMES, not in aggregate; scope capability
-  labels to the regimes the probe reached. Full checklist + the channel-exit repair option:
-  `build_discipline.md` → *The relocating confound*. Two bookends (2026-07-25, OQ-253/255):
-  **a falsifier must be FIREABLE** — before pre-registering a kill condition, name a possible
-  world that satisfies it; one contradictory under its own definitions is hedging in a
-  falsifier's costume. And **a repair that encodes the tested claim into the instrument** makes
-  the theory unfalsifiable through its own gate — record the discriminating probe as a STANDING
-  probe at adoption (scope attached, re-fire obligation, failure semantics pre-committed).
-  Both: `build_discipline.md` → *A falsifier must be FIREABLE*.
-- **(7) A conceded point is not a research question (operator, 2026-08-12).** Distinct from (4):
-  hedging refuses a commitment it *could* make; this takes a fact that is **already the operating
-  condition** and converts it into a question requiring evidence. **Tell: every warrant you reach
-  for is shaped like an OUTSIDE** (an independent author, a losing prediction, a resolved OQ, a rare
-  pattern) while the fact is true *inside* the system — plus a self-instance that is available and
-  unused (the thing under question usually happened during the exchange that raised it). **Substrate
-  check that ends it fastest: before asking whether X *can* happen, check whether X is what the last
-  commit did** — here, moving a seat is the day's work (clause order changes what a predicate
-  returns; `once/1` vs a trailing cut leaves different siblings reachable; a `^...$` anchor decides
-  which physical line is a fact). Not an epistemic error but a **register preference**, so noticing
-  it does not dissolve it — it re-derives one level up as "but does it move *creditably*." Concede in
-  the register the point was made in; downstream questions get raised as downstream, never in place
-  of the concession. **The self-instance tell is the one that fires, because it needs no judgment —
-  it is a grep against the transcript.** Unlike (4), this failure is **invisible in the output** (a
-  well-formed question reads as diligence), which is why it holds a capped slot: the visible sibling
-  has any reader as a second line of defence, this one has none. **Falsifier, attached at adoption:**
-  load-bearing iff instances found before the September consolidation pass are ones **nobody flagged
-  in conversation** — every founding instance was operator-caught, which is right for minting and
-  wrong for keeping; if the ledger holds only operator-named instances at the pass, demote or retire.
+**8. Recap-as-witness substitution.** *Paste-or-untag* at the turn boundary: a turn reporting N
+edits done pastes N witnesses; M<N is the defect, and the operator reads any done-claim lacking a
+same-turn paste as unverified regardless of the recap. Detail: BD → *Pattern 8*.
+
+**Shared root of 1 and 2: build for the corpus you intend, not the one on disk** — a scheme that
+*cannot* collide by construction beats one that *happens not to* today.
+
+**A denominator that silently admits non-members gets WORSE while reading STABLE (OQ-306, resolved
+2026-08-21).** Membership is by FILENAME, so `manifest.n_constraints` counted the
+`*_contradictions.pl` meta-files, and that stratum GREW (9 → 27) with nothing going red — a
+growing contaminant rewrites a time series rather than biasing it constantly. **Use the built
+membership predicates — `corpus_loader:corpus_story/1`, `corpus_member_kind/2`, denominator
+`manifest.n_stories` (`n_constraints` is a MEMBER count kept only as a same-run key); gate row
+`corpus census` guards the share over time. Count it live, never from git** (the stratum moves with
+no commit at all). `schema_version` is now **3**; a `!= 2` reader refuses. Detail: BD → *A
+denominator that silently admits non-members*; KNOWN_STATE 2026-08-21.
+
+### Controls, witnesses, and handoffs (operator rulings, 2026-08-11 → 2026-08-20)
+
+Each is one sentence here and a full section in `build_discipline.md` under the italicised name.
+
+- **Every diagnostic needs a positive control** — an empty grep, `findall` of `[]`, a 0, an "I
+  found it nowhere" each means *nothing there* OR *didn't dispatch*; this holds for reasoning, not
+  just shell. **A control demonstrates DISCRIMINATION, not detection:** the witness is a case the
+  instrument DECLINED (grades: a decline in its own history > a natural negative > an authored
+  decoy); no decline available ⇒ the question is UNANSWERABLE from this corpus (declare it). An
+  instrument validated in one ROLE (detector) reused in another (selection metric) is a NEW
+  instrument owing its own decline. (*Every diagnostic needs a positive control*; *A positive
+  control demonstrates DISCRIMINATION*.)
+- **A check that CANNOT fail witnesses nothing** — ask *what value would make this line fail?*;
+  none ⇒ consistency check, discrimination still owed. **Pin `/usr/bin/grep`, not `grep`, in any
+  script computing a reported count** (a green "73 + 101 = 174" concealed a positional parse,
+  2026-08-10). (*A consistency check is not a discrimination check*.)
+- **A control you ADD is itself a claim** — same-path, two-sided, riskiest-shape,
+  substrate-anchored, write-free-if-pre-write. (*An introduced instrument is itself a claim*.)
+- **A control must witness that it is CALLED** — a guarded function called only from its selftest
+  is an orphan: control count rises while coverage falls. Orphaning arrives through repairs, so
+  retire the old control in the same change as its replacement. (*A control must witness that it
+  is CALLED*.)
+- **A found defect's before-commit is a free negative control** — run the detector at N and N−1,
+  record *fires at N, declines at N−1*; availability is not automatic (check), and when a detector
+  will follow, preserve the defective state deliberately. (*When a defect is found…*.)
+- **Gate the output, not only the input** — a pipeline verified on what it consumes can produce
+  nothing and report green (219 calls, nothing persisted). Persist the raw datum first,
+  write-then-verify per unit, assert count AND non-emptiness AND parses-to-vocabulary, count from
+  the artifact never the loop; audit by enumerating what a spend DEPENDS ON, not by following red
+  lights. (*Gate the output, not only the input*.)
+- **A verification section may not pre-authorize dismissal of a signal it has not re-witnessed**
+  — convert every "expect X red, ignore it" into "if X is red, confirm against KNOWN_STATE <date>
+  before attributing it elsewhere"; the executor reports the baseline OBSERVED, not predicted.
+  (*A verification section may not pre-authorize dismissal*.)
+- **Write the receiver's prompt before calling a design done** — enumerating what a receiver must
+  DO surfaces what re-reading (recognition) never does; "read the design and execute it" catches
+  nothing; the terminal is a channel, so say what may be PRINTED. (*Write the receiver's prompt*.)
+- **The receiver's license to refuse** — an instruction correct in prose and wrong when executed is
+  refused at the volume of a completion and routed back to the sender; scope is *executed as
+  written, this produces what the design forbids*, not "I'd do it differently" (that is the
+  one-sentence flag). State the license in the handoff prompt. **A running receiver holding
+  `file:line` pins LOCKS that file** — clearance means checking the whole pin set. (*The
+  receiver's license to refuse*.)
+- **Unwired ≠ worthless** — Pattern 1 is a build-time rule, not a licence to call a zero-firing
+  subsystem cruft; adjudicate by the product it yields (duplicate ⇒ cruft; unique/refinement ⇒
+  wire it or log it in `design_gaps.md`); when unsure, preserve. (*Unwired ≠ worthless*.)
+- **Nobody reads a hammer's changelog** — before minting any record about our own work, name the
+  reader and the decision it changes; a tool is validated by use. Governs MINTING only; the rule
+  above still governs removal. (*Nobody reads a hammer's changelog*.)
+
+### Over-confident moves on the synthesis side — errors of *claiming*, each owes a witness
+
+Full version: BD → *Over-confident moves on the synthesis side*; *When to stop verifying*.
+
+- **(1) False-absence.** Before "absent / can't / no X," run a positive control (grep a name you
+  KNOW exists) or tag it **OPEN**; control the claim at its altitude (a probe over `f` licenses
+  "absent in `f`"). **The concept→surface mapping is its own claim** — sweep sibling surfaces
+  before "concept C has no live channel" (`coordination_vitality` 0-authored while
+  `founding_problem_status` carried it at 164/199, OQ-255).
+- **(2) False-unification.** Before merging two things that share vocabulary or dynamics, verify
+  the architecture doesn't *mandate* their separation (observer/committer: v7 Theorem 7 forbids the
+  fold). Shared dynamics is analogy, not a bridge.
+- **(3) Unguarded axis-swap.** A new or relabelled axis owes a PRE-REGISTERED discriminating
+  control: the case where new and nearest-prior axis come apart, outcomes written before the run.
+  One witness earns "separable here," not "orthogonal everywhere."
+- **(4) Hedging-as-rigor.** "Both readings possible" is earned only when no falsifier can be
+  specified; if a kill condition exists, COMMIT and attach it.
+- **(5) When to stop verifying.** Stop when the next pass costs more than being wrong AND every
+  open is DECLARED: each verdict names a tier-available falsifier or downgrades to OPEN, typed
+  against `docs/omega_variables.md`. Trap: an *orientation* gloss is a deferred Ω_E, not Ω_P.
+- **(6) Non-discriminating falsifier.** A control closes ONE channel and the confound relocates
+  (OQ-232, 3× in one arc); iterate until it lands nowhere or in a declared residue. **A falsifier
+  must be FIREABLE** (name a world that satisfies it), and a repair that encodes the tested claim
+  into the instrument owes a standing probe. (BD → *The relocating confound*; *A falsifier must be
+  FIREABLE*.)
+- **(7) A conceded point is not a research question.** Converting a fact that is already the
+  operating condition into a question needing outside evidence — tell: every warrant is shaped
+  like an OUTSIDE while a self-instance sits unused in the transcript. Concede in the register the
+  point was made in. Falsifier attached at adoption (BD → *A conceded point*): load-bearing iff
+  instances found before the September consolidation pass were not operator-flagged.
 
 ## Critical Distinctions
 
@@ -962,91 +718,55 @@ filename==subject) before trusting a legacy-corpus DR sweep. Provenance: OQ-20 a
 2026-06-22.**
 
 **FIVE LIVE LEGS, and the beta posture (operator ruling, 2026-06-20; legs extended 2026-07).**
-`prolog/testsets/` is the LIVE leg — a small, **deliberately singleton topical working set** that
-lets the operator exercise the engine *while building it* (running it surfaces more live issues);
-`prolog/testsets_haiku/` + `prolog/testsets_flash/` are the reconciled multi-reading **twins**, kept
-as the comparison baseline; `prolog/testsets_kimi/` + `prolog/testsets_sonnet/` are two additional
-model-named legs added later (postdate the 2026-07-23 OQ-60 census).
+`prolog/testsets/` is the LIVE leg — a small, **deliberately singleton topical working set** the
+operator exercises the engine on while building it; `testsets_haiku/` + `testsets_flash/` are the
+reconciled multi-reading **twins** (the comparison baseline); `testsets_kimi/` + `testsets_sonnet/`
+are two later model-named legs. (Further legs have been registered since — `python/shared/corpus_legs.py`
+`LIVE_LEGS` and the `corpus census` baseline are authoritative, not this paragraph.)
 
-**File counts — the four STATIC legs only (disk-verified 2026-08-18): `testsets_haiku` 960,
-`testsets_flash` 960, `testsets_kimi` 1005, `testsets_sonnet` 1001.** These are finished corpora;
-a number here is usable.
-
+**Static-leg file counts (disk-verified 2026-08-18): `testsets_haiku` 960, `testsets_flash` 960,
+`testsets_kimi` 1005, `testsets_sonnet` 1001.** Finished corpora; a number here is usable.
 **`prolog/testsets/` CARRIES NO COUNT, EVER (operator ruling, 2026-08-18) — count it, never recall
-it.** It is the live leg and moves continuously: operator topic runs land stories mid-session
-(witnessed 2×). Any literal figure for it is stale the moment it is written, while still reading as
-authoritative. Get it at the moment you need it — `manifest.n_constraints` from the run's own
-`pipeline_output.json`, or `ls prolog/testsets/*.pl | wc -l` — and state the date alongside it.
-This paragraph previously published `testsets 259` stamped 2026-08-12; it was **279** by
-2026-08-18, six days later, still reading as disk-verified. That is the drift the ruling removes,
-and it is why the static-leg figures above are safe and this one is not.
+it:** topic runs land stories mid-session, so any literal is stale the moment written while still
+reading as verified (this paragraph once published 259; it was 279 six days later). Get it at the
+moment of use — `manifest.n_constraints` of the run's own `pipeline_output.json`, or
+`ls prolog/testsets/*.pl | wc -l` — with the date. Provenance: KNOWN_STATE 2026-08-18.
 
-All five are live. **`testsets/`'s singleton sparsity is INTENDED, not a defect or a half-finished
-rebuild** — do not "complete," flatten, or rebuild it on sight; its high OQ-58 dangling rate is the
-expected sparsity artifact (each lone reading dangles edges to ungenerated siblings). **The project
-is currently ALPHA, working toward BETA: extract maximum value from the corpus we have so the work
-earns its way to beta before any rebuild.** The rebuild (a fresh `testsets_*`-style corpus) comes
-*after* schema, wiring, and enough of ISSUES.md are worked out — and with many OQs still open, that
-is a ways off. A future instance **may SUGGEST a
-rebuild** when accumulated schema/wiring changes seem to warrant it, but should not propose one
-lightly or treat the singleton working set as something to fix. (Resolves the OQ-58 corpus-identity
-flag; the regime swap that produced the original three legs is witnessed in
-`audits/2026-06-20_oq58_cross_corpus_incompleteness/`; the kimi/sonnet legs were added afterward.)
+**`testsets/`'s singleton sparsity is INTENDED, not a half-finished rebuild** — do not "complete,"
+flatten, or rebuild it on sight; its high OQ-58 dangling rate is the expected sparsity artifact.
+**The project is ALPHA working toward BETA: extract maximum value from the corpus we have before
+any rebuild**; a future instance may SUGGEST a rebuild, not propose one lightly. It is the
+**evolving-schema test bed** (operator, 2026-06-24): schema/prompt/scope changes are exercised HERE
+(the twins stay the stable baseline); we do **not** backfill any leg, and "hold off until rebuild"
+is the WRONG posture — an OQ-37-style "does this metric earn its keep" call is settled by testing
+it on `testsets/`. Witness of the regime swap: `audits/2026-06-20_oq58_cross_corpus_incompleteness/`.
+
 **A leg's MODEL is not its directory name — verify from `story_provenance` (or `classify_corpus`'s
 fingerprint refusal) before attributing or pooling (OQ-78, 2026-08-10).** `testsets_kimi/` is
-`kimi-k2.6` while the default leg's kimi stratum is `kimi-k3`, and `testsets_sonnet/` is
-`claude-sonnet-5` — the same model the default leg's largest stratum uses, so it is TEST data for
-any sonnet-5 question, not a neutral comparison leg. Pooling on the directory name fails silently.
-The four twin legs are ONE seed set re-authored per model (957 four-way matched ids), so a cross-leg
-contrast is *matched-seed across models* — topic and claimed_type mix held fixed, feeding constant —
-never a withheld-input arm. **Corollary: ε-keyed statistics are per-Author stratum and are NEVER
-pooled across legs** — the last-digit rail is model-bound (Claude→`.x8`, kimi→`.x2`, flash→`.x5`),
-so a pooled ε aggregate averages three different idioms into a number that looks fine and means
-nothing.
-**THE TWIN LEGS ARE THE ONLY MATCHED-SEED STRUCTURE IN THE PROJECT, and marginal-independence vs
-paired-comparability are MUTUALLY EXCLUSIVE across every other population (OQ-78/OQ-281,
-2026-08-10).** A population independent enough to serve as a clean *marginal* known-positive is, by
-that same independence, **unusable for a paired read** — and this is a structural property of how
-the corpus was built, not a gap to be filled. Witnessed: the archive (n=60) and default-leg derived
-sonnet-4.5 (n=64) landing on the same ε digit from a **zero-story-id intersection** was the
-strongest evidence in the OQ-78 calibration pass, and that same zero forecloses any paired
-within-family check between them; every non-twin Claude population shares **0** ids with the twin
-legs (sole exception: default-leg haiku-4.5 × sonnet leg, 28 ids). **So: before designing any
-paired/matched-seed probe, check the id intersection FIRST** — outside `testsets_haiku|flash|kimi|
-sonnet` (957 four-way matched) there is nothing to pair, and a paired design over any other pair of
-populations is dead on arrival. A new matched-seed leg is a generation spend, never a re-read.
-Declared as **GAP-35** (`docs/design/design_gaps.md`), which also records that the twins' pairing is
-a `constraint_id` (filename) join — `cs_story_uid` deliberately does NOT join and `seeded_from` is
-unemitted — so **matched-seed structure is a generation-time decision a later session cannot
-reverse** (the entry to weigh when the rebuild question comes up).
-**Test bed, not backfill target (operator clarification, 2026-06-24).** `testsets/` is the
-**evolving-schema test bed**: schema/prompt/scope changes are *encouraged* pre-rebuild and
-exercised HERE (the twins stay the stable matched-pair baseline). A change that breaks a
-`testsets/` result is fine — the twins are the comparison, not `testsets/`. We do **not**
-backfill any leg (all five are for testing); "hold off until rebuild" is the WRONG posture.
-So an OQ-37-style "does this metric earn its keep" call is settled by *does it provide (or might
-it provide) useful analysis?* — make the schema/prompt change and test it on `testsets/` — never
-by "defer to the rebuild."
+`kimi-k2.6` while the default leg's kimi stratum is `kimi-k3`; `testsets_sonnet/` is
+`claude-sonnet-5`, the same model as the default leg's largest stratum — TEST data for any sonnet-5
+question, not a neutral comparison leg. The four twin legs are ONE seed set re-authored per model
+(957 four-way matched ids): a cross-leg contrast is *matched-seed across models*, never a
+withheld-input arm. **ε-keyed statistics are per-Author stratum and NEVER pooled across legs** —
+the last-digit rail is model-bound (Claude→`.x8`, kimi→`.x2`, flash→`.x5`).
+**The twin legs are the ONLY matched-seed structure in the project (OQ-78/OQ-281, GAP-35):**
+every other population pair shares ~0 story ids (sole exception: default-leg haiku-4.5 × sonnet leg,
+28 ids), so **check the id intersection FIRST before designing any paired probe** — outside the
+twins there is nothing to pair, and a new matched-seed leg is a generation spend, never a re-read.
+The twins pair on `constraint_id` (filename); `cs_story_uid` does not join and `seeded_from` is
+unemitted, so matched-seed structure is a generation-time decision a later session cannot reverse.
 
 **FNL prevalence is regime-bound — never a detection result (OQ-70, RESOLVED 2026-06-05).**
-All kernel_v1-era FNL firings (the 827/1106 era) rode `claimed_natural/2` source 2, which read
-ANY single authored mountain perspective as a naturality claim — a generation-template convention
-copied from the one-shot example (`agent/verification_bottleneck.json`, "ANALYTICAL OBSERVER /
-NATURAL LAW VIEW (MOUNTAIN)"). Counterfactual witnessed 2026-06-04: retracting the template
-perspectives migrated FNL→FCR almost wholesale (FCR's `appears_as_rope` sibling was the same gate
-pattern), zero mass landing in genuine natural_law/CI_rope. Operator ruled option A as the CLASS
-(2026-06-05, `72ec2cdd`): no signature may read a single authored perspective as a story-level
-claim — both bait clauses removed, detector intact (positive control still fires via the explicit
-story-level claim). What survives: (a) ALL pre-reset/archive prevalence stays regime-bound
-(authoring convention, never detection); (b) live prevalence is citable only as a CLAIMS
-statistic (stories that claim naturality/coordination and fail compliance); (c) statistics reset
-TWICE — 2026-06-05 (class fix) and 2026-06-11 (example cutover; discount example-inherited
-signatures per `audits/2026-06-11_oq109_phase_b/EXAMPLE_INHERITED_SIGNATURES.md`).
-Also: pipeline outputs from runs
-BEFORE 2026-06-04 carry ONE non-corpus per_constraint entry (`catholic_church_1200`, an engine
-demo from `constraint_instances.pl`) — exclude it, or corpus counts run one high vs the manifest.
-Runs from 2026-06-04 on enumerate `corpus_loader:corpus_constraint/1` and match the manifest;
-check `manifest.pipeline_run_at` to know which regime an output is in.
+All kernel_v1-era FNL firings (827/1106) rode a `claimed_natural/2` source that read ANY single
+authored mountain perspective as a naturality claim — a generation-template convention, not
+detection; retracting the template perspectives migrated FNL→FCR wholesale (witnessed
+2026-06-04). Operator ruling (`72ec2cdd`): no signature may read a single authored perspective as
+a story-level claim. So: (a) ALL pre-reset/archive prevalence is regime-bound; (b) live prevalence
+is citable only as a CLAIMS statistic; (c) statistics reset 2026-06-05 and again 2026-06-11
+(example cutover — discount example-inherited signatures per
+`audits/2026-06-11_oq109_phase_b/EXAMPLE_INHERITED_SIGNATURES.md`). Pipeline outputs from before
+2026-06-04 carry ONE non-corpus `per_constraint` entry (`catholic_church_1200`, an engine demo) —
+exclude it; runs from 2026-06-04 on enumerate `corpus_constraint/1` and match the manifest.
 
 **A kernel-positive means "admits a foundational construction," dominance UNJUDGED — never "this
 topic IS a dominant/certified kernel" (kernel-first router, 2026-06-06; OQ-79).**
@@ -1105,44 +825,26 @@ appear in no canonical context and their scope_modifier values are unvalidated. 
 
 **Generation is stochastic; the committed story is the determinism frontier (operator ruling,
 2026-06-12).** LLM generation NEVER reproduces — same material re-run gets different scopings,
-namings, readings, ε (OQ-26 / Axiom 2 amended in v6.13.1; the press/Reformation triple, kernel_v1).
-**Measured upstream magnitude (OQ-264 resolved 2026-08-06): same-input decompose redraw
-stability of per-reading identity is FILE-STRUCTURE-DEPENDENT — 2/6–3/6 (340K arsenal),
-4/6–5/6 (103K arsenal), 6/6 ×3 (34K single-voice) — so there is NO global churn floor; a
-manifest feature counts as replicated only if present (name-blind subject+stance) in ALL 3
-same-input redraws (k=3 unanimous; 1–2 of 3 = observation). Pooled ratios do NOT repair
-per-reading instability — a unit-built denominator inherits the churn (witnessed: a k=3
-share range fell entirely between numerator-identical draws; fewer readings raise share) —
-so report numerator/denominator ranges separately and never gate finer than the
-denominator's own churn. Names are never identity across redraws (kernel ids churned at
-reproduce-rate 1.0). Sampling is not pinnable (Sonnet-5 rejects temperature; no API seed),
-so churn is the production regime's own. Full standard:
-`audits/2026-08-06_oq264_kredraw_variance/WRITEUP.md`.**
-So do not design, test, or reason as if same-prompt → same-story: backchecking a generation says
-nothing about the next run, re-generated stories are NEW DRAWS not re-measurements, and cross-run
-"same story" identity does not exist. **Deterministic from the committed JSON onward — and that
-boundary is CHECKED, not assumed** (hash inputs + manifest + output; byte-identical at single
-commits, but order-dependency is the OQ-112 class). Three mechanisms make "same material, different
-results" — generation stochasticity, ensemble refit (corpus-relative stats), pipeline
-non-determinism at fixed input (a bug) — **attribute by the stage-hash diff, never by assumption**
-("it's the LLM" without the diff is a hypothesis where a witness goes). Meta-analysis rides snapshot
-manifests + per-story provenance (model, sampling params, prompt/schema/example commits). **The
-typing machinery (fingerprint/orbit/Boltzmann) is KIND-level only:** `seeded_from` is
-generation-time plumbing, never identity recovered backward by signature matching (witnessed both
-directions: `audits/2026-06-12_signature_identity_witness/`) — never key an exclusion list or any
-per-story mechanism on names/signatures across a regen boundary. **A category shift on redraw is the
-mechanism WORKING, not identity decaying** (`docs/seat-theorem-v1.md`): verdicts are seat-indexed, a
-redraw occupies a new seat, and a classification that *couldn't* shift would be contentless. The
-analysis product is the SHAPE (clusters, shifts, connections — judged by the hypotheses they
-generate); read the replicate stability table as a σ/seat partition (draw-stable ≈ situation-fixed,
-draw-unstable ≈ seat-expressive), not a noise filter. Corollary 3 unchanged: pre-committed
-confrontations still bite — only the determinism valence was wrong, the witness discipline holds.
-**Reading that table: `status: stable` is NOT `positive`-stable (OQ-190, 2026-08-17).** A cell whose
-`agreement_kind` is `absence` was absent in every draw — nothing was compared, and the gate passed on
-absence (Pattern 5). `base_properties.victims` reads 4/6 stable and is **0/6 positive**; the cast
-bucket is **3 positive-stable cells out of 54**, not a uniform 0/6 (`roster_card` 2/6 and
-`time_horizon_multiset` 1/6 are genuine). Filter on `agreement_kind` before citing any stability
-score. Witness: `audits/2026-08-17_oq190_blast_radius/stability_positive_grade.tsv`.
+namings, readings, ε (OQ-26 / Axiom 2 amended in v6.13.1). Measured (OQ-264, 2026-08-06):
+same-input redraw stability of per-reading identity is FILE-STRUCTURE-DEPENDENT (2/6 to 6/6), so
+there is NO global churn floor; a manifest feature counts as replicated only if present
+(name-blind) in ALL 3 same-input redraws; pooled ratios inherit the churn, so report
+numerator/denominator ranges separately; names are never identity across redraws; sampling is not
+pinnable (no temperature, no seed). Standard: `audits/2026-08-06_oq264_kredraw_variance/WRITEUP.md`.
+**So:** re-generated stories are NEW DRAWS, not re-measurements; cross-run "same story" identity
+does not exist; never key an exclusion list or per-story mechanism on names/signatures across a
+regen boundary (`seeded_from` is generation-time plumbing, never identity recovered backward —
+`audits/2026-06-12_signature_identity_witness/`). **Deterministic from the committed JSON onward,
+and that boundary is CHECKED, not assumed** (hash inputs + manifest + output; order-dependency is
+the OQ-112 class): attribute "same material, different results" by the stage-hash diff — generation
+stochasticity, ensemble refit, or pipeline non-determinism (a bug) — never by assumption. **A
+category shift on redraw is the mechanism WORKING** (`docs/seat-theorem-v1.md`): verdicts are
+seat-indexed and a redraw occupies a new seat; the analysis product is the SHAPE, and the replicate
+stability table reads as a σ/seat partition (draw-stable ≈ situation-fixed, draw-unstable ≈
+seat-expressive), not a noise filter. **Reading that table: `status: stable` is NOT
+`positive`-stable (OQ-190)** — an `agreement_kind: absence` cell was absent in every draw and
+passed on absence (Pattern 5); filter on `agreement_kind` before citing any stability score
+(`audits/2026-08-17_oq190_blast_radius/stability_positive_grade.tsv`).
 
 **Pre-computed values live in `outputs/pipeline_output.json`** (H¹, Arakelov heights, MaxEnt
 distributions, classifications). Read from there; do not recompute from scratch.
@@ -1226,20 +928,15 @@ accretes one file per session finding. Periodically consolidate: merge same-prin
 delete memories since promoted into repo docs, trim MEMORY.md to one-line index entries, prune
 resolved/stale items.
 
-**TRIPWIRE — MERGING TRADES AN ATTENTION CAP FOR A DELIVERY CAP, AND NOTHING GOES RED (2026-08-12,
-OQ-289/OQ-290).** `MEMORY.md` is always-loaded, but the ~53 sibling files arrive as per-turn
-`relevant_memories` attachments under a **per-file** cap two-to-three orders of magnitude smaller
-than the always-loaded path's. The 2026-08-10 consolidation is what pushed files over it: **19 of 53
-now exceed 4,096 B** (delivered fractions 16–89%) — or **1 of 53**, if the other documented constant
-(25,000 B) binds instead; which one is unsettled and is exactly what OQ-289 runs. An over-limit file
-arrives truncated with a `Read` pointer appended, and whether an instance follows that pointer is
-also unwitnessed. So: **when merging, prefer front-loading each cluster file with a self-sufficient
-summary in its first 4 KB** over producing a large file whose tail may never be delivered, and do
-not treat "merged, index shorter" as finished. `python3 python/apparatus_instrument.py --check`
-prints the delivered-fraction table (**reporting only** — do not promote it to enforcing until
-OQ-290 rules). Full provenance: KNOWN_STATE 2026-08-12; the retracted always-loaded version of this
-hazard is OQ-286 (`CLAUDE.md` itself has 46× headroom and is skipped *whole*, never tail-truncated —
-do not re-mint that claim).
+**TRIPWIRE — MERGING TRADES AN ATTENTION CAP FOR A DELIVERY CAP, AND NOTHING GOES RED
+(OQ-289/OQ-290, 2026-08-12).** `MEMORY.md` is always-loaded, but the sibling files arrive as
+per-turn `relevant_memories` attachments under a **per-file** cap (4,096 B or 25,000 B — which one
+binds is what OQ-289 runs); an over-limit file arrives truncated with a `Read` pointer whose
+follow-through is unwitnessed. **When merging, front-load each cluster file with a self-sufficient
+summary in its first 4 KB**, and do not treat "merged, index shorter" as finished.
+`python3 python/apparatus_instrument.py --check` prints the delivered-fraction table (reporting
+only until OQ-290 rules). Provenance: KNOWN_STATE 2026-08-12; the retracted CLAUDE.md-truncation
+claim is OQ-286 — do not re-mint it.
 
 The same monthly pass covers:
 
@@ -1255,19 +952,26 @@ The same monthly pass covers:
   premise has changed; this is the symmetric counterpart to the promotion test (promotion adds,
   this removes/refreshes).
 
-**Last review: 2026-08-10. Interval: monthly.** If today is on or after **2026-09-10**, prompt
-the user to run a consolidation pass before starting the requested work, then update both dates.
-The 2026-08-10 pass was the major prune (memory 113→53 files; KNOWN_STATE window residue
-drained 52/52; ISSUES backlog drained 100/139) and installed the apparatus instrument:
-**the memory Feedback channel is capped at 33 entries (gated exchange — retire one to admit
-one) and every consolidation pass reads the rolling Fired: catch rate (OQ-276)**, both
-enforced/reported by `python3 python/apparatus_instrument.py --check` in the gate.
-**Declared residue (pick up next round):** (a) 40 borderline ISSUES entries left uncompressed
-(30 pre-compressed 16–33-line pointer-blocks; 7 fresh Aug-2026 closes — OQ-151/258/259/260/
-261/262/264 — whose bodies are still-operative rulings; revisit once aged); (b) one headerless
-tripwire block in KNOWN_STATE under the 2026-06-27 OQ-124/OQ-149 header (a lost `##` header —
-one-line restore); (c) first OQ-276 catch-rate reading, and set its decay floor once enough
-Fired: bits exist to see the value lattice.
+**Last full review: 2026-08-10. Interval: monthly.** If today is on or after **2026-09-10**,
+prompt the user to run a consolidation pass before starting the requested work, then update both
+dates. The 2026-08-10 pass was the major prune (memory 113→53 files; KNOWN_STATE window residue
+drained 52/52; ISSUES backlog drained 100/139) and installed the apparatus instrument: **the
+memory Feedback channel is capped at 33 entries (gated exchange — retire one to admit one) and
+every consolidation pass reads the rolling Fired: catch rate (OQ-276)**, both enforced/reported
+by `python3 python/apparatus_instrument.py --check` in the gate.
+**Out-of-cycle CLAUDE.md demotion pass, 2026-08-23** (prompted by an outside reader's verdict on
+`build_discipline.md` — sound ideas, unedited density): this file 15,174 → ~10,900 words, with the
+Build Discipline section cut to tripwire + pointer and every demoted detail verified present in
+`build_discipline.md`/KNOWN_STATE before removal; a glossary block added at the top of
+`build_discipline.md`. **Standing rule from it: the always-loaded file carries the tripwire and
+the pointer, never the exposition — a promotion that adds more than ~6 lines should demote the
+body to the case-law file in the same change.** That pass also discharged residue (b) (header
+restored) and (c) (first catch-rate reading recorded in OQ-276, now BLOCKED-ON-YOU for the value
+ruling). **Declared residue for the 2026-09-10 pass:** (a) 40 borderline ISSUES entries left
+uncompressed (30 pre-compressed pointer-blocks; 7 fresh Aug-2026 closes — OQ-151/258/259/260/
+261/262/264 — whose bodies are still-operative rulings); (d) the memory files themselves were
+NOT re-consolidated on 2026-08-23 (54 files, channel 33/33 — at cap); (e) KNOWN_STATE roll-off
+for entries older than 30 days was not run on 2026-08-23.
 
 ## Audit Methodology
 

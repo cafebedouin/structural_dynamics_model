@@ -11852,14 +11852,14 @@ consumer requiring the role gauge).
 **Ω-type:** Ω_P at the read (whether the ritual's cost is worth the catch rate is the
 operator's value ruling); the rate itself is Ω_E (mechanically computed).
 
-**Status:** open — **the Ω_P value ruling is DECLARED NOT RIPE (operator, 2026-08-19,
+**Status:** open — **RIPE as of 2026-08-23 (the watcher fired; see the consolidation read below). Earlier: the Ω_P value ruling was DECLARED NOT RIPE (operator, 2026-08-19,
 second-instance reviewed), and unlike OQ-317's calendar bound this one waits on a STRUCTURAL
 change that may never come**: it ripens only when `Fired: no` becomes reachable. The
 investigations ledger (below) is adopted to make it reachable. **Routed out of BLOCKED-ON-YOU
 2026-08-20** via the `blocked_on_condition` dep below — the menu was re-asking every session for
 a ruling declared not ripe, inviting exactly the premature read the standing prohibition forbids.
 **Priority:** 5
-**Deps:** blocked_on_condition first Fired: no in either channel — watcher: apparatus_instrument.py oq276_wake gate line (fires on any no; also at 20 ledger closes with zero no), plus the unconditional catch-rate re-read each monthly consolidation pass
+**Deps:** blocked_on_human value ruling on the first catch-rate reading — the blocked_on_condition watcher (apparatus_instrument.py oq276_wake) FIRED by 2026-08-23 with 11 ledger Fired: no; the reading is below under "Consolidation read (2026-08-23)"
 
 ### Ruling (2026-08-19) — the ledger, its criterion, and the pre-committed reading
 
@@ -12026,6 +12026,38 @@ the "make-work" question with data. Either way the answer stops being asserted a
 starts being measured. Falsifier for the instrument itself: if audits start gaming
 the bit (everything tagged `latent` to look useful), the per-entry one-line
 justification is the audit trail — spot-check at consolidation time.
+
+### Consolidation read (2026-08-23) — first reading; the watcher has fired; the value ruling is the operator's
+
+Witness: `.venv/bin/python python/apparatus_instrument.py --check`, 2026-08-23, whose gate line
+opened with `OQ-276 WAKE: Fired: no recorded (0 writeup / 11 ledger) — the deferred value ruling
+is RIPE` and closed with `catch-rate 31L/2l/0n of 33 bits (33 of 82 writeups carry one)`.
+
+1. **The two channels disagree, and the disagreement is the finding.** WRITEUP bits: **31 live /
+   2 latent / 0 no** — still not one decline in the audit-dir channel. Ledger
+   (`audits/INVESTIGATIONS.md`, adopted 2026-08-19): **18 live / 2 latent / 11 no of 31 closed**
+   (hand tally, same day; the instrument's 11 `no` reconciles — a 13-hit grep includes the header
+   and the fenced format example). So `no` became reachable the moment registration preceded the
+   decision to write a dir, at a rate of roughly one in three — which is the population-selection
+   mechanism FINDING 2026-08-13 predicted, now measured rather than argued. Read per ruling §3: a
+   yield over LEDGERED inquiries, not a general catch rate.
+2. **Latent spot-check (addendum §4a) — both bits pass.** `2026-08-17_giant_comp_segv_hang`
+   (explicitly PROVISIONAL, conditional on unrun round-2 arms) and
+   `2026-08-19_oq285_mode3_measurement_arm` (real dead token, hazard conditional on an input the
+   corpus does not produce) each carry a one-line justification that matches the `latent`
+   definition; neither reads as a `no` dressed up. The first is owed a re-issue when its arms run.
+3. **Denominator drift (addendum §4b).** Audit-dir creation: 11 dirs in 2026-08-01..10 (pre-bit,
+   ~1.1/day) vs 31 dirs in 2026-08-11..23 (~2.4/day) — the rate roughly doubled after the bit
+   landed, though it sits inside the historical range (June ~3.3/day, July ~1.5/day). Bit coverage
+   4/53 → 26/75 → 33/82. A cross-time comparison of the writeup-channel rate is therefore not
+   licensed yet; the ledger channel has no pre-bit baseline at all (it is 4 days old).
+4. **What is now the operator's to rule (Ω_P):** (a) whether ~1/3 `no` over ledgered inquiries,
+   with 31/31 live in the dir channel, reads as "the ritual pays" or "the dir channel is
+   publication-biased and the ledger is the only honest instrument"; (b) the decay floor and window
+   deferred at minting (now that a value lattice exists: 11/31 ≈ 0.35 ledger-`no`); (c) whether the
+   writeup bit is retired in favour of the ledger bit, or both kept with the disagreement reported.
+   Routed to BLOCKED-ON-YOU via the Deps line. Not self-resolved here — the reading is the
+   instrument's; the verdict on the ritual's cost is the seat this OQ exists to keep declared.
 
 ---
 

@@ -542,8 +542,10 @@ def main() -> int:
         rate = (f"catch-rate {tally['live']}L/{tally['latent']}l/{tally['no']}n "
                 f"of {n_bits} bits ({n_bits} of {n_writeups} writeups carry one; "
                 f"forward-only from 2026-08-10)")
-        if tally["no"] == 0:
-            rate += " — NO DECLINE EVER RECORDED: readout not yet interpretable (OQ-276)"
+        # The "no decline" verdict is over BOTH channels (writeup bit + ledger line), and
+        # is appended below once the ledger has been read — this summary used to say
+        # "NO DECLINE EVER RECORDED" from the writeup count alone while the WAKE line on
+        # the row above reported 11 ledger declines (witnessed 2026-08-23).
     else:
         rate = "catch-rate: no Fired: bits yet"
     # INVESTIGATIONS LEDGER readout (OQ-276 ruling, 2026-08-19). Reporting ONLY, never a
@@ -556,9 +558,17 @@ def main() -> int:
     if ledger.is_file():
         n_open, n_closed, ledger_no = read_ledger(
             ledger.read_text(encoding="utf-8"))
-        rate += f"; ledger {n_open} open / {n_closed} closed (informational)"
+        rate += (f"; ledger {n_open} open / {n_closed} closed, {ledger_no} no "
+                 f"(informational)")
         # OQ-276 mechanical watcher (reporting only; see oq276_wake docstring)
         wake = oq276_wake(tally["no"], ledger_no, n_closed)
+    else:
+        ledger_no = 0
+    if n_bits and tally["no"] == 0 and ledger_no == 0:
+        rate += " — NO DECLINE EVER RECORDED in either channel: readout not yet interpretable (OQ-276)"
+    elif n_bits and tally["no"] == 0:
+        rate += (f" — writeup channel has no decline; the ledger channel has {ledger_no} "
+                 f"(OQ-276 consolidation read 2026-08-23)")
     for p in problems:
         print(f"PROBLEM: {p}")
     if wake:

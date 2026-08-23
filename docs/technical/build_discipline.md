@@ -24,6 +24,37 @@ Nothing here says a ninth member must be layer-indexed (ruling: ISSUES OQ-332, 2
 
 ---
 
+## How to read this file, and the vocabulary it assumes
+
+**This file is the case-law archive; `CLAUDE.md` → Build Discipline is the checklist.** Each `##`
+section below is one rule with its mechanism, the dated instance(s) that produced it, and a
+diagnostic. Read a section when the one-line tripwire in `CLAUDE.md` names it, or when you are
+about to argue a rule does not apply to your case. (Outside reader's verdict, 2026-08-23: the
+ideas are sound, the file is a postmortem system that reads as a checklist only if you already
+hold the project's vocabulary — hence this block, added the same day.)
+
+Project vocabulary used throughout without re-definition:
+
+- **OQ-NN** — an open question in `../../ISSUES.md` (the single tracker); `grep OQ-NN ISSUES.md`.
+- **Witness / paste-or-untag** — a same-turn pasted run, diff, or artifact path that backs a claim;
+  an unbacked done/count claim is tagged `(recalled)` or OPEN (`CLAUDE.md` → *The working method*).
+- **Seat** — a declared observer position a verdict is indexed to; no seat-free verdict exists
+  (`../seat-theorem-v1.md`; `../deferential_realism_paper_v8.md` §5.4 for seat/gauge/orientation).
+- **Ω_E / Ω_C / Ω_P** — the typed open-question sorts (empirical / contested / operator-ruled);
+  taxonomy in `../omega_variables.md`, the sorting discipline in `../design/design_discipline.md` §6.
+- **Altitude** — the scope a claim is licensed at (a probe over `f` licenses "absent in `f`," not
+  "in the system"); *scoped altitude* = the level the evidence actually reaches.
+- **Surface** — a place a value is read from or published to (a predicate, a JSON field, a doc
+  paragraph, a report headline); *sibling surfaces* carry the same concept under different names.
+- **Load-bearing** — a fact or rule that some later decision actually depends on; its opposite is
+  *academic* (true, recorded, consulted by no one — *Nobody reads a hammer's changelog*).
+- **Graduation step** — the named action that would turn an OPEN/`(recalled)` claim into a
+  witnessed one.
+- **KNOWN_STATE** — `../../KNOWN_STATE.md`, the dated session log; query it with
+  `python3 python/known_state_status.py --file <path>`, never whole-read.
+- **Pattern N** — one of the eight indices of THIS taxonomy (7 members, index 3 vacated); the
+  token is overloaded elsewhere in the repo (`CLAUDE.md` → *Numbering is SETTLED*).
+
 ## The working method: separated passes (the procedure that prevents the patterns)
 
 The patterns below are introduced when deciding and writing happen in one undivided pass. The
@@ -964,6 +995,12 @@ set for kernel readings will over-count exactly the constraints the locks were i
 protect. Welfare-reading / false_natural_law (OQ-30) is the live case: a bound probe there
 manufactures false natural-law witnesses on the constraints `false_natural_law` was designed
 to intercept.
+
+**The asymmetry, and when you need not re-run:** the bound form is **over-permissive** (it admits
+everything the unbound form would, plus whatever the skipped cuts were guarding), so a bound-arg
+**zero is conservative and trustworthy** — nothing satisfies even the loosened test — while a
+bound-arg **nonzero is an artifact until checked** unbound. Promoted from `CLAUDE.md` 2026-08-23,
+where it had lived without a copy here.
 
 ### INCIDENCE LEDGER (the accumulator — append here, do not start a second list)
 

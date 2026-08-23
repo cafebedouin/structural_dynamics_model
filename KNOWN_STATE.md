@@ -45,6 +45,42 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-23 — [landed] Out-of-cycle CLAUDE.md demotion pass (15,174 → 10,986 words); build_discipline.md glossary; first OQ-276 catch-rate reading (watcher fired, routed BLOCKED-ON-YOU); apparatus summary line corrected
+**Files:** CLAUDE.md, docs/technical/build_discipline.md, ISSUES.md, python/apparatus_instrument.py, KNOWN_STATE.md
+**Tier:** landed
+
+Trigger: an outside reader (Perplexity, on `build_discipline.md` pasted cold) returned "sound
+ideas, private vocabulary, unedited density, best read as case law behind a checklist." The
+verdict was accurate about the wrong file — the case-law/checklist split already exists and the
+checklist (`CLAUDE.md`) had absorbed a third of the case law. So the pass was a DEMOTION, not an
+edit of the archive: Build Discipline 419 → 187 lines, the hooks paragraph, the memory-delivery
+tripwire, and three Critical Distinctions blocks cut to tripwire + pointer. Every demoted detail
+was grep-verified present in `build_discipline.md` or KNOWN_STATE BEFORE removal (one was not —
+the Pattern-7 bound-arg zero/nonzero asymmetry lived only in CLAUDE.md — and was added to BD's
+Pattern 7 body first). Witness of nothing lost: a 45-keyword tripwire sweep before/after (0 lost),
+with a positive control of three deliberately demoted strings (`443/519`, `orphaned_controls`,
+`three edits witnessed`) each reading 1 → 0 in CLAUDE.md and ≥1 in BD. `doc patterns` and the
+full gate GREEN after (2026-08-23). `build_discipline.md` gained a *How to read this file* block
+(glossary of OQ / witness / seat / Ω / altitude / surface / load-bearing / graduation step).
+
+Standing rule recorded in CLAUDE.md → Memory Consolidation Review: a promotion adding more than
+~6 lines demotes the body to the case-law file in the same change.
+
+OQ-276: `apparatus_instrument.py --check` printed the WAKE line — 0 writeup / **11 ledger**
+`Fired: no` — so the ruling declared NOT RIPE on 2026-08-19 is ripe; the reading (channels
+disagree 31L/2l/0n vs 18/2/11; both latent bits spot-checked genuine; audit-dir creation ~1.1/day
+pre-bit vs ~2.4/day post-bit) is in OQ-276 *Consolidation read (2026-08-23)*, and its Deps line is
+now `blocked_on_human`. **Instrument fix:** the gate's `apparatus` summary said "NO DECLINE EVER
+RECORDED" from the writeup count alone while the WAKE line above it reported 11 — the verdict is
+now computed over both channels and the ledger `no` count is printed on the row.
+
+Also discharged: residue (b) of the 2026-08-10 pass (lost `##` header on the 2026-06-27
+stable/match tripwire restored; `known_state_status.py --file python/cohort_stability.py` now
+routes it). NOT done: memory-file re-consolidation (54 files, channel 33/33), KNOWN_STATE
+30-day roll-off, ISSUES compress-on-close — the 2026-09-10 full pass keeps them.
+
+---
+
 ## 2026-08-23 — [correction-key] `corpus_wasserstein_fracture` and `arakelov_threshold` are DRAW-DOMINATED at corpus level (sonnet2 vs sonnet3: 1.9× on the median, apparatus byte-identical); the rest of the `diagnostic` block carries a reproducible model fingerprint
 **Files:** prolog/measurement_layer.pl, prolog/json_report.pl, prolog/maxent_classifier.pl, prolog/network_dynamics.pl, prolog/grothendieck_cohomology.pl, python/audits/leg_diagnostic_table.py, python/audits/five_leg_twin_comparison.py, outputs/pipeline_output.json
 **Tier:** correction-key
@@ -6034,8 +6070,13 @@ FIX: same-kernel-donor guard as first clause of `compute_edge_contamination/7` �
 
 Ran the OQ-70-style bait-confound control on the three cross-model-divergent fields, per-field pre-registered (`audits/2026-06-27_oq124_oq149_committer_convention_control/`); twins re-classified at one commit `bbf5c92` (on-disk outputs had straddled 20fab78/8126231); positive controls held. Verdicts: Field A (CHE↔FCR signature fork) = SIGNAL — ~13:1 asymmetric, dominant lean a continuous extraction-magnitude difference (ext Spearman 0.86, flash systematically lower; two-sided `with_retracted` control discharged) → signature lean carries a model index (v8 §3/OQ-72). Field B (`cs_reading_relation`) = CONVENTION — fails to covary with settled substrate on disagreeing slots → needs a provenance bucket (precedent `becd0f87`). Field C (`overridden` 51-vs-4) = OPEN-pending-instrumentation.
 Enrichment: `overridden` is coercion-invariant (missing `cs_axiom_status` KeyErrors generation, `generate_constraint_pl.py:672` — NOT silently defaulted; the `contested/foreclosed→holdable` remap `story_repair.py:89-90` IS silent — needs raw pre-repair capture via `story_repair._normalize_axiom_status` cid logging). Third-model spend warranted (A=signal), operator-gated.
+## 2026-06-27 — TRIPWIRE: a `stable`/`match` cell in a per-field comparison table has three meanings, two hollow (OQ-118 re-probe)
 **Files:** python/cohort_stability.py, python/cohort_sigma_seat_eval.py
 **Tier:** tripwire
+
+(Header restored 2026-08-23 — the consolidation residue (b) of the 2026-08-10 pass; the block had
+been sitting under the OQ-124/OQ-149 `landed` header above, so its `tripwire` tier was never
+routed to an editor of either file.)
 
 A `stable`/`match` verdict in a per-field comparison table can mean three things, two hollow:
 content reproduced, presence-only matched, or constant field — aggregating without splitting
