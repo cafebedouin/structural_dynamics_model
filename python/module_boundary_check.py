@@ -353,6 +353,7 @@ CORPUS_DIRS = {
     "testsets_stealth2": "Same-model REDRAW of testsets_stealth at prompt e03e2210 (redraw + prompt change; 2026-08-22).",
     "testsets_glm":      "Model-named leg (z-ai/glm-5.2:free via OpenRouter, reasoning off; 2026-08-21).",
     "testsets_nemotron": "Model-named leg (nvidia/nemotron-3-ultra-550b-a55b:free via OpenRouter, reasoning off; 2026-08-21).",
+    "testsets_nemotron_think": "Regime-contrast leg (nvidia/nemotron-3-ultra-550b-a55b:free, reasoning ON/default; 2026-08-22).",
     "probsets":         "Probe story packs — data, same shape as a testset leg.",
     "archives":         "Archived corpora and point-in-time probes; per audits/README.md "
                         "point-in-time documents are not retro-edited.",
