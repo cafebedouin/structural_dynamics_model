@@ -17874,6 +17874,10 @@ suppression 0.55→0.64, powerless seat tangled_rope 28%→34–37% / snare 28%�
 institutional seat piton 0%→7–8%; paired Δε up on 38% of seeds, down on 10%. Thinking moves the seat
 TOWARD EXTRACTION, not just around. The generality arms below test whether that is reasoning-general.
 
+**Third thinking-on model (kimi-k2.6, kimi vs kimi2, prompt change confounded):** |Δε| ≥0.10 on 17%, seat-vector
+churn 44%, no direction (paired Δε mean −0.003) — less unstable than Flash-on (22%) or stealth (25%); the
+regime's instability has a model-specific magnitude. Still no thinking-off arm for kimi (constructible, OQ-342).
+
 **Generality, pure pair (stealth2 vs stealth3, same commit, 2026-08-22):** |Δε| ≥0.10 on 25% of seeds, seat-vector churn
 63%, paired Δε mean +0.003 (no direction) — identical to the prompt-confounded pair, so the prompt change moved
 nothing and this is the regime's own floor on a second reasoning model. ε exact-agreement is only 12% because
@@ -18034,6 +18038,11 @@ with ε pinned). **Floor table, thinking-off, ε pinned in all three (2026-08-22
 | stealth/ox-alpha thinking-on (stealth/2, prompt change confounded) | 49% | 65% | 83% | 87% | 20% | 66% |
 | stealth/ox-alpha thinking-on PURE (stealth2/3, same commit) | 52% | 65% | 82% | 87% | 25% | 63% |
 | gemini-2.5-flash thinking-on (flash_think/2) | 64% | 71% | 77% | 76% | 22% | 51% |
+| kimi-k2.6 thinking-on (kimi/kimi2; July leg at becd0f87 — redraw + prompt change) | 70% | 75% | 86% | 90% | 17% | 44% |
+
+**kimi floor landed 2026-08-22 ($42): the five-leg writeup's headline — kimi band-3 share 63% — REPLICATES
+(63% → 64%; red 2.8% → 2.6%; mean ε 0.589 → 0.585): a model disposition, not draw luck.** Thinking-on
+instability is model-dependent: kimi 17% / Flash-on 22% / stealth 25% of seeds move ε ≥0.10 on redraw.
 
 The classification floor is model-specific and NOT derivable from the ε floor; every cross-model
 h1/verdict claim must be read against the noisier of the two models' floors.

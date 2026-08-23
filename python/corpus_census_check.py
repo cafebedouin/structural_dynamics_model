@@ -124,6 +124,7 @@ STAMPED_FILE_COUNTS = {
     "testsets_sonnet3": 1003,   # stamped 2026-08-22
     "testsets_haiku3": 993,     # stamped 2026-08-22
     "testsets_stealth3": 1005,  # stamped 2026-08-22
+    "testsets_kimi2": 1005,     # stamped 2026-08-22
 }
 REMEASURE_GROWTH_FACTOR = 2.0
 
