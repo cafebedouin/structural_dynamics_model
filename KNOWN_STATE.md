@@ -45,6 +45,68 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-23 — [tripwire] A `blocked_on_condition` edge on a `mitigated` OQ routes NOTHING; and `.claude/agents/`+`skills/` are COMMITTED, not machine-local
+
+**Files:** `.claude/skills/plan-review/SKILL.md`, `.claude/skills/plan-review/RUNS.md`, `python/runs_ledger_check.py`, `scripts/gate.sh`, `CLAUDE.md`, `docs/technical/omega_resolver.md`, `ISSUES.md`
+**Tier:** tripwire
+
+**TRIPWIRE 1 — routing dies on the status change, silently.** `omega_resolver.ACTIVE =
+{open, investigating, partial}`. `mitigated` is NOT in it. So the moment you move an OQ to
+`mitigated`, it leaves the active frontier (witnessed this session: 144 → 143 active), and **any
+`blocked_on_condition` / `blocked_on` edge you author on it routes nothing** — the OQ can never
+appear in the menu's BLOCKED list and no watcher will ever wake it. Nothing goes red: the edge
+parses, `omega check` reports 0 problems, the INDEX row renders it. It is a correct record and an
+inert route, and the two are indistinguishable at the read site. OQ-337 hit this exactly: its plan
+specified a ripening edge firing when OQ-338's remedy is designed, and that edge will never fire.
+**If a mitigated OQ must come back on an event, the mechanism has to live where the person causing
+the event is READING** — a sentence in the OTHER entry, not an edge on yours. (Whether `mitigated`
+belongs in the active frontier at all is OQ-141, still open.) Not promoted to CLAUDE.md: the
+audience is whoever next edits `ISSUES.md`, and this file's `Files:` routing already delivers to
+exactly them.
+
+**TRIPWIRE 2 — a premise that talked a planner out of the right remedy.** CLAUDE.md's hooks
+paragraph said `.claude/settings.json` is committed and "everything else under `.claude/` is
+machine-local"; `docs/technical/omega_resolver.md` said settings.json was itself *gitignored*. Both
+false, and mutually contradictory — resolved against the code. `.gitignore` excludes `.claude/*`
+then negates `!.claude/settings.json`, `!.claude/agents/`, `!.claude/skills/`; `git ls-files
+.claude/` returns five tracked paths. **Both corrected in `f997c0a9` — the CLAUDE.md fix IS this
+entry's promotion; nothing further promotes.** The cost is the point: OQ-337's constraint (3)
+reasoned FROM the stale sentence to "a repo gate cannot see it on a fresh clone", called that "the
+interesting part of the problem", and so ruled out the remedy that was available the whole time. A
+fresh clone of a repo where a file is tracked HAS the file. R4 (operator-ruled 2026-08-23): applied
+rather than presented as a diff, since there is no judgment in the edit — and ruled explicitly NOT
+to generalize into a standing licence to amend CLAUDE.md.
+
+**LANDED — OQ-337 mitigated.** The plan-review ledger's four silent append failures all traced to
+one grammar defect: the run-id was claimed at PLANNING time while the ledger is only writable at
+EXECUTION time. Remedy: the planner **composes** a row carrying the literal placeholder
+`<allocated-at-append>` (`c4832806`), and the first write-capable session **allocates at landing**
+by deriving the id from the file at that moment. Gate row **`ledger grammar`** (`4c770b13`;
+reporting-only → blocking in `8a999c24` per R-B, after the first live green). 13 two-sided
+controls, including a decline on the live file and an exit-1-vs-git-fatal discrimination.
+
+**A FOURTH instance landed 2026-08-23, one day before the remedy** — the OQ-120 plan instructed its
+executor to mint an id that already existed, itself already a reassignment. Caught only by an
+executor re-deriving the pin and refusing. **Every one of the four was caught by a human or a
+receiver's refusal, never by a mechanism.** That is what the gate row changes for the collision
+half — and only that half.
+
+**What the gate row does NOT do, recorded because a green row invites the opposite reading: it
+cannot see a MISSING append.** A run that never landed a row leaves the file perfectly grammatical.
+The absence detector OQ-337 specifies was not built; the burden is recorded **UNMET**, and the
+argument that the absence class is removed by construction is a prevention claim with no positive
+control (its prediction is a non-event). Pending R-A.
+
+**Also open:** R1 (whose decision the landing-chain grammar was — planner-designed, ratification
+and attribution both unresolved), R3 (allocate-at-landing closed the collision class *and* the
+race's landing-time witness with it — the harmful race now surfaces only as a gate red after the
+fact, the benign interleaving leaves no trace), R5 (deliberately open — an unreconstructible
+planning date cannot write fields 1–2 and cannot mark them `UNRECORDED` either; no instance exists
+to design against). R2 ruled runs-EXECUTED, with the undercount stated affirmatively in RUNS.md's
+own head note rather than hedged: a shelved plan's rounds are real spend this file does not count.
+
+---
+
 ## 2026-08-23 — [tripwire] A gate criterion can be UNSATISFIABLE BY CONSTRUCTION and survive seven review rounds — two did, in one gate
 
 **Files:** `prolog/maxent_classifier.pl`, `prolog/drl_core.pl`, `prolog/constraint_indexing.pl`, `audits/2026-08-21_oq120_epsilon_boundary/`, `audits/2026-08-23_oq120_epsilon_boundary_v2/`, `ISSUES.md`
