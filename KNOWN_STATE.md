@@ -151,6 +151,11 @@ in runbook §9.
   redraw + prompt change (the flash-vs-flash2 shape), NOT the pure thinking-on floor; that is
   stealth2 vs a later stealth3 at the same commit (free). Stealth is outside the free-tier daily cap
   (0 × 429 over 1,040 requests; nemotron's first 429 at request #1025).
+- **2026-08-23 06:30 — nemotron_think first pass 732/1005 (free; cap at request ~943; auto-resume loop
+  `outputs/no_scope_runs_nemotron_think/auto_resume.sh` relaunches hourly until ≥1000).** The second regime
+  pair REPLICATES the Flash result: thinking moves the seat toward extraction (Δε +0.061, snare 9%→18%,
+  unknown 22%→15%) and the framing signature (mountains +0.12, benign stratum 17% ≥0.30) — OQ-343(a) answered
+  2/2 families; OQ-349 arm 1 can run on nemotron_think's persisted reasoning traces at $0. 15 legs registered.
 - **22:45 — DAY CLOSED: 14 live legs, census GREEN, every floor in OQ-347's table landed.** kimi2 COMPLETE
   1005 ($42; the 63% band-3 kimi signature replicates at 64%). Floors: thinking-off Flash/Sonnet/Haiku seat
   churn 22/38/65%; thinking-on kimi/Flash/stealth ε-move rates 17/22/25%. Still queued (OQ-342 children):

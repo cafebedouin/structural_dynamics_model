@@ -17963,6 +17963,14 @@ suppression 0.55→0.64, powerless seat tangled_rope 28%→34–37% / snare 28%�
 institutional seat piton 0%→7–8%; paired Δε up on 38% of seeds, down on 10%. Thinking moves the seat
 TOWARD EXTRACTION, not just around. The generality arms below test whether that is reasoning-general.
 
+**(a) ANSWERED 2026-08-23 — model-general, 2/2 families.** nemotron-3-ultra thinking-off vs thinking-on
+(`testsets_nemotron` 996 vs `testsets_nemotron_think` 732 partial, 728 shared seeds; free): paired Δε mean
++0.061 (Flash +0.065), up 39% / down 12% (Flash 38/10), mean ε 0.48 → 0.54, suppression 0.48 → 0.54,
+powerless-seat snare 9% → 18%, tangled_rope 29% → 36%, `unknown` 22% → 15%, band-3 21% → 34%; |Δε| ≥0.10 on
+27% of seeds. Thinking moves the seat toward extraction on a second model family with the same shape and
+magnitude (`audits/2026-08-21_flash_regime_vs_redraw/nemotron_regime_pair_2026-08-23.txt`). Remaining: (b)'s
+type-flip read on nemotron once the leg completes; kimi-off arm still unbuilt.
+
 **Third thinking-on model (kimi-k2.6, kimi vs kimi2, prompt change confounded):** |Δε| ≥0.10 on 17%, seat-vector
 churn 44%, no direction (paired Δε mean −0.003) — less unstable than Flash-on (22%) or stealth (25%); the
 regime's instability has a model-specific magnitude. Still no thinking-off arm for kimi (constructible, OQ-342).
@@ -18133,6 +18141,7 @@ with ε pinned). **Floor table, thinking-off, ε pinned in all three (2026-08-22
 | stealth/ox-alpha thinking-on PURE (stealth2/3, same commit) | 52% | 65% | 82% | 87% | 25% | 63% |
 | gemini-2.5-flash thinking-on (flash_think/2) | 64% | 71% | 77% | 76% | 22% | 51% |
 | kimi-k2.6 thinking-on (kimi/kimi2; July leg at becd0f87 — redraw + prompt change) | 70% | 75% | 86% | 90% | 17% | 44% |
+| nemotron-3-ultra OFF vs ON (regime contrast, 728 seeds, think leg partial) | 43% | 56% | 66% | 72% | 27% | 76% |
 
 **kimi floor landed 2026-08-22 ($42): the five-leg writeup's headline — kimi band-3 share 63% — REPLICATES
 (63% → 64%; red 2.8% → 2.6%; mean ε 0.589 → 0.585): a model disposition, not draw luck.** Thinking-on
@@ -18323,6 +18332,11 @@ absolute prohibition, dignity, speech absolutism, equality) — DR's own false-s
 re-read as extractive could be the framework NOTICING naturalization — but also a physics
 interpretation (`quantum_formalism__copenhagen_reading`, +0.5 twice) and a historiographical
 thesis (`press_reformation_causation__technological_determinism`, +0.8 twice), which is FRAMING.
+
+**Replicated on nemotron-3-ultra (2026-08-23, `nemotron_noticing_vs_framing_2026-08-23.txt`):** rise largest on
+mountains (+0.12) and ropes (+0.11), ~zero on snares (−0.01), benign stratum +0.13 with 17% raised ≥0.30
+(Flash 16%) — same shape on a second family. nemotron_think's persisted responses carry `message.reasoning`,
+so arm 1 below can run on them now at $0.
 
 **The fork cannot be settled from inside the framework's outputs.** Three arms, cheapest first:
 1. **Reasoning-text census (free).** OpenRouter returns `message.reasoning`; the nemotron

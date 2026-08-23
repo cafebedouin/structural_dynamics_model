@@ -125,6 +125,7 @@ STAMPED_FILE_COUNTS = {
     "testsets_haiku3": 993,     # stamped 2026-08-22
     "testsets_stealth3": 1005,  # stamped 2026-08-22
     "testsets_kimi2": 1005,     # stamped 2026-08-22
+    "testsets_nemotron_think": 732,  # stamped 2026-08-23 (growing; auto-resume across the free-tier cap)
 }
 REMEASURE_GROWTH_FACTOR = 2.0
 

@@ -55,6 +55,7 @@ LIVE_LEGS = (
     "testsets_haiku3",     # 2026-08-22, 993 — the pure haiku floor pair with haiku2
     "testsets_stealth3",   # 2026-08-22, 1005 — the pure thinking-on floor pair with stealth2
     "testsets_kimi2",      # 2026-08-22, 1005 — the kimi floor pair with testsets_kimi
+    "testsets_nemotron_think",  # 2026-08-23, 732 and growing (free-tier cap; auto-resume) — nemotron regime pair
 )
 
 # NOTE ON module_boundary_check.ALL_ARM_C_LEGS, which now references this
