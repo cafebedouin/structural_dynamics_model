@@ -95,6 +95,12 @@ in runbook §9.
   redraw + prompt change (the flash-vs-flash2 shape), NOT the pure thinking-on floor; that is
   stealth2 vs a later stealth3 at the same commit (free). Stealth is outside the free-tier daily cap
   (0 × 429 over 1,040 requests; nemotron's first 429 at request #1025).
+- **22:15 — stealth3 COMPLETE 1005 (free) + certified; kimi2 at 1000/1005 after three batches ($42) with a
+  5-seed sync pass finishing.** Pure thinking-on floor (stealth2 vs stealth3, same commit): |Δε| ≥0.10 on
+  25% of seeds, seat-vector churn 63%, no direction — identical to the prompt-confounded pair (OQ-347 table).
+  Pending at this entry: kimi chain (reclassify July kimi at HEAD → sweep/classify kimi2), then register
+  kimi2, re-pin census (13→14 legs), gate, push; nemotron cap probe still 429 hourly (residue + `_think`
+  sibling queued behind it). Flash backfill final: 206/210.
 - **15:00 — floors and backfills LANDED; 12 live legs, census GREEN.** Pure thinking-off floors (same
   commit, ε pinned): Flash seat-vector churn 22% / Sonnet 38% / Haiku 65% (h1 85/72/53%) — the
   classification floor is model-specific and not derivable from ε (table on OQ-347). sonnet3 1003,
