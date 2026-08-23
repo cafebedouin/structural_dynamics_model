@@ -169,10 +169,15 @@ run "probe harness"  "$PY" python/probe_harness_gate.py --check
 # perfectly grammatical. The missing-append remedy is SKILL.md's landing-chain procedure.
 # The OQ's stated ABSENCE-detector control burden is therefore recorded UNMET, not covered.
 # R-B (operator, 2026-08-21): REPORTING-ONLY for the first live run, blocking thereafter. A
-# first-run red on the live file would couple the gate against pushes of unrelated work while
-# C5 simultaneously forbids repairing the offending row quietly -- a bad shape to discover
-# mid-execution. Drop `--reporting` in its own commit once the first live run is green.
-run "ledger grammar" "$PY" python/runs_ledger_check.py --check --reporting
+# first-run red on the live file would have coupled the gate against pushes of unrelated work
+# while C5 simultaneously forbids repairing the offending row quietly -- a bad shape to
+# discover mid-execution. The first live run was GREEN (2026-08-23, full gate; and again after
+# the head-note rewrite), so `--reporting` is dropped here and the row is now BLOCKING.
+# Blast radius, stated where whoever trips it will look: this row is blocking by the gate's
+# construction, so a malformed ledger row blocks pushes of UNRELATED work until it is
+# repaired. That is by design -- the ledger is a cost meter whose failures have all been
+# silent, and a row that only reports is a row that gets skimmed.
+run "ledger grammar" "$PY" python/runs_ledger_check.py --check
 
 # Standing detection that OQ-277's FROZEN preregistration has not been altered — a run was
 # made under md5 4118f64e, so if the document changes, the stamp stops naming what is on
