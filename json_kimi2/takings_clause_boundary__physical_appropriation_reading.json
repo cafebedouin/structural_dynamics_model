@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "takings_clause_boundary__physical_appropriation_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tcpa",
+    "story_uid": "a9997eab-dc0b-4d9e-a575-40fc4d8d9b53"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.68,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Takings Clause Physical Appropriation Reading",
+    "topic_domain": "constitutional/law/property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_and_federal_governments",
+      "regulatory_agencies"
+    ],
+    "victims": [
+      "property_owners_subject_to_regulation"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.4
+    }
+  ],
+  "omegas": [
+    {
+      "id": "original_meaning_contingency",
+      "question": "Does the historical record of the Fifth Amendment's ratification support a physical-appropriation-only reading, or is this a doctrinal construction of the late twentieth century?",
+      "resolution_mechanism": "Archival historical analysis of takings discourse at the Founding; comparison with state constitutional provisions and early eminent domain practice.",
+      "impact": "If the original meaning is indeterminate or broader, the physical appropriation reading loses its conventional grounding and computes as more extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Historical grounding of the physical appropriation test"
+    },
+    {
+      "id": "regulatory_loss_as_background_risk",
+      "question": "Are non-physical regulatory losses a legitimate background risk of property ownership, or a concealed wealth transfer to the public?",
+      "resolution_mechanism": "Comparative institutional analysis of property value fluctuations under regulatory regimes versus physical dispossession.",
+      "impact": "If background risk, the extraction metric overstates cost-shifting; if wealth transfer, the coordination story is cover for extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Nature of uncompensated regulatory losses"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of regulatory takings claims structural (judicial dismissal) or internalized (property owners' acceptance of police power norms)?",
+      "resolution_mechanism": "Post-doctrinal-shift litigation rates: if claim filing rates are low despite high regulatory burden, suppression is partly internalized.",
+      "impact": "Internalized suppression raises effective extraction above the structural measure; the constraint operates on identity as well as courts.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Structural versus internalized suppression of takings claims"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "state_and_federal_governments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer and perpetuate the constitutional interpretation through the federal judiciary and, indirectly, state courts bound by Supreme Court precedent. Benefit from broad regulatory authority without fiscal liability for non-physical regulatory diminutions."
+    },
+    {
+      "name": "property_owners_subject_to_regulation",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear uncompensated economic losses from zoning, environmental, and other non-physical land-use regulations. Their takings claims are dismissed unless they demonstrate a direct physical appropriation or permanent occupation."
+    },
+    {
+      "name": "regulatory_agencies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Exercise land-use, environmental, and economic regulatory power without compensation liability for regulatory diminution, provided no physical invasion occurs."
+    },
+    {
+      "name": "property_rights_expansionists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for compensation when regulation destroys economic value, regardless of physical invasion. Structurally excluded from prevailing doctrine by the physical-appropriation threshold rule."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Analyze the doctrinal coherence of the physical appropriation test, its historical provenance, and its distributional consequences across constitutional and property law."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a bright-line rule for courts to distinguish compensable takings from non-compensable exercises of the police power, reducing judicial discretion and administrative cost in regulatory and eminent domain disputes.",
+    "transfer_function": "Shifts the cost of non-physical regulatory diminution from the public fisc to affected property owners; transfers legal protection from broad economic rights to narrow physical possession rights.",
+    "absent_voices": "Property owners facing severe economic diminution without physical invasion, and regulatory takings advocates who would argue for compensation under balancing tests; their claims are foreclosed by the physical appropriation threshold.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the physical appropriation limit vanished, courts would revert to balancing tests or broader categorical rules, rearranging fiscal burdens, regulatory incentives, and the viability of zoning and environmental programs.",
+    "founding_problem": "The need to prevent government evasion of the just compensation requirement through regulatory means while preserving a robust police power for health, safety, and welfare regulation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Originalist jurists and some constitutional historians attest the founding understanding targeted physical appropriation; progressive legal scholars and property rights economists outside the benefiting government parties contest this as anachronistic or underinclusive."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "physical_appropriation_baseline",
+    "drift_state": {
+      "moment": "post_cedar_point_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "regulatory_takings_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "categorical_takings_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "physical_seizure_compensation_threshold",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "police_power_non_compensable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the physical_appropriation_reading of the contested takings_clause_boundary kernel. Under this reading, the Fifth Amendment's Takings Clause requires compensation only for direct physical seizures or permanent physical occupations of property. All other regulatory burdens, including total economic wipeouts effected by regulation, are treated as non-compensable exercises of the police power. The reading narrows the victim set to victims of physical dispossession and expands government regulatory freedom. Sibling readings include regulatory_takings_reading (significant economic diminution is compensable) and categorical_takings_reading (total wipeouts plus physical occupations are per se takings).",
+    "key_agents": [
+      "state_and_federal_governments (agenda_setter/beneficiary â institutional/constrained)",
+      "property_owners_subject_to_regulation (payer â moderate/constrained)",
+      "regulatory_agencies (beneficiary â institutional/constrained)",
+      "property_rights_expansionists (excluded â organized/constrained)",
+      "constitutional_scholars (observer â analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.65) is substantial because the constraint permits government regulations that diminish property value up to one hundred percent without compensation, so long as no physical invasion occurs. Suppression (0.68) is high because the constraint forecloses entire categories of regulatory takings claims at the pleading stage. Theater_ratio (0.40) reflects the increasing performative invocation of originalism and formalism to justify what functions as a cost-shifting rule. Accessibility_collapse (0.60) is moderate-to-high: alternative theories remain doctrinally available but are practically disfavored for non-physical intrusions. Resistance (0.55) reflects sustained scholarly and advocacy criticism plus intermittent doctrinal challenges.",
+    "perspectival_gap": "From the government and regulatory agency seats, the constraint is a necessary limitation on compensation liability that preserves the police power and prevents regulatory paralysis. From the property owner seat, it is an arbitrary threshold that permits uncompensated wealth destruction. The engine computes this divergence from the same structural data: identical scope and power atoms produce opposite effective extraction depending on beneficiary versus payer role.",
+    "directionality_logic": "state_and_federal_governments and regulatory_agencies are structural beneficiaries: the constraint subsidizes their regulatory activity by eliminating compensation liability for non-physical regulations (low d, low or negative effective extraction). property_owners_subject_to_regulation are the targets: they bear the cost of regulatory diminution without recourse (high d, high effective extraction). property_rights_expansionists are excluded from the beneficiary structure entirely.",
+    "mandatrophy_analysis": "The classification as tangled_rope prevents mislabeling the constraint as pure extraction or pure coordination. It genuinely coordinates constitutional adjudication by supplying a bright-line rule that reduces litigation uncertainty and judicial discretion. However, it asymmetrically allocates the cost of regulation to property owners while shielding the public fisc. Without the coordination function, it would be a snare; without the asymmetric cost-shifting, it would be a rope. The founding problem â distinguishing takings from legitimate regulation â remains contested and live, so the constraint is not yet a piton, though the rising theater_ratio indicates increasing performative maintenance.",
+    "kernel_context": "This constraint is the physical_appropriation_reading of the takings_clause_boundary kernel. It treats only direct physical seizures or permanent physical occupations as compensable takings. Sibling readings are regulatory_takings_reading (compensates significant economic diminution) and categorical_takings_reading (physical occupations plus total wipeouts are per se compensable). The decomposition follows Îµ-invariance: each reading has a distinct beneficiary/victim structure and extraction profile."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

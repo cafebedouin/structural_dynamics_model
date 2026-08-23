@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "eu_council_unanimity__diplomatic_capital_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eu_unanimity_dipcap",
+    "story_uid": "f030244e-cd48-4f3a-8257-56ef09171e9c"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.25,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "EU Council Unanimity â Diplomatic Capital Reading",
+    "topic_domain": "institutional_design/international_relations/political_economy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "council_member_states"
+    ],
+    "vindicated_propositions": [
+      "legitimacy_through_consent",
+      "unanimity_durability_thesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "council_member_states",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Collective of EU member states bound by the Council unanimity procedure. Each state possesses an equal veto and invests diplomatic time in iterative negotiation. In return they receive policy buy-in, sovereignty reassurance, and durable agreements with lower downstream defection risk. Exit from the procedure is effectively tied to EU membership, which is politically and economically costly."
+    },
+    {
+      "name": "european_commission",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Proposes legislation and monitors implementation but does not vote in the Council. Observes the unanimity process from an institutional vantage point, assessing whether negotiated outcomes align with the integration acquis and evaluating the transaction costs of consensus relative to majority alternatives."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Secures collective action among sovereign states with divergent interests by forcing iterative negotiation until all parties consent, thereby internalizing objections before adoption.",
+    "transfer_function": "Transfers diplomatic time and negotiation effort from member states into the bargaining process; transfers legitimacy and implementation durability to the resulting policy.",
+    "absent_voices": "EU citizens, candidate countries, and affected third parties are not at the bargaining table; their interests may be diluted or traded away in closed-door consensus packages.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unanimity vanished overnight in sensitive domains, the Council would shift to QMV or similar majoritarian rules. Bargaining would speed up but lose the procedural guarantee that every state's core interests are accommodated; the resulting policies would face higher non-compliance and political contestation risks.",
+    "founding_problem": "How to secure collective action and compliance among sovereign states with highly divergent interests without triggering exit or systematic non-compliance.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Academic scholars in international relations and EU studies attest that the problem of securing sovereign-state compliance remains live in taxation, foreign policy, and enlargement. Independent treaty histories and comparative federalism research corroborate the continuing relevance of the consensus problem outside the beneficiary states' own assertions."
+  },
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This is the diplomatic_capital_reading of the eu_council_unanimity kernel. It treats Council unanimity not as a veto trap or sovereignty shield, but as a coordination investment: member states spend time and diplomatic capital up front to produce decisions that all parties own, yielding higher compliance and legitimacy than majority imposition. The kernel is contested â sibling readings frame the same procedure as sovereignty_guarantor (protecting small states against majoritarian coercion) or veto_trap (enabling minoritarian extraction). This story instantiates only the diplomatic-capital reading, with low Îµ reflecting friction costs rather than extraction.",
+    "key_agents": [
+      "council_member_states (institutional/constrained): symmetric beneficiaries of legitimacy and durability, equally possessing veto power.",
+      "european_commission (institutional/analytical): observer evaluating transaction costs and integration effects."
+    ],
+    "logic_rationale": "Extractiveness is low (0.22) because the 'cost' of unanimity is mutual negotiation friction, not a unilateral transfer. Suppression is low (0.25) because the rule does not silence dissent but rather requires its resolution; alternatives like QMV are procedurally unavailable for covered decisions, but this is a collectively adopted procedure, not an imposed coercion. Theater is low (0.15): the negotiation is substantively functional. Accessibility collapse (0.35) reflects that QMV alternatives are procedurally blocked in unanimity domains, yet remain visible and politically discussed. Resistance (0.30) captures intermittent complaint about decisional paralysis, counterbalanced by general acceptance of the legitimacy premium.",
+    "perspectival_gap": "The divergence between this reading and the veto_trap reading is kernel-level, not metric-level. Under diplomatic_capital, all member states are near-symmetric beneficiaries (d â 0.5) investing coordination cost for collective gain. Under veto_trap, specific states or coalitions become agenda_setters wielding credible blocking threats to extract side-payments, producing asymmetric extraction. The engine will compute different per-seat classifications for the same procedural rule depending on which reading's structural data (beneficiary/victim declarations) is loaded.",
+    "directionality_logic": "Council member states are declared beneficiaries with constrained exit, yielding directionality near the symmetric center. No victim group is declared because this reading asserts no fixed extraction from any state to another; the veto is equally distributed. The European Commission is an analytical observer with no directional stake in the extraction formula.",
+    "mandatrophy_analysis": "Unanimity was built to solve the compliance problem among sovereigns. In this reading it remains live for sensitive domains (tax, foreign policy, enlargement) because the underlying coordination problem â securing willing implementation from states with divergent interests â has not disappeared. Mandatrophy is therefore not declared resolved. The classification as rope rather than piton is supported by the low theater ratio and the absence of performative maintenance: states genuinely bargain, package deals, and adjust texts rather than theatrically re-enacting a solved consensus.",
+    "kernel_context": "This constraint is one reading of the eu_council_unanimity kernel. The diplomatic_capital_reading sees unanimity as coordination investment producing legitimacy. Sibling readings are sovereignty_guarantor_reading (unanimity as protection against majoritarian coercion) and veto_trap_reading (unanimity as structural enabler of minoritarian extraction). Each reading instantiates a distinct constraint with distinct Îµ and beneficiary structures."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_sibling_delta",
+      "question": "How would the classification of EU Council unanimity change if the veto_trap reading or sovereignty_guarantor reading were adopted as the operative framing?",
+      "resolution_mechanism": "Comparative domain analysis across policy areas (taxation, foreign policy, enlargement) to test whether unanimity operates as coordination, sovereignty protection, or extraction in each.",
+      "impact": "Adopting the veto_trap reading would raise Îµ and shift classification toward tangled_rope or snare by introducing asymmetric victimhood; adopting the sovereignty_guarantor reading would keep Îµ low but make the beneficiary structure asymmetric (small states as primary beneficiaries).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural ambiguity between coordination, sovereignty protection, and extraction readings of the same kernel."
+    },
+    {
+      "id": "unanimity_durability_empirical",
+      "question": "Do decisions taken by unanimity in the EU Council exhibit measurably higher compliance and lower defection rates than those taken by QMV?",
+      "resolution_mechanism": "Quantitative compliance studies comparing transposition timelines, infringement proceedings, and national court challenges for unanimity-adopted versus QMV-adopted directives.",
+      "impact": "If durability is not empirically supported, the legitimacy payoff central to this reading is undermined and Îµ should rise to reflect pure friction without compensating benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical test of the legitimacy-durability claim central to this reading."
+    },
+    {
+      "id": "negotiation_cost_legitimacy_tradeoff",
+      "question": "At what point do the transaction costs of unanimity negotiation exceed the legitimacy benefits, and does the post-enlargement EU currently sit above or below that threshold?",
+      "resolution_mechanism": "Economic analysis of legislative delay costs combined with elite and public legitimacy surveys across member states.",
+      "impact": "If costs exceed benefits, the constraint becomes a net extraction mechanism even under this reading, pushing classification toward tangled_rope.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Cost-benefit threshold ambiguity for unanimity as coordination investment."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_council_unanimity__sovereignty_guarantor_reading",
+      "eu_council_unanimity__veto_trap_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the eu_council_unanimity kernel. The diplomatic_capital_reading interprets the same procedural rule as coordination investment, while sibling readings interpret it as sovereignty protection or extraction trap. They are linked as a constraint family because they share the same natural-language label but instantiate structurally distinct claims with different Îµ values."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "consensual_intergovernmental_bargaining",
+    "drift_state": {
+      "moment": "post_enlargement_contemporary",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sovereignty_guarantor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "veto_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "iterative_negotiation_produces_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "unanimity_preferable_to_qmv_for_core_policies",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

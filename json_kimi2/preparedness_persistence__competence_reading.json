@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "b6fecdec-4f6d-44d0-a849-fde10bcbadc1"
+  },
+  "base_properties": {
+    "extractiveness": 0.1,
+    "suppression": 0.08,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.02,
+    "claimed_type": "rope",
+    "human_readable": "Live Exercised Preparedness Drills and Inspections",
+    "topic_domain": "institutional/disaster_preparedness",
+    "beneficiaries": [
+      "emergency_response_personnel",
+      "facilities_engineers",
+      "emergency_coordinators"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "stakeholders": [
+    {
+      "name": "emergency_response_personnel",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Participates in regular emergency-response drills to maintain individual and team skills under realistic conditions. The exercises keep procedural knowledge executable during high-stress events. Can leave the organization or profession, but within any prepared-response role, live practice is the standard for competence."
+    },
+    {
+      "name": "facilities_engineers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Conducts and responds to scheduled inspections of physical infrastructure and safety systems. Inspections catch degradation before it becomes catastrophic failure. Professional accountability depends on documented verification, and the engineer benefits when latent faults are found early."
+    },
+    {
+      "name": "emergency_coordinators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Designs, schedules, and evaluates drill scenarios and inspection protocols. Holds the organizational memory of what hazards to exercise and what standards to apply. Benefits from a genuinely prepared organization because their authority and effectiveness depend on actual operational readiness, not documented compliance alone."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains individual and team competence in emergency procedures so that under stress, responses are coordinated rather than improvised; verifies that physical infrastructure continues to meet safety specifications before failure occurs.",
+    "transfer_function": "Moves organizational attention and labor from routine operations to readiness practice; moves inspection effort across infrastructure components to detect entropy-induced degradation.",
+    "absent_voices": "Personnel who have never experienced an actual emergency and therefore undervalue drill time; efficiency analysts who treat scheduled drills as lost productive capacity; advocates of simulation-only or virtual-reality training who are not in the room where the live-exercise standard is set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If live exercised drills and inspections disappeared, unpracticed skills would degrade toward improvisation, equipment faults would accumulate undetected, and the organization's capacity to execute coordinated emergency response would atrophy â the world of operational readiness would rearrange toward failure.",
+    "founding_problem": "Emergency-response skills and infrastructure integrity degrade without regular exercise and verification; ad-hoc improvisation under crisis pressure produces uncoordinated, ineffective response and preventable physical failures.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Emergency-management literature, after-action reports from actual disasters, and safety-engineering standards bodies attest that competence atrophies without practice and that inspection detects latent failures. These sources sit outside the immediate benefiting parties of any single organization."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.07
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the competence_reading of the preparedness_persistence kernel. The standing arrangement is that organizations conduct regular drills and inspections as live exercised knowledge, treating practice as the mechanism that maintains operational readiness. In this reading, the arrangement is a genuine coordination mechanism (Rope) that solves the collective-action problem of keeping multi-agent response procedures executable under stress, layered atop the natural decay dynamic of skills and infrastructure (Mountain). There is no extraction structure: all named parties are net beneficiaries, and persistence depends on mutual benefit rather than coercion.",
+    "key_agents": [
+      "emergency_response_personnel: Primary beneficiary (moderate/mobile) â gains operational competence and safety through live practice",
+      "facilities_engineers: Primary beneficiary (moderate/mobile) â gains verified infrastructure integrity through systematic inspection",
+      "emergency_coordinators: Agenda-setter and beneficiary (moderate/mobile) â administers drills and benefits from a genuinely prepared organization"
+    ],
+    "logic_rationale": "Extractiveness is very low (0.10) because the constraint moves time and attention but does not extract asymmetric rents; all parties are net beneficiaries. Suppression is minimal (0.08) because compliance is voluntary and preference-aligned â attendance may be formally required, but resistance is negligible. Theater ratio is very low (0.05) because the functional account dominates; drills genuinely exercise skills and inspections genuinely catch faults. Accessibility collapse is modest (0.20) because alternatives (simulation-only training, third-party certification) exist but lack the shared-reference advantage of live, co-located exercise. Resistance is near zero (0.02) because the founding problem remains live and corroborated externally.",
+    "perspectival_gap": "Seat divergence is minimal in the competence reading: the agenda-setter (emergency_coordinators) and the beneficiaries (personnel, engineers) all experience the constraint as coordination rather than extraction. The perspectival gap appears only when this reading is compared to the sibling husk_reading, which would reclassify the same practices as theatrical maintenance. Within this reading, the computed directionality for all seats sits near the beneficiary end.",
+    "directionality_logic": "All declared agents are beneficiaries. Emergency coordinators administer the arrangement but do not capture rents from it; their authority depends on actual readiness. Personnel and engineers receive the safety and competence gains. No victim group is declared, so structural derivation produces low directionality across all seats. No override is needed.",
+    "mandatrophy_analysis": "Low D5 risk. The founding problem â skill atrophy and latent infrastructure failure without regular exercise â remains live and is corroborated by sources outside the benefiting parties. The arrangement is not transitional, so no sunset clause is warranted. The negligible theater ratio indicates that function has not atrophied into performance; the mandate and the function remain aligned.",
+    "kernel_context": "This constraint is the competence_reading of the preparedness_persistence kernel. It reads drills and inspections as live exercised knowledge that genuinely maintains operational readiness. Sibling readings are husk_reading (memorial performance, atrophied competence) and hybrid_reading (stratified competence/ritual across components). These readings coexist as alternative framings of the same institutional practices; the competence reading does not logically foreclose either, because an observer can adopt this framing for a given practice while other observers adopt sibling framings for the same or comparable practices."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Is the observed drill and inspection practice best characterized as live exercised competence, memorial performance, or a stratified hybrid?",
+      "resolution_mechanism": "Comparative after-action analysis: correlate drill observation scores with actual emergency performance metrics across organizations; measure whether inspection findings predict failure rates or are decorrelated from outcomes.",
+      "impact": "Resolving the reading contest would reclassify the constraint from rope (competence) to piton (husk) or tangled_rope (hybrid), radically altering the directionality profile and mandatrophy assessment.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the preparedness_persistence kernel is structurally accurate."
+    },
+    {
+      "id": "mountain_rope_boundary",
+      "question": "Does the constraint derive its force from the natural law of skill decay and infrastructure entropy (Mountain), or from the institutional choice to coordinate practice (Rope)?",
+      "resolution_mechanism": "Examine whether readiness atrophies automatically in the absence of any institutional arrangement (supporting Mountain for the decay dynamic) while treating the specific drill/inspection protocol as separable coordination (Rope).",
+      "impact": "If the decay dynamic is dominant, the constraint's persistence is physically necessary rather than socially contingent; if the protocol choice is dominant, classification as rope is correct but the coordination type and beneficiaries shift.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between physical decay law and institutional coordination."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "live_exercised_readiness",
+    "drift_state": {
+      "moment": "contemporary_audit_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "husk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "live_practice_maintains_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "systematic_inspection_prevents_failure",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "network": {
+    "dual_formulation_note": "The preparedness_persistence kernel decomposes into three readings: competence (this file), husk, and hybrid. Each reading assigns a different structural character to the same institutional practices of drills and inspections."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

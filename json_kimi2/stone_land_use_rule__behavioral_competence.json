@@ -1,0 +1,223 @@
+{
+  "header": {
+    "constraint_id": "stone_land_use_rule__behavioral_competence",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "d70bdb56-3adc-4b3b-9278-7ade7b2f9a2e"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.22,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Stone-Marked Hazard Avoidance Rule (Behavioral Competence Reading)",
+    "topic_domain": "disaster_anthropology/land_use_governance",
+    "beneficiaries": [
+      "local_residents"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "local_residents",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Community members who daily accept steep climbs and longer routes to avoid the stone-marked zone, sustaining a 78-year compliance pattern in exchange for perceived hazard avoidance and intergenerational safety."
+    },
+    {
+      "name": "customary_council",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Local governance body that maintains the physical stone, transmits the origin narrative, and legitimizes the boundary. They enforce no sanctions but sustain the institutional frame through ritual remembrance and land-use planning."
+    },
+    {
+      "name": "disaster_anthropologist",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Researchers who document the 78-year compliance record and debate whether the stone governs behavior or has decayed to a commemorative husk."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates collective avoidance of a hazardous zone by marking a boundary and aligning pedestrian and land-use practice across generations, preventing individual shortcut-taking that would undermine group safety.",
+    "transfer_function": "Transfers time and physical effort (steep climbs) from individual community members to the collective account of hazard avoidance; no asymmetric material transfer.",
+    "absent_voices": "Younger residents and external developers who would prefer to route through the prohibited zone for economic convenience; they are absent from the customary decision-making space or overruled by intergenerational consensus.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the prohibition disappeared overnight, the coordinated avoidance pattern would fragment; some residents would take the shorter route, land-use pressure would mount, and the 78-year safety buffer would erode within a generation as institutional memory decoupled from practice.",
+    "founding_problem": "A past disaster created a persistent hazard zone that required coordinated community avoidance to prevent individual risk-taking that would endanger lives and livelihoods.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Geological hazard assessments and historical disaster records from outside the community corroborate the original risk; however, independent surveys contest whether the current risk profile justifies the sustained economic cost of avoidance."
+  },
+  "interval": {
+    "start": 0,
+    "end": 78
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 13,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 26,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 39,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 52,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 65,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 78,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 13,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 26,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 39,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 52,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 65,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 78,
+      "value": 0.12
+    }
+  ],
+  "omegas": [
+    {
+      "id": "behavioral_force_vs_memorial",
+      "question": "Does the stone currently enforce binding land-use avoidance, or has it decayed to a commemorative symbol without behavioral compulsion?",
+      "resolution_mechanism": "Ethnographic observation of actual pedestrian routing and land-use patterns; interviews with residents on whether shortcut-taking triggers social sanction or hazard concern.",
+      "impact": "If behavioral force is absent, this reading collapses toward the commemorative_husk sibling (low/zero extraction, possible piton); if present, the live rope classification is sustained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Kernel contest: whether the stone retains behavioral competence"
+    },
+    {
+      "id": "hazard_persistence",
+      "question": "Does the geological or disaster hazard that originally justified the prohibition still obtain at levels that warrant sustained economic cost?",
+      "resolution_mechanism": "Independent geological and disaster-risk assessment of the prohibited zone compared with historical baseline.",
+      "impact": "If hazard is proven extinct, the coordination function becomes mandatrophic (zombie rope/piton risk); if hazard persists, the rope classification is strongly corroborated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the underlying hazard remains live"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is compliance driven by internalized norms, external social sanction, or rational hazard avoidance?",
+      "resolution_mechanism": "Post-exit or generational-change observation: if relocated residents still avoid analogous zones, suppression is internalized; if compliance drops when social observers are absent, it is external.",
+      "impact": "Internalized suppression raises effective extraction modestly because the constraint travels with the agent; external suppression keeps extraction bounded by the local social field.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Structural vs internalized suppression mechanism"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story models a stone marker that functions as a live land-use prohibition in a disaster-affected community. The behavioral_competence reading treats the stone as an active coordination device: for 78 years, residents have accepted the economic cost of steep climbs to avoid a hazard zone, with daily spatial practice serving as the enforcement mechanism. The reading claims the stone is not a memorial relic but a binding rule whose violation is checked by routine. The kernel is contested by the commemorative_husk reading, which asserts the stone has decayed to symbolic status without behavioral force. This JSON instantiates only the behavioral_competence reading as a clean epsilon-invariant constraint.",
+    "key_agents": [
+      "local_residents (moderate/constrained): Bear symmetric coordination costs (steep climbs) and receive hazard avoidance.",
+      "customary_council (moderate/constrained): Maintains the stone and institutional memory; no material extraction.",
+      "disaster_anthropologist (analytical/analytical): Observes the 78-year compliance record and the kernel contest."
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) because the constraint moves only time and effort into collective hazard avoidance, with no captured surplus. Suppression is low-moderate (0.22) because deviation is checked by social practice and spatial routine, not by coercion or sanction. Theater ratio is very low (0.12): the steep climbs are real costs, not performative. Accessibility collapse is moderate (0.40): once a resident knows the rule, the shortcut socially collapses even if it remains physically open. Resistance is minimal (0.10) because compliance is sustained and largely internalized across generations. The measurement series show stable low extraction with minor fluctuations, consistent with 78 years of sustained coordination.",
+    "perspectival_gap": "The agenda-setter seat (customary council) and beneficiary seat (local residents) both experience the constraint as legitimate coordination protecting against a shared hazard. There is no strong perspectival divergence into extraction because no party captures asymmetric rents; the engine will compute both seats as near-symmetric or mild-beneficiary, consistent with rope classification.",
+    "directionality_logic": "Local residents are declared beneficiaries (low d) because they receive the primary coordination good (hazard avoidance). Their directionality is not pushed toward target because they are not structurally victimized; the steep climb is a symmetric coordination cost. The customary council sits near the agenda-setter center with no extraction to capture. No directionality overrides are needed because the structural derivation from beneficiary declarations and exit options accurately reflects the symmetric coordination picture.",
+    "mandatrophy_analysis": "The founding problem â a disaster-created hazard requiring coordinated avoidance â is contested but still plausibly live. The constraint persists because it solves a genuine coordination problem (preventing individual risk-taking that would undermine collective safety), not because an entrenched party extracts from its continuation. If the hazard were proven extinct, the constraint would risk mandatrophy (becoming a piton or zombie rope), but the behavioral_competence reading asserts the hazard rationale remains structurally operative.",
+    "kernel_context": "This is the behavioral_competence reading of the stone_land_use_rule kernel, which asserts the stone remains a behaviorally active prohibition. The sibling commemorative_husk reading claims the stone has decayed to a memorial artifact without current behavioral force. The two readings are mutually exclusive empirical claims about the same object."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "active_prohibitory_boundary",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "repudiation_pressure",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "commemorative_husk",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "stone_retains_binding_force",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "hazard_avoidance_overrides_convenience",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

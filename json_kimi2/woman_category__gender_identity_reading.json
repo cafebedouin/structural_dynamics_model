@@ -1,0 +1,282 @@
+{
+  "header": {
+    "constraint_id": "woman_category__gender_identity_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wcgir",
+    "story_uid": "7d871585-0c63-4d80-bfab-eb72d3b21697"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.72,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.78,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Woman Category: Gender Identity Reading",
+    "topic_domain": "political_philosophy/law/social_policy/bioethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "gender_inclusion_advocates",
+      "institutional_adopters"
+    ],
+    "victims": [
+      "gender_identity_women"
+    ],
+    "vindicated_propositions": [
+      "gender_self_determination_doctrine",
+      "anti_discrimination_gender_identity"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "omegas": [
+    {
+      "id": "domain_dependent_extraction",
+      "question": "Does the constraint's extractiveness vary structurally between identity-document policy and sports eligibility such that they constitute separate constraints?",
+      "resolution_mechanism": "Decompose into separate stories if empirical measurement shows non-overlapping epsilon confidence intervals across domains.",
+      "impact": "If domain-specific, the current story conflates two constraints and should be split per the epsilon-invariance principle.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural ambiguity over whether identity-documents and sports/spaces are the same constraint"
+    },
+    {
+      "id": "victim_beneficiary_ambiguity",
+      "question": "Are people who identify as women genuine victims of this constraint, or are they its primary beneficiaries, with the victim role actually belonging to natal women losing sex-based protections?",
+      "resolution_mechanism": "Analyze directionality from each seat: if self-identified women experience negative effective extraction (subsidized access), they are beneficiaries; if they bear positive extraction (scrutiny, targeting, collision costs), they are victims.",
+      "impact": "Reverses the beneficiary-victim structure and thus the directionality derivation for the primary affected group.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the primary affected group is subsidized or extracted-from"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of sex-based protection claims structural (legal penalties, institutional exclusion) or internalized (social stigma, self-censorship)?",
+      "resolution_mechanism": "Track opposition expression pre- and post-legal adoption; if suppression persists after legal threat recedes, it is partially internalized.",
+      "impact": "Internalized suppression inflates effective extraction beyond the structural measure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the gender-identity reading of the contested woman_category kernel: the claim that 'woman' is a person who identifies as a woman, regardless of sex assigned at birth. It is codified in anti-discrimination law, identity-document policy, and institutional inclusion guidelines across a growing number of jurisdictions. The reading coordinates category membership by replacing biological gatekeeping with self-declaration, but its application to sports eligibility and sex-segregated spaces generates high-stakes collision between access rights and exclusion rights. The authored victim setâpeople who identify as women, including transgender womenâreflects the structural delta provided for this reading: they bear the concentrated costs of contested implementation, political targeting, and safety risks in high-extraction domains. The claim/metric independence is maintained: the constraint is claimed as tangled_rope (genuine coordination function plus asymmetric extraction) while the metrics describe a substantially extractive, actively enforced arrangement with high resistance.",
+    "key_agents": [
+      "institutional_adopters (agenda_setter / institutional / constrained) â governments and courts that codify the gender-identity criterion and administer its enforcement",
+      "gender_inclusion_advocates (beneficiary / organized / mobile) â advocacy networks that collect policy victories and legitimacy from the constraint's operation",
+      "gender_identity_women (payer / powerless / identity_locked) â self-identified women, including transgender women, who bear the costs of collision in sports and segregated spaces",
+      "sex_based_protection_advocates (excluded / organized / constrained) â feminist and legal advocates arguing for sex-based categorical protections, structurally marginalized as discriminatory",
+      "sports_governance_bodies (observer / institutional / analytical) â federations attempting to reconcile inclusion with competitive fairness",
+      "medical_legal_observers (observer / institutional / analytical) â expert bodies providing testimony on gender identity standards"
+    ],
+    "logic_rationale": "Extractiveness (0.66) is moderate-to-high because the constraint transfers category membership and access rights from a biologically assigned system to self-declaration, generating substantial costs in high-stakes domains (sports, shelters, prisons) where collision is sharpest. It is lower in identity-document policy. Suppression (0.72) is high because the constraint's persistence requires active enforcementâanti-discrimination penalties, institutional exclusion of dissent, and social delegitimation of sex-based protection claims. Theater ratio (0.28) reflects a real coordination function in legal recognition alongside growing performative allyship that outpaces institutional capacity. Accessibility collapse (0.60) captures the partial delegitimation of biological-sex-based alternatives without their full disappearance. Resistance (0.78) is high due to organized opposition from sex-based advocacy movements and jurisdictional pushback. The measurement series share a single time grid to prevent misalignment artifacts.",
+    "perspectival_gap": "The agenda-setter and beneficiary seats (institutions, advocates) experience the constraint as a rights-affirming coordination mechanism that resolves boundary disputes and reduces gatekeeping costs. The payer seat (gender_identity_women) experiences the same constraint as a source of invasive scrutiny, political targeting, and physical risk in sex-segregated spaces where access rights collide with exclusion rights. The engine computes this divergence from the structural data: low directionality for adopters and advocates, high directionality for identity-locked payers.",
+    "directionality_logic": "Institutional adopters and inclusion advocates are structural beneficiaries: they gain administrative clarity, policy coherence, and political legitimacy from the constraint's operation (low d, subsidized). Gender-identity women are structural targets: they bear the concentrated extraction of contested implementation, especially in sports and spaces, and their exit is identity-locked because leaving the category is existentially costly (high d, amplified chi). Sex-based protection advocates are excluded from the framework entirely, their opposition pre-classified as discriminatory, giving them no directional influence within the constraint's own logic.",
+    "mandatrophy_analysis": "The constraint prevents mislabeling by preserving the coordination function: it genuinely resolves a categorical boundary problem and reduces the indignity of biological gatekeeping. However, the coordination function is inseparable from asymmetric extraction because the same self-declaration mechanism that grants documents also governs sports and shelter access, where the collision costs fall on the payer seat. Without the genuine coordination function, the constraint would be a pure snare; without the asymmetric extraction in high-stakes domains, it would be a rope. The tangled_rope classification captures this hybridity.",
+    "kernel_context": "This constraint is the gender_identity_reading of the woman_category kernel. It instantiates the reading that category membership is determined by internal gender identity. Sibling readings are the sex_biology_reading (biological determinacy) and the intersex_accommodation_reading (non-binary sex spectrum with accommodation). The disagreement is located at the criterion for membership: self-identification versus biological morphology versus developmental variation."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "sex_biology_reading",
+      "intersex_accommodation_reading"
+    ],
+    "dual_formulation_note": "The woman_category kernel decomposes into three structurally distinct readings. The gender_identity_reading treats self-identification as determinative; the sex_biology_reading treats chromosomal/anatomical sex as determinative; the intersex_accommodation_reading treats sex as a non-binary spectrum with accommodation for atypical development. Each reading has a different beneficiary/victim structure and epsilon profile."
+  },
+  "stakeholders": [
+    {
+      "name": "institutional_adopters",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Governments, courts, and administrative bodies that codify gender identity as the legal criterion for categorical membership. They gain a administrable rule that avoids biological testing but face litigation, political backlash, and contradictory demands when applying the rule to sports, shelters, and correctional facilities."
+    },
+    {
+      "name": "gender_inclusion_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocacy organizations, legal nonprofits, and campaign networks that have secured adoption of gender-identity criteria. They collect policy victories, organizational funding, and moral legitimacy from the constraint's continued operation and defend it against sex-based protection claims."
+    },
+    {
+      "name": "gender_identity_women",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "People who identify as women, including transgender women, who are designated beneficiaries of the category rule but bear its concentrated costs: invasive scrutiny during sports eligibility hearings, political targeting in public discourse, and safety risks in sex-segregated spaces where access rights collide with exclusion rights. Exit from the category is existentially costly because gender identity is constitutive of social personhood for this seat."
+    },
+    {
+      "name": "sex_based_protection_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Feminist and legal advocates who argue that 'woman' is a sex-based category requiring protections for female biology. They are structurally excluded from the policy framework, their arguments pre-classified as discriminatory rather than treated as contesting the kernel on its own terms."
+    },
+    {
+      "name": "sports_governance_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International and national sports federations attempting to reconcile gender-identity inclusion with competitive fairness. They observe the collision but lack authority to resolve the underlying kernel dispute, producing shifting testosterone limits and inclusion guidelines that move with political and legal pressure."
+    },
+    {
+      "name": "medical_legal_observers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Medical associations, legal scholars, and human rights monitors who provide expert testimony and standards on gender identity. They observe the implementation and offer interpretive guidance but do not directly collect or pay within the constraint's transfer structure."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Resolves categorical boundary disputes over who counts as a woman by replacing biological gatekeeping with subjective self-identification, reducing administrative verification costs and affirming individual autonomy over categorical membership.",
+    "transfer_function": "Moves legal recognition, access to sex-segregated spaces, and eligibility for sex-based protections from a biologically assigned system to a self-declaration system; moves political legitimacy and policy-coordination gains to adopting institutions and advocacy networks, while moving the costs of contested implementationâscrutiny, safety risks, and political targetingâto self-identified women, especially in high-stakes domains like sports and shelters.",
+    "absent_voices": "Advocates for sex-based protections for natal females are structurally excluded from the policy framework, their arguments pre-classified as discriminatory; intersex perspectives that resist binary gender-identity categorization are also largely absent from the dominant policy discourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the gender-identity criterion vanished overnight, legal sex classification would revert to biological or administrative sex markers, access policies for women's sports and shelters would require alternative eligibility tests, and the existing anti-discrimination infrastructure built around gender identity would require reconceptualization.",
+    "founding_problem": "How to include transgender women in the legal and social category 'woman' without subjecting them to invasive biological verification, medical gatekeeping, or categorical exclusion.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated by human rights organizations and medical associations from outside the immediate beneficiary advocacy sphere; contested by feminist legal scholars, sport regulators, and some medical ethicists who argue the solution dissolves necessary sex-based protections."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "gender_self_determination_framework",
+    "drift_state": {
+      "moment": "contemporary_policy_contestation",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sex_biology_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "intersex_accommodation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "gender_identity_determines_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "sex_based_exclusion_is_discriminatory",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

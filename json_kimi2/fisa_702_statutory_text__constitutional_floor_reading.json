@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__constitutional_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-26",
+    "status": "ACTIVE",
+    "story_uid": "08ef0873-1b84-48ce-be5f-c5df6124eba7"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.35,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fourth Amendment Warrant Requirement for FISA 702 U.S. Person Content Queries (Constitutional Floor Reading)",
+    "topic_domain": "constitutional_law/national_security/surveillance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_persons"
+    ],
+    "victims": [
+      "executive_surveillance_agencies"
+    ],
+    "vindicated_propositions": [
+      "fourth_amendment_warrant_clause",
+      "carpenter_digital_privacy_doctrine",
+      "individualized_probable_cause_standard"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "us_persons",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive protection against warrantless government search of their communications content. The constitutional guarantee attaches by virtue of U.S. person status and is enforced regardless of individual consent. Exit requires leaving the territorial and legal scope of the Fourth Amendment, which is costly and incomplete."
+    },
+    {
+      "name": "executive_surveillance_agencies",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Conduct foreign intelligence surveillance and query Section 702-acquired databases. Under this reading, they must obtain individualized probable cause warrants from the FISA Court before accessing U.S. person content, imposing legal preparation, delay, and disclosure costs that degrade operational speed and secrecy."
+    },
+    {
+      "name": "fisa_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers the warrant requirement for U.S. person content queries under this reading. Must apply individualized probable cause scrutiny rather than deferring to foreign intelligence purpose. The court's gatekeeping authority is constituted by the constraint; it cannot exit its interpretive role without abandoning the judicial function."
+    },
+    {
+      "name": "civil_liberties_organizations",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Litigate and advocate for the constitutional floor reading, representing U.S. person privacy interests in public and judicial fora. They do not directly receive the constraint's protection nor bear its costs, but serve as the primary analytical voice asserting the Fourth Amendment warrant requirement against executive practice."
+    },
+    {
+      "name": "congress",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enacted the FISA statute and controls appropriations for surveillance programs, but under this reading the constitutional warrant requirement operates independently of statutory language. Congress cannot legislatively authorize warrantless queries of U.S. person content; its exit options are bounded by constitutional amendment politics."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents arbitrary executive intrusion into private communications by interposing a neutral magistrate between the surveillance agency and the U.S. person, coordinating state power and individual privacy through probable cause review.",
+    "transfer_function": "Moves operational freedom, speed, and secrecy from executive surveillance agencies to judicial oversight and privacy protection for U.S. persons; transfers the evidentiary and procedural burden to the government before any content query occurs.",
+    "absent_voices": "Non-U.S. persons abroad and foreign targets are structurally excluded from the Fourth Amendment warrant conversation; their interests in global communication privacy and in not being collateral data subjects are not represented. The executive branch's foreign intelligence operational community is present in the policy conversation but is treated as a payer rather than a legitimate interlocutor in this reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constitutional warrant requirement for 702 U.S. person queries vanished, executive agencies would query acquired databases without individualized judicial scrutiny, the FISA Court's domestic-content oversight function would collapse, and the equilibrium between foreign intelligence collection and privacy would shift toward unilateral executive discretion.",
+    "founding_problem": "Unchecked executive exercise of general search and surveillance power against individuals, exemplified by colonial writs of assistance, which the Fourth Amendment was ratified to prohibit.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Independent constitutional scholars and federal judiciary attest through Fourth Amendment jurisprudence (e.g., Katz, Carpenter) that the founding problem of arbitrary executive search persists into the digital age. The executive branch attests the problem is managed by statutory minimization procedures, but this attestation originates from the seat that operationally benefits from the contested reading. Corroboration from outside the beneficiary set is present in the judicial and academic record."
+  },
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the constitutional_floor_reading of the fisa_702_statutory_text kernel. The standing arrangement under contest is the executive practice of querying Section 702-acquired databases containing U.S. person communications content without obtaining individualized probable cause warrants. This reading reframes the practice not as a foreign intelligence statutory matter but as a criminal procedure question governed by the Fourth Amendment. The constraint is the constitutional warrant requirement itself, which coordinates privacy protection for U.S. persons while extracting operational speed and secrecy from the executive branch. KEY AGENTS (by structural relationship): U.S. persons (beneficiary, powerless/constrained) â receive privacy protection; Executive surveillance agencies (payer, institutional/constrained) â bear compliance costs and operational friction; FISA Court (agenda_setter, institutional/analytical) â administers warrant gatekeeping; Civil liberties organizations (observer, organized/analytical) â litigate the reading; Congress (observer, institutional/constrained) â bound by constitutional floor.",
+    "key_agents": [
+      "U.S. persons: Primary beneficiary (powerless/constrained) â receive constitutional privacy protection against warrantless queries",
+      "Executive surveillance agencies: Primary payer (institutional/constrained) â bear extraction in the form of legal delay, probable cause preparation, and disclosure",
+      "FISA Court: Agenda-setter (institutional/analytical) â administers the warrant requirement and derives institutional authority from it",
+      "Civil liberties organizations: Analytical observer (organized/analytical) â represent privacy interests without direct cost or benefit flow",
+      "Congress: Secondary observer (institutional/constrained) â statutorily active but subordinate to constitutional floor"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.25 because the constitutional floor imposes moderate compliance costs on the executive (legal preparation, delay, probable cause showing) but does not extinguish the surveillance mission. Suppression at 0.35 reflects the procedural coercion of the warrant requirement; it is not violent but is structurally binding on institutional actors. Accessibility collapse is high (0.80) because, within the U.S. legal framework, alternatives to the Fourth Amendment warrant clause are legally foreclosedâCongress cannot statutorily authorize warrantless searches of U.S. person content. Resistance at 0.55 captures persistent executive-branch litigation, legislative advocacy, and administrative resistance to this reading. Theater ratio is modest (0.20): the warrant application process contains performative elements, but this reading demands substantive individualized probable cause, which resists pure theatricality. The measurement series share one time grid (0â16) to prevent misaligned temporal substitution.",
+    "perspectival_gap": "The executive surveillance agencies (payer seat) experience the constraint as extraction: every U.S. person content query requires legal friction, probable cause documentation, and delay. U.S. persons (beneficiary seat) experience it as protective coordination against arbitrary search. The FISA Court (agenda-setter) experiences it as a grant of institutional authority and interpretive role. The engine computes divergent per-seat classifications from these structural asymmetries; the payer seat will compute toward snare/tangled_rope territory while the beneficiary seat computes toward rope/mountain protection.",
+    "directionality_logic": "U.S. persons are declared beneficiaries with constrained exit; their directionality is near the beneficiary pole (low d), meaning effective extraction is damped into constitutional subsidy and privacy protection. Executive surveillance agencies are declared victims/payers with constrained exit; their directionality is near the target pole (high d), amplifying effective extraction into substantial operational burden. The FISA Court, as agenda-setter with analytical exit, sits near the beneficiary/agenda side because the constraint's existence empowers its gatekeeping function. Congress and civil liberties organizations, as observers, sit outside the direct extraction flow.",
+    "mandatrophy_analysis": "This reading prevents mislabeling by separating the constitutional warrant requirement (genuine coordination protecting against arbitrary search) from either pure executive discretion (a snare on U.S. persons if unconstrained) or a toothless statutory minimization rule (a rope with no enforcement). The Tangled Rope classification captures that judicial oversight is real coordinationâprobable cause review is substantiveâwhile the cost is asymmetrically borne by executive operational tempo. If the warrant process were degraded to a rubber stamp (rising theater_ratio), the constraint would drift toward Piton; if the executive captured the FISA Court, shifting the agenda_setter role toward beneficiary status at payer expense, it would drift toward Snare.",
+    "kernel_context": "This constraint is the constitutional_floor_reading of kernel fisa_702_statutory_text. Sibling readings: foreign_target_strict_reading (statutory text controls collection scope to foreign targets abroad) and incidental_collection_reading (warrantless query of incidentally collected U.S. person communications is permitted for foreign intelligence purpose). This reading holds that the Fourth Amendment's warrant clause is the operative constraint regardless of FISA's foreign-target language, and that U.S. person status triggers probable cause protection independent of the foreign/domestic distinction."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest_fisa_702",
+      "question": "This constraint instantiates the constitutional_floor_reading of kernel fisa_702_statutory_text; the sibling incidental_collection_reading treats 702 queries of U.S. person content as foreign-intelligence collection exempt from warrant, while foreign_target_strict_reading treats statutory language as dispositive. Does the constitutional warrant requirement logically foreclose the incidental_collection_reading or merely exert structural pressure on it?",
+      "resolution_mechanism": "Supreme Court adjudication of a direct challenge to warrantless 702 U.S. person queries, or legislative amendment codifying one reading.",
+      "impact": "If foreclosed, the constitutional floor reading becomes the dominant legal framework and epsilon shifts toward compliance-cost extraction from the executive; if coexisting, the kernel remains contested with cyclical enforcement variation and seat divergence persists.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer omega documenting the kernel reading contest for FISA 702 and the foreclosure boundary between readings."
+    },
+    {
+      "id": "us_person_boundary_ambiguity",
+      "question": "Does the 'U.S. person' category in 702 map cleanly onto the Fourth Amendment's protected scope, or do dual-nationals, permanent residents, and entities create boundary ambiguity that bleeds the warrant requirement's protection?",
+      "resolution_mechanism": "Judicial line-drawing in specific cases testing the constitutional floor against novel fact patterns (dual-status individuals, corporate entities, protected foreign entities).",
+      "impact": "Boundary ambiguity would raise extractiveness for groups near the margin who lose clear protection; definitional clarity would stabilize the constraint's seat classifications.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary ambiguity in U.S. person definition under the constitutional floor reading."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "fourth_amendment_warrant_framework",
+    "drift_state": {
+      "moment": "contemporary_fisa_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "foreign_target_strict_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "incidental_collection_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "warrant_required_for_us_person_content_queries",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "foreign_intelligence_purpose_no_warrant_exemption",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "fisa_702_statutory_text__foreign_target_strict_reading",
+      "fisa_702_statutory_text__incidental_collection_reading"
+    ],
+    "dual_formulation_note": "The fisa_702_statutory_text kernel decomposes into three structurally distinct constraints because the label 'FISA 702' conflates: (1) the constitutional floor reading (Fourth Amendment warrant requirement for U.S. person content queries), (2) the foreign target strict reading (statutory collection limits), and (3) the incidental collection reading (warrantless query of incidentally collected U.S. person data). Each has a different epsilon referent, beneficiary structure, and classification. This story authors the constitutional floor reading."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

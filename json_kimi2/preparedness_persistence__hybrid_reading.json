@@ -1,0 +1,269 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "preparedness_persistence_hybrid",
+    "story_uid": "265d372e-2df5-42cb-bb61-a90889ed577b"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.35,
+    "theater_ratio": 0.7,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.25,
+    "claimed_type": "piton",
+    "human_readable": "Stratified Preparedness Persistence â Hybrid Reading",
+    "topic_domain": "institutional/disaster_preparedness",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false
+  },
+  "stakeholders": [
+    {
+      "name": "emergency_management_agency",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Maintains the overall disaster preparedness framework, administering budgets for both engineering inspection and evacuation drill programs. Politically constrained from abolishing either component even where operational returns have diverged, because cutting any preparedness activity invites liability exposure."
+    },
+    {
+      "name": "engineering_inspectors",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Conduct rigorous structural and safety inspections that retain genuine operational competence. They observe the divergence between inspected physical risk and the rehearsed response protocols, but their professional mandate is limited to the inspection subsystem."
+    },
+    {
+      "name": "drill_administrators",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Manage scheduled evacuation drills, documentation, and compliance reporting. Their work is procedurally specified and repeated regardless of evolving risk profiles or building-specific conditions; they maintain the ritualized subsystem without capturing concentrated extraction."
+    },
+    {
+      "name": "legislative_oversight",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Funds and audits preparedness programs through appropriations and post-audit reviews. They receive reports showing mixed competence but lack political incentive to surgically prune ritualized components, preferring to maintain the bundled institutional appearance of readiness."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Engineering inspection coordinates genuine risk identification and mitigation; evacuation drills once coordinated collective response behavior but now primarily satisfy procedural compliance requirements.",
+    "transfer_function": "Moves institutional budget, staff time, and regulatory attention from risk-calibrated activities toward documented drill completion and inspection regimes, with ritualized components absorbing resources disproportionate to operational return.",
+    "absent_voices": "Frontline building occupants and facilities maintenance staff who experience drills as scheduled interruptions and know which safety protocols are structurally sound versus performatively maintained; their operational knowledge is rarely solicited in formal audits.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Genuine engineering inspection would need immediate replacement to prevent structural failures; ritualized drill programs would cease, freeing resources and altering compliance officer roles. The mixed nature means some functions are load-bearing while others are inertial.",
+    "founding_problem": "Catastrophic events revealed that uncoordinated emergency response and unmaintained infrastructure caused preventable loss of life and property.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Engineering safety boards and post-disaster forensic reports corroborate that structural inspection prevents collapse. Independent efficiency audits and academic studies contest whether scheduled evacuation rehearsals continue to provide marginal safety returns, asserting they have become performative compliance exercises."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the hybrid_reading of the preparedness_persistence kernel. The natural-language concept 'preparedness' conflates structurally distinct subsystems: engineering inspection retains live operational competence (mountain-like stability), while evacuation drills have atrophied into ritualized performance (piton-like inertia). The hybrid reading resolves this by stratifying the label: the constraint is neither uniformly functional nor uniformly hollow, but a mixed system where extraction is localized to the ritualized subsystems. Sibling readings â competence_reading (all live) and husk_reading (all atrophied) â are modeled as separate constraints linked in the network.",
+    "key_agents": [
+      "emergency_management_agency: Agenda-setter (institutional/constrained) â maintains the bundled preparedness program",
+      "engineering_inspectors: Observer (organized/constrained) â conducts competent inspections that retain genuine safety function",
+      "drill_administrators: Observer (moderate/constrained) â manages ritualized evacuation rehearsals",
+      "legislative_oversight: Observer (institutional/constrained) â funds and audits the mixed program"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.42 because only the ritualized drill subsystem extracts operational resources disproportionate to safety returns; the competent inspection subsystem dampens the whole-system Îµ. Theater_ratio is high (0.70) because the visible face of preparedness â scheduled drills, documented compliance â is predominantly performative. Suppression is low (0.35) because persistence is driven by institutional inertia and budget continuity rather than active coercion. Accessibility_collapse is moderate (0.45): alternatives to ritualized drills are thinkable but institutionally costly to implement; alternatives to engineering inspection are not viable. Resistance is low (0.25) because no party is hurt enough by the diffuse costs to mobilize reform.",
+    "perspectival_gap": "Engineering inspectors experience the constraint as necessary and functional; drill administrators experience it as procedural obligation; oversight bodies see a budget line they cannot politically untangle. The engine will compute different seat types: inspectors near mountain, drill administrators near piton, oversight near rope or piton depending on how they value the compliance documentation.",
+    "directionality_logic": "No concentrated beneficiary is declared; extraction is diffuse across the ritualized subsystem (budgets, staff time, compliance documentation). Costs are borne diffusely by taxpayers and building occupants. Without beneficiary or victim declarations, directionality defaults to canonical fallback per power atom, but the structural picture is symmetrically diffuse â no agent is heavily subsidized or targeted by the constraint as a whole.",
+    "mandatrophy_analysis": "The founding problem â preventing catastrophic loss â is live for structural inspection but dead or shifted for ritualized drills. The constraint persists as a bundled institution because the live and dead components share a budget and administrative structure. This is classic mandatrophy: the mandate has outlived its function for a significant fraction of the system. The hybrid reading captures this by declaring the founding_problem_status contested, preventing misclassification as pure coordination (rope) or pure extraction (snare).",
+    "kernel_context": "Reading hybrid_reading of kernel preparedness_persistence. Siblings: competence_reading (all components are live exercised knowledge), husk_reading (all components are memorial performance)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_location",
+      "question": "This constraint is the hybrid_reading of kernel preparedness_persistence. Does stratification into competent and ritualized subsystems resolve the kernel contest, or does it presuppose a decomposition that the sibling readings reject?",
+      "resolution_mechanism": "Cross-reading empirical comparison: measure Îµ and theater_ratio independently for engineering inspection and evacuation drill subsystems under each reading's framing.",
+      "impact": "If the decomposition is robust across readings, the hybrid reading provides a synthesis; if the subsystem boundaries collapse under measurement, the kernel contest remains unresolved.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether hybrid stratification resolves the preparedness kernel contest"
+    },
+    {
+      "id": "sibling_structural_delta",
+      "question": "The competence_reading treats all preparedness as live knowledge (low Îµ, low theater), while the husk_reading treats all as memorial performance (high Îµ, high theater). How much of the variance in this reading's metrics is driven by subsystem selection versus framing?",
+      "resolution_mechanism": "Subsystem-isolated measurement: author separate constraint stories for engineering inspection and evacuation drills, then compare their metrics to the hybrid whole.",
+      "impact": "High framing-dependency would suggest the kernel is observer-relative; high subsystem-dependency would support Îµ-invariance and justify decomposition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Framing versus subsystem contribution to metric variance across kernel readings"
+    },
+    {
+      "id": "inertia_vs_active_defense",
+      "question": "Is the persistence of ritualized drill programs driven by passive institutional inertia (budget continuity, role preservation) or by active political defense from concentrated beneficiaries?",
+      "resolution_mechanism": "Budget-trace analysis: if drill budgets survive zero-based review without targeted lobbying, inertia dominates; if cuts are systematically blocked by identifiable actors, active defense dominates.",
+      "impact": "If inertia dominates, the piton classification holds; if active defense and concentrated beneficiaries are found, the constraint reclassifies toward snare or tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional inertia versus active beneficiary defense in ritualized subsystem persistence"
+    }
+  ],
+  "gain_flow": "diffuse",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_persistence__competence_reading",
+      "preparedness_persistence__husk_reading"
+    ],
+    "dual_formulation_note": "The kernel 'preparedness persistence' decomposes into three readings because the natural-language label conflates subsystems with divergent Îµ profiles. The hybrid reading stratifies the system, linking to both the competence and husk readings as boundary cases."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "husk_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "selective_maintenance_mandate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "subsystem_autonomy_principle",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "comprehensive_operational_readiness",
+    "drift_state": {
+      "moment": "contemporary_mixed_state",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

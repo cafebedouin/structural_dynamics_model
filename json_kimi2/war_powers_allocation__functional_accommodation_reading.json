@@ -1,0 +1,274 @@
+{
+  "header": {
+    "constraint_id": "war_powers_allocation__functional_accommodation_reading",
+    "version": "1.0",
+    "generated_date": "2026-01-20",
+    "status": "ACTIVE",
+    "story_uid": "d982de54-3364-44c5-8196-b96223410f63"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.8,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "War Powers Functional Accommodation (Contextual Allocation Reading)",
+    "topic_domain": "constitutional law / separation of powers",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_branch"
+    ],
+    "victims": [
+      "congress"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 75
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.8
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the functional_accommodation_reading of the war_powers_allocation kernel. Under this reading, constitutional war powers are allocated contextually: imminent threats permit unilateral executive action, while prolonged campaigns require congressional authorization. The reading creates an ambiguity zone between 'imminent' and 'prolonged' that both branches contest. Over time, executive operational framing has expanded the unilateral zone, extracting Article I authority from Congress while preserving a veneer of inter-branch accommodation. The constraint coordinates rapid crisis response but asymmetrically extracts institutional authority through contextual ambiguity.",
+    "key_agents": [
+      "executive_branch: Primary beneficiary and agenda-setter (institutional/global) â gains discretionary authority and administers operational-context framing",
+      "congress: Primary payer (institutional/national) â bears institutional cost of eroded categorical war powers and repeated fait accompli",
+      "federal_judiciary: Analytical observer (institutional/national) â abstains from adjudication under political question and ripeness doctrines, validating the ambiguity",
+      "public_electorate: Excluded party (organized/national) â structurally absent from operational-context determinations despite bearing democratic accountability costs"
+    ],
+    "logic_rationale": "Base extractiveness (0.78) is high because the ambiguity zone between imminent threat and prolonged campaign has been systematically exploited to authorize extended military operations without legislative approval. Suppression (0.80) is high because the constraint's persistence depends on suppressing categorical rule alternatives (formal declarations of war, strict congressional primacy) and on judicial abstention that prevents legal clarification. Theater_ratio (0.52) reflects that an increasing share of inter-branch activity consists of legal performances (OLC opinions, War Powers Resolution reporting) that maintain the appearance of accommodation while actual congressional control has atrophied. Accessibility_collapse (0.75) is high because once the contextual frame is accepted, categorical alternatives become politically inaccessible. Resistance (0.55) is moderate: Congress occasionally asserts itself through funding threats or WPR invocation, but partisan alignment and institutional collective-action costs limit effective pushback.",
+    "perspectival_gap": "From the executive seat, the functional accommodation framework appears as necessary constitutional flexibility preventing paralysis during fast-moving security threats. From the congressional seat, the same framework appears as a structural transfer of Article I authority to Article II through manipulable temporal distinctions. The federal judiciary sees a non-justiciable political question; the public sees military decisions made without transparent authorization. The engine computes these divergences from the structural data rather than adjudicating them.",
+    "directionality_logic": "executive_branch is declared as beneficiary and agenda_setter: it collects discretionary authority and administers the operational-context framing. Its exit is mobile within the constitutional order, yielding low directionality (beneficiary side). congress is declared as victim/payer: its constitutional authority over war initiation is extracted through ambiguity and fait accompli. Its exit is constrained by political dynamics, partisan alignment, and institutional inertia, yielding high directionality (target side). federal_judiciary sits at analytical exit with institutional power, observing without paying or collecting.",
+    "mandatrophy_analysis": "The framework was built to solve the founding problem of institutional paralysis during imminent threats (founding_problem_status: contested). If that problem is dead and the arrangement now primarily enables prolonged unilateral campaigns, the (dead Ã world_rearranges) mismatch flags capture or zombie dynamics. However, the coordination functionârapid response capability in genuine emergenciesâremains live, preventing pure snare classification. The tangled_rope classification captures both the genuine coordination and the asymmetric extraction through ambiguity. The theater_ratio (0.52) captures the growing performance of constitutional fidelity without actual congressional control.",
+    "kernel_context": "This constraint is the functional_accommodation_reading of the war_powers_allocation kernel. Sibling readings are congressional_primacy_reading (categorical legislative authorization as constitutional necessity) and inherent_executive_reading (inherent unilateral executive authority). This reading occupies the doctrinal middle ground where operational context determines allocation, creating an ambiguity zone that structurally advantages the executive over time while suppressing categorical rules on both sides."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contestedness",
+      "question": "Does the functional accommodation reading represent a genuine constitutional middle ground or a rhetorical device that systematically advantages the executive over time?",
+      "resolution_mechanism": "Historical time-series analysis of executive unilateral action frequency and congressional authorization rates; a monotonic increase in unilateral action under the functional accommodation framework indicates a ratchet effect rather than an equilibrium.",
+      "impact": "Would reclassify from tangled_rope toward snare if the ambiguity zone is exploited systematically; would support rope classification if contextual allocation genuinely balances across branches over time.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether functional accommodation is a stable middle ground or executive ratchet"
+    },
+    {
+      "id": "imminent_prolonged_boundary",
+      "question": "Is the boundary between imminent threat and prolonged campaign determinate in practice, or does it collapse under executive framing?",
+      "resolution_mechanism": "Empirical audit of military operations designated as limited, defensive, or imminent that exceeded 90 days without congressional authorization.",
+      "impact": "If the boundary routinely collapses, the constraint's coordination function is weaker than authored and extraction is higher; may trigger false summit or mandatrophy flags.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Operational boundary stability between imminent and prolonged contexts"
+    },
+    {
+      "id": "cs_framing_underdetermination",
+      "question": "Does the authority of the functional accommodation framework derive from constitutional text and lineage, from evolved inter-branch practice, or from judicial abstention that enables executive aggrandizement?",
+      "resolution_mechanism": "Genealogical analysis of war powers jurisprudence tracing the weight given to text, historical practice, and justiciability doctrines in sustaining the framework.",
+      "impact": "Would shift authority_grounding from lineage/practice to extraction if judicial abstention is the primary sustaining force, altering the commitment-system classification and interpretive-layer assessment.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Epistemic grounding of the functional accommodation authority structure"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "executive_branch",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Initiates military operations under claims of imminent threat or limited intervention. Frames operational context to fit within the unilateral action zone through OLC opinions and public messaging. Benefits from ambiguity that allows prolonged operations to be characterized as limited or defensive. Could theoretically seek authorization but chooses not to in order to preserve discretion."
+    },
+    {
+      "name": "congress",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Constitutionally vested with war declaration and authorization power. Under functional accommodation, retains theoretical authority over prolonged campaigns but is routinely bypassed or presented with fait accompli. Can withhold funding or enact statutory limits, but political costs, partisan alignment, and collective-action problems prevent effective resistance. Bears the institutional cost of eroded constitutional authority."
+    },
+    {
+      "name": "federal_judiciary",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Possesses jurisdiction over separation-of-powers disputes but frequently abstains under political question doctrine, ripeness principles, or lack of standing. When it intervenes, it tends to avoid challenging the executive's contextual claims. Sits in an analytical posture with no institutional exit from constitutional jurisdiction."
+    },
+    {
+      "name": "public_electorate",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Elects both branches but lacks direct mechanism to enforce war powers compliance. Public opinion on military action is reactive and framed by executive messaging. Structurally excluded from the operational-context determination that governs whether congressional authorization is required."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates rapid national security response without requiring protracted legislative deliberation during imminent threats, while preserving a legislative check over sustained military commitments.",
+    "transfer_function": "Transfers discretionary authority over the initiation, scope, and termination of military force from Congress to the Executive in operational contexts characterized as imminent or limited, while theoretically reserving prolonged campaigns for legislative authorization.",
+    "absent_voices": "Foreign populations in target states; service members who bear deployment risks without independent voice in authorization debates; and institutionalist legal scholars advocating categorical war-declaration requirements are present in academic discourse but structurally excluded from the operational-context determination.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the functional accommodation framework vanished, the inter-branch equilibrium around military force would destabilize. Reverting to strict congressional primacy would remove executive discretion for rapid response; reverting to inherent executive authority would remove the legislative check for prolonged campaigns. Either shift would rearrange the institutional landscape for war initiation.",
+    "founding_problem": "The Constitution's divided war powers create institutional friction during fast-moving security threats; rigid categorical allocation (exclusive congressional declaration versus exclusive executive response) could paralyze defense or enable unchecked executive war-making.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The executive branch and national security bureaucracy attest the problem is still live, citing need for speed and secrecy. Congressional institutionalists and legal historians attest the accommodation has shifted from solving friction to enabling evasion. Corroboration from outside the benefiting parties includes separation-of-powers scholars and retired judges who document the framework's drift toward unilateralism."
+  },
+  "network": {
+    "affects_constraints": [
+      "congressional_primacy_reading",
+      "inherent_executive_reading"
+    ],
+    "dual_formulation_note": "This constraint is the functional_accommodation_reading of the war_powers_allocation kernel, decomposed from the colloquial label 'war powers' per the epsilon-invariance principle. Sibling readings (congressional_primacy_reading, inherent_executive_reading) instantiate structurally distinct claims with different epsilon values, beneficiary/victim structures, and directionalities."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "gain_flow": "executive_branch",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "functional_separation_framework",
+    "drift_state": {
+      "moment": "contemporary_unilateral_presidency",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "congressional_primacy_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "inherent_executive_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "contextual_allocation_doctrine",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "imminent_threat_executive_prerogative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

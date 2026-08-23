@@ -1,0 +1,285 @@
+{
+  "header": {
+    "constraint_id": "udhr_article_3__procedural_hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "2c497a49-3e12-4972-9a8e-4ebbc2385561"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UDHR Article 3 Procedural Hybrid Reading",
+    "topic_domain": "constitutional/human_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "detainees_with_procedural_access",
+      "human_rights_judiciaries",
+      "state_executives"
+    ],
+    "victims": [
+      "emergency_detainees",
+      "welfare_claimants_excluded"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 75
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.55
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "detainees_with_procedural_access",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individuals in state custody who benefit from habeas corpus review and torture prohibition. Their security depends on judicial institutions recognizing and enforcing these procedural rights. Exit is constrained by detention itself, though procedural access offers partial relief."
+    },
+    {
+      "name": "emergency_detainees",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals detained under emergency regimes where habeas corpus is suspended or delayed. They bear the cost of the procedural reading's allowance for emergency limits. Exit is trapped: they cannot access courts and cannot leave detention."
+    },
+    {
+      "name": "welfare_claimants_excluded",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individuals seeking housing, healthcare, or subsistence under the umbrella of security of person who are denied because the procedural reading does not resolve the welfare contest. They bear the cost of ambiguity: states cite the procedural focus to avoid positive obligations."
+    },
+    {
+      "name": "human_rights_judiciaries",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Domestic and international courts and treaty bodies that derive institutional authority from interpreting Article 3 as a procedural mandate. They adjudicate habeas petitions and torture claims. Their exit is analytical: they can adopt alternative readings but at high professional and doctrinal cost."
+    },
+    {
+      "name": "state_executives",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "State governments that administer detention regimes, declare emergencies, and interpret the unresolved welfare contest to avoid expenditure. They set the operational boundaries of the procedural guarantee and benefit from the flexibility the hybrid reading provides."
+    },
+    {
+      "name": "human_rights_defenders",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "NGOs, lawyers, and monitoring bodies that document emergency detention and welfare gaps. They move between jurisdictions and forums, advocating for broader readings but operating within the procedural framework where it offers leverage."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared international standard for minimum procedural protections against arbitrary state violence: habeas corpus review, prohibition of torture, and judicial oversight of detention. Coordinates state behavior around a floor of legality without requiring agreement on maximalist welfare or liberty theories.",
+    "transfer_function": "Moves security from persons in emergency detention (where habeas is suspended) and welfare claimants (where positive obligations are denied) to states that retain flexibility in emergency powers and avoid welfare expenditure; moves institutional authority to judiciaries tasked with procedural review.",
+    "absent_voices": "Torture survivors in non-state detention and persons seeking positive entitlements under Article 3 are structurally absent from the procedural reading's focus; they would argue for a broader substantive resolution of the liberty/welfare contest.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the procedural hybrid reading vanished, states would lose the legal cover of minimum procedural compliance for emergency detention regimes; judiciaries would lose their habeas mandate; welfare claimants would need to ground security claims in other articles or readings. The international human rights order would reorganize around either pure negative liberty or positive entitlement frameworks.",
+    "founding_problem": "Post-WWII prevention of arbitrary state killing, disappearance, and torture by fascist and totalitarian regimes; establishment of a universally legible minimum floor of procedural protection.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Human rights historians and the UDHR drafting committee attest the founding problem. However, post-colonial scholars and critical legal theorists from outside the benefiting parties attest that the procedural focus was deliberately narrowed to avoid obligating wealthy states to redistribute resources, making the founding problem's resolution partial and contested."
+  },
+  "omegas": [
+    {
+      "id": "procedural_reading_vs_substantive_siblings",
+      "question": "Does the procedural hybrid reading structurally avoid the positive entitlement debate because the two questions are genuinely separable, or because separating them benefits states that wish to avoid welfare obligations?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions adopting positive entitlement readings versus procedural-only readings: if security outcomes are equivalent, the separation is genuine; if welfare-reading jurisdictions show measurably better security for the indigent, the separation is a cost-shield.",
+      "impact": "If the separation is a cost-shield, the procedural reading's epsilon is higher than its coordination framing suggests, pushing it toward snare. If genuine, it remains tangled_rope with moderate extraction from emergency exceptions alone.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the procedural/substantive split is structurally necessary or strategically advantageous to avoiding welfare obligations."
+    },
+    {
+      "id": "emergency_detention_as_extraction",
+      "question": "Are emergency detention limits and habeas suspensions inherent exceptions to any procedural guarantee, or are they constructed loopholes that allow states to extract liberty while maintaining a veneer of legality?",
+      "resolution_mechanism": "Historical trend analysis of emergency declarations: if they correlate with regime stability threats rather than genuine security emergencies, they function as extraction mechanisms.",
+      "impact": "If emergency powers are systematically abused, the extraction component of this constraint is higher and the coordination function is partially theatrical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether emergency detention exceptions are genuine safety valves or extraction channels."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "post_war_procedural_minimum",
+    "drift_state": {
+      "moment": "contemporary_human_rights_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "negative_liberty_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "positive_entitlement_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "habeas_and_torture_ban_exhaust_article_3_mandate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "substantive_welfare_contest_beyond_article_3_scope",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "udhr_article_3__negative_liberty_reading",
+      "udhr_article_3__positive_entitlement_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the UDHR Article 3 kernel. The procedural hybrid reading isolates the procedural due process components and their structural relationship to unresolved substantive liberty/welfare questions. The negative liberty reading and positive entitlement reading instantiate alternative constraints from the same text. They are linked as a constraint family."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "commentary": {
+    "narrative_context": "UDHR Article 3 reads: Everyone has the right to life, liberty and security of person. The procedural hybrid reading interprets this as guaranteeing due process protectionsâhabeas corpus, judicial review of detention, and prohibition of tortureâwhile deliberately leaving unresolved whether security of person requires positive welfare entitlements or merely negative liberty from state violence. This reading is one of three competing interpretations of the same textual kernel; it structurally coordinates international human rights practice around a legibility floor while permitting states to extract liberty through emergency detention exceptions and to avoid welfare obligations through procedural narrowness.",
+    "key_agents": [
+      "State executives (agenda_setter/institutional/arbitrage): Administer emergency powers and exploit the unresolved welfare contest",
+      "Emergency detainees (payer/powerless/trapped): Bear extraction through suspended habeas corpus",
+      "Welfare claimants excluded (payer/powerless/constrained): Denied positive entitlements by the procedural focus",
+      "Human rights judiciaries (beneficiary/institutional/analytical): Derive mandate from procedural interpretation",
+      "Detainees with procedural access (beneficiary/powerless/constrained): Protected when enforcement is present",
+      "Human rights defenders (observer/organized/mobile): Document gaps and advocate for broader readings"
+    ],
+    "logic_rationale": "Extractiveness (0.48) is moderate: the torture prohibition and habeas corpus genuinely coordinate state behavior and protect some detainees, but emergency detention limits and the unresolved welfare contest create systematic extraction from emergency detainees and welfare claimants. Suppression (0.52) reflects active state resistance to full habeas access and the institutionalization of emergency exceptions. Theater ratio (0.30) captures performative complianceâstates ratify conventions, establish review bodies, yet maintain secret detention and deny welfare. Accessibility collapse (0.45) is moderate: alternative readings exist in some jurisdictions but are structurally marginalized by the procedural reading's dominance in international forums. Resistance (0.58) is substantial from human rights NGOs and progressive judiciaries pushing for broader interpretations.",
+    "perspectival_gap": "The agenda-setter seat (state executives) experiences the constraint as a flexible coordination tool that preserves sovereignty over emergencies and budgets. The payer seats (emergency detainees, welfare claimants) experience it as a hollow procedural shell that legitimates extraction. The beneficiary seat (detainees with access, judiciaries) experiences it as a genuine protective structure. The engine computes this divergence from structural data.",
+    "directionality_logic": "State executives sit near the beneficiary end: they gain institutional flexibility from the unresolved welfare contest and emergency powers. Emergency detainees sit at the full-target end: trapped, powerless, directly extracted via suspended habeas. Welfare claimants are also high-d targets: the procedural focus directly denies their claims. Human rights judiciaries are low-d beneficiaries: the reading gives them a mandate. Detainees with procedural access are mixedâbeneficiaries of the constraint's coordination function but only when enforcement is present.",
+    "mandatrophy_analysis": "The constraint prevents pure-extraction mislabeling because its coordination function is structurally real: habeas corpus and torture prohibition have verifiably prevented arbitrary killing and disappearance in multiple jurisdictions. It prevents pure-coordination mislabeling because the emergency exception and welfare ambiguity are not accidental side effects but structurally incorporated features that systematically benefit states at the cost of detainees and claimants.",
+    "kernel_context": "This constraint is the procedural_hybrid_reading of kernel udhr_article_3, coexisting with negative_liberty_reading (minimal state interference) and positive_entitlement_reading (material conditions guaranteed). The sibling readings hold different normative axioms; this reading's distinctive claim is that Article 3's security guarantee is procedurally satisfied by habeas and torture prohibition alone, without resolving the deeper liberty/welfare contest."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

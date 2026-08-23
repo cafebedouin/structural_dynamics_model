@@ -1,0 +1,287 @@
+{
+  "header": {
+    "constraint_id": "common_article_3_scope__state_centric_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ca3_state",
+    "story_uid": "eff47bb6-1ebf-4422-aeac-0c3eb4d47bab"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.78,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State-Centric Threshold Reading of Common Article 3 Scope",
+    "topic_domain": "international_humanitarian_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_governments",
+      "international_criminal_tribunals"
+    ],
+    "victims": [
+      "irregular_combatants",
+      "civilians_in_unclassified_conflicts"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 75
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.78
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Common Article 3 of the 1949 Geneva Conventions provides minimum humanitarian guarantees for non-international armed conflicts. The state-centric reading of CA3 scope restricts its application to conflicts meeting intensity and organization thresholds (the Tadic criteria), excluding low-level violence, internal disturbances, and law enforcement operations. This reading is contested by expansive human rights approaches that would apply CA3 to any organized armed violence, and by ICRC customary-law approaches that track evolving state practice. The state-centric reading structurally benefits states by preserving operational discretion and domestic legal frameworks, while irregular combatants and civilians in sub-threshold conflicts are excluded from CA3's protective regime. The constraint is authored as a kernel reading with siblings expansive_human_rights_reading and icrc_customary_reading.",
+    "key_agents": [
+      "state_governments: Primary agenda-setter (institutional/arbitrage) â classifies conflicts, retains operational discretion",
+      "irregular_combatants: Primary target (powerless/trapped) â excluded from CA3 protections by threshold classification",
+      "civilians_in_unclassified_conflicts: Secondary target (powerless/trapped) â lack minimum guarantees in sub-threshold zones",
+      "human_rights_advocacy_networks: Excluded voice (moderate/constrained) â argues for floor-of-rights application without formal standing",
+      "international_criminal_tribunals: Beneficiary (institutional/analytical) â applies clear threshold test for jurisdiction"
+    ],
+    "logic_rationale": "Extractiveness (0.72) is high because the threshold doctrine systematically withholds humanitarian legal protections from vulnerable populations in conflicts that states classify as sub-threshold, transferring the costs of sovereignty preservation to those populations. Suppression (0.78) is higher still because the constraint's persistence depends on actively resisting expansive human rights interpretations and excluding alternative legal frameworks from application. Theater_ratio (0.45) reflects the elaborate legal ritual around intensity and organization assessment, which functions partly as genuine legal analysis and partly as performative sovereignty defense. Accessibility_collapse (0.65) captures that while human rights law persists as an alternative, it is significantly weaker in providing the specific protections CA3 guarantees. Resistance (0.60) reflects sustained pressure from human rights bodies, UN mechanisms, and some judicial actors to lower or eliminate the thresholds. The temporal series shows extraction and suppression rising over the interval as human rights norms developed and the state-centric reading was increasingly mobilized to exclude them; all metrics share the 0-75 time grid.",
+    "perspectival_gap": "The state_governments seat experiences the constraint as necessary coordination that preserves international legal order and state consent; the irregular_combatants and civilians seats experience the same structure as violent exclusion from legal protection. The international_criminal_tribunals seat experiences it as a workable jurisdictional test. The engine computes this divergence from the structural data: identical legal provisions produce opposite directionalities depending on whether the agent classifies or is classified.",
+    "directionality_logic": "State_governments are structural beneficiaries (d near 0.0) because the constraint subsidizes their operational discretion and sovereignty. International_criminal_tribunals are mild beneficiaries (d ~0.2) because the test provides jurisdictional clarity. Irregular_combatants and civilians_in_unclassified_conflicts are full targets (d near 1.0) because the constraint extracts legal protections from them and they have trapped exit â they cannot unilaterally reclassify the conflicts they inhabit. Human_rights_advocacy_networks are excluded observers with constrained exit (d ~0.5 symmetrically excluded).",
+    "mandatrophy_analysis": "The founding problem â distinguishing armed conflict from law enforcement to preserve state consent â was genuinely live in 1949. It is now contested: states assert it remains live, while external observers document protection gaps. The (founding_problem_status = contested x disappearance_verdict = world_rearranges) mismatch signals that the arrangement may have shifted from scaffold-like transitional coordination toward persistent extraction, but the constraint retains enough genuine coordination function (preventing total IHL dilution) to avoid snare classification. The temporal measurements show extraction accumulation over time, which the T17 abductive trigger would flag for investigation.",
+    "kernel_context": "This constraint instantiates the state_centric_reading of the common_article_3_scope kernel. Sibling readings are expansive_human_rights_reading (CA3 as floor for all organized armed violence) and icrc_customary_reading (scope determined by evolving practice and opinio juris). The state-centric reading forecloses the expansive reading (thresholds vs. no thresholds are logically incompatible in a single framework) and influences the customary reading (state practice shapes customary evolution without determining it)."
+  },
+  "omegas": [
+    {
+      "id": "threshold_necessity_vs_exclusion",
+      "question": "Is the intensity and organization threshold a necessary structural feature of international humanitarian law to secure state consent, or is it a constructed barrier that extracts protections from vulnerable populations?",
+      "resolution_mechanism": "Comparative analysis of state practice in jurisdictions that have adopted expansive human rights readings versus state-centric readings; measurement of protection gaps in sub-threshold conflicts.",
+      "impact": "If the threshold is necessary, the constraint remains a tangled rope with genuine coordination function; if purely constructed for exclusion, it reclassifies toward snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the threshold doctrine is structurally necessary or purely extractive"
+    },
+    {
+      "id": "customary_evolution_pressure",
+      "question": "Does evolving customary international law documented by the ICRC support expanding CA3 beyond the state-centric threshold, rendering this reading increasingly extractive?",
+      "resolution_mechanism": "Tracking state opinio juris and practice over time; monitoring domestic court rulings that apply CA3 to low-intensity violence.",
+      "impact": "If customary law is expanding, the state-centric reading suppresses an emerging norm and functions more as active extraction than coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether customary law evolution undermines the state-centric threshold"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint is one reading of the contested kernel common_article_3_scope. The sibling readings (expansive_human_rights_reading, icrc_customary_reading) would change the beneficiary/victim structure and scope. What classification would change if the expansive reading were adopted?",
+      "resolution_mechanism": "Comparison across the constraint family; the expansive reading would likely classify as rope or scaffold (genuine coordination with broader beneficiaries) while this reading extracts from excluded groups.",
+      "impact": "The kernel's structural indeterminacy means the constraint's type depends on which reading dominates the interpretive field.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading contest and structural indeterminacy"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "state_governments",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Classify internal violence as either armed conflict triggering CA3 or law enforcement falling below the threshold. They define intensity and organization criteria through national practice, military manuals, and diplomatic argumentation. They retain maximum operational discretion in sub-threshold situations and resist external classification that would expand CA3 obligations."
+    },
+    {
+      "name": "irregular_combatants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Participate in organized armed violence that state governments classify as below the intensity or organization threshold. They are denied CA3 protections including humane treatment, fair trial guarantees, and safeguards against torture and summary execution. They cannot unilaterally elevate the conflict classification to trigger protections."
+    },
+    {
+      "name": "civilians_in_unclassified_conflicts",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Inhabit territories experiencing sustained low-level violence, internal disturbances, or tensions that states classify below the CA3 threshold. They lack the explicit minimum humanitarian guarantees against murder, mutilation, torture, and hostage-taking that CA3 would provide, and may be subjected to domestic security operations without IHL oversight."
+    },
+    {
+      "name": "human_rights_advocacy_networks",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that CA3 should apply as a floor of minimum standards to all organized armed violence regardless of threshold classification. They are structurally excluded from the formal state-centric interpretive framework that sets intensity and organization requirements, and their alternative readings are treated as political rather than legal arguments in inter-state forums."
+    },
+    {
+      "name": "international_criminal_tribunals",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Apply the Tadic threshold test to determine jurisdiction over non-international armed conflicts. They benefit from having concrete, state-accepted legal criteria to establish the applicability of CA3 and avoid direct confrontations with state sovereignty over conflict classification."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes clear jurisdictional thresholds that separate armed conflict subject to international humanitarian law from internal disturbances and law enforcement subject to domestic jurisdiction, preserving state sovereignty and the state-consent foundation of the Geneva Conventions.",
+    "transfer_function": "Moves legal protections, fair trial guarantees, and minimum humanitarian safeguards away from irregular combatants and civilians in low-intensity or unclassified conflicts toward state governments as operational discretion and toward international criminal tribunals as jurisdictional clarity.",
+    "absent_voices": "Irregular combatants excluded by the threshold, civilians in zones of persistent low-level violence, and human rights advocates arguing for floor-of-rights application are structurally absent from the formal state-centric interpretive framework that sets the thresholds.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the state-centric threshold vanished and CA3 applied broadly to all organized armed violence, states would lose significant operational discretion, more internal conflicts would be classified as non-international armed conflicts triggering IHL obligations, detainees would gain minimum guarantees, and the sovereignty-humanitarian oversight balance would shift toward external legal accountability.",
+    "founding_problem": "To establish a clear legal boundary between armed conflict subject to international humanitarian law and internal disturbances or law enforcement subject to domestic jurisdiction, ensuring state consent to the Geneva Conventions by respecting sovereignty over internal security.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "States and the ICRC Commentary attest the boundary was originally necessary to preserve IHL's integrity and state consent. However, contemporary UN human rights mechanisms, special rapporteurs, and independent legal scholars from outside the state-beneficiary set attest the threshold has become a tool for systematic exclusion; corroboration is split across institutional lines."
+  },
+  "network": {
+    "affects_constraints": [
+      "expansive_human_rights_reading",
+      "icrc_customary_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the common_article_3_scope kernel. It is structurally paired with expansive_human_rights_reading and icrc_customary_reading as alternative indexical commitments to the same legal text. The epsilon-invariance principle requires separate stories because the readings have different beneficiary/victim structures and different epsilon values."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_human_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "icrc_customary_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "intensity_organization_thresholds_mandatory",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "state_primacy_in_conflict_classification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "state_consent_based_ihl_framework",
+    "drift_state": {
+      "moment": "contemporary_human_rights_expansion",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "state_governments",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

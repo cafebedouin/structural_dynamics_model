@@ -1,0 +1,292 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__p2p_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "btc_p2p",
+    "story_uid": "f6b18249-3630-4a94-8979-e58639e1e24c"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin P2P Cash Reading â Fee Market Exclusion",
+    "topic_domain": "cryptoeconomic/monetary_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "miners",
+      "custodial_exchanges"
+    ],
+    "victims": [
+      "unbanked_populations",
+      "small_merchants"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "miners",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Validate transactions and collect block subsidies plus fees. Under the fee-market arrangement, they capture rising per-transaction revenue as block space scarcity increases. They signal protocol preferences via mining pools and can redirect hash power across competing chains."
+    },
+    {
+      "name": "core_developers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintain the reference client and protocol specification. Their code defines consensus rules including block weight limits and fee estimation. They can propose changes but cannot unilaterally enforce them; social consensus among node operators and miners is required."
+    },
+    {
+      "name": "unbanked_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Depend on censorship-resistant payment rails for remittances and savings in economies with failing currencies or capital controls. High on-chain fees price them out of base-layer settlement, forcing reliance on custodial intermediaries or exclusion from the network entirely."
+    },
+    {
+      "name": "small_merchants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Accept cryptocurrency for goods and services. Volatile and high on-chain fees make small-value payments uneconomical, pushing them toward custodial processors or off-chain layers that reintroduce counterparty risk."
+    },
+    {
+      "name": "custodial_exchanges",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Provide on-ramps and custody. Rising base-layer fees drive retail users into custodial wallets and exchange-managed payment rails, concentrating transaction volume and custody fees in their infrastructure."
+    },
+    {
+      "name": "p2p_cash_advocates",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocate for base-layer scaling and low-fee inclusion. They operate nodes, publish research, and forked into separate chains when the base protocol maintained the block limit. They observe the constraint from outside the current consensus power structure."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates global, peer-to-peer value transfer without trusted intermediaries through proof-of-work consensus and shared ledger state.",
+    "transfer_function": "Moves transaction fee revenue from users to miners, and displaces user custody from self-custody base layer to custodial intermediaries as on-chain fees rise.",
+    "absent_voices": "Users in developing economies with sub-dollar transaction budgets are priced out of on-chain voice; big-block advocates who forked to separate chains are excluded from the mainchain consensus conversation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the fee-market block-space constraint disappeared (e.g., unlimited cheap block space with equivalent security), miners would lose fee revenue, custodial exchanges would lose forced off-chain volume, and unbanked users would regain direct base-layer access â the Bitcoin network would reorganize around a different security-subsidy and user-access equilibrium.",
+    "founding_problem": "Double-spending in digital cash without a trusted third party; creation of a censorship-resistant electronic payment system for online commerce.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Early cypherpunk literature and the whitepaper itself attest the founding problem was peer-to-peer electronic cash. Current Bitcoin developers and institutional holders attest the problem has evolved into digital gold settlement; unbanked users and forked-chain communities attest the original problem is unsolved. Corroboration from outside the benefiting parties: academic development economists and human-rights organizations document the ongoing need for low-fee censorship-resistant payments."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the p2p_cash_reading of the bitcoin_whitepaper kernel. It models the standing Bitcoin protocol arrangementâfixed block weight limit, competitive fee market, proof-of-work consensusâas experienced by a reading that holds Bitcoin's purpose to be censorship-resistant electronic cash for direct transactions. From this seat, the fee-market dynamic extracts from populations that cannot pay rising settlement costs, while miners and custodial infrastructure capture the revenue and secondary benefits. The constraint retains a genuine global coordination functionâcensorship-resistant ledger stateâbut under the p2p_cash reading the same structure asymmetrically excludes the very users the kernel was built to serve. Sibling readings (digital_gold_reading, protocol_ossification_reading) coexist in the same ecosystem but assign different directionality and beneficiary structures to the identical protocol rules.",
+    "key_agents": [
+      "miners: Primary beneficiary/agenda-setter (organized/arbitrage) â captures fee revenue and enforces consensus",
+      "core_developers: Agenda-setter (organized/mobile) â maintains the protocol specification",
+      "unbanked_populations: Primary target (powerless/constrained) â denied base-layer access by rising fees",
+      "small_merchants: Target (moderate/constrained) â priced out of on-chain commerce",
+      "custodial_exchanges: Secondary beneficiary (institutional/arbitrage) â gains custody volume from high fees",
+      "p2p_cash_advocates: Analytical observer (moderate/mobile) â sees drift from cash function"
+    ],
+    "logic_rationale": "Extractiveness is high (0.72) because the fee market prices out low-value transactions, effectively denying the kernel's cash function to the powerless. Suppression is substantial (0.68): the fee-market outcome is enforced by consensus rules, hash-power signaling, and social sanction against protocol changes that would expand block space. Theater ratio (0.48) reflects performative 'decentralization' rhetoric that obscures the custodial re-intermediation high fees force. Accessibility collapse (0.70) is high within the Bitcoin systemâonce a user is committed to Bitcoin, cheap base-layer alternatives are structurally unavailable. Resistance (0.55) is moderate: the big-block faction mounted significant resistance (BCH fork, ongoing advocacy), but the small-block consensus has prevailed in the main chain.",
+    "perspectival_gap": "The agenda-setter seats (miners, developers) experience the constraint as a necessary scarcity mechanism that funds security and prevents spam; the target seats experience it as a paywall that strips Bitcoin of its cash utility. The engine computes this divergence from identical protocol rules because the structural dataâwho collects fees, who is excluded, and what exit options each seat possessesâdiffers. Miners can arbitrage hash power across chains; unbanked users cannot arbitrage their need for censorship-resistant cash.",
+    "directionality_logic": "Miners and custodial exchanges sit near the beneficiary end: they collect fees and custody volume generated by scarce block space. Unbanked populations and small merchants sit near the target end: they bear the cost of exclusion from the base layer. Core developers sit near symmetric: they neither collect the fees nor pay the exclusion cost directly, but their professional identity is bound to the protocol's current parameters. The p2p_cash advocate observer sits outside the directionality derivation, analytical.",
+    "mandatrophy_analysis": "The founding problem was peer-to-peer electronic cash without trusted third parties. Under the p2p_cash reading, the current arrangement has drifted from that mandate: fees now require trusted third parties (custodial exchanges, Lightning service providers) for small transactions, reintroducing the very intermediaries the kernel sought to eliminate. The constraint is therefore not a pure Rope (the coordination is contaminated by extraction), nor a pure Snare (the ledger coordination is real and non-theatrical), but a Tangled Rope where genuine global settlement coordination coexists with asymmetric extraction through fee-market exclusion.",
+    "kernel_context": "This is the p2p_cash_reading of the bitcoin_whitepaper kernel, holding that Bitcoin's legitimate purpose is censorship-resistant electronic cash for direct transactions. Sibling readings: digital_gold_reading (store-of-value/inflation-hedge framing) and protocol_ossification_reading (change illegitimacy except near-universal consensus). The three readings coexist as live positions in the Bitcoin ecosystem but produce structurally distinct constraints with different beneficiary/victim maps."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer",
+      "question": "Is this constraint best understood as a reading of the Bitcoin whitepaper kernel, or as an independent description of Bitcoin's current protocol dynamics?",
+      "resolution_mechanism": "Textual analysis of the whitepaper and early protocol behavior against contemporary fee-market dynamics and social-contract discourse.",
+      "impact": "If independent, the kernel framing is ornamental; if kernel-bound, drift_state and reading relations become primary classification drivers.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer frame ambiguity for Bitcoin whitepaper kernel"
+    },
+    {
+      "id": "fee_extraction_vs_security_budget",
+      "question": "Does the fee market extract from users beyond the necessary cost of proof-of-work security, or does fee revenue precisely fund the security threshold?",
+      "resolution_mechanism": "Empirical estimation of miner cost structures and security budget requirements at various block sizes and hash-rate levels.",
+      "impact": "If fees exceed security cost, the excess is extractive overhead supporting higher epsilon; if fees approximate cost, the constraint moves toward rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fee revenue and security budget alignment"
+    },
+    {
+      "id": "victim_exit_trapped_or_constrained",
+      "question": "Are unbanked users structurally trapped in Bitcoin (no alternative censorship-resistant rails), or merely constrained by current fees?",
+      "resolution_mechanism": "Cross-asset analysis of censorship-resistant payment options and capital-control evasion pathways in jurisdictions with banking exclusion.",
+      "impact": "If trapped, directionality and effective extraction are amplified; if constrained, exit options moderate extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trapped versus constrained exit for victim populations"
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "reference_frame": "peer_to_peer_electronic_cash",
+    "drift_state": {
+      "moment": "contemporary_fee_market_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "digital_gold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "protocol_ossification_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "inclusive_onchain_cash_mandate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "negligible_fee_scaling_prerogative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_gold_reading",
+      "protocol_ossification_reading"
+    ],
+    "dual_formulation_note": "This story is one reading of the bitcoin_whitepaper kernel, instantiating the p2p_cash_reading. Its sibling readings (digital_gold_reading, protocol_ossification_reading) instantiate structurally distinct constraints from the same kernel. The epsilon values differ because the referentâthe standing arrangement under contestâis assessed through different normative premises: cash utility versus store-of-value scarcity versus change illegitimacy."
+  },
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "60480b67-5614-499b-a639-1dde3ba3e0dc"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.25,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "HOA Covenant â Shared Infrastructure Coordination Reading",
+    "topic_domain": "property_law/collective_governance/urban_planning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "all_homeowners"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "all_homeowners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Own property within the covenant-bound community. Receive maintained shared infrastructure such as private roads, drainage, utilities, and common areas funded by proportionate assessments. Bear the cost of that maintenance through dues. Exit requires selling the property or achieving a supermajority vote to dissolve the covenant, which is costly and rare."
+    },
+    {
+      "name": "hoa_board",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Administers the recorded declaration of covenants, conditions, and restrictions. Collects assessments, contracts for infrastructure maintenance, and enforces only provisions related to objective nuisance and cost recovery. Authority is functionally limited to preserving the common elements; the board does not capture surplus revenue and is subject to homeowner recall and state fiduciary statutes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates collective maintenance of non-excludable infrastructure serving multiple parcels within a community: private roads, drainage systems, utility easements, and common areas. Prevents free-riding on maintenance costs and resolves genuine negative externalities such as objective nuisances that degrade neighboring property values or create health hazards.",
+    "transfer_function": "Moves proportional maintenance assessments from each homeowner to a common fund, which pays directly for infrastructure upkeep and nuisance abatement. Transfers are symmetric and cost-recovering; no party extracts a surplus from the flow.",
+    "absent_voices": "Homeowners who would prefer purely private maintenance contracts or no collective governance at all are structurally excluded because the covenant runs with the land and binds subsequent purchasers. Renters within the community, who pay assessments indirectly through rent, are excluded from covenant amendment votes despite bearing the costs.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the covenant disappeared overnight, the shared infrastructure would lack a statutory or contractual funding mechanism. Homeowners would need to negotiate ad-hoc maintenance contracts for roads, drainage, and common areas, or watch the infrastructure degrade. The current collective financing and dispute-resolution arrangement would collapse and require municipal absorption or private renegotiation.",
+    "founding_problem": "Privately owned parcels sharing critical infrastructure faced a collective-action problem: no individual homeowner had adequate incentive to maintain roads or drainage benefiting all owners, and uncoordinated maintenance led to free-riding, underprovision, and physical decay of common elements.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Urban planning and public finance scholarship external to the HOA board and homeowners attests that common-interest communities require coordinated funding mechanisms for shared infrastructure where municipal provision is absent. Many state statutes explicitly recognize HOAs as infrastructure-substitutes, corroborating that the founding problem remains unresolved without the arrangement."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the coordination_reading of the hoa_covenant_scope kernel: the view that a homeowners association covenant is fundamentally a ropeâa low-extraction coordination mechanism for shared infrastructure maintenance and genuine externality resolution. Under this reading, assessments are symmetric cost-recovery transfers among similarly situated homeowners, and enforcement is narrowly scoped to infrastructure funding and objective nuisance. The kernel is contested by two sibling readings: behavioral_control_reading (aesthetic uniformity and social control) and extraction_reading (revenue generation and board power consolidation). This reading instantiates a clean, low-Îµ rope with no victims and symmetric beneficiaries.",
+    "key_agents": [
+      "All homeowners (moderate/constrained): Symmetric beneficiaries who pay proportionate assessments and receive maintained shared infrastructure.",
+      "HOA board (organized/constrained): Agenda setter administering the covenant with narrow, cost-recovering enforcement authority."
+    ],
+    "logic_rationale": "Extractiveness is low (0.15) because assessments are designed as proportional cost-sharing for non-excludable infrastructure, not rent collection. Suppression is low-moderate (0.25) because enforcement is limited to dues collection and objective nuisance abatement; alternatives such as municipal absorption or private road maintenance exist but are costly. Theater ratio is very low (0.10) because most board activity is functional maintenance contracting and accounting rather than performative governance. Accessibility collapse is moderate (0.40) because once a buyer enters the covenant, alternatives to the collective arrangement require property sale. Resistance is low (0.20) because homeowners structurally benefit from maintained infrastructure and the arrangement is not experienced as extractive under this reading.",
+    "perspectival_gap": "Under the coordination reading, all seated agents experience the constraint as symmetric or mildly beneficial. The engine should compute low directionality deviation for homeowners and the board because the structural data declare symmetric beneficiaries and no victims. Divergence from the sibling readings (behavioral control and extraction) is not captured as seat divergence within this story; it manifests across the constraint family as competing interpretations of the same legal instrument.",
+    "directionality_logic": "All homeowners are symmetric beneficiaries (d near the center, slightly toward beneficiary because they receive infrastructure services that exceed individual provision costs). The HOA board is an agenda setter without a surplus-capture role; its directionality is near symmetric (d â 0.5). No victim group is declared, so no high-d target seat exists. The structural derivation chain therefore produces low effective extraction for all indexed seats.",
+    "mandatrophy_analysis": "The coordination reading prevents mislabeling by rigorously restricting the covenant's legitimate scope to infrastructure and objective nuisance. If the same legal instrument is used to enforce aesthetic preferences or generate fines, that function belongs to a different constraint story (the sibling readings) with a distinct Îµ and victim structure. Mandatrophyâpersistence after function deathâis not present here because the founding problem (shared infrastructure maintenance) remains live and the arrangement directly addresses it.",
+    "kernel_context": "This constraint is the coordination_reading of the hoa_covenant_scope kernel. Sibling readings are behavioral_control_reading (covenant as aesthetic and behavioral uniformity enforcement) and extraction_reading (covenant as revenue generation and board power consolidation). This reading claims the kernel's legitimate scope is limited to shared infrastructure coordination and objective nuisance resolution, and that drift toward the sibling readings represents institutional mission creep rather than the covenant's core function."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_scope_drift",
+      "question": "Does the legal form of the HOA covenant instrument inherently enable drift toward behavioral control and extraction, or can the coordination reading's narrow scope be institutionally stabilized?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with strict statutory scoping limits on HOA enforcement authority versus permissive regimes; measurement of enforcement action categories across regimes.",
+      "impact": "If drift is inherent, the coordination reading describes an unstable ideal type rather than an operable constraint; if stabilizable, the rope classification holds for well-designed covenants.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the coordination reading is structurally stable or inevitably drifts"
+    },
+    {
+      "id": "free_rider_enforcement_threshold",
+      "question": "At what point does the administrative cost of enforcing assessments against delinquent homeowners exceed the revenue recovered, converting cost-recovery coordination into net extraction?",
+      "resolution_mechanism": "Empirical accounting studies of HOA enforcement costs versus recovery rates, including legal fees and collection overhead.",
+      "impact": "If enforcement costs routinely exceed recoveries funded by compliant homeowners, the symmetric beneficiary claim weakens and the constraint shifts toward tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforcement cost threshold against delinquent homeowners"
+    },
+    {
+      "id": "objective_nuisance_boundary",
+      "question": "Is the distinction between 'objective nuisance' (health/safety/property damage) and 'aesthetic preference' stable in covenant enforcement practice, or does the interpretation layer systematically blur them?",
+      "resolution_mechanism": "Content analysis of HOA enforcement actions and judicial opinions categorizing covenant violations as health/safety versus aesthetic.",
+      "impact": "If the boundary is unstable, the coordination reading's narrow scope cannot be maintained in practice and the constraint family collapses toward the behavioral control reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of the objective nuisance versus aesthetic boundary"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "hoa_covenant_scope__behavioral_control_reading",
+      "hoa_covenant_scope__extraction_reading"
+    ],
+    "dual_formulation_note": "The natural-language label 'HOA covenant' conflates three structurally distinct constraints: genuine infrastructure coordination (this story), behavioral control via aesthetic rules, and extraction via fines and selective enforcement. Each has a different epsilon, beneficiary structure, and enforcement logic. They are modeled as separate stories linked by network edges, not as one constraint with a parameter-dependent classification."
+  },
+  "gain_flow": "diffuse",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "shared_infrastructure_agreement",
+    "drift_state": {
+      "moment": "contemporary_hoa_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "behavioral_control_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "infrastructure_costs_common_responsibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "objective_nuisance_enforcement_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

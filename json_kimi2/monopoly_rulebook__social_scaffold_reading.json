@@ -1,0 +1,240 @@
+{
+  "header": {
+    "constraint_id": "monopoly_rulebook__social_scaffold_reading",
+    "version": "1.0",
+    "generated_date": "2026-01-09",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "monopoly_social_scaffold",
+    "story_uid": "5bc4bc36-190b-4297-9881-7887331fa43e"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.38,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.3,
+    "claimed_type": "scaffold",
+    "human_readable": "Monopoly Social Scaffold Reading",
+    "topic_domain": "game_theory/social_coordination",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "social_play_group"
+    ],
+    "victims": [
+      "competitive_players"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "host_player",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Proposes and enforces session-specific house rules before and during play; can end the game or change the activity but is socially expected to sustain group engagement for the evening."
+    },
+    {
+      "name": "social_play_group",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "The assembled players who benefit from extended inclusion and interaction; they informally enforce house rules by mutual agreement and social pressure to keep eliminated or near-eliminated players in the game."
+    },
+    {
+      "name": "competitive_players",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Players who prefer strategic, by-the-book play; their early advantages are eroded by house-rule redistribution and their objections are overridden by majority preference, costing them time and competitive satisfaction."
+    },
+    {
+      "name": "tournament_orthodoxy",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Competitive tournament communities and rulebook purists not present at the casual table; they maintain official rankings and would insist on strict text fidelity, including auctions and rapid elimination."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Keeps a mixed-skill social group engaged in a single board game for an evening by preventing early player elimination and maintaining liquidity, converting a competitive elimination design into a social coordination device.",
+    "transfer_function": "Moves time, competitive advantage, and game resources from players who would win quickly under orthodox rules to the group as a whole via house-rule mechanisms such as Free Parking jackpots, skipped auctions, and lenient trading, prolonging the session.",
+    "absent_voices": "Tournament orthodoxy players and rulebook purists are absent; they would insist on strict adherence including auctions and rapid elimination, but they are not in the room when casual house rules are adopted.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If house-rule corrections vanished and strict rulebook enforcement replaced them, competitive players would eliminate casual players earlier, the social event would fragment, and the group would likely abandon the game or switch activities.",
+    "founding_problem": "The Monopoly rulebook as written produces rapid wealth concentration and player elimination that ends the game too quickly for a mixed-skill social group, undermining the evening's social function.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Game designers and sociologists of play have documented that Monopoly's official rules are widely unknown or ignored in casual settings because they truncate social interaction; corroboration comes from outside the benefiting party (e.g., ethnographic studies of family game nights), while the benefiting social group merely experiences the adjustment as making the game more fun."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_extraction_vs_coordination",
+      "question": "Does the social scaffold reading describe a genuine coordination mechanism, or does it rationalize extraction from competitive players by framing it as social cohesion?",
+      "resolution_mechanism": "Examine whether competitive players experience net negative utility across repeated sessions; if they consistently endure the game for social belonging, extraction is present.",
+      "impact": "If rationalization, effective extractiveness is higher than the coordination framing suggests, and the computed seat type for competitive players shifts toward snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the scaffold is coordination or extraction rationalized as cohesion"
+    },
+    {
+      "id": "house_rule_origin_ambiguity",
+      "question": "Are house rules spontaneously generated by each social play group, or are they transmitted culturally as a stable tradition?",
+      "resolution_mechanism": "Cross-group comparison of house rule variants; high similarity suggests cultural transmission, high variation suggests spontaneous generation.",
+      "impact": "If transmitted, the constraint has lineage authority and may compute as commitment-system extraction; if spontaneous, it is distributed practice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Origin of house rules as spontaneous or transmitted tradition"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of orthodox rule objections structural (social exclusion for insisting) or internalized (players genuinely prefer house rules)?",
+      "resolution_mechanism": "Observe competitive players in isolation: do they revert to orthodox rules when removed from the social group?",
+      "impact": "If internalized, suppression is higher than structural measures suggest; if purely structural, competitive players carry latent resistance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression of orthodox play preferences"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the social_scaffold_reading of the monopoly_rulebook kernel. The standing arrangement is the widespread casual practice of overlaying house rules onto the Monopoly rulebook to prolong play, inject liquidity, and prevent elimination, thereby converting a competitive elimination game into a social coordination device. Sibling readings include the extraction_demo_reading (Marxist pedagogical frame) and the tournament_orthodoxy_reading (immutable competitive framework). This reading treats the house-rule layer as a temporary scaffold whose legitimacy derives from the social occasion rather than the text.",
+    "key_agents": [
+      "social_play_group (beneficiary, moderate/constrained): the assembled players who gain extended social interaction",
+      "competitive_players (payer, moderate/constrained): players who prefer orthodox rules and bear the cost of prolonged suboptimal play",
+      "host_player (agenda_setter, moderate/mobile): proposes and administers house rules for the session",
+      "tournament_orthodoxy (excluded, organized/analytical): competitive rulebook authorities not present at the table"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.45) because the house rules extract competitive advantage and time from skilled players to redistribute to the group, but the extraction is bounded by the social occasion's duration and the group's mutual interest. Suppression is moderate-low (0.38): the official rules are known but socially overridden through peer consensus rather than formal coercion. Theater ratio is low-moderate (0.25) because the house rules perform a genuine coordination function, though some ritualistic repetition occurs. Accessibility collapse is moderate (0.45): alternatives (playing by the book, stopping early) exist but carry social cost. Resistance is low-moderate (0.30): competitive players may grumble but rarely escalate. The claim is scaffold because the arrangement is temporary (session-bound, has_sunset_clause: true) and justified by the social transition, not a steady-state competitive order.",
+    "perspectival_gap": "The beneficiary seat (social_play_group) experiences the constraint as enabling coordination and inclusion; the payer seat (competitive_players) experiences the same rules as devaluing their skill and extending a game they would prefer to end. The host sits near the beneficiary end because they share the social goal, while the tournament orthodoxy seat, if computed analytically, would read the constraint as severe authority erosion. The engine captures this divergence from the same structural data.",
+    "directionality_logic": "The social_play_group is declared beneficiary, yielding low directionality; their constrained exit (social belonging) does not shift them toward target because the structural relationship is subsidizing. Competitive_players are declared victim/payer, yielding high directionality; their constrained exit amplifies effective extraction because they cannot easily leave without social rupture. The host_player, as agenda_setter with mobile exit, derives moderate directionality: they administer the constraint but could terminate it, which limits their computed extraction.",
+    "mandatrophy_analysis": "Without the R5 genealogy interview, this constraint could be misread as a rope (pure coordination) because everyone appears to agree at the table, or as a snare (pure extraction) from the competitive player's viewpoint. The scaffold classification is supported by the live founding problem (rapid elimination under official rules), the active enforcement requirement (house rules must be remembered and enforced session-by-session), and the sunset clause (the arrangement expires when the social occasion ends). The theater ratio remains below the piton threshold, indicating the function is not merely inertial.",
+    "kernel_context": "This is the social_scaffold_reading of the monopoly_rulebook kernel. It holds that the rulebook requires community correction to be socially playable. Sibling readings: extraction_demo_reading (the rulebook demonstrates monopoly capitalism) and tournament_orthodoxy_reading (the text is an immutable competitive framework)."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "communal_play_tradition",
+    "drift_state": {
+      "moment": "official_rulebook_authority",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "extraction_demo_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "tournament_orthodoxy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "house_rules_instrumentally_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "social_cohesion_overrides_text_fidelity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "extraction_demo_reading",
+      "tournament_orthodoxy_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the monopoly_rulebook kernel, decomposed from the colloquial 'Monopoly rules' label into structurally distinct commitments."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
