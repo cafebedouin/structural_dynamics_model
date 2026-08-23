@@ -1,0 +1,21 @@
+engine commits present: ['734d587', 'bdb84ee']  <-- NOT coherent; reclassify
+nemotron      n= 996 | h1 band3=21% band0=31% null=12% | red=13.3% green=12.8%
+nemotron_think n= 732 | h1 band3=34% band0=23% null=10% | red=11.2% green=14.5%
+
+pair                            n             h1_band             verdict           signature         purity_band  claimed_type(auth)       epsilon(auth)
+nemotron vs nemotron_think    728                43%                 56%                 66%                 55%                 72%                 20% 
+ε thresholds: {'rope_epsilon_ceiling': 0.45, 'snare_epsilon_floor': 0.46, 'tangled_rope_epsilon_floor': 0.3, 'piton_epsilon_floor': 0.1, 'fpn_epsilon': 0.001}
+nemotron vs nemotron_think n= 728 |Δε| median=0.06 p75=0.10 p90=0.23 max=0.77 | ≥0.10: 27%  ≥0.20: 14%
+nemotron vs nemotron_think n= 728 | type-vector changed: all=76% |Δε|≥.10=94% (n=194) <.10=70% | verdict: ≥.10=72% <.10=34% | h1: ≥.10=78% <.10=49%
+nemotron      n=996 mean ε=0.484 sd=0.254 | mean suppression=0.484
+    powerless     tangled_rope=29% unknown=22% naturalized=15% scaffold=10% rope=10% snare=9% mountain=3% piton=2%
+    moderate      snare=31% rope=20% tangled_rope=20% unknown=13% scaffold=12% piton=2% naturalized=2%
+    institutional rope=75% scaffold=14% naturalized=4% piton=2% tangled_rope=2% snare=2% unknown=1%
+    analytical    snare=32% unknown=22% rope=17% tangled_rope=15% scaffold=9% mountain=3% piton=2% naturalized=0%
+nemotron_think n=732 mean ε=0.542 sd=0.229 | mean suppression=0.542
+    powerless     tangled_rope=36% snare=18% unknown=15% naturalized=12% rope=10% scaffold=8% mountain=1% piton=1%
+    moderate      snare=38% tangled_rope=26% rope=15% unknown=10% scaffold=8% naturalized=1% piton=1%
+    institutional rope=76% scaffold=11% naturalized=6% snare=3% unknown=2% piton=2% tangled_rope=2%
+    analytical    snare=42% tangled_rope=21% unknown=16% rope=13% scaffold=5% mountain=1% piton=1%
+
+paired Δε (nemotron_think − nemotron): mean=+0.061, up≥.05=39% down≥.05=12%
