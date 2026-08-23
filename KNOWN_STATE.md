@@ -95,6 +95,14 @@ in runbook §9.
   redraw + prompt change (the flash-vs-flash2 shape), NOT the pure thinking-on floor; that is
   stealth2 vs a later stealth3 at the same commit (free). Stealth is outside the free-tier daily cap
   (0 × 429 over 1,040 requests; nemotron's first 429 at request #1025).
+- **22:45 — DAY CLOSED: 14 live legs, census GREEN, every floor in OQ-347's table landed.** kimi2 COMPLETE
+  1005 ($42; the 63% band-3 kimi signature replicates at 64%). Floors: thinking-off Flash/Sonnet/Haiku seat
+  churn 22/38/65%; thinking-on kimi/Flash/stealth ε-move rates 17/22/25%. Still queued (OQ-342 children):
+  nemotron residue 153 + `_think` sibling (cap probe running hourly, self-launching); rescue passes on the
+  Flash legs' residues under e03e2210 (cents); reclassify ALL 14 legs at one commit + the six-plus-leg
+  harness read (OQ-347 step 2–4, `five_leg_twin_comparison.py` LEGS is hardcoded); OQ-349's three arms
+  (reasoning-text census first, free); OQ-346 new-family pairs after that. Balances: Moonshot ~$20,
+  Anthropic ~$35 + auto-load, Gemini cap $100, OpenRouter $50 untouched.
 - **22:15 — stealth3 COMPLETE 1005 (free) + certified; kimi2 at 1000/1005 after three batches ($42) with a
   5-seed sync pass finishing.** Pure thinking-on floor (stealth2 vs stealth3, same commit): |Δε| ≥0.10 on
   25% of seeds, seat-vector churn 63%, no direction — identical to the prompt-confounded pair (OQ-347 table).
