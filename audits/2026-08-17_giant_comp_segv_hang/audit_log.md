@@ -362,9 +362,211 @@ are kept, so a plant runs the same load path as a counted row.
 
 ### Per-machine artifacts, git-excluded
 
-`corpus_snapshot/` and `raw/` under this audit dir are per-machine and are excluded from
-version control via the repository's machine-local git exclude file (deliberately NOT cited
-as a path here: it is untracked by construction, so citing it would be citing unversioned
-evidence — the `audit cites` gate row flags exactly that, and did). Their committed witness
-is the count + fingerprint recorded in this log (RA); core binaries are recorded as
-`path + size + md5 + readelf -n`, never committed.
+`corpus_snapshot/` and the **per-row subdirectories** of `raw/` (the `.stderr` files, 56 MB for
+arm A alone, and any cores) are per-machine and excluded from version control via the
+repository's machine-local git exclude file — deliberately NOT cited as a path here: it is
+untracked by construction, so citing it would be citing unversioned evidence, which is exactly
+what the `audit cites` gate row flags (and did).
+
+**F5 — RA over-excluded, corrected before commit 2.** The plan's RA ("committed digests,
+artifacts per-machine") excluded `raw/` wholesale. The `audit cites` gate row disagreed, and it
+is right: `raw/arm_A.tsv` **is** the frozen evidence for every count in this log, it is 12 KB,
+and an audit that cites it while leaving it untracked is citing evidence a fresh clone cannot
+read. The exclusion was narrowed to `raw/*/`, and the six row-level artifacts
+(`arm_A.tsv`, `arm_A.console`, `warmup.tsv`, `warmup2.tsv`, `ctl_hang.tsv`,
+`ctl_hang_kill.tsv` — 32 KB total) are COMMITTED. Verified staged-set contains no `core.*` and
+no `.stderr`. Core binaries would still be recorded as `path + size + md5 + readelf -n` and
+never committed; none exist, because nothing crashed.
+
+---
+
+## Step 1b — the driver witnessed through itself
+
+All controls below ran BEFORE any counted row. Session start 15:54; the 90-minute apparatus budget
+(→ 17:24) was not approached — Step 1b completed by 16:20.
+
+### Warm-up ×2 — the clean reference
+
+```
+$ TAG=warmup  N=1 ./round2_arms.sh A
+    snapshot: CREATED …/corpus_snapshot     285 files  fp=ea0c60a50e6d7b063b7a51d9154f5893
+    goal: asserta(config:param(corpus_path,'…/corpus_snapshot')), run_giant_component_analysis, halt.
+  raw/warmup.tsv:   i=1	rc=0	bytes=7740	wall_ms=1411	rss_kb=na	stray=0	pid=na
+  raw/warmup/1.stderr:3051: [corpus] Loaded 285 testsets successfully.
+
+$ TAG=warmup2 N=1 ./round2_arms.sh A
+    snapshot: reusing frozen …/corpus_snapshot   285 files  fp=ea0c60a50e6d7b063b7a51d9154f5893
+  raw/warmup2.tsv:  i=1	rc=0	bytes=7740	wall_ms=1385	rss_kb=na	stray=0	pid=na
+  raw/warmup2/1.stderr: [corpus] Loaded 285 testsets successfully.   (1 match)
+```
+
+- **Loaded N == snapshot count (285) on both runs.** The overlay reaches the loader; the corpus did
+  not move.
+- **`corpus_fp` = `ea0c60a50e6d7b063b7a51d9154f5893`** over the 285-file snapshot — stable across
+  both runs and used as the frozen fingerprint for arm A.
+- **Clean reference: `bytes = 7740`.** (The out-of-band Step-0.3 run measured 7 747; the 7-byte
+  difference is `$(...)` stripping trailing newlines. The reference is the driver's own number.)
+- **F10 margin, WITNESSED not guessed: the two clean runs are byte-IDENTICAL, so the margin is
+  pinned at EXACT EQUALITY.** Any `rc=0` arm-A row with `bytes != 7740` is REPORTED as a finding.
+- **`warm_up_wall = 1411 ms`** (max of the two).
+
+### F5 detector-headroom guard
+
+`warm_up_wall / (TMO·1000) = 1411 / 25000 = 0.056`, far below the 0.5 stop-and-ask threshold. The
+detector still separates *did-not-complete* from *slow*. **PASS** — `rc=124` may be read as
+did-not-complete-in-TMO.
+
+### F4 arm-A ceilings, computed from the warm-up (no fixed-minute figure)
+
+- clean-branch expectation `150 × warm_up_wall` = **211.7 s ≈ 3.5 min** of swipl time (plus per-row
+  matcher/core-sweep overhead);
+- absolute ceiling `150 × (TMO + kill_after + slack)` = 150 × ~31 s ≈ **77.5 min**. **Exceeding the
+  absolute ceiling is stop-and-ask.**
+
+### Control — a second start under the same TAG is refused
+
+```
+$ TAG=warmup N=1 ./round2_arms.sh A
+REFUSED: …/raw/warmup.tsv already exists — pick a fresh TAG (outputs are never shared)
+driver rc=3
+```
+
+### Control — the matcher, two-sided
+
+```
+PRESENT half (one invocation at TMO−3 s, control TAGs only):
+  raw/ctl_hang/1.matcher       -> 650242
+  raw/ctl_hang_kill/1.matcher  -> 650734
+ABSENT half (post-row survivor check on every row):
+  no VOID(survivor) line on any control or warm-up row; stray=0 on every row.
+```
+
+Both halves fire. Until this pair existed, "stray=0 / no survivor" was uninformative; it is now a
+read from an instrument witnessed able to see a live process. Resolution is by
+`/proc/<pid>/comm == swipl` **with parent comm `timeout`** — the pid recorded is the row's own
+swipl, not the `timeout` wrapper.
+
+### Plant 1 — TERM-responsive hang
+
+```
+$ TAG=ctl_hang GOAL="sleep(60)" N=1 ./round2_arms.sh A
+  goal: asserta(config:param(corpus_path,'…')), sleep(60), halt.
+  i=1	rc=124	bytes=299	wall_ms=25029	rss_kb=na	stray=0	pid=650242
+```
+
+**rc=124 at 25 029 ms** — as pinned. `wall_ms < KTHRESH`, so this row is TERM-responsive
+did-not-complete.
+
+### Plant 2 — TERM-ignoring hang (confirms the Step-0.4 KILL cell through the driver)
+
+```
+$ TAG=ctl_hang_kill GOAL="on_signal(term,_,ignore), sleep(60)" N=1 ./round2_arms.sh A
+      row 1: rc=137, NO new /tmp/core.* in [1787519856900,1787519886904]
+  i=1	rc=137	bytes=299	wall_ms=30004	rss_kb=na	stray=0	pid=650734
+
+$ awk -v K=29000 -F'\t' '…' raw/ctl_hang_kill.tsv
+  rc=137 wall_ms=30004 -> KILL-required did-not-complete (>=KTHRESH)
+```
+
+**The KILL path is reachable through the driver**, and the classifier puts the row in the right
+bucket. The split stays "a-priori threshold, confirmed reachable by control" — it is not UNPINNED.
+
+Incidentally two-sided: the `rc≥128` core-collection branch **ran** on this row and correctly
+reported *no new core* (SIGKILL produces none) rather than silently passing. The branch is
+exercised; it is the swipl-segv case that remains untested (declared).
+
+### Control — the `dmesg` channel is readable (so its empty result is a tested absence)
+
+```
+$ dmesg -T > /tmp/dmesg_probe.txt 2>/tmp/dmesg_probe.err ; echo rc=$?
+  rc=0        stdout lines: 1195      stderr: (empty)
+  last line: [Sun Aug 23 16:01:41 2026] FS:  0000785fbb962740 GS:  0000000000000000
+  grep -ci 'killed process' -> 0
+```
+
+Without this the driver's silent `dmesg` line would have been indistinguishable between *no OOM
+kill* and *cannot read the ring buffer*. It reads; there are no OOM kills.
+
+### Partial-arm rule (restated before the arm runs)
+
+An arm interrupted before row 150 is VOID (cause `interrupted`); its rows stay as evidence; it is
+re-run from row 1 under a **fresh TAG**, and the authoritative TAG is named in this log.
+
+---
+
+## Step 2 — arm A, Set R, n=150. **0 failures.**
+
+Pre-assert: `raw/arm_A.tsv` absent (`ls` → No such file). Idle re-check immediately before launch:
+`pgrep -af '[s]wipl|[c]-orchestrator|[r]un_pipeline'` empty (rc=1).
+
+Started **16:19:00 −05:00**, finished **16:23:13 −05:00** — **4 min 13 s**, against a clean-branch
+expectation of ~3.5 min of swipl time and an absolute ceiling of ~77.5 min. Ceiling not approached.
+
+### Driver console (whole)
+
+```
+### ARM A  baseline (default flags)   [TAG=arm_A]
+    swipl:  SWI-Prolog version 10.0.2 for x86_64-linux
+    detector: TMO=25  kill_after=5  KTHRESH=29000
+    ulimit -c: 100544 blocks
+    snapshot: reusing frozen …/corpus_snapshot
+    snapshot: 285 files  fp=ea0c60a50e6d7b063b7a51d9154f5893
+    census(start):                       <- empty
+    goal:   asserta(config:param(corpus_path,'…/corpus_snapshot')), run_giant_component_analysis, halt.
+    census(end):                         <- empty
+    dmesg(killed process):               <- empty (channel proven readable at Step 1b)
+    snapshot fp stable across the arm: ea0c60a50e6d7b063b7a51d9154f5893
+    rows: 150
+```
+
+**No VOID of any cause.** Start and end census empty; snapshot fingerprint stable (a consistency
+check under R5, not a guard); no OOM kill in `dmesg`.
+
+### Counts, re-derived from `raw/arm_A.tsv` with the pinned expressions (never the driver summary)
+
+| bucket | expression | count |
+|---|---|---|
+| rows | `wc -l` | **150** |
+| clean | `$2=="rc=0"` | **150** |
+| failures | `$2!="rc=0"` | **0** |
+| did-not-complete-in-TMO | `$2=="rc=124" \|\| ($2=="rc=137" && substr($4,9)+0>=29000)` | 0 |
+| segv | `$2=="rc=139"` | 0 |
+| external kill / OOM | `$2=="rc=137" && substr($4,9)+0<29000` | 0 |
+| driver/env fault | `1..127` | 0 |
+| other `≥128` | — | 0 |
+
+**Reconciliation** (the real check — `clean+failures==rows` is a tautology):
+`dnc 0 + segv 0 + extkill 0 + faults 0 + other≥128 0 = 0 = failures` → **RECONCILES**.
+
+**Shape check:** 150 rows, `NF==7` on every row, all seven prefixes (`i= rc= bytes= wall_ms=
+rss_kb= stray= pid=`) present → **SHAPE OK, 0 malformed**. `i` sequence complete 1..150, no gaps.
+
+**F10 silent-corruption flag:** clean rows with `bytes != 7740` (the exact-equality margin witnessed
+at Step 1b) → **0**. All 150 clean runs emitted byte-identical output. The 0/150 is not "150 runs
+that returned 0 while quietly producing nothing different" — the output is the same complete report
+each time.
+
+**Invariants:** `stray=0` on all 150 rows; `rss_kb=na` on all 150 (Set R, by construction);
+`pid=na` on all 150 (no matcher invocation on a counted row, by construction).
+
+**Wall time:** n=150, min 1369 ms, mean 1395.6 ms, max **1470 ms** — the slowest row used **5.9 %**
+of `TMO`. Nothing came within 23 s of the timeout.
+
+### Zero classification (what the 0 is and is not evidence about)
+
+- **0 failures = a TESTED absence.** The detector's `rc=124` and `rc=137`/`≥KTHRESH` cells were
+  each fired by a plant through this driver at Step 1b, and the `rc≥128` core branch ran. A failure
+  of either did-not-complete kind would have been recorded.
+- **No cores and no stacks = UNTESTED INSTRUMENTS.** The plants exercised the *channel* (a core is
+  writable at the bound; gdb attaches) — not the failure. No swipl core was ever produced here, so
+  the "core size == BOUND ⇒ truncated" rule remains a-priori, and RA's `path+size+md5+readelf -n`
+  ledger is **empty because nothing crashed**, not because collection was skipped.
+- **`rss_kb` is unmeasured** for the whole arm (`na`, Set R): swap/OOM behaviour is not addressed.
+- **Round 1 is unrecheckable.** Its evidence never reached this directory and its binary is purged.
+
+### Reading against the pre-committed table
+
+`0/150` → the ruled branch: **CLOSE `resolved`** (RB). Exact one-sided 95 % upper bound on the
+per-run failure rate given 0/150, under an independence assumption: **1.98 %**.
+`P(0/150 | p₀ = .07) = 1.9 × 10⁻⁵`. Arms B–F, the valgrind pass and the symbol question are
+**moot**; Step 3 is not entered.

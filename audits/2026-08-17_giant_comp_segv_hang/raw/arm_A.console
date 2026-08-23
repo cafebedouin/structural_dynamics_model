@@ -1,0 +1,14 @@
+### ARM A  baseline (default flags)   [TAG=arm_A]
+    swipl:  SWI-Prolog version 10.0.2 for x86_64-linux
+    detector: TMO=25  kill_after=5  KTHRESH=29000
+    ulimit -c: 100544 blocks
+    snapshot: reusing frozen /home/scott/bin/structural_dynamics_model/audits/2026-08-17_giant_comp_segv_hang/corpus_snapshot
+    snapshot: 285 files  fp=ea0c60a50e6d7b063b7a51d9154f5893
+    census(start):
+    goal:   asserta(config:param(corpus_path,'/home/scott/bin/structural_dynamics_model/audits/2026-08-17_giant_comp_segv_hang/corpus_snapshot')), run_giant_component_analysis, halt.
+    census(end):
+    dmesg(killed process):
+    snapshot fp stable across the arm: ea0c60a50e6d7b063b7a51d9154f5893
+    rows: 150  raw: /home/scott/bin/structural_dynamics_model/audits/2026-08-17_giant_comp_segv_hang/raw/arm_A.tsv
+    (counts are re-derived from the TSV with the pinned expressions in
+     audit_log.md Step 0.3 — this driver prints NO failure summary by design)
