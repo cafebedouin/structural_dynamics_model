@@ -283,6 +283,43 @@ Prompt-interpretation signal, already available without backfill: which models a
 role=`victim` (prose-following: Flash, Nemotron) vs `payer` (enum-following: Claude, Kimi) —
 one instruction, a clean cross-model split; extend to other enum sites as they surface.
 
+## 10. Live-leg rename (`testsets/` → `testsets_live/`, `json/` → `json_live/`) — DEFERRED plan + reference census (2026-08-23)
+
+Operator proposal: rename the live leg and nest every leg under one parent. Ruling-grade findings
+that shape it (witnessed 2026-08-23):
+
+- **Not `sonnet_live`.** The live leg's `story_provenance` models: 132 claude-sonnet-5, 75
+  claude-sonnet-4-5, 28 claude-haiku-4-5, 11 gemini-2.5-flash, 7 claude-sonnet-4 (+ smaller strata).
+  A model in the directory name is the OQ-78 trap; `testsets_live` / `json_live`.
+- **Do NOT nest legs under a parent `prolog/testsets/`.** Three load-bearing mechanisms assume the
+  flat layout: `config.pl` default `corpus_path=testsets` + the deliberately NON-recursive glob
+  (a parent dir has 0 `.pl` → `corpus_empty` on every default load); the story writer's lint temp
+  file resolves `prolog/` by `dirname(dirname(...))` from flat `prolog/testsets/`
+  (`generate_kernel_corpus.py:861`); and every leg-name-keyed registry (`corpus_legs.py`,
+  `corpus_census_check.py` + baseline, `module_boundary_check.py` CORPUS_DIRS/arm G,
+  `schema_shape.txt` LEGS pins) plus each driver's `REPO_ROOT/"prolog"/f"testsets_{leg}"` pattern.
+  Keep legs flat; a `prolog/README` listing them buys the tidiness.
+- **Size of the narrow rename (two dirs only):** code sites naming the default path, per file
+  (comments excluded): `prolog/validation_suite.pl` 285 (AUTO-GENERATED — regenerates on the next
+  `run_pipeline`, do not hand-edit), `python/regenerate_stories.py` 15, `python/run_pipeline.py` 11,
+  `python/module_boundary_check.py` 11, `python/corpus_census_check.py` 11,
+  `python/enhanced_report.py` 10, `agent/generate_kernel_corpus.py` 10, `python/sweeps/perturb.py` 8,
+  `python/migrate_cs_facts_to_uid.py` 8, `python/sweeps/witness_pass.py` 7, `python/duplicate_checker.py`
+  7, `python/batch_claim_reconciliation.py` 6, `agent/perspective_experiment.py` 6,
+  `python/sweeps/tripwire_fabricated_defaults.py` 5, `python/testset_rebuild.py` 4,
+  `python/python_gap_suite.py` 4, `python/grid_first_contact_gate.py` 4, `prolog/corpus_loader.pl` 4,
+  `prolog/giant_component_analysis.pl` 4, `agent/c-orchestrator.py` 4 (imports `JSON_DIR`/`TESTSETS_DIR`
+  from `story_generator_base` — follows the constants), `python/shared/corpus_legs.py` 3,
+  `python/orbit_operator.py` 3, plus ~12 audit scripts under `python/audits/` (point-in-time; leave).
+- **Sequence when done:** (1) no generator mid-write (all legs landed) and no live worktree branch
+  (a rename conflicts with every path a branch touches); (2) `git mv` both dirs; (3) change
+  `config.pl` `param(corpus_path, …)`, `story_generator_base.TESTSETS_DIR`, `generate_kernel_corpus.JSON_DIR`
+  / `BETA_PROCESSED`, `run_pipeline.JSON_DIR`; (4) re-key the five registries (`testsets` →
+  `testsets_live`) and re-pin the census with a cause; (5) `run_pipeline` once to regenerate
+  `validation_suite.pl`; (6) sweep the remaining live scripts from the census above; (7) CLAUDE.md
+  Corpus Loading + Critical Distinctions + this runbook; (8) `[GATE]` GREEN is the witness. Mint as an
+  OQ (with this census as its checklist) once the oq-48 worktree has merged.
+
 ## 8. Pointers
 
 - Drivers: `agent/generate_kernel_corpus.py` (`run_no_scope`), `agent/run_no_scope_gemini.py`,
