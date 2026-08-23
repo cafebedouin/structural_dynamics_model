@@ -35,3 +35,43 @@ written (S8) is re-stated above.
 
 ## Results (nothing above this line was written after a v2 sweep ran)
 
+
+## CLOSE stamp
+
+- **CLOSE HEAD:** `6dd69469a74f8e21167ec70ec09d631e017dc283`
+- **OPEN HEAD:** `f88c8c3c` — **HEAD MOVED during the window, as the concurrency contract
+  predicted.** Intervening commits, both by the concurrent corpus-generation instance:
+  - `bdb84ee00` — `testsets_nemotron_think` first pass, 732/1005 stories (thinking-ON
+    regime-contrast leg).
+  - `bcf2905dc` — its regime-pair audit (off vs on, 728 seeds).
+  - plus this audit's own four: `964cb49a8` (evidence), `2bfb41417` (trackers),
+    `ee1031515` (RUNS.md), `6dd69469a` (CLAUDE.md line fix).
+
+- **Blast radius on THIS audit's read-set: ZERO — observed, not predicted.**
+  `git diff --stat f88c8c3c bcf2905dc` over the engine/config/manifest files the probes read
+  (`drl_core.pl`, `config.pl`, `constraint_indexing.pl`, `maxent_classifier.pl`,
+  `signature_detection.pl`, `corpus_loader.pl`, `sweeps/epsilon_stability.py`,
+  `outputs/pipeline_output.json`) is **empty**, and over all 18 swept legs + `kernel_v1` is
+  **empty**. The 1,468 changed files are entirely the new `testsets_nemotron_think` leg and its
+  audit directory.
+- **`testsets_nemotron_think` was 0 files at BOTH enumerations** (v1 and v2) and was therefore
+  correctly excluded from both sweeps by the S5 enumerate-at-execution rule. It now holds 732. A
+  future run will pick it up; this one did not measure it and does not claim to.
+- **Per-leg count-pair guard: no leg moved during its own sweep**, on either run — the mechanism
+  that would have caught an in-flight leg reported clean 19/19 twice.
+
+## Gate at CLOSE — OBSERVED
+
+Re-observed after `WRITEUP.md` landed in both directories. `audit writeup` and `apparatus`,
+which were RED at OPEN for the stated transient reason, are now **GREEN**:
+
+- `audit writeup`: `OK (206 dirs, 38 enforced, 0 problems)`
+- `apparatus`: `GREEN — catch-rate 30L/2l/0n of 32 bits; ledger 0 open / 29 closed; channel 33/33`
+
+One RED appeared mid-close and was this audit's: `audit cites ERRORS: 1` —
+`untracked-frozen-evidence`, v2's `audit_log.md:31` citing
+`audits/2026-08-21_oq120_epsilon_boundary/substrate_check.md` while nothing was yet committed. A
+frozen-evidence citation that is not tracked would vanish on a fresh clone, so the checker was
+right and the fix was to commit, not to re-word. Final gate state recorded below.
+
+**FINAL: `GATE: GREEN`, exit 0, all 28 rows** (transcript: `gate_close.txt`).
