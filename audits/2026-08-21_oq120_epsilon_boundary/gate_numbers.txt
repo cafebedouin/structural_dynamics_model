@@ -1,0 +1,76 @@
+N_eps  = 9351
+N_reach= 9344
+N_rail = 9191
+
+qualifying transitions (clean)      9853
+qualifying with unknown endpoint    178  (counted, reported separately)
+all located transitions, live legs  122031
+snare_epsilon_floor-attributed, any 4717
+  ... inside N_rail                 4527
+  ... with FT pair exactly {rope,snare} 0
+
+MOVED vs DECISIVE (the bit flips at every 0.46 crossing by construction;
+  decisive = the gate's own output type is actually an MT endpoint):
+  snare_epsilon_floor MOVED    in N_rail  4527
+  snare_epsilon_floor DECISIVE in N_rail  1
+     ... FT pair exactly {rope,snare}     0
+     ... MT pairs                         {'tangled_rope -> snare': 1}
+     ... models                           ['claude-haiku-4-5-20251001']
+  rope_epsilon_ceiling DECISIVE in N_rail 1852
+
+unfiltered over EVERY located live transition (no N_eps/N_reach/N_rail filter):
+  snare_epsilon_floor MOVED     4717
+  snare_epsilon_floor DECISIVE  1
+  rope_epsilon_ceiling DECISIVE 1936
+  decisive-predicate control: plant-fires=True decoy-declines=True
+models contributing to N_rail       ['claude-haiku-4-5-20251001', 'claude-sonnet-4-5-20250929', 'claude-sonnet-5', 'gemini-2.5-flash', 'kimi-k2.6', 'nvidia/nemotron-3-ultra-550b-a55b:free', 'stealth/ox-alpha']
+legs contributing to N_rail         18
+
+deciding-gate census over qualifying transitions:
+  naturalized_epsilon_floor          5232
+  rope_epsilon_ceiling               5232
+  snare_epsilon_floor                4621
+  coalition_fired                    4488
+  naturalized_chi_ceiling            4481
+  rope_chi_ceiling                   4481
+  tangled_rope_chi_floor             4481
+  piton_extraction_ceiling           4468
+  scaffold_extraction_ceil           4468
+  rope_chi_nonpositive               84
+
+FT pairs among N_rail transitions:
+  tangled_rope -> naturalized              4367
+  piton -> tangled_rope                    2790
+  piton -> rope                            1363
+  rope -> naturalized                      654
+  tangled_rope -> rope                     249
+  rope -> rope                             45
+  tangled_rope -> piton                    41
+  rope -> tangled_rope                     36
+  piton -> naturalized                     27
+  rope -> piton                            19
+  naturalized -> tangled_rope              7
+  tangled_rope -> scaffold                 6
+  tangled_rope -> snare                    1
+
+MT-invariant / FT-only among qualifying: 4602
+
+per-leg N_rail:
+  testsets                               131
+  testsets_flash                         213
+  testsets_flash2                        189
+  testsets_flash3                        203
+  testsets_flash_think                   454
+  testsets_flash_think2                  478
+  testsets_haiku                         506
+  testsets_haiku2                        516
+  testsets_haiku3                        553
+  testsets_kimi                          378
+  testsets_kimi2                         447
+  testsets_nemotron                      615
+  testsets_sonnet                        935
+  testsets_sonnet2                       1178
+  testsets_sonnet3                       1189
+  testsets_stealth                       540
+  testsets_stealth2                      565
+  testsets_stealth3                      515

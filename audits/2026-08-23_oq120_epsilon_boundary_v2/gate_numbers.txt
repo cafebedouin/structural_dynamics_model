@@ -1,0 +1,53 @@
+BRANCH: G1b
+  because: floor met, 1 snare_epsilon_floor-DECISIVE transition(s) but from 1 model stratum (['claude-haiku-4-5-20251001']) — fails >=2 distinct MODELS
+
+POOLED MEMO LINE (satisfies nothing on its own — the per-stratum table below is primary):
+  N_eps 1919  N_reach 1917  N_rail 1852
+  qualifying transitions 1919 (+0 unknown-endpoint, separate)
+  all located live transitions 122031
+  MT-invariant / FT-only among qualifying 1163
+
+MOVED vs DECISIVE (both reported; DECISIVE is the ruled reading):
+  snare_epsilon_floor  MOVED 4717   DECISIVE 1
+  rope_epsilon_ceiling DECISIVE 1936
+  snare DECISIVE models: ['claude-haiku-4-5-20251001']
+  FT pair exactly {rope,snare} among snare-DECISIVE: 0
+
+RE-SET FLOOR — per stratum, N_rail>=10 AND rate>=0.5%, in >=2 MODEL strata
+  strata passing: 12   distinct models passing: 6 ['claude-haiku-4-5-20251001', 'claude-sonnet-5', 'gemini-2.5-flash', 'kimi-k2.6', 'nvidia/nemotron-3-ultra-550b-a55b:free', 'stealth/ox-alpha']
+  FLOOR MET: True
+
+  stratum                                                        stories  N_rail    rate  pass
+  claude-sonnet-5|off|e03e2210|685ed7cf                             2006     531  6.62%  YES
+  claude-haiku-4-5-20251001|off|e03e2210|685ed7cf                   2444     272  2.78%  YES
+  stealth/ox-alpha|on|e03e2210|685ed7cf                             2046     231  2.82%  YES
+  claude-sonnet-5|off|8080348c|becd0f87                             1006     204  5.07%  YES
+  stealth/ox-alpha|on|685ed7cf|685ed7cf                              969     115  2.97%  YES
+  nvidia/nemotron-3-ultra-550b-a55b:free|off|685ed7cf|685ed7cf       852     113  3.32%  YES
+  kimi-k2.6|on|e03e2210|685ed7cf                                    1005     102  2.54%  YES
+  gemini-2.5-flash|on|685ed7cf|685ed7cf                             1980     101  1.28%  YES
+  kimi-k2.6|on|8080348c|becd0f87                                    1005      77  1.92%  YES
+  claude-haiku-4-5-20251001|unknown|22843cdf|2e9dff2f                533      63  2.95%  YES
+  nvidia/nemotron-3-ultra-550b-a55b:free|off|e03e2210|685ed7cf       144      17  2.95%  YES
+  claude-sonnet-5|unknown|685ed7cf|685ed7cf                           54      12  5.56%  YES
+  claude-sonnet-5|unknown|8080348c|becd0f87                           55       7  3.18%  no
+  gemini-2.5-flash|off|22843cdf|2e9dff2f                             765       5  0.16%  no
+  claude-sonnet-4-5-20250929|unknown|22843cdf|2e9dff2f                35       1  0.71%  no
+  claude-sonnet-5|unknown|8080348c|f1436bd4                           18       1  1.39%  no
+  claude-sonnet-4-20250514|unknown|046e0a40|c6d6880c                   7       0  0.00%  no
+  claude-sonnet-4-5-20250929|unknown|046e0a40|2e9dff2f                 5       0  0.00%  no
+  claude-sonnet-4-5-20250929|unknown|8080348c|becd0f87                35       0  0.00%  no
+  gemini-2.5-flash|off|685ed7cf|685ed7cf                            1902       0  0.00%  no
+  gemini-2.5-flash|off|e03e2210|685ed7cf                             206       0  0.00%  no
+  kimi-k3|unknown|8080348c|becd0f87                                    5       0  0.00%  no
+  unprovenanced                                                     1106       0  0.00%  no
+
+FT pairs among N_rail (decisive-scored):
+  piton -> rope                           1188
+  rope -> naturalized                     615
+  rope -> piton                           19
+  piton -> naturalized                    15
+  rope -> rope                            14
+  tangled_rope -> snare                   1
+
+kernel_v1 (archive, separate, never corroboration): transitions 10215, snare DECISIVE 0, rope DECISIVE 217
