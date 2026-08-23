@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "23893aff3ba2c71ef9a70ec3f67fcfb87683865e",
+    "store_version": "f6d6e7c1b5dcd3b2f5f497d1cc37303a6876a0f7",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-23T12:23:41"
+    "generated_at": "2026-08-23T12:47:31"
   },
-  "issues_sha": "36019ae055005139ef6ad341c74a69f3cfd370521c693a7ed34b2dac05789096",
-  "n_entries": 351,
+  "issues_sha": "231a0e56f6e5ca9dd984d3acd929e560ab865b2775f72ad7e13114b15ff1091d",
+  "n_entries": 355,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 138,
+    "open": 142,
     "partial": 5
   },
   "active": [
@@ -2052,6 +2052,82 @@
         "OQ-78",
         "OQ-120",
         "OQ-347"
+      ]
+    },
+    {
+      "id": "OQ-352",
+      "status": "open",
+      "priority": 2,
+      "summary": "Per-leg REPORT driver: the corpus-level tools (orbits, FPN, giant comp, HAC, covering, fingerprint, commentary census) have never run on a post-reset 1000-story leg and have no `classify_corpus`-style driver",
+      "deps": [
+        "blocked_on OQ-301",
+        "gates OQ-353",
+        "gates OQ-354"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-160",
+        "OQ-182",
+        "OQ-246",
+        "OQ-301",
+        "OQ-353",
+        "OQ-354"
+      ]
+    },
+    {
+      "id": "OQ-353",
+      "status": "open",
+      "priority": 2,
+      "summary": "Corpus-level statistic FLOORS and the size × content × edge-semantics control: which report-tool headlines measure corpus content, which measure the draw, and which saturate by construction",
+      "deps": [
+        "blocked_on OQ-352"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-25",
+        "OQ-78",
+        "OQ-84",
+        "OQ-95",
+        "OQ-182",
+        "OQ-193",
+        "OQ-239",
+        "OQ-326",
+        "OQ-347",
+        "OQ-352",
+        "OQ-355"
+      ]
+    },
+    {
+      "id": "OQ-354",
+      "status": "open",
+      "priority": 3,
+      "summary": "Tool-correctness at scale: seed-matched invariants, regime scaling with n, and thinking-on as a natural perturbation of the orbit/FPN layer",
+      "deps": [
+        "blocked_on OQ-352"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-95",
+        "OQ-343",
+        "OQ-349",
+        "OQ-352",
+        "OQ-353",
+        "OQ-355"
+      ]
+    },
+    {
+      "id": "OQ-355",
+      "status": "open",
+      "priority": 4,
+      "summary": "Three members of the per-leg `diagnostic` block carry no information: `boltzmann_summary` duplicates `coupling_summary` by construction, `network_stability` is saturated `cascading` on 19/19 legs by an absolute threshold, and `contextuality.by_type` is constant",
+      "deps": [
+        "splits_from OQ-239"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-61",
+        "OQ-239",
+        "OQ-353"
       ]
     }
   ],

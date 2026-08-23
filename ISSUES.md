@@ -18570,7 +18570,220 @@ it reports; build_discipline → *a repair that encodes the tested claim into th
 
 ---
 
-*Last updated: 2026-08-22. Add new items with sequential OQ-NN labels. Mark
+## OQ-352 — Per-leg REPORT driver: the corpus-level tools (orbits, FPN, giant comp, HAC, covering, fingerprint, commentary census) have never run on a post-reset 1000-story leg and have no `classify_corpus`-style driver
+
+**Ω-type:** Ω_E (a build; its correctness is witnessable by the same refusal gates `classify_corpus`
+already carries).
+
+**Status:** open — minted 2026-08-23 from the leg-expansion recon (19 legs, ~17.3k stories on disk).
+**Priority:** 2
+**Deps:** blocked_on OQ-301, gates OQ-353, gates OQ-354
+**Files:** `python/run_pipeline.py` (`classify_corpus` :368 — the model; `_prolog_orbit`/`_prolog_fpn`/
+`_prolog_maxent`/`_prolog_giant_comp`/the trajectory step :837–960 — the stages), `prolog/corpus_loader.pl`
+(`corpus_path` overlay, `asserta` only), `python/shared/corpus_legs.py` (`LIVE_LEGS`, 19 as of
+`f49229e54`), `docs/technical/swipl_load_path_and_probe_gotchas.md` (§5 frozen-corpus rule).
+
+**The fact (witnessed 2026-08-23, recon turn).** `classify_corpus` runs only `run_json_report`, so the
+18 per-leg outputs carry per-story fields plus the top-level `diagnostic` block and nothing else. The
+report-stage tools — `orbit_report` (+ `orbit_data.json`), `fpn_report`, `giant_component_analysis`,
+`covering_analysis`, `fingerprint_report`, `context_profile` (HAC, `trajectory_enabled=1`),
+`commentary_census`, `maxent_report`, `pattern_mining`, `variance_analysis`, `index_sufficiency`,
+`abductive_report` — run only inside the full `run_pipeline` over the DEFAULT leg and write shared
+`outputs/`. Audit overlay census (`grep -rhoE "corpus_path, *'?[a-z_/0-9]+" audits/ python/audits/`):
+kernel_v1 ~250 overlays, `testsets_flash` 14, `testsets_haiku` 10, every other leg 0–3. **Every
+corpus-level number those tools have ever published is a k=1 point estimate on one draw of one corpus**,
+and they have been exercised at n≈1000 exactly once (kernel_v1, pre-reset regime).
+
+**What to build.** `report_corpus(corpus_path, out_dir)` — a sibling of `classify_corpus` that runs the
+Phase-2 report stages against an overlay leg into `outputs/legs/<leg>/`, carrying:
+- **one fresh swipl process per leg AND per stage** (OQ-246: in-process leg iteration accumulates
+  `narrative_ontology` facts; the tell — two legs byte-identical — is WEAKER on same-model redraw pairs,
+  which are expected to be near-identical on marginals, so the per-process rule is the only guard);
+- the `classify_corpus` refusals reused verbatim (zero-glob, `corpus_constraint == glob`, provenance
+  fingerprint with `expected_model=None` for mixed-model corpora, raw freshness) — and **gate the
+  OUTPUT** (build_discipline → *Gate the output, not only the input*): each stage's artifact must exist,
+  be non-empty, and carry a manifest sidecar stamped with the same `corpus_hash` (the
+  `orbit_data.manifest.json` pattern), asserted same-run before any cross-leg join;
+- `trajectory` (HAC) and `giant_comp` NEVER co-resident (OQ-182) — sequential after the parallel block,
+  as `_phase_prolog` already does; a per-leg retry ledger for the OQ-301 failure regime (hang at 25 s /
+  SIGSEGV / 967-byte truncation), recorded per leg, never absorbed as "ran";
+- md5-fingerprint the leg around the run (gotchas §5) — the static legs are frozen, `testsets` is not;
+- `regenerate_orbits.py` is hard-wired to the default corpus (`run_pipeline.py:776`) — the orbit stage
+  needs the overlay threaded through, not a copy (Pattern 2).
+
+**Why blocked on OQ-301.** This driver executes `run_giant_component_analysis` 19× at n≈1000 and once
+at n=3380 (OQ-353's v6 arm); the reported-not-witnessed 7/100 failure regime at n=279 is exactly the
+thing a 20-run sweep would meet, with capture still broken (no core pattern, no attach-on-timeout
+hook). OQ-301's return plan is a dedicated session; this waits for its arm-A reading.
+
+**Resolution:** the driver exists, refuses on every listed condition (two-sided controls per refusal),
+and has produced the full artifact set for at least two legs and one archive overlay with manifests
+that `assert_corpus_current` accepts. **What it changes:** OQ-353/OQ-354 become runnable; OQ-182's
+"unique product" (HAC families) gets its first validation population; OQ-160/170's cluster analyses
+get a corpus larger than `testsets/`.
+
+---
+
+## OQ-353 — Corpus-level statistic FLOORS and the size × content × edge-semantics control: which report-tool headlines measure corpus content, which measure the draw, and which saturate by construction
+
+**Ω-type:** Ω_E (pre-registered measurements with a falsifier per statistic).
+
+**Status:** open — minted 2026-08-23. **Step 0 is LANDED** for the `diagnostic` block (the one
+corpus-level surface that already exists per leg): `audits/2026-08-23_leg_diagnostic_table/`, F1–F8,
+KNOWN_STATE 2026-08-23 correction-key.
+**Priority:** 2
+**Deps:** blocked_on OQ-352
+**Files:** `python/audits/leg_diagnostic_table.py` (the step-0 instrument — extend, do not fork),
+`audits/2026-08-23_leg_diagnostic_table/leg_diagnostic_pairs.tsv` (the floor-table format), `prolog/
+archives/datasets/original_v6/` (the control), `prolog/drl_purity_network.pl:114–115` and
+`prolog/giant_component_analysis.pl` (the same-kernel edge guard, OQ-84/OQ-193), `prolog/
+measurement_layer.pl` (`wasserstein_edge_transport` → corpus-fitted `maxent_distribution/3`).
+
+**Why the 19 legs alone cannot answer this.** They are ONE seed set (957 four-way matched ids, GAP-35) at
+ONE size. The pure redraw pairs (flash2/3, flash_think/2, haiku2/3, sonnet2/3, stealth2/3 — classed from
+`story_provenance`, never directory names) give each statistic a **within-model draw floor**, which
+separates *draw noise* from *model disposition* — step 0 did that: type shares, purity coverage/bands,
+drift rates and network shares sit at between/within ratio 8–38, while `corpus_wasserstein_fracture` and
+`arakelov_threshold` sit below 3 (sonnet2/3 medians 1.124 vs 0.602 with the apparatus byte-identical on
+re-run: the MaxEnt refit moves, the engine does not). But a pair floor can NEVER say *content vs
+construction*: a headline identical on every leg is either a property of these situations or a property
+of any ~1000-story corpus run through this tool (the `[EDGE]` risk — the report tools were written for a
+150–300-story topical corpus and "cascading" / "one giant component" may be true of every large leg in
+the same way; `network_stability` is ALREADY saturated `cascading` on 19/19 legs by an absolute
+`NumSevere >= 3`, OQ-355).
+
+**The control (operator, 2026-08-23): `archives/datasets/original_v6`** — 3,380 stories, **zero filename
+overlap with every live leg** (sonnet2 0/1003, stealth3 0/1005, kimi2 0/1005, flash3 0/958, testsets
+0/285; witnessed 2026-08-23), 3.4× the size. NOT `kernel_v1`: it shares ~800 ids with each twin leg
+(same seed pool, pre-reset regime) — a same-situations/different-regime arm, not an independent one, and
+a reader who treats it as a content control makes the OQ-78 marginal-vs-paired error in reverse.
+
+**The design — a 2×2 per statistic, plus one factor for two tools:**
+- (a) the legs at n≈1000 (19 draws; pair floors from the five pure pairs);
+- (b) v6 whole at 3,380 (`expected_model=None`; mixed-model, so ε-keyed stats stay per-author-stratum);
+- (c) v6 random subsamples at n≈1000, k=3 (symlink dirs under a `corpus_path` overlay — free);
+- (d) the situation-fixed core (OQ-347 step 4) vs its complement, once it exists.
+Readings, pre-committed: same on (a) and (c) despite zero shared situations ⇒ **construction-bound
+(saturated)** — demote from headline, needs a size-normalized form; differs (b) vs (c) ⇒ **size-bound**;
+separates (a) from (c) but not (b) from (c) ⇒ **carries content** (the headline the tool was built for);
+within-pair spread ≥ between-model spread ⇒ **draw noise** (step-0's falsifier, kept).
+- **Third factor for the purity network and giant component ONLY:** both count a `shared_agent_link`
+  edge only across kernels (`drl_purity_network.pl:115`; giant_comp per OQ-193). v6 carries no
+  `cs_kernel_id` (0/3380 files), so the guard never fires there and every shared-agent edge counts;
+  on a leg, sibling readings of one kernel are unlinked by construction. So run the leg arm twice —
+  production, and with the guard overlaid off (`probe_harness:with_overlay`, install witness required,
+  OQ-326) — to read the leg at v6's edge semantics too. The guard-on/off delta is itself the quantity
+  that says whether "one giant component" on a leg is kernel-sibling structure or cross-topic coupling.
+  Every other tool (FPN, orbits, HAC, covering, fingerprint, Wasserstein/MaxEnt) reads no kernel fact
+  (grep witnessed 2026-08-23) — clean 2×2.
+
+**Confounds declared up front.** v6 is chimera-era and schema-old (OQ-25 id reuse; `coordination_type`
+/ stakeholder fields may be absent or differently shaped), so purity coverage and anything
+stakeholder-keyed differ for VINTAGE reasons — the type-share / drift / network / FPN / orbit statistics
+are the ones that survive; say which column each statistic is in before reading it. The 2026-07-02 v6
+output on disk (`outputs/pipeline_output_original_v6.json`, `3b169bb`, schema 2) is at an old engine
+and is NOT comparable — v6 needs a fresh run at HEAD. **Cross-leg pooled networks are a declared
+non-arm:** seats are story-local (GAP-31) and a pooled H¹/FPN measures its pooling convention
+(CLAUDE.md → *A pooled-across-story seat H¹*); nothing here joins legs into one network.
+
+**Statistics to place (pre-register the list before OQ-352 lands, then freeze):** orbit-class histogram
+and `orbit_monotonicity` shares; FPN fixed-point count, convergence iterations, network purity;
+giant-component fraction and phantom-node share (OQ-95's metric); HAC family count at a fixed cut;
+covering / fingerprint class counts; `corpus_wasserstein_fracture`, `arakelov_threshold` (already
+draw-bound — the 2×2 says whether they are ALSO size-bound); and the step-0 block re-read on (b)/(c).
+
+**Resolution:** one table — statistic × {draw-noise, model-disposition, content, size-bound,
+construction-bound} — with the pair floor and the v6 cells beside every headline the report tools
+publish. **What it changes:** which corpus-level numbers may be cited at all, and in what form; the
+size-normalized rewrite list for OQ-355/OQ-239; whether OQ-182's HAC families are a content product.
+
+---
+
+## OQ-354 — Tool-correctness at scale: seed-matched invariants, regime scaling with n, and thinking-on as a natural perturbation of the orbit/FPN layer
+
+**Ω-type:** Ω_E.
+
+**Status:** open — minted 2026-08-23 from the leg-expansion recon.
+**Priority:** 3
+**Deps:** blocked_on OQ-352
+**Files:** `prolog/grothendieck_cohomology.pl` (`orbit_vector`, `cohomological_obstruction`),
+`prolog/orbit_report.pl`, `prolog/drl_fpn.pl`, `prolog/giant_component_analysis.pl`, `audits/2026-08-
+21_flash_regime_vs_redraw/paired_agreement.py` (the per-story paired instrument to reuse).
+
+**Three checks the corpus-level tools have never had, each with its decline built in.**
+1. **Seed-matched invariants (tool variation vs authored variation).** Across legs the same seed is
+   authored with different seat sets (`h1_stakeholder_n_seats` varies by draw). Partition matched seeds
+   into *seats-identical* vs *seats-differ*; over the seats-identical stratum, any difference in the
+   ORBIT tool's output between two legs is either authored-field variation (ε, claimed type — checkable
+   per field) or tool variation; a residual after fielding is the defect. The seats-differ stratum is the
+   decline (the tool SHOULD move there). Count both strata before reading either (Pattern 5 dual).
+2. **Regime scaling with n.** giant-comp phantom-node share (OQ-95), FPN iteration count, HAC family
+   count, and `network_n_severe` as functions of n across 285 (`testsets`) → 732 (`nemotron_think`)
+   → ~1000 (the legs) → 3380 (v6) → v6 subsamples at 1000 (OQ-353 arm c). A statistic that is a
+   function of SIZE at fixed content is the Pattern-6 shape one level up (the aggregate carries no
+   coverage); `network_stability`'s absolute threshold is the already-witnessed instance (OQ-355).
+3. **Thinking-on as a natural perturbation.** The Flash and nemotron regime pairs move per-story ε and
+   signature at band-crossing magnitude (OQ-343/OQ-349; step-0 shows the corpus-level type mix moving
+   with it: Flash tangled_rope 0.42 → 0.50, critical drift events/story 1.45 → 1.8). Does the orbit/FPN/
+   giant-comp layer move with that shift, or absorb it? A corpus-level tool that reads identical on the
+   thinking-off and thinking-on legs of the SAME seeds is either robust or blind, and the per-story layer
+   already says which — so the pre-registered expectation is "moves, by at least the per-story shift
+   projected through the tool"; reading flat is the finding, not the pass.
+
+**Resolution:** three pre-registered readings with their declines recorded. **What it changes:** whether
+the report tools can be trusted on the 1000-story legs at all, before any of their headlines is cited
+under OQ-353.
+
+---
+
+## OQ-355 — Three members of the per-leg `diagnostic` block carry no information: `boltzmann_summary` duplicates `coupling_summary` by construction, `network_stability` is saturated `cascading` on 19/19 legs by an absolute threshold, and `contextuality.by_type` is constant
+
+**Ω-type:** Ω_E (mechanical — each is witnessed in code and on 19 legs), with an Ω_C rider on the
+disposition for the network categorical (retire, size-normalize, or move to the per-component home).
+
+**Status:** open — minted 2026-08-23 from `audits/2026-08-23_leg_diagnostic_table/` F4–F6.
+**Priority:** 4
+**Deps:** splits_from OQ-239
+**Files:** `prolog/json_report.pl:1803–1815` (`coupling_summary` / `boltzmann_summary` writers, `tally_
+boltzmann` :2291, `boltzmann_label` :1333), `prolog/boltzmann_compliance.pl:94–103`, `prolog/
+logical_fingerprint.pl` (`categorize_coupling`), `prolog/network_dynamics.pl` (`network_stability_
+assessment/2`, `network_cascade_count_threshold`), `prolog/grothendieck_cohomology.pl:431` (`contextuality
+_by_type`), `python/enhanced_report.py` and any consumer of the three fields.
+
+**The three facts (all 19 legs, 258 ≤ n ≤ 1005):**
+- **`boltzmann_summary` ≡ coarsened `coupling_summary`.** `compliant == independent`, `inconclusive ==
+  inconclusive`, `non_compliant == strongly + weakly + nonsensically_coupled`, exactly, on every leg —
+  because `boltzmann_compliant/2` tests `CouplingScore =< Threshold`, which IS `categorize_coupling`
+  clause 1, and both read one `fingerprint_coupling/2` term. Two names for one partition in a published
+  block: a consistency check that cannot fail (build_discipline), the OQ-61 "type-composition
+  restatement" shape. Not a value defect; a reader comparing them learns nothing.
+- **`network_stability` = `cascading` 19/19.** The rule is `NumSevere >= 3` against a count that scales
+  with n; every leg has 205–618 severe. The size-normalized carrier is already in the block
+  (`network_n_severe / n`: 0.21 `testsets` … 0.62 `stealth`, between/within ratio 14 — informative)
+  and the categorical ignores it. This is OQ-61's "saturated cascade flag" measured, and the concrete
+  input OQ-239's per-component home was declared to need.
+- **`contextuality.by_type` is structurally fixed.** mountain 1.0 and scaffold 0.0 on every leg; snare
+  0.985–1.0, tangled_rope 0.90–1.0, rope 0–0.045, piton 0–0.17 — the analytical type nearly determines
+  whether the other seats disagree, so the cells carry the seat theorem, not the corpus. `corpus_fraction`
+  ≈ share(tangled_rope + snare + mountain) within ±0.05 on 15/19 legs; the sonnet/nemotron residual
+  (−0.10…−0.12) is their larger undetermined share (determined-only denominator).
+
+**Dispositions to rule (Ω_C rider):** (1) drop `boltzmann_summary` or mark it at the site as a derived
+view — consumer sweep first (Pattern 1 applied in reverse: a field with a consumer that reads it as
+independent evidence is the defect); (2) `network_stability`: keep the categorical only with a
+size-normalized rule (share floor, or the per-component form OQ-239 owns) — an absolute threshold on a
+corpus-size-scaled count is the Pattern-6 shape at corpus level and should not survive OQ-353's
+construction-bound column; (3) `contextuality.by_type`: retire, or re-key to something that can vary
+(e.g. fraction by CLAIMED type, which step 0 did not test). Output-changing in all three cases — split
+from behavior-preserving, land with the consumer sweep, witness by the per-leg table re-run.
+
+**Resolution:** the three rulings landed, consumers swept, `leg_diagnostic_table.py` re-run showing the
+block without the dead members. **What it changes:** the per-leg `diagnostic` block becomes citable
+member-by-member; OQ-239 gets its quantitative premise.
+
+---
+
+*Last updated: 2026-08-23. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

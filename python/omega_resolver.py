@@ -733,6 +733,7 @@ def cmd_menu(entries):
     (1=highest); the ranking is the operator's declared seat, surfaced — not
     computed. The coverage footer states how trustworthy the frontier is."""
     buckets, sccs, nontrivial = frontier(entries)
+    _, adj = blocking_graph(entries, active_only=True)
     man = manifest()
     n_active = sum(1 for e in entries.values() if e.active)
     print("# Omega frontier — what's workable now  (authored Priority; 1=highest)")
@@ -804,8 +805,17 @@ def cmd_menu(entries):
             if conds:
                 print(f"  {oq}  {e.title[:52]}  → waits on condition: {conds[0][:70]}")
                 continue
-            waits = [t for r, t in e.deps if r in BLOCKING_RELATORS]
-            print(f"  {oq}  {e.title[:52]}  → waits on {', '.join(waits) or '?'}")
+            # Only the entry's OWN blocked_on targets are things it waits on; a
+            # `gates` target is something it ENABLES (edge reversed in
+            # blocking_graph) and listing it here read as a dependency — witnessed
+            # 2026-08-23 on OQ-352 ("waits on OQ-301, OQ-353, OQ-354" for an entry
+            # that waits on OQ-301 and gates the other two).
+            # The blocking graph already holds the true upstream set — including
+            # the reversed `gates` edges authored on OTHER entries (OQ-342 gates
+            # OQ-343..348, whose own Deps carry no blocking relator and used to
+            # print "waits on ?").
+            waits = sorted(adj.get(oq, ()), key=lambda o: int(o.split("-")[1]))
+            print(f"  {oq}  {e.title[:52]}  → waits on {', '.join(waits) or '(transitive)'}")
 
     n_dep = sum(1 for e in entries.values() if e.active and e.deps)
     n_pri = sum(1 for e in entries.values() if e.active and e.priority is not None)
