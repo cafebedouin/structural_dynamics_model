@@ -8301,6 +8301,24 @@ three silent-registration instances share a mechanism or want three local ones.
 
 **Cross-refs:** OQ-306 (parent), OQ-338 (sibling instance), OQ-276 (the apparatus-instrument line).
 
+**A FIFTH instance, 2026-08-23 — the OTHER half of the row, and a new mechanism: the ANNOTATION
+obligation was not in the executor prompt.** The OQ-301 round-2 run landed its row cleanly at
+execution start (`2026-08-23-1`, both pinned instruments agreeing at 5 pre-existing rows, no
+collision, `ledger grammar` green) — the compose-at-planning / allocate-at-append grammar worked
+exactly as built. **What did not travel was the `post-impl gaps:` annotation obligation**, which
+SKILL.md itself says the executor prompt is the ONLY channel for. The OQ-301 plan's executor
+prompt carries the landing obligation and omits the annotation one, so the implementing session
+reached close with the column empty — and an empty `post-impl gaps:` column is indistinguishable
+from *no gaps were found*, which is the same silent shape as a missing append, one column over.
+The implementing session declined to fill it itself: the column is written by a fresh instance
+that RE-DERIVES, and a value supplied by the party being measured is indistinguishable at every
+read site from one that was checked (the same reasoning as the lander's no-corrections rule).
+**So the row for `2026-08-23-1` stands with an unwritten last column, awaiting an evaluator.**
+This sharpens (2): the checkable consequence should cover BOTH halves of a row's lifecycle — a
+landed row whose `post-impl gaps:` is still empty after its OQ has closed is as visible a state as
+a referenced run-id with no row, and the `ledger grammar` gate row already parses the column it
+would have to look at.
+
 ---
 
 ## OQ-338 — The serialization rule has no mechanism: "one pipeline at a time" is prose, and an empty `pgrep` is not a witness
