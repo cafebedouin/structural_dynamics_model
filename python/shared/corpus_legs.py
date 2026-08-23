@@ -53,6 +53,7 @@ LIVE_LEGS = (
     "testsets_stealth2",   # 2026-08-22, complete 1005 (stealth/ox-alpha redraw at prompt e03e2210)
     "testsets_sonnet3",    # 2026-08-22, 1003 — the pure sonnet floor pair with sonnet2
     "testsets_haiku3",     # 2026-08-22, 993 — the pure haiku floor pair with haiku2
+    "testsets_stealth3",   # 2026-08-22, 1005 — the pure thinking-on floor pair with stealth2
 )
 
 # NOTE ON module_boundary_check.ALL_ARM_C_LEGS, which now references this

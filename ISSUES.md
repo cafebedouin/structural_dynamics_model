@@ -17874,6 +17874,11 @@ suppression 0.55→0.64, powerless seat tangled_rope 28%→34–37% / snare 28%�
 institutional seat piton 0%→7–8%; paired Δε up on 38% of seeds, down on 10%. Thinking moves the seat
 TOWARD EXTRACTION, not just around. The generality arms below test whether that is reasoning-general.
 
+**Generality, pure pair (stealth2 vs stealth3, same commit, 2026-08-22):** |Δε| ≥0.10 on 25% of seeds, seat-vector churn
+63%, paired Δε mean +0.003 (no direction) — identical to the prompt-confounded pair, so the prompt change moved
+nothing and this is the regime's own floor on a second reasoning model. ε exact-agreement is only 12% because
+this model authors ε continuously (no last-digit rail) — OQ-78's rail reading does not apply to it.
+
 **Generality, first arm (stealth, reasoning mandatory, k=2 on 2026-08-22):** |Δε| ≥0.10 on 20% of seeds between
 draws (Flash thinking-on: 22%), seat-vector churn 66% — the thinking-on instability is not Flash-specific.
 Direction cannot be read on stealth (no thinking-off arm exists for it); that is the nemotron on/off pair.
@@ -18027,6 +18032,8 @@ with ε pinned). **Floor table, thinking-off, ε pinned in all three (2026-08-22
 | claude-sonnet-5 (sonnet2/3) | 72% | 74% | 94% | 94% | 4% | 38% |
 | claude-haiku-4-5 (haiku2/3) | 53% | 77% | 91% | 89% | 9% | 65% |
 | stealth/ox-alpha thinking-on (stealth/2, prompt change confounded) | 49% | 65% | 83% | 87% | 20% | 66% |
+| stealth/ox-alpha thinking-on PURE (stealth2/3, same commit) | 52% | 65% | 82% | 87% | 25% | 63% |
+| gemini-2.5-flash thinking-on (flash_think/2) | 64% | 71% | 77% | 76% | 22% | 51% |
 
 The classification floor is model-specific and NOT derivable from the ε floor; every cross-model
 h1/verdict claim must be read against the noisier of the two models' floors.
