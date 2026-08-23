@@ -1,0 +1,248 @@
+{
+  "header": {
+    "constraint_id": "market_as_natural_default__lapsed_alternative_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "af846275-872c-4bd7-90c3-b15ec3294b5e"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.18,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.15,
+    "claimed_type": "piton",
+    "human_readable": "Market-as-Natural Default (Lapsed-Alternative Reading)",
+    "topic_domain": "political economy/ideology studies/economic history",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.08
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_membership",
+      "question": "This constraint instantiates the lapsed_alternative_reading of the market_as_natural_default kernel; how would the classification change if the same standing arrangement were authored under a sibling reading?",
+      "resolution_mechanism": "Re-author the same referent under beneficiary_maintained_reading (which adds incumbent beneficiaries and active post-hoc defense, raising epsilon and adding enforcement structure) and under hybrid_amnesia_reading (which adds delayed beneficiary capture riding on the lapsed closure), then compare computed types across the three files.",
+      "impact": "Only this reading yields a beneficiary-free, enforcement-free, low-epsilon profile; the sibling readings convert the same naturalization into an enforced extraction structure with identifiable seats, moving the computed type toward the extractive categories.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame membership: one of three readings of the market-naturalization kernel, generated clean and epsilon-invariant."
+    },
+    {
+      "id": "residual_maintenance_detection",
+      "question": "Does any subtle, unorganized maintenance of the naturalization occur — curricular selection pressures, citation-network gating, funding incentives — that would falsify the no-active-closure premise?",
+      "resolution_mechanism": "Historiographic audit of economics curricula, publishing records, and hiring patterns distinguishing coordinated exclusion of non-market frameworks from mere drift of attention.",
+      "impact": "Detected maintenance would shift this story toward the hybrid reading (lapsed closure enabling capture) and raise effective extraction above the authored ceiling.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether truly no agent performs even implicit upkeep of the default framing."
+    },
+    {
+      "id": "recovery_dissolution_sufficiency",
+      "question": "Would recovering the forgotten alternatives actually dissolve the naturalization, or does the default re-form after each recovery episode?",
+      "resolution_mechanism": "Track episodes in which alternatives entered mainstream discourse (for example the post-crisis revival of interest in commons and cooperative arrangements) and measure whether the default framing rebounded once attention receded.",
+      "impact": "If the default re-forms, persistence has a ratchet component that pure lapsed memory does not explain, and the constraint is stickier than this reading's mechanism accounts for.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether memory restoration alone suffices to dissolve the naturalized default."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "economics_commonsense_transmitters",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Write the textbooks, teach the curricula, and set the terms of financial journalism through which economic common sense is reproduced. They inherited a syllabus in which market exchange appears as the way economies are organized; earlier and adjacent arrangements appear, if at all, as historical curiosities rather than live options. They did not construct this framing and do not campaign for it — reproducing it is simply what the standard curriculum contains. Introducing systematic treatment of non-market arrangements would mean rebuilding course sequences against hiring, accreditation, and citation structures built around the standard canon, with little reward attached to the effort."
+    },
+    {
+      "name": "general_public",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Inhabit the default as part of the background of how things are. Policy preferences, career plans, and civic imagination are formed inside it; arrangements outside the market frame do not register as options because their historical existence is unknown to them. Nothing is taken from them that they notice; what narrows is the set of arrangements they can imagine asking for. The framing is fused with their sense of what an economy simply is, so the only route out is encountering the historical record that other arrangements operated — often recently — and that record sits in institutions that do not teach it."
+    },
+    {
+      "name": "economic_historians",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Work in the archives where the forgotten alternatives are documented: commons charters, guild regulations, cooperative ledgers, planning-era records. From this seat the default has a visible date of birth and a traceable mechanism of spread, and the alternatives are recoverable rather than destroyed. They periodically publish recoveries of specific arrangements, but their findings circulate in journals and monographs that rarely reach the curricula and newsrooms through which the default reproduces."
+    },
+    {
+      "name": "heterodox_economists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organize in marginal associations and journals and argue that the default is a constructed framing rather than a fact of nature. Their objections are substantive and persistent, but they circulate outside the venues — flagship curricula, mainstream journals, policy ministries — where the default is reproduced, so the conversation that would contest it never actually convenes. Their position would change materially if the historical record of alternatives were admitted to the standard syllabus."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared default assumption — that exchange is organized through markets — which spares each actor the cost of re-deriving or re-debating economic arrangement; expectations align without deliberation.",
+    "transfer_function": "Moves nothing measurable: no money, work, attention, or status transfers through the naturalization itself. Its entire effect is confined to narrowing which arrangements are imagined as available.",
+    "absent_voices": "Economic historians and practitioners of non-market arrangements — commons stewards, cooperative organizers, planners — would object that the default erases demonstrated viable alternatives; they are absent from the curricula, newsrooms, and policy venues where the default reproduces.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Curricula, policy frameworks, and everyday economic common sense are built on the default. If it vanished overnight — if everyone woke remembering that guild systems, commons regimes, cooperative production, and planning arrangements had operated at scale — policy imagination, business education, and institutional design would reopen around visibly competing alternatives and reorganize before settling into new defaults.",
+    "founding_problem": "Nothing was deliberately built to solve a problem: the default is what remained when the comparison set vanished. Its functional ancestor — providing a shared baseline while alternatives were still contested and visible — lapsed when postwar pedagogy and living memory dropped the alternatives, leaving a baseline without a remembered choice behind it.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "No benefiting party attests the genealogy because none exists under this reading; corroboration comes entirely from outside any gaining seat. Curriculum records show comparative-economic-systems instruction contracting after the Cold War, and economic historians document the mid-century disappearance of alternative arrangements from pedagogy and policy discourse — attested from the archival seat, not from any seat served by the default."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "A dominant framing treats market exchange as the natural, default way of organizing economic life. Under this reading, the framing's persistence is explained by lapsed memory: historically visible alternatives — guild systems, commons regimes, cooperative production, planning arrangements — dropped out of living memory and mainstream pedagogy over the mid-twentieth century, and the default persists because no one remembers there was ever a choice. No agent defends the framing, no agent collects from it, and nothing bars rediscovery of the alternatives; the record sits in archives, recoverable by research. The arrangement is therefore inertial rather than enforced: an administrative default kept by nobody, costing its inhabitants only the options they cannot imagine.\n\nKEY AGENTS (by structural relationship):\n- economics_commonsense_transmitters: Administrator of reproduction (institutional/constrained) — transmits the default without defending it\n- general_public: Diffuse bearer of unrecognized costs (moderate/identity_locked) — inhabits the default; narrowed option-recognition\n- economic_historians: Analytical observer (moderate/analytical) — holds the recoverable record of alternatives\n- heterodox_economists: Excluded critic (organized/constrained) — objects from outside the venues of reproduction",
+    "key_agents": [
+      "economics_commonsense_transmitters: Administrator of reproduction (institutional/constrained) — transmits the default without defending it",
+      "general_public: Diffuse bearer of unrecognized costs (moderate/identity_locked) — inhabits the default; narrowed option-recognition",
+      "economic_historians: Analytical observer (moderate/analytical) — holds the recoverable record of alternatives",
+      "heterodox_economists: Excluded critic (organized/constrained) — objects from outside the venues of reproduction"
+    ],
+    "logic_rationale": "Extractiveness is 0.12 because no transfer occurs anywhere in the structure: the only cost the arrangement imposes is narrowed imagination, which this reading values small. Suppression is 0.18 because nothing coerces — alternatives are unavailable through absence of memory, not through barriers; the number registers the residual friction of re-encountering the record, not enforcement. Theater is 0.08 because nothing is performed: no maintenance rituals defend the default, no compliance is staged; the arrangement is kept by sheer uninhabitance of the alternative. Accessibility collapse is 0.25 — the decisive divergence from a natural-law profile: understanding the arrangement REOPENS the alternatives rather than closing them, since the reading's core claim is that the record survives and research recovers it. Resistance is 0.15 because the default is invisible to its inhabitants; criticism exists but targets framings its holders perceive as imposed, and under this reading's lights the naturalization draws little resistance precisely because it is not experienced as an imposition. The claimed type (piton) and the metrics were authored independently: the claim states what this reading holds structurally true (dead mandate, inertial persistence, no capturer, costly-to-fix relative to diffuse benefit), the metrics describe the arrangement's actual operation. The measurement series run on one shared time grid (points 0, 6, 12, 18, 24, 30) with every tracked metric authored at every point; suppression_requirement is deliberately not tracked as a series because the enforcement picture is static-null — there is no enforcement machinery whose build-up or decay could be traced, and the scalar suppression value carries that fact.",
+    "perspectival_gap": "The three inhabited seats experience radically different arrangements despite sharing one referent. From the transmitter seat the default is a neutral professional background — a settled canon that imposes no cost on its user and would be expensive to disturb; classified from inside, it would look like benign infrastructure. From the public seat there is no experienced arrangement at all: the purest inertial case, in which the constraint operates entirely outside awareness and extraction is imperceptible from within. From the historian seat the same arrangement is a dated artifact with a traceable spread mechanism and recoverable alternatives. The engine computes this divergence from the power and exit data; the authored claim does not adjudicate it.",
+    "directionality_logic": "No beneficiaries and no victims are declared — that absence IS this reading's core structural claim (no identifiable beneficiary class; no extraction-bearing victim class, since nothing transfers). Because the derivation chain finds no Phase-B beneficiary/victim data to read, canonical per-power-atom fallbacks would be uninformative, so explicit overrides pin the near-symmetric positions the reading actually describes: institutional transmitters at d=0.45 (a mild beneficiary-side tilt — the professional convenience of a settled canon — with no collection of the arrangement's gains) and the moderate public at d=0.58 (a mild target-side tilt — narrowed option-recognition — with no transfer borne). Flows are near-zero in both directions, which is what the tight band around 0.5 encodes. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is scaled in the engine's arithmetic, and the analytical historian seat sits outside the beneficiary/target scaling entirely.",
+    "mandatrophy_analysis": "The arrangement's functional ancestor — supplying a shared decision baseline while alternatives were contested and visible — is dead; what persists is a baseline whose comparison set has been forgotten. Mandatrophy is therefore resolved and declared. The classification prevents mislabeling in both directions: read without this reading's structural data, the naturalization invites a snare-style misread (inventing enforcers and beneficiaries that the record does not show) or a mountain-style misread (asserting a naturality that the archival record contradicts — the arrangement has a birthdate and a spread mechanism, so emerges_naturally is honestly false and the mountain claim is unavailable). The piton designation names the actual condition: dead mandate, inertial persistence, no concentrated capturer (gain_flow is an affirmative diffuse), and a fix whose cost to whoever could perform it — rebuilding economic common sense through curricula and media — is prohibitive relative to the diffuse benefit of fixing.",
+    "kernel_context": "This constraint instantiates the lapsed_alternative_reading of the market_as_natural_default kernel: the claim that the market's naturalized default status persists because historically visible alternatives dropped out of living memory and pedagogy, not because any agent defends the default. Sibling readings — beneficiary_maintained_reading (incumbents actively defend the naturalization post hoc) and hybrid_amnesia_reading (lapsed closure creates conditions for later beneficiary capture) — instantiate different constraints from the same kernel, with added beneficiary structure and higher epsilon; they are separate files, not part of this one. This file generates ONLY the lapsed-alternative reading as a clean, epsilon-invariant constraint: no beneficiaries, no enforcement, epsilon held low and invariant across observables."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "beneficiary_maintained_reading",
+      "hybrid_amnesia_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the market is the natural default' covers three structurally distinct claims that differ on the maintenance mechanism and therefore on epsilon. This file instantiates the lapsed-alternative reading: persistence by forgetting alone, no beneficiary class, no enforcement, epsilon approximately 0.12. beneficiary_maintained_reading instantiates active post-hoc defense by incumbents — adds beneficiaries and enforcement machinery, substantially higher epsilon. hybrid_amnesia_reading instantiates lapsed closure followed by beneficiary capture — adds delayed capture dynamics, intermediate epsilon. The readings share one referent (the standing naturalization) and are linked here as a constraint family; each is generated as a clean, epsilon-invariant constraint in its own file, per the epsilon-invariance principle."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "self_enforcing",
+    "reading_relations": [
+      {
+        "sibling_id": "beneficiary_maintained_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_amnesia_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "naturalization_persists_by_lapsed_memory_alone",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "forgotten_alternatives_remain_recoverable",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "visible_alternative_plurality",
+    "drift_state": {
+      "moment": "contemporary_policy_pedagogy",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "header": {
+    "constraint_id": "nsl_legal_text__sovereignty_restoration_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nsl_sov",
+    "story_uid": "81a65d6b-34ea-4e84-a973-d85b396ed539"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.26,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "National Security Law — Sovereignty Restoration Reading",
+    "topic_domain": "constitutional/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cpg_authority",
+      "hksar_government",
+      "stability_seeking_residents",
+      "hong_kong_business_community"
+    ],
+    "victims": [
+      "protest_movement_participants",
+      "pro_democracy_activists",
+      "opposition_politicians",
+      "independent_journalists"
+    ],
+    "vindicated_propositions": [
+      "comprehensive_jurisdiction_doctrine",
+      "sovereign_security_prerogative"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 48,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 48,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.77,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 48,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This constraint is one reading of the nsl_legal_text kernel — the sovereignty_restoration_reading. What would the sibling readings change structurally, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Comparison against the sibling files (nsl_legal_text__democratic_enclosure_reading, nsl_legal_text__jurisdictional_capture_reading): the enclosure sibling expands the victim set from security-threat-designated actors to dissent-as-such and raises epsilon sharply; the jurisdictional-capture sibling adds common-law institutional autonomy to the victim set and relocates extraction onto the legal system itself.",
+      "impact": "The disagreement is located in two structural elements: the extension of the target class (does enforcement track genuine security threats, or does the threat category coincide with political dissent?) and the fate of common law adjudication (preserved venue versus transplanted substance). Resolving either element toward a sibling's premise dissolves this reading's distinct epsilon, victim set, and classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this file instantiates one of three live readings of the NSL text; sibling readings are separate constraints, not averaged into this one."
+    },
+    {
+      "id": "threat_dissent_boundary",
+      "question": "Does enforcement under the law in fact track conduct constituting genuine security threats (operational planning, violence, foreign-direction), or has the threat category expanded until it covers ordinary political dissent?",
+      "resolution_mechanism": "Systematic coding of prosecuted cases against the four statutory crime definitions: proportion of cases involving operational capability or foreign direction versus pure advocacy, slogan-display, or organization-building; trajectory of the sedition caseload relative to the four named crimes.",
+      "impact": "If the boundary holds, this reading's moderate epsilon and bounded victim set are stable and the tangled_rope classification stands. If the boundary dissolves, this reading collapses into the democratic_enclosure sibling: epsilon rises sharply, the victim set expands to dissent-as-such, and the computed classification shifts snare-ward.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The load-bearing boundary of this reading: where the security-threat category ends and political dissent begins."
+    },
+    {
+      "id": "extraction_accumulation_trajectory",
+      "question": "Is the moderate extraction level stable, or does cost-bearing accumulate as enforcement broadens from the four named crimes into sedition, cultural regulation, elections administration, and economic conduct?",
+      "resolution_mechanism": "Longitudinal tracking of the widening set of cost-bearing actors: new professional and cultural sectors drawn under enforcement attention, expansion of designated-judge remit, growth of preventive measures (bounties, border alerts, school curricula) relative to case-based enforcement.",
+      "impact": "Continued accumulation with a widening victim set would date a tangled_rope-to-snare transition and validate the enclosure sibling's structural delta; a plateau at moderate levels would confirm this reading's bounded-extraction profile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the moderate epsilon holds or accumulates as the enforcement perimeter widens."
+    },
+    {
+      "id": "founding_problem_liveness_corroboration",
+      "question": "Is the founding problem (persistent foreign interference and latent separatism requiring the law's continued full operation) still live, or is liveness asserted mainly by the arrangement's own administrators?",
+      "resolution_mechanism": "External audit of the continuing-threat claim: independent security analyses distinguishing documented foreign-direction cases from asserted ones; comparison of threat assessments issued by parties with no stake in the law's continuation against official characterizations.",
+      "impact": "If liveness fails external audit, the arrangement persists past its mandate and the theater_ratio rise signals onset of piton dynamics; if corroborated, the live founding problem supports the reading's steady-state justification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding problem's continuing liveness survives corroboration from outside the benefiting parties."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This file instantiates the sovereignty_restoration_reading of the National Security Law: the law as a legitimate sovereign security instrument that restored constitutional order after the 2019 unrest. On this reading the arrangement solves a real governance problem — a quarter-century failure to enact Basic Law Article 23, capped by months of escalating unrest that the local institutions proved unable to terminate — and its costs fall on a bounded class (movement participants, activists, opposition politicians, independent media) whom the reading processes as security risks rather than as a general-population tax. The reading therefore authors moderate extraction, high-but-normalizing suppression, and a genuine coordination function alongside an enforced transfer. Per the epsilon-invariance principle this is one member of a three-file constraint family: the democratic_enclosure and jurisdictional_capture siblings are separate stories with their own epsilon values, victim sets, and classifications, linked through network.affects_constraints.",
+    "key_agents": [
+      "- cpg_authority: agenda-setter (institutional/arbitrage) — drafted and imposed the law via the Annex III mechanism, sets enforcement priorities and interpretations, collects the arrangement's principal gains",
+      "- hksar_government: beneficiary with secondary agenda-setting role (institutional/constrained) — administers enforcement locally, collects restored governability, bears sanction and autonomy costs",
+      "- stability_seeking_residents: beneficiary (moderate/constrained) — recovered usable streets and predictable daily life; bear diffuse costs in narrowed speech and schooling norms",
+      "- hong_kong_business_community: beneficiary (powerful/arbitrage) — collected the stability premium; capital hedged abroad lets it keep the gains without the political exposure",
+      "- protest_movement_participants: payer (powerless/trapped) — processed as security risks; facing prosecution, detention, surrendered travel documents",
+      "- pro_democracy_activists: payer (moderate/identity_locked) — civic identity fused with the cause; choose prison, disqualification, or exile advocacy over silence",
+      "- opposition_politicians: payer (moderate/constrained) — disqualified by oath vetting or detained; institutional access eliminated, arena gone",
+      "- independent_journalists: payer (moderate/constrained) — newsroom closures and sedition cases; operating under self-censorship equilibria",
+      "- unconsulted_hk_public: excluded (organized/constrained) — the law's subjects were never in the drafting room; no local vote, consultation, or authorization",
+      "- joint_declaration_signatories: observer (institutional/analytical) — monitor, grade, and sanction from outside; no enforcement seat inside the arrangement"
+    ],
+    "logic_rationale": "Extraction is authored moderate (0.58 at interval end) because the cost-bearing set is concentrated: the general population experiences the arrangement predominantly as restored order, while severe costs land on identifiable political classes. The series rises from 0.42 as enforcement broadened from the four named crimes into sedition prosecutions, oath vetting, and media closure — accumulation, but bounded. Suppression (0.72) is authored as a raw structural property, unscaled by power or scope; its temporal series is deliberately non-monotonic: a hard early ratchet (mass arrests, the Apple Daily raid and closure, the '47 democrats' case) peaking around month 24, then declining as open resistance collapsed and enforcement shifted to preventive, routine modes — chilling effects doing work the active machinery no longer needs to. Theater rises steadily (0.14 to 0.26) as functional security targets depleted and performative loyalty maintenance (oath renewals, national security education, institutional pledge displays) grew as a share of activity. All three series run on one shared six-point grid so no metric's row is backfilled from another's end state.",
+    "perspectival_gap": "The seats compute very different arrangements from the same legal text. From the agenda-setter seat the structure is a completed constitutional repair it authored, with arbitrage-grade control over revision — the coordination side dominates. From the trapped and identity_locked payer seats the same structure operates as open-ended personal jeopardy with no exit priced in their favor. Between the beneficiary seats the divergence runs on exit quality: the business community's arbitrage position converts the arrangement into near-pure subsidy, while constrained residents collect real but partial gains against diffuse costs they did not choose. The engine computes these per-seat classifications from the structural data; this reading's authored claim does not adjudicate them.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation: cpg_authority sits near the full-beneficiary end (authored the instrument, collects its principal gains, faces no constraint it did not write); hksar_government derives low d as a declared beneficiary but its constrained exit and dual enforcement role place it short of full subsidy; stability_seeking_residents sit mildly beneficiary-side with diffuse costs; the business community's arbitrage exit pushes it nearest the beneficiary pole of any seat. All four payer groups derive high d, amplified by trapped and identity_locked exit profiles — the activists' identity lock places them at the extreme target end, since exit carries identity-death rather than mere cost. No directionality_overrides are authored: the exit-option differentiation (trapped versus arbitrage versus constrained) gives the derivation chain everything it needs to separate seats that share power atoms.",
+    "mandatrophy_analysis": "The classification discipline cuts both ways for this reading. Declaring the victim set blocks the reading's own temptation to launder the arrangement as pure rope — the transfer is real, enforced, and asymmetric, whatever its justification. Conversely, declaring the coordination function and the beneficiary set blocks the sibling readings' move to erase the genuine order-restoration achievement and read the whole structure as cover. On obsolescence: the founding problem is authored live under this reading, so mandatrophy is not resolved — but the rising theater_ratio is the designated watch item. If the threat recedes while enforcement and loyalty performance persist, the arrangement drifts toward maintained-theater operation, and the mismatch consumer (founding_problem_status x disappearance_verdict) is the tripwire for that transition.",
+    "kernel_context": "Kernel: nsl_legal_text — the enacted National Security Law text as a single persisting commitment. This file instantiates the sovereignty_restoration_reading: the law as a legitimate sovereign security instrument restoring constitutional order after the 2019 unrest. Sibling readings, each a separate constraint file with its own epsilon and classification: democratic_enclosure_reading (the law as permanent closure of democratic space and criminalization of dissent) and jurisdictional_capture_reading (the law as mainland legal-system transplantation eroding common law autonomy). Neither sibling is averaged into this story; the contest between readings lives in the omega variables, not in this constraint's metrics."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "nsl_legal_text__democratic_enclosure_reading",
+      "nsl_legal_text__jurisdictional_capture_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the nsl_legal_text kernel per the epsilon-invariance principle. The colloquial label 'the NSL' conflates three structurally distinct claims: (1) this file — a sovereign security instrument with a genuine coordination function and bounded, opposition-concentrated extraction (tangled_rope profile, moderate epsilon); (2) the democratic_enclosure sibling — the same text read as permanent closure of democratic space, with dissent-as-such in the victim set and sharply higher epsilon; (3) the jurisdictional_capture sibling — the text read as transplantation eroding common law autonomy, with the legal system itself among the cost-bearers. The upstream claim (legitimate restoration) is cited as warrant by the arrangement's defenders; the downstream siblings contest its extension. Each story carries its own epsilon, beneficiaries, victims, and claimed type; this file links both siblings through affects_constraints."
+  },
+  "stakeholders": [
+    {
+      "name": "cpg_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Drafted and imposed the law by decision inserted through the Basic Law Annex III mechanism after judging local legislation would never arrive; chairs the Committee for Safeguarding National Security through an appointed advisor; sets enforcement priorities, issues interpretations, and directs cases of concern. Collects the arrangement's principal gains: closure of a decades-long security gap, elimination of an organized challenge to sovereignty, and demonstrated command over the territory's political space. It authored the instrument, faces no constraint it did not write, and extended the architecture with the 2024 local Article 23 legislation."
+    },
+    {
+      "name": "hksar_government",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Administers enforcement locally through the National Security Department of the police, designated judges, and the Secretary for Justice; collects restored governability, street calm, and renewed administrative authority after 2019. Also bears costs a purely beneficiary reading would miss: officials sanctioned abroad, diminished international standing, and autonomy questions raised by each directive received from above. It executes the center's priorities and cannot decline them without replacement, so its exit is constrained despite its enforcement seat."
+    },
+    {
+      "name": "stability_seeking_residents",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Residents wearied by 2019's disruptions — blocked transport, vandalized districts, a year of confrontation — regained usable streets, functioning transit, and predictable daily life. They bear diffuse indirect costs: narrowed speech norms, patriotic curriculum for their children, and a political voice most did not exercise and now cannot. Emigration was a real exit and many took it; those who remain are held by family, property, and livelihood, making their effective position constrained."
+    },
+    {
+      "name": "hong_kong_business_community",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Financial and professional services gained the end of disruption and a restored predictability premium; exchanges, banks, and property interests publicly welcomed the return of order. Capital is mobile and many firms hedge operations to Singapore while keeping Hong Kong books — an arbitrage position that lets them collect the stability dividend without bearing the political exposure the arrangement generates."
+    },
+    {
+      "name": "protest_movement_participants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Those who marched, staffed roadblocks, or organized in 2019-2020 now face liability under the new definitions: unauthorized-assembly prosecutions, charges brought for slogans and flags, long pre-trial detention. Under this reading they are processed as security risks rather than negotiated counterparts. Their exit is trapped — some surrendered travel documents as bail conditions, trials are pending, and the window for leaving before arrest has closed for anyone already charged."
+    },
+    {
+      "name": "pro_democracy_activists",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Organizers, district councillors, and movement veterans whose civic identity is constituted by the cause: for them exit means exile or silence, and many chose prison, disqualification, or overseas advocacy over either. Several are subjects of overseas bounty notices. The identity fusion is the binding mechanism — the arrangement costs them most precisely because self-concept and cause coincide, so they keep bearing costs that peers without that fusion fled."
+    },
+    {
+      "name": "opposition_politicians",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Legislators and candidates disqualified through oath vetting or detained in the '47 democrats' case; parties dissolved or hollowed out. Their institutional access is gone and the electoral rules that replaced them exclude their platform. Remaining options are quietism, retirement, or exile-based commentary — resources and mobility some retain, but no arena in which to use them."
+    },
+    {
+      "name": "independent_journalists",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Newsroom closures — the largest independent paper raided and forced to cease within a year of enactment — sedition charges against reporters and commentators, and visa and licensing pressure shrank the independent press. Remaining journalists operate under self-censorship equilibria; exit is emigration or career change, both costly. They carry the arrangement's information-narrowing costs, which this reading accounts as collusion-enforcement rather than as harm."
+    },
+    {
+      "name": "unconsulted_hk_public",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "The law was drafted in Beijing and promulgated by insertion into Annex III without local legislative deliberation, consultation, or any vote the public's representatives could cast. The people who live under it indefinitely were structurally absent from the drafting table; their preferences entered only afterward, through surveys and emigration flows, never through authorization. They would have objected to the imposition method even where many supported the outcome."
+    },
+    {
+      "name": "joint_declaration_signatories",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Foreign governments — notably the United Kingdom as co-signatory of the 1984 Joint Declaration, and states engaging the ICCPR review cycle — monitor the law's operation, publish assessments, impose visa and sanction measures, and lodge formal objections. They observe and grade the arrangement but hold no enforcement seat inside it; their leverage is reputational and reciprocal, exercised from outside the legal order they are assessing."
+    }
+  ],
+  "gain_flow": "cpg_authority",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves a governance gap left open for twenty-three years: provides unified statutory definitions of secession, subversion, terrorism, and collusion with foreign forces where none existed locally, restores the public-order capacity that 2019 exhausted, and gives businesses and residents a single authoritative security framework instead of improvised ad-hoc policing.",
+    "transfer_function": "Moves political freedom of action — speech, assembly, organization, press — from pro-democracy actors and opposition institutions to the central state's security apparatus; moves enforcement discretion to the national security police and designated judges; moves predictability and order to residents and business.",
+    "absent_voices": "The unconsulted_hk_public seat: the law's subjects were never in the room — no local consultation, no legislative vote, no ratification; the pan-democratic representatives who would have objected were excluded from the process by design, and detained defendants awaiting trial have no effective voice in the arrangement's ongoing refinement. Treaty bodies and foreign signatories comment from outside without standing inside.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight repeal would reopen the contest it froze: surviving networks and exile cohorts would rebuild organized opposition, in-flight prosecutions would lose their legal basis, the 2024 local Article 23 legislation would stand orphaned, and the center would face again the sovereignty-without-security-control problem it concluded in 2020 it could no longer tolerate. Business stability premiums and residential calm would be repriced against renewed-unrest risk within weeks.",
+    "founding_problem": "After 2019's months of escalating unrest — airport shutdowns, petrol bombs, a stabbed legislator, open 'mutual destruction' rhetoric — overlaid on twenty-three years of unenacted Basic Law Article 23, Beijing judged that it held sovereignty over Hong Kong without security control of it, and that local institutions would never close the gap voluntarily.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The historical problem is corroborated from outside the benefiting parties: contemporaneous international media documentation of the unrest's scale and violence, insured-loss and retail-sales data showing the economic damage, and foreign-government statements at the time acknowledging its severity. The continuing-liveness claim — persistent foreign interference, latent separatism — is attested mainly by the CPG and HKSAR governments themselves, with partial external support from security analysts and sanctioned-entity listings; critics abroad dispute the threat's nature and scale, so liveness is corroborated thinly and openly contested."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "annex_iii_constitutional_continuity",
+    "drift_state": {
+      "moment": "contemporary_post_local_article23_legislation",
+      "direction": "revival_pressure",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "democratic_enclosure_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "jurisdictional_capture_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "target_class_limited_to_genuine_security_threats",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "nsl_completes_basic_law_design_via_annex_iii",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "restored_order_serves_collective_welfare",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

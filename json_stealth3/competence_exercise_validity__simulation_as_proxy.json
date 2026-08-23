@@ -1,0 +1,348 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__simulation_as_proxy",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cev_sim_proxy",
+    "story_uid": "d0d1196d-3909-4392-aa33-2dd69e75ad6d"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.42,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Scheduled Simulation as Valid Competence Exercise (Drills as Proxy-Catastrophe)",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "regulated_operators",
+      "simulation_vendors"
+    ],
+    "victims": [
+      "frontline_operators",
+      "downstream_public"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.42
+    }
+  ],
+  "omegas": [
+    {
+      "id": "simulation_fidelity_gap",
+      "question": "How far does competence exercised on rehearsed scenarios transfer to events outside the rehearsed envelope?",
+      "resolution_mechanism": "Match drill-score histories against subsequent real-event performance across licensees; compare readiness measures from licensees using unannounced or adversarial formats against scheduled-format peers.",
+      "impact": "A wide transfer gap voids the substitution premise, raises the burden borne on the public side, and pulls the arrangement toward the sibling readings' territory; a narrow gap supports this reading's validity claim and lowers the target-side burden.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Size of the transfer gap between drilled and unrehearsed event classes."
+    },
+    {
+      "id": "drill_choreography_share",
+      "question": "What share of recorded exercise outcomes reflect genuine rehearsal versus scenario design and scoring practices that preclude failure?",
+      "resolution_mechanism": "Audit scenario-selection archives and evaluator-score distributions; blind re-scoring of recorded exercises by external evaluators.",
+      "impact": "A high choreographed share means theater_ratio is understated and the arrangement is drifting toward performative maintenance of a record rather than production of readiness; a low share confirms the exercise function remains primary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of drill success attributable to scenario design rather than operator readiness."
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "This story instantiates the simulation_as_proxy reading of the competence_exercise_validity kernel; would the sibling readings (real_catastrophe_only, continuous_refresh_hybrid) restructure who bears the arrangement's costs and how heavily?",
+      "resolution_mechanism": "Author the sibling stories against the same standing arrangement and compare their epsilon and victim structures; the disagreement is located at the substitution premise — whether simulated events can occupy the exercise role that real catastrophe would occupy.",
+      "impact": "Under real_catastrophe_only the standing arrangement's unvalidated-readiness deficit becomes the headline cost and the public-side burden rises sharply with no coordination credit for drills; under continuous_refresh_hybrid the arrangement becomes a transitional floor requiring continuous supplementation, recasting the burden as chronic under-training rather than acute mismatch. Either adoption forces re-authoring of epsilon and the victim set for this story's subject matter.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading among three of the exercise-validity kernel."
+    },
+    {
+      "id": "identity_vs_structural_operator_lock",
+      "question": "Is frontline operators' inability to contest the exercise standard structural (licensure and employment dependence) or internalized (professional identity fused with the certification record)?",
+      "resolution_mechanism": "Post-exit survey of former operators: if readiness-doubt expression appears once employment consequences are removed, the lock was substantially internalized.",
+      "impact": "An internalized lock raises the effective burden on the operator seat beyond what structural barriers alone predict, and predicts slow reform uptake even after exercise standards loosen.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of operator-side lock: career structure versus certification-fused identity."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Safety-critical industries (nuclear, aviation, chemical process, emergency response) operate under an arrangement in which periodically completing scheduled simulations, drills, and tabletop exercises counts as valid exercise of rare-event competence, with the resulting drill record and safety statistics treated as proof that competence remains occupied and that regulatory compliance establishes adequacy. The arrangement solves a real problem — events too rare or dangerous to experience cannot be rehearsed by waiting for them — and simultaneously generates a compliance economy: scenario packages, evaluator accreditation, audit-ready completion logs. Over the interval the exercise function has persisted while a growing share of activity has shifted to defending the metric: scenario selection that avoids failure modes, scoring conventions that certify success, after-action boilerplate. KEY AGENTS (by structural relationship): regulated_operators (agenda setter, institutional/constrained), safety_regulators (co-agenda setter, institutional/constrained), frontline_operators (primary bearer of readiness risk, moderate/identity_locked), downstream_public (diffuse bearer of residual event risk, powerless/trapped), simulation_vendors (beneficiary, organized/mobile), independent_safety_engineers (excluded critic, moderate/mobile), accident_investigation_bodies (analytical observer, institutional/analytical). This is one reading of the competence_exercise_validity kernel (see kernel_context); the sibling stories real_catastrophe_only and continuous_refresh_hybrid author the same standing arrangement with different epsilon and victim structure — this reading grants the coordination credit the catastrophe-only reading withholds and asserts the sufficiency the hybrid withholds, yielding a mid-range epsilon rather than the siblings' poles.",
+    "key_agents": [
+      "- regulated_operators: Agenda setter (institutional/constrained) — designs, schedules, and certifies the exercise record; the completed drill log is the compliance artifact, and the compliance surplus (avoiding costlier continuous or unannounced programs) accrues here",
+      "- safety_regulators: Co-agenda setter (institutional/constrained) — mandates exercise frequency and documentation, collects the legibility dividend of a uniform audit surface",
+      "- frontline_operators: Primary target (moderate/identity_locked) — certification-linked careers fuse professional standing with drill passage; readiness risk concentrates where scripted rehearsal replaces varied experience",
+      "- downstream_public: Diffuse target (powerless/trapped) — bears the consequences of events that exceed rehearsed envelopes; no seat in scenario design",
+      "- simulation_vendors: Beneficiary (organized/mobile) — revenue scales with mandated exercise volume across industries; mobile across sectors",
+      "- independent_safety_engineers: Excluded voice (moderate/mobile) — publishes on skill decay and fidelity limits from outside the exercise-design and accreditation rooms",
+      "- accident_investigation_bodies: Analytical observer (institutional/analytical) — reconstructs real events and compares the drill record against what actually failed"
+    ],
+    "logic_rationale": "Claim and metrics are authored independently. The claimed type is tangled_rope because the arrangement demonstrably coordinates (it rehearses what cannot be experienced and produces a uniform readiness record) AND demonstrably carries enforced asymmetric burden (the gap between rehearsed and actual event demands rests on staff and publics, while the compliance surplus banks at the operator seat); this reading endorses the validity core without denying the asymmetry, so the claim is not tuned down to rope nor up to snare. Extractiveness 0.48: roughly half the arrangement's operating cost purchases genuine rehearsal value (which bounds epsilon well below snare range even from a sympathetic seat), while the remainder is compliance surplus and choreography margin. Suppression 0.42 is a raw, unscaled structural property: statutory mandate plus career dependence on the certification record suppresses internal contest; it is not amplified by power or scope. Theater_ratio 0.52 sits just past half — scenario curation and generous evaluation now defend the metric as much as they build readiness, marking Goodhart substitution onset. Accessibility_collapse 0.35: alternatives (unannounced, adversarial, continuously refreshed formats) remain lawful and are practiced by leading operators, so understanding the arrangement does not collapse exits. Resistance 0.45: steady scholarly critique and post-incident findings, short of organized refusal. The measurement series run on ONE shared eight-point grid (all three metrics authored at every time point); rising base_extractiveness models Goodhart accumulation; rising suppression_requirement models enforcement-capacity maturation — each major accident ratcheted mandate intensity and audit depth, a stepwise ratchet smoothed into trend rather than a cyclical oscillation.",
+    "perspectival_gap": "Seats should compute differently. From the operator and regulator seats the arrangement is coordination they built and administer: a schedulable, auditable readiness record. From the frontline operator seat — identity_locked, certification-fused — the same structure operates as a script whose passage substitutes for varied experience, computing near the full-target end. The trapped, powerless public seat computes the heaviest effective burden: verification of readiness quality is hardest precisely where the consequence of error lands. The vendor seat, mobile across sectors, sits near the beneficiary end despite collecting fees. The engine derives these divergences from the structural data; the authored tangled_rope claim does not adjudicate them.",
+    "directionality_logic": "Beneficiaries (regulated_operators, simulation_vendors) derive low directionality; victims (frontline_operators, downstream_public) derive high. Trapped and identity_locked exit positions push the two target seats toward the full-target end; the vendor's arbitrage-grade mobility damps its effective burden toward subsidy despite its revenue position. Receipt of gains is distinct from beneficiary role: fees flow transactionally to vendors, but the concentrated capture — the compliance surplus of meeting the mandate at minimum viable rigor instead of running costlier continuous programs — accrues at the regulated_operators seat, which is why gain_flow names it. National and regional scopes raise verification difficulty modestly, scaling effective extraction upward for the target seats; suppression, again, is unscaled.",
+    "mandatrophy_analysis": "No obsolescence declaration: the founding problem (readiness for unexperienceable events) remains fully live, so the R5 mismatch consumer reads status=live x verdict=world_rearranges — no zombie flag. The classification earns its keep by keeping both sides of the ledger on one constraint: crediting the arrangement's real rehearsal function (preventing mislabel as pure extraction) while naming the enforced asymmetry (preventing mislabel as pure coordination). Watch item rather than resolution: with theater_ratio crossing 0.5, continued choreography drift could atrophy the exercise function until the arrangement persists as record-maintenance — at that point the piton signature (administrator-could-change-it, cost-asymmetry against fixing) would become the honest description, and this story's temporal series is structured to date such a transition if it occurs.",
+    "kernel_context": "Kernel: competence_exercise_validity — what counts as exercise that keeps rare-event competence occupied. This file instantiates the simulation_as_proxy reading: scheduled simulation validly occupies the exercise role of catastrophe; the drill record and safety statistics evidence adequacy. Siblings: real_catastrophe_only (denies substitution outright — only lived catastrophe truly exercises competence) and continuous_refresh_hybrid (simulation necessary but not sufficient; retention requires continuous cycles). Reading relations: my substitution premise directly contradicts the catastrophe-only premise, so no single framework holds both — forecloses; the hybrid shares my validity premise and disputes only sufficiency, and parties hold partitioned versions of both (simulation valid for routine abnormal classes, insufficient for compound rarities), so coexists_with. Authority adjudicating the kernel is credentialed technical and regulatory expertise, with an interpretive layer (standards committees, evaluation doctrine) absorbing drift without reopening the validity question; the reference frame is the scheduled-simulation validity baseline, and contemporary skill-decay research and drill-versus-outcome mismatch findings constitute a substantial, unrecognized challenge to the foundational premise."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__real_catastrophe_only",
+      "competence_exercise_validity__continuous_refresh_hybrid"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'competence exercise' decomposes into three readings of one kernel, each a separate story with its own epsilon, beneficiaries, and victims. This story (simulation_as_proxy) sits between the siblings: it grants the coordination credit that real_catastrophe_only withholds and asserts the sufficiency that continuous_refresh_hybrid denies, producing a mid-range epsilon over the same standing arrangement. Edges mark family membership, not agreement."
+  },
+  "stakeholders": [
+    {
+      "name": "regulated_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Runs the facility portfolio. Designs and schedules exercises within the regulator's envelope, selects scenarios, appoints evaluators, and files completion records. The completed drill log is the artifact presented at audits, and building it costs far less than running unannounced or continuously refreshed programs would. Operating licenses condition on documented exercise history, so leaving the regime is unavailable; staying minimally compliant is a managed choice. The savings from meeting the mandate at minimum viable rigor accumulate here."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Writes the exercise-frequency and documentation requirements, accredits evaluators, and audits the records. The drill log provides a uniform, inspectable compliance surface across thousands of licensees — legibility that would be expensive to obtain any other way. The mandate comes from statute; tightening or relaxing the exercise standard is politically visible and slow."
+    },
+    {
+      "name": "simulation_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sells scenario libraries, simulators, evaluator training, and audit-preparation services across industries. Revenue scales with the number and frequency of mandated exercises. Customers are replaceable across regulated sectors, so a shift in validity standards would redirect product lines rather than end the business."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Staffs the control rooms, flight decks, and response teams. Maintains certification by passing scheduled exercises; pay progression and advancement track drill performance. Professional standing is built on the certification record, and voicing doubt about whether the exercises measure real readiness reads as questioning one's own qualification. Opting out ends employment; the difference between rehearsed scenarios and actual event demands lands on this seat first."
+    },
+    {
+      "name": "downstream_public",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Lives and works within reach of the facilities and services whose operators drill. Bears the consequences if real events exceed rehearsed envelopes. Receives drill notices but never fidelity assessments; has no seat in scenario design and no way to relocate away from reliance on regulated infrastructure."
+    },
+    {
+      "name": "independent_safety_engineers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Human-factors researchers and veteran engineers who publish on skill decay and simulation fidelity limits. They argue for unannounced, adversarial, and continuously refreshed formats and for publishing exercise failure rates. They sit outside exercise-design committees and accreditation panels; their access runs through journals and post-incident testimony, years behind the decisions those venues critique."
+    },
+    {
+      "name": "accident_investigation_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reconstructs real events after the fact and compares the drill record against what actually failed. Sees the full arc — scenario selection, scoring conventions, the distance between passed objectives and event outcome — and feeds findings back into standards on a multi-year lag."
+    }
+  ],
+  "gain_flow": "regulated_operators",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Exercises readiness for events too rare, hazardous, or expensive to experience directly, and gives regulators, insurers, and the public a uniform, schedulable, inspectable readiness record that many organizations can produce simultaneously.",
+    "transfer_function": "Moves training budget and staff hours from operators into scheduled simulation infrastructure and vendor services; moves assurance and legibility up to regulators; leaves the distance between rehearsed and actual event demands — wherever fidelity falls short — resting on frontline staff and nearby publics.",
+    "absent_voices": "Independent safety engineers and adversarial-training advocates stand outside the exercise-design and accreditation rooms; residents near facilities receive drill notices but never fidelity assessments; survivors of real events that outran rehearsed scenarios reach the table only years later, through investigation reports rather than scenario redesign.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would force every licensee to rebuild its readiness program around some other validity standard — continuous refresh, unannounced adversarial exercises, or accumulated experience — vendors would lose the mandated-volume market, regulators would lose their uniform audit surface, and certification-linked careers would lose their currency. The compliance economy around exercise validity would regroup around a successor standard rather than dissolve.",
+    "founding_problem": "Rare severe events cannot be summoned for practice: before simulation-based exercise, industries had no way to rehearse or demonstrate readiness for catastrophes that must not happen, leaving both competence and compliance unverifiable between events.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Professional engineering societies and accident-investigation archives corroborate that the founding problem is real: rare severe events cannot be produced on demand, and the pre-simulation record shows readiness failures no amount of intent prevented. Corroboration that the problem remains live — as distinct from solved — comes from outside the benefiting parties: published skill-decay research and investigation findings of events exceeding rehearsed envelopes. No party outside the regime attests that the current simulation-based answer closes the problem."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "scheduled_simulation_validity_baseline",
+    "drift_state": {
+      "moment": "contemporary_skill_decay_research_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "real_catastrophe_only",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "continuous_refresh_hybrid",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulated_exercise_satisfies_retention_requirement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "safety_record_validates_competence_adequacy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

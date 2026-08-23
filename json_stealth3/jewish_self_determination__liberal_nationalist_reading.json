@@ -1,0 +1,427 @@
+{
+  "header": {
+    "constraint_id": "jewish_self_determination__liberal_nationalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jsd_libnat",
+    "story_uid": "9896c88a-dabb-4c56-b27b-f87309dc5e98"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.6,
+    "claimed_type": "rope",
+    "human_readable": "Jewish Self-Determination — Liberal Nationalist Reading (Equal-Nation Parity Claim)",
+    "topic_domain": "political philosophy/nationalism studies/postcolonial theory",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "jewish_diaspora_communities",
+      "israeli_citizenry",
+      "persecuted_jewish_refugees"
+    ],
+    "victims": [
+      "palestinian_national_community"
+    ],
+    "vindicated_propositions": [
+      "wilsonian_nationality_principle",
+      "un_charter_peoples_equality_doctrine",
+      "minority_nation_legibility_standard"
+    ]
+  },
+  "interval": {
+    "start": 1897,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1897,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1922,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1947,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1967,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1988,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1993,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1897,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1922,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1947,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1988,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1993,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1897,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1922,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1947,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1967,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1988,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1993,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This constraint is one reading (liberal_nationalist_reading) of the kernel jewish_self_determination; which reading governs any given classification of 'the Jewish self-determination claim'?",
+      "resolution_mechanism": "Corpus-level comparison across the five sibling stories; the unlabeled claim has no defined classification until a reading is specified.",
+      "impact": "Sibling readings assign different epsilon and victim sets: the settler_colonial reading raises epsilon sharply and centers palestinian victims; the religious_covenant reading shifts grounding to theological title; the diasporist reading removes the refuge warrant and locates the hazard in the state itself; the indigenous_return reading drives epsilon toward zero.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed identity of the constraint within its kernel."
+    },
+    {
+      "id": "disagreement_location_structural_elements",
+      "question": "Where exactly do the sibling readings disagree — on the source of the claim (secular parity vs divine covenant vs indigeneity), on the victim set, or on whether the nation-state frame itself is the harm?",
+      "resolution_mechanism": "Element-by-element diff across the sibling stories' axioms, victim declarations, and reference frames.",
+      "impact": "If the disagreement is located in the frame rather than the claim, no quantity of evidence about persecution or historical attachment resolves it; classification divergence across readings is permanent and must be carried per-story rather than averaged.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Locates the kernel contest in specific structural elements rather than a general dispute."
+    },
+    {
+      "id": "partition_feasibility",
+      "question": "Is territorial partition with mutual recognition achievable, or does the parity formula presuppose a settlement the parties cannot actually reach?",
+      "resolution_mechanism": "Negotiation-history analysis and convergence testing across successive frameworks (Peel, 181, Oslo parameters): do offers converge toward a stable two-claim settlement?",
+      "impact": "If partition is infeasible, the principle's operation perpetuates open-ended asymmetry: epsilon rises, the effective type drifts toward tangled_rope, and the palestinian payer seat hardens toward full-target directionality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of the settlement formula on which this reading's low-to-moderate epsilon depends."
+    },
+    {
+      "id": "principle_vs_conduct_attribution",
+      "question": "Is the measured extraction attributable to the parity principle itself, or to state conduct exceeding it (occupation and settlement expansion beyond the partition premise)?",
+      "resolution_mechanism": "Counterfactual compliance analysis: model epsilon under strict adherence to the partition-and-mutual-recognition formula versus observed conduct, and attribute the difference.",
+      "impact": "If conduct exceeds principle, this story's epsilon overstates the principle's intrinsic extraction; the state's conduct warrants a separate constraint story, keeping this reading's classification clean rather than charging the implementer's drift to the claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Separates the principle's intrinsic epsilon from implementer drift."
+    },
+    {
+      "id": "victim_seat_under_own_lights",
+      "question": "Does this reading's own frame contain a victim seat at all, or only costs-of-settlement borne by a co-equal claimant?",
+      "resolution_mechanism": "Consent analysis: costs accepted as the price of a symmetric bargain differ structurally from costs imposed without a bargained frame; test whether the palestinian community ever consented to the partition premise at any codifying moment.",
+      "impact": "If no consent frame ever obtained, the payer seat computes nearer full-target and the arrangement trends tangled_rope despite the reading's parity intent; if a consent frame is credited, the borne costs remain settlement-price and the rope classification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the reading's 'no victim in principle' survives contact with consent facts."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the kernel jewish_self_determination: the liberal nationalist claim that the Jewish people constitute a nation holding an equal entitlement to self-determination alongside other peoples. As a standing arrangement, the claim operates through recognition politics (Mandate-era codification, UNGA 181, bilateral recognition), through the partition-plus-mutual-recognition settlement formula, and through the refuge function that converts sovereignty into a rescue option for persecuted Jews. The epsilon referent is the standing arrangement under contest — the parity claim as institutionalized — assessed by the reading's own lights (equal dignity of peoples, consent-based legitimacy); it is NOT the rival arrangements sibling readings would install. The claim and the metrics are independent authored facts: the reading is CLAIMED as rope (a genuine coordination device for competing national claims, carried by persuasion within liberal premises), while the metrics describe the arrangement's actual operation, including implementation asymmetry and a rising defensive-enforcement requirement. Per the epsilon-invariance principle, the kernel label decomposes into five structurally distinct constraints (this file plus four sibling files); they are linked via network.affects_constraints, not merged here.",
+    "key_agents": [
+      "- jewish_diaspora_communities: Principal beneficiary (organized/mobile) — receives public standing for peoplehood and the refuge option",
+      "- israeli_citizenry: Beneficiary-payer (institutional/constrained) — holds the realized sovereignty and bears its defense costs",
+      "- persecuted_jewish_refugees: Crisis-window beneficiary (powerless/trapped) — the refuge function's direct recipients",
+      "- palestinian_national_community: Primary payer (organized/trapped) — bears the implementation costs of the parity formula",
+      "- zionist_institutions: Agenda setter (institutional/identity_locked) — administers the claim's settlement and advocacy machinery",
+      "- great_power_patrons: Agenda setter (institutional/mobile) — converted the claim into operative international law",
+      "- arab_regional_states: Excluded party (institutional/mobile) — objected to the codified formula from outside the rooms where it was written",
+      "- normative_political_theorists: Analytical observer (analytical/analytical) — evaluates the claim's coherence and its costs"
+    ],
+    "logic_rationale": "Extractiveness 0.32 (low-to-moderate): the parity premise itself demands symmetry, so the principle's intrinsic demand is cheap for adherents; the measured extraction reflects three residual cost streams — the non-consensual character of the founding partition for the local population, the asymmetric implementation that has tracked the stronger party's position, and the ordinary nation-state costs borne by minorities inside the self-determining polity. Suppression 0.42: the core claim persists by persuasion (it follows from liberal premises many holders accept independently), but a defensive enforcement layer has grown since the 2000s — anti-delegitimization statutes, definitional regimes with speech consequences, funding conditionality — and the scalar records that force as currently applied. Suppression is authored as a raw structural property and is deliberately unscaled; only extractiveness is scaled by directionality and scope downstream. Theater_ratio 0.28: ceremonial reaffirmation of the claim grows as substantive progress stalls (anniversary declarations substituting for settlement), but recognition and refuge delivery remain real functions. Accessibility_collapse 0.55: within a liberal-nationalist framework, denying Jewish nationhood collapses as inconsistent once the premise is granted, yet rival readings remain fully live across frameworks — hence mid-range rather than mountain-grade collapse. Resistance 0.6: the claim meets sustained organized resistance from the Palestinian national movement, postcolonial scholarship, and portions of the diaspora left. The temporal series oscillates rather than drifting monotonically: extraction and suppression peaked after 1967, dipped during the Oslo window, and re-rose as the process collapsed — the cycle tracks diplomatic openings and closures, not intermittent reinforcement as an extraction mechanism. All three tracked metrics share one eight-point grid so no metric row is sampled against another metric's end-state.",
+    "perspectival_gap": "The seats compute differently by construction. From the palestinian_national_community seat, the arrangement presents as an enforced asymmetry: a formula codified without their consent, implemented along the stronger party's line, with no territorial exit — high effective extraction. From the jewish_diaspora_communities and persecuted_jewish_refugees seats, the same arrangement presents as insurance: a standing rescue option whose costs are borne elsewhere. From the israeli_citizenry seat it presents as a fair formula imperfectly realized — they pay blood for it and resent being classified as its mere beneficiaries. From the great_power_patrons seat it is order-maintenance, repriced with strategy. Identity-lock dynamics concentrate in zionist_institutions: these bodies are institutionally fused with the claim — their mandates, constitutions, and fundraising identities ARE the parity project — so exit is unthinkable without self-dissolution; if that fusion broke (for instance, if diaspora institutions reconstituted around diaspora pluralism), the claim's administrative backbone would fragment and its persistence would rest on persuasion alone.",
+    "directionality_logic": "Beneficiary declarations drive the derivation: jewish_diaspora_communities, israeli_citizenry, and persecuted_jewish_refugees sit near the beneficiary end (low d); palestinian_national_community, declared victim and seated as payer with trapped exit, sits near the full-target end (high d) — trapped exit pushes it further toward full target than a mobile payer would sit. One directionality override is authored for the institutional power atom (d = 0.18): three institutional seats (israeli_citizenry, zionist_institutions, great_power_patrons) all sit near the beneficiary end, but the automatic derivation cannot see this from their mixed signatures — the citizenry pays heavy visible costs (conscription, war dead) that could read as targeting, the patrons hold no beneficiary listing, and the institutions appear as neutral administrators. Structurally all three accrue the arrangement's principal yields, so the override corrects the whole institutional band downward together; the organized band needs no override because role declarations already split the diaspora (low d) from the palestinian community (high d) at the same power level.",
+    "mandatrophy_analysis": "The founding problem — mass statelessness and recurrent persecution of a dispersed people in the nation-state era — is genuinely contested in status: the danger is corroborated from outside the beneficiary set (Holocaust historiography, the diplomatic record, contemporary security data), while the adequacy of the sovereignty remedy is precisely what the sibling readings dispute. Because status is 'contested' rather than 'dead', the R5 mismatch consumer finds no dead-problem-plus-world-rearranges flag: the arrangement is not a zombie mandate. The classification discipline cuts both ways here. Claiming rope prevents the mislabel that would read the whole arrangement as pure extraction — a reading that would erase the refuge function that has concretely rescued persecuted Jews in every crisis window since 1933. Authoring honest nonzero metrics and a real payer seat prevents the opposite mislabel — a costless parity claim — which would erase the displacement history and the non-consent at codification. The mandatrophy question stays open through the partition_feasibility and victim_seat_under_own_lights omegas rather than being settled by fiat in either direction.",
+    "kernel_context": "Kernel: jewish_self_determination. This file instantiates the liberal_nationalist_reading — the claim that Jewish peoplehood constitutes a nation with an equal entitlement to self-determination, grounded in secular-liberal parity rather than covenant, indigeneity, or anti-territorial pluralism. Sibling readings (separate constraint stories): indigenous_return_reading, settler_colonial_reading, religious_covenant_reading, diasporist_reading. Foreclosure assessment conducted reading-by-reading rather than defaulted: a party holding the parity premise is NOT logically committed to rejecting the settler-colonial premise (one can affirm an equal claim and acknowledge colonial mechanics in its exercise — a live strained-coexistence position), nor the covenant premise (different grounds, compatible conclusions), nor the indigenous premise (mutually reinforcing), nor the diasporist premise (affirm the claim, oppose the exercise — coherent). Hence this reading forecloses no sibling; relations are assigned as influences toward indigenous_return (the parity framework supplies the secular-legibility substrate on which the indigeneity argument rides in international law) and coexists_with toward the other three. Reference frame: wilsonian_peoples_parity — the reading's own t0 holds that peoples, as such, hold equal self-determination rights and that secular recognition suffices. Drift state at the contemporary postcolonial moment: practice_drift, substantial, acknowledged — the reading's own adherents openly concede that facts on the ground have departed from the partition-and-mutual-recognition formula while continuing to hold the parity frame itself intact."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "jewish_self_determination__indigenous_return_reading",
+      "jewish_self_determination__settler_colonial_reading",
+      "jewish_self_determination__religious_covenant_reading",
+      "jewish_self_determination__diasporist_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'Jewish self-determination' decomposes into five structurally distinct constraints (one per reading of the kernel), each with its own epsilon, beneficiary/victim structure, and classification. This story is the liberal_nationalist member. The liberal reading is diplomatically upstream: its parity frame supplied the register in which the indigenous_return argument operates internationally (influences edge), while the settler_colonial, religious_covenant, and diasporist readings coexist as rival live positions. Epsilon differs across the family by construction: indigenous_return drives epsilon toward zero, this reading sits low-to-moderate (0.32), settler_colonial sits high with an explicit palestinian victim set, religious_covenant relocates grounding to theological title, and diasporist removes the refuge warrant entirely. No single story may hedge across these; linkage is via network edges only."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "jewish_diaspora_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Live as minorities across dozens of host societies, organized through congregations, federations, and advocacy bodies. The parity principle gives their peoplehood public standing: host governments and institutions recognize Jews as a nation and not merely a religion, which shapes minority-rights claims and guarantees a place of retreat. Individual members vary widely in identification with the national project; opting out of it carries social cost inside communal institutions but no legal barrier in liberal host states."
+    },
+    {
+      "name": "israeli_citizenry",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold citizenship in the state that embodies the claim. They receive the realized good — territory, self-government, automatic immigration rights for co-nationals — and pay for its defense through conscription, reserve duty, war casualties, and security spending. Internal politics divides over how far the state should extend territory versus trade it for recognition. Emigration is legal and common enough to have a name, but language, family, army ties, and identity anchor most."
+    },
+    {
+      "name": "palestinian_national_community",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Hold a reciprocal national claim to the same territory, which this framework recognizes in principle as equal. In practice they have borne the larger share of the arrangement's costs: displacement in 1948, statelessness distributed across neighboring states and occupied territories, and a partition formula whose terms were set without their consent and whose implementation has tracked the stronger party's position. Their claim is tied to this land; there is no alternative territory to which it could migrate."
+    },
+    {
+      "name": "persecuted_jewish_refugees",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "In crisis windows — 1930s Europe, the postwar displaced-persons camps, the Soviet refusenik era, the Ethiopian airlifts, post-Soviet and Ukrainian emergencies — the sovereign refuge is the concrete deliverable of the principle. They arrive with nothing, are absorbed by immigration law rather than discretionary asylum, and cannot exit the circumstances that make the refuge necessary."
+    },
+    {
+      "name": "zionist_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The World Zionist Organization, the Jewish Agency, and successor bodies built settlement, immigration, and advocacy machinery decades before statehood and continue administering diaspora-facing functions. They are constituted by the parity claim itself; abandoning it would dissolve their mandate. Leadership rotates, but the organizational commitment is total."
+    },
+    {
+      "name": "great_power_patrons",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Britain issued the Balfour Declaration; the United States and the Soviet Union backed partition in 1947; the United States has since supplied diplomatic cover and military assistance. Patronage is what made the parity claim operative in international law. Patrons can reprice or withdraw support — as Britain effectively did with the 1939 White Paper — and their commitment fluctuates with strategic interest rather than principle."
+    },
+    {
+      "name": "arab_regional_states",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Surrounding states opposed the partition plan militarily in 1948, absorbed Palestinian refugees (most withholding citizenship), and fought subsequent wars; several have since signed normalization agreements. They were excluded from the forums where the principle was codified and their objections never entered its text; their later bargaining power came from war and oil, not from a seat in the founding conversation."
+    },
+    {
+      "name": "normative_political_theorists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Political theorists, international-law scholars, and historians evaluate whether the parity claim coheres with liberal premises, how it compares with other national movements' claims, and what its realization has cost. They take no side in the contest, and their analyses feed every party."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared standard for adjudicating two national claims to one territory: if peoples hold equal self-determination rights, then reciprocal recognition plus territorial partition is the fair settlement formula. It also coordinates dispersed Jewish communal action around a legible civic-national project, and gives third parties a rule for extending recognition without adjudicating theology or ancient title.",
+    "transfer_function": "Moves international recognition, legitimacy, and ultimately sovereign jurisdiction toward the Jewish national collectivity; moves the refuge option to persecuted Jews in crisis windows; and moves the costs of territorial concession and adjustment onto whichever party holds less leverage at each implementation moment — historically, the Palestinian community.",
+    "absent_voices": "At the codifying moments (Balfour 1917, San Remo 1920, UNGA 181) the Arab inhabitants of Palestine had no consenting seat: their objection existed but never entered the principle's formulation. Contemporary Palestinian representation sits in the conversation but inherits a fixed premise. Non-Zionist and diasporist Jewish voices were present at the founding and outvoted, not absent — the genuinely absent seat was the local non-Jewish population's consent, paired with the excluded arab_regional_states stakeholder.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the parity principle vanished overnight, Jewish national claims would lose their liberal legibility — falling back on theological or historical-title arguments that persuade narrower audiences — recognition diplomacy would lose its working formula, and the refuge architecture would lose its normative warrant. The underlying facts of attachment and presence would persist, but the arrangement organizing them would rearrange around whichever rival frame seized the vacancy.",
+    "founding_problem": "Mass statelessness and recurrent persecution of a dispersed people in the nation-state era: between expulsions, pogroms, and finally the Holocaust, Jewish collective survival lacked the sovereign guarantee other nations took for granted. The founding problem was converting peoplehood into the era's currency of safety — sovereignty.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Holocaust historiography and the contemporaneous diplomatic record corroborate the founding danger from outside the beneficiary set; postcolonial critics of Zionism concede the historical persecution while disputing the remedy. Whether the problem remains live is attested in one direction by security studies and community-security incident data, and disputed in the other by scholars arguing sovereignty has become the risk multiplier. No source outside the dispute neutrally certifies the status — hence 'contested' rather than 'live' or 'dead'."
+  },
+  "gain_flow": "israeli_citizenry",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "jewish_self_determination__indigenous_return_reading",
+      "jewish_self_determination__settler_colonial_reading",
+      "jewish_self_determination__religious_covenant_reading",
+      "jewish_self_determination__diasporist_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "wilsonian_peoples_parity",
+    "drift_state": {
+      "moment": "contemporary_postcolonial_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "indigenous_return_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "settler_colonial_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "religious_covenant_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "diasporist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "peoples_hold_equal_self_determination_rights",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "secular_recognition_suffices_for_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "partition_resolves_competing_claims_symmetrically",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

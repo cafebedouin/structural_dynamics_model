@@ -1,0 +1,383 @@
+{
+  "header": {
+    "constraint_id": "gpl_copyleft_scope__narrow_scope_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_narrow_scope_reading",
+    "story_uid": "663d7ef9-6559-4135-be8c-0235fe0b6827"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.33,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.5,
+    "claimed_type": "rope",
+    "human_readable": "GPL Section 2(b) Covered-Set Boundary (Narrow Doctrine-Following Construal)",
+    "topic_domain": "legal/economic - software licensing, intellectual property, open-source governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_software_vendors",
+      "proprietary_device_driver_vendors",
+      "downstream_enterprise_deployers",
+      "gpl_project_contributors",
+      "dual_license_vendors"
+    ],
+    "vindicated_propositions": [
+      "traditional_copyright_derivation_criteria",
+      "documented_api_decoupling_sufficiency"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "fsf_license_steward",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Publishes and maintains the GPL license text and its official interpretive FAQ; answers integrators' boundary questions; initiates or funds compliance litigation when derivative works of GNU code are shipped without source. Its staffing, funding, and reputation are constituted by stewardship of this license family, so departing the role would dissolve the organization's purpose. It holds normative authority disproportionate to its budget."
+    },
+    {
+      "name": "gpl_enforcement_organizations",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Bring infringement claims and compliance audits against distributors of GPL-covered works, concentrating in recent years on embedded devices and on couplings whose covered status is disputed. Their claims succeed against outright violations and stall at the disputed boundary cases; they run on donations and volunteer counsel. Their continuing relevance depends on visible violations remaining frequent enough to fund the work."
+    },
+    {
+      "name": "commercial_software_vendors",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build operating systems, compiler toolchains, databases, and cloud services that embed GPL-licensed components beneath proprietary management layers, and distribute appliances containing GPL firmware. They disclose source for the combinations their counsel classifies as covered derivative works and keep everything else closed. Switching to permissively licensed or in-house substitutes is possible at significant engineering cost, and some firms do so to simplify compliance."
+    },
+    {
+      "name": "proprietary_device_driver_vendors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Ship graphics, networking, and storage drivers as loadable modules for GPL kernels without publishing driver source, relying on the separateness of loadable modules under the doctrine-based boundary. They invest in kernel interface stability arrangements and occasionally face infringement allegations over module status. Hardware revenue does not turn on the outcome, but software margins do."
+    },
+    {
+      "name": "gpl_project_contributors",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Write and contribute code to GPL projects under the license's terms, expecting improvements to covered derivative works to come back under the same license. They receive the disclosed sources of covered derivatives and build on them; they have no individual legal capacity to police the boundary and depend on stewards, enforcement organizations, and courts. Moving past contributions to different terms requires locating and persuading every copyright holder, which is rarely feasible."
+    },
+    {
+      "name": "downstream_enterprise_deployers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Procure servers, phones, and cloud stacks that mix GPL infrastructure with licensed proprietary tooling; their annual compliance sign-off depends on the boundary staying stable enough to certify. They hold purchasing leverage over vendors and foundations alike but do not participate in boundary interpretation. Exit means re-platforming, at multi-year cost."
+    },
+    {
+      "name": "dual_license_vendors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Offer identical code under the GPL and under paid commercial terms, selling exemption from the sharing obligation to customers whose use falls on the covered side of the boundary. Their pricing assumes the boundary is predictable: an expanded boundary pushes customers toward permissive competitors, and a collapsed one removes the reason to buy at all. They earn from both sides of the line and press quietly for its stability."
+    },
+    {
+      "name": "inactive_original_copyright_holders",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Assigned or contributed code to GPL projects years ago and scattered; their consent is a legal prerequisite for changing the terms of any work they touched, yet they are frequently unreachable, retired, or indifferent. They hold veto power they rarely learn they possess. Their presumed views on scope are invoked rhetorically by every faction, but they deliberate nowhere and enforce nothing."
+    },
+    {
+      "name": "ip_litigation_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Hear the occasional infringement claim touching the boundary and resolve it under general copyright doctrine without issuing the kind of broad precedent that would fix the covered set; GPL questions arrive embedded in larger commercial disputes. Their few, case-specific pronouncements become the citations every faction quarrels over."
+    },
+    {
+      "name": "academic_ip_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Publish the doctrinal analyses - joint works, derivations, abstraction-filtration-comparison - that corporate counsel and movement lawyers both cite, and host the forums where boundary questions are argued. They hold no enforcement capacity and take funding from neither side. Their framing choices quietly shape which construals look respectable."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a single widely recognized criterion for which combinations of GPL-licensed and independently developed code trigger the source-sharing obligation, so that thousands of routine integration decisions do not each require bespoke legal negotiation and developers are not forced to avoid GPL components altogether.",
+    "transfer_function": "Moves source-code disclosure from makers of covered derivative works to the public commons, and moves nothing from developers whose couplings fall outside the derivative boundary - mere aggregation, plugin architectures, and certain dynamic linking forms retain their proprietary status. Implicitly, GPL infrastructure becomes usable at zero license fee by commercial integrators who comply on the covered portion.",
+    "absent_voices": "Inactive copyright holders of long-contributed code would object to boundary decisions made without them but are dispersed, unreachable, and hold unorganized veto power; individual contributors without litigation budgets have no seat in FAQ drafting or courtroom argument; end users of combined proprietary/GPL products have no vehicle for their preferences about how the combination is treated. All sit in the excluded position: affected, unorganized, outside the interpretive conversation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the boundary criterion vanished overnight, every integration involving GPL code would revert to first-principles legal judgment; risk-averse commercial adopters would substitute permissive or proprietary components, hybrid products would fragment, and the mixed-economy division of labor the boundary enables would dissolve into either blanket avoidance of GPL code or blanket enclosure of derived improvements.",
+    "founding_problem": "Early-1990s free-software advocacy faced a dilemma: a license strict enough to keep all derived works free made GPL code unusable alongside independent proprietary programs and chilled adoption, while a lax license let companies privatize improved code wholesale. Section 2(b), together with the aggregation clarification maintained in the license's FAQ tradition, was built to thread that needle - attaching the sharing obligation to genuine derivations only, so legitimate combination remained possible while privatization of derived improvements stayed blocked.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: court adjudications of GPL-related infringement claims have repeatedly applied general copyright derivative-work criteria to the boundary question; academic copyright scholarship on joint works and derivations supplies the doctrinal foundation this reading invokes; practitioner licensing literature written for commercial clients documents the adoption problem the aggregation and plugin carve-outs resolve. No single attester speaks for the arrangement; the corroboration is the convergence of courts, scholarship, and practitioner records, each outside the license-steward seat."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 1991,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1997,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2003,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1997,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2003,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1997,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2003,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.33,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of the GPL copyleft-scope kernel; the contest among readings is carried in commentary.kernel_context and the omega variables and is not part of this constraint. Under the doctrine-following construal modeled here, GPL Section 2(b)'s sharing obligation attaches only to works that traditional copyright law itself classifies as derivative works. Mere aggregation of separate programs, plugin architectures communicating through documented interfaces, and certain forms of dynamic linking fall outside the obligation; the covered set is whatever copyright doctrine's derivation criteria yield, nothing broader. The arrangement's referent for epsilon is the standing arrangement under contest - Section 2(b) as operated under this construal - assessed by this reading's own lights: the obligation is confined, consented at adoption, priced transparently, and reciprocated within its declared boundary, so extraction is moderate-low and stable. This reading endorses the construal itself as the correct operation of the standing license, so there is no reform alternative whose merits could contaminate the referent. claimed_type (rope) is this reading's structural assessment; the metrics are authored independently as descriptive measurements of actual operation; any divergence the engine computes between claim and computed type is signal, not error to be reconciled.\n\nKEY AGENTS (by structural relationship):\n- fsf_license_steward: agenda-setting steward (organized/identity_locked) - maintains license text, FAQ, and enforcement posture on a generational horizon\n- gpl_enforcement_organizations: ex-post compliance actors (organized/identity_locked) - pursue claims that stall at the boundary cases\n- commercial_software_vendors: principal beneficiaries (powerful/mobile) - embed GPL components behind proprietary layers, disclosing only covered derivatives\n- proprietary_device_driver_vendors: beneficiaries at the contested edge (powerful/mobile) - ship loadable modules treated as separable\n- gpl_project_contributors: supply-side beneficiaries (moderate/constrained) - receive disclosed source of covered derivatives back\n- downstream_enterprise_deployers: beneficiaries of boundary stability (institutional/mobile)\n- dual_license_vendors: boundary arbitrageurs (powerful/arbitrage) - sell the alternative to the obligation\n- inactive_original_copyright_holders: excluded (powerless/trapped) - consent-gating, unorganized, absent\n- ip_litigation_courts: analytical observers (institutional/analytical) - dormant case-by-case adjudicators of the boundary\n- academic_ip_scholars: analytical observers (analytical/analytical) - supply the doctrinal vocabulary both camps cite",
+    "logic_rationale": "Epsilon 0.38: under this construal the sharing obligation reaches only doctrine-true derivatives, a subset of integrations that shrinks as interface-based and dynamically linked patterns proliferate. The obligation is consented (adopters accept Section 2(b) knowingly), priced transparently, and reciprocated (disclosed derivative source returns to the same commons the adopter drew from), so extraction is moderate-low and nearly flat across the interval - the early dip reflects the aggregation FAQ clarification reducing accidental chilling, the late stabilization reflects contested-zone litigation raising scrutiny marginally. Suppression 0.33: the arrangement rests on ordinary copyright enforcement plus episodic litigation rather than exclusionary machinery; alternatives (permissive licenses, LGPL, purchased dual-licensing, in-house substitution) remain fully accessible, so no suppression-of-exits structure operates. Theater 0.28: compliance checking and FAQ adjudication are functionally load-bearing, but a growing minority of enforcement-adjacent activity consists of boundary assertions aimed at couplings this construal places outside the covered set - performative relative to this reading, however sincere their authors. Accessibility collapse 0.30 and resistance 0.50: alternatives do not collapse (the license competes in an open market of licensing terms) and the construal meets sustained interpretive resistance from actors who hold the covered set to be larger - doctrinal contestation and episodic litigation rather than refusal by covered parties, who comply at high rates. All three temporal series run on one shared seven-point grid (1991-2025), every tracked metric authored at every point. The suppression_requirement series traces a single enforcement wave: capacity built through the 2000s around embedded-device violation clusters, peaked circa 2009, then decayed as boundary-targeting suits failed to produce broad-coverage precedent. This is a one-cycle arc driven by external violation clusters and litigation outcomes, not intermittent reinforcement, so a seven-point grid suffices rather than the eight-to-ten-point oscillation battery; base_properties values are authored at the interval's end state, post-decay. Suppression is authored as a raw structural property and is not scaled by power or scope - only extractiveness enters the engine's directionality and scope scaling. Boltzmann coordination_type is information_standard: the constraint's primary service is definitional, a classification protocol telling integrators which combinations oblige sharing; enforcement machinery backs the protocol but is not the service itself, and the low type floor (0.02) poses no benignity pass here since measured extraction sits well above it. Receipt surface: gain_flow is authored 'diffuse' after checking every named seat - the arrangement's receipts (disclosed source of covered derivatives) accrue to the developer commons at large, and no named seat captures them; commercial vendors receive avoided obligation (retention of proprietary layers), which is relief from burden, not receipt of the extracted flow. fixing_cost is authored 'prohibitive': attempts to redefine the determinative boundary have repeatedly proven ecosystem-splitting (license-version fragmentation, relicensing blocked by dispersed copyright holders, boundary litigation without resulting precedent), so imposing any different rule costs more than ending the ambiguity benefits any seat positioned to try. Note for consumers: 'diffuse' plus 'prohibitive' is nominally the piton cell, but the structure refutes a piton - maintenance is active, distributed, and eager across beneficiary seats, theatricality is low, and the cost asymmetry is a transition cost imposed by third-party consent requirements, not administrator inertia. The divergence is left as authored data, not reconciled to the rope claim.",
+    "perspectival_gap": "The seats compute differently. The steward seat (identity_locked, generational) experiences the license as its life's work and evaluates every boundary question against the mission of keeping derived works free; its published guidance and enforcement posture form inside that frame, and exit from the role is implausible because its identity is constituted by the role. The vendor seats (powerful, mobile, biographical) experience the same license text as a set of engineering-relevant parameters with known treatments - aggregate separately, communicate through interfaces, load modules - and manage legal exposure as routine compliance. Contributors (moderate, constrained) experience the boundary as the perimeter of the reciprocity they were promised: protective inside it, and dependent on stewards and courts for anything at its edge. The courts experience dormancy: adjudication arrives case-by-case under general doctrine without a settled precedent, so the same integration can be lawful in one counsel's reading and actionable in another's. Same-power divergence: the steward and a major vendor each hold substantial power in their own currency (normative authority versus deployment gravity) yet experience opposite arrangements because their exit options and time horizons differ - identity_locked/generational versus mobile/biographical - not because nominal power differs. Identity-lock dynamics: the steward's lock is institutional-ideological fusion (organization and mission have merged); if the frame broke - say, a definitive appellate ruling fixing the covered set - the steward's evaluation of every boundary case would snap to the ruling rather than to mission, and the enforcement posture would reorganize around compliance monitoring. The enforcement organizations' lock is similar but thinner, funded as it is by the continued visibility of violations.",
+    "directionality_logic": "Every declared beneficiary derives directionality toward the subsidized end. commercial_software_vendors and proprietary_device_driver_vendors surrender source only on the combinations their counsel classifies as covered - a cost priced at license adoption - and keep everything the construal places outside the covered set; their net position is strongly favorable, which the secondary payer role on commercial_software_vendors records without overturning the beneficiary-side derivation. gpl_project_contributors surrender code voluntarily and receive disclosed derivative source back under the same terms; relative to a no-license counterfactual in which their code could be enclosed wholesale, the arrangement subsidizes them. downstream_enterprise_deployers and dual_license_vendors draw pure coordination value (certifiable compliance; monetizable boundary). No victims are declared, deliberately and defensibly: under this construal's own lights, no party bears a cost it did not consent to, at a posted price, with reciprocation inside the declared boundary. Actors who hold that the covered set should be larger (the steward, the enforcement organizations) are not extracted-from by this construal - their grievance concerns which construal should govern, a cross-reading question routed to the omega variables rather than manufactured into victimhood inside this story. Agenda-setter seats derive near-symmetric stewardship directionality; the analytical seats stand outside the chi arithmetic. The absence of any high-directionality seat is the structural signature the rope claim rests on: extraction exists (covered derivative-makers disclose source) but is consented and reciprocated rather than coerced from a trapped population.",
+    "mandatrophy_analysis": "The rope classification guards against two mislabels. Read naively as 'a license that restricts,' the arrangement invites a pure-extraction scoring; the snare reading fails structurally because it cannot name victims coerced past real exits - exits are genuine (permissive substitutes, purchased exemptions, clean-room reimplementation), the burden is consented and posted, and receipts flow back to the paying side's commons. Read cynically as 'a fading formality,' the arrangement invites a degraded-inertia scoring; that fails too because theater is low, maintenance is active and distributed, and the founding problem is live - every new coupling technology reopens the boundary question, so the mandate has not outlived its function and no mandatrophy_resolved flag is set. The scaffold reading also fails honestly: the boundary rule is steady-state infrastructure rather than transitional support and carries no sunset clause. The R5 genealogy interview corroborates liveness from outside the benefiting parties (courts, scholarship, practitioner records), so the mismatch consumer finds founding_problem_status=live paired with disappearance_verdict=world_rearranges - aligned, no zombie flag. The analysis chiefly protects the opposite confusion here: preventing genuine coordination (the boundary convention that makes mixed development legible to thousands of daily decisions) from being mislabeled as extraction because the surrounding license is restrictive in character.",
+    "kernel_context": "This file instantiates the narrow_scope_reading of the gpl_copyleft_scope kernel: the fixed GPL Section 2(b) text, whose copyleft reach is contested. Sibling readings: strong_copyleft_reading (the covered set extends to all coupled works, including dynamic linking) and enforcement_vacuum_reading (absent definitive precedent, realized scope is set by whichever interpretive community holds enforcement capacity in a given context). The disagreement is located in the determinative rule for the covered set: doctrine-following derivation criteria (this reading) versus technical-coupling criteria (strong) versus enforcement-capacity-dependent realization (vacuum). This file generates only the narrow reading as a clean, epsilon-invariant constraint; the sibling structural deltas are carried in the omega variables."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Which construal of GPL Section 2(b)'s covered set is authoritative: doctrine-following derivation criteria (this reading), technical-coupling criteria reaching all linked works (strong sibling), or enforcement-capacity-dependent realization (vacuum sibling)?",
+      "resolution_mechanism": "A definitive appellate ruling on whether dynamic linking produces a derivative work, or a successor license version that states the covered set explicitly.",
+      "impact": "If the strong sibling's rule prevails, this story's beneficiaries lose their retention rights, epsilon rises substantially, and the computed profile shifts toward tangled_rope or snare; if the vacuum sibling's account prevails, realized scope becomes context-dependent and this story's clean epsilon holds only in doctrine-respecting jurisdictions.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Kernel-level contest over the determinative boundary rule; this file authors only the narrow reading."
+    },
+    {
+      "id": "dynamic_linking_derivative_status",
+      "question": "Does dynamic linking produce a derivative work under applicable copyright doctrine, and if so, which linking forms (address-space integration, symbol interdependence, header exposure) tip the balance?",
+      "resolution_mechanism": "Appellate precedent or systematic analysis of Copyright Office registration practice applied to linking cases.",
+      "impact": "Resolves the widest epsilon band inside this reading: if common linking forms count as derivations, the covered set expands and effective extraction on vendors rises sharply; if none do, the covered set contracts further and the rope profile strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The empirical core of the boundary question: linking versus derivation."
+    },
+    {
+      "id": "contributor_expectation_shortfall",
+      "question": "Did contributors who understood the sharing obligation to extend beyond doctrine-true derivations suffer uncompensated losses when the narrower construal became operative in practice?",
+      "resolution_mechanism": "Contributor surveys on boundary understanding at contribution time, plus relicensing-project records quantifying how often consent-gathering failed because scope expectations differed.",
+      "impact": "If the shortfall is substantial and uncompensated, a victim class exists that this story's structural declarations omit, shifting the computed profile toward tangled_rope and revising the directionality map.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cross-reading delta routed here per Rule 1: expectation losses attributable to reading selection rather than to this reading's operation."
+    },
+    {
+      "id": "enforcement_capacity_dependence",
+      "question": "Does realized scope vary systematically with which interpretive community holds enforcement capacity in a given ecosystem (steward-aligned projects versus industry-dominated foundations)?",
+      "resolution_mechanism": "Comparative audit of compliance outcomes across ecosystems matched for integration pattern but differing in enforcement posture.",
+      "impact": "High variance means this story's epsilon describes doctrine-respecting contexts specifically and the vacuum sibling's account governs elsewhere; low variance confirms a single operable boundary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Vacuum-sibling delta: whether the boundary's realized strength is context-dependent."
+    },
+    {
+      "id": "novel_coupling_forms_coherence",
+      "question": "Do network-delivered services, container image distribution, and machine-learning ingestion of GPL corpora fit the binary derivation/aggregation taxonomy at all?",
+      "resolution_mechanism": "Doctrinal analysis of the new integration forms against derivation criteria, plus observed licensing responses (network-copyleft adoption, source-available pivots) in affected projects.",
+      "impact": "If the new forms sit outside the taxonomy, effective freedom exceeds what this reading models and the boundary's grip erodes silently; if they map onto it, the construal extends without revision.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the reading's taxonomy remains coherent for post-binary coupling technologies."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_copyleft_scope__strong_copyleft_reading",
+      "gpl_copyleft_scope__enforcement_vacuum_reading",
+      "copyright_derivative_work_definition"
+    ],
+    "dual_formulation_note": "'GPL copyleft scope' decomposes into three structurally distinct constraints per the epsilon-invariance principle: this narrow reading (covered set equals doctrine-true derivatives; epsilon moderate-low), the strong reading (covered set extends to all coupled works; epsilon substantially higher; separate file), and the enforcement-vacuum reading (realized scope equals enforcement-capacity-dependent; epsilon context-dependent; separate file). The colloquial label conflated them; each file carries its own beneficiaries, metrics, and classification, and the family is linked through affects_constraints. Edges: this reading cites traditional copyright doctrine as its determinative authority (upstream edge to copyright_derivative_work_definition, the settled legal category with high empirical confidence); its persistence uncontradicted is the very condition the enforcement-vacuum reading describes (downstream edge); and its survival against broad-coverage litigation shapes the strong reading's operating environment without resolving it. Upstream-downstream structure follows the family pattern: the settled doctrine claim feeds this reading's rule, which in turn structures both siblings' environments."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "traditional_copyright_derivation_doctrine",
+    "drift_state": {
+      "moment": "contemporary_linking_litigation_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "strong_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "enforcement_vacuum_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "covered_set_follows_traditional_copyright_derivatives",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "non_derivative_integration_carries_no_sharing_obligation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

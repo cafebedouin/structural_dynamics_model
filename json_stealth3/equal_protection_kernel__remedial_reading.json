@@ -1,0 +1,357 @@
+{
+  "header": {
+    "constraint_id": "equal_protection_kernel__remedial_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "cf3830ff-cc5d-462f-8ae2-595fef79abf4"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.5,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Equal Protection Clause — Remedial/Diversity Reading (Race-Conscious Action Permitted When Narrowly Tailored)",
+    "topic_domain": "constitutional law/education policy/civil rights",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "underrepresented_minority_applicants",
+      "historically_excluded_communities"
+    ],
+    "victims": [
+      "rejected_race_blind_admissible_applicants"
+    ],
+    "vindicated_propositions": [
+      "strict_scrutiny_narrow_tailoring_doctrine",
+      "compelling_interest_documentation_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 1978,
+    "end": 2023
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1978,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1989,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1996,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2003,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1978,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1989,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1996,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2003,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1978,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1989,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1996,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2003,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.65,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "equal_protection_kernel_reading_position",
+      "question": "This constraint is one reading (remedial_reading) of the equal_protection_kernel — what changes structurally if a sibling reading governs instead, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Doctrinal resolution of the trigger-condition dispute: the readings disagree on the clause's trigger — classification per se (colorblind_reading), subordination-direction (antisubordination_reading), or adequacy of narrow tailoring to a documented compelling interest (this reading). Adoption of colorblind_reading removes the beneficiary set entirely and renders the arrangement itself impermissible; adoption of antisubordination_reading widens permitted action beyond narrow tailoring and shrinks the victim set to hierarchy-entrenching uses.",
+      "impact": "Under colorblind_reading this constraint's epsilon redistributes toward zero-for-this-arrangement (the practice becomes unconstitutional per se) and rejected applicants cease to be victims of this constraint specifically; under antisubordination_reading the documentation obligation loosens and the coordination function broadens from repair-channel to hierarchy-dismantling license.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame position: this story is the remedial reading of a three-reading kernel; sibling readings are separate constraints, not measurement parameters of this one."
+    },
+    {
+      "id": "remedial_evidentiary_threshold",
+      "question": "Can present-day institutions satisfy the documented-historical-exclusion predicate with contemporary evidence of representational gaps, or does the predicate require tracing current disadvantage to specific documented discriminatory acts?",
+      "resolution_mechanism": "Admissions litigation and civil-rights enforcement findings testing whether current gaps are causally traceable to documented exclusion versus generalized societal discrimination that the doctrine has long held insufficient.",
+      "impact": "If the threshold tightens to specific causal tracing, the beneficiary set contracts sharply and the constraint's coordination function collapses toward documentation theater; if generalized evidence suffices, the constraint operates as authored.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the remedial predicate remains satisfiable under tightening evidentiary standards."
+    },
+    {
+      "id": "durational_limit_never_fires",
+      "question": "Narrow tailoring conventionally demands durational limitation (the Powell/Grutter quarter-century expectation) — does the constraint carry an operative sunset, and what happens when the expected endpoint passes without formal lapse?",
+      "resolution_mechanism": "Track whether any jurisdiction terminates race-conscious programs upon declaring remediation complete, versus persisting by inertia and routine renewal after the expected window closes.",
+      "impact": "If the durational expectation never fires, the arrangement drifts from transitional repair toward permanent preference maintenance — the mandate-outlived-function pathway that degrades coordination into inertia.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Unfired implicit sunset: the gap between the reading's built-in transitory expectation and its actual open-ended operation."
+    },
+    {
+      "id": "plus_factor_magnitude_opacity",
+      "question": "How large is the actual race effect at the admission margin relative to the 'one plus factor among many' scale the reading's rhetoric assumes?",
+      "resolution_mechanism": "Institutional data disclosed in litigation (internal odds-ratio and counterfactual analyses) and natural experiments from race-blind transitions in ban jurisdictions.",
+      "impact": "Large measured margin effects raise effective extraction on rejected applicants above the authored value and push the arrangement toward the pure-extraction boundary; small effects support the narrow-tailoring defense and the authored value stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude-versus-rhetoric gap in the plus-factor operation, the key input to accurate epsilon."
+    },
+    {
+      "id": "dual_rationale_separability",
+      "question": "The reading licenses action for BOTH documented remediation AND compelling diversity — are these one interest or two, and which sustains the arrangement if the other fails?",
+      "resolution_mechanism": "Observe program behavior when one rationale weakens: if programs persist on diversity alone after remediation evidence erodes (or on remediation alone after diversity skepticism spreads), the rationales are separable supports.",
+      "impact": "If separable, the coordination function can migrate from repair to preference maintenance without textual change — extraction continues under a swapped justification; if fused, failure of either rationale collapses the whole permission structure.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the twin compelling interests are structurally independent load-bearing walls or one wall with two doors."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the remedial reading of the equal protection clause, race-conscious state action is constitutionally permissible when narrowly tailored to a compelling interest — remediation of documented historical exclusion or the educational benefits of diversity. Instantiated in selective higher education, the arrangement lets universities weigh race as one plus factor in individualized holistic review, conditioned on documentation of the compelling interest and subject to strict scrutiny. The epsilon referent is the standing arrangement under contest — race-conscious admissions as this reading licenses it — assessed by the reading's own lights; the reading's endorsed ideal (perfectly tailored, self-terminating remediation) is not the referent. Claim and metrics are authored independently: the constraint is CLAIMED as tangled_rope because it pairs a genuine coordination function (a disciplined channel for repairing documented exclusion) with asymmetric extraction (marginal admission probability moved from race-blind-admissible rejected applicants to beneficiaries) held in place by active judicial enforcement. Family membership: this is one of three readings of the equal_protection_kernel; the siblings are separate stories with their own epsilon values, beneficiary sets, and types, linked via network.affects_constraints.",
+    "key_agents": [
+      "selective_universities: agenda-setting administrator (institutional/identity_locked) — runs race-conscious holistic review, documents the compelling interest, bears litigation and compliance costs",
+      "federal_courts: enforcement authority (institutional/analytical) — polices narrow tailoring; its stepwise hardening drove the enforcement ratchet across the interval",
+      "underrepresented_minority_applicants: primary beneficiary (moderate/constrained) — receives marginal admission consideration",
+      "historically_excluded_communities: grounding beneficiary (organized/generational) — supplies the documented-exclusion record the remedial predicate draws on",
+      "rejected_race_blind_admissible_applicants: primary target (moderate/constrained) — bears the margin loss a race-blind process would not have produced",
+      "general_student_body: diffuse beneficiary (moderate/constrained) — receives the claimed diversity benefits",
+      "civil_rights_advocacy_organizations: organizational beneficiary (organized/mobile) — defends the arrangement and draws standing and mission from its legal contests",
+      "colorblind_principle_advocates: excluded voice (organized/mobile) — holds the categorical objection this reading's frame defines out rather than answers"
+    ],
+    "logic_rationale": "Extraction is authored at 0.58: the arrangement moves real admission probability at the margin from race-blind-admissible rejected applicants to beneficiaries, and litigation-disclosed institutional data indicate the margin effects were material, but the reading's own design disciplines the transfer — individualized review, no quotas, durational expectations — so extraction is bounded rather than open-ended. Suppression is authored at 0.65 as a raw structural property, unscaled by power or scope: holding the arrangement in place required escalating legal machinery, and subjects' alternatives were partial (race-blind regimes operated lawfully throughout; applicants could apply elsewhere, but no alternative restored a denied seat). Theater is 0.50 at interval end: individualized review was real, but a growing share of activity was litigation-proofing — mission statements, committee reports, and post-hoc rationalizations assembled to survive strict scrutiny rather than to operate the program. Accessibility collapse is low (0.35) because alternatives never collapsed: race-blind admissions remained lawful and widespread, and several large states ran ban regimes concurrently. Resistance is high (0.80): ballot initiatives, state bans, and three generations of litigation made this one of the most actively contested arrangements in the domain. The measurement series share one grid (1978, 1989, 1996, 2003, 2014, 2023); all three tracked metrics rise monotonically — extraction accumulates as programs mature, theater grows as legal risk grows, and the suppression_requirement series traces the enforcement ratchet from Bakke-era deference through Croson-era hardening to the withdrawal of deference in 2023. The shape is a stepwise ratchet, not a cycle: each doctrinal episode permanently raised the enforcement intensity required to hold the arrangement, with no relaxation phase.",
+    "perspectival_gap": "The seats compute differently from the same structure. From the rejected-applicant seat the arrangement is enforced extraction: a specific, personal loss produced by rules the applicant never agreed to and cannot exit. From the beneficiary seat the same rules are access: the difference between an offer and a denial. From the university seat the arrangement is governance: an authority it exercises, documents, and defends, whose costs (litigation, compliance, reputational whiplash) it pays while its identity is fused with the mission the authority serves. From the bench the arrangement is doctrine to be administered — near-symmetric and analytical. The engine computes these divergent per-seat classifications from the structural data; the divergence between the payer seat and the agenda-setter seats is the measurement this story exists to take.",
+    "directionality_logic": "Beneficiary declarations (underrepresented_minority_applicants, historically_excluded_communities, plus the diffuse student-body and advocacy-organization beneficiaries) place those seats near the beneficiary end: the arrangement subsidizes them, and their exit options do not convert them into net payers. The victim declaration (rejected_race_blind_admissible_applicants) places that seat near the target end: concentrated, personal, non-restorable loss with constrained exit. Selective_universities sit mid-range and mixed — they exercise the authority and advance their mission through it (pull toward the beneficiary end) while paying litigation and compliance costs under identity-locked exit (pull toward the target end); the secondary payer role encodes this so the derivation does not flatten them into pure administrators. Federal_courts derive near-symmetric: they set and enforce the terms without collecting from the operation. No directionality_overrides were needed: the beneficiary/victim declarations plus exit options produce the correct relationships, and the universities' mixed position is carried structurally by the secondary role and identity-locked exit rather than by an override.",
+    "mandatrophy_analysis": "The founding problem — documented historical exclusion from selective higher education — is corroborated as historical fact from outside the benefiting parties, but its present-day status is contested: the opposing litigation record concedes the history while disputing whether current gaps remain traceable to remediable exclusion. The reading carries an implicit durational expectation (narrow tailoring conventionally demands time limits; the quarter-century horizon articulated at the doctrine's high-water mark) that was never codified — an unfired sunset. That is the mandatrophy hazard: if remediation is judged complete, or the evidentiary predicate fails, while the permission persists by inertia and routine documentation, the arrangement degrades toward an inertial shell — administered by universities who could change it, borne diffusely by rejected applicants, and deliberately maintained by no one. Classifying this as tangled_rope rather than pure extraction preserves the distinction the corpus needs: the coordination function (a disciplined repair channel plus the diversity-integration rationale) is genuine under this reading's own lights, and the margin transfer rides on it rather than constituting its cover. mandatrophy_resolved is deliberately not declared: the mandate's death is contested, not settled, and the dual_rationale_separability omega tracks the specific pathway by which the mandate could die while the arrangement lives.",
+    "kernel_context": "This story instantiates the remedial_reading of the equal_protection_kernel: the Fourteenth Amendment's equal protection clause read as licensing race-conscious state action when narrowly tailored to remedy documented historical exclusion or serve a compelling diversity interest. Sibling readings — equal_protection_kernel__colorblind_reading (categorical prohibition of state racial classifications) and equal_protection_kernel__antisubordination_reading (permission keyed to dismantling rather than entrenching hierarchy) — are separate constraints, linked through network.affects_constraints. This file authors only the remedial reading with a single stable epsilon; the contest among readings is recorded in the omega variables, not averaged into the metrics."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "equal_protection_kernel__colorblind_reading",
+      "equal_protection_kernel__antisubordination_reading"
+    ],
+    "dual_formulation_note": "One fixed text (the Fourteenth Amendment's equal protection clause) decomposes into three structurally distinct constraints. The readings differ on the clause's trigger: classification per se (colorblind_reading), subordination-direction (antisubordination_reading), or inadequately-tailored action (remedial_reading, this file). Because the trigger differs, each reading yields a different beneficiary set, victim set, and epsilon over the same institutional surface: colorblind_reading empties the beneficiary set and renders the arrangement itself impermissible; antisubordination_reading widens permitted action and narrows the victim set to hierarchy-entrenching uses; this reading yields the plus-factor arrangement with rejected race-blind-admissible applicants as victims. Lineage: the antisubordination tradition supplied this reading's historical warrant, while colorblind_reading exerts continuous repudiation pressure on it. All three files cross-link via network.affects_constraints."
+  },
+  "stakeholders": [
+    {
+      "name": "selective_universities",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Administer holistic admissions at selective institutions and, under this reading, may weigh race as one plus factor among many. Keeping that authority requires documenting a compelling interest — remediation of documented exclusion or the educational benefits of diversity — and showing the program is narrowly tailored: individualized review, no quotas, durational limits. They carry the compliance burden: mission statements, committee records, litigation defense. Leaving voluntarily would mean abandoning a diversity commitment fused with institutional identity and mission, which they treated for decades as costlier than defending the program through successive lawsuits."
+    },
+    {
+      "name": "federal_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate whether each program survives strict scrutiny. Across the interval they moved from deference to demanding review, requiring ever more rigorous documentation and ultimately withdrawing the deference that had sustained race-conscious admissions. They neither collect nor pay under the arrangement; they set and revise the terms under which every other seat operates."
+    },
+    {
+      "name": "underrepresented_minority_applicants",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Apply to selective institutions and receive additional consideration in holistic review; at the margin this converts into admission offers a race-blind process would not have extended. Their access depends on universities maintaining the program and on courts sustaining its legality. Applying elsewhere or reapplying is possible but does not reach the specific institutions where the consideration operates."
+    },
+    {
+      "name": "historically_excluded_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The groups whose documented exclusion — segregation statutes, discriminatory admissions, exclusionary practices — supplies the remedial predicate. Members and descendants gain representation at selective institutions when the program operates, and community organizations, churches, and civic groups compile the historical record and discrimination findings that the documentation requirement draws on."
+    },
+    {
+      "name": "rejected_race_blind_admissible_applicants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Applicants who would have received an offer under a race-blind process but are denied at the margin where race-conscious consideration tips the decision. They lose a specific seat at a specific institution and are evaluated partly by race. Recourse is limited: reapplication, other institutions, or litigation; no available choice restores a denied admission."
+    },
+    {
+      "name": "general_student_body",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enrolled students who receive the claimed educational benefits of diverse classrooms — the diversity half of the compelling-interest rationale. They pay no distinct burden beyond tuition already owed, and their benefit is diffuse and difficult to verify individually."
+    },
+    {
+      "name": "civil_rights_advocacy_organizations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Organizations whose constituencies and missions are advanced by the arrangement's continued operation. They defend the program in litigation, mobilize support, and draw standing, funding, and relevance from the legal contests the arrangement generates. They can redirect effort to other campaigns if the arrangement ends."
+    },
+    {
+      "name": "colorblind_principle_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocates, litigants, and legislators who hold that the state may not use racial classifications for any purpose. Within this reading's frame their position functions as a definitional exclusion rather than a competing answer — the frame presumes narrowly tailored use can be legitimate. They operate through ballot initiatives, state legislation, and lawsuits aimed at ending the arrangement altogether."
+    }
+  ],
+  "gain_flow": "underrepresented_minority_applicants",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a disciplined channel through which state actors and universities may address documented historical exclusion: individualized, holistic evaluation in which race may count as one factor among many, bounded by strict scrutiny's requirements — documented compelling interest, no quotas, durational expectation — so that repair proceeds without categorical preferences or quota regression.",
+    "transfer_function": "Moves marginal admission probability at selective institutions from applicants who would have been admitted under a race-blind process to applicants from historically excluded groups, and moves documentation and litigation-risk burdens onto the universities administering the process.",
+    "absent_voices": "Colorblind-principle advocates hold that any state racial classification is constitutionally illegitimate regardless of purpose; within this reading's frame their objection is defined out by construction rather than answered on its merits. Rejected applicants similarly enter the frame mainly as litigation plaintiffs rather than as seated parties with standing interests of their own.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the permission vanished overnight, selective-university admissions processes, campus composition, K-12 pipeline and outreach programs, and the litigation agenda surrounding race and education would all reorganize — as they demonstrably began doing after 2023 when the permission was withdrawn.",
+    "founding_problem": "Documented historical exclusion — de jure segregation and discriminatory admissions — left historically excluded racial groups severely underrepresented at selective institutions; the reading was built to let state actors remedy that exclusion without violating the equal protection guarantee.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: federal desegregation litigation and consent decrees documenting state-imposed exclusion, civil-rights enforcement findings, and historical scholarship on de jure and de facto exclusion. Notably, the opposing litigation record itself concedes the history of discrimination while disputing whether present-day gaps remain traceable to it — no party disputes that the exclusion occurred; the dispute is whether the remedial predicate remains satisfied now."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "equal_protection_as_remedial_authorization",
+    "drift_state": {
+      "moment": "contemporary_post_sffa",
+      "direction": "repudiation_pressure",
+      "magnitude": "severe",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "colorblind_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "antisubordination_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "narrow_tailoring_legitimates_race_conscious_remedy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "compelling_interest_requires_documented_predicate",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

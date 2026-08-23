@@ -1,0 +1,396 @@
+{
+  "header": {
+    "constraint_id": "substance_control_kernel__harm_reduction_reading",
+    "version": "1.0",
+    "generated_date": "2026-07-02",
+    "status": "ACTIVE",
+    "story_uid": "80cb27bb-455e-49d7-9833-df4c9d55c6d1"
+  },
+  "base_properties": {
+    "extractiveness": 0.47,
+    "suppression": 0.41,
+    "theater_ratio": 0.31,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Harm-Reduction Governance Regime: Substance Use as Managed Health Condition",
+    "topic_domain": "public health policy / criminal justice / political economy",
+    "requires_active_enforcement": true,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.52,
+    "beneficiaries": [
+      "people_who_use_drugs",
+      "addiction_treatment_service_providers",
+      "public_health_authorities"
+    ],
+    "victims": [
+      "people_who_use_drugs",
+      "illicit_supply_chain_workers",
+      "host_neighborhood_residents"
+    ],
+    "vindicated_propositions": [
+      "decoupling_care_from_abstinence_reduces_mortality"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "people_who_use_drugs",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Use opioids, stimulants, and other controlled substances. Under this regime they can carry naloxone, exchange syringes, consume under supervision, and obtain medication-assisted treatment without committing to abstinence. The same regime can summon them before health commissions, refer them to compulsory treatment on refusal, enroll them in drug-court supervision where liberty is conditioned on compliance and urine screening, and register them in case-management databases. Leaving the regime's reach generally means leaving the jurisdiction or ending use, which dependency makes rare; moving between cities resets access but not status."
+    },
+    {
+      "name": "addiction_treatment_service_providers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Operate clinics, supervised consumption sites, outreach teams, and medication programs funded by public contracts that scale with the regime's continuation. Staff, facilities, and missions are built around service delivery to people who use drugs; winding the regime down would strand capital, careers, and client relationships. Organizational identity has fused with the served population."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design clinical guidelines, license and inspect supervised sites, distribute naloxone stockpiles, and publish surveillance data. They set the operational agenda for the whole arrangement, and their budgets and jurisdictional remit expand with it. Civil-service mandates and political oversight bound how far they can move ahead of statute, and they cannot simply abandon the portfolio."
+    },
+    {
+      "name": "illicit_supply_chain_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Grow, transport, cut, and retail prohibited substances, and are frequently people who use themselves. Personal use is removed from the criminal docket under this regime, but everything upstream remains a criminal matter, so enforcement effort concentrates on them. A record forecloses licensed work and housing, the income is survival-level, and exiting the trade usually means destitution."
+    },
+    {
+      "name": "law_enforcement_agencies",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lose arrest volumes, pretext-stop authority, and a traditional measure of institutional success as personal use leaves the criminal docket. They retain and refocus the supply file, asset forfeiture, and newly funded duties such as naloxone carriage and site liaison. Rank-and-file culture experiences the shift as a demotion of mandate even as parts of the budget redirect toward them."
+    },
+    {
+      "name": "host_neighborhood_residents",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Live and run businesses around supervised consumption sites and open drug scenes. They absorb discarded equipment, loitering, and visible disorder while the mortality and transmission benefits are counted city-wide. Neighborhood associations petition councils, contest siting decisions, and can force facility relocation; moving away themselves is possible but costly."
+    },
+    {
+      "name": "rural_substance_users",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Use substances far from the urban centers where services concentrate. Supervised sites, syringe programs, and prescribers are thin or absent in their counties, so the arrangement's protections largely bypass them even as its referral mechanisms and data systems still reach them. No one represents them at the tables where service maps are drawn."
+    },
+    {
+      "name": "general_taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Finance the service network through appropriations and insurance levies. They see line items but little outcome detail, and they cannot opt out of funding. Whether the spend reads as bargain or burden depends on which mortality and cost-offset figures one credits."
+    },
+    {
+      "name": "academic_harm_reduction_evaluators",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Run cohort studies and site evaluations, publish mortality and transmission findings, and advise ministries. Their evidence base anchors the regime's public justification, and their careers and research funding ride partly on continued evaluation demand — a fact that cuts both ways for their independence."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Manages the collective-health problem posed by widespread substance use: centralized naloxone distribution, supervised consumption, sterile equipment provision, and medication-assisted treatment reduce overdose mortality and blood-borne disease transmission at scales individual users, families, and scattered clinics cannot achieve alone.",
+    "transfer_function": "Moves tax revenue and grant funds into a network of treatment and harm-reduction service organizations; moves users' compliance (attendance, disclosure, biological monitoring) to state agencies and contracted providers; retains criminal sanction applied to supply-chain participants; redirects some police capacity from use-side arrest to emergency response and interdiction.",
+    "absent_voices": "Rural users outside service catchments; people serving sentences under the retained supply-side penalties; users who reject the client/patient frame and want autonomy rather than enrollment; unlicensed suppliers who would compete with the sanctioned channel. All would object if seated; none currently is.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would collapse naloxone distribution, supervised consumption, and medication-assisted treatment; overdose deaths and HIV/HCV incidence would climb within months as users returned to unmanaged street supply; the funded service sector would unwind; police would re-absorb use-side enforcement; neighborhoods hosting former sites would see rapid visible change. Arrangements across health systems, criminal dockets, and municipal budgets depend on the regime's continuance.",
+    "founding_problem": "Injection-driven HIV and hepatitis C epidemics, and later mass opioid overdose mortality, were spreading because criminalization drove users away from health contact: people avoided syringe services, hid use, and died without witnesses. The arrangement was built to sever health outcomes from use-status — to treat the body whatever the legal theory of the behavior.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "National coroner and medical-examiner mortality series and WHO/UNAIDS surveillance independently attest that the founding problems — overdose deaths and injection-driven blood-borne transmission — remain live. One caveat stated plainly: much corroborating epidemiology is produced by researchers whose funding streams connect to implementing agencies, so corroboration is strong but not wholly outside the beneficiary orbit."
+  },
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.41,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the substance-control kernel: the harm-reduction reading, in which substance use is governed as a health condition and pragmatic intervention is justified independently of whether use ceases. Under this reading users exit the criminal victim set for personal use but enter a paternalistic health-management relation (summons, referral, compulsory treatment on refusal, drug-court conditions); enforcement recedes on the use side while the supply chain remains fully criminalized; overdose mortality and disease transmission become the primary observables; and the state shifts toward service-provider. The ε referent is this standing harm-reduction arrangement itself, assessed by the reading's own lights — NOT the prohibition arrangement it replaced and NOT the legalized market some of its proponents anticipate; those are separate stories with separate victim sets and separate ε. The claim/metric split is deliberate: the reading is CLAIMED here as tangled_rope (genuine epidemic-coordination function entangled with asymmetric extraction through the same structure), while the metrics are authored descriptively of the regime's actual operation.\n\nKEY AGENTS (by structural relationship):\n- people_who_use_drugs: Dual-positioned principal ([moderate]/[constrained]) — collects services and decriminalized status, bears paternalistic supervision\n- illicit_supply_chain_workers: Concentrated enforcement target ([powerless]/[trapped]) — the retained criminal victim set\n- public_health_authorities: Agenda-setter and institutional beneficiary ([institutional]/[constrained]) — administers and grows with the regime\n- addiction_treatment_service_providers: Institutional beneficiary ([institutional]/[identity_locked]) — budget scales with regime continuance\n- law_enforcement_agencies: Dual-positioned institutional actor ([institutional]/[constrained]) — loses use-side mandate, retains supply file\n- host_neighborhood_residents: Localized payer ([organized]/[constrained]) — concentrated site costs, diffuse benefits elsewhere\n- rural_substance_users: Excluded voice ([powerless]/[trapped]) — reached by data systems, unreached by services\n- general_taxpayers: Diffuse payer ([moderate]/[constrained])\n- academic_harm_reduction_evaluators: Analytical observer ([analytical]/[analytical])",
+    "key_agents": [
+      "people_who_use_drugs: dual-positioned principal — services received, paternalistic supervision borne",
+      "illicit_supply_chain_workers: concentrated enforcement target under retained supply criminalization",
+      "public_health_authorities: agenda-setter administering guidelines, licensing, and surveillance",
+      "addiction_treatment_service_providers: contract-funded sector whose budget scales with the regime",
+      "law_enforcement_agencies: lose use-side volumes, retain supply interdiction and forfeiture",
+      "host_neighborhood_residents: bear concentrated site-adjacent costs",
+      "rural_substance_users: excluded from service geography and planning tables",
+      "general_taxpayers: diffuse financiers of the apparatus",
+      "academic_harm_reduction_evaluators: analytical observers anchoring the evidence base"
+    ],
+    "logic_rationale": "Extraction is authored moderate (0.47) and plateauing: the regime's early decades shed the heavy criminal extraction of prohibition-era use enforcement, but the residual structure — compulsory-treatment pathways, drug-court conditionality, supply-side felony exposure, and a service apparatus financed by continued caseloads — hardened rather than dissolved after roughly year 24. Suppression (0.41) is a raw structural property, unscaled by power or scope: it reflects active machinery that still exists (commission summons, court conditionality, supply policing, prosecution of unlicensed provision), not merely attitudinal stigma. Theater ratio (0.31) is rising from a low base: process metrics — kits distributed, encounters logged, screenings completed — increasingly stand in for the outcome metrics (mortality, incidence) the regime exists to move, a textbook Goodhart drift as funding follows countable activity. Accessibility collapse is low (0.35): both sibling arrangements remain live political alternatives and neither the legal-market option nor the punitive option is foreclosed by the regime's existence. Resistance is moderate (0.52): sustained opposition from abstinence-oriented advocates, site-siting opponents, and law-and-order constituencies, counterweighted by broad expert consensus. The temporal series run on ONE shared grid (t=0,6,12,18,24,30,36, spanning approximately 1989–2025) with all three metrics authored at every point, so no scalar substitution injects end-state values into earlier periods. Claim and metrics are authored independently; the engine computes per-seat classifications from the structural data.",
+    "perspectival_gap": "The seats diverge sharply and the engine should compute it. From the provider and authority seats the arrangement is coordination they built, staff, and believe in — near-pure rope. From the supply-chain worker's seat it is indistinguishable from the prohibition it replaced: the same police, the same courts, the same cells, now concentrated exclusively on people like them — effectively snare-grade. From the user's seat it is genuinely mixed: naloxone and methadone arrive alongside summonses and urine screens, placing them between beneficiary and target rather than at either pole. Host-neighborhood residents experience a locally concentrated cost with geographically diffuse compensation, which no aggregate metric averages away. Identity-lock operates differently across seats: provider organizations have fused organizational identity with the served population (winding down reads as betrayal, not downsizing), and users risk internalizing the client role such that exit feels like self-abandonment — the second mechanism is flagged as an omega because it is internalized rather than structural. Inter-institutionally, police and health authorities occupy the same nominal power level yet pull in opposite directions on every expansion decision, differentiated entirely by constraint-specific factors: forfeiture flows and arrest-volume metrics versus mortality dashboards and licensure authority.",
+    "directionality_logic": "The beneficiary/victim declarations drive the derivation. people_who_use_drugs appears in BOTH arrays deliberately: services subsidize them while compulsory-referral and court-conditionality extract from them, and their constrained exit (dependency bars relocation or cessation for most) keeps them from arbitraging the mix — the derived d should land near symmetric, not at either pole. addiction_treatment_service_providers and public_health_authorities sit at the beneficiary end: budgets and remit scale with the regime. illicit_supply_chain_workers sit at the full-target end: powerless, trapped, and the sole remaining criminal victim class, they absorb the enforcement intensity the use-side decriminalization released. host_neighborhood_residents carry a real but localized cost position. law_enforcement_agencies are the deliberate complication: nominally they lost (use-side mandate) and gained (supply file, naloxone-response funding, forfeiture) simultaneously, which is why they carry paired roles — the derivation from the arrays alone would flatten this, and the commentary flags the flattening rather than papering over it with overrides. Taxpayers sit mildly on the cost side with no exit. The evaluator seat is analytical throughout.",
+    "mandatrophy_analysis": "The founding problem — injection-driven epidemics and mass overdose mortality — is verifiably LIVE (coroner series, WHO surveillance), so this is not a mandatrophy case today and no mandatrophy_resolved declaration is made. The risk runs the other direction: the measurements show theater_ratio climbing monotonically while extractiveness plateaus, the signature of a coordination function gradually acquiring a self-perpetuating service apparatus around it. If epidemic mortality fell decisively while funding followed caseload rather than need, the regime would drift toward maintaining the managed condition rather than reducing harm — the mismatch consumer watching founding_problem_status x disappearance_verdict would catch the flip when 'live' stops being corroborated from outside the beneficiary set. Classifying this as tangled_rope rather than snare preserves the analytic separation the corpus needs: the epidemic-coordination function is real and measurable, and calling the whole structure pure extraction would erase the mortality reductions that are its strongest defense; calling it pure coordination would erase the supply-chain prisoner, the compelled patient, and the budget-cycle incentive that all ride the same structure.",
+    "kernel_context": "Kernel: substance_control_kernel — how a polity governs psychoactive substance use. This file instantiates the harm_reduction_reading: use is a health condition; intervention is pragmatic and justified independently of cessation. Sibling readings are other constraints, not parts of this one: the prohibition_reading (use as moral transgression warranting state punishment) authors a sharply higher ε over its own arrangement with users inside the criminal victim set; the legalization_reading (use as individual liberty with state limited to third-party harm prevention and externality pricing) authors a lower ε with the paternalistic layer dropped out. The structural disagreement is located in the victim set and in the observables: who counts as harmed (the user's own body? third parties? the social order?) and what counts as success (cessation? mortality? autonomy?). Per the epsilon-invariance rule this contest is decomposed into three files linked through network edges; nothing about the sibling readings is averaged into this one."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "prohibition_reading",
+      "legalization_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'substance control'. The label conflates three structurally distinct claims with different ε, different victim sets, and different observables: prohibition_reading (punishment regime; users in the criminal victim set; order as observable), this file — harm_reduction_reading (service-provider regime; users dual-positioned; mortality/transmission as observables), and legalization_reading (externality-priced liberty; users as autonomous consumers; third-party harm as observable). Family linkage runs prohibition_reading -> harm_reduction_reading -> legalization_reading historically: the prohibition arrangement is what harm reduction was built inside and against, and harm reduction's institutionalized health-framing and service infrastructure now reshape the environment in which legalization arguments operate. Each file links the others through network.affects_constraints; no file hedges ε across readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "legalization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "intervention_legitimate_without_abstinence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "care_not_sanction_for_personal_use",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "evidence_led_health_stewardship",
+    "drift_state": {
+      "moment": "contemporary_fentanyl_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "addiction_treatment_service_providers",
+  "fixing_cost": "prohibitive",
+  "omegas": [
+    {
+      "id": "kernel_reading_decomposition",
+      "question": "This story instantiates only the harm-reduction reading of the substance-control kernel; how would the classification shift if the standing arrangement under contest were the prohibition or legalization reading instead?",
+      "resolution_mechanism": "Author the sibling stories (prohibition_reading, legalization_reading) each with its own ε referent, victim set, and primary observables, then compare per-seat classifications across the family.",
+      "impact": "Under the prohibition reading, users join illicit_supply_chain_workers in the criminal victim set and ε rises sharply; under the legalization reading, the paternalistic intervention layer drops out, the user seat moves toward autonomy, and ε falls toward externality-pricing levels. Cross-family comparison, not intra-story hedging, resolves the contest.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: one kernel, three readings, three separate ε-invariant constraints."
+    },
+    {
+      "id": "paternalism_extraction_boundary",
+      "question": "Where does the regime's health intervention stop protecting and start extracting from users — voluntary service uptake versus commission summons, compulsory referral on refusal, drug-court conditionality, and monitored case management?",
+      "resolution_mechanism": "Compare user-reported autonomy costs and outcomes across jurisdictions matched on service level but varying in coercion intensity; natural experiments where compulsory pathways were suspended or struck down.",
+      "impact": "If the coercive layer is separable from the service layer, ε for this reading falls and the regime trends toward rope; if current implementations fuse them, the user seat sits nearer the full-target end than the beneficiary/victim duality alone suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Locating the care/coercion boundary inside the user's dual position."
+    },
+    {
+      "id": "supply_side_criminalization_ratchet",
+      "question": "Is retained supply-side criminalization a functional guard the reading requires, or a ratchet that preserves enforcement budgets and forfeiture flows independent of any protective effect?",
+      "resolution_mechanism": "Track supply-arrest rates, interdiction expenditure, and forfeiture receipts in the longest-operating harm-reduction jurisdictions; test whether enforcement intensity tracks measured supply-side harm or institutional budget cycles.",
+      "impact": "If ratchet-driven, the supply-side residue is extraction riding the health frame and the regime accumulates snare features at the supply-worker seat over time; if functional, it prices as coordination overhead.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the criminalized remainder of the supply chain is function or rent."
+    },
+    {
+      "id": "provider_budget_capture",
+      "question": "Does the service-provider sector's dependence on regime continuance distort program design toward indefinitely managing the condition rather than resolving it?",
+      "resolution_mechanism": "Audit provider funding structures against outcome incentives; compare jurisdictions using salaried state-employed clinicians against contract-funded nonprofit networks on outcome-versus-caseload sensitivity.",
+      "impact": "If capture is real, the concentration of gains at the provider seat deepens and the regime's persistence becomes partly self-interested rather than evidence-led, accelerating the theater-ratio drift already visible in the measurements.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the receipt seat's budget cycle bends the regime's goals."
+    },
+    {
+      "id": "client_identity_internalization",
+      "question": "Do users come to experience the client/patient role as identity, such that remaining inside the arrangement is partly internalized attachment rather than chosen benefit — making observed stay exceed what the services alone explain?",
+      "resolution_mechanism": "Longitudinal qualitative follow-up of users who relocate to jurisdictions without the regime: track self-description, service re-engagement, and reported reasons.",
+      "impact": "If internalization is substantial, effective suppression for the user seat exceeds the structural measure — users carry the regime's grip with them after exit — and the identity_locked characterization would fit more users than the constrained atom currently conveys.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Structural versus internalized binding of the user seat to the client role."
+    },
+    {
+      "id": "cs_framing_underdetermination",
+      "question": "The declared framing grounds the regime's authority in medical/public-health expertise; an alternative framing locates the operative authority in the state's inherited police-power and narcotics-law lineage, with clinical bodies as an interpretive layer — do the two framings produce different commitment-system classifications?",
+      "resolution_mechanism": "Re-run the commitment-system classification with authority_grounding variants tracing to the narcotics-law tradition and compare pattern outputs against the declared expertise framing.",
+      "impact": "If the police-power frame fits better, the regime inherits prohibition's authority lineage rather than expertise legitimacy, and the drift vector reads as lineage erosion rather than practice lag — changing which remedial pressures the engine predicts.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Framing under-determination: expertise stewardship versus police-power inheritance beneath it."
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

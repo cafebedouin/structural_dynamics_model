@@ -1,0 +1,330 @@
+{
+  "header": {
+    "constraint_id": "mandate_legitimacy_scope__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "8487e8cb-dd3f-4dc4-b4c1-cc8291e06628"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.52,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proportionality Reading of Vaccination Mandate Legitimacy",
+    "topic_domain": "public_health_ethics/constitutional_law/medical_autonomy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "immunocompromised_individuals",
+      "pre_vaccination_age_infants",
+      "public_health_authorities"
+    ],
+    "victims": [
+      "disproportionately_mandated_workers",
+      "vaccine_adverse_event_bearers"
+    ],
+    "vindicated_propositions": [
+      "proportionality_review_doctrine",
+      "least_restrictive_means_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is one reading of the mandate_legitimacy_scope kernel — would instantiating a sibling reading change the structural classification?",
+      "resolution_mechanism": "Author the sibling files: public_health_primary would collapse the victim set toward empty (compulsion presumptively legitimate when collective protection is at stake, epsilon low) and bodily_autonomy_primary would expand it to every coerced person regardless of parameters (epsilon high); the disagreement is located in categorical versus parameter-indexed legitimacy.",
+      "impact": "If public_health_primary controlled, this reading's victims dissolve into justified costs; if bodily_autonomy_primary controlled, the endorsed core becomes extraction too — the moderate blended epsilon and conditional victim set are artifacts of this reading, not of the arrangement alone.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a three-reading kernel; siblings would restructure victim set and epsilon."
+    },
+    {
+      "id": "severity_threshold_indeterminacy",
+      "question": "Who fixes the numerical thresholds (what disease severity counts as serious, what vaccine efficacy counts as sufficient) and with what acknowledged error bars?",
+      "resolution_mechanism": "Comparative review of agency parameter-setting practice and judicial scrutiny of threshold choices; epidemiological sensitivity analysis showing how mandate verdicts flip within plausible confidence intervals.",
+      "impact": "Loose thresholds shrink the condemned periphery and lower measured epsilon; strict, error-bar-honest thresholds enlarge it — the moderate epsilon is hostage to threshold discipline.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold-setting discretion drives where the legitimate/illegitimate line falls."
+    },
+    {
+      "id": "natural_immunity_accounting",
+      "question": "Does documented prior infection count toward the vaccine-efficacy parameter, or must mandates ignore recovery status?",
+      "resolution_mechanism": "Immunological evidence on durability of infection-derived versus vaccine-derived protection, and review of mandate texts that disregard documented recovery.",
+      "impact": "Counting natural immunity converts a large worker cohort from mandated to exempt, cutting the victim set and lowering epsilon for the employment-mandate segment; ignoring it inflates apparent necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether recovered individuals are wrongly swept into the mandated class."
+    },
+    {
+      "id": "pathogen_conditional_decomposition_pressure",
+      "question": "The expected structural delta says the victim set and epsilon vary by pathogen (measles mandate legitimate, influenza mandate not) — can one story honestly carry a single blended epsilon?",
+      "resolution_mechanism": "If per-pathogen assessment shows non-overlapping verdicts, decompose into per-pathogen constraint stories (a low-epsilon measles-mandate story and a high-epsilon influenza-mandate story) linked by network.affects_constraints, per the epsilon-invariance principle.",
+      "impact": "The current blended epsilon (0.50) is the honest single-file compromise; decomposition would replace it with two stable epsilon values and sharpen both victim sets.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Decomposition pressure from pathogen-conditioned verdicts within one reading."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the proportionality reading of the mandate_legitimacy_scope kernel. The standing arrangement under contest is compulsory-vaccination practice as it actually operates — school-entry laws, healthcare employment requirements, military and federal workforce mandates — assessed by this reading's own lights. On those lights the arrangement splits cleanly: mandates backed by severe disease, high-efficacy safe vaccines, and no workable less restrictive alternative (measles being the paradigm) are legitimate coordination; mandates riding on weak parameters (annual influenza with modest efficacy, boosters with waning benefit, rules blind to documented prior infection) are coercion without adequate justification. The reading therefore authors a moderate epsilon over the whole arrangement and a victim set concentrated on the weak-parameter periphery. Sibling readings (public_health_primary, bodily_autonomy_primary) are separate constraints with their own epsilon and victim structures, linked through network.affects_constraints; nothing about them is averaged into this file. Claim/metric independence holds: tangled_rope is claimed from the structure (a genuine coordination function joined to asymmetric extraction, actively enforced), while the metrics are authored as descriptive of observed operation.\n\nKEY AGENTS (by structural relationship):\n- constitutional_review_courts: Agenda setter (institutional/analytical) — administers the proportionality standard and sets its stringency\n- public_health_authorities: Primary beneficiary with agenda-setting duties (institutional/constrained) — supplies the parameters, collects legitimated mandate authority\n- immunocompromised_individuals: Protected beneficiary (organized/trapped) — relies on coverage produced by endorsed mandates\n- pre_vaccination_age_infants: Protected beneficiary (powerless/trapped) — shielded only by surrounding coverage\n- disproportionately_mandated_workers: Primary target (organized/constrained) — bears weak-parameter coercion\n- vaccine_adverse_event_bearers: Secondary target (powerless/trapped) — bear residual injury priced as acceptable aggregate risk\n- conscientious_objector_parents: Excluded voice (organized/identity_locked) — categorical objection with no seat in the parameter frame\n- bioethics_scholars: Analytical observer (analytical/analytical) — documents rubber-stamp review and articulates the objections courts compress\n\nAssumption stated: interval time points map approximately to calendar years t0=1990 through t30=2020, chosen because the modern mandate-expansion and retrenchment record falls in that window.",
+    "key_agents": [
+      "constitutional_review_courts: agenda setter — applies, refines, or declines the proportionality standard; sets its stringency for everyone else",
+      "public_health_authorities: primary beneficiary with agenda-setting duties — designs mandates, supplies severity/safety/coverage data, collects legitimated coercive authority",
+      "immunocompromised_individuals: protected beneficiary — depends on community immunity from mandates that survive the test",
+      "pre_vaccination_age_infants: protected beneficiary — shielded only by surrounding coverage during the highest-risk window",
+      "disproportionately_mandated_workers: primary target — bears mandates whose parameter case is weak; union voice without exit",
+      "vaccine_adverse_event_bearers: secondary target — injury absorbed as residual risk within an accepted aggregate trade-off",
+      "conscientious_objector_parents: excluded voice — categorical objection the parameter frame has no seat for",
+      "bioethics_scholars: analytical observer — audits review quality from outside the compliance structure"
+    ],
+    "logic_rationale": "Extraction is moderate (0.50 at interval end) because the standing arrangement blends an endorsed core — measles-style mandates the reading judges legitimate, where coercion buys genuine protection for the powerless — with a condemned periphery of weak-parameter mandates the reading judges extractive. Suppression (0.52) is predominantly structural: school exclusion, employment termination, licensure consequences, with a smaller internalized component (social sanction pressing compliance); it is authored raw and unscaled, per the engine's design — only extractiveness is scaled by directionality and scope. Theater (0.40) reflects a review process that performs genuine parameter analysis in outbreak-driven, high-salience cases while rubber-stamping agency assertions in routine ones. Accessibility collapse (0.45): alternatives — exemption processes, testing regimes, remote arrangements, private schooling — persist but at real cost, so options narrow without vanishing. Resistance (0.60): sustained litigation, exemption movements, and legislative counter-moves meet the arrangement continuously. All three tracked series share one six-point grid; the mid-interval acceleration corresponds to expansion of mandates into weak-parameter contexts (healthcare-worker influenza rules, then pandemic-era boosters), and the terminal dip to post-pandemic retrenchment (federal mandate vacatur, military rescission, university rollbacks). Base properties report the end-state.",
+    "perspectival_gap": "From the payer seats the arrangement computes as enforced extraction: workers face termination over mandates whose parameter case they can document as weak, and injured bearers find their harm priced as someone else's acceptable aggregate. From the protected beneficiary seats the same arrangement computes as justified coordination that keeps classmates and nurses immune around people who cannot be vaccinated. From the agenda-setter seat it is doctrine to be administered coherently. The engine derives these divergent per-seat classifications from the declared directionalities and exits; this commentary does not adjudicate them.",
+    "directionality_logic": "Immunocompromised individuals and infants are declared beneficiaries with trapped exit: the constraint subsidizes them (shielding they cannot purchase individually), placing their d near the beneficiary end — notably, trapped exit does not push them toward target because the protective flow runs toward them. Disproportionately mandated workers are declared victims with constrained exit (licensure and seniority tied to the mandating institutions), pushing their effective extraction toward the full-target end. Adverse-event bearers are victims with trapped exit — injury already realized, recourse capped and slow. Public health authorities are beneficiaries but also run the machinery; their d sits low but not minimal, since mandate backfire costs them politically. Courts are analytical. Spatial scope is national: verification of parameter claims is institutionally feasible but politically contestable, supporting moderate amplification rather than extreme.",
+    "mandatrophy_analysis": "The founding problem is live, so no mandatrophy is declared: each new pathogen and vaccine generation reopens the parameter assessment, and the R5 mismatch consumer finds status=live paired with verdict=world_rearranges — no zombie flag. The tangled_rope classification is what prevents mislabeling in both directions: reading the whole arrangement as a snare erases the endorsed core that genuinely protects the powerless (infants, the immunocompromised), while reading it as pure rope erases the condemned periphery where coercion demonstrably outruns its justification. The hybrid type holds both facts in one structure.",
+    "kernel_context": "Kernel: mandate_legitimacy_scope — the contested question of when state-compelled medical intervention is legitimate. This file instantiates the proportionality_reading: legitimacy is parameter-indexed to disease severity, vaccine safety/efficacy, and the availability of less restrictive alternatives. Sibling readings, authored as separate constraints: public_health_primary (categorical authorization when collective protection is at stake) and bodily_autonomy_primary (categorical veto absent informed consent). The disagreement is located in whether legitimacy is categorical or conditional: the siblings fix the answer categorically in opposite directions; this reading makes it an empirical function, which is why its victim set is conditional and its epsilon moderate."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "mandate_legitimacy_scope__public_health_primary",
+      "mandate_legitimacy_scope__bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'vaccine mandate legitimacy' covers three structurally distinct constraints — categorical public-health authorization (public_health_primary), parameter-indexed authorization (this file), and categorical autonomy veto (bodily_autonomy_primary). Each carries its own epsilon, victim set, and classification; none averages over the others. Structural flow: this reading sits between the siblings — it imposes parameter-proof requirements on public_health_primary's legitimacy conditions (influences) while coexisting with bodily_autonomy_primary as rival live positions held by different factions. A fourth decomposition axis (per-pathogen stories) is documented in omega pathogen_conditional_decomposition_pressure."
+  },
+  "stakeholders": [
+    {
+      "name": "constitutional_review_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Apply, refine, or decline the proportionality standard when mandate disputes reach them: weighing disease-severity evidence, vaccine risk-benefit profiles, and the availability of less restrictive means, their rulings set how demanding the test is for every other actor. They neither vaccinate nor refuse; their stake is doctrinal — the coherence of the framework they administer and the precedent line they extend or cut back."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design and administer vaccination mandates and supply the severity, safety, and coverage data the proportionality assessment consumes. When mandates pass the test they gain a legitimated coercive instrument and higher coverage; when review is loose they gain it cheaply. Exit is constrained: having built programs, staffing models, and political capital around mandate authority, abandoning the tool carries programmatic and career cost."
+    },
+    {
+      "name": "immunocompromised_individuals",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Rely on community immunity produced by mandates that survive the proportionality test, because they cannot be safely vaccinated or respond poorly to vaccines. They bear exposure risk wherever coverage falls and cannot exit the risk environment individually; patient-advocacy networks give them collective voice, but their protection depends entirely on other people's compliance."
+    },
+    {
+      "name": "pre_vaccination_age_infants",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Too young for measles vaccination during the highest-risk window, they are protected only by the coverage surrounding them. They cannot act, speak, or relocate on their own behalf; their interest enters the assessment through caregivers, pediatricians, and epidemiological argument."
+    },
+    {
+      "name": "disproportionately_mandated_workers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Healthcare, military, and other workers subject to mandates where the parameter case is weak — annual influenza shots of modest efficacy, boosters with waning benefit, requirements that ignore documented prior infection. Compliance costs them time, side-effect risk, and sometimes employment; refusal costs them their position. Unions give them voice but not exit: licensure, seniority, and pensions are tied to the very institutions doing the mandating."
+    },
+    {
+      "name": "vaccine_adverse_event_bearers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People who suffer recognized adverse events after mandated doses. The proportionality framework prices their injury as residual risk within an acceptable aggregate trade-off; compensation runs through narrow administrative channels with damage caps and long timelines. They cannot return to their pre-injury position, and their individual claim competes publicly against the population-level success story that justified the mandate."
+    },
+    {
+      "name": "conscientious_objector_parents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Parents whose objection is categorical — that compelled injection is wrong regardless of disease parameters. The proportionality conversation has no seat for them: it presupposes coercion can be justified and argues only about when. They organize for exemptions, litigate on religious-liberty grounds, and absorb social sanction; leaving their position would mean abandoning commitments that constitute their community identity."
+    },
+    {
+      "name": "bioethics_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the framework from outside: publishing on proportionality's stringency, documenting where review is rubber-stamp, comparing jurisdictions, and articulating the autonomy-side objections the courts compress into footnotes. They carry no compliance obligations; their influence runs through amicus briefs, advisory committees, and the training of future reviewers."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Converts an open-ended contest over state medical coercion into a parameterized decision procedure: disease severity, vaccine risk-benefit profile, and the exhaustion of less restrictive means are assessed before compulsion is deployed, giving legislatures, agencies, courts, and objectors a shared evidentiary vocabulary for a fight that would otherwise be pure power.",
+    "transfer_function": "Moves coercive burden — injection obligation, exclusion from school or employment on refusal — onto individuals when the parameter case supports it, and moves protection from severe disease toward those who cannot be vaccinated; in the reverse direction it moves decisional limits onto the state, forbidding compulsion where the parameters fail.",
+    "absent_voices": "Categorical autonomy objectors sit outside the frame: the test presupposes compulsion can be justified and argues only about when, so the prior question — whether the state may compel at all — is never heard inside it. Adults who cannot vaccinate for medical reasons are represented by proxies rather than seated. Workers bearing weak-parameter mandates had no seat when the parameters were set; they arrive only as litigants after the fact.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the proportionality test, every mandate dispute collapses into a binary between categorical public-health authority and categorical bodily sovereignty: courts lose the mediating doctrine, agencies lose the evidentiary discipline the test imposes, and weak-parameter mandates either proliferate unchecked or all mandates fall together. School-entry systems, healthcare employment rules, and exemption litigation would all reorganize around whichever absolute prevailed.",
+    "founding_problem": "Smallpox-era police power confronted bodily liberty: Cambridge, Massachusetts compelled vaccination in 1902, Henning Jacobson refused, and the resulting litigation forced the question of when collective disease defense legitimately overrides individual refusal. The proportionality answer was built to distinguish legitimate collective defense from arbitrary coercion by indexing legitimacy to measurable parameters rather than deciding the matter categorically.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: a century of judicial opinions applying and refining the standard — including contemporary rulings vacating weak-parameter mandates — constitutional-law scholarship across ideological camps treating the parameter question as unsettled and recurring, and bioethics literature independently deriving least-restrictive-means requirements. Public health agencies also attest liveness, but self-interestedly; the external judicial and scholarly attestations stand on their own."
+  },
+  "gain_flow": "public_health_authorities",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "parameter_conditioned_coercion_authority",
+    "drift_state": {
+      "moment": "post_covid_mandate_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "coercion_legitimacy_is_parameter_indexed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "least_restrictive_means_before_compulsion",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

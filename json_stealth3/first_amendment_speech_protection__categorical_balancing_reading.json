@@ -1,0 +1,402 @@
+{
+  "header": {
+    "constraint_id": "first_amendment_speech_protection__categorical_balancing_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "a6794326-b836-4107-a7d9-11eafeb6b92c"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.52,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "First Amendment Speech Protection — Categorical Balancing Reading (Judicial Category-Creation Regime)",
+    "topic_domain": "constitutional law/political philosophy/speech regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_judiciary",
+      "incumbent_legislative_majorities"
+    ],
+    "victims": [
+      "political_dissidents_and_radicals",
+      "sexual_expression_communities",
+      "prospective_speakers"
+    ],
+    "vindicated_propositions": [
+      "judicial_supremacy_doctrine",
+      "stare_decisis_principle",
+      "case_by_case_adjudication_method"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.52,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This constraint is one reading (categorical_balancing_reading) of the first_amendment_speech_protection kernel; would instantiating the absolutist_reading or harm_limited_reading instead yield a different epsilon, beneficiary set, and type for the same constitutional text?",
+      "resolution_mechanism": "Generate the sibling stories as separate constraints and compare computed classifications; divergence in epsilon and victim sets locates the disagreement in what constitutes the protected set (text-fixed vs judicially-created vs harm-triggered).",
+      "impact": "If the siblings classify differently (expected), the colloquial label 'First Amendment speech protection' is ambiguous across readings and corpus consumers must never pool metrics across the family; this story's epsilon is a property of this reading, not of the amendment.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed classification over a shared kernel; committer structure routed here per the kernel-authoring rules."
+    },
+    {
+      "id": "category_harm_tracking",
+      "question": "Do the judicially maintained excluded categories (obscenity, incitement, true threats) track demonstrable harms, or do they sweep in expression whose harm is speculative — is the category boundary doing harm-prevention work or interpretive-territory work?",
+      "resolution_mechanism": "Systematic audit of prosecutions and regulations under the excluded categories against evidence of concrete harm, comparing enforcement patterns for minority-speaker versus majority-speaker expression.",
+      "impact": "If the categories over-sweep, effective extraction on the minority payer seats rises above the authored epsilon and the classification trends toward snare; if they track harms tightly, more of the measured extraction is coordination price.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the excluded categories are harm-tracking or territory-marking."
+    },
+    {
+      "id": "predictability_cost_attribution",
+      "question": "Is the unpredictability speakers bear intrinsic to any protected/regulable boundary (a coordination cost any regime must pay), or is it amplified specifically by the case-by-case method (an extractive institutional choice)?",
+      "resolution_mechanism": "Compare ex ante clarity under counterfactual regimes: historical-exclusion tests as administered in state jurisdictions with stronger textual protections, and harm-trigger tests in comparative constitutional systems.",
+      "impact": "If most unpredictability is method-specific, the balancing method itself is the extraction mechanism and removal is cheaper than the judiciary claims; if intrinsic, fixing_cost stays prohibitive and measured extraction sits nearer the coordination floor.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Attribution of the predictability cost between inherent boundary-drawing and the chosen method."
+    },
+    {
+      "id": "chilling_effect_magnitude",
+      "question": "How large is the ex ante chilling effect on prospective speakers near category boundaries, and is it structural (prosecution and litigation risk) or internalized (self-censorship habits that persist absent active enforcement)?",
+      "resolution_mechanism": "Behavioral and survey data on self-censorship correlated with proximity to category boundaries; natural experiments from decisions that narrowed or widened the excluded categories.",
+      "impact": "If largely internalized, suppression persists after doctrinal liberalization and the scalar suppression understates steady-state suppression; if structural, doctrinal change rapidly lowers it.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism for the speaker-side costs."
+    },
+    {
+      "id": "balancing_rhetoric_vestigiality",
+      "question": "Is the case-by-case balancing rhetoric still outcome-determinative, or has it become theatrical cover for category outcomes reached by other means (historical tradition, institutional deference, intuitive severity judgments)?",
+      "resolution_mechanism": "Code modern speech-clause opinions for whether the balancing analysis ever plausibly could have flipped the outcome, comparing opinion rhetoric against vote patterns and concurrence behavior.",
+      "impact": "If mostly vestigial, theater_ratio is understated and the constraint is drifting toward inertial rhetorical maintenance of an atrophied method; if determinative, the authored theater_ratio stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the balancing method remains functional or is increasingly performed."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is the judicial regime in which the First Amendment's protected/unprotected boundary is constituted case-by-case: courts weigh the value of specific expression against asserted harms, and the accumulated decisions harden into named categories (obscenity, incitement, true threats, and allied exclusions) that legislatures, prosecutors, and lower courts then apply. This file instantiates the categorical_balancing_reading of the first_amendment_speech_protection kernel and authors nothing about the sibling readings' merits. The epsilon referent is this standing categorical-balancing arrangement as this reading's own lights assess it: a regime with a real administrative function (a workable, precedent-backed map of regulable speech) that nonetheless concentrates interpretive authority in the judiciary, erodes ex ante predictability for speakers, and exposes minority expression to categorization out of protection. The claim/metric gap is deliberate: the regime CLAIMS itself as faithful administration of an absolute guarantee while the authored metrics describe moderately extractive, actively enforced operation whose extraction has accumulated over the interval — the engine measures that divergence; the claim is not reconciled to the metrics. KEY AGENTS (by structural relationship): see key_agents; the structural center is a judiciary that both runs the boundary-drawing machinery and collects its product.",
+    "key_agents": [
+      "- institutional_judiciary: Agenda-setter and principal beneficiary (institutional/identity_locked) — administers the protected/unprotected boundary case-by-case and collects interpretive authority as the standing product",
+      "- incumbent_legislative_majorities: Secondary beneficiary (powerful/mobile) — receives a judicially certified regulatory domain inside the excluded categories",
+      "- political_dissidents_and_radicals: Primary target (powerless/trapped) — expression sits nearest the incitement and threat boundaries; bears prosecution risk when lines are redrawn",
+      "- sexual_expression_communities: Primary target (powerless/trapped) — obscenity classification removes protection entirely, with criminal and financial-exposure consequences",
+      "- prospective_speakers: Diffuse target (moderate/constrained) — ordinary speakers who carry the ex ante uncertainty cost and cannot afford the litigation that would clarify their position",
+      "- civil_liberties_litigators: Observer (organized/analytical) — litigate boundary cases and map the doctrine without setting or collecting from it",
+      "- absolutist_scholars_and_textualist_justices: Excluded (moderate/analytical) — holders of the rival fixed-text reading, present in scholarship and dissents but outside the operative framework"
+    ],
+    "logic_rationale": "Extraction is 0.62: the arrangement delivers a genuine service (administrable doctrine) while the judiciary retains the standing power to define the service's scope, and the costs — predictability erosion, categorization risk, litigation burden — fall on those with the least capacity to contest them. Suppression is 0.52: the constraint operates through stare decisis discipline, certiorari gatekeeping, and deference norms that foreclose rival readings inside judicial practice, plus a chilling gradient on speakers near boundaries; it coerces interpretation more than expression. Theater is 0.38 and rising: much modern balancing rhetoric performs open-minded weighing while delivering category outcomes reached by other means, though the categories themselves are applied genuinely. Accessibility collapse is 0.40: alternatives persist — absolutist scholarship, state constitutional protections, comparative harm-trigger regimes — so understanding the constraint does not eliminate exits from it. Resistance is 0.50: sustained textualist and absolutist opposition (historic dissents, academic first-amendment absolutism, periodic calls to abandon balancing) that has never displaced the framework. The measurement series run on ONE shared grid of nine points (interval units are years, t0=1945 to tn=2025): base_extractiveness climbs monotonically as categories ossify into interpretive property; theater_ratio climbs as balancing rhetoric detaches from outcome determination; suppression_requirement rises steeply through the mid-century hardening of the category apparatus (Roth through Miller) and plateaus once the enforcement machinery — precedent hierarchy, gatekeeping, deference norms — reaches maturity. All three metrics are authored at every shared time point; no metric borrows another's grid.",
+    "perspectival_gap": "The seats compute differently and should. From the agenda-setter seat, the arrangement is stewardship: the judiciary experiences category-drawing as the faithful administration of an absolute text against hard cases, and its identity is fused with that role. From the payer seats, the same structure is exposure: dissidents and sexual-expression communities experience the categories as the mechanism by which their expression loses protection, and prospective speakers experience the method as retrospective certainty — protection knowable only after litigation they cannot fund. Incumbent legislative majorities occupy a dual position the derivation must register: beneficiaries of a certified regulatory domain, yet excluded from the larger protected zone. The engine computes this divergence from the structural data; the authored claim does not adjudicate it.",
+    "directionality_logic": "The judiciary is declared beneficiary and holds the agenda-setter role with identity-locked exit: its directionality sits nearest the beneficiary pole, and its identity lock amplifies persistence independent of function. Incumbent legislative majorities are secondary beneficiaries — the excluded categories are precisely the space where their statutes enjoy presumption of validity — but they also bear the forbidden-zone cost, placing them modestly off the beneficiary pole. Political dissidents, sexual-expression communities, and prospective speakers are declared victims with weak or absent exit: dissidents and sexual-expression communities sit near the full-target pole (their expression is the direct object of category enforcement, and no jurisdiction reliably shelters them); prospective speakers bear a diffuse version of the same extraction (uncertainty rather than prosecution), placing them high but not maximal. Civil-liberties litigators and absolutist scholars are observer/excluded seats: they neither collect nor pay, and their exclusion from binding practice is itself part of the arrangement's operation.",
+    "mandatrophy_analysis": "The founding problem — giving an absolute text operative content amid sedition, obscenity, and loyalty prosecutions — remains live, so no mandatrophy is declared and none should be inferred from the rising theater ratio alone. The classification work this story performs is bidirectional mislabel-resistance. Against the judiciary's self-description (pure coordination: neutral administration protecting liberty), the declared victims and the accumulating extraction show the coordination carries asymmetric payment. Against the absolutist caricature (pure usurpation: courts seizing the text), the genuine coordination function — no speech regime avoids boundary-drawing, and precedent-backed categories solve a real collective-action problem for legislatures, prosecutors, and speakers — blocks a snare verdict. Tangled rope is the structurally honest claim. The trajectory data flag the forward risk: if balancing rhetoric continues detaching from outcome determination while the category map persists, the arrangement drifts toward theatrical maintenance of an atrophied method — the omega balancing_rhetoric_vestigiality tracks exactly that transition.",
+    "kernel_context": "This story instantiates the categorical_balancing_reading of the first_amendment_speech_protection kernel (the Free Speech Clause's guarantee structure). Sibling readings, each a separate constraint with its own epsilon, beneficiaries, and victims: absolutist_reading ('no law' means no law; the protected set is fixed by text and historical exclusion, and judicial balancing is illegitimate) and harm_limited_reading (protection yields only on demonstrable, unconsented-to harm established case-specifically). This file authors only the categorical-balancing instantiation: the protected set as constituted by judicial weighing, with the judiciary as beneficiary and predictability/minority-expression costs as the payer side. Nothing here averages over or hedges across the sibling readings."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "first_amendment_speech_protection__absolutist_reading",
+      "first_amendment_speech_protection__harm_limited_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'First Amendment speech protection.' The label conflates three structurally distinct claims about what CONSTITUTES the protected set: (1) absolutist_reading — the set is fixed by text and historical exclusion; (2) categorical_balancing_reading (this file) — the set is constituted by judicial weighing into named categories; (3) harm_limited_reading — the set yields only to case-specifically demonstrated unconsented harm. Each claim has its own epsilon, its own beneficiary/victim structure, and its own failure modes, so each is a separate story linked through network edges rather than one story with a measurement parameter. This reading is the operative judicial regime and therefore shapes the operating environment of both siblings: it sets the legitimacy conditions under which absolutist proposals are heard (as displacement of settled practice) and harm-limited proposals are absorbed (as refinements inside categories)."
+  },
+  "stakeholders": [
+    {
+      "name": "institutional_judiciary",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The Supreme Court and the lower federal courts define, refine, and enforce the boundary between protected and unprotected speech through successive case adjudications; each decision extends or trims the category map that legislatures, prosecutors, and speakers must then live inside. The institution collects the standing product of its own machinery — interpretive authority, the acknowledged power to say what the amendment permits — and its docket, prestige, and self-conception are bound up with remaining the boundary-setter. Leaving would mean renouncing category-creation for a fixed-text or harm-triggered test, dissolving the institution's distinctive function in this domain."
+    },
+    {
+      "name": "incumbent_legislative_majorities",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive a judicially certified regulatory domain — obscenity, incitement, true threats, and allied exclusions — inside which their statutes enjoy presumption of validity and survive review that would strike comparable regulation of protected expression. They also face the forbidden zone: the protected categories they may not touch regardless of majority preference. Their net position is favorable and adjustable; they can redirect regulatory attention among the sanctioned categories as politics move."
+    },
+    {
+      "name": "political_dissidents_and_radicals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Their expression sits nearest the incitement and true-threat boundaries, and the historical record shows disproportionate enforcement against them whenever the lines are drawn or redrawn — wartime sedition prosecutions, Cold War loyalty cases, modern material-support and threat prosecutions. They cannot relocate their speech outside the jurisdiction, lack the resources to litigate boundary definitions, and bear prosecution risk as the price of speaking at all."
+    },
+    {
+      "name": "sexual_expression_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Expression classified as obscene loses protection entirely, and the obscenity category is applied with locally variable standards atop federal criminal statutes, so no jurisdiction reliably shelters them. Classification carries direct criminal exposure and cascades into platform exclusion, payment-processing refusal, and financial de-risking. Their exit options are effectively nil: the category follows the expression wherever it is distributed domestically."
+    },
+    {
+      "name": "prospective_speakers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Ordinary citizens, journalists, protesters, and online posters deciding whether to speak. Because protection is determined case-by-case, it is knowable only retrospectively: the ex ante question 'will this be protected?' has no reliable answer short of litigation they cannot fund. They carry the uncertainty cost directly — self-censorship near the category boundaries — and their numbers make them the broadest bearer of the arrangement's predictability cost."
+    },
+    {
+      "name": "civil_liberties_litigators",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Public-interest law organizations and first-amendment academics litigate boundary cases, publish doctrine maps, and supply the evidentiary record on enforcement patterns. They neither administer the arrangement nor collect its product; their function is adversarial clarification, and their access runs entirely through the cases the agenda-setter chooses to hear."
+    },
+    {
+      "name": "absolutist_scholars_and_textualist_justices",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Holders of the rival fixed-text account: they maintain that the amendment's guarantee is categorical apart from narrow historical exclusions and that judicial creation of the protected/unprotected boundary is itself the deviation. They publish, dissent, and testify, but they stand outside the operative framework that generates binding doctrine — the conversation that defines the categories happens without them, and their objections enter the record only at the margins."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Supplies a workable, precedent-backed map of which speech the state may regulate, so that legislatures draft, prosecutors charge, lower courts decide, and speakers plan without relitigating the amendment's first principles in every case; routes the recurring collision between expression and security, order, and dignity interests through administrable categories rather than ad hoc political judgment.",
+    "transfer_function": "Moves interpretive authority over the amendment's scope from the text's readers — speakers, legislators, citizens — to the federal judiciary; returns regulatory discretion to legislative majorities within the judicially excluded categories; and moves uncertainty and litigation costs onto speakers, concentrated on those whose expression sits nearest the category boundaries.",
+    "absent_voices": "Speakers whose expression falls nearest the boundaries — dissidents, sexual-minority publishers, online posters facing threat charges — bear the doctrine's costs but had no seat when the categories were drawn and have none as they are refined. Absolutist scholars hold a complete rival account of the kernel but operate outside binding practice. Citizens and jurors who ultimately judge speech crimes never participate in defining the categories they are asked to apply.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the category apparatus vanished overnight, every speech regulation and prosecution would require first-principles adjudication: legislatures would re-code statutes against either near-categorical protection or harm-triggered limits, thousands of convictions under the excluded categories would become doctrinally unmoored, prosecutors would lose their certified safe harbors, and the judiciary would lose its distinctive speech-law function. The arrangements of every named seat depend on the constraint existing in approximately its current form.",
+    "founding_problem": "Giving an absolute guarantee ('no law' abridging speech) operative content amid World War I sedition prosecutions, obscenity enforcement, and later Cold War loyalty regimes: how to make the text governable without either gutting it or paralyzing all regulation of expression.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal historians documenting the Espionage Act prosecutions and the doctrinal scramble of 1919–1957 corroborate the founding problem from outside the benefiting parties; prosecuted speakers and defense-case records attest its persistence; comparative constitutional scholarship confirms every rights-guaranteeing polity faces the same administration problem. No source outside the benefiting parties attests that judicial category-creation specifically is the necessary solution — that element rests on the judiciary's own attestation, and the rival readings dispute it."
+  },
+  "gain_flow": "institutional_judiciary",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "harm_limited_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "judicial_balancing_creates_protected_set",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "category_exclusion_precedes_case_specific_harm_proof",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "judicial_category_stewardship",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

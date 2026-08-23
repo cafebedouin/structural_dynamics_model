@@ -1,0 +1,405 @@
+% ============================================================================
+% CONSTRAINT STORY: reading_acquisition_legitimacy__structured_literacy_remediation
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-08-05
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_reading_acquisition_legitimacy__structured_literacy_remediation, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: reading_acquisition_legitimacy__structured_literacy_remediation
+ *   human_readable: Structured-Literacy Vulnerable-First Instructional Legitimacy Mandate (structured_literacy_remediation reading)
+ *   domain: education_policy/cognitive_science/literacy_pedagogy
+ *
+ * SUMMARY:
+ *   Since roughly the early 2010s, a coordinated reform movement has
+ *   converted convergent cognitive-science findings about reading acquisition
+ *   into statutory legitimacy rules: state legislatures pass
+ *   Science-of-Reading alignment laws, ban cueing-based practices, mandate
+ *   intensive teacher retraining, and restrict curriculum adoption to
+ *   approved structured-literacy products. The movement began with
+ *   early-adopter state reforms, accelerated through national investigative
+ *   journalism, and spread through parent-led dyslexia advocacy campaigning
+ *   legislature by legislature. The constraint this story models is that
+ *   legitimacy apparatus itself — the rule that instruction counts as
+ *   legitimate only when designed for the most vulnerable learners first and
+ *   delivered through explicit, cumulative, diagnostic, multisensory
+ *   principles. Its operation is structurally mixed: a genuine,
+ *   well-evidenced coordination function (shared methodology protecting
+ *   students whom implicit instruction fails) runs through the same channels
+ *   that route large mandated procurement sums to aligned publishers and
+ *   training providers and strip instructional authority from practitioners
+ *   trained in other traditions. CONSTRAINT FAMILY NOTE: this file
+ *   instantiates one reading of the reading_acquisition_legitimacy kernel;
+ *   sibling stories (phonics_decoding_primacy,
+ *   whole_language_meaning_primacy, balanced_literacy_integration)
+ *   instantiate other readings with different epsilon values and beneficiary
+ *   structures — the phonics-evidence story sits upstream (its findings are
+ *   cited as justification for this reading's broader package), while this
+ *   reading's ascendancy exerts downstream pressure on the others' operating
+ *   environments.
+ *
+ * KEY AGENTS:
+ *   - - dyslexic_students: Primary intended beneficiary (powerless/trapped) — the population the vulnerable-first design centers; strongest subsidy flow
+ *   - - general_education_students: Broad beneficiary (powerless/constrained) — served by explicit instruction, no voice in time allocation
+ *   - - sor_aligned_publishers: Primary commercial beneficiary (organized/arbitrage) — capture the mandated-procurement channel
+ *   - - structured_literacy_training_providers: Secondary commercial beneficiary (organized/arbitrage) — mandated professional-development receipts
+ *   - - reading_science_researchers: Epistemic beneficiary (institutional/mobile) — evidentiary authority and consultancy
+ *   - - dyslexia_advocacy_orgs: Agenda-setter with beneficiary position (organized/constrained) — draft statutes, mobilize testimony
+ *   - - state_legislatures_and_agencies: Enforcement agenda-setter (institutional/mobile) — enact, enforce, and alone can amend or repeal
+ *   - - classroom_teachers: Primary payer (organized/constrained) — absorb retraining burden and fidelity rubrics
+ *   - - district_administrators: Budgetary payer (institutional/constrained) — mandated procurement inside fixed budgets
+ *   - - legacy_balanced_literacy_educators: Identity-locked payer (moderate/identity_locked) — professional devaluation and method stigma
+ *   - - teacher_preparation_faculties: Payer (institutional/constrained) — forced syllabus overhaul under accreditation rules
+ *   - - english_learner_families: Excluded voice (powerless/constrained) — biliteracy needs outside the statute frame
+ *   - - independent_education_researchers: Analytical observer (analytical/analytical) — sees the full structure
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(reading_acquisition_legitimacy__structured_literacy_remediation, 0.45).
+domain_priors:suppression_score(reading_acquisition_legitimacy__structured_literacy_remediation, 0.66).
+domain_priors:theater_ratio(reading_acquisition_legitimacy__structured_literacy_remediation, 0.32).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, extractiveness, 0.45).
+narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 0.66).
+narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 0.32).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, accessibility_collapse, 0.55).
+narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, resistance, 0.6).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(reading_acquisition_legitimacy__structured_literacy_remediation, tangled_rope).
+narrative_ontology:human_readable(reading_acquisition_legitimacy__structured_literacy_remediation, "Structured-Literacy Vulnerable-First Instructional Legitimacy Mandate (structured_literacy_remediation reading)").
+narrative_ontology:topic_domain(reading_acquisition_legitimacy__structured_literacy_remediation, "education_policy/cognitive_science/literacy_pedagogy").
+
+domain_priors:requires_active_enforcement(reading_acquisition_legitimacy__structured_literacy_remediation).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(reading_acquisition_legitimacy__structured_literacy_remediation, 'ed57d480-6a23-4f0e-9162-abd204b1fff9').
+narrative_ontology:cs_kernel_codification('ed57d480-6a23-4f0e-9162-abd204b1fff9', formalized).
+narrative_ontology:cs_authority_grounding('ed57d480-6a23-4f0e-9162-abd204b1fff9', expertise).
+narrative_ontology:cs_interpretation_layer_present('ed57d480-6a23-4f0e-9162-abd204b1fff9').
+narrative_ontology:cs_reading_relation('ed57d480-6a23-4f0e-9162-abd204b1fff9', reading_acquisition_legitimacy__phonics_decoding_primacy, influences).
+narrative_ontology:cs_reading_relation('ed57d480-6a23-4f0e-9162-abd204b1fff9', reading_acquisition_legitimacy__whole_language_meaning_primacy, forecloses).
+narrative_ontology:cs_reading_relation('ed57d480-6a23-4f0e-9162-abd204b1fff9', reading_acquisition_legitimacy__balanced_literacy_integration, coexists_with).
+narrative_ontology:cs_axiom('ed57d480-6a23-4f0e-9162-abd204b1fff9', foundational, vulnerable_learners_first_design_priority).
+narrative_ontology:cs_axiom_status(vulnerable_learners_first_design_priority, holdable).
+narrative_ontology:cs_axiom_grounding('ed57d480-6a23-4f0e-9162-abd204b1fff9', vulnerable_learners_first_design_priority, deontological).
+narrative_ontology:cs_axiom('ed57d480-6a23-4f0e-9162-abd204b1fff9', foundational, explicit_cumulative_diagnostic_instruction_required).
+narrative_ontology:cs_axiom_status(explicit_cumulative_diagnostic_instruction_required, holdable).
+narrative_ontology:cs_axiom_grounding('ed57d480-6a23-4f0e-9162-abd204b1fff9', explicit_cumulative_diagnostic_instruction_required, empirically_contingent).
+narrative_ontology:cs_axiom('ed57d480-6a23-4f0e-9162-abd204b1fff9', secondary, intervention_grade_instruction_for_all_preventatively).
+narrative_ontology:cs_axiom_status(intervention_grade_instruction_for_all_preventatively, holdable).
+narrative_ontology:cs_axiom_grounding('ed57d480-6a23-4f0e-9162-abd204b1fff9', intervention_grade_instruction_for_all_preventatively, instrumental).
+narrative_ontology:cs_reference_frame('ed57d480-6a23-4f0e-9162-abd204b1fff9', convergent_cognitive_science_standard).
+narrative_ontology:cs_drift_state('ed57d480-6a23-4f0e-9162-abd204b1fff9', post_state_mandate_wave, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('ed57d480-6a23-4f0e-9162-abd204b1fff9', '').
+narrative_ontology:cs_kernel_id(reading_acquisition_legitimacy__structured_literacy_remediation, reading_acquisition_legitimacy).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, dyslexic_students).
+narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, general_education_students).
+narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, sor_aligned_publishers).
+narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, structured_literacy_training_providers).
+narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, reading_science_researchers).
+narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, dyslexia_advocacy_orgs).
+narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, classroom_teachers).
+narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, district_administrators).
+narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, legacy_balanced_literacy_educators).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, teacher_preparation_faculties).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Are students who do not learn to read through immersion alone and whose school trajectories hinge on whether early instruction teaches the written code explicitly and flags their difficulty before failure accumulates. They choose nothing about method; families advocate on their behalf, and private tutoring is the principal fallback when school instruction misses them.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, dyslexic_students, beneficiary,
+    powerless, biographical, trapped, national).
+
+% Learn to read across a range of ease. Explicit, sequenced code instruction serves nearly all of them, though the split of classroom time between code work and rich text, discussion, and content building varies with the adopted program, and they have no voice in that allocation.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, general_education_students, beneficiary,
+    powerless, biographical, constrained, national).
+
+% Produce core reading programs, decodable text series, and screening tools marketed as aligned to reading science. When a state passes an alignment statute, adoption committees must select from approved lists and sales surge. Several firms previously sold balanced-literacy lines and retooled their catalogs when demand shifted, which keeps their position adaptable.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, sor_aligned_publishers, beneficiary,
+    organized, biographical, arbitrage, national).
+
+% Deliver the mandated professional development: multi-day or yearlong courses ending in completion certificates that licensure rules require. Revenue scales directly with how many states mandate the training and how many teachers each district must enroll.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, structured_literacy_training_providers, beneficiary,
+    organized, biographical, arbitrage, national).
+
+% Run the studies of phonemic awareness, systematic phonics, and reading difficulty that give the approach its evidentiary standing. They testify to legislatures, advise agencies, consult for districts and publishers, and their field's public prominence rises with the policy wave.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, reading_science_researchers, beneficiary,
+    institutional, generational, mobile, global).
+
+% Organize parents of struggling readers, draft legislative language, supply hearing testimony, and campaign state by state. Their framing of reading difficulty as an identifiable, teachable condition shapes what statutes require. Membership and funding grow with each law passed.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, dyslexia_advocacy_orgs, agenda_setter,
+    organized, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(reading_acquisition_legitimacy__structured_literacy_remediation, dyslexia_advocacy_orgs, beneficiary).
+
+% Enact alignment statutes, bar instructional practices deemed discredited, fund training pipelines, and rewrite licensure and adoption rules. Agencies translate statutes into rubrics and approved-list processes. They retain the capacity to amend or repeal what they enacted, making them the seat with the most direct ability to change the arrangement.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, state_legislatures_and_agencies, agenda_setter,
+    institutional, generational, mobile, national).
+
+% Deliver daily instruction under the adopted program. They absorb evening and weekend training hours, teach from prescribed sequences, and face evaluation rubrics keyed to implementation fidelity. Union representation gives them collective voice after decisions are made; changing careers mid-life carries heavy personal cost.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, classroom_teachers, payer,
+    organized, biographical, constrained, regional).
+
+% Buy what approved lists contain and schedule the mandated training inside fixed budgets. Money displaced onto reading programs and courses comes out of arts, electives, and other material budgets, and departing from the list invites state findings.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, district_administrators, payer,
+    institutional, biographical, constrained, regional).
+
+% Built careers on workshop-model teaching, leveled texts, and small-group guided reading. Districts discard their book rooms, evaluation rubrics mark their methods deficient, and public debate labels their professional life's approach harmful. Renouncing the methods means renouncing a professional identity formed over decades.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, legacy_balanced_literacy_educators, payer,
+    moderate, biographical, identity_locked, national).
+
+% Prepare future teachers under accreditation and licensure rules that now prescribe what coursework must contain. Long-standing syllabi, textbook relationships, and methods courses are rewritten to satisfy program approval, with faculty roles and course loads shifting accordingly.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, teacher_preparation_faculties, payer,
+    institutional, generational, constrained, national).
+
+% Have children acquiring English while learning to read, whose needs include oral-language development, home-language literacy, and culturally familiar texts — considerations that sit uneasily inside English-code-centric statutes. Adoption hearings and legislative testimony rarely include them, and few mechanisms exist for their priorities to reach the approved-list process.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, english_learner_families, excluded,
+    powerless, generational, constrained, national).
+
+% Study the policy wave from outside the aligned-vendor and advocacy networks, tracking implementation fidelity, cost flows, and outcome data against the movement's claims. Both contending camps cite their analyses selectively.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, independent_education_researchers, observer,
+    analytical, civilizational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(reading_acquisition_legitimacy__structured_literacy_remediation, sor_aligned_publishers).
+narrative_ontology:fixing_cost_class(reading_acquisition_legitimacy__structured_literacy_remediation, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves a real fragmentation problem in early reading instruction: teacher preparation varies widely, instructional quality varies classroom to classroom, and struggling readers are identified late. The arrangement supplies a shared scope-and-sequence, common diagnostic instruments, a universal screening cadence, and a cumulative skill progression that holds across grades, teachers, and schools.
+% TRANSFER_FUNCTION: Moves money from district budgets to aligned publishers and mandated-training providers; moves instructional authority and planning time from classroom teachers to prescribed scripts, trainers, and state rubrics; moves professional status toward holders of structured-literacy credentials and away from other traditions; moves classroom time toward explicit code work.
+% ABSENT_VOICES: English-learner families would object that statutes privilege English code instruction over oral-language development, home-language literacy, and culturally familiar texts; students themselves have no seat anywhere in adoption or legislation; classroom teachers enter the conversation mainly through unions after statutes pass, not during drafting.
+% DISAPPEARANCE_RATIONALE: If the structured-literacy legitimacy rules vanished overnight, licensure requirements, curriculum approved lists, multi-year training contracts, dyslexia service pathways, university syllabi, and vendor product lines would all lose their organizing criterion: districts would revert to local discretion, litigation over mandates would dissolve, publishers and trainers would re-pivot their catalogs, and teacher autonomy would partially return. The underlying cognitive science would not change, but every arrangement built on the legitimacy rule would reorganize around it.
+% FOUNDING_PROBLEM: Generations of students — disproportionately students with dyslexia and other language-based learning differences — were failing to learn to read under implicit, discovery-oriented instruction; teacher preparation programs were not teaching the alphabetic principle; reading disabilities were identified only after years of accumulated failure.
+% FOUNDING_PROBLEM_CORROBORATION: Corroborated from outside the beneficiary set: national assessment trend data (flat reading scores over decades) compiled by statistical agencies with no vendor interest; the peer-reviewed meta-analytic literature on systematic phonics predating and independent of the policy wave; clinical neuropsychological literature on reading disability; evaluation of England's national phonics screening regime; and public revisions by former balanced-literacy leadership acknowledging the phonics gap in prior materials. The founding problem is attested by parties who gain nothing from the arrangement's continuation.
+narrative_ontology:disappearance_verdict(reading_acquisition_legitimacy__structured_literacy_remediation, world_rearranges).
+narrative_ontology:founding_problem_status(reading_acquisition_legitimacy__structured_literacy_remediation, live).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(reading_acquisition_legitimacy__structured_literacy_remediation, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_stealth3', 'agent/example_platform_commission.json',
+    'stealth/ox-alpha', 'max_tokens=65536,temperature=model_default,reasoning=model_default').
+narrative_ontology:story_seed(reading_acquisition_legitimacy__structured_literacy_remediation, 'none', 1).
+narrative_ontology:epsilon_provenance(reading_acquisition_legitimacy__structured_literacy_remediation, 0.45, 'stealth/ox-alpha', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(reading_acquisition_legitimacy__structured_literacy_remediation_tests).
+:- end_tests(reading_acquisition_legitimacy__structured_literacy_remediation_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Claim/metric independence is preserved: the claimed type (tangled_rope) is asserted from structure — a genuine coordination function and an asymmetric transfer running through the same actively enforced apparatus — while the metrics describe observed operation. Extractiveness (0.45) reflects real coordination value discounted by mandated-procurement economics: alignment statutes convert curriculum and professional-development spending into captive markets, and the reading's own candid voices (including prominent researchers warning against a new orthodoxy) acknowledge commercial capture at the margins. Suppression (0.66) is high because persistence depends on actively excluding rival methods — statutory cueing bans, approved-list exclusivity, fidelity rubrics — not on participant preference; roughly 70% of this suppression is structural (statutes, adoption gates, evaluation systems) and roughly 30% internalized (professional stigma and identity threat among legacy-pedagogy educators), an ambiguity carried in an omega. Theater ratio (0.32) captures the certificate-versus-practice gap: training completions counted as implementation, legacy materials relabeled as aligned, without proportional change in classroom routine. Accessibility collapse (0.55) is moderate: official alternatives are closed in mandate states, yet tutoring, homeschooling, and uneven enforcement keep rival practices partially alive. Resistance (0.60) is sustained — union objections to scripted mandates, parent complaints about narrowed text diets, scholarly dissent, and open defense of balanced-literacy practice. Temporal series run on ONE shared grid (t=0,3,6,9,12,15, approximately 2011-2026) with every tracked metric authored at every point: extractiveness and theater rise with successive procurement waves and relabeling; suppression_requirement traces the enforcement ratchet as three-cueing bans and training mandates spread — an enforcement-capacity dynamic, hence its inclusion. The trajectory is a monotonic ratchet, not cyclical; no intermittent-reinforcement mechanism is implicated. Coalition note: the payer class is not helpless — teacher unions constitute the principal coalition vector, and their post-hoc bargaining explains why suppression plateaus rather than climbing indefinitely. Final series values equal the base_properties scalars (interval-end state).
+ *
+ * PERSPECTIVAL GAP:
+ *   Seats experiencing the SAME arrangement compute different types. From the state_legislatures_and_agencies seat the apparatus is a governance framework it built and can revise — coordination-forward. From the classroom_teachers and legacy_balanced_literacy_educators seats the same apparatus operates as enforced extraction: imposed hours, prescribed delivery, devalued careers — with the legacy educators' identity_locked exit pushing them furthest toward the full-target end. From the dyslexic_students seat it is rescue: the first instructional regime that reliably reaches them. From the vendor seats it is a favorable market structure. Same-level divergence appears between the two commercial seats (both organized, both arbitrage-capable, differing in product-cycle speed) and between researchers (mobile, epistemic authority) and advocacy organizations (constrained to the legislative arena they mastered). The engine computes these per-seat classifications from the structural data; the authored claim adjudicates none of them.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Beneficiary declarations drive low directionalities: dyslexic_students sit nearest the full-beneficiary end (trapped dependence on exactly the instruction the arrangement mandates — maximal subsidy, minimal exit), general_education_students near them. The commercial seats derive low d from beneficiary position, tempered by their arbirtage-grade exits keeping them from pure-subsidy territory. Victim declarations drive high d: classroom_teachers (organized but constrained exit), district_administrators (institutional but legally bound), and legacy_balanced_literacy_educators, whose identity_locked exit places them at the extreme target end despite only moderate formal power. The excluded seat (english_learner_families) would compute a high d if seated — their interests bear costs the current frame externalizes — but exclusion means they feed no derivation. Observers take the analytical atom and no directionality. No directionality overrides are needed: beneficiary/victim declarations plus exit atoms reproduce the true relationships, and the one tempting override (downgrading publishers for their educational contribution) would launder the procurement channel this story exists to expose.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding problem is LIVE: reading difficulty remains widespread, and the corroboration record shows the problem is attested by parties outside the benefiting set. No mandatrophy declaration is warranted, and the R5 mismatch check (status=live x verdict=world_rearranges) is internally consistent — no zombie flag expected. The classification earns its keep in both directions: a pure-snare reading would erase the protected students whose stake is the arrangement's moral core, laundering their interests as cover; a pure-rope reading would launder the mandate economy — captive procurement markets, identity destruction for legacy practitioners, silenced English-learner constituencies — as innocent coordination. The tangled_rope claim forces both faces into the ledger simultaneously. Watch item: theater_ratio's steady climb (0.16 to 0.32) is the Goodhart-drift signature; if mandates outlive demonstrated function while completion certificates substitute for instructional change, the structure drifts piton-ward, and the rising theater series gives the temporal detectors the data to catch it.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    kernel_reading_committer_structure,
+    'Which reading of the reading_acquisition_legitimacy kernel should govern instructional legitimacy — and what changes structurally if a sibling reading governs instead of structured_literacy_remediation?',
+    'Comparative constraint authorship of the sibling readings (phonics_decoding_primacy, whole_language_meaning_primacy, balanced_literacy_integration) over the same standing arrangement: compare each reading''s beneficiary/victim structure, enforcement surface, and epsilon. The disagreement between readings is located in the criterion-of-legitimacy element, not in the underlying efficacy evidence.',
+    'Under whole_language_meaning_primacy the victim set expands sharply to include dyslexic students failed by implicit instruction; under phonics_decoding_primacy the vulnerable-first universal-intensity layer drops out and coordination scope narrows; under balanced_literacy_integration enforcement relaxes and vendor concentration falls. This file''s classification holds only for the structured_literacy_remediation reading.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_committer_structure, conceptual, 'Committer structure: this constraint is one reading (structured_literacy_remediation) of the reading_acquisition_legitimacy kernel; sibling readings instantiate different constraints.').
+
+omega_variable(
+    constructed_package_vs_natural_consequence,
+    'Does the full prescriptive package — vulnerable-first universalism, multisensory delivery, continuous diagnostics, universal preventive intensity — follow necessarily from the cognitive-science core, or is it a constructed policy bundle that exceeds what the evidence compels?',
+    'Component-wise dismantling trials isolating each package element''s marginal contribution, and comparative study of jurisdictions adopting narrow phonics mandates versus full structured-literacy bundles.',
+    'If the bundle exceeds the evidence, the arrangement''s quasi-natural framing weakens and false-summit risk rises — pressure away from any mountain reading toward rope or tangled_rope; if each component is independently supported, the coordination claim strengthens and extraction attributions narrow to the procurement channel alone.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(constructed_package_vs_natural_consequence, conceptual, 'Whether the prescriptive superstructure is compelled by the empirical substrate or is a constructed addition riding on it.').
+
+omega_variable(
+    vendor_rent_share_of_mandated_spend,
+    'What share of mandate-driven procurement (aligned core programs, decodable series, mandated professional development) reflects service value versus positional rent unavailable in non-mandated markets?',
+    'Procurement audits, contract disclosure, and price benchmarking of aligned products against comparable goods in non-mandated markets; comparison of mandated-training pricing against voluntary-enrollment pricing for the same courses.',
+    'High rent share pushes the commercial seats toward snare-flavored computation and raises effective extraction for the district and taxpayer side; negligible rent supports the coordination framing and lowers the constraint''s measured extractiveness.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(vendor_rent_share_of_mandated_spend, empirical, 'Whether mandated-market prices track cost-plus-service or capture.').
+
+omega_variable(
+    universal_dosage_tradeoff,
+    'Does extending intervention-grade structure to all students cost typical or advanced readers meaningful access to rich meaning-making, content-knowledge building, and voluntary reading volume?',
+    'Longitudinal comparison of vocabulary growth, background-knowledge measures, and reading-volume outcomes under universal structured-literacy regimes versus balanced conditions, controlling for demographics and baseline skill.',
+    'If a real tradeoff exists, general_education_students carry a hidden payer position that the current beneficiary declaration understates, the constraint''s beneficiary structure is less uniform than authored, and the vulnerable-first framing''s universal extension becomes a contested design choice rather than an unambiguous improvement.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(universal_dosage_tradeoff, empirical, 'Whether universal preventive intensity imposes real opportunity costs on students who did not need it.').
+
+omega_variable(
+    suppression_structural_vs_internalized,
+    'Is the measured suppression on legacy-pedagogy practitioners structural (statutory bans, approved-list exclusions, fidelity rubrics) or internalized (professional stigma, identity threat, self-censorship)?',
+    'Post-repeal suppression trajectory: examine jurisdictions that repeal alignment statutes or soften rubrics; if devaluation, self-censorship, and hiring discrimination against legacy-trained educators persist after the structural bars come down, the internalized component is confirmed.',
+    'If substantially internalized, effective suppression exceeds what statute repeal alone would remove, the identity_locked exit attribution for legacy_balanced_literacy_educators deepens, and their seat''s computed extraction rises beyond the structural measure.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_structural_vs_internalized, empirical, 'Structural versus internalized composition of the constraint''s suppressive force on displaced practitioners.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(reading_acquisition_legitimacy__structured_literacy_remediation, 0, 15).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(read_tr_t0, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 0, 0.16).
+narrative_ontology:measurement(read_tr_t3, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 3, 0.19).
+narrative_ontology:measurement(read_tr_t6, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 6, 0.22).
+narrative_ontology:measurement(read_tr_t9, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 9, 0.26).
+narrative_ontology:measurement(read_tr_t12, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 12, 0.29).
+narrative_ontology:measurement(read_tr_t15, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 15, 0.32).
+
+% Extraction over time
+narrative_ontology:measurement(read_be_t0, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 0, 0.26).
+narrative_ontology:measurement(read_be_t3, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 3, 0.31).
+narrative_ontology:measurement(read_be_t6, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 6, 0.36).
+narrative_ontology:measurement(read_be_t9, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 9, 0.4).
+narrative_ontology:measurement(read_be_t12, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 12, 0.43).
+narrative_ontology:measurement(read_be_t15, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 15, 0.45).
+
+% Suppression requirement over time
+narrative_ontology:measurement(read_su_t0, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 0, 0.34).
+narrative_ontology:measurement(read_su_t3, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 3, 0.42).
+narrative_ontology:measurement(read_su_t6, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 6, 0.5).
+narrative_ontology:measurement(read_su_t9, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 9, 0.57).
+narrative_ontology:measurement(read_su_t12, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 12, 0.62).
+narrative_ontology:measurement(read_su_t15, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 15, 0.66).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(reading_acquisition_legitimacy__structured_literacy_remediation, enforcement_mechanism).
+narrative_ontology:affects_constraint(reading_acquisition_legitimacy__structured_literacy_remediation, reading_acquisition_legitimacy__phonics_decoding_primacy).
+narrative_ontology:affects_constraint(reading_acquisition_legitimacy__structured_literacy_remediation, reading_acquisition_legitimacy__whole_language_meaning_primacy).
+narrative_ontology:affects_constraint(reading_acquisition_legitimacy__structured_literacy_remediation, reading_acquisition_legitimacy__balanced_literacy_integration).
+
+% DUAL FORMULATION NOTE:
+% The colloquial label 'science of reading' (like the older 'reading wars') conflates at least four structurally distinct claims about instructional legitimacy, decomposed here per the epsilon-invariance principle into a four-story constraint family sharing the reading_acquisition_legitimacy kernel. The phonics_decoding_primacy story is upstream: its meta-analytic evidence base is cited as justification for this reading's broader package. This story is the current policy-dominant member: its statutory enforcement reshapes the operating environments of all three siblings (banning whole-language practice outright, compressing balanced-literacy's space, absorbing phonics-primacy into a larger bundle). Each sibling carries its own epsilon, beneficiaries, victims, and network edge back to this story.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

@@ -1,0 +1,327 @@
+{
+  "header": {
+    "constraint_id": "total_war_reachability_boundary__contraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "c5044ba3-7abd-4abb-a5a4-853b282d1dab"
+  },
+  "base_properties": {
+    "extractiveness": 0.16,
+    "suppression": 0.08,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.38,
+    "claimed_type": "mountain",
+    "human_readable": "Total-War Reachability Boundary - Contraction Reading (Winnable Total War Outside the Feasible Set)",
+    "topic_domain": "international_relations/strategic_studies",
+    "emerges_naturally": true,
+    "victims": [
+      "global_civilian_population",
+      "future_generations"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 17,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 52,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 65,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 17,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 52,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 65,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.48,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_status_reachability_modality",
+      "question": "This story instantiates the contraction_reading of the total_war_reachability_boundary kernel: is winnable total war permanently outside the feasible set (this reading), merely improbable while remaining reachable (dropping_reading), or contingently unreachable and technologically reversible (contingent_reachability_reading)?",
+      "resolution_mechanism": "A demonstrated war-winning pathway in credible wargaming or practice would refute this reading; verified multilateral disarmament that leaves the boundary intact would strengthen it; the sibling stories carry the competing classifications as separate constraints.",
+      "impact": "If dropping_reading is right, this constraint recomputes as a rope (coordination equilibrium) with real beneficiaries; if contingent_reachability is right, it recomputes as a piton awaiting technological reversal; the mountain classification holds only under permanence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which modality of the reachability boundary holds: permanent exclusion, probabilistic reduction, or reversible contraction."
+    },
+    {
+      "id": "natural_law_vs_maintained_construct",
+      "question": "Is the boundary a genuine natural-law limit (a mountain), or a constructed condition contingent on human-maintained arsenals - an artifact whose naturality is inherited from physics but whose continued existence is a standing choice?",
+      "resolution_mechanism": "Counterfactual analysis of verified multilateral disarmament: if the boundary would survive substrate removal (via reconstitution knowledge and delivery-system latency), it approaches natural-law status; if it dissolves with the arsenals, it is a maintained construct.",
+      "impact": "If constructed-and-maintained, the mountain claim weakens toward rope or scaffold, and the administering commands acquire a maintenance-beneficiary structure this reading denies.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the contraction is a fact of the world or a fact of the arsenal."
+    },
+    {
+      "id": "universal_risk_extraction_vs_hazard_profile",
+      "question": "Does the universal extinction-risk bearing declared here constitute extraction (victims without a capturer) or merely the hazard profile of a protective limit - cost without transfer?",
+      "resolution_mechanism": "Decompose epsilon into a transfer component (resources moved to any seat) and a risk-bearing component (exposure with no recipient); if transfer dominates and a seat captures it, the structure is extractive despite the mountain profile.",
+      "impact": "If risk-bearing dominates with no capture, the mountain classification stands with a universal victim set; if a capture seat emerges (for example the weapons-industrial complex), the constraint recomputes toward tangled_rope or snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether universal cost-bearing under a capturer-less limit counts as extraction."
+    },
+    {
+      "id": "signaling_theater_function_erosion",
+      "question": "Is the rising signaling theater around the boundary (measurement series) eroding the boundary's function, or parasitic on its fixity - performance layered on a limit that performs regardless?",
+      "resolution_mechanism": "Crisis-behavior analysis: if theater-driven misreading (Able Archer-class incidents) increasingly produces boundary-threatening behavior, theater is eroding function; if crises resolve with the limit intact, theater is parasitic.",
+      "impact": "Theater sustained above 0.5 with function erosion would push the computed type toward piton; parasitic theater leaves the mountain classification untouched.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether growing performative signaling threatens the boundary's operative core."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Between 1945 and roughly the mid-1960s, thermonuclear arsenals with survivable second-strike capability contracted the strategic space of the great powers: every credible wargame, every feasibility study, and every crisis converged on the conclusion that total war between nuclear-armed states has no winning branch. This story instantiates the CONTRACTION READING of the total_war_reachability_boundary kernel: the removal of winnable total war from the feasible set is treated as a fixed, physics-grade limit - a mountain. No actor collects from its operation; the declared victim set is universal, because the limit's existence entails permanent species-level tail risk borne by every population, disproportionately by those with no voice in posture decisions. Per the epsilon-invariance decomposition rule, the colloquial label 'the nuclear revolution' covers three structurally distinct claims about this boundary - permanent contraction (this file), probabilistic reduction with retained reachability (dropping_reading), and contingent, technology-reversible contraction (contingent_reachability_reading) - each authored as its own constraint with its own epsilon and linked through network.affects_constraints. The claim/metric split is deliberate: claimed_type asserts mountain; the authored metrics describe a limit that is nearly absolute in feasibility terms (accessibility_collapse 0.92) yet surrounded by real intellectual resistance (0.38) and heavy signaling theater (0.48). The engine adjudicates; the claim is not tuned to the predicted output.\n\nKEY AGENTS (by structural relationship):\n- nuclear_strategic_commands: Administrator seat (institutional/identity_locked) - operates the arsenals constituting the boundary; collects nothing\n- nuclear_power_political_leadership: Dual seat (institutional/constrained) - holds launch authority, bears crisis exposure\n- global_civilian_population: Primary universal victim (powerless/trapped) - bears the entire tail risk\n- non_nuclear_states: Sheltered-hostage seat (moderate/constrained) - protected by a limit it does not own\n- future_generations: Excluded victim (powerless/trapped) - inherits embedded risk, cannot object\n- disarmament_movements: Excluded opposition (organized/constrained) - outside all posture decisions\n- strategic_studies_community: Analytical observer (analytical/analytical) - maps the feasible set",
+    "key_agents": [
+      "nuclear_strategic_commands: Administrator seat (institutional/identity_locked) - operates the arsenals whose second-strike survivability constitutes the boundary; collects nothing; cannot exit without ceasing to be what it is",
+      "nuclear_power_political_leadership: Dual seat (institutional/constrained) - holds launch authority, sets doctrine, bears crisis exposure; payer with agenda-setting powers",
+      "global_civilian_population: Primary universal victim (powerless/trapped) - bears the entire tail risk; no vote, no exit",
+      "non_nuclear_states: Sheltered-hostage seat (moderate/constrained) - protected by a limit they do not own, exposed to consequences they do not control",
+      "future_generations: Excluded victim (powerless/trapped) - inherits embedded risk; structurally unable to object",
+      "disarmament_movements: Excluded opposition (organized/constrained) - argues for abolishing the boundary's basis; holds no seat in any posture decision",
+      "strategic_studies_community: Analytical observer (analytical/analytical) - maps the feasible set; adjudicates reachability claims by model and simulation"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.16 at interval end) because the boundary transfers nothing to anyone: its cost side is universal risk-bearing and the resource sink of the arsenals that instantiate it, with no receiving seat - hence gain_flow 'diffuse'. Suppression is near-floor (0.08) because the limit coerces no one; alternatives collapse on comprehension rather than by enforcement, which is why accessibility_collapse is high (0.92) while suppression stays low - the mountain signature separates these two channels, and suppression is authored as the raw unscaled structural property it is. Resistance (0.38) is real but perpetually unsuccessful: countervailing warfighting doctrine, missile-defense schemes, and disarming-strike concepts are repeated attempts to restore reachability that wargaming keeps refuting. Theater_ratio (0.48) tracks the growth of performative signaling - tests as messages, red lines, posture reviews that change nothing - atop a limit whose core function never degraded; it sits just under the Goodhart line. The series show the boundary's history as a cycle (rise to the 1962 crisis-density peak, Cold-War plateau, post-1991 trough, current rebound) driven by exogenous geopolitical tension and arsenal size rather than by any extraction dynamic - the oscillation is not an intermittent-reinforcement mechanism, and the base_properties scalars reflect the interval-end state. All series share one eight-point grid (T=0..80) so no metric's end-state leaks backward into earlier rows.",
+    "perspectival_gap": "The seats compute differently from identical facts. From the strategic commands' position the boundary is the operating environment they administer and guarantee - a mission, not an imposition; from the civilian seats it is pure exposure without agency; from non-nuclear capitals it is shelter purchased with hostage-status; from the analytical seat it is a settled result. The identity-lock on the commands is institutional fusion: the organization has become its function, so exit (dismantling the force) is unthinkable from inside the professional identity that the mission constitutes - if that frame broke, the administrator seat would recompute from steward to potential fixer. The divergence between the administrator seat's experience (stewardship) and the powerless seats' experience (hostagehood) is the story's central perspectival fact, and it is computed by the engine from the structural data, not asserted by the claim.",
+    "directionality_logic": "Declared structure: victims are global_civilian_population and future_generations (universal, powerless, trapped - derivation places both near the full-target end, amplified further by the constraint's universal scope in the engine's arithmetic, which it owns); no beneficiaries are declared, because no seat collects from the boundary's operation. Two overrides correct derivations the structural data alone would get wrong: (1) institutional -> 0.58 - both institutional seats administer and bear without capturing, but a generic institutional/agenda-setter derivation assumes administration implies capture-side benefit, which is false here; (2) moderate -> 0.45 - non_nuclear_states carry the victim declaration, which alone would drive them toward the target end, but their net position is slightly sheltered (secondary beneficiary role): protected by the limit, taxed by hostage exposure. The excluded organizer seat (disarmament_movements) is deliberately left to fallback per the R3 rule that authored absences must not drive classification.",
+    "mandatrophy_analysis": "The receipt surface makes this constraint look piton-shaped - diffuse gains, prohibitive fixing - and the R5 interview sharpens the trap: the founding problem (recurrent great-power total war) is dead, and the arrangement persists. But the piton test is cost-asymmetry plus atrophied function, and this limit's function is intact (theater 0.48, accessibility_collapse 0.92): the problem is dead BECAUSE the arrangement holds, which is load-bearing persistence, not vestigial drift. Conversely, the mandatrophy lens prevents the opposite error: reading the dead founding problem as license to treat the boundary as obsolete (the contingent_reachability move) would mistake the extinguisher for the fire. The classification that survives both errors is the one this reading asserts: a fixed limit whose founding problem it consumed.",
+    "kernel_context": "Kernel: total_war_reachability_boundary - the contested question of whether winnable total war remains inside the feasible set of great-power strategy. This file instantiates the contraction_reading: nuclear weapons contracted the strategic space, and winnable total war left the feasible set entirely - a permanent, physics-grade exclusion. Sibling readings, authored as separate constraints: dropping_reading (total war dropped in probability but remains reachable; deterrence as rope) and contingent_reachability_reading (current contraction is a reversible piton awaiting technological change). Both are foreclosed within this reading's framework: their core premises contradict the permanence claim. Committal structure is routed to the omega variables (kernel_reading_status_reachability_modality carries the modality contest; natural_law_vs_maintained_construct carries the naturality question)."
+  },
+  "network": {
+    "affects_constraints": [
+      "total_war_reachability_boundary__dropping_reading",
+      "total_war_reachability_boundary__contingent_reachability_reading",
+      "nuclear_taboo_norm",
+      "npt_bargain"
+    ],
+    "dual_formulation_note": "The colloquial label 'the nuclear revolution' decomposes, per the epsilon-invariance principle, into three structurally distinct claims about the same kernel: this file (contraction_reading) authors the strong claim - permanent exclusion of winnable total war, mountain, epsilon indexed to universal risk-bearing with no capture; dropping_reading authors the probabilistic claim (rope: deterrence as coordination equilibrium, reachability retained); contingent_reachability_reading authors the reversibility claim (piton: atrophied capability awaiting technological reversal). Each sibling carries its own epsilon, beneficiary/victim structure, and claimed type. The contraction claim is upstream in the sense that both weaker readings concede current unreachability and dispute only its modality. Edges run from this file to both siblings and to the downstream structures the boundary underwrites (nuclear taboo norm, NPT bargain)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "nuclear_strategic_commands",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Operate the arsenals whose survivable second-strike capability constitutes the boundary: maintain alert postures, run the wargames that repeatedly confirm no war-winning pathway exists, and execute retaliation if attacked. They administer the machinery that instantiates the limit but collect no revenue from it; their budgets are costs, their mission is the limit's guarantee. Exit would mean dismantling the force they are - the institution has become its function."
+    },
+    {
+      "name": "nuclear_power_political_leadership",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold launch authority and set doctrine; bear the decision burden of a limit they cannot repeal and the personal risk that any crisis escalates past recall. They can reshape posture at the margins but cannot restore a winnable total war short of disarmament, which their security establishments resist. They pay in constrained option sets and crisis exposure."
+    },
+    {
+      "name": "global_civilian_population",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Bear the entire tail risk the boundary's existence entails: if the limit ever fails - by accident, miscalculation, or unauthorized use - they die first and in the largest numbers, and no alert posture, doctrine, or treaty is ever put to their vote. Exit is physically unavailable; the blast radius is the species' habitat."
+    },
+    {
+      "name": "non_nuclear_states",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Live under a limit owned by others: sheltered from great-power total war they could not have survived, yet hostage to arsenals they neither control nor voted for, and exposed to fallout and nuclear winter produced elsewhere. Renouncing or acquiring weapons does not move the boundary; their option set is bounded by decisions made in other capitals."
+    },
+    {
+      "name": "future_generations",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Inherit whatever risk the present generation's posture decisions embed - waste storage, arsenal modernization, treaty collapse - with no seat in any room where those decisions are made. They would object to the risk being renewed on their behalf; their objection is structurally uncastable."
+    },
+    {
+      "name": "disarmament_movements",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organized campaigns - treaty-ban coalitions, humanitarian initiatives - arguing the limit's basis should be abolished outright; they hold moral authority and occasional legal victories but no seat in alert-posture or doctrine decisions in any nuclear-armed capital."
+    },
+    {
+      "name": "strategic_studies_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The wargamers, physicists, and theorists who mapped the contraction: they adjudicate reachability claims by model and simulation, publish the feasibility analyses all parties cite, and see the full structure - including that the limit binds its own administrators."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Removes total war from every nuclear power's feasible set simultaneously, terminating the otherwise-unbounded competition in war-winning capability. The removal is not negotiated into place and requires no agreement to sustain: the same physical fact binds all parties at once, so restraint is not coordinated among actors but imposed on them by the shared limit.",
+    "transfer_function": "Transfers no goods to any seat. What moves is option-space and risk: the total-war option is subtracted from every state's strategy set, and species-level tail risk is distributed across all populations - concentrated on those with no voice in alert postures - while the arsenals that constitute the boundary absorb a standing fraction of great-power budgets.",
+    "absent_voices": "Future generations would object to inheriting a renewed risk they cannot cast a vote against; the publics of nuclear-armed states would object that alert postures and doctrines are set over their heads; non-nuclear majorities would object to hostage-status they never accepted; disarmament campaigns hold the objection continuously but hold no seat in any capital's posture decisions. All four objections are structurally uncastable inside the rooms where the boundary's terms are administered.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If winnable total war returned to the feasible set overnight, great-power war planning would revive within a planning cycle: total-war preparation would again be rational for every major power, crisis bargaining would lose its floor, and every alliance, trade, and diplomatic arrangement premised on the impossibility of great-power total war would be repriced against a new possibility of civilizational termination. The rearrangement would be total, which is the operational content of calling the boundary a mountain.",
+    "founding_problem": "The demonstrated recurrence of industrial-scale total war among great powers (1914-18, 1939-45) and the resulting strategic problem: how any state secures itself against another's total-war ambition when total war is survivable enough to attempt.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "No beneficiary set exists to self-attest - this reading declares none - so corroboration is necessarily external: the eighty-year empirical absence of great-power total war in the diplomatic-historical record; the contemporaneous internal conclusions of both Cold-War adversaries (superpower wargaming archives and senior decision-makers' documented judgments that total war was unwinnable); and the repeated failure of every attempted refutation (warfighting doctrine, missile defense, disarming-strike concepts) to demonstrate a winning branch. The problem is dead as effectuated by the arrangement - the distinction that keeps this from being a zombie finding is carried in the disappearance_verdict and the theater series, not in this narrative."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "thermonuclear_contracted_feasible_set",
+    "drift_state": {
+      "moment": "contemporary_multipolar_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "dropping_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "contingent_reachability_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "winnable_total_war_physically_unreachable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "escalation_converges_to_catastrophe",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dep_trap",
+    "story_uid": "a580bfc5-1bce-4960-ae46-85079d4818ee"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.55,
+    "theater_ratio": 0.29,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unconditional Income Support — Dependency-Trap Reading",
+    "topic_domain": "political economy/social policy/welfare state theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "long_term_recipients",
+      "transfer_bureaucracy"
+    ],
+    "victims": [
+      "working_taxpayers",
+      "at_risk_poor_youth"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reading_contest_income_support_kernel",
+      "question": "This constraint instantiates the dependency_trap_reading of the income_support_commitment kernel; at which structural element is the disagreement with the sibling readings (freedom_floor_reading, targeting_efficiency_reading) located?",
+      "resolution_mechanism": "Adoption of a sibling reading re-indexes epsilon over the same standing arrangement: freedom_floor_reading authors low epsilon (the floor as autonomy and exit-capacity infrastructure), targeting_efficiency_reading localizes epsilon in the universality-overhead component. Long-run pilot, panel, and administrative data on labor-supply and skill-formation effects decide which reading's descriptive claims hold.",
+      "impact": "If the freedom-floor descriptive claims prevail, this constraint's epsilon collapses toward the resource-allocation coordination floor and classification trends rope; if the targeting-efficiency framing prevails, the extraction decomposes into a targeted rope plus a universal surcharge, splitting this story in two.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer routing: one reading of the income_support_commitment kernel; the disagreement sits in the descriptive effect claims (cumulative dependence formation versus autonomy enablement) and in distribution-design premises."
+    },
+    {
+      "id": "disincentive_causal_direction",
+      "question": "Does the unconditional payment itself cause labor-market exit and skill atrophy, or does it mainly cushion exits driven by pre-existing conditions the floor did not create?",
+      "resolution_mechanism": "Longitudinal randomized and natural-experiment evidence (negative income tax trials, national basic-income pilots, benefit-reform discontinuities) tracking hours worked, re-entry wages, and skill proxies over five-plus years.",
+      "impact": "Small durable disincentives drop epsilon toward the coordination floor and flatten the payer-seat asymmetry; large cumulative effects push epsilon upward and raise the risk of a tangled_rope-to-snare transition as dependence compounds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal weight of the unconditional floor in producing the dependence this reading alleges."
+    },
+    {
+      "id": "dependence_structural_vs_internalized",
+      "question": "Is recipient-side exit suppression structural (skill and network depreciation raising re-entry cost) or internalized (household normalization of non-work and self-concept fused with support status)?",
+      "resolution_mechanism": "Post-exit trajectory data where payments lapse: if search intensity and re-entry remain depressed after the fiscal barrier is removed, the internalized share is material.",
+      "impact": "A large internalized share raises effective suppression above the structural measure and shifts the long-term recipient seat's exit posture from trapped toward identity_locked, amplifying that seat's effective extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism split behind recipient-side suppression: economic lock-in versus identity fusion."
+    },
+    {
+      "id": "intergenerational_cost_deferral",
+      "question": "How much of the arrangement's current affordability rests on deferring financing cost to future taxpayers rather than covering it from current-year revenue?",
+      "resolution_mechanism": "Actuarial decomposition of program financing into current revenue versus accumulated obligations, with sensitivity of solvency to demographic projections.",
+      "impact": "High deferral raises the excluded future-taxpayer seat's exposure and extends the constraint's effective time horizon, increasing scope-amplified extraction; low deferral contains the burden within the paying generation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Share of the arrangement's cost financed by intergenerational deferral rather than current revenue."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A national unconditional income-support arrangement pays every resident a flat periodic amount financed by general taxation — no means test, no work requirement, no time limit. This story assesses that standing arrangement through the dependency-trap lens: the flat payment lowers the relative return to entry-level work, and for recipients who remain out of employment the gap between a constant payment and a depreciating earning capacity widens year over year. Financing falls on the working tax base; the net flow runs from labor-market-attached households toward detached ones, with the heaviest private cost — forgone skill formation at the career entry point — landing on the poor. The arrangement simultaneously performs a real pooling function (a universal subsistence floor with no gatekeeping) and runs a persistent asymmetric transfer; both halves are declared structural facts, not reconciled.\n\nKEY AGENTS (by structural relationship):\n- working_taxpayers: Primary target (organized/constrained) — bears the net fiscal levy with no offsetting receipt\n- long_term_recipients: Primary beneficiary (powerless/trapped) — collects the concentrated net transfers\n- at_risk_poor_youth: Dual-positioned target-beneficiary (powerless/constrained) — receives the payment while bearing forgone skill formation\n- welfare_ministry: Agenda-setter (institutional/constrained) — sets payment levels and the financing schedule\n- transfer_bureaucracy: Secondary beneficiary (organized/constrained) — staffing and budgets scale with program scope\n- future_taxpayers: Excluded bearer (powerless/trapped) — services deferred financing costs with no seat in deliberation\n- policy_evaluation_researchers: Analytical observer (analytical/analytical) — produces the evidence both directions cite",
+    "key_agents": [
+      "working_taxpayers: Primary target (organized/constrained) — funds the universal payment while receiving little back; lever is electoral",
+      "long_term_recipients: Primary beneficiary (powerless/trapped) — payment is primary income; outside option depreciates yearly",
+      "at_risk_poor_youth: Dual-positioned payer-beneficiary (powerless/constrained) — stands at the skill-formation entry point the payment prices away",
+      "welfare_ministry: Agenda-setter (institutional/constrained) — sets parameters within statutory bounds; continuity depends on program stability",
+      "transfer_bureaucracy: Secondary beneficiary (organized/constrained) — administers enrollment and payment; scale tracks program scope",
+      "future_taxpayers: Excluded bearer (powerless/trapped) — named in actuarial tables, absent from deliberation",
+      "policy_evaluation_researchers: Analytical observer (analytical/analytical) — runs pilots and panels; influence runs through citation"
+    ],
+    "logic_rationale": "Extractiveness is 0.60: the net flow runs persistently from the productive base toward non-participation, and the poorest entrants bear a compounding private cost in forgone capability — substantial, but short of pure extraction because the floor function is real and every seat draws on it in adversity. Suppression is 0.55 as a raw structural property (unscaled by power or scope): financing is compulsory with no individual opt-out, but electoral exit exists and is exercised. Theater is 0.29: transfers are real and dominant, while evaluation commissions, reporting cycles, and pilot announcements grow faster than actual parameter changes. Accessibility collapse is 0.45: work, family support, charity, and migration persist as alternatives, but the flat payment erodes the pull of entry-level work and, cumulatively, the capacity to take it. Resistance is 0.55: persistent electoral contestation over levels and conditionality, plus intermittent work effort among recipients. The claim (tangled_rope) and the metrics are authored independently — the claim states this reading's structural assessment (genuine pooling plus asymmetric net flow); the metrics describe observed operation. All three tracked series share one time grid (t=0,10,20,30,40,50) so no metric row borrows another's end-state. Identity-lock dynamics: the mechanism binding long-term recipients is part economic (skill and network depreciation) and plausibly part internalized (household normalization, recipient self-concept); the split is unresolved and routed to the dependence_structural_vs_internalized omega rather than asserted.",
+    "perspectival_gap": "From the payer seats the arrangement computes as enforced transfer carrying compounding private costs; from the recipient seats the same structure is a lifeline whose removal is the catastrophe; from the ministry seat it is insurance priced against actuarial forecasts; from the bureaucracy seat it is employment. Identical metrics, divergent seats — the engine computes per-seat classifications from power, exit options, and directionality; nothing in the authored claim adjudicates between them.",
+    "directionality_logic": "Working taxpayers sit near the full-target end: net levy, no offsetting receipt, exit limited to costly emigration or electoral reversal. Long-term recipients sit near the beneficiary end: constant receipt against a depreciating outside option. At-risk poor youth are declared in the victim set and derive a high d accordingly; their secondary receipt dampens but does not reverse the net position, because the forgone skill formation compounds against a flat payment. The ministry sits near symmetric — it trades fiscal cost for institutional stability — and the bureaucracy leans beneficiary, collecting scaled budgets without bearing the levy. Future taxpayers are pure targets with zero present voice: the widest directional gap in the story, and the reason the excluded seat matters despite holding no vote.",
+    "mandatrophy_analysis": "Reading the arrangement as pure extraction would erase the genuine pooling function every seat — payers included — draws on in adversity; reading it as pure coordination would erase the compounding costs the payer and at-risk seats bear. The tangled_rope claim holds both halves in view: coordination (universal floor, no gatekeeping, no take-up failure) alongside asymmetric net flow (productive base finances detachment while the poorest pay in forgone capability). The founding problem — subsistence insecurity without stigma or administrative gatekeeping — remains live, so no mandatrophy is declared. The open question the temporal series registers is whether costs have begun migrating from solving the founding problem to manufacturing a successor problem: base_extractiveness rises monotonically across the interval while the transfer function itself never lapses.",
+    "kernel_context": "Kernel: income_support_commitment — the standing commitment to unconditional income support. This file instantiates the dependency_trap_reading: the arrangement assessed as a work disincentive that atrophies skills and accumulates state dependence. Sibling readings: freedom_floor_reading (the same arrangement assessed as autonomy, dignity, and labor-market exit-capacity infrastructure, authoring low epsilon) and targeting_efficiency_reading (the arrangement assessed by distribution design, localizing epsilon in the universality overhead). All three read the same referent — the standing unconditional arrangement — and differ in the descriptive effect claims and design premises brought to it; the disagreement is located in whether cumulative dependence formation is a real effect of the floor itself."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__freedom_floor_reading",
+      "income_support_commitment__targeting_efficiency_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the income_support_commitment kernel decomposes into three reading-stories sharing one referent (the standing unconditional arrangement) with reading-indexed epsilon values. This member carries the dependency-trap assessment. Edges link the siblings because upstream descriptive findings (pilots, discontinuities, longitudinal panels) feed every member's epsilon and the members compete for the same legislative attention. Decomposition follows the epsilon-invariance rule: one reading, one epsilon, one beneficiary/victim structure per file."
+  },
+  "stakeholders": [
+    {
+      "name": "working_taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Earn market income and remit the taxes that finance the universal payment. Their net position is negative: they fund the floor while receiving little back. Opting out is unavailable — residence and earning expose them to the levy regardless of consent. Their lever is electoral: shifting payment levels, tax schedules, or conditionality through legislation. Emigration exists for a mobile minority but severs livelihoods and family ties for most."
+    },
+    {
+      "name": "long_term_recipients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Receive the payment as their primary or sole income across many years. Out of steady employment, occupational skills depreciate, professional networks thin, and résumé gaps lengthen, so the wages available on re-entry fall over time while the payment stays constant. Leaving the arrangement means accepting a falling living standard against a shrinking outside option; staying means the gap widens further each year."
+    },
+    {
+      "name": "at_risk_poor_youth",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Stand at the decision point where early jobs build the skills and work history that price later careers. The unconditional payment lowers the cost of postponing that first rung; those who postpone collect the payment now and enter the labor market later with weaker credentials. They receive the transfer like everyone else while bearing the forgone-formation cost privately."
+    },
+    {
+      "name": "welfare_ministry",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sets the payment level, the tax schedule that finances it, and the review calendar. Commissions evaluations, answers to the legislature, and adjusts parameters within statutory bounds. Its institutional continuity depends on the program's legal stability; radical redesign requires coalition politics it does not control alone."
+    },
+    {
+      "name": "transfer_bureaucracy",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers enrollment, payment processing, fraud screening, and reporting. Staffing and administrative budgets scale with program scope. Executes policy rather than writing it, and its employment persists exactly as long as the program does."
+    },
+    {
+      "name": "future_taxpayers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Will service whatever financing gap today's payment levels accumulate. Named in actuarial tables but holding no vote, no lobby, and no seat in the deliberations that set current generosity; their interests enter only through the forecasts the ministry chooses to commission."
+    },
+    {
+      "name": "policy_evaluation_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Run and analyze pilots, policy discontinuities, and longitudinal panels on labor supply, skill formation, and fiscal incidence. Publish findings that cut in both directions and hold no stake in either expansion or retrenchment; influence runs through citation into ministry reviews and legislative testimony."
+    }
+  ],
+  "gain_flow": "long_term_recipients",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Pools subsistence risk across the whole population: every resident receives a guaranteed floor regardless of employment status, eliminating means-testing gatekeeping, stigma, and take-up failure, and insuring against job loss and income volatility without administrative verification.",
+    "transfer_function": "Moves purchasing power from the taxed base — disproportionately working households and capital — to residents in equal per-capita amounts; the net flow concentrates on those with little or no market income and recurs year over year.",
+    "absent_voices": "Future taxpayers bear the deferred financing costs but hold no seat in current deliberation; informal-economy workers and migrants excluded from the payout perimeter would contest who counts as a resident owed the floor; low-wage employers facing thinner entry-level labor supply would contest the disincentive design but enter only as lobbying outsiders.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Household budgets, retail demand floors, and labor-supply patterns are configured around the payment. Overnight removal would force rapid re-entry into low-wage work, spike hardship and charity load, contract consumption in recipient-dense regions, and force emergency re-legislation within months — the world rearranges around its absence.",
+    "founding_problem": "Industrial-era mass unemployment and old-age poverty outpaced charitable and familial capacity, and means-tested relief carried heavy administrative cost, stigma, and take-up failure; the arrangement was built to guarantee subsistence independent of employment fluctuations without gatekeeping anyone.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: national statistical offices' poverty and food-insecurity series, international labor-body compilations of subsistence insecurity, and employer-association surveys documenting entry-level skill shortages all attest the underlying insecurity persists. No credible source attests the founding problem is solved; advocacy and critical seats agree on the problem's persistence while disputing the arrangement's effect on it."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "distributed",
+    "reference_frame": "work_conditioned_safety_net",
+    "drift_state": {
+      "moment": "contemporary_post_pilot_evidence_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "targeting_efficiency_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "reciprocity_conditions_legitimate_support",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "dependence_costs_exceed_floor_benefits",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "header": {
+    "constraint_id": "lausanne_minority_protections__guarantor_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lgp_guarantor",
+    "story_uid": "bc62ae89-ee4b-4e66-994e-37c492cec0d6"
+  },
+  "base_properties": {
+    "extractiveness": 0.31,
+    "suppression": 0.38,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.62,
+    "claimed_type": "scaffold",
+    "human_readable": "Lausanne Guarantor-Supervision Reading: Internationally Supervised Minority Obligations",
+    "topic_domain": "international_law/religious_governance/minority_rights",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "guarantor_state_greece",
+      "ecumenical_patriarchate",
+      "istanbul_greek_orthodox_communities",
+      "armenian_community_institutions",
+      "jewish_community_of_turkey",
+      "western_thrace_muslim_communities",
+      "orthodox_diaspora_advocacy_groups"
+    ],
+    "victims": [
+      "turkish_state"
+    ],
+    "vindicated_propositions": [
+      "international_minority_supervision_doctrine",
+      "individual_petition_effectiveness_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.35,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_epsilon_routing",
+      "question": "This constraint is one reading (guarantor_reading) of the kernel lausanne_minority_protections; how much of the measured profile is reading-indexed rather than topic-fixed?",
+      "resolution_mechanism": "Corpus-level comparison against the sibling readings: restrictive_reading authors epsilon over a domestic-exclusivity arrangement (expects low epsilon from its own lights), expansive_reading authors epsilon over unfulfilled institutional-continuity guarantees (expects high epsilon). The disagreement is located on the locus-of-authority axis (international supervision versus domestic interpretation) intersecting the scope axes (worship-only versus institutional continuity) carried by the siblings.",
+      "impact": "If the sibling stories author materially different epsilon over the same historical record, the kernel decomposes cleanly into three epsilon-invariant constraints; if they converge, the reading distinction is rhetorical and the family collapses into one story.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Reading-indexed nature of epsilon for one instantiation of the Lausanne kernel."
+    },
+    {
+      "id": "strasbourg_pathway_durability",
+      "question": "Is the post-1990 European adjudication channel a durable second enforcement pillar of the supervision arrangement, or an epiphenomenon contingent on Council of Europe membership politics?",
+      "resolution_mechanism": "Track whether minority-clause litigation volume and compliance outcomes survive episodes of Turkish disengagement rhetoric, budget crises, and suspension debates; compare case throughput before and after each membership shock.",
+      "impact": "If epiphenomenal, the arrangement degrades toward ritual diplomacy with negligible functional share (theater_ratio rising past 0.5); if durable, the transitional-support function retains a working edge and the scaffold reading stays defensible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of the European adjudication pillar of the guarantor channel."
+    },
+    {
+      "id": "reciprocity_operational_symmetry",
+      "question": "Does the supervision arrangement in practice bind both signatory states symmetrically, or does it operate one-directionally in favor of the guarantor state's agenda?",
+      "resolution_mechanism": "Compare invocation frequency and litigation outcomes for minority clauses as applied to each state: Thrace-community cases (mufti appointment, waqf administration) against Istanbul-community cases (foundation property, seminary reopening).",
+      "impact": "If one-directional, the arrangement functions as a unilateral diplomatic instrument wearing a mutual-obligation form, which raises the effective extraction asymmetry between the two implementing states and pressures the classification away from pure transitional support.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Symmetry of supervision across the two implementing states."
+    },
+    {
+      "id": "missing_sunset_design_intent",
+      "question": "The arrangement was conceived as transitional support pending full civic integration of the protected populations, yet carries no codified sunset — is the omission a League-era drafting artifact or a load-bearing ambiguity deliberately preserved to keep the leverage alive?",
+      "resolution_mechanism": "Diplomatic archival analysis of the 1922-23 negotiations and subsequent guarantor-state internal memoranda: did drafters discuss termination conditions, and did later foreign ministries treat permanence as a feature?",
+      "impact": "Deliberate preservation would recast the arrangement as a permanent diplomatic instrument rather than transitional support, challenging the authored scaffold claim in favor of an open-ended coordination reading.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether the absent sunset clause reflects design intent or drafting accident."
+    },
+    {
+      "id": "dormancy_period_measurement_gap",
+      "question": "During the long dormancy (roughly interval points 30-60) the measured extraction and suppression fall to their lowest values precisely while the protected populations suffered their largest catastrophic losses (1942 capital levy, 1955 riots, 1964 expulsions) with no supervisory response — does the low measured profile describe a benign arrangement or an absent one?",
+      "resolution_mechanism": "Counterfactual weighting of the dormancy window: score the arrangement by harm-per-invocation rather than gross activity, using archival records of failed or unmade interventions against the loss events.",
+      "impact": "If absence, the historical trough understates the arrangement's failure and any lifecycle analysis should weight the dormancy gap as the decisive segment; the revival-era recovery would read as reconstruction rather than improvement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the dormancy-era low metrics measure benignity or nonexistence of the arrangement."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested kernel 'Lausanne minority protections': the guarantor reading, which holds that the 1923 treaty's minority clauses are internationally supervised obligations enforceable through guarantor-state diplomacy and European human rights mechanisms rather than solely through Turkish domestic interpretation. The standing arrangement under contest — and the referent for every authored value — is the existing supervision architecture as this reading assesses it: a treaty-born channel through which Greece raises minority grievances, minority foundations litigate in Strasbourg, and European bodies convert the file into benchmarks, while the implementing state absorbs episodic compliance costs and resists the supervision framing itself. Per the epsilon-invariance principle, the colloquial label 'Lausanne minority protections' decomposes into three structurally distinct claims (restrictive, expansive, guarantor readings) with different epsilon, different beneficiary salience, and different failure modes; this file authors only the guarantor instantiation and links its siblings through the network.\n\nKEY AGENTS (by structural relationship):\n- guarantor_state_greece: agenda-setting beneficiary (institutional/mobile) — invokes supervision, collects leverage\n- ecumenical_patriarchate: principal intended protected party (powerless/identity_locked)\n- istanbul_greek_orthodox_communities: protected remnant population (powerless/constrained)\n- armenian_community_institutions: protected foundation estate (organized/constrained)\n- jewish_community_of_turkey: protected communal infrastructure (organized/arbitrage)\n- western_thrace_muslim_communities: mirror-image protected minority (organized/constrained)\n- turkish_state: implementing state bearing compliance costs (powerful/constrained) — resists supervision framing\n- echr_strasbourg_organs: adjudicative administrator (institutional/analytical)\n- european_commission_enlargement: leverage converter (institutional/mobile)\n- orthodox_diaspora_advocacy_groups: amplification and funding (organized/arbitrage)\n- lausanne_treaty_legal_scholars: analytical observer (analytical/analytical)",
+    "key_agents": [
+      "guarantor_state_greece: agenda-setting beneficiary (institutional/mobile) — co-authored the treaty, periodically invokes the minority clauses across bilateral, parliamentary, and EU venues, and collects diplomatic leverage from each invocation while spending ministerial capital",
+      "ecumenical_patriarchate: principal intended protected party (powerless/identity_locked) — heads an Istanbul-based see whose schools, foundations, and clergy pipeline depend on Turkish implementing law; relocation would dissolve its canonical identity, so it pursues survival through Strasbourg litigation, diplomatic appeals, and quiet negotiation",
+      "istanbul_greek_orthodox_communities: protected remnant population (powerless/constrained) — a few thousand families plus Imbros/Tenedos villagers holding minority schooling and foundation-property rights after catastrophic mid-century shrinkage",
+      "armenian_community_institutions: protected foundation estate (organized/constrained) — runs dozens of schools and charities, filed the bulk of post-2011 property-registration claims, and lost most historic holdings to earlier confiscations",
+      "jewish_community_of_turkey: protected communal infrastructure (organized/arbitrage) — maintains a small institutional footprint with a well-worn emigration exit exercised repeatedly after the 1942 levy and 1955 riots",
+      "western_thrace_muslim_communities: mirror-image protected minority (organized/constrained, spoken-for) — holds reciprocal minority status in Greece but its priorities travel mainly through Athens and Ankara rather than through its own seat",
+      "turkish_state: implementing state bearing compliance costs (powerful/constrained) — implements through its own courts and foundations directorate, treats the clauses as settled domestic law, resists outside supervision, and absorbs episodic judgment debts, returned properties, and accession-benchmark pressure while controlling the levers outsiders most request",
+      "echr_strasbourg_organs: adjudicative administrator (institutional/analytical) — receives individual applications, adjudicates property and education treatment against Convention standards, and issues judgments whose follow-through rests on Committee of Ministers supervision",
+      "european_commission_enlargement: leverage converter (institutional/mobile) — turns the minority file into accession benchmarks and progress-report items; the file rises and falls with enlargement politics",
+      "orthodox_diaspora_advocacy_groups: amplification and funding (organized/arbitrage) — US- and Europe-based heritage organizations that fund litigation and publish monitoring with no exposure to implementing decisions",
+      "lausanne_treaty_legal_scholars: analytical observer (analytical/analytical) — documents drafting history and tracks which clauses produced justiciable practice versus dormant text"
+    ],
+    "logic_rationale": "Extraction is authored low (0.31 at interval end) because, assessed by this reading's own lights, the arrangement's costs on the implementing state are legitimate oversight burdens, and in fact the channel is too weak to move much value: enforcement succeeds episodically (court-ordered property returns, compensation awards) and fails routinely (seminary closed since 1971 despite decades of invocation). Suppression (0.38) is a raw structural property, unscaled by power or scope: the arrangement adds an adjudicative channel rather than foreclosing alternatives, but sustaining it requires continuous diplomatic and litigious effort against an unwilling implementer. Theater (0.35) reflects a genuine split: annual demarches and recycled progress-report paragraphs that change nothing, alongside real judgments with material consequences. Accessibility collapse is low (0.35) — minorities retain domestic courts, UN treaty bodies, bilateral channels, and emigration; the arrangement supplements rather than monopolizes. Resistance is high (0.62) because the implementing state actively contests the supervision framing itself: denying the see's standing, slow-walking restitution, and asserting domestic-exclusivity of interpretation. The measurement series run on ONE shared grid (t = 0, 15, 30, 45, 60, 75, 90, 100; years since 1923) across all three tracked metrics. The trajectory is a full rise-collapse-rebuild cycle: League-era enforcement machinery (high suppression_requirement at t0) decays to near-zero by t45 as the host institution dies; the European petition pathway rebuilt enforcement capacity after t60-t75; theater peaks in the dormancy valley (0.60 at t45) where ritual invocation replaced function. The cycle is driven by enforcement-infrastructure availability (host institutions rising and falling), not by intermittent reinforcement — the oscillation is exogenous, not an extraction mechanism.",
+    "perspectival_gap": "The engine should compute sharply different per-seat types from this structural data. From the implementing state's seat (sole victim declaration, powerful but constrained exit), the arrangement presents as externally imposed supervision with real episodic costs and a sovereignty-framing dispute — a high-directionality experience of the same structure the guarantor experiences as service. From the guarantor seat (agenda-setting beneficiary, mobile exit, continental scope), the arrangement is a leverage asset it activates selectively. From the trapped and identity-locked minority seats, it is a lifeline venue whose weakness is itself the injury. Same-nominal-level institutional actors diverge on role and exit: the two states differ in exit mobility and structural position; the Strasbourg organs and the enlargement machinery monetize the file in jurisdiction and benchmarks respectively. Identity-lock dynamics concentrate in the patriarchate: its professional-canonical identity is constituted by location and succession in Istanbul, so its exit option is not merely costly but self-dissolving; if that identity frame broke (a movable see became conceivable), its directionality would shift toward mobile and the computed seat profile would flatten.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation. The seven declared beneficiaries (protected communities and institutions, plus the guarantor state) derive low directionality — the arrangement subsidizes them with venue, restitution, and leverage. The single declared victim, turkish_state, derives high directionality (near-full target) from victim status plus constrained exit: it bears judgment debts, returned-property costs, and benchmark pressure and cannot cheaply abandon the treaty or Council membership. One override is declared: the institutional power atom is pinned to d = 0.12 because the derivation chain has no beneficiary declarations for the treaty-administering bodies (Strasbourg organs, enlargement machinery) and its canonical institutional fallback would place them mid-scale; structurally these seats are subsidized by the arrangement (each invocation expands their jurisdiction, caseload, and agenda relevance), so the explicit override records their near-beneficiary position alongside the guarantor state, which shares the atom and genuinely nets leverage. The override is safe from collision: the implementing state sits on the powerful atom, not the institutional one. Note again that suppression enters the computation unscaled; only extractiveness is scaled by directionality and spatial scope, so the implementing state's continental-scale verification difficulty moderately amplifies its experienced chi while doing nothing to the raw suppression figure.",
+    "mandatrophy_analysis": "This reading exists to prevent two opposite mislabels. Read without the guarantor frame, the arrangement looks like dead-letter text: decades of dormancy, ritual demarches, a closed seminary — a candidate for inertial persistence with high theatrical maintenance. Read with the frame but without the temporal record, the post-1990 litigation revival looks like a healthy coordination mechanism. The truth is a scaffold whose sunset was never codified: the arrangement was designed as transitional support (League-era minority protection was explicitly provisional, awaiting the implementer's maturation into trustworthy protector), the transition it supported was violently overtaken by events (exchange, levy, riots, expulsions) rather than completed, and the mechanism neither dissolved nor matured — it calcified into semi-ritual practice while retaining a live adjudicative edge. The R5 mismatch consumer reads founding_problem_status (contested) against disappearance_verdict (contested): no hard zombie flag fires, but the theater series' dip-and-return shape marks the drift watch-point — if theater_ratio climbs past 0.5 again while case throughput flattens, the inertial reading wins and reclassification review is warranted. The claim/metric independence rule is honored here deliberately: the scaffold claim encodes design intent and transitional function; the metrics encode observed weak, resistible, partly theatrical operation. Where the engine's computed per-seat types diverge from the claim — particularly the implementing state's seat computing as a substantially constrained party — that divergence is the measurement this story exists to take, not an inconsistency to reconcile.",
+    "kernel_context": "Kernel: lausanne_minority_protections (the 1923 treaty's Sections III minority clauses as a persisting commitment). This file instantiates the guarantor_reading: obligations are internationally supervised, enforceable through guarantor-state diplomacy and European human rights mechanisms, not solely through domestic interpretation. Sibling readings are separate constraints: restrictive_reading (protections cover individual worship only; institutional autonomy, property, and clerical training are domestic matters under general Turkish law) and expansive_reading (guaranteed functional continuity of pre-1923 religious governance, including institutional self-administration, property rights, and clergy formation). The three readings disagree on two distinct axes: locus of authoritative interpretation (this reading's axis: external supervision versus domestic exclusivity) and scope of protected content (the siblings' axes: worship-only versus institutional continuity). Locus and scope are independent, so no reading logically forecloses another; each is a separate epsilon-invariant constraint over the same historical record, linked through network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "lausanne_minority_protections__restrictive_reading",
+      "lausanne_minority_protections__expansive_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Lausanne minority protections' conflates three structurally distinct claims with materially different epsilon values, decomposed per the epsilon-invariance principle into a three-story constraint family: restrictive_reading (domestic exclusivity, worship-only scope; its own lights expect low epsilon), expansive_reading (institutional-continuity scope; unfulfilled guarantees assessed as violated trust expect high epsilon), and this file's guarantor_reading (external supervision locus; low epsilon as transitional support with a weak edge). The guarantor reading sits upstream of both siblings in influence terms: every successful externally-adjudicated case erodes the restrictive premise's operating environment, and the adjudication channel is the delivery vehicle the expansive claims require to bite. Neither dependency is a logical foreclosure — locus and scope are independent axes — so all three readings remain simultaneously live positions held by different parties."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "guarantor_state_greece",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Co-signed the 1923 treaty and periodically invokes its minority clauses in bilateral dealings, parliamentary resolutions, and EU contexts, pressing for seminary reopening, foundation-property restitution, and recognition of the Istanbul church leadership's standing. Collects diplomatic leverage whenever the file is raised and spends ministerial time and political capital on it; can escalate to EU and Council of Europe venues or quietly set the file aside when wider relations matter more."
+    },
+    {
+      "name": "ecumenical_patriarchate",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Heads an Istanbul-based see whose schools, foundations, and clergy-training pipeline depend on Turkish implementing law; moving would dissolve its canonical identity, so survival runs through Strasbourg litigation, appeals to visiting officials, and quiet negotiation with Ankara. Received court-ordered returns of foundation properties in recent decades while its theological academy has remained closed since 1971."
+    },
+    {
+      "name": "istanbul_greek_orthodox_communities",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Remnant lay population of a few thousand, plus Imbros and Tenedos villages, holding minority schooling and foundation-property rights; shrank catastrophically after the 1942 capital levy, the 1955 riots, and the 1964 deportations. Families exit by emigration while remaining community boards fight case-by-case registration battles for orphanages and school buildings."
+    },
+    {
+      "name": "armenian_community_institutions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operates dozens of schools, churches, and charitable foundations under the state foundations directorate; filed the largest share of property-registration claims after the 2011 registration decree and pursued parallel cases in Strasbourg. Most historic holdings were lost to earlier confiscations and auctions, and each recovery arrives case by case."
+    },
+    {
+      "name": "jewish_community_of_turkey",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Maintains a small communal infrastructure of schools, a hospital, and synagogues under treaty-listed minority status. Large waves of departure followed the 1942 wealth levy and the 1955 riots, so remaining institutions weigh every dispute against a well-worn emigration path already exercised by most of the former community."
+    },
+    {
+      "name": "western_thrace_muslim_communities",
+      "role": "beneficiary",
+      "secondary_role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Holds mirror-image minority status in Greece — muftiates, charitable endowments, bilingual schools — and stands to gain whenever scrutiny of the minority clauses applies to both signatories. Its own priorities, such as elected muftis and school curricula, travel mainly through Athens and Ankara rather than through any seat of its own in the diplomatic process."
+    },
+    {
+      "name": "turkish_state",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Implements minority policy through its own courts, the general directorate of foundations, and interior-ministry practice; treats the treaty clauses as settled domestic law to be interpreted by Turkish institutions and resists framings of outside supervision. Absorbs episodic costs — judgment debts, returned properties, diplomatic friction, accession benchmarks — while controlling the specific levers external parties most request, such as reopening the seminary and recognizing the Istanbul see's broader standing. Leaving the treaty framework or the Council of Europe is possible in principle but prohibitively entangled with its wider economic and security ties."
+    },
+    {
+      "name": "echr_strasbourg_organs",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Receives individual applications from minority foundations and community members, adjudicates whether property and education treatment meets Convention standards, and issues judgments carrying compensation awards. Caseload grows with each filing cycle, and follow-through depends on Committee of Ministers supervision rather than any power of its own to compel implementation."
+    },
+    {
+      "name": "european_commission_enlargement",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Converts minority-clause grievances into accession progress-report items and negotiating benchmarks, giving the diplomatic file a second leverage channel. The whole apparatus rises and falls with enlargement politics: when accession talks stalled, the file lost its primary vehicle regardless of its substantive merits."
+    },
+    {
+      "name": "orthodox_diaspora_advocacy_groups",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "US- and Europe-based heritage organizations that fund litigation, lobby legislatures, and publish monitoring reports. They gain standing and donor engagement from the issue and face no exposure whatsoever to the implementing state's decisions; their participation is entirely voluntary and reversible."
+    },
+    {
+      "name": "lausanne_treaty_legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Documents the treaty's drafting history, tracks which clauses produced justiciable practice versus dormant text, and publishes comparative studies of League-era minority protection. Holds no stake in outcomes and supplies the archive on which later readers of the arrangement rely."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a common, externally verifiable channel for raising and assessing cross-border minority-protection grievances that neither community accepts the implementing state's domestic institutions alone to judge impartially; standardizes what counts as a treaty shortcoming across guarantor diplomacy and Strasbourg litigation, and gives both signatories' obligations a shared reference record.",
+    "transfer_function": "Moves adjudicative attention and diplomatic leverage toward minority grievances and toward the guarantor state's broader bilateral agenda; moves compliance costs — restitution, compensation awards, reputational exposure, accession benchmarks — onto the implementing state; moves legitimacy and jurisdictional resources to the European institutions that operate the channel.",
+    "absent_voices": "The Thrace communities are spoken for rather than speaking (voiced through Athens and Ankara, with their own priority disputes underrepresented); ordinary members of the Istanbul Armenian and Jewish communities beyond foundation boards have no procedural seat; the Turkish domestic public has never been consulted on the terms of external supervision it is asked to accept; and the generations educated before the seminary's 1971 closure — the clergy cohort the pipeline was meant to produce — exist only as a missing class in the record. All of them sit outside the guarantor capitals and the Strasbourg chamber where the file circulates.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the supervision reading vanished overnight, the implementing state would experience immediate relief from judgment exposure and benchmark pressure and would claim nothing else changes, since it already treats interpretation as domestic; the protected communities would lose the one channel that has ever returned property or compensated losses at scale, shifting them back to wholly domestic remedies they do not trust; the guarantor state would lose a recurring leverage asset and reframe the file around reciprocity and EU criteria; the Strasbourg organs would continue hearing Convention cases stripped of their treaty-clause framing. Whether the world rearranges therefore depends on which seat answers — hence contested rather than a single verdict.",
+    "founding_problem": "After the Ottoman collapse and the Balkan Wars, the emerging nation-states inherited religiously governed populations amid a recent record of wartime persecution; the powers demanded treaty-guaranteed minority protection as the price of recognition, supervised from outside because domestic guarantees were judged untrustworthy — the arrangement was built to bridge a transition until the new states matured into reliable protectors.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroboration exists from outside the benefiting parties: the League of Nations archival record and its successor UN treaty-body files document the founding design of external supervision and its provisional intent; ECtHR judgment recitals independently cite the treaty's protective purpose when adjudicating property and schooling cases; and the implementing state's own sustained rejection of the supervision framing — arguing the clauses are settled domestic law — implicitly attests that the founding premise was external supervision, since that is precisely what it refuses. British Foreign Office correspondence from the 1922-23 negotiation window supplies a fourth, adversarial-neutral source. No corroboration comes only from within the beneficiary set."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "league_era_full_supervision_regime",
+    "drift_state": {
+      "moment": "post_1990_strasbourg_petition_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "restrictive_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "expansive_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "lausanne_obligations_internationally_supervised",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "guarantor_and_strasbourg_channels_are_valid_venues",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "scaffold",
+    "downstream_of": [
+      "lausanne_minority_protections__restrictive_reading",
+      "lausanne_minority_protections__expansive_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "header": {
+    "constraint_id": "church_turing_thesis__mathematical_definition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ctt_math_def",
+    "story_uid": "12cb4d77-1b2a-4cda-99fb-4507d7db8285"
+  },
+  "base_properties": {
+    "extractiveness": 0.07,
+    "suppression": 0.05,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.18,
+    "claimed_type": "rope",
+    "human_readable": "Church-Turing Thesis as Stipulative Definition of Effective Computability",
+    "topic_domain": "philosophy_of_mathematics/foundations_of_computation",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "computability_theorists",
+      "theoretical_computer_scientists"
+    ],
+    "vindicated_propositions": [
+      "computation_model_equivalence"
+    ]
+  },
+  "interval": {
+    "start": 1936,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1936,
+      "value": 0.03,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1952,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1936,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1952,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.22,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_status",
+      "question": "This constraint instantiates only the mathematical-definition reading of the church_turing_thesis kernel; what structurally changes if a sibling reading (physical_claim_reading, epistemological_boundary_reading) is adopted instead?",
+      "resolution_mechanism": "Compare the three sibling stories' epsilon values, beneficiary/victim sets, and computed types; track which reading governs a given citational context (definition-use versus empirical-prediction-use versus provability-boundary-use).",
+      "impact": "Under the physical reading the same sentence becomes falsifiable with potential victim sets among research programs staked on beyond-Turing computation; under the epistemological reading it bounds formal knowledge; under this reading it is unfalsifiable by construction and bears no victim set.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is one reading of a three-reading kernel; sibling adoption changes epsilon, victim structure, and type."
+    },
+    {
+      "id": "consolidation_genealogy",
+      "question": "Did the thesis function as a stipulation from 1936, or did it begin as a substantive identification (Church's and Turing's analyses of mechanical procedure) later consolidated into a definition by Kleene-era textbook practice?",
+      "resolution_mechanism": "Close reading of Church 1936, Turing 1936-37, Kleene 1952, and subsequent canonical textbook formulations for the shift from argued identification to stipulated definition.",
+      "impact": "If stipulative from the start, the convention's authority is purely conventional; if consolidated later, part of its acceptance inherits the force of the original equivalence arguments, which changes how much traction a rival definition could gain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether definitional status was original to the 1936 papers or a later textbook consolidation."
+    },
+    {
+      "id": "renaming_burden_materiality",
+      "question": "Do excluded groups (hypercomputation researchers, broad-reading philosophers of mind) bear material costs from the fixed definition — forced neologism, referee friction — and if so, are those costs captured by any seat?",
+      "resolution_mechanism": "Publication and review-practice audit of papers proposing beyond-Turing or nonstandard computability notions: acceptance rates, terminological demands from referees, citation patterns relative to standard-terminology work.",
+      "impact": "Systematic captured costs would push the story toward a hybrid coordination/extraction profile; incidental uncaptured friction leaves the pure-coordination classification intact with epsilon near zero.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Materiality and capture status of the convention's terminological externality on excluded groups."
+    },
+    {
+      "id": "authority_framing_underdetermination",
+      "question": "Is the authority adjudicating this definition the mathematical community's demonstrated expertise, or the textbook canon operating as a transmission lineage?",
+      "resolution_mechanism": "Test which framing better predicts behavior: expertise predicts the definition's standing is continuously re-earned as new computation models are located by theorem; lineage predicts canon inertia independent of demonstrable adequacy.",
+      "impact": "Under the lineage framing, authority_grounding shifts from expertise to lineage, the interpretive layer reads as chain-of-transmission, and drift assessment would weight canon inertia more heavily; the expertise framing treats the definition as perpetually re-justified.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "CS-framing under-determination between expertise and lineage readings of definitional authority."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In this reading, the Church-Turing thesis is not a hypothesis about the world but a stipulation: 'effectively computable' means computable by a Turing machine (equivalently, lambda-definable or general-recursive). It is true by convention, unfalsifiable by construction, and its function is terminological alignment — one fixed predicate so that undecidability results, reductions, and equivalence theorems across mathematics, logic, and computer science refer to the same class of functions without restatement. The colloquial label 'Church-Turing thesis' spans three structurally distinct claims; per the epsilon-invariance principle this story authors only the definitional reading, linked to its siblings (the empirical physics claim and the epistemological boundary claim) through the network. Claim/metric independence is preserved: the claim is pure coordination, and the authored metrics independently describe near-zero extraction with a slowly rising share of ceremonial invocation around a live convention.\n\nKEY AGENTS (by structural relationship):\n- computability_theorists: primary beneficiary (organized/mobile)\n- theoretical_computer_scientists: secondary beneficiary (organized/mobile)\n- logic_textbook_authors: agenda setter (organized/constrained)\n- hypercomputation_physicists: excluded voice (moderate/mobile)\n- philosophy_of_mind_arguers: excluded voice (moderate/mobile)\n- historians_of_logic: analytical observer (analytical/analytical)",
+    "key_agents": [
+      "computability_theorists: primary beneficiary (organized/mobile) — consume and reproduce the fixed definition in daily theorem-proving",
+      "theoretical_computer_scientists: secondary beneficiary (organized/mobile) — build complexity theory and semantics on the shared predicate",
+      "logic_textbook_authors: agenda setter (organized/constrained) — fix the canonical formulation in reference works and curricula",
+      "hypercomputation_physicists: excluded voice (moderate/mobile) — study beyond-Turing processes under forced parallel terminology",
+      "philosophy_of_mind_arguers: excluded voice (moderate/mobile) — computability claims narrowed by the stipulated meaning",
+      "historians_of_logic: analytical observer (analytical/analytical) — attest the genealogy from outside the user communities"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.07 (interval end): the convention effects no material transfer; its only costs are conformity friction on dissenting terminology, and those costs accrue to no seat. Suppression is 0.05 and static — maintenance is reputational and editorial, with no enforcement-capacity buildup or decay to trace, so no suppression_requirement series is authored (a static enforcement picture is carried by the scalar, per the temporal-authoring rule). Theater_ratio rises 0.05 to 0.22 as a growing share of the thesis's public life becomes ritual invocation in textbooks and popularizations while its operative use — anchoring undecidability statements — remains routine; the function is intact, so the rise signals ceremony accreting around a live tool, not decay. Accessibility_collapse is 0.55: alternative stipulations remain fully available to anyone willing to define differently, but practical fragmentation costs half-close them in effect. Resistance is 0.18: episodic dissent (interaction-based computability proposals, broad-reading advocacy) without sustained opposition. Both series share one seven-point time grid (1936-2025) so no metric row is sampled against another's gaps.",
+    "perspectival_gap": "From the beneficiary seats the convention is free infrastructure: results port across subfields and terms never need restatement. From the agenda_setter seat it is stewardship: the work is choosing formulations that keep the literature coherent, rewarded in reputation rather than rent. From the excluded seats the same stability reads as a closed door — the predicate they need is pre-emptied, and their only available motion is parallel coinage. The engine computes these per-seat differences from power, exit, and role data; a beneficiary seat computing near-pure coordination alongside an excluded seat computing mild imposition is the expected divergence, not an inconsistency.",
+    "directionality_logic": "Beneficiaries (computability_theorists, theoretical_computer_scientists) are declared, driving their derived directionality toward the beneficiary pole; no victims are declared because a definition cannot be violated, only departed from — there is no transfer for anyone to bear. The agenda_setter administers without collecting: no rent flows through the seat. The excluded groups are deliberately left out of the victim array: their cost is a naming externality (forced neologism), documented in their situations and probed by the renaming_burden_materiality omega rather than asserted as extraction. Suppression is authored as a raw structural property (0.05) and is not scaled; only extractiveness is scaled by directionality and scope in the engine's computation — with near-zero base extraction, scaling leaves every seat's effective extraction negligible.",
+    "mandatrophy_analysis": "Two misreadings are prevented. First, the rising theater trajectory invites a degraded-inertia verdict — heavy ceremonial invocation around an old convention — but the operative function (fixing the predicate every undecidability proof quantifies over) is fully exercised, so the mandate is live and mandatrophy_resolved is deliberately not declared. Second, the kernel's sibling readings carry real contests (a falsifiable physics claim, a provability boundary); folding those contests into this story would fabricate extraction and victims where the definition has none. The epsilon-invariance decomposition keeps this reading's epsilon at its own near-zero value, preserving the distinction between a working terminological convention and the disputes that surround it.",
+    "kernel_context": "Kernel: church_turing_thesis. This story instantiates the mathematical_definition_reading: the thesis as a stipulative definition of 'effective computability', true by convention and not empirically testable. Siblings: physical_claim_reading (an empirical claim that no physical process exceeds Turing-machine power) and epistemological_boundary_reading (the thesis as the boundary of formally provable computation). Reading relations are authored from this reading to both siblings as influences: the fixed predicate this reading stipulates is the reference the epistemological boundary claim quantifies over, and it forces the physical claim to travel under its own separately defined predicate rather than inside the thesis itself. Neither sibling is foreclosed — a party holding this reading can consistently acknowledge the others as claims about different subject matters, which is precisely the insulation the definitional move was designed to provide."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "church_turing_thesis__physical_claim_reading",
+      "church_turing_thesis__epistemological_boundary_reading"
+    ],
+    "dual_formulation_note": "'Church-Turing thesis' is a colloquial label spanning three structurally distinct constraints (epsilon-invariance decomposition). This story authors the stipulative-definition reading: epsilon ~0.07, no victim set, coordination of terminology, unfalsifiable by construction. church_turing_thesis__physical_claim_reading authors the empirical universe claim (falsifiable, with potential victim sets among research programs staked on beyond-Turning computation). church_turing_thesis__epistemological_boundary_reading authors the formal-knowledge boundary claim. This reading is upstream: the predicate it fixes is what the other two quantify over, so affects_constraints edges run from this story to both siblings."
+  },
+  "stakeholders": [
+    {
+      "name": "computability_theorists",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Prove theorems about which functions are and are not effectively computable, working inside the fixed meaning the convention supplies. The shared definition lets undecidability and reduction results cite one another without restating terms. A member who prefers a different meaning can define one in their own papers, at the price of fragmenting the literature their results need to land in."
+    },
+    {
+      "name": "theoretical_computer_scientists",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build complexity theory, programming-language semantics, and verification on the same fixed notion; algorithms courses teach it as background furniture. They gain portability of results across subfields. Exit is ordinary career mobility — the definition belongs to the field, not to any member, and no one is bound to it personally."
+    },
+    {
+      "name": "logic_textbook_authors",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Choose which formulation of the definition appears in canonical texts and reference works, and their choices propagate through curricula and citation practice. They administer the convention rather than profit from it; printing a nonstandard definition would isolate their text from the literature it summarizes."
+    },
+    {
+      "name": "hypercomputation_physicists",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Study proposed physical processes — Malament-Hogarth spacetimes, infinite-time regimes, quantum arguments — that would compute beyond Turing-machine power if realized. Because 'effective computability' is already taken by the stipulated meaning, their objects must be named under new labels such as 'physical computability' or 'hypercomputation', and referees ask them to keep the vocabularies apart. They are not seated where the definition is fixed; their recourse is parallel terminology, not revision."
+    },
+    {
+      "name": "philosophy_of_mind_arguers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Use computability talk in debates about mind and mechanism, including whether physical brains exceed Turing power. The fixed meaning narrows what their claims can literally assert, so they either adopt the stipulated notion or coin their own; neither path revises the convention. They publish outside the venues where the definition is maintained."
+    },
+    {
+      "name": "historians_of_logic",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Trace how the informal 1930s notion of effective calculability became the modern stipulation, and how the competing interpretations of the thesis diverged from one another. They collect and attest the genealogy without administering or using the definition in proof."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "six_questions": {
+    "coordination_function": "Aligns terminology across mathematics, logic, and computer science: one fixed meaning for 'effectively computable' so that undecidability results, reductions, and equivalence theorems refer to the same class of functions without restatement.",
+    "transfer_function": "Transfers no money, labor, or goods. It transfers definitional authority: the power to say what 'effectively computable' denotes moves from open contest to a settled stipulation, and correspondingly transfers a naming burden outward — anyone wanting a broader notion must mint and defend new terms.",
+    "absent_voices": "Hypercomputation physicists and broad-reading philosophers of mind would ask that 'effective computability' remain open or carry physical content; they are outside the rooms (journals, curricula, reference works) where the definition is fixed, and their objection surfaces only as the requirement to coin parallel terms.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the stipulation vanished overnight, every undecidability claim, reduction, and equivalence theorem would lose its shared referent: papers would need to restate which definition of effective computability they use, curricula would fork, and the literature would re-coordinate — most likely back onto the same identification, but only after a period of terminological churn. The mathematics itself survives; the arrangement's coordination product does not.",
+    "founding_problem": "In the 1930s 'effectively calculable' named an informal intuition — finite, mechanical, rule-following procedure — with no precise extension, and proving the Entscheidungsproblem undecidable required fixing that extension. Church (lambda-definability) and Turing (machine computability) supplied candidate precisifications that proved coextensive, and the community adopted the identification as the meaning of the term.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians of logic, attesting from outside the user communities, document the founding problem: Hilbert's Entscheidungsproblem demanded a precise boundary for mechanical procedure, and the 1936 papers of Church and Turing were direct responses to it. Even the reading's critics — philosophers of computation who dispute the definitional status — concede that the informal notion required precisification, corroborating the problem's reality independently of the benefiting parties. No beneficiary attests alone."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "stipulated_equivalence_convention",
+    "drift_state": {
+      "moment": "contemporary_hypercomputation_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "epistemological_boundary_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "physical_claim_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "effective_computability_is_stipulative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "definition_forecloses_no_physical_claim",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

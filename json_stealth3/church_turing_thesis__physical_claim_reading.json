@@ -1,0 +1,386 @@
+{
+  "header": {
+    "constraint_id": "church_turing_thesis__physical_claim_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ct_physical_reading",
+    "story_uid": "15c6aa09-0a3e-4891-b9ad-463d12bfc4c5"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.58,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Physical Church-Turing Thesis: Empirical Bound on Physical Computation",
+    "topic_domain": "philosophy_of_mathematics/philosophy_of_computation/foundations_of_computer_science",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "turing_framework_computer_science",
+      "complexity_theory_researchers",
+      "cryptographic_protocol_designers"
+    ],
+    "victims": [
+      "hypercomputation_researchers",
+      "exotic_physical_computation_proposers"
+    ],
+    "vindicated_propositions": [
+      "gandy_machine_boundedness_theorem",
+      "deutsch_church_turing_principle",
+      "turing_adequacy_for_physical_devices"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "turing_framework_computer_science",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The international discipline of computer science organizes its curricula, textbooks, and result-claims around the Turing-machine model. Every subfield inherits the assurance that physical devices implement Turing-computable functions, which lets theorems, compilers, and security arguments compose across areas. Members experience the framework as simply what computation is; leaving it would mean rebuilding the field's shared language."
+    },
+    {
+      "name": "complexity_theory_researchers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Define hardness classes, reductions, and completeness results relative to Turing-bounded machine models. Their physical-relevance statements ('no efficient algorithm exists for X') presuppose that no physical device beats the model. A demonstrated device computing beyond the model would force re-examination of decades of such statements, though the abstract mathematics would survive untouched."
+    },
+    {
+      "name": "cryptographic_protocol_designers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Design protocols whose security arguments assume adversaries are Turing-bounded algorithms, converting 'unbreakable' into a precise statement. If physical processes could compute non-recursive functions, standard assumptions would need rederivation against a larger adversary class."
+    },
+    {
+      "name": "computational_gatekeeping_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Journal editors, program committees, and funding panels decide which computation papers and grants circulate. Submissions claiming physical processes that compute beyond the Turing model are typically screened out as speculative or erroneous, with the thesis cited as settled background rather than examined on its physical merits. The reviewers themselves are not bound by the screening rules they apply."
+    },
+    {
+      "name": "hypercomputation_researchers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "A small, scattered community studies whether any physical process — analog devices with unlimited precision, relativistic spacetimes permitting infinite observation time, quantum-gravitational regimes — could compute functions no Turing machine computes. Their papers face rejection rates far above field norms, grant applications rarely survive panel review, and graduate students are advised away from the topic. Leaving means abandoning the research identity they trained into; staying means career precarity."
+    },
+    {
+      "name": "exotic_physical_computation_proposers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Physicists, mostly in relativity and quantum foundations, who point out that known solutions of general relativity (spacetimes with infinite proper-time compression) or idealized quantum measurements appear to permit non-Turing computation. They publish mainly in physics venues, frame proposals carefully to avoid the 'hypercomputation' label, and can redirect to mainstream questions in their fields at the cost of dropping the computational claim."
+    },
+    {
+      "name": "quantum_supremacy_experimentalists",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Large quantum-hardware groups demonstrate sampling tasks intractable for classical machines. Their claims are defined and verified inside Turing-computable territory — quantum circuits compute recursive functions — so the framework currently shelters their priority disputes. If any future hardware regime appeared to compute beyond the model, their verification methods and claims would be the first casualties; they monitor the boundary while benefiting from its current placement."
+    },
+    {
+      "name": "experimental_hypercomputation_builders",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Engineers and experimentalists who would attempt bench-top tests of non-Turing computation proposals if any venue funded them. No program exists; proposals die at the whiteboard stage because review treats the underlying question as already answered. They have no seat in the conversations that set computational orthodoxy."
+    },
+    {
+      "name": "philosophy_of_computation_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Philosophers of computer science and logic who catalog what the thesis asserts, distinguish its definitional, epistemic, and physical formulations, and document that neither proof nor refutation of the physical version exists. They publish analyses of the boundary's status but set no research agendas."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Supplies a single closed answer to 'what can be computed' that every subfield of computer science builds on: results proved for Turing machines transfer to physical devices, so theorems, compilers, protocols, and verification arguments compose without each area re-deriving the physical reach of computation.",
+    "transfer_function": "Moves epistemic closure and legitimacy toward Turing-framework programs: publication space, grant funds, graduate-student labor, and citation flow route to model-internal work, while proposals touching non-Turing physical computation lose access to those resources.",
+    "absent_voices": "Experimental builders who would test candidate non-Turing processes have no seat — no funding stream or journal section exists for them. Physicists outside the Turing frame (analog and continuous-computation traditions) are heard only when they translate into discrete models. Both would object that the boundary was declared settled without a decisive physical test.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the community overnight stopped treating Turing-computability as the bound of physical computation, physical-relevance claims across complexity theory would need requalification, cryptographic adversary models would widen, and a large experimental program to test candidate non-Turing processes would mobilize; textbooks and curricula would revise. The rearrangement is epistemic rather than infrastructural — no bridges fall — but the research world reorganizes around a reopened question.",
+    "founding_problem": "Hilbert's program left a precise question — which number-theoretic functions are effectively calculable — answered formally by Church and Turing in 1936. The physical variant asks whether the universe's actual processes respect that formal answer: whether every finitely realizable physical procedure computes only Turing-computable functions (formalized by Gandy in 1980; restated for quantum physics by Deutsch in 1985).",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the general-relativity literature (Etesi and Nemeti's construction of Malament-Hogarth spacetimes, published in physics venues) attests that the question of physical non-Turing computation arises from physics itself, not from the discipline's internal needs; philosophical surveys (Copeland, Ord) independently document that neither proof nor refutation exists; and hypercomputation researchers — who bear the arrangement's costs rather than collect its benefits — attest the problem is live. No corroboration rests on the benefiting parties alone."
+  },
+  "interval": {
+    "start": 0,
+    "end": 90
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.58,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The physical Church-Turing thesis asserts that no physical process computes functions beyond Turing-machine computability. Unlike its definitional and epistemological siblings, this reading is an empirical claim about the universe — and it has never been proven or refuted. Its operative form in the research world is a community-wide treatment of the bound as settled: complexity-theoretic physical-relevance claims, cryptographic adversary models, and review practice all presuppose it, while the small community probing its possible failure bears systematic career and funding costs. The claim/metric gap is deliberate: the constraint is CLAIMED as tangled_rope from its structure (a genuine, heavily-used coordination foundation plus an asymmetrically burdened minority program plus active gatekeeping), while the metrics are authored descriptively of its actual operation — the engine measures any divergence; the claim is not tuned to predicted output. This file instantiates ONE reading of the church_turing_thesis kernel; the definitional and epistemological readings are separate constraints linked via network.affects_constraints, per the epsilon-invariance decomposition rule.",
+    "key_agents": [
+      "hypercomputation_researchers: Primary target (powerless/identity_locked) — bears the arrangement's career, funding, and publication costs",
+      "exotic_physical_computation_proposers: Secondary target (moderate/constrained) — physicists whose relativity and quantum-foundations results brush the boundary",
+      "turing_framework_computer_science: Primary beneficiary (institutional/constrained) — the discipline whose shared foundation the bound secures",
+      "complexity_theory_researchers and cryptographic_protocol_designers: Secondary beneficiaries (organized-to-institutional/constrained)",
+      "computational_gatekeeping_institutions: Agenda-setter (institutional/arbitrage) — administers the boundary through review and funding decisions",
+      "quantum_supremacy_experimentalists: Conditional seat (institutional/mobile) — sheltered inside the bound today, first exposed if it moves",
+      "experimental_hypercomputation_builders: Excluded voice (powerless/trapped) — would test the boundary empirically but has no seat",
+      "philosophy_of_computation_analysts: Analytical observer (analytical/analytical) — documents the claim's unproven status"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.48): the direct costs concentrate on a tiny research community (systematic funding denial, above-norm rejection rates, advised-away students), while a diffuse epistemic cost — a possibility space closed by consensus rather than by evidence — falls on everyone. Suppression (0.58) is real but non-coercive: nothing is banned, yet gatekeeping reliably filters boundary-touching work out of mainstream venues and funding streams. Theater ratio (0.28) reflects a growing share of ritual thesis-invocations — papers and textbooks citing the bound as established fact without examining its physical content — alongside a core bounding function that still does daily work. Accessibility collapse (0.40): alternatives remain reachable (hypercomputation analyses do get published in peripheral venues) but at heavy reputational cost. Resistance (0.50): persistent counter-pressure from relativity-based constructions, Pour-El-Richards analog results, and ongoing philosophical critique. The temporal series run on ONE shared grid (T=0..90 at steps of 15) with every tracked metric authored at every point; the suppression_requirement series is authored because the story specifically traces enforcement-capacity change — gatekeeping machinery maturing from loose mid-century consensus into institutionalized review practice — not merely shifting extraction.",
+    "perspectival_gap": "Three seats experience structurally different arrangements. From the hypercomputation researcher's position the bound operates as a closed door: an orthodoxy that ends careers and deflects funding without engaging the physics. From the mainstream discipline's position the same structure is the floor everything stands on — a settled foundation with no experienced cost. From the gatekeeper's position it is ordinary quality control: rejecting speculation. The engine computes these divergent per-seat classifications from the power, exit, and role data; the authored claim adjudicates none of them.",
+    "directionality_logic": "Beneficiary declarations map to low-directionality seats: the discipline, complexity theorists, and cryptographers collect closure and composability while paying almost nothing (damped chi). Payer declarations map to high-directionality seats: hypercomputation researchers sit near the full-target end, amplified by identity_locked exit — their professional selves are fused with the question the arrangement forecloses. Exotic proposers carry high d but their constrained-but-real mobility dampens effective extraction. Gatekeepers derive near-beneficiary directionality with arbitrage exit — they set the terms they administer. Quantum supremacy experimentalists sit near symmetric: sheltered beneficiaries now, conditional payers on any boundary collision. No directionality overrides are used: the beneficiary/victim declarations plus exit atoms already produce the correct relationships, and the schema's power-atom-keyed override mechanism cannot cleanly separate the multiple institutional seats with different roles.",
+    "mandatrophy_analysis": "No mandatrophy: the founding problem — does physics exceed formal computability — is live, corroborated from outside the benefiting parties, and the mismatch consumer reads status=live x verdict=world_rearranges as consistent (no zombie flag). The classification prevents mislabeling in both directions: reading the bound as a mountain (a natural law) would erase the identifiable payers and the enforcement machinery that sustains the arrangement; reading it as a snare would erase the genuine, universally-used coordination function that every subfield of computer science consumes daily. Tangled rope holds both facts: real coordination, real asymmetric cost, active enforcement holding the joint.",
+    "kernel_context": "This story instantiates the physical_claim_reading of the church_turing_thesis kernel: the thesis read as an empirical claim about the universe — no physical process computes beyond Turing-machine computability. Sibling readings, authored as separate constraint files: mathematical_definition_reading (the thesis as a stipulative definition of 'effective computability', true by convention, untestable, negligible extraction) and epistemological_boundary_reading (the thesis as the boundary of provable computability, independent of physical possibility). The disagreement among readings is located in the semantic status assigned to the same formal statement — definition, epistemic limit, or physical fact. Only this reading is falsifiable, hence the only one with a victim set, an enforcement surface, and nonzero epsilon; its empirical fate exerts pressure on how the siblings are received without logically ruling either out."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_partition",
+      "question": "Does the operative constraint on research practice correspond to this physical reading, or to one of the sibling readings (definitional or epistemological)?",
+      "resolution_mechanism": "Author the sibling stories and compare per-seat classifications and epsilon across the family; the reading whose structural data reproduce the observed gatekeeping and payer costs is the operative one.",
+      "impact": "If the definitional reading is operative, epsilon collapses toward zero (conventions have no victims) and the payer set identified here dissolves; if the epistemological reading, the victim set shifts to proof-seeking programs and the physical-test question drops out entirely.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which reading of the CT kernel the practiced constraint actually instantiates."
+    },
+    {
+      "id": "physical_truth_value",
+      "question": "Is the thesis true of our universe — does any physically realizable process compute a non-recursive function?",
+      "resolution_mechanism": "Either a completed fundamental physics yielding a Gandy-style boundedness theorem from accepted laws, or observation of computation in a regime (Malament-Hogarth spacetime, unlimited-precision analog measurement) realizing a non-recursive function.",
+      "impact": "If true, the arrangement loses its payers (they are chasing a genuine impossibility) and trends toward pure coordination; if false, the arrangement is suppressing a real capability and hardens toward extraction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Truth-value of the physical CT claim, undecided by current physics."
+    },
+    {
+      "id": "victim_status_vs_risk_selection",
+      "question": "Are hypercomputation researchers genuine payers of the arrangement, or volunteers bearing ordinary speculative-research risk?",
+      "resolution_mechanism": "Matched-proposal audit: resubmit identical proposals with the hypercomputation framing stripped and compare review outcomes against field baselines.",
+      "impact": "If outcomes match baseline, measured extraction is overstated and the structure trends rope; if systematically penalized beyond risk, the payer designation stands and strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether observed career costs exceed ordinary speculative-science risk."
+    },
+    {
+      "id": "quantum_boundary_collision",
+      "question": "Will any quantum-supremacy-class claim ever require computing beyond Turing-computable functions, rather than merely beating classical complexity?",
+      "resolution_mechanism": "Track the verifiability literature on sampling tasks; watch for hardware regimes invoking beyond-standard-model or gravitational effects whose claimed outputs are non-recursive.",
+      "impact": "On collision, the payer set expands from a marginal community to flagship industrial programs and epsilon rises sharply; absent collision, the conditional-payer seat stays dormant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Conditional expansion of the victim set via quantum supremacy claims."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (journal and funding gatekeeping) or internalized (self-censorship instilled by training)?",
+      "resolution_mechanism": "Post-gatekeeping trajectory: if submission rates to newly receptive interdisciplinary venues stay low after formal barriers drop, the internalized component dominates.",
+      "impact": "Internalized suppression raises effective suppression above the structural measure and persists after institutional reform; purely structural suppression would fall quickly if gatekeeping relaxed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism split."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "church_turing_thesis__mathematical_definition_reading",
+      "church_turing_thesis__epistemological_boundary_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'Church-Turing thesis' per the epsilon-invariance principle. The label conflates three structurally distinct claims: a stipulative definition (true by convention, epsilon approximately zero, no victims), an epistemic boundary (about provability, independent of physics), and this physical empirical claim (testable, contested, with a victim set and enforcement surface). Each member gets its own epsilon, stakeholders, and classification; this file is the physical reading. The upstream members (definitional, epistemological) are cited as settled background by the enforcement this story documents, so edges run from this reading to both siblings: its empirical fate changes their reception conditions without foreclosing either."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "empirical_universal_generalization",
+    "drift_state": {
+      "moment": "post_quantum_supremacy_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "mathematical_definition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "epistemological_boundary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "physical_processes_turing_bounded",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "computability_boundary_is_testable_not_stipulated",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "turing_framework_computer_science",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

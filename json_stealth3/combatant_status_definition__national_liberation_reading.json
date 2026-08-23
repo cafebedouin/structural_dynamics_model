@@ -1,0 +1,328 @@
+{
+  "header": {
+    "constraint_id": "combatant_status_definition__national_liberation_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "39bc89de-842d-4c7c-bda5-f8d81782f114"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.52,
+    "theater_ratio": 0.34,
+    "accessibility_collapse": 0.46,
+    "resistance": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "National Liberation Combatant Status Extension (AP I Article 1(4))",
+    "topic_domain": "legal/humanitarian/international",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "national_liberation_movements",
+      "captured_liberation_fighters",
+      "occupied_civilian_populations"
+    ],
+    "victims": [
+      "colonial_occupation_powers"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 48
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 48,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 48,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 48,
+      "value": 0.52
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint instantiates the national_liberation_reading of the combatant_status_definition kernel; the state_centric_reading and functional_protection_reading are separate constraints with their own epsilon values and victim sets. Which reading governs a given legal order changes who counts as a protected fighter at all.",
+      "resolution_mechanism": "Not resolvable within this file; tracked across the linked sibling stories. Each reading is generated as a clean epsilon-invariant constraint and the corpus compares their computed classifications.",
+      "impact": "Adopting the state-centric sibling would remove the liberation-movement and captured-fighter beneficiary seats entirely (non-state actors categorically excluded); adopting the functional-protection sibling would detach baseline detention protections from status altogether, shrinking what this reading's conditional grant adds. The disagreement is located at whether combatant status is a state-monopolized category or conditionally extensible to organized non-state groups.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a three-reading kernel; sibling readings are separate files."
+    },
+    {
+      "id": "trigger_category_contestation",
+      "question": "Which concrete conflicts satisfy the trigger classes 'colonial domination', 'alien occupation', and 'racist regimes'? The classes are politically charged and no automatic activation test exists.",
+      "resolution_mechanism": "Case-by-case authoritative determination through UN organ pronouncements, state-party practice, and eventual judicial treatment of specific conflicts.",
+      "impact": "Activation is the gate for everything else: where no conflict is recognized as qualifying, the arrangement imposes nothing and protects no one; where activated, the full obligation-to-grant-immunity burden falls on the detaining power.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether a given conflict falls inside the Article 1(4) trigger classes."
+    },
+    {
+      "id": "compliance_verification_asymmetry",
+      "question": "Whether a detained fighter's movement actually met the organization, responsible-command, and open-carriage criteria is typically assessed by the detaining power itself - the very party bearing the obligation adjudicates whether the obligation attaches.",
+      "resolution_mechanism": "Independent fact-finding: International Humanitarian Fact-Finding Commission inquiries, ICRC detention assessments, third-state or tribunal review of status determinations.",
+      "impact": "Self-assessed non-qualification collapses the protected fighter's status in practice while leaving the arrangement nominally intact - the beneficiary seat's protection becomes contingent on the payer seat's honesty, which would raise effective burden asymmetry beyond the authored epsilon.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Status determinations are made by the obligated party, creating a verification asymmetry."
+    },
+    {
+      "id": "customary_consolidation_question",
+      "question": "Does the Article 1(4)/44(3) extension bind states that never ratified Protocol I, as emerging customary law, or does it remain treaty-bounded?",
+      "resolution_mechanism": "Systematic tracking of state practice and opinio juris among persistent non-ratifiers, including their battlefield detention policies and any tribunal acceptance of the extension as custom.",
+      "impact": "If custom, the arbitrage exit of non-ratifying military powers closes and the arrangement's coercive reach becomes global; if not, the constraint remains confined to ratifying parties and the excluded seats stay outside permanently.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Customary-law status of the liberation-fighter extension beyond the treaty parties."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "national_liberation_movements",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Armed wings of peoples fighting colonial domination, alien occupation, or racist regimes. The arrangement offers them a path to lawful-combatant recognition if they maintain organizational structure, responsible command, and open carriage of arms during operations. Declining the terms means fighting as categorically criminalized insurgents whose captured members can be prosecuted or executed; accepting them means discipline costs, command accountability, and exposure of their fighters at the moment of attack, in exchange for protected status for anyone captured and a claim to legitimacy as a party to an international conflict."
+    },
+    {
+      "name": "captured_liberation_fighters",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Members of qualifying movements who fall into the enemy's hands. If their movement is recognized as meeting the criteria, they hold prisoner-of-war status: shielded from criminal prosecution for lawful acts of war, entitled to detention safeguards, and repatriated at hostilities' end. If recognition is denied, they face trial as criminals or saboteurs with penalties up to death. They control nothing about the determination; their protection depends entirely on a status decision made by the power detaining them."
+    },
+    {
+      "name": "colonial_occupation_powers",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "States administering colonies, occupations, or racially structured regimes in territories where armed resistance operates. The arrangement obliges them to treat fighters of qualifying movements as lawful combatants: extending immunity for acts of war, owing prisoner-of-war treatment on capture, and surrendering the option of prosecuting resistance as ordinary crime. Their exits are short of formal withdrawal: declining to ratify the protocol, denying that a particular conflict falls within the trigger classes, or judging the opposing movement non-compliant - routes most major military powers have in fact taken."
+    },
+    {
+      "name": "ap_i_high_contracting_parties",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The states that adopted and ratified Protocol I and thereby wrote the extension into treaty law, predominantly a post-colonial bloc that carried the provision through the 1974-1977 diplomatic conference. They control invocation and interpretation through diplomatic conferences, decide which conflicts get formally characterized as qualifying, and have collectively declined to amend or withdraw the provision despite the friction it generates with allied military powers. Most collect reputational and precedential value from the self-determination framing."
+    },
+    {
+      "name": "occupied_civilian_populations",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Civilians living in territories under colonial or military administration where liberation armed groups operate. They gain when the arrangement pulls insurgent violence into commanded, distinguishable channels - fighters who must carry arms openly and answer to a command structure are easier to tell apart from civilians - and when captured fighters hold protected status rather than disappearing into punitive detention. They lose when fighters blend into civilian space and the detaining power responds with collective punishments, curfews, and sweeps that fall on everyone."
+    },
+    {
+      "name": "non_ratifying_military_powers",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Major military powers that declined to ratify Protocol I, several having objected during negotiation that the liberation extension would confer combatant legitimacy on irregular fighters, blur the combatant-civilian line, and hand propaganda victories to armed opposition movements. They sit outside the ratified arrangement and outside the conference rooms where its interpretation is negotiated, yet their detention practices and doctrinal writings weigh heavily on whether the extension consolidates as custom."
+    },
+    {
+      "name": "icrc",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Custodian and promoter of the Geneva body of law. Visits detainees held by all sides in qualifying and non-qualifying conflicts alike, published the authoritative commentary on the protocol's provisions at adoption, and documents - without adjudicating - where invoking states apply the extension and where they quietly decline to. Its institutional interest lies in the coherence and authority of the legal category system as a whole."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Regularizes asymmetric conflict between peoples and the powers administering their territories by publishing verifiable criteria - organization, responsible command, open carriage of arms - under which insurgent fighters are treated as lawful combatants. It solves a real classification problem: how to extend soldier-like status and protection to anti-colonial and anti-occupation fighters without either criminalizing them wholesale or dissolving the combatant-civilian distinction that protects everyone else.",
+    "transfer_function": "Moves legal recognition and protective status - combatant immunity, prisoner-of-war treatment, exemption from prosecution for lawful acts of war - from the detaining or occupying power to captured members of qualifying liberation movements; correspondingly moves prosecutorial discretion over captured fighters away from the territorial sovereign.",
+    "absent_voices": "Non-ratifying military powers - most prominently the United States and Israel, which objected during negotiation that the extension legitimized irregular violence - are outside the ratified conversation entirely; their objections survive only in negotiating-record reservations and doctrinal writing. Settler and garrison communities in contested territories, whose security concerns motivated much of the occupying-side objection, likewise had no seat in the provision's design. They are kept out by the treaty-consensus structure itself, not by any procedural exclusion they could appeal.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the extension vanished overnight, captured liberation fighters would revert to unlawful-participant classification subject to criminal trial or execution; movements would lose the incentive structure that trades discipline for protected status, weakening the pull toward commanded, distinguishable conduct; occupying powers would regain unrestricted prosecutorial discretion over resistance; and the self-determination-conflict framework built on Article 1(4) - UN characterizations, ICRC operational assumptions, post-colonial legal doctrine - would reorganize around ad hoc detention practice.",
+    "founding_problem": "Wars of national liberation against colonial domination were treated as internal rebellions, letting colonial and occupying powers execute or imprison captured fighters as murderers and bandits rather than soldiers. The arrangement was built to secure soldier-like dignity and protection for fighters in self-determination struggles, and to give those fighters a concrete reason - protected status on capture - to fight within the laws of war.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set by the ICRC's official commentary on Protocol I (which records the drafting intent to bring liberation wars inside the international-conflict framework), by successive UN General Assembly resolutions affirming the international character of such conflicts, and by the academic IHL literature. Former colonial and occupying-power governments attest the opposite on status: that classic colonial domination has ended and the trigger classes are being stretched to cover ordinary insurgencies - so the problem's liveness is affirmed by humanitarian and multilateral sources and disputed by the powers that would bear the obligation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "combatant_status_definition__state_centric_reading",
+      "combatant_status_definition__functional_protection_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'combatant status in IHL'. The label conflates three structurally distinct claims with different epsilon values and different victim sets: (1) this national-liberation reading - conditional extension of combatant status to organized non-state groups in self-determination conflicts, with occupying powers bearing the obligation side; (2) the state-centric reading - categorical exclusion of non-state actors, with liberation movements as the excluded class; (3) the functional-protection reading - status-independent minimum protections for all detainees, with no status gate at all. This file instantiates reading (2-of-the-three ordering notwithstanding) the national-liberation reading only; the siblings are separate stories linked here. Upstream/downstream: the state-centric reading is the inherited Geneva-III baseline this reading modifies; the functional-protection reading runs on a parallel layer (Common Article 3 / Article 75 baselines) that composes with rather than competes against the status question."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "self_determination_inclusive_combatancy",
+    "drift_state": {
+      "moment": "contemporary_asymmetric_conflict_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "state_centric_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "functional_protection_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "wars_of_self_determination_are_international_conflicts",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "organized_liberation_fighters_deserve_combatant_immunity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "criteria_gating_preserves_distinction",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Additional Protocol I (1977) declares that armed conflicts in which peoples fight colonial domination, alien occupation, or racist regimes in exercise of their right of self-determination are international conflicts, and relaxes the combatant criteria for such fighters: a movement that is organized under responsible command and whose members carry arms openly during engagements and deployments earns its captured members prisoner-of-war status. This story authors THAT arrangement - the national-liberation extension - as a single epsilon-invariant constraint. It is one reading of the combatant_status_definition kernel; the state-centric reading (categorical exclusion of non-state actors) and the functional-protection reading (status-independent baseline protections) are separate constraint files with their own epsilon values, beneficiary/victim structures, and classifications, linked through network.affects_constraints. Per the kernel-reading rule, the contest between readings is NOT described inside this constraint; it is routed to the kernel_reading_position omega. KEY AGENTS (by structural relationship): - colonial_occupation_powers: primary target (institutional/arbitrage) - bears the obligation to grant immunity and POW treatment, exits via non-ratification and denial of qualification; - national_liberation_movements: primary beneficiary (organized/constrained) - collect recognition and protection conditional on discipline; - captured_liberation_fighters: direct protected seat (powerless/trapped) - hold or lack POW status by decision of their captor; - occupied_civilian_populations: mixed population seat (powerless/trapped) - gain distinguishability, absorb blurring costs; - ap_i_high_contracting_parties: agenda-setter (institutional/mobile) - wrote and police the text; - non_ratifying_military_powers: excluded objector (institutional/arbitrage); - icrc: custodian-observer (institutional/analytical).",
+    "logic_rationale": "Claim and metrics are authored independently. The claimed type is tangled_rope because the structure satisfies all three canonical conditions: a genuine coordination function (publishing verifiable criteria that solve the classification problem for asymmetric war and give fighters a concrete incentive toward commanded, distinguishable conduct), asymmetric payment through the same structure (the occupying power owes immunity and POW treatment while receiving no equivalent concession - the expected structural delta names high burden for occupying powers and only moderate, conditional burden for liberation movements), and dependence on active enforcement (qualification determinations, ICRC access, compliance pressure; no self-executing mechanism). Extractiveness 0.62 reflects that asymmetry: the arrangement's principal cost lands on the detaining power, moderated by its arbitrage-grade exits. Suppression 0.52 is moderate: entry was consensual (ratification), but once inside, the obligation binds and the arrangement actively forecloses the criminalization strategy occupying powers prefer; suppression is authored as a raw structural property and is deliberately NOT scaled by scope or directionality - the engine owns that arithmetic. Accessibility collapse 0.46: alternatives persist (stay outside the treaty, deny the trigger, judge the movement non-compliant), so understanding the arrangement does not close the option set. Resistance 0.61: sustained - major powers refused ratification over precisely this provision, and occupying powers resist invocation in practice. Theater 0.34: the underlying Geneva-III machinery is real and used, but the extension itself is invoked far more often as normative assertion than as applied status determination - an invocation gap that widens slowly over the interval. The measurement series run on ONE shared grid (t = 0, 8, 16, 24, 32, 40, 48; adoption-era 1977 to the present) with every tracked metric authored at every point, so no scalar substitution injects end-state values into earlier times. The suppression_requirement series is authored deliberately: the story traces enforcement-capacity maturation (ratification growth through decolonization, consolidation of ICRC detention-access practice, the Article 90 fact-finding machinery), a rising trajectory from 0.30 to 0.52. Base extractiveness rises monotonically 0.35 to 0.62 as the treaty consolidated and the normative burden concentrated on occupying powers; theater drifts up gently as the invocation gap grows. No cyclical dynamics are authored - the trajectory is maturation, not oscillation.",
+    "perspectival_gap": "The seats compute differently and the divergence is the finding. From the colonial_occupation_powers seat, the arrangement is an imposed obligation: it strips the criminalization tool, rewards their opponents with legitimacy, and is administered by a post-colonial majority bloc - with arbitrage exit damping but not removing the burden (non-ratification carries reputational cost, and customary-consolidation pressure threatens the exit itself). From the national_liberation_movements and captured_liberation_fighters seats, the same structure is conditional protection: real, valued, but gated by criteria their adversary adjudicates. From the ap_i_high_contracting_parties seat, it is a settled normative achievement. The engine computes per-seat classifications from the structural data (power, exit, directionality derived from the beneficiary/victim declarations); the authored claim does not adjudicate between these experiences.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for national_liberation_movements, captured_liberation_fighters, and (weakly, via the secondary payer position) occupied_civilian_populations; the victim declaration drives colonial_occupation_powers toward the full-target end, with its arbitrage exit options pulling it back from maximum effective burden relative to a trapped target. The agenda_setter seat sits near-symmetric: the contracting parties wrote the rule and collect precedential value while bearing no direct operational cost. Excluded and observer seats contribute no directionality. No directionality_overrides are needed: the derivation from beneficiary/victim data plus exit options reproduces the intended relationships, including the expected structural delta (moderate burden for qualifying movements, high burden for occupying powers).",
+    "mandatrophy_analysis": "The founding problem's status is contested, and that contest is the live analytical question: classic colonial administration has largely ended, which would strand the original trigger, but alien-occupation cases persist and keep the arrangement attached to live disputes - so the (contested x world_rearranges) cell correctly avoids the dead-mandate zombie flag while flagging the trigger-class stretching documented in the trigger_category_contestation omega. Classification prevents mislabeling in both directions: reading the arrangement as pure extraction (a snare) would erase its real coordination achievement - it solved a genuine classification problem and buys distinguishable, commanded conduct with protected status; reading it as pure coordination (a rope) would erase the asymmetric payment structure through which occupying powers fund the protection of their opponents. Tangled rope holds both facts in one structure. The piton failure mode is guarded against by the receipt surface: gains demonstrably accrue to a named seat (captured fighters), so this is not diffuse-cost inertia; and fixing_cost is prohibitive, so neglect-by-cheap-exit does not apply either.",
+    "kernel_context": "Kernel: combatant_status_definition - the persisting commitment, fixed in the Geneva texts, that defines who may fight and what follows for those captured. This file instantiates the national_liberation_reading: combatant status extends to organized, command-controlled non-state armed groups fighting colonial domination, alien occupation, or racist regimes (AP I Articles 1(4) and 44(3)). Sibling readings, each a separate constraint story: the state_centric_reading (status requires formal state military organization per the Article 4 criteria; non-state actors categorically excluded) and the functional_protection_reading (all detained persons receive Common Article 3 minimum protections regardless of status). Relational structure from this reading: it FORECLOSES the state-centric reading within any single commitment framework - a legal order cannot coherently hold 'non-state actors are categorically excluded from combatant status' and 'qualifying liberation movements hold combatant status'; the extension contradicts categorical exclusion on the same question. It COEXISTS WITH the functional-protection reading: that reading operates on a different layer (status-independent baseline treatment) and composes with any answer to the status question. Reference frame: this reading takes the kernel's legitimate state to be self-determination-inclusive combatancy. Drift at the contemporary moment: substantial, unacknowledged practice_drift - the frame holds that qualifying fighters receive combatant status, while occupying powers in practice systematically decline qualification determinations, leaving the frame asserted in doctrine and bypassed in application."
+  },
+  "gain_flow": "captured_liberation_fighters",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "preparedness_transmission__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pt_comp",
+    "story_uid": "ca899154-0879-44dc-a351-66925003865e"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.55,
+    "theater_ratio": 0.23,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Civil Defense Drill and Inspection Transmission Regime — Competence Reading",
+    "topic_domain": "institutional/civil_defense",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "emergency_response_services",
+      "facility_occupants",
+      "veteran_drill_instructors"
+    ],
+    "victims": [
+      "small_facility_operators",
+      "production_line_workers",
+      "taxpayers"
+    ],
+    "vindicated_propositions": [
+      "practiced_readiness_doctrine",
+      "skill_decay_without_rehearsal_hypothesis"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A mature civil-defense jurisdiction mandates recurring evacuation drills and facility inspections across workplaces, schools, hospitals, and public buildings, administered by a standing examiner corps. Under the reading instantiated here, this recurring activity is live exercised knowledge: each incoming cohort re-validates capability through practice — veteran instructors carry forward scenario libraries and unwritten judgment calls, examiners calibrate findings against live exercise performance, and drill participants improvise effectively when scenarios vary from the script. The costs are real and recurring: compliance hours levied on operators and workers, inspection-preparation burden falling hardest on thinly-staffed premises, and taxpayer funding for the examining apparatus. KEY AGENTS (by structural relationship): civil_defense_inspectorate — agenda setter ([institutional]/[identity_locked]) — administers the schedule, trains examiners, issues penalties; emergency_response_services — primary beneficiary ([organized]/[constrained]) — readiness refreshed through joint exercises; facility_occupants — net beneficiary with incidental cost ([moderate]/[constrained]); veteran_drill_instructors — knowledge carrier and status holder ([organized]/[identity_locked]); large_facility_operators — cost bearer with arbitrage-grade exit ([powerful]/[arbitrage]); small_facility_operators — cost bearer without leverage ([moderate]/[constrained]); production_line_workers — direct time payer with partial voice ([organized]/[constrained]); informal_settlement_residents — excluded non-participant ([powerless]/[trapped]); disaster_research_community — analytical observer ([analytical]/[analytical]). Per the epsilon-invariance principle this file instantiates ONE reading cleanly: sibling stories (husk_reading, hybrid_reading) instantiate the rival readings of the same kernel as separate constraints with their own epsilon, beneficiaries, and types, linked via network.affects_constraints.",
+    "logic_rationale": "Extraction 0.45: the arrangement delivers a genuine protective service, but the compliance stream persistently exceeds marginal delivery cost and the burden concentrates on the least-leveraged payers (small operators, hourly workers, taxpayers) while large operators convert the obligation into consultancy demand and standards-committee influence. Suppression 0.55: the coercive component is structural — penalty schedules, improvement notices, certification withholding, closure exposure — not internalized belief; participants broadly accept the necessity of practice, and unionized workers negotiate timing and frequency rather than existence. Theater 0.23: the majority of drill activity produces rehearsed-but-transferable skill and the majority of inspections surface correctable physical defects; a growing minority is checklist ceremony performed for the register. Accessibility_collapse 0.35: alternatives (voluntary preparedness programs, insurance-tiered incentives, community-run drills) remain partially viable but demonstrably weaker without the mandated spine — they do not collapse. Resistance 0.45: schedule-relief lobbying, deliberate compliance minimization, and bargaining over drill timing are persistent but bounded by post-incident surges in public support. Suppression is authored as a raw structural property and stays unscaled; the engine alone scales extractiveness by directionality and scope. The measurement series run on one single shared time grid (every tracked metric authored at every point 0-30) with mild monotone drift — no oscillation, so no cyclical-reinforcement analysis applies. Identity-lock dynamics: the inspectorate seat shows institutional identity fusion (the organization has become its function — budget arguments, promotion ladders, and doctrine all run through inspection volume, so exit would dissolve the corps); veteran instructors show professional identity fusion (their standing rests on being the ones who remember incidents firsthand, so handing over tacit material is experienced as self-erasure). Coalition consideration: worker payers are partially organized and do extract scheduling concessions, which moderates but does not remove their cost position.",
+    "perspectival_gap": "Seats compute differently from the same structure. The agenda_setter seat experiences the arrangement as the thing it built, staffs, and embodies — from inside the corps the exercise calendar is the protective fabric itself and effective extraction from its own vantage is near zero. The trapped and constrained payer seats experience enforced recurring cost decoupled from their risk profiles. The arbitrage seat (large operators) converts the cost into influence and revenue — former inspectors hired as consultants, seats on the checklist committees — so the same obligation reads as manageable overhead with a private upside. The excluded seat experiences not the constraint's weight but its absence: no drill circuit ever reaches them. None of these divergences is adjudicated by the authored claim; the engine computes them from power, exit, and directional position.",
+    "directionality_logic": "Declared beneficiaries derive low directionality (subsidized seats): emergency_response_services receive refreshed readiness and trained recruits; facility_occupants trade modest time for survival-critical habit; veteran_drill_instructors collect status and continuity from the arrangement. Declared victims derive high directionality amplified by exit conditions: small_facility_operators and production_line_workers are trapped or constrained, sitting near the full-target end; taxpayers fund the apparatus with no opt-out. large_facility_operators are victim-declared but their arbitrage-grade exit damps effective extraction substantially — the derivation handles this without an override. The civil_defense_inspectorate is deliberately NOT declared beneficiary or victim: it runs the arrangement rather than merely collecting, and the derivation chain's canonical fallback would misplace a seat whose mandate, budget line, and staffing requests demonstrably ride on inspection volume and drill coverage. A directionality override sets it to d=0.28 — heavily subsidized, bearing only accountability and staffing costs. informal_settlement_residents sit outside the arrangement's coverage entirely: they are authored as excluded for the consensus-provenance check, not as targets — the arrangement extracts nothing from them, which is precisely their complaint.",
+    "mandatrophy_analysis": "The founding problem — paper plans failing in real events while capability decays between rare crises — remains live: workforce turnover keeps eroding habit, and novel hazards keep arriving, so periodic re-validation has not outlived its function. The R5 mismatch consumer finds status=live paired with verdict=world_rearranges, a consistent pair producing no zombie flag. The slow theater_ratio climb (0.14 to 0.23) is the quantity to watch: if checklist ceremony continues substituting for varied live exercise, the competence claim degrades toward the husk reading's territory and mandatrophy resolves — the temporal series exists precisely so that transition is dated from data rather than asserted. Classification discipline cuts both ways: reading this arrangement as pure enforced extraction (a snare verdict) would erase the demonstrated protective gradient that post-event inquiries corroborate; reading it as frictionless coordination (a rope verdict) would erase the measurable burden asymmetry between leveraged and leverage-less payers. The tangled-rope claim holds both halves open until the burden-proportionality omega resolves.",
+    "kernel_context": "Kernel: preparedness_transmission — the standing commitment that recurring drill and inspection activity transmits defensive capability across generations. This story instantiates the competence_reading: the activity is live exercised knowledge, and each cohort re-validates capability through practice, yielding high adaptive capacity — inspectors recognize novel failure signatures and participants improvise under scenario variation. Sibling stories instantiate the rival readings of the same kernel: husk_reading (the activity persists as memorial ritual while operational knowledge hollows out) and hybrid_reading (transmission is stratified — engineering competence remains high while civilian coordination knowledge decays). The disagreement is located in what the repeated exercise actually constitutes: preserved capability versus performed remembrance versus stratified residue. Each reading is a separate constraint with a distinct epsilon over the same observable activity; this file authors only its own reading's structure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_transmission__husk_reading",
+      "preparedness_transmission__hybrid_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'civil defense preparedness transmission' covers rival constitutive claims about one observable body of activity (recurring drills and inspections). Each reading is a separate story with its own epsilon, beneficiary structure, and type: competence_reading (this file — live re-validated capability, moderate bounded extraction, tangled-rope claim), husk_reading (high theater, inertial persistence, piton-side candidate), hybrid_reading (stratum-dependent epsilon, decomposed by infrastructure layer). The competence reading is structurally upstream in the sense that its validation claim is the baseline the other two readings contest; all family members link one another via affects_constraints so contamination analysis can trace whether evidence of ritualization in one reading propagates to the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "civil_defense_inspectorate",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Runs the national schedule of mandatory drills and facility inspections, trains and rotates its examiner corps, keeps the finding registers, and issues improvement notices and penalties. Its budget line and staffing requests are argued from inspection volume and drill coverage statistics. Senior examiners advance inside the corps; leaving would mean dissolving the organization they have become, and most serve until retirement."
+    },
+    {
+      "name": "emergency_response_services",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Fire, rescue, and medical crews take part in joint exercises that refresh inter-agency signaling, staging, and casualty-flow habits before every real deployment needs them. New hires arrive already fluent in the common playbook because the school and workplace drill circuit precedes them. Their operational readiness depends on the exercise calendar continuing; withdrawing would strand coordination habits that decay within months."
+    },
+    {
+      "name": "facility_occupants",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Workers and residents walk the evacuation routes, locate the extinguishers, and learn the alarm meanings on a recurring cycle. The time spent comes out of working or residential hours; the payoff is knowing what to do when a real alarm sounds. Changing employers or buildings resets them into someone else's identical cycle."
+    },
+    {
+      "name": "veteran_drill_instructors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Long-serving trainers who carry the scenario libraries and the unwritten judgment calls — when to vary a drill, how far to push a simulated blockage, which cohort needs which surprise. Their standing inside the service rests on being the ones who remember past incidents firsthand. Handing over the tacit material means writing down what is mostly in their heads; most stay until retirement, and the material leaves with them if they go early."
+    },
+    {
+      "name": "small_facility_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Run premises on thin margins with no compliance staff. Every drill cycle and inspection visit lands directly on the owner's calendar and payroll, and preparing for a finding competes with billable work. Hiring outside help costs more than the penalty they fear; relocating or switching trades does not leave the national mandate behind. They get safer premises and insured continuity out of the same obligation that eats their week."
+    },
+    {
+      "name": "production_line_workers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Give up shift hours to muster, evacuate, and regroup on a schedule set above them. Where collective bargaining exists, representatives negotiate frequency and timing, but the mandate itself is not theirs to set. Moving jobs anywhere in the regulated economy places them under another employer's identical obligation. The evacuation habit they acquire is the same one that gets them out of a real fire."
+    },
+    {
+      "name": "large_facility_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Operate major sites with dedicated safety offices. They absorb drill days easily, hire former inspectors as consultants, and hold seats on the committees that draft next year's checklist. Some lobby successfully to tailor requirements to their building classes; a few relocate energy-intensive lines to jurisdictions running lighter schedules. The obligation is a cost center they manage, and partly a channel of influence they use."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the examiner corps, the exercise logistics, and the register infrastructure through appropriations. No individual can opt out of the funding stream, and the benefit arrives as a statistical reduction in catastrophe losses that never announces itself. Support rises sharply after visible incidents and erodes slowly between them."
+    },
+    {
+      "name": "informal_settlement_residents",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Live and work in structures that never entered the inspection roll — unpermitted additions, unregistered workshops, dense informal housing blocks. No drill circuit reaches them; when fires and collapses strike these blocks the losses are the highest in the jurisdiction. They have no seat in the consultation rounds that set drill priorities and no channel to request coverage."
+    },
+    {
+      "name": "disaster_research_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and post-event investigators who compile casualty and recovery statistics, compare outcomes across drilled and undrilled sites, and publish skill-retention curves showing how fast evacuation habit decays. Their access depends on cooperation from the services they study; they hold no enforcement power and answer to journals and inquiry commissions rather than to agencies."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a perishable, distributed public good — population-scale response habit — that no household or firm would rationally sustain alone: scheduled repetition keeps evacuation behavior, equipment checks, and inter-agency signaling from decaying between rare real events, and inspection cycles catch physical degradation before it compounds. The free-rider problem in preparedness investment is solved by mandating the practice everyone benefits from.",
+    "transfer_function": "Moves scheduled hours and preparation spending from operators and workers, and appropriations from taxpayers, into the examiner corps and the exercise calendar; moves tacit incident knowledge downward from veteran instructors to each incoming cohort; moves findings upward from site visits into the correction loop; moves penalties from non-compliant operators into public accounts.",
+    "absent_voices": "Residents and workers in unregistered structures are absent from the priority-setting consultations — they bear the jurisdiction's highest residual losses and hold no seat. Rank-and-file workers enter drill policy mainly through management channels rather than direct representation. Both groups would press for broader geographic coverage of the drill circuit and for worker input into scheduling; their absence flatters the coverage statistics the regime reports about itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the drill and inspection mandate vanished overnight, the protective fabric would unravel on a decay curve: evacuation habit measurably erodes within months, the instructor corps disperses within a few years, and the first major fire or collapse after the gap would find formerly drilled sites performing like never-drilled ones — with casualty and loss figures to prove it. Insurers would reprice uncertified buildings, the apparatus's thousands of staff would redeploy, and political pressure would rebuild some version of the mandate after the first avoidable mass-casualty event.",
+    "founding_problem": "Recurring urban fires and industrial disasters showed written escape plans and paper certifications failing in real events: occupants froze at unfamiliar exits, suppression equipment sat unmaintained, and agencies discovered mid-response that their procedures did not interoperate. The arrangement was built to convert paper readiness into embodied, practiced habit that survives workforce turnover — re-walking the routes, re-checking the gear, rehearsing the signals until they hold under stress.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: judicial inquiry commissions and independent fire-investigation units repeatedly attribute lower casualty counts at sites with documented recent exercise histories, and reinsurer loss series show the same gradient across their portfolios — neither source answers to the inspectorate or to operator associations. Operator associations dispute the sizing of the burden but concede the protective gradient itself. The burden-side claims rest mainly on the payers' own testimony, which is the expected asymmetry; the life-safety claim has independent attestation."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_resolution",
+      "question": "Does the observed drill and inspection activity instantiate live re-validated competence (this reading), memorial husk, or stratified hybrid transmission?",
+      "resolution_mechanism": "Blinded scoring of no-notice cross-site exercises for improvisation quality, correlated with post-event forensic outcome divergence across sites differing in prior exercise variety. The sibling stories (husk_reading, hybrid_reading) carry the rival readings and resolve independently; this story's structural delta — novel-signature recognition and effective improvisation under scenario variation — is the specific quantity the comparison tests.",
+      "impact": "Resolution toward the husk reading raises theater_ratio and epsilon sharply here and shifts classification toward inertial persistence; resolution toward hybrid forces stratum-level decomposition of this story; confirmation stabilizes the tangled-rope claim with bounded extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which reading of the preparedness_transmission kernel the observable activity actually instantiates."
+    },
+    {
+      "id": "scheduled_vs_no_notice_evidence_gap",
+      "question": "Do routinely scheduled drills measure transferable capability or script recall — is the adaptive-capacity delta real, or an artifact of announced exercises?",
+      "resolution_mechanism": "A randomized no-notice exercise program with blinded scoring against scheduled-exercise baselines, plus longitudinal retention curves tracking cohort performance between drill cycles.",
+      "impact": "If scheduled exercises measure script recall, this reading's structural delta is overstated, epsilon rises, and drift toward the husk reading accelerates; if improvisation transfers across scenario variation, the low theater ratio is vindicated and the competence claim firms up.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether standard exercise formats can distinguish live capability from rehearsed performance."
+    },
+    {
+      "id": "burden_risk_proportionality",
+      "question": "Do compliance costs track site-specific risk profiles, or do they track organizational size and political salience instead?",
+      "resolution_mechanism": "Regression of inspection hours and drill-day costs against quantified hazard indices per facility class; comparison of finding-severity distributions across operator size bands.",
+      "impact": "If burden tracks size and salience rather than risk, extraction concentrates on the lowest-leverage payers and the tangled-rope asymmetry deepens toward extraction dominance; proportionate burden supports the coordination-first framing.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the compliance burden is risk-proportionate or structurally skewed."
+    },
+    {
+      "id": "authority_locus_underdetermination",
+      "question": "Is the regime's legitimacy grounded in the codified statutory mandate or in the examiner corps' professional judgment culture — and does the framing choice change the commitment-system classification?",
+      "resolution_mechanism": "Trace amendment history for divergence between statute text and checklist practice, identifying which governs on the ground when they conflict; interview retired examiners on rule-following versus judgment calls under field conditions.",
+      "impact": "A statute-grounded framing implies a fixed-text-style kernel buffered by an interpretive corps; a judgment-culture framing implies practice-grounded authority with different drift sensitivity; the commitment-system pattern classification shifts accordingly, and this story currently declares the expertise/judgment framing.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "CS-framing under-determination: codified-text versus practitioner-judgment framings of the same authority structure."
+    },
+    {
+      "id": "excluded_population_coverage_gap",
+      "question": "How much aggregate protective value is lost to populations outside the inspection roll, and would inclusion change the declared beneficiary structure?",
+      "resolution_mechanism": "Casualty and loss data partitioned by building-registration status; a pilot extending the drill circuit into registered informal blocks with follow-up outcome comparison against matched uncovered blocks.",
+      "impact": "Large uncovered losses would mean the arrangement's protective reach is narrower than the beneficiary declarations imply, raising the measured cost of exclusion and complicating the net-benefit case presented to the payer seats; negligible residual loss would confirm the current beneficiary structure as complete for practical purposes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Protective-value losses concentrated in populations the arrangement does not cover."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "live_exercised_capability",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "husk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "rehearsal_preserves_operational_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "scenario_variation_builds_novel_failure_recognition",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "gain_flow": "civil_defense_inspectorate",
+  "fixing_cost": "prohibitive"
+}

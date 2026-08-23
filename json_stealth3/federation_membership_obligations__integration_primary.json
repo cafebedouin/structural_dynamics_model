@@ -1,0 +1,602 @@
+{
+  "header": {
+    "constraint_id": "federation_membership_obligations__integration_primary",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "81d1749e-7047-4902-b2a1-770825ee8095"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.58,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Free-Movement Priority over National Welfare Boundaries (Integration-Primary Reading)",
+    "topic_domain": "political economy/federalism/migration policy/welfare state theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "intra_eu_mobile_workers",
+      "multinational_employers",
+      "court_of_justice_of_the_eu",
+      "european_commission"
+    ],
+    "victims": [
+      "displaced_local_labor",
+      "gateway_region_residents",
+      "sending_state_public_services",
+      "national_welfare_administrations",
+      "member_state_governments"
+    ]
+  },
+  "interval": {
+    "start": 1992,
+    "end": 2026
+  },
+  "stakeholders": [
+    {
+      "name": "intra_eu_mobile_workers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Move, take up employment, and reside in any member state under treaty rights; after qualifying periods they access the host state's social benefits on terms approaching those of nationals. Gains include wage differentials over origin-country levels, portable pension rights, and family life spanning borders. Exit is their defining capacity: they can return or move onward, though re-establishing benefit entitlements restarts waiting periods wherever they land."
+    },
+    {
+      "name": "displaced_local_labor",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Work in gateway regions and exposed trades (construction, food processing, warehousing, residential care) where incoming labor concentrates. Face wage moderation at the lower deciles, intensified scheduling competition, and crowded rental markets. Moving elsewhere within the country means chasing the same inflows; retraining pathways are slow and unevenly funded; many are anchored in place by tenancies, mortgages, and family care obligations."
+    },
+    {
+      "name": "gateway_region_residents",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Live in the districts receiving the largest inflows. Experience school-place shortages, longer GP waits, and escalating rents, while clinics, care homes, and food-processing lines stay open because mobile workers staff them. Household budgets absorb the housing costs; household care consumes the services the arrivals deliver."
+    },
+    {
+      "name": "sending_state_public_services",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Operate the health, eldercare, and education systems of the main sending states, which trained professionals who then exercised mobility rights westward. Replace experienced nurses and physicians with short-contract staff or vacancies, and finance training whose returns accrue abroad. Retention through pay is out of reach while wage convergence lags decades behind, and the same rights regime they fund makes barring departure unlawful."
+    },
+    {
+      "name": "national_welfare_administrations",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer benefit systems whose eligibility boundaries are settled in Luxembourg as often as in national statute. Process coordination paperwork (S1 registrations, posted-worker declarations), bring or defend test cases they expect will narrow their discretion, and absorb verification burdens for residence-linked claims. Their statutory categories survive on paper but bind less each decade."
+    },
+    {
+      "name": "member_state_governments",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Co-legislate the framework yet administer its daily application. Negotiate opt-outs and transitional controls at each accession, invoke safeguard clauses in downturns, and answer electorates that blame the framework for local pressures. Full departure has been demonstrated possible once, at ruinous cost, and is not a working option for the remainder; their leverage runs through unanimity votes and infringement defenses rather than through setting the terms."
+    },
+    {
+      "name": "multinational_employers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Staff operations across borders from a single continental labor pool: smooth shortages by recruiting where skills sit, moderate wage growth with credible access to alternative supply, and relocate functions between member states when labor costs shift. Posting arrangements and mutual recognition of qualifications make multi-country deployment routine rather than exceptional."
+    },
+    {
+      "name": "court_of_justice_of_the_eu",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Decides preliminary references that define how far mobility rights reach into national social systems; each ruling extends or bounds the acquis and becomes precedent no member state voted on directly. Its docket, doctrinal legacy, and institutional weight grow with every social-policy reference it answers. It exits nothing and answers to the member states collectively rather than to any affected class of individuals."
+    },
+    {
+      "name": "european_commission",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Opens infringement proceedings against member states that restrict mobile workers' equal treatment, negotiates transition periods at each enlargement, and proposes the coordination regulations that govern benefit aggregation across borders. Its portfolio and initiative monopoly over the mobility file expand with each competence the case law confirms."
+    },
+    {
+      "name": "third_country_nationals",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Reside, work, and pay taxes inside member states while remaining outside the citizenship-mobility settlement: no automatic cross-border residence rights, benefit access gated by national schemes and long regularization paths. They watch a border-free zone operate for others and hold no seat in the forum that defines it."
+    },
+    {
+      "name": "eu_mobility_research_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Produces the longitudinal microdata and natural-experiment literature (wage-compression estimates, fiscal-balance panels, posting-regime audits) that every other seat cites when convenient; publishes findings regardless of which seat they embarrass."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the fragmentation of twenty-seven bounded labor markets: allocates labor toward where it prices highest, gives citizens an enforceable cross-border legal status, prevents beggar-thy-neighbor welfare closure during asymmetric shocks, and makes the goods, services, and capital freedoms credible by guaranteeing the labor freedom reciprocally.",
+    "transfer_function": "Moves labor and human capital from lower-wage to higher-wage member states; moves welfare-system access rights from nationally-bounded residence pools to qualifying mobile workers; moves adjudicative authority over social-policy boundaries from national parliaments and courts to Luxembourg; and leaves the adjustment costs (wage pressure, housing competition, emptied training pipelines) concentrated on the non-mobile and the sending side.",
+    "absent_voices": "Third-country nationals living and working inside the settlement's territory but excluded from its rights architecture would object that a mobility regime is being constitutionalized over their heads on citizenship grounds they can never satisfy. Non-mobile low-income residents of gateway regions register their objection chiefly through populist electoral vehicles rather than any seat in the process-design forum. Sending-state rural communities losing care staff have no Union-level representation of their specific loss. None of the three holds a seat in the configuration that defines this arrangement.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight repeal would strand millions of settled cross-border households mid-entitlement, break employer staffing models built on posting and recognition, damage the single market's credibility (if labor can be closed, so can the rest), vacate a large share of the Court's social docket, and force twenty-seven welfare systems to redraw residence tests against one another simultaneously. Rearrangement would be violent and slow; nothing approaches equilibrium quickly.",
+    "founding_problem": "After 1945, Western European states sought to make interstate war materially impossible by entangling coal, steel, trade, and eventually labor so tightly that national economic closure would amount to a hostile act. Free movement of workers entered the common market at its founding so that no member state could weaponize labor barriers against another; Maastricht later made mobility the constitutive content of a new Union citizenship.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the accession applications of formerly neutral states (Austria, Finland, Sweden) cited the security-and-interdependence rationale in official memoranda; successive national security strategies treat economic interdependence as a war deterrent; integration historiography documents the founding motive in the drafting record of the treaties themselves. Stated plainly: the welfare-boundary-yield component enjoys no equivalent external corroboration. National social-law scholars dispute that deep welfare harmonization follows from the security founding problem, and that silence about necessity is itself signal."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1992,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2004,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2004,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1992,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2004,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.58
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1992,
+    "tn": 2026,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1992,
+        "value": 0.3
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.22
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1992,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1992,
+        "value": 0.3
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1992,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1992,
+        "value": 0.2
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.18
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1992,
+        "value": 0.3
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1992,
+        "value": 0.25
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.45
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1992,
+        "value": 0.4
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.55
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1992,
+        "value": 0.15
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.12
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1992,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.28
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1992,
+        "value": 0.2
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1992,
+        "value": 0.4
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1992,
+        "value": 0.25
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2026,
+        "value": 0.2
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1992,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2026,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1992,
+        "value": 0.3
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2026,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1992,
+        "value": 0.45
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2026,
+        "value": 0.65
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates one reading, integration_primary, of the contested kernel federation_membership_obligations. The standing arrangement under contest: treaty-enshrined mobility rights (worker, self-employed, student, and economically inactive resident after lawful presence) that member-state welfare eligibility rules must accommodate; enforcement runs through CJEU preliminary rulings and Commission infringement action, with primacy doctrine rendering national closure legislation legally void where it collides with the rights. The arrangement coordinates genuinely (a continental labor market with portable rights, mutual recognition of qualifications, crisis-time reallocation capacity) while transferring concentrated costs onto seats that never set the terms: non-mobile workers and residents of gateway regions, the public systems of sending states that train staff who leave, national welfare administrations whose statutory boundaries bind less each decade, and member-state governments whose social-policy competence is adjudicated elsewhere. Claim and metrics are authored independently: claimed_type states tangled_rope as the structure I believe true (both a real coordination function and asymmetric extraction, actively enforced); the metrics describe operation as this reading honestly assesses it. Per the epsilon-referent rule, epsilon is authored for the standing integration-primary arrangement as seen through THIS reading's lights, never for the sibling readings' endorsed arrangements, which are separate files.\n\nKEY AGENTS (by structural relationship):\n- intra_eu_mobile_workers: primary beneficiary (moderate/mobile) — enters receiving-state welfare beneficiary sets\n- multinational_employers: concentrated gain recipient (powerful/arbitrage)\n- court_of_justice_of_the_eu: agenda setter via case law, authority accumulator (institutional/analytical)\n- european_commission: enforcement arm, competence accumulator (institutional/constrained)\n- displaced_local_labor: primary cost bearer (powerless/trapped)\n- gateway_region_residents: diffuse cost bearer with service offsets (moderate/constrained)\n- sending_state_public_services: structural loser of trained staff (organized/trapped)\n- national_welfare_administrations: administered boundary-loser (institutional/constrained)\n- member_state_governments: dual seat — domestic administrator and sovereignty-cost payer (institutional/constrained)\n- third_country_nationals: excluded voice (powerless/trapped)\n- eu_mobility_research_community: analytical observer",
+    "key_agents": [
+      "- intra_eu_mobile_workers: primary beneficiary (moderate/mobile) — treaty rights to work, reside, and access host welfare after qualifying periods",
+      "- multinational_employers: concentrated gain recipient (powerful/arbitrage) — continental staffing pool, wage moderation, posting agility",
+      "- court_of_justice_of_the_eu: agenda setter via case law (institutional/analytical) — each ruling extends or bounds the rights; docket and doctrine accumulate",
+      "- european_commission: enforcement arm (institutional/constrained) — infringement actions, enlargement transition bargains, coordination regulations",
+      "- displaced_local_labor: primary cost bearer (powerless/trapped) — wage and scheduling pressure, housing competition in gateway trades",
+      "- gateway_region_residents: diffuse cost bearer with service offsets (moderate/constrained) — rents and queues paid, staffing received",
+      "- sending_state_public_services: structural loser (organized/trapped) — trains staff whose returns accrue abroad, barred from retaining them",
+      "- national_welfare_administrations: administered boundary-loser (institutional/constrained) — eligibility discretion settled in Luxembourg",
+      "- member_state_governments: dual seat — domestic administrator and sovereignty-cost payer (institutional/constrained)",
+      "- third_country_nationals: excluded voice (powerless/trapped) — inside the territory, outside the rights settlement",
+      "- eu_mobility_research_community: analytical observer (analytical/analytical) — supplies the evidence both sides cite"
+    ],
+    "logic_rationale": "Extractiveness 0.58: from this reading's own seat the arrangement delivers its constitutional purpose, but three cost channels are real and uncompensated (concentrated wage and housing pressure on trapped local labor, training-return drain from sending-state systems, adjudicative-authority rents accruing to Luxembourg); the reading judges the overall bargain net-positive without denying the debit side of the ledger. Suppression 0.58: persistence depends on active legal machinery (primacy, infringement penalties, precedent discipline) applied against member-state closure attempts; it is structural coercion aimed at governments, with minimal force ever applied at the level of individuals. Suppression is authored as a raw structural property and is not scaled by power or scope in the story; only extractiveness is scaled, by the engine, through directionality and scope. Theater 0.28: solidarity rhetoric and pre-enlargement assurances that workers will not come perform inclusion, while services-mode carve-outs and safeguard clauses preserve exits for capital that labor lacks. Accessibility collapse 0.62: once primacy is understood, wholesale national welfare closure is foreseeable as legally void, yet partial instruments persist (proportionality-bounded residence tests, transitional controls, safeguard invocation), so alternatives dim without vanishing. Resistance 0.72: sustained and occasionally decisive — one member state exited, opt-out protocols persist, national constitutional courts contest primacy's reach, and safeguard clauses are invoked in every downturn. All three temporal series run on ONE shared seven-point grid; every tracked metric carries an authored value at every examined point. The suppression_requirement series is authored deliberately rather than defaulted: this story's enforcement-capacity arc is part of its meaning — machinery ratcheted upward through the post-enlargement decade, peaked around the backlash years, then partially receded as the Court itself bounded jobseekers' access (the Dano-line turn). The trajectories are monotone with one doctrinal inflection rather than cyclical; no intermittent-reinforcement mechanism is claimed, and the scalar base_properties values are the interval-end states of the same series.",
+    "perspectival_gap": "The engine should compute sharply different per-seat types. From displaced_local_labor and sending_state_public_services (trapped or bound payers at powerless and organized power), the arrangement computes snare-leaning: costs arrive without consent and exit is theoretical. From intra_eu_mobile_workers (mobile) and multinational_employers (arbitrage), it computes rope-leaning: a rights regime that simply works. The Luxembourg seats compute coordination-with-authority-rents: the Court experiences its rulings as elaborating a text the states freely ratified, while payer seats experience the same rulings as rules nobody they elected wrote. Identity-lock binds the integration elite: for Court and Commission careers the acquired-body-of-law worldview is professional identity, the frame in which yielding welfare boundaries reads as constitutional maturity rather than dispossession; if that frame broke, the institutional seats would compute far less coordination weight and the authority-rent channel would surface plainly. On the suppression-mechanism ambiguity: this constraint's suppression is predominantly structural (legal primacy binding national legislatures and administrators); a minority is internalized, as national officials socialized into conformity continue treating boundaries as void even where enforcement slackens — roughly a large structural share and a smaller internalized residue.",
+    "directionality_logic": "The beneficiary and victim declarations map onto real flows. Mobile workers receive wage differentials and benefit access; their defining mobility pushes their derived directionality firmly toward the beneficiary end. Multinational employers collect the largest concentrated surplus (continental staffing option value, wage-trajectory control, posting agility) and arbitrage-grade exit places them nearest the beneficiary pole. The Luxembourg seats derive low directionality from their beneficiary declarations, though their agenda_setter roles mean the derivation should not read them as pure subsidy-recipients; the dual roles carry that nuance. Trapped payers sit at the target end: displaced local labor cannot relocate faster than inflows arrive, sending-state systems are bound by the very rights they finance training for, and national administrations and governments bear competence loss with only constrained exit (departure demonstrated once, at ruinous cost). No directionality_overrides are used: the derivation chain from declared roles plus exit options reproduces these positions faithfully, and an override keyed to the institutional power atom would wrongly homogenize seats this story exists to distinguish (national_welfare_administrations on the target side versus the Court on the beneficiary side share a power atom but hold opposite structural relationships). Receipt surface: gain_flow names multinational_employers because receipt-of-gain and beneficiary-role are distinct facts — the workers' gains are broad but individually bounded and partly returned through taxes, while the employers' seat demonstrably accrues the arrangement's transferable surplus; the Court's gain (doctrine, docket, weight) is real but not transferable in the same ledger, so it is not the receipt seat.",
+    "mandatrophy_analysis": "The founding problem (making interstate war materially impossible by entangling economies until closure equals aggression) remains live and is corroborated from outside the beneficiary set, so no mandatrophy resolution is declared and none should be inferred. The tangled_rope classification does double preventive work. Against the snare mislabel: a pure-extraction reading would erase the coordination the regime actually delivers (portable pensions, qualification recognition, pandemic-era redistribution of essential workers to where beds and shelves needed filling) — coordination that would persist regardless of anyone defending it rhetorically. Against the rope whitewash: a pure-coordination reading would dissolve the named victims into transition costs, ignoring that the payer seats are precisely those with the least exit and the weakest voice where the rules are written. Mandatrophy drift is watched rather than resolved: if the security rationale decays while boundary-yield intensifies, the founding-problem status flips and the arrangement slides toward piton-or-snare territory; the temporal series (extractiveness rising through 2016 before easing) is the kind of accumulating-extraction record that abductive triggers feed on.",
+    "kernel_context": "Kernel: federation_membership_obligations — the standing commitment over what membership in the European federal order obliges regarding cross-border movement and social protection. This file instantiates the integration_primary reading: free movement is constitutive of Union citizenship and single-market functioning, and member-state welfare boundaries must yield where they collide with mobility rights. Sibling readings — member_sovereignty_primary (national welfare states retain primary closure authority; movement is conditional on labor-market protection and system sustainability) and selective_solidarity (rights tiered by contribution history; access follows the contributory rather than the citizenship principle) — are separate constraints with their own epsilon, victim sets, and classifications, authored in their own files and linked through network.affects_constraints. Per the epsilon-referent rule, this story authors epsilon for the standing integration-primary arrangement as this reading assesses it; the sibling stories share the referent but author different values by their own lights. Committer structure (which kernel, which reading, what siblings would change, where the disagreement sits) is routed to the kernel_reading_selection omega rather than invented into fields."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection",
+      "question": "Which reading of the federation_membership_obligations kernel is operative: mobility-right priority (this file), sovereign closure authority (member_sovereignty_primary), or contribution-tiered access (selective_solidarity)?",
+      "resolution_mechanism": "Not resolvable inside this file: each reading is a separate constraint with its own epsilon and victim set. Resolution arrives only through treaty-amendment politics, accumulated CJEU doctrine shifts, or corpus-level comparison across the three sibling stories.",
+      "impact": "If member_sovereignty_primary prevailed, the victim set inverts: mobile workers facing lawful exclusion become the targets and this file's payer seats move toward beneficiary positions; if selective_solidarity prevailed, non-contributory mobiles become the target class and displaced-local-labor costs attenuate. Every seat's classification moves with the answer.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this constraint is the integration_primary reading of one contested kernel; sibling readings instantiate rival arrangements with different victim sets."
+    },
+    {
+      "id": "net_fiscal_contribution_ambiguity",
+      "question": "Are mobile EU workers net fiscal contributors or net recipients in typical receiving states over a working lifetime?",
+      "resolution_mechanism": "Longitudinal administrative microdata linking tax contributions and benefit receipts per arrival cohort, as produced by the research-community seat.",
+      "impact": "If broadly net-contributory, the taxpayer-side victim channel collapses, epsilon falls, and the arrangement drifts toward rope with costs concentrated on displaced labor alone; if net-recipient in gateway strata, an additional victim seat hardens and epsilon rises.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fiscal balance of the mobile population: decides whether one declared victim channel is structural or rhetorical."
+    },
+    {
+      "id": "labor_displacement_vs_complementarity",
+      "question": "Does incoming mobile labor compress wages and displace non-mobile workers in exposed local markets, or complement them?",
+      "resolution_mechanism": "Replicated natural-experiment designs (admission-wave discontinuities, settlement-pattern instruments) reconciling the conflicting area-based and individual-panel literatures.",
+      "impact": "If displacement is marginal, displaced_local_labor is closer to a rhetorically constructed victim, epsilon drops, and the classification tilts toward rope; if displacement is concentrated and durable, that victim seat hardens and the arrangement skews snare-ward at the trapped seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the primary human cost channel is structural or narrated."
+    },
+    {
+      "id": "ecj_expansion_accountability_deficit",
+      "question": "Is the Court's case-law-driven extension of mobility rights into social policy an accountability deficit extracting an authority rent, or ordinary judicial elaboration of a text the states freely ratified?",
+      "resolution_mechanism": "Comparative constitutional analysis of delegation breadth at ratification versus the doctrine reached; intergovernmental conference records on intended social-policy scope.",
+      "impact": "If deficit, the institutional beneficiary seats carry capture weight and the arrangement skews snare-ward at those seats; if ordinary elaboration, the authority-rent channel shrinks and the coordination reading strengthens.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legitimacy character of the Luxembourg seats' expanding role in social-policy boundary-setting."
+    },
+    {
+      "id": "sending_state_adjustment_permanence",
+      "question": "Will sending-state public systems' losses persist, or do wage convergence and return migration retire this victim seat within a generation?",
+      "resolution_mechanism": "Cohort tracking of return-migration rates and sectoral staffing recovery in the principal sending states.",
+      "impact": "If losses retire, the sending-side seat behaves as a transitional cost with a natural sunset, softening the arrangement's extraction profile at that seat; if losses persist, the seat calcifies as a permanent structural payer and the asymmetry hardens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Permanence question for the sending-side victim channel."
+    },
+    {
+      "id": "coercion_grid_level_resolution",
+      "question": "Are the authored level-resolved grid judgments (individual freedom expanding while structural coercion hardens) robust, or artifacts of conservative fill where the story underdetermines a level?",
+      "resolution_mechanism": "Level-disaggregated evidence: individual-level mobility-friction measures, organizational compliance-cost surveys, class-level electoral-pressure indices, and structural infringement-and-penalty records.",
+      "impact": "If the gradient fails plausibility audit, the cross-level drift conclusions report OPEN rather than confirmed; the scalar classification stands unaffected, but any level-gradient claim withdraws.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Uncertainty flag on the authored coercion grid's conservative level-resolved judgments."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "federation_membership_obligations__member_sovereignty_primary",
+      "federation_membership_obligations__selective_solidarity"
+    ],
+    "dual_formulation_note": "Constraint family: the label 'free movement versus welfare boundaries' decomposes into three readings of one kernel with different victim sets and different epsilon. This reading's victims are displaced local labor, gateway-region residents, sending-state systems, national welfare administrations, and member-state governments; member_sovereignty_primary's victims would instead be mobile workers facing lawful exclusion; selective_solidarity's victims would be non-contributory mobiles denied tiered access. Family members link via network.affects_constraints. Pressure runs asymmetrically: this reading's case-law expansion creates structural downstream pressure on the selective_solidarity proposal space (every citizenship-based extension enlarges the constituency for contributory tiering), while coexisting indefinitely with member_sovereignty_primary as opposing defaults held by different parties."
+  },
+  "gain_flow": "multinational_employers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "mobility_constitutive_membership_order",
+    "drift_state": {
+      "moment": "contemporary_post_enlargement_backlash",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "member_sovereignty_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "selective_solidarity",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mobility_rights_constitutive_of_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "welfare_boundaries_subordinate_to_mobility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "worker_status_prerequisite_for_residence",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

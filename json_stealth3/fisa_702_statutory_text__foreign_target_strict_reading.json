@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__foreign_target_strict_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "cb80108e-508f-429b-85b4-65942a994e34"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.42,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.45,
+    "claimed_type": "rope",
+    "human_readable": "FISA §702 Foreign-Target Limitation (Strict Statutory Reading)",
+    "topic_domain": "constitutional law / national security / surveillance policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_persons_rights_holders"
+    ],
+    "vindicated_propositions": [
+      "fourth_amendment_domestic_warrant_line",
+      "constitutional_avoidance_canon"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 13,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 13,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 13,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "us_persons_rights_holders",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "U.S. persons whose communications are incidentally swept in when they contact overseas parties. Under this reading they sit outside the permissible target set: their incidentally collected content must be purged rather than retained for access, and it is unavailable for domestic criminal or regulatory use. Their protection is mediated entirely by institutions — statute, FISC minimization orders, oversight boards — and they receive no individual notice of incidental collection. Exit looks like encryption or withdrawal from international communication, which is impractical for most.",
+      "agent": true
+    },
+    {
+      "name": "intelligence_community_agencies",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "NSA and FBI operate the collection and bear the compliance burden: building minimization procedures that purge incidentally collected U.S. person content, forgoing warrantless queries of the 702 database for domestic criminal purposes, and documenting compliance to the FISC and DOJ. In exchange, the foreign-target line is what makes the warrantless foreign collection program constitutionally defensible — without it the program would face a general-warrant challenge. They cannot exit the statute, and their institutional preference for the broader incidental reading is channeled into reauthorization lobbying rather than open noncompliance.",
+      "agent": true
+    },
+    {
+      "name": "foreign_intelligence_targets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Non-U.S. persons abroad whose communications are the authorized collection subject. The statute fixes them as the permissible target set; they have no Fourth Amendment standing, no U.S. forum, and no practical exit from communications infrastructure that transits U.S. providers. Under this reading their position is unchanged from any other reading of the text — the constraint's distinctive operation falls on the domestic side, not theirs.",
+      "agent": true
+    },
+    {
+      "name": "foreign_intelligence_surveillance_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Approves annual targeting and minimization procedures and adjudicates compliance disputes; under this reading it would enforce minimization as deletion and reject query regimes that repurpose incidentally collected U.S. person content for domestic purposes. It is bound to its statutory role, sits ex parte, and its docket is the arrangement's primary enforcement surface.",
+      "agent": true
+    },
+    {
+      "name": "congressional_overseers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The intelligence and judiciary committees wrote the foreign-target language and reauthorize it on fixed cycles; they can tighten or loosen the line at each reauthorization and have repeatedly declined to adopt the broader incidental reading for U.S. person queries. Their exit is legislative rather than practical — they remain the seat that could replace this arrangement by amendment.",
+      "agent": true
+    },
+    {
+      "name": "privacy_civil_liberties_oversight_board",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Audits minimization and query compliance and publishes reports; it attests from outside the operating agencies whether the strict line is honored in practice. Its findings are the main non-ex parte record of how much incidentally collected U.S. person content survives and for how long.",
+      "agent": true
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Draws a bright, judicially administrable line between foreign intelligence collection and domestic surveillance: the agencies get a single warrantless collection authority bounded to non-U.S. persons abroad, the FISC gets an administrable minimization standard, and the domestic population gets a categorical guarantee that its communications are not the target and that incidentally swept content is deleted rather than retained for use.",
+    "transfer_function": "Moves collection capability toward non-U.S. persons abroad and away from U.S. persons; moves compliance costs — minimization, deletion, query restrictions, documentation — onto the operating agencies; and moves legal protection to U.S. persons, whose incidentally collected content is rendered inaccessible for domestic purposes.",
+    "absent_voices": "Foreign intelligence targets would object to the entire arrangement but have no U.S. forum: no Fourth Amendment standing, no notice, and an ex parte FISC. U.S. persons receive no individual notice of incidental collection and lack standing to challenge minimization failures; their interests appear only through amicus appointments, oversight boards, and congressional staff — never as parties.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strict foreign-target line vanished overnight, the warrantless program would lose its constitutional defense: either the program would have to be rebuilt around individualized warrants — a massive operational restructuring — or a general-warrant challenge would force the same result. Query practice, minimization procedure, and the FISC's docket would all reorganize around the warrant requirement.",
+    "founding_problem": "After the Church Committee documented decades of warrantless surveillance of Americans, Congress built FISA to require individualized warrants for domestic surveillance; the 2008 amendments added a streamlined way to target non-U.S. persons abroad without individualized orders — and the foreign-target language is the line that keeps that efficiency from swallowing the domestic warrant requirement.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Church Committee history and the FISA statute's own findings attest the founding problem from outside the benefiting parties; FISC opinions and Privacy and Civil Liberties Oversight Board reports corroborate that the foreign/domestic line-drawing problem remains live; even executive-branch testimony defending the program rests on the premise that U.S. persons are not the target — no party with a seat asserts the founding problem is dead."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fisa_702_statutory_text__incidental_collection_reading",
+      "fisa_702_statutory_text__constitutional_floor_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the natural-language label 'FISA 702' covers at least three structurally distinct constraints. This file is the strict reading — a protective line with low ε and rights-holders benefited. The incidental_collection_reading instantiates the same text as a permission structure (high ε, U.S. persons in the victim set, warrantless query authority over retained incidental content). The constitutional_floor_reading removes the statutory question entirely, grounding a warrant requirement in the Fourth Amendment itself. Upstream/downstream: the constitutional floor pressures the statutory readings via constitutional avoidance; this reading, if adopted, shrinks the floor reading's docket (the influences edge). Each file carries its own ε; the family is linked through affects_constraints and must not be merged."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is one reading of the fisa_702_statutory_text kernel; what structurally changes if the incidental_collection_reading is adopted instead?",
+      "resolution_mechanism": "Statutory amendment or a sustained FISC/courts shift to the incidental reading; the sibling story authors the delta (U.S. persons enter the victim set, minimization becomes access restriction rather than deletion, ε rises toward 0.7+ from the rights-holder seat).",
+      "impact": "Adoption of the sibling converts this file's protective arrangement into the sibling's extractive one; the two files must never be merged — their ε values differ by design, and the classification of the whole turns on which reading governs.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: which reading of the 702 kernel governs."
+    },
+    {
+      "id": "incidental_volume_growth",
+      "question": "Does the growth in incidentally collected U.S. person communications (platform migration, global traffic transiting U.S. providers) make residual exposure substantial even under strict minimization-as-deletion?",
+      "resolution_mechanism": "Declassified minimization reports and FISC compliance filings quantifying incidentally collected U.S. person content and retention windows.",
+      "impact": "If residual exposure is substantial, the 0.15 ε understates the rights-holder burden even under this reading, and the low-extraction profile erodes without any change in the statutory line.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether strict minimization keeps pace with incidental collection volume."
+    },
+    {
+      "id": "foreign_target_exclusion_burden",
+      "question": "Does the domestic settlement purchase its coordination with burdens on non-U.S. persons who have no voice in it — and should those burdens count when evaluating this constraint?",
+      "resolution_mechanism": "A values determination (whether extraterritorial persons enter the evaluation's ledger) plus comparative analysis of target-set breadth across readings; no empirical observation resolves it from inside this reading's lights, which is why the foreign-target seat carries a directionality override rather than a victim declaration.",
+      "impact": "If foreign-target burdens count, the kernel-level arrangement is a hybrid coordination/extraction structure regardless of which reading governs, and this file's rope claim holds only for the domestic seats.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether the voiceless target set counts in the settlement's ledger."
+    },
+    {
+      "id": "line_erosion_trajectory",
+      "question": "Will the strict line hold across reauthorization cycles, or erode by attrition into the incidental reading's operational practice while the statutory text stays unchanged?",
+      "resolution_mechanism": "Successive reauthorization statutes, FISC minimization approvals, and FBI query-audit series compared across cycles.",
+      "impact": "Erosion would leave this constraint formally intact but functionally displaced — drift toward the sibling file's world without formal amendment; the theater_ratio series is the early indicator.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the strict line survives reauthorization attrition."
+    },
+    {
+      "id": "constitutional_floor_backstop",
+      "question": "If the constitutional_floor_reading is adopted (warrants required for U.S. person queries regardless of statute), does this reading's constraint become redundant backstop or the vehicle that moots the constitutional question?",
+      "resolution_mechanism": "Appellate or en banc treatment of whether U.S. person database queries are Fourth Amendment searches; doctrinal analysis of the avoidance relationship between the readings.",
+      "impact": "If the floor reading governs, this file's constraint survives as statutory belt-and-suspenders with near-zero independent extractive content; if this reading governs first, the floor question is avoided and the sibling's docket shrinks.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Relationship between the statutory strict reading and the constitutional floor."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested FISA §702 statutory text: the strict reading, under which the foreign-target language categorically excludes U.S. persons from the permissible target set, requires minimization of incidentally collected U.S. person content as deletion rather than access restriction, and bars FBI queries of the 702 database for domestic criminal purposes. The ε referent is the standing 702 arrangement assessed by this reading's own lights: rights-holders retain Fourth Amendment protections, so base extractiveness from them is low (0.15). The sibling readings are different constraints, not alternative measurements of this one: the incidental_collection_reading authors high ε with U.S. persons in the victim set (retention and warrantless querying of incidentally collected content), and the constitutional_floor_reading bypasses statutory construction entirely, grounding a warrant requirement in the Fourth Amendment itself. Claimed type and metrics are authored independently within this file; the engine computes per-seat classifications from the structural data.\n\nKEY AGENTS (by structural relationship):\n- us_persons_rights_holders: primary beneficiary (moderate/constrained) — protected by the categorical line; no individual notice or standing\n- intelligence_community_agencies: payer with beneficiary secondary position (institutional/constrained) — bears compliance costs; collects the program's constitutional defensibility\n- foreign_intelligence_targets: payer (powerless/trapped) — the defined target set; no forum, no exit\n- foreign_intelligence_surveillance_court: agenda_setter (institutional/constrained) — administers targeting and minimization approval ex parte\n- congressional_overseers: agenda_setter (institutional/mobile) — wrote the line; can replace it at reauthorization\n- privacy_civil_liberties_oversight_board: observer (moderate/analytical) — the main non-ex parte compliance record",
+    "logic_rationale": "Extractiveness is low (0.15) because the constraint's distinctive operation is protective: what it adds to the underlying program is the domestic line, and under this reading the line holds — incidental content is deleted and domestic queries are barred. Suppression (0.42) is authored as a raw, unscaled structural property: it is real but directed at the operating agencies (mandatory deletion, query prohibition, FISC documentation), while alternatives — individualized warrants, programmatic restructuring at reauthorization — remain open, so it lacks the closed-exit character of a snare; the engine, not this file, scales extractiveness by directionality and scope. Theater (0.22) reflects a functional core — deletion and query restriction are substantive — with a growing ritual share as annual certification and compliance reporting have thickened. Accessibility collapse is low (0.35) because the alternative readings are not collapsed: the incidental reading remains the executive's operative position and a live litigable claim. Resistance (0.45) records the agencies' sustained institutional push for query authority at each reauthorization. All three series share one time grid (t=0..16, mapping 2008 enactment to the 2024 reauthorization, with t=5 at the 2013 disclosures and t=10 at the 2018 reauthorization); the suppression_requirement series is authored because this story specifically tracks enforcement machinery — the FISC's post-disclosure minimization scrutiny and the statutory query restrictions that accumulated after 2013 — not because suppression varies incidentally. Receipt surface: gain_flow is authored 'diffuse' as an affirmative checked claim — the constraint's product (domestic protection) accrues across the rights-holder population and no named seat captures it; the agencies accrue the underlying program's continuation, which is the kernel-level settlement's product rather than this constraint's own yield. fixing_cost is 'prohibitive': removing the strict line has been attempted at every reauthorization cycle and the warrant-requirement core for U.S. person queries has not yielded — the political and constitutional cost to the fixing seat exceeds the operational benefit the agencies would gain. Note that the diffuse-plus-prohibitive combination sits in the cell the prototype labels piton-flavored; here it reflects a valued, actively enforced protection (low theater, live function), not inertial maintenance.",
+    "perspectival_gap": "The seats should compute differently. From the rights-holder seat the arrangement is protection: low extraction, genuine coordination. From the agency seat it is a binding operational limit whose legitimizing benefit the agencies also collect — a dual position the single-role derivation can only partially see. From the foreign-target seat the same arrangement is extraction with no exit and no voice: the constraint defines them as the permissible target set. The FISC seat sees an administrable standard; the congressional seat sees an adjustable line. The engine computes these divergences from the structural data; the rope claim is the domestic-settlement view, not an adjudication of the foreign-target seat.",
+    "directionality_logic": "us_persons_rights_holders are declared beneficiaries, driving their d toward the beneficiary end. The agencies bear compliance costs (payer) while collecting the authorization benefit (secondary beneficiary) — their derived d should land near symmetric; no override is used because the dual declaration carries the structure. foreign_intelligence_targets carry role payer but appear in no victim declaration: the strict reading's rights frame does not count them, so the canonical fallback for powerless agents would understate their position as the constraint's defined target set. A single directionality override (powerless → 0.90) corrects this — it is unambiguous in this story because only the foreign-target seat holds that power atom; their d sits near the full-target end because the arrangement's operation directs surveillance at them specifically and they have no exit.",
+    "mandatrophy_analysis": "The founding problem — authorizing efficient foreign collection without recreating warrantless domestic surveillance — is live, so mandatrophy does not attach: the constraint's function has not outlived its justification, and the founding-problem status is corroborated from outside the benefiting parties. The classification work here is the reverse of the usual case: this story prevents a coordination structure from being misread as extraction cover. The strict reading's constraint genuinely protects the domestic population; its low ε is not a cover story but the reading's operative content. The residual extraction questions are routed to omegas rather than forced into the classification: whether residual incidental exposure is larger than the reading's lights can see, and whether the domestic settlement purchases itself with burdens on the voiceless — a kernel-level question that belongs to the family, not to this file.",
+    "kernel_context": "Kernel: fisa_702_statutory_text — the fixed statutory language of FISA §702, codification fixed_text, authority distributed (FISC, DOJ, Congress, and the courts all produce competing readings, which is why three sibling readings are live). This file instantiates the foreign_target_strict_reading. Siblings: incidental_collection_reading (same text read to permit retention and warrantless querying of incidentally collected U.S. person content — high ε, U.S. persons in the victim set) and constitutional_floor_reading (the Fourth Amendment itself requires warrants for U.S. person queries regardless of statutory meaning). The three readings instantiate different constraints with different victim sets and ε values; they are linked through network.affects_constraints."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "reference_frame": "categorical_foreign_target_line",
+    "drift_state": {
+      "moment": "post_disclosure_oversight_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "incidental_collection_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_floor_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "categorical_foreign_target_limitation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "incidental_us_person_data_deletion",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "domestic_purpose_query_prohibition",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

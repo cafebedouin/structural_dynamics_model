@@ -1,0 +1,331 @@
+{
+  "header": {
+    "constraint_id": "coercion_legitimacy_boundary__bodily_autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "01ff124e-9654-4c93-91ed-91abffb1d298"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.35,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Categorical Consent Boundary - Bodily Autonomy Primary Reading",
+    "topic_domain": "public_health/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "conscientious_objectors",
+      "civil_liberties_institutions",
+      "public_health_enforcement_agencies",
+      "medical_professionals"
+    ],
+    "victims": [
+      "immunocompromised_individuals"
+    ],
+    "vindicated_propositions": [
+      "informed_consent_doctrine",
+      "bodily_integrity_as_fundamental_right"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.35
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_location",
+      "question": "This constraint is one reading (bodily_autonomy_primary) of the coercion_legitimacy_boundary kernel; the sibling readings public_health_primary and proportionality_reading instantiate different constraints. Where exactly is the disagreement located, and what would adopting a sibling change structurally?",
+      "resolution_mechanism": "Comparative structural analysis across the three reading-files: the disagreement sits in (a) the scope of 'medical intervention' - whether population-level preventive compulsion counts as intervention the consent rule reaches - and (b) whether collective harm-prevention may enter the legitimacy calculus at all.",
+      "impact": "Adopting public_health_primary would move immunocompromised_individuals out of the victim set (into the protected), move conscientious_objectors toward payer, and raise the measured burden of refusal-permissive arrangements. Adopting proportionality_reading would split the victim set by pathogen severity, retaining immunocompromised exposure only for low-severity diseases.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: which kernel, which reading, what siblings would change."
+    },
+    {
+      "id": "externality_attribution",
+      "question": "Is the infection burden falling on immunocompromised individuals fairly attributable to the categorical consent boundary itself, or to background vaccine hesitancy that would persist under any consent regime?",
+      "resolution_mechanism": "Cross-jurisdiction comparison of outbreak burden and susceptible-population size in strict-mandate versus broad-exemption regions, controlling for baseline hesitancy, socioeconomic confounders, and pathogen circulation intensity.",
+      "impact": "If the burden tracks the boundary's breadth, the asymmetric-cost component of this reading's structure is confirmed and the moderate extractiveness stands. If background hesitancy explains most of it, the measured burden drops toward ordinary coordination cost and the classification relaxes toward pure coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the victim-side cost is caused by the boundary or merely co-occurs with it."
+    },
+    {
+      "id": "enforcement_durability",
+      "question": "Does the categorical boundary persist because it is settled constitutional and professional doctrine, or because a contingent political coalition currently defends it?",
+      "resolution_mechanism": "Track amendment attempts, supreme-court composition turnover, statutory exemption-regime swings, and professional-body guideline revisions over successive political cycles.",
+      "impact": "Contingent persistence would make the arrangement transient in crisis windows - a support structure that holds only while its coalition holds - rather than a durable feature of medical governance; settled persistence supports a long-lived hybrid structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Settlement versus coalition-dependence of the boundary's maintenance."
+    },
+    {
+      "id": "cs_framing_underdetermination",
+      "question": "Is the distributed multi-text framing of the kernel (no single adjudicator owns the coercion-legitimacy boundary; constitutions, the Nuremberg/Belmont canon, statutes, and case law jointly carry it) the only defensible framing, or does a fixed-text framing (the Nuremberg/Belmont canon as THE kernel, courts as designated interpreters) fit equally well?",
+      "resolution_mechanism": "Examine whether any single text functions as the operative adjudication source across jurisdictions, or whether adjudication genuinely routes through heterogeneous local authorities; signals: citation practice in landmark rulings, professional-body deference patterns, legislative override frequency.",
+      "impact": "Under a fixed-text framing, interpretation concentrates in courts, drift would register as codification strain rather than dispersed practice drift, and the reading's maintenance profile would look more centralized and more brittle than the distributed framing suggests.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Alternative framings of the kernel's codification and authority produce different drift classifications."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "immunocompromised_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Live with leukemia, transplant immunosuppression, or antibody deficiencies that blunt vaccine response; some cannot receive certain vaccines at all. They rely on the immunity of the people around them to stay safe and cannot opt out of other people's choices. When local uptake slips, their infection risk rises with no compensating channel - they carry the residue of every refusal in their community, and no jurisdiction change reliably escapes the exposure."
+    },
+    {
+      "name": "conscientious_objectors",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Decline vaccination or treatment on religious, philosophical, or bodily-integrity grounds. Under this arrangement their refusal is final: no school-entry rule, employment condition, or emergency order overrides it. They carry social friction and, in outbreak pockets, elevated personal risk of their own, but no instrument of compulsion reaches them, and the risks their refusal creates for others rest elsewhere."
+    },
+    {
+      "name": "public_health_enforcement_agencies",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Run immunization, screening, and outbreak-response programs. The categorical rule lifts from them the duty to operate coercive campaigns - no compliance sweeps, no exclusion orders to defend in court, no political ownership of forced procedures. The same rule narrows their toolkit: where voluntary uptake stalls they must spend on persuasion, access, and treatment capacity instead of reaching for mandates, and they absorb criticism for outbreaks they lacked the instruments to prevent."
+    },
+    {
+      "name": "courts_and_ethics_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Constitutional benches, licensing boards, research-ethics committees, and malpractice courts administer the consent boundary: they strike compelled procedures, vet research protocols, and discipline practitioners who bypass consent. Holding the boundary consumes review capacity and draws recurring political fire; abandoning it would unsettle the doctrinal foundation their own authority rests on, so they maintain it within the interpretive room their mandates allow."
+    },
+    {
+      "name": "civil_liberties_institutions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Rights-advocacy organizations whose modern public profile is built substantially on bodily-autonomy litigation. The categorical boundary is their doctrinal home ground; they challenge every proposal to carve collective-benefit exceptions into it. After a decade of reproductive-rights reversals their organizational identity fused with this terrain - pivoting away would mean disowning the cause that now defines them, so they litigate and mobilize for the boundary as such."
+    },
+    {
+      "name": "medical_professionals",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Physicians and nurses practice inside the consent norm: it shields them from liability, anchors patient trust, and gives clinical authority a legitimate basis. The same norm leaves them managing the consequences of clustered refusal - treating preventable infections, stretching surge capacity, and delivering hard outcomes to families who declined protection - costs that arrive at the bedside rather than through any bill sent to those whose refusal generated them."
+    },
+    {
+      "name": "pandemic_preparedness_planners",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Career public-health strategists whose scenario playbooks assume lawful access to compulsion tools - isolation orders, conditions of entry, workplace requirements. Under a categorical boundary those playbook chapters are dead weight; their expertise is not invited into governance conversations that treat compulsion as permanently off the table, and some relocate to sectors or jurisdictions where their planning craft still has purchase."
+    },
+    {
+      "name": "national_bioethics_commission",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "A standing advisory body that audits how the consent boundary performs: it commissions burden studies, hears testimony from objectors, agencies, clinicians, and patient advocates, and publishes recommendations. It holds no enforcement power and collects nothing from the arrangement; its seat exists to see the whole board and report what it finds."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains the trust precondition of medical care: patients and research subjects can submit to examination, treatment, and experimentation knowing their bodies will not be handled without their agreement. Consent requirements convert a deep asymmetry of knowledge and power between practitioner and patient into a governed exchange, and give clinicians a legitimate basis for action that patients have authorized.",
+    "transfer_function": "Moves decisional authority over bodily integrity to each individual (or their guardian), and moves the residual infection risk created by refusals onto those who cannot vaccinate or mount a response - uncompensated and unchosen. It also moves enforcement burden off public agencies and onto courts and ethics bodies, who carry the boundary's defense as a standing institutional cost.",
+    "absent_voices": "Those whose lives depend on community immunity speak mainly through proxy advocacy organizations rather than as a seated constituency; emergency planners holding compulsion-dependent playbooks are structurally out of the conversation once the boundary is drawn as categorical; cognitively impaired wards without engaged guardians have no seat at all. Their absence lets the boundary's unanimity look more consensual than it is.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the categorical consent boundary vanished overnight, research-subject protections would unwind toward pre-Nuremberg norms, clinical practice would lose the liability and trust scaffolding that channels patients into care, courts and ethics committees would lose a core docket, and public-health agencies would regain compulsion instruments they currently lack - the entire architecture of modern medical ethics would reorganize around whatever coercion calculus replaced it.",
+    "founding_problem": "State and professional power over unconscious, anesthetized, captive, or devalued bodies was exercised without limit: experimentation on prisoners and institutionalized people, surgery performed without explanation, treatment of wards as raw material. The consent boundary was built to make the body's owner the final gate against institutional bodily violation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: the Nuremberg tribunal record and subsequent war-crimes prosecutions document the abuses that produced the Code; the Belmont Report (1979, congressionally chartered commission) and the 1997 presidential apology for the Tuskegee Syphilis Study attest the founding problem from governmental seats; published survivor testimony from research-abuse cohorts attests it from the affected side. None of these corroborators benefits from the categorical boundary."
+  },
+  "gain_flow": "conscientious_objectors",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the coercion_legitimacy_boundary kernel: the bodily_autonomy_primary reading, under which no medical intervention may proceed without the individual's (or guardian's) affirmative consent, however large the collective payoff. The constraint binds public-health governance absolutely at the level of principle, is administered by courts, licensing boards, and research-ethics bodies, coordinates the trust that lets patients enter care and subjects enter trials, and - this is the structural delta this reading carries - leaves the infection residue of refusals resting on those who cannot vaccinate or respond, while relieving public agencies of the burden of running coercive campaigns. The epsilon referent is the standing arrangement this story is about: the categorical consent requirement as it actually operates (settled in clinical and research settings, contested at the population-health margin), assessed by this reading's own lights, including the costs its own operation generates for third parties. Family note: sibling readings (public_health_primary, proportionality_reading) are separate constraint files with their own epsilon, victim sets, and types; nothing about them enters this file's metrics. The claimed type and the metrics below are independently authored facts: I claim tangled_rope because the structure holds a genuine, load-bearing coordination function together with a real asymmetric cost borne by a class that cannot exit, and I author the metrics as descriptively true of that operation without tuning either to the other.",
+    "key_agents": [
+      "immunocompromised_individuals: primary target (powerless/trapped) - bears the infection risk the boundary's non-enforcement leaves uninternalized",
+      "conscientious_objectors: primary beneficiary (moderate/constrained) - refusal never overridden; sheds the risk their refusal creates onto their communities",
+      "public_health_enforcement_agencies: incidental beneficiary with a payer side (institutional/constrained) - relieved of mandate enforcement duty, stripped of the mandate instrument",
+      "courts_and_ethics_bodies: agenda setter (institutional/constrained) - administers the consent boundary through constitutional review, licensure discipline, and protocol vetting",
+      "civil_liberties_institutions: secondary beneficiary (organized/identity_locked) - litigates to hold the boundary; organizationally fused with the cause",
+      "medical_professionals: dual-positioned (organized/constrained) - protected by the consent norm at work, absorbs surge costs of preventable outbreaks at the bedside",
+      "pandemic_preparedness_planners: excluded voice (organized/mobile) - compulsion-dependent playbooks ruled off-table, expertise uninvited",
+      "national_bioethics_commission: analytical observer (institutional/analytical) - audits the whole arrangement, collects nothing"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.52) and omission-driven: the boundary confiscates nothing and deploys no coercion of its own; its cost flows passively as uninternalized infection risk concentrated on a class that cannot exit susceptibility. That concentration and absence of compensation is why epsilon is well above coordination cost, and its passive character is why it stays well below predatory levels. Suppression (0.35) is structural and seat-asymmetric: the boundary legally incapacitates the state's coercive instruments while liberating individuals from compulsion - net moderate-low, unscaled by scope per the framework's rule. Theater ratio (0.20) is low: the consent machinery (protocol vetting, licensure discipline, malpractice review) does real gating work; the slow rise across the interval tracks growing ritualization of consent documentation without functional collapse. Accessibility collapse (0.40): coercive alternatives remain legally available in much of the landscape - the boundary's claim that they are impermissible is normative, not an accomplished factual closure - so alternatives are narrowed in legitimacy but not erased in fact. Resistance (0.70) is high and sustained: public-health and utilitarian quarters press continuously for severity-conditioned exceptions, and the pressure intensified after the pandemic decade. The measurement series run on one shared time grid (points 0-30, unit: years, spanning the consolidation-and-contest era from post-Belmont consolidation to the present post-pandement contest peak); epidemic-wave oscillation in mandate politics is smoothed into the trend lines, and the rising suppression_requirement series reflects genuine enforcement-capacity maturation (conscience-statute regimes, judicial review practice, ethics-committee expansion), not a static picture.",
+    "perspectival_gap": "The payer seat and the beneficiary seats should compute as different types from the same structure. From the immunocompromised seat the boundary reads as abandonment dressed as principle: an absolute rule whose costs land, uncompensated, on the one class unable to protect itself - near-pure extraction. From the objector and civil-liberties seats the same structure is the floor of civilized medicine, the Nuremberg lesson made operational - near-pure protection. The agency seat holds both at once: relief from a politically toxic duty and loss of a tool it may desperately need. The engine computes this divergence from the structural data; the authored claim does not adjudicate it.",
+    "directionality_logic": "Conscientious_objectors sit near the beneficiary pole (declared beneficiary, moderate power, constrained exit): the arrangement subsidizes their refusal and externalizes its cost. Immunocompromised_individuals sit near the full-target pole (declared victim, powerless, trapped): they bear what others' freedom sheds, with no arbitrage available. Public_health_enforcement_agencies derive low-to-mid directionality from their beneficiary declaration, tempered by their declared payer side (lost instrument, absorbed blame) - the dual role is authored rather than overridden because the derivation reads the beneficiary array and the secondary role documents the offset. Medical_professionals similarly derive low d from the beneficiary array with the bedside surge cost noted as their payer side. Courts_and_ethics_bodies hold no array membership; their directionality comes from the fallback, and qualitatively they sit near symmetric - they expend standing maintenance effort and collect legitimacy and jurisdiction in return. No directionality overrides are used: every seat's derived position matches its declared structural relationship, and the two dual-positioned agents carry secondary_role rather than an override, keeping the derivation chain primary.",
+    "mandatrophy_analysis": "The classification discipline matters here in both directions. Calling this a snare would erase the genuine coordination function: consent requirements are load-bearing for medicine itself - remove them and care-seeking, trial participation, and clinician legitimacy degrade together, which is why no serious actor proposes repeal. Calling it a rope would erase the asymmetric cost: the risk transfer is real, concentrated on a class that cannot consent-or-respond its way out, and uncompensated - hallmarks of extraction riding a coordination structure. Tangled_rope preserves both truths and keeps the diagnostic question live: is the immunocompromised burden the price of the coordination or rent-shaped shedding? On mandatrophy proper: the founding problem (institutional violation of captive and devalued bodies) remains live in attenuated forms, so the mandate has not outlived its function and no mandatrophy resolution is declared; the R5 mismatch consumer should find status=live consistent with verdict=world_rearranges, no zombie flag.",
+    "kernel_context": "Kernel: coercion_legitimacy_boundary - the standing question of when compelling a person's body is legitimate. This file instantiates the bodily_autonomy_primary reading: consent as the complete legitimator of bodily contact, collective benefit never entering the calculus. Sibling readings, held by other parties and authored as separate constraint files: public_health_primary (the state may compel when collective harm-prevention outweighs individual autonomy) and proportionality_reading (coercion legitimacy scales with disease severity and transmission dynamics). Those readings' structures are deliberately excluded from this file's metrics; the contest between them is recorded in the omega variables, not in the constraint body."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "coercion_legitimacy_boundary__public_health_primary",
+      "coercion_legitimacy_boundary__proportionality_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'when may the state coerce medical intervention' decomposes, per the epsilon-invariance principle, into three structurally distinct readings of one kernel, each a separate file with its own epsilon, beneficiary/victim sets, and type: this file (bodily_autonomy_primary - categorical consent, moderate epsilon from non-enforcement, immunocompromised as victims), public_health_primary (conditional compulsion, objectors as bearers), and proportionality_reading (severity-scaled compulsion, victim set split by pathogen). Upstream/downstream: this reading supplies the deontological floor against which both siblings negotiate; proportionality_reading is the downstream synthesis that borrows the categorical reading's clinical-domain settlements while relaxing them at the population margin. Links here are family edges, not shared classification."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "absolute_consent_sovereignty",
+    "drift_state": {
+      "moment": "contemporary_mandate_contestation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "coercion_legitimacy_boundary__proportionation_reading_placeholder",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bodily_integrity_requires_affirmative_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "collective_benefit_never_overrides_refusal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

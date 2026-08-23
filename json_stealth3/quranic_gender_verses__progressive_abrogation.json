@@ -1,0 +1,365 @@
+{
+  "header": {
+    "constraint_id": "quranic_gender_verses__progressive_abrogation",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "57ffcc3c-4700-4d13-8b5c-d915456332d4"
+  },
+  "base_properties": {
+    "extractiveness": 0.88,
+    "suppression": 0.78,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Progressive-Abrogation Reading of the Gender-Specific Qur'anic Rulings",
+    "topic_domain": "religious/legal-hermeneutic/gender",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "traditional_juridical_establishment",
+      "male_household_guardians",
+      "literal_identity_communities"
+    ],
+    "victims": [
+      "muslim_women_under_classical_rulings",
+      "reformist_hermeneuts"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 70
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.86
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.87
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.88
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.78
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This constraint is one reading (progressive_abrogation) of the kernel quranic_gender_verses; how would the sibling readings (literal_hierarchical, contextual_egalitarian) restructure the beneficiary/victim sets and epsilon if instantiated instead?",
+      "resolution_mechanism": "Generate the sibling stories as separate constraint files over the same referent; compare computed per-seat classifications and epsilon across the family.",
+      "impact": "Classification is reading-indexed: literal_hierarchical would author lower epsilon over the identical referent (the divine order is accepted as legitimate); contextual_egalitarian intermediate. Only cross-reading comparison settles the kernel's structure; this file alone cannot.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: this story is one reading of a three-reading kernel; sibling deltas are structural, not noise."
+    },
+    {
+      "id": "naskh_applicability_to_gender_verses",
+      "question": "Does the classical naskh methodology legitimately extend to these verses - is there authentic evidence that later revelation abrogated 4:11, 2:282, or 4:34?",
+      "resolution_mechanism": "Philological audit of abrogation claims: matn-to-matn contradiction criteria, asbab al-nuzul chains, and the classical usul condition that abrogation require a later ruling on the same subject with reliable transmission.",
+      "impact": "If the naskh evidence fails, this reading collapses toward the contextual_egalitarian sibling; if it holds, the standing arrangement enforces divinely superseded law and the high-extraction assessment strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the abrogation engine of this reading satisfies classical usul al-fiqh conditions."
+    },
+    {
+      "id": "revelation_chronology_direction",
+      "question": "Is the egalitarian proof-text (49:13) actually later than the restrictive rulings (4:11, 2:282, 4:34) - the direction the abrogation claim requires?",
+      "resolution_mechanism": "Isnad-critical and stylistic dating of the surahs. Most chronologies place 49:13 in the middle Medinan period while surah 2's debt verse and much of surah 4 are late Medinan; if the restrictive verses postdate the egalitarian principle, the abrogation arrow reverses or fails.",
+      "impact": "The reading's entire engine depends on the arrow's direction. A failed direction removes its distinguishing premise relative to contextual_egalitarian and leaves the standing arrangement's defenders holding the stronger chronological position.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Chronological fragility of the later-supersedes-earlier premise."
+    },
+    {
+      "id": "epistemic_violence_exposure",
+      "question": "If this reading prevailed, what identity-disruption costs fall on communities whose religious identity is bound to the literal reading, and do those costs belong in the arrangement's total ledger?",
+      "resolution_mechanism": "Track identity-coherence outcomes where egalitarian codification succeeded (societies with reformed family codes): disaffiliation rates, schism formation, fundamentalist backlash intensity across generations.",
+      "impact": "Substantial epistemic costs would mean the reversal is not a pure improvement - the constraint family's accounting must include this reading's own casualties, tempering straightforward liberation narratives and feeding back into per-seat classification for literal_identity_communities.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Costs this reading imposes on literal-identity communities if adopted."
+    },
+    {
+      "id": "scholar_adoption_feasibility",
+      "question": "Can scholars adopt this reading from inside traditional institutions at survivable cost, or does the reading's viability require institutional capture it cannot achieve while its advocates are expelled?",
+      "resolution_mechanism": "Longitudinal tracking of reformist scholars' institutional standing: promotion outcomes, exclusion from fatwa councils, innovation/deviance proceedings, and whether any traditional academy has ever licensed abrogation-based gender rulings.",
+      "impact": "Prohibitive adoption costs would keep the reading structurally marginal regardless of textual merit; persistence analysis would shift from textual validity to institutional access, and the reading's long-run effect would route through state legislatures rather than the academies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Exit-cost structure facing this reading's advocates inside traditional institutions."
+    },
+    {
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is the suppression sustaining compliance with the gender rulings structural (family and legal sanction, exit costs) or internalized (settled belief that the differential is divinely ordained and just)?",
+      "resolution_mechanism": "Post-exit trajectory: compare women who emigrate or leave the tradition with those who remain under weakened enforcement - if acceptance of the differential persists where the sanction machinery is absent, a large internalized component exists.",
+      "impact": "Internalized suppression raises effective suppression above the structural measure and predicts the arrangement surviving formal legal reform; purely structural suppression predicts rapid relaxation once sanction lifts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism split of the suppression holding the arrangement in place."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of a contested kernel. The kernel is the normative status of the Qur'an's gender-specific legal verses (4:11 inheritance shares, 2:282 witness arithmetic, 4:34 household authority). Three readings compete: literal_hierarchical (timeless divine ordinance), contextual_egalitarian (historically situated steps requiring maqasid-guided reinterpretation), and THIS reading, progressive_abrogation: the verses are an incomplete trajectory, and later egalitarian principles (49:13 universal human dignity) supersede them via naskh. The constraint classified here is the standing arrangement those verses anchor - the classical fiqh enforcement regime - assessed through this reading's own lights. Epsilon's referent is that standing arrangement, never this reading's endorsed egalitarian alternative. Through this reading's lights the arrangement is maximally extractive: it compels compliance with rules the reading holds divinely superseded, under a permanence claim the reading's central premise refutes.\n\nKEY AGENTS (by structural relationship):\n- traditional_juridical_establishment: agenda-setter and principal beneficiary (institutional/identity_locked) - administers enforcement, collects interpretive authority\n- muslim_women_under_classical_rulings: primary target (powerless/trapped) - bear differential shares, testimony weighting, guardianship provisions\n- male_household_guardians: secondary beneficiary (moderate/constrained) - receive preferential shares and household authority\n- reformist_hermeneuts: dissenting advocates of this reading (organized/identity_locked) - bear sanction costs for advancing abrogation from inside the tradition\n- literal_identity_communities: identity-bound supporters (organized/identity_locked) - collect existential coherence; exposed to epistemic costs if the reading prevails\n- state_family_law_regulators: partial implementers (institutional/constrained) - some jurisdictions already run modified regimes\n- academic_quranic_studies: analytical observer (institutional/analytical) - attests historical situatedness from outside all confessional seats",
+    "key_agents": [
+      "traditional_juridical_establishment: agenda_setter + beneficiary (institutional power, identity_locked exit, global scope) - runs the academies, fatwa councils, and court training through which the rulings operate; its authority is the rent the arrangement pays it",
+      "muslim_women_under_classical_rulings: payer (powerless, trapped, global scope) - bear the material and standing costs of the differential; individual exit carries family rupture and communal expulsion",
+      "male_household_guardians: beneficiary (moderate, constrained, global scope) - receive preferential shares and domestic authority without administering the system",
+      "reformist_hermeneuts: payer + prospective beneficiary (organized, identity_locked, global scope) - advance this very reading; pay in stalled careers and deviance charges; cannot exit the tradition their faith identity constitutes",
+      "literal_identity_communities: beneficiary (organized, identity_locked, regional scope) - hold existential coherence from the arrangement's permanence claim; the population this reading's success would most disrupt",
+      "state_family_law_regulators: observer (institutional, constrained, national scope) - codify variants; several jurisdictions demonstrate state-level departure is feasible",
+      "academic_quranic_studies: observer (institutional, analytical, global scope) - supply the chronological and philological evidence on which this reading's engine lives or dies"
+    ],
+    "logic_rationale": "Epsilon 0.88 is authored through this reading's own lights over the standing arrangement: a regime compelling obedience to rules the reading holds abrogated, justified by a divine-permanence claim the reading's core premise denies, is close to the extraction ceiling. Suppression 0.78 is a raw structural property (unscaled by power or scope): enforcement runs through institutional credentialing, innovation and apostasy-adjacent charges, and family-level sanction; an internalized component is suspected and routed to an omega rather than folded into the scalar. Theater 0.38: the jurisprudence is functionally real (courts, fatwa, teaching), but a growing share of activity is apologetic performance defending the rulings against reform critique rather than adjudication. Accessibility_collapse 0.62: egalitarian alternatives are articulated and known, but for insiders they collapse behind exit costs approaching apostasy stakes. Resistance 0.68: sustained reformist scholarship, Muslim feminist jurisprudence, and state-level family-code departures meet the arrangement head-on. Claim and metrics are independent authored facts: claimed_type snare is my structural judgment from this reading's seat (the coordination story - divine timelessness - is precisely what the reading refutes, leaving coercion-sustained extraction with identifiable victims); the metrics describe observed operation. The engine computes per-seat types from the structural data; divergence between seats is the measurement, not an error to reconcile.\n\nTemporal grid: interval 0-70 maps approximately to 1955-2025. One shared grid for all three series (points 0,10,20,30,40,50,60,70). Base_extractiveness dips at t=10 (statist modernization briefly softened enforcement, e.g. reformed family codes) then climbs monotonically as revivalism rebuilt enforcement AND as egalitarian alternatives proliferated - continuing to enforce contested rules in front of known alternatives grows more extractive through this reading's lights. Suppression_requirement traces the enforcement-capacity arc: mid-century relaxation (0.54 at t=10), revivalist rebuild (0.72 by t=40), hardening plateau since. Theater_ratio rises steadily as public defense of the rulings shifted from juristic work to apologetic performance. All endpoints match the base_properties scalars.",
+    "perspectival_gap": "The seats should compute sharply different types from identical structural data. From the traditional_juridical_establishment seat, the arrangement is continuous divine order it stewards - beneficiary directionality damps effective extraction toward subsidy, and the seat experiences reform as attack, not extraction. From the muslim_women seat, the same structure computes as coerced differential with no exit - full-target directionality, maximal chi. From the reformist_hermeneuts seat, the arrangement extracts twice: once in the rulings themselves, once in the sanction fell on anyone who says aloud what this reading says. From the literal_identity_communities seat, the arrangement delivers existential coherence and its defense is identity maintenance. The engine owns these computations; this story supplies the structural asymmetries (trapped vs identity_locked vs constrained exit; powerless vs institutional power) that make the divergence real rather than rhetorical.",
+    "directionality_logic": "Beneficiary declarations drive low d: the establishment (agenda-setter collecting authority rents), male guardians (material preferential shares), and literal-identity communities (coherence goods) all sit toward the subsidized end, with the establishment's identity_locked exit anchoring it further from target position despite its enforcement labor. Victim declarations drive high d: women under the rulings sit nearest full-target - powerless power atom and trapped exit amplify; reformist hermeneuts carry elevated d as payers-by-dissent, sanctioned for advocating the very reading this story instantiates. No directionality_overrides are used: the beneficiary/victim declarations plus exit atoms already separate the seats, and the one subtle case (literal communities, who would pay under this reading's success but benefit under the standing arrangement) is correctly resolved by referencing the arrangement, which is the epsilon referent. Receipt surface: the arrangement's gains land in two sinks - authority rents at the establishment, property shares at the guardians. gain_flow names traditional_juridical_establishment because it is the seat that administers the rules AND captures the meta-rent (credentialing, adjudicative monopoly, institutional continuity) that sustains the whole structure; guardian receipts are distributed pass-through of rules the establishment maintains. fixing_cost is prohibitive for the seat that could fix it: the establishment could dissolve the arrangement by accepting the abrogation reading, but doing so dissolves the fixer's own authority foundation - the cost of fixing exceeds anything the fixer bears from the status quo.",
+    "mandatrophy_analysis": "The classification guards against two opposite mislabels. First, the false-summit mislabel: reading the arrangement as untouchable divine fixity (mountain-shaped) when it has named beneficiaries, human enforcement machinery, and mounting resistance - declaring beneficiaries and authoring honest metrics keeps the FSM question open rather than letting naturality language immunize it. Second, the costless-liberation mislabel: treating this reading's adoption as a pure Pareto move. The omegas hold the counter-ledger open - epistemic violence exposure for literal-identity communities, prohibitive adoption costs for scholars inside the institutions, and the chronological fragility of the abrogation arrow itself. On mandatrophy proper: the founding problem (workable family legislation for a 7th-century community - widow security, orphan property, household order) has been substantially transformed; civil law now performs many of those functions across the Muslim world, yet the gender-specific provisions persist where enforced. Hence founding_problem_status contested rather than dead: the establishment attests liveness from inside the beneficiary set, while academic historians and reformed-jurisdiction practice corroborate transformation from outside it. Because status is contested rather than dead, the status-x-verdict mismatch flag does not fire - but the contested status itself routes scrutiny through the kernel family, where the sibling readings carry the same referent with different epsilon.",
+    "kernel_context": "Kernel: quranic_gender_verses - the normative status of Q.4:11, Q.2:282, and Q.4:34. This file instantiates the progressive_abrogation reading: the verses are an incomplete trajectory, and later egalitarian principles (exemplified by 49:13) supersede them via naskh. Sibling readings, authored as separate constraint files over the same referent: literal_hierarchical (the verses are timeless binding ordinance - lower epsilon, identical victim set, authority grounded in permanence) and contextual_egalitarian (the verses are historically situated progressive steps requiring maqasid-guided reinterpretation - intermediate epsilon, verses retain contextual normativity this reading denies them). This reading relates to literal_hierarchical by mutual logical exclusion within any single framework and to contextual_egalitarian by structural competition over the same proof-texts. Epsilon here is reading-indexed over the fixed referent of the standing enforcement arrangement; the endorsed egalitarian alternative is not the referent and contributes nothing to the authored value."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "quranic_gender_verses__literal_hierarchical",
+      "quranic_gender_verses__contextual_egalitarian"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'what the Qur'an says about gender' decomposes into three structurally distinct constraints - one per reading of the kernel quranic_gender_verses. Each has its own epsilon (reading-indexed over the shared referent of the standing enforcement arrangement), its own beneficiary/victim emphasis, its own failure modes, and its own axioms. This member (progressive_abrogation) is distinguished by making the arrangement's coordination justification FALSE as its central premise (the rules are superseded), which pushes its assessment toward the extractive pole; literal_hierarchical accepts the justification (lower epsilon, same victims); contextual_egalitarian reframes it (verses retain contextual normativity). The members are linked pairwise via affects_constraints; contamination propagates through shared proof-texts (49:13, the chronology of surahs 2 and 4) and through the shared enforcement apparatus."
+  },
+  "stakeholders": [
+    {
+      "name": "traditional_juridical_establishment",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Maintains the academies, fatwa councils, and court-training pipelines through which the gender-specific rulings (4:11 inheritance shares, 2:282 witness arithmetic, 4:34 household authority) are taught as permanently binding divine law. Issues judgments, credentials jurists, and classifies rival readings as deviation. Its standing, funding, and adjudicative role flow from being the arbiter of these rulings; renouncing them would dissolve the institution's claim to transmit an intact revelation, so the option is not seriously entertained from inside."
+    },
+    {
+      "name": "muslim_women_under_classical_rulings",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Live under the rulings where they are operative: smaller fixed shares in many inheritance configurations, witness-weighting in some classical applications, and household-authority provisions. Individual exit - declining the shares, refusing the arbitration, or leaving the tradition - carries family rupture, community expulsion, and in some jurisdictions legal jeopardy, so most comply within the system while collective reform proceeds slowly or abroad. Coalition potential exists (reformist networks, feminist jurisprudence circles) but is unevenly reachable from inside affected households."
+    },
+    {
+      "name": "male_household_guardians",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Husbands, fathers, sons, and brothers who receive the preferential shares and hold the domestic authority the provisions assign. Most regard the distribution as divinely fixed rather than personally chosen; their material position and household standing depend on its continuation, though few of them administer, teach, or defend the system institutionally. Were the distribution changed, they would lose relative advantage without existential harm - their stake is advantage, not survival."
+    },
+    {
+      "name": "reformist_hermeneuts",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Scholars and jurists inside or adjacent to the traditional academies who argue from the tradition's own tools - naskh methodology, the chronology of revelation, 49:13 - that the gender-specific rulings are superseded. They publish, teach, and petition official bodies; careers stall, fatwa councils exclude them, and some face innovation or deviance proceedings. Leaving the tradition entirely is closed to them by their own faith commitment, so they absorb the costs of advocating from within and would collect interpretive standing if their reading prevailed."
+    },
+    {
+      "name": "literal_identity_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Lay and clerical communities whose religious identity is bound to reading the rulings as timeless divine ordinance. The arrangement gives them existential coherence: scripture as fixed, complete, and authoritative. They defend it in public debate and raise children into it. A successful abrogation reading would unsettle the foundation of that identity rather than their material position, which is why their resistance is fiercer than the material beneficiaries' and why they are the population most exposed to disruption if this reading prevails."
+    },
+    {
+      "name": "state_family_law_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Legislatures and courts in Muslim-majority and Muslim-minority states that decide how much of the classical distribution to codify. Several jurisdictions already operate equal-inheritance or reformed family codes; others enforce the classical shares verbatim. Their record demonstrates that state-level departure is feasible, purchased at the price of recurring legitimacy conflict with the establishment and, in some cases, of exporting the dispute to diaspora communities."
+    },
+    {
+      "name": "academic_quranic_studies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "University-based historians and philologists of early Islam who date the verses, reconstruct the occasions of revelation, and document the seventh-century problems the rulings addressed. They hold no stake in the arrangement's continuation and corroborate or challenge this reading's chronological premises from outside every confessional seat - including the finding that the egalitarian proof-text may not postdate the restrictive rulings, on which this reading's engine depends."
+    }
+  ],
+  "gain_flow": "traditional_juridical_establishment",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a single, divinely-sanctioned template for family property division, witness weighting, and marital governance across a geographically vast and legally plural civilization - solving predictability, dispute-resolution, and widow/orphan-protection problems without requiring centralized enforcement infrastructure.",
+    "transfer_function": "Moves property shares, adjudicative standing, and household authority from women to male kin under the operative rulings, and moves interpretive monopoly over the relevant verses to the scholarly establishment that certifies their meaning.",
+    "absent_voices": "Muslim women subject to the rulings are largely absent from the forums that set them - historically excluded from classical juristic deliberation and underrepresented in contemporary fatwa councils. Reformist hermeneuts are excluded from official bodies precisely for the positions this reading advances. The people the verses govern speak about the rules mostly in venues the rules' administrators do not control.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the enforcement arrangement vanished overnight, inheritance flows, testimony practice, and household-authority patterns would reorganize immediately - the record of jurisdictions that already substituted reformed family codes shows the rearrangement is concretely available, and diaspora communities split along the resulting fault lines today.",
+    "founding_problem": "Seventh-century Arabian family regulation: securing widows' and orphans' property claims amid tribal conflict, ordering households in a stratified patriarchal society, and giving a new political community authoritative, workable family legislation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Contested by design. The traditional establishment attests liveness from inside the beneficiary set (divine law does not expire). Outside corroboration supports the transformed-or-dead reading: academic Quranic historians document the rulings' seventh-century occasional specificity; the civil codes of numerous Muslim-majority and Muslim-minority jurisdictions already perform the founding functions (widow security, orphan property) through other mechanisms; Muslim feminist jurists attest that the parity question is now governed elsewhere. No party outside the beneficiary set attests that the original problem persists in its original form."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "completed_ethical_trajectory_toward_parity",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "literal_hierarchical",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "contextual_egalitarian",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "later_revelation_supersedes_earlier_gender_rulings",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "universal_dignity_principle_normatively_supreme",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

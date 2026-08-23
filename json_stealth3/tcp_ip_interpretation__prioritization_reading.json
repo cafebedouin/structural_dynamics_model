@@ -1,0 +1,379 @@
+{
+  "header": {
+    "constraint_id": "tcp_ip_interpretation__prioritization_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "story_uid": "8002f43d-c134-439c-8cc6-0a451c0eb260"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.7,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Paid Prioritization as Network Management (Prioritization Reading of the TCP/IP Interpretation Kernel)",
+    "topic_domain": "technology governance / internet policy / telecommunications law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "broadband_isps",
+      "large_edge_platforms",
+      "cdn_and_transit_providers",
+      "broadband_subscribers"
+    ],
+    "victims": [
+      "small_independent_edge_services"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "broadband_isps",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operates the last-mile access network and sets the terms under which traffic is handled: standard tiers, premium latency assurances, interconnection pricing, and acceptable-use policy. Deploys the queueing and policy machinery that sorts packets into paid and unpaid classes, collects the associated fees, and defends its discretion over what counts as network management in regulatory proceedings and court. Leaving the arrangement is not a live option; the working levers are repricing, reclassifying traffic categories, and lobbying over the legal boundary."
+    },
+    {
+      "name": "large_edge_platforms",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Delivers video, search, commerce, and communications at planetary scale. Purchases dedicated interconnection and premium delivery to hold performance steady at peak hours; the fee stings, but assured delivery doubles as a barrier against undercapitalized competitors. Hedges further by building cache footprints and private backbone routes into major markets, negotiating bilaterally where smaller rivals cannot get a meeting."
+    },
+    {
+      "name": "small_independent_edge_services",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Runs newsletters, podcasts, indie games, community platforms, and nonprofit archives on the assumption that delivery quality does not depend on budget. At peak hours their packets wait behind paying traffic classes; buying equivalent assurance costs a far larger share of their revenue, and for many it is simply unaffordable. There is no alternative wire to the customer and no realistic path to self-provisioned distribution; the working choices are absorbing worse performance, charging users for the difference, or closing."
+    },
+    {
+      "name": "broadband_subscribers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Buys access plans and experiences the resulting delivery quality. Gains where tiered fees fund added capacity and newer wires; loses ground where unpaid traffic queues behind sponsored or premium classes and where plan menus migrate toward bundles that privilege affiliated content. Switching providers is slow and often impossible where only one or two wires reach the home, so influence runs through complaint channels, advocacy groups, and regulators rather than exit."
+    },
+    {
+      "name": "cdn_and_transit_providers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sells caching, delivery optimization, and transit between edge networks and access networks. The rougher the last mile gets for unassured traffic, the more edge networks spend on caches and private routes, so friction at the access layer expands this market. Profits from the arrangement's side effects without setting its terms, and can reposition inventory across markets freely."
+    },
+    {
+      "name": "telecom_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Determines whether differentiated handling counts as lawful network management or unlawful discrimination, through rulemakings, adjudication, and enforcement. Authority has swung between mandating equal handling and restoring operator discretion; each definition of reasonable management redraws the boundary the other seats bargain around, and each swing draws litigation from whoever lost. Cannot exit the controversy; the docket regenerates itself."
+    },
+    {
+      "name": "prospective_edge_entrants",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Founders deciding where to build and services that have not launched. Represented in neither interconnection negotiations nor rulemaking dockets except through general-purpose advocacy; the delivery assumptions their business plans depend on, that performance does not track payments, are decided in rooms they never enter. By the time a cohort arrives, the prevailing terms are already priced in."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allocates genuinely scarce capacity: when access links saturate, some queue discipline must decide whose traffic waits, and differentiated scheduling resolves contention by class while the associated fees finance capacity expansion and peak-load engineering.",
+    "transfer_function": "Moves money from edge services, and indirectly from subscribers through pass-through and bundle pricing, to access-network operators as the price of latency assurance; moves reach and attention from non-paying edge services toward paying ones whenever congestion binds.",
+    "absent_voices": "Prospective edge entrants whose launch economics assume delivery quality independent of budget; noncommercial producers, archives, and open-source infrastructure projects that can neither pay for assurance nor organize as an industry; future subscriber cohorts whose baseline expectations will form around whatever regime prevails. None of these seats sits in interconnection negotiations or rulemaking dockets except through proxy advocates.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the permission structure vanished overnight, operators would revert to uniform best-effort forwarding, premium-delivery revenue lines would close, edge delivery costs would compress toward commodity transit prices, and the interconnection market would reorganize around neutral termination; CDN spending patterns, platform architecture, and launch economics for new services would all visibly rearrange over several years.",
+    "founding_problem": "Best-effort IP offered no latency guarantee for time-sensitive traffic; differentiated queueing was engineered so real-time and mission-critical packets could jump queues during congestion, and operators later sought to recover the cost of over-provisioned networks by selling graded service tiers.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Academic networking literature and the DiffServ specification record attest the engineering problem independently of operator commercial interest; independent measurement programs such as M-Lab and SamKnows document persistent peak-hour degradation from outside the industry. No external source corroborates the specifically retail fast-lane framing; consumer advocates and several competition authorities attest that the sold tiers outrun measured congestion, while operators attest the management need remains live."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 21,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested kernel tcp_ip_interpretation: the prioritization_reading, under which TCP/IP permits differentiated service quality as network management, authorizing ISPs to operate paid fast lanes, incentivizing network investment through tiered fee recovery, and disadvantaging unfunded edge services. Per the epsilon-invariance discipline, the sibling readings are different constraints in different files: the neutrality_reading authors a non-discrimination requirement over the same class of arrangement, and the zero_rating_reading authors a permission for sponsorship exemptions; they enter this file only through cs_structure.reading_relations, network.affects_constraints, and the kernel omegas. The epsilon referent is the standing arrangement under contest, assessed by this reading's own lights: the operational regime in which access networks schedule traffic into paid and unpaid classes. The reading does not deny the costs its own structural delta names, namely that unfunded edge services wait behind paying classes and that launch economics assuming budget-independent delivery stop penciling out; hence epsilon sits at a substantive middle-high level rather than near zero. Claim and metrics are authored independently: the claim is tangled_rope because the arrangement genuinely coordinates (some queue discipline is unavoidable under scarcity, and differentiated scheduling plus fee-funded capacity is a real answer) while the same structure extracts asymmetrically (those unable to pay receive systematically worse delivery), held together by active enforcement (delivery contracts, traffic-policy machinery, and continuous regulatory defense of operator discretion).",
+    "key_agents": [
+      "broadband_isps: agenda setter and principal collector (institutional/arbitrage) — administers the prioritization regime, defines what counts as network management, collects fast-lane and interconnection premiums",
+      "large_edge_platforms: dual-positioned beneficiary-payer (powerful/mobile) — buys assured delivery, converts it into a competitive moat over smaller rivals, hedges via owned CDN and backbone footprint",
+      "small_independent_edge_services: primary bearer of costs (powerless/trapped) — cannot buy comparable assurance, waits behind paying classes, no alternative path to users",
+      "broadband_subscribers: incidental beneficiary and indirect payer (organized/constrained) — receives capacity funded by tiers, absorbs deprioritized unpaid traffic and bundle steering",
+      "cdn_and_transit_providers: secondary beneficiary (institutional/arbitrage) — sells the mitigation the arrangement's friction generates",
+      "telecom_regulators: agenda setter of the legal frame (institutional/constrained) — swings between mandating equal handling and restoring operator discretion; each swing relitigated",
+      "prospective_edge_entrants: excluded voice (powerless/trapped) — launch assumptions decided in rooms they never enter"
+    ],
+    "logic_rationale": "Base extractiveness ends at 0.72: premium-delivery pricing is decoupled from marginal forwarding cost, and the unpaid class absorbs measurable peak-hour penalty. Suppression is authored at 0.70 as a STRUCTURAL property, unscaled and distinct from the suppression_requirement series: last-mile concentration means edge services and subscribers lack alternatives regardless of which way the regulatory pendulum swings, so structural lock-in stays high and flat while ACTIVE enforcement machinery (the series) oscillates. Theater ratio ends at 0.48: the network-management label legitimately covers real congestion scheduling, but a growing share of activity is retail upsell marketed through the same language, plus the pronounced compliance-performance phase during the regulated interlude. Accessibility collapse 0.60: mitigation (CDNs, direct peering) exists and works, but is purchasable mainly by the already-large, so alternatives collapse for the weak and persist for the strong. Resistance 0.70: a two-decade advocacy and litigation campaign, state-level statutes, and recurring federal rulemaking keep the arrangement continuously defended rather than settled. Temporal design uses ONE shared grid at nine points mapped approximately to 1996-2026 (unit roughly one year; anchors: DiffServ-era research at 0, first discriminatory-blocking enforcement near 8, appellate invalidation of early rules and the interconnection disputes near 16, the Title II reclassification interlude at 18, repeal near 21, the state-law and EU-regulation patchwork near 25). The cycle is a regulatory pendulum: extractiveness and enforcement machinery climb in permissive windows, collapse during the mandated-equality interlude, then rebuild. Critically, the oscillation functions partly as intermittent reinforcement with an upward RATCHET: each permissive window banks contracts, traffic-policy infrastructure, and normalized premium products, so successive troughs rise (0.35, 0.48) and successive peaks rise (0.66, 0.72). The theater spike at the interlude reflects compliance performance rather than functional change, which is why theater and extractiveness move inversely there.",
+    "perspectival_gap": "Seats compute differently by construction. From the operator seat the arrangement is coordination it built and staffs: congestion is real, somebody must allocate, and the fees fund wires. From the small edge seat the identical structure is a toll booth it cannot afford with no road around it. The large-platform seat experiences a manageable fee attached to a moat; the regulator seat experiences a movable legal boundary; the CDN seat experiences demand growth. The engine derives these divergent per-seat classifications from the structural data (roles, power, exit, scope); nothing in the authored claim adjudicates them.",
+    "directionality_logic": "Declarations drive the derivation: broadband_isps sit at the beneficiary pole (they author and collect); small_independent_edge_services sit at the full-target end (declared victim, powerless, trapped, so amplification is maximal); broadband_subscribers land near symmetric (genuine capacity benefit against indirect fee incidence and bundle steering); cdn_and_transit_providers sit beneficiary-side without administering anything. One override is authored: large_edge_platforms derive near the beneficiary pole from their beneficiary role, but they are also material PURCHASERS of the fast-lane product, a fee-bearing position the derivation cannot see inside a beneficiary declaration. Their net relationship mixes contribution and capture, so an override at power_atom=powerful (the only powerful seat in this story, uniquely identifying them) sets d=0.35, moving that agent off the pure-beneficiary end toward moderately-target-side-of-symmetric. telecom_regulators carry an agenda-setting role without collecting the arrangement's gains; their directionality reflects administration of the legal frame rather than rent.",
+    "mandatrophy_analysis": "The founding problem splits cleanly: the engineering problem (latency-sensitive traffic over contended links) remains live and externally corroborated by queuing theory and measurement studies; the commercial framing (retail fast lanes priced to consumers of assurance) is contested, with external sources arguing the sold tiers outrun measured congestion. Status is therefore authored 'contested', and paired with disappearance_verdict=world_rearranges this yields NO dead-mandate mismatch flag; the arrangement's persistence tracks a still-live underlying need, which is exactly what keeps this a tangled_rope rather than a decayed residue. The classification guards against mislabeling in BOTH directions: a pure-coordination reading (the operator's own account) erases who pays and how asymmetrically; a pure-extraction reading (the strongest neutrality account) denies the real allocation function that scarcity forces on any shared link. The forward risk to watch is piton-drift: if the congestion_authenticity omega resolves toward scarcity-independent activation and the capex_incidence omega resolves toward substitution, the arrangement's function atrophies into a billing category maintained by brand theater, and the theater trajectory (already elevated at 0.48 with a compliance-performance spike in the series) is the leading indicator.",
+    "kernel_context": "Kernel: tcp_ip_interpretation, the question of what the TCP/IP design establishes for traffic handling. This file instantiates the prioritization_reading: differentiated service quality is within the design's envelope as network management. Sibling files: tcp_ip_interpretation__neutrality_reading, which holds that the design embodies an end-to-end non-discrimination requirement, and tcp_ip_interpretation__zero_rating_reading, which holds that selective exemptions for sponsored content fall within the design's tolerance. The located disagreement is whether non-discrimination is constitutive of the design or external to it; this reading holds it external, making flow-allocation policy an operator matter rather than a property of the protocol."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This file is one reading of the tcp_ip_interpretation kernel; what exactly do the sibling files assert differently, and how must cross-file comparison be indexed?",
+      "resolution_mechanism": "Join all three stories on kernel_id: tcp_ip_interpretation__neutrality_reading authors epsilon over the same differentiated-handling arrangement judged as forbidden discrimination; tcp_ip_interpretation__zero_rating_reading authors epsilon over sponsorship exemptions. Compare per-seat outputs ACROSS the three files; never treat any single file's verdict as a fact about the kernel itself.",
+      "impact": "Comparison that ignores reading index merges three distinct epsilon values and three distinct victim sets into one spurious number; per-seat divergence inside this file is valid only relative to this reading's authorization premise.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-index discipline: this story is the prioritization_reading instantiation, not the kernel."
+    },
+    {
+      "id": "nondiscrimination_premise_location",
+      "question": "Does the transport layer's design constitute a nondiscrimination commitment, or is it an allocation-indifferent abstraction that leaves flow-handling policy to operators?",
+      "resolution_mechanism": "Architectural-historical analysis of the design record (RFC 791/793, the end-to-end arguments paper, contemporaneous design-philosophy writing) cross-checked against how adjudicating bodies have treated the design's normative content; if the record shows constitutive nondiscrimination, this reading's authorization premise collapses into bare policy preference.",
+      "impact": "Resolved as constitutive, this constraint's permission rests entirely on constructed law and its extraction is fully attributable to policy choice; resolved as abstraction, the sibling neutrality reading's mandate premise lacks design grounding and its constraint is equally constructed. Either resolution relocates, but does not dissolve, the inter-reading dispute.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Where the readings' disagreement is located: constitutive nondiscrimination versus allocation-open transport."
+    },
+    {
+      "id": "congestion_authenticity",
+      "question": "How much of deployed differentiated handling responds to measured congestion, and how much proceeds independent of link saturation?",
+      "resolution_mechanism": "Telemetry audits correlating quality-of-service activation windows with utilization curves; disclosure of what triggers premium classes in operator policy engines.",
+      "impact": "If prioritization routinely activates absent congestion, the coordination component shrinks and the arrangement drifts toward pure toll collection; if tied to genuine peaks, a larger share of measured extraction is the irreducible price of the allocation function itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the engineering warrant matches deployment practice."
+    },
+    {
+      "id": "capex_incidence_vs_rent",
+      "question": "Does fast-lane and premium-tier revenue fund incremental capacity, or substitute for capital expenditure operators would have undertaken anyway?",
+      "resolution_mechanism": "Segmented financial disclosure linking delivery-product revenue to capital-expenditure deltas; natural experiments across jurisdictions with different permission regimes.",
+      "impact": "If substitutional, the reading's own investment-defense fails on instrumental grounds and the transfer stands nearly bare; if additive, part of the transfer is genuine funding of the coordination function and the extraction estimate should be discounted accordingly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Tests the reading's economic warrant from within its own lights."
+    },
+    {
+      "id": "small_edge_coalition_power",
+      "question": "Can individually powerless small edge providers convert collective organization, such as trade associations, cooperative peering, or pooled delivery purchasing, into bargaining power that changes their effective position?",
+      "resolution_mechanism": "Track formation and outcomes of edge-provider coalitions in interconnection and rulemaking proceedings; measure whether pooled arrangements obtain terms comparable to large-player bilateral deals.",
+      "impact": "Successful coalition shifts this seat off the pure-target corner and softens the asymmetry driving the extraction reading; repeated failure confirms the structural trap and supports the current directionality assignment.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Coalition potential of a fragmented payer class."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_ip_interpretation__neutrality_reading",
+      "tcp_ip_interpretation__zero_rating_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'the net neutrality debate': one kernel (tcp_ip_interpretation), three readings, three structurally distinct constraints with distinct epsilon values and victim sets. This file authors the prioritization_reading. The neutrality_reading file supplies the doctrinal baseline this reading defines itself against (upstream in the argumentative sense); the zero_rating_reading file rides the permissive momentum this reading normalizes, since acceptance of performance-tier differentiation lowers the political cost of accepting sponsorship exemptions. Links are declared reciprocally through network.affects_constraints in all three files; cross-family analysis must join on kernel_id, never average across files."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ],
+  "gain_flow": "broadband_isps",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "allocation_indifferent_transport_abstraction",
+    "drift_state": {
+      "moment": "contemporary_state_law_patchwork",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "neutrality_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "zero_rating_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "transport_design_leaves_flow_allocation_to_operators",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "differentiated_scheduling_constitutes_network_management",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

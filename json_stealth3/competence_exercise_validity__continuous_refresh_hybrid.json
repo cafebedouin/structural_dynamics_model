@@ -1,0 +1,406 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__continuous_refresh_hybrid",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "1bc03741-682f-415c-a31b-91e125495309"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.51,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Continuous Drill-Cycle Mandate for Safety-Critical Competence",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "general_public_affected_communities",
+      "training_simulation_vendors",
+      "reinsurers",
+      "safety_regulators"
+    ],
+    "victims": [
+      "safety_critical_operators",
+      "frontline_crews"
+    ],
+    "vindicated_propositions": [
+      "skill_decay_without_practice",
+      "team_coordination_degrades_between_exercises",
+      "process_dependent_competence_retention"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Writes minimum drill frequencies, scenario fidelity requirements, and pass criteria into operating licenses; audits drill records and can issue findings that suspend authority to operate. Its inspection staffing and technical budget scale with the volume of mandated exercise it must oversee."
+    },
+    {
+      "name": "safety_critical_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Runs plants, fleets, and facilities whose licenses condition on demonstrated drill performance. It schedules crews out of production for rehearsals, buys simulator capacity, and remediates failed objectives. Skipping the cycle risks license action and uninsured liability; running it consumes a permanent operating budget line."
+    },
+    {
+      "name": "frontline_crews",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Spends recurring duty hours in scenario rehearsal and evaluated drills, including no-notice events that interrupt rest patterns. Drill results gate individual qualification and advancement. The same rehearsal builds the team coordination they would depend on in a real event."
+    },
+    {
+      "name": "training_simulation_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Designs scenarios, builds and operates simulators, and delivers evaluated drill services under multi-year contracts. Demand is set by mandated drill hours rather than discretionary purchases, so revenue tracks the requirement's volume and fidelity thresholds."
+    },
+    {
+      "name": "reinsurers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Prices coverage for low-frequency, high-severity events and conditions terms on documented drill performance. It commissions its own audits of operator drill records and adjusts premiums or deductibles when cycles lapse."
+    },
+    {
+      "name": "general_public_affected_communities",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Lives and works near plants, transport corridors, and facilities whose worst-case events would land locally. It bears drill program costs indirectly through rates and fares and holds no seat in setting the requirements that protect it."
+    },
+    {
+      "name": "small_operator_representatives",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Represents operators for whom full-fidelity drill cycles are a fixed cost that scales poorly with fleet or plant size. It petitions for tiered requirements and expanded simulator credit and is routinely outvoted in the working groups where frequency standards are drafted."
+    },
+    {
+      "name": "human_factors_research_community",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Studies skill decay, team performance under stress, and transfer from simulator to field. Its findings are cited by every other seat, but it holds no vote in standard setting and receives no mandate revenue."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Converts individually certified skill into continuously rehearsed team capability across a distributed population of safety-critical operations. It solves the shared problem that competence decays silently between rare events and that no single operator captures the full system-level benefit of everyone staying practiced.",
+    "transfer_function": "Moves operating budgets and crew duty time into recurring scenario design, simulator capacity, and evaluated drills; moves pass/fail assurance data upward to regulators and insurers; moves contracted drill-delivery revenue to training vendors.",
+    "absent_voices": "Small operators facing fixed-cost drill burdens and crews who experience scheduled drills as evaluation ritual are outside the working groups where drill frequency and fidelity standards are set; those tables are populated by large operators, regulators, and vendors whose interests align on high mandated volume.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Training calendars, simulator procurement, vendor contracts, insurance premium structures, and regulatory audit programs are all built around mandated drill cycles. Overnight removal would strand simulator assets, void coverage terms keyed to drill records, and leave competence to decay on the skill-fade timescale until the next severe event forced reorganization.",
+    "founding_problem": "Post-accident investigations in the late 1970s and 1980s found crews and control rooms that were fully certified on paper yet failed basic responses under stress. The gap was traced to skill fade between infrequent validations, and the founding fix was to make exercise continuous rather than episodic.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Peer-reviewed skill-decay research and accident-board findings documenting degraded crew response after long drill gaps attest the problem from outside the benefiting parties. Vendor and regulator attestations that the problem is live are discounted as self-interested; the academic and investigative sources carry the corroboration."
+  },
+  "interval": {
+    "start": 1979,
+    "end": 2019
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1979,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1984,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1989,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1994,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2004,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1979,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1984,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1989,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1994,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2004,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1979,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1984,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1989,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1994,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1999,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2004,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.51,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Across nuclear, aviation, chemical, and healthcare operations, licenses and coverage terms condition continued operation on a recurring cycle of evaluated drills: crews must repeatedly rehearse rare, high-consequence scenarios rather than validate competence once and stand down. This story instantiates ONE reading of the contested kernel competence_exercise_validity — the continuous_refresh_hybrid reading, which holds that simulation is necessary but not sufficient and that retention is process-dependent, requiring continuous drill cycles rather than one-time state validation. The sibling readings (simulation_as_proxy, real_catastrophe_only) are separate constraints in separate files and are not averaged into this one. Epsilon's referent is the standing arrangement under contest — the mandated continuous-exercise regime as it actually operates — assessed by this reading's own lights: the reading endorses the cycle's necessity while acknowledging that mandated volume exceeds the evidence-based minimum and that a compliance industry rides the requirement.\n\nKEY AGENTS (by structural relationship):\n- safety_regulators: agenda-setting seat (institutional/constrained) — writes drill requirements into licenses, audits records; oversight workload justifies its budget\n- safety_critical_operators: primary paying seat (powerful/constrained) — funds and staffs the cycle; retains the competence and avoids the catastrophe\n- frontline_crews: paying-and-protected seat (organized/constrained) — supplies rehearsal hours and evaluation exposure; owns the competence that keeps them alive\n- training_simulation_vendors: collecting seat (organized/arbitrage) — sells scenario design and drill delivery into guaranteed mandated demand\n- reinsurers: co-enforcing beneficiary seat (institutional/mobile) — prices catastrophe risk and writes drill records into coverage terms\n- general_public_affected_communities: protected beneficiary seat (powerless/trapped) — carries residual local risk and indirect drill overhead in prices\n- small_operator_representatives: excluded seat (moderate/constrained) — would press for size-tiered requirements; absent from standard-setting tables\n- human_factors_research_community: analytical seat (moderate/analytical) — produces the skill-decay evidence the mandate's legitimacy rests on",
+    "logic_rationale": "Extractiveness 0.45: the cycle imposes a permanent recurring cost line on operators and crews, partially reciprocated by retained capability — by this reading's lights the core is justified but mandated volume runs above the evidence-based minimum, and that surplus is the extractive share. Suppression 0.51: persistence depends on active license-condition enforcement, ratcheted hard after the TMI- and Challenger-era findings and roughly stable since; suppression is authored as a raw structural property — the engine scales only extractiveness, by directionality and scope. Theater_ratio 0.32: scheduled, pre-briefed drills increasingly measure compliance rather than exercise degraded conditions, but no-notice audits retain real function. Accessibility_collapse 0.55: once skill-fade evidence is understood, validate-once alternatives lose standing, but the sibling readings keep alternatives live as argued positions. Resistance 0.55: operators push back on volume and scheduling, some crews on evaluation burden, while insurers and publics push for more. The measurement series runs on one shared nine-point grid (1979–2019) so every tracked metric is authored at every examined time point: suppression_requirement traces the enforcement ratchet (0.30 to 0.51), base_extractiveness traces compliance-volume growth (0.24 to 0.45), theater_ratio traces scripted-compliance creep (0.12 to 0.32). Claim/metric independence: claimed_type tangled_rope is asserted from structure — a genuine coordination function plus identifiable payers and collectors through the same enforced arrangement — while the metrics are authored independently of that claim.",
+    "perspectival_gap": "From the regulator and vendor seats the cycle is functioning assurance infrastructure worth defending and extending; from the operator and crew seats the same cycle is a recurring tax of time and budget whose volume is set by parties that do not bear it. The public seat experiences only the protected side. Crews hold coalition capacity through unions and professional bodies — the reason resistance registers at all despite dispersed individual stakes. Small operators meet a fixed-cost wall that the large-operator-dominated standards table does not price, which is why their representatives sit outside the room.",
+    "directionality_logic": "Beneficiary/victim declarations plus exit atoms reproduce the relationships without overrides: vendors and reinsurers collect from mandated volume with mobile or arbitrage exits — nearest the beneficiary end; regulators administer the arrangement and their budgets scale with oversight load — beneficiary-side despite the agenda-setter role; operators and crews bear the recurring cost under constrained exit — target-side, with crews landing mid-range because their own competence and survival sit inside the arrangement (dual payer/beneficiary positioning); affected publics are subsidized beneficiaries with trapped exit — the strongest damping. Scope amplification applies modestly at the regime's national-to-continental reach.",
+    "mandatrophy_analysis": "The founding problem — certified-but-unpracticed crews failing under stress — is corroborated as live by skill-decay research and accident-board findings from outside the benefiting parties, so the mismatch consumer reads founding_problem_status=live against disappearance_verdict=world_rearranges and raises no zombie flag. The mandatrophy risk here is not a dead mandate but dose inflation: the temporal series is positioned to catch the case where theater passes 0.5 and extraction keeps climbing while the founding problem stays live — the signature of an exercise function drifting into performance maintenance. If dose-response evidence later showed mandated volume far exceeding the retention minimum, the piton-direction hypothesis would activate for investigation.",
+    "kernel_context": "Kernel: competence_exercise_validity — what counts as valid exercise that sustains safety-critical competence. This file instantiates the continuous_refresh_hybrid reading: simulation is necessary but not sufficient; retention is process-dependent and requires continuous drill cycles, not one-time validation. Siblings: simulation_as_proxy (simulation counts as the valid exercise; drills are proxy-catastrophe) and real_catastrophe_only (only real catastrophe truly exercises competence). Relation choices: toward simulation_as_proxy I declare forecloses, because this reading's core premise — simulation is NOT sufficient — directly contradicts that reading's sufficiency claim, and no single framework can hold both; toward real_catastrophe_only I declare coexists_with, because the two readings operate on different predicates (retention-over-time versus full-depth exercise) and composite positions such as 'drills retain baseline readiness; real events build peak readiness' are coherently held, leaving that dispute empirical rather than logical. Reference frame: continuously_exercised_competence_baseline. At the contemporary sim-credit-expansion moment the drift is practice_drift, minor, acknowledged — regimes nominally endorse continuous exercise while stretching intervals and substituting simulator hours, and the authority structure sees and accepts the dilution."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__simulation_as_proxy",
+      "competence_exercise_validity__real_catastrophe_only"
+    ],
+    "dual_formulation_note": "The colloquial label 'exercise keeps us safe' conflates three structurally distinct claims about what validates competence: continuous-cycle sufficiency (this file), simulation sufficiency (competence_exercise_validity__simulation_as_proxy), and catastrophe-only validity (competence_exercise_validity__real_catastrophe_only). Each carries its own epsilon, victim set, and enforcement economics; they form a constraint family linked through network edges rather than one observable-dependent story. The upstream empirical claim (skill decay without practice) is cited as evidence by all three readings, which is why the family links run through it."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "continuously_exercised_competence_baseline",
+    "drift_state": {
+      "moment": "contemporary_sim_credit_expansion",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_proxy",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "real_catastrophe_only",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_retention_requires_continuous_cycles",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "one_time_state_validation_insufficient_for_readiness",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "reading_indexical_delta",
+      "question": "This constraint is the continuous_refresh_hybrid reading of the competence_exercise_validity kernel; what structural differences would the sibling readings introduce if adopted as the operative standard?",
+      "resolution_mechanism": "Adoption events: a regulator granting unlimited simulator credit would instantiate simulation_as_proxy (mandated live-drill hours collapse toward the coordination floor and epsilon falls); a post-accident shift to event-driven-only validation would instantiate real_catastrophe_only (the preventive regimen is condemned as insufficient and regulation reorganizes around incident learning).",
+      "impact": "Sibling adoption changes the victim set (who must drill), the beneficiary set (vendor revenue mix), and epsilon materially. This file's epsilon is indexed to the hybrid reading only; averaging across readings would violate epsilon invariance.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-reading indexicality: epsilon and structure are reading-relative over the shared kernel."
+    },
+    {
+      "id": "mandated_dose_vs_evidence_based_minimum",
+      "question": "How far does mandated drill volume exceed the dose-response minimum that skill-decay research identifies as sufficient for retention?",
+      "resolution_mechanism": "Meta-analyses of skill-decay dose-response curves and controlled comparison of jurisdictions operating reduced-schedule regimes with equivalent outcome metrics.",
+      "impact": "The gap between mandated and minimal dose is the extractive share riding the coordination function. If mandated volume approximates the minimum, the arrangement trends toward pure coordination; if it runs well above, the extraction share grows and the payer seats' effective burden rises.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the mandate's volume tracks retention science or compliance politics."
+    },
+    {
+      "id": "drill_theater_fraction",
+      "question": "What share of evaluated drill activity measures compliance rather than exercising crews under degraded, ambiguous, or no-notice conditions?",
+      "resolution_mechanism": "Comparative studies of no-notice audit drills versus scheduled announced drills, measuring performance deltas and objective-completion rates.",
+      "impact": "A theater share above roughly 0.5 would signal that the exercise function is drifting into performance maintenance, activating the piton-direction hypothesis for the exercise regime.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Functional-versus-performative composition of mandated drill activity."
+    },
+    {
+      "id": "safety_record_attribution",
+      "question": "Does the improving safety record attribute to continuous exercise cycles, or to concurrently deployed engineering redundancy, process-safety management, and design changes?",
+      "resolution_mechanism": "Multivariate accident-rate analyses conditioning on engineering and design upgrades, isolating the marginal contribution of drill-cycle intensity.",
+      "impact": "Weak drill attribution undermines this reading's vindication claim and the mandate's legitimacy basis; strong attribution supports both the reading and the current mandate intensity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal weight of drill cycles in the recorded safety improvement."
+    },
+    {
+      "id": "standard_setting_authority_basis",
+      "question": "Does standard-setting authority rest on demonstrated predictive validity of drill regimens, or on institutional self-perpetuation of the compliance apparatus?",
+      "resolution_mechanism": "Track whether frequency and fidelity standards actually revise when dose-response evidence contradicts mandated volumes; revision responsiveness distinguishes expertise-grounded from self-perpetuating authority.",
+      "impact": "If authority is self-perpetuating, the assurance layer's role reclassifies toward collection and the operator seats' effective burden rises; if evidence-responsive, the expertise grounding holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the commitment system's authority is evidence-wielding or self-justifying."
+    }
+  ],
+  "gain_flow": "training_simulation_vendors",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

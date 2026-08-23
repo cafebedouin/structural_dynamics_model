@@ -1,0 +1,385 @@
+{
+  "header": {
+    "constraint_id": "dignified_death__autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "19a59399-ac67-4a04-8120-124e673472f7"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.62,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Autonomy-Primary Dignified Death: Medically Gated Final Authority",
+    "topic_domain": "bioethics/medical_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "eligible_suffering_patients",
+      "medical_profession_gatekeepers"
+    ],
+    "victims": [
+      "ineligible_suffering_patients"
+    ],
+    "vindicated_propositions": [
+      "regulated_access_safeguard_doctrine",
+      "terminal_prognosis_eligibility_boundary"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 29
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 29,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 29,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 29,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "state_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Drafts and revises the statute defining who may request medical assistance in dying and under what conditions: eligibility criteria (terminal-prognosis windows, capacity requirements, waiting periods), provider licensing, and the review and reporting apparatus. Collects fiscal relief as authorized deaths shorten high-cost end-of-life care, and contains malpractice and criminal liability by routing every death through auditable state-designed procedure. Nothing binds it to the current boundary; it can redraw the criteria at will."
+    },
+    {
+      "name": "medical_profession_gatekeepers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Assesses requests, certifies capacity and eligibility, prescribes or administers. No death proceeds without a willing physician, so the profession holds the practical veto regardless of statutory text. Conscientious objectors may decline entirely and keep practicing; participants bear moral distress, documentation load, and occasional legal exposure. The arrangement concentrates jurisdiction over dying inside medicine — a territorial expansion of the profession that precedes and outlasts any individual case."
+    },
+    {
+      "name": "eligible_suffering_patients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Faces a terminal prognosis inside the eligibility window, retains decisional capacity, and secures a willing assessor. For them the arrangement converts a forbidden act into a scheduled, supported, legally protected death on a date they help choose. Their access depends entirely on staying inside the criteria and finding a provider; step outside the window or lose capacity, and the door closes."
+    },
+    {
+      "name": "ineligible_suffering_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Suffers grievously — chronic non-terminal illness, psychiatric torment, advanced disability, or declining capacity — but fails an eligibility criterion, so the arrangement offers nothing except the continuation being fled. Remaining options are degraded: refusing food and fluids over weeks, traveling abroad at great cost if mobile and resourced, or clandestine acts exposing helpers to prosecution. The norm proclaiming final authority over death is precisely what defines them as unqualified to exercise it."
+    },
+    {
+      "name": "patient_family_members",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Absorbs the caregiving labor, witnesses the suffering, and grieves on both sides of the decision — some lobby for access, others plead against it, and the statute routes decision authority around them either way. They gain relief when suffering ends sooner and bear loss, suspicion of pressuring the patient, and, where they assist outside the law, criminal exposure."
+    },
+    {
+      "name": "disability_rights_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organized opposition outside the design room: reads the eligibility criteria as a public statement that certain disabled lives are not worth continuing, and warns that expansion follows fiscal pressure. Testifies, litigates, and campaigns, but holds no seat on the review bodies that write the criteria their constituents live under."
+    },
+    {
+      "name": "resource_poor_rural_patients",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Formally inside the eligibility class but practically outside the service: no willing provider within reach, no travel budget, thin palliative infrastructure. For them access exists on paper only, and the arrangement's benefits concentrate where providers cluster. Would object that a right they cannot reach is a statement about whose suffering counts."
+    },
+    {
+      "name": "bioethics_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Studies the arrangement across jurisdictions: compares criteria drift, request demographics, oversight outcomes, and the gap between autonomy rhetoric and gated delivery. Publishes, advises commissions, and holds no stake in any particular death."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Channels voluntary-death requests through one regulated medical pathway: eligibility screening, capacity verification, waiting periods, provider administration, and state review replace clandestine suicide, ad hoc physician discretion, and criminalized assistance with a single auditable procedure a pluralistic society can inspect.",
+    "transfer_function": "Moves decision authority over death from the suffering individual to a gatekeeping chain (legislature-set criteria, assessing physicians, review committees); moves the timing of death from the individual's chosen moment to the earliest moment the apparatus permits; moves legal risk from patients and families to licensed institutions; and, through prognosis-linked eligibility, moves high-cost end-of-life care off institutional budgets earlier than natural dying would.",
+    "absent_voices": "Disability-rights advocates, who read the eligibility criteria as a public valuation of disabled life and hold no seat on the bodies that write the criteria; ineligible chronic and psychiatric sufferers, whose testimony is structurally unheard because the criteria define their suffering as non-qualifying; poor and rural patients, for whom formal eligibility is practically void; and, in prohibition jurisdictions, the entire class of denied patients, who have no seat in any enactment conversation at all.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the gated arrangement vanished overnight, eligible patients would return to clandestine exits, refused sustenance, or unrelieved dying; physicians would lose the regulated channel and resume case-by-case discretion under criminal exposure; the state would lose its oversight data and its liability container; families would absorb both the suffering and the legal risk the arrangement currently intermediates. The end-of-life landscape reorganizes around whatever replaces it — which is why every party fights over the criteria rather than ignoring them.",
+    "founding_problem": "Clandestine, unregulated dying: terminally ill people ending their lives alone, violently, or at unaccountable physician discretion, helpers exposed to prosecution, and no social mechanism to distinguish requested release from abandonment or abuse. Early enactments (Oregon 1997, the Netherlands 2002) traded blanket prohibition for controlled access to solve it.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: pre-legislation coronial and forensic records documenting violent suicide methods among the terminally ill (Oregon pre-1997, Netherlands pre-2002 court cases), palliative-medicine literature documenting refractory suffering at life's end, and testimony of families who lost members to solitary violent exits. Disability-rights organizations — opponents of the arrangement — corroborate that clandestine dying was real while disputing that gated access answers it; theirs is the strongest available attestation because they collect nothing from either answer."
+  },
+  "gain_flow": "state_health_authorities",
+  "fixing_cost": "prohibitive",
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading of the dignified_death kernel (autonomy_primary). What would change structurally under the sibling readings, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Author the sibling stories (dignified_death__sanctity_primary, dignified_death__relational_autonomy) and compare victim sets, beneficiary sets, and epsilon at matched referents; the disagreement localizes to the locus-of-death-authority premise.",
+      "impact": "Under sanctity_primary the victim set inverts (the choosing patient becomes the transgressor); under relational_autonomy the victim set expands to pressured vulnerable persons and authority redistributes to the triad — per-seat classifications computed from this story's data do not transfer to siblings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of the dignified_death kernel; siblings re-specify the victim set by relocating decision authority."
+    },
+    {
+      "id": "eligibility_criteria_ratchet",
+      "question": "Do eligibility criteria ratchet monotonically outward (terminal-only toward chronic, psychiatric, and minority-age inclusion, on the Benelux trajectory), converting a narrow catastrophe-prevention mandate into general death-on-request?",
+      "resolution_mechanism": "Longitudinal comparison of eligibility statutes and review-body rulings across jurisdictions and decades; track the proportion of assisted deaths following eligibility-expansion amendments.",
+      "impact": "Continued ratchet supports the extraction-accumulation reading of the rising base_extractiveness series and thins the coordination half of the structure; a stable boundary would support the safeguard reading and lower epsilon.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the eligibility boundary expands monotonically under fiscal and advocacy pressure."
+    },
+    {
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is the measured suppression structural (statutes, penalties, provider scarcity) or internalized (patients self-censor requests as burdensome; clinicians internalize an ethos that a death request signals failed care)?",
+      "resolution_mechanism": "Compare request rates and request-withholding interviews across jurisdictions before and after liberalization; if withheld requests persist where legal barriers drop, the internalized component is substantial.",
+      "impact": "If internalized, effective suppression exceeds the structural measure and persists after reform — the arrangement's coercive force travels inside patients and clinicians rather than residing in the statute.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized components of the arrangement's suppressive force."
+    },
+    {
+      "id": "consent_authenticity_under_dependency",
+      "question": "For patients whose exit runs entirely through the gatekeeping apparatus and who depend on the caregivers and institutions the arrangement regulates, is the request for death authentic self-determination or adaptation to felt burden?",
+      "resolution_mechanism": "Not resolvable by outcome data alone; requires structured qualitative study of decision contexts, triangulated across jurisdictions with differing safeguard designs. This is the exact fault line between this reading and relational_autonomy.",
+      "impact": "Widespread burden-adaptation shrinks the genuine coordination good, raises epsilon, and shifts weight toward the relational reading's procedural safeguards; robust authenticity confirms this reading's premise.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Authenticity of autonomous death requests under dependency — the autonomy/relational fault line."
+    },
+    {
+      "id": "prohibition_decomposition",
+      "question": "Does the epsilon authored here (the gated enactment arrangement) also describe prohibition jurisdictions, or is prohibition a structurally distinct constraint?",
+      "resolution_mechanism": "Decompose: author dignified_death__prohibition_regime as a separate story (denied exit with no compensating access, criminalized assistance, no oversight good) and link it in the network; compare epsilon at the shared reading.",
+      "impact": "From this reading's seat, prohibition computes as materially more extractive with no coordination half; merging the two arrangements into one story would contaminate epsilon and blur the victim set. Kept separate, each carries one stable epsilon.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Epsilon invariance: gated enactment and prohibition are two constraints, not one constraint measured two ways."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "dignified_death__sanctity_primary",
+      "dignified_death__relational_autonomy",
+      "dignified_death__prohibition_regime"
+    ],
+    "dual_formulation_note": "The colloquial label 'dignity in dying' decomposes into at least four structurally distinct constraints: this autonomy_primary reading (the gated enactment arrangement, epsilon 0.52, tangled profile); sanctity_primary (whose endorsed arrangement is prohibition — from its seat the violation falls on the terminating act itself); relational_autonomy (triad-distributed authority under procedural safeguards); and the prohibition regime as a standalone arrangement (highest epsilon from the autonomy seat — denied exit with no compensating access). Upstream/downstream: sanctity_primary is historically upstream — its doctrinal prohibitions built the legal baseline this reading contests; autonomy_primary influences relational_autonomy — the individualist reading's documented failure modes (felt-burden pressure, isolation of dependent patients) generate exactly the safeguards the relational reading formalizes. Every family member links the others via network.affects_constraints; epsilon is authored per reading and never averaged."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "individual_self_sovereignty_over_dying",
+    "drift_state": {
+      "moment": "contemporary_gated_enactment_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sanctity_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "relational_autonomy",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "self_determination_constitutes_dying_dignity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "sufferer_holds_final_authority_over_death_timing_and_method",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates the autonomy_primary reading of the dignified_death kernel as a single epsilon-invariant constraint. The standing arrangement under contest — the story's epsilon referent — is the medico-legal gatekeeping apparatus through which autonomy-framed aid-in-dying regimes actually operate: legislature-defined eligibility criteria (terminal-prognosis windows, capacity requirements, waiting periods), assessing and administering physicians whose willingness is a practical precondition, and state review and reporting machinery. Assessed by this reading's own lights — dignity resides in self-determination, so the suffering individual holds final authority over timing and method of death — the arrangement delivers a genuine good to one class (eligible patients receive a scheduled, protected, medically supported death) while conditioning the promised 'final' authority on gatekeeper approval: eligibility criteria deny exit to chronically and psychiatrically suffering patients whose agony fails the boundary, clinician discretion can veto formally qualifying applicants, and the procedural apparatus taxes dying applicants with delay, repetition, and scrutiny. Prohibition jurisdictions, where no access exists at all, are a DIFFERENT constraint with a different epsilon (see the prohibition_decomposition omega and network links); this story does not average across them. Claim and metrics are authored independently: claimed_type records the structural judgment (an autonomy norm entangled with medical gatekeeping — coordination and asymmetric extraction in one structure); the metrics record the arrangement's observed operation.\n\nKEY AGENTS (by structural relationship):\n- state_health_authorities: Agenda-setting regulator ([institutional]/[arbitrage]) — writes the eligibility criteria, collects fiscal and liability relief\n- medical_profession_gatekeepers: Administering gatekeeper ([institutional]/[arbitrage]) — holds the practical veto; collects expanded professional jurisdiction over dying\n- eligible_suffering_patients: Coordinated beneficiary ([powerless]/[trapped]) — receives the authorized exit the arrangement exists to provide\n- ineligible_suffering_patients: Primary target ([powerless]/[trapped]) — bears prolonged suffering against will behind the eligibility boundary\n- patient_family_members: Burden-bearing bystander ([moderate]/[constrained]) — absorbs care labor and grief; decision authority routes around them\n- disability_rights_advocates: Excluded objector ([organized]/[constrained]) — reads the criteria as a valuation of disabled life; no seat in criteria design\n- resource_poor_rural_patients: Formally eligible, practically excluded ([powerless]/[trapped]) — nominal access without reachable providers\n- bioethics_analysts: Analytical observer ([analytical]/[analytical]) — compares criteria drift and rhetoric-outcome gaps across jurisdictions",
+    "key_agents": [
+      "state_health_authorities: agenda-setting regulator, institutional power, arbitrage exit — defines eligibility, collects fiscal and liability relief",
+      "medical_profession_gatekeepers: administering gatekeeper, institutional power, arbitrage exit — practical veto-holder, collects professional jurisdiction over dying",
+      "eligible_suffering_patients: coordinated beneficiary, powerless, trapped — receives the authorized exit",
+      "ineligible_suffering_patients: primary target, powerless, trapped — bears prolonged suffering against will",
+      "patient_family_members: burden-bearing bystander, moderate, constrained — absorbs care labor and grief",
+      "disability_rights_advocates: excluded objector, organized, constrained — no seat in criteria design",
+      "resource_poor_rural_patients: formally eligible, practically excluded, powerless, trapped",
+      "bioethics_analysts: analytical observer, analytical power, analytical exit"
+    ],
+    "logic_rationale": "Epsilon 0.52 sits mid-band for this reading: the referent arrangement extracts substantially (denied exit for whole classes of sufferers, conditional rather than final authority, procedural taxation of the dying) while delivering a real coordination good (safe, regulated, legally protected access for eligible patients), so it is neither negligible nor confiscatory. Suppression 0.62 is authored as a raw structural property — unscaled by power or scope — reflecting that persistence depends on active machinery: statutory boundaries, backstop penalties for assistance outside the criteria, and provider scarcity functioning as passive enforcement; alternatives (voluntary stopping of eating and drinking, foreign travel, palliative sedation) survive but degraded, which is why suppression sits below confiscatory levels. Theater_ratio 0.38: serial review committees rarely overturn determinations, waiting periods are routinely waived or shortened, and documentation rituals largely legitimate decisions already made — while capacity assessment retains genuine protective function, so the ratio is elevated but not dominant. Accessibility_collapse 0.48: alternatives collapse almost completely for the immobile, impecunious, and cognitively declining, and only partially for everyone else. Resistance 0.55 is bidirectional — expansionist litigation against the criteria and restrictionist campaigns against expansion meet the arrangement from both sides, plus clinician refusals to participate. The three measurement series share one time grid (points 0, 5, 10, 15, 20, 25, 29) per the alignment rule; trajectories are monotonic rather than cyclical — no intermittent-reinforcement cycle appears in the record. Rising base_extractiveness models extraction accumulation as criteria ratchet outward while gatekeeping consolidates; the rising suppression_requirement series tracks genuine enforcement-capacity growth (reporting mandates, referral rules, provider-pool tightening), which is why it is authored as a series rather than left to the scalar. Receipt surface: gains demonstrably accrue to the state seat (fiscal relief, liability containment), and the cost class of fixing — reopening the eligibility settlement against organized opposition on both flanks — is prohibitive for the officeholders who could fix it.",
+    "perspectival_gap": "The agenda-setting seats and the payer seats should compute different types from identical metrics. From the state and profession seats the arrangement is prudent public medicine they designed: screened, safe, accountable, the criteria as considered policy. From the ineligible-patient seat the same structure is the prolongation of suffering administered under the banner of the very norm that promises final authority — the reading proclaiming self-determination is the one defining them as unqualified for it. Same-level divergence among the powerless: eligible and ineligible patients hold identical power atoms and identical trapped exit, yet sit on opposite sides of a criterion boundary neither chose; among the formally eligible, urban resourced patients and rural poor patients diverge completely on effective access despite identical legal status. The engine computes these divergences from the structural data; the authored claim adjudicates nothing.",
+    "directionality_logic": "Beneficiary declarations drive the low end: eligible_suffering_patients receive the arrangement's core good (d near the beneficiary pole), and medical_profession_gatekeepers — listed as beneficiaries because the arrangement concentrates professional jurisdiction over dying inside medicine — derive low d from that declaration. The victim declaration drives the high end: ineligible_suffering_patients bear the arrangement's costs with trapped exit, placing them near the full-target pole. Two overrides correct derivations the structural data alone would misread. Institutional atom pinned to 0.25: both institutional seats are agenda-setters, and a derivation reading enforcement position alone would push them target-ward, but both are capture-side collectors — the state accrues fiscal relief and liability containment, the profession accrues jurisdiction — tempered by real borne costs (administrative load, moral distress), so d sits well short of the beneficiary pole. Moderate atom pinned to 0.55: family members appear in no beneficiary or victim array and would otherwise take a canonical fallback; their actual position is near-symmetric and slightly cost-weighted (care labor, grief, overridden preferences, against relief from shortened witnessing). Spatial scope is national across the operative seats, so scope amplification of extractiveness is modest and uniform.",
+    "mandatrophy_analysis": "Classification discipline cuts both ways here. Reading the arrangement as pure coordination (its official self-description: compassionate, safeguarded access) erases the denied-exit victim set — the people the eligibility boundary defines as unqualified for the dignity the norm proclaims. Reading it as pure extraction (the sanctity opposition's characterization) erases the genuine good delivered to eligible patients and the real protective work capacity screening does. The tangled_rope claim holds both halves in one structure: the same gate that delivers an authorized death to one class delivers prolonged suffering to another, and active enforcement is what holds the boundary. On mandatrophy: the founding problem (clandestine, unregulated, persecuted dying) is contested rather than dead — proponents cite continuing unmet demand; opponents contend the arrangement manufactures its own necessity. The mandate has nonetheless drifted from catastrophe-prevention toward allocation-management of death itself, which is why the eligibility-ratchet omega carries the forward-looking risk: if criteria expand under fiscal pressure faster than suffering-class testimony enters the design room, extraction accumulation compounds and the coordination half thins.",
+    "kernel_context": "This story instantiates the autonomy_primary reading of the dignified_death kernel: dignity resides in self-determination, therefore the suffering individual holds final authority over the timing and method of death. Sibling readings, each a separate constraint with its own epsilon and victim set: sanctity_primary (dignity resides in life's intrinsic value; intentional termination violates transcendent moral law regardless of consent) and relational_autonomy (dignity emerges from relational context; decision authority distributes across the patient-family-clinician triad under procedural safeguards). The disagreement is located in a single structural element — the locus of death-decision authority — and everything downstream (victim set, beneficiary set, enforcement shape) re-specifies with it. Relation choices: autonomy_primary forecloses sanctity_primary because accepting final individual authority negates the sanctity premise that consent cannot license termination — no single framework holds both; autonomy_primary influences relational_autonomy because the individualist reading's documented failure modes (felt-burden pressure on dependent patients, isolation of the dying) generate exactly the procedural safeguards the relational reading formalizes — revision pressure within a shared autonomy-respecting framework, not mutual exclusion. Epsilon here is authored for this reading's referent only and is never averaged across readings."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

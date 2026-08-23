@@ -1,0 +1,360 @@
+{
+  "header": {
+    "constraint_id": "sovereign_legitimacy__republican_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "story_uid": "f691006d-7ec0-45d0-afcc-67ab19ea3505"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.5,
+    "theater_ratio": 0.27,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Republican Popular-Sovereignty Legitimation Regime (Delegated Consent Reading)",
+    "topic_domain": "political philosophy/constitutional theory/legitimacy studies",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "enfranchised_voting_citizenry",
+      "elected_officeholders",
+      "majority_coalitions"
+    ],
+    "victims": [
+      "disenfranchised_residents",
+      "persistent_minority_groups",
+      "future_generations"
+    ],
+    "vindicated_propositions": [
+      "popular_sovereignty_doctrine",
+      "social_contract_theory",
+      "consent_of_the_governed_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 27,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 27,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.27
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is the republican reading of the sovereign_legitimacy kernel. Would instantiating a sibling reading — monarchical (authority flows downward through inherited right) or constitutional_hybrid (dual-sourced, constitutionally mediated) — change the beneficiary/victim structure and epsilon of the legitimation arrangement?",
+      "resolution_mechanism": "Comparative classification across the three sibling files: align each reading's beneficiary/victim arrays and epsilon over the same polity, and isolate the disagreement element — the direction of legitimacy flow, the identity of the authorizing principal, and the legitimacy weight assigned to inheritance.",
+      "impact": "Under the monarchical reading the beneficiary/victim sets invert (court and nobility collect; the populace pays without a consent channel); under the hybrid reading beneficiaries split between a ceremonial principal and an elective principal. Epsilon and per-seat classifications are reading-indexed, so cross-reading comparison is valid only over the shared referent. Note on scoping: the republican-hybrid pair avoids foreclosure only because the hybrid's inherited component is confined to ceremonial/symbolic functions outside this reading's axiom scope (political-coercive authority); if that scoping judgment were rejected, the hybrid would join the monarchical reading in the foreclosure relation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one of three readings of the sovereign_legitimacy kernel; each sibling instantiates a different constraint with its own epsilon and party structure."
+    },
+    {
+      "id": "demos_boundary_circularity",
+      "question": "Who is 'the people' whose consent authorizes? The enrolled electorate defines franchise boundaries, yet the reading's moral principal may be all the governed — the boundary that determines the victim set is drawn by the mechanism it characterizes.",
+      "resolution_mechanism": "Track franchise jurisprudence and expansion episodes against demographic reality: if the enrolled demos converges on all permanently governed persons the circularity closes benignly; if exclusions persist or grow, the gap is structural rather than transitional.",
+      "impact": "If the demos is all the governed, current exclusions are core victims and epsilon rises materially; if the demos is the enrolled citizenry, exclusions fall outside the arrangement's own accounting and epsilon drops — swinging the classification between tangled_rope and near-rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Demos-definition circularity: the mechanism defines the population whose consent is supposed to define the mechanism."
+    },
+    {
+      "id": "majoritarian_binding_status",
+      "question": "Are losses suffered by persistent minorities under durable majorities extraction, or the legitimate price of collective decision adequately buffered by counter-majoritarian safeguards?",
+      "resolution_mechanism": "Measure safeguard strength and outcomes: judicial protection, supermajority thresholds, minority-weighted institutions, and longitudinal gaps between minority outcomes and majority-preference curves.",
+      "impact": "Strong effective safeguards push the minority seat toward symmetric directionality and the arrangement toward rope; weak safeguards leave the minority seat near full target and the arrangement at tangled_rope trending snare-for-that-seat.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether systematic minority loss counts as extraction depends on safeguard strength and normative framing."
+    },
+    {
+      "id": "consent_authenticity",
+      "question": "Is the periodic consent signal authentic delegation, or manufactured acquiescence shaped by restricted choice sets, donor-filtered agendas, and information asymmetry?",
+      "resolution_mechanism": "Compare expressed preferences under expanded-choice conditions (ranked ballots, open primaries, publicly financed campaigns) against baselines; measure congruence between policy output and median-voter preference over time.",
+      "impact": "If consent is substantially manufactured, the validation mechanism the reading rests on degrades toward performance, epsilon rises, and the coordination claim weakens; if the signal is robust, current metrics stand.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Authenticity of the electoral consent signal versus manufactured acquiescence."
+    },
+    {
+      "id": "extraction_seat_rotation",
+      "question": "Does electoral turnover genuinely rotate the seat receiving the arrangement's gains, or has capture congealed into a durable donor-incumbent class?",
+      "resolution_mechanism": "Longitudinal analysis of policy responsiveness by income bracket, incumbent persistence under neutralized spending conditions, and coalition-composition turnover across cycles.",
+      "impact": "Genuine rotation supports the diffuse receipt reading and blocks drift toward snare; congealed capture relocates the gains to a named seat and pushes classification toward snare. This omega is the load-bearing assumption behind authoring gain_flow as diffuse.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the gains-receiving seat rotates with elections or has congealed into durable capture."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "enfranchised_voting_citizenry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Holds the authorization power the whole arrangement runs on: periodically casts ballots that confer, renew, or terminate officeholders' mandates, and between elections petitions, organizes, and litigates. Carries the costs of civic attention and periodic mobilization and absorbs policy outcomes as a diffuse mass. Exit means emigrating to another polity with its own authorization regime — leaving does not release anyone from being governed somewhere else."
+    },
+    {
+      "name": "elected_officeholders",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Competes for delegated mandates and then wields the administrative, legislative, and coercive powers conferred by election results. Also writes the rules of its own selection — franchise law, district boundaries, ballot access — and staffs the machinery that keeps elections running. Tenure ends at scheduled intervals unless renewed; defeat removes them peacefully. Careers, patronage networks, and post-office prospects all depend on the continuation of the selection cycle, and every term in office is lived under threat of removal by the electorate."
+    },
+    {
+      "name": "majority_coalitions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Temporary alliances of voters, parties, and interest blocs that win enough aggregation events to set policy. While ascendant, their preferences are enacted and their opponents' overridden; on defeat they dissolve and re-form around new issues. Nothing pins them to a fixed position — their defining feature is that membership rotates with each electoral cycle, and today's losing bloc is a candidate for tomorrow's winning one."
+    },
+    {
+      "name": "disenfranchised_residents",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Lives under the full weight of the laws, taxes, policing, and long-term commitments the arrangement produces, but holds no authorized channel to grant or withhold consent: ballots, candidacy, and referendum access are closed by status — citizenship category, criminal record, territory of residence, or age. Recourse is petitioning those already enfranchised, litigation, or emigration; none of these converts presence into counted consent. Many are born into the exclusion and die in it, and the rules of their inclusion are written exclusively by the enfranchised."
+    },
+    {
+      "name": "persistent_minority_groups",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Participates fully in the authorization cycle — votes, organizes, runs candidates, lobbies — yet loses the decisive aggregations cycle after cycle, because numbers or geographic dispersion guarantee being outvoted whenever stakes concentrate. Counter-majoritarian safeguards sometimes blunt the worst outcomes; the underlying arithmetic recurs regardless. Internal relocation does not escape a national majority, and emigration means abandoning home, livelihood, and community."
+    },
+    {
+      "name": "future_generations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Will inherit the debts, environmental commitments, constitutional amendments, and institutional precedents contracted by today's majorities. Cannot vote, object, or renegotiate now; by the time each cohort can act, the commitments are sunk. Every cohort hands the next a pre-negotiated world it never agreed to, and no mechanism exists by which the not-yet-present register consent or dissent."
+    },
+    {
+      "name": "constitutional_high_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reviews legislation and executive action against the constitutional text that frames the arrangement, striking down what fails. Decides what counts as a valid exercise of the popular will and where majorities must stop — questions the majorities themselves would often answer differently. Judges are selected through the very processes they referee, and their rulings reshape the franchise and the consent mechanisms over generational timescales."
+    },
+    {
+      "name": "rival_authorization_claimants",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Hereditary-restorationist circles, theocratic movements, and secessionist campaigns hold complete theories of legitimate rule that the arrangement does not merely outvote but defines as out of bounds — ineligible for ballots, barred from official recognition, occasionally prosecuted when acted upon. They operate at the margins of tolerated politics; their claims survive as argument and underground organization rather than as access to the authorization conversation."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Aggregates millions of dispersed political judgments into single binding authorization events on a fixed schedule; confers revocable mandates on officeholders; converts grievances about rule into competitive replacement of rulers rather than violent removal; and synchronizes the peaceful transfer of governing power across an entire polity on a predictable calendar.",
+    "transfer_function": "Transfers decision authority and command of lawful coercion from the citizenry at large to elected officeholders for fixed renewable terms; transfers tax revenue and compliance from everyone governed — consenting or not — into institutions those officeholders direct; and during campaigns transfers money, media attention, and volunteer labor from donors, broadcasters, and activists toward contenders for office.",
+    "absent_voices": "The disenfranchised would object first: they are governed at full intensity with no consent channel (see disenfranchised_residents). Rival authorization traditions — hereditary, theocratic, secessionist — would object that their legitimacy claims are ruled inadmissible rather than defeated on merit (see rival_authorization_claimants). Future generations cannot appear at all yet absorb the longest-lived commitments. None of these seats sits in the authorization conversation whose reach they contest.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Every office's title would evaporate overnight: mandates derive their validity from the consent cycle, and with it gone, succession would fall to raw possession — military commands, wealthy families, foreign patrons, and leftover hereditary claimants each asserting rule. Courts would lose the constitutional frame they adjudicate within, and the removal mechanism that converts grievance into turnover would vanish with it. Nearly every modern institution chains its authority back through this arrangement, so the rearrangement would be extensive and violent.",
+    "founding_problem": "After divine-right and bloodline justifications for rule collapsed under religious schism, dynastic war, and Enlightenment criticism, large-scale societies faced the problem of what could make obedience legitimate: why should the governed obey any particular set of governors, and how should governors be replaced without war? The answer built here: locate the source of authority in the governed themselves, and make its renewal a repeating public act.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set on both flanks. Authoritarian regimes corroborate it involuntarily: governments that permit no real contest nonetheless stage elaborate elections, spending real resources to counterfeit the consent signal — behavior that makes sense only if the legitimation problem remains live even for the arrangement's enemies. Classical corroboration predates the beneficiary classes: contract theorists wrote before mass electorates existed, addressing skeptics and rulers generally, and Edmund Burke, attacking the proposed solution from a traditionalist seat, conceded the problem it answered was real. Contemporary legitimacy research measuring trust decay corroborates that the problem recurs each generation rather than having been solved once."
+  },
+  "commentary": {
+    "narrative_context": "A republic's claim to legitimacy is that political authority is real only as a standing delegation: the people authorize, officeholders execute, elections renew or revoke the mandate, and a constitutional frame polices what majorities may lawfully do. This story authors that arrangement as it actually operates — franchise lines as drawn, safeguards as built, campaign finance as it flows — assessed by this reading's own standards: the epsilon referent is the operative republican legitimation regime under contest, never the reading's idealized alternative and never a sibling reading's arrangement. Its coordination half is load-bearing: it converts grievance into replacement rather than revolt and synchronizes peaceful transfers of power. Its extraction half is equally structural: persons governed at full intensity with no consent channel, minorities bound cycle after cycle by durable majorities, and generations bound by commitments they never made. The colloquial label 'legitimate authority' decomposes into three readings of the sovereign_legitimacy kernel; this file is the republican one and hedges nothing across siblings. Claim and metrics are independent: tangled_rope is asserted from structure, and the metric scores describe observed operation without being tuned to confirm the claim.\n\nKEY AGENTS (by structural relationship):\n- enfranchised_voting_citizenry: primary beneficiary (organized/constrained) — source of delegated consent, bears episodic mobilization costs\n- elected_officeholders: agenda-setting beneficiary (institutional/constrained) — receives delegated authority, writes selection rules, removable via the mechanism itself\n- majority_coalitions: cycling beneficiary (organized/mobile) — collects policy victories while ascendant, dissolves on defeat\n- disenfranchised_residents: primary target (powerless/trapped) — fully bound by the arrangement, no authorized consent channel\n- persistent_minority_groups: recurring target (organized/trapped) — participates but systematically loses decisive aggregations\n- future_generations: silent target (powerless/trapped, civilizational horizon) — bound by present commitments without present consent\n- constitutional_high_courts: analytical observer (institutional) — adjudicates the boundary between popular will and constitutional limit\n- rival_authorization_claimants: excluded alternative (organized/regional) — hereditary, theocratic, and secessionist legitimacy claims kept outside the authorization conversation",
+    "logic_rationale": "Extractiveness 0.48 is moderate by construction of the arrangement: a working consent mechanism holds extraction below snare range, but full-intensity governance without a consent channel (status-based disenfranchisement), systematic minority outvoting, and intergenerational binding hold it well above rope range. The value is reading-indexed over the fixed referent (the operative arrangement), not averaged across sibling readings. Suppression 0.50 is a RAW structural property, unscaled by power or scope (only extractiveness is scaled in the engine's computation): rival authorization channels are legally barred and delegitimized, occasionally prosecuted when enacted, but ordinary political contestation is institutionalized and routine — what is suppressed is the authorization channel itself, not participants' welfare. Theater 0.27: elections genuinely confer and remove power, but campaign ritual, symbolic voting, and plebiscitary performance carry a substantial and rising performative share. Accessibility_collapse 0.38: alternatives remain visible and live — sibling readings, technocratic proposals, sortition experiments, direct-democracy instruments — so understanding the arrangement does not collapse its rivals. Resistance 0.55: sustained and recurrent, from suffrage movements historically through secession attempts, abstention waves, court-curbing bills, and anti-constitutional populism; notably, much resistance attacks the exclusion half while affirming the coordination half.\n\nCYCLICAL PATTERN: the measurement series shows a full cycle — accumulation (t0-t12: demographic change outpacing franchise adjustment, donor concentration, district entrenchment drive epsilon up), incident (t12: legitimacy crisis peak, epsilon 0.56, theater 0.33 as performative response swells), reform (t15: franchise expansion and representation repair pull epsilon down sharply), honeymoon/relaxation (t18-t21), then renewed accumulation (t24-t30). Unlike interpersonal intermittent reinforcement, the oscillation here is partly the self-correction mechanism working: crisis opens reform windows that reset extraction. But each cycle leaves ratchet residue — the net trend across one full cycle is upward (0.40 to 0.48), and the theater floor creeps up with each repetition. Scalars are authored at t30, late-accumulation phase, so base_properties reflects that phase, not the cycle average. All tracked metrics run on one shared time grid (step 3 across the full interval); suppression_requirement is deliberately untracked because enforcement capacity is static in this story's narrative — the flat enforcement picture is carried by the base_properties scalar alone.",
+    "perspectival_gap": "The seats should classify differently. From the officeholder seat the arrangement is simultaneously the source of its authority, the discipline over it, and the rulebook it writes — a mixed position no pure category captures from inside. From the enfranchised voter seat it is near-pure subsidy: the machine exists to validate their sovereignty. From the disenfranchised seat the identical legal order presents as unconsented imposition — same laws, same taxes, zero channel. The sharpest same-power contrast is majority_coalitions versus persistent_minority_groups: both hold the organized power atom, yet one sits near the beneficiary extreme and the other near the target extreme; the differentiator is positional durability and exit (mobile re-formation versus trapped recurrence), not resources or organization. The courts see the full structure from an analytical seat and are themselves products of the processes they referee. The engine computes these per-seat classifications from the authored structural data; the authored claim adjudicates none of it.",
+    "directionality_logic": "Beneficiary/victim declarations map cleanly onto the directionality axis. Enfranchised voters derive near the full-beneficiary end (d ~0.05): the arrangement subsidizes them with validated sovereignty. Majority coalitions derive similarly low with mobility damping (arbitrage-adjacent exit). Disenfranchised residents derive near the full-target end (d ~0.95): powerless, trapped, bearing every governance cost with no consent input. Future generations sit at or beyond full-target (d ~0.90+): no channel exists in any period available to them. Persistent minority groups derive high but below full-target (d ~0.80-0.85): they hold a real participation channel that simply loses — participation moderates directionality even when outcomes do not. One override is authored: elected_officeholders (institutional) at d 0.25, above the ~0.10 the uniform treatment of the beneficiaries array would produce, because officeholders are not passive collectors — they administer enforcement, write the selection rules that define everyone else's position, and live under removal discipline and career lock to the mechanism. The derivation chain reads the beneficiaries array uniformly and cannot distinguish the voter's subsidy from the officeholder's administered, accountable position. Scope note: the national scope raises verification difficulty modestly, amplifying effective extraction for target seats; suppression enters the computation unscaled.",
+    "mandatrophy_analysis": "The founding problem is live — every generation re-legitimates or forfeits legitimacy, and even the arrangement's enemies counterfeit its signal — so the R5 mismatch consumer reads status=live x verdict=world_rearranges: coherent, no zombie flag. The tangled_rope claim guards against the two symmetrical mislabelings. Calling this a rope would zero out the excluded: the disenfranchised, the recurrently outvoted, and the unborn bear real costs that a pure-coordination reading renders invisible. Calling it a snare would erase the accountability function that genuinely and peacefully removes rulers — a function with no cover-story character whatsoever. Scaffold is structurally unavailable: the arrangement declares itself permanent by design, renewal rather than transition. Residual decay risk is tracked by the theater series: if electoral performance detaches from the conferment/removal function (sustained theater above 0.5), the arrangement slides toward piton — the measurements watch exactly that threshold, peaking at 0.33 in-cycle and resetting after each reform window.",
+    "kernel_context": "Kernel: sovereign_legitimacy — the contested commitment that political authority requires a determinate source of legitimacy. This file instantiates the republican_reading: legitimacy flows upward, from the people through delegated consent, renewed by electoral cycles and bounded by constitutional adherence. Siblings, authored as separate constraint files: monarchical_reading (authority flows downward through inherited right and divine sanction) and constitutional_hybrid_reading (dual sourcing — ceremonial inheritance plus delegated politics — mediated by constitutional law). The disagreement is located in the direction of legitimacy flow and the identity of the authorizing principal. Reading relations from this seat: the monarchical reading is FORECLOSED — a framework holding that all legitimate authority derives from popular consent cannot simultaneously hold that authority flows downward from inherited right as its ground; the contradiction is the canonical Locke-versus-Filmer structure. The hybrid reading COEXISTS: its inherited component is confined to ceremonial/symbolic functions outside this reading's axiom scope, so both readings remain live across parties — though this scoping judgment is itself flagged inside the kernel_reading_contestation omega, since rejecting it would convert coexistence into foreclosure. Drift: against this reading's reference frame (popular_sovereignty_consent_framework), contemporary practice departs substantially — donor-filtered agendas, franchise erosion episodes, executive encroachment on the consent machinery — while the frame remains officially intact and its erosion is not acknowledged by the authority structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "sovereign_legitimacy__monarchical_reading",
+      "sovereign_legitimacy__constitutional_hybrid_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'legitimate authority' conflates three structurally distinct legitimation arrangements and is decomposed per the epsilon-invariance principle into a three-file constraint family sharing the sovereign_legitimacy kernel: monarchical_reading (historically upstream — its collapse supplied the founding problem this reading answers, and it is cited as the rejected alternative in republican founding documents), constitutional_hybrid_reading (the mediating form, under continuous structural pressure from this reading toward fuller popular authorization — parliamentary monarchies progressively absorbing elective elements), and this republican_reading. Each file carries its own epsilon, beneficiary/victim structure, and claimed type; family links run through affects_constraints in all three."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "monarchical_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "constitutional_hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "all_legitimate_authority_derives_from_popular_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "delegated_authority_conditionally_revocable_through_electoral_cycles",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "popular_sovereignty_consent_framework",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

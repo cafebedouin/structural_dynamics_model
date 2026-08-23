@@ -1,0 +1,371 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__interface_boundary_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_interface_boundary",
+    "story_uid": "7e72afc9-3fc1-4d4c-9c07-d7020ca0da61"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Interface-Boundary Aggregation Convention (GPL Derivative-Work Trigger)",
+    "topic_domain": "legal/software-licensing/open-source-governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_ecosystem_integrators",
+      "corporate_open_source_counsel"
+    ],
+    "victims": [
+      "gpl_contributor_community",
+      "combined_stack_end_users"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.42
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_selection",
+      "question": "This story instantiates the interface_boundary_reading of the gpl_derivative_work_trigger kernel; which reading actually governs license obligations — broad copyleft (any linking, even dynamic, creates a derivative work), interface-boundary (clean APIs aggregate even under tight coupling), or narrow permissive (only modifications trigger)?",
+      "resolution_mechanism": "Decisive judicial treatment of inter-program derivation across invocation boundaries, or a uniform steward-enforced interpretive standard adopted across major GPL projects.",
+      "impact": "Under the broad reading the target set expands to every proprietary integrator and epsilon rises sharply; under the narrow reading targets nearly vanish and the arrangement approaches pure coordination. This story's classification holds only within the interface reading; the siblings are separate constraints with their own epsilon values.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: this constraint is one of three live readings of the derivative-work-trigger kernel; sibling readings are separate files."
+    },
+    {
+      "id": "scaffold_vs_steady_state_question",
+      "question": "Is the interface-boundary convention a transitional holding pattern whose justification expires once courts resolve the derivation question, or steady-state doctrine its adherents defend indefinitely?",
+      "resolution_mechanism": "Track steward behavior over time: conversion of informal tolerance into permanent formal exceptions and stability guarantees indicates steady state; lapse of no-guarantee postures or expiry-bounded exceptions indicates a transitional arrangement with functional sunset.",
+      "impact": "A transitional resolution would attach sunset semantics and shift classification toward scaffold; a steady-state resolution supports the tangled_rope claim authored here.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Generation brief hypothesized scaffold; authored claim refines to tangled_rope pending resolution of this question."
+    },
+    {
+      "id": "contributor_consent_pricing",
+      "question": "Do GPL contributors experience integrator appropriation as uncompensated loss, or is it fully priced into their voluntary license choice?",
+      "resolution_mechanism": "Contributor revealed-preference studies: contribution rates under counterfactual reciprocity mandates; surveys of stated willingness to contribute if integrator source-return were compulsory.",
+      "impact": "Full pricing pushes effective extraction toward the coordination-cost floor; unpriced network-effect pressure raises it and strengthens the extraction leg of the hybrid classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reciprocity shortfall is consented exchange or unpriced appropriation."
+    },
+    {
+      "id": "clean_boundary_definability",
+      "question": "Does a 'clean API boundary' remain a workable criterion as toolchains deepen coupling — static linking, header macro expansion, template instantiation, link-time optimization, and generated bindings blur the line between interacting and incorporating?",
+      "resolution_mechanism": "Comparative compliance jurisprudence: which integrator practices counsel treats as safe across toolchain generations; litigation outcomes on borderline static-linking cases.",
+      "impact": "If clean boundaries cease to be identifiable, the reading's protective scope contracts toward the narrow reading and measured extraction rises; if toolchains stabilize around inspectable interfaces, the convention consolidates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Load-bearing vagueness in the reading's boundary criterion under modern toolchains."
+    },
+    {
+      "id": "network_use_escape_hatch",
+      "question": "How much of the arrangement's apparent stability depends on the SaaS escape hatch — network delivery evading every reading's trigger — rather than on the boundary convention itself?",
+      "resolution_mechanism": "Counterfactual adoption analysis if AGPL-style network triggers were universalized: would integrators migrate server-side and hollow out the convention's relevance?",
+      "impact": "High dependence means the convention coordinates less than it appears and its cost profile shifts toward one-way appropriation with declining reciprocal return; low dependence confirms genuine compositional coordination.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the convention's coordination function is real or shadowed by distribution-avoidance."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A doctrinal convention in open-source governance holds that proprietary code interacting with GPL-licensed libraries across clean, documented API boundaries constitutes aggregation rather than derivation — even when the coupling is technically tight (dynamic linking, shared address spaces, embedded interpreters) — so that copyleft source obligations stop at the interface and do not reach the caller. This file instantiates ONE reading of the contested kernel gpl_derivative_work_trigger; the broad copyleft reading and the narrow permissive reading are separate constraints with their own epsilon values and target sets, linked through the network section. Per the epsilon-referent rule, extractiveness here is authored for the standing arrangement under contest — the interface-boundary-governed mixed-licensing ecosystem — as THIS reading assesses it, not as the broad reading would assess the same arrangement. The generation brief hypothesized a scaffold; analysis refined the claim to tangled_rope (reasoning in mandatrophy_analysis and the scaffold_vs_steady_state_question omega): the convention carries no declared sunset anywhere in its instruments, its adherents defend it as permanent doctrine, and the transitional character the scaffold hypothesis detects is real but instantiation-specific — routed to the omega and the enforcement trajectory rather than forced into the claim. KEY AGENTS (by structural relationship): see key_agents; interval maps 0=1991 (GPLv2/LGPLv1, mere-aggregation language) to 35=2026 (post-Google-v.-Oracle, AI-training era).",
+    "key_agents": [
+      "gpl_copyright_holders_stewards: Agenda setter (institutional/constrained) — administers the boundary, issues exceptions and interpretive statements, chooses whether to assert broader ownership claims",
+      "proprietary_ecosystem_integrators: Primary beneficiary (powerful/constrained) — captures infrastructure value behind closed application layers",
+      "gpl_contributor_community: Primary payer (organized/constrained) — supplies the commons; absorbs the reciprocity shortfall",
+      "combined_stack_end_users: Secondary payer (moderate/constrained) — surrenders visibility and control of the closed layers atop open infrastructure",
+      "corporate_open_source_counsel: Secondary beneficiary (institutional/mobile) — operationalizes the convention as compliance practice",
+      "free_software_legal_advocacy_orgs: Contesting observer (organized/analytical) — supplies the external pressure the convention's enforcement must continuously answer",
+      "judicial_authorities: Decisive observer (institutional/analytical) — their silence is load-bearing",
+      "saas_operators_on_gpl_infrastructure: Excluded party (powerful/arbitrage) — network use escapes every reading; absent from the conversation"
+    ],
+    "logic_rationale": "Extraction is moderate (0.38): the convention coordinates genuinely — mixed stacks ship that otherwise would not — while a reciprocity shortfall accumulates on the contributor side and a visibility/control shortfall accumulates on the user side; the reading's own lights count much of the flow as consented license terms, which caps epsilon below pure-extraction territory. Suppression (0.42) reflects the convention's dependence on active maintenance — steward statements, compliance auditing, maintainer gatekeeping against internal-interface exposure — rather than participant preference; alternatives (permissive stacks, dual licensing, AGPL) remain available, so coercion is bounded. Theater (0.35): a growing share of activity is compliance documentation and interpretive statement-making that performs certainty the underlying legal question does not possess. Accessibility collapse is low (0.30): exits and substitutes survive contact with the convention. Resistance is substantial (0.60): advocacy litigation campaigns arrive in waves (BusyBox, VMware/Hellwig, Vizio) superimposed on a secular rise, which the coarse shared grid samples as monotonic growth. The three metric series share one eight-point grid (t=0..35) so every metric is authored at every examined time point. Suppression_requirement is tracked because this story specifically traces enforcement-capacity maturation — informal goodwill norms professionalizing into a compliance industry and litigation-defense posture — not merely extraction drift.",
+    "perspectival_gap": "Seats compute differently from the same structure. From the integrator seat the convention is enabling infrastructure — the thing that makes their product category possible — and its costs (compliance staffing, residual litigation risk) read as ordinary overhead. From the contributor seat the same structure is a reciprocity leak: their commons supports closed products whose winners rarely return comparable source. From the end-user seat it is a visibility ceiling: open foundations under closed houses. The steward seat straddles: adoption justifies tolerance, mission resents it. Counsel experiences the convention as fragile rent — valuable exactly as long as courts stay silent. The engine derives these divergences from the declared roles, power, and exit atoms; nothing in the claim adjudicates them.",
+    "directionality_logic": "Integrators and counsel declare as beneficiaries (derived d near the beneficiary end): the convention subsidizes both — product viability for the former, practice existence for the latter. Contributors and combined-stack end users declare as targets (derived d near the target end): both bear costs the convention's operation generates — unreciprocated appropriation for the former, surrendered stack visibility for the latter — though each carries a secondary beneficiary position (adoption and capability respectively), which tempers but does not invert their directionality. Stewards hold the agenda-setter seat with near-symmetric directionality: they collect adoption and relevance and pay enforcement labor and mission erosion. Advocacy organizations and courts are observers with analytical exit; SaaS operators are excluded with arbitrage-grade exit — the convention touches them least, which is precisely why they need not enter the conversation. No directionality overrides are authored: the beneficiary/victim declarations plus exit atoms produce the correct qualitative ordering without correction.",
+    "mandatrophy_analysis": "The founding problem — copyleft/proprietary composition blocking mixed stacks — remains live and is corroborated from outside the beneficiary set, so the convention is not a zombie mandate; mandatrophy resolution turns instead on whether its JUSTIFICATION has migrated from solving composition to defending interpretive turf. Two signals cut differently: enforcement labor has professionalized and grown (rising suppression_requirement series), which is what mandate-persistence looks like; but the convention's core service — making mixed stacks shippable — is still consumed daily by every integrator, which is what live function looks like. The scaffold hypothesis from the generation brief fails the structural test: no declared sunset exists in the convention's instruments (the Classpath and GCC runtime exceptions are perpetual; kernel no-guarantee postures are deterrents, not expiry clauses), and adherents defend the reading as steady-state doctrine. The transitional character is real but local — instantiated in specific postures, not in the convention — and is routed to the scaffold_vs_steady_state_question omega rather than forced into the claim. The classification prevents mislabeling in both directions: reading the convention as pure coordination ignores the measurable reciprocity leak; reading it as pure extraction ignores that the leak is priced into voluntary license choices and bounded by available exits.",
+    "kernel_context": "Kernel: gpl_derivative_work_trigger — the contested question of what interaction between separately owned codebases triggers GPL source-disclosure obligations. This file instantiates the interface_boundary_reading: clean API boundaries constitute non-derivative aggregation even with tight coupling. Sibling readings: broad_copyleft_reading (any linking, even dynamic, creates a derivative work) and narrow_linking_permissive_reading (linking is aggregation; only modifications trigger obligations). The three readings disagree on the same concrete cases — a dynamically linked, API-clean combination is derivative under broad, aggregate under interface and narrow — and are held by different factions (copyleft advocates, industry compliance practice, permissive maximalists) with no judicial tiebreaker to date."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_derivative_work_trigger__broad_copyleft_reading",
+      "gpl_derivative_work_trigger__narrow_linking_permissive_reading"
+    ],
+    "dual_formulation_note": "One colloquial label — 'does linking trigger GPL source obligations?' — decomposes into three structurally distinct constraints (broad, interface-boundary, and narrow-permissive readings of the gpl_derivative_work_trigger kernel). Each has its own epsilon, beneficiary/victim structure, and classification; this file instantiates the interface-boundary reading only. The broad reading is the doctrinal pole the advocacy community cites as baseline; the narrow reading is the deregulatory pole; the interface reading mediates and is the operative industry convention. Family members link via network.affects_constraints; the upstream broad reading supplies the doctrinal arguments the interface reading's enforcement must answer."
+  },
+  "stakeholders": [
+    {
+      "name": "gpl_copyright_holders_stewards",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Publish and maintain GPL-licensed libraries and kernels; decide which interfaces receive explicit use exceptions, publish interpretive statements about where license obligations begin and end, and choose whether to assert broader ownership claims against integrators. They can tighten or relax the boundary at any time, but doing so risks splitting their contributor base or collapsing the adoption that funds the project's relevance. Relicensing wholesale requires aggregating copyrights from many contributors, which bounds their practical freedom of movement."
+    },
+    {
+      "name": "proprietary_ecosystem_integrators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build commercial products that call GPL libraries and kernels through their published interfaces; their application-layer source stays closed while the underlying infrastructure stays open. They staff compliance teams to keep product code on documented interfaces and away from internal symbols, and they budget for legal risk that a court could someday disagree with the boundary convention. Moving to permissively licensed infrastructure would mean re-engineering products around different kernels and libraries, so they adapt to boundary changes rather than leave."
+    },
+    {
+      "name": "gpl_contributor_community",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Write and maintain the GPL code that integrators build on. They receive adoption, bug reports, compatibility testing, and occasional upstreamed fixes from commercial users, and their work runs widely deployed systems. When integrators capture the value of that infrastructure in closed products without contributing comparable source back, the shortfall lands on them as unpaid common maintenance and on the license's reciprocity promise as a partial hollowing-out. Withholding their labor or forking is possible but means abandoning the project they built."
+    },
+    {
+      "name": "combined_stack_end_users",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Run phones, appliances, servers, and services assembled from open GPL infrastructure underneath closed proprietary components. They can inspect and modify the open layers, obtain security patches for them, and gain from the competition and capability the mixed model produces. They cannot study, modify, or repair the closed layers, cannot verify what those layers do with their data, and depend on vendors for updates to the whole stack. Switching to fully open stacks exists as an option but at real cost in capability and convenience."
+    },
+    {
+      "name": "free_software_legal_advocacy_orgs",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Publish legal analyses arguing that linking produces derivative works and that the boundary convention understates license obligations; fund enforcement litigation against integrators they judge non-compliant; press stewards to tighten boundaries. They hold no administrative authority over the convention, but their campaigns are the main external pressure the convention must continuously answer, and their litigation wins and losses move the risk calculus every integrator budgets for."
+    },
+    {
+      "name": "corporate_open_source_counsel",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "In-house and firm lawyers who translate the boundary convention into compliance policy: interface audits, contribution policies, exception drafting, acquisition due diligence. Their practice exists because the convention holds; a definitive contrary court ruling would collapse much of its value overnight, while a definitive confirming ruling would commoditize it. They move between employers and firms and advise whichever position the legal environment rewards."
+    },
+    {
+      "name": "judicial_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts and copyright offices that have so far declined to rule decisively on whether interacting across an interface creates a derivative work, deciding adjacent questions (copyrightability of API declaring code, fair use in reimplementation) whose implications bleed into the question without settling it. Their silence is load-bearing: the convention persists in the space their indecision leaves."
+    },
+    {
+      "name": "saas_operators_on_gpl_infrastructure",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Run GPL-licensed software as network services without distributing binaries, offering the functionality through interfaces of their own. Because no distribution occurs, the license's source-sharing trigger never fires under any reading, and they sit outside the boundary debate entirely. They would object to any tightening that reached network use, but no seat in the interpretive conversation represents them, and their business model quietly defines the escape hatch the convention's critics point to."
+    }
+  ],
+  "gain_flow": "proprietary_ecosystem_integrators",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Lets two licensing regimes compose into single product stacks: a stable, documented interface contract divides labor so that open infrastructure is maintained once, publicly, and proprietary application investment builds on it without either side absorbing the other's obligations. Without it, every mixed stack faces an all-or-nothing choice between full disclosure and abandoning shared infrastructure.",
+    "transfer_function": "Moves infrastructure value — maintenance, reliability, security patching of GPL components — into closed proprietary products without reciprocal source return, and moves adoption, compatibility investment, bug reports, and occasional upstreamed fixes back to the commons. Net direction over the interval runs from the contributor community and from combined-stack users (who surrender visibility and control of the closed layers) toward proprietary integrators.",
+    "absent_voices": "Combined-stack end users appear in license debates only through proxy organizations; non-commercial redistributors without counsel face the same boundary questions with none of the interpretive resources; and SaaS operators — whose network delivery escapes every reading's trigger — are entirely outside the conversation while quietly defining its largest loophole. Courts, the only seat able to settle the question, have declined to occupy it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the convention vanished overnight — courts adopting the broad reading — thousands of shipping products would become non-compliant simultaneously: integrators would face a litigation wave or scramble to open application layers, relicense stacks, or re-engineer onto permissive infrastructure; GPL projects would lose the adoption that sustains them; device and service prices and architectures would reorganize around whichever escape routes remained.",
+    "founding_problem": "Early copyleft adoption stalled commercially: businesses would not ship products on GPL libraries if doing so obligated disclosing their entire application source, and permissive-licensed competitors were absorbing the infrastructure niche. The interface-boundary convention (with the LGPL and explicit exceptions as its institutional forms) was articulated to let mixed stacks ship — keeping copyleft infrastructure economically viable while containing disclosure obligations to the licensed components themselves.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Attested from outside the beneficiary set: the Free Software Foundation's own historical rationales for the LGPL and library exceptions (authored by the convention's chief critics, who concede the composition problem is real while disputing this reading's answer to it); academic copyright scholarship on derivative works and program interaction; and integrator-side testimony in the Google v. Oracle proceedings documenting the commercial stakes. No corroborating source claims the problem is solved."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "scaffold",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "interface_boundary_aggregation_norm",
+    "drift_state": {
+      "moment": "post_google_v_oracle_ai_training_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "broad_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "narrow_linking_permissive_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "invocation_across_documented_interface_is_not_transformation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "boundary_discipline_sustains_aggregation_treatment",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

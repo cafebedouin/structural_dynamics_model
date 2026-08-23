@@ -1,0 +1,379 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_decision_authority__autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-06",
+    "status": "ACTIVE",
+    "story_uid": "75eaa64e-606b-4f06-8d72-e636bd8ccd02"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "End-of-Life Decision Authority: Standing Medico-Legal Gatekeeping Regime (Autonomy Reading)",
+    "topic_domain": "bioethics/end-of-life policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "vulnerable_dependent_patients",
+      "medical_professional_bodies",
+      "religious_institutions"
+    ],
+    "victims": [
+      "competent_suffering_individuals",
+      "prosecuted_compassionate_assisters",
+      "cross_border_dying_travelers"
+    ],
+    "vindicated_propositions": [
+      "sanctity_of_life_doctrine",
+      "medical_gatekeeping_authority_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 1976,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1976,
+      "value": 0.85,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1986,
+      "value": 0.83,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1996,
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1976,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1986,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1996,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1976,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1986,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1996,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "autonomy_reading_kernel_membership",
+      "question": "This constraint is one reading of the end_of_life_decision_authority kernel (the autonomy_reading); what would the sibling readings change structurally if instantiated instead?",
+      "resolution_mechanism": "Instantiate the sibling stories: the sanctity_reading would empty this victim set (no denied-access class exists where prohibition is the point) and seat healthcare professionals as refusers; the vulnerability_protection_reading would split the victim set into the denied and the coerced and seat the institutional checkpoints themselves as the constraint.",
+      "impact": "Classification is reading-indexed: the same referent computes as tangled_rope from this seat, but would compute differently from the sanctity seat (low reading-indexed extraction, mountain-claimed) and the vulnerability_protection seat (moderate, harms in both directions).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: which kernel, which reading, what the sibling readings would change."
+    },
+    {
+      "id": "disagreement_location_final_authority",
+      "question": "Where exactly do the three readings disagree, and which structural element moves when the disagreement is resolved?",
+      "resolution_mechanism": "Locate the disagreement in the locus of final authority over death (individual will vs intrinsic value independent of will vs institutional distribution); test by asking each reading who may say no to a settled, repeated, competent request to die.",
+      "impact": "Resolving the locus reassigns the entire victim set: will as final authority seats the suffering-prolonged; intrinsic value seats no denied-access class; distribution splits the class between the denied and the coerced.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The kernel contest is a dispute over the seat of final authority, not over empirical facts."
+    },
+    {
+      "id": "coercion_prevention_efficacy",
+      "question": "Does institutional gatekeeping actually reduce coerced or non-voluntary death relative to permissive regimes with safeguards — the premise of the arrangement's protective coordination function?",
+      "resolution_mechanism": "Comparative jurisdictional data: coerced-death incidence, elder-abuse and pressure indicators, and safeguard outcomes across prohibition, licensed-access, and permissive regimes.",
+      "impact": "If gatekeeping does not reduce coercion incidence, the coordination function thins and the arrangement computes toward pure extraction from more seats; if it does, part of the measured extraction is the price of protection rather than overhead.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the protective coordination function is genuine or cover."
+    },
+    {
+      "id": "competence_boundary_contestation",
+      "question": "The victim set is bounded by competence determinations the contested regime itself administers — does the competent/incompetent line hold at the boundaries (depression, disability, dementia, fluctuating capacity)?",
+      "resolution_mechanism": "Capacity-assessment outcome data at the boundary cases, plus the rate at which competence findings reverse under appeal or re-examination.",
+      "impact": "If the competence line systematically excludes people with settled wills, the victim set is larger than authored and this reading understates extraction; if it holds, the reading's clean victim class is confirmed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This reading's victim class depends on a boundary drawn by the regime it contests."
+    },
+    {
+      "id": "externalized_slippery_slope_risk",
+      "question": "This reading externalizes coercion-risk (slippery slope) to the vulnerability_protection sibling's story — what happens to this story's beneficiary structure if coercion pressure emerges endogenously inside autonomy-style regimes?",
+      "resolution_mechanism": "Longitudinal data from long-standing permissive jurisdictions on pressure on elderly, disabled, and dependent patients, including criteria-expansion trajectories over time.",
+      "impact": "If the risk internalizes, vulnerable_dependent_patients stop being pure beneficiaries in this story too, and the arrangement's coordination/extraction balance shifts — the tangled_rope claim weakens toward pure extraction from this reading's own seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether this reading's externalization of slippery-slope risk is structurally stable."
+    },
+    {
+      "id": "cs_authority_framing_underdetermination",
+      "question": "authority_grounding is authored as extraction (institutions benefit from kernel non-revision, with an interpretive layer absorbing drift); is the alternative framing — distributed legal authority with no single extractor — the better commitment-system classification?",
+      "resolution_mechanism": "Test whether any single institution's benefit from non-revision is load-bearing: if medical bodies, religious institutions, and courts each hold only partial stakes in kernel stability, the distributed framing fits better.",
+      "impact": "Under the distributed framing the CS pattern changes (no designated interpreter; drift reads as jurisdictional variance rather than absorbed drift) while the constraint's metric classification is unaffected.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "CS-framing under-determination: extraction-grounded vs distributed-authority framings of the same regime."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the autonomy_reading of the end_of_life_decision_authority kernel: the claim that competent individuals possess sovereign authority over their own death. Per the kernel-reading epsilon-referent rule, extractiveness is authored for the standing arrangement under contest — the medico-legal regime that withholds final end-of-life decision authority from competent individuals and vests it in criminal prohibition, medical gatekeeping, and institutional review — assessed by THIS reading's own lights, never by the reading's endorsed alternative. By this reading's lights the standing regime is substantially extractive: it prices the protection of dependent patients in the currency of prolonged suffering charged to a competent class that does not need or want that protection, and it enforces the price with criminal law and licensing discipline. The expected structural delta for this reading is realized in the structural data: the suffering-prolonged denied access enter the victim set; healthcare professionals appear in dual position as the regime's enforcement front line and its moral-cost bearers; and slippery-slope risk is externalized — coercion-of-the-vulnerable concerns are seated in the vulnerability_protection sibling's story, not here. The sibling readings are separate constraints with separate, reading-indexed epsilon values over the same shared referent; this file links them via network.affects_constraints. Claim and metrics are independently authored: the claimed type is this reading's structural assessment of the regime, and the metrics are its descriptive assessment — neither was tuned toward the other or toward a predicted engine output.",
+    "key_agents": [
+      "competent_suffering_individuals: primary target (powerless/trapped) — bears the regime's cost as prolonged living against settled will, with access denied",
+      "vulnerable_dependent_patients: coordinated protected class (powerless/trapped) — shielded from pressure to die by the same structure that prices the shield on others",
+      "medical_professional_bodies: beneficiary (institutional/constrained) — retains gatekeeping jurisdiction over death; absorbs drift through guidance and ethics practice",
+      "religious_institutions: beneficiary (organized/identity_locked) — collects doctrinal vindication from prohibition; cannot reposition without doctrinal dissolution",
+      "bedside_physicians: dual-positioned enforcer (organized/constrained; agenda_setter with secondary payer position) — executes gatekeeping at the point of request while bearing moral distress and prosecution exposure",
+      "legislative_judicial_authorities: agenda_setter (institutional/arbitrage) — redraws the authority map and can exit by rewriting it",
+      "prosecuted_compassionate_assisters: secondary target (powerless/trapped) — family members and clinicians bearing the enforcement machinery's cost",
+      "cross_border_dying_travelers: partial-exit target (moderate/constrained) — buys partial relief through foreign jurisdictions, rationed by money and medical eligibility",
+      "nonterminal_suffering_excluded: excluded voice (powerless/trapped) — chronic, degenerative, and psychiatric suffering carved out of even reform statutes"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.68 (end-state) by this reading's lights: the regime's core operation is requiring competent individuals to continue living against their settled, repeated will, with prosecution risk attached to anyone who helps them stop. Suppression (0.62) is a raw structural property — criminal prohibition, licensing discipline, travel friction — and is NOT scaled by directionality or scope; only extractiveness is engine-scaled by d and spatial scope. Theater (0.45) rises across the interval: as reform pressure mounted, prohibition jurisdictions increasingly governed through prosecutorial-discretion policies that never enforce but never reform, and through ethics review that delays without deciding — performative maintenance of a prohibition no longer honestly enforced (Goodhart drift of the protective proxy). Accessibility collapse is moderate (0.55): exits exist — foreign jurisdictions, voluntary stopping of eating and drinking, terminal sedation, underground assistance — but are rationed by money, medical eligibility, and legal gray zones, so alternatives narrow without closing. Resistance is high (0.6): constitutional litigation, sustained advocacy, clinician civil disobedience, and jurisdiction-by-jurisdiction reform waves meet the regime continuously. All three tracked metric series run on one shared time grid (1976/1986/1996/2006/2016/2026) with every metric authored at every point; the trajectories are monotonic rather than cyclical — extractiveness and suppression decay as legalization spreads while theater rises as enforcement goes symbolic. The flattening extractiveness curve encodes this reading's specific complaint: even reform statutes replace prohibition with gatekeeping rather than sovereignty, putting a floor under epsilon that no further reform wave in this interval removed.",
+    "perspectival_gap": "The payer and agenda seats should compute divergent types from the same structure. From competent_suffering_individuals (powerless, trapped) the regime computes as near-total denial with a protective story they cannot opt out of; from medical_professional_bodies (institutional, constrained) the same structure computes as professional duty, liability management, and a jurisdiction held for a century; from legislative_judicial_authorities (institutional, arbitrage) it is settled law they revisit at will. Inter-institutional dynamics: medical bodies and religious institutions experience reform waves differently — the bodies can reposition (several have moved from opposition to neutrality) because their stake is jurisdictional, while religious institutions cannot reposition without doctrinal dissolution, hence the identity_locked exit; their identity fusion is doctrinal (the institution has become its teaching on intentional death), and if that frame broke, their seat would recompute as ordinary organized opposition. Same-level lateral dynamics: within the victim class, competent_suffering_individuals (trapped) and cross_border_dying_travelers (constrained, near-arbitrage) hold the same formal position with different exits — money and medical timing buy partial exit, differentiating their effective position despite identical status. Coalition dynamics cap themselves structurally: the victim class has organized advocacy, but its members die on a schedule the constraint itself sets, so class power is permanently time-limited in a way no other victim class in this corpus is. Bedside physicians carry a professional-identity fusion of their own — the healer norm makes assistance unthinkable for some and conscience-objection mandatory for others — which differentiates physicians within the same seat. Suppression here is predominantly structural (criminal law, licensing); the internalized components (internalized healer norms, internalized duty-to-die pressure) are seated in the sibling stories per this reading's externalization.",
+    "directionality_logic": "The beneficiary/victim declarations drive d. vulnerable_dependent_patients sit near the beneficiary end: the arrangement subsidizes them with protection at zero direct price. medical_professional_bodies and religious_institutions collect authority and vindication respectively. legislative_judicial_authorities hold agenda control with arbitrage exit, placing them near the beneficiary end despite writing the rules — they can leave the arrangement's costs behind by amending it, and several have. The victim class sits near the target end, differentiated by exit: trapped competent_suffering_individuals and prosecuted_compassionate_assisters take near-full-target d; the purchased partial exit of cross_border_dying_travelers damps theirs. bedside_physicians are genuinely dual-positioned — they administer the gatekeeping while bearing its moral and legal costs — so the secondary_role payer declaration exists precisely so the engine computes a mid-range d rather than reading them as pure enforcers; the expected structural delta (professionals as facilitators) describes the reading's endorsed arrangement and appears here as the reform-jurisdiction half of their situation. Spatial scope is national for most seats (the regime is jurisdictional), global for religious institutions operating across jurisdictions, continental for travel-based exit. Larger scope amplifies effective extraction modestly in the engine's computation; the national scope of the primary target seat keeps that amplification bounded.",
+    "mandatrophy_analysis": "The classification prevents two opposite mislabelings. Reading the regime as a mountain (natural law: society must never permit intentional death) fails: emerges_naturally is false, the arrangement is enacted statute and case law, and it was rewritten jurisdiction-by-jurisdiction across the interval — the declining extractiveness and suppression series record a constructed constraint under active revision, not an irreducible limit. Reading it as pure extraction with a cover story also fails: the coordination function is genuine — dependent patients are shielded from pressure by institutional verification, and the founding problem (coerced and non-voluntary death) is corroborated live by parties outside the beneficiary set. Tangled_rope holds both facts: real coordination for one class, asymmetric incidence — protection for one class priced in the suffering of another through the same structure, held by active enforcement. Mandatrophy is not resolved: the founding mandate remains live (founding_problem_status live, corroborated), so the arrangement has not outlived its function; this reading's complaint is over-service at asymmetric cost, not obsolescence. The R5 mismatch check (status live x disappearance verdict world_rearranges) accordingly raises no zombie flag. The receipt surface records where the gains land: gatekeeping authority accrues demonstrably to medical_professional_bodies, and fixing_cost is classed cheap — not because reform is costless, but because it is procedurally proven in a dozen comparable jurisdictions, making the barrier political coordination rather than feasibility; the captured seat keeps the arrangement snare-flavored under either cost class regardless of this story's claim.",
+    "kernel_context": "Kernel: end_of_life_decision_authority — the contested commitment over who holds final authority when a person's death can be chosen. This file instantiates the autonomy_reading: competent individuals possess sovereign authority over their own death. Siblings: sanctity_reading (intentional life-ending violates intrinsic value independent of individual will) and vulnerability_protection_reading (end-of-life authority must be distributed across institutional checkpoints to prevent both denial and coercion). This reading's core premise — the competent will suffices — logically excludes the sanctity reading's core premise — will is irrelevant to permissibility — within any single framework, hence the forecloses edge. Against the vulnerability_protection reading the relation is influences rather than forecloses: every autonomy victory is implemented through checkpoint-style safeguards, which changes that sibling's operating environment (from defending prohibition to designing safeguards) without logically eliminating it, and a single framework can hold individual authority exercised through verification. The structural disagreement is located in the locus of final authority — individual will, intrinsic value, or institutional distribution — and resolving it reassigns the entire victim set."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_decision_authority__sanctity_reading",
+      "end_of_life_decision_authority__vulnerability_protection_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the natural-language concept 'end-of-life decision authority' decomposes into three structurally distinct constraints, one per reading of the kernel, per the epsilon-invariance principle. The autonomy reading (this file) authors high reading-indexed extractiveness for the shared referent — the standing medico-legal gatekeeping regime — and seats the suffering-prolonged denied access as its victim set. The sanctity sibling authors low extractiveness over the same referent and seats no denied-access victim class (prohibition is its point, not its cost). The vulnerability_protection sibling authors moderate extractiveness and seats both the denied and the coerced. The upstream sibling is sanctity: it historically supplies the doctrinal warrant the standing regime cites, and its claim is the one this reading and the vulnerability_protection reading both descend from and contest. All three files link one another via network.affects_constraints; no story in the family should be read alone."
+  },
+  "stakeholders": [
+    {
+      "name": "competent_suffering_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Terminally ill or unbearably suffering adults with decision-making capacity whose repeated, settled requests to end their lives are refused by law and by medical gatekeeping. What flows to them is continued living under conditions they have rejected; what flows from them is compliance enforced by criminal law. Their exits: enduring, violent self-endangerment that risks worse injury, or travel to a permissive jurisdiction that costs more than most dying people have and is often medically closed to them by the time they need it."
+    },
+    {
+      "name": "vulnerable_dependent_patients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Elderly, disabled, and dependent patients whose families or caregivers might benefit from their deaths. The gatekeeping apparatus stands between them and any pressure to die: requests are scrutinized, capacity is examined, and no life-ending act proceeds on mere say-so. The protection costs them nothing directly; its price is carried by the class of competent sufferers described above."
+    },
+    {
+      "name": "medical_professional_bodies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Licensing colleges and professional associations that hold final gatekeeping authority over end-of-life decisions. The arrangement preserves a jurisdiction they have exercised for a century: no death is chosen without passing through their members' assessment. They absorb change through guidance documents and ethics-committee practice rather than statutory revision, and several have shifted from outright opposition to studied neutrality as reform waves advanced."
+    },
+    {
+      "name": "religious_institutions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Churches and doctrinal bodies whose teaching holds that life's value does not depend on the individual's will. The standing arrangement embeds that teaching in law, and its persistence vindicates their authority in the public square across every jurisdiction they operate in. Their position is not revisable without doctrinal dissolution: repositioning on intentional death would unravel commitments that constitute the institution itself."
+    },
+    {
+      "name": "bedside_physicians",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The clinicians at the point of request. They assess capacity, delay, refuse, and in prohibition jurisdictions face criminal exposure and licensing ruin if they assist compassionately; many carry the moral cost of watching patients die violently or travel abroad to die among strangers. Where reform has come, they administer the new statutes' conditions — becoming licensed facilitators under rules they did not write. Their exit is bounded: they can leave end-of-life practice but not the arrangement that governs it."
+    },
+    {
+      "name": "legislative_judicial_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Legislatures and courts that set and periodically redraw the authority map — absolute prohibition, prosecutorial discretion, licensed access with safeguards. They can revisit the arrangement at will and several have; their relationship to it is one of authorship, not subjection."
+    },
+    {
+      "name": "prosecuted_compassionate_assisters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Spouses, adult children, friends, and clinicians who helped a competent person die and were investigated, prosecuted, or disciplined for it. They acted at the dying person's settled request and bear the enforcement machinery's cost: trials, convictions, professional ruin. Their exit is nothing — the act is done before the law arrives."
+    },
+    {
+      "name": "cross_border_dying_travelers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Dying people with enough money and enough medical eligibility to reach foreign right-to-die organizations. They buy partial relief from the arrangement — a legal death, abroad, among strangers — at the price of travel their bodies may not tolerate, costs their families carry, and a legal gray zone for anyone who accompanies them. Money and timing ration the exit."
+    },
+    {
+      "name": "nonterminal_suffering_excluded",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People suffering unbearably from chronic, degenerative, or psychiatric conditions that no reform statute covers: every assisted-dying law on the books requires terminal prognosis or excludes mental suffering outright. They would object to being carved out of even the reformed arrangements and are structurally absent from the drafting tables; their requests are refused without a hearing."
+    }
+  ],
+  "gain_flow": "medical_professional_bodies",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "The arrangement solves a real collective problem: it prevents coerced, mistaken, and non-voluntary deaths of dependent people by requiring institutional verification before any life-ending act, and it maintains a single medical-legal protocol for end-of-life decisions across millions of deaths.",
+    "transfer_function": "Moves final decision authority over death from competent individuals to medical-legal gatekeeping institutions; moves the price of that protection to the competent suffering class, paid in prolonged living against settled will; moves enforcement risk onto family members and clinicians who assist.",
+    "absent_voices": "The non-terminal suffering — chronic, degenerative, psychiatric — are excluded from every reform statute's scope and from the drafting tables that wrote them. The dead under the arrangement (violent suicides, the deceased of prosecuted assisters, those who died abroad among strangers) cannot testify; their objection survives only as statistics and second-hand accounts. Both groups would object that the conversation's boundaries were drawn without them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the gatekeeping arrangement vanished overnight, end-of-life decisions would reorganize around individual-plus-physician determination within existing medical relationships; medical bodies would lose a century-old jurisdiction they currently absorb drift through; dependent-patient protections would need deliberate replacement rather than existing by default; the dying would reorganize final decisions around new defaults; and the prosecution risk currently shadowing compassionate assistance would evaporate.",
+    "founding_problem": "The arrangement was consolidated to prevent the recurrence of non-voluntary killing and coerced death: the eugenics-era record of involuntary euthanasia, and medicine's history of unilateral life-ending decisions, were to be answered by placing end-of-life decisions under institutional control rather than individual or familial will.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: disability-rights organizations opposing assisted dying attest that pressure on dependent patients is real and present; elder-abuse and safeguarding literature documents inheritance-motivated pressure; prosecutorial case records show coerced-death attempts. The vulnerability_protection sibling reading exists precisely because this problem is live. Note that the autonomy reading itself corroborates the problem's liveness while disputing that the standing arrangement is the right instrument for it — corroboration of the problem is not corroboration of the regime."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "individual_sovereign_self_determination",
+    "drift_state": {
+      "moment": "contemporary_legalization_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sanctity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "vulnerability_protection_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competent_will_sufficient_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "denied_self_determination_is_the_primary_harm",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "header": {
+    "constraint_id": "press_reformation_causality__strategic_deployment",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prsd",
+    "story_uid": "010fae0e-52dd-4009-842b-19ce79aa41c3"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.62,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Strategic Print Deployment of the Reformation (Reformer-Printer Weaponization Reading)",
+    "topic_domain": "history_of_technology/religious_history/media_studies",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "protestant_reformers",
+      "early_modern_printers",
+      "secular_princes",
+      "literate_urban_readers"
+    ],
+    "victims": [
+      "catholic_church_hierarchy",
+      "pirated_authors"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.62
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint instantiates the strategic_deployment reading of the press_reformation_causality kernel; what would change structurally if the technological_determinism sibling reading were adopted instead?",
+      "resolution_mechanism": "Cross-reading comparison within the kernel family: reclassify the same historical arrangement under the determinism reading, where enabling capacity rather than agent choice carries the causal load.",
+      "impact": "Under determinism, the beneficiary/victim structure shifts from agent coalitions to the technology itself as an autonomous force; persistence reads as inevitability rather than maintained deployment, dissolving the enforcement story and changing the computed type.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame position marker: this story is one reading of a contested causal kernel, with sibling readings authored as separate constraints."
+    },
+    {
+      "id": "co_constitution_feedback_delta",
+      "question": "How would the co_constitution sibling reading restructure this constraint's beneficiary and enforcement data?",
+      "resolution_mechanism": "Model the print-economy/religious-controversy feedback loop as the unit of analysis — printer profits funding controversy, controversy driving demand, demand reshaping doctrine — rather than unidirectional strategic use of a tool.",
+      "impact": "Co-constitution distributes agency across the loop and blurs the beneficiary/target boundary (the Church itself became a mass print user after 1540), likely softening the asymmetry that drives the tangled-rope computation toward rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Sibling-reading structural delta: feedback-loop framing versus agent-directed deployment framing."
+    },
+    {
+      "id": "counterfactual_diffusion_necessity",
+      "question": "Was strategic print deployment causally necessary for the Reformation's scale, or would maturing manuscript and preaching networks have achieved comparable diffusion?",
+      "resolution_mechanism": "Compare diffusion half-lives of pre-print heterodox movements (Waldensians, Wycliffites, Hussites) against print-era Protestant spread, controlling for political protection; use production and edition-count data from the book-history literature.",
+      "impact": "If manuscript networks converge on comparable reach, the coordination-function component shrinks and the arrangement reads closer to pure rent-seeking; if print is decisive, the rope component is confirmed and the tangled-rope claim stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the coordination function attributed to the deployment was decisive or incidental."
+    },
+    {
+      "id": "piracy_net_harm_attribution",
+      "question": "Did unauthorized reprinting impose net harm on the authors pirated, or did the publicity outweigh lost sales in the early modern book market?",
+      "resolution_mechanism": "Author-level comparison of earnings and career trajectories for pirated versus exclusively published writers, including royalty arrangements some reformer-authors negotiated against prevailing pirate norms.",
+      "impact": "If net benefit dominates, pirated_authors exits the victim set and the extraction profile concentrates on the Church hierarchy, raising measured asymmetry; if net harm dominates, the dual-victim structure stands as authored.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Victim-set composition uncertainty around unauthorized reprinting."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "protestant_reformers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "University-trained clergy and former monastics who wrote vernacular sermons, Bible translations, and polemics timed to printer output. Print let them address a public directly, bypassing episcopal licensing and disputation gatekeeping. Their livelihoods, physical safety, and self-conception fused with the movement the pamphlet network sustained; leaving it meant recantation, exile, or the stake."
+    },
+    {
+      "name": "early_modern_printers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Master printers and their investor syndicates who selected, financed, and rushed editions to market. They decided which tracts were set in type and in what quantity, hedged between confessional markets, relocated shops when city authorities turned hostile, and took the profits of repeated bestseller runs. Many also absorbed losses from confiscated stock and banned editions."
+    },
+    {
+      "name": "secular_princes",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Territorial rulers who protected reforming printers, sponsored court preachers, and legislated church ordinances. They gained legal-religious cover for absorbing monastic property and tithes, and used confessional alignment as diplomatic currency. Their position let them switch patrons or hedge between Rome and the evangelical estates at comparatively low cost."
+    },
+    {
+      "name": "literate_urban_readers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Townsmen, artisans, students, and lower clergy who bought pamphlets and household Bibles, joined reading circles, and carried arguments into guildhalls and taverns. They could choose among competing confessional offers and stop buying; their demand signals steered what printers risked next."
+    },
+    {
+      "name": "catholic_church_hierarchy",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "The papal curia, bishops, and religious orders that lost the indulgence revenue stream, the interpretive monopoly, and in wide territories the obedience of clergy and laity. Their countermeasures — bans, indices, censorship offices, reformed orders — consumed enormous resources and recovered little of the lost ground. They could not abandon doctrine or office to escape the pressure."
+    },
+    {
+      "name": "pirated_authors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Humanist scholars, poets, and theologians whose works were reprinted without permission or payment across the European book fairs. Unauthorized editions spread their names widely while cutting into authorized sales and exposing them to charges for texts they had not cleared. Their remedies — privilege petitions, litigation — ran at manuscript speed against reprint speed."
+    },
+    {
+      "name": "anabaptist_radicals",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Baptist and spiritualist reformers outside the magisterial coalition. Their own writings circulated in small fugitive editions; the coalition's presses and pulpits printed against them, and imperial and civic authorities executed many. They had no seat in the publishing decisions that defined acceptable reform."
+    },
+    {
+      "name": "historians_of_the_book",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Modern scholars of print culture who reconstruct production figures, printer ledgers, and diffusion patterns from archives. They take no side in the sixteenth-century allocation and can compare the whole arrangement across seats and centuries."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the dispersed-dissent synchronization problem: cheap, identical, rapidly reprinted pamphlets let geographically scattered critics cite the same texts, answer the same objections, and recognize themselves as one movement within months — something episodic manuscript circulation and earshot preaching could not do. Secondarily it standardizes vernacular scripture and liturgy across territories.",
+    "transfer_function": "Moves interpretive authority and revenue: indulgence income and doctrinal gatekeeping away from the Roman hierarchy toward reformer-published vernacular texts; moves coin from urban readers to printers and their investor syndicates through bestseller economics; moves church lands and dues toward cooperating princes under reforming legal cover; moves attention from Latin clerical discourse to vernacular public argument.",
+    "absent_voices": "Anabaptist and spiritualist radicals would object loudest: they were printed against by the very coalition this arrangement served, and their own presses were few and fugitive. The peasants of 1525 would object — their grievances were answered with Luther's printed counterattack. Catholic scholastics would object that their reply channels (disputation, episcopal correction) operated at manuscript speed against print speed. None of these sat in the coalition's publishing councils.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the deployment arrangement vanished overnight — printers declining reformist copy, reformers reverting to manuscript and pulpit — the movement fragments back into contained academic dissent on the Hussite pattern: local suppression succeeds because confiscation can outrun hand-copying; indulgence revenue and doctrinal monopoly persist; the princes lose the legal-religious cover for secularizing church property; the print trade loses its first mass-market bestseller engine and contracts back to liturgical and official jobbing.",
+    "founding_problem": "The arrangement was built to solve a double bottleneck: doctrinally, how to carry scholarly critique past episcopal gatekeeping to a literate public faster than authorities could confiscate it; commercially, how to fill presses profitably in a market whose official contracts (liturgica, university texts) were controlled by the Church.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the Catholic controversialist Johannes Cochlaeus urged suppressing print shops precisely because Luther's theses outran episcopal reply; the 1521 Edict of Worms and the 1559 Index attest the bottleneck by attempting to close it; Venetian and French diplomatic dispatches note the speed of pamphlet spread. Modern book historians (Febvre and Martin, Eisenstein, Pettegree) corroborate the mechanism while disputing its causal weight — that dispute is the kernel contest recorded in the omegas."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "press_reformation_causality__technological_determinism",
+      "press_reformation_causality__co_constitution"
+    ],
+    "dual_formulation_note": "Constraint family: press_reformation_causality decomposes into three readings — strategic_deployment (this file), technological_determinism, and co_constitution. The colloquial question 'did the printing press cause the Reformation?' conflates three structurally distinct claims with different epsilon referents: agent-directed deployment (deliberate, targeted extraction; tangled-rope shape), autonomous enabling capacity (no agent-side extraction; inevitability claim), and feedback-loop co-production (distributed agency; rope-leaning). Each is authored as a separate story with its own epsilon, beneficiaries, and metrics; the enabling-capacity claim sits upstream since both other readings presuppose the capacity existed."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "agent_centered_strategic_causation",
+    "drift_state": {
+      "moment": "contemporary_historiography",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "technological_determinism",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "co_constitution",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "agent_choice_carries_causal_load",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "market_logic_shaped_doctrine",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Between roughly 1517 and 1567 (modeled here as interval 0-50), an alliance of reformers, master printers, and opportunistic princes converted an existing reproduction technology into an instrument: vernacular pamphlets, translated scripture, and polemical flugschriften were commissioned, priced, and timed to break the Church's hold on doctrine and revenue. This story instantiates ONE reading of the press_reformation_causality kernel — the strategic_deployment reading — and generates it as a clean, epsilon-invariant constraint: the standing arrangement under contest is the deployment complex itself, and epsilon is authored for that arrangement as this reading sees it (deliberate, targeted, agent-directed). The contest with sibling readings is NOT folded into the constraint; it is routed to the omegas and to commentary.kernel_context per the committer-frame rules. The claim and the metrics are independent authored facts: claimed_type states what I believe is structurally true of the arrangement (genuine coordination function plus asymmetric extraction, actively maintained), while the metrics describe its observed operation; the engine computes per-seat classifications from the structural data, and any divergence between claim and computed type is the measurement the corpus exists to take.",
+    "key_agents": [
+      "protestant_reformers: Primary beneficiary (organized/identity_locked) — authored the weaponized content; exit means recantation or death",
+      "early_modern_printers: Secondary beneficiary and operational agenda-setter (organized/constrained) — selected what was printed and collected the monetary rents",
+      "secular_princes: Opportunist beneficiary (powerful/arbitrage) — supplied protection and law, collected property and jurisdiction",
+      "literate_urban_readers: Diffuse beneficiary (moderate/mobile) — received cheap standardized argument, steered demand",
+      "catholic_church_hierarchy: Primary target (institutional/trapped) — lost revenue, interpretive monopoly, and territorial obedience; could not exit doctrine",
+      "pirated_authors: Secondary target (moderate/constrained) — bore uncompensated reprinting with offsetting publicity",
+      "anabaptist_radicals: Excluded voice (powerless/trapped) — printed against by the coalition, absent from its councils",
+      "historians_of_the_book: Analytical observer (analytical/analytical) — reconstructs the whole structure from archives"
+    ],
+    "logic_rationale": "Extractiveness is 0.66 at interval end because the deployment deliberately targeted existing revenue and authority streams (indulgences, interpretive monopoly) and because printer returns were decoupled from author compensation — piracy was the norm, privileges the exception. Suppression is 0.62 because persistence required continuous active work: evading the Edict of Worms, disguising imprints, running the Frankfurt clandestine trade, and later building Protestant territories' own censorship once the coalition held power. Theater_ratio is 0.28 and rising slowly: the core activity stayed functional, but licensing formalities, safe dedications, and confessional boilerplate grew as a defensive share of output. Accessibility_collapse is 0.40 — scribal and pulpit channels persisted throughout but were outcompeted on speed and cost, not eliminated. Resistance is 0.70: the Counter-Reformation, the Index, imperial bans, and eventually war were sustained, organized counter-mobilization. The temporal series run on one shared grid (points 0,10,20,30,40,50) so every metric is authored at every examined point; extractiveness rises steeply to a 1530s plateau then eases slightly as the Church counter-mobilizes and markets saturate, while suppression_requirement ratchets monotonically upward as enforcement machinery matured on both confessional sides. Receipt surface: gains demonstrably split three ways — printer profits, reformer authority, princely property — so after checking every named seat, no single seat captures the extraction; gain_flow is therefore the affirmative 'diffuse', not a default. Fixing cost is 'prohibitive': the party with the strongest incentive to remove the arrangement (the Church) spent decades and ruinous resources attempting exactly that and failed, which is direct evidence on the cost class.",
+    "perspectival_gap": "The payer seat and the beneficiary seats should compute differently, and the structural data is built to produce that divergence. From the catholic_church_hierarchy seat — institutional power, civilizational horizon, trapped exit — the arrangement operates as deliberate dispossession by a coalition wielding a superior reproduction technology: a snare-shaped experience borne by the party least able to leave. From the reformer and printer seats the same structure is a coordination tool they built, funded, and risked their necks for: rope-shaped. The reader seat sits near-symmetric, gaining access while paying indirectly through confessional strife. The historian seat sees an instrument whose valence depends entirely on position. The engine computes these per-seat classifications from power, exit, and declared position; nothing in the authored claim adjudicates between them.",
+    "directionality_logic": "Declarations map to directionality as follows. catholic_church_hierarchy: declared victim, trapped exit, institutional power — derived d sits near the full-target end, and effective extraction is amplified by the trap. protestant_reformers: declared beneficiaries with identity_locked exit — the lock keeps them at the subsidized end indefinitely; their fusion with the movement means the subsidy cannot be cashed out by leaving. early_modern_printers: beneficiaries with constrained exit and agenda-setting leverage — low d, but their gatekeeping position lets them steer which doctrines ride the channel. secular_princes: beneficiaries with arbitrage-grade exit — nearest the full-beneficiary end; they could hedge between confessions, which is exactly what several did. literate_urban_readers: beneficiaries with mobile exit — nearest the beneficiary end, paying only diffuse indirect costs. pirated_authors are declared victims but their situation is genuinely ambivalent (unauthorized reprinting both harmed their sales and spread their reputations); the directionality_override surface keys on power atoms, which pirated_authors share with literate_urban_readers, so an override would misfire across seats — the ambivalence is routed to the piracy_net_harm_attribution omega instead of forced into a scalar.",
+    "mandatrophy_analysis": "The founding problem — carrying dissent past episcopal gatekeeping faster than confiscation could run, and filling presses profitably outside Church-controlled contracts — was substantially solved by the mid-1520s: the coalition had broken the bottleneck, and no later pamphlet ever again had to achieve what the 95 Theses and the 1522 September Testament achieved. What persisted after the victory was the machine: confessional propaganda departments, printer rent-seeking on an established bestseller format, and princely administration of seized church property. That is a mandate outliving its function, and the story declares mandatrophy_resolved accordingly; the founding_problem_status x disappearance_verdict pair (dead x world_rearranges) records the zombie signature for the mismatch consumer. The classification prevents mislabeling in both directions: calling the arrangement a pure snare erases the real coordination achievement (dispersed dissent synchronized at print speed — a genuine collective-action solution that manuscripts could not deliver); calling it a pure rope erases the asymmetric extraction (a trapped institutional target, uncompensated authors, and rents decoupled from service). The tangled-rope claim holds both facts in one structure, and the temporal series shows the drift from breakthrough instrument to standing extraction-and-propaganda apparatus.",
+    "kernel_context": "Kernel: press_reformation_causality — what explains the Reformation's print-mediated success. This file instantiates the strategic_deployment reading: human coalitions (reformers, printers, princes) deliberately weaponized an existing technology toward religious and economic ends. Sibling readings, authored as separate constraints: technological_determinism (the press as autonomous enabling force making vernacular scripture spread and Reformation success inevitable) and co_constitution (technology and agency co-produced the outcome through feedback loops between the print economy and religious controversy). This reading's epsilon is authored for the standing deployment arrangement as seen from the agency-centered seat; the sibling files carry their own epsilon over their own framings, and the disagreement between readings is located in where causal load sits — agent choice, technical capacity, or the loop between them."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

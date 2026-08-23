@@ -1,0 +1,397 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__simulation_as_sufficient",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "story_uid": "4135d70b-f2ef-4c6d-b578-faf5845cda9d"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.4,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-Sufficiency Standard for Catastrophe-Avoidance Competence",
+    "topic_domain": "institutional/epistemic — safety engineering and organizational learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulator_vendors_and_training_industry",
+      "certifying_bodies",
+      "hro_training_departments",
+      "flying_public_and_host_communities"
+    ],
+    "victims": [
+      "line_operators",
+      "near_miss_investigation_programs",
+      "small_regional_operators"
+    ],
+    "vindicated_propositions": [
+      "simulation_transfer_equivalence_hypothesis",
+      "quantified_competence_measurement_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "certifying_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Publish and administer the training regulations and accreditation standards that define simulator hours, scenario banks, and passing scores as the route to certified readiness. Staff the working groups that decide what counts as equivalent fidelity. Funded by fees and appropriations tied to running the certification system; the agency's self-concept is bound to the standards apparatus it administers, and it cannot step outside the statutory role that role defines."
+    },
+    {
+      "name": "simulator_vendors_and_training_industry",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design and sell full-fidelity simulators, scenario software, and instructor services to every organization the standards bind. Order books follow mandate expansions rather than customer preference, and the supplier base is a small set of global firms diversified across civil and military contracts. Revenue depends on continued official acceptance of simulator performance as the measure of readiness."
+    },
+    {
+      "name": "hro_training_departments",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Run the internal academies and simulation centers, schedule recurrent cycles, and produce the audit records that demonstrate compliance. Documented simulator hours buy budget standing and legal defensibility after adverse events; the same departments also absorb the capital, scheduling, and instructor costs the standards impose."
+    },
+    {
+      "name": "simulator_instructors_check_airmen",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Deliver scenario sessions and score crew performance against the published metrics. Salaries and professional standing scale with mandated training volume; they simultaneously face pressure to produce passing results and crews who contest scores, and they can move between competing training centers."
+    },
+    {
+      "name": "line_operators",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Fly the line, staff the control rooms, and operate the theaters. Recertification and, increasingly, promotion ride on recurrent simulator scores, and career consequences attach to those scores. Their experiential knowledge of how real events differ from scripted ones enters the process mainly through structured debrief forms completed after sessions."
+    },
+    {
+      "name": "near_miss_investigation_programs",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Collect, code, and analyze incident reports and minor failures from live operations — historically the channel through which organizations noticed drift between trained conditions and actual ones. Compete for budgets against simulation procurement; several long-standing reporting programs have been folded into simulator-feedback loops or defunded following adoption of the sufficiency standard, while the programs' staff remain committed to the field-learning mission that gave the programs their purpose."
+    },
+    {
+      "name": "small_regional_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Purchase simulator access by the hour at distant training centers, often sharing scarce devices with larger carriers' overflow. Fixed mandated training costs weigh heaviest on thin margins, and these operators hold few seats on the committees that design scenarios or set passing standards."
+    },
+    {
+      "name": "flying_public_and_host_communities",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Receive whatever safety margin the competence regime produces and bear the residual risk of any gap between rehearsed and actual performance. Individuals cannot opt out of shared airspace or plant siting, hold no seat in standards-setting, and typically learn of competence gaps only through accident reports."
+    },
+    {
+      "name": "veteran_practitioners_doubting_equivalence",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Long-service captains, shift supervisors, and senior clinicians who describe from experience the difference between the simulation room and the event — startle, consequence, irreversibility — and find few formal channels to press that testimony into standards revision. Their critiques circulate in trade press, retirement speeches, and informal mentoring."
+    },
+    {
+      "name": "academic_hro_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study how organizations detect and correct drift, comparing simulation-led regimes with incident-led ones across industries. Neither fund nor staff the training system; the transfer-of-training and collective-mindfulness literatures constitute the main external check on the sufficiency claim."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a repeatable, standardized, physically safe way to rehearse catastrophic failure modes that cannot be rehearsed live, and a shared measurable benchmark for declaring crews, teams, and license-holders ready.",
+    "transfer_function": "Moves training dollars from regulated organizations and public budgets to simulator manufacturers and training providers under mandate-backed demand; moves evaluation authority from accumulated field experience to simulator scoring; converts operational risk narratives into auditable training records.",
+    "absent_voices": "Veteran practitioners who describe the difference between the simulation room and the event, and near-miss specialists whose programs lost standing, sit outside the standards committees where fidelity equivalence is defined. Line crews enter chiefly through structured debrief instruments rather than agenda-setting roles.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the sufficiency standard vanished overnight, certification systems would lose their primary instrument, license pipelines would stall pending replacement criteria, training markets would reprice around uncertain demand, and organizations would reopen field and incident-learning channels that the standard had displaced — the competence-retention economy reorganizes around whatever signal source the successor standard names.",
+    "founding_problem": "Catastrophic failure modes are too rare and too lethal for on-the-job mastery: early aviation, reactor, and surgical practice consumed crews, patients, and plants during competence acquisition, so a safe rehearsal substitute for real events had to be found.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Accident investigation boards, insurers, and academic safety science — none of whom collect from the training market — attest that the rehearsal problem is real and ongoing. The sibling positions likewise concede simulation's necessity; the live dispute across the kernel is whether simulation is sufficient, not whether the founding problem exists."
+  },
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.4,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Across aviation, nuclear operations, surgery, and emergency response, high-fidelity simulation became the primary mechanism for maintaining catastrophe-avoidance competence, and the equivalence premise — that the cognitive and procedural demands of simulation are structurally equivalent to real events — was written into the certification standards that allocate training mandates, define passing criteria, and justify recurrent-evaluation regimes. This story instantiates ONE reading of the competence_retention_exercise kernel: simulation_as_sufficient, which holds the equivalence premise and treats the resulting regime as genuine competence maintenance with ordinary coordination costs. Per Rule 1 the contest is NOT described inside the constraint; the sibling readings (catastrophe_as_necessary, near_miss_as_bridge) are separate constraint files linked via network.affects_constraints, each carrying its own epsilon and victim set. The claim/metric split is deliberate: claimed_type is tangled_rope as an independent structural judgment, while the metrics describe the regime's actual operation — genuine, irreplaceable rehearsal coordination accreting mandate rents, metric displacement, and budgetary crowding-out of field-learning channels. Divergence between the authored claim and any per-seat computation is the measurement, not an error.",
+    "key_agents": [
+      "- certifying_bodies: Agenda setter (institutional / identity_locked) — writes and administers the standards that make simulator performance the certified measure of readiness; cannot step outside the statutory role its identity is fused with",
+      "- simulator_vendors_and_training_industry: Primary beneficiary (powerful / arbitrage) — sells simulators, scenario content, and instruction into regulation-created demand from a concentrated global supplier base",
+      "- hro_training_departments: Beneficiary and day-to-day administrator (organized / constrained) — runs academies, produces the audit trail, gains budget standing and legal defensibility while absorbing compliance costs",
+      "- simulator_instructors_check_airmen: Beneficiary-administrator (organized / mobile) — delivers and scores sessions; livelihood scales with mandated volume",
+      "- line_operators: Primary target (organized / constrained) — recertification and promotion ride on simulator scores; field experience enters only through debrief instruments",
+      "- near_miss_investigation_programs: Secondary target (moderate / identity_locked) — the field-learning channel competing for budget against simulation procurement",
+      "- small_regional_operators: Secondary target (moderate / constrained) — buys scarce simulator hours at distant centers with least influence over standards",
+      "- flying_public_and_host_communities: Diffuse beneficiary with residual-risk exposure (powerless / trapped) — receives the safety margin, bears tail risk, holds no standards seat",
+      "- veteran_practitioners_doubting_equivalence: Excluded voice (moderate / identity_locked) — attests startle/consequence gaps from experience with few formal channels",
+      "- academic_hro_researchers: Analytical observer (analytical / analytical) — external check via transfer-of-training and mindfulness literatures"
+    ],
+    "logic_rationale": "Extractiveness 0.45 is a reading-indexed value over the standing simulation-centered arrangement: even by this reading's own lights the regime concedes mandate-inelastic demand feeding a concentrated vendor oligopoly, regressive hourly pricing that weighs hardest on small operators, and budgetary displacement of near-miss channels — while holding the core exchange fair, since the rehearsal function has no substitute at any price. Suppression 0.40 is a raw structural property (unscaled by power or scope in the engine): alternatives are neither banned nor free — near-miss programs were defunded and folded into simulator feedback loops, veteran dissent was channeled out of committee rooms, but incident-reporting traditions survive in places. Theater 0.32: most session activity is functionally real, with a growing scored-procedure shell as automated grading rewards script execution over judgment. Accessibility_collapse 0.52 and resistance 0.45 reflect partial alternative-collapse and sustained academic, union, and practitioner pushback rather than either natural-law closure or open contest. Enforcement capacity genuinely expanded over the interval (mandates broadened from initial qualification to perpetual recurrent cycles across new industries), so suppression_requirement is tracked temporally with a rising-then-plateauing series; extraction and theater climbed alongside it. All series share one seven-point grid so no metric is sampled against another's end state. Receipt surface: the gains demonstrably land at the vendor seat (mandate-backed demand, concentrated supply, price-inelastic buyers), so gain_flow names simulator_vendors_and_training_industry rather than 'diffuse'; fixing_cost is prohibitive because removal means unwinding certification frameworks, sunk simulator fleets, and international harmonization agreements against diffuse, hard-to-attribute benefits. Trajectories are monotone ratchets, not cycles — no intermittent-reinforcement dynamic is claimed.",
+    "perspectival_gap": "The seats should compute differently. From the certifying and vendor positions the arrangement is professionalized competence infrastructure they built, administer, and profit from legitimately; from the line-operator and small-operator positions the same structure operates as score-governed evaluation with career consequences attached and pricing that ignores ability to pay; from the near-miss program's position it is the displacement of a whole epistemic channel; from the flying public's position it is an invisible bargain trading rehearsed assurance for unmodeled tail risk. The engine computes this divergence from the structural data — power atoms, exit options, and role declarations — and the authored claim does not adjudicate it.",
+    "directionality_logic": "Simulator vendors sit nearest the beneficiary pole: pure collectors with arbitrage-grade diversification and no compliance burden of their own. Certifying bodies collect authority, fees, and jurisdiction rather than training revenue — low d but nonzero through budget dependence on the system they certify. Training departments mix collection (defensibility, budget standing) with payment (capital, scheduling), placing them modestly up from the pole. Flying publics derive subsidy (the safety margin) with a tail-risk uptick carried by their secondary payer position. Line operators and small operators sit near the full-target end: they bear the transfers, their exit is constrained by licensure and market position, and their voice is proceduralized. Near-miss investigation programs bear the constraint's suppressive edge — their decline is the counterfactual the equivalence claim enforces — giving them high effective extraction despite modest formal power. Veterans, as an excluded voice, hold no directional seat but document where the conversation's boundaries were drawn.",
+    "mandatrophy_analysis": "The founding problem — safe rehearsal of the unrehearsable — is live and externally corroborated, so no obsolescence flag is available and none is claimed. The tangled_rope classification is what prevents mislabeling in both directions: a snare reading would erase the irreplaceable coordination function (no alternative rehearses catastrophic scenarios safely at any cost, which even the sibling readings concede), while a rope reading would erase the mandate rents, the regressive pricing structure, and the budgetary strangulation of field-learning channels that the same standard produces. The temporal series show extraction, theater, and enforcement intensity rising together over the interval — the signature of coordination accreting extraction, not of a mandate outliving its problem. Mandatrophy language stays reserved for the piton case: nothing here is maintained theatrically after functional death.",
+    "kernel_context": "This constraint is the simulation_as_sufficient reading of the competence_retention_exercise kernel: the commitment that high-fidelity simulation constitutes genuine exercise of catastrophe-avoidance competence. Sibling readings are catastrophe_as_necessary (only real catastrophes confer and maintain genuine competence) and near_miss_as_bridge (near-misses provide the validating feedback simulation needs without requiring full catastrophe). Reading relations are authored as forecloses in both directions because the premises are categoricals on the same quantity — whether any extra-simulational signal is required for genuine competence: this reading asserts none is; the siblings assert some is (total, or partial). No single framework holds both sides of a direct contradictory, which is the foreclosure condition, not mere factional disagreement. Reference frame: the reading takes fidelity-equivalence as the legitimate settled state; the drift vector records the startle/surprise and manual-skills research era substantially challenging the foundational empirical premise while the standards apparatus patches symptoms (upset-recovery modules, manual-handling emphasis) without revisiting the premise itself — hence axiom_overriding, substantial, acknowledged false."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This story instantiates the simulation_as_sufficient reading of the competence_retention_exercise kernel; what structural changes would the sibling readings (catastrophe_as_necessary, near_miss_as_bridge) introduce?",
+      "resolution_mechanism": "Author the sibling stories as separate files and compare victim sets, epsilon, and enforcement surfaces across the three; the disagreement is located precisely in the equivalence premise — whether any extra-simulational signal is required for genuine competence.",
+      "impact": "Under catastrophe_as_necessary the target set shifts outward — populations exposed to preventable disasters bear the cost of learning-by-disaster — and extraction externalizes beyond the training market entirely; under near_miss_as_bridge the contested surface moves to incident-reporting labor and the evidential weight of degraded real-world signals. Victim-set and epsilon differences across the family are the classification data.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one of three mutually exclusive readings; foreclosure edges authored in cs_structure."
+    },
+    {
+      "id": "transfer_of_training_partiality",
+      "question": "How much of simulator-exercised competence survives contact with genuine startle, surprise, and irreversible consequence?",
+      "resolution_mechanism": "Longitudinal linkage of simulator scores to subsequent line-event outcomes; controlled startle-inoculation trials; natural experiments where simulator currency lapsed fleet-wide (e.g., pandemic-era access restrictions) with outcome comparison against matched periods.",
+      "impact": "Materially partial transfer undermines the foundational axiom on which mandates are justified; the mandate layer would then read as rent-bearing rather than readiness-bearing, and classification pressure shifts toward the extractive pole. Full transfer would vindicate the reading's coordination account.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cognitive and procedural fidelity transfers completely to real events."
+    },
+    {
+      "id": "goodhart_metric_displacement",
+      "question": "Do simulator metrics measure generalized catastrophe-avoidance competence, or scenario-specific test-taking skill?",
+      "resolution_mechanism": "Perturbation studies inserting novel, unrehearsed failure modes into scored scenarios and comparing performance against rehearsed-script variants; analysis of instructor score distributions before and after automated grading adoption.",
+      "impact": "If metrics reward preparation-for-the-known-scenario, the measurement layer functions partly as credentialing ritual, the theater_ratio is understated, and the doctrine of quantified competence measurement is vindicated only nominally.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Metric validity under Goodhart pressure from high career stakes attached to scores."
+    },
+    {
+      "id": "displacement_vs_merit_of_field_channels",
+      "question": "Were near-miss and field-learning channels reduced on merit, or crowded out budgetarily once the sufficiency standard was adopted?",
+      "resolution_mechanism": "Budget and headcount histories of incident-reporting programs immediately before and after simulation-mandate adoption; matched-organization comparisons where both channels were retained.",
+      "impact": "Merit-based reduction supports the reading's coordination account and lowers the suppression attributable to the claim; fiscal crowding-out raises it and implicates the standard itself as the suppressing force.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cause of complementary-channel decline: epistemic inferiority or budgetary displacement."
+    },
+    {
+      "id": "framing_claim_vs_infrastructure",
+      "question": "Is the constraint the institutionalized equivalence claim, or the simulation infrastructure regime that claim licenses?",
+      "resolution_mechanism": "Counterfactual construction: strip the equivalence claim from the standards while leaving hardware and hours in place — if mandates, pricing power, and channel displacement persist, the claim is the operative constraint; the framing choice was guided by the fact that the claim, not the equipment, adjudicates legitimacy and allocates budgets.",
+      "impact": "An infrastructural framing lowers epsilon toward coordination cost and pulls classification toward rope; the claim-framing keeps mandate rents and channel displacement visible. Classification differs across framings, so the choice is recorded rather than assumed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "CS-framing under-determination: claim-layer kernel versus hardware-layer kernel."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__catastrophe_as_necessary",
+      "competence_retention_exercise__near_miss_as_bridge"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'simulation-based competence retention' conflates three structurally distinct arrangements, each with its own epsilon and victim set. Historical influence runs catastrophe_as_necessary (the pre-simulation baseline, where learning-by-disaster was the accepted tuition) -> near_miss_as_bridge (which accepts simulation as primary but demands real-world validation input) -> simulation_as_sufficient (this file, which denies any extra-simulational requirement). Each successor reading was argued as a correction of its predecessor's insufficiency, so upstream stories are cited as evidence by downstream advocacy. This file links both siblings via affects_constraints; the sibling files reciprocate."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_as_necessary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "near_miss_as_bridge",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_fidelity_confers_genuine_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulator_metrics_track_real_event_readiness",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "simulation_fidelity_equivalence_standard",
+    "drift_state": {
+      "moment": "post_startle_surprise_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

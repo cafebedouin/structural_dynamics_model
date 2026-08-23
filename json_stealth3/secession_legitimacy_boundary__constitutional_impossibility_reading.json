@@ -1,0 +1,350 @@
+{
+  "header": {
+    "constraint_id": "secession_legitimacy_boundary__constitutional_impossibility_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "4cec5cde-cfae-47f7-8515-1d14156b7512"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.68,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.58,
+    "claimed_type": "mountain",
+    "human_readable": "Union Permanence Doctrine — Unilateral Secession Impermissible, Amendment-Negotiated Exit Only",
+    "topic_domain": "political economy/federalism/resource politics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "federal_government",
+      "recipient_provinces",
+      "rest_of_federation_electorates"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "territorial_integrity_doctrine",
+      "amendment_exclusivity_principle",
+      "clarity_requirement_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_permanence",
+      "question": "Is the union-permanence principle a structural feature of viable federation (closer to natural law for this domain) or a designed allocation rule that identifiable agents benefit from treating as inevitable?",
+      "resolution_mechanism": "Comparative test: federations that codified member exit rights (explicit secession clauses) versus those that forbade them. If codified-exit federations persist at rates comparable to permanence-clause federations, permanence is design choice rather than structural necessity.",
+      "impact": "If design, the mountain claim is a false summit: the constraint recomputes as a constructed, actively enforced arrangement with identifiable beneficiaries, and the reading's constitutive framing fails. If necessity, the constitutive reading survives and the authored suppression reflects the irreducible price of the commitment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether permanence is structural necessity or constructed rule (FSM ambiguity carrier)."
+    },
+    {
+      "id": "amendment_route_functionality",
+      "question": "Is the negotiated amendment exit a reachable alternative, or a formally open, practically jammed door?",
+      "resolution_mechanism": "Enumerate every attempted amendment-route exit across comparable federations; compute the supermajority constellations each design requires versus the constellations ever politically assembled; test whether any design parameter (e.g. simultaneous dual assent by the exiting unit and the remainder) makes success arithmetically implausible.",
+      "impact": "If jammed, theater_ratio is understated and the arrangement operates closer to pure prohibition behind a legitimating facade. If reachable, the negotiated-exit framing earns its keep and part of the measured cost-bearing is the price of a real option.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reachability of the formal exit channel."
+    },
+    {
+      "id": "reading_index_epsilon_divergence",
+      "question": "This file instantiates one reading (constitutional impossibility) of the secession_legitimacy_boundary kernel; the sibling readings (popular sovereignty, grievance threshold, treaty primacy) authorize different beneficiary/victim sets and different epsilon over the SAME standing arrangement — which element of the disagreement drives the divergence?",
+      "resolution_mechanism": "Cross-file comparison at kernel level: locate the disagreement in the legitimacy source of exit (ratified text versus referendum result versus injustice threshold versus treaty-holder consent), not in the arrangement's mechanics, which all four files describe identically.",
+      "impact": "This file's epsilon (0.38) and empty victim set are indexed to THIS reading. Treating them as topic-level verdicts would corrupt cross-reading meta-analysis. Sibling files carry their own victim sets: referendum-denied majorities under popular sovereignty, threshold-crossing populations under grievance threshold, unconsulted treaty holders under treaty primacy.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: epsilon and victim structure are reading-indexed, not topic truth."
+    },
+    {
+      "id": "clarity_conditions_legitimacy",
+      "question": "Do clarity conditions imposed after referenda strengthen the amendment channel's legitimacy, or reveal goalpost-moving that further jams the negotiated exit?",
+      "resolution_mechanism": "Sequence audit: compare conditions demanded before versus after each referendum; test whether a hypothetical perfectly clear majority would in fact have triggered negotiation under the rules as they stood at the time the vote was held.",
+      "impact": "If goalpost-moving, the negotiated-exit justification loses evidentiary support, effective suppression runs above the authored scalar, and the reading's claim that a legitimate channel exists weakens. If applied in good faith, the channel's legitimacy stands.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether post-hoc clarity rules are good-faith application or retroactive tightening."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A federal constitutional order bars unilateral provincial secession and channels all legitimate exit through a supermajority amendment process requiring concurrence of both the exiting unit and the remainder of the federation. This file instantiates the constitutional-impossibility reading of the secession_legitimacy_boundary kernel: it treats permanence as constitutive constitutional law rather than policy, holds separatist legitimacy claims categorically void, and consequently authors an EMPTY victim set — the reading denies the extraction characterization outright, so no agent enters base_properties.victims. Its epsilon is indexed to that stance (OQ-26): 0.38 over the standing arrangement as this reading assesses it, acknowledging heavy but deemed-legitimate membership obligations on higher-revenue provinces while rejecting the claim that these justify exit outside the amendment channel. The three sibling readings — popular sovereignty, grievance threshold, treaty primacy — are separate files with their own beneficiary/victim structures; per the kernel rules their contents are routed to omega variables here and are not folded into this constraint. The claim/metric gap is deliberate and is the datum: the reading CLAIMS constitutive permanence (mountain, emergent-natural framing), while the authored metrics describe an actively enforced arrangement with a never-used exit door, rising enforcement investment, and accumulating cost concentration. That divergence is what the engine measures; nothing here reconciles it.\n\nKEY AGENTS (by structural relationship):\n- federal_government: agenda-setter (institutional/arbitrage) — administers the permanence doctrine, sets negotiation conditions, collects the unified fiscal base\n- constitutional_judiciary: agenda-setter/enforcer (institutional/constrained) — certifies questions, refuses effect to out-of-channel exit attempts\n- recipient_provinces: primary beneficiary (organized/constrained) — accrue transfers secured by locked-in membership\n- rest_of_federation_electorates: beneficiary veto-holder (organized/constrained) — ratification gate on any exit\n- resource_rich_net_contributor_province: principal cost-bearer (powerful/constrained; secondarily positioned as beneficiary via common-market and insurance access)\n- provincial_separatist_movements: direct target of the categorical prohibition (organized/identity_locked)\n- linguistic_minorities_in_contested_regions: cost-bearer under either outcome (moderate/constrained)\n- indigenous_treaty_holders: excluded seat — lands implicated by any boundary change, unseated from amendment tables (organized/trapped)\n- comparative_constitutional_scholarship: analytical observer — documents that no amendment-route exit has ever completed",
+    "key_agents": [
+      "federal_government: agenda-setter (institutional/arbitrage) — administers the permanence doctrine, sets the timing and conditions of any negotiation table, decides which referendum questions count as clear; draws revenue depth, defense integration, and diplomatic standing from undivided territory",
+      "constitutional_judiciary: enforcing agenda-setter (institutional/constrained) — certifies which secession questions proceed and refuses effect to exit attempts outside the amendment channel; precedent-bound",
+      "recipient_provinces: primary beneficiary (organized/constrained) — receive equalization and program transfers whose scale presupposes contributor provinces cannot walk away",
+      "rest_of_federation_electorates: beneficiary veto-holder (organized/constrained) — ratify or block any exit amendment; benefit from intact internal market and pooled debt",
+      "resource_rich_net_contributor_province: principal cost-bearer (powerful/constrained, secondary beneficiary) — largest net fiscal contributor; formal exit requires simultaneous dual supermajorities never yet assembled",
+      "provincial_separatist_movements: direct target of the prohibition (organized/identity_locked) — organizational existence constituted by pursuit of the blocked objective",
+      "linguistic_minorities_in_contested_regions: cost-bearer under either outcome (moderate/constrained) — exposed to relocation costs and language-regime shifts each crisis cycle",
+      "indigenous_treaty_holders: excluded (organized/trapped) — hold pre-constitutional treaties straddling any prospective boundary; absent from ratification formulas",
+      "comparative_constitutional_scholarship: analytical observer (analytical/global) — documents the worldwide record that no pre-existing amendment route to secession has ever been completed"
+    ],
+    "logic_rationale": "Epsilon is authored at 0.38 because this reading assesses the standing arrangement by its own lights: membership obligations on higher-revenue provinces are real but classified as legitimate federation dues, and the extraction characterization that would justify exit is rejected as a category error. The value is not zero because the reading cannot deny the growing cost asymmetry it observes — only its legitimacy. Suppression is 0.68 as a RAW structural property (unscaled by power or scope, per the framework rule): the exit channel requires simultaneous dual supermajorities, clarity conditions were legislated after referenda rather than before, courts refuse effect to out-of-channel attempts, and the international system withholds recognition from unilateral exits. It stops short of higher values because movements operate openly, referenda are legally tolerated, and no criminalization machinery exists in the liberal-federation cases this reading describes. Theater_ratio 0.40: the adjudicative apparatus functions daily and genuinely, but the negotiated-exit door has never opened anywhere, and official rhetoric continues directing aggrieved provinces toward it — a meaningful performative share. Accessibility_collapse 0.52: once the design is understood, unilateral and internationally-recognized alternatives collapse heavily, but the formal amendment route remains visibly open on paper, retaining partial accessibility. Resistance 0.58: serial referenda, sustained movements, litigation, and recurring scholarly contestation, without armed rebellion in the modern cases. The temporal series run on ONE shared grid (points 0, 6, 12, 18, 24, 30; T0 approximates the modern consolidated amendment framework, T12-T18 the secession-referendum era and subsequent clarity-statute hardening, T30 the contemporary period). suppression_requirement is tracked because the story specifically traces enforcement-capacity BUILD-UP — the step-change at T12-T18 models clarity legislation and doctrinal consolidation, an enforcement ratchet, not mere extraction drift; base_extractiveness rises gently with transfer-asymmetry growth (relevant to T17 abductive monitoring on a mountain-claimed story); theater climbs as cumulative disuse of the exit door outpaces the rhetoric pointing at it.",
+    "perspectival_gap": "Seats compute differently and should. From the federal and judicial seats the arrangement presents as constitutional bedrock — permanence experienced as the shape of the world rather than a rule anyone chose. From the contributor province it presents as a gilded enclosure: real services, real countercyclical insurance, real market access, and an exit that exists everywhere except in practice. From the separatist seat it presents as categorical closure — the rule's legitimacy claim is exactly what the movement exists to contest, so no framing of the rule can register as neutral there. Same-power lateral divergence: the contributor and recipient provinces hold identical nominal constitutional standing and opposite net positions; the same rule binds one as principal payer and the other as payee, and their exit values differ accordingly (the payee loses receipts by leaving the pool; the payer gains release). Inter-institutional divergence: federal and provincial orders sit inside one constitutional framework yet experience the amendment gate oppositely — as protective supermajoritarianism from the center, as a bolted door from the resource-heavy province. The engine computes these divergences from the structural data; the authored mountain claim does not adjudicate among them.",
+    "directionality_logic": "Declared beneficiaries (federal_government, recipient_provinces, rest_of_federation_electorates) derive low directionality through the standard chain. The victims array is INTENTIONALLY EMPTY: the constitutional-impossibility reading denies the extraction characterization, and per the kernel rules the victim sets of the sibling readings belong to their files, not this one — folding them in would average across readings and violate epsilon invariance. But this leaves the structural position of the principal cost-bearer invisible to array-based derivation: resource_rich_net_contributor_province would otherwise derive a mid-low directionality indistinguishable from incidental participants. The override (powerful -> 0.78) restores the structural fact — largest net outflows in the federation, exit gated behind never-assembled dual supermajorities — WITHOUT importing any sibling reading's legitimacy judgment. Directionality records position (who bears and who receives); legitimacy stays in epsilon, where it is reading-indexed. Provincial_separatist_movements reach the target end through identity-locked exit modulation rather than array declaration, which keeps the reading's clean victim-free structure intact while still encoding that the prohibition binds them most directly.",
+    "mandatrophy_analysis": "The founding problem — union fragility under unilateral withdrawal — remains live, so this is not a dead-mandate case; the mismatch consumer reads founding_problem_status=live x disappearance_verdict=world_rearranges and finds no zombie flag. The live mandatrophy-adjacent risk runs in the OPPOSITE direction from obsolescence: naturalization. This reading dresses a constructed, actively enforced allocation rule in constitutive permanence — which is precisely the false-summit signature. Declaring beneficiaries on the mountain claim routes the file through false-summit evaluation, and the natural_law_vs_constructed_permanence omega carries the necessity-versus-design question the schema requires. Symmetrically, the classification guards the mirror-image error available to the sibling readings: reading pure extraction where a live, load-bearing coordination function operates. Seat-divergent computation is what separates the two failure modes — the same structure reads as constitutive order from the agenda-setter seats, as legitimate dues from the beneficiary seats, and as a bolted enclosure from the contributor seat; only the per-seat computation, not the authored claim, locates where on that spectrum the arrangement actually operates.",
+    "kernel_context": "This story is ONE READING of the secession_legitimacy_boundary kernel: the constitutional-impossibility reading — unilateral secession is constitutionally impermissible, and only exit negotiated through constitutional amendment is legitimate. Sibling readings are separate constraint files over the same standing arrangement: popular_sovereignty_reading (a clear provincial referendum result is self-legitimating), grievance_threshold_reading (legitimacy arises when federal conduct crosses a structural-injustice threshold regardless of text), and treaty_primacy_reading (Indigenous treaty rights predate and supersede both orders; no exit is legitimate without treaty-holder consent). This file's epsilon (0.38), its beneficiary set, and its deliberately empty victim array are indexed to THIS reading's lights; the siblings author their own structures. Relation choices: a framework committed to amendment-exclusive legitimacy cannot coherently admit referendum self-legitimation or extra-textual injustice overrides without dissolving its own core premise (forecloses, twice); treaty primacy survives as a rival held by other parties because neither tradition can logically eliminate the other's supremacy claim from within its own framework (coexists_with). Drift note: the reference frame (indestructible-union doctrine) is intact and reaffirmed; the interpretation layer has absorbed the post-referendum negotiation-obligation gloss and clarity legislation without surfacing frame revision — practice_drift, minor, acknowledged."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "secession_legitimacy_boundary__popular_sovereignty_reading",
+      "secession_legitimacy_boundary__grievance_threshold_reading",
+      "secession_legitimacy_boundary__treaty_primacy_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'secession legality' decomposes under the epsilon-invariance principle (DP-001) into four structurally distinct constraints sharing one kernel, each with its own epsilon, beneficiary/victim structure, and classification: this file (constitutional impossibility — amendment-exclusive exit; reading-indexed epsilon 0.38; empty victim set because the reading denies the extraction claim); popular_sovereignty_reading (referendum self-legitimation; victim set = majorities whose referendum results are denied effect); grievance_threshold_reading (injustice-conditional legitimacy; victim set = populations past the structural-injustice threshold); treaty_primacy_reading (consent-preconditioned legitimacy; victim set = unconsulted treaty holders). Family topology: this reading functions as the legal baseline AGAINST WHICH the grievance-threshold reading defines its departures (upstream in citation structure); treaty primacy sits upstream historically (validity claims predating both constitutional orders) and exerts structural pressure on this file's ratification formulas through duty-to-consult jurisprudence without foreclosing it. Every family member links the others via affects_constraints; orphan stories within this kernel are a code smell."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.78
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Administers the constitutional order in which provincial exit requires a negotiated amendment ratified by supermajorities across the federation. Sets the timing, conditions, and framing of any negotiation table, and determines which referendum questions count as sufficiently clear to engage it. Draws continuing revenue depth, defense integration, and diplomatic standing from undivided territory. It can reshape the rules it enforces at lower cost than any other seat, since any redesign still runs through institutions it dominates."
+    },
+    {
+      "name": "constitutional_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Certifies which secession-related questions may proceed and refuses effect to exit attempts made outside the amendment channel. Its rulings supply the operative meaning of the permanence principle, including conditions added after referenda about when negotiation must follow a clear vote. Appointment structures and precedent bind it; revisiting the doctrine would require roughly the same cross-jurisdictional consensus the doctrine itself demands of everyone else."
+    },
+    {
+      "name": "recipient_provinces",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Receive ongoing equalization and program transfers whose scale presupposes that higher-revenue provinces remain members. Individually unable to alter the amendment formula; collectively able to swing ratification. Their budgets treat the inflows as baseline, and leaving the pool would mean surrendering receipts they have built spending around. They defend the permanence framework in intergovernmental forums as a matter of fiscal continuity."
+    },
+    {
+      "name": "rest_of_federation_electorates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold ratification power over any exit amendment and draw benefit from the intact internal market, pooled debt service, and shared defense the union finances. They experience the permanence rule as background constitutional furniture and mobilize around it mainly in the months when a referendum forces the question onto their ballots."
+    },
+    {
+      "name": "resource_rich_net_contributor_province",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Contributes the largest net fiscal outflows in the federation while drawing common-market access, currency stability, defense provision, and countercyclical support in downturn years. Its formal path out runs through an amendment requiring simultaneous supermajorities in its own legislature and across the rest of the federation — a combination that has never been assembled anywhere. Commodity wealth buys it bargaining leverage inside the rules, not a route around them; its grievances are aired in intergovernmental conferences whose agendas the federal order chairs."
+    },
+    {
+      "name": "provincial_separatist_movements",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Contest elections and run referenda on leaving the federation; the categorical bar on unilateral exit defines the exact boundary their project presses against. Cadre careers, donor coalitions, and organizational infrastructure are all built around pursuing the blocked objective, so standing down would dissolve the movement rather than relieve it. Each referendum cycle regenerates the organization even when the vote fails."
+    },
+    {
+      "name": "linguistic_minorities_in_contested_regions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Live inside jurisdictions whose borders are the subject of the dispute and would hold minority status under either outcome. They absorb relocation costs, property-value exposure, and language-regime uncertainty during each crisis cycle. Their recourse is rights litigation and gradual internal migration toward other provinces — both slow and costly, and neither gives them a seat in the ratification formulas."
+    },
+    {
+      "name": "indigenous_treaty_holders",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Hold treaties predating both orders of government whose territories straddle the boundaries any exit would redraw. They are not constituents of the federal-provincial amendment tables and do not appear in the ratification formulas; consultation happens informally, after negotiating positions have hardened, or not at all. Unlike every other seat, they cannot relocate out of the question — their relationship to the land is the stake."
+    },
+    {
+      "name": "comparative_constitutional_scholarship",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Tracks how federations worldwide handle member exit, compiles the record showing that no federation has completed secession through a pre-existing amendment route, and supplies the outside assessment of whether permanence principles track structural necessity or particular design choices. Collects nothing and pays nothing; its standing comes from being outside every national ratification formula."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Makes multi-decade federation commitments credible: pooled defense financing, a single internal market, shared currency and debt service, and countercyclical transfers across regions all presuppose that membership cannot be revoked unilaterally after an adverse shock. The impermissibility rule removes the walk-away option that would otherwise price every transfer as hostage-taking and every long-lived joint investment as unrecoverable.",
+    "transfer_function": "Moves recurring net fiscal transfers from higher-revenue provinces into the federation pool and onward to recipient provinces; and moves authority over territorial-membership questions from provincial majorities to a joint supermajority amendment process in which the exiting unit and the remainder must concur.",
+    "absent_voices": "Indigenous treaty holders would object that consent formulas ignore prior occupancy and that their lands straddle every prospective boundary — they are unseated from the amendment tables (authored above as the excluded seat). Linguistic minorities in contested regions hold stakes in both outcomes yet enter the process only through litigation after positions have hardened. Neither seat appears in any ratification formula; dissent is priced out of the room rather than voiced within it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight repeal would reopen the walk-away option: bond markets would reprice provincial debt against fragmentation risk, transfer pools would unwind as contributors renegotiated or exited, defense and trade arrangements would fragment along new borders, and every future asymmetric shock would restart dissolution bargaining from scratch. Removal of the arrangement rearranges the fiscal, security, and market architecture immediately — nothing about the current equilibrium survives its absence.",
+    "founding_problem": "Founding-era fragility: loose confederations were dissolving or paralyzed — unable to finance common defense, service shared revolutionary debts, or hold a customs area — because any member could withdraw or hold out. Durable union required closing the unilateral withdrawal option before credit markets and defense planners would underwrite the joint enterprise.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: comparative-federalism scholarship and archival founding correspondence (defense-financing and debt-service motives) attest that the founding fragility problem was real, and the record of collapsed nineteenth-century confederations is independent of any current beneficiary's account — the analytical observer seat supplies this attestation. Note the limit: no corroborating source from the contributing side attests that the CURRENT terms remain the right answer to that original problem; the problem's reality and the terms' fairness are attested by different seats, and conflating them would be a cover-story move."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "indestructible_union_doctrine",
+    "drift_state": {
+      "moment": "contemporary_post_referendum_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "popular_sovereignty_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "grievance_threshold_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "treaty_primacy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "constitutional_amendment_exclusive_exit",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "permanence_preconditions_federation_goods",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "recipient_provinces",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

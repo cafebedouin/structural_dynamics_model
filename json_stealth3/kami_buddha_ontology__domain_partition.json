@@ -1,0 +1,399 @@
+{
+  "header": {
+    "constraint_id": "kami_buddha_ontology__domain_partition",
+    "version": "7.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "9fce5018-ff56-43f6-a491-692178250d3e"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.34,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.28,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Domain Partition of Kami and Buddhas (Shinbutsu Bunri Reading)",
+    "topic_domain": "religious studies/japanese cultural history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "buddhist_temple_establishment",
+      "shrine_priesthood",
+      "meiji_nationalist_ideologues"
+    ],
+    "victims": [
+      "fused_village_communities",
+      "jinguji_institutions",
+      "danka_households"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 155
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.88
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 78,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 130,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 155,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.84
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 78,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 130,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 155,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 78,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 130,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 155,
+      "value": 0.42
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_index",
+      "question": "This story authors only the domain_partition reading of the kami_buddha_ontology kernel; would instantiating the honji_suijaku_monism or incoherent_bundle readings yield a different beneficiary structure and epsilon for the same colloquial label?",
+      "resolution_mechanism": "Generate the sibling stories and compare computed classifications; convergence across readings would suggest the label tracks one underlying structure, systematic divergence confirms the decomposition into a constraint family.",
+      "impact": "If the monism reading computes with a different victim set (doctrinal elites extracting interpretive authority rather than households paying fees), the corpus must treat shinbutsu-shugo as a family of linked stories, never as one constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-index dependence of the kami-buddha kernel's classification."
+    },
+    {
+      "id": "enforcement_epoch_referent",
+      "question": "Does the end-state epsilon measure the Meiji-enforced partition or the post-disestablishment customary settlement, and can a single scalar honestly span the 1946 discontinuity?",
+      "resolution_mechanism": "Compare household payments for equivalent mortuary services in districts where shrine-temple fusion survived longest against fully separated districts; differential pricing isolates the enforcement legacy.",
+      "impact": "If survivor-district households pay systematically less, the partition premium is an enforcement artifact and the end-state extractiveness is overstated; if pricing converges, the contemporary arrangement is closer to priced service.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which epoch's arrangement the terminal epsilon describes."
+    },
+    {
+      "id": "danka_payment_voluntariness",
+      "question": "Are contemporary household payments to temples purchases of valued services or obligation-driven transfers that would largely cease under free choice?",
+      "resolution_mechanism": "Revealed-preference tracking: adoption rates of nonreligious funerals, family-grave dissolution applications, and the survey gap between stated belief and continued payment.",
+      "impact": "A wide stated-belief-versus-payment gap implies the transfer rides on social enforcement, raising the payer seat's effective extraction; a narrow gap supports the service-cost framing and lowers it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Voluntary-purchase versus obligation character of danka transfers."
+    },
+    {
+      "id": "purity_stratum_nativeness",
+      "question": "Is the life/death domain split a native structure of kami worship or an artifact of Buddhist defilement doctrine absorbed into Shinto self-understanding?",
+      "resolution_mechanism": "Philological and archaeological work on pre-Buddhist mortuary practice at sacred sites: burial proximity to shrine precincts, earliest attested death taboos, Kojiki-era purity regulations.",
+      "impact": "If native, the partition's coordination stratum is deep and durable and survives even full doctrinal re-fusion; if imported, it is a contingent overlay whose removal would cost little functional capacity.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Origin ambiguity of the purity/death jurisdictional division."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "meiji_nationalist_ideologues",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "A coalition of nativist scholars, court officials, and state builders who argued that sovereign national cult required purging Buddhist elements from shrine worship. They drafted the 1868 separation edicts, staffed the short-lived Doctrine Ministry, and supplied the one-nation-one-ancestral-cult justification for dismantling combined shrine-temple complexes. Once the policy was implemented they moved to other projects; their standing never depended on administering what they had built."
+    },
+    {
+      "name": "home_ministry_shrine_bureau",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The ministry office that administered the separation campaign: issuing edict circulars, dispatching inspectors to certify that shrines contained no Buddhist objects, ordering removal or burning of Buddhist images from shrine grounds, laicizing shrine-attached clerics, and later ranking shrines and assigning state stipends. It worked through prefectural governors and could delist or defrock noncompliant clergy."
+    },
+    {
+      "name": "buddhist_temple_establishment",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The surviving temple corporations and their denominational headquarters. During the persecution years they lost lands, images, and parishioners, and thousands of temples were merged or closed outright. After the pressure eased they rebuilt around the one ritual jurisdiction left uncontested to them: funerals, graves, and memorial services. Household parish registration gives them a recurring fee base of funeral honoraria, grave upkeep, and anniversary offerings, and denominational literature supplies the justification for exclusive death jurisdiction. Families can sever the registration, but doing so is socially costly, which keeps revenue stable even as explicit belief declines."
+    },
+    {
+      "name": "shrine_priesthood",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hereditary and licensed priests of the shrine system. Separation handed them exclusive claim over purity-managed rites: births, newborn presentations, land purification, festival life, and for decades state stipends backed by compulsory parish rolls. They simultaneously lost what their former temple attachments had provided, chiefly funeral income and death-anniversary offerings. Professional formation treats contact with the dead as defiling, so re-entering the funeral market would require overturning their own purity discipline."
+    },
+    {
+      "name": "danka_households",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Ordinary families registered with a neighborhood temple. They receive funerals, gravesites, and annual memorial services, and owe recurring payments: funeral honoraria that run high relative to comparable ceremonies, grave maintenance fees, and segmental anniversary offerings. Registration is inherited along with the family grave; dropping it strains kin relations and complicates burial logistics. Many report thin personal attachment to Buddhist doctrine alongside uninterrupted payment."
+    },
+    {
+      "name": "fused_village_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Rural communities whose sacred life ran through combined complexes hosting kami festivals, Buddhist mortuary halls, and shared rites honoring both. The edict campaign forced them to split these sites, surrender images, and choose affiliations; villages that resisted saw leaders fined or prosecuted. Their descendants inherit a landscape of divided institutions and fragmented festival calendars, with the pre-separation liturgy carried mainly by elders and local historians."
+    },
+    {
+      "name": "jinguji_institutions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "The shrine-attached temples themselves, the monastic complexes embedded in shrine precincts that had mediated between kami and buddha cults for centuries. Between 1868 and 1871 they were abolished wholesale: buildings demolished, statues burned or sold, resident clerics laicized or expelled. As corporate actors they ceased to exist; their traces survive in local records and in the split physical fabric of shrine precincts."
+    },
+    {
+      "name": "shinto_death_rite_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Priests, sectarian groups, and reformers who contend that kami cults can serve the dead, citing precedents where shrines handled mortuary rites before purity doctrine hardened. They publish liturgies and perform occasional shrine funerals, but face a market arranged against them: entrenched temple incumbency in parish networks, defilement norms inside the priesthood itself, and funeral-industry defaults. Their share of the death-rite market remains marginal despite periodic revival efforts."
+    },
+    {
+      "name": "religious_studies_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic specialists in Japanese religion, historians of kami-buddha relations and sociologists of contemporary practice. They document the pre-separation fusion, the mechanics of the nineteenth-century campaign, and current statistics on funeral affiliation, and they generate the competing interpretive frames gathered under this story's kernel. They collect no revenue from the arrangement and their analyses carry no jurisdictional force."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allocates ritual jurisdiction over the human lifecycle between two sacerdotal systems serving the same population: purity-managed life transitions and agricultural cycles to kami shrines, death, burial, and posthumous memorial care to Buddhist temples. Without the allocation, both systems claim the same rites and households face duplicate obligations and open jurisdictional conflict.",
+    "transfer_function": "Moves money and obligation from lay households to institutional religion: funeral honoraria, grave maintenance, anniversary offerings, and parish dues flow to temples; purification fees, offerings, and historically compulsory parish support flow to shrines. In the enforcement era it also moved property, with fused sacred assets reassigned to whichever side survived, and moved legitimation upward to the state in exchange for administrative recognition.",
+    "absent_voices": "The villagers whose combined complexes were dismantled had no seat in the 1868 to 1871 edict process; petitions and rural uprisings against separation were met with prosecution rather than representation. Shinto death-rite advocates remain outside the death jurisdiction the partition assigns. And the parties whose identities the partition defines, the kami and buddhas as worshipped, enter only through institutions claiming to speak for them; no seat represents the fused practice itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Funeral and grave arrangements are contractually and emotionally load-bearing: if the death-jurisdiction assignment vanished overnight, parish revenue streams, cemetery-law defaults, funeral-industry routing, and family memorial calendars would all reorganize; shrines would face immediate demand for death rites they currently refuse on purity grounds; and the two-clergy division of the lifecycle calendar, new year visits, childhood blessings, weddings, funerals, and memorial anniversaries, would lose its coordinating frame.",
+    "founding_problem": "Two layered problems. The older stratum: keeping death pollution away from purity-managed sacred space so kami rites remain performable, an allocation problem inherent to operating purity and death cults for one population. The Meiji stratum: constructing a sovereign national cult purged of foreign contamination, breaking Buddhist institutional power over household registration and funerals, and anchoring imperial ideology in an exclusively kami-centered ancestry.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Outside the beneficiary institutions: occupation-era disestablishment analysis and the religious-studies literature on pre-modern fusion and State Shinto corroborate the two-stratum genealogy; prefectural archives and village histories document that separation was imposed against recorded local resistance rather than demanded by practitioners; and market evidence, the steady rise of nonreligious funerals to roughly a third of the total, indicates the death-jurisdiction problem no longer uniquely requires the temple solution. No party outside the beneficiary set attests that the nationalist founding problem remains live."
+  },
+  "gain_flow": "buddhist_temple_establishment",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "The domain-partition claim, that kami and buddhas are ontologically distinct agents with complementary non-overlapping jurisdictions, operates in Japanese religious life as an arrangement with two strata: an old folk-practical division of ritual labor, and a Meiji-enforced separation that dismantled centuries of institutional fusion and then decayed into custom after 1945. The arrangement solves a genuine allocation problem while carrying asymmetric, actively maintained extraction: a death-jurisdiction monopoly monetized through hereditary parish obligations, purchased at the price of destroying fused practice. Claim and metrics are authored independently: I claim tangled_rope because both halves are structurally present; the metrics describe what the arrangement actually does, and the engine computes per-seat verdicts from the structural data. The epsilon referent is the standing partitioned arrangement across both strata, assessed by this reading's own lights.",
+    "key_agents": [
+      "- meiji_nationalist_ideologues: Agenda-setting authors of the separation program (institutional/arbitrage) — designed the partition and departed after implementation",
+      "- home_ministry_shrine_bureau: Enforcing administrator (institutional/mobile) — ran inspections, destruction orders, and clergy sanctions",
+      "- buddhist_temple_establishment: Primary beneficiary with a historical victim phase (organized/constrained) — holds the death-jurisdiction side and receives the recurring fee base",
+      "- shrine_priesthood: Secondary beneficiary (organized/constrained) — holds the purity-jurisdiction side of the partition",
+      "- danka_households: Principal continuing payers (powerless/constrained) — bear hereditary fees with service offsets",
+      "- fused_village_communities: Principal historical victims (powerless/trapped) — bore the dismantling of integrated sacred sites",
+      "- jinguji_institutions: Abolished intermediary institutions (powerless/trapped) — the corporate form destroyed by enforcement",
+      "- shinto_death_rite_advocates: Excluded voice (moderate/constrained) — barred from the death jurisdiction the partition reserves",
+      "- religious_studies_scholars: Analytical observer (analytical/analytical) — sees the full structure across all kernel readings"
+    ],
+    "logic_rationale": "End-state extractiveness sits at 0.52 because the standing arrangement mixes priced service (funerals and memorials households would purchase in some form regardless) with a partition premium: hereditary parish lock-in, honoraria inflated relative to comparable ceremonies, and foreclosure of the fused alternative. Suppression is 0.34: state coercion collapsed at disestablishment, and what remains is social enforcement, kin pressure, and incumbent gatekeeping rather than law. Theater is 0.42 and rising slowly: the rites remain functional, but the articulated rationale for the partition has thinned to habit and inherited formula, with almost no participant able to state why the domains must not merge. Accessibility collapse is 0.40, since alternatives demonstrably persist (nonreligious funerals, secular graves, small-scale shrine funerals) but carry real friction. Resistance is 0.28: the great resistance wave was broken in the 1870s, and contemporary posture is closer to indifference than opposition. The temporal series run on one shared ten-point grid so every tracked metric is authored at every examined time point; the 1946 discontinuity (points 70 to 78) is the interval's structural event, an enforcement collapse that cut suppression by two-thirds and extractiveness nearly in half while leaving the partitioned practice itself intact.",
+    "perspectival_gap": "The seats compute differently and should. From the agenda-setter seat the partition was a design task completed and abandoned; nothing in that seat's situation registers the ongoing fee flows. From the temple-establishment seat the arrangement is livelihood and identity: a jurisdiction it suffered to win and now administers, which reads as legitimate stewardship of the dead. From the danka-household seat the same structure arrives as inherited obligation, fees detached from felt belief. From the fused-community and jinguji seats the arrangement is a wound: sites split, lineages erased. The engine derives these divergent per-seat types from power, exit, and role data; the divergence between the temple seat and the household seat is the measurement this story exists to take.",
+    "directionality_logic": "Declared beneficiaries (temple establishment, shrine priesthood, Meiji ideologues) derive directionality near the beneficiary end; the ideologues sit nearest it because their exit was total arbitrage, they collected legitimation and left. Danka households derive near the target end, damped by their declared secondary benefit, they do receive the services they pay for. Fused village communities and jinguji institutions derive at the full-target end: trapped, no exit, and the enforcement fell directly on them. The excluded advocates register the foreclosure of an alternative rather than a payment flow. National spatial scope amplifies effective extraction modestly for the target seats, per the engine's scope scaling; suppression stays unscaled as a raw structural property.",
+    "mandatrophy_analysis": "The classification guards against two symmetrical mislabels. Reading the arrangement as pure extraction ignores that the allocation function is real and broadly endorsed: the born-Shinto-die-Buddhist settlement is a division of labor households largely affirm, and the purity stratum answers a problem that predates and survives the state. Reading it as pure coordination ignores its installation history and rent structure: the modern partition was imposed by coercion, retains hereditary fee lock-in, and forecloses the fused practice it displaced. On mandatrophy: the Meiji mandate, a sovereign national cult, died at disestablishment and no beneficiary openly defends it; the older purity-management stratum persists in attenuated form; hence founding_problem_status contested. A consumer reading the founding narrative as self-serving flag should find corroboration for exactly that: the nationalist stratum is dead, the practical stratum lives, and the arrangement's persistence is carried by habit and revenue rather than by either mandate.",
+    "kernel_context": "This story instantiates the domain_partition reading of the kami_buddha_ontology kernel: kami and buddhas as ontologically distinct agents governing complementary, non-overlapping domains. Sibling readings are honji_suijaku_monism (kami and buddhas identical as ground and trace) and incoherent_bundle (shinbutsu-shugo as an institutionally sustained bundle of contradictory commitments rather than a coherent kernel). The epsilon authored here measures only the partition strand of the arrangement; the siblings are separate constraint stories linked through the network, not folded into this one."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "honji_suijaku_monism",
+      "incoherent_bundle"
+    ],
+    "dual_formulation_note": "The colloquial label shinbutsu-shugo conflates at least three structurally distinct claims, decomposed per the epsilon-invariance principle into a linked family. This story authors the domain-partition reading: two parallel ontologies with enforced separation, epsilon near 0.5 mixing genuine coordination with monopoly rents. The honji-suijaku monism reading (hierarchical identity doctrine) has a different beneficiary structure, doctrinal elites collecting interpretive authority rather than households paying fees, and therefore its own epsilon and classification. The incoherent_bundle reading is a meta-claim denying stable classification for the aggregate. Upstream-downstream: the partition reading's enforcement created the institutional conditions (destroyed intermediaries, hardened jurisdictions) against which the monism reading's revival pressure and the bundle reading's diagnosis operate. Each member links to the others here; no member should absorb another's epsilon."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "honji_suijaku_monism",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "incoherent_bundle",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "kami_buddha_ontological_distinctness",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "death_pollution_barred_from_kami_sites",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "parallel_domain_dualism",
+    "drift_state": {
+      "moment": "contemporary_postdisestablishment",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "header": {
+    "constraint_id": "exercise_as_competence_maintenance__simulation_sufficiency_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "5a76fb59-1218-447c-81f1-6700ba972da7"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.5,
+    "theater_ratio": 0.37,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.32,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mandated Simulation Regime as Competence Maintenance (Simulation-Sufficiency Reading)",
+    "topic_domain": "safety_engineering/organizational_learning/crisis_preparedness",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_regulators",
+      "regulated_operators",
+      "simulator_vendors"
+    ],
+    "victims": [
+      "fidelity_gap_casualties"
+    ],
+    "vindicated_propositions": [
+      "transfer_of_training_hypothesis",
+      "simulator_certification_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Sets drill-frequency and fidelity requirements across covered industries, audits simulator scorecards and exercise logs as evidence of readiness, and publishes compliance statistics. Oversight budgets and staffing are justified by the demonstrability of this evidence stream. Abandoning or radically shrinking the mandate exposes the agency to blame attribution after any future incident, so stepping away from the regime carries career-institutional risk even where its value is doubted internally."
+    },
+    {
+      "name": "regulated_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Airlines, hospital systems, chemical plants, and utilities that must purchase mandated simulation hours and document exercise completion. They receive certified-ready status, insurer premium treatment, a litigation defense of record ('the crew was drilled'), and genuine procedural fluency among their crews. They also fund the entire apparatus: device purchase, scenario licensing, instructor time, and crew-hours diverted from production. Leaving the regime is not available while they operate licensed assets."
+    },
+    {
+      "name": "simulator_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Manufacture simulation devices, license scenario libraries, sell instructor certification and recurring recertification cycles into demand that exists only because purchase is compulsory. Pricing anchors to the mandate rather than to willingness-to-pay, and product refresh cycles track regulatory revision calendars. The same product lines port across aviation, medicine, energy, and maritime clients, so any single jurisdiction's rule changes pose little commercial risk."
+    },
+    {
+      "name": "drill_participants",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Frontline crews, nursing staff, control-room operators, and shift supervisors who spend scheduled duty hours inside scenarios and are scored on simulator performance. They bear fatigue, schedule disruption, and evaluation stress, and they individually carry the procedural fluency gained. They cannot opt out while employed in covered roles, and their qualitative sense of whether a scenario felt real enters the record only indirectly, filtered through pass/fail scoring."
+    },
+    {
+      "name": "fidelity_gap_casualties",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Patients, passengers, plant neighbors, and residents who are physically present when a real event exceeds what the trained-and-certified organization can execute. They inherit the difference between competence as measured in the simulator and competence demanded by the actual event: degraded communications, improvised decisions, delayed evacuation. They arrive after all preparation is complete and have no seat in the design of what prepared them."
+    },
+    {
+      "name": "accreditation_auditors",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Inspect exercise logs, witness scheduled drills, and sign off on simulator-scored competence evidence for accreditation purposes. They see pass rates and completion certificates; they almost never observe the same organization's behavior during an unscheduled real event. Their instruments measure exactly what the mandate defines as competence, no more."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a standing population of organizations capable of executing coordinated emergency response: scheduled rehearsals synchronize multi-shift and multi-agency procedure, surface equipment and protocol defects before real events, and preserve perishable procedural skills across the long quiet intervals between rare catastrophes.",
+    "transfer_function": "Moves crew time and operating budget from production into rehearsal; moves mandate-driven spending from regulated operators to simulator vendors, scenario licensors, and training providers; moves documented compliance artifacts from operators to regulators, insurers, and litigation defense.",
+    "absent_voices": "Those harmed when fidelity proved inadequate are dead, injured, or dispersed after the fact and are almost never seated on standards committees that define next cycle's scenarios. Independent human-factors researchers studying the limits of skill transfer sit outside the mandate-setting process. Frontline staff assessments of scenario realism reach the record only as scored outcomes, not as testimony about what the exercises failed to reproduce.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mandate regime vanished overnight, drill cadence would fall to voluntary and budgetary whim, the mandated simulator market would evaporate along with its pricing anchor, insurers would lose the documented-readiness signal they price against, and regulators would lose their principal evidence of having overseen anything. Competence maintenance would become discretionary and wildly uneven across organizations until the next disaster re-politicized it.",
+    "founding_problem": "Recurrent disasters showed organizations that had never rehearsed coordinated response failing within the first minutes to hours, with learning purchased afterward at the price of lives; the arrangement was built to force the rehearsal to happen before the event rather than after it.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent post-incident investigation boards, public inquiries, and accident reports — produced entirely outside the benefiting parties — attest both directions of the record: organizations without recent relevant rehearsal execute badly, and organizations with recent rehearsal execute measurably better initial response. The same investigation literature is the primary external source of the fidelity-gap critique, which corroborates that the founding problem (unrehearsed response) remains live while documenting where the current answer falls short."
+  },
+  "gain_flow": "simulator_vendors",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "lived_catastrophe_necessity_reading",
+      "hybrid_decay_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'exercise maintains crisis competence.' The label conflates structurally distinct claims about what exercises the competence kernel; each claim is authored as its own story with its own epsilon, beneficiary/victim structure, and victim set. This file instantiates the sufficiency claim: a comparatively narrow victim set (only those harmed when simulation fidelity proved inadequate) and an epsilon reflecting endorsement of the core rehearsal function plus compliance-layer accumulation. The sibling stories instantiate the lived-catastrophe necessity claim and the hybrid decay claim, with different victim sets and materially different epsilon. Family linkage runs through network.affects_constraints here and through typed edges in cs_structure.reading_relations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading of the exercise_as_competence_maintenance kernel — which reading is instantiated here, and what would the sibling readings change structurally?",
+      "resolution_mechanism": "Framework choice resolves at the point of institutional adoption: an oversight body that certifies readiness from simulator scorecards is holding this reading; one that weights field-performance history over drill logs is holding a sibling. The disagreement locates at a single structural element — whether any attainable simulation fidelity reaches judgment-under-stakes — and each sibling answers it differently.",
+      "impact": "Adopting the lived-catastrophe sibling expands the victim set to everyone whose competence atrophied without real-stakes activation and raises epsilon sharply; adopting the hybrid sibling splits the kernel into separately classified procedural and judgment constraints with distinct victim sets. This file's classification holds only within the sufficiency reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is the simulation-sufficiency reading of a contested kernel; sibling readings are separate constraints, not parameters of this one."
+    },
+    {
+      "id": "fidelity_adequacy_at_scale",
+      "question": "Is fidelity sufficient for retention transfer attainable at deployable scale and cost, or does the attainable-fidelity frontier fall short of what the sufficiency claim requires?",
+      "resolution_mechanism": "Transfer-effectiveness studies correlating simulator tier with subsequent field performance across industries, paired with cost curves for high-fidelity simulation at fleet-wide scale.",
+      "impact": "If the fidelity the claim requires cannot be bought at the scale the mandate covers, sufficiency collapses toward the hybrid reading, the effective victim set widens past fidelity-gap casualties, and epsilon rises accordingly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reading's own success condition (adequate fidelity, everywhere, affordably) is met in fact."
+    },
+    {
+      "id": "simulator_metric_predictive_validity",
+      "question": "Do simulator performance metrics predict field performance, or do they reward simulator-specific fluency that decays under real stakes?",
+      "resolution_mechanism": "Linkage datasets matching individual and crew simulator scores to performance in subsequent unscheduled real incidents, controlling for case mix.",
+      "impact": "Weak predictive validity means the theater ratio is understated at 0.37 and the arrangement drifts toward theatrical maintenance of a credential rather than maintenance of capability — a classification movement toward piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the competence measure the mandate relies on measures the competence the mandate exists to protect."
+    },
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "Where does genuine coordination end and mandate-created rent begin — is the compelled simulator market a necessary cost of the coordination, or rent riding on compulsion?",
+      "resolution_mechanism": "Compare readiness outcomes across jurisdictions that mandate outcome-audited field exercises versus jurisdictions that mandate simulator-hour counts, at matched spend levels.",
+      "impact": "If outcomes track audit type rather than spend, the vendor-side share of measured extraction is rent removable by mandate redesign without losing the rehearsal function; if outcomes track spend, most measured extraction is nearer true coordination cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Separability of the rehearsal function from the compliance-market apparatus attached to it."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "simulated_exercise_parity",
+    "drift_state": {
+      "moment": "contemporary_post_incident_inquiry_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "lived_catastrophe_necessity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_decay_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulated_exercise_is_genuine_activation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "fidelity_gradient_determines_retention",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Across safety-critical industries, regulators mandate recurring catastrophe rehearsal and accept simulator performance as the evidence of maintained competence. The standing arrangement under examination is that regime as this reading endorses it: simulated catastrophe treated as genuine exercise of the response competence, with fidelity of simulation governing how much of that exercise survives contact with a real event. The regime genuinely solves a collective-action problem — no single operator can sustain multi-agency rehearsal alone, and skills decay without scheduled use — while a compliance-market layer has grown around the mandate: compulsory purchase anchoring vendor pricing, recertification lock-in, and documented-drill artifacts functioning as liability cover partly decoupled from field readiness. KEY AGENTS (by structural relationship): - safety_regulators: Agenda-setter and beneficiary (institutional/constrained) — mandate the regime and collect demonstrable oversight; - regulated_operators: dual-positioned beneficiary/payer (powerful/constrained) — fund the apparatus, collect compliance cover and capability; - simulator_vendors: primary collecting seat (organized/arbitrage) — own the mandate-created market; - drill_participants: cost-bearing participants with incidental personal gain (moderate/constrained); - fidelity_gap_casualties: primary targets under this reading's narrowed victim set (powerless/trapped) — bear harm when fidelity proves inadequate; - accreditation_auditors: analytical observers measuring what the mandate defines.",
+    "key_agents": [
+      "safety_regulators: agenda-setter and beneficiary (institutional/constrained) — set drill mandates, collect demonstrable oversight",
+      "regulated_operators: dual-positioned beneficiary/payer (powerful/constrained) — buy mandated simulation, collect compliance cover and genuine fluency",
+      "simulator_vendors: primary collecting seat (organized/arbitrage) — sell into demand created by compulsion",
+      "drill_participants: cost-bearing participants (moderate/constrained) — spend duty hours, carry the skill gains",
+      "fidelity_gap_casualties: primary targets under this reading (powerless/trapped) — harmed when real events exceed the trained envelope",
+      "accreditation_auditors: analytical observers (institutional/analytical) — certify what the mandate defines as competence"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.42: the core rehearsal function delivers real capability, so the reading's own lights discount the arrangement heavily toward coordination, but a rent layer demonstrably accumulates — vendor pricing anchored to compulsory purchase, recertification cycles tracking regulatory calendars, and compliance artifacts priced above their readiness content. Suppression is 0.50 and structural throughout: mandates bind through audit schedules, penalty schedules, and insurance premium consequences, not through internalized belief; nobody involved thinks drills are unnecessary because they have been made unable to imagine otherwise. Theater ratio 0.37 and climbing: scenario reuse, teaching-to-the-checklist, and announced-exercise choreography substitute measurable proxy performance for field transfer, but remain below the proxy-domination threshold. Accessibility_collapse 0.45: alternatives persist (unannounced drills, joint field exercises with response agencies, cross-industry scenario exchanges) but the compliant-minimum format crowds them out once the audit logic is understood. Resistance 0.32: operators lobby against mandate expansion and unions negotiate drill compensation, but normative endorsement of rehearsal broadly blunts opposition — nobody campaigns against being prepared. Enforcement history traces one visible half-cycle: aggressive build-up after founding disasters (suppression_requirement rising to 0.66 by t8), then normalization and softening as paperwork compliance became culturally self-sustaining (declining to 0.50). The oscillation driver is external — disaster salience — not an intermittent-reinforcement mechanism owned by the constraint. All three tracked series run on one shared grid (points 0–24 at step 4) so no metric row is sampled against a substituted end-state value.",
+    "perspectival_gap": "The payer seats and the collecting seats should compute differently. From the vendor seat the arrangement is a durable revenue architecture built on statutory demand. From the operator seat it is an annoying-but-rational purchase: compliance cover plus capability, worth the invoice. From the participant seat it is taxed time repaid in personally-held skill. From the fidelity-gap casualty seat it is the reason competent-seeming people failed them — the same scorecard that certified the crew is the record of what was never rehearsed. Scope interacts with verification: operators span global footprints while auditors inspect nationally, so larger scope makes the extraction layer harder to verify and the engine scales effective extraction upward accordingly; casualties, trapped and powerless, sit at the full-target end with no dampening exit. Suppression here is structural, not internalized — no internalization component is claimed, and no suppression-mechanism ambiguity omega is required on that axis.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation: regulators and vendors declare as beneficiaries and sit near the subsidy end; fidelity_gap_casualties declare as victims with trapped exit and powerless position, placing them at the full-target end with amplified effective extraction. Two corrections were needed because the derivation would otherwise misread dual-positioned agents. First, regulated_operators appear in the beneficiaries array, which pulls the derivation strongly toward the beneficiary pole (~0.15-0.25); but they also fund the entire apparatus — device purchase, licensing, crew-hours — so their true position is near-symmetric, corrected to 0.45 via the powerful-atom override. Second, drill_participants carry no victim declaration (this reading deliberately narrows the victim set to fidelity-gap casualties, per the reading's structural signature), which would seat them near-neutral-or-beneficiary; but they bear real time, fatigue, and evaluation costs against genuine personal skill gains, corrected to 0.58 via the moderate-atom override. The overrides encode cost-bearing that the narrowed victim declaration cannot express.",
+    "mandatrophy_analysis": "The founding problem is live: catastrophic-risk exposure persists, and the external investigation record attests that unrehearsed organizations still fail. Status live crossed with verdict world_rearranges yields no zombie flag — the arrangement is not surviving past its function. Mandatrophy resolution is therefore not declared, and no sunset clause is authored: nothing in the regime's own structure contemplates its retirement. The classification work this story performs is preventing two symmetrical mislabels. Reading the arrangement as pure coordination ignores that the same statute that schedules rehearsal also manufactures a captive market and a liability artifact — asymmetric extraction with named payers. Reading it as pure extraction ignores that rehearsal demonstrably preserves perishable skill and surfaces protocol defects before events — a coordination function with corroborated external evidence. Tangled_rope holds both facts without letting either erase the other; the temporal series then tracks which side is gaining (rent and theater rising slowly, enforcement softening), which is the drift signal the corpus exists to take. Coalition note: the victim seat here is composed of post-hoc, geographically dispersed casualties who share no organizing identity before the event that harms them, so coalition-power prospects for the powerless seat are weak, and the analysis does not lean on rescue-by-coalition."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

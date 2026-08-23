@@ -1,0 +1,384 @@
+% ============================================================================
+% CONSTRAINT STORY: us_constitution_text__positivist_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-12
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_us_constitution_text__positivist_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: us_constitution_text__positivist_reading
+ *   human_readable: Positivist Rule of Recognition — Constitutional Validity by Enactment Pedigree
+ *   domain: legal/constitutional/interpretive_theory
+ *
+ * SUMMARY:
+ *   The positivist reading holds that a norm counts as constitutional law
+ *   because it was enacted through prescribed procedures — bicameral passage,
+ *   presentment, Article V ratification — and not because its content is
+ *   just, its meaning is what the ratifiers understood, or its principles fit
+ *   contemporary values. As an operative constraint it binds judges to
+ *   source-validity: the operative question 'was this enacted?' replaces 'is
+ *   this just?' and 'what did they mean?', and constitutional change runs
+ *   exclusively through Article V. The arrangement coordinates the legal
+ *   system around a checkable criterion of validity — the rule-of-recognition
+ *   function — while transferring interpretive finality to
+ *   enactment-accessible institutions and the cost of un-enacted justice
+ *   claims to the claimants who hold them. Per the epsilon-invariance
+ *   principle this story is one member of a three-story constraint family:
+ *   the colloquial label 'constitutional interpretation' decomposes into
+ *   structurally distinct readings (positivist, originalist,
+ *   living-constitutionalist), each with its own epsilon, victims, and
+ *   classification; the siblings are separate files linked through
+ *   network.affects_constraints, and the family decomposition is documented
+ *   in network.dual_formulation_note.
+ *
+ * KEY AGENTS:
+ *   - federal_judiciary: agenda-setter and primary beneficiary (institutional/identity_locked) — administers the pedigree criterion, collects its legitimacy and insulation, absorbs grudge-case enforcement costs
+ *   - incumbent_legislatures: beneficiary (institutional/constrained) — enactments carry validity regardless of content
+ *   - executive_officials: beneficiary (institutional/constrained) — presumptive legality for official action under enacted norms
+ *   - organized_enactment_interests: beneficiary (organized/mobile) — equipped to run the Article V conversion path the criterion makes decisive
+ *   - unenumerated_rights_claimants: primary target (powerless/trapped) — moral claims foreclosed at the threshold for lack of enactment
+ *   - amendment_blocked_groups: secondary target (organized/trapped) — cannot open the Article V door the criterion's own defense points to
+ *   - moral_jurisprudence_traditions: excluded voice (moderate/constrained) — rival validity criterion kept outside operative doctrine
+ *   - constitutional_academy: analytical observer (moderate/analytical) — documents the gap between procedural claim and practice
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(us_constitution_text__positivist_reading, 0.55).
+domain_priors:suppression_score(us_constitution_text__positivist_reading, 0.6).
+domain_priors:theater_ratio(us_constitution_text__positivist_reading, 0.42).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(us_constitution_text__positivist_reading, extractiveness, 0.55).
+narrative_ontology:constraint_metric(us_constitution_text__positivist_reading, suppression_requirement, 0.6).
+narrative_ontology:constraint_metric(us_constitution_text__positivist_reading, theater_ratio, 0.42).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(us_constitution_text__positivist_reading, accessibility_collapse, 0.5).
+narrative_ontology:constraint_metric(us_constitution_text__positivist_reading, resistance, 0.6).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(us_constitution_text__positivist_reading, tangled_rope).
+narrative_ontology:human_readable(us_constitution_text__positivist_reading, "Positivist Rule of Recognition — Constitutional Validity by Enactment Pedigree").
+narrative_ontology:topic_domain(us_constitution_text__positivist_reading, "legal/constitutional/interpretive_theory").
+
+domain_priors:requires_active_enforcement(us_constitution_text__positivist_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(us_constitution_text__positivist_reading, '93325f76-6a8f-43d0-8480-bac04527f46d').
+narrative_ontology:cs_kernel_codification('93325f76-6a8f-43d0-8480-bac04527f46d', fixed_text).
+narrative_ontology:cs_authority_grounding('93325f76-6a8f-43d0-8480-bac04527f46d', practice).
+narrative_ontology:cs_interpretation_layer_present('93325f76-6a8f-43d0-8480-bac04527f46d').
+narrative_ontology:cs_reading_relation('93325f76-6a8f-43d0-8480-bac04527f46d', us_constitution_text__originalist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('93325f76-6a8f-43d0-8480-bac04527f46d', us_constitution_text__living_constitutionalist_reading, coexists_with).
+narrative_ontology:cs_axiom('93325f76-6a8f-43d0-8480-bac04527f46d', foundational, validity_requires_enactment_pedigree).
+narrative_ontology:cs_axiom_status(validity_requires_enactment_pedigree, holdable).
+narrative_ontology:cs_axiom_grounding('93325f76-6a8f-43d0-8480-bac04527f46d', validity_requires_enactment_pedigree, conventional).
+narrative_ontology:cs_axiom('93325f76-6a8f-43d0-8480-bac04527f46d', foundational, source_validity_binds_judges).
+narrative_ontology:cs_axiom_status(source_validity_binds_judges, holdable).
+narrative_ontology:cs_axiom_grounding('93325f76-6a8f-43d0-8480-bac04527f46d', source_validity_binds_judges, conventional).
+narrative_ontology:cs_axiom('93325f76-6a8f-43d0-8480-bac04527f46d', secondary, article_v_exclusive_amendment_path).
+narrative_ontology:cs_axiom_status(article_v_exclusive_amendment_path, holdable).
+narrative_ontology:cs_axiom_grounding('93325f76-6a8f-43d0-8480-bac04527f46d', article_v_exclusive_amendment_path, conventional).
+narrative_ontology:cs_reference_frame('93325f76-6a8f-43d0-8480-bac04527f46d', article_v_pedigree_supremacy).
+narrative_ontology:cs_drift_state('93325f76-6a8f-43d0-8480-bac04527f46d', contemporary_doctrine, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('93325f76-6a8f-43d0-8480-bac04527f46d', '').
+narrative_ontology:cs_kernel_id(us_constitution_text__positivist_reading, us_constitution_text).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(us_constitution_text__positivist_reading, federal_judiciary).
+narrative_ontology:constraint_beneficiary(us_constitution_text__positivist_reading, incumbent_legislatures).
+narrative_ontology:constraint_beneficiary(us_constitution_text__positivist_reading, executive_officials).
+narrative_ontology:constraint_beneficiary(us_constitution_text__positivist_reading, organized_enactment_interests).
+narrative_ontology:constraint_victim(us_constitution_text__positivist_reading, unenumerated_rights_claimants).
+narrative_ontology:constraint_victim(us_constitution_text__positivist_reading, amendment_blocked_groups).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Decides which enacted norms count as constitutional law: checks enactment provenance, treats Article V ratification as the exclusive path of constitutional change, and reverses lower courts that ground holdings in unenacted moral principle. The arrangement supplies the courts' decision procedure, their claim to neutrality, and their insulation from political accountability; it also obliges them to enforce enacted provisions they may find unjust, so they absorb the public legitimacy cost of those enforcement acts. Leaving the criterion would mean dismantling the self-understanding that justifies judicial review itself.
+narrative_ontology:constraint_stakeholder(us_constitution_text__positivist_reading, federal_judiciary, agenda_setter,
+    institutional, generational, identity_locked, national).
+narrative_ontology:stakeholder_secondary_role(us_constitution_text__positivist_reading, federal_judiciary, beneficiary).
+
+% Produce norms whose constitutional force flows from enactment itself: whatever clears the prescribed procedure stands as valid law regardless of its content, which shields legislative products from judicial moral veto. Their standing access to the enactment machinery is the asset the criterion protects. They have no way to obtain that validity guarantee outside the pedigree system, and no incentive to widen the criteria of validity beyond it.
+narrative_ontology:constraint_stakeholder(us_constitution_text__positivist_reading, incumbent_legislatures, beneficiary,
+    institutional, biographical, constrained, national).
+
+% Act under statutes and constitutional provisions whose force rests on proper promulgation. The criterion gives official action presumptive legality and shields the administrative state from litigation built on unenacted moral principle. Their dependence is structural: if every act's validity became contestable on moral grounds, governing by standing rules would become impractical.
+narrative_ontology:constraint_stakeholder(us_constitution_text__positivist_reading, executive_officials, beneficiary,
+    institutional, biographical, constrained, national).
+
+% Interest groups with the resources and coalitions to work Congress and state ratification bodies can convert organizational effort into entrenched constitutional change through Article V and into ordinary law through enactment. The criterion makes that conversion path the decisive one, rewarding precisely the actors equipped to run it. They keep fallback channels — statutes, state constitutions, friendly courts — if the constitutional path closes, so their exposure to the arrangement is low.
+narrative_ontology:constraint_stakeholder(us_constitution_text__positivist_reading, organized_enactment_interests, beneficiary,
+    organized, generational, mobile, national).
+
+% Litigants whose substantive claims rest on moral argument rather than enacted text — unenumerated rights, evolving-equality theories, natural-justice claims — find the criterion forecloses their theories at the threshold: no enactment, no constitutional hearing on the merits. Their routes of escape all run through institutions the criterion points away from their moral premises: courts bound to pedigree, a Congress without the votes, states without the will. They cannot exit to any forum that would honor the claim as posed.
+narrative_ontology:constraint_stakeholder(us_constitution_text__positivist_reading, unenumerated_rights_claimants, payer,
+    powerless, biographical, trapped, national).
+
+% Groups that cannot assemble the supermajority coalition Article V requires — historically disenfranchised populations, regionally concentrated minorities, diffuse issue coalitions — cannot convert even majority-supported claims into enacted constitutional text. The standard defense of the criterion ('if the right matters, amend the Constitution') points at a door their position structurally cannot open. They carry the arrangement's costs while holding the least leverage over the enactment machinery it channels everything through.
+narrative_ontology:constraint_stakeholder(us_constitution_text__positivist_reading, amendment_blocked_groups, payer,
+    organized, generational, trapped, national).
+
+% Natural-law theorists, rights-based scholars, and judges inclined to moral reasoning hold a developed account of what makes constitutional law valid that operative doctrine excludes. They publish, dissent, and teach, but their criterion of validity has no purchase in controlling precedent; their objection is recorded at the margins of the system they argue should be re-founded.
+narrative_ontology:constraint_stakeholder(us_constitution_text__positivist_reading, moral_jurisprudence_traditions, excluded,
+    moderate, generational, constrained, national).
+
+% Law professors, legal historians, and philosophers of law analyze the criterion's operation, document the gap between its procedural claim and actual adjudicative practice, and supply both the critiques and the defenses the other seats litigate with. They collect no rents from the arrangement and bear none of its enforcement burdens; their seat is analytical.
+narrative_ontology:constraint_stakeholder(us_constitution_text__positivist_reading, constitutional_academy, observer,
+    moderate, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(us_constitution_text__positivist_reading, federal_judiciary).
+narrative_ontology:fixing_cost_class(us_constitution_text__positivist_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a shared, checkable criterion of constitutional validity: every institution and citizen can verify whether a norm was enacted through prescribed procedures (bicameral passage, presentment, Article V ratification), so disputes about what counts as supreme law are resolved by documentary pedigree rather than by adjudicating contested moral philosophy or historical reconstruction. This is the rule-of-recognition function: it makes the legal system's identity determinate.
+% TRANSFER_FUNCTION: Moves interpretive finality and legitimacy to institutions and actors whose positions carry enactment pedigree (courts applying it, legislatures producing it, officials acting under it), and moves the cost of un-enacted justice claims onto the claimants who hold them — their theories are foreclosed at the threshold rather than adjudicated on the merits.
+% ABSENT_VOICES: The people governed by enacted provisions they had no hand in enacting — the enslaved at the founding, disenfranchised populations since, and contemporary diffuse groups unable to field Article V coalitions — are structurally absent from the pedigree that binds them; they appear in the system only as litigants losing or as amendment proposals failing. Natural-law and rights-based jurisprudential traditions hold developed objections but sit outside operative doctrine.
+% DISAPPEARANCE_RATIONALE: If the pedigree criterion vanished overnight, every constitutional norm's binding force would become simultaneously contestable on moral and historical grounds; courts would need a replacement criterion or collapse into open political adjudication; Article V would lose its monopoly on constitutional change and with it the concept of entrenched law; and the predictability that statutes, contracts, and administrative government currently borrow from constitutional validity would evaporate until a successor rule of recognition stabilized.
+% FOUNDING_PROBLEM: The founding generation needed supreme law that courts could enforce without courts becoming an unaccountable moral tribunal: a criterion that lets a judge say 'this is law because it was enacted, not because I approve of it.' The positivist reading is the mature form of that answer — judicial review legitimated as pedigree-checking rather than moral reasoning.
+% FOUNDING_PROBLEM_CORROBORATION: Legal-historical scholarship outside the benefiting parties attests the founding problem was real (the Marbury-era record and the Federalist defense of judicial review as applied law, not will). The problem's continuing liveness is attested by the reading's own critics: the legal-realist tradition and rights-based theorists dispute the positivist solution precisely because they accept that the interpretive-constraint problem exists. No source outside the beneficiary set attests that the problem is dead; the dispute is over whether the pedigree criterion still serves the problem or now chiefly protects the institutions administering it.
+narrative_ontology:disappearance_verdict(us_constitution_text__positivist_reading, world_rearranges).
+narrative_ontology:founding_problem_status(us_constitution_text__positivist_reading, contested).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(us_constitution_text__positivist_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_stealth3', 'agent/example_platform_commission.json',
+    'stealth/ox-alpha', 'max_tokens=65536,temperature=model_default,reasoning=model_default').
+narrative_ontology:story_seed(us_constitution_text__positivist_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(us_constitution_text__positivist_reading, 0.55, 'stealth/ox-alpha', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(us_constitution_text__positivist_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(us_constitution_text__positivist_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(us_constitution_text__positivist_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extraction is 0.55: the criterion systematically excludes un-enacted justice claims from constitutional remedy while channeling validity and finality to actors with enactment access; it is not higher because the exclusion is partly the price of a coordination good — a determinate rule of recognition — that all parties, eventually including the excluded, consume, and because Article V has repeatedly absorbed major justice claims (the Reconstruction Amendments being the canonical case). Suppression is 0.6: persistence depends on actively excluding rival criteria of validity through appellate reversal, certiorari discretion, professional socialization, and the legitimacy narrative of neutral application; the suppressed objects here are interpretive alternatives rather than persons, and the suppression mechanism is both structural (hierarchy, gatekeeping) and internalized (judges socialized to experience moral reasoning as illegitimate even absent external sanction), with the structural component dominant and the internalized component keeping enforcement costs low between crises. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is scaled downstream by directionality and scope in the engine. Theater is 0.42: pedigree-checking is real work, but a substantial share of 'we merely apply enacted text' activity is performance — formalist opinions smuggling substantive judgment, the neutrality claim maintained against visible moral reasoning. Accessibility collapse is 0.5: understanding the criterion does not collapse its alternatives, because two rival readings are institutionalized with sitting adherents; what is collapsed is a sitting judge's practical room to adopt them. Resistance is 0.6: a century of realist and rights-based critique, a rival-reading bench, and periodic political backlash. Receipt: the gains demonstrably accrue to federal_judiciary, which administers the criterion and collects its primary returns — decision procedure, neutrality legitimacy, insulation, docket control — so gain_flow names that seat; fixing is prohibitive for the seat that could fix it, since adopting a rival criterion would dissolve the judiciary's self-justification and expose it to political retaliation. The claim (tangled_rope) and the metrics were authored independently: the type states the structure I believe true (real coordination function plus asymmetric exclusion costs plus active enforcement); the metrics state what I believe descriptively operates; the engine computes the per-seat classifications. The criterion's coordination function is providing a shared, checkable validity standard, so boltzmann.coordination_type is information_standard. All three tracked series share one time grid (1803, 1857, 1905, 1937, 1954, 1990, 2026).
+ *
+ * PERSPECTIVAL GAP:
+ *   The sharpest divergence is between seats at the same nominal power. The federal judiciary and incumbent legislatures are both institutional actors, yet the judiciary administers the criterion and must enforce enacted provisions it may find unjust (Dred Scott is the canonical cost), while legislatures collect validity without administering anything; the judiciary's identity lock — its self-justification as neutral applier of enacted law, an institutional identity in which the organization has become its function — means it cannot adopt the claimants' criterion without dissolving the institution's own legitimacy story, whereas a legislature's exposure is merely electoral. Among the paying seats, unenumerated_rights_claimants are individually powerless, and their only coalition form is exactly the amendment path the criterion reserves for change — the path amendment_blocked_groups, though organized, cannot open; coalition capacity therefore does not convert into exit for either paying seat. From the agenda-setter seat the arrangement computes as coordination it maintains; from the trapped paying seats the same structure operates as foreclosure of their claims.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Beneficiary declarations map to real actors and flows: the judiciary collects the decision procedure, the neutrality legitimacy, and insulation from political accountability; legislatures collect validity for their products; officials collect presumptive legality; organized interests collect the Article V conversion path. The scenario's declared abstract beneficiary — 'institutional stability and rule-of-law predictability' — is recorded under vindicated_propositions (rule_of_law_predictability), not beneficiaries, because a proposition collects no rents. The declared victim — 'substantive justice claims that lack formal enactment' — is instantiated as the actors holding those claims (unenumerated_rights_claimants, amendment_blocked_groups), since victims must be real-world actors. These declarations drive the directionality derivation: beneficiary seats derive low d; victim seats derive high d, amplified by trapped exit on both paying seats. The judiciary's agenda-setter position does not push it toward the target end: the grudge-case legitimacy costs it absorbs are real but smaller than the returns it collects, and its identity lock deepens rather than offsets its subsidy. Spatial scope is national, but verification of the criterion is documentary — enactment records are checkable — which keeps the scope amplification of effective extraction modest, one structural reason the arrangement is stable.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding problem — how to have supreme law and judicial enforcement without an unaccountable moral tribunal — remains live, but the arrangement's center of gravity has partly shifted from solving it to protecting the institutions that administer it: the theater series rises across the mechanical-jurisprudence era and stays elevated, and the neutrality performance now does defensive work. The tangled_rope classification prevents two opposite misreadings. Reading the criterion as pure extraction would erase a real coordination achievement — every legal system needs a criterion of validity, and the enactment path has absorbed justice claims at Reconstruction scale. Reading it as pure coordination would erase the documented victims — claimants foreclosed at the threshold, and the Article V door their own defense points to standing effectively closed to diffuse interests. The live drift risk runs toward extraction dominance: if Article V's accessibility keeps degrading while the exclusion of moral claims persists, the victim side of the ledger grows and the arrangement drifts toward the snare cell; a Reconstruction-scale absorption of a justice claim through Article V would push it back toward the rope side. The classification keeps both sides of that ledger on the books, which is what the mandatrophy question — is the arrangement still doing what it was built for, or performing its history? — requires.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    kernel_reading_indexicality,
+    'This story is one reading (positivist_reading) of the us_constitution_text kernel; what structurally changes if a sibling reading is instantiated instead?',
+    'Author the sibling stories (originalist_reading, living_constitutionalist_reading) and compare victim sets, beneficiary structures, and epsilon across the family.',
+    'The originalist reading relocates the excluded class from ''claims lacking enactment pedigree'' to ''claims diverging from ratification-era public meaning''; the living reading relocates it to ''claims frozen at enacted text.'' Each relocation changes who pays, who collects, and the computed classification of the same constitutional order.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_indexicality, conceptual, 'Committer structure: which kernel reading this story instantiates and what siblings would change.').
+
+omega_variable(
+    validity_criterion_location,
+    'Do the three readings answer the same question — what makes constitutional law binding — or does the positivist reading answer a validity question while the siblings answer interpretive-method questions, making them partially compatible rather than rival?',
+    'Conceptual analysis of each reading''s target question: pedigree as validity criterion versus original meaning as interpretive canon versus adaptive principle as interpretive duty; test whether hybrid positions (pedigree validity plus originalist method) are coherent and inhabited.',
+    'If the siblings answer different questions, the family is a division of labor rather than a contest, and cross-reading epsilon comparison risks category error; if they answer the same question, the family is a genuine three-way rivalry and per-reading classification is the right unit of analysis.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(validity_criterion_location, conceptual, 'Where the disagreement between readings is located: validity versus interpretive method.').
+
+omega_variable(
+    extraction_or_coordination_price,
+    'Is the burden on un-enacted justice claims asymmetric extraction (value transferred to enactment-accessible institutions) or the unavoidable price of any rule-of-recognition coordination?',
+    'Comparative analysis across legal systems with different validity criteria; test whether hybrid criteria (pedigree plus principled moral reasoning, as in rights-based integrity theories) deliver comparable predictability and stability.',
+    'If hybrid criteria match the pedigree system''s stability, the exclusion of moral claims is extractive overhead and the arrangement drifts toward the snare cell; if not, part of the measured extraction is coordination cost and the arrangement sits nearer the rope side.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(extraction_or_coordination_price, empirical, 'Whether excluding moral-content claims is rent or the price of the coordination good.').
+
+omega_variable(
+    article_v_accessibility,
+    'Is the Article V amendment path — the standard defense of the criterion''s victim burden (''if the right matters, enact it'') — practically accessible to diffuse interests, or have supermajority structure and polarization closed it?',
+    'Measure amendment success rates by proposer type (organized versus diffuse), compare accessible historical windows (Reconstruction, Progressive era) against the contemporary period, and track state-ratification dynamics for justice-claim proposals.',
+    'If the path is effectively closed for the victim classes, the ''enact it then'' defense collapses, trapped-target effective extraction amplifies, and drift toward the snare cell is indicated; if accessible, the coordination side of the ledger holds and the tangled classification is stable.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(article_v_accessibility, empirical, 'Accessibility of the amendment route the criterion points victims toward.').
+
+omega_variable(
+    pedigree_application_leakage,
+    'How much substantive moral judgment leaks into nominally pedigree-bound adjudication (substantive due process, proportionality balancing, unenumerated-rights reasoning presented as textual analysis)?',
+    'Doctrinal coding of controlling opinions: classify each dispositive step as documentary (enactment provenance, Article V status) or substantive (moral or prudential judgment), and track the ratio across eras.',
+    'High leakage raises the theater ratio toward performative maintenance and undermines the neutrality legitimacy claim that does the criterion''s enforcement work; low leakage supports the authored suppression and theater values as descriptive.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(pedigree_application_leakage, empirical, 'Gap between the pedigree-only claim and actual adjudicative practice.').
+
+omega_variable(
+    rule_of_recognition_pedigree,
+    'The criterion ''validity derives from enactment'' is itself never enacted — it is a practice-constituted social rule. Does the reading''s own foundation sit inside or outside the pedigree system it describes?',
+    'Conceptual analysis of the rule of recognition''s status: whether it can be coherently treated as a presupposition of the legal system or whether its extra-pedigree foundation undermines the reading''s purity claim.',
+    'If the foundation is extra-pedigree, the reading''s claim to be purely procedural is internally unstable, the practice-drift reading of the arrangement strengthens, and the authority structure looks more practice-grounded than text-grounded; if the presupposition holds, the frame is coherent as authored.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(rule_of_recognition_pedigree, conceptual, 'Self-foundation status of the validity criterion.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(us_constitution_text__positivist_reading, 1803, 2026).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(us_const_positivist_tr_t1803, us_constitution_text__positivist_reading, theater_ratio, 1803, 0.22).
+narrative_ontology:measurement(us_const_positivist_tr_t1857, us_constitution_text__positivist_reading, theater_ratio, 1857, 0.3).
+narrative_ontology:measurement(us_const_positivist_tr_t1905, us_constitution_text__positivist_reading, theater_ratio, 1905, 0.55).
+narrative_ontology:measurement(us_const_positivist_tr_t1937, us_constitution_text__positivist_reading, theater_ratio, 1937, 0.5).
+narrative_ontology:measurement(us_const_positivist_tr_t1954, us_constitution_text__positivist_reading, theater_ratio, 1954, 0.35).
+narrative_ontology:measurement(us_const_positivist_tr_t1990, us_constitution_text__positivist_reading, theater_ratio, 1990, 0.4).
+narrative_ontology:measurement(us_const_positivist_tr_t2026, us_constitution_text__positivist_reading, theater_ratio, 2026, 0.42).
+
+% Extraction over time
+narrative_ontology:measurement(us_const_positivist_be_t1803, us_constitution_text__positivist_reading, base_extractiveness, 1803, 0.42).
+narrative_ontology:measurement(us_const_positivist_be_t1857, us_constitution_text__positivist_reading, base_extractiveness, 1857, 0.72).
+narrative_ontology:measurement(us_const_positivist_be_t1905, us_constitution_text__positivist_reading, base_extractiveness, 1905, 0.5).
+narrative_ontology:measurement(us_const_positivist_be_t1937, us_constitution_text__positivist_reading, base_extractiveness, 1937, 0.48).
+narrative_ontology:measurement(us_const_positivist_be_t1954, us_constitution_text__positivist_reading, base_extractiveness, 1954, 0.4).
+narrative_ontology:measurement(us_const_positivist_be_t1990, us_constitution_text__positivist_reading, base_extractiveness, 1990, 0.52).
+narrative_ontology:measurement(us_const_positivist_be_t2026, us_constitution_text__positivist_reading, base_extractiveness, 2026, 0.55).
+
+% Suppression requirement over time
+narrative_ontology:measurement(us_const_positivist_su_t1803, us_constitution_text__positivist_reading, suppression_requirement, 1803, 0.35).
+narrative_ontology:measurement(us_const_positivist_su_t1857, us_constitution_text__positivist_reading, suppression_requirement, 1857, 0.62).
+narrative_ontology:measurement(us_const_positivist_su_t1905, us_constitution_text__positivist_reading, suppression_requirement, 1905, 0.5).
+narrative_ontology:measurement(us_const_positivist_su_t1937, us_constitution_text__positivist_reading, suppression_requirement, 1937, 0.55).
+narrative_ontology:measurement(us_const_positivist_su_t1954, us_constitution_text__positivist_reading, suppression_requirement, 1954, 0.42).
+narrative_ontology:measurement(us_const_positivist_su_t1990, us_constitution_text__positivist_reading, suppression_requirement, 1990, 0.5).
+narrative_ontology:measurement(us_const_positivist_su_t2026, us_constitution_text__positivist_reading, suppression_requirement, 2026, 0.6).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(us_constitution_text__positivist_reading, information_standard).
+narrative_ontology:affects_constraint(us_constitution_text__positivist_reading, us_constitution_text__originalist_reading).
+narrative_ontology:affects_constraint(us_constitution_text__positivist_reading, us_constitution_text__living_constitutionalist_reading).
+narrative_ontology:affects_constraint(us_constitution_text__positivist_reading, article_v_amendment_procedure).
+
+% DUAL FORMULATION NOTE:
+% The colloquial label 'constitutional interpretation constraint' decomposes into three structurally distinct readings of the us_constitution_text kernel, per the epsilon-invariance principle: this positivist story (validity by enactment pedigree; victims are claimants whose moral content lacks enactment), the originalist story (meaning fixed at ratification; its own victims — claims diverging from original public meaning — and its own epsilon), and the living-constitutionalist story (meaning evolves with society; its own victims — claims frozen at enacted text — and its own epsilon). Each story carries its own claimed_type and metrics. The positivist criterion sits upstream of both siblings in one specific sense: Article V pedigree is the change-mechanism each sibling's account must route through or around, so this story structurally influences the siblings' operating environment. The article_v_amendment_procedure edge records the enforcement backbone: the criterion's extraction profile depends on the amendment path's accessibility (see omega article_v_accessibility).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

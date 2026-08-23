@@ -1,0 +1,427 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_boundary__individual_right_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "second_amendment_individual_right",
+    "story_uid": "20f68ba0-cb27-4b2b-a168-ee7de7ce38d3"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Individual-Right Arms Boundary: Operative-Clause Shield on Private Possession",
+    "topic_domain": "constitutional law/political theory/firearms policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "private_firearm_owners",
+      "firearms_industry",
+      "gun_rights_advocacy_organizations"
+    ],
+    "victims": [
+      "mass_shooting_victims",
+      "domestic_violence_victims",
+      "firearm_suicide_victims",
+      "urban_communities_with_concentrated_gun_violence",
+      "state_regulatory_authorities"
+    ],
+    "vindicated_propositions": [
+      "pre_existing_rights_doctrine",
+      "originalist_interpretive_authority"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 18
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.6,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This constraint is one reading of the second_amendment_boundary kernel: what structurally changes if a sibling reading (militia_conditioned_reading, insurrectionist_reading) is instantiated instead?",
+      "resolution_mechanism": "Comparative authoring of the sibling stories. The militia-conditioned reading moves private possession out of the protected domain and shrinks the victim set to harms outside militia-relevant context; the insurrectionist reading adds a resistance-capacity function and redraws the beneficiary set. The disagreement is located in a single structural element: whether the prefatory clause limits the operative clause's scope.",
+      "impact": "The victim set, the coordination function, and the enforcement structure all change with the reading; epsilon and classification are reading-indexed and not comparable across readings without normalization.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed structure of a contested constitutional kernel."
+    },
+    {
+      "id": "victim_set_reading_contestation",
+      "question": "Does this reading's own seat accept that the counted harms (mass-casualty events, domestic homicide, firearm suicide) are costs the boundary imposes, or does it hold them to be the price of a legitimate pre-existing liberty outside the cost ledger?",
+      "resolution_mechanism": "Seat-level comparison: the owner, industry, and enforcing-judiciary seats compute the boundary as right-protection with near-zero imposed cost; the victim seats compute enforced imposition with trapped exit. The divergence is structural, not a measurement error.",
+      "impact": "If the reading's self-assessment governs, effective imposed cost drops toward the coordination floor and the type moves toward rope; if the victim-seat accounting governs, the current profile holds or hardens.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed status of the victim set."
+    },
+    {
+      "id": "harms_causal_attribution",
+      "question": "What share of firearm mortality (suicide, domestic homicide, mass-casualty events) is causally attributable to the constitutional shielding itself, versus what would persist under any regime retaining an individual right of narrower scope?",
+      "resolution_mechanism": "Cross-jurisdiction and cross-national comparison controlling for demographics, urbanization, and socioeconomic covariates; natural experiments from state-level policy variation and from the post-Bruen wave of struck and chilled regulations.",
+      "impact": "A high attributable share supports the victim-set accounting and the current imposed-cost estimate; a low share recasts the boundary as coordination with incidental costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal share of firearm harm attributable to the constitutional shield."
+    },
+    {
+      "id": "bruen_methodology_stability",
+      "question": "Will the historical-analogue test stabilize into a workable boundary, or collapse into judge-by-judge divergence that either hardens the foreclosure of regulation or dissolves it?",
+      "resolution_mechanism": "Track the post-Bruen appellate record: circuit splits, en banc reversals, certiorari grants, and the rate at which regulations survive or fall.",
+      "impact": "Collapse toward permissive divergence raises suppression and effective imposed cost (more regulation foreclosed); collapse toward restrictive divergence lowers both and moves the computed type toward rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of the enforcement methodology that sets the boundary's effective width."
+    },
+    {
+      "id": "defensive_use_genuineness",
+      "question": "How much of the beneficiary-side coordination claim (arms for lawful self-defense) rests on genuine defensive use versus contested survey inflation?",
+      "resolution_mechanism": "Reconcile defensive-use survey estimates against incident-based data (national crime surveys, police records, justified-homicide counts); compute net benefit under both estimates.",
+      "impact": "If genuine defensive use is a small fraction of the claimed benefit, the coordination function thins and the imposed-cost share of the structure rises; if substantial, the coordination component is firmer than the metrics assume.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evidence basis for the beneficiary-side coordination claim."
+    },
+    {
+      "id": "identity_lock_reversibility",
+      "question": "Is the fusion between firearm ownership and liberty/self-reliance self-concept strong enough that owner-side attachment to the boundary would persist even after a sustained doctrinal reversal?",
+      "resolution_mechanism": "Longitudinal attitude and ownership data across jurisdictions adopting restrictive regimes; cultural persistence of ownership where constitutional protection is absent.",
+      "impact": "If identity lock persists, the arrangement's persistence is not enforcement-dependent and post-reversal classification shifts toward inertial maintenance; if it breaks, the boundary's fate tracks the doctrine.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Durability of owner-side identity fusion under doctrinal change."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A constitutional boundary, operative since ratification and hardened into its modern form by the Heller (2008), McDonald (2010), and Bruen (2022) line, shields private firearm possession as a pre-existing individual right: the operative clause protects, and state regulation of possession or carry is presumptively an infringement, survivable only by historical analogue. The boundary settles the citizen-state arms relationship — no level of government may disarm the lawful populace — while the same structure insulates the firearms market from prohibition and forecloses the regulatory instruments through which exposed populations would otherwise reduce their exposure. Benefits concentrate on owners, manufacturers, and advocacy organizations; costs concentrate on those exposed to unrestricted access: mass-casualty events, domestic homicide where an abuser has firearm access, and the roughly half of U.S. firearm deaths that are suicides. The interval maps 2008-2026 (t=0 is Heller; t=15 is Bruen's first full appellate year).",
+    "key_agents": [
+      "private_firearm_owners: primary beneficiary (organized/identity_locked) — possession shielded from prohibition; exit is identity-costly",
+      "firearms_industry: primary beneficiary (institutional/arbitrage) — collects the market-side gains: insulated demand and civil-liability immunity",
+      "gun_rights_advocacy_organizations: beneficiary (institutional/identity_locked) — the boundary is both their cause and their resource base",
+      "federal_judiciary: agenda_setter (institutional/identity_locked) — administers the boundary and its historical-analogue test",
+      "mass_shooting_victims: primary payer (powerless/trapped) — bears the costs of foreclosed prevention",
+      "domestic_violence_victims: primary payer (powerless/trapped, immediate horizon) — abuser firearm access",
+      "firearm_suicide_victims: primary payer (powerless/trapped, immediate horizon)",
+      "urban_communities_with_concentrated_gun_violence: diffuse payer (powerless/trapped)",
+      "state_regulatory_authorities: payer (institutional/constrained) — regulatory capacity foreclosed",
+      "gun_violence_prevention_advocates: excluded (organized/constrained) — expertise inadmissible in the interpretive forum",
+      "public_health_researchers: analytical observer",
+      "constitutional_law_scholars: analytical observer"
+    ],
+    "logic_rationale": "Extractiveness 0.65: substantial asymmetric costs flow through the same structure that protects lawful possession — not total, because the right also shields genuine self-defense, hunting, and sport uses that their holders value. Suppression 0.6 is a raw structural property, unscaled by power or scope: the foreclosure of the regulatory alternative operates through constitutional supremacy, not physical coercion, and it leaves room — some regulations survive as historical analogues. Theater_ratio 0.3: the boundary's operation is mostly functional (courts actually strike and stay laws), but a growing share of activity is performative — the prefatory clause is rhetorically maintained without any limiting function under this reading, and historical-analogue lawyering multiplies citations to founding-era statutes of doubtful relevance. Accessibility_collapse 0.6: once the boundary is understood, comprehensive regulation collapses as a legal option, though the analogue carve-out keeps partial alternatives alive. Resistance 0.65: sustained mass movements, legislative counter-efforts in high-violence states, and a continuous litigation wave. Claim/metric independence: the type is claimed as tangled_rope from the structural read — a genuine coordination function (the citizen-state boundary solves a real collective-action problem) plus asymmetric imposition (victims pay through the same structure) plus active judicial enforcement — while the metrics are authored as descriptive of the operation; any divergence between claim and computed type is data, not error. The three measurement series share one time grid (t=0,3,6,9,12,15,18); suppression_requirement is authored because the story specifically tracks enforcement intensification (the Bruen ratchet: an expanding doctrinal apparatus striking and staying regulation), not merely a shift in extraction. gain_flow names firearms_industry because the market-side gains — insulated demand plus civil-liability immunity — demonstrably accrue there; fixing_cost is prohibitive because the fix paths are Article V amendment or doctrinal reversal by a court whose method is invested in the current frame.",
+    "perspectival_gap": "The seats compute differently. From the owner and industry seat the boundary is bedrock: a pre-existing liberty that government may not abridge, with imposed costs near zero and the fixity of natural law claimed for a text. From the victim seats the same structure is enforced imposition with trapped exit — the preventive instruments were foreclosed before the harm arrived, and recourse is political voice overridden by constitutional supremacy. The judiciary seat experiences neutral administration of text; the excluded advocacy seat experiences foreclosure of its entire evidence base from the interpretive forum. The victim seats are individually powerless; their coalition capacity (mass mobilization after high-casualty events) is the visible source of the resistance metric, and it has so far moved legislatures faster than courts. The engine computes these per-seat types from power, exit, and role; the gap between the reading's self-assessment and the victim-seat accounting is precisely the measurement this story exists to take.",
+    "directionality_logic": "Owners are declared beneficiaries with identity_locked exit: the derivation places them on the benefit side of the ledger, and the identity lock binds them to the arrangement rather than to its costs — they cannot cheaply leave the protected class either. The industry is a beneficiary with arbitrage-grade exit, placing it nearest the beneficiary end: it captures the market-side gains and can retool if the frame shifts. Advocacy organizations are beneficiaries whose institutional identity is fused with the arrangement. The four harm-bearing groups are payers with trapped exit and powerless or organized power, placing them near the full-target end; state regulatory authorities are payers with constrained exit (they cannot exit the Constitution, only craft analogues), at moderately high directionality. The judiciary is the agenda-setter: it administers the boundary and is not a rent collector, so its position derives from its enforcement role rather than from the beneficiary/victim ledger. No directionality overrides are used: the beneficiary/victim declarations plus exit options produce the correct relationships, and the one coarse spot (owners are both organized and identity-locked) is resolved on the benefit side by the role declaration.",
+    "mandatrophy_analysis": "The classification prevents two opposite mislabels. Reading the arrangement as pure extraction erases the genuine coordination function: the citizen-state boundary solves a real collective-action problem that tens of millions of owners would rebuild if it fell, and the ownership alternative is not suppressed — the arrangement is not held up by coercion of its beneficiaries. Reading it as pure coordination erases the asymmetric ledger: victims pay through the same structure that protects owners, and the enforcement machinery exists to hold that asymmetry against sustained resistance. Tangled rope holds both halves. On mandatrophy: the founding problem — standing armies and federal disarmament — is contested rather than dead, because the modern arrangement is invoked almost entirely against regulation rather than against disarmament, while the self-defense need it also protects remains live. founding_problem_status is therefore contested, the R5 mismatch flag (dead plus world_rearranges) does not fire, and mandatrophy is not declared resolved: the arrangement's persistence is contested-purpose persistence, not zombie persistence.",
+    "kernel_context": "Kernel: second_amendment_boundary — the constitutional text's twenty-seven words as a stabilized commitment governing the arms boundary. This file instantiates the individual_right_reading: the operative clause establishes a pre-existing individual right, and the prefatory militia clause states a purpose without limiting the right's scope. Sibling readings are authored as separate constraints: militia_conditioned_reading (the prefatory clause defines the right's scope, permitting comprehensive regulation) and insurrectionist_reading (the right exists to preserve armed resistance capacity against tyrannical government). This reading's structural delta: private possession enters the protected domain, state regulation is treated as presumptive infringement, the firearms market becomes constitutionally shielded, and the victim set comprises those harmed by unrestricted access."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "militia_conditioned_reading",
+      "insurrectionist_reading"
+    ],
+    "dual_formulation_note": "The natural-language label 'the Second Amendment' covers one kernel read three ways; per the epsilon-invariance principle each reading instantiates a structurally distinct constraint with its own epsilon, beneficiary/victim structure, and classification, authored as its own file. This story is the individual_right_reading. The militia_conditioned_reading shares the referent arrangement but authors a different victim set (private-possession harms leave the protected domain's cost ledger) and a different coordination function (collective defense); the insurrectionist_reading adds a resistance-capacity function and redraws beneficiaries. The readings are linked through network.affects_constraints and typed through cs_structure.reading_relations rather than merged."
+  },
+  "stakeholders": [
+    {
+      "name": "private_firearm_owners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Own firearms for self-defense, hunting, sport, and collection; the boundary shields possession from prohibition, strikes registration and storage mandates, and constrains carry licensing. They experience the arrangement as protection of a liberty they hold to pre-date government. Relinquishing arms is legally possible but culturally penalized and bound up with a self-reliance self-concept, so exit from the protected class is identity-costly rather than impractical."
+    },
+    {
+      "name": "firearms_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Manufactures and sells into a market whose demand is insulated from prohibition by the constitutional boundary, with civil-liability immunity layered on by statute. Demand surges whenever regulation is threatened. It could retool to other product lines, but the domestic market is the profit core, so the boundary functions as a standing demand guarantee and the seat where the arrangement's market-side gains demonstrably accrue."
+    },
+    {
+      "name": "gun_rights_advocacy_organizations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Litigate, lobby, and mobilize members in defense of the boundary; membership and donation flows track the perceived threat to the right, so each regulatory attempt replenishes the resource base. The organizations' institutional identity has fused with the right's defense — pivoting away would dissolve them — making the arrangement simultaneously their cause and their operating budget."
+    },
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Administers the boundary: defines the historical-analogue test, strikes or stays regulations, and resolves circuit splits. The current majority's interpretive method is fused with the boundary's maintenance, so revisiting the frame would require the court to spend institutional capital against its own method. It sets the agenda for what counts as a permissible regulation and enforces the result."
+    },
+    {
+      "name": "mass_shooting_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Killed, wounded, or bereaved in mass-casualty events. The class of regulations with the strongest evidence of reducing casualty counts — assault-weapon and large-magazine limits — is struck or chilled under the boundary, so the preventive instrument was foreclosed before the harm arrived. Survivors carry injury and grief with no legal lever against the arrangement; their recourse is political voice, which constitutional supremacy overrides."
+    },
+    {
+      "name": "domestic_violence_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Face a partner or ex-partner with firearm access, which multiplies homicide risk several-fold; leaving is the most dangerous moment. Protective-order disarmament survives only within contested doctrinal margins, and the boundary constrains the broader disarmament statutes that would protect them. They can exit a relationship but not the abuser's access to arms, so the exposure follows them."
+    },
+    {
+      "name": "firearm_suicide_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Constitute the majority of U.S. firearm deaths; means lethality converts an attempt into a death. Waiting periods and extreme-risk protection orders — the instruments with evidence of interrupting this pathway — are constrained in whole or part by the boundary. The decedents cannot speak; the class is represented by bereaved families and the epidemiological record, and its members exit only by dying."
+    },
+    {
+      "name": "urban_communities_with_concentrated_gun_violence",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Bear a concentrated homicide burden, disproportionately in Black urban neighborhoods: cumulative trauma, economic drag, and policing burden across generations. The boundary forecloses the jurisdiction-level regulatory tools these communities' governments would otherwise deploy. Moving away is available only to those with resources, so the class as such is held in place."
+    },
+    {
+      "name": "state_regulatory_authorities",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Legislatures and agencies in high-violence states enact licensing regimes, storage mandates, assault-weapon bans, and risk-protection orders; a large share is struck or chilled under the historical-analogue test, at continuing litigation cost. They cannot exit the constitutional framework — only re-craft statutes as historical analogues — so their policy capacity is foreclosed rather than their persons harmed."
+    },
+    {
+      "name": "gun_violence_prevention_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organize for evidence-based regulation and litigate for it, but their epidemiological expertise is structurally inadmissible in the forum that sets the boundary, which admits founding-era evidence rather than modern data. They argue from outside the interpretive conversation that decides the question, with mobilization capacity that moves politics but not the governing test."
+    },
+    {
+      "name": "public_health_researchers",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Quantify firearm mortality and the effects of regulatory instruments; their findings define the size and distribution of the harm-side ledger but carry no vote in the interpretive forum. They see the full cost structure without the power to alter it."
+    },
+    {
+      "name": "constitutional_law_scholars",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Map the doctrine's structure, history, and failure modes from both originalist and living-constitutionalist seats; they document how the boundary operates and where its method strains, without holding enforcement power. The analytical seat from which the full arrangement is visible."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Settles the citizen-state boundary over arms: a constitutionally entrenched individual right coordinates the expectation that no level of government may disarm the lawful populace, converting what would otherwise be a recurring asymmetric political fight (each citizen alone against the state) into a settled rule individuals can rely on without collective action.",
+    "transfer_function": "Moves regulatory authority from legislatures to courts, market security (insulated demand, civil-liability immunity) to owners, manufacturers, and advocacy organizations, and the costs of unrestricted access — death, injury, trauma, and foreclosed prevention — to exposed persons and their communities.",
+    "absent_voices": "Firearm suicide decedents cannot appear; mass-shooting victims appear only as bereaved survivors after the fact; public-health evidence is structurally inadmissible under the historical-analogue test; regulators in high-violence jurisdictions argue from outside the interpretive forum. The apparent settledness of the interpretive conversation is partly an artifact of whose evidence its rules admit.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the boundary vanished overnight, states would re-regulate within legislative sessions — licensing, safe-storage mandates, assault-weapon and magazine limits, expanded risk-protection orders — the market would contract under liability exposure, carry regimes would revert to discretionary issuance, and advocacy funding would reorganize around ordinary politics. The post-Bruen litigation wave demonstrates the dependence in reverse: the arrangement holds exactly where the constitutional shield holds.",
+    "founding_problem": "Founding-era fear of a standing army and federal disarmament of the populace: the arrangement was constitutionalized so that the people could not be disarmed, with the individual-right reading locating the protected problem in the individual's need for arms for self-defense and as a check on centralized force.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Founding-era historians outside the beneficiary set attest the anti-standing-army genealogy and dispute how individual or collective the original right was; public-health researchers attest that the arrangement's operative modern problem is not federal disarmament but firearm harm; advocacy organizations attest the disarmament threat remains live. No party outside the beneficiary set attests the founding problem is simply solved, and none attests it is simply unchanged — the corroboration is itself the contest."
+  },
+  "gain_flow": "firearms_industry",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "founding_era_individual_arms_liberty",
+    "drift_state": {
+      "moment": "post_bruen_doctrinal_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "militia_conditioned_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "insurrectionist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "pre_existing_individual_right_to_arms",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "prefatory_clause_does_not_limit_scope",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

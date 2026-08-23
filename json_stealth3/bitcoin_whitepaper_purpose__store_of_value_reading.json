@@ -1,0 +1,417 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper_purpose__store_of_value_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "e8982007-4c71-4ac3-a59c-52eb5b5f7825"
+  },
+  "base_properties": {
+    "extractiveness": 0.64,
+    "suppression": 0.52,
+    "theater_ratio": 0.33,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Capacity Ceiling under the Store-of-Value Reading (Verifiability-First Settlement)",
+    "topic_domain": "distributed systems/monetary theory/technology governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "long_term_holders",
+      "full_node_operators",
+      "bitcoin_miners",
+      "custodial_offchain_providers"
+    ],
+    "victims": [
+      "low_fee_onchain_users",
+      "small_direct_settlement_merchants"
+    ],
+    "vindicated_propositions": [
+      "digital_scarcity_thesis",
+      "fee_market_security_model",
+      "verification_cost_bound_theory"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "full_node_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Run independently verifying software on commodity hardware at their own expense, checking every block against consensus rules and refusing blocks or chains that exceed agreed parameters. Collectively they decide what the network accepts: a 2015-2017 attempt by miners and businesses to raise the block size collapsed when validating nodes refused to follow. Most are unpaid volunteers; their influence exists only while they keep validating, and the 'don't trust, verify' ethos makes stepping away feel like surrendering the property the system exists to protect. Their verification costs stay low precisely because the capacity ceiling holds."
+    },
+    {
+      "name": "core_maintainers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Maintain the reference implementation most nodes run; review, merge, or reject protocol changes and publish releases. Their reputations, funding relationships, and professional identities are built on a roadmap committed to keeping per-node verification cheap and moving scaling above the base layer. They cannot force anyone to upgrade, so their authority operates through release politics, persuasion, and social standing rather than command."
+    },
+    {
+      "name": "long_term_holders",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold the asset as savings across years and transact rarely. The capacity ceiling's scarcity discipline underwrites the security-and-neutrality story their valuation relies on, while their infrequent transactions expose them to little of the fee burden. Deep liquid markets let them sell or diversify at any time; their principal stake is that the premium narrative stays credible."
+    },
+    {
+      "name": "bitcoin_miners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Convert electricity into blocks and collect the block subsidy plus transaction fees; pools aggregate many small operators. Scarce block space concentrates fee revenue when demand surges, but the per-block cap bounds their upside in quiet periods. Their specialized hardware has no use outside this chain, and they must build exactly what the validating majority accepts; their 2017 attempt to signal larger blocks failed when nodes refused to follow."
+    },
+    {
+      "name": "custodial_offchain_providers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate exchanges, custodial wallets, and hosted second-layer services. Users priced off the base layer become their customers: balances sit with them, payments route through their infrastructure. Expensive on-chain access expands their addressable market; they profit whichever way the interpretive dispute resolves, so long as direct self-custodied use stays costly."
+    },
+    {
+      "name": "low_fee_onchain_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Send small cross-border payments and savings transfers directly on the base layer: remittances, payroll, peer-to-peer trades in economies with failing local currencies. When demand fills blocks they bid against larger spenders or wait through confirmation backlogs; at the 2017 and 2021 peaks, fees sometimes exceeded the amounts being sent. Many arrived because local banking failed them, so leaving means returning to the problem they fled, and the technical alternatives demand skills or custody arrangements they often lack."
+    },
+    {
+      "name": "small_direct_settlement_merchants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Accept the asset directly for goods and services without an intermediary processor. Fixed capacity turns their checkout into a fee auction during busy periods and imposes confirmation-time uncertainty on customers; most have retreated to custodial processors or discontinued direct acceptance. Their customer bases and accounting are already built around the asset, so switching means rebuilding their sales plumbing."
+    },
+    {
+      "name": "p2p_cash_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Read the whitepaper's 'peer-to-peer electronic cash' purpose as the binding specification and campaigned through 2015-2017 for larger blocks to keep everyday purchases on-chain. They lost the consensus contest, saw pro-big-block content moderated out of major discussion venues during the fight, and a portion forked to a larger-block chain in 2017. They remain outside base-layer governance, advocating from an adjacent chain."
+    },
+    {
+      "name": "protocol_governance_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study how the network governs itself: node economics, developer influence, miner incentives, fork outcomes. Their published assessments are used by regulators, investors, and academics. They hold no stake in outcomes and can compare this system freely against other ledgers; their seat exists to see the structure the participants stand inside of."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a globally consistent, independently verifiable transaction ledger: capping per-block capacity keeps full verification affordable on commodity hardware, so no coalition of miners, exchanges, or developers can rewrite history undetected by thousands of independent validators. Scarce block space is rationed among competing users by fee auction.",
+    "transfer_function": "Moves fee revenue from users who transact on-chain to miners; moves low-value payment activity off the base layer into second-layer networks and custodial services; and, via the scarcity-plus-security narrative, supports a valuation premium accruing to large holders.",
+    "absent_voices": "Small-value users priced off the base layer have no formal seat: governance runs through node operators, miners, and developers, and the cash-utility constituency speaks mainly through fork exit or second-layer workarounds. Merchants seeking direct settlement likewise lack representation. Their objections surfaced only as the 2015-2017 blocksize conflict and the 2017 fork.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the capacity ceiling vanished overnight (nodes accepting arbitrarily large blocks), verification costs would balloon, hobbyist validators would quit, and validation would concentrate in datacenters, pools, and exchanges. Censorship-resistance and neutrality premiums would deflate, undermining the holders' thesis; the fee market would collapse toward subsidy-only security just as subsidies decline; and high-throughput cash usage would flood the base layer, reversing the settlement-layer character the reading defends. Nearly every seat rearranges.",
+    "founding_problem": "Replace trust-based electronic payments with peer-to-peer verification: eliminate trusted third parties from digital cash by letting every participant verify the ledger. The 1MB block ceiling began in 2010 as a temporary anti-spam measure, never announced as permanent policy.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The whitepaper text itself, which belongs to no benefiting party, declares the trusted-third-party elimination objective. The 2015-2017 blocksize-war record and the cash faction's fork exit attest that the reading dispute is real rather than rhetorical, and the academic cost-of-verification literature corroborates that the trade-off this reading invokes exists. No disinterested body adjudicates which clause binds; Satoshi's silence removed the tie-breaking voice."
+  },
+  "interval": {
+    "start": 0,
+    "end": 17
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 17,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 17,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.02,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 17,
+      "value": 0.28,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story authors ONE reading of a contested kernel. The kernel is the Bitcoin whitepaper's purpose: a founding text whose designated interpreter (Satoshi Nakamoto) fell silent in 2011, leaving the document as substrate that rival constituencies read differently. THIS FILE instantiates the store_of_value_reading only: the position that decentralization and full-node verifiability are the binding design commitments, that on-chain capacity is therefore deliberately kept scarce (the 1MB block ceiling retained), that scaling belongs to layers above the base chain, and that the resulting fee market is the standing price of keeping verification sovereign. Its structural shadow: long-term holders and node operators gain; users who need cheap on-chain transactions are priced off or pushed toward custodians. The sibling reading (electronic_cash_reading), in which the 'cash' telos binds and capacity must serve everyday payments, is a DIFFERENT constraint with its own file, its own epsilon, and its own victim set; nothing about it is averaged into this story (epsilon-invariance; family link recorded in network.affects_constraints).\n\nKEY AGENTS (by structural relationship):\n- full_node_operators: Enforcement backbone and agenda seat (organized/identity_locked) — validate at personal expense, refuse non-conforming blocks, benefit from cheap verification\n- core_maintainers: Agenda seat (institutional/identity_locked) — steward the reference implementation and the roadmap the ceiling rides on\n- long_term_holders: Principal beneficiary (moderate/arbitrage) — scarcity discipline underwrites their premium; they bear little of the fee burden\n- bitcoin_miners: Fee-market recipient (organized/trapped) — collects surge fees, capped in quiet periods, sunk capital\n- custodial_offchain_providers: Displacement beneficiary (powerful/arbitrage) — priced-off users become their customers\n- low_fee_onchain_users: Primary target (powerless/constrained) — bids for scarce block space or exits\n- small_direct_settlement_merchants: Target (moderate/constrained) — direct acceptance made costly and uncertain\n- p2p_cash_advocates: Excluded constituency (organized/arbitrage) — lost the consensus contest, forked out\n- protocol_governance_analysts: Analytical observer (analytical/analytical)\n\nClaim and metrics are authored independently: claimed_type tangled_rope states my structural belief (genuine censorship-resistance coordination PLUS asymmetric cost incidence PLUS active enforcement), while the metric values state descriptive conditions as I assess them. The engine computes per-seat classifications; divergence between claim and computed type is datum, not error.",
+    "logic_rationale": "Extractiveness 0.64: the fee market moves real sums — 2017 and 2021 congestion peaks produced transaction fees exceeding many users' payment amounts — and priced-off users suffer exclusion losses, partially offset by genuine settlement service received. Suppression 0.52 is a standing structural quantity: within-system alternatives (raising the cap) are foreclosed by consensus culture and exit carries severe network-effect cost, even though active coercion today is modest. Theater 0.33: the verification function is real and performed daily, but a widening gap separates the sovereignty rhetoric (node counts, proof-of-keys rituals) from where economic weight actually sits (exchanges, ETFs, custodial wallets). Accessibility collapse 0.55: inside Bitcoin the big-block alternative is essentially foreclosed; externally, forks and rival chains persist at network-effect cost. Resistance 0.55: the 2015-2017 conflict was a full civil war; resistance since is episodic (inscription/ordinals disputes rekindled capacity arguments in 2023).\n\nCYCLICAL PATTERN: the series oscillates rather than drifting monotonically — halving-amplified speculative waves collide with fixed capacity, producing congestion crests (T8=2017, T12=2021) followed by bear-market lulls (T10), with a structural plateau forming by T17 as the fee market matures. Two full crests are visible on the shared nine-point grid. The oscillation is partly the extraction mechanism itself: maximum fee capture lands exactly when users' urgency peaks (intermittent-reinforcement character). Base metrics are authored at the current phase — post-second-crest plateau, T17.\n\nSUPPRESSION SERIES VS SCALAR: the suppression_requirement series tracks active enforcement intensity, which was BUILT during the wars (forum censorship, node DDoS, UASF brinkmanship peaking at 0.80 in 2017) and then DECAYED into routinized, largely self-executing consensus enforcement (0.28 today). The scalar 0.52 measures standing structural suppressiveness (foreclosed alternatives, costly exit). These are distinct quantities; the story deliberately traces the enforcement-machinery arc rather than assuming it flat.",
+    "perspectival_gap": "Seats should compute differently. From the node-operator and maintainer seats the arrangement reads as guardianship: cheap sovereignty, identity reward, a job faithfully done. From the priced-off user and merchant seats the same structure reads as exclusion: a fee auction they lose, a door closing. Holders experience a premium accrual at negligible personal cost; miners are genuinely ambivalent (windfall surge fees versus capped quiet-period revenue versus rules they cannot change); custodial providers experience growth fed by displacement. Same nominal community, same nominal rules — the per-seat classifications diverge because power, exit, and directional position differ, and the engine computes that divergence from the structural data rather than from the claim.",
+    "directionality_logic": "Beneficiary declarations drive low d: long-term holders sit nearest the beneficiary pole (declared beneficiaries WITH arbitrage-grade exit — they can liquidate anytime); full_node_operators sit low despite their out-of-pocket costs because the ceiling is what keeps their verification affordable and their role meaningful; custodial providers are clean beneficiaries of the displacement flow. Victim declarations drive high d: low_fee_onchain_users (powerless, constrained, global) sit nearest the full-target pole — dispersed across jurisdictions, unable to coordinate locally, locked in by the very monetary failures that brought them. Small merchants follow slightly behind. Miners land mid-low: declared beneficiaries receiving fees, but with trapped exit and capped revenue tempering the position. No directionality overrides are authored: the derivation chain from beneficiary/victim declarations plus exit atoms already orders the seats correctly, and the guidance reserves overrides for cases the derivation gets wrong. Suppression enters the computation unscaled; only extractiveness is scaled, by directionality and by global scope, which amplifies effective extraction on the dispersed victim seats because verification of their treatment is hardest at that spread.",
+    "mandatrophy_analysis": "The founding problem — eliminating trusted third parties from electronic payments — is NOT dead; it has mutated. The ceiling's own success pushes small users into custodial hands, recreating the trusted intermediary one layer up, which is the sharpest evidence the founding disease persists. Mandatrophy is therefore unresolved, and the classification guards against both mislabels: a pure-coordination reading would erase the priced-off victims and treat a contested policy parameter as if it were weather; a pure-extraction reading would erase the daily-delivered censorship-resistance and neutrality that the arrangement genuinely produces. Tangled rope keeps both truths on the table: real coordination function, asymmetric incidence, active enforcement required to hold the shape.",
+    "kernel_context": "This story instantiates the store_of_value_reading of the kernel bitcoin_whitepaper_purpose — the contested commitment anchored in Nakamoto's 2008 whitepaper, whose authoritative interpreter vanished with Satoshi's 2011 withdrawal (the nakamoto_oracle_opacity condition), leaving the text as substrate for rival readings. The sibling reading is bitcoin_whitepaper_purpose__electronic_cash_reading, in which the title's 'cash' telos binds and the system must support everyday low-fee transactional use. This file authors ONLY the store-of-value reading as a clean epsilon-invariant constraint: one epsilon, one beneficiary/victim structure, one type. The sibling's structure (cash users as intended beneficiaries, the ceiling as the offending element) belongs to its own file; the two are linked as a constraint family via network.affects_constraints, and the location of the disagreement between them is carried in omega variables rather than hedged into the metrics."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is authored as ONE reading — store_of_value_reading — of the kernel bitcoin_whitepaper_purpose; what would the corpus record if the electronic_cash_reading were instantiated instead?",
+      "resolution_mechanism": "Generate the sibling story (bitcoin_whitepaper_purpose__electronic_cash_reading) with mirrored structure and compare epsilon, beneficiary/victim sets, and computed types across the family.",
+      "impact": "Under the sibling reading, low-fee on-chain users are the intended beneficiaries rather than the priced-off victims, the capacity ceiling becomes the offending element rather than its guardian, and epsilon's referent shifts from the settlement-integrity arrangement to the cash-accessibility arrangement.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: this file is one reading of a contested kernel; sibling readings are separate constraints, not parameters of this one."
+    },
+    {
+      "id": "disagreement_load_bearing_clause",
+      "question": "Where in the kernel text does the reading-disagreement actually bind — the title's 'cash' designation, or the design's decentralization and verification emphasis?",
+      "resolution_mechanism": "Close textual analysis cross-checked against revealed preference: which clause each faction treats as defeasible in practice (the cash camp accepted second-layer compromises; the store-of-value camp accepted custodial drift).",
+      "impact": "If 'cash' binds, the ceiling violates the kernel's own specification and this reading is revisionist; if verification binds, the cash reading abandons the kernel's security core. Locating the load-bearing clause determines which reading counts as deviation rather than interpretation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Locates the specific structural element the sibling readings disagree on."
+    },
+    {
+      "id": "ceiling_technical_necessity",
+      "question": "Is a capacity ceiling at roughly this magnitude technically necessary for affordable full verification, or is it a conservatively chosen parameter maintained past its evidentiary support?",
+      "resolution_mechanism": "Node-cost telemetry across candidate block sizes, plus historical natural experiments: pre-2017 growth under the ceiling, and the larger-block fork's node-count and validation-cost trajectory.",
+      "impact": "If necessity holds, much of the measured extraction is the genuine price of the coordination good; if not, the surplus is manufactured-scarcity rent and the arrangement slides toward pure extraction with a coordination cover story.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Tests the trade-off premise underwriting the ceiling."
+    },
+    {
+      "id": "fee_market_security_sufficiency",
+      "question": "Can the fee market the ceiling creates sustain hashrate security as block subsidies continue declining?",
+      "resolution_mechanism": "Post-halving fee-share telemetry and stress models of the security budget at successive subsidy epochs.",
+      "impact": "If fees fall short, the security premise beneath the holders' premium erodes, the ceiling loses its coordination justification, and persistence shifts toward inertia — the hybrid's coordination half decays while the extraction half remains.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-run viability of the security-budget mechanism the reading depends on."
+    },
+    {
+      "id": "lightning_noncustodial_absorption",
+      "question": "Does the Lightning Network actually absorb priced-off users without recreating custodial intermediaries?",
+      "resolution_mechanism": "Wallet custody telemetry: the share of Lightning liquidity and payment volume flowing through non-custodial channels versus custodial wallets and exchange integrations.",
+      "impact": "If absorption is mostly custodial, the ceiling's scaling story functions partly as cover for re-intermediation — the whitepaper's eliminated trusted third parties return one layer up, and the coordination half of the hybrid thins toward extraction-with-ritual.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the off-chain escape valve preserves the self-custody property it promises."
+    },
+    {
+      "id": "custodial_practice_gap_reversibility",
+      "question": "Is the drift of economic weight into custodial hands (exchanges, ETF wrappers) compatible with, or fatal to, the node-sovereignty premise this reading rests on?",
+      "resolution_mechanism": "Track the self-custodied share of supply and the economic relevance of independent nodes; observe whether sovereignty rhetoric retains behavioral bite (withdrawal events, proof-of-keys participation).",
+      "impact": "If the drift is irreversible, the verification the ceiling protects is performed by a shrinking caste for an audience that no longer verifies — the theater share rises and the arrangement trends toward inertial maintenance dressed as principle.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the practice drift toward custody undermines the reading's own foundation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper_purpose__electronic_cash_reading",
+      "nakamoto_oracle_opacity"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'Bitcoin's design purpose' conflates two structurally distinct claims. The store_of_value_reading (this file) authors epsilon for the standing settlement-integrity arrangement — scarce base-layer capacity defended by node consensus, holders and node operators gaining, low-fee users bearing the incidence. The electronic_cash_reading authors a DIFFERENT constraint over the same text: capacity subordinated to everyday cash utility, with the ceiling as the offending element. Their epsilon values differ widely because their referents differ; neither averages into the other. The upstream/downstream link runs through the 2017 consensus outcome, which reshaped the cash reading's operating environment (forcing fork exit) without resolving it. The nakamoto_oracle_opacity entry is linked as the interpretive-vacuum condition that keeps both readings live."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "verification_first_sovereign_settlement",
+    "drift_state": {
+      "moment": "contemporary_custodial_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "electronic_cash_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "verification_affordability_bounds_scale",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "base_layer_is_settlement_not_payments",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

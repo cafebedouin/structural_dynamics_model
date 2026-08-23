@@ -1,0 +1,338 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__incidental_collection_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "2fc9ed18-de18-46b4-8142-acb72f606150"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.62,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FISA Section 702 Incidental-Collection Reading: Retention and Warrantless Query of U.S.-Person Communications",
+    "topic_domain": "constitutional_law/national_security",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "signals_intelligence_agencies",
+      "federal_bureau_of_investigation",
+      "executive_branch_national_security_establishment"
+    ],
+    "victims": [
+      "us_person_communicants",
+      "backdoor_search_targets",
+      "privileged_professional_communicants"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.62
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "signals_intelligence_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Collects communications of non-U.S. persons reasonably believed to be located abroad under the statutory authority, writes and applies the minimization procedures that determine what incidentally collected U.S.-person content is kept, and operates the repositories that analysts query. As the authority approaches each expiration date it drafts the reauthorization case and supplies the intelligence-value examples that sustain it. Its alternatives are rich: it can shift collection onto other legal authorities, adjust targeting, or reshape its own procedures; abandoning the arrangement is not something it needs to contemplate."
+    },
+    {
+      "name": "federal_bureau_of_investigation",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Queries the collected repository using U.S.-person identifiers tied to its own counterintelligence, counterterrorism, and ordinary criminal investigations, without obtaining individualized court orders for those searches. Warrant-based paths remain open to it but are slower and narrower; the repository offers immediate, broad access. It reports query statistics to oversight bodies and adjusts its procedures when reviewers find violations."
+    },
+    {
+      "name": "executive_branch_national_security_establishment",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The departments and offices that defend the legal reading, certify minimization compliance, classify the program's mechanics, and negotiate each reauthorization. It bears essentially none of the privacy cost and collects the institutional benefit of an access path unencumbered by individualized court orders; its exit is trivial because it controls the procedures themselves."
+    },
+    {
+      "name": "congressional_oversight_committees",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Writes and periodically renews the statutory authority and runs oversight hearings fed by classified briefings. Members who favor narrowing the query rules have repeatedly introduced warrant-requirement amendments that fail by narrow margins; members who favor renewal control the scheduling. The committees' institutional position depends on the authority existing to be overseen and renewed."
+    },
+    {
+      "name": "us_person_communicants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Anyone in the United States who communicates with a person or account overseas that meets the targeting criteria. Their messages enter the collected repositories without their knowledge, consent, or any individualized determination about them; they cannot find out whether they were collected, cannot decline, and have no procedural path to contest retention. Their only partial shield is end-to-end encryption, which the collection architecture increasingly routes around or renders moot at the endpoints."
+    },
+    {
+      "name": "backdoor_search_targets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People whose own identifiers — name, email address, phone number — are entered into the repository during domestic investigations. They are searched directly rather than incidentally, without a warrant and usually without ever learning the search occurred; disclosure typically arrives only if material surfaces in a criminal case, sometimes years afterward."
+    },
+    {
+      "name": "privileged_professional_communicants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Journalists, defense counsel, clergy, and physicians whose work requires confiding exchanges with sources, clients, and contacts abroad. Their professional obligations make avoidance impossible — declining the communication ends the service — and the sensitivity of their traffic makes them disproportionately represented among incidentally collected content. Institutions exist to litigate on their behalf, but individual members cannot protect their own files."
+    },
+    {
+      "name": "foreign_intelligence_targets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Non-U.S. persons abroad whose communications the authority is designed to acquire. They stand wholly outside the constitutional protections invoked on behalf of U.S. persons, have no forum in which to object, and bear the direct weight of the collection the arrangement exists to perform."
+    },
+    {
+      "name": "foreign_intelligence_surveillance_court",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reviews targeting and minimization procedures and hears agency reports on query compliance, meeting predominantly ex parte with classified materials. It approves, modifies, and occasionally rebukes the procedures, and its opinions — mostly declassified long after the decisions — are the nearest thing to adversarial testing the arrangement receives."
+    },
+    {
+      "name": "civil_liberties_litigators",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Advocacy organizations and defense-bar networks that challenge the query practices in public litigation and press warrant-requirement amendments. They hold no seat in the procedure-approval process, reach the reviewing court only through rare amicus appointments, and learn program details chiefly through leaks and declassification."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aggregates signals intelligence on foreign threats — terrorism, proliferation, cyber intrusion — by acquiring communications of non-U.S. persons abroad at scale, solving a collection problem that individualized, per-target court orders handle too slowly and too narrowly for distributed foreign communications.",
+    "transfer_function": "Moves communicative privacy — access to the content and metadata of communications involving U.S. persons — from U.S. persons, without notice, consent, or warrant, to intelligence and domestic-investigation agencies, under administrative minimization procedures rather than judicial authorization.",
+    "absent_voices": "The queried U.S. persons themselves: most never learn their communications were searched and so cannot object anywhere. Civil-liberties litigators hold no seat in the procedure-approval process and reach the reviewing court only through occasional amicus appointments. Defense counsel frequently cannot learn whether case evidence originated in the repository until late disclosure, if at all.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the retention-and-query authority vanished overnight, agencies would need individualized court orders or far stricter handling for U.S.-person data already collected; domestic investigations would lose a major evidentiary shortcut and reorganize around slower warrant-based paths; foreign-intelligence collection would continue but with materially higher handling costs and smaller usable corpora. The arrangements of every seated party depend on the authority continuing.",
+    "founding_problem": "The pre-2008 framework required an individualized court order for each acquisition, which proved ill-suited to intercepting distributed foreign communications — email, voice-over-IP, cloud-stored content — transiting United States infrastructure; the 2008 amendments were built to authorize acquisition directed at foreign targets without a per-target order.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Partially corroborated from outside the benefiting parties: the Privacy and Civil Liberties Oversight Board's independent review attests both the reality of the foreign-collection function and its drift toward domestic investigative use; declassified reviewing-court opinions acknowledge the foreign-targeting purpose while documenting query violations; the pre-2008 collection-gap problem is documented in prior independent commission records. No fully disinterested body attests that the founding problem persists in its original form — congressional privacy caucuses and civil-liberties litigators dispute that the original gap justifies the current query practice."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fisa_702_statutory_text__foreign_target_strict_reading",
+      "fisa_702_statutory_text__constitutional_floor_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'Section 702.' The single statutory text is a contested kernel read three ways, each reading instantiating a distinct constraint with its own stable epsilon and victim set: this file (incidental_collection_reading — retention and warrantless foreign-purpose query of incidentally collected U.S.-person communications, epsilon approximately 0.45, U.S. persons in the victim set via backdoor searches); foreign_target_strict_reading (incidental U.S.-person data minimized to practical inaccessibility for domestic use — victim set contracts toward foreign targets only, epsilon falls toward coordination cost); and constitutional_floor_reading (any U.S.-person content query is a search requiring a probable-cause warrant regardless of statutory construction — the same conduct re-described as warrantless search, epsilon rises sharply). The epsilon values differ because the readings disagree about what the arrangement IS, not because one observable was swapped for another; per the epsilon-invariance principle they are separate stories linked here rather than one story with a measurement parameter."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "foreign_targeting_minimization_regime",
+    "drift_state": {
+      "moment": "post_risaa_reauthorization",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "foreign_target_strict_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_floor_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "foreign_intelligence_purpose_displaces_warrant_requirement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "administrative_minimization_substitutes_for_judicial_authorization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This constraint is one reading of the kernel fisa_702_statutory_text (reading: incidental_collection_reading). Which reading of the statutory text governs actual collection and query practice — and how would the victim set and epsilon change under the sibling readings?",
+      "resolution_mechanism": "Supreme Court adjudication of a repository-query case, statutory amendment imposing a warrant requirement for U.S.-person queries, or sustained reviewing-court procedural rulings; each would shift the operative reading and re-partition the victim set.",
+      "impact": "Under foreign_target_strict_reading the U.S.-person victim set contracts to residual incidental exposure and epsilon falls toward coordination cost; under constitutional_floor_reading the identical conduct is re-described as warrantless search, epsilon rises sharply and the classification migrates toward pure extraction. The authored epsilon of 0.45 is valid only for this reading; it is not a property of the statutory text as such.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed identity: sibling readings of the same statutory text instantiate different constraints with different victim sets and epsilon values."
+    },
+    {
+      "id": "query_necessity_separability",
+      "question": "Is warrantless querying of incidentally collected U.S.-person communications necessary to the foreign-intelligence mission, or is it separable — could agencies obtain individualized court orders for U.S.-person queries at modest mission cost?",
+      "resolution_mechanism": "Operational comparison of mission output under periods or regimes with enhanced query procedures (the post-2021 imposed query procedures, the codified audit-trail requirements) against baseline periods of unrestricted querying.",
+      "impact": "If separable, the queried access is extraction riding on genuine foreign-targeting coordination and effective extraction rises above the authored value; if inseparable, part of the authored epsilon is the price of the coordination itself and the hybrid-coordination reading strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the extraction component is structurally separable from the coordination component."
+    },
+    {
+      "id": "minimization_enforcement_gap",
+      "question": "Do the minimization and oversight procedures constrain retention and querying as the reading claims, or is compliance substantially self-certified?",
+      "resolution_mechanism": "Independent oversight audits, declassified reviewing-court compliance opinions, and inspector-general reports comparing declared procedure against observed query behavior — including the documented 2020-2023 findings of widespread non-compliant Federal Bureau of Investigation queries and the post-reform violation-rate data.",
+      "impact": "A wide gap between declared procedure and observed practice raises effective extraction above the authored 0.45 and pushes the theater ratio upward; demonstrated conformity supports the reading's own assessment of the arrangement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether administrative safeguards bind in practice or operate mainly on paper."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the incidental-collection reading of the Section 702 text, communications acquired through targeting of non-U.S. persons abroad may be retained indefinitely and queried by U.S.-person identifier without an individualized court order whenever a foreign-intelligence purpose justifies the query; administrative minimization procedures, written and applied by the collecting agencies themselves, stand in place of judicial authorization. The practical consequence is that U.S. persons enter the searched population through two doors — incidental sweep-in at collection and direct identifier query during domestic investigations — with no notice, no consent, and no exit. This file instantiates ONE reading of the contested statutory kernel; the sibling readings (foreign_target_strict_reading, constitutional_floor_reading) are separate constraints in separate files, linked through the network section. Per the epsilon-referent rule for kernel readings, the authored epsilon describes the standing incidental-collection arrangement as this reading assesses it — substantial but bounded intrusion, acknowledged even by the reading that endorses the arrangement — not the arrangement a sibling reading would put in its place. The claim and the metrics are independent authored facts: the claimed type states what I believe structurally true of this arrangement; the metrics state what I believe descriptively true of its operation; the engine computes per-seat classifications from the structural data and owns any divergence.",
+    "key_agents": [
+      "signals_intelligence_agencies: agenda-setting collector ([institutional]/[arbitrage]) — writes the minimization procedures, holds the repositories, drafts each reauthorization case",
+      "federal_bureau_of_investigation: primary domestic beneficiary ([institutional]/[mobile]) — queries the repository by U.S.-person identifier without individualized court orders",
+      "executive_branch_national_security_establishment: institutional beneficiary ([institutional]/[arbitrage]) — defends the reading, certifies compliance, controls classification",
+      "congressional_oversight_committees: co-agenda-setter ([institutional]/[arbitrage]) — renews the authority; warrant-requirement amendments repeatedly fail narrowly",
+      "us_person_communicants: primary target ([powerless]/[trapped]) — swept in incidentally, unable to know, decline, or contest",
+      "backdoor_search_targets: primary target ([powerless]/[trapped]) — searched directly by identifier in domestic investigations",
+      "privileged_professional_communicants: concentrated target ([moderate]/[trapped]) — journalists, counsel, clergy whose obligatory confiding traffic is disproportionately collected",
+      "foreign_intelligence_targets: nominal target ([powerless]/[trapped]) — outside the constitutional order entirely",
+      "foreign_intelligence_surveillance_court: analytical observer ([institutional]/[analytical]) — ex parte procedure review, delayed declassification",
+      "civil_liberties_litigators: excluded challenger ([organized]/[analytical]) — no seat in the approval process, reaches the court only via amicus"
+    ],
+    "logic_rationale": "Extraction is authored at 0.45: the arrangement grants warrantless access to the content of rights-holders' communications — a substantial taking — but the taking is bounded by the foreign-targeting anchor, by minimization procedures that have demonstrably tightened after documented violations, and by periodic reauthorization scrutiny. Suppression is authored at 0.62 and is structural, not violent: classification, absence of notice, ex parte review, and the impossibility of opting out of communicating with the world. Suppression is a raw structural property and is deliberately NOT scaled by power or scope — only extractiveness is scaled, by directionality and spatial scope, in the engine's computation. Theater ratio 0.38: oversight activity is partly functional (it produced real procedural corrections after 2021) but a growing share is compliance performance — statistics reports, certification letters, anniversary-value anecdotes — that ratifies rather than tests. Accessibility collapse 0.58: the alternatives are legally coherent (the strict sibling reading demonstrates that aggressive minimization is statutorily implementable; warrant-based querying demonstrably works) but are politically foreclosed — which is why collapse is substantial yet short of the near-total collapse of a natural limit. Resistance 0.6: sustained litigation, narrowly failing warrant amendments across multiple reauthorization cycles, and recurring legislative revolt attempts. The statute's literal sunset clause is declared because it exists, but it operates as a reauthorization ratchet rather than a transition plan — each expiry has been the occasion for renewal, occasionally with margin-narrowing safeguards, never for wind-down. The measurement series run on one shared time grid (t=0 maps to 2008 enactment; t=4 to the 2012 renewal; t=8 to 2016 mid-cycle query growth; t=12 to 2020 peak non-compliance; t=14 to the 2022 violation findings and imposed reforms; t=16 to the 2024 reauthorization), with every tracked metric authored at every point; the extractiveness series shows accumulation followed by partial correction, and the end-state values equal the base_properties scalars.",
+    "perspectival_gap": "The payer seats and the agenda-setter seats should compute divergent types from identical structural data. From the collecting agencies' position the arrangement is a lawful authority they administer, with costs borne by people who are not in the room; from the trapped U.S.-person seats the same structure operates as unconsented, unnegotiable access to their private communications — an experience closer to pure extraction with a coordination alibi. The reviewing court sits between: it sees the procedures' paper rigor and the violations' paper frequency. The engine computes this divergence per seat; the authored claim does not adjudicate it.",
+    "directionality_logic": "Beneficiary declarations drive the derivation: the collecting agencies, the domestic-investigation bureau, and the executive establishment all sit near the beneficiary end (low d, damped or inverted effective extraction) — each controls its own alternatives, and the establishment controls the procedures themselves. Victim declarations drive the opposite pole: U.S.-person communicants, backdoor-search targets, and privileged professional communicants are trapped rights-holders with no notice and no exit, sitting near the full-target end, so effective extraction is amplified for them; larger spatial scope (global) further amplifies verification difficulty. Foreign-intelligence targets are the designed objects of the collection and likewise derive high d. No directionality overrides are authored: the structural derivation from declared roles, power, and exit options captures every seat accurately, and the override mechanism keys on the power atom rather than the agent — with five institutional seats in this story holding genuinely different relationships, a power-atom-level override would misapply across all of them.",
+    "mandatrophy_analysis": "The founding problem — efficient acquisition of distributed foreign communications — is genuinely partly live, which is exactly why this must not be flattened into pure extraction: doing so would erase the real collective-security coordination that anchors the arrangement and misread a working intelligence capability as mere cover. Equally, the arrangement must not be flattened into pure coordination: the domestic-query function has grown far beyond the foreign-targeting rationale, transferring communicative privacy from non-consenting rights-holders to investigating agencies through the same structure that performs the coordination. The hybrid classification holds both facts in tension. On the genealogy interview, the founding problem's status is contested and the disappearance verdict is world_rearranges — the mismatch consumer therefore reads no dead-mandate-plus-dependence flag, but the temporal series carry the sharper signal: extraction accumulated monotonically for twelve years before disclosure forced partial correction, the classic signature of a coordination function accreting an extraction rider faster than its oversight can strip it.",
+    "kernel_context": "Kernel: fisa_702_statutory_text — the Section 702 text authorizing acquisition of foreign-intelligence information from non-U.S. persons reasonably believed to be located abroad. This file instantiates the incidental_collection_reading: once acquisition occurs under a valid foreign target, incidentally collected U.S.-person communications may be retained and warrantlessly queried when justified by a foreign-intelligence purpose, with administrative minimization substituting for judicial authorization. Sibling readings are separate constraints: foreign_target_strict_reading holds that incidental U.S.-person data must be minimized to practical inaccessibility for domestic purposes, and constitutional_floor_reading holds that the Fourth Amendment requires a probable-cause warrant for any government search of U.S.-person content regardless of statutory construction. This file's epsilon, victim set, and classification are indexed to this reading alone; the reading relations and axioms in cs_structure encode how this reading stands toward its siblings, and the kernel_reading_indexicality omega carries the open question of which reading governs practice."
+  },
+  "gain_flow": "signals_intelligence_agencies",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

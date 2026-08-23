@@ -1,0 +1,397 @@
+{
+  "header": {
+    "constraint_id": "unclos_sovereignty_boundary__historical_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-07-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "unclos_historical_rights",
+    "story_uid": "686e1e1f-116e-48d0-bb14-1928f6a72e50"
+  },
+  "base_properties": {
+    "extractiveness": 0.74,
+    "suppression": 0.74,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "snare",
+    "human_readable": "Historical-Rights Overlay on Codified Maritime Zones (Historical-Rights Reading)",
+    "topic_domain": "international_law/maritime_governance/geopolitical_strategy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "historic_rights_claimant_states",
+      "artisanal_historic_user_communities_of_claimant"
+    ],
+    "victims": [
+      "eez_holding_coastal_states",
+      "coastal_artisanal_fishers_of_eez_states",
+      "transiting_commercial_shipping",
+      "external_naval_patrol_operators"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.69
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.74
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.74
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_structural_delta",
+      "question": "This constraint is the historical_rights_reading of kernel unclos_sovereignty_boundary; how would instantiating a sibling reading change the structural data?",
+      "resolution_mechanism": "Classify the sibling stories (unclos_sovereignty_boundary__strict_eez_reading, unclos_sovereignty_boundary__non_ratifier_enforcement_reading) from their own files and compare beneficiary/victim sets and epsilon.",
+      "impact": "Under the strict reading the sets invert: EEZ-holding coastal states become beneficiaries and the expansive claimant becomes the target; under the non-ratifier reading navigational actors leave the victim set entirely and the claimant loses enforcement legitimacy. Per-seat classifications computed from this file are valid only for this reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: sibling readings instantiate different constraints with inverted structures."
+    },
+    {
+      "id": "epsilon_referent_selection",
+      "question": "Is epsilon priced against the de facto historical-rights enforcement regime (the arrangement this reading instantiates where operative) or against the codified EEZ baseline the reading contests?",
+      "resolution_mechanism": "Fix the referent by the story's subject: the standing arrangement this reading produces and defends in the enforced waters. Cross-check by classifying the strict_eez_reading story, whose referent is the codified regime.",
+      "impact": "Pricing against the codified baseline instead would invert the sign structure - the claimant would appear targeted and EEZ holders subsidized - yielding a different constraint, not a different measurement of this one.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Referent fixation for a kernel reading: which standing arrangement epsilon describes."
+    },
+    {
+      "id": "historic_record_sufficiency",
+      "question": "Do the archival records substantiate continuous, peaceable, exclusive exercise of authority over the waters at issue, at the standard historic-title doctrine requires?",
+      "resolution_mechanism": "Evidentiary review on the Anglo-Norwegian Fisheries and 2016 arbitral standard: maps, administrative acts, acquiescence or protest by other states.",
+      "impact": "If the record fails, the reliance-protection rationale collapses and the arrangement reads as capture maintained purely by coercion; if it succeeds, a genuine coordination kernel survives and a tangled-rope reading strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the factual predicate of the historical-rights claim meets title standards."
+    },
+    {
+      "id": "enforcement_ratchet_path",
+      "question": "Will coercive enforcement intensity continue ratcheting upward, plateau at current levels, or relax under negotiation?",
+      "resolution_mechanism": "Track interdiction rates, coast-guard legislation, feature construction, and standoff frequency over the forward decade.",
+      "impact": "Continued ratcheting pushes suppression beyond 0.8 and dates a further degradation step; relaxation would pull the arrangement back toward contestable hybrid territory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Forward trajectory of the enforcement machinery."
+    },
+    {
+      "id": "coalition_fixing_feasibility",
+      "question": "Could a coalition of EEZ-holding states, external naval operators, and shipping interests raise the cost of enforcement enough to change the cost class of removing the arrangement?",
+      "resolution_mechanism": "Observe whether joint patrol frameworks, unified code-of-conduct language, and coordinated economic measures materialize and alter claimant behavior.",
+      "impact": "Effective coalition action would move fixing_cost from prohibitive toward cheap and date a possible unraveling; persistent failure leaves the current cost class stable.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether collective action by the paying seats can change the fix economics."
+    },
+    {
+      "id": "identity_lock_durability",
+      "question": "How durable is the claimant's fusion of the maritime claim with national identity across leadership transitions and economic shocks?",
+      "resolution_mechanism": "Observe succession episodes, nationalist media cycles, and whether any leadership faction floats compromise language without career termination.",
+      "impact": "If the identity frame breaks, the agenda-setting seat's exit shifts from identity-locked toward merely constrained and the arrangement becomes negotiable within a political generation; if durable, enforcement persists regardless of functional performance.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Durability of the ideological fusion binding the enforcing seat to the claim."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A major maritime power asserts that centuries of use, occupation, and administration confer sovereign rights across waters that the UN Convention on the Law of the Sea allocates to other coastal states as 200-nautical-mile exclusive economic zones. The claim is administered through coast-guard interdiction, militarized artificial features, and a state-subsidized fishing fleet, and is defended by refusing the 2016 arbitral award that tested it. This file instantiates ONE reading of the contested kernel unclos_sovereignty_boundary - the historical_rights_reading; the strict_eez_reading and non_ratifier_enforcement_reading are separate constraints with their own files, linked through network.affects_constraints. Claim and metrics are authored independently: the reading presents itself as prior, quasi-natural law ('rights that predate' the treaty), rhetoric characteristic of a false-summit framing, but the arrangement is enforcement-dependent with identifiable beneficiaries, so it is not authored as a mountain and emerges_naturally is not set. The epsilon referent is the standing arrangement this reading instantiates where operative - the de facto historical-rights enforcement regime in the contested waters - assessed as it operates on non-consenting parties; the reading's own restitution framing is recorded, not adopted, and the referent choice is carried as an omega.",
+    "key_agents": [
+      "- historic_rights_claimant_states: Agenda setter and principal beneficiary (institutional/identity_locked) - administers and enforces the overlay, collects its gains",
+      "- eez_holding_coastal_states: Primary target (organized/constrained) - bear loss of exclusive jurisdiction inside treaty zones",
+      "- coastal_artisanal_fishers_of_eez_states: Deepest target (powerless/trapped) - expelled from traditional grounds, no forum",
+      "- artisanal_historic_user_communities_of_claimant: Shielded beneficiary (powerless/constrained) - subsidized access cited as living evidence",
+      "- transiting_commercial_shipping: Diffuse target (moderate/mobile) - absorbs friction costs priced into insurance and routing",
+      "- external_naval_patrol_operators: Contesting target (powerful/mobile) - challenged passage operations, directionality overridden",
+      "- asean_multilateral_forum: Excluded voice (organized/constrained) - kept out of the bilateral channel where the arrangement is administered",
+      "- permanent_court_of_arbitration_tribunal: Analytical observer (institutional/analytical) - award issued and refused recognition"
+    ],
+    "logic_rationale": "Epsilon 0.74 prices the arrangement as it operates: fisheries grounds closed to their historic users, survey and hydrocarbon activity displaced from licensed zones, transit friction priced into war-risk insurance, and strategic control consolidated over the largest share of a semi-enclosed sea - all accruing to one seat. Suppression 0.74 is authored as a raw structural property, unscaled by power or scope: persistence runs through coast-guard legislation, water-cannon interdiction, blocking of lawful resupply, AIS manipulation, and bilateralizing pressure that removes alternative forums; roughly four-fifths is structural coercion and one-fifth the elite-internalized conviction that the rights are historically self-evident. Theater 0.42 reflects a growing performative share - museum construction, map exhibitions, anniversary landings, white-paper production - alongside genuinely functional enforcement and administration. Accessibility_collapse 0.45: alternatives remain partly available (the codified regime is intact on paper, arbitration exists, coalitions are possible) but are blocked in practice inside the enforced zones. Resistance 0.60: the award, freedom-of-navigation operation tempo, littoral-state transparency initiatives, and ramming countermeasures are sustained pushback. boltzmann.coordination_type is declared resource_allocation because the arrangement's operative function is allocating access to fisheries, hydrocarbons, and transit lanes; the floor test then measures how far extraction exceeds the allocation-cost baseline, which is diagnostically appropriate for the claimed type. The measurement series share one nine-point grid (t=0..16, mapping 2009-2025, anchored at the claim's modern codification via the continental-shelf submission); incident-driven oscillation (2012 shoal seizure, 2014 rig deployment, 2021-24 blockades) rides a monotonic escalation trend, and the escalation - not the incidents - is the classified signal. suppression_requirement is tracked because the story's dynamic is enforcement-capacity intensification (interdiction posture maturing into statute and blockade tactic), not merely shifting extraction. Base scalars describe the interval-end state.",
+    "perspectival_gap": "The same structure computes differently by seat. From the agenda-setting seat the arrangement is restored right: directionality near the beneficiary pole, identity lock converts the claim from policy into identity, and the seat experiences challenge as injury. From the EEZ-holding seats the identical structure is enforced dispossession - high directionality amplified by constrained exit; a won award changes nothing on the water. The trapped fisher seats sit nearest the full-target pole: no forum, no mobility, no compensation. External naval operators experience targeted challenge despite global mobility - derivation from victim status plus mobile exit would damp their directionality toward the beneficiary side, hence the explicit override. Commercial shipping prices the friction and routes around it, sitting mid-scale. The arbitral seat sees the whole structure and can bind no one. The divergence is not disagreement about facts; it is the structural asymmetry the engine computes from the declared data.",
+    "directionality_logic": "Beneficiary declarations (claimant states, shielded user communities) derive low directionality; victim declarations (EEZ states, their fishers, shipping, naval operators) derive high directionality, amplified by exit grade - trapped fishers highest, constrained EEZ states next. Two corrections and one restraint: (1) external_naval_patrol_operators hold the only 'powerful' atom, and derivation from victim-plus-mobile-exit would place them implausibly near the beneficiary side; their mobility is global repositioning capacity, not insulation from an arrangement that targets their operations directly - overridden to d=0.7. (2) The 'institutional' atom is deliberately left un-overridden because two institutional agents sit on it with opposite relationships (the claimant as beneficiary-administrator, the tribunal as analytical observer); a power-atom-keyed override cannot separate them, so structural derivation stands. Scope is regional with global spillover through shipping; the engine's scope amplification applies modestly.",
+    "mandatrophy_analysis": "The founding mandate - bridging vested reliance across the transition from occupancy-based to codified entitlement - was inherently transitional. Four decades after codification, that bridging function is spent in exactly the terrain where this reading deploys it: the zones are delimited, the reliance interests shielded are the claimant's own expanding state-backed fleets rather than pre-existing communities facing retroactive loss, and rival historic users are expelled rather than protected. mandatrophy_resolved is therefore declared true. The classification guards both mislabelings: calling the arrangement a rope launders capture behind the reliance-protection story; calling it a mountain launders construction behind 'predates the treaty' rhetoric - the false-summit signature the beneficiary declarations are positioned to catch. The snare claim keeps victims and coercion-dependence visible, while the historic_record_sufficiency omega preserves the narrow-doctrine residue that would justify movement toward tangled_rope if the evidentiary predicate ever met title standards.",
+    "kernel_context": "This story instantiates the historical_rights_reading of the kernel unclos_sovereignty_boundary - the question of what determines sovereign entitlement in waters covered by both long-standing use and codified maritime zones. Sibling readings: strict_eez_reading (Article 57 exclusivity, no overlay claims valid) and non_ratifier_enforcement_reading (freedom of navigation as customary law enforceable by naval presence independent of ratification). This reading grounds entitlement in the temporal priority of usage; the strict reading grounds it in codified text; the non-ratifier reading grounds navigational freedom in custom. The three are authored as separate constraint stories with separate epsilon values and inverted beneficiary/victim structures; this file's structural data is valid only for this reading."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "unclos_sovereignty_boundary__strict_eez_reading",
+      "unclos_sovereignty_boundary__non_ratifier_enforcement_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'who owns the contested sea' decomposes, per the epsilon-invariance principle, into three structurally distinct constraints sharing one kernel: this historical-rights overlay (epsilon 0.74, claimant-beneficiary / EEZ-victim structure), the strict_eez_reading (codified exclusivity, inverted structure), and the non_ratifier_enforcement_reading (customary navigational freedom, navigators removed from the victim set). Measuring entitlement by historical record versus by treaty text yields different epsilon because they are different constraints, not one constraint under two observables. Family structure: the codified regime (strict reading) is the upstream establishment this reading overlays and pressures; the non-ratifier reading responds operationally to this reading's enforcement."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.7
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "historic_rights_claimant_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "A major maritime power publishes maps and white papers asserting that centuries of use and administration confer rights across waters lying inside other states' 200-mile zones. It administers the claim through a coast-guard statute, militarized artificial features, and a state-subsidized fishing fleet that doubles as presence. Its leadership frames the waters as recovered national territory; renouncing the claim is treated domestically as betrayal, so stepping back from enforcement is not a live option for any government that expects to survive office. Gains - fisheries access, hydrocarbon prospects, strategic depth - accrue to its ministries, fleets, and southern commands."
+    },
+    {
+      "name": "eez_holding_coastal_states",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Southeast Asian coastal states hold treaty-based exclusive rights to the waters off their coasts. Inside those zones they now face interdicted survey vessels, blocked resupply missions to grounded outposts, and exclusion from shoals they occupy. Their remedies - an arbitration won but unenforceable, a regional consensus stymied by unanimity rules, security dependence on external navies - each carries costs their economies and politics can only partially bear. Leaving the arrangement is not available to them short of conceding the waters."
+    },
+    {
+      "name": "coastal_artisanal_fishers_of_eez_states",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Village fishing fleets that worked particular shoals and lagoons for generations are chased from traditional grounds by coast-guard craft; some grounds have been effectively closed for over a decade. Their boats, gear, and household income are tied to specific reefs; relocating to distant ports means losing gear access and market ties they cannot rebuild. They hold no standing in any negotiating channel."
+    },
+    {
+      "name": "artisanal_historic_user_communities_of_claimant",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Fishing communities on the claimant's coasts receive subsidized fuel, insurance, and protected access to grounds worked under the claim. Their seasonal circuits are cited as living proof of the historical record. Their individual livelihoods depend on continuing access that the state secures; they neither set the policy nor bear its diplomatic costs."
+    },
+    {
+      "name": "transiting_commercial_shipping",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Container lines, bulk carriers, and energy tankers moving a large share of global trade through the sea face periodic challenges, shadowing, and demands near contested features. War-risk premiums and route adjustments price the friction. Individual operators can reroute through adjacent straits at meaningful cost, and collectively they lobby flag states rather than engage the administering power directly."
+    },
+    {
+      "name": "external_naval_patrol_operators",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Outside navies assert that transit freedoms survive any coastal claim and schedule deliberate passage operations near contested features to demonstrate it. Their vessels are shadowed, warned, and on occasion maneuvered against; their operations carry incident risk they must plan around. They possess unmatched global reach, yet within these particular waters their presence is contested rather than accepted, and withdrawal would concede the operational precedent."
+    },
+    {
+      "name": "asean_multilateral_forum",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "The ten-member regional bloc is the natural venue for a unified code of conduct but operates by consensus, and members dependent on the claimant's investment block strong language. The claimant insists on one-to-one negotiation, where its size dominates. The forum issues statements but cannot seat itself at the table where the arrangement is actually administered."
+    },
+    {
+      "name": "permanent_court_of_arbitration_tribunal",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "A five-member annex VII tribunal constituted at a littoral state's request heard the merits in 2016 and ruled the broad historical-rights claim incompatible with the treaty's allocation of rights, finding no evidence of exclusive historic control within the zones at issue. It possesses no marshal; its award binds only insofar as parties accept it, and the claimant announced non-recognition before the text issued. It continues to shape how third parties and courts read the record."
+    }
+  ],
+  "gain_flow": "historic_rights_claimant_states",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides an administrable priority rule for maritime spaces where long-standing patterns of use and effective occupation predate formal delimitation: it tells states and user communities that continuity of use, not paper title alone, determines access, resolving conflicts between newly codified zones and settled practice without renegotiating every boundary.",
+    "transfer_function": "Moves effective jurisdiction over fisheries, hydrocarbon prospecting, shoal occupation, and transit regulation from EEZ-holding coastal states and uninvolved navigators to the historic-rights claimant state, executed through coast-guard interdiction, paramilitary fleet presence, and construction on contested features.",
+    "absent_voices": "Neighboring states with their own documented historic-use records (whose evidence would complicate the exclusivity of the claimant's account), the multilateral regional forum (kept out by insistence on bilateral negotiation), the arbitral tribunal whose award is refused recognition, expelled EEZ-state fishing communities, and marine-science bodies documenting reef destruction from island construction - none sits inside the bilateral channel where the arrangement is administered.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the overlay vanished overnight, EEZ states would resume full jurisdiction over their 200-mile zones, the claimant's coast guard would fall back to baselines, freedom-of-navigation operation tempo would normalize into ordinary port-state relations, and the region's fisheries and hydrocarbons would reorganize around treaty boundaries - removal rearranges control over one of the world's busiest and most resource-dense sea areas.",
+    "founding_problem": "Before codified maritime zones, entitlement followed occupancy and use; the doctrine preserved vested reliance - historic bays, prescriptive title - so that codification would not retroactively extinguish settled communities and administrations.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The narrow doctrine is corroborated outside the benefiting parties by international jurisprudence (the Anglo-Norwegian Fisheries line; the 2016 award, which accepts historic-title categories while finding the broad claim unproven) and by mainstream publicists. The broad override version - historic rights extinguishing codified EEZ entitlements wholesale - is attested only by the benefiting parties' own white papers; no disinterested source corroborates it, and that absence is itself signal."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "pre_codification_occupancy_priority",
+    "drift_state": {
+      "moment": "post_arbitral_award_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "strict_eez_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "non_ratifier_enforcement_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "prior_usage_creates_overriding_sovereign_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "continuous_effective_occupation_is_evidenced",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

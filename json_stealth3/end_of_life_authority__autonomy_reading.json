@@ -1,0 +1,425 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_authority__autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eola_autonomy",
+    "story_uid": "87373fa8-98ed-4673-a760-deed5fdcd6fe"
+  },
+  "base_properties": {
+    "extractiveness": 0.49,
+    "suppression": 0.55,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Autonomy-Grounded Medical Aid in Dying Regime (Eligibility-Gated Access Framework)",
+    "topic_domain": "bioethics/end-of-life policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "eligible_requesting_patients",
+      "participating_physicians",
+      "palliative_care_establishment",
+      "oversight_review_commissions"
+    ],
+    "victims": [
+      "ineligible_suffering_patients",
+      "cross_border_medical_travelers",
+      "underground_assistance_networks"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "eligible_requesting_patients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Adults judged competent and meeting their jurisdiction's criteria who formally request medical aid in dying. They receive physician assessment, prescribed medication or administration, and legal protection for everyone involved. Their other paths — continued treatment, palliative sedation, stopping food and fluids, travel abroad — stay open but are slower or harder on their families, and most proceed within months of a first formal request."
+    },
+    {
+      "name": "ineligible_suffering_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People with severe psychiatric illness, advanced dementia, or non-terminal degenerative disease who want help to die but sit on the wrong side of the eligibility line. They keep living in conditions they call intolerable; some spend savings traveling to permissive countries, others stop eating and drinking, and some die of their underlying disease during repeated assessments or waiting periods that they came close to satisfying."
+    },
+    {
+      "name": "participating_physicians",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Physicians who assess requests, prescribe or administer, and file the reports their statute requires. Participation converts what was once felony exposure into protected practice and sometimes billable work, alongside documentation duties, review-board scrutiny, and the weight of deciding who qualifies. Conscientious objectors transfer the caseload to colleagues, and in thinly served regions a handful of willing physicians carry an entire region."
+    },
+    {
+      "name": "oversight_review_commissions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Statutory bodies that collect every case report, check compliance, publish annual data, and refer suspected violations to prosecutors. Their rulings become working precedent that shapes which requests succeed; their staff and budgets grow with caseload. They answer to the legislature that chartered them and cannot change eligibility criteria on their own."
+    },
+    {
+      "name": "legislative_bodies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Parliaments and state legislatures that wrote the eligibility lines, waiting periods, and reporting duties, and that amend them when public pressure, court rulings, or commission findings demand it. Each amendment redraws who may ask and who may not. Holding a regulated middle position lets members defend the arrangement against both outright prohibition and unregulated practice."
+    },
+    {
+      "name": "palliative_care_establishment",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Hospice and palliative medicine as a field. It fought legalization for decades, then absorbed it — receiving mandated referrals and funding-parity concessions in exchange for neutrality. Practitioners split between collaborating with aid-in-dying programs and refusing on principle, and the field's public stance has softened as referral volumes grew. Its professional self-conception — neither hastening nor abandoning death — makes wholesale embrace or rejection equally unavailable."
+    },
+    {
+      "name": "sanctity_aligned_religious_institutions",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Churches and right-to-life organizations that hold intentional life-ending impermissible regardless of consent. They litigate, campaign, and counsel against the practice, and they carry a diffuse institutional cost as legal normalization erodes their standing in public bioethics. Their doctrine permits no compromising participation and no official neutrality."
+    },
+    {
+      "name": "disability_rights_organizations",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocacy groups arguing that offering death where social support falls short devalues disabled lives and exposes poor or dependent people to subtle pressure toward choosing it. They testify at every expansion hearing and lose most of them; several report being consulted after positions were effectively set rather than before."
+    },
+    {
+      "name": "cross_border_medical_travelers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Patients living where assistance is banned or closed to their diagnosis who pay foreign clinics — most famously in Switzerland — several thousand dollars to accompany their deaths. They travel while gravely ill, often without family legally able to attend, and their bodies return home as repatriation cases."
+    },
+    {
+      "name": "underground_assistance_networks",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Right-to-die societies and lay helpers who advise or accompany suicides where no lawful channel exists, accepting prosecution risk; several founders have been tried and convicted, and their manuals circulate regardless. Where courts later widened the legal space — Germany's 2020 ruling, Austria's 2020 decision — parts of this network reorganized into licensed associations almost overnight."
+    },
+    {
+      "name": "international_human_rights_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "UN treaty monitors, the European Court of Human Rights, and comparable bodies that hear petitions from both directions — applicants demanding a protected right to die, and disability monitors condemning expansion as a danger. Their findings reshape national debates; they administer nothing."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Converts clandestine, error-prone self-killing into medically supervised, reported, and reviewed deaths: capacity assessment, voluntariness verification, uniform documentation, cause-of-death classification, and legal certainty for clinicians are solved once, centrally, instead of leaving every death to improvised private arrangement.",
+    "transfer_function": "Moves decisional authority over the timing of death from a state-and-profession monopoly to qualifying individuals; moves procedural labor (assessment, paperwork, review) onto physicians and commissions; and moves suffering-time and proof-burden onto requesters, who must establish eligibility before anything moves.",
+    "absent_voices": "Ineligible sufferers — psychiatric patients, the non-terminal in strict regimes, people with dementia past the capacity threshold — were not in the room when eligibility lines were drawn and remain outside them; minors are excluded everywhere with essentially no consultation; patients who died while waiting or appealing are permanently absent; disability advocates report structured lateness to the drafting table.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the regime vanished overnight, several thousand deaths per year would reroute through travel clinics, stopped eating and drinking, and underground assistance; physicians would lose safe harbor and withdraw; prosecutions of helpers would resume in former permissive zones; review commissions and their datasets would dissolve; and prohibition jurisdictions bordering permissive ones would face renewed inbound pressure.",
+    "founding_problem": "Unbearable, irremediable suffering at life's end combined with legal exposure for anyone who helps relieve it by hastening death — how to honor requests for release without opening abuse of people made vulnerable by illness, age, or dependency.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the Lancet Commission on Global Access to Palliative Care and WHO reports document the untreated-suffering gap; Oregon's annual division-authored reports record inadequately controlled symptoms among requesters; the Supreme Court of Canada in Carter v. Canada accepted live evidence that the existing prohibition caused disproportionate harm; palliative medicine journals independently document demand the specialty cannot absorb."
+  },
+  "interval": {
+    "start": 0,
+    "end": 28
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 28,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 28,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 28,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Wherever the autonomy reading of end-of-life authority has been enacted — Oregon 1997, the Netherlands and Belgium 2002, Colombia 1997/2015, Canada 2016 and 2021, and the constitutional-court openings in Germany, Austria, and Italy around 2019-2020 — the reading has taken institutional form as an eligibility-gated access regime: statutory criteria define who may request aid in dying, waiting periods and dual assessments verify the request, review commissions audit every case, and enforcement runs in both directions (against physicians who exceed criteria and against anyone assisting outside the channels). This story models that standing arrangement as the autonomy reading itself assesses it: the core promise is delivered to those who qualify, while the gates extract real suffering-time from those who do not, and the machinery's procedural share grows with maturity. The colloquial label 'right to die' is deliberately decomposed: this file is the autonomy reading only, with its own epsilon, victim set, and trajectory; the sanctity reading (categorical prohibition) and the slippery-slope mechanism (empirical expansion claim) are separate constraints linked through the network block.\n\nKEY AGENTS (by structural relationship):\n- eligible_requesting_patients: intended beneficiary (powerless/trapped) — receives the delivered service\n- ineligible_suffering_patients: primary target (powerless/trapped) — bears prolonged suffering behind the eligibility line\n- participating_physicians: dual-positioned instrument (powerful/constrained) — collects safe harbor, bears compliance and moral load\n- oversight_review_commissions: administrator (institutional/constrained) — sets working precedent, grows with caseload\n- legislative_bodies: principal agenda-setter (institutional/mobile) — draws and redraws the eligibility line\n- palliative_care_establishment: absorbed former opponent (organized/identity_locked)\n- sanctity_aligned_religious_institutions and disability_rights_organizations: organized resisters bearing diffuse institutional costs\n- cross_border_medical_travelers: arbitrageurs of the patchwork (moderate/arbitrage)\n- underground_assistance_networks: suppressed extra-channel actors (organized/constrained)\n- international_human_rights_bodies: analytical observer",
+    "key_agents": [
+      "eligible_requesting_patients — intended beneficiary (powerless/trapped)",
+      "ineligible_suffering_patients — primary target (powerless/trapped)",
+      "participating_physicians — dual-positioned clinician seat (powerful/constrained)",
+      "oversight_review_commissions — administrator (institutional/constrained)",
+      "legislative_bodies — principal agenda-setter (institutional/mobile)",
+      "palliative_care_establishment — absorbed former opponent (organized/identity_locked)",
+      "sanctity_aligned_religious_institutions — doctrinal resister (organized/identity_locked)",
+      "disability_rights_organizations — resister with sidelined-design complaint (organized/constrained)",
+      "cross_border_medical_travelers — patchwork arbitrageur (moderate/arbitrage)",
+      "underground_assistance_networks — suppressed extra-channel actor (organized/constrained)",
+      "international_human_rights_bodies — analytical observer (institutional/analytical)"
+    ],
+    "logic_rationale": "Extractiveness 0.49: the regime delivers its core good to qualifiers while the gates extract suffering-time from the ineligible, delay-cost from near-qualifiers, travel-and-exclusion costs from the patchwork's losers, and compliance burden from physicians — substantial but nowhere near snare-level, because the primary intended population is genuinely served. Suppression 0.55: raw structural coercion — prosecution of extra-channel assistance, sanctioning of physicians who deviate, and closure of lawful alternatives outside the gate — moderated by two decades of decriminalization drift at the edges. Theater_ratio 0.30 and rising slowly: retrospective review commissions that concur with the original assessment in the overwhelming majority of cases (Belgium's federal commission is the clearest case) increasingly certify rather than scrutinize, a classic Goodhart drift from review quality to case throughput. Accessibility_collapse 0.45: once the gated route is understood, alternatives (Swiss travel, VSED, palliative sedation, underground help) remain partially reachable, so alternatives do not fully collapse. Resistance 0.62: the arrangement fights a two-front war — sanctity-aligned and disability-advocacy opposition to its existence and expansion, and patient-advocacy pressure against its restrictiveness — which is why it meets continuous, organized, bidirectional resistance. All three tracked series share one eight-point grid (t=0..28) so no metric row borrows another's endpoints; the trajectories are monotone drift, not oscillation, so no cycle-lengthening was needed. Suppression_requirement is tracked temporally because the story specifically traces enforcement-capacity migration: vigorous prosecution of extra-systemic helpers in the early era (convictions of prominent assisters, licensing threats) relaxing after the German and Austrian constitutional openings, while intra-regime compliance enforcement held constant — the scalar 0.55 matches the end-state. Suppression is authored as a raw structural property and is deliberately left unscaled; only extractiveness is scaled by directionality and scope downstream.",
+    "perspectival_gap": "Per-seat divergence is the point of this story. From the eligible patient's seat the arrangement computes as near-pure enablement — a hard-won liberation with modest procedural friction. From the ineligible patient's seat the same gates compute as denial-with-paperwork: the right the reading proclaims stops exactly at their diagnosis, and their trapped exit position amplifies whatever extraction reaches them. The physician seat straddles: safe harbor and professional meaning on one side, gatekeeping duty and moral residue on the other — which is why a directionality override lifts physicians off the pure-beneficiary floor. The sanctity-aligned seat rejects the entire apparatus as illegitimate regardless of how gently it operates, but that assessment belongs to the sibling reading's own story file, not to this one's metrics. Identity-lock dynamics bind two seats: the palliative establishment fuses professional identity with the ethos of neither hastening nor abandoning death, so it can neither join nor defeat the regime and instead bargains for referral flows; religious institutions fuse doctrinal identity with categorical impermissibility, making exit from opposition unthinkable without dissolving the institution. If the palliative identity frame broke, the field would likely convert from negotiated neutrality to full-service integration, lowering friction for requesters; if the doctrinal frame broke, the strongest organized resistance would demobilize and expansion would accelerate.",
+    "directionality_logic": "Eligible requesting patients sit nearest the beneficiary end (d near 0.0): subsidized access, trapped exit irrelevant to their favorable position. Ineligible suffering patients sit near the full-target end (d near 1.0): they fund the regime's respectability with their prolonged suffering while receiving nothing from it. Cross-border travelers and underground networks are targets with partial mitigation — travelers buy their way out through arbitrage, networks accept risk as mission cost. Participating physicians are overridden to d=0.32: the automatic derivation from their beneficiary listing would place them near 0.1, but their real position mixes genuine gain (protected practice, fees in some systems) with compliance burden, review exposure, and the gatekeeping role that makes them the regime's hands — a mid-low value reflecting net benefit with real extraction borne. Oversight commissions and legislatures derive as low-d administrators and beneficiaries of legitimacy; commissions' gains are bounded and byproduct-shaped (staff and budget follow caseload; they did not design the gates and do not campaign to enlarge them), and no named seat captures the extraction as designed rent — the gain_flow 'diffuse' assertion is affirmative: each seat was checked, physicians' gains are offset by duties, commissions' accretion is consequential rather than purposive, and legitimacy disperses across the political system. Receipt is nonetheless real: the suffering-time transferred from the ineligible purchases the public trust that keeps the whole arrangement lawful, and that trust lands on no single chair.",
+    "mandatrophy_analysis": "The founding problem remains live — aging populations, cancer prevalence, documented untreated-symptom burdens, and steady request volumes corroborated by sources outside the benefiting parties — so this is not a mandate that outlived its function and no mandatrophy resolution is declared. The classification guards against mislabeling in both directions: calling the regime pure coordination (a rope) would erase the measurable suffering-time the gates extract from the ineligible; calling it pure extraction (a snare) would erase the fact that the primary population is genuinely served and would hand the sanctity reading's conclusion to this file by fiat. Tangled rope holds both truths: real coordination function, real asymmetric extraction, active enforcement required to sustain both. The forward-looking risk is Goodhart drift in the review layer: if theater_ratio continues climbing past roughly 0.5 while the founding problem stays live, the review apparatus would be certifying rather than safeguarding, and the extraction side of the ledger would grow without any corresponding coordination gain. The R5 mismatch consumer finds status=live paired with verdict=world_rearranges — no zombie flag — and the rising theater series is flagged for monitoring rather than reclassification.",
+    "kernel_context": "This file instantiates the autonomy_reading of the contested kernel end_of_life_authority: individual self-authorship grounds a right to determine the circumstances and timing of one's death under unbearable suffering. Two sibling readings instantiate other constraints from the same kernel and are deliberately excluded from this file's metrics: the sanctity_reading (life's intrinsic value prohibits intentional ending regardless of preference), which shares this story's contested territory but authors an inverted structure, and the slippery_slope_mechanism (initial frameworks empirically expand beyond competent terminal cases), which is an empirical claim about this reading's own operation rather than a rival normative premise. The disagreement is located at one structural element: whether death-timing authority is alienable by the competent person at all. Everything else — safeguards, review, eligibility mechanics — is downstream machinery whose meaning depends on that prior commitment."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment_split",
+      "question": "Is death-timing authority alienable by the competent person (this autonomy_reading), inalienably held by God, nature, or community (sanctity_reading), or empirically self-eroding wherever delegated (slippery_slope_mechanism)? This file is one reading only — its epsilon and victim set are indexical to that reading and must not be averaged across siblings.",
+      "resolution_mechanism": "Not resolvable by data at the kernel level; resolution occurs per-jurisdiction through constitutional adjudication and legislation, which simply selects a reading locally. Cross-jurisdiction comparison of victim sets documents the split without closing it.",
+      "impact": "If the sanctity reading prevails in a jurisdiction, the victim set inverts (lives intentionally ended become the harmed class) and this file's classification does not transfer; if the slippery-slope mechanism dominates the discourse, this reading's legitimacy erodes regardless of its per-case performance.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Indexical split of the end_of_life_authority kernel across three sibling readings."
+    },
+    {
+      "id": "eligibility_expansion_asymptote",
+      "question": "Does the observed eligibility expansion (Belgium to minors 2014, Canada dropping reasonably-foreseeable-death in 2021 and moving toward mental-illness and mature-minor tracks, Dutch psychiatric practice growth) approach an asymptote at competent-adult terminal cases-plus-margin, or continue outward?",
+      "resolution_mechanism": "Longitudinal statutory-amendment tracking and commission caseload composition data over the next decade, particularly the Canadian Track-2/mental-illness sequence.",
+      "impact": "Continued expansion lowers gate-extraction for newly eligible classes while extending the regime's footprint and feeding the slippery-slope sibling's evidentiary base; an asymptote would stabilize this story's metrics near current values and starve the sibling mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trajectory and limit of eligibility-criteria expansion."
+    },
+    {
+      "id": "capacity_screening_reliability",
+      "question": "How reliably do capacity assessments and depression screens separate autonomous requests from requests driven by treatable despair, given that only a small fraction of requesters receive formal psychiatric evaluation in most regimes?",
+      "resolution_mechanism": "Outcome studies comparing requesters referred for psychiatric consultation against those waved through, plus longitudinal regret/error audits where death certificates and commission files allow linkage.",
+      "impact": "If screening systematically misses coerced or despair-driven requests, part of what this story measures as honored autonomy is concealed extraction, raising effective extractiveness and widening the victim set to nominally eligible patients.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Validity of the capacity and voluntariness screen at the regime's front door."
+    },
+    {
+      "id": "economic_pressure_conversion",
+      "question": "Does material deprivation convert nominally voluntary requests into economically coerced ones — patients choosing death because care, housing, or disability support is unaffordable or unavailable (the central Canadian Track-2 criticism)?",
+      "resolution_mechanism": "Socioeconomic profiling of requester cohorts against matched non-requester cohorts with equivalent prognoses, and case-series analysis of requests citing care-access failure.",
+      "impact": "If conversion is real, the victim set widens beyond the ineligible to include some nominally eligible requesters, effective extractiveness rises materially, and the disability-advocacy seat's objections move from commentary-grade to correction-grade evidence.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether poverty converts choice into coercion inside the eligibility gate."
+    },
+    {
+      "id": "suppression_patchwork_representation",
+      "question": "Does the story-level suppression scalar represent the whole patchwork, given that enforcement intensity fell sharply in permissive-and-liberalizing jurisdictions while remaining near-full criminal enforcement in prohibition enclaves covering most of the world's population?",
+      "resolution_mechanism": "Comparative docket analysis of assistance-related prosecutions and licensing actions across permissive, transitional, and prohibition jurisdictions over the interval.",
+      "impact": "If prohibition-enclave enforcement dominates the weighted picture, story-level suppression is understated; if permissive-zone relaxation dominates, overstated — either skew shifts the computed type at seats located in the corresponding zone.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether one suppression scalar can represent a juridically fragmented enforcement landscape."
+    },
+    {
+      "id": "review_theater_drift",
+      "question": "Do retrospective review commissions exert substantive control over practice quality, or have they drifted into rubber-stamp certification (near-total concurrence rates, minimal referral-to-prosecutor volume)?",
+      "resolution_mechanism": "Commission dissent and referral rates over time, sampled audit of reviewed cases against independent clinical standards, and comparison of pre-review versus post-review violation detection.",
+      "impact": "If certification has replaced scrutiny, theater_ratio is understated and rising faster than modeled, strengthening the Goodhart-drift reading and pulling late-interval classification toward degraded maintenance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Functional versus ceremonial status of the oversight review layer."
+    },
+    {
+      "id": "framing_institution_vs_legitimacy_claim",
+      "question": "Should the commitment system be framed as the statutory apparatus itself (formalized rules administered by commissions and legislatures) or as the legitimacy claim layered above it (the autonomy doctrine that makes the apparatus defensible at all)? The two framings yield different kernel_codification and authority_grounding profiles.",
+      "resolution_mechanism": "Test which framing reproduces the observed dispute structure: if contests always resolve through statute amendment, the institutional frame fits; if contests resolve through doctrine revision (court rulings redefining the autonomy premise), the legitimacy-claim frame fits.",
+      "impact": "Under the legitimacy-claim framing, authority_grounding shifts from distributed toward expertise-and-lineage hybrids anchored in human-rights jurisprudence, changing the CS pattern classification and the drift vector's anchor point.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Framing under-determination in the commitment-system classification."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_authority__sanctity_reading",
+      "end_of_life_authority__slippery_slope_mechanism",
+      "informed_consent_medical_authority"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'right to die' under kernel end_of_life_authority. The label covers three structurally distinct claims with different epsilon referents and different victim sets: this autonomy_reading file (standing arrangement = eligibility-gated access regime; victims = the ineligible, the patchwork's losers, suppressed extra-channel actors), the sanctity_reading (standing arrangement = categorical prohibition; its victim and beneficiary sets invert this file's), and the slippery_slope_mechanism (an empirical claim whose evidentiary base IS this file's temporal record — hence the influences edge from this reading to it). Upstream, informed_consent_medical_authority feeds this reading: the autonomy premise is the informed-consent doctrine extended to the timing of death itself. All family members link through network.affects_constraints; no single story averages across readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.32
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "individual_self_authority_over_death_timing",
+    "drift_state": {
+      "moment": "contemporary_post_carter_post_bgh_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sanctity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "slippery_slope_mechanism",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competent_autonomous_request_grounds_assistance_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "procedural_safeguards_facilitate_not_substantively_veto",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

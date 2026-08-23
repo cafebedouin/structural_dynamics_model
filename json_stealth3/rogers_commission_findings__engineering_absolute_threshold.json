@@ -1,0 +1,415 @@
+{
+  "header": {
+    "constraint_id": "rogers_commission_findings__engineering_absolute_threshold",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "DISCHARGED (sunset fired at certification, Oct 1988)",
+    "measurement_id_prefix": "rcf_eat",
+    "story_uid": "c04b5434-8087-4014-aa86-9bb020bb597b"
+  },
+  "base_properties": {
+    "extractiveness": 0.26,
+    "suppression": 0.82,
+    "theater_ratio": 0.17,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.55,
+    "claimed_type": "scaffold",
+    "human_readable": "Rogers Findings, Engineering Absolute Threshold Reading: Flight Halt Until O-Ring Redesign Certified",
+    "topic_domain": "organizational/regulatory/aerospace-safety",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "shuttle_astronaut_corps"
+    ],
+    "victims": [
+      "nasa_launch_schedule_management",
+      "commercial_payload_customers",
+      "dod_national_security_payload_offices"
+    ],
+    "vindicated_propositions": [
+      "physical_certification_before_flight",
+      "engineer_veto_authority_in_readiness_review"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "srb_joint_engineers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Solid rocket booster engineers at Morton Thiokol and NASA (the seal and joint specialists who had documented field-joint rotation and O-ring blow-by before the accident). Under this reading they hold veto authority in Flight Readiness Reviews: no resumption recommendation passes without their concurrence, and they set the test evidence that certification requires. Their professional identity fused with the seal problem years before the accident; Roger Boisjoly's post-accident testimony effectively ended his career, which illustrates that exiting the safety mandate reads from inside as betraying professional duty. What flows to them is authority and the obligation to withhold it."
+    },
+    {
+      "name": "nasa_launch_schedule_management",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Headquarters and program-office managers whose performance is measured in flights per year. The gate removes every lever they normally use to restore cadence: no waivers, no accepted-deviation memos, no schedule trades, no documented-risk sign-off path. Their careers are tied to a manifest that is frozen for the duration, and leaving the program would mean abandoning the institutions they run. They bear the grounded-manifest cost for as long as certification takes."
+    },
+    {
+      "name": "shuttle_astronaut_corps",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Active and future flight crews who would ride the redesigned booster. After the accident they pressed internally for hardware fixes before any resumption (the chief astronaut's February 1986 memo cataloging outstanding hazards). They receive the risk reduction the gate produces; they cannot opt out of the manifest and would not want to opt out of the protection. Their leverage is moral and professional, exercised through the astronaut office rather than through the review boards themselves."
+    },
+    {
+      "name": "morton_thiokol_srb_division",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sole-source solid rocket booster contractor. Absorbs the redesign engineering burden, schedule liability, and the reputational damage of the failure attribution to its joint design. Simultaneously receives the funded redesign and recertification program the gate creates, which keeps its booster line and workforce intact through the stand-down. Walking away from the contract would forfeit its core business, so it works the gate rather than resisting it."
+    },
+    {
+      "name": "dod_national_security_payload_offices",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Defense users depending on the shuttle for heavy and classified payloads. The grounding strands deployment plans with no substitute heavy-lift capacity ready; they lobby for the earliest possible resumption and accelerate expendable-vehicle programs as a partial hedge. They cannot fly anything through the gate and bear the delay directly."
+    },
+    {
+      "name": "commercial_payload_customers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Satellite operators with contracted shuttle launches. The indefinite grounding forces renegotiation of every manifest slot; many shift contracts to the European Ariane and to expendable vehicles, a partial exit that dampens what the gate ultimately costs them. Those without credible alternatives absorb the delay in full."
+    },
+    {
+      "name": "challenger_51l_crew_families",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Families of the lost crew. The people whose deaths anchor the boundary's moral authority have no seat in Flight Readiness Reviews or certification boards; they speak through memorial statements, congressional testimony, and the press, and they oppose any resumption that carries the smell of schedule pressure. Their position cannot be voted out of the conversation because they were never in it."
+    },
+    {
+      "name": "rogers_presidential_commission",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The presidential commission whose report supplies the kernel text. It documented the joint failure physics, the temperature sensitivity, and the approval chain that normalized escalating erosion, then disbanded. It operates no gate and collects nothing; its findings are subsequently interpreted by the contending readings."
+    },
+    {
+      "name": "congress_oversight_committees",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "House and Senate committees that fund the agency and hold hearings. They convert post-accident public reaction into budgetary enforcement of the stand-down, and later press for cadence restoration as the redesign matures. They observe, fund, and pressure; they do not operate the gate."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Converts an incredible promise into a verifiable gate. After a loss of vehicle caused by a known joint defect waved through under schedule pressure, no internal assurance that the program will be careful is credible; the arrangement solves the flight-resumption commitment problem by requiring physical certification evidence before any crew flies, anchoring resumption authority to test results rather than to managerial assertion.",
+    "transfer_function": "Moves resumption authority from schedule-holding program management to certification-gated engineering review; moves roughly thirty-two months of grounded operations out of the launch manifest; moves redesign and recertification funding from NASA and contractor budgets into the booster joint redesign program. The arrangement's operation collects no ongoing rent; what moves is authority, time, and budget.",
+    "absent_voices": "The Challenger 51-L crew, whose deaths anchor the boundary, and their families had no seat in Flight Readiness Reviews or certification boards; they speak only through memorials, hearings, and press. Scientific and commercial users whose missions were indefinitely deferred had no vote on the certification timetable; their interests entered only through congressional pressure and contract renegotiation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Within the constraint's operating window, overnight removal means resumption on the as-flown field joint, the configuration with a demonstrated cold-temperature catastrophic failure mode, before any fix exists. The manifest restarts immediately, the redesign program loses its forcing function, and the fleet resumes operating the exact defect the Rogers report documented. Every arrangement built on the stand-down (crew assignments, manifest replans, the funded redesign itself) presupposes the gate.",
+    "founding_problem": "The solid rocket booster field joint O-rings lost sealing function under cold temperatures and ignition pressure transients, a defect engineers had documented and warned about for years while readiness reviews repeatedly accepted escalating erosion as acceptable risk. The arrangement was built to break the coupling between a known lethal hardware defect and a decision process that had normalized its warning signs.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the Rogers Commission report itself, a presidential body external to NASA and Thiokol, documented the joint failure physics and the normalized-deviance approval chain; Richard Feynman's commissioned appendix demonstrated the temperature-resilience loss with a simple ice-water demonstration; House Science and Technology Committee hearings and the post-redesign flight record corroborate that the specific defect was remediated. No party inside the arrangement attests that the founding problem is still live."
+  },
+  "interval": {
+    "start": 0,
+    "end": 32
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 28,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 28,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.9,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.88,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.86,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.84,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 28,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.35,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "After the loss of Challenger on 28 January 1986, the Rogers Commission report became the fixed text from which the post-accident order was read. This story instantiates the engineering_absolute_threshold reading: the findings establish a technical safety boundary under which flight operations cease until the solid rocket booster field joint is physically redesigned and the redesign is certified by test. Under this reading, booster engineers hold veto authority in Flight Readiness Reviews, no waiver or documented-risk path exists, and the fleet stands down for roughly thirty-two months until certification opens the gate (return to flight, October 1988). The epsilon referent is the standing arrangement under contest, the certification-gated flight ban itself, assessed by this reading's own lights: from the engineering seat the gate tracks a physical failure mode, so the arrangement is held to extract little beyond what the hardware owes. The claim and the metrics are independent authored facts: the constraint is CLAIMED as scaffold (transitional support whose justification is the safe return to flight, carrying a certification-triggered sunset that actually fired), while the authored metrics describe its actual operation, a hard, highly suppressive gate whose costs fell on identifiable seats for the duration of the stand-down.",
+    "key_agents": [
+      "srb_joint_engineers: Agenda-setting seat (organized/identity_locked) — hold veto authority over Flight Readiness Reviews under this reading; set the certification evidence standard",
+      "nasa_launch_schedule_management: Primary target (institutional/trapped) — bears the grounded-manifest cost with no waiver path",
+      "shuttle_astronaut_corps: Primary beneficiary (organized/constrained) — receives the risk reduction the gate produces",
+      "morton_thiokol_srb_division: Dual-positioned payer/beneficiary (institutional/constrained) — absorbs the redesign burden and collects the funded redesign program",
+      "dod_national_security_payload_offices: Secondary target (institutional/constrained) — stranded heavy-payload plans, lobbies for earliest resumption",
+      "commercial_payload_customers: Target with partial exit (organized/arbitrage) — shifts contracts to expendable vehicles where possible",
+      "challenger_51l_crew_families: Excluded moral authority (organized/trapped) — no seat in the review structure, speaks through hearings and press",
+      "rogers_presidential_commission: Analytical observer — source of the kernel text, operates no gate",
+      "congress_oversight_committees: Observing enforcer (institutional/analytical) — converts public reaction into budgetary enforcement"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.26, reading-indexed: this reading holds the gate as tracking physical necessity (the joint demonstrably failed within its qualified envelope), so the arrangement extracts little that is not owed to the hardware; the residual reflects judgment-laden certification stringency and delay beyond strict necessity. Suppression is high (0.82) because the gate left launch-cadence seats with no alternative path to flight at all; suppression is a raw structural property and is deliberately NOT scaled by power or scope, unlike extractiveness. Theater is low (0.17): the stand-down was substantively functional (real redesign, real full-scale testing, real certification), with ritual accretion near return to flight. Accessibility collapse is 0.70: within the reading's framework, once the joint physics are accepted, alternatives to the gate largely foreclose, but political alternatives (program cancellation, vehicle replacement) remained open, so collapse is substantial but not total. Resistance is 0.55: real pressure came from defense payload offices, commercial customers, and headquarters schedule advocates, blunted by the post-disaster accountability climate. The temporal series run on one shared nine-point grid (months from the January 1986 grounding to the October 1988 return to flight) so every tracked metric is authored at every examined time point. Base extractiveness is hump-shaped rather than accumulating: it peaks mid-interval as compounded delay maximizes the cost of the gate, then discharges as certification approaches, which is the signature of a scaffold completing its transition rather than of rent accumulation. Suppression requirement plateaus near 0.9 through the crisis-shock phase, erodes gradually as redesign milestones land, and releases sharply at certification. Theater rises gently as documentation and demonstration rituals accumulate ahead of the public return to flight. The base_properties scalars describe the constraint's operative phase (the hard-gate plateau), not the terminal discharge point, which is why the series endpoints sit below the scalars.",
+    "perspectival_gap": "The seats compute differently by construction. From the agenda-setter seat (booster engineers), the constraint is legitimate authority they wield: the gate is the instrument through which their pre-accident warnings finally bind. From the primary payer seat (launch schedule management), the same structure is an immovable wall that removed every lever they ordinarily use, experienced as extraction of their manifest and their careers. The beneficiary seat (astronaut corps) experiences it as protection purchased with someone else's schedule. The arbitrage seat (commercial customers) experiences it as a negotiable delay they can partially route around. The engine computes these per-seat classifications from the structural data; the authored scaffold claim does not adjudicate between them.",
+    "directionality_logic": "The astronaut corps is declared beneficiary and derives a low directionality (the gate subsidizes their survival). Launch schedule management, defense payload offices, and commercial customers are declared victims and derive high directionality; the trapped exit of schedule management and defense offices amplifies their effective extraction toward the full-target end, while the commercial customers' arbitrage-grade exit (shift to Ariane and expendables) damps theirs. The booster contractor sits mid-scale: declared payer on the stakeholder surface with a secondary beneficiary role, absorbing redesign cost while collecting the funded redesign program, so its costs and gains partially offset. The engineers, as agenda setters whose authority exists only through the constraint's continuation, derive beneficiary-side directionality without collecting rents. Observers derive analytical directionality and feed no extraction arithmetic.",
+    "mandatrophy_analysis": "This is a scaffold that discharged correctly, and the classification matters precisely because it prevents two opposite mislabels. Reading the gate as a snare (pure extraction on launch cadence) misses that nobody collected the extracted time as rent: the grounded months were deadweight consumed as delay and rework, and the gate dissolved the moment its justification was satisfied. Reading it as a permanent rope misses that its whole justification was transitional; keeping the absolute ban past certification would have converted it into inertial maintenance. The sunset clause is load-bearing: certification was the sunset trigger, and it fired. Note on the R5 mismatch signal: the founding problem is dead (the defect was remediated and corroborated from outside the benefiting parties) while the disappearance verdict is world_rearranges (within the operating window, removal would have restarted flight on the defective joint). That combination flags mechanically as capture-or-zombie, but here it is a completion signature, not a capture signature: the arrangement rearranged the world while alive and then ended when its function ended, which is what a successful scaffold does. The zombie risk in this kernel lives in the sibling readings, where compliance apparatus and quantified-risk process persist past their justification; those stories carry their own classifications.",
+    "kernel_context": "This story instantiates the engineering_absolute_threshold reading of the rogers_commission_findings kernel: the June 1986 presidential commission report treated as a fixed text from which institutional obligations are read, with drift migrating into interpretation. Sibling readings: management_compliance_narrative (the findings establish a documentation-and-mitigation compliance process sufficient to proceed) and actuarial_risk_acceptance (the findings establish a quantified-risk gate, fly when a documented failure probability is accepted by informed decision-makers). Relation calls: coexists_with toward both siblings. Adopting this reading commits a party to calling the siblings misreadings of the report, but neither sibling is rendered self-contradictory by this reading's premises, and all three remained live positions held simultaneously by different factions (management ran the compliance narrative while booster engineers held the threshold, and the agency later re-adopted quantified-risk acceptance); no single interpretive framework can hold two of them as accounts of what the findings establish, but neither eliminates the other as a coherent position, so foreclosure is not warranted. The readings are also sequentially combinable in practice (threshold until certification, actuarial or compliance regimes thereafter), which further argues against logical foreclosure. Drift profiles differ across the kernel: this reading's certification gate held while its veto-authority foundation eroded slowly and acknowledgedly; the sibling stories carry their own reference frames and drift states."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "Which reading of the Rogers findings does the report text actually compel: an absolute technical boundary, a compliance process, or a quantified-risk gate?",
+      "resolution_mechanism": "Comparative institutional outcome analysis across organizations that implemented each reading, plus close textual analysis of the report's recommendation language against its evidentiary chapters; the text underdetermines the reading, so resolution comes from which implementation the subsequent record vindicates.",
+      "impact": "If the management reading is adopted, suppression drops sharply (documentation suffices to proceed) and the constraint reclassifies toward a compliance-process hybrid; if the actuarial reading is adopted, the gate becomes a quantified threshold with a waiver path; only under this reading does the absolute no-flight boundary with engineer veto exist at all.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is one of three rival readings of the rogers_commission_findings kernel; the choice of reading determines the constraint's entire suppression and victim structure."
+    },
+    {
+      "id": "certification_standard_stringency",
+      "question": "What verification standard counted as certified, and how much of the thirty-two-month stand-down was fixed by the physics versus chosen by the certifying authorities?",
+      "resolution_mechanism": "Archival record of the certification criteria debates (full-scale static firing requirements, joint environmental testing, hot-fire verification) and the schedule trade studies NASA and the contractor ran against them.",
+      "impact": "A stricter-than-necessary standard lengthens the suppression of launch cadence and raises the extraction the gate imposes on payer seats; a looser standard shortens the stand-down but raises residual crew risk, moving the constraint between scaffold and a weaker, riskier gate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How much of the gate's duration and cost was discretionary judgment rather than physical necessity."
+    },
+    {
+      "id": "veto_authority_durability",
+      "question": "Did the engineer veto authority embedded in this reading persist beyond the stand-down, or decay under renewed schedule pressure?",
+      "resolution_mechanism": "Longitudinal record of Flight Readiness Review governance from return to flight onward, cross-checked against the Columbia Accident Investigation Board's findings on the recurrence of normalized deviance in a later program era.",
+      "impact": "If the veto decayed, this reading's constraint converts over time from a lived gate into theatrical compliance (piton drift in the successor arrangements); if it held, the post-certification steady state is a durable rope-like safety standard.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Durability of the reading's enforcement foundation after its sunset fired."
+    },
+    {
+      "id": "suppression_basis_structural_vs_political",
+      "question": "Was the gate's suppressive force structural (anchored in certification physics that no manager could argue away) or political (anchored in the post-disaster accountability climate, which fades)?",
+      "resolution_mechanism": "Counterfactual comparison: enforcement behavior in the months immediately after the accident versus late in the stand-down, when public attention had moved on but the gate held; plus the record of what happened to similar safety boundaries in agencies without an equivalent catalyzing report.",
+      "impact": "If the suppression was mostly political, the constraint would have lifted as memory faded regardless of certification status (piton or abandoned-boundary trajectory); if structural, the gate persists exactly until certification and no longer, which is what the record shows.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the measured suppression was carried by the hardware argument or by the accountability climate."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "shuttle_commercial_payload_phaseout",
+      "nasa_independent_safety_overhead",
+      "frr_engineering_veto_persistence"
+    ],
+    "dual_formulation_note": "The colloquial label 'the Rogers findings' covers three structurally distinct constraints corresponding to the three readings of the kernel: this story (engineering_absolute_threshold, a transitional certification gate), management_compliance_narrative (a documentation-sufficiency compliance process), and actuarial_risk_acceptance (a quantified-risk acceptance gate). Each has its own epsilon, beneficiary/victim structure, and classification; they are linked as readings of one kernel through cs_structure.reading_relations rather than merged into one story. Downstream, this reading's operation structurally influenced the commercial payload phaseout (the indefinite grounding made shuttle commercial manifest commitments untenable), the creation of independent safety overhead in the agency, and the persistence of engineering veto authority in readiness reviews after the gate opened; those constraints are declared as network dependents."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "physical_certification_gate",
+    "drift_state": {
+      "moment": "contemporary_post_caib_era",
+      "direction": "authority_erosion",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "management_compliance_narrative",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "actuarial_risk_acceptance",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "physical_verification_precedes_flight_resumption",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "engineer_veto_over_schedule_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "morton_thiokol_srb_division",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

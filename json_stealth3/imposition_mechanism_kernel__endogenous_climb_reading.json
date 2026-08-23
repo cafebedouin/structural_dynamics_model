@@ -1,0 +1,305 @@
+{
+  "header": {
+    "constraint_id": "imposition_mechanism_kernel__endogenous_climb_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "endo_climb",
+    "story_uid": "b7be0c56-8eec-4966-817b-4ab2b6c1a8dc"
+  },
+  "base_properties": {
+    "extractiveness": 0.19,
+    "suppression": 0.12,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.14,
+    "claimed_type": "rope",
+    "human_readable": "Endogenous Climb Legitimation Pathway (Adoption Precedes Mandate)",
+    "topic_domain": "historical_sociology/state_formation/cultural_authority",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "early_adopter_households",
+      "majority_adopting_households",
+      "local_reform_elites",
+      "central_state_authority"
+    ],
+    "vindicated_propositions": [
+      "convention_devolution_theory",
+      "common_knowledge_tipping_model"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_assignment",
+      "question": "This story instantiates the endogenous_climb_reading of imposition_mechanism_kernel; are the corpus transitions it draws on actually governed by endogenous climb rather than by the sibling readings (exogenous_override_reading, hybrid_legitimation_reading)?",
+      "resolution_mechanism": "Per-case sequencing tests: reconstruct adoption curves from marriage registers, association rosters, and mission reports; date mandates against them; measure enforcement expenditure. Mandate-after-adoption with low enforcement cost supports this reading; mandate-before with heavy enforcement supports the override sibling; mixed signatures support the hybrid sibling.",
+      "impact": "If a sibling reading governs the cases, this constraint's low epsilon and rope classification are wrong: the same colloquial label decomposes into a snare-shaped (override) or tangled_rope-shaped (hybrid) story with materially higher extraction and suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which reading of the imposition-mechanism kernel the underlying norm transitions instantiate."
+    },
+    {
+      "id": "mandate_sequencing_identifiability",
+      "question": "Can mandate-versus-adoption sequencing actually be established from the surviving record, given that ratification documents tend to backdate popular sentiment and adoption curves are reconstructed from fragmentary registers?",
+      "resolution_mechanism": "Microhistorical triangulation: enrollment ledgers, pledge lists, subscription rolls, and mission reports dated against edict composition dates and court deliberation minutes, with sensitivity analysis over dating uncertainty.",
+      "impact": "If mandates in fact preceded adoption in the flagship cases, this reading's low-suppression, low-cost profile is misattributed: suppression existed but was deferred to the post-ratification period, and epsilon rises accordingly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the archival record can settle the sequencing premise this reading stands on."
+    },
+    {
+      "id": "successful_climb_survivorship",
+      "question": "Is this reading induced only from transitions that succeeded, leaving failed or stalled climbs outside the sample and biasing the measured costliness of the arrangement downward?",
+      "resolution_mechanism": "Collect stalled-transition cases (campaigns that plateaued below the tipping point, pledge collapses, reversed mandates) and score their outcomes alongside the successes.",
+      "impact": "Failed climbs impose real costs (polarization, burned signals, half-shifted marriage markets); including them raises the arrangement's measured costliness and may push effective extraction above the coordination floor.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Survivorship bias in the case base behind the endogenous-climb account."
+    },
+    {
+      "id": "post_ratification_theater_drift",
+      "question": "Does the rising post-ratification ceremonial activity (anniversary edicts, compliance statistics, credit-claiming commemorations) mark the beginning of inertial drift, in which the mandate apparatus persists theatrically after its coordinating work is done?",
+      "resolution_mechanism": "Track whether later mandates initiate transitions or merely commemorate completed ones; count enforcement activations against registered compliance over successive campaigns.",
+      "impact": "If commemoration displaces initiation, the arrangement decays toward inertial maintenance and the theater_ratio series should be read as a leading indicator of that decay.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the mandate apparatus is drifting from coordination toward ceremony."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Across the state-formation episodes this reading covers, the same arrangement recurs: a costly self-enforcing convention loses its grip from below. Reform associations publish pledge registers; prominent families marry according to the new practice; adoption spreads through marriage-market arithmetic rather than police action; and the state's prohibition edicts arrive years after adoption has already peaked in the core regions, functioning as certification of a shift already accomplished. The epsilon referent is that standing arrangement, adoption-first legitimation with the mandate as ratifier, assessed by this reading's own lights: a coordination solution to a convention trap, with enforcement costs near zero because compliance is voluntary once expectations flip. KEY AGENTS (by structural relationship): central_state_authority, agenda-setting ratifier (institutional/arbitrage); early_adopter_households, first-moving beneficiaries who absorb pre-tipping-point penalties (moderate/constrained); majority_adopting_households, mass beneficiaries who move once expectations flip (organized/mobile); local_reform_elites, broker-beneficiaries running pledge societies (organized/identity_locked); holdout_communities, residual cost-bearers past the flip (moderate/trapped); historical_sociologists, analytical observers reconstructing adoption curves (analytical/analytical). Family note: this file is one of three readings of imposition_mechanism_kernel; the sibling readings are separate constraint stories linked through network.affects_constraints, each with its own epsilon and victim structure.",
+    "key_agents": [
+      "central_state_authority: Agenda-setting ratifier (institutional/arbitrage) — issues the mandate after adoption peaks, converts momentum into administrative legitimacy at near-zero enforcement cost",
+      "early_adopter_households: First-moving beneficiaries (moderate/constrained) — absorb pre-tipping-point penalties and supply the visible proof the change was wanted",
+      "majority_adopting_households: Mass beneficiaries (organized/mobile) — move once expectations flip, turning an early-adopter experiment into common knowledge",
+      "local_reform_elites: Broker-beneficiaries (organized/identity_locked) — run pledge societies and registers; their standing is fused to the cause",
+      "holdout_communities: Residual cost-bearers (moderate/trapped) — keep the old practice past the flip and pay escalating penalties no one collects",
+      "historical_sociologists: Analytical observers (analytical/analytical) — reconstruct adoption curves and date mandates; their findings adjudicate the reading"
+    ],
+    "logic_rationale": "Extraction is low (0.19) because nothing material is taken: the arrangement's currency is assurance, and its one concentrated gain, the legitimacy the state banks on ratifying, is paid for by no one. Suppression is low (0.12) because persistence requires no coercion: expectations flip first, edicts second; the mild residual is post-shift social pressure on holdouts. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is scaled downstream by the engine. Theater (0.30) is the honest blemish: once adoption succeeds, the mandate apparatus increasingly commemorates rather than initiates, a drift the measurement series tracks on a single shared seven-point grid. Accessibility collapse (0.62) reflects the convention mechanics: after the flip, remaining outside the new practice is nearly unavailable inside affected marriage markets, though peripheral communities retain workable alternatives far longer than a natural law would permit. Resistance (0.14) is minimal because the mandate confronts a fait accompli; opposition is confined to holdout regions already losing the arithmetic. Claimed type is rope on the structural facts: a genuine collective-action problem solved with negligible coercive overhead, participants as net beneficiaries, no suppressed alternative. Coordination type is identity_coordination: the machinery coordinates reputation and marriage-market membership claims against shifting criteria, and the identity framing carries no hidden extraction here since extraction is independently low. Metrics and claim are authored independently; the engine computes per-seat verdicts from the structural data.",
+    "perspectival_gap": "Seats should diverge sharply. From the central_state_authority seat the arrangement is nearly free authority: ratify, register, take credit. From the adopting-household seats it is deliverance from a trap they solved themselves, with the mandate as welcome insurance. From the holdout_communities seat the same structure reads as something done to them: a convention flipped without their consent, imposing yearly penalties they cannot escape, so that from that chair the shape resembles enforced extraction even though no one collects. Holdout communities could in principle coalize to restore the old equilibrium, but coordination is precisely what they lack, which is why their trapped exit does not convert into resistance. The engine computes these per-seat verdicts from power, exit, and directional data; the divergence between the state's rope and the holdouts' extraction-shadow is the perspectival measurement this story exists to take.",
+    "directionality_logic": "Beneficiary declarations map to low d: early and majority adopting households, reform elites, and the state all sit near the subsidized end, the state lightest-loaded of all since its gain costs it only the drafting of edicts. Holdout communities carry the arrangement's only real costs and derive d near the target end; their trapped exit amplifies the effective load the engine assigns them. Because their losses are diffuse and uncaptured by any seat, aggregate epsilon stays low even though the holdout seat's effective extraction is the story's maximum; that asymmetry between seat-level and aggregate readings is intended signal, not noise. Every paying seat operates at regional scope, where verification is comparatively easy, so no scope amplification inflates the figures.",
+    "mandatrophy_analysis": "The founding problem, convention traps blocking welfare-improving norm change, is live: every new reform campaign re-runs the machinery, so the arrangement is not obsolete and mandatrophy is unresolved. Classification discipline cuts both ways. Reading the state's involvement as coercion would mislabel a rope as a snare and invent victims who do not exist; reading the post-ratification ceremony as harmless decoration would miss the theater drift the series records. The guard condition: if commemorative mandates displace initiating ones and enforcement activations fall toward zero while the apparatus persists, the arrangement ages into inertial maintenance, coordination remembered and function gone. The omega post_ratification_theater_drift watches that seam.",
+    "kernel_context": "Kernel: imposition_mechanism_kernel, the contested question of how new norms acquired legitimacy during episodes of state formation and cultural transformation. This file instantiates the endogenous_climb_reading: legitimacy climbs from below, and the state mandate arrives as ratification of adoption already accomplished. Sibling readings: exogenous_override_reading (coercion manufactures legitimacy; the mandate precedes and produces acceptance) and hybrid_legitimation_reading (symbolic authority transfer combined with institutional incentives; neither pole alone). The disagreement is located in two structural elements: the temporal ordering of mandate versus popular acceptance, and the source from which legitimacy is drawn. This story authors epsilon only for the climb account's referent, the standing arrangement in which adoption precedes mandate, and does not average across readings."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "imposition_mechanism_kernel__exogenous_override_reading",
+      "imposition_mechanism_kernel__hybrid_legitimation_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'how new norms gained legitimacy during state formation' decomposes per the epsilon-invariance principle into three readings of imposition_mechanism_kernel, each a separate story with its own epsilon: this file (endogenous climb, mandate ratifies prior adoption, low epsilon, rope-shaped), imposition_mechanism_kernel__exogenous_override_reading (coercion creates legitimacy, high epsilon, snare-shaped), and imposition_mechanism_kernel__hybrid_legitimation_reading (symbolic authority transfer plus incentives, intermediate epsilon, tangled_rope-shaped). The endogenous reading sits upstream of the hybrid: its demonstrated successes made pure-coercion accounts untenable and created the conditions in which the hybrid synthesis was proposed. Sibling files link back to this ID."
+  },
+  "stakeholders": [
+    {
+      "name": "central_state_authority",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Issues the mandate that ratifies the already-spreading practice change: drafting edicts, appointing inspection offices, publishing compliance statistics. By the time the mandate lands, most target households have already moved, so the office's main work is registering a shift it did not originate and converting the momentum into administrative legitimacy. Declining to ratify would forfeit the credit; timing the announcement is the lever this seat holds."
+    },
+    {
+      "name": "early_adopter_households",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Abandon the practice before their neighbors do, accepting years of marriage-market penalty and gossip in exchange for ending the practice's direct costs sooner. They join pledge associations, sign public registers, and supply the visible examples later cited as proof the change was wanted. Once the majority moves, their early sacrifice converts into standing; before it, they cannot unilaterally return without paying twice."
+    },
+    {
+      "name": "majority_adopting_households",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Wait until the shift is unmistakably underway, then move with the crowd, abandoning the practice once the marriage market and neighborhood expectations have visibly flipped. They bear little transition risk and capture most of the benefit of ending the practice; their participation is what turns an early-adopter experiment into common knowledge."
+    },
+    {
+      "name": "local_reform_elites",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Gentry, merchants, returned students, and association officers who fund pledge societies, publish registers of compliant families, and lobby the provincial office. Their local standing rides on the reform cause; retreating from it would cost them the identity and networks the campaign built. They broker between household readiness and official ratification."
+    },
+    {
+      "name": "holdout_communities",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Remote counties and conservative lineages that keep the old practice past the tipping point. As surrounding districts flip, their daughters' marriage prospects narrow to within-group matches and traveling brokers, and the penalty grows yearly. No office collects anything from them; their loss is the residual price of living on the losing side of a convention that moved without them. Rejoining means admitting a decade of defiance; staying means shrinking pools."
+    },
+    {
+      "name": "historical_sociologists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Reconstruct adoption curves from marriage registers, association rosters, and mission reports; date mandates against them; publish the sequencing findings that decide which account of norm legitimation the era's transitions support. They collect nothing and pay nothing; their leverage is evidential."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the mutual-expectation trap that keeps costly self-enforcing practices alive: no household can abandon the practice alone without marrying its children into penalty, so abandonment requires common knowledge that everyone is ready. Pledge registers, association memberships, prominent examples, and finally the state mandate supply graded signals that convert private readiness into public fact, letting large populations move within the same few seasons.",
+    "transfer_function": "Moves assurance and standing rather than goods: early adopters' transition risk is pooled and amortized across the whole adopting population; the adopting public extends legitimacy to the state free of charge when it ratifies; and the state returns certification and insurance (registration of compliant families, protection for late movers) to adopters. Nothing material is taken from anyone; the flows are informational and reputational.",
+    "absent_voices": "Holdout communities and the practice's traditional defenders enter the record mainly through reformers' pamphlets and officials' compliance tables, not through their own testimony; the people who lived under the practice bodily speak through reformers' and missionaries' transcription, if at all. They sit in village registers and lineage genealogies, outside the mandate's drafting rooms: the mandate ratified a shift that no deliberation had consulted them on.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the common-knowledge machinery, costly conventions persist indefinitely: prohibition edicts issued into unreformed expectation structures fail for generations, which is the recorded fate of bans in regions the climb never reached, while communities that achieve the shift sustain abandonment with almost no enforcement. Remove the arrangement and the world reverts to convention traps plus ineffective decrees.",
+    "founding_problem": "Costly self-enforcing conventions, practices each family would gladly drop if others dropped them simultaneously but cannot drop alone, blocking welfare-improving norm change during state consolidation and cultural transformation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: missionary and consular archives recording the repeated failure of prohibition edicts where adoption had not occurred; twentieth-century public-health campaign literature against parallel practices, which independently rediscovers and redeploys the pledge-and-register mechanism; and economic historians' replication of the marriage-market penalty arithmetic. None of these sources answers to the state offices or reform associations that benefited from the arrangement."
+  },
+  "gain_flow": "central_state_authority",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "popular_adoption_precedence",
+    "drift_state": {
+      "moment": "contemporary_microhistorical_era",
+      "direction": "axiom_overriding",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "exogenous_override_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_legitimation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legitimacy_originates_in_popular_adoption",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "mandate_ratifies_rather_than_creates_legitimacy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

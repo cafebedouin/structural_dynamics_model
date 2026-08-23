@@ -1,0 +1,369 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__public_health_primary",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "8dea246a-5c3a-4900-8bba-5207d5e04d50"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.68,
+    "theater_ratio": 0.36,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public-Health-Primary Legitimation Standard for Health Interventions",
+    "topic_domain": "public health policy / medical ethics / constitutional law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "immunocompromised_patients",
+      "elderly_high_risk_residents",
+      "public_health_authorities",
+      "employers_administering_mandates"
+    ],
+    "victims": [
+      "unvaccinated_workers",
+      "unvaccinated_patrons",
+      "unvaccinated_healthcare_workers"
+    ]
+  },
+  "interval": {
+    "start": 1905,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1905,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1940,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1905,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1940,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1905,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1940,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.68
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_decomposition",
+      "question": "This constraint instantiates only the public_health_primary reading of the legitimate_health_intervention kernel. Do the sibling readings instantiate structurally different constraints (different victim sets, different enforcement surfaces), such that any single-story treatment of the kernel would be mis-specified?",
+      "resolution_mechanism": "Generate and classify the sibling stories legitimate_health_intervention__bodily_autonomy_primary and legitimate_health_intervention__proportionality_reading; compare victim sets, epsilon values, and computed types across the kernel family.",
+      "impact": "If the siblings differ structurally as expected, the kernel must remain three linked stories: the bodily-autonomy reading empties the victim set entirely (no imposition is legitimate regardless of measured benefit), and the proportionality reading makes victim membership contingent on threat level. Merging them would average incompatible epsilon values over one label.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-level decomposition across three competing readings of legitimate health intervention."
+    },
+    {
+      "id": "outcome_measurement_self_certification",
+      "question": "Is the population-outcome evidence that confers legitimacy verified by bodies independent of the agencies imposing the interventions, or does the measuring authority effectively certify its own mandates?",
+      "resolution_mechanism": "Trace the provenance of morbidity/mortality estimates used in mandate determinations; distinguish figures replicated by national statistics offices and academic consortia from agency-only reporting.",
+      "impact": "Self-certification raises the agenda-setter seat's effective directionality above the derived beneficiary-end value and pushes classification toward the extractive end; independently verified outcome data strengthens the genuine-coordination component of the arrangement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Independence of the measurement that legitimizes imposition."
+    },
+    {
+      "id": "vector_label_vs_victim_status",
+      "question": "Does classifying unvaccinated individuals as disease vectors make them victims of this arrangement, or does their harm flow from the particular enforcement instruments chosen (termination, exclusion) rather than from the outcome-standard itself?",
+      "resolution_mechanism": "Compare jurisdictions applying the same outcome standard with non-punitive instruments (education campaigns, insurance incentives, paid vaccination leave): if refuser welfare diverges sharply at equal coverage levels, the victim status is instrument-generated.",
+      "impact": "If instrument-generated, the epsilon attributable to the legitimation standard falls and the enforcement layer carries the costs; if intrinsic to the externality framing, the classification of refusal itself is the mechanism imposing on refusers.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether refuser harm attaches to the standard or to the chosen enforcement tools."
+    },
+    {
+      "id": "emergency_enforcement_ratchet",
+      "question": "Was the 2020-2025 enforcement intensification (employment termination, access credentials) a temporary exercise of emergency authority that decays, or a ratchet establishing durable precedent for peacetime mandates?",
+      "resolution_mechanism": "Track whether credential infrastructure and employer policy templates persist beyond emergency declarations; monitor legislative sunsets, repeals, and litigation outcomes through the interval end.",
+      "impact": "A permanent ratchet shifts the trajectory toward sustained high suppression and warrants snare-drift monitoring; decay restores the pre-2020 profile in which compulsion was confined mainly to school-entry statutes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reversibility of the pandemic-era enforcement wave."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is the outcome-based legitimation standard for imposed health interventions: an intervention counts as legitimate when it demonstrably reduces population-level morbidity or mortality, and individual refusal is administered as an externality - met with employment termination, exclusion from services, and credential checkpoints rather than persuasion alone. The line runs from Jacobson-era compulsory smallpox vaccination through school-entry statutes to the 2020-2025 wave of employer mandates and digital access passes. This file instantiates ONE reading of the contested kernel legitimate_health_intervention - the public_health_primary reading - as a clean, epsilon-invariant constraint. The sibling readings are separate constraints in separate files: legitimate_health_intervention__bodily_autonomy_primary grounds legitimacy in informed consent and leaves refusers outside any victim set (no imposition is legitimate regardless of measured benefit), while legitimate_health_intervention__proportionality_reading indexes victim membership to threat characteristics. Under THIS reading the victim set is fixed by outcome arithmetic: the unvaccinated enter as vectors, the immunocompromised and elderly enter as protected beneficiaries, and enforcement machinery generates the measured costs. Claim and metrics are independent authored facts: claimed_type states the authoring seat's structural judgment (tangled_rope - genuine herd-immunity coordination fused with asymmetric enforcement costs), while the metrics describe observed operation including the COVID-era enforcement spike; the engine computes per-seat classifications and adjudicates any divergence.",
+    "key_agents": [
+      "public_health_authorities: agenda setter (institutional/constrained) - defines the outcome criteria deciding when imposition is legitimate; directs enforcement through employer directives and access rules; their budget and standing ride on demonstrating measurable reductions",
+      "employers_administering_mandates: dual-positioned collector (beneficiary/payer, institutional/arbitrage) - terminates or bars unvaccinated staff, gaining workforce uniformity and liability insulation while absorbing attrition, compliance cost, and litigation",
+      "unvaccinated_workers: primary target (moderate/trapped) - bears suspension, termination, and the externality label; mandates span major employers and licensure boards so changing jobs does not escape",
+      "unvaccinated_patrons: secondary target (moderate/constrained) - barred from venues, transit, and cross-border travel under credential regimes; alternatives exist only at real cost",
+      "unvaccinated_healthcare_workers: organized target (organized/trapped) - licensure binds them to regulated facilities; unions negotiated exemptions yet thousands were terminated in 2021",
+      "immunocompromised_patients: protected beneficiary (powerless/trapped) - cannot mount vaccine response; depends wholly on others' coverage for protection",
+      "elderly_high_risk_residents: beneficiary (moderate/constrained) - gains reduced exposure; isolation substitutes for community immunity only at severe life cost",
+      "philosophical_exemption_advocates: excluded voice (powerless/trapped) - consent-based objections have no seat in rule-setting forums; enter only through litigation after rules bind",
+      "constitutional_courts: analytical observer (institutional/analytical) - adjudicate mandate legality under police-powers doctrine; can reshape enforcement instruments but not the outcome-measurement standard itself"
+    ],
+    "logic_rationale": "Extraction is high (0.71 at interval end) because enforcement reaches livelihoods and civic access: termination, exclusion from venues and transport, and credential gates are costs imposed on refusers far beyond the marginal cost of persuasion, though well short of carceral measures. Suppression (0.68) reflects the enforcement machinery itself - employer directives, licensure leverage, checkpoint administration - and is authored as a raw structural property, unscaled by power or scope; only extractiveness is scaled in the engine's computation. Theater ratio (0.36) is elevated but bounded: outcome measurement and dose delivery are real functions, while badge displays, attestation rituals, and testing theater layered onto already-vaccinated staff inflate performative activity, especially at the 2021 peak. Accessibility collapse (0.48) is moderate: medical exemptions persist, jurisdiction shopping and remote work softened workplace mandates late in the interval, but exemption criteria narrowed administratively and philosophical exemptions were abolished in much of the mapped space. Resistance (0.62) is substantial - litigation, union pushback, protest, and legislative repeal movements - because the constraint meets organized, articulate opposition rather than passive acquiescence. All three series run on one shared time grid (eight points, 1905-2025) so every metric is authored at every examined time point; the 2021 peak followed by partial 2025 decay models the emergency-wave shape, not a monotonic ratchet assumption.",
+    "perspectival_gap": "The seats compute differently by construction. From the immunocompromised patient's position the arrangement is protective coordination she cannot buy for herself; from the terminated worker's position the identical structure is enforced dispossession justified by a metric he was never permitted to contest; from the agency's position it is the faithful application of an evidence standard; from the bench it is a police-powers doctrine question. Professional identity fuses the agenda-setter seat: public-health practitioners' self-concept is constituted through outcome measurement, so challenges to the standard register as attacks on epidemiology itself rather than as contestable legitimacy choices - an institutional identity lock the engine reads through the agency's constrained exit. Suppression here is overwhelmingly structural (legal penalties, employment condition, access denial) with a thinner internalized component (anticipatory self-exclusion by refusers who withdraw before enforcement lands); the omega battery handles residual ambiguity.",
+    "directionality_logic": "Beneficiary declarations drive low directionalities: immunocompromised patients (trapped, powerless) sit nearest the full-beneficiary pole - the constraint subsidizes them with protection they cannot purchase; elderly high-risk residents sit similarly low with slightly more mobility. Payer declarations drive high directionalities: unvaccinated workers (trapped) approach the full-target pole since termination removes income and the mandate web forecloses employer arbitrage; unvaccinated patrons run nearly as high but retain costly substitution; organized healthcare workers carry the highest-cost profile among payers because licensure traps them inside the enforcing institutions themselves. Employers are genuinely dual-positioned - they collect workforce uniformity and liability insulation yet pay attrition and compliance costs - keeping their effective directionality off the extreme beneficiary pole. Public health authorities are agenda setters who also benefit (authority and budget track demonstrated reductions); the derivation places them low but the measurement-self-certification omega flags the capture risk that would raise their d. No directionality overrides are declared: beneficiary/victim declarations plus exit options already produce the correct ordering, and overrides keyed by power atom would wrongly homogenize differentiated seats sharing an atom.",
+    "mandatrophy_analysis": "The founding problem - free-rider stall below herd-protection thresholds leaving the unprotectable exposed - remains live: pathogens still circulate and thresholds still bind, so the arrangement is not a piton kept alive by inertia, and no sunset clause is authored. The classification guards against symmetric errors. Reading the arrangement as pure extraction (the bodily-autonomy error) erases the real coordination function: measured mortality collapses after compulsory programs are attested by vital-statistics bodies outside the benefiting parties, and the immunocompromised seat's dependence is genuine. Reading it as pure coordination (the agency's own framing) erases the asymmetric enforcement costs borne by a defined victim set through termination and exclusion. Tangled rope holds both truths in one structure: the same mandate that protects the trapped patient extracts the trapped worker's livelihood, and the engine's per-seat computation is what separates those experiences instead of averaging them into a single flattering or damning verdict.",
+    "kernel_context": "This story instantiates the public_health_primary reading of the kernel legitimate_health_intervention: legitimacy flows from demonstrated population-level morbidity/mortality reduction, and refusal is priced as externality. Sibling readings of the same kernel: bodily_autonomy_primary (legitimacy requires informed consent; coercion violates bodily integrity regardless of public benefit) and proportionality_reading (legitimacy requires weighting intervention severity against threat level). This reading's reference frame takes measured population benefit as the baseline currency of legitimacy; the siblings relocate that currency to consent or to calibrated threat. Each sibling is authored as its own constraint file with its own victim set and epsilon; nothing about the contest between readings is folded into this file's classification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "legitimate_health_intervention__bodily_autonomy_primary",
+      "legitimate_health_intervention__proportionality_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'legitimate health intervention' covers three structurally distinct claims about what grounds legitimacy, and forcing them into one story would make epsilon observable-dependent. This file (public_health_primary) authors epsilon for the outcome-based legitimation regime with the unvaccinated in the victim set as vectors and enforcement machinery (termination, exclusion) generating high measured extraction. The sibling bodily_autonomy_primary authors epsilon for a consent-governed regime in which the refuser victim set is empty and coercion is illegitimate regardless of outcome; the sibling proportionality_reading authors epsilon for a threat-indexed regime in which victim membership varies with disease characteristics. Upstream/downstream structure: the outcome-measurement paradigm constituted by this reading defines the threat axis the proportionality reading weighs (declared as influences), while the consent premise of bodily_autonomy_primary contradicts this reading's externality premise so sharply that no single framework holds both (declared as forecloses)."
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Defines the measurable-benefit criteria that decide when an imposed intervention is legitimate, certifies interventions against surveillance data, and during emergencies directs employer mandates and access rules. Agency budgets, statutory authority, and professional standing track demonstrated reductions in disease burden, giving the seat a continuous stake in the standard's maintenance. Leaving the arrangement would mean ceding the outcome-measurement franchise to rival bodies; the available exit is narrowed discretion, not departure."
+    },
+    {
+      "name": "employers_administering_mandates",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Terminates or bars unvaccinated employees under regulatory directive or liability logic, collecting workforce uniformity, reduced outbreak disruption, and insurance-liability insulation. Pays compliance administration, attrition of experienced staff who refuse, grievance handling, and litigation exposure. Large firms lobby for carve-outs unavailable to smaller competitors and can shift policy templates across jurisdictions; their exit from the arrangement is partial repositioning, not withdrawal from labor markets."
+    },
+    {
+      "name": "immunocompromised_patients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cannot mount an effective response to vaccination and depends entirely on the coverage of people around them for protection against circulating pathogens. Has no private substitute for population-level immunity - isolation is the only fallback and it consumes ordinary life. Bears acute risk whenever community coverage slips below protective thresholds."
+    },
+    {
+      "name": "elderly_high_risk_residents",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Gains reduced exposure to vaccine-preventable disease through others' compliance with immunization requirements. Holds advocacy organizations but diffuse electoral weight; can retreat into isolation during outbreaks at severe cost to social life, caregiving access, and mental health, so exit exists only as self-impoverishment of daily living."
+    },
+    {
+      "name": "unvaccinated_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Faces suspension, testing fees, and ultimately termination under employer mandates. Changing employers does not escape: parallel mandates span major chains, hospital systems, and government contractors, and some licensure boards condition practice on status. Carries the public label of externality source, which narrows sympathy and legal recourse. The realistic choices are compliance against conscience, exit from the formal workforce, or litigation after the fact."
+    },
+    {
+      "name": "unvaccinated_patrons",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Barred from restaurants, venues, gyms, domestic transit segments, and cross-border travel under credential regimes. Substitutes exist - delivery, home entertainment, domestic road travel - but at real monetary and social cost, and the restriction can arrive overnight with an emergency order. Participation in civic and commercial life is conditional on a status they declined."
+    },
+    {
+      "name": "unvaccinated_healthcare_workers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Work inside the institutions enforcing the standard. Licensure ties them to regulated facilities, so refusing means leaving the profession they trained for, not just one employer. Unions negotiated testing alternatives and exemption processes with partial success, yet thousands were terminated in the 2021 wave; their skills are non-portable outside licensed settings, making their trap deeper than the general workforce's despite superior organization."
+    },
+    {
+      "name": "philosophical_exemption_advocates",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Hold consent-based commitments that the outcome criterion renders inadmissible in rule-setting forums: advisory committees, emergency orders, and employer policy processes take measured benefit as settled and never convene the objection. These advocates enter the conversation only through litigation after rules bind, through repealed-exemption campaigns, and through ballot initiatives years after the fact. No seat exists for them at the moment rules are written."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate whether compulsory measures fall within police-powers doctrine, weighing the Jacobson lineage of deference to public-health determinations against liberty and equal-protection claims. Can invalidate particular enforcement instruments and force procedural protections for exemptions, but cannot displace the outcome-measurement standard itself, which enters their dockets as settled science rather than as the contestable legitimacy claim it is."
+    }
+  ],
+  "gain_flow": "employers_administering_mandates",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Aligns millions of individual immunization and exposure decisions with population-level protection no individual can purchase alone, solving the herd-immunity free-rider problem; secondarily fixes a single decision rule - demonstrated morbidity/mortality reduction - for when a health intervention may be imposed at all.",
+    "transfer_function": "Moves infection risk away from those who cannot be protected (immunocompromised, elderly) onto mandated individuals who bear vaccination, testing, and enforcement costs; moves decision authority over bodies from individuals to outcome-measuring authorities; the enforcement layer moves income (terminated wages, unpaid suspension) and access (venue entry, travel) from refusers to compliant participants.",
+    "absent_voices": "Consent-holding refusers - philosophical and religious objectors - are absent from rule-setting and appear only as litigants after rules bind; medical-exemption applicants face criteria narrowed without their participation; populations subjected to historical compulsory campaigns under colonial administration were never consulted at all. Their absence is structural: the externality premise classifies their objection as the thing being regulated rather than as testimony.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal ends employer termination rules and access credentials immediately; coverage drifts downward as complacency and refusal rise; outbreaks concentrate in unvaccinated clusters within seasons; immunocompromised and elderly residents lose indirect protection with no substitute and bear the difference in admissions and deaths; agencies lose their principal imposition instrument while retaining recommendation authority; employers rebuild policies around liability self-protection. Arrangements across employment, commerce, and clinical practice reorganize around the standard's absence.",
+    "founding_problem": "Dense cities and airborne pathogens create free-rider dynamics in which voluntary immunization stalls below the threshold needed to protect those who cannot be vaccinated; compulsory vaccination under police powers was codified in the smallpox era to close that gap, generalized through school-entry statutes, and scaled to workplaces during pandemic emergencies.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: national vital-statistics offices and WHO surveillance record the mortality collapses following compulsory programs (smallpox, polio, measles); courts attested the founding problem from a non-agency seat beginning with Jacobson v. Massachusetts (1905); hospital-admission datasets document continuing burdens when coverage lapses. The genealogy is unusually well attested independent of the agencies that operate the arrangement today."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "population_outcome_legitimacy_baseline",
+    "drift_state": {
+      "moment": "post_emergency_endemic_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "population_benefit_grounds_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "refusal_is_externality_imposition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

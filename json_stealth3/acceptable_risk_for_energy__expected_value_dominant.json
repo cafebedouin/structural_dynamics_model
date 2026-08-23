@@ -1,0 +1,359 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_for_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "ecda49f1-b991-4b05-af34-68806bd7a8a8"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.45,
+    "theater_ratio": 0.36,
+    "accessibility_collapse": 0.28,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Expected-Value-Dominant Energy Risk Acceptability Criterion",
+    "topic_domain": "risk_assessment/energy_policy/public_safety_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "nuclear_operators",
+      "baseload_capital_markets",
+      "pra_professionals",
+      "climate_policy_bodies"
+    ],
+    "victims": [
+      "fenceline_communities_near_reactors",
+      "future_generations_liable_for_waste",
+      "taxpayer_liability_backstops"
+    ],
+    "vindicated_propositions": [
+      "expected_utility_decision_theory",
+      "probabilistic_risk_assessment_methodology",
+      "monetized_climate_benefit_accounting"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "energy_regulators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Writes and administers the acceptability criteria, commissions the probabilistic studies that feed them, helps legislate liability-cap parameters, and defends the annualized discipline against post-accident political surges. Collects a defensible, auditable mandate from running the framework. Cannot abandon the statutory mandate that binds it, and faces capture pressure simultaneously from licensees and from opposition publics after every visible accident."
+    },
+    {
+      "name": "nuclear_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Builds and operates reactors under licenses granted through the annualized determination. Statutory liability caps mean the worst-case costs of a severe accident stop at the cap; insurance premiums are sized to expected value, not to tail magnitude. Site-specific sunk capital and decades-long regulatory relationships make redeployment slow. Lobbies continuously to preserve the accounting that prices its residual tail exposure favorably."
+    },
+    {
+      "name": "baseload_capital_markets",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Finances plant construction and holds utility debt and equity. Expected-value licensing plus liability capping make long-horizon cashflows insurable and bankable. Capital can move to any jurisdiction or asset class quickly, so an unfavorable shift in the risk arithmetic simply redirects investment rather than trapping it."
+    },
+    {
+      "name": "pra_professionals",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Consultancies, national-laboratory analysts, and agency technical staff produce the probabilistic models the determination runs on. Careers, methodological canons, peer standing, and standards-board seats are all invested in the annualized framework. Moving to a rival risk ontology would mean abandoning the professional identity built inside this one."
+    },
+    {
+      "name": "climate_policy_bodies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Treaty bodies and national climate ministries book firm low-carbon output as a climate benefit inside the acceptability ledger. They depend on the framework keeping firm clean capacity financeable and report decarbonization progress against it. Leaving the framework would strip out the benefit term they administer and complicate portfolio commitments already made."
+    },
+    {
+      "name": "fenceline_communities_near_reactors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Lives within the evacuation shadow of licensed sites. Hosts plant employment, contractor wages, and the municipal tax base, so leaving carries economic ruin alongside radiation exposure. Their concentrated tail exposure enters the determination as a small annualized figure spread across the whole population served, while the actual low-probability high-consequence event would land here. Home equity, kin networks, and local wages are tied to the facility's continued operation."
+    },
+    {
+      "name": "future_generations_liable_for_waste",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Inherits spent-fuel storage and geological repository stewardship obligations that today's determination books as a discounted engineering cost-line. Holds no seat in any acceptability proceeding, cannot consent to or refuse the burden, and cannot exit it. The discount rate applied to their liability is chosen entirely by the generation deciding now."
+    },
+    {
+      "name": "taxpayer_liability_backstops",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Stands behind statutory liability caps: above the cap, severe-accident cleanup and compensation costs default to public balance sheets under Price-Anderson-type regimes. Receives cheap firm power and decarbonization as spillover benefits from the same arrangement. Cannot opt out of the backstop short of emigration."
+    },
+    {
+      "name": "tail_risk_advocates_public_health_scientists",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Publishes fat-tail, irreversibility, and intergenerational-equity critiques; testifies at hearings; files comments on licensing dockets. Their valuation basis is admissible as argument but carries no weight in the annualized arithmetic that decides the outcome. Journals, advocacy networks, and international forums remain open to them, so exit from the discourse is easy even though entry into the determination is blocked."
+    },
+    {
+      "name": "independent_risk_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic decision theorists and comparative-risk researchers audit the framework from outside licensing processes. They document where probability estimates diverge by orders of magnitude, how discount-rate choices embed distributional judgments, and how sibling risk ontologies would redistribute the same physical exposures across different bearer sets."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides one commensurable, auditable metric for comparing heterogeneous energy hazards — reactor accidents, waste exposure, air pollution mortality, climate forcing — enabling consistent licensing, insurable financing, cross-jurisdictional benchmarking, and portfolio planning. Prevents both regulatory paralysis (no facility passes any intuitively stated bar) and single-event policy whiplash.",
+    "transfer_function": "Moves residual, uninsured risk-bearing from operators and ratepayers-at-large onto the least-represented bearers — fence-line communities absorbing concentrated tail exposure and future generations holding waste liabilities — while moving decision authority to technical-economic analysts. Moves capital toward technologies whose profiles price favorably under annualized accounting, and moves liability-cap headroom from public balance sheets to private operators.",
+    "absent_voices": "Tail-risk and intergenerational-ethics advocates testify but enter without valuation weight; the unborn hold no seat at all; fence-line residents participate through comment periods that cannot alter the arithmetic pricing their exposure. They are located in hearing transcripts, ethics literature, and docket filings — adjacent to the process, outside the determination.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would force licensing back to ad hoc political judgment per technology and per accident; nuclear financiers would withdraw absent actuarial cover; insurance pools and liability-cap regimes would lose their pricing basis; international benchmarking would fragment; and each jurisdiction would improvise thresholds after the next incident, restoring the whiplash cycle the framework was built to damp.",
+    "founding_problem": "Post-war deployment of hazardous energy technology outran intuitive moral judgment: how can a regulator justify accepting or rejecting facilities whose worst outcomes are rare, historically unprecedented, and unevenly distributed, with a warrant that survives legislative oversight, judicial review, and cross-technology consistency?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "National Academies institutional reviews of federal risk assessment and public-health scientific testimony attest from outside the benefiting parties that the heterogeneous-risk-comparison problem remains live; administrative-law proceedings in which agencies must defend their methodologies on the record corroborate it further. No attestation comes from the residual bearers themselves — fence-line and future-generation objections appear in dockets, but no voice from that seat affirms the founding framing; that absence is itself signal."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.61
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The expected-value-dominant acceptability regime determines whether energy facilities — above all nuclear — may be built and operated by comparing annualized expected costs against expected benefits including monetized climate benefits, with rare events entering strictly as probability-times-consequence products. The framework is presented as neutral decision science; its critics read it as an arithmetic that launders the transfer of concentrated tail risk onto parties who never agreed to hold it. KEY AGENTS (by structural relationship): energy_regulators: Agenda setter (institutional/constrained) — administers the determination and defends the annualized discipline; nuclear_operators: Primary beneficiary (powerful/constrained) — collects capped-liability licensure; baseload_capital_markets: Secondary beneficiary (institutional/arbitrage) — collects bankability; pra_professionals: Identity-locked beneficiary (organized/identity_locked) — careers fused to the method; climate_policy_bodies: Institutional beneficiary (institutional/constrained) — administers the climate-benefit term; fenceline_communities_near_reactors: Primary target (powerless/trapped) — absorbs concentrated tails; future_generations_liable_for_waste: Intergenerational target (powerless/trapped, civilizational horizon); taxpayer_liability_backstops: Residual target with indirect benefit (moderate/constrained); tail_risk_advocates_public_health_scientists: Excluded voice (moderate/mobile); independent_risk_analysts: Analytical observer. The claim/metrics split is deliberate: claimed_type is tangled_rope from my structural read, while the authored metrics describe the moderate extraction this reading honestly concedes — the engine computes each seat independently.",
+    "logic_rationale": "Extraction (0.38 at interval end) is moderate: the reading's own lights concede real but bounded transfer — liability caps leave residuals on public balance sheets, probability weighting books concentrated tails as dispersed annuities, and discount rates shrink inherited waste burdens — while the framework genuinely prices chronic risks (air pollution, carbon) that intuition underweights. Suppression (0.45) is deliberately authored BELOW the enforcement series endpoint (0.61) because the scalar is a raw, unscaled structural property mixing two components: compelled compliance inside the regulated domain (strong — no reactor operates outside the framework) versus weak suppression of rival risk framings outside it (German phase-out, Italian referenda, and tail-dominant scholarship all remained lawful). Theater ratio (0.36) reflects growing precision theater: decimal-point expected values convey certitude the underlying probability estimates cannot support. Accessibility collapse (0.28) is low — sibling readings remain fully accessible alternatives. Resistance (0.55) is substantial — referenda, phase-outs, and licensing litigation recur. All three series run on one shared grid (t=0..50, mapped to roughly 1975-2025) with every tracked metric authored at every point. The trajectories are shock-shaped rather than monotonic: enforcement steps up after TMI (t~4), Chernobyl (t~11), 9/11 (t~26), and Fukushima (t~36), then partially relaxes — a crisis-response-decay cycle in which the shock response is partly protective hardening and partly legitimacy maintenance. Base-properties scalars are measured at interval end (t=50), on the post-partial-relaxation phase of the most recent cycle.",
+    "perspectival_gap": "The seats should compute very different types from identical structural data. From the operator seat the framework is actuarially fair coordination it helped design: premiums match expected value, caps are legislated openly. From the fenceline and future-generation seats the same arithmetic operates as enforced extraction: their exposure is discounted by factors they never chose, and their exit is trapped or nonexistent. The regulator seat experiences a defensible public mandate; the PRA-professional seat experiences professional vindication; the capital seat experiences ordinary bankability. None of these perceptions is authored here — each is computed from power, exit, and declared position, and their divergence is the finding.",
+    "directionality_logic": "Beneficiaries derive low directionality: operators and capital markets collect directly from the framework's pricing; PRA professionals collect standing and fees; climate bodies collect the benefit term they administer. Victims derive high directionality: fenceline communities and future generations are trapped bearers of the discounted remainder, sitting near the full-target end; taxpayer backstops are also targets but with material secondary gains. One override is authored: taxpayer_liability_backstops would derive a near-full-target d (~0.82) from payer role plus constrained exit plus moderate power, but the derivation cannot see the cheap-firm-power and decarbonization spillovers flowing to the same seat, so d is corrected downward to 0.68 — an indirect-beneficiary correction, not a demotion of their target position. Fenceline communities receive job and tax-base offsets too, but these are locally captured and do not approach their tail exposure; no override is warranted there.",
+    "mandatrophy_analysis": "The founding problem — a defensible, repeatable warrant for accepting unevenly distributed catastrophic risk — is still live, so this is not a resolved-mandatrophy case. The tangled_rope claim is what prevents mislabeling in both directions: reading the framework as pure coordination (rope) would erase the measurable transfer of uninsured tails onto non-consenting bearers; reading it as pure extraction (snare) would erase the genuine commensuration function that keeps multi-technology regulation coherent, insurable, and resistant to single-event panic. The forward risk to watch is piton drift: if decisive licensing migrates to sibling readings or to jurisdictions abandoning the framework, the annualized apparatus could persist as precision performance — models maintained, decimals published, decisions made elsewhere. Rising theater_ratio alongside falling decision relevance is the signature; the current series shows mild upward drift only.",
+    "kernel_context": "This story instantiates the expected_value_dominant reading of the kernel acceptable_risk_for_energy. The kernel — what counts as acceptable risk for energy infrastructure — is read three ways: this reading prices everything annually (probability times consequence, costs against benefits including climate benefit); catastrophic_tail_dominant lets low-probability high-consequence events dominate, weighting irreversibility and intergenerational burden over optimization; comparative_risk_dominant accepts risk only relative to competing energy risks, with no absolute threshold. Per the structural delta for this reading, nuclear exits the victim set when expected value is favorable against alternatives, suppression of tail-risk framing is low, and waste disposal appears as a solvable engineering cost-line rather than an intergenerational burden. The sibling readings are other constraints in other files with their own epsilon and victim structures; nothing about them is averaged into this story."
+  },
+  "omegas": [
+    {
+      "id": "kernel_sibling_reading_divergence",
+      "question": "This constraint is one reading (expected_value_dominant) of kernel acceptable_risk_for_energy; what structurally changes if a jurisdiction or era adopts catastrophic_tail_dominant or comparative_risk_dominant instead?",
+      "resolution_mechanism": "Track adoption events: post-Fukushima German and Japanese policy shifts, SMR-era licensing reforms, IAEA guidance revisions; classify each jurisdiction-era by operative reading and compare victim sets, epsilon, and waste treatment across readings.",
+      "impact": "Under catastrophic_tail_dominant, nuclear re-enters the victim set, waste becomes an intergenerational burden rather than an engineering cost-line, and suppression of expected-value framing rises sharply; under comparative_risk_dominant the absolute-threshold question dissolves and acceptability tracks the competitor mix. Classification of the whole family flips with adoption.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: reading-indexed divergence across the acceptable-risk-for-energy kernel."
+    },
+    {
+      "id": "rare_event_probability_uncertainty",
+      "question": "Core-melt frequencies and repository-breach probabilities carry order-of-magnitude epistemic uncertainty; is the probability-times-consequence product stable enough to bear acceptability determinations?",
+      "resolution_mechanism": "Structured expert elicitations with convergence testing, accumulated operating experience, and sensitivity analysis of licensing outcomes across the published probability band.",
+      "impact": "If licensing outcomes flip across the credible probability band, the framework's effective behavior approaches the catastrophic_tail_dominant reading regardless of its formal commitment, and epsilon becomes unstable in the way DP-001 forbids for a single constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether p-by-c products are robust to heavy-tailed probability estimate uncertainty."
+    },
+    {
+      "id": "residual_tail_consent_status",
+      "question": "Is bearing of residual uninsured tail risk by non-consenting fence-line populations extraction within this reading's own lights, or legitimate actuarial pricing of a compensated position?",
+      "resolution_mechanism": "Willingness-to-accept compensation studies in host communities, siting-conflict records, and analysis of whether existing property-value and tax-base offsets approach compensated-exposure benchmarks.",
+      "impact": "If the residual is judged uncompensated and unconsented even by the reading's own welfare standards, epsilon rises materially and the payer seats' computed classifications harden toward snare-flavored extraction; if compensation is judged adequate, the tangled_rope reading holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Consent and compensation status of the residual tail risk this framework transfers."
+    },
+    {
+      "id": "liability_cap_residual_share",
+      "question": "What fraction of severe-accident total cost falls outside statutory liability caps onto public backstops?",
+      "resolution_mechanism": "Forensic reconstruction of Price-Anderson-type regimes against realized costs (Fukushima cleanup, TMI litigation history) and probabilistic cost curves for severe scenarios.",
+      "impact": "A large uncapped residual means the authored epsilon understates transfer to taxpayers; a small residual supports the reading's claim that private pricing covers the relevant risk.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Size of the publicly backstopped remainder behind liability caps."
+    },
+    {
+      "id": "climate_displacement_counterfactual",
+      "question": "Does the climate-benefit term in the acceptability numerator depend on a displacement counterfactual (against gas or coal generation) whose size varies with grid mix and electrification pathway?",
+      "resolution_mechanism": "Dispatch and capacity-expansion modeling under decarbonization scenarios with and without firm low-carbon capacity.",
+      "impact": "If the displacement benefit shrinks as grids decarbonize, the framework's favorable arithmetic for firm nuclear weakens, loosening the constraint's grip on the victim set and accelerating migration toward sibling readings.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Counterfactual dependence of the climate-benefit term that anchors this reading."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_for_energy__catastrophic_tail_dominant",
+      "acceptable_risk_for_energy__comparative_risk_dominant"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'acceptable nuclear/energy risk'. The label conflates three structurally distinct claims with different epsilon, victim sets, and enforcement profiles: this file owns the expected-value reading (everything prices annually; tails enter as p-by-c); catastrophic_tail_dominant owns the tail-dominant claim (irreversibility and intergenerational burden dominate; epsilon authored far higher from its seat); comparative_risk_dominant owns the relative-threshold claim (no absolute bar). This reading sits upstream of the comparative reading — its annualized outputs supply the numbers comparative assessments tabulate — and stands in unresolved coexistence with the tail reading, which directly contests its foundational axiom rather than depending on it. Per the epsilon-invariance principle these are three constraints, not one constraint viewed from three angles; each is authored separately and linked here."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "expected_value_actuarial_baseline",
+    "drift_state": {
+      "moment": "contemporary_post_fukushima_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "comparative_risk_dominant",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "expected_value_sufficiency_for_acceptability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "rare_events_enter_as_probability_weighted_terms",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "nuclear_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

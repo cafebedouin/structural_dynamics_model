@@ -1,0 +1,337 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_clause_39__feudal_prerogative_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "b1b4e0dc-30ec-428f-a3f1-43d956682368"
+  },
+  "base_properties": {
+    "extractiveness": 0.31,
+    "suppression": 0.3,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Clause 39 as Feudal Privilege: Rank-Bound Procedural Guarantee within the Hierarchical Order",
+    "topic_domain": "constitutional/legal_history/political_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "baronage_and_knights",
+      "lesser_free_tenants"
+    ],
+    "victims": [
+      "the_crown",
+      "unfree_peasantry"
+    ],
+    "vindicated_propositions": [
+      "peer_judgment_procedure",
+      "law_of_the_land_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 1215,
+    "end": 1350
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1215,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1225,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1250,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1275,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1300,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1325,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1350,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1215,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1225,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1250,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1275,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1300,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1325,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1350,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1215,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1225,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1250,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1275,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1300,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1325,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1350,
+      "value": 0.3
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is the feudal_prerogative_reading of the magna_carta_clause_39 kernel — clause 39 as a rank-bound procedural privilege stabilizing the hierarchical order. What structural changes would a sibling reading produce if adopted, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Compare against the sibling stories' authored victim sets and epsilon: the liberal_due_process_reading universalizes the protected class (all persons against arbitrary state power); the originalist_limitation_reading narrows the guarantee to the specific royal abuses documented in the 1215 context. The disagreement is located in two structural elements: the referent of 'free man' (legal class term vs. universal person) and the source of the guarantee's legitimacy (enacted class settlement vs. principle latent in the text vs. documented-abuse remedy).",
+      "impact": "Under the liberal sibling the victim set expands beyond the crown's bounded prerogative and the excluded majority to every person denied procedure, and epsilon rises; under the originalist sibling epsilon falls toward a narrow abuse-remedy. This file's classification is unaffected — the siblings are separate constraints with their own stable epsilon per the epsilon-invariance principle.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a contested kernel; sibling deltas and the location of the dispute."
+    },
+    {
+      "id": "villein_exclusion_status",
+      "question": "Is the unfree majority's exclusion from the guarantee an extraction through this settlement — the price at which elite peace was purchased and the hierarchical order preserved — or merely the boundary of its scope, a fact about who the clause addresses rather than a cost it imposes?",
+      "resolution_mechanism": "Counterfactual settlement analysis: whether a 1215 universal-procedure clause would have altered manorial obligations or lord-court jurisdiction; manorial court records read against the charter's operative scope across the interval.",
+      "impact": "If the exclusion is constitutive extraction, epsilon sits near the authored 0.31 and the tangled_rope claim holds; if it is mere scope, epsilon drops toward 0.15 and the arrangement trends toward pure coordination between crown and elites with the majority simply outside it.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading's defining narrowness is extraction or boundary."
+    },
+    {
+      "id": "enforcement_normalization",
+      "question": "After the coercive phase of 1215-1217, did the clause's persistence depend on active enforcement at all, or did it hold by normalization and interest-convergence between crown and elites?",
+      "resolution_mechanism": "Institutional history: distraint records after 1217, the 1297 confirmation crisis, judicial enforcement dockets, and the frequency of baronial re-extraction episodes (1258, 1264, 1297).",
+      "impact": "If enforcement became dispensable after normalization, the active-enforcement leg of the hybrid claim is historically contingent — strongest early, weakest late; the suppression_requirement series models exactly this decay with the temporary re-tightening around 1297.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's enforcement requirement decayed into normalization across the interval."
+    },
+    {
+      "id": "law_of_land_content",
+      "question": "What did 'the law of the land' concretely require between 1215 and 1350 — crown-administered custom, established feudal procedure, or an independent standard the crown could not set alone?",
+      "resolution_mechanism": "Judicial practice analysis: plea rolls, writ-system procedure, and the 1354 statutory gloss rendering the formula as 'due process of law'.",
+      "impact": "A crown-defined content makes the guarantee partly theatrical (theater_ratio understated at the margin); an independent content makes it a genuine check on the crown (epsilon's crown-facing component understated).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Operative content of the clause's central formula across the interval."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "the_crown",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Holds the realm's prerogative — seizure of lands, imprisonment, wardships and marriages, fiscal exactions. Under armed baronial pressure in 1215 it promised to proceed against a free man's person or holdings only by judgment of his equals or the law of the land, and it regranted that promise in 1216, 1217, and 1225, confirming it again in 1297 under threat of withheld taxation. Its own courts administer the promise day to day. It cannot walk out: repudiation in 1215-1217 cost it the realm's obedience and nearly the throne. What it ceded is bounded — jurisdiction over the unfree, wardship, and most fiscal power remain its own, and the settlement preserved the dynasty through the crisis that produced it."
+    },
+    {
+      "name": "baronage_and_knights",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Holds estates, honors, and military tenures; extracted the promise at Runnymede and enforced it in 1215-1217 through a committee of twenty-five empowered to distrain the king's castles if he reneged. Its persons, heirs, and lands are what the guarantee covers. Exit means abandoning English land and lineage; a few went to Ireland or the continent at heavy cost. It returns periodically to renew the promise when it frays — 1258, 1264, 1297."
+    },
+    {
+      "name": "lesser_free_tenants",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Knights, sokemen, and some townsmen who count as 'free men' under the words. They receive the same shield against seizure, imprisonment, and disseisin without the baronage's collective muscle; they ride on protection won and renewed by others. Leaving free tenure means dropping into the statuses below it."
+    },
+    {
+      "name": "unfree_peasantry",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Villeins and serfs, the majority of the population. They owe labor services and dues, answer in their lords' courts, and fall outside the words 'free man.' The Runnymede settlement was made over their heads: the peace it purchased confirmed the manorial order in which they hold no procedural standing against lord or king. A fugitive could be reclaimed; a year and a day in a chartered town was the narrow, costly leak. No seat at Runnymede, no voice in any reissue."
+    },
+    {
+      "name": "free_women",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Widows and heiresses holding free tenures. The charter's opening clauses shield their dower and their consent to remarriage, but the great procedural promise is worded for 'free men,' and their access to it runs through husbands, guardians, and lords. They would read the promise as theirs; the text and the courts do not reliably hand it to them."
+    },
+    {
+      "name": "monastic_chroniclers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monastic and court-adjacent writers — Matthew Paris at St Albans, the Dunstable annalist — who record the grants, the repudiations, the reissues, the ceremonies, and the kings' evasions. They watch the whole arc from outside the compact. They write; they do not decide."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the crown-elite collective-action problem that produced the 1215 crisis: converts the king's personal discretion over elite persons and lands into a fixed procedure — judgment by one's equals or the law of the land — so that the feudal compact holds without each baron defending his estate by private war, and elite succession and property transfer proceed on predictable terms.",
+    "transfer_function": "Moves procedural security from a royal discretion-good to a class entitlement: the crown cedes a bounded slice of prerogative (seizure, imprisonment, disseisin, outlawry as against free men) to the baronage and lesser free tenants, while the unfree majority's standing passes unchanged — the settlement's peace is financed by their continued exclusion from the guarantee.",
+    "absent_voices": "The villeins and serfs — the majority of the realm — had no seat at Runnymede, no voice in any reissue, and no standing under 'free man'; they would object that protection is rationed by rank. Free women, though the charter's early clauses touch widowhood, stand outside the clause's guarantee in practice. Their absence is not incidental to this reading — it is its content.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight disappearance would return elite persons and lands to royal discretion. The 1215-1217 sequence is the natural experiment: John's repudiation brought papal annulment, civil war, and a French prince's invitation to the throne. Baronial property security, the courts' procedure for elite grievance, and the compact's peace all depend on the clause; the arrangement would rearrange within a season.",
+    "founding_problem": "King John's arbitrary disseisin of baronial lands, imprisonment of elite opponents, mercenary exactions, and scutage taken without consent made elite persons and property insecure against the king's will; the barons sought a procedural guarantee — judgment of equals or law of the land — as the price of laying down their armed demand.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The crown's own repeated reissues (1216, 1217, 1225) and the 1297 confirmation extracted under threat of withheld taxation attest the problem's persistence from an adverse-interest seat; monastic chroniclers outside the compact (Matthew Paris; the Dunstable annalist) document continuing royal evasions; the routine application of the clause by royal justices in the plea rolls attests the procedural need independently of baronial advantage. No attestation comes from the unfree majority — they were never asked."
+  },
+  "gain_flow": "baronage_and_knights",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "At Runnymede in June 1215, an armed baronial confederation extracted from King John a promise that no free man would be seized, imprisoned, disseised, outlawed, exiled, or destroyed except by the lawful judgment of his equals or by the law of the land. Read within its own century, the promise is narrow by construction: 'free man' names a legal class — barons, knights, and the free tenantry — not the realm's population, the great majority of whom were unfree and outside the words entirely. The clause was repudiated within weeks, annulled by the pope, and regranted in 1216, 1217, and 1225; the coercive enforcement committee of 1215 was dropped after 1217 and the guarantee settled into routine judicial administration, punctuated by renewal crises (1258, 1297) in which the barons re-extracted the promise against fiscal pressure. Across the interval the arrangement does two things at once: it solves the crown-elite collective-action problem that had produced civil war, and it distributes procedural security as a class privilege whose price — the unfree majority's continued exclusion from any procedural standing — is paid silently. The claim and the metrics are authored independently: the tangled_rope claim states the structure believed true of this reading; the metric values state its operation as descriptively assessed, and where the engine's computed type diverges from the claim, that divergence is the datum.",
+    "key_agents": [
+      "the_crown: principal payer and agenda-setter (institutional/constrained) — cedes bounded prerogative, regrants the promise four times, administers the law it promised to obey",
+      "baronage_and_knights: primary beneficiary (organized/constrained) — the protected class; extracted the grant and enforced it 1215-1217 by distraining power",
+      "lesser_free_tenants: secondary beneficiary (moderate/constrained) — count as 'free men,' ride on protection won and renewed by the baronage",
+      "unfree_peasantry: payer without voice (powerless/trapped) — the majority; bear the settlement's cost through exclusion from the guarantee",
+      "free_women: excluded (moderate/constrained) — hold free tenures but stand outside the guarantee's wording",
+      "monastic_chroniclers: analytical observer (analytical/analytical) — record the whole arc from outside the compact"
+    ],
+    "logic_rationale": "Extraction is authored at 0.31 — modest by this reading's own design: the clause burdens traditional authority only at the margin (the crown keeps wardship, fiscal power, and jurisdiction over the unfree), and most of the measured extraction sits in the entrenchment effect — procedural security distributed as a class privilege, with the settlement's peace financed by the majority's exclusion. Suppression (0.30 at interval end) is a raw structural property, deliberately unscaled by power or scope: it measures the coercive holding-power the clause itself required, which was high in 1215 (an armed committee of twenty-five with distraining power over royal castles) and decayed toward normalized judicial administration by 1350 — the suppression_requirement series models that decay, including the temporary re-tightening around the 1297 confirmation crisis. Theater (0.30) rises across the interval as confirmations, cathedral readings, and oath ceremonies accumulate around a clause the courts still genuinely apply; the performative share grows without the function atrophying inside this window. Accessibility_collapse (0.35) is low because alternatives persist throughout — the crown repeatedly sought repudiation, rival jurisdictions (Church courts, manorial courts, the writ system) operated alongside, and nothing here forecloses other arrangements the way a natural limit does. Resistance (0.55) is the crown's own record: immediate repudiation in 1215, papal annulment, grudging minority-era reissues, the 1297 crisis. All three temporal series share one grid (1215-1350 at seven points) so no metric is sampled against another's end-state.",
+    "perspectival_gap": "The seats compute differently because the same settlement is three different things from three positions. From the crown's seat the clause is a bounded concession it administers itself — a price paid once in 1215 for a stability that preserved nearly everything else it held. From the baronial seat it is a won and repeatedly renewed guarantee, the shield over persons, heirs, and land. From the villein seat the same document is the settlement made over their heads: the protection they watch distributed by rank is a cost they bear with no voice in any reissue. The chronicler's analytical seat sees all three at once, which is why the contemporary record reads as both reverence and grievance.",
+    "directionality_logic": "Beneficiary declarations (baronage_and_knights, lesser_free_tenants) drive low directionality for the protected class — the guarantee subsidizes them, and their constrained exit (land, lineage, tenure) does not change that they sit at the subsidized end. The victim declarations split the paying side. The crown bears the formal burden (payer role, constrained exit — it cannot exit its own legal order), which the structural derivation would read as near-full target; the override to 0.65 corrects for the crown's dual position as the compact's chief beneficiary — the settlement preserved the dynasty in 1215 and left the bulk of prerogative intact, so the crown is substantially subsidized by the very limit it pays. The unfree peasantry derive high directionality from the payer declaration plus trapped exit: their payment is exclusion itself, held in place by the settlement's stability. No override is needed for the beneficiary class — the derivation already seats them at the subsidized end.",
+    "mandatrophy_analysis": "The founding problem — elite insecurity against arbitrary royal action — stayed live across the whole interval, so no mandatrophy is declared and none is due: the clause's function did not outlive its mandate inside this window. The classification work the type claim does is boundary-keeping in both directions: a pure-coordination label would erase the villein exclusion's asymmetric cost (the settlement's peace is financed by the majority's rightlessness), while a pure-extraction label would erase the genuine crown-baron collective-action solution and the crown's own compact-level gain. The theater rise is ceremonialization around a live function, not atrophy — judicial application is real at 1350 — so a degraded-inertial reading would be premature inside the interval; the drift_state records where the atrophy pressure actually arrives, later, and from this reading's own success.",
+    "kernel_context": "This file is one reading of the magna_carta_clause_39 kernel: the feudal_prerogative_reading — clause 39 as a rank-bound procedural privilege that stabilizes the hierarchical order. Sibling readings are separate constraint stories: the liberal_due_process_reading (the clause as a universal individual guarantee against arbitrary state power — protected class expanded to all persons, victim set and epsilon rising accordingly) and the originalist_limitation_reading (the clause as a remedy for the specific royal abuses documented in the 1215 context — narrower even than this reading). The disagreement is located in two structural elements: the referent of 'free man' (legal class term vs. universal person) and the source of the guarantee's legitimacy (enacted class settlement vs. principle latent in the text vs. documented-abuse remedy). This file authors only the feudal reading's epsilon, victims, and structure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "magna_carta_clause_39__liberal_due_process_reading",
+      "magna_carta_clause_39__originalist_limitation_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'Magna Carta, clause 39' decomposes into three structurally distinct constraints — this feudal reading (protection as rank-bound privilege; epsilon ~0.31), the liberal due-process reading (universal individual guarantee; higher epsilon, expanded victim set), and the originalist limitation reading (remedy for documented 1215 abuses only; lower epsilon). The readings share a fixed text but assign different protected classes and different legitimacy sources, so each carries its own stable epsilon per the epsilon-invariance principle. The feudal reading is upstream: its centuries of operation created the text-prestige and the 'law of the land' formula that the liberal reading later reinterprets, so edges run from this file to both siblings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "feudal_compact_bounded_prerogative",
+    "drift_state": {
+      "moment": "early_seventeenth_century_common_law_revival",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "liberal_due_process_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "originalist_limitation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "procedural_rights_are_rank_bound",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "prerogative_channeled_not_displaced",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "judgment_by_equals_is_class_court",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "header": {
+    "constraint_id": "monopoly_rulebook__extraction_demo_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a47b5316-504f-45f4-b8bc-3310173f1ee7"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.66,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "mountain",
+    "human_readable": "Monopoly Rulebook as Rent-Concentration Demonstration (Extraction-Demo Reading)",
+    "topic_domain": "economic/game-theory/institutional-design",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "monopoly_accumulating_winners"
+    ],
+    "victims": [
+      "bankrupt_eliminated_players"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 90
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.66
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "monopoly_accumulating_winners",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Assembles uncontested color-group monopolies, builds houses and hotels, and collects escalating payments from every opponent who lands. The rulebook gives them no way to decline the position: refusing to develop or collect forfeits the competitive race, and the same rules that reward accumulation punish restraint. Exit from the arrangement means winning, which ends the game."
+    },
+    {
+      "name": "bankrupt_eliminated_players",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Pay rent on every landing, mortgage and sell holdings at distressed prices, and eventually owe more than their liquid assets cover. Bankruptcy removes them from the table permanently; the rules provide no re-entry, no relief payment, and no appeal. Once eliminated, they have no standing left to object inside the game — their objection can only take the form of leaving it."
+    },
+    {
+      "name": "struggling_midgame_players",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "exit_options": "constrained",
+      "time_horizon": "immediate",
+      "spatial_scope": "local",
+      "situation": "Hold scattered properties and collect occasional small rents while paying far larger ones to whoever completed a monopoly first. Every legal move — mortgaging, selling, trading, auction bidding — is open to them, but each converges on the same destination unless they win the monopoly race outright. They may form temporary trading coalitions to blockade a leader, but such cartels are unstable under the rules' individual incentive to defect."
+    },
+    {
+      "name": "demonstration_host_facilitators",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Sets the table's protocol: the printed rules govern, no house amendments, play runs to the rulebook's conclusion. They adjudicate disputes over auctions, bankruptcy timing, and loans, and they hold the line against the recurring proposal to soften the endgame. Nothing binds them to this role — they can announce house rules at any session — but within a session they administer the arrangement as written and collect no in-game money for doing so."
+    },
+    {
+      "name": "house_rule_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The large population of players who favor free-parking jackpots, doubled starting salaries, mercy loans, and slowed elimination. Under the by-the-book protocol they are ruled out of the conversation before the first roll: their proposals are classified as corruption of the demonstration rather than contributions to it. Their practical response has been exit — most household tables worldwide play modified versions — which is why their voice survives everywhere except inside the pure-rule session."
+    },
+    {
+      "name": "game_history_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Study the rulebook's genealogy: the original patented Landlord's Game designed to teach a critique of land rent, its commercial successor that kept the mechanics and changed the purpose, and the century of play those two intents produced. They publish the documentation that lets anyone check which parts of the current text are inherited pedagogy and which are product design."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a real coordination problem for two to eight strangers: turn order, property pricing, auction procedure, building rules, and bankruptcy procedure are specified once and centrally, so a property-trading game can run without the players negotiating meta-rules before every session.",
+    "transfer_function": "Moves in-game capital from every player, via rent on developed monopolies, toward whoever first assembles an uncontrollable position; the terminal transfers strip the last solvent opponents of everything and leave one holder of the entire board.",
+    "absent_voices": "House-rule advocates would object that the mandated endgame makes the game socially unplayable and would inject liquidity and slow elimination; they are excluded by the protocol's by-the-book rule. Bankrupted players would object loudest of all, but elimination strips them of in-game standing — their objection arrives only as departure. Both voices live outside this reading's session, in the sibling readings and at modified tables.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the rulebook's mandated arrangement vanished overnight, tables would reorganize around modified play within a generation — which is roughly what already happened wherever house rules spread: liquidity returns, eliminations slow, and the winner-takes-all terminus becomes rare. The seats that depend on the arrangement as written (the demonstration host's protocol, the winner's claim to a rulebook-legitimate conquest) would lose their object.",
+    "founding_problem": "To compress the dynamics of private land ownership into a playable hour: whoever lands on another's improved property pays whatever the owner asks, and concentration of everything in few hands follows — a playable proof built to teach a critique of rent (the patented Landlord's Game lineage), later carried into a commercial product whose drama is conquest and ruin.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties by the historical record: patent filings, the founder's published rules and accompanying political statement, and subsequent game-history scholarship document the pedagogical origin independently of any current winner or host. The commercial successor's own trade history corroborates the second genealogy — an entertainment product — and the two lineages' partisans dispute which founding problem governs the modern text. No party inside the game's winner seat attests anything."
+  },
+  "omegas": [
+    {
+      "id": "authored_rules_vs_natural_law_ambiguity",
+      "question": "Is the rulebook's concentration dynamic a genuine instantiation of structural economic law, or a deliberately authored artifact whose apparent inevitability is a set of design parameters that identifiable parties (winners, the demonstration's custodians) benefit from presenting as natural?",
+      "resolution_mechanism": "Parameter-sensitivity testing across matched play sessions and simulations: vary starting capital, salary schedules, and property pricing while holding everything else fixed. If small parameter changes reliably dissolve or restore the concentration terminus, the 'law' is authored and tunable rather than discovered.",
+      "impact": "If the dynamic is authored, the mountain claim fails and the arrangement computes as an enforced hybrid — real coordination shell carrying asymmetric transfer with a beneficiary seat — rather than a demonstration of necessity; if it is robustly parameter-insensitive, the reading's lawlikeness claim strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the rulebook's concentration outcome reflects discoverable structure or designable parameters."
+    },
+    {
+      "id": "kernel_reading_commitment_scope",
+      "question": "This constraint is one reading (extraction_demo_reading) of the monopoly_rulebook kernel; how would instantiating the sibling readings change the structural picture?",
+      "resolution_mechanism": "Author the siblings as separate stories and compare: social_scaffold_reading (house rules as required community correction) and tournament_orthodoxy_reading (the text as immutable competitive standard). Compare epsilon, victim sets, and computed types across the family.",
+      "impact": "Under the scaffold reading the victim set shrinks and epsilon drops (liquidity slows elimination); under the orthodoxy reading the referent shifts to ranked competitive play where elimination is a consented entry condition and epsilon re-prices accordingly. The disagreement is located in the status of the mandated elimination: truth-bearing necessity versus correctable defect versus legitimate ranking condition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame scoping: which kernel, which reading, what siblings would change."
+    },
+    {
+      "id": "bounded_stakes_moral_weight",
+      "question": "Does the arrangement's bounded, voluntary, zero-material-stakes character (pieces reset at the next session) discount the weight of its transfers, or does this reading hold the mechanism load-bearing regardless of stakes?",
+      "resolution_mechanism": "Contrast assessments of identical play arcs with and without material side-bets; test whether the reading's own adherents price the demonstration differently when real money rides.",
+      "impact": "If bounded-stakes discounting applies, effective pressure on the payer seats drops materially and the arrangement reads closer to a costly lesson than a predatory structure; if the reading weighs mechanism over stakes, the high extraction assessment stands.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether simulated stakes carry the same evaluative weight as lived ones."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (the rules contain no relief mechanism, bankruptcy is procedurally mandatory) or internalized/social (tables keep playing past the point of fun because quitting violates the by-the-book norm the host maintains)?",
+      "resolution_mechanism": "Observe session abandonment rates where the host explicitly releases players from the finish-the-game norm versus where the norm stands; if abandonment spikes when permission is granted, much of the held-in-place behavior was normative rather than procedural.",
+      "impact": "If internalized, the arrangement's effective grip exceeds what the rule text alone implies — enforcement lives in the table's manners and would survive edits to the text; if structural, removing the no-relief clauses would collapse suppression immediately.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus normative sources of the arrangement's hold on players."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A printed rulebook mandates a property-trading game in which rent flows to whoever completes an uncontested monopoly, no mechanism returns capital to the paying side, and insolvency ends a player's participation permanently. This story instantiates ONE reading of that rulebook — the extraction-demonstration reading — which holds that the mandated arrangement faithfully exhibits how private ownership of land and utilities concentrates all wealth in few hands, and that the elimination terminus is not a defect but the demonstration's payload. Per the epsilon-invariance principle, the sibling readings (social correction, competitive orthodoxy) are separate constraints in separate files; they are linked, not folded in. KEY AGENTS (by structural relationship): the winner seat (powerful/constrained) collects the escalating transfers; the bankrupted (powerless/trapped) bear them until removal; midgame players (moderate/constrained) pay while still holding assets; the demonstration host (moderate/mobile) administers by-the-book protocol without collecting in-game money; house-rule advocates (organized/mobile/global) stand excluded by protocol and answer with exit; game-history scholars (analytical) observe the full genealogy.",
+    "key_agents": [
+      "- monopoly_accumulating_winners: Primary beneficiary seat ([powerful]/[constrained]) — receives every rent stream; the rules reward accumulation and penalize restraint, so even a reluctant occupant of this seat is carried to the same terminus",
+      "- bankrupt_eliminated_players: Primary payer seat ([powerless]/[trapped]) — pays until insolvent, then exits permanently with no in-game voice",
+      "- struggling_midgame_players: Dual-positioned seat ([moderate]/[constrained]) — collects scattered small rents while paying larger ones; coalition counter-play is available but unstable under individual defection incentives",
+      "- demonstration_host_facilitators: Agenda-setting seat ([moderate]/[mobile]) — administers the by-the-book protocol, adjudicates procedure, collects nothing in-game",
+      "- house_rule_advocates: Excluded seat ([organized]/[mobile]/global) — the liquidity-injecting majority, barred from the conversation and answering with exit to modified tables",
+      "- game_history_scholars: Analytical observer ([analytical]/[analytical]) — documents the pedagogical origin and the commercial pivot"
+    ],
+    "logic_rationale": "Epsilon is authored at 0.72 against the fixed referent — the standing by-the-book arrangement, assessed by this reading's own lights — not against any alternative the reading prefers. Transfers are one-directional once a monopoly forms, no clause returns capital downward, and the terminal event confiscates all remaining positions from all but one seat; the score is discounted slightly from saturation because stakes are bounded and participation voluntary. Suppression (0.66, unscaled by design) is structural first — the text offers no relief mechanism and makes insolvency procedurally mandatory — with a normative overlay maintained by the host; it is capped below saturation because the trade and auction rules admit coalition counter-play, which occasionally rescues a doomed seat. Theater (0.45) is honest about the arc's back half: once concentration becomes irreversible around minute 60, continued play is largely enactment of a foregone conclusion — real mechanism early, performance late. Accessibility_collapse is 0.40 because alternatives do NOT collapse: modified play remains trivially available (that is precisely why a sibling reading exists), and this reading suppresses alternatives rhetorically, not practically. Resistance is 0.55 — the mass adoption of house rules worldwide is documented, persistent resistance to the mandated endgame. The three measurement series share one grid (minutes 0-90) so every metric is authored at every examined point; the trajectory is a monotonic positive-feedback ratchet, not a cycle — each rent payment tightens the next squeeze — so no oscillation machinery is invoked, and the oscillation-is-extraction warning does not apply. Endpoint values match the base_properties scalars.",
+    "perspectival_gap": "The seats compute differently by construction. From the winner seat the arrangement narrates as merit: skill identified undervalued assets, timing converted them into a moat, and the payout is the earned return. From the bankrupted seat the same sequence is compulsory ruin — the rules gave them obligations with no corresponding rights. The host seat experiences fiduciary fidelity to the text; the excluded advocates experience a protocol that disqualified their contribution before it was voiced; the analytical seat sees an authored artifact marketed for a century as a timeless classic. None of these perceptions is authored as fact — the engine derives each seat's classification from power, horizon, exit, and scope.",
+    "directionality_logic": "Beneficiary and victim declarations drive the derivation. The winner sits near the subsidy end (declared beneficiary, powerful, exit only through victory). Bankrupted players sit at the full-target end (declared victims, powerless, trapped — no exit preserves their position, and elimination removes them entirely). Midgame players derive high d from their payer role despite their secondary beneficiary role, because their net flow is strongly negative. House-rule advocates derive low d through mobility: having exited, the arrangement barely reaches them. No directionality_overrides are authored: the one candidate — marking the host symmetric at 0.5 — shares the moderate power atom with the midgame payers, so a power-atom-keyed override would flatten the payers' correctly derived high d; the derivation from the host's absence from both beneficiary and victim lists is the better approximation of custodial neutrality. Scope effects are modest here: most seats are local (table-scale verification is easy), while the globally distributed advocate seat is the least exposed.",
+    "mandatrophy_analysis": "The classification guards against mislabel in both directions. Reading the arrangement as pure mountain would launder a designed artifact's parameter choices as natural law — the declared beneficiaries make that laundering visible rather than silent. Reading it as pure extraction would erase the genuine coordination function (strangers can play a complex trading game at all only because the text specifies procedure) and would misread the pedagogical intent that distinguishes this reading from a mere predation story. Mandatrophy is deliberately NOT declared resolved: this reading holds the founding mandate live, and the R5 interview records the contest instead. The watch-item is the theater trajectory — if the demonstration's audience fully evaporates and by-the-book enforcement persists as ritual (sessions run to a foregone conclusion for no one's instruction), the arrangement slides toward the degraded-inertial signature; the rising theater series is the leading indicator of that slide.",
+    "kernel_context": "Kernel: monopoly_rulebook — one printed rule text that different constituencies read differently. This file instantiates the extraction_demo_reading, which treats the text as a faithful working model whose harshness is evidence rather than error. Sibling readings: social_scaffold_reading treats the same text as requiring community correction to be socially playable (house rules as pastoral amendment), and tournament_orthodoxy_reading treats it as the immutable competitive standard whose authority must not bend for comfort. The folk mapping is scriptural: this reading is the fundamentalist who believes the hard passages are literally true, the scaffold reading is the reformer who amends for the flock, and the orthodoxy reading is the liturgical conservative who protects the text for ranking purposes. The disagreement is located precisely in the status of the mandated elimination terminus: truth-bearing necessity, correctable defect, or legitimate entry condition. Each reading is a separate constraint with its own epsilon, victim set, and type; this file authors only its own."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "monopoly_rulebook__social_scaffold_reading",
+      "monopoly_rulebook__tournament_orthodoxy_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial object 'Monopoly's official rules' covers three structurally distinct claims and is split into three stories sharing the monopoly_rulebook kernel. This file (extraction_demo_reading) authors the historical-origin claim: the mandated arrangement demonstrates rent-driven concentration, epsilon high (0.72), victim set = bankrupted players. The social_scaffold_reading authors the correction claim: community amendment is required for playability, epsilon lower because injected liquidity slows the elimination cascade and shrinks the victim set. The tournament_orthodoxy_reading authors the competition claim: the text is the legitimate ranked-play framework, with the referent shifted to consented competitive entry so the same mechanics price differently. The extraction reading sits upstream: it is the genealogical indictment that pressures the orthodoxy's legitimacy conditions (its 'timeless neutral classic' framing) and the baseline the scaffold reading defines itself against. All three files carry cross-links in network.affects_constraints; no story in the family is an orphan."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "founder_georgist_demonstration_design",
+    "drift_state": {
+      "moment": "commercial_mass_market_play",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "social_scaffold_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "monopoly_rulebook__tournament_orthodoxy_playing_standard",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "rent_concentration_is_structurally_inevitable_under_the_text",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "mandated_elimination_carries_the_demonstration_payload",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "monopoly_accumulating_winners",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

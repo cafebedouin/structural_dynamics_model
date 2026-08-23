@@ -1,0 +1,397 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__utilitarian_hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "e82d06de-f062-4652-8c7d-55b4d3596a32"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.26,
+    "theater_ratio": 0.36,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Welfare-Contingent Licensing Governance (Utilitarian Hybrid Reading)",
+    "topic_domain": "economic/political/software_engineering",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dual_license_vendors",
+      "platform_cloud_providers",
+      "open_source_foundations",
+      "enterprise_software_buyers",
+      "public_funded_infrastructure_users"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "research_funding_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Attach open-licensing conditions to publicly funded software where their assessments indicate shared infrastructure serves the public better than restricted distribution, and relax or redirect conditions when evidence changes. Grant terms are rewritten on funding-cycle timescales, so they can move faster than procurement law."
+    },
+    {
+      "name": "national_procurement_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Write and enforce purchasing rules that weigh open-source requirements against vendor accountability, support contracts, and certification needs. Their rules bind thousands of agencies; revising them takes years, so they hold the framework in place more than they steer it."
+    },
+    {
+      "name": "dual_license_vendors",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Release software under open terms while selling commercial licenses and hosted tiers to customers whose compliance or integration needs exceed the open grant. Revenue arrives precisely where the closed option is justified by sustainability or scale arguments, and the firms' open-source program offices, standards participation, and policy submissions actively shape how licensing choices get evaluated."
+    },
+    {
+      "name": "platform_cloud_providers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Run other parties' open software as hosted services at scale, profiting from open availability without corresponding upstream contribution. When projects relicense to restrict hosted use, these providers pay real migration and rebuild costs, and they lobby hard against restrictive terms — they are simultaneously the largest beneficiaries of openness and the largest organized opponents of its withdrawal."
+    },
+    {
+      "name": "open_source_foundations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold trademarks, host infrastructure, and steward commons that the mixed-ecosystem settlement protects. They depend on corporate contributions and sponsorships that are legitimated by sustainability and public-benefit arguments, which limits how hard they can push back against the same sponsors' enclosure decisions."
+    },
+    {
+      "name": "enterprise_software_buyers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Choose per workload between open components and commercial products, capturing the option value the mixed ecosystem provides: commodity infrastructure at near-zero license cost, paid support where liability demands it. Switching costs exist per system but no buyer is bound to one model across their portfolio."
+    },
+    {
+      "name": "public_funded_infrastructure_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers, agencies, and civic technologists use code produced under public-funding openness conditions. Their benefit is structural — they could not individually purchase equivalent infrastructure — and their dependence means they track funding-policy changes closely but cannot shop elsewhere when a mandate lapses."
+    },
+    {
+      "name": "volunteer_contributors_to_enclosed_projects",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Contribute unpaid labor to projects that later convert to proprietary or source-available terms under sustainability rationales. Their merged work is absorbed into the closed product without compensation; leaving means abandoning communities, reputation, and mastery accumulated in a specific codebase, and comparable venues for the same work are scarce."
+    },
+    {
+      "name": "captive_users_of_specialized_tools",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Professions served by closed vertical tools — circuit design, clinical systems, aviation software — pay escalating license fees for products whose closed status was argued for on service, certification, and continuity grounds. Validated workflows, regulatory qualification, and training investment make switching effectively impossible even as prices rise."
+    },
+    {
+      "name": "downstream_dependents_unconsulted",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The long tail of indirect dependents — applications, pipelines, teaching materials, derivative projects — that consume software through transitive dependency chains. No mechanism seats them in licensing or re-licensing decisions; they learn of changes when builds break, terms change, or downloads disappear, and they have no channel to contest the welfare reasoning that justified the change."
+    },
+    {
+      "name": "technology_policy_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study licensing outcomes, maintenance economics, and enclosure episodes; publish audits of whether stated welfare rationales match observed conduct. Their work feeds funder policy and procurement revision but carries no enforcement power of its own."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allocates development-and-distribution models across heterogeneous software contexts: general-purpose infrastructure is routed toward open licensing where networked maintenance and reuse dominate, while specialized, safety-regulated, or revenue-intensive tools may be routed toward proprietary licensing where sustained income funds certification and support. It settles the open-versus-closed allocation problem per domain instead of imposing a single categorical rule that would misfit half the ecosystem.",
+    "transfer_function": "Moves licensing legitimacy and, materially, surplus: public funds and volunteer labor flow toward open commons where the welfare assessment favors them; subscription and commercial-license revenue flows to vendors where closure is defended on sustainability grounds; and the recurring cost of deciding which model applies is shifted from ideology-bound standoffs to evidence-assessment processes run by funders, procurement bodies, and firm policy teams.",
+    "absent_voices": "Downstream dependents, unconsulted user communities, and past contributors of re-licensed projects are absent from the small maintainer-vendor-funder rooms where enclosure decisions are made. They object after the fact — when builds break or terms change — and their objections arrive without a procedural seat, so the welfare calculus that justified each closure was computed over the preferences of those present.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Funder grant terms, procurement rules, dual-license business plans, foundation sponsorship agreements, and enterprise sourcing strategies all presuppose per-context licensing optimization. Overnight removal forces every jurisdiction and firm back toward a categorical default — universal opening or universal propertization — breaking specialized-tool financing in the first case and fragmenting shared infrastructure in the second, followed by years of renegotiation toward some new allocation regime.",
+    "founding_problem": "The categorical doctrines had deadlocked the field: a universal openness mandate starved revenue-dependent specialized development and support, while a universal property mandate fragmented shared infrastructure and forced wasteful duplication. The hybrid framework was built to solve allocation — assigning each software context the model that maximizes total output and access rather than the model a doctrine commands.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the beneficiary set by the academic economics-of-open-source literature, public-sector ICT and procurement reviews, and post-mortem audits of national open-source programs, all of which document that the allocation problem recurs in each new domain. Corroboration is partial in character: a large share of the loudest attestation comes from beneficiary firms' own sustainability whitepapers, so the independent evidentiary base is specifically the scholarly and audit literatures, and it is thinner than the volume of self-interested advocacy surrounding the framework."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.36,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.26,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of the software-source-status kernel: the utilitarian hybrid position that neither open nor proprietary licensing is categorically required, and that the legitimate model for any given context is whichever maximizes aggregate welfare. The constraint under classification is the operative governance framework built on that position — the funder conditions, procurement rules, and firm licensing strategies that assign each software context a model by welfare assessment. Its epsilon referent is the standing mixed-ecosystem arrangement this framework governs, assessed by this reading's own lights: the reading endorses mixed ecosystems, so epsilon measures how far the ACTUAL operation of context-contingent selection departs from welfare-tracking selection — not the performance of any alternative arrangement. The claim/metrics split is deliberate: the framework is CLAIMED as rope (a genuine allocation mechanism with no categorical victim set, matching this reading's structural signature), while the authored metrics describe operation with accumulating enclosure pressure — welfare vocabulary increasingly deployed to dress competitive closure, enforcement machinery maturing around procurement and grant terms. The engine measures that divergence; the claim is not reconciled to the metrics.",
+    "key_agents": [
+      "- research_funding_agencies + national_procurement_authorities: Agenda-setting institutional seats (institutional/mobile and institutional/constrained) — attach and enforce per-context licensing conditions on public money and public purchasing",
+      "- dual_license_vendors: Primary beneficiary with norm-shaping secondary role (powerful/arbitrage) — collects enclosure-legitimated revenue and co-authors the welfare standard",
+      "- platform_cloud_providers: Dual-positioned beneficiary/payer (powerful/mobile) — profits from open hosting, pays when openness is withdrawn",
+      "- open_source_foundations: Protected beneficiary with constrained exit (organized/generational) — stewards the commons the settlement safeguards",
+      "- volunteer_contributors_to_enclosed_projects: Contingent payer (moderate/constrained) — absorbed labor when projects close under sustainability rationales",
+      "- captive_users_of_specialized_tools: Contingent payer (moderate/trapped) — bears rising fees where closure was welfare-defended",
+      "- downstream_dependents_unconsulted: Excluded seat (powerless/trapped) — bears decisions it had no procedural voice in",
+      "- technology_policy_researchers: Analytical observer — audits stated versus revealed welfare rationales"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.38 — well above a pure coordination cost but far below categorical-extraction territory — because the framework's allocation function is real while its welfare vocabulary is increasingly borrowed for enclosure justifications (open-core conversions, hosted-use restrictions, strategic de-opening). Suppression is low (0.26): the framework suppresses no alternative model — it exists to legitimize pluralism — but its enforcement arm (grant conditions, procurement compliance, trademark governance) has grown from near-nothing to a real disciplinary layer, hence the rising suppression_requirement series rather than a static scalar. Theater_ratio (0.36 and climbing) tracks open-washing: sustainability and public-benefit language attached to decisions whose revealed driver is competitive positioning. Accessibility_collapse is low (0.35) because understanding the framework collapses nothing — both models remain fully available by design. Resistance is substantial (0.55): categorical partisans on both sides reject the framework's refusal to settle, and community backlash to enclosure episodes is organized and recurring. The temporal picture is monotonic accumulation, not oscillation — no cyclical mechanism is claimed, and all three series share one six-point grid so the engine samples a consistent history. The rising base_extractiveness series is exactly the profile the extraction-accumulation abductive trigger watches; it does not reclassify, but it dates the drift toward the rope/tangled boundary. Contributor exit deserves note: reputation and community membership fuse contributors to their projects, so their constrained-exit rating carries an identity component that would raise their effective exposure if the frame broke.",
+    "perspectival_gap": "Seats should compute sharply different types from identical structural facts. From the agenda-setting seats the framework is evidence-based allocation they administer and can defend from their own audits; from the contingent payer seats — contributors whose work was absorbed, captive users of closed vertical tools — the same framework operates as a legitimacy machine for decisions made over their heads; from the powerful beneficiary seats it is the settlement that makes their business models licit. Same-level divergence is equally structural: the two powerful beneficiary seats differ because one (dual-license vendors) collects from closure it helps argue for while the other (cloud providers) pays when openness closes; the two moderate payer seats differ by exit — contributors retain constrained mobility across venues while captive tool users are trapped by validated workflows and regulatory qualification. The engine computes these per-seat classifications from power, exit, and declared position; nothing here adjudicates them.",
+    "directionality_logic": "Beneficiaries declared in base_properties drive low directionality for the organized beneficiary cluster: foundations, buyers, and public-infrastructure users derive near-subsidy positions, correctly, since the framework shields their interests at little cost to them. Two corrections are declared as overrides because the automatic derivation misprices the affected seats. First, the powerful seats (dual_license_vendors, platform_cloud_providers): the derivation reads declared beneficiaries and outputs a near-beneficiary d, but both seats co-author the welfare standard itself — their program offices and policy submissions shape which closures count as welfare-justified — so their effective position is partially extractive-adjacent; overridden to d=0.28. Second, the moderate seats (volunteer contributors, captive tool users): they appear in no beneficiary or victim declaration, so they would receive the power-atom fallback, but descriptively they are the framework's contingent payers — overridden to d=0.66. Institutional agenda-setters derive near-symmetric positions (they administer without collecting), and the powerless excluded seat derives a high target-side d reflecting its exposure to unconsulted decisions. Note on scaling: suppression enters computation as a raw structural property, unscaled by power or scope; only extractiveness is scaled, which is why the framework's growing enforcement layer registers in the suppression series without inflating per-seat extraction arithmetic.",
+    "mandatrophy_analysis": "The founding allocation problem is live — each new domain (hosted services, model weights, security-mandated transparency) reopens the open-versus-closed question — so no mandatrophy is declared and none should be inferred from the rising theater ratio. The classification's protective work runs the other direction: because this reading declares no categorical victim set, a lazy reading of the enclosure episodes could inflate the framework into a snare, converting contingent, seat-local costs into a fabricated victim class; conversely, the framework's genuine coordination function could be cited to wave off the accumulating capture evidence. The correct guard is the mismatch check: if the founding problem were ever attested dead while the world-rearranges verdict persisted, the capture/zombie flag should fire against the rising theater series — the framework persisting as performance after its allocation function lapsed. At the current interval endpoint the problem is live, enforcement is maturing rather than atrophying, and the honest posture is rope-with-drift, watched."
+  },
+  "omegas": [
+    {
+      "id": "source_status_kernel_disagreement",
+      "question": "This constraint instantiates only the utilitarian_hybrid_reading of kernel software_source_status. Where exactly is the disagreement with the sibling readings located, and what would each displacement change structurally?",
+      "resolution_mechanism": "Track which reading successive jurisdictions, funders, and major projects converge on: adoption of the freedom-imperative reading would manufacture a categorical victim set (any proprietary operator becomes a rights violator); adoption of the property-rights reading removes welfare conditionality (closure needs no justification); adoption of the pragmatic-development reading collapses context-selection into a general open-superiority rule.",
+      "impact": "Displacement by any sibling changes the beneficiary/victim structure wholesale — the hybrid's defining feature (no categorical victims, mixed ecosystems acceptable) dissolves, and this story's epsilon and classification cease to describe the operative constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a four-reading kernel; the disagreement is located in whether licensing permissibility is categorical (freedom, property) or indexed to a decision procedure (hybrid, pragmatic-leaning hybrid)."
+    },
+    {
+      "id": "welfare_function_underdetermination",
+      "question": "Whose welfare does the framework aggregate, and how are individual items — developer autonomy, user access, vendor revenue, maintenance sustainability — weighted inside the calculus?",
+      "resolution_mechanism": "Explicit specification of the social welfare function behind funder and procurement assessments; comparative audit of decisions reached under different weighting schemes.",
+      "impact": "Heavy weighting of producer autonomy converges this reading toward the freedom-imperative sibling; consumer-surplus-only weighting legitimizes substantially more enclosure and raises effective epsilon; the classification swings on the aggregation choice, which the framework currently leaves implicit.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The aggregate-welfare standard is underspecified; epsilon is stable only given a fixed aggregation, which no seat currently authors."
+    },
+    {
+      "id": "enclosure_capture_vs_complexity",
+      "question": "Does the rising theater_ratio and base_extractiveness reflect rent-seeking capture of the welfare vocabulary, or genuine growth in the share of contexts where welfare-honest analysis supports closure?",
+      "resolution_mechanism": "Paired audit of enclosure episodes: compare stated welfare rationales against revealed conduct (pricing, fork suppression, feature withholding), and test counterfactual openness in the affected contexts.",
+      "impact": "Confirmed capture converts the drift from benign complexity into strategic enclosure and pushes affected seats' computed types toward the tangled-rope/snare flank; confirmed honest complexity supports the rope claim at higher metric values.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether welfare language is being captured or the welfare-honest closure share is genuinely rising."
+    },
+    {
+      "id": "enforcement_hardening_trajectory",
+      "question": "Will the maturing enforcement layer (grant conditions, procurement compliance, trademark governance) stabilize the framework as low-overhead coordination, or harden into gatekeeping that extracts compliance costs from smaller actors?",
+      "resolution_mechanism": "Compare administrative burden and compliance failure rates across actor sizes as mandate regimes mature; track whether enforcement revisions respond to evidence or to incumbent preference.",
+      "impact": "Hardening into size-differentiated gatekeeping would raise suppression for small actors specifically and push the framework across the rope/tangled boundary; stabilization preserves the rope classification with the current metric profile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Direction of the enforcement-capacity trajectory the suppression_requirement series is tracing."
+    },
+    {
+      "id": "welfare_standard_framing_underdetermination",
+      "question": "Is the right commitment-system framing the licensing-allocation norm administered by policy bodies, or the aggregate-welfare standard itself functioning as the kernel — an interpretive tradition that absorbs strategic closure by re-describing it as a welfare case?",
+      "resolution_mechanism": "Test the alternative framing against the same episodes: if the standard's interpretive layer systematically launders enclosure decisions without ever surfacing kernel revision, the standard-as-kernel framing is the better fit.",
+      "impact": "Under the alternative framing, authority_grounding shifts from expertise toward extraction — the authority structure's benefit flows from preventing the standard's own revision — changing the commitment-system classification and the drift interpretation (practice_drift becomes acknowledged kernel management).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "CS-framing underdetermination: institution-level versus standard-level kernels yield different authority and drift classifications for the same episodes."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__freedom_imperative_reading",
+      "software_source_status__pragmatic_development_reading",
+      "software_source_status__property_rights_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'how software source should be governed' decomposes, per the epsilon-invariance principle, into four structurally distinct constraints — one per reading of the software_source_status kernel. Each reading carries its own epsilon over its own referent arrangement: the freedom reading measures the proprietary-use arrangement as rights violation; the property reading measures open mandates as expropriation; the pragmatic reading measures methodology adherence; this hybrid reading measures the mixed-ecosystem allocation arrangement by its own welfare-tracking standard. They are separate stories linked by this network edge, not one story with a measurement parameter. Upstream-downstream structure within the family: whichever reading dominates funding and procurement policy sets the resource environment for the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.28
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.66
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "rope"
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "welfare_maximizing_mixed_ecosystem",
+    "drift_state": {
+      "moment": "contemporary_commercial_open_source_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_imperative_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pragmatic_development_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "property_rights_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "aggregate_welfare_supremacy_in_licensing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "no_categorical_model_mandate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "dual_license_vendors",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "header": {
+    "constraint_id": "licensing_statute_mandate__graduated_access_filter",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "story_uid": "a79053f5-e714-4dea-80f4-5d8c5f87b0e6"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.78,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "Statutory Credential Mandates as Graduated Access Filter",
+    "topic_domain": "labor economics/regulatory policy/public administration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "licensed_incumbent_practitioners",
+      "accredited_training_programs"
+    ],
+    "victims": [
+      "low_income_license_aspirants",
+      "returning_citizens_with_records"
+    ],
+    "vindicated_propositions": [
+      "state_police_power_doctrine",
+      "meritocratic_gatekeeping_norm"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.76,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.77,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.78,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "This story is the graduated_access_filter reading of the licensing_statute_mandate kernel; would the public_safety_coordination or rent_seeking_suppression readings of the same statutes yield a different epsilon, victim set, or computed type?",
+      "resolution_mechanism": "Author and classify the sibling stories against the same statutory referent and compare per-seat outputs; divergent computed types across readings locate the disagreement in victim-set identification and barrier-incidence attribution rather than in the statutes themselves.",
+      "impact": "Adopting the safety reading would lower epsilon toward coordination-cost levels and likely compute a rope-side type; adopting the rent-seeking reading would widen the victim set to all blocked entrants and raise measured extraction further.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: one statutory kernel, three readings, three constraints."
+    },
+    {
+      "id": "harm_evidence_gap",
+      "question": "Do barrier stringency and measurable consumer-harm reduction correlate across licensed occupations?",
+      "resolution_mechanism": "Cross-state dose-response comparison of occupations licensed in some states and unlicensed in others, matched on service type and provider mix.",
+      "impact": "No harm differential confirms the safety rationale as cover and stabilizes the snare computation; a strong differential in specific occupations splits the family, with those segments computing closer to a coordinated standard.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the coordination cover story has empirical substance."
+    },
+    {
+      "id": "incidence_attribution",
+      "question": "Is the class gradient in licensure completion caused by the credential mandate itself or by correlated background disadvantage?",
+      "resolution_mechanism": "Natural experiments from state derecognition and universal-recognition adoptions: if demographic entry gaps close when statutes lift, the statute carries the gradient.",
+      "impact": "Statute-caused gradients support the structural-exclusion reading; background-caused gradients would relocate the binding mechanism outside this constraint's scope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal attribution of the class-sorting pattern."
+    },
+    {
+      "id": "aspirant_suppression_mechanism",
+      "question": "Is aspirant non-entry driven by the structural cost of the gate or by internalized expectation that licensure is unattainable?",
+      "resolution_mechanism": "Compare completion rates among funded applicants (employer-sponsored, scholarship) against self-financed applicants; persistence of non-application after fee waivers indicates internalized residue.",
+      "impact": "An internalized component raises effective suppression above the statutory measure and persists after reform; a purely structural component predicts rapid entry response to cost relief.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression among excluded aspirants."
+    },
+    {
+      "id": "grandfathering_ratchet",
+      "question": "Does each scope expansion become irreversible because sitting practitioners are exempted while new entrants remain bound?",
+      "resolution_mechanism": "Track repeal and rollback episodes for durability: whether delicensed occupations stay open or mandates return within a decade.",
+      "impact": "A durable ratchet means reform requires prospective sunset architecture rather than one-time repeal; absence of a ratchet keeps rollback cheap and persistence contingent on ongoing defense.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Irreversibility of expansions via grandfathering."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Occupational licensing statutes require a state-granted credential as a condition of lawful practice in a widening roster of occupations. This story instantiates the graduated_access_filter reading of that statutory kernel: it treats the operative function of the credential mandate as a tiered access filter whose binding incidence falls along class and prior-resource lines — who can finance the required clock-hours, survive years of unpaid supervised practice, and clear discretionary character gates — rather than along any measured risk the occupation poses. On this reading the public-safety rationale functions as the arrangement's public justification while the enforced mechanism sorts entrants by wealth and background. The epsilon authored here (0.70) is assessed, per the reading's own lights, against the standing arrangement — the statutes as they operate today — and not against the narrower, harm-evidenced licensure regime this reading would regard as legitimate. Sibling readings of the same kernel (public_safety_coordination, rent_seeking_suppression) are separate constraint files with their own epsilon and victim sets; they are linked through the network, not averaged into this one.\n\nKEY AGENTS (by structural relationship):\n- licensed_incumbent_practitioners: Primary beneficiary (organized/identity_locked) — collects the wage premium the entry gate sustains\n- accredited_training_programs: Secondary beneficiary (institutional/mobile) — sells the statutorily mandated preparation\n- professional_licensing_boards: Agenda setter (institutional/arbitrage) — defines scope, grants and revokes, enforces\n- state_legislatures: Co-agenda setter (institutional/arbitrage) — enacts and amends the statutes\n- low_income_license_aspirants: Primary target (powerless/trapped) — bears the barrier's full cost\n- returning_citizens_with_records: Secondary target (powerless/trapped) — barred at the final discretionary gate\n- license_dependent_consumers: Near-symmetric party (moderate/constrained) — buys the assurance signal, pays restricted-supply prices\n- out_of_state_credentialed_practitioners: Excluded peer (moderate/constrained) — equally trained, barred by non-recognition\n- labor_economists: Analytical observer (analytical/analytical) — measures incidence, premia, and reform outcomes",
+    "key_agents": [
+      "licensed_incumbent_practitioners: Primary beneficiary (organized/identity_locked) — collects the wage premium the entry gate sustains",
+      "accredited_training_programs: Secondary beneficiary (institutional/mobile) — sells the statutorily mandated preparation",
+      "professional_licensing_boards: Agenda setter (institutional/arbitrage) — defines scope, grants and revokes, enforces",
+      "state_legislatures: Co-agenda setter (institutional/arbitrage) — enacts and amends the statutes",
+      "low_income_license_aspirants: Primary target (powerless/trapped) — bears the barrier's full cost",
+      "returning_citizens_with_records: Secondary target (powerless/trapped) — barred at the final discretionary gate",
+      "license_dependent_consumers: Near-symmetric party (moderate/constrained) — buys the assurance signal, pays restricted-supply prices",
+      "out_of_state_credentialed_practitioners: Excluded peer (moderate/constrained) — equally trained, barred by non-recognition",
+      "labor_economists: Analytical observer (analytical/analytical) — measures incidence, premia, and reform outcomes"
+    ],
+    "logic_rationale": "Extractiveness is high (0.70) because the measured transfers — wage premia to license holders, tuition to mandated training programs, and the foregone earnings of everyone the gate excludes — are large relative to any demonstrable harm reduction for most covered occupations. Suppression (0.78) is a raw structural property, unscaled by power or scope: the gate is statutory prohibition backed by fines and misdemeanor charges for unlicensed practice, and the informal-economy alternative carries its own legal exposure. Theater ratio (0.35) reflects machinery that performs diligence — continuing-education hours, renewal paperwork, public board hearings — while the binding element is simply the statute's existence; the performance share has grown as requirements lengthened. Accessibility collapse (0.55) is partial: adjacent unlicensed occupations, informal work, and interstate moves remain, but each carries a wage discount or legal risk, so alternatives degrade rather than vanish. Resistance (0.62) is real and growing: antitrust and civil-rights litigation, fair-chance campaigns, universal-recognition adoption, and sunset-review regimes. The measurement series run on one shared time grid (points 0–30 at intervals of 6) so every tracked metric is authored at every examined point; the suppression_requirement series is authored because the story specifically traces enforcement-capacity change — board staffing and penalty escalation building through the middle of the interval, then plateauing as budgets stabilized and reform pressure mounted. The extractiveness trajectory is a ratchet with late deceleration rather than a cycle: expansions accumulate, each grandfathering its sitting beneficiaries, while late-interval reform blunts but does not reverse the slope.",
+    "perspectival_gap": "The payer seats and the agenda-setter seats should compute very differently. From the aspirant's position the arrangement is a wall: the occupation is legally closed until an unaffordable sequence is completed, and failure at any stage forfeits everything spent. From the incumbent's position the same statutes are professional obligation and quality stewardship — the license is experienced as earned standing, not as a toll others pay. Boards experience a protection mandate; legislatures experience manageable interest-group politics in which concentrated opposition reliably beats diffuse benefit. Coalition potential among the powerless victims exists — aspirants are numerous, and fair-chance and worker-center organizing have scored localized wins — but collective-action costs are high because each exclusion is individual, the payoff to organizing is deferred, and returning citizens carry compounded stigma that suppresses participation. The engine computes these per-seat divergences from the structural data; nothing in the authored claim adjudicates them.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for incumbents and training programs; victim declarations drive high directionality for aspirants and returning citizens, amplified by trapped exit — neither group can reach the licensed rate without clearing the gate, and the second group hits a discretionary bar after its investment is sunk. Incumbents' identity_locked exit matters on the subsidy side: their career capital is fused to the credential, so defense of the arrangement is indistinguishable from self-defense, which stabilizes the beneficiary coalition beyond what fee flows alone would predict. License-dependent consumers sit near symmetric through their dual beneficiary/payer declaration — they receive the assurance signal and pay the restricted-supply markup, with the sharpest shortfalls in low-income service deserts. Out-of-state credentialed practitioners are targets despite moderate power: non-recognition aims the gate at them specifically. No directionality_overrides are authored: the beneficiary/victim declarations plus exit atoms place every seat correctly, and an override keyed to a shared power atom (three institutional actors with different relationships) would flatten distinctions the structural data already encodes.",
+    "mandatrophy_analysis": "The founding problem — quackery and fatal amateur practice in a handful of expert professions — is plausibly still live for clinical occupations and dead or never-operative for the broadened personal-service roster, hence founding_problem_status: contested. The arrangement persists and grows across both halves, which is the signature the R5 mismatch consumer watches: not the flagged dead-plus-world_rearranges zombie combination, but adjacent to it. Classification prevents mislabeling in both directions here. Reading the whole apparatus as rope accepts the safety cover story wholesale and misses the class-sorting mechanism this reading isolates; reading all of it as pure extraction with no coordination content would erase the corroborated clinical-safety core that the sibling public_safety_coordination reading legitimately registers. Keeping the epsilon referent fixed on the standing arrangement — statutes as operated — also guards against the advocacy-reading failure mode in which a critic's preferred alternative (narrow, harm-evidenced licensure) silently substitutes for the arrangement under evaluation and drives epsilon toward zero.",
+    "kernel_context": "This story instantiates the graduated_access_filter reading of the licensing_statute_mandate kernel. The sibling readings — public_safety_coordination and rent_seeking_suppression — are separate constraint files that read the same statutory text differently: the safety reading locates the kernel's function in consumer-harm prevention through minimum competence standards (lower epsilon, likely rope-side computation), and the rent-seeking reading locates it in supply restriction and incumbent rent collection (comparably high epsilon, with a victim set spanning all blocked entrants rather than class-sorted aspirants specifically). The disagreement between readings is located in victim-set identification and barrier-incidence attribution: who the gate actually excludes, and whether the binding effect tracks occupation risk or prior resource access. Reading relations are authored coexists_with toward both siblings because no reading's core premise logically eliminates another's within a single framework — critics of licensing routinely hold all three characterizations together, and defenders hold the safety reading alone; the contest is empirical and distributive, not formally contradictory, so foreclosure would overclaim."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "licensing_statute_mandate__public_safety_coordination",
+      "licensing_statute_mandate__rent_seeking_suppression"
+    ],
+    "dual_formulation_note": "The colloquial label 'occupational licensing' decomposes, per the epsilon-invariance principle, into three structurally distinct readings of one statutory kernel: consumer-harm prevention (public_safety_coordination), incumbent supply restriction (rent_seeking_suppression), and class-indexed access tiering (this file). Each reading assigns its own epsilon to the same standing arrangement — the statutes as operated — because each reads the binding mechanism differently; measuring the arrangement by harm-reduction observables yields low extraction, while measuring it by barrier-incidence observables yields high extraction, which is precisely the signal that the label conflated distinct constraints. Family linkage runs through affects_constraints; the upstream safety reading is the one cited as justification by the enforcement structure, and the two critical readings draw on overlapping empirical programs."
+  },
+  "stakeholders": [
+    {
+      "name": "licensed_incumbent_practitioners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Hold licenses that legally reserve their occupation's market. Their wages run above comparable unlicensed trades, a premium sustained because new entry must first clear training hours, examinations, and fees. Many sit on the boards that write the rules. Leaving the occupation would forfeit years of invested training and professional standing, so defending the license requirement is indistinguishable from defending their own career capital."
+    },
+    {
+      "name": "accredited_training_programs",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Sell the courses, clock-hours, and examination preparation the statutes require before anyone may sit for licensure. Enrollment is guaranteed by the mandate itself, and tuition scales with required hours. Programs advocate for scope additions that lengthen curricula; if mandates loosened, pivoting to elective or unregulated subjects remains available."
+    },
+    {
+      "name": "professional_licensing_boards",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Appointed bodies, majority sitting licensees, that define scope of practice, set passing scores, grant and revoke licenses, and pursue unlicensed practice through cease-and-desist orders and penalties. They adjust exemptions, grandfathering, and interstate compact reciprocity under political pressure while keeping the entry gate intact; their authority depends on the statutes remaining broad."
+    },
+    {
+      "name": "state_legislatures",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enact and amend the credential statutes, occasionally adding sunrise reviews or recognizing out-of-state licenses. Repeal bills face concentrated opposition from the affected occupations and diffuse, unorganized benefit from would-be entrants, so wholesale retrenchment rarely survives committee even where fiscal analyses favor it."
+    },
+    {
+      "name": "low_income_license_aspirants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Want to work in licensed occupations but must finance tuition, examination fees, and hundreds to thousands of unpaid supervised hours before earning anything at the licensed rate. Credit constraints and family obligations put the upfront investment out of reach for many; those who start and stall carry debt with no credential, and practicing without the license brings fines or misdemeanor charges."
+    },
+    {
+      "name": "returning_citizens_with_records",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Complete the required training, then meet character-and-fitness questions and conviction-based denial at the final gate. The investment is already spent when the discretionary bar closes; appeals are slow, and the same record that blocks licensure pushes work into the informal economy, where incomes are lower and penalties for unlicensed practice compound the original conviction."
+    },
+    {
+      "name": "license_dependent_consumers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Receive a common, state-backed signal that a provider met a minimum standard, plus a recourse path through the board. They pay for it in restricted supply: fewer providers, longer waits, and higher prices than in neighboring unlicensed markets, with the sharpest shortfalls in lower-income neighborhoods where provider density was thinnest to begin with."
+    },
+    {
+      "name": "out_of_state_credentialed_practitioners",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Hold licenses earned under another state's requirements and find them unrecognized or re-examined at the border. Identical training, different paperwork: until universal-recognition acts spread, moving means months without income or repeating coursework already passed."
+    },
+    {
+      "name": "labor_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Measure wage premia, employment and minority-employment effects, and pass-rate demographics across states and over time; document that barrier stringency tracks occupation income and prestige more closely than injury or harm rates; and evaluate reform episodes such as derecognition and universal recognition for their labor-market consequences."
+    }
+  ],
+  "gain_flow": "licensed_incumbent_practitioners",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Gives consumers a uniform, state-backed signal of minimum training in personal-service and health occupations, gives practitioners a portable (if unevenly recognized) marker of standing, and gives boards a defined scope within which to police practice.",
+    "transfer_function": "Moves income upward through restricted supply — higher prices paid by consumers and higher wages collected by license holders — and moves upfront costs (tuition, examination and license fees, unpaid supervised hours) from aspiring workers to training programs and boards; foregone earnings during qualification fall on the aspirant.",
+    "absent_voices": "Would-be entrants priced out at the application stage never appear in board minutes or sunrise hearings; informal practitioners working below the radar have no recorded position; residents of the service deserts created by thin provider supply are unrepresented at scope hearings, which are dominated by sitting licensees.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight repeal would expand legal entry immediately: prices in newly opened occupations would compress toward unlicensed-market levels, voluntary certification and insurer credentialing would replace the statutory signal within a few years, boards would lose their enforcement caseload, and training programs would retool toward elective curricula — the labor market for these occupations would reorganize around private reputation and liability rules rather than statutory gates.",
+    "founding_problem": "Progressive-era cities faced recognizable quackery and fatal amateur practice in medicine, pharmacy, and a handful of trades; information asymmetry between expert provider and lay customer was severe, and states responded by codifying minimum training and examination as a condition of lawful practice.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Public-health agencies and the malpractice and quality-of-care literature attest a live harm-prevention function in clinical occupations — corroboration from outside the beneficiary set. For the broadened roster of personal-service occupations, state sunset commissions, competition-authority comments, and the labor-economics literature attest that no demonstrable harm differential supports the barrier. No source outside the benefiting parties attests the founding problem live across the whole covered universe, and none attests it at all for cosmetology-tier fields."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_safety_coordination",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "rent_seeking_suppression",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "credential_barriers_sort_by_prior_resources",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "market_access_denial_requires_harm_evidence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "harm_evidenced_minimal_licensure",
+    "drift_state": {
+      "moment": "contemporary_reform_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

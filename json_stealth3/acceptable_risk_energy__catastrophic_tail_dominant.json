@@ -1,0 +1,371 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__catastrophic_tail_dominant",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "are_ctd",
+    "story_uid": "39be3cf9-f828-459c-86f1-b72266f2ec06"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.76,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Catastrophic-Tail-Dominant Acceptable Risk Doctrine (Energy Pathway Regulation)",
+    "topic_domain": "decision-theoretic/political-economic",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "fossil_fuel_generators",
+      "anti_nuclear_advocacy_network",
+      "renewable_energy_producers"
+    ],
+    "victims": [
+      "nuclear_operators",
+      "electricity_ratepayers",
+      "fossil_pollution_exposed_communities",
+      "future_generations"
+    ],
+    "vindicated_propositions": [
+      "precautionary_principle",
+      "linear_no_threshold_model"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 27,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 27,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 27,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.76,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_delta",
+      "question": "This constraint instantiates the catastrophic_tail_dominant reading of the acceptable_risk_energy kernel; what structural changes would the sibling readings (expected_value_dominant, option_value_preserving) produce if they governed the same arrangement?",
+      "resolution_mechanism": "Author and classify the sibling stories, then diff victim sets, epsilon, and enforcement profiles across the three readings of the shared kernel.",
+      "impact": "Under expected_value_dominant the nuclear victim set empties (mortality-per-TWh accounting favors the pathway) and fossil mortality enters as governing counted harm; under option_value_preserving pathway suppression is priced as destroyed decision flexibility rather than accepted tail-avoidance cost.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame membership: one reading of a three-reading kernel; sibling deltas routed here per Rule 2."
+    },
+    {
+      "id": "tail_weight_commensurability",
+      "question": "Where the readings disagree: can the weight assigned to low-probability catastrophic outcomes be finite and commensurable with aggregated statistical harms, or is it lexically infinite?",
+      "resolution_mechanism": "Decision-theoretic analysis of whether any preference-elicitation procedure can recover finite tail weights that reproduce the doctrine's actual pathway exclusions.",
+      "impact": "Recoverable finite weights would collapse this reading into the expected-value sibling with adjusted parameters; demonstrated incommensurability entrenches the foreclosure relation and stabilizes this reading's separate existence.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Location of the inter-reading disagreement: commensurability of infinite versus finite tail weights."
+    },
+    {
+      "id": "lnt_low_dose_validity",
+      "question": "Is the linear-no-threshold dose-response model empirically warranted in the low-dose regime, or does a threshold or hormetic model hold?",
+      "resolution_mechanism": "Large-cohort epidemiology of low-dose occupational and environmental exposure cross-checked against mechanistic radiobiology.",
+      "impact": "A real low-dose threshold would shrink the catastrophic-risk calculus that drives pathway suppression; strict LNT inflates it. Either resolution re-prices epsilon and reshapes the victim set.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical foundation of the radiation-risk arithmetic the doctrine runs on."
+    },
+    {
+      "id": "climate_tail_self_application",
+      "question": "Does this reading's own axiom, applied consistently, classify climate-system catastrophe as a dominating tail — and if so, does the arrangement it governs violate its own axiom by suppressing a low-carbon pathway?",
+      "resolution_mechanism": "Internal consistency audit: apply the reading's lexicographic rule to the full set of energy-pathway tails including climate disruption, and compare the resulting pathway policy to the observed arrangement.",
+      "impact": "If climate tails dominate under the reading's own rule, the standing arrangement is self-undermining and its extraction rises even by the reading's lights; if the reading stipulates 'catastrophic' to mean acute technological events only, the discounting of fossil and climate harm is definitional and the current valuation is stable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the reading's scope restriction on 'catastrophic' is principled or ad hoc."
+    },
+    {
+      "id": "public_risk_perception_internalization",
+      "question": "Is the suppression of the nuclear pathway maintained by structural barriers (licensing economics, financing costs) or by internalized perception (availability-cascade dread that persists after barriers are removed)?",
+      "resolution_mechanism": "Post-liberalization trajectory in jurisdictions that restart construction: if public opposition and financing premia persist after regulatory barriers fall, the internalized component dominates.",
+      "impact": "An internalized component makes suppression sticky beyond regulatory change — removing the licensing wall would not restore the pathway, and effective suppression exceeds the structural measure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism for the pathway exclusion."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The catastrophic-tail-dominant doctrine is the operative rule by which energy regulators and publics decide which risks are tolerable: low-probability, high-consequence events (reactor accidents with contamination) are weighted as if categorically intolerable, and avoiding them justifies accepting higher aggregate harm elsewhere. In practice the rule concentrates regulatory attention on catastrophic nuclear scenarios, ratchets requirements onto the licensed fleet after every accident worldwide, and — through the economics it creates — walls off new construction of the lowest-mortality-per-TWh generation pathway, leaving the displaced demand to combustion sources whose continuous, statistically dispersed death toll registers nowhere as a discrete event. The arrangement has a genuine protective function (tail prevention is real; post-accident retrofits measurably improved safety) AND an asymmetric discounting structure (identifiable incumbents collect the displaced market share while diffuse populations bear the substituted harm). This story instantiates ONE reading of the acceptable_risk_energy kernel — the catastrophic_tail_dominant reading — as a clean, epsilon-invariant constraint; the sibling readings are separate files linked through the network block. The epsilon referent is the standing tail-dominant arrangement itself, valued by this reading's own lights: those lights register the arrangement's self-undermining tension, since the same rule that dominates the reactor-accident tail feeds the climate tail it would also have to dominate if applied consistently.\n\nKEY AGENTS (by structural relationship):\n- nuclear_safety_regulators: Agenda-setting administrator (institutional/constrained) — sets risk criteria, collects mandate and budget from stringency\n- fossil_fuel_generators: Primary beneficiary (powerful/arbitrage) — collects displaced generation share\n- anti_nuclear_advocacy_network: Identity-fused beneficiary (organized/identity_locked) — purpose and funding constituted by the framing\n- renewable_energy_producers: Secondary beneficiary (organized/mobile) — inherits investment headroom\n- nuclear_operators: Primary target with dual position (powerful/trapped) — bears suppression, partially shielded by liability socialization\n- electricity_ratepayers: Target (powerless/trapped) — pays compliance and substitution costs\n- fossil_pollution_exposed_communities: Target (powerless/trapped) — bears the discounted distributed toll\n- future_generations: Non-present bearer of cumulative costs (listed, agent=false)\n- expected_value_analysts: Excluded voice (moderate/mobile) — holds the rival accounting, no seat\n- climate_policy_bodies: Analytical observer (institutional/analytical) — counts the aggregate harm",
+    "logic_rationale": "Extraction is substantial (0.62 at interval end) but not maximal: the arrangement delivers a real service (catastrophic-scenario prevention, safety-culture spillovers to other industries) alongside the pathway-suppression externality, and by this reading's own lights part of the aggregate harm is an authorized cost of tail avoidance rather than theft — what registers as extraction even internally is the incumbent capture of the displaced share and the self-undermining climate feedback. Suppression (0.76) is authored as a raw structural property, unscaled by power or scope: the pathway is excluded by licensing closure, financing premia, and mobilized opposition, not merely disadvantaged. Theater ratio (0.32) reflects growing compliance documentation and redundant proceduralism that no longer tracks marginal risk reduction, while the enforcement core remains functional. Accessibility collapse is moderate (0.45): rival decision frameworks survive intact in actuarial practice and academic literature — the doctrine dominates institutional licensing without erasing its alternatives. Resistance (0.60) is sustained: mortality-per-TWh accounting, cost-benefit mandates, industry litigation, and climate-policy pressure all push against the doctrine continuously. The temporal series run on one shared grid (t=0,9,18,27,36,45, mapping approximately 1979-2024) so every metric is authored at every examined point; the trajectory is a step-ratchet rather than smooth drift — each major accident (t~0 Three Mile Island, t~7 Chernobyl, t~32 Fukushima) steps suppression up, with partial relaxation after t~40 as restart programs and climate commitments reopen the question. Extraction dips at the endpoint as renewables begin absorbing displaced share instead of fossil generation. The oscillation is not intermittent reinforcement; it is externally driven by accident events, documented here as the ratchet mechanism the doctrine runs on.",
+    "perspectival_gap": "The seats compute radically different constraints from identical regulatory text. From the regulator's seat the doctrine is a professional mission: stringency is diligence, and budget growth with mandate is institutional success. From the operator's seat it is a walled garden: obligations compound with every foreign accident while the exit door (new build) is bricked shut — though the same regime socializes their worst-case losses, a dual position that tempers but does not reverse their target-side exposure. From the exposed-community seat the doctrine is invisible: their harm arrives as statistics without a scene, which is precisely why it carries no political weight — the doctrine's salience asymmetry (one dramatizable catastrophe outweighs ten thousand dispersed deaths) is the shield under which the substitution proceeds. From the fossil generator's seat it is quiet opportunity requiring no advocacy. From the advocacy network's seat it is vigilance that must never relax. Coalition analysis for the powerless payer seats: their coalition potential is structurally crippled because the harm is statistical — there is no incident, site, or moment to organize around, whereas the advocacy seat mobilizes on vivid imagery. The engine computes these divergent per-seat classifications from the structural data; nothing in the authored claim adjudicates between them.",
+    "directionality_logic": "Beneficiary declarations place fossil_fuel_generators, anti_nuclear_advocacy_network, and renewable_energy_producers near the beneficiary pole (d near 0.05-0.15): the first collects displaced revenue with arbitrage-grade capital mobility, the second collects identity and funding with no exit conceivable, the third collects investment headroom with mobile capital. Victim declarations place nuclear_operators (trapped, sunk assets, dual-positioned via liability socialization — d near 0.75-0.8), electricity_ratepayers (trapped, d near 0.85), and fossil_pollution_exposed_communities (trapped, d near 0.9) near the target pole. future_generations is listed with agent=false and correctly contributes nothing to directionality — a non-present actor must not feed the arithmetic as if it collected or paid at a seat. nuclear_safety_regulators declare no beneficiary/victim position; the derivation falls back toward symmetric, but structurally their mandate, staffing, and authority scale with the doctrine's stringency — a beneficiary-side pull the fallback understates. I deliberately do NOT author a directionality override for this: overrides key on power atoms, and the institutional atom is shared with climate_policy_bodies (an observer) while the powerful atom is shared by opposed seats (fossil beneficiary, operator target) — any override would conflate structurally opposed agents. The coarse-grain error is noted here as an interpretive caveat instead.",
+    "mandatrophy_analysis": "The founding problem — assuring publics that worst-case nuclear scenarios would never be tolerated — is contested rather than dead: the tail remains physically possible (corroborated by the historical record of Chernobyl and Fukushima from outside the beneficiary set), yet its magnitude has narrowed dramatically (passive-safety designs, international casualty accounting), and the doctrine's scope has quietly expanded from worst-case assurance into general pathway governance. The classification prevents mislabeling in both directions. Coding the arrangement as pure extraction would erase the genuine coordination service — tail prevention is a real collective-action problem, and even the doctrine's sharpest critics concede the post-accident safety improvements were real. Coding it as pure coordination would erase the asymmetric discounting through which identifiable incumbents collect the displaced share while diffuse populations bear the substituted toll. The tangled-rope structure holds both: coordination function and extraction run through the same licensing machinery, and the enforcement requirement is load-bearing — without active regulatory closure and mobilized opposition, financing would reopen the pathway within a decade. Mandatrophy is not declared resolved: the function has thinned at the margin (theater share rising, scope drifting past the founding warrant) but the enforcement core still performs its named service.",
+    "kernel_context": "This story instantiates the catastrophic_tail_dominant reading of the acceptable_risk_energy kernel. Sibling readings, each a separate constraint file: expected_value_dominant (acceptability minimizes aggregate expected harm via mortality-per-TWh accounting — would empty the nuclear victim set and enter fossil deaths as governing counted harm) and option_value_preserving (acceptability maintains multiple energy pathways under deep uncertainty — would price pathway suppression as destroyed flexibility). The disagreement among readings is located in one structural element: the commensurability of the weight assigned to low-probability catastrophic outcomes against aggregated statistical harms — infinite and lexical in this reading, finite and monetized in the expected-value sibling, deferred under deep uncertainty in the option-value sibling. Per the committer-frame rules, the contest is not described inside the constraint body; it is routed to the kernel_reading_delta and tail_weight_commensurability omegas."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__expected_value_dominant",
+      "acceptable_risk_energy__option_value_preserving"
+    ],
+    "dual_formulation_note": "The colloquial label 'acceptable risk' decomposes into three structurally distinct claims per the epsilon-invariance principle: (1) catastrophic_tail_dominant — this story, where reactor-accident potential carries lexical weight and the nuclear pathway sits in the victim set; (2) expected_value_dominant — where all pathway harms are finite, commensurable, and counted, emptying the nuclear victim set and elevating fossil mortality to governing status; (3) option_value_preserving — where the coordination object is decision flexibility itself and suppression is priced as destroyed option value. The three readings share one kernel and one referent arrangement but author different epsilon, different victim sets, and different types; forcing them into one story would make epsilon observable-dependent, which is the decomposition failure mode. Family linkage runs through network.affects_constraints in all three files. Upstream/downstream: the expected-value reading is the analytic baseline this reading defines itself against, so this story's edges point at both siblings."
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Set and enforce the numerical risk criteria new reactors must satisfy, run probabilistic safety assessments, and layer retrofit requirements onto the existing fleet after every accident anywhere in the world. Agency budgets, staffing, and statutory authority expand with the stringency of catastrophic-scenario controls, and career advancement runs through the safety mission. Stepping outside the framework would mean dismantling the agency's own mandate, so exit is available only at the cost of professional self-erasure."
+    },
+    {
+      "name": "fossil_fuel_generators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sell the generation that fills the gap wherever nuclear capacity is cancelled or retired; every excluded reactor enlarges their dispatch share and asset utilization. They need not campaign for the doctrine — funding the broader reliability discourse that favors their fleet suffices. Capital moves freely across fuels and jurisdictions, so no jurisdiction's policy can trap them."
+    },
+    {
+      "name": "anti_nuclear_advocacy_network",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Campaign organizations, affiliated experts, and movement media whose purpose, funding pipelines, and member identities are constituted by opposition to nuclear technology. Catastrophic-scenario imagery is their core communicative asset; conceding that the pathway is comparably safe would dissolve the organization's reason to exist. Membership built the identity, so exit would require renouncing the self."
+    },
+    {
+      "name": "renewable_energy_producers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Develop wind, solar, and storage capacity that inherits investment flows and mandate headroom when the competing low-carbon source is excluded from planning. They advocate decarbonization targets their technology can meet alone once nuclear is walled off, and capital reallocates across projects and markets freely."
+    },
+    {
+      "name": "nuclear_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Operate the licensed fleet under requirements that escalate with every foreign accident, while new-build licensing stays effectively closed in most jurisdictions. Sunk assets, decommissioning liabilities, and site-specific infrastructure make leaving the pathway equivalent to total loss. The same regime that walls off their growth also socializes their worst-case losses through liability caps and state backstops, so they hold a genuine secondary position on the collecting side."
+    },
+    {
+      "name": "electricity_ratepayers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Pay the composite bill: compliance costs baked into tariffs, higher wholesale prices where firm low-carbon capacity was retired, and the fiscal backstops standing behind liability caps. They cannot choose their grid's generation mix, negotiate the pricing, or opt out of the system that bills them."
+    },
+    {
+      "name": "fossil_pollution_exposed_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Live downwind and downstream of the combustion generation filling the gap, bearing elevated mortality and morbidity as a continuous, statistically dispersed toll that registers nowhere as a discrete event. Income and housing constrain mobility, and the harm arrives without a moment, site, or scene to organize against."
+    },
+    {
+      "name": "future_generations",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Will inherit the cumulative climate burden of the combustion generation that filled the gap left by the excluded pathway, along with the decommissioned sites and stranded wastes left behind. They hold no seat in any licensing proceeding and have no mechanism to object. Listed for completeness of the harm accounting; not a present actor."
+    },
+    {
+      "name": "expected_value_analysts",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Actuarial, epidemiological, and energy-systems analysts who compute mortality per terawatt-hour and monetized comparisons across pathways. Licensing proceedings admit catastrophic-scenario testimony but give their aggregate accounting no formal seat; they publish critiques that alter no license terms and move to whichever institution will host the work."
+    },
+    {
+      "name": "climate_policy_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Assessment bodies and treaty processes that count aggregate emissions and mortality across all pathways. They document that excluding the low-carbon pathway raises the aggregate harm the doctrine was built to avoid, and their findings feed political pressure without touching licensing criteria directly. They observe the full structure from a seat that neither collects nor pays."
+    }
+  ],
+  "gain_flow": "fossil_fuel_generators",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the problem of how a polity decides which technological risks are tolerable when consequences are catastrophic, irreversible, and uncompensable after the fact: it concentrates regulatory attention and resources on preventing low-probability, high-consequence events, and provides publics an assurance that worst cases are being actively guarded against rather than traded off against averages.",
+    "transfer_function": "Moves decision weight, and through it money, health burden, and market share: shifts generation investment away from the nuclear pathway toward combustion and renewable alternatives; transfers the health cost of displaced generation onto pollution-exposed populations; transfers compliance costs to operators and ratepayers; and delivers the displaced revenue stream to the incumbents of the surviving pathways.",
+    "absent_voices": "Holders of the mortality-per-TWh accounting (actuarial and epidemiological analysts) have no formal seat in licensing proceedings, which admit catastrophic-scenario testimony; the populations bearing the substituted fossil toll are present only as background statistics; future generations are present in no forum at all. The unanimity of the licensing record partly reflects who was never in the room.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the doctrine vanished overnight, licensing regimes would re-price risk by expected harm, new reactor construction would restart in most jurisdictions within the decade, fossil dispatch shares would fall as the low-carbon competitor returned, and the advocacy-and-compliance ecosystem organized around catastrophic-scenario politics would lose its object — the energy system would reorganize around the pathway the doctrine currently walls off.",
+    "founding_problem": "The arrangement was built to solve the problem of public assurance after catastrophic imagery became politically decisive: how to demonstrate that worst-case nuclear scenarios — reactor accidents producing contamination on the Chernobyl scale, and the weapons-adjacent fears attached to the technology — would never be tolerated as the price of electricity.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroboration exists from outside the benefiting parties and cuts both ways: the historical record of Chernobyl and Fukushima, attested by independent international bodies, confirms the tail was once real and remains physically possible; the same bodies' casualty accounting (UNSCEAR, WHO) together with passive-safety engineering and IPCC pathway analysis attests that the worst-case magnitude has narrowed dramatically and that the founding problem, as originally posed, is substantially solved — supporting the reading that the arrangement now persists beyond its warrant. No source inside the fossil or advocacy beneficiary sets is relied on for either half."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "lexicographic_catastrophe_priority",
+    "drift_state": {
+      "moment": "contemporary_climate_integration_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "expected_value_dominant",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "option_value_preserving",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "catastrophic_outcomes_weighted_infinite",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "distributed_harms_discountable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

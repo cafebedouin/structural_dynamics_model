@@ -1,0 +1,276 @@
+{
+  "header": {
+    "constraint_id": "simultaneous_veneration__domain_partition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "ec3e0f52-f830-4d9c-8d4e-7698de79e76b"
+  },
+  "base_properties": {
+    "extractiveness": 0.16,
+    "suppression": 0.1,
+    "theater_ratio": 0.14,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.08,
+    "claimed_type": "rope",
+    "human_readable": "Simultaneous Kami-Buddha Veneration as Domain Partition (Domain-Partition Reading)",
+    "topic_domain": "religious/historical",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "lay_practitioner_households",
+      "kami_shrine_priesthoods",
+      "buddhist_temples_and_clergy",
+      "court_and_shogunate_patrons"
+    ]
+  },
+  "interval": {
+    "start": 800,
+    "end": 1868
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection",
+      "question": "This story instantiates the domain_partition_reading of the simultaneous_veneration kernel. Which reading of that kernel — functional domain partition, ontological fusion, or pragmatic incoherence — best matches the historical arrangement's structure, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Comparative coding of practice records (household rite calendars, shrine and temple ledgers, funeral registers) against doctrinal treatises across the interval; the reading whose beneficiary structure and extraction profile the practice records support prevails.",
+      "impact": "The ontological-fusion sibling would re-author epsilon around a hierarchical kami-to-buddha relation and likely raise extractiveness; the pragmatic-incoherence sibling would raise suppression (contradiction sustained without enforcement pressure) and push the Meiji endpoint toward degraded or extractive dynamics. This file authors only the partition reading's epsilon-invariant constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: one reading of the simultaneous_veneration kernel; sibling readings would reclassify the same standing arrangement."
+    },
+    {
+      "id": "cultic_vs_ontological_distinctness",
+      "question": "Does this reading's claim that kami and buddhas are distinct entities operate at the cultic-functional level (separate cults with separate portfolios, compatible with theories of ontological identity) or the ontological level (two kinds of beings, which would logically foreclose the fusion reading within any single framework)?",
+      "resolution_mechanism": "Test whether mainstream pre-Meiji frameworks held functional partition and ontological identity simultaneously; if such frameworks were the norm, the distinctness claim is cultic-functional and the fusion reading is not foreclosed.",
+      "impact": "If the claim is ontological, this reading forecloses the fusion sibling and the kernel contest is logical; if cultic-functional, both readings remain live and the contest is empirical.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Location of the foreclosure question between the partition and fusion readings."
+    },
+    {
+      "id": "edo_death_economy_boundary",
+      "question": "Where does the domain-partition arrangement end and the Edo compulsory temple-registration economy begin — is the professionalized Tokugawa funeral-fee economy part of this arrangement or a distinct constraint?",
+      "resolution_mechanism": "Decomposition test: author the registration mechanism (the parishioner-household system binding households to temples under state requirement) as its own story; if its extraction is substantially higher and driven by state compulsion rather than domain logic, the boundary is real.",
+      "impact": "If the registration economy is inside this arrangement, death-domain epsilon rises toward 0.25+ and the type drifts toward a hybrid coordination-extraction structure; if outside, this story keeps low epsilon and the sibling story carries the extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Epsilon-invariance boundary between the partition arrangement and the Edo registration-backed funeral economy."
+    },
+    {
+      "id": "life_death_domain_epsilon_split",
+      "question": "Do the life-domain (kami) and death-domain (buddha) sides of the partition carry independent epsilon values, as the expected structural delta specifies — and if so, what are they?",
+      "resolution_mechanism": "Author the two sub-constraints separately (a kami life-domain arrangement story and a buddha death-domain arrangement story) and measure each side's fee structure and compulsion independently.",
+      "impact": "If the death domain's epsilon is substantially higher (funeral-fee economy concentrated at household crises), the joint value of 0.16 understates the death side and overstates the life side; the family should be split into two linked stories.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The reading's internal two-constraint decomposition with independent epsilon values."
+    },
+    {
+      "id": "post_separation_persistence",
+      "question": "Does the lifecycle partition pattern persist after the arrangement's legal dissolution without enforcement — and does that persistence confirm genuine coordination function over institutional inertia?",
+      "resolution_mechanism": "Post-1868 practice evidence: continuation of kami-side rites for living concerns and temple-side rites for death absent any legal requirement, as documented in folklore studies and religious-history surveys.",
+      "impact": "Persistence without enforcement supports the coordination reading (self-organizing allocation of religious demand); rapid decay after 1868 would instead have supported an inertia reading of the late-Edo arrangement.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Rope-versus-inertia test from the arrangement's behavior after forced dissolution."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1100,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1400,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1700,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1868,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1100,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1400,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1700,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1868,
+      "value": 0.14,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Pre-Meiji Japan sustained two parallel religious economies — kami shrines and Buddhist temples — serving the same households for roughly a millennium. This story authors the domain-partition reading of that standing arrangement: kami institutions govern this-worldly prosperity (harvest, health, fortune, purification) and Buddhist institutions govern death and afterlife (funerals, memorials, salvation), so that venerating both is not contradiction but division of labor. The reading is claimed as a coordination arrangement with negligible extraction and no victims; the metrics are authored independently and, on this reading, they agree — the domain-partition reading is precisely the reading on which the arrangement's extraction is near-zero. KEY AGENTS (by structural relationship): lay_practitioner_households — net beneficiary carrying fee costs (organized/mobile) — uses both domains' rites and funds both; kami_shrine_priesthoods — life-domain beneficiary (organized/constrained) — collects offerings and festival dues; buddhist_temples_and_clergy — death-domain beneficiary (institutional/constrained) — collects funeral and memorial fees; court_and_shogunate_patrons — agenda-setter and legitimation beneficiary (institutional/mobile) — frames and sponsors both establishments; edo_period_confucian_critics — excluded critic (moderate/constrained); religious_studies_scholars — analytical observer (analytical/analytical).",
+    "logic_rationale": "Extractiveness is authored low (0.16 at interval end) because the arrangement's revenue lines — offerings, festival dues, funeral and memorial fees — track services households demonstrably seek, and no party is bound to either establishment by force. Suppression is authored low (0.10) and is a raw structural property, unscaled by power or scope: nothing enforces dual affiliation, and households favoring one side go unpenalized; only the engine scales extraction, by directionality and scope. Theater is low (0.14): the rites performed are the ones households use, though late-Edo liturgical and doctrinal elaboration adds ornament. Accessibility collapse is low (0.20) because alternatives persist across the whole interval — exclusive kami veneration, exclusively Buddhist practice, selective emphasis, and new movements all operated alongside the dual pattern. Resistance is low (0.08): the partition met sectarian friction at the margins but no sustained opposition to the division of labor itself. The measurement series run on one shared time grid (800, 1100, 1400, 1700, 1868) with every tracked metric authored at every point; suppression_requirement is deliberately not tracked because the enforcement picture is static — the arrangement ran on convention, not enforcement machinery, and the scalar suppression value already carries that fact. The claimed type and the metrics are authored independently; here they agree, and the engine still computes per-seat classifications from the structural data regardless of the claim.",
+    "perspectival_gap": "From the household seat the arrangement is complementary provision — two institutions, two portfolios, no conflict. From either clergy seat it is a stable franchise boundary guaranteeing each side a revenue domain. From the excluded Confucian seat it is an ungrounded duplication of cult; from the Meiji ideological seat (outside this story's stakeholder set) the same practice was contamination to be purged by force. The two clergy classes sit at comparable institutional standing yet experience different economies: the death-domain side carries a fee-per-service economy concentrated at household crises, the life-domain side a festival-and-offering economy distributed across the calendar — same-level actors differentiated by constraint-specific exit and revenue structure, not by global standing. The engine computes these divergences per seat from power, exit, and role data.",
+    "directionality_logic": "Every declared party is a beneficiary: households receive both domains' rites (their fee costs as secondary position place them slightly above the beneficiary pole toward symmetric), the two clergy classes collect their domains' revenues, and the political patrons collect legitimation. No victim group is declared because, by this reading's lights, no party bears uncompensated costs — the fee economy is the price of services sought, not a transfer under compulsion. Directionality therefore sits near the beneficiary end for the clergy and patron seats and near-symmetric for households; the engine amplifies the modest base extraction by national scope but damps it at every beneficiary seat. No directionality overrides are used: the beneficiary declarations plus exit options already yield the correct values for every seat.",
+    "mandatrophy_analysis": "The classification guards against two misreadings. Reading the Edo funeral-fee economy as this arrangement's core would convert it into an extraction story with the death domain as captive market; the registration-economy boundary omega holds that reading to a separate decomposition test rather than letting it contaminate this story's epsilon. Reading the arrangement's late persistence as institutional inertia would convert it into a degraded vestige; the post-separation persistence omega tests that directly — the lifecycle partition re-formed without legal support after 1868, which is function, not inertia. The founding-problem interview corroborates from outside the beneficiary set: hostile Meiji ideologues attested the arrangement's reality by the violence of its dismantling, and modern scholarship attests the partition pattern's persistence. The arrangement's mandate did not outlive its function before it was terminated — it was killed, not abandoned — so no mandatrophy resolution is declared.",
+    "kernel_context": "This story instantiates the domain_partition_reading of the kernel simultaneous_veneration — the standing arrangement of pre-Meiji Japanese dual veneration of kami and buddhas. Sibling readings of the same kernel: the ontological-fusion reading (kami and buddhas as one class of being seen through two cultural lenses) and the pragmatic-incoherence reading (contradictory beliefs sustained without enforcement until Meiji). This file authors only the partition reading as a clean, epsilon-invariant constraint; the siblings are separate files linked through the network, and the contest among them is routed to the kernel_reading_selection omega rather than adjudicated here."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "simultaneous_veneration__ontological_fusion_reading",
+      "simultaneous_veneration__pragmatic_incoherence_reading"
+    ],
+    "dual_formulation_note": "Constraint family of the simultaneous_veneration kernel: this domain-partition reading, the ontological-fusion reading, and the pragmatic-incoherence reading are sibling readings of one standing arrangement (pre-Meiji dual veneration), linked because each authors a different epsilon over the same referent. This reading further decomposes into two parallel sub-constraints — the life-domain kami arrangement and the death-domain buddha arrangement — with independent epsilon values (life-domain near zero; death-domain modestly higher via the funeral-fee economy); that split is documented in the life_death_domain_epsilon_split omega and should be authored as separate linked stories if finer resolution is needed. The kernel contest itself is routed to the kernel_reading_selection omega, not adjudicated inside this file."
+  },
+  "stakeholders": [
+    {
+      "name": "lay_practitioner_households",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Households across the archipelago keep both affiliations as a matter of course: they call on shrine priests for purification, harvest festivals, blessings for births and building, and protection from misfortune, and they call on temples for funerals, grave rites, memorial services, and prayers for the dead. They fund both through offerings, festival dues, and service fees, and decide for themselves how much weight to give each side; no authority penalizes a household that favors one. The pattern passes down the family line across generations."
+    },
+    {
+      "name": "kami_shrine_priesthoods",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hereditary shrine lineages perform the this-worldly rites — purification, festival, divination, blessing — and live on offerings, festival dues, and land income attached to their shrines. Each office is tied to a specific shrine and its patron community; stepping outside the kami-side role would dissolve the office itself. A few great shrines hold national standing; most serve village and town constituencies."
+    },
+    {
+      "name": "buddhist_temples_and_clergy",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Temple networks ordain clergy, hold land, and conduct the death-side rites — funerals, grave rites, memorial services — along with teaching and prayer for salvation. Funeral and memorial fees are a core revenue line, and temple affiliation gives a household its death ritual for a lifetime. Clergy are bound by ordination and sect rules; sects differ in how much they emphasize kami veneration, but the death-rite function is the floor of the temple economy."
+    },
+    {
+      "name": "court_and_shogunate_patrons",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The imperial court maintains a separate administrative bureau for kami worship alongside its offices for Buddhist clergy, and successive warrior governments license temples, confirm shrine ranks, and fund state rites in both idioms. Patrons draw legitimation from both establishments — rainmaking and realm-protection rites from the kami side, mortuary and doctrinal authority from the temples — and can reframe the two establishments' relation by edict, as the Meiji government later did from the opposite direction."
+    },
+    {
+      "name": "edo_period_confucian_critics",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Confucian scholars in samurai service write critiques arguing that both establishments drain the countryside's wealth and that maintaining two cults lacks any single doctrinal ground. They publish and advise, but religious policy is set by the court, the temples, and the shrine lineages; their objections register nowhere in the arrangement's operation. Their class position binds them to the order they criticize."
+    },
+    {
+      "name": "religious_studies_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Historians and scholars of religion reconstruct the arrangement from rite calendars, temple and shrine ledgers, doctrinal treatises, and the archive of the Meiji separation. They collect nothing from the arrangement and bear none of its costs; their seat is analytical, assessing whether the domain-partition description fits the recorded practice."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The arrangement provides lifecycle religious coverage without institutional conflict: kami institutions handle this-worldly concerns (harvest, health, fortune, purification) and Buddhist institutions handle death and afterlife (funerals, memorials, salvation), so two religious economies serve the same households with complementary rather than competing claims.",
+    "transfer_function": "Moves offerings, festival dues, and funeral and memorial fees from practitioner households to shrine priesthoods for this-worldly rites and to temples for death rites; moves ritual legitimation (realm protection, mortuary authority) upward to the court and warrior governments that sponsor both establishments.",
+    "absent_voices": "Confucian critics in samurai service objected that dual cult maintenance was ungrounded and costly, and held no seat in the arrangement's operation; Christian missionaries, expelled in the early Edo period, objected from entirely outside that dual veneration was incoherent idolatry. The practitioners' own first-person voices are also largely absent — the consensus this reading describes is inferred from rite calendars, ledgers, and elite testimony rather than practitioner self-report.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Households would lose either this-worldly or mortuary coverage overnight; the two clergy economies would lose their revenue domains; festival calendars and funeral custom would unravel. The Meiji separation is the natural experiment: legal dissolution required an edict campaign, triggered the destruction of thousands of temples and shrine-temple complexes, and the lifecycle pattern re-formed informally within a generation or two — evidence that the world was arranged around the practice.",
+    "founding_problem": "How a society that adopts an imported salvation religion (Buddhism, from the sixth century) while maintaining indigenous kami cults can provision the full ritual life of its households — this-worldly fortune and afterlife fate — without the two establishments fighting over the same jurisdiction.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: the Meiji state's own separation edicts attest the arrangement was real enough to require forcible dismantling, and modern scholarship of Japanese religion (folklore studies and religious-history literature) attests that the lifecycle partition — kami-side rites for living concerns, temple-side rites for death — persisted after legal separation without enforcement. Neither attestation originates with the arrangement's benefiting parties."
+  },
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "complementary_domain_partition",
+    "drift_state": {
+      "moment": "meiji_separation_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "severe",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "ontological_fusion_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "pragmatic_incoherence_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "kami_buddha_functional_domain_distinctness",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simultaneous_veneration_as_domain_specialization",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

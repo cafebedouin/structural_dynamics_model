@@ -1,0 +1,559 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ubi_freedom_floor",
+    "story_uid": "f28e1405-49fb-4bb2-9b5b-f2fcb0cbdf1d"
+  },
+  "base_properties": {
+    "extractiveness": 0.26,
+    "suppression": 0.18,
+    "theater_ratio": 0.14,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.42,
+    "claimed_type": "rope",
+    "human_readable": "Universal Unconditional Income Floor (Freedom-Floor Reading)",
+    "topic_domain": "political economy/social policy/welfare state",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "precarious_workers",
+      "unpaid_caregivers",
+      "independent_artists",
+      "abuse_victims_exiting_relationships",
+      "small_business_owners",
+      "rental_property_owners"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "pilot_labor_supply_neutrality",
+      "stigma_as_targeting_artifact"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.14,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_index",
+      "question": "This story instantiates the freedom_floor_reading of the unconditional_income_support kernel; would the same statutory arrangement, read through the dependency_trap_reading, yield a different victim set, a higher epsilon, and a different type?",
+      "resolution_mechanism": "Cross-reading comparison once the sibling stories are compiled: hold the referent fixed (the same arrangement), compare authored beneficiary/victim structures and epsilon across readings; divergence then locates the dispute in the readings' premises rather than in the arrangement.",
+      "impact": "If the dependency-trap reading better fits observed net flows, this story's no-victims Pareto claim fails and the arrangement reclassifies toward hybrid coordination/extraction with net contributors as victims; if this reading fits, the sibling's incentive-distortion premise loses its structural footing.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Kernel membership: one arrangement, three readings; this file is the freedom-floor instantiation."
+    },
+    {
+      "id": "labor_supply_scale_neutrality",
+      "question": "Do the minimal labor-supply effects observed in the Alaska dividend and in cash-transfer pilots persist at national, tax-funded scale?",
+      "resolution_mechanism": "Scaled natural experiments: nationwide rollouts with staggered timing, or regional discontinuities in benefit level, measured against reservation-wage and hours-worked baselines.",
+      "impact": "Large-scale withdrawal effects would raise effective extraction (recipients pay in forgone output), erode the voluntary-participation coordination claim, and push classification toward hybrid coordination/extraction; confirmation locks the rope reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pilot-scale labor-supply neutrality extrapolates to universal scale."
+    },
+    {
+      "id": "net_payer_seat_visibility",
+      "question": "Is there a structurally distinct net-payer cohort whose cost the no-victims declaration leaves unmodeled?",
+      "resolution_mechanism": "Lifecycle distributional incidence analysis of the funding package: if a defined cohort pays persistently more than it receives across the lifecycle and cannot offset through the dividend, it is a payer seat despite the Pareto framing.",
+      "impact": "A confirmed persistent net-payer cohort forces a victims declaration, pushes the powerful seat's directionality above the authored override, and moves the arrangement toward hybrid coordination/extraction; lifecycle-neutral incidence supports the no-victims claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether progressive funding creates a durable loser cohort the Pareto claim conceals."
+    },
+    {
+      "id": "rent_capture_leakage",
+      "question": "How much of the payment's real value leaks to rental_property_owners through rent pass-through in supply-constrained housing markets?",
+      "resolution_mechanism": "Event-study rent series around dividend disbursement dates and benefit-level changes, stratified by local housing-supply elasticity.",
+      "impact": "High pass-through converts a share of the transfer into landlord income, shrinks recipients' real gain, and would justify listing rental_property_owners as a primary rather than incidental beneficiary; low pass-through preserves the diffuse-gains claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Housing-market capture of universal cash transfers."
+    },
+    {
+      "id": "universality_durability_under_fiscal_stress",
+      "question": "Does universality survive a fiscal crisis, or does the arrangement collapse into means-testing, destroying the stigma-elimination function this reading depends on?",
+      "resolution_mechanism": "Observe the arrangement's behavior under a realized revenue shock: whether adjustments preserve universality (level changes, funding rebalancing) or reintroduce conditions (cliffs, assessments, categories).",
+      "impact": "Collapse into means-testing ends this constraint and births a different one (targeted aid with restored stigma and takeup penalties); resilience confirms the coordination function is robust rather than fair-weather.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the floor's defining property is crisis-robust."
+    },
+    {
+      "id": "cs_framing_under_determination",
+      "question": "Is the kernel the statutory payment formula, or the pilot-evaluation practice that produces the evidence this reading's authority rests on?",
+      "resolution_mechanism": "Trace which entity adjudicates disputes in practice: legislatures amending formulas versus research communities ruling on evidence quality.",
+      "impact": "Under the practice framing, authority_grounding shifts from expertise toward practice and drift reads as methodological rather than legislative; the reading's authority classification changes though the arrangement's type does not.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Alternative kernel framings for the commitment-system classification."
+    },
+    {
+      "id": "leveled_judgment_uncertainty",
+      "question": "The organizational-level rows of the coercion grid rest on thinner evidence than the individual and structural rows; how much of the organizational-level picture is conservative judgment rather than measurement?",
+      "resolution_mechanism": "Firm-level studies of hiring behavior, wage-setting, and business-association lobbying before and after dividend introduction.",
+      "impact": "If employer-side adaptation is larger than authored, the organizational rows understate residual coercive capacity and the individual-level relief is partly illusory; if smaller, the grid understates the floor's bargaining-power effect.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Evidence quality of organization-level grid judgments."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "national_fiscal_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Levies the taxes that fund the payment, operates the enrollment and disbursement infrastructure, and sets the benefit level through the annual budget process. Receives political credit for the program's popularity and carries the fiscal exposure when revenues fall. Once the payment is universal and individual, it cannot retarget or withdraw it without dissolving the arrangement's defining property, so its practical room to maneuver is narrower than its formal authority suggests."
+    },
+    {
+      "name": "precarious_workers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Work in hourly, gig, and short-contract jobs where wages and conditions are set under time pressure. Receive the same payment as everyone else and contribute taxes on earnings; for most in this group the payment exceeds their tax contribution. The payment gives them the option to refuse an abusive shift, wait out a bad job market, or retrain without losing housing. Leaving the tax-and-transfer system itself is not a realistic option."
+    },
+    {
+      "name": "unpaid_caregivers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Raise children or care for elderly and disabled relatives full-time without payroll income. The payment is often their only personal money, and it arrives without applications, home visits, or proof of job search. Their care obligations tie them to specific households and locations, so their mobility is limited regardless of income."
+    },
+    {
+      "name": "independent_artists",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Produce work with long, uncertain payoff horizons: music, writing, visual art, independent research. The payment covers subsistence between commissions and lets them decline commercial work that would consume their practice. They pay taxes on occasional income and could, under enough pressure, take conventional employment; the floor is what makes declining that pressure sustainable."
+    },
+    {
+      "name": "abuse_victims_exiting_relationships",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Need money of their own, quickly and quietly, to leave a controlling partner. A payment that arrives automatically in their own name, with no application a partner could intercept or sabotage, functions as an exit resource. Their immediate-timeframe needs and continued entanglement with the household they are leaving keep them the least mobile group in the arrangement."
+    },
+    {
+      "name": "small_business_owners",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Run shops, farms, and trades selling into local demand. The payment raises their customers' baseline spending and lets them hire seasonally without becoming anyone's only lifeline. They also pay the taxes that fund it and lobby over the rate; unlike employees, they can restructure, relocate, or shift income between forms."
+    },
+    {
+      "name": "rental_property_owners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Own the housing stock that payment recipients rent. Where housing supply is tight, part of any broad cash increase surfaces as rent rather than tenant consumption. They did not design the arrangement and gain nothing from administering it, but they can reposition assets, adjust rents, and convert units faster than tenants can move."
+    },
+    {
+      "name": "high_income_net_contributors",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Pay substantially more in taxes than they receive back in payments. Under this arrangement that net contribution is framed as the price of living in a jurisdiction where no one's labor is secured by desperation, a framing they may or may not accept. Their capital, credentials, and residency options span borders, so sustained perceived overpayment leaks out through tax migration and income structuring rather than open revolt."
+    },
+    {
+      "name": "future_taxpayers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Will inherit whatever gap remains between promised payments and funded reserves in jurisdictions that finance the floor partly with debt. They attend no budget negotiation, hold no seat in the pilot evaluations, and cannot decline the fiscal legacy; their only present representatives are actuaries and opposition parties speaking on their behalf."
+    },
+    {
+      "name": "comparative_policy_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Run and evaluate the pilots, compare dividend and transfer programs across countries, and publish the labor-supply, wellbeing, and takeup findings that both defenders and opponents of the floor cite. They collect no payment from the arrangement and bear none of its costs; their stake is the integrity of the evidence base."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a baseline-security problem: it establishes, once and centrally, a subsistence income every resident holds as of right, so that survival is not indexed to accepting any particular job, staying in any particular household, or performing eligibility rituals. Universality is the coordination device: one rule, no assessments, no stigma differential, replacing a patchwork of means-tested programs each with its own bureaucracy and takeup penalty.",
+    "transfer_function": "Moves purchasing power from the general tax base, progressively weighted so net contributions concentrate among high earners, to every resident in equal, individual, unconditional payments; net, it transfers from net contributors to net recipients while paying everyone, and converts categorical welfare budgets into a single universal line.",
+    "absent_voices": "Future taxpayers bear debt-financed variants without a seat (authored as excluded). Residents of poorer jurisdictions excluded by national borders would object that the floor is a national club good. Caseworkers and administrators of the means-tested programs the floor would absorb hold expertise the transition decommissions. Recipients of deeper targeted benefits would object if universality arrived at the cost of their supplement levels.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would strip caregivers, people leaving controlling households, and between-jobs workers of their only unconditional income; means-tested rolls would swell within months; low-wage bargaining would revert to take-it-or-leave-it terms; dividend-style economies would see immediate consumption contraction concentrated in exactly the households with the highest marginal propensity to spend.",
+    "founding_problem": "Industrial and post-industrial economies bind survival to employment, and the welfare states built to patch this used means-tested aid that stigmatizes takeup, traps recipients behind benefit cliffs, and systematically misses caregivers, informal workers, and people between jobs. The floor was built to guarantee subsistence without conditions, assessments, or stigma.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary coalition: OECD and ILO coverage-gap statistics attest that means-tested systems miss caregivers, informal workers, and the between-jobs; employer federations attest recruitment and retention problems tied to desperation-driven labor mismatch; and fiscal-conservative institutes that oppose the remedy nonetheless concede the underlying precarity in their own analyses. No outside party attests that the floor as designed fully solves the problem; that remains this reading's assertion."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "unconditional_income_support__dependency_trap_reading",
+      "unconditional_income_support__universality_paradox_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'unconditional income support' decomposes into three structurally distinct claims per the epsilon-invariance principle. This file is the freedom-floor reading: beneficiaries are those whose options the floor widens, no victims claimed, moderate epsilon, rope. The dependency_trap_reading authors the same statutory arrangement with net contributors and displaced targeted-aid recipients as victims and higher epsilon; the universality_paradox_reading models the political mechanics rather than the incidence. Upstream/downstream: this reading's pilot evidence (Alaska dividend, Kenya transfers, Finland experiment) is the empirical substrate both siblings engage, the dependency-trap reading contests it and the paradox reading consumes its cross-ideological appeal. Each family file links the other two via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 40,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.3
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.5
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.32
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.7
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.3
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.33
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.6
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.34
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.58
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.2
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.22
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.4
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.22
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.28
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.1
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.12
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.3
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.33
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.3
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.4
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.42
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "A universal, individual, unconditional periodic payment to every resident, funded by a progressively weighted tax base: this story instantiates the freedom-floor reading of the unconditional_income_support kernel, in which the payment is an autonomy-enabling floor that removes desperation from labor-market bargaining, eliminates welfare stigma by construction, and insures against market shocks. The colloquial label covers structurally distinct claims; per the epsilon-invariance principle this file authors ONE reading with one stable epsilon, and the sibling readings (dependency_trap_reading, universality_paradox_reading) are separate files linked via network.affects_constraints.\n\nKEY AGENTS (by structural relationship):\n- national_fiscal_authority: agenda setter (institutional/constrained) — funds, administers, sets the level; cannot retarget without dissolving the defining property\n- precarious_workers: primary beneficiary (moderate/constrained) — the floor prices desperation out of their bargaining\n- unpaid_caregivers: primary beneficiary (powerless/trapped) — only personal income, zero assessment burden\n- independent_artists: beneficiary (moderate/constrained) — subsistence between uncertain payoffs\n- abuse_victims_exiting_relationships: beneficiary in crisis (powerless/trapped, immediate horizon) — automatic individual payment as exit resource\n- small_business_owners: incidental beneficiary and contributor (organized/mobile)\n- rental_property_owners: incidental beneficiary via price pass-through (organized/arbitrage)\n- high_income_net_contributors: principal net contributor (powerful/arbitrage, global scope)\n- future_taxpayers: excluded seat (powerless/trapped) — inherits unfunded promises\n- comparative_policy_researchers: analytical observer — owns the evidence base both sides cite",
+    "logic_rationale": "Extractiveness is authored moderate-low (0.26 at interval end) because the arrangement's real cost is fiscal and progressive: it extracts purchasing power from net contributors, but the reading holds there is no behavioral extraction channel (labor-supply effects minimal per the Alaska/Kenya record) and no suppressed alternative. The temporal series shows gentle accumulation (0.12 to 0.26) as proposals scale from oil-funded dividends and donor-funded pilots toward tax-funded universality: delivery costs amortize with digitization while fiscal weight grows with coverage and aging. Suppression is low (0.18): the only compulsion is the general tax obligation shared with every public expenditure; receipt is passive and cannot be opted out of, but nothing enforces participation in any activity. Mechanistically the suppression is structural, not internalized, and the arrangement's distinctive move is removing the structural triggers (applications, assessments, categories) that generated internalized stigma under means-tested regimes; the residue fades with cohort turnover rather than being suppressed. Theater is low (0.14): the payments are the function; the slow rise tracks demonstration-project framing and branding rather than any growth in performative administration. Accessibility_collapse is moderate (0.38): workable alternatives persist (negative income tax, refined targeted aid, job guarantees) but the stigma-elimination property is hard for targeted designs to replicate, so the alternative space partially collapsed around the universal form. Resistance is moderate (0.42): fiscal-conservative opposition and taxpayer associations are real and organized, yet implemented versions enjoy broad approval. Claim and metrics are independent authored facts: the rope claim follows from the reading's structure (participants net beneficiaries, alternatives unsuppressed, coordination enabling voluntary participation), while the metrics describe observed operation; the engine computes per-seat types and any divergence is the datum. The coercion grid tells the same account at level resolution: individual and class coercive pressure falls sharply (desperation pricing out of bargaining), structural-level pressure is stable-to-mildly-rising (tax compulsion replaces market compulsion as the binding form), and organizational-level movement is mild. Rising fiscal weight alongside falling lived coercion is coherent, not contradictory: they are different observables of one arrangement maturing. Trajectories are monotonic; no cyclical dynamics, so no intermittent-reinforcement concern arises.",
+    "perspectival_gap": "The seats compute differently by construction. From the beneficiary seats (caregivers, abuse victims, precarious workers) the arrangement is experienced as option-opening: the same payment that is trivial at the median is existential at the bottom decile. From the high_income_net_contributors seat the identical structure is a permanent net levy whose legitimating story they did not write; their exit is arbitrage (migration, structuring), not refusal, so their resistance registers as leakage rather than contest. From the national_fiscal_authority seat the arrangement is a maintenance burden with political upside: it cannot retarget without breaking universality, so its discretion is narrower than its formal power. Inter-institutionally, business associations experience the funding side while their members experience the demand side, splitting the organized seat's own alignment. Same-level lateral texture: precarious workers and independent artists sit at the same nominal beneficiary position with different exit textures — the worker's constraint is wage subordination, the artist's is income volatility — which is why both are authored constrained rather than trapped or mobile. No seat is identity_locked: the nearest case is caregivers, whose trapping is relational obligation rather than identity fusion, and the classification would not change if that frame broke.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for the six beneficiary groups; the victims array is intentionally EMPTY because this reading claims a Pareto structure — no seat is authored as harmed. That emptiness is exactly why two overrides are needed. First, powerful (high_income_net_contributors): the structural derivation cannot see their net-payer position because the reading declines to declare victims, and the canonical fallback would misplace them near the beneficiary end merely because they receive the dividend too; 0.7 encodes substantial-target position tempered by dividend receipt, insurance value, and the systemic benefits they consume. Second, institutional (national_fiscal_authority): the authority is a conduit, not a collector — it administers the flow, absorbs fiscal risk, and gains legitimacy, which nets to roughly symmetric exposure; 0.5 prevents a fallback that would read administration as benefit. Rental_property_owners derive low directionality from their beneficiary declaration, correctly reflecting incidental rather than sponsored benefit; whether their capture grows is tracked by the rent_capture_leakage omega rather than pre-decided here.",
+    "mandatrophy_analysis": "The rope claim protects the genuine coordination content — stigma-free universality, shock absorption, exit finance for caregivers and people leaving controlling households — from being flattened into pure fiscal extraction by the incentive-distortion critique; the coordination function (one rule replacing a patchwork of stigmatizing assessments) is real and load-bearing. Symmetrically, the omegas are the tripwires that would expose coordination decaying into asymmetric extraction: net_payer_seat_visibility tests the Pareto claim against lifecycle incidence, rent_capture_leakage tests whether the gains stay diffuse, labor_supply_scale_neutrality tests whether the voluntary-participation premise survives scale, and universality_durability_under_fiscal_stress tests whether the defining property survives its first real revenue shock. Mandatrophy is not declared: the founding problem is live and corroborated from outside the beneficiary coalition, so the arrangement has not outlived its function.",
+    "kernel_context": "Kernel: unconditional_income_support — the commitment that every resident receives an equal, individual, unconditional periodic payment. This file instantiates the freedom_floor_reading: the floor as autonomy-enabling, stigma-eliminating, shock-absorbing. Siblings: dependency_trap_reading (the same arrangement read as an incentive-distorting subsidy that rewards idleness and crowds out targeted aid) and universality_paradox_reading (the same arrangement read as a politically ambiguous vehicle whose cross-ideological appeal masks incompatible implementation paths). The disagreement is located in the behavioral and political valence of unconditionality itself: whether unconditional receipt liberates choice (this reading), corrupts incentives (dependency trap), or masks incompatible coalitions (paradox). Relations authored reflect that structure: coexists_with toward dependency_trap_reading, because the two are rival empirical framings both live in contemporary discourse and a mixed assessment (some liberation, some distortion) is internally consistent, so neither premise logically eliminates the other; influences toward universality_paradox_reading, because this reading's cross-ideological success is precisely the raw material the paradox reading analyzes — its legitimacy conditions feed the sibling's subject matter without resolving it."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "autonomy_preserving_universal_floor",
+    "drift_state": {
+      "moment": "contemporary_partial_implementation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universality_paradox_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditionality_is_autonomy_precondition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "universality_eliminate_takeup_stigma",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

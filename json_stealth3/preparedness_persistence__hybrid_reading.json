@@ -1,0 +1,392 @@
+{
+  "header": {
+    "constraint_id": "preparedness_persistence__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prep_hybrid",
+    "story_uid": "61f23c2a-1c65-400d-bdcb-708c9256b64d",
+    "created_at": "2026-06-12T09:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.55,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Stratified Preparedness Regime (Hybrid Reading)",
+    "topic_domain": "institutional/safety-regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_administrators",
+      "liability_insurers",
+      "regulatory_agencies",
+      "fire_protection_engineers"
+    ],
+    "victims": [
+      "building_occupants",
+      "hourly_facility_staff"
+    ],
+    "vindicated_propositions": [
+      "compliance_documentation_doctrine",
+      "routine_drill_efficacy_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "institutional_administrators",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Schedule and announce evacuation exercises, select their scenarios, and sign the compliance attestations that insurers and regulators accept. Exercise time falls mostly on staff below them, while the resulting documented record defends them in litigation and passes audits. Declining to run the exercises would expose them to citation and uninsured liability, so the calendar continues regardless of what the exercises demonstrate."
+    },
+    {
+      "name": "regulatory_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Write and amend the mandates, audit facilities against them, and accept or reject the documentation produced. The compliance record gives them a legible surface they can inspect at scale; enforcing it consumes budget and political capital, and they collect no fee stream from it. Their leverage is periodic: it peaks after publicized disasters and erodes between them."
+    },
+    {
+      "name": "liability_insurers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Price premiums and set coverage terms keyed to inspection certificates and exercise logs. They run neither the inspections nor the exercises; the certificate system lets them underwrite thousands of buildings they never visit. When loss data disappoints they can reprice or withdraw from a market entirely."
+    },
+    {
+      "name": "fire_protection_engineers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Licensed professionals who physically examine structures, alarms, sprinklers, and egress paths and sign findings that carry legal weight. Their judgment is genuinely exercised and their findings feed real remediation; their livelihood and professional standing depend on the inspection side of the regime remaining substantive."
+    },
+    {
+      "name": "building_occupants",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Live and work in regulated buildings. They receive real protection from inspected structural and suppression systems, and they spend scheduled hours in announced exercises that route them down familiar stairs to familiar muster points. They cannot individually verify the systems they rely on and cannot readily relocate away from buildings whose exercise programs consume their time."
+    },
+    {
+      "name": "hourly_facility_staff",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Run the exercises and complete the checklists on instruction, often during peak workload or on their own time, under discipline for non-participation. They gain the least from the exercise program and have the least say in its design; refusing means finding another job."
+    },
+    {
+      "name": "mobility_impaired_occupants",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Use wheelchairs or have limited mobility in buildings whose evacuation planning centers on stairwell descent. Announced exercises routinely exclude them or relegate them to designated refuge areas that are themselves rarely tested. They would redesign the exercises around their scenarios but are not in the rooms where scenarios are chosen."
+    },
+    {
+      "name": "disaster_research_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study post-incident behavior, exercise-transfer validity, and inspection effectiveness across jurisdictions. They publish on which preparedness activities predict survival and which predict paperwork, and they see the whole stratified picture that any single participant seat sees only locally."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Creates a shared, verifiable record that buildings and response plans meet minimum safety standards: licensed inspection generates trustworthy structural and systems information that individual occupants cannot produce themselves, and scheduled exercises give dispersed occupants common knowledge of alarms, routes, and muster points.",
+    "transfer_function": "Moves staff time and attention into compliance performance; moves inspection fees from facility operators to licensed firms; moves premium discounts and litigation defensibility to operators and insurers; leaves the residual risk of hollow response capability sitting with occupants.",
+    "absent_voices": "Mobility-impaired occupants, night-shift staff who rarely encounter daytime announced exercises, and residents of buildings where drills are pre-announced would all object that the tested scenario is not the real one. They are outside the rooms where exercise scenarios are designed, and the compliance record is silent about their exclusion.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Insurance pricing, liability allocation, and occupancy certification all key off the inspection-and-exercise record. Overnight removal would force reorganization of who verifies safety and how; unpriced risk would migrate back onto occupants until substitute verification arrangements emerged, and the litigation posture of every facility operator would reset.",
+    "founding_problem": "Serial building disasters killed occupants because no one had verified egress, alarms, and structural systems, and because untrained occupants froze or stampeded. The regime was built to make safety externally verifiable and response rehearsed.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Fire-protection regulators' post-incident investigation series and national institute forensic reports corroborate the inspection-side problem as still live, from outside the benefiting parties. Behavioral studies of real evacuations and firefighter after-action reports attest that announced exercises measure scheduling compliance rather than response capability. No benefiting party attests that the exercise-side founding problem remains solved in its original form."
+  },
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.55
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_persistence__husk_reading",
+      "preparedness_persistence__competence_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'institutional preparedness' decomposes into three readings of the kernel preparedness_persistence, each with its own epsilon and beneficiary structure. competence_reading (upstream, highest empirical confidence in the inspection literature) is cited by administrators as evidence the regime works; husk_reading is cited by critics as evidence it has hollowed; this hybrid_reading holds the middle with component-level evidence and inherits citations from both sides. The stories are linked pairwise via affects_constraints; each carries its own stable epsilon over the same standing arrangement."
+  },
+  "commentary": {
+    "narrative_context": "A large-scale institutional preparedness regime — mandatory life-safety inspection plus recurring evacuation exercises — operates across commercial and residential buildings. Under this reading the regime is internally stratified: the engineering-inspection stratum still performs its function (licensed professionals verify structural, alarm, and egress systems against physical standards, and findings correlate with real failure prevention), while the exercise stratum has largely detached from its function (sessions are scheduled, announced, and scored as attendance events; their scenarios rarely match real emergencies, and measured performance is scheduling compliance rather than response capability). The regime as a whole therefore carries a genuine coordination core wrapped in a growing performative shell, sustained by statute, insurance pricing, and liability doctrine. Extraction is localized: it concentrates where compliance is performed without capability being built.\n\nKEY AGENTS (by structural relationship):\n- institutional_administrators: agenda-setting beneficiary (organized/constrained) — schedules and attests compliance, collects liability defensibility\n- regulatory_agencies: agenda-setter (institutional/constrained) — writes mandates, audits, gains a legible surface, bears enforcement cost\n- liability_insurers: beneficiary (institutional/arbitrage) — prices off certificates, runs nothing\n- fire_protection_engineers: beneficiary (moderate/mobile) — exercises live judgment in the competent stratum\n- building_occupants: payer with incidental benefit (powerless/constrained) — real protection from inspection, time cost and residual risk from hollow exercises\n- hourly_facility_staff: payer (powerless/trapped) — performs the exercises, gains least, refuses at career cost\n- mobility_impaired_occupants: excluded (powerless/trapped) — their scenarios are the ones the exercises never test\n- disaster_research_community: observer (analytical/analytical) — sees the stratified structure whole",
+    "logic_rationale": "Claim and metrics are authored independently. The claim is tangled_rope because the regime jointly satisfies the three structural marks: a genuine coordination function (externally verifiable safety information no occupant can produce alone), asymmetric extraction (compliance labor and residual risk flow to those who neither design nor profit from the exercises), and active enforcement (statute, audit, and insurability). The metrics describe the stratification: extractiveness 0.48 reflects extraction concentrated in the exercise stratum while the inspection stratum stays near coordination cost; theater_ratio 0.52 places the performative share just past half, matching the reading's partition; suppression 0.55 is moderate — enforcement is real but soft (citation and insurability, not force), and suppression is authored as a raw structural property, unscaled by power or scope. Accessibility_collapse 0.45: alternatives (validated scenario training, unannounced exercises, third-party outcome audits) remain imaginable and partly piloted, but the compliance templates crowd them out. Resistance 0.45: checkbox-minimalism, gamed attendance, and episodic post-disaster reform pressure. The temporal series share one grid (five-year points over a 1980-2025 window). Theater and extractiveness ratchet upward across the window; suppression_requirement sawtooths — spiking after the major fire disasters near the window's start, mid-window, and late-window, decaying between — and the cycle is itself partly the mechanism: each reform wave widens the documented-compliance surface, whose substance then decays, lifting the theater floor while enforcement intensity resets. End-state scalars were read at t=45, on the decay limb following the latest ratchet.",
+    "perspectival_gap": "From the administrator seat the regime is a functioning obligation met on schedule; from the engineer seat it is a working verification craft; from the insurer seat it is an actuarial input; from the staff and occupant seats it is time taken and risk retained. Same nominal regime, four different experienced objects — the engine computes this divergence from power, exit, and role asymmetries rather than from the authored claim. Coalition potential among the powerless seats (tenant associations, union grievances over uncompensated exercise time) is real but historically episodic: it spikes after disasters and dissipates between them, which is why the powerless seats persist at high directional load rather than organizing it away.",
+    "directionality_logic": "Administrators derive near-beneficiary directionality: they collect the attestation's defensive value and externalize exercise time downward. Insurers sit nearest the beneficiary pole: certificate-fed underwriting with arbitrage-grade exit. Engineers are genuine beneficiaries of the competent stratum with mobile exit. Agencies are listed beneficiaries (the legible compliance surface) but their net position is only mildly favorable once enforcement cost is counted, so their computed directionality sits well above the other beneficiaries'. Occupants mix real inspection benefit against exercise time cost and unhedged residual risk, landing them mid-high; hourly staff, who perform without designing and cannot refuse, sit nearest the target pole. Mobility-impaired occupants are excluded rather than coordinated — the exercise program's blind spot is precisely their scenario. No directionality overrides were needed: the beneficiary/victim declarations plus exit options reproduce these positions.",
+    "mandatrophy_analysis": "Reading the regime as a single rope would hide the localized extraction; reading it as a piton would erase the live inspection function. The stratified reading keeps both facts load-bearing: the founding problem of the inspection stratum (unverifiable structural safety) is live, while the founding problem of the exercise stratum (untrained panic) has been transformed — announced compliance sessions no longer rehearse the surprise conditions they were built for. Mandatrophy is therefore resolved per-stratum, not globally: the obsolescence flag attaches to the exercise subsystem, and the structurally indicated remedy is component-level replacement of ritual exercises with validated, unannounced scenario training — not abolition of the regime, whose inspection core still earns its keep.",
+    "kernel_context": "This story instantiates the hybrid_reading of the kernel preparedness_persistence. Sibling readings: competence_reading (all preparedness activity is live exercised knowledge) and husk_reading (all of it is memorial performance). The disagreement is located at the stratification boundary — which components transfer to real capability and which merely document compliance. Hybrid coexists_with both siblings rather than foreclosing either: it contradicts neither sibling's universal premise, it partitions the domain they dispute; the two universal readings, held by other parties, do foreclose each other, but that edge belongs to their stories, not this one. Adopting a sibling reading would change this constraint structurally by moving the boundary: competence_reading dissolves the extraction claim (epsilon collapses toward coordination cost), husk_reading generalizes it (the whole regime becomes inertial performance)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_stratification_boundary",
+      "question": "Where exactly does the competent/ritual boundary fall, and is this hybrid partition the right framing of the preparedness kernel, or do the universal siblings (all-competent, all-husk) better fit the evidence?",
+      "resolution_mechanism": "Component-level transfer audits: compare post-incident behavior and system-failure rates for inspected versus uninspected systems, and for drilled versus undrilled populations; adopt whichever framing the component-level evidence supports.",
+      "impact": "If inspection is also captured, the constraint collapses toward the husk reading (inertial performance throughout); if exercises demonstrably build transferable readiness, it collapses toward the competence reading (pure coordination). Either shift changes epsilon materially and reclassifies the affected strata.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary location and framing choice for the preparedness_persistence kernel; this story is the hybrid reading of that kernel."
+    },
+    {
+      "id": "drill_transfer_validity",
+      "question": "What fraction of scheduled exercise activity transfers to behavior under real, unannounced emergencies?",
+      "resolution_mechanism": "Post-incident forensics comparing casualty curves and egress times across buildings with differing exercise regimes; validated scenario assessments replacing attendance counts as the performance measure.",
+      "impact": "Low transfer confirms the ritual stratum and sustains the high theater_ratio; high transfer lowers epsilon toward coordination cost and pulls the whole regime toward rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Transfer validity of scheduled exercises to real emergency behavior."
+    },
+    {
+      "id": "inspection_capture_drift",
+      "question": "Is the inspection stratum eroding toward self-certification and rubber-stamp third-party review?",
+      "resolution_mechanism": "Re-inspection studies correlating inspector identity, fee structure, and violation discovery rates; longitudinal comparison of findings for first-time versus repeat clients.",
+      "impact": "Capture shrinks the competent stratum, raising both epsilon and theater_ratio and dating the husk transition earlier than this reading projects.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the competent stratum is itself drifting toward performance."
+    },
+    {
+      "id": "false_confidence_externality",
+      "question": "Does ritualized exercising actively increase harm — complacency, over-reliance on announced-warning assumptions — beyond the time it consumes?",
+      "resolution_mechanism": "Behavioral comparison of occupants from high-exercise versus low-exercise buildings in actual incidents, controlling for building type and occupancy.",
+      "impact": "A positive externality raises effective harm above the time-cost measure and strengthens the case for replacing rather than continuing the exercises.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Possible negative externality of hollow exercise programs on real-world response."
+    },
+    {
+      "id": "reform_ratchet_asymmetry",
+      "question": "Do post-disaster reform waves permanently expand the compliance surface faster than their substantive content decays — that is, is the theater floor monotonically rising?",
+      "resolution_mechanism": "Cross-jurisdiction panel data on documentation requirements added per reform wave versus requirements later retired.",
+      "impact": "A ratcheting floor predicts continued theater_ratio growth absent structural reform and dates a future piton transition for the exercise stratum.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the disaster-reform cycle ratchets performance upward irreversibly."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "competent_core_performative_shell",
+    "drift_state": {
+      "moment": "contemporary_compliance_expansion_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "husk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "competence_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "preparedness_is_heterogeneous",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "component_level_audit_required",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "institutional_administrators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

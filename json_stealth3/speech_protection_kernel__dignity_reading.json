@@ -1,0 +1,379 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_kernel__dignity_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "spk_dignity",
+    "story_uid": "e75fb42f-792a-4499-9d5b-72789c722b1d"
+  },
+  "base_properties": {
+    "extractiveness": 0.44,
+    "suppression": 0.58,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Conditional Speech Protection Regime (Equal-Dignity Reading)",
+    "topic_domain": "constitutional law/political philosophy/communication rights",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "members_of_targeted_groups",
+      "general_public"
+    ],
+    "victims": [
+      "group_libelers_and_extremist_speakers",
+      "chilled_borderline_speakers",
+      "content_platforms"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.58
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This story instantiates only the dignity_reading of speech_protection_kernel; how much of its classification is indexical to that reading rather than to the underlying constitutional text-family the readings share?",
+      "resolution_mechanism": "Generate and compare the four sibling-reading stories (absolutist, harm_threshold, marketplace, democratic_participation) under matched structural data; divergent computed types across readings locate the indexical component.",
+      "impact": "If classification diverges sharply across readings, the corpus must treat speech-protection classification as reading-indexed; merging readings into one story would fabricate an observer-independent epsilon that violates epsilon-invariance.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a five-reading kernel; sibling readings are separate constraints with their own epsilon and victim sets."
+    },
+    {
+      "id": "subordination_boundary_discretion",
+      "question": "Does adjudicative practice track genuine structural subordination, or does the subordination boundary drift toward institutional convenience and category creep?",
+      "resolution_mechanism": "Audit tribunal and commission rulings against independent measures of subordination effect (status-harm studies, targeted-group incident reporting); measure classification-error rates and scope expansion over time.",
+      "impact": "Confirmed drift raises effective extraction on borderline speakers and trends the computed type toward snare; a tight boundary supports the tangled_rope claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the adjudicated subordination boundary tracks the phenomenon or the institution's convenience."
+    },
+    {
+      "id": "protection_consent_asymmetry",
+      "question": "Is protection that binds non-consenting members of targeted groups constitutive of the group's interest, or an imposition that extracts acquiescence from a dissenting subset of the protected class?",
+      "resolution_mechanism": "Survey and deliberative polling within protected populations; track opt-out attempts, their frequency, and how institutions treat them.",
+      "impact": "If dissent is substantial, the beneficiary seat splits and effective extraction on the dissenting subset rises; the uniform-beneficiary declaration would need subdivision into consenting and non-consenting strata.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Consent asymmetry inside the protected class: uniform beneficiary declaration versus a dissenting protected subset."
+    },
+    {
+      "id": "chill_population_magnitude",
+      "question": "How large is the population of borderline speakers who self-edit without ever reaching an adjudicator, and does the victims declaration materially understate the payer set?",
+      "resolution_mechanism": "Writer, artist, comedian, and academic surveys on self-censorship near group-topic boundaries; platform creator-attrition data around moderation expansions.",
+      "impact": "A large chilled population raises measured extraction and suppression beyond the authored scalars and strengthens the payer side of the asymmetry.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Size of the anticipatory-self-censorship population relative to adjudicated cases."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "members_of_targeted_groups",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Live under a legal order in which expression depicting their group as unfit for membership can be brought before equality bodies and formally answered. They file complaints, testify, and rely on the resulting rulings to keep their standing in workplaces, housing markets, and public debate from being openly contested. Leaving the jurisdiction that protects them would mean losing home, work, and community, so most stay and work through the system."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Inhabit the resulting discourse environment: they read, argue, and joke under rules that remove the most subordinating material from circulation. They gain a public square in which no group's belonging is routinely voted down, and pay in the form of softened satire, policed comment sections, and occasional news stories about prosecuted posts."
+    },
+    {
+      "name": "group_libelers_and_extremist_speakers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Publish material portraying ethnic, religious, or migrant groups as dangerous, dishonest, or unworthy of membership. When adjudicators classify their output as subordinating, they face fines, takedowns, or prosecution. They rarely accept the classification and typically see themselves as truth-tellers rather than subordinators; abandoning the message would dissolve the movements and identities built around it."
+    },
+    {
+      "name": "chilled_borderline_speakers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Satirists, polemicists, academics, and performers whose work brushes against sensitive group topics. They cannot reliably predict where adjudicators will draw the line between provocative and subordinating, so many soften or abandon projects near the boundary. Their realistic options are self-editing, changing subjects, or relocating their audience to other jurisdictions."
+    },
+    {
+      "name": "content_platforms",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate global hosting services for user expression. They must apply removal rules derived from dignity-based statutes in each jurisdiction they serve, building policy teams and review pipelines to comply. Operating across borders lets them geofence stricter rules to stricter countries and route disputed content elsewhere, which blunts but does not eliminate their exposure."
+    },
+    {
+      "name": "equality_law_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Human rights commissions, equality tribunals, and courts that receive complaints, decide what counts as subordinating expression, and issue binding rulings. Each ruling extends or refines their jurisdiction, and budgets and staffing grow with caseload. They cannot step outside the adjudicative role their statutes assign them."
+    },
+    {
+      "name": "democratic_legislators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Enacted the conditional-protection statutes and retain formal power to widen, narrow, or repeal them. Amendment requires assembling coalitions across parties that fear being cast as either soft on vilification or hostile to free expression, so most settle for periodic review rather than structural change."
+    },
+    {
+      "name": "free_expression_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Civil liberties organizations and legal scholars campaigning against expansion of restricted categories. They absorb litigation costs, divert organizational agendas from other civil-liberties work, and publish sustained critique. They can redirect attention to other issues or jurisdictions, and periodically do."
+    },
+    {
+      "name": "dissenting_minority_members",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Members of the very groups the statutes protect who reject the protection: some want to reclaim stigmatizing labels, some find the complaint machinery stigmatizing, some simply disagree with the framing. The statutes address them as a class whether or not they consent, and no procedure exists for opting out of being a protected-class member."
+    },
+    {
+      "name": "comparative_constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Track how different jurisdictions draw the line between protected and restricted expression, publish comparisons, and advise reformers on all sides. They hold no stake in any single regime and can adopt any jurisdiction's framework as their object of study."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a shared public discourse in which membership in the political community is not contested through the medium of expression: by removing speech that functions as structural subordination from the protected class, the arrangement keeps one class of participants' equal standing from being publicly voted down, addressing the collective problem that a discourse commons open to group-deletion rhetoric degrades the standing of entire groups at once.",
+    "transfer_function": "Moves decision-rights over public expression from speakers and platforms to equality adjudicative bodies; moves expressive liberty and compliance costs from speakers classified as subordinating and from platforms that must police them; delivers assured civic standing to members of targeted groups.",
+    "absent_voices": "Dissenting members of the protected groups themselves are structurally absent: statutes address them as a class, and no procedure solicits their consent or records their objection inside the adjudicative conversation. Speakers governed by absolutist-jurisdiction regimes are also absent from the boundary-setting conversation that defines what counts as subordinating.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight repeal would return group-vilifying material to full circulation, reopen the standing contests that rulings had closed, strand complaint machinery and its accumulated caseload, and force platforms to re-derive policy from scratch; protected-group advocacy networks, tribunal staffing, and platform policy teams would all reorganize around the change.",
+    "founding_problem": "Mid-twentieth-century constitutional design confronted the documented sequence in which unrestricted group vilification in public discourse preceded and enabled the exclusion and persecution of minority groups; the founding problem was how to keep public discourse from serving as an instrument of group subordination without abolishing free discourse itself.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historical scholarship on the vilification-persecution sequence attests the founding problem from outside the benefiting coalition, and the reading's own opponents corroborate it as well: free-expression advocates and absolutist jurists dispute the remedy while conceding in their own analyses that the founding harms were real. No corroborating source attests that the problem is solved; all treat it as ongoing."
+  },
+  "gain_flow": "equality_law_apparatus",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_kernel__absolutist_reading",
+      "speech_protection_kernel__harm_threshold_reading",
+      "speech_protection_kernel__marketplace_reading",
+      "speech_protection_kernel__democratic_participation_reading"
+    ],
+    "dual_formulation_note": "Colloquial 'speech protection' decomposes, per epsilon-invariance, into five structurally distinct constraints — one per reading of the kernel. This file is the dignity_reading instantiation: protection conditional on non-subordination, with group harm treated as distinct from individual harm. Its epsilon (0.44) reflects the conditional regime's own mix of coordination and payment; the absolutist sibling authors a near-categorical shield, the harm_threshold sibling a demonstrability-gated regime, the marketplace sibling a counter-speech regime, the democratic_participation sibling a function-weighted regime. The absolutist reading (oldest codification) supplies the fixed texts all readings interpret; the dignity reading exerts downstream pressure on platform-moderation practice in adopting jurisdictions. Family links run through network.affects_constraints in every member file."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "equal_dignity_precondition_framework",
+    "drift_state": {
+      "moment": "contemporary_platform_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "harm_threshold_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "marketplace_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "democratic_participation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "group_harm_distinct_from_individual_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "equal_civic_standing_preconditions_participation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "protection_conditional_on_non_subordination",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "In jurisdictions adopting the dignity reading, constitutional and statutory speech protection is conditioned on expression not functioning as structural subordination of identifiable groups: hate speech and group libel fall outside the protected class, and equality bodies adjudicate the boundary. The epsilon referent is the standing arrangement under contest — the conditional-protection regime as actually administered — assessed by this reading's own lights, which count the restriction of subordinating speech as largely legitimate and therefore locate residual extraction in adjudicative discretion, chill spillover onto borderline speech, and adjudicative-apparatus growth rather than in the core restriction itself. This story is ONE reading of the speech_protection_kernel; the absolutist, harm_threshold, marketplace, and democratic_participation readings are separate constraints (separate files) with their own epsilon values, victim sets, and classifications, and are not averaged or hedged into this one.",
+    "key_agents": [
+      "members_of_targeted_groups: Primary beneficiary (organized/constrained) — assured civic standing flows to them through the adjudicative process",
+      "equality_law_apparatus: Agenda-setting administrator (institutional/constrained) — adjudicates the subordination boundary and accrues jurisdiction, caseload, and staffing with each ruling",
+      "group_libelers_and_extremist_speakers: Primary payer (powerless/identity_locked) — bear fines, takedowns, and prosecution; ideologically fused with the restricted message",
+      "chilled_borderline_speakers: Secondary payer (moderate/constrained) — bear anticipatory self-editing costs without ever reaching an adjudicator",
+      "content_platforms: Institutional payer (powerful/arbitrage) — bear compliance and policing costs, partially offset by cross-border geofencing",
+      "democratic_legislators: Founding agenda-setter (institutional/mobile) — retain amendment power but face coalition costs in using it",
+      "free_expression_advocates: Organized opposing payer (organized/mobile) — absorb litigation and agenda costs of resisting category expansion",
+      "dissenting_minority_members: Excluded voice (powerless/trapped) — protected-class members who reject the protection and cannot opt out",
+      "comparative_constitutional_scholars: Analytical observer (analytical/analytical) — sees the full cross-jurisdictional structure"
+    ],
+    "logic_rationale": "Extraction is moderate (0.44 at interval end) because the regime genuinely transfers decision-rights and expressive liberty, but the dignity reading's own assessment bounds the core restriction as justified, leaving residual extraction in classification error, chill spillover, and apparatus growth. Suppression (0.58) is authored as a RAW structural property and is deliberately NOT scaled by power or scope — the engine owns that arithmetic; the scalar reflects sanctions, takedowns, and chill, discounted partially by surviving alternatives (bounded counter-speech, jurisdiction shopping). Theater ratio (0.22) is low-moderate: adjudication is functionally real, with a growing symbolic-compliance layer (corporate statements, training regimes, ritual condemnations) riding on top. Accessibility collapse (0.38) is low for a governance constraint because alternatives persist once the rule is understood. Resistance (0.52) is substantial: organized free-expression campaigns, juristic dissent, and platform friction. The claim is authored independently of the metrics: tangled_rope because the arrangement possesses a genuine, externally corroborated coordination function (equal-standing discourse maintenance), an asymmetric payment structure (speakers and platforms pay; the apparatus accrues), and active enforcement dependence. The temporal series run on ONE shared seven-point grid with all three metrics authored at every point; suppression_requirement is tracked because the narrative specifically traces enforcement-capacity buildout (commission mandates, tribunal staffing, platform policy teams maturing over the interval), not merely shifting extraction. Trajectories are monotonic, not cyclical: enforcement maturation and category expansion proceed without observed oscillation, so no intermittent-reinforcement mechanism is posited.",
+    "perspectival_gap": "The seats compute differently by construction. From the equality_law_apparatus seat the arrangement is a jurisdiction it administers and grows with; from the payer seats (libelers, chilled speakers, platforms) the same structure operates as restriction and compliance burden; from the members_of_targeted_groups seat it operates as protection; from the dissenting_minority_members seat it operates as protection imposed without consent. The sharpest same-level lateral contrast is members_of_targeted_groups versus dissenting_minority_members: identical nominal class position, opposite structural relationships, differentiated by consent and by exit (constrained versus trapped). Inter-institutionally, democratic_legislators (mobile, retaining amendment power) sit differently from equality_law_apparatus (constrained, growing with caseload) and content_platforms (arbitrage-capable across borders) despite overlapping institutional standing. Identity-lock dynamics: the libeler seat's identity_locked exit is ideological identity fusion — the restricted message constitutes the movement's self-concept, so exit would dissolve the identity rather than merely forfeit a channel; if that fusion broke, the seat's effective extraction would drop toward that of an ordinary regulated speaker.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for members_of_targeted_groups and (via the dual role) near-symmetric positioning for general_public. Victim declarations drive high directionality for the three payer seats, amplified toward the full-target end for group_libelers_and_extremist_speakers by their identity_locked exit, and damped for content_platforms by arbitrage-grade exit. No directionality_overrides are authored: the derivation chain captures every seat except equality_law_apparatus, whose benefit (jurisdiction and caseload accrual) is real but instrumental-administrative; listing it under beneficiaries would misdeclare its position, and a power-atom override keyed to 'institutional' would also strike democratic_legislators, which shares that atom with a different structural relationship. The apparatus seat therefore rides the canonical fallback, and the limitation is recorded here rather than papered over with a blunt override.",
+    "mandatrophy_analysis": "The founding problem remains live (vilification persists, and no corroborating source — including the reading's opponents — attests otherwise), so no mandatrophy resolution is declared. The classification prevents symmetrical mislabeling: reading only the payment half would render the regime a censorship machine (snare misread); reading only the coordination half would render it pure protection (rope misread). Tangled_rope holds both halves together. The receipt surface records that the adjudicative apparatus is the seat the regime's gains demonstrably accrue to (caseload, jurisdiction, staffing) — a partial, instrumental accrual rather than full capture, since the regime's persistence rests on broad normative support from protected communities and egalitarian coalitions rather than on apparatus self-interest; this is why the claim remains tangled_rope despite a named gain seat. Fixing is prohibitive for the seats that could fix it: repeal requires cross-party coalitions, untangles treaty commitments, and strands dependent machinery, relative to a benefit of fixing that the fixing seats themselves do not collect.",
+    "kernel_context": "Kernel: speech_protection_kernel — the stabilized commitment, expressed across constitutional and human-rights texts, that expression warrants legal protection. This file instantiates the dignity_reading: protection is conditional on expression not functioning as structural subordination of target groups; group harm is recognized as distinct from individual harm; hate speech and group libel are unprotected; equal dignity maintenance is the precondition of protected participation. Sibling readings — absolutist_reading (near-categorical protection; listener harm never grounds restriction), harm_threshold_reading (protection gated on demonstrable harm to victims), marketplace_reading (protection serves truth-discovery; harmful speech is countered by more speech), and democratic_participation_reading (protection strongest for self-governance-necessary political expression) — are separate constraints with their own files, epsilon values, and victim sets. Relation choices: this reading's foundational axiom (group-based subordination grounds restriction, with group harm distinct from and sufficient without demonstrable individual harm) directly negates the absolutist premise (no harm grounds restriction), the harm_threshold premise (only demonstrable harm grounds restriction), and the marketplace remedy premise (all harmful speech is countered, never removed) — hence forecloses for those three within any single framework; the democratic_participation premise (strongest protection for political expression) composes coherently with a dignity carve-out (strongest protection for non-subordinating political expression), hence coexists_with. Drift note: implementations in several jurisdictions now adjudicate mere offense under dignity-derived standards, exceeding this reading's own reference frame (subordination, not offense) — practice_drift, substantial, unacknowledged by the authority structure, which reads the expansion as fulfillment."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

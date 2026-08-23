@@ -1,0 +1,381 @@
+{
+  "header": {
+    "constraint_id": "npt_treaty_1970__oligopoly_enforcement_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_npt_treaty_1970__oligopoly_enforcement_reading",
+    "story_uid": "c79582a0-d62a-4f07-a1a4-575c0176b43a"
+  },
+  "base_properties": {
+    "extractiveness": 0.64,
+    "suppression": 0.66,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NPT Two-Tier Nonproliferation Regime (Oligopoly Enforcement Reading)",
+    "topic_domain": "international_law/security/regime_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "p5_nuclear_weapon_states",
+      "extended_deterrence_host_allies",
+      "emerging_peaceful_nuclear_programs"
+    ],
+    "victims": [
+      "nnws_safeguarded_majority",
+      "threshold_breakout_states"
+    ],
+    "vindicated_propositions": [
+      "possessor_club_stability_doctrine",
+      "declared_materials_verification_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.66,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "npt_kernel_reading_indexicality",
+      "question": "This constraint instantiates the oligopoly_enforcement_reading of kernel npt_treaty_1970; how would instantiating the sibling readings change the constraint's structure and classification?",
+      "resolution_mechanism": "Author the sibling stories (reciprocal_disarmament_reading, withdrawal_sovereignty_reading) against the same referent and compare computed classifications. The disagreement is located in three structural elements: the legal force of Article VI, the conditionality of Articles I-II obligations, and the standing of the Article X exit.",
+      "impact": "Under the reciprocal reading, Article VI enters the binding-obligation set, NWS arsenals become part of the extraction surface, and the arrangement computes as pure extraction from the disarmament-claimant seats; under the withdrawal reading, enforcement universality dissolves and the sanctions machinery itself becomes the contested object.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: reading-indexed classification of the NPT kernel; epsilon is indexed to this reading over the fixed referent of the standing regime."
+    },
+    {
+      "id": "verification_asymmetry_necessity",
+      "question": "Is the inspection-burden asymmetry (intrusive verification of non-weapon states, no audit jurisdiction over recognized weapon states' military programs) an inherent property of arms-control verification or a constructed privilege?",
+      "resolution_mechanism": "Technical assessment of universal-coverage proposals — fissile-material cutoff with verified production bans, managed-access warhead verification — against the declared-materials safeguards standard.",
+      "impact": "If inherent, a slice of the measured burden is irreducible coordination cost and the tangled-rope structure strengthens; if constructed, the asymmetry is rent and the arrangement trends toward pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the safeguards asymmetry is technically forced or institutionally chosen."
+    },
+    {
+      "id": "nnws_restraint_mechanism",
+      "question": "Is non-weapon-state restraint under the regime structural (alliance dependence, sanctions exposure) or internalized (absorbed nonproliferation norm)?",
+      "resolution_mechanism": "Comparative trajectory analysis of states whose structural supports moved — Ukraine after the 1994 Budapest assurances, Belarus and Kazakhstan denuclearization, South Korean alliance fluctuations — versus states retaining guarantees.",
+      "impact": "If internalized, restraint outlives enforcement decay and the regime's suppressive requirement falls without behavioral change; if structural, enforcement erosion converts directly into breakout pressure and effective suppression rises.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized sources of nonproliferation compliance."
+    },
+    {
+      "id": "indefinite_extension_lever_loss",
+      "question": "Did the 1995 indefinite extension convert a renewable 25-year bargain into a permanent hierarchy by removing the renegotiation lever, and is the resulting arrangement now maintained by inertia rather than consent?",
+      "resolution_mechanism": "Compare review-conference bargaining intensity and Article VI deliverables before and after 1995; test whether any disarmament benchmark became enforceable once expiry pressure vanished.",
+      "impact": "If the lever's removal drove the post-1995 rise visible in the measurement series, the arrangement's steady state sits closer to inertial persistence than to a living bargain, and long-run classification drifts accordingly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether permanence without benchmarks entrenched the two-tier structure."
+    },
+    {
+      "id": "article_iv_offset_weight",
+      "question": "How much of the non-weapon-state burden is genuinely offset by Article IV technology transfer and the security value of neighbors' restraint?",
+      "resolution_mechanism": "Economic quantification of transferred reactor, fuel-assurance, and safety-training value against safeguard-compliance costs, combined with survey evidence on stated accession motives.",
+      "impact": "Large offsets push the payer seats toward a coordinated-benefit experience; negligible offsets leave them near the full-target pole and strengthen the extraction reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Weight of the compensatory half of the grand bargain."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The 1968 Non-Proliferation Treaty, in force since 1970, divides the world into five recognized nuclear weapon states and everyone else. This story instantiates the oligopoly_enforcement_reading of that kernel: Articles I-II (no transfer, no acquisition) operate as the regime's primary binding obligations, enforced through IAEA safeguards, Security Council sanctions, and supplier-cartel export controls, while Article VI (good-faith disarmament negotiation) is treated as contingent and aspirational — invoked ritually at review conferences, never justiciable. The epsilon referent is the standing arrangement under contest — the NPT regime as actually operated 1970-present — assessed by this reading's own lights: a genuine cascade-prevention coordination function wrapped around an enforcement structure whose burdens fall on disarmed states and whose benefits accrue to the weapons-holding five. The colloquial label 'the NPT bargain' decomposes, per the epsilon-invariance principle, into three structurally distinct readings (this one, reciprocal_disarmament_reading, withdrawal_sovereignty_reading) with different victim sets and different classifications; they are linked through the network layer, not merged. The claim/metric gap is deliberate: the constraint is CLAIMED as tangled_rope (real coordination, real asymmetry) while the authored metrics describe substantially extractive, increasingly theatrical, actively enforced operation — the engine measures that divergence.",
+    "key_agents": [
+      "p5_nuclear_weapon_states: agenda-setter and primary beneficiary (institutional/arbitrage) — administers enforcement through Security Council permanence, retains arsenals uninspected, collects the status rents of a closed club",
+      "iaea_safeguards_secretariat: administering enforcer (institutional/identity_locked) — runs the verification workload in non-weapon states, with no equivalent jurisdiction over weapon-state military programs",
+      "nnws_safeguarded_majority: primary target (organized/constrained) — bears full-scope safeguards and permanent renunciation, organizes collectively but under sanctions exposure",
+      "threshold_breakout_states: heavily positioned target with partial compensation (powerful/constrained) — denied the deterrent their latent capability would support",
+      "extended_deterrence_host_allies: secondary beneficiary (organized/constrained) — protected without ownership, invested in the two-tier division",
+      "emerging_peaceful_nuclear_programs: compensated entrants (moderate/mobile) — Article IV recipients whose alternatives are worse",
+      "tpnw_humanitarian_coalition: resisting payers (organized/constrained) — built the 2017 prohibition instrument after repeated review-cycle failures",
+      "nonparty_nuclear_armed_states: excluded armed outsiders (powerful/arbitrage) — India, Pakistan, Israel validate the discrimination critique from outside the regime",
+      "arms_control_verification_analysts: analytical observer (analytical/analytical) — supply the evidentiary record both coalitions cite"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.64: high, but short of pure-extraction levels because cascade prevention is a real collective good and Article IV delivers tangible technology access. Suppression is authored at 0.66 as a raw structural property (unscaled by power or scope — scaling happens only to extractiveness in the engine): the regime's persistence depends on actively punishing exit (the North Korea precedent), conditioning cooperation on compliance, and ratcheting verification (Additional Protocol 1997, UNSCR 1540 2004). Theater ratio 0.38: the safeguards function is real, but a growing share of regime activity is ritual — review-conference consensus documents that bind nothing, Article VI progress reporting that reports stagnation. Accessibility_collapse 0.48: alternatives demonstrably persist (India, Pakistan, Israel stayed out and armed; North Korea exited; the TPNW route exists), so the regime does not collapse alternatives the way a natural limit would. Resistance 0.58: sustained Non-Aligned Movement bloc pressure, the 122-vote TPNW adoption, and Iranian procedural warfare are real, organized, and recurrently effective at blocking P5 preferences. The measurement series run on one shared grid (T=0,10,20,30,40,50 ≈ 1970-2020) with all three metrics authored at every point. All three rise: extraction accumulates as Article VI recedes (plateau during early post-Cold-War optimism, then acceleration after the 1995 indefinite extension removed the renegotiation lever), theater grows as review cycles ritualize, and the suppression_requirement series is authored because this story specifically tracks enforcement-capacity build-up — the machinery matured and hardened over the interval rather than staying static.",
+    "perspectival_gap": "Four seats experience four different constraints under the same text. From the P5 seat the regime is order-preserving stewardship they fund diplomatically and profit from structurally — effective extraction computes near zero or negative. From the safeguarded-majority seat it is enforced second-class citizenship: permanent renunciation paired with unfulfilled reciprocation. From the threshold-state seat it is the denial of a capability they paid to develop, compensated by an umbrella whose credibility they cannot verify. From the IAEA seat it is mission growth and professional purpose. The engine computes these divergences from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Beneficiary declarations drive the P5, umbrella allies, and Article IV entrants toward the low-d (subsidized) pole; the P5's arbitrage-grade exit — they reinterpret the text for themselves while enforcing it on others — places them nearest the beneficiary end. Victim declarations drive the safeguarded majority and threshold states toward the high-d (full-target) pole; their constrained exit (sanctions exposure, alliance dependence) traps them near it. One override is declared: threshold_breakout_states carry a dual position (payer with secondary beneficiary status via extended deterrence), which a naive derivation would blur toward mid-scale; under this reading the deterrent denial dominates the compensation, so d is overridden to 0.70 at the powerful power atom. The TPNW coalition derives high d from its payer role despite its considerable agency — organized resistance under constrained exit is still targeted position. The nonparty armed states sit outside the derivation entirely: they refused the arrangement, so they are neither its beneficiaries nor its victims; they are the excluded seat whose absence at founding shaped the whole structure.",
+    "mandatrophy_analysis": "The founding problem — a predicted proliferation cascade of twenty-plus nuclear states — remains live, so no mandatrophy resolution is declared; the arrangement has not outlived its horizontal function. But the arrangement's second pillar has atrophied into performance, and the theater_ratio series (0.15 to 0.38) tracks that atrophy directly. The tangled-rope claim prevents mislabeling in both directions: a pure-extraction verdict would erase why roughly 180 states stay (genuine cascade fear, real Article IV goods, verifiable neighbor restraint), while a pure-coordination verdict would erase the enforcement asymmetry the measurement series documents — burdens universalized, benefits concentrated, reciprocation deferred indefinitely. The engine's per-seat computation decides whether the payer seats experience the arrangement as hybrid or as pure extraction; the corpus exists to take that measurement, not to presume it.",
+    "kernel_context": "Kernel: npt_treaty_1970 — the treaty text as stabilized commitment, frozen since 1968 with all drift migrating into interpretation. This file instantiates the oligopoly_enforcement_reading: Articles I-II as primary binding obligation, Article VI as contingent/aspirational. Sibling readings: reciprocal_disarmament_reading (Article VI as binding legal obligation with temporal urgency; horizontal and vertical nonproliferation as a reciprocal bargain) and withdrawal_sovereignty_reading (Article X exit as legitimate sovereignty exercise; obligations contingent on the security environment). The disagreement is located in three structural elements: the legal force of Article VI, the conditionality of Articles I-II obligations, and the standing of the Article X exit. Relation choices: this reading COEXISTS WITH the reciprocal reading — two factional camps (the P5 enforcement coalition and the disarmament-claimant coalition) hold contradictory interpretations of the same article simultaneously, with no authoritative adjudicator forcing exclusive assignment, exactly the originalist/living-text pattern. This reading INFLUENCES the withdrawal-sovereignty reading — its enforcement practice (the DPRK sanctions precedent, the treatment of withdrawal-under-noncompliance as breach of prior commitments) raises the cost and lowers the legitimacy of the exit path without logically eliminating it, a clear upstream/downstream causal structure rather than mutual exclusion."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "reciprocal_disarmament_reading",
+      "withdrawal_sovereignty_reading",
+      "tpnw_2017_prohibition_instrument",
+      "iaea_additional_protocol_regime"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'the NPT bargain': the kernel npt_treaty_1970 splits into three readings with distinct epsilon values and victim sets — this oligopoly_enforcement_reading (epsilon 0.64; victims: safeguarded NNWS and threshold states), reciprocal_disarmament_reading (pulls NWS arsenals onto the extraction surface; epsilon higher from the disarmament-claimant seat), and withdrawal_sovereignty_reading (makes the enforcement machinery itself the contested object). Causal structure runs upstream-to-downstream: this reading's operation feeds legitimacy pressure into both siblings — each unfulfilled Article VI cycle strengthens the reciprocal reading, and the DPRK exit precedent strengthens the sovereignty reading. The TPNW instrument and the Additional Protocol regime are downstream institutional artifacts linked for contamination-propagation analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.7
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "p5_nuclear_weapon_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The five recognized nuclear weapon states administer the regime's coercive machinery through their permanent Security Council seats, decide when safeguards disputes trigger sanctions, and control the interpretive content of Article VI at review conferences. They retain and modernize arsenals with no inspection of their own military programs, extend deterrence to allies, and collect the standing of a closed membership whose door the treaty locks behind them. Their privileged position depends on the text staying frozen; they arbitrage between enforcing the articles on others and reinterpreting the disarmament article for themselves."
+    },
+    {
+      "name": "iaea_safeguards_secretariat",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Administers comprehensive safeguards and Additional Protocol inspections in non-weapon states, certifies compliance, and refers unresolved cases toward the Security Council. Its budget, mandate, and professional identity are constituted by the verification workload the regime assigns it, and it holds no equivalent audit jurisdiction over the recognized weapon states' military programs. Shrinking the safeguards mission would dissolve the organization's core purpose, so its institutional self-concept is fused with the arrangement it polices."
+    },
+    {
+      "name": "nnws_safeguarded_majority",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The roughly 180 non-weapon states parties submit full-scope safeguards, accept intrusive inspections, and forgo the weapons option permanently. In exchange they receive peaceful-technology cooperation and the security value of neighbors' verified restraint. They organize collectively through the Non-Aligned Movement caucus and review-conference blocs to demand disarmament movement, but their leverage is bounded by sanctions exposure and alliance dependencies; leaving carries the North Korea precedent of punitive isolation."
+    },
+    {
+      "name": "threshold_breakout_states",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Economically and technologically advanced states — Japan, South Korea, Germany and peers — with latent weapons capability measured in months to years of breakout time. They bear the heaviest inspection intensity relative to their industrial capacity, permanently surrender the deterrent option their capability would support, and absorb neighborhood threats from armed states outside the treaty. Their compensation runs through extended-deterrence umbrellas whose credibility they cannot independently verify, plus first-tier standing in the peaceful nuclear order. Exiting would mean choosing between arming alone against proliferated neighborhoods and forfeiting alliance protection."
+    },
+    {
+      "name": "extended_deterrence_host_allies",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "States under United States nuclear umbrellas receive deterrent protection without owning weapons or hosting operational arsenals, riding on the weapon states' retained forces. Decades of defense planning, basing arrangements, and public opinion in these states presuppose the two-tier division; abandoning it would force independent deterrent decisions they have politically declined for generations."
+    },
+    {
+      "name": "emerging_peaceful_nuclear_programs",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Developing states building first reactors receive technology transfer, fuel-supply assurances, and safety training under the treaty's cooperation article — the tangible side of the bargain. Participation is conditioned on safeguards acceptance, and the alternative (exclusion from the supplier cartel) is materially worse, which keeps them inside by interest rather than attachment."
+    },
+    {
+      "name": "tpnw_humanitarian_coalition",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Over 120 mostly non-weapon states concluded after repeated review-cycle failures that the disarmament half of the bargain would not arrive on any schedule, and built an alternative instrument — the 2017 Treaty on the Prohibition of Nuclear Weapons — banning possession, use, and threat. They remain treaty parties paying safeguards costs while mounting the regime's largest institutional resistance from inside; the weapon states boycott the new instrument and use financial and alliance pressure to keep it from touching arsenal policy."
+    },
+    {
+      "name": "nonparty_nuclear_armed_states",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "India, Pakistan, and Israel stayed outside the treaty, armed, and argue that a permanent five-member weapons club proves nonproliferation law is positional rather than principled. Absent from the founding bargain, they decline both its obligations and its benefits, trading with the regime selectively — India's 2008 supplier exemption showed the regime bending when great-power interests aligned."
+    },
+    {
+      "name": "arms_control_verification_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic and think-tank specialists in regime theory and verification technology who map the bargain's reciprocity balance, document safeguards coverage gaps and arsenal modernization rates, and supply the evidentiary record that both the enforcement coalition and the disarmament coalition cite for opposite conclusions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the proliferation-cascade collective-action problem: a single verification standard lets states forgo weapons without fearing undetected neighbor cheating, and a capped possessor set limits the number of fingers on nuclear triggers and the number of dyads in which crises can go nuclear.",
+    "transfer_function": "Moves sovereignty over fuel-cycle decisions and submission to intrusive verification from the non-weapon majority to the P5-administered regime; moves status and security rents to the five; moves the promised disarmament obligation nominally from the weapon states to an indefinitely deferred future.",
+    "absent_voices": "The nonparty nuclear-armed states were absent from the founding bargain and remain outside; their objection — that the structure entrenches discrimination and thereby incentivizes armament — was voiced only from outside and was answered with supplier-cartel punishment rather than argument. The Global South delegations present at founding accepted the bargain under assurance of eventual disarmament; their successors now speak through the TPNW coalition, but the seats that would insist on binding reciprocity were never given decision weight inside the enforcement machinery.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the regime vanished overnight, the safeguards infrastructure would stop certifying restraint, threshold states would reopen deterrent decisions, alliance architectures premised on extended deterrence would renegotiate, the export-control cartel would lose its legal anchor, and regional arms-race spirals would resume in the Middle East, East Asia, and South Asia — the arrangements of dozens of states depend on it.",
+    "founding_problem": "In the 1960s the forecast was a proliferation cascade — official estimates ran to twenty-five or more nuclear states within two decades — driven by security-dilemma dynamics in every region. The bargain built to stop it: cap the club at the existing five, buy everyone else off with peaceful-technology access and a good-faith disarmament commitment by the five.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The horizontal half's liveness is attested from outside the beneficiary set by IAEA reporting on the DPRK and Iran files and by the 1998 South Asian tests. The vertical half's death is attested from outside the beneficiary set by the 122-state TPNW vote, SIPRI and independent arsenal-modernization data showing all five weapon states upgrading forces, and the Shultz-Perry-Kissinger-Nunn sequence of abolition appeals by former senior officials of the leading weapon state. No corroborating source outside the P5 attests that Article VI is being honored on any schedule; the P5 themselves attest only the horizontal half."
+  },
+  "gain_flow": "p5_nuclear_weapon_states",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "horizontal_binding_vertical_deferred",
+    "drift_state": {
+      "moment": "post_tpnw_entry_into_force",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "reciprocal_disarmament_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "withdrawal_sovereignty_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "articles_i_ii_unconditionally_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "article_vi_nonjusticiable_aspiration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

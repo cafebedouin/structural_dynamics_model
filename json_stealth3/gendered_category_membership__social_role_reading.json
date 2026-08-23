@@ -1,0 +1,338 @@
+{
+  "header": {
+    "constraint_id": "gendered_category_membership__social_role_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gcm_social_role",
+    "story_uid": "9359fb87-51fe-4e8a-aad3-e2dcdaaa0d30"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.55,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Recognition-Gated Gender Category Membership (Social Role Reading)",
+    "topic_domain": "social ontology/political philosophy/bioethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "gender_conforming_cis_adults"
+    ],
+    "victims": [
+      "nonpassing_trans_individuals",
+      "conditionally_passing_trans_individuals",
+      "gender_nonconforming_cis_women"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "Which constitutive criterion — immutable biological markers, self-declared identity, or sustained performance with others' recognition — actually fixes gender category membership, and does fixing it differently change who counts?",
+      "resolution_mechanism": "Comparative institutional analysis of jurisdictions and communities operating each criterion: track membership disputes, exclusion incidents, and litigation outcomes under each regime.",
+      "impact": "Each sibling reading produces a structurally different constraint: a biological-marker reading concentrates exclusion categorically on trans people; an identity reading relocates gatekeeping disputes to bad-faith-declaration policing; this recognition reading distributes both exclusion risk and performance burden across everyday interaction. Cross-reading comparison belongs to the engine layer over the linked sibling files, not inside this story.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the gendered_category_membership kernel; the sibling readings are separate constraint files with their own epsilon and victim sets."
+    },
+    {
+      "id": "victim_structure_symmetry",
+      "question": "Do trans individuals and gender-nonconforming cis women bear the arrangement's costs symmetrically, or does one seat dominate the harm distribution?",
+      "resolution_mechanism": "Incident reporting on facility challenges, misrecognition rates, and discrimination complaints disaggregated by seat.",
+      "impact": "If cis women's challenge exposure rivals trans exclusion, the arrangement's costs are broader than a trans-focused framing suggests and cross-seat resistance coalitions become likelier; if trans harms dominate, the arrangement operates closer to targeted exclusion than distributed gatekeeping.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the ambiguous victim structure splits evenly between trans individuals and nonconforming cis women."
+    },
+    {
+      "id": "passing_resource_stratification",
+      "question": "How strongly does success under the recognition criterion track resources — wealth, transition timing, body morphology, geographic mobility — rather than effort or duration of performance?",
+      "resolution_mechanism": "Outcome data on recognition success correlated with socioeconomic and medical-access variables.",
+      "impact": "High resource-tracking would make the arrangement doubly stratifying (membership by class as well as by performance), raising effective extraction above the authored scalar and sharpening the asymmetry between the two trans seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the performance criterion functions as a class filter."
+    },
+    {
+      "id": "enforcement_locus_drift",
+      "question": "Is gatekeeping genuinely distributed across social interactions, or is it concentrating in institutional codification — provider guidance, case law, documentation rules?",
+      "resolution_mechanism": "Track the share of membership disputes resolved by institutional ruling versus interpersonal judgment over the interval.",
+      "impact": "Concentration would push suppression above the authored scalar and shift the arrangement toward centrally enforced operation; continued diffusion keeps enforcement cheap, deniable, and hard to litigate against.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Locus of enforcement: distributed interactional gatekeeping versus institutional codification."
+    },
+    {
+      "id": "suppression_internalization_split",
+      "question": "How much of the measured suppression is structural (door policies, document checks, public challenge norms) versus internalized (anticipatory self-policing of presentation that persists where rules relax)?",
+      "resolution_mechanism": "Post-relaxation trajectory studies: in jurisdictions adopting self-declaration, measure whether anticipatory performance labor persists among people already socialized under recognition norms.",
+      "impact": "If internalization dominates, effective suppression exceeds the structural measure and outlives formal reform — targets carry the gatekeeper with them after exit; if structural dominates, rule change rapidly lowers suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism in a distributed social constraint."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the social-role reading, gender category membership is not fixed at birth and not secured by private self-declaration: it is constituted by sustained social performance that draws recognition from others. Membership is therefore always conditional and always revocable — held only as long as the performance keeps eliciting uptake. This distributes gatekeeping across millions of daily micro-interactions rather than concentrating it in any office, and it prices membership in continuous labor for anyone whose embodiment does not spontaneously elicit recognition. Trans women are included conditionally, on passing; gender-nonconforming cis women discover the test fires on their bodies too; intersex people are absorbed by early assignment rather than consulted. This file instantiates ONE reading of the contested kernel gendered_category_membership; the biological-sex and gender-identity readings are separate constraint files with their own epsilon, victim sets, and classifications, and are not folded into this one. Epsilon's referent is the standing recognition-performative arrangement itself, assessed by this reading's own lights — not any sibling's endorsed alternative.\n\nKEY AGENTS (by structural relationship):\n- gender_conforming_cis_adults: primary beneficiary and distributed administrator (moderate/mobile) — recognition flows to them unbidden; they wield it in micro-interactions\n- conditionally_passing_trans_individuals: dual-positioned payer/beneficiary (moderate/identity_locked) — inclusion purchased with continuous, revocable performance\n- nonpassing_trans_individuals: primary target (powerless/trapped) — bears the boundary enforcement without access to the performance remedy\n- gender_nonconforming_cis_women: collateral target (moderate/constrained) — the recognition test fires on their bodies as well\n- sex_segregated_service_providers: institutional administrator (institutional/constrained) — converts distributed recognition into door-level decisions\n- intersex_individuals: excluded voice (powerless/trapped) — the managed counterexample\n- human_rights_tribunals: analytical observer (institutional/analytical) — sees the structure accumulate across cases",
+    "logic_rationale": "Claim and metrics are authored independently. The claimed type is tangled_rope because the structure possesses all three canonical elements: a genuine coordination function (shared categories resolve pronouns, facilities, address, and dress expectations once socially instead of per-encounter), asymmetric extraction (continuous performance labor and challenge exposure fall on those whose embodiment does not spontaneously elicit recognition, while effortless legibility flows to those it does), and active enforcement (distributed social sanctioning, increasingly codified in provider guidance and case law). Metrics are authored descriptively: epsilon 0.45 is low-to-moderate because the arrangement delivers the coordinated good to anyone who meets the criterion and the criterion is in principle open, yet it prices membership in unending labor for one seat and denies it outright to another; suppression 0.55 reflects diffuse but pervasive sanctioning with no central police; theater_ratio 0.30 is low-moderate because much gendered performance is constitutive rather than decorative, while a growing share of justification talk ('safety', 'fairness') performs reassurance over decisions that run on recognition habit; accessibility_collapse 0.45 because alternatives (self-declaration norms, identity-first address) exist and spread in enclaves — understanding the arrangement does not close the exits; resistance 0.60 because sustained contestation from trans advocacy, gender-critical countermovements, and intersex objection keeps the criterion politically alive. Suppression is authored as a raw structural property; only extractiveness gets scaled by directionality and scope in the engine's computation. The temporal series run on one shared grid (points 0–30 at step 5) so every tracked metric is authored at every examined time point; the rising suppression_requirement series tracks real enforcement-capacity change — institutional codification hardening as self-declaration alternatives spread — not mere extraction drift.",
+    "perspectival_gap": "From the conforming member's seat the arrangement is invisible infrastructure — coordination that simply works, experienced as rope. From the conditionally passing seat it is a job that never ends, with membership revocable at any exposed interaction. From the nonpassing seat it is a wall administered politely, experienced as trap. Same structure, three experienced types; the engine computes this divergence per seat from the structural data, and the divergence — not any single verdict — is the finding. The service-provider seat adds a fourth reading: an administrator absorbing litigation and reputational whiplash whichever way it decides, collecting none of the gains.",
+    "directionality_logic": "The beneficiary declaration places gender_conforming_cis_adults near the beneficiary end (low d, subsidized by the arrangement they also administer — their dual beneficiary/agenda_setter position is the distributed-gatekeeping structure itself). The victim declarations place the three payer seats near the target end, with exit modulation doing real work: nonpassing trans individuals are trapped (damped nothing, amplified fully), conditionally passing trans individuals are identity_locked (the performance is constitutive of the membership they live through, so exit is unthinkable rather than merely costly), and nonconforming cis women are constrained (presentation modifiable at cost). The dual seat derives mid-range, which is correct. One override is authored: sex_segregated_service_providers carry no beneficiary/victim declaration, so derivation would hand them the institutional power-atom fallback; their actual position sits target-side of center (d=0.35) because they absorb the arrangement's conflict costs — litigation, guidance churn, user confrontation — while collecting none of its gains. The override touches the institutional atom generally; the only other institutional agent is the tribunal observer, whose analytical exit removes it from the extraction computation.",
+    "mandatrophy_analysis": "Reading the structure as pure rope would erase the conditional, revocable character of trans inclusion and the challenge exposure of nonconforming cis women — the coordination story would launder the performance levy. Reading it as pure snare would erase the genuine coordination delivered to everyone who meets the criterion and the criterion's openness in principle — the extraction story would deny that shared categories solve a real problem. Tangled rope holds both halves: coordination function real, extraction asymmetric, enforcement continuous. On genealogy: the founding coordination problem (sorting interaction partners across bodily diversity) is still live even though its current solution is contested, so no mandatrophy resolution is declared and no zombie flag is invited — the mismatch consumer should find status=contested paired with verdict=world_rearranges, a live dispute rather than a dead mandate.",
+    "kernel_context": "This story instantiates the social_role_reading of the kernel gendered_category_membership: membership grounded in sustained social performance and recognition by others. Sibling readings — gendered_category_membership__biological_sex_reading (immutable markers ground membership) and gendered_category_membership__gender_identity_reading (self-declared identity grounds it) — are separate constraint files; their structural deltas (categorical exclusion; bad-faith-declaration policing respectively) are not averaged into this story's epsilon. Relation choices: coexists_with toward the biological reading because hybrid frameworks (biology as eligibility, recognition as realized membership) keep both live within single parties' commitments; influences toward the identity reading because this reading's entrenched recognitional infrastructure — documents, facility norms, interactional habit — sets the operating environment any self-declaration regime must displace, a structural pressure short of logical foreclosure. Drift is authored as axiom_overriding/substantial/unacknowledged: self-declaration statutes and identity-based institutional norms directly challenge the constitutive premise while the practicing majority treats recognition as settled fact rather than contestable criterion."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "gendered_category_membership__biological_sex_reading",
+      "gendered_category_membership__gender_identity_reading"
+    ],
+    "dual_formulation_note": "The colloquial question 'what makes someone a man or a woman' decomposes, per the epsilon-invariance principle, into three structurally distinct constraints: biological-marker constitution, identity self-declaration, and performative recognition. Each has its own epsilon, victim set, enforcement surface, and classification; measuring membership by one criterion yields a different constraint than measuring it by another. This file authors the recognition reading only. The upstream/downstream texture runs both ways — biological essentialism is cited against recognition-gating, and identity-based law erodes it — so the family is linked pairwise rather than ranked; cross-reading comparison belongs to the engine layer over the linked files."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "gender_conforming_cis_adults",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Move through gendered social life without ever having to establish membership: their presentation draws immediate correct address, facility access, and unmarked belonging. They also administer the standard in thousands of unnoticed micro-decisions — pronoun choices, corrections, compliments, doorway judgments — without any body ever convening to set rules. Leaving the arrangement would mean trading effortless legibility for nothing, so exit never comes up."
+    },
+    {
+      "name": "conditionally_passing_trans_individuals",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Hold recognized membership only while a continuous performance — voice, dress, movement, paperwork, history management — keeps drawing others' uptake. Inclusion is real and valued: correct address, safer facility use, ordinary belonging. But any single interaction can expose the performance and revoke the recognition, so the work never stops. Stopping the performance would collapse the membership they live through day to day, which makes quitting unthinkable rather than merely costly."
+    },
+    {
+      "name": "nonpassing_trans_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Cannot secure stable recognition however long the performance runs: address stays wrong, facilities stay hazardous, belonging stays provisional. They carry the arrangement's boundary enforcement — challenge, scrutiny, correction — while being unable to purchase what the performance buys others. There is nowhere to stand outside the sorting: every interaction re-runs the test."
+    },
+    {
+      "name": "gender_nonconforming_cis_women",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Tall, broad, flat-chested, or otherwise masculine-presenting cis women whom the recognition test flags anyway: challenged entering women's changing rooms, questioned at shelter doors, asked to account for themselves in spaces they have always used. They can spend money and discomfort modifying presentation, or absorb repeated public challenge. Their exposure shows the test runs on performance signals rather than on anything they chose."
+    },
+    {
+      "name": "sex_segregated_service_providers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Shelters, prisons, sports governing bodies, and facility operators turn a distributed social standard into door-level decisions, one user at a time. Whichever way they decide, they absorb litigation risk, guidance churn, press attention, and user conflict. They cannot decline to decide: statute, funders, and users force a judgment call at every threshold."
+    },
+    {
+      "name": "intersex_individuals",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Born with variations the two-category sorting has no clean answer for, they were typically assigned early and expected to perform the assignment quietly. When communities argue about who counts, they are discussed more than consulted. Their existence is the standing edge case the arrangement manages rather than hears."
+    },
+    {
+      "name": "human_rights_tribunals",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate membership disputes case by case — facility access, documentation, sports eligibility — and their rulings feed back into provider guidance and public expectation. They watch the whole structure accumulate across cases without collecting from it or bearing its daily costs."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Shared gender categories let strangers coordinate interaction without negotiation: pronoun selection, facility allocation, address forms, dress expectations, and kinship terms are resolved by a common classification. Recognition-based membership supplies that classification through observable performance, making category assignment fast and mutually checkable.",
+    "transfer_function": "Moves recognition goods — access to sex-segregated spaces, correct address, freedom from challenge, unmarked belonging — to those whose sustained performance secures others' uptake; moves continuous performance labor and exposure-to-challenge onto those whose embodiment does not spontaneously elicit recognition; and concentrates membership-judging authority in the recognizing crowd.",
+    "absent_voices": "Intersex individuals, whose bodily variation the arrangement absorbs by early assignment rather than consultation, and nonpassing trans people in communities where their testimony carries no weight precisely because they lack the recognition the arrangement distributes — the gatekeeper's veto extends to the gatekept's account of the gate.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Every gendered arrangement — facilities, documents, forms of address, dress codes, sports categories, kinship terminology — presupposes a working membership criterion. Overnight removal would force case-by-case renegotiation of all of them, and the recognitional habits of millions of daily interactions would lose their object.",
+    "founding_problem": "Coordinating social roles and expectations across a population with varied bodies, in societies organized around a two-category division of labor, kinship, and reproduction — strangers needed a fast, shared way to sort interaction partners.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Anthropological and historical scholarship outside the beneficiary set attests both the ubiquity of gender-sorting coordination problems and the deep variability of membership criteria across societies and eras — variability that corroborates the coordination need while undercutting any claim that this particular recognition arrangement is its necessary solution. No source outside the benefiting parties attests that the current criteria are fixed; the benefiting majority are their principal attestors."
+  },
+  "gain_flow": "gender_conforming_cis_adults",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "sustained_performative_recognition",
+    "drift_state": {
+      "moment": "contemporary_visibility_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "biological_sex_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gender_identity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "recognition_constitutes_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "sustained_performance_accrual",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

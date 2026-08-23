@@ -1,0 +1,382 @@
+{
+  "header": {
+    "constraint_id": "family_law_authority__secular_contractual_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a941da8d-5588-4072-b3dd-b5651e905ba7"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Civil Marriage Validity Regime — State-Contractual Reading",
+    "topic_domain": "legal/political/comparative-law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "registered_married_spouses",
+      "dependent_minor_children",
+      "state_fiscal_administration"
+    ],
+    "victims": [
+      "divorcing_spouses",
+      "unregistered_cohabiting_partners",
+      "polyamorous_households",
+      "means_tested_low_income_couples"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "registered_married_spouses",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Two adults who registered and now hold the bundle: succession defaults, next-of-kin standing, filing options, spousal visa routes, survivor benefits. Their exit from the status runs back through the same courts and registries, at a price set by the same statute that admitted them."
+    },
+    {
+      "name": "dependent_minor_children",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Receive custody, support, and succession defaults keyed to their parents' registration. Cannot opt in or out; their protection depends entirely on whether the adults above them passed through the validity gate."
+    },
+    {
+      "name": "state_fiscal_administration",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Tax and social-security administrations treat the registered couple-plus-dependents as a counting unit. Joint assessment options, survivor benefits, and household means-tests all key off the civil record; the unit yields administrative economies and a stable fee revenue stream."
+    },
+    {
+      "name": "state_legislature",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Writes and amends the validity criteria, capacity rules, and dissolution procedure. Consults bar associations, licensed religious bodies, and family-policy advocacy groups; revisits the statute when electoral coalitions shift, not when unregistered or multi-partner households petition."
+    },
+    {
+      "name": "civil_registration_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate the registers that confer validity: verify identity, capacity, and prior-bond status; collect fees; transmit certified extracts to courts, tax offices, and border agencies. Budgets and headcount scale with registration volume and with fraud-screening workload."
+    },
+    {
+      "name": "divorcing_spouses",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Dissolving the union runs through filing fees, mandated separation intervals where they apply, asset-division proceedings, and support recalculation. Statutory rights are written symmetrically, but administered outcomes — post-divorce income trajectories especially — remain uneven across spouses."
+    },
+    {
+      "name": "unregistered_cohabiting_partners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Share homes, finances, and often children without registering. Hold no automatic succession, next-of-kin, or spousal-immigration standing; purchase partial substitutes — cohabitation contracts, powers of attorney, beneficiary designations — which work until a counterparty (a hospital desk, a border agency, an intestate estate) refuses them."
+    },
+    {
+      "name": "polyamorous_households",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Multi-partner households raising children and sharing property. The registration template admits exactly two principals, so there is no application to file, no fee to pay, no path at any price. The household reconstructs fragments of the bundle through deeds, wills, guardianship petitions, and visitation authorizations that institutions may decline to honor."
+    },
+    {
+      "name": "means_tested_low_income_couples",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Live month-to-month on means-tested supports. Registering merges household income counts and can strip housing, childcare, and health benefits worth more than any advantage the bundle offers; the result is a standing penalty attached to the validity gate for exactly the households with the thinnest margins."
+    },
+    {
+      "name": "unlicensed_religious_communities",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Communities whose own rites they regard as fully constituting marriage, but who either lack or decline state authorization to solemnize. Under the standing arrangement their ceremonies create no civil status, and they hold no seat in the consultations where validity criteria are written."
+    },
+    {
+      "name": "human_rights_treaty_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Treaty-monitoring committees review national marriage and family law against equality and private-life provisions; they gather statistics, publish concluding observations, and document gaps between written symmetry and administered results. They impose no domestic rule directly."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains one authoritative public record of conjugal bonds plus a standardized default rule-set — succession, next-of-kin medical standing, parental responsibility, spousal immigration, tax filing — so that registries, hospitals, courts, banks, and border agencies coordinate against a single status instead of negotiating bespoke terms with every household.",
+    "transfer_function": "Concentrates the legal incident bundle in registered dyads; moves registration and dissolution fees from individuals to public treasuries; moves documentary burdens (proof of capacity, prior-bond status) onto applicants; and centralizes definitional authority over the institution's terms in legislatures and family-law courts rather than in the contracting parties or their communities.",
+    "absent_voices": "Multi-partner households (no seat in the two-principal template's drafting or amendment), unlicensed religious communities (whose constitutive claims carry no weight in validity consultations), and advocates of menu-style partnership instruments (who would unbundle the incidents) all stand outside the consultation circuit, which convenes bar associations, licensed clergy, and family-policy advocacy organized around the registered dyad.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Succession would revert to general intestacy rules with no spousal preference, next-of-kin medical standing would dissolve into case-by-case dispute, spousal immigration routes would close, survivor pensions and filing options would lapse, and every third party that currently reads the civil record would need a new protocol overnight — thousands of statutory cross-references would require rewriting.",
+    "founding_problem": "As successor states took marriage registration over from ecclesiastical and customary record-keepers in the eighteenth and nineteenth centuries, the problem was proof: who is bound to whom, to whom do children belong for succession and support, and how are clandestine, fraudulent, or bigamous unions excluded — answered by a single state-maintained register with capacity screening.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "External attestation exists: historiography of civil-registration reform (the Hardwicke Act 1753 literature and Code Civil scholarship), the parliamentary record of the 1836 English Marriage Act debates, and demographic archives of clandestine-marriage litigation attest the recording problem and its state-register solution from outside any current beneficiary seat. Contemporary liveness is attested by family-court caseloads and registry fraud-screening volumes. Contestation of the full bundle's necessity comes from family-pluralism scholarship and partnership-diversity advocacy, neither of which disputes the recording core. No source outside the beneficiary set attests that the complete modern bundle is required by the original problem — that claim is asserted only from within."
+  },
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The standing arrangement this story authors is civil marriage as the secular-contractual reading constitutes it: two autonomous adults contract before a state-authorized registrar, validity flows solely from entry in the civil record, rights and obligations inside the union are statutorily gender-symmetric, and no religious rite is required — nor sufficient — for civil validity. Around that validity criterion sits a large bundled rule-set: succession defaults, next-of-kin medical standing, spousal immigration routes, tax-filing options, survivor benefits, parental-responsibility presumptions. Admission to the bundle runs through one gate; departure runs through the same machinery at a marked-up price. The claim/metric split is deliberate: claimed_type records the structural judgment (a genuine coordination core carrying asymmetric, actively enforced extraction), while the metrics record descriptive operating levels; the engine computes per-seat types from the structural data, and divergence between claim and computed output is the measurement the corpus exists to take. Interval anchoring assumption: T0 approximates 1965 (the opening of the equal-rights and decriminalization reform wave), T60 approximates 2025; time points index elapsed years.\n\nKEY AGENTS (by structural relationship):\n- registered_married_spouses (moderate/constrained): principal holders of the incident bundle\n- dependent_minor_children (powerless/trapped): ride parental registration for custody, support, and succession defaults\n- state_fiscal_administration (institutional/arbitrage): receives fee revenue and administrative economies from the household-counting unit\n- state_legislature (institutional/arbitrage): sets and revises validity criteria and dissolution procedure\n- civil_registration_authorities (institutional/arbitrage): administer the validity gate, with a fee-collection sideline\n- divorcing_spouses (moderate/constrained): bear the exit price — fees, waiting periods, litigation\n- unregistered_cohabiting_partners (moderate/mobile): live the joint life without the bundle, patch gaps with private instruments\n- polyamorous_households (powerless/trapped): no registration path exists at any price\n- means_tested_low_income_couples (powerless/trapped): face benefit cliffs that price registration out of reach\n- unlicensed_religious_communities (organized/identity_locked): ceremonies they regard as constitutive confer no civil status here\n- human_rights_treaty_bodies (institutional/analytical): audit statutory symmetry against administered outcomes",
+    "logic_rationale": "Extractiveness 0.42: the coordination spine is real and heavily used, but the single-gate bundle design prices entry and exit above a bare-contract baseline, excludes entire household forms, and hands the fiscal administration a convenient counting unit — extraction that survives even this reading's own autonomy-justifying lights, since a consent-centered reading implies freedom of terms that the standardized, non-negotiable bundle denies. Suppression 0.48: opting out entirely carries no sanction, but within the recognized-partnership domain the state's monopoly on validity collapses most alternatives; partial private substitutes exist and fail unpredictably at hospital desks and borders. Theater 0.18: the machinery performs its function; ceremony and commemorative politics add performance around a working core. Accessibility_collapse 0.45: understanding the gate does not erase alternatives — private contracts and parallel partnership lanes exist in some jurisdictions — but each substitute covers only a fragment of the bundle. Resistance 0.40: cohabitation growth, marriage delay, principled-refusal currents, and partnership-diversity advocacy press against the constraint without displacing it. Trajectories: base_extractiveness declines across the interval (final coverture-era residues removed, no-fault dissolution cutting forced-maintenance costs, morality-policing enforcement retired), flattening late as remaining extraction concentrates in bundle-design features rather than role asymmetry; suppression_requirement falls faster early (criminal enforcement retired) then stabilizes with a late uptick as documentary-fraud screening intensified; theater_ratio creeps upward as commemorative and defensive politics accumulate around a stable core. Enforcement history is traced because the story's dynamic IS enforcement-capacity change (criminal-to-administrative migration); all three series share one seven-point grid, and end-state values match the base_properties scalars by construction of the interval ending at the present.",
+    "perspectival_gap": "From the registered-spouse seat the arrangement presents as enabling infrastructure — a cheap key to a thousand legal doors. From the divorcing seat the same machinery presents as a tollgate with the toll collected on the way out; from the means-tested seat the gate is priced above reach precisely where its protections matter most; from the registry seat it is a workflow and a budget line. Same statute, four different lived arrangements. The engine computes these per-seat classifications from the structural declarations; nothing in the authored claim adjudicates between them.",
+    "directionality_logic": "Beneficiary declarations drive the low-d seats: registered spouses, dependent children, and the fiscal administration sit near the subsidized end, with the children's powerlessness and trapped exit reinforcing subsidy-side treatment of that seat. Victim declarations drive the target end: polyamorous households and means-tested couples combine victim position with trapped exit, placing them near full-target; divorcing spouses are victims whose exit runs through the constraint's own machinery (constrained, high d). Unregistered cohabitants are the modulation case: declared victims, but their mobile exit and access to partial private substitutes pull their effective d below the trapped-victim band — exit-option differentiation does the work a per-agent override would otherwise perform, so no directionality_overrides entries are authored. Scope is national for nearly all seats, so scope amplification of effective extraction is modest; the human-rights seat observes at global scope from an analytical position outside the d computation.",
+    "mandatrophy_analysis": "The founding problem — a single authoritative public record of conjugal bonds for succession, support, and proof against clandestine unions — retains a live core: registries still adjudicate capacity, prior-bond status, and document fraud daily, and courts still consume the record. Whether the full institutional bundle remains necessary to that recording function is disputed by the parties, hence founding_problem_status 'contested' rather than 'dead'. Combined with a world_rearranges disappearance verdict, the mismatch consumer reads contested x rearranges and raises no dead-mandate zombie flag — correctly, since the recording core is demonstrably exercised. The tangled_rope claim is what prevents mislabeling in both directions: the genuine coordination function (the register would be rebuilt within a year if abolished) blocks a pure-extraction reading, while the measurable asymmetric extraction (exit pricing, exclusion of non-dyadic forms, benefit-cliff incidence at the gate) blocks a pure-coordination reading. No sunset clause is authored because the arrangement carries no declared transition endpoint; its justification is steady-state, not transitional.",
+    "kernel_context": "This story instantiates the secular_contractual_reading of the family_law_authority kernel — the contested question of what authority constitutes a valid marriage. The sibling readings (each authored as its own constraint story) are christian_canonical_reading (sacrament under ecclesiastical or denominational authority), hindu_dharmashastra_reading (sacramental samskara under dharmic texts and customary practice), muslim_shariat_reading (the nikah contract under Quranic injunction and hadith), and parsi_zoroastrian_reading (community-preserving institution under Zoroastrian religious law). The disagreement among the readings sits at three loci: the source of validity (state registration versus religious rite, text, or community), the allocation of rights within the union (statutory symmetry versus role-defined asymmetry), and the boundary of permissible unions (interfaith permission versus endogamous or intra-faith requirement). Those loci and their structural consequences are carried in the omega variables; this file's classification concerns only the standing arrangement this reading constitutes."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment_structure",
+      "question": "This constraint instantiates the secular_contractual_reading of the family_law_authority kernel; what would displacement by a sibling reading (hindu_dharmashastra, muslim_shariat, christian_canonical, parsi_zoroastrian) change structurally?",
+      "resolution_mechanism": "Compile and compare the sibling reading stories: shifts in the validity criterion (rite or text versus state registration), in the victim sets (for example, wives under role-defined asymmetric divorce authority, interfaith couples under endogamy requirements), and in the enforcement authority locate what each sibling would alter.",
+      "impact": "If a sibling reading displaced this one, the validity gate moves from the civil register to a religious authority, the victim set expands along religious and gender lines, and the epsilon referent becomes a different standing arrangement entirely.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is one reading of the contested family-law-authority kernel."
+    },
+    {
+      "id": "disagreement_locus_across_readings",
+      "question": "Where exactly do the sibling readings disagree — at the source of validity (state versus religious authority), at the allocation of rights inside the union (symmetric versus role-defined), or at the boundary of permissible unions (interfaith permission versus endogamy)?",
+      "resolution_mechanism": "Structural comparison of foundational axioms across the sibling set: each reading's distinguishing atom identifies which element it treats as constitutive, and the overlap pattern isolates the primary contested locus.",
+      "impact": "If the primary locus is validity-source, this reading's sole-criterion axiom is the contested edge and its foreclosure relations carry the load; if rights-allocation dominates, the flashpoint is statutory amendment inside this reading, and its extraction profile moves with each family-law revision.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Locus of the kernel disagreement across sibling readings."
+    },
+    {
+      "id": "bundle_indivisibility_necessity",
+      "question": "Is the standardized all-or-nothing incident bundle structurally necessary for third-party legibility (registries, hospitals, courts, banks coordinating on one status), or could menu-style partnership instruments deliver the same coordination at lower extraction?",
+      "resolution_mechanism": "Compare administrative error rates and transaction costs in jurisdictions operating parallel lighter instruments alongside full marriage against jurisdictions offering only the full bundle.",
+      "impact": "If the functions are separable, the gap between bundle cost and modular cost is excess extraction attributable to this constraint's design choice; if inseparable, part of the measured extraction is irreducible coordination cost and the tangled_rope balance shifts toward the rope pole.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the single-bundle design is coordination-necessary or rent-bearing."
+    },
+    {
+      "id": "dissolution_cost_attribution",
+      "question": "Given gender-symmetric statutes, do dissolution costs and post-dissolution outcomes fall evenly across spouses, or do observed gaps indicate residual asymmetry inside the constraint's own procedure?",
+      "resolution_mechanism": "Longitudinal income and caretaking-loss studies of divorced cohorts, controlling for pre-dissolution earnings, labor-force attachment, and child-rearing shares.",
+      "impact": "Persistent controlled gaps would raise the payer-seat extraction estimate for this constraint and point to dissolution-procedure remedies; parity would corroborate the symmetry principle the arrangement vindicates and lower the divorcing-seat d.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether symmetric statutes produce symmetric dissolution outcomes."
+    },
+    {
+      "id": "benefit_cliff_coupling_attribution",
+      "question": "Are the registration penalties borne by means-tested couples attributable to this constraint's indivisible-bundle design, or to the parallel means-testing regime's household-counting rules?",
+      "resolution_mechanism": "Natural experiment: jurisdictions that severed fiscal household-unit definitions from marital status (individualized taxation and benefit assessment) — do marriage rates and measured registration penalties diverge there?",
+      "impact": "If attributable to the bundle design, means-tested couples sit firmly in this constraint's victim set and its extraction estimate stands; if attributable to the welfare rules, those couples migrate to the coupled constraint's story and this story's extraction drops accordingly.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Cross-constraint attribution of the marriage penalty at the registration gate."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "christian_canonical_reading",
+      "hindu_dharmashastra_reading",
+      "muslim_shariat_reading",
+      "parsi_zoroastrian_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'marriage law': that label covers at least five structurally distinct validity regimes, authored as separate stories and linked through this network. This member is the state-exclusive criterion — no religious requirement, statutory gender symmetry, interfaith permitted, registration as the sole validity test. The sibling members retain religious constitutive elements and, in several cases, role-defined right allocations and union-boundary restrictions, so their victim sets and epsilon values differ structurally, not observationally; each sibling file carries its own epsilon over its own standing arrangement. Edges run from this reading to each sibling because the sole-criterion axiom, where it governs, renders rival validity sources legally inert within its jurisdiction — the foreclosure recorded in cs_structure.reading_relations. Pluralist polities segment jurisdictions (personal-law boards, opt-in civil marriage lanes) rather than resolving the contradiction; that segmentation is coexistence ACROSS frameworks and does not weaken the within-framework foreclosure this reading's axiom commits it to."
+  },
+  "gain_flow": "state_fiscal_administration",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "state_registered_symmetric_consent_union",
+    "drift_state": {
+      "moment": "contemporary_partnership_pluralism",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "christian_canonical_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hindu_dharmashastra_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "muslim_shariat_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "parsi_zoroastrian_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mutual_consent_of_autonomous_adults_is_constitutive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_registration_is_sole_validity_criterion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

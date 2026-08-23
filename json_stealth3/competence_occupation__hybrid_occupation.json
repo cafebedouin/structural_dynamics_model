@@ -1,0 +1,332 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__hybrid_occupation",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "70ff1419-4763-4d7b-88fc-a69bc5986a7d"
+  },
+  "base_properties": {
+    "extractiveness": 0.46,
+    "suppression": 0.57,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Continuous Multi-Mechanism Competence Occupation Requirement (Hybrid Reading)",
+    "topic_domain": "institutional/safety-regulation/professional-competence",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "training_industry_vendors",
+      "safety_regulators",
+      "insurers_underwriters",
+      "service_users_public"
+    ],
+    "victims": [
+      "licensed_practitioners",
+      "hro_operators"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.57
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "This story instantiates the hybrid_occupation reading of the competence_occupation kernel; would instantiating simulation_sufficiency or real_incident_necessity instead change the beneficiary/victim structure and epsilon?",
+      "resolution_mechanism": "Author the sibling stories as separate constraints and compare computed classifications. The disagreement is located in whether synthetic and plural exercise genuinely occupies the competence kernel or merely rehearses its measurable proxies.",
+      "impact": "Under simulation_sufficiency the refresher and audit mechanisms become removable overhead (lower epsilon, rope-leaning); under real_incident_necessity the entire synthetic apparatus becomes proxy performance (higher theater_ratio, piton/snare-leaning). This story's epsilon is indexed to the hybrid frame over the fixed referent of the standing arrangement.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of the competence_occupation kernel; sibling readings would restructure beneficiaries and epsilon over the same referent."
+    },
+    {
+      "id": "marginal_mechanism_dose_response",
+      "question": "Does each additional mandated mechanism add independent competence coverage, or do the mechanisms overlap enough that the marginal mandate is redundant over-provision?",
+      "resolution_mechanism": "Dose-response meta-analysis across mechanism combinations: fit skill-decay curves against varying doses of simulator hours, refresher cycles, procedural drilling, and audit frequency, testing whether each mechanism shifts the decay intercept independently.",
+      "impact": "Redundancy at the margin converts the excess from coordination cost to extractive overhead, raising effective extraction and pushing the regime toward the snare-leaning edge of tangled_rope; demonstrated additivity supports treating the surplus as the price of the assurance function itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the multi-mechanism menu is additive in coverage or partially redundant over-provision."
+    },
+    {
+      "id": "checkride_validity_decay",
+      "question": "Has high-stakes standardized evaluation (proficiency checks, scored line audits) decoupled from the competence it certifies — do audit and check findings actually predict subsequent event involvement?",
+      "resolution_mechanism": "Correlate line-audit and proficiency-check outcomes with subsequent operator-level event rates; compare predictive validity before and after data-driven qualification programs were introduced.",
+      "impact": "If decoupled, the audit mechanism's theater_ratio is understated and the enforcement seat's coordination claim weakens toward ritual; if predictive, line audits are the regime's highest-value mechanism and the measured theater is concentrated elsewhere.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Goodhart risk on the evaluation mechanisms: whether checking still measures the competence it gates."
+    },
+    {
+      "id": "authority_grounding_underdetermination",
+      "question": "Is the regime's authority grounded in expertise (technical bodies interpreting decay evidence and revising curricula accordingly) or in extraction (a regulator-vendor complex whose budgets and markets depend on kernel stability)?",
+      "resolution_mechanism": "Trace revision history: when decay or transfer evidence contradicted a mandated configuration, did mandates revise toward the evidence (expertise behavior) or persist with interpretive absorption inside approved-program reviews (extraction behavior)?",
+      "impact": "Expertise grounding supports the coordination half of the tangled_rope reading; extraction grounding recasts the agenda_setter seat as captured, strengthens the snare reading, and would reclassify the authority structure's drift as denial-driven.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "CS-framing under-determination: the same institutional surface supports an expertise reading and an extraction reading with different classifications."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "training_industry_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Manufactures and operates full-fidelity simulators, delivers recurrent courseware, and staffs instructor and examiner services. Demand is set by regulatory mandate rather than discretionary purchase, in a concentrated supplier market with pricing power. Each added mechanism — a new device class, a new audit program, a new refresher cycle — expands the addressable market; device utilization is contracted years ahead."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Writes and enforces the recurrent-training requirement, approves curricula and training devices, and administers proficiency checking through designated examiners. Budget and staffing scale with program scope, and post-incident ratchets expand the mandate. The agency's public legitimacy rests on visibly maintaining the regime; career civil servants spend entire working lives inside the certification apparatus."
+    },
+    {
+      "name": "licensed_practitioners",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Attends scheduled simulator sessions, refresher ground school, and procedural drills, and is subject to line audits and periodic proficiency checks. Bears duty time, study load, evaluation stress, and in some professions direct fees. Failure at a check suspends currency and livelihood pending remediation. Unions negotiate scheduling and pay protections but not the existence of the requirement; leaving the profession forfeits accumulated career capital and professional identity."
+    },
+    {
+      "name": "hro_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Funds and schedules the entire training apparatus, absorbs fleet and theatre downtime for training cycles, and passes much of the cost into prices. In exchange receives documented-compliance liability shielding, insurability, and public legitimacy. Cannot exit the regime while operating under license; jurisdiction shopping at the regulatory margins is possible but does not remove the obligation."
+    },
+    {
+      "name": "insurers_underwriters",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Conditions coverage on documented compliance with the training regime and feeds audit and check records into actuarial models. The regime gives them a legible risk object to price; they reinforce enforcement by writing training standards into coverage conditions without operating any of it, and can reprice or withdraw from lines if the regime loosens."
+    },
+    {
+      "name": "service_users_public",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Receives the safety assurance the regime promises — flights, surgeries, and plant operations conducted by currently qualified crews. Pays embedded training costs in fares, bills, and premiums. Holds no seat in configuration decisions and has no practical alternative service mode that escapes the regime's cost structure."
+    },
+    {
+      "name": "training_research_community",
+      "role": "observer",
+      "secondary_role": "beneficiary",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produces the skill-decay curves, transfer-of-training studies, and simulator-fidelity evaluations that every seat cites in configuration debates. Research funding and publication careers depend on the optimization question remaining open; the community supplies evidentiary raw material without administering or purchasing anything."
+    },
+    {
+      "name": "evidence_based_training_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Researchers, former check airmen, and operator training managers who argue for leaner, competency-outcome-based configurations in place of mandated mechanism menus. They publish, testify, and staff advisory committees, but hold no agenda-setting vote; their proposals enter the process and exit diluted."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the assurance problem: how a profession guarantees to regulators, insurers, and the public that rare-event-critical skills remain occupied despite long quiescent periods between real demands. The multi-mechanism design responds to heterogeneous decay rates and observability limits — simulation exercises rare and dangerous procedures safely, refreshers rebuild declarative knowledge, procedural drilling maintains motor sequences, and line audits observe behavior that only appears in real work.",
+    "transfer_function": "Moves time, money, and attention: from practitioners (duty time, off-duty study, evaluation stress) and operators (training budgets, equipment downtime) to training vendors (device hours, courseware, instruction), regulators (program fees funding oversight scope), and research institutions (study populations and data access); moves assurance, currency, and employability back to practitioners.",
+    "absent_voices": "Evidence-based minimalists and competency-assessment advocates hold no agenda-setting seat — they advise and publish but do not decide. Practitioners who exited under check failure are absent from configuration debates entirely. Service users are present only through proxy representation. The unanimity behind mechanism multiplication partly reflects who was never in the room.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the multi-mechanism requirement vanished overnight, insurers would reprice or withdraw coverage pending new risk evidence, regulators would rebuild oversight instruments after the first decay-attributed incident, vendors would lose mandate-guaranteed demand, practitioner currency would lapse into private arrangements, and the public assurance signal would collapse — the HRO labor market and its insurance and regulatory surround would reorganize around whatever replaced it.",
+    "founding_problem": "Post-war jet-age accident clusters and early nuclear incidents showed that critical skills decay during long quiescent periods, that one-time licensing did not maintain competence, and that recurring failures traced to rustiness and unrehearsed rare procedures. The arrangement was built to solve continuous assurance of rare-event readiness.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Accident-investigation bodies outside the beneficiary set continue to attribute residual incidents partly to skill lapse and unrehearsed conditions, and the peer-reviewed human-factors literature independently documents decay curves and transfer gaps; neither collects training rents. Corroboration for the problem's liveness is therefore external and reasonably strong; corroboration for any particular configuration is not, which is precisely the open question this reading carries."
+  },
+  "gain_flow": "training_industry_vendors",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__simulation_sufficiency",
+      "competence_occupation__real_incident_necessity"
+    ],
+    "dual_formulation_note": "Constraint family decomposition of the colloquial label 'competence maintenance training' (epsilon-invariance principle). The label conflates three structurally distinct claims: (1) hybrid_occupation — this file — plural mechanisms jointly necessary, configuration optimally indeterminate; (2) simulation_sufficiency — simulator drills alone prevent decay, making refresher/audit mechanisms removable overhead; (3) real_incident_necessity — only actual catastrophic incidents provide authentic occupation conditions, making the synthetic apparatus proxy performance. Each carries its own epsilon, beneficiary structure, and classification; this upstream reading (highest institutional entrenchment) influences both siblings because regulators cite hybrid necessity when defending budgets against sim-sufficiency simplification and against incident-necessity skepticism. Sibling files must link back via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Across high-reliability industries — aviation, nuclear operations, surgery, emergency response — a standing requirement holds that licensed practitioners maintain competence through continuous engagement with multiple distinct exercise mechanisms: full-fidelity simulation, periodic refresher instruction, procedural reinforcement drilling, and line audits of real-work performance. Regulators enforce it through proficiency checking and certificate action; operators fund it; a specialized training industry delivers it; insurers condition coverage on it. This story instantiates the hybrid_occupation reading of the competence_occupation kernel: no single mechanism suffices, each exercises and observes a different slice of the competence surface, and the optimal configuration among mechanisms is unsettled — making training optimization a standing research problem. Per the epsilon-invariance principle this file authors ONE reading; the sibling readings are separate constraints linked through network.affects_constraints. Epsilon's referent is the standing multi-mechanism arrangement as it actually operates, assessed by this reading's lights — never a hypothetical leaner regime. The claimed_type (tangled_rope) is authored independently of the metrics: the regime coordinates genuine assurance AND carries asymmetric extraction; the engine computes per-seat classifications from the structural data, and any divergence between claim and computed type is the measurement the corpus exists to take.\n\nKEY AGENTS (by structural relationship):\n- licensed_practitioners: Primary target (organized/identity_locked) — bears the regime's time, stress, and career-risk costs\n- training_industry_vendors: Primary beneficiary (organized/arbitrage) — collects the largest direct monetary flow under mandate-guaranteed demand\n- safety_regulators: Agenda setter (institutional/identity_locked) — writes, enforces, and ratchets the requirement; scope scales with it\n- hro_operators: Dual-positioned payer-beneficiary (powerful/constrained) — funds the apparatus, receives liability shielding and insurability\n- insurers_underwriters: Beneficiary (institutional/arbitrage) — prices the regime's records, reinforces enforcement through coverage conditions\n- service_users_public: Diffuse beneficiary-payer (powerless/constrained) — receives safety assurance, pays embedded costs, holds no configuration seat\n- training_research_community: Analytical observer (analytical/analytical) — supplies the decay curves and transfer studies all seats cite\n- evidence_based_training_advocates: Excluded voice (moderate/mobile) — argues for leaner outcome-based configurations; published but never agenda-setting",
+    "logic_rationale": "Extractiveness 0.46: the majority of regime spend purchases real service delivery (device operation, instruction, audit labor), but extraction enters through concentrated-market pricing on mandate-guaranteed demand, uncompensated practitioner time, and chronic over-provision sustained by the unresolved configuration question — when the optimal dose is unknown, the dose drifts upward and stays there. Suppression 0.57: enforcement is sanction-backed (failed checks suspend currency and livelihood; certificates are revocable) and opting out while practicing is not permitted, but broad practitioner consent, union negotiation, and professional buy-in temper the coercive surface. Theater_ratio 0.38: a substantial minority of activity is teaching-to-the-profile and credit-hour ritualism, against a functional core of genuine skill exercise; the ratio rises over the interval as standardized high-stakes evaluation matures. Accessibility_collapse 0.45: alternatives do not fully collapse — data-driven qualification programs, competency-based models, and the sim-sufficiency proposal remain live and partially implemented, which is itself evidence against mountain status. Resistance 0.5: union campaigns over unpaid training time, professional revolt against certification-maintenance mandates, and operator cost lobbying are real and recurring. Suppression is authored as a raw structural property and is NOT scaled by power or scope; only extractiveness is scaled, by directionality and scope, in the engine's computation. The three measurement series run on one shared time grid ({0,10,20,30,40,50}) so every metric is authored at every examined point; the historical dynamic is a post-incident ratchet (step increases after visible accidents, partial relaxation in budget cycles) that decade-scale sampling renders as a smooth rise — the steps, not the slope, are the real enforcement history.",
+    "perspectival_gap": "Four seats compute the same structure differently. From the practitioner seat (identity_locked payer) the regime is enforced burden with existential stakes — a failed check is a career event, and the requirement's necessity is experienced as imposed. From the vendor seat (arbitrage beneficiary) it is a legitimate, durable market serving safety. From the regulator seat (identity_locked agenda_setter) it is the mission itself — the agency has become its oversight function, and questioning the configuration questions the institution. From the insurer seat (arbitrage beneficiary) it is a legible risk object that makes underwriting possible. The engine derives these divergent classifications from power, exit, and directional position; the divergence, not any single seat's verdict, is the finding.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation: vendors, regulators, insurers, and the public derive low directionality (subsidized or near-symmetric); practitioners derive high directionality (full-target side, amplified by identity_locked exit). Two overrides correct derivations the structural arrays cannot express. First, powerful -> 0.45: hro_operators are listed among victims because training budgets are a direct cost they bear, but the derivation from victim-listing alone would push them toward the full-target end; their liability shielding, insurability, and cost pass-through make them genuinely dual-positioned, sitting well short of full target. Second, powerless -> 0.30: service_users_public are listed as beneficiaries, but they also pay embedded costs in every fare, bill, and premium; the override places them slightly beneficiary-side of symmetric rather than at the subsidized pole. Practitioners (organized, identity_locked, victim-listed) need no override — the derivation already places them near the full-target end, which matches their structural position.",
+    "mandatrophy_analysis": "The founding problem — continuous assurance of rare-event readiness — is live and externally corroborated, so this is not a resolved mandate wearing an old uniform; the R5 mismatch consumer should find status=live crossed with verdict=world_rearranges and raise no zombie flag. The classification still earns its keep at the component level: the regime's theater concentrates in its evaluation mechanisms (teaching-to-the-checkride, credit-hour accumulation), and if line audits decay into scored ritual — the checkride_validity_decay omega — the audit component becomes piton-flavored while the ensemble persists on the strength of its other legs. Authoring tangled_rope rather than rope prevents the opposite mislabel: reading the vendor receipts and practitioner burden as pure extraction would erase the genuine assurance function that accident investigations keep vindicating; authoring rope would erase the mandate-guaranteed demand structure that keeps the dose above any defensible optimum. The perpetual-optimization structure is the hinge: unresolved configuration questions sustain over-provision, and over-provision is where the extraction lives.",
+    "kernel_context": "Kernel: competence_occupation — what it takes to keep rare-event-critical skill occupied rather than decayed. This file instantiates the hybrid_occupation reading: competence occupation requires continuous multi-mechanism exercise (simulation + refresher + procedural reinforcement + line audits), with the optimal configuration unsettled. Sibling readings, authored as separate constraints: simulation_sufficiency (simulator drills alone constitute sufficient exercise and prevent decay) and real_incident_necessity (only actual catastrophic incidents provide the authentic conditions that occupy the kernel). The disagreement is located in whether synthetic and plural exercise genuinely occupies the competence kernel or merely rehearses its measurable proxies — and consequently in which mechanisms are necessary versus removable overhead. This reading's foundational premises are empirically contingent (transfer-of-training studies, decay curves), which is why the kernel's contest is resolvable in principle yet has persisted for decades: the observables are plural, expensive, and slow."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "plural_mechanism_occupation_baseline",
+    "drift_state": {
+      "moment": "contemporary_high_fidelity_simulation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_sufficiency",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "plurality_of_mechanisms_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "synthetic_exercise_genuinely_occupies_kernel",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

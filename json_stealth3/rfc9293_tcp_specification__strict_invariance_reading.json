@@ -1,0 +1,367 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__strict_invariance_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "ce95631b-da87-451d-9769-3a3335195f63"
+  },
+  "base_properties": {
+    "extractiveness": 0.16,
+    "suppression": 0.3,
+    "theater_ratio": 0.07,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.38,
+    "claimed_type": "rope",
+    "human_readable": "RFC 9293 TCP Specification — Strict Invariance Reading (Invariant State-Machine Mandate)",
+    "topic_domain": "technological/standards-governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "mainstream_os_tcp_stacks",
+      "application_developers",
+      "internet_end_users",
+      "backbone_network_operators"
+    ],
+    "victims": [
+      "embedded_and_iot_implementers",
+      "middlebox_vendors_and_operators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ietf_transport_community",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Drafts, revises, and publishes the specification through working-group consensus, maintains the errata system, and organizes interop events where implementations are checked against one another. Its authority is voluntary: implementers follow because the process demonstrates competence, not because compliance is compelled. When TCP's shared rules bounded progress on latency and ossification problems, this community chartered QUIC and moved part of its transport work outside the document it administers."
+    },
+    {
+      "name": "mainstream_os_tcp_stacks",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Maintains the kernel transport stacks in Linux, Windows, macOS, and the BSDs. Receives guaranteed operability with every other stack on the planet, which is the foundation of its platform value. Pays recurring conformance cost: each specification revision raises some recommendations to requirements, and the stacks must re-verify behavior against the tightening text. Cannot abandon the arrangement because every client and server expects it, though the large stack owners jointly fund QUIC development as a hedge."
+    },
+    {
+      "name": "embedded_and_iot_implementers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Builds medical devices, industrial controllers, automotive modules, and consumer IoT firmware that must speak the transport protocol with minimal memory and engineering slack. Depends totally on every peer honoring the published machine, because it cannot afford defensive parsing of hostile or nonstandard behavior; when any node on the path deviates, these devices fail first and hardest. Firmware ships for a decade or more under certification regimes, so switching transports is rarely possible after design freeze. Bears the full conformance cost of each revision with the least capacity to absorb it, while still receiving ordinary operability like everyone else."
+    },
+    {
+      "name": "middlebox_vendors_and_operators",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Builds and operates firewalls, NATs, load balancers, and WAN optimizers that inspect, rewrite, or terminate transport flows. Under the strict reading of the specification, flow modification is classified as violation rather than feature, and successive revisions have converted what these products routinely did — stripping unfamiliar options, coalescing acknowledgments, rewriting sequence numbers — into documented nonconformance that the text now works around by making formerly optional behaviors mandatory to preserve. Enterprise demand for traffic inspection persists, so these firms adapt and re-engineer rather than exit."
+    },
+    {
+      "name": "application_developers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Writes software against a reliable byte-stream abstraction and never negotiates transport semantics per peer. Gains the largest single economies of the arrangement: one mental model, one debugging literature, universal reach. Where latency sensitivity or head-of-line blocking hurts, the migration path to HTTP/3 over QUIC is real and increasingly paved, so exit is available at the application layer."
+    },
+    {
+      "name": "internet_end_users",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Experiences the arrangement only as the background fact that devices and services interoperate. Pays nothing directly and contributes no conformance effort. Individual voice is negligible; aggregate purchasing and attention decisions shape which stacks and transports platforms ship."
+    },
+    {
+      "name": "backbone_network_operators",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Carries the world's transport flows and receives congestion-shaped, statistically predictable traffic without contributing any conformance effort of its own. Capacity planning, peering economics, and outage forensics all rest on sender behavior following the published rules. Cannot decline to carry the protocol; its stake is in the invariant holding everywhere its packets transit."
+    },
+    {
+      "name": "quic_http3_community",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Browser, CDN, and cloud vendors that concluded the shared transport rules could not be amended fast enough for their latency and ossification problems, and responded by rebuilding transport over encrypted UDP where intermediaries cannot read or modify state at all. Rather than contesting the document's requirements from inside, they routed around them; their growing traffic share is a standing demonstration that exit from the arrangement is viable at scale."
+    },
+    {
+      "name": "conformance_testing_community",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Maintains test harnesses and packet-crafting tools, runs interop bake-offs, and publishes measurement studies of deployed behavior. Collects nothing and pays nothing under the arrangement; its findings serve both camps — catching implementer deviation for the strict camp and documenting systematic path behavior for those who study what the network actually does."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides one precisely specified, publicly maintained transport state machine so that independently written, independently evolving implementations interoperate by construction rather than by negotiation; embeds congestion control so that millions of competing flows share finite link capacity without destroying it.",
+    "transfer_function": "Moves compliance effort and behavioral restraint from every participating implementer into the shared interoperability surface: each stack pays exact-replication cost and forgoes unilateral deviation, and in exchange receives guaranteed mutual operability. No money moves; the goods transferred are engineering effort, design freedom, and conformity.",
+    "absent_voices": "Middlebox builders were historically outside the room where endpoint correctness was defined — the end-to-end design tradition treated intermediaries as obstacles to be designed around, not constituents. Latency-sensitive application designers and operators of high-loss satellite links objected to inflexible semantics and largely left the conversation by funding and deploying QUIC instead of litigating the text. Embedded-device makers, with the least engineering slack and the most total dependence on the invariant, have the least representation in working-group deliberation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the invariant vanished overnight, stacks would diverge immediately and every cross-vendor connection would renegotiate behavior experimentally. Congestion control would fragment, and shared links would lurch back toward the collapse dynamics the mandates were written to prevent. Middleboxes would optimize against whichever dialects survived in each region. The transport layer would reorganize into incompatible application and regional fiefdoms — the pre-TCP fragmentation the specification exists to have ended.",
+    "founding_problem": "Heterogeneous host systems on a shared packet-switched network could not interoperate reliably: each vendor shipped ad hoc host-to-host procedures, and the 1986 congestion collapse demonstrated that uncoordinated sending behavior destroyed the shared infrastructure itself.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Attested from outside the benefiting parties: independent interop bake-offs and third-party conformance tooling still surface cross-implementation divergence whenever a requirement loosens; the academic measurement literature documents fresh breakage whenever middlebox behavior shifts; and the QUIC design community — a constituency that exited the arrangement — attests in its own charter materials that the shared-fate properties of the incumbent transport were precisely the problem it had to solve differently. No attestation from inside the governance process is required."
+  },
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 27,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.16
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 27,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 27,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.07
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "rfc9293_tcp_specification__optimization_latitude_reading",
+      "rfc9293_tcp_specification__middlebox_realism_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the TCP specification' decomposes into three structurally distinct constraints with distinct epsilon values over distinct referents. This story instantiates the strict invariance reading: the specification as a mandated invariant machine, epsilon low (0.16) because the compliance burden is dominated by genuine coordination cost. The optimization latitude reading reads the same text as specifying behavioral outcomes with internal freedom, absorbing much of the compliance cost into permitted latitude (epsilon lower still). The middlebox realism reading takes deployed-path behavior as the real protocol and treats specification authority as subordinate, exposing substantially more contestation and a higher effective epsilon against a referent that includes the middlebox population. Upstream-downstream structure: the strict reading is the established textual baseline; the latitude reading mediates between text and practice; the realism reading is the measurement-driven challenger whose evidence the strict tradition repeatedly absorbs (each tightening round codifies a middlebox behavior as a constraint on endpoints). All three files link one another through affects_constraints."
+  },
+  "commentary": {
+    "narrative_context": "RFC 9293 specifies TCP as a precise state machine, and the strict invariance reading holds that implementations must replicate that machine exactly — externally observable behavior included — because global interoperability is a commons that unilateral deviation destroys. Middlebox modification of flows is classified as violation, not feature. The claim/metric gap is intentional per the independence rule: the constraint is CLAIMED as rope (a genuine collective-action solution whose participants are net beneficiaries and whose alternatives are not suppressed) while the metrics are authored as descriptively true of its actual operation — low but nonzero compliance burden, conformity enforcement that has visibly hardened over four decades, and a small paying minority. This story is one reading of the rfc9293_tcp_specification kernel; the optimization latitude and middlebox realism readings are separate constraints with their own epsilon values and stakeholder surfaces (see network.dual_formulation_note). KEY AGENTS (by structural relationship): see commentary.key_agents. Assumptions stated: interval year 0 corresponds to the original host-to-host specification's publication (1981) and year 45 to the present consolidation under RFC 9293 (2026); the strict reading's victim class is taken to be implementations whose reliance on the published guarantees is total, principally resource-constrained embedded systems, together with flow-modifying intermediaries whose existing practice the reading outlaws.",
+    "key_agents": [
+      "- ietf_transport_community: Agenda setter (institutional/mobile) — authors, revises, and polices the invariant through working-group consensus, errata, and interop events; authority is voluntary and demonstrated by its mobility (it chartered QUIC when the incumbent transport bounded progress)",
+      "- mainstream_os_tcp_stacks: Primary beneficiary with real compliance cost (powerful/constrained) — maintains kernel state machines, receives universal operability, hedges via QUIC funding",
+      "- embedded_and_iot_implementers: Principal paying seat (moderate/trapped) — least engineering slack, total reliance on the published guarantees, hardest failures under any deviation",
+      "- middlebox_vendors_and_operators: Paying seat under prohibition (powerful/constrained) — flow-modifying products reclassified as violations; adapts and re-engineers rather than exits",
+      "- application_developers: Beneficiary (moderate/mobile) — consumes the reliable byte-stream abstraction; migrates to HTTP/3 where latency binds",
+      "- internet_end_users: Diffuse beneficiary (organized/immediate) — experiences the commons as 'the Internet just works'; no direct contribution",
+      "- backbone_network_operators: Beneficiary without compliance cost (institutional/constrained) — receives congestion-shaped, analyzable traffic it did nothing to produce",
+      "- quic_http3_community: Exited constituency (powerful/arbitrage) — routed around the invariant over encrypted UDP; standing proof that exit is viable at scale",
+      "- conformance_testing_community: Analytical observer (analytical/analytical) — measures conformity for the strict camp and deviation for the challengers; collects and pays nothing"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.16 at interval end) because the burden the arrangement imposes — exact replication, no unilateral latitude, periodic re-verification as requirements tighten — is real but dwarfed by the operability every seat receives, and no seat converts the arrangement into income; the value sits just above the information_standard coordination floor, which is the honest neighborhood for a protocol whose implementation cost exceeds a naming convention but whose surplus is not captured by anyone. Suppression (0.30) is authored as a raw, unscaled structural property: participation is voluntary, alternatives are not merely tolerated but thriving (QUIC), and no outsider is coerced — what suppression exists is conformity pressure inside the cooperating class, and the suppression_requirement series traces its deliberate hardening (host requirements documents, mandatory congestion control after the 1986 collapse, institutionalized interop testing, and finally the current specification's explicit retreat from liberal acceptance of malformed input). That series is authored because this story specifically tracks enforcement-capacity change: the trajectory rises monotonically as the policing machinery matured, with no oscillation, so no cyclical pattern is claimed. Theater_ratio stays negligible (0.07) because nearly all specified activity is functional — the machine does the work it describes — with a thin residue of pro-forma requirements documented more than tested. Accessibility_collapse (0.42) reflects that understanding the arrangement does not dissolve alternatives: QUIC, SCTP, and raw-UDP designs remain reachable at moderate friction, though kernel-level ubiquity keeps exit expensive for stacks and devices. Resistance (0.38) is real but channeled: it lives in the deployed middlebox population's accumulated behavior, in the latitude constituency's pushback on requirement inflation, and in the exited QUIC community's existence, rather than in open defiance. All three tracked series share one six-point time grid (years 0, 9, 18, 27, 36, 45) with every metric authored at every point. Receipt surface: gain_flow is authored as 'diffuse' after checking every named seat — no seat accrues the arrangement's surplus as income; compliance effort dissipates into maintenance and operability gains are benefit-from, not receipt-of. fixing_cost is authored as 'prohibitive': the only seat able to relax the invariant (the agenda setter) faces removal whose losses — global interoperability collapse — exceed any relief by orders of magnitude, so the cost class of fixing is prohibitive relative to its benefit.",
+    "perspectival_gap": "The seats should compute differently and the engine owns that computation. From the agenda setter's chair the arrangement is a successfully maintained commons it built and keeps repairing. From the mainstream stack seat it is a favorable trade: recurring conformance cost purchased with universal operability. From the embedded seat it is a fragile dependency — a promise of universal conformity on which its devices stake everything, honored by a network that only approximately complies. From the middlebox seat it is a prohibition: a text that reclassifies its products' core behaviors as violations and steadily converts former liberties into documented nonconformance. From the exited QUIC seat it is a solved problem, visible only in retrospect. Same document, same requirements text — five structurally different arrangements depending on where one stands. No authored field reconciles these; the divergence is the measurement.",
+    "directionality_logic": "Directionality follows the beneficiary/victim declarations and exit structure. The four beneficiary groups sit near the subsidized end: end users and backbone operators receive the commons without paying conformance cost (lowest d), application developers pay little beyond adherence, and mainstream stacks sit slightly higher in d because their secondary paying position is real. The embedded implementers are the sharpest paying seat: trapped exit, total guarantee-reliance, and full compliance cost with minimal slack place them near the target end despite their secondary beneficiary position. Middlebox operators also sit near the target end within this reading's frame — but their payment is forfeiture of an interference liberty, not a transfer flowing to anyone else; the arrangement extracts conformity from them without depositing the proceeds anywhere, which is why gain_flow remains diffuse despite two declared victim classes. Global spatial scope applies the engine's modest verification-difficulty amplification to the paying seats' effective burden; the engine owns that arithmetic. Suppression is authored unscaled, as a raw structural property, and the commentary treats it accordingly.",
+    "mandatrophy_analysis": "The founding problem — heterogeneous hosts that cannot interoperate, and shared infrastructure that collapses under uncoordinated sending — is live and permanently so: it regenerates with every new implementer, every new middlebox behavior, and every new application class. Because the founding problem is live and the verdict is world_rearranges, the mismatch consumer finds no dead-problem-plus-world_rearranges flag, and no zombie signature is asserted. The classification discipline this story exercises runs in both directions: calling the arrangement rope prevents the paying seats' real burdens (embedded fragility, middlebox prohibition) from being misread as pure extraction riding a fake coordination story — the coordination function here is as genuine as coordination gets. Symmetrically, the temporal record watches the failure mode specific to ropes: requirement inflation that accumulates compliance cost faster than interoperability benefit (visible as the slow base_extractiveness creep from 0.10 to 0.16 alongside the steeper enforcement hardening), and the QUIC exit as an early-warning indicator that the cooperating population could drain. If a future revision cycle kept tightening requirements after the last interoperability benefit was banked, this rope would begin converting into something with a captured maintenance constituency; the measurements exist to date that transition if it comes.",
+    "kernel_context": "This constraint is the strict invariance reading of the rfc9293_tcp_specification kernel: the specification as a mandated invariant machine that implementations must replicate exactly, with zero tolerance for deviation and middlebox modification classified as violation. Its sibling readings are the optimization latitude reading (the text specifies behavioral outcomes and permits implementation freedom within semantic bounds) and the middlebox realism reading (real TCP is the path-dependent protocol shaped by the deployed middlebox population, and specification authority is subordinate to what the network does). None of the three relations is a foreclosure: strict and latitude are synthesizable in a single framework via black-box conformance semantics (external-behavior invariance with internal freedom), and strict and realism are co-held in hybrid form by current practice, which mandates endpoint-side strictness while accommodating documented middlebox behavior. The disagreement's location differs by pair: with latitude it is the meaning of conformance; with realism it is the locus of authority — text versus deployment. The strict reading's epsilon (0.16) is authored over the strict regime as referent; the siblings author their own epsilons over their own referents in their own files."
+  },
+  "omegas": [
+    {
+      "id": "conformance_binding_scope",
+      "question": "Does the strict reading's mandate to 'replicate the invariant machine exactly' bind externally observable protocol behavior, internal algorithm structure, or both?",
+      "resolution_mechanism": "Specification of conformance-test semantics: a black-box suite (packet-exchange equivalence) versus white-box review (internal timer, buffer, and algorithm audit) would settle which freedoms survive.",
+      "impact": "A wider binding (internals included) raises epsilon by removing implementer design freedom the narrower reading permits, and shifts some latitude-reading territory into this story's ledger.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in what exact replication covers — observable wire behavior versus internal implementation structure."
+    },
+    {
+      "id": "coordination_cost_vs_latent_burden",
+      "question": "Is the epsilon above the information_standard floor genuine coordination cost (timers, congestion-control complexity, re-verification cycles), or does requirement inflation impose burden beyond what interoperability needs?",
+      "resolution_mechanism": "Itemized accounting comparing per-requirement implementation cost against measured interoperability benefit, using interop-event failure data before and after individual requirement tightenings.",
+      "impact": "If a material share of the burden buys no interoperability, the rope certification weakens and the excess flags as accumulating overhead serving process maintenance rather than participants.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether measured compliance burden tracks the coordination function or exceeds it."
+    },
+    {
+      "id": "victim_attribution_question",
+      "question": "Are strict-guarantee-reliant implementations harmed by the invariant itself, or by other parties' nonconformance to it — that is, does the declared victim class belong to this reading's ledger or to the enforcement-gap ledger?",
+      "resolution_mechanism": "Counterfactual comparison across readings: model embedded-system failure rates under strict, latitude, and realism regimes; if failures fall under looser regimes, the harm attributes to the invariant's overpromise; if they rise, it attributes to deviation.",
+      "impact": "Attribution to the invariant itself would push this story's effective extraction upward and toward a hybrid classification; attribution to enforcement gaps leaves the rope intact with the gap recorded elsewhere.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the embedded-implementer victim class is caused by the strict guarantee or by its incomplete observance."
+    },
+    {
+      "id": "sibling_latitude_structural_delta",
+      "question": "What structurally changes under the optimization latitude reading of the same kernel text?",
+      "resolution_mechanism": "Generate the sibling story: conformance defined at the behavioral-outcome level absorbs much of the compliance cost into permitted latitude, thinning the victim set to parties harmed by outcome-level divergence only, and lowering epsilon below this reading's 0.16.",
+      "impact": "Documents the committer delta: the same text yields a different constraint with a smaller paying class and weaker enforcement need; classification comparisons across the pair measure how much of the burden is definitional rather than physical.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-routing omega: the declared structural difference this reading's latitude sibling would exhibit."
+    },
+    {
+      "id": "sibling_realism_structural_delta",
+      "question": "What structurally changes under the middlebox realism reading of the same kernel text?",
+      "resolution_mechanism": "Generate the sibling story: the referent shifts from the specification to the deployed-path protocol, the middlebox population moves from violating class to constitutive fact, and epsilon is computed against endpoint-plus-path behavior — plausibly yielding a hybrid classification with identifiable coordinated and paying classes.",
+      "impact": "Documents the committer delta: authority locus moves from text to deployment; this reading's victim classes redistribute (middleboxes exit the paying set; strict-reliant implementers remain exposed); the pair's comparison quantifies the cost of the text-versus-dispute over sovereignty.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-routing omega: the declared structural difference this reading's realism sibling would exhibit."
+    },
+    {
+      "id": "quic_exit_drain_lifecycle",
+      "question": "If encrypted-transport exit continues scaling, does the strict regime's cooperating population drain to the point where the arrangement persists mainly by inertia?",
+      "resolution_mechanism": "Transport-share telemetry: track the HTTP/3 fraction of web traffic and the emergence of non-web QUIC applications over the coming decade.",
+      "impact": "Sustained drain would date a lifecycle transition in which the specification's function persists but its living constituency shrinks — the characteristic precursor to an inertial, theatrically maintained remainder; a plateau would indicate a stable two-protocol equilibrium.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the exited QUIC constituency foreshadows a draining of the strict regime's coordination base."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "invariant_state_machine_canon",
+    "drift_state": {
+      "moment": "post_quic_middlebox_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "optimization_latitude_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "middlebox_realism_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "invariant_machine_replication_mandated",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "middlebox_modification_is_violation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

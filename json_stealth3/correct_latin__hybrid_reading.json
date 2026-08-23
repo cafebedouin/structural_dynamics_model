@@ -1,0 +1,357 @@
+{
+  "header": {
+    "constraint_id": "correct_latin__hybrid_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "0293e3e8-2176-4ece-83bd-fd91aada56a5"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.35,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Correct Latin — Hybrid Reading: Transmitted Core with Textual Correction",
+    "topic_domain": "historical_linguistics/philology/intellectual_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "classical_philological_establishment",
+      "latin_literary_community"
+    ],
+    "victims": [
+      "latin_learners",
+      "medieval_transmission_institutions"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 120
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 120,
+      "value": 0.35,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This story instantiates the hybrid reading of the correct_latin kernel; what would the sibling readings change structurally if they governed instead?",
+      "resolution_mechanism": "Compare against the sibling stories correct_latin__continuity_reading and correct_latin__discontinuity_reading, authored as separate constraints over the same kernel.",
+      "impact": "Under the continuity reading the victim set collapses — transmitted forms are fully legitimate, no correction extraction exists, and the arrangement approaches pure coordination. Under the discontinuity reading the victim set expands — all medieval transmission becomes deviation, the establishment's authority becomes total, and the arrangement hardens toward enforced reconstruction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this is one of three readings of the correct_latin kernel; sibling readings are separate constraint stories, not positions inside this one."
+    },
+    {
+      "id": "correctable_surface_boundary",
+      "question": "Is the line between the protected grammatical core and the correctable surface (orthography, vocabulary) actually drawable, or does every correction decision secretly re-decide it?",
+      "resolution_mechanism": "Corpus study of accepted versus rejected emendations across a century of critical editions: if accepted corrections sort cleanly into surface classes, the boundary is real; if the accepted set is explicable only by editorial preference, it is not.",
+      "impact": "If the boundary is not drawable, the hybrid reading collapses toward one of its siblings — everything correctable resolves to the discontinuity pole, nothing correctable to the continuity pole — and the arrangement should be recomputed under whichever pole the evidence supports.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the hybrid reading's core/surface distinction is a stable structural fact or a post hoc rationalization of editorial practice."
+    },
+    {
+      "id": "dual_position_directionality",
+      "question": "Do the medieval transmission institutions sit nearer the target end or the beneficiary end of the arrangement's direction, given that the standard simultaneously legitimizes their grammatical core and emends their surface forms?",
+      "resolution_mechanism": "Track whether transmission institutions adopt corrected forms in their own new writing and editions (net movement toward the standard) or maintain transmitted forms against corrections (net resistance).",
+      "impact": "If net-adopting, the extraction concentrates on learners and the institutional seats compute near-symmetric, pulling the arrangement toward pure coordination at those seats; if net-resisting, the payer-side derivation stands and the arrangement is more asymmetric than the dual role suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Directionality ambiguity for the dual-positioned transmission institutions; the structural derivation from their payer role may overstate their target position."
+    },
+    {
+      "id": "enforcement_erosion_or_internalization",
+      "question": "Does the falling enforcement series record the standard losing its grip, or the standard no longer needing enforcement because conformity has been internalized by a smaller, self-selecting community?",
+      "resolution_mechanism": "Compare conformity to the standard in unenforced contexts — living-Latin conversation, informal scholarly writing, online Latin communities — against conformity in enforced contexts such as examinations and refereed editions.",
+      "impact": "If grip is being lost, the arrangement is drifting toward theatrical persistence — maintenance rituals outliving obedience — and should be tracked for piton-like decay; if internalized, the falling series records a stable equilibrium and the arrangement is healthier than its enforcement numbers suggest.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether declining suppression_requirement reflects decay of the arrangement or maturation beyond the need for enforcement."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "correct_latin__continuity_reading",
+      "correct_latin__discontinuity_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'correct Latin' covers three structurally distinct standards, decomposed per the epsilon-invariance principle into three stories over one kernel: correct_latin__continuity_reading (transmitted practice as the whole standard — negligible correction extraction, victim set collapses), correct_latin__discontinuity_reading (ancient witness as the whole standard — total correction authority, victim set expands to all transmission), and this story, the hybrid reading (partial continuity with targeted reform — bounded extraction, bounded victim set). Each story has its own epsilon, beneficiaries, and victims. The continuity sibling is the practice-base cited as evidence that the hybrid baseline is credible; the discontinuity sibling is the pressure cited as justification for the correction apparatus. This story links both."
+  },
+  "stakeholders": [
+    {
+      "name": "classical_philological_establishment",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "University classics faculties, critical-edition editors, journal boards, and the learned academies that maintain the standard. They decide which forms are correct, which emendations enter the edited corpus, and what examinations require. Each accepted correction extends the body of forms they adjudicate; their professional standing, careers, and institutions are built on being the ones who adjudicate. Leaving the role would mean leaving the discipline itself — there is no version of their profession that does not include setting the standard."
+    },
+    {
+      "name": "latin_learners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Students in seminaries, classics programs, and medieval-studies training who must acquire the standard as it stands and re-acquire parts of it when corrections shift it. They hold no seat in the bodies that decide corrections; their recourse is to choose a different field of study, at the cost of their chosen vocation."
+    },
+    {
+      "name": "medieval_transmission_institutions",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The liturgical, curial, notarial, and monastic traditions that carried Latin through the centuries and whose transmitted forms are the baseline the standard protects. Their grammatical core is what the standard preserves; their orthographic and vocabular particularities are what the correcting apparatus emends. They cannot exit without dissolving the tradition itself — the transmitted form is not something they use but something they are."
+    },
+    {
+      "name": "secondary_school_latin_teachers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Teachers who transmit the standard to new learners and apply it in examinations. They bear each revision twice — re-learning the corrected forms themselves and re-teaching them — while holding no seat in the editorial and curricular bodies that produce the revisions."
+    },
+    {
+      "name": "medievalist_tradition_scholars",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Scholars whose expertise is the transmitted medieval corpus. They are consulted as witnesses to what the tradition transmitted, but they hold no adjudicating seat in the correction process; the bodies that decide which forms stand are staffed by classical philologists. Their objections to particular emendations are recorded in prefaces and reviews but do not bind the standard."
+    },
+    {
+      "name": "latin_literary_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The dispersed community of people who write and read Latin — across countries, denominations, and centuries. They benefit from a single mutually intelligible standard: a text composed in one tradition remains legible and evaluable in another. They bear the conformity cost diffusely, in the labor of writing to a standard none of them individually sets."
+    },
+    {
+      "name": "intellectual_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars who study how the correctness standard arose, changed, and was defended, without adjudicating what correct Latin is. They see the whole structure — the transmission, the corrections, the interests — from outside the practice."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains one written Latin standard across a dispersed, multilingual, multi-generational community, so that texts remain mutually intelligible and evaluable across borders and centuries; the correction mechanism keeps that standard anchored to its classical source without requiring the community to re-derive the language from ancient texts.",
+    "transfer_function": "Moves correction authority — the standing right to decide which forms are correct — from writers, teachers, and traditional institutions to the professional philological establishment; moves revision labor outward, so that each accepted correction is paid for in re-learning and re-editing by learners, teachers, and editors rather than by those who accepted it.",
+    "absent_voices": "Medievalist tradition scholars and the liturgical communities whose forms get emended would object that the correction process treats transmission as raw material rather than as a party; they sit outside the editorial boards and curricular committees where corrections are decided. Latin learners would object that each revision is a cost imposed without consultation; they are, by definition, not yet in the profession.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the standard vanished overnight, edited editions would lose their adjudicating rule and diverge into house styles; seminaries and classics curricula would each teach a different target; cross-border Latin writing would fragment into regional and confessional practices, as it did before standardization. The arrangements of everyone who writes, teaches, examines, or edits Latin depend on the standard's existence.",
+    "founding_problem": "After Latin ceased to be anyone's mother tongue but remained the scholarly and liturgical common language, the question arose what form written Latin should take: the form carried by continuous use, the form recoverable from ancient texts, or some combination. The hybrid answer — transmitted practice as baseline, textual evidence as corrector — was the working settlement of that question.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Liturgical authorities outside the philological establishment attest the need for a stable, teachable standard — they required one for the liturgy even while resisting particular emendations. Intellectual historians document the Renaissance-to-nineteenth-century dispute over barbarous versus classical Latin as a real governing problem, not a retrospective construction. The recurring preface question in every critical edition — why emend this form and retain that one — attests that the problem still governs practice."
+  },
+  "gain_flow": "classical_philological_establishment",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "Since the professionalization of classical philology in the nineteenth century, written Latin has been governed by a correctness standard whose hybrid form holds the classical grammatical core as transmitted through medieval practice as the legitimate baseline, subject to correction in orthography and vocabulary by ancient textual evidence. The standard is administered by a professional apparatus — critical editions, learned journals, curricula, examinations — that decides which forms stand and which get emended. It coordinates written Latin across countries, denominations, and generations; it also concentrates correction authority in the philological establishment while each correction's costs (re-learning, re-editing, emendation of traditional forms) fall on learners, teachers, and the transmission institutions themselves. The epsilon referent is the standing arrangement under contest — the correctness standard as it actually operates — assessed by this reading's own lights, never the fully reconstructed or fully traditional standard the sibling readings would install. The claimed type and the metrics are authored independently: the claim states what this reading takes the arrangement structurally to be; the metrics state what it descriptively does.",
+    "key_agents": [
+      "classical_philological_establishment: agenda-setter and primary beneficiary (institutional / identity_locked) — sets the standard, adjudicates corrections, collects the authority the correcting role confers",
+      "latin_learners: primary target (powerless / constrained) — acquire and re-acquire the standard, bear each revision, hold no seat in the deciding bodies",
+      "medieval_transmission_institutions: dual-positioned party (institutional / identity_locked) — their transmitted core is the baseline the standard protects; their surface forms are what the correcting apparatus emends",
+      "secondary_school_latin_teachers: secondary target (moderate / constrained) — transmit the standard and apply it in examinations, absorbing each revision twice",
+      "medievalist_tradition_scholars: excluded voice (organized / constrained) — consulted as witnesses to transmission, seated in no adjudicating body",
+      "latin_literary_community: coordination beneficiary (organized / constrained) — writes and reads Latin across borders on the strength of the shared standard, bearing diffuse conformity costs",
+      "intellectual_historians: analytical observer — sees the whole structure from outside the practice"
+    ],
+    "logic_rationale": "Extraction is moderate (0.48 at interval end): the authority gradient is real — the right to decide what is correct accrues to a professional class while each decision's costs are displaced onto those who must conform — but it is bounded by rule-governed correction (evidence, not preference, nominally drives each emendation) and by a coordination benefit shared across the whole community. Suppression is moderate-low (0.35): enforcement runs through editorial gatekeeping, examinations, and curricular mandates rather than prohibition; exit exists (write in the vernacular, celebrate the liturgy in the vernacular, join the living-Latin movement), and the enforcement series falls across the interval as Latin's institutional reach contracts. Theater is low-moderate (0.28): the standard does real coordinating work, but a growing share of its maintenance is ceremonial — correcting texts few people read, examining forms in examinations that gate few careers. Accessibility_collapse is low (0.30): the alternatives do not collapse — writing by transmitted practice and writing by reconstructionist principle both remain live practices, embodied in the sibling readings' continuing factions. Resistance is moderate (0.50): the arrangement is contested from both flanks at once, tradition-partisans resisting emendation of transmitted forms and purists resisting the legitimacy granted to transmission. The three tracked series run on one shared time grid; they smooth over recurring micro-cycles — each major edition or curricular reform sparks a resistance flare that decays into acceptance — which are visible only at finer time resolution than this grid captures.",
+    "perspectival_gap": "Seats should compute differently. From the establishment's seat the arrangement is the discipline's own rational achievement: corrections are improvements, the authority it collects is earned expertise, and the whole looks like coordination it built and maintains. From the learner's seat the same structure is a moving target set by others — each revision a cost incurred without consent — and it reads as extraction through and through. From the transmission institutions' seat it is a bargain never negotiated: their core legitimized, their surface expropriated, their compliance assumed. The engine computes these divergences from power, exit, and role data; the authored claim does not adjudicate them.",
+    "directionality_logic": "The establishment sits at the beneficiary end: it collects the arrangement's principal yield (correction authority) and is identity-locked into the correcting role — its profession is the adjudication. Learners sit at the target end: they bear the transfer (revision labor) with constrained exit, since leaving means abandoning their chosen vocation. Teachers sit near the target end, bearing enforcement labor and double revision costs at moderate power. The transmission institutions are the genuinely dual case: their payer role derives a high directionality, but the arrangement simultaneously subsidizes them — it is their transmitted core the standard protects and legitimates — so their true position is nearer symmetric than the victim-side derivation alone would place them; omega dual_position_directionality tracks this. The literary community sits low-mid: net coordination benefit, diffuse conformity cost. Learners' coalition power is structurally weak: their exposure is transient — each cohort exits the learner role within years — so the bearing class never accumulates the continuity needed to organize, while the establishment's seat is permanent; this asymmetry, not any single cohort's powerlessness, is what stabilizes the gradient. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is scaled, by each seat's derived direction and the arrangement's global scope.",
+    "mandatrophy_analysis": "The founding problem — what form written Latin should take once no one acquires it natively but many still need it — remains live, so this is not a dead-mandate case. But the mandate has narrowed: from governing a republic of letters' common language to maintaining a specialist standard for a contracting community. The classification earns its keep by refusing both mislabels: calling the arrangement pure coordination would erase the authority gradient on which the correcting class's standing rests; calling it pure extraction would erase the genuine, broadly shared benefit of one mutually intelligible written Latin and the rule-governed character of its corrections. The tangled form holds both. The falling enforcement series raises the one live obsolescence question — whether maintenance is outliving obedience — and the omega tracks it rather than presuming an answer.",
+    "kernel_context": "This constraint is the hybrid reading of the correct_latin kernel: the commitment that there is a correct form of written Latin. The continuity reading holds transmitted practice itself as the standard; the discontinuity reading holds the ancient textual witness as the standard and treats transmission as deviation. This reading splits the difference structurally rather than rhetorically: transmitted practice supplies the baseline (and is empirically vindicated as a carrier of the classical core), while ancient witnesses hold corrective authority over the transmitted surface. The relation to both siblings is coexistence rather than foreclosure: the kernel admits graded positions — this reading is the graded position — and each sibling remains a live, coherent standard held by real factions in the discipline, as the continuing dispute between tradition-partisans and reconstructionists attests. None of the three readings renders another unholdable; each is a complete answer to the same question, held by different parties."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "transmitted_core_bounded_correction",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "continuity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "discontinuity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "medieval_transmission_preserves_classical_core",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "textual_evidence_binds_surface_correction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "correction_bounded_by_transmitted_core",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

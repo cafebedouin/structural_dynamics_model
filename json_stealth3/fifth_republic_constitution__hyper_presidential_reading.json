@@ -1,0 +1,377 @@
+{
+  "header": {
+    "constraint_id": "fifth_republic_constitution__hyper_presidential_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-14",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fr_hyperpres",
+    "story_uid": "1bf0294b-83d8-438f-96ee-541b9a2c9ab5"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.72,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hyper-Presidential Reading of the Fifth Republic Constitution",
+    "topic_domain": "political/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_president",
+      "ruling_majority_deputies"
+    ],
+    "victims": [
+      "opposition_deputies",
+      "opposition_electorate",
+      "prime_minister_government"
+    ],
+    "vindicated_propositions": [
+      "gaullist_presidential_sovereignty_doctrine",
+      "rationalized_parliamentarism_doctrine",
+      "domaine_reserve_foreign_policy_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 66
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_president",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Elected for five years by direct universal suffrage on a personal mandate. Appoints and dismisses the prime minister without counter-signature, presides over the council of ministers, commands the armed forces and the nuclear deterrent, conducts foreign policy as a personal preserve, may dissolve the National Assembly, and may invoke emergency powers that suspend parliamentary checks. Directs the government's legislative strategy; when a contested bill stalls, the government engages its responsibility and the text is adopted without assembly assent unless a near-unanimous censure intervenes. Exit looks like dissolving the chamber and appealing to the country over its head."
+    },
+    {
+      "name": "prime_minister_government",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Appointed by, and removable at the discretion of, the president. Carries the presidential program through the assembly and formally engages the government's responsibility on blocked bills, the procedural step that adopts the text without a vote. Bears the parliamentary hostility the presidential program generates: censure motions aim at the government, and its fall removes the prime minister, not the president. Refusing the president's direction ends the tenure; resignation is the only exit and it terminates the political line."
+    },
+    {
+      "name": "ruling_majority_deputies",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold seats on the presidential majority's ticket and depend on its investiture for reselection. Are spared recording individual positions on contested bills when responsibility is engaged, a protection from constituent backlash. Receive committee assignments and access in exchange for discipline. Defecting to a censure motion ends their prospects with the majority, and the president may dissolve the chamber and send them before the electorate early."
+    },
+    {
+      "name": "opposition_deputies",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold minority seats won under the two-round ballot. Their amendments are erased when responsibility is engaged; their oversight initiatives stall without committee leverage; under emergency powers their chamber's checks are suspended outright. Their one procedural recourse, a censure motion, requires an absolute majority of all chamber members including defections from the presidential bloc, and has succeeded only twice in the arrangement's history. Staying means accepting overridden votes; leaving means abandoning the seat their voters gave them."
+    },
+    {
+      "name": "opposition_electorate",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Citizens whose votes produced legislative representation for minority platforms. Between elections that representation can be rendered procedurally inert: bills pass without their deputies' assent, oversight is suspended in emergencies, and the next opportunity to weigh in arrives only at the synchronized electoral calendar. No procedural channel exists to register dissent between elections; protest and abstention are the remaining currencies."
+    },
+    {
+      "name": "constitutional_council",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reviews statutes and government-zone acts for conformity with the constitutional text. Composed of former officeholders and jurists; its historical posture toward presidential-zone acts was marked deference, tightening only gradually after procedural reforms widened referral paths. Its findings can void provisions of a bill but have not reversed the adoption machinery itself; it adjudicates the boundary rather than setting it."
+    },
+    {
+      "name": "citizen_initiative_referendum_advocates",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Movements and petition organizers pressing for citizen-initiated referendum procedures that would give voters a standing channel between elections. Outside the constitutional conversation: no parliamentary group carries their proposal to a vote, and the agenda for institutional reform is controlled by the offices the arrangement empowers. They organize petitions and demonstrations from outside the chamber."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Produces decisive, unified government action: a single directly elected executive node sets policy direction, resolves inter-ministerial conflict, and can enact legislation without assembling ad hoc parliamentary coalitions for every measure — answering the cabinet-instability and legislative-gridlock pattern of the predecessor regime.",
+    "transfer_function": "Moves lawmaking authority and policy-direction rights from the elected assembly to the presidency: engagement of government responsibility on a bill converts contested texts into adopted law without assembly assent; emergency powers suspend parliamentary oversight outright; dissolution converts parliamentary defiance into executive-timed elections; and accountability for unpopular decisions is routed downward onto the prime minister while decision rights concentrate upward in the president.",
+    "absent_voices": "Advocates of citizen-initiated referendum and proponents of strengthened parliamentary oversight hold no seat in the constitutional conversation when a unified presidential majority stands: the same majority that enables the arrangement controls the agenda for revisiting it. Their objection — that popular sovereignty reaches the state exclusively through one person — is voiced only outside the chamber.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the bypass machinery vanished overnight, French governance would reorganize around negotiated parliamentary coalitions: legislation would require assembled majorities bill-by-bill, governments would fall and form through assembly arithmetic rather than sole presidential appointment, foreign-policy and defense direction would migrate back under legislative budget and oversight control, and accountability would attach to whichever office took each decision.",
+    "founding_problem": "Regime instability in the predecessor republic: cabinets averaging months in office, assemblies unable to legislate through shifting coalitions, and a colonial war producing an insurrectionary crisis that threatened civil war. The 1958 design answered with a sovereign arbiter placed above the parties and a rationalized parliament; the 1962 direct election then recast the arbiter as the nation's directly mandated spokesman.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem itself is corroborated from outside any benefiting party: constitutional histories, comparative-politics literature, and contemporaneous testimony spanning the political spectrum attest the predecessor regime's instability and the 1958 crisis. Corroboration that the problem remains live comes almost exclusively from the benefiting parties — the presidential office and successive presidential majors citing each new emergency — while scholarly sources and parliamentary minorities date the original problem as solved and dispute the successor-crisis justification. The contested status therefore rests on a documented evidence asymmetry, stated here openly."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 66,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 66,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 66,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Within the Fifth Republic's constitutional architecture as instantiated by its hyper-presidential reading, the President of the Republic governs as the directly mandated embodiment of national will, minimally constrained by the legislature. The president appoints and dismisses the prime minister without counter-signature, commands the armed forces and the nuclear deterrent, conducts foreign policy as a personal preserve, may dissolve the National Assembly, and, through the government's engagement of its responsibility on a bill, converts contested legislation into adopted law without assembly assent; in declared emergency, Article 16 suspends parliamentary checks altogether. The legislature's costs concentrate at moments of invocation: votes overridden, amendments erased, oversight suspended, dissolution held over dissenting chambers. The presidency as institution and the incumbent occupying it collect concentrated decision rights and accountability insulation; the governing majority is spared recorded votes on contested bills; the opposition, its electorate, and the government itself bear the arrangement's running costs. This file instantiates ONE reading of a contested constitutional kernel; the reading identity and its siblings are recorded in commentary.kernel_context and the committer omega, not averaged here. The arrangement described carries a single stable epsilon throughout.",
+    "key_agents": [
+      "- incumbent_president: primary beneficiary and agenda-setter (institutional/arbitrage) — collects concentrated decision rights, accountability insulation, and exits no other seat holds",
+      "- prime_minister_government: enforcing intermediary and designated casualty (institutional/constrained) — formally engages responsibility on bills, absorbs censure risk and blame",
+      "- ruling_majority_deputies: secondary beneficiary with payer underside (organized/constrained) — spared recorded votes and granted access; surrender legislative autonomy",
+      "- opposition_deputies: primary target seat (organized/constrained) — votes overridable, amendments erasable, oversight suspendable",
+      "- opposition_electorate: diffuse target (powerless/trapped) — legislative representation nullified between elections",
+      "- constitutional_council: institutional adjudicator-observer (institutional/analytical) — historically deferential reviewer of presidential-zone acts",
+      "- citizen_initiative_referendum_advocates: excluded seat (powerless/trapped) — no channel into the constitutional conversation"
+    ],
+    "logic_rationale": "Extractiveness is high (0.75) because the arrangement decouples lawmaking outcomes from assembly assent: dozens of engagements of government responsibility in the 2022-2024 window normalized a mechanism designed as exceptional, and each invocation transfers adoption authority wholesale to the executive. Suppression (0.72) is authored as a raw structural property — it is NOT scaled by power or scope in the engine's computation; only extractiveness is scaled by directionality and scope. The suppressive machinery is procedural closure: censure motions require an absolute majority of all chamber members including defections from the presidential bloc, elections arrive at quinquennial intervals synchronized to favor the presidency, and the adjudicating council's historical deference left few judicial exits. The suppression mix is overwhelmingly structural (procedural and calendar closure); a smaller internalized component runs through the majority's anticipatory obedience under the investiture system. Accessibility collapse (0.55) is moderate: exits exist and two successful censures (1962, 2024) prove the mechanism breakable, but each attempt prices in near-impossible opposition unity. Resistance (0.60) is real and recurring: censures, sustained protest waves, upper-chamber obstruction, and record abstention as passive refusal. Theater ratio (0.52) crosses the substitution threshold in the final period: assembly debate under a predetermined adoption outcome retains full procedural form while deciding nothing — performative maintenance of the legislative function itself. The three metric series run on ONE shared eight-point grid, every tracked metric authored at every examined time point; the mid-interval oscillation tracks divided-government episodes and is exogenous (electoral coincidence), not an intermittent-reinforcement mechanism, and the five-year-term reform suppressed that cycle structurally, converting oscillation into monotonic rise. Caveat: the base scalars describe the constraint at its peak unified-majority configuration.",
+    "perspectival_gap": "Seats compute divergent types from identical structure. From the incumbent's chair the arrangement is the coordination device it anchors — decision rights it exercises, stability it credits itself with, and exits (dissolution, emergency powers) that no other seat holds; its computed extraction sits near the subsidy end. From the opposition benches the identical machinery operates as enforced closure: votes overridable, oversight suspendable, recourse priced at near-impossible unanimity. Majority deputies compute an intermediate seat: spared accountability votes (short-run gain) while surrendering legislative autonomy and carrying dissolution exposure (long-run cost). The prime minister occupies a genuinely split position — the enforcing hand and the designated casualty at once, absorbing censure risk while exercising delegated adoption authority. Trapped, powerless electorate seats amplify hardest: their legislative preferences are nullified between elections with no procedural exit. Note on exit atoms: the binding on majority deputies runs through material career dependence (party investiture) rather than identity fusion, which is why they are authored constrained rather than identity_locked; the engine derives the divergence among all these seats from the authored power, exit, and role data — nothing in the claimed type adjudicates it.",
+    "directionality_logic": "Beneficiary and victim declarations drive the derivation chain. incumbent_president (declared beneficiary, arbitrage-grade exit) derives near the beneficiary pole — the arrangement subsidizes its holder with decision rights and accountability insulation. ruling_majority_deputies carry a dual declaration (beneficiary primary, payer secondary): spared recorded votes and patronage access push derived d low, while surrendered autonomy and dissolution exposure pull the true relationship upward toward roughly 0.35. prime_minister_government (payer primary, agenda_setter secondary) derives strongly target-side from its casualty role; the enforcement half of its position — it alone formally engages responsibility on a bill — moderates its true d toward the middle. Neither nuance received a directionality override, deliberately: the override surface keys on the power atom, and this story's institutional seats (president, prime minister, adjudicating council) share one atom across radically different structural relationships, so an atom-level override would misapply across seats; the dual-role declarations carry the correction instead. opposition_deputies (victim, constrained exit, organized) derive well into target territory; opposition_electorate (victim, powerless, trapped) sits nearest the full-target pole, since trapped exit plus powerlessness maximizes effective extraction per unit of base epsilon. constitutional_council holds an observer seat with analytical exit and feeds no directional flow. Spatial scope is national across operative seats; verification of whether assembly will binds is administrable at that scope, tempering the amplification the engine applies at larger scopes.",
+    "mandatrophy_analysis": "The founding mandate — curing cabinet instability — was achieved within a generation of the 1958 design, and the arrangement has intensified rather than relaxed since, which is the mandatrophy signature: persisting past the problem it was built for. The classification discipline cuts both ways. Reading the arrangement as pure coordination would ignore the documented transfer of lawmaking authority and the assembly's hollowed function; reading it as pure seizure would ignore the genuine coordination the structure still delivers — no cabinet-crisis paralysis has occurred under it, and decisive-executive capacity remains a real, demanded good. The tangled_rope claim holds both halves: a real coordination function, an asymmetric transfer riding on that same structure, and enforcement required to sustain the asymmetry. On the genealogy interview, founding_problem_status is authored contested with the evidence asymmetry stated openly: corroboration of the original problem is broad and sits outside the benefiting set, while attestation of its persistence comes overwhelmingly from the benefiting parties. The status-times-verdict combination (contested x world_rearranges) reports no zombie flag; the theater ratio at 0.52, just past the substitution threshold, is the symptom worth watching rather than the test — the arrangement still rearranges the world, and its successor function remains live even as the founding mandate has been outlived.",
+    "kernel_context": "Kernel: fifth_republic_constitution — a fixed_text codification, the written constitutional text of 1958 amended from 1962 onward, reviewed by an adjudicating council, with transmission through the Gaullist founding lineage. This file instantiates the hyper_presidential_reading: the president as direct sovereign embodying national will, minimally constrained by the legislature. Sibling readings — separate constraints in separate files, never averaged into this one: fifth_republic_constitution__parliamentary_constraint_reading (president as coordinated executive requiring legislative authorization for implementation) and fifth_republic_constitution__cohabitation_equilibrium_reading (dual executive under negotiated authority allocation between president and prime minister). The readings disagree on the authorization locus: whether anything beyond direct election constrains presidential action. This story's epsilon refers only to this reading's arrangement."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_locus",
+      "question": "This constraint is one reading of the fifth_republic_constitution kernel (instantiating hyper_presidential_reading). Where exactly is the structural disagreement located among the three readings?",
+      "resolution_mechanism": "Compare the three readings on the authorization axis: the parliamentary_constraint sibling locates constraint in required legislative authorization; the cohabitation_equilibrium sibling locates it in negotiated intra-executive allocation; this reading locates it nowhere — direct mandate suffices. Empirical probe: which structural element each reading treats as load-bearing (responsibility-engagement and emergency-powers usage versus prime-ministerial appointment practice versus cohabitation episodes).",
+      "impact": "Adopting the parliamentary_constraint sibling moves the legislature out of the victim set and drops epsilon sharply; adopting the cohabitation sibling splits agenda-setting between two executives and redistributes the beneficiary set. This file's classification is valid only under this reading's instantiation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: one reading of a contested constitutional kernel; the disagreement is located on the executive-authorization axis."
+    },
+    {
+      "id": "article_16_dormant_reserve",
+      "question": "Is the emergency-powers article's suspension of parliamentary checks a dormant reserve capability whose threat operates only episodically, or an operative background force that continuously disciplines legislative behavior?",
+      "resolution_mechanism": "Behavioral analysis of legislative compliance and government-proposed amendments under varying perceived emergency proximity; comparative study of emergency-powers invocation thresholds across semi-presidential systems.",
+      "impact": "If dormant, the arrangement's steady-state extractive load is overstated by episodic peaks; if operative, the continuous suppression contribution is understated and the drift toward harder enforcement accelerates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the emergency reserve functions episodically or as continuous background discipline."
+    },
+    {
+      "id": "quinquennat_configuration_dependence",
+      "question": "Does the 2017-2024 intensification reflect a durable structural ratchet — five-year synchronized terms plus a fragmented assembly making presidential bypass the default operating mode — or a transient response to an unusual assembly configuration?",
+      "resolution_mechanism": "Observe the next electoral cycle under alternative assembly compositions; compare responsibility-engagement frequency across governing configurations since the five-year-term reform.",
+      "impact": "A durable ratchet supports continued drift toward harder extraction and a snare-ward trajectory; the transient reading implies reversion toward the tangled-rope baseline once coalition formation resumes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the recent peak is a structural ratchet or a configuration artifact."
+    },
+    {
+      "id": "direct_mandate_legitimacy_basis",
+      "question": "Is the direct-mandate premise — that the president's election constitutes the nation speaking directly — a genuine expression of popular sovereignty, or a constructed legitimation that converts electoral victory into unconstrained executive license?",
+      "resolution_mechanism": "Turnout and blank-vote trajectories in presidential versus legislative contests; deliberative surveys on whether citizens understand their presidential vote as authorizing bypass of their legislative representation.",
+      "impact": "If constructed, the foundational axiom's conventional grounding is exposed as cover and the legitimacy accounting shifts toward the extraction reading; if genuine, part of the measured suppression reflects accepted democratic design rather than imposed closure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the direct-mandate axiom is lived democratic expression or post hoc legitimation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fifth_republic_constitution__parliamentary_constraint_reading",
+      "fifth_republic_constitution__cohabitation_equilibrium_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'the Fifth Republic Constitution' conflates three structurally distinct arrangements that readings of the same fixed text instantiate. Each sibling carries its own epsilon, its own beneficiary/victim structure, and its own classification: the parliamentary_constraint sibling keeps the legislature out of the victim set and prices executive action in required authorization; the cohabitation_equilibrium sibling splits agenda-setting between two executives; this hyper_presidential sibling concentrates both and books the legislature as bearer of invocation-time costs. Edge logic from this reading: the parliamentary_constraint sibling is foreclosed within any single framework (authorization-required and mandate-suffices are direct negations on the same premise); the cohabitation_equilibrium sibling is influenced without being eliminated — synchronized five-year terms shrink cohabitation windows and normalized bypass erodes the negotiating leverage that equilibrium presupposes. Upstream/downstream: the 1958 founding design (higher empirical establishment) supplies the textual kernel all three readings transmit; this reading's practice reshapes the downstream viability of both siblings."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "gaullist_sovereign_arbiter_design",
+    "drift_state": {
+      "moment": "contemporary_fragmented_assembly_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "parliamentary_constraint_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "cohabitation_equilibrium_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "direct_mandate_embodies_national_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "executive_unity_requires_decision_concentration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "incumbent_president",
+  "fixing_cost": "prohibitive"
+}

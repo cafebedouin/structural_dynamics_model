@@ -1,0 +1,285 @@
+{
+  "header": {
+    "constraint_id": "nicene_creed_authority__symbolic_confessional_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nicene_creed_symbolic",
+    "story_uid": "c45eee18-05d4-4603-9ff0-60665bff3509"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.18,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.45,
+    "claimed_type": "rope",
+    "human_readable": "Nicene Creed as Historically Contingent Witness (Symbolic-Confessional Reading)",
+    "topic_domain": "religious/ecclesial",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "local_congregations",
+      "individual_believers",
+      "interfaith_dialogue_partners"
+    ],
+    "victims": [
+      "centralized_magisterial_authorities"
+    ],
+    "vindicated_propositions": [
+      "liberty_of_conscience",
+      "doctrinal_revisability",
+      "faith_as_uncoerced_assent"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This constraint is one reading — the symbolic_confessional_reading — of the nicene_creed_authority kernel; what structurally changes if a sibling reading is instantiated instead?",
+      "resolution_mechanism": "Compare the sibling constraint stories (nicene_creed_authority__strict_orthodox_reading, nicene_creed_authority__liturgical_habituation_reading): the strict-orthodox sibling inverts the topology — dissenting believers and pluralist communities become the targets, sanction machinery activates, and extractiveness rises sharply; the liturgical sibling detaches the creed's function from personal assent entirely.",
+      "impact": "The disagreement is located in the SOURCE of the creed's authority: intrinsic binding ontology versus community discernment versus liturgical performance. Which reading holds determines the victim set, the enforcement surface, and the classification of every seat.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story instantiates one reading of a contested kernel; sibling readings instantiate different constraints."
+    },
+    {
+      "id": "discernment_majoritarian_risk",
+      "question": "Is community discernment under this reading genuinely non-coercive, or does congregational consensus develop its own soft majoritarian pressure — dissenters socially managed into the discerned 'sense of the community'?",
+      "resolution_mechanism": "Longitudinal study of how minority discernment is treated in symbolic-reading congregations: whether dissenting readings receive standing in the discernment process, or are absorbed, deferred indefinitely, or socially sanctioned.",
+      "impact": "If majoritarian pressure is systematic, the arrangement's extractiveness rises above the authored range and its classification drifts toward a hybrid coordination/extraction shape; individual_believers would need a payer secondary role.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether distributed discernment stays non-coercive or regenerates local extraction."
+    },
+    {
+      "id": "magisterial_victim_status",
+      "question": "Are centralized magisterial authorities genuinely victims of this arrangement — bearing an imposed cost — or are they merely denied a prerogative this reading holds was never legitimately theirs?",
+      "resolution_mechanism": "Depends on a prior account of legitimate doctrinal authority, which is the kernel contest itself: within this reading's own frame the 'cost' is withdrawal of recognition from an illegitimate claim, not extraction; on a strict-orthodox frame the arrangement strips a legitimate office of its authority.",
+      "impact": "If the cost is illegitimate-power-denied, the victim declaration is a framing artifact and effective extraction is lower still; if binding creedal authority is legitimate, the arrangement imposes real loss and the payer declaration hardens.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the payer seat bears extraction or only forfeits an illegitimate claim — reading-indexed victim status."
+    },
+    {
+      "id": "revisability_boundary",
+      "question": "Where does historical contingency end — may the community's discernment revise the creed's core confessional content and still confess 'the same faith' the witness bears?",
+      "resolution_mechanism": "Observe how symbolic-reading communities handle proposed revisions (creedal restatement, non-theistic reinterpretation of credal clauses): accepted as discernment, or refused as breach of the witness?",
+      "impact": "Too much revisability dissolves the coordination function (the shared vocabulary ceases to be shared); too little re-imports the binding authority the reading exists to withhold. The boundary determines whether the arrangement holds as steady-state coordination or drifts.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The reading's internal boundary between discernment and dissolution."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "local_congregations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Gathered communities that confess the creed together as a received witness from the fourth-century church. They discern its meaning in their own context, may restate or supplement it in their own confessions, and are not answerable to any external office for their reading. What flows to them is a shared vocabulary of faith linking them to other communities and to their own past; what flows from them is voluntary assent. A congregation that discerned differently could revise its confession without sanction."
+    },
+    {
+      "name": "individual_believers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Members who make the creed their own through personal faith; their assent is what gives the words authority in their case. They may question clauses, reinterpret imagery, or hold the creed loosely while remaining full members. Dissent or reinterpretation carries no doctrinal penalty, though the ordinary social weight of congregational expectation remains."
+    },
+    {
+      "name": "interfaith_dialogue_partners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Communities and traditions outside the credal churches — other Christian bodies, other religions, secular interlocutors — who engage credal communities in conversation. Because the creed is held as a contingent witness rather than a non-negotiable test, they meet it as an object of comparison rather than a demand for assent; they bear no cost from the arrangement and are not bound by it."
+    },
+    {
+      "name": "centralized_magisterial_authorities",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Hierarchical teaching offices — papal congregations, synodal hierarchies claiming binding interpretive authority, doctrinal commissions — whose office consists in defining what the creed obligates and sanctioning departure from it. Under this arrangement their binding judgments receive no acknowledgment from communities that discern for themselves; the office's claim to fix the creed's meaning is structurally set aside. An office of this kind cannot adopt the reading without dissolving the claim that constitutes the office."
+    },
+    {
+      "name": "creedal_traditionalist_minorities",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Members and factions within symbolic-reading communities who hold that the creed states binding truth and that deviation matters eternally. In congregations where discernment presupposes the contingent-witness frame, their premise is ruled out before discussion begins; they find themselves without standing in the very discernment processes the arrangement empowers, and their objections are heard as temperament rather than doctrine."
+    },
+    {
+      "name": "historians_of_doctrine",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars of the creeds' composition and reception who study how authority has been exercised over the text across centuries. They take no side in the contest, hold no stake in the arrangement, and can compare the reading's claims about the creed's historical character against the documentary record."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Solves the problem of common confession across diverse, self-governing communities: a scattered, generation-spanning fellowship shares one historic vocabulary of faith without requiring a central interpreter to fix its meaning, because each community and each believer supplies the assent that gives the words authority.",
+    "transfer_function": "Moves interpretive authority and status: from would-be central teaching offices to local congregational discernment and individual conscience. Material transfer is minimal — the arrangement moves assent, attention, and the standing to define the faith, not wealth.",
+    "absent_voices": "Strict-orthodox members inside symbolic-reading communities (creedal_traditionalist_minorities) would object that the creed binds and that eternal stakes are being dissolved, but the discernment frame rules their premise out before they speak. The fourth-century bishops who framed the creed against Arianism also cannot speak: whether their anti-Arian witness is faithfully received or domesticated into mere witness is exactly what they would dispute.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Communities holding this reading would lose their shared confessional vocabulary overnight: common confession, the ecumenical posture it enables, and the distribution of interpretive authority (congregation and conscience over office) all depend on the arrangement and would reorganize — toward a competing reading of the kernel or fragmentation into unconnected local testimonies.",
+    "founding_problem": "The arrangement was built against coercive creedalism: the use of the creed as an imposed metaphysical test enforced by sanction — consciences bound, dissenters anathematized, doctrinal police empowered — in the aftermath of the confessional conflicts and the Enlightenment critique of imposed orthodoxy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historians of doctrine outside the beneficiary set document the coercive-creedalism problem the reading answered — records of anathemas, synodal and inquisitorial sanctions, and confessional-era persecution of dissenters. The strict-orthodox parties corroborate it from the opposite seat: their defense of binding creedal authority confirms the reading arose against exactly that practice, even as they judge the response infidelity rather than liberation."
+  },
+  "commentary": {
+    "narrative_context": "In the symbolic-confessional reading, the Nicene Creed is a historically contingent witness — a fourth-century community's testimony arising from a particular controversy — whose authority is not intrinsic but conferred anew wherever communities discern it as faithful and believers assent through personal faith. This story instantiates that reading as a standing arrangement: congregations confess voluntarily, discern locally, permit theological pluralism, and carry the creed into interfaith conversation as a witness offered rather than a test imposed. The arrangement's costs fall not on dissenters but on would-be central authorities, whose prerogative to fix the creed's meaning and sanction departure is structurally withheld. This is ONE reading of a contested kernel; the strict-orthodox and liturgical-habituation readings are separate constraints with their own epsilon, beneficiary/victim structure, and classification.\n\nKEY AGENTS (by structural relationship):\n- local_congregations: primary beneficiary (organized/mobile) — receive the shared confessional vocabulary, discern locally\n- individual_believers: primary beneficiary (moderate/mobile) — their personal assent confers the creed's authority in their case\n- interfaith_dialogue_partners: secondary beneficiary (organized/mobile) — meet the creed as witness, not test\n- centralized_magisterial_authorities: primary payer (institutional/identity_locked) — binding and sanctioning prerogative withheld\n- creedal_traditionalist_minorities: excluded voice (organized/identity_locked) — premise ruled out of the discernment they sit inside\n- historians_of_doctrine: analytical observer (analytical/analytical) — compare the reading's claims against the documentary record",
+    "logic_rationale": "Extractiveness is low (0.18): the arrangement transfers no material goods and binds no conscience; the residual value reflects the ordinary weight of communal confession — voluntary assent still costs something, and congregational expectation is real. Suppression is low (0.18) and authored as a raw structural property, unscaled: no sanction machinery exists, and the soft pressure that remains is the ordinary social gravity of any shared practice (an omega tracks whether that gravity hardens into majoritarian extraction). Theater is low (0.15) but drifting up: as personal faith thins in some mainline congregations, creed recitation persists as habit for a minority of reciters — the drift the measurement series records, and the seam where the liturgical-habituation sibling reading lives. Alternatives remain substantially available (accessibility_collapse 0.35): congregations may restate, supplement, or decline the creed; believers may reinterpret without penalty; rival confessional witnesses circulate freely. Resistance is moderate (0.45): the reading meets sustained resistance from creedal traditionalists inside its own communities and from centralized authorities outside them, but not enough to threaten the arrangement where it is institutionally established. The measurement series run on ONE shared time grid — interval points are roughly five-year spans from the reading's late-nineteenth-century institutional consolidation (point 0) to the present (point 30) — so every tracked metric is authored at every point. No suppression_requirement series is authored: the reading builds no enforcement machinery, so the enforcement picture is static and carried by the scalar. Identity-lock note: the magisterial payer's lock is institutional identity (the office has become its function — its claim to fix creedal meaning constitutes the office); the traditionalist minority's lock is ideological (a worldview in which eternal stakes make loose holding unthinkable). If either frame broke, the payer seat's effective cost would drop sharply and the excluded voice would re-enter the conversation.",
+    "perspectival_gap": "The seats compute differently. From the congregation's seat the arrangement is the condition of honest confession: the creed means what the community discerns, and no external office can overrule that. From the magisterial seat the same arrangement is dispossession — an office constituted to fix the creed's meaning watches its claim go unacknowledged, and its identity-locked position means it cannot join the reading without dissolving itself. The excluded traditionalist seat experiences a third thing: living inside a discernment process whose premise forecloses theirs, heard as temperament rather than doctrine. The authored claim (rope) is the structural truth from the reading's own lights; the payer and excluded seats should compute a different experience, and that divergence is the measurement.",
+    "directionality_logic": "Beneficiary declarations map to real structure: local_congregations and individual_believers sit at the beneficiary end (the arrangement subsidizes their discernment and assent), and interfaith_dialogue_partners benefit incidentally without participating or bearing cost. The single victim declaration — centralized_magisterial_authorities — maps to the arrangement's one real cost: the withholding of binding recognition, borne by offices whose identity_locked exit pushes them toward the full-target end of the derivation. The residual costs are diffuse: no seat captures another's contribution — individuals' assent accrues to the congregational common life the individuals themselves share. That is why gain_flow is authored 'diffuse' as an affirmative checked claim (each named seat was examined; none captures) rather than naming a capturer. Fixing is cheap for whoever could fix it: a congregation can drop or revise the practice at will; nothing locks it in, which is also why neglect of the practice would be transient rather than structurally protected.",
+    "mandatrophy_analysis": "The classification discipline runs in both directions here. Mislabeling the arrangement a snare (creed as instrument of control) would read the strict-orthodox history onto a reading that exists precisely to refuse that history — the founding problem is live, not dead, and the arrangement still does what it was built to do. Mislabeling it a mountain is foreclosed by the reading's own contingency claim: the creed's authority is explicitly NOT a natural or inevitable fact but a conferred one. The live mandatrophy risk is subtler: if communal discernment hardens into majoritarian expectation (the discernment_majoritarian_risk omega tracks this), the arrangement would persist in name while its non-coercive function atrophied — a drift the rising theater series already faintly records. The rope claim is the structural truth under the reading's own lights; the engine's per-seat computation is what detects the drift if it comes.",
+    "kernel_context": "This constraint is the symbolic_confessional_reading of the nicene_creed_authority kernel — the single persisting commitment that the Nicene Creed carries authority in the church. Sibling readings: the strict_orthodox_reading (the creed binds all believers to one metaphysical ontology; deviation is heresy warranting sanction) and the liturgical_habituation_reading (the creed functions as identity boundary marker through liturgical performance, independent of cognitive metaphysical assent). This story authors only the symbolic-confessional instantiation: the creed as historically contingent witness whose authority derives from community discernment and personal faith. The sibling readings are separate constraints with their own epsilon, beneficiary/victim structure, and classification; the structural contest between them is recorded in the omegas, not averaged here."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "nicene_creed_authority__strict_orthodox_reading",
+      "nicene_creed_authority__liturgical_habituation_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the natural-language label 'the authority of the Nicene Creed' covers at least three structurally distinct arrangements — binding ontological standard (strict_orthodox_reading), liturgical identity marker (liturgical_habituation_reading), and contingent witness under communal discernment (this story). Their epsilon values differ widely: the strict-orthodox arrangement is substantially extractive (sanction-backed binding of conscience), the liturgical arrangement extracts attention and identity rather than assent, and this arrangement is minimally extractive. The strict-orthodox sibling is historically prior, and its enforcement history is the founding problem this reading was built against; the stories are linked so contamination analysis can track, for example, how revival_pressure from the strict-orthodox frame alters this arrangement's operating environment."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "reference_frame": "contingent_witness_under_communal_discernment",
+    "drift_state": {
+      "moment": "contemporary_pluralist_era",
+      "direction": "revival_pressure",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "strict_orthodox_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "liturgical_habituation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creed_authority_is_derivative_of_discernment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "creed_is_historically_contingent_witness",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

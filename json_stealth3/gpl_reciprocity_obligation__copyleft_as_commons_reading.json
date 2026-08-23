@@ -1,0 +1,348 @@
+{
+  "header": {
+    "constraint_id": "gpl_reciprocity_obligation__copyleft_as_commons_reading",
+    "version": "1.0",
+    "generated_date": "2026-07-01",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_commons_reading",
+    "story_uid": "38de4ab3-2a94-4a08-88f9-0d1bb64e9cf9",
+    "created_at": "2026-07-01T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.52,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Mandatory Reciprocity as Commons-Preservation Mechanism",
+    "topic_domain": "economic/legal/technological",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "the_free_software_commons",
+      "contributing_developers"
+    ],
+    "victims": [
+      "proprietary_exit_maximizer_firms"
+    ],
+    "vindicated_propositions": [
+      "commons_reciprocity_principle"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "fsf_license_stewards",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Holds copyright on the license text itself, publishes successive versions and the authoritative interpretation FAQ, defines what counts as compliant distribution, and campaigns for adoption across projects. Bears the reputational and coordination cost of defending contested interpretations but can amend the terms going forward, so adverse interpretive outcomes never trap them in someone else's rules."
+    },
+    {
+      "name": "software_freedom_conservancy_enforcers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Runs compliance programs for member projects: negotiates settlements with violators, documents infringements, and occasionally litigates under copyright law. Funded by donations, so enforcement capacity is finite and selectively deployed; aggressive action against prominent firms carries fundraising and public-relations risk, which narrows their practical room to maneuver."
+    },
+    {
+      "name": "the_free_software_commons",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The pooled corpus of reciprocally licensed source code together with the contributor community that maintains it. Grows only through returned improvements; its integrity depends on the reciprocity rule continuing to bind integrators. It has no center that could relocate or reconstitute itself elsewhere if the rule failed — its continued existence as a commons is constituted by the rule it benefits from."
+    },
+    {
+      "name": "contributing_developers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Write and contribute code under reciprocal terms. They receive guaranteed access to everyone else's improvements and a durable shared asset; they pay by surrendering proprietary rights in their own contributions and by accepting that downstream obligations may constrain products they later ship. Leaving the ecosystem would cost them professional standing and a community identity substantially built around commitments to shared code."
+    },
+    {
+      "name": "proprietary_exit_maximizer_firms",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Firms whose preferred business model integrates commons code into closed products. Each integration forces a choice: publish derivative sources on the same terms, engineer around the component, procure a substitute, or ship in violation and risk infringement action. Avoiding GPL code entirely is possible but carries re-engineering cost, dependency-chain friction, and lost access to mature components; many such firms respond by maintaining strict GPL-procurement bans instead."
+    },
+    {
+      "name": "dual_license_commercial_vendors",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Publish a community edition of their product under the reciprocal license while selling proprietary licenses for the same codebase. They harvest external contributor labor into the free edition and monetize the desire of customers to escape its terms, complying formally with the very license whose constraints they sell relief from."
+    },
+    {
+      "name": "proprietary_stack_vendors",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Firms running fully proprietary stacks that never incorporate reciprocal code. They hold no seat in license governance, yet their procurement policies, standards-body lobbying, and promotion of permissive alternatives shape the environment the reciprocity rule operates in. They would argue the rule functions as a market barrier dressed as ethics, and they encounter it only as a procurement obstacle."
+    },
+    {
+      "name": "ip_policy_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study license regimes as institutional technology, tracing enclosure and reciprocity dynamics across permissive and reciprocal ecosystems, publishing analyses that both defenders and critics of the arrangement cite in support of opposed conclusions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the assurance problem of a shared code pool: absent a binding reciprocity rule, any integrator can appropriate improvements and close them, and rational contributors anticipating defection under-invest in the pool. Making unilateral appropriation a copyright violation converts mutual contribution into the stable strategy.",
+    "transfer_function": "Moves derivative-work improvements and redistribution rights from firms that build on the commons back into the commons; equivalently, it transfers the opportunity cost of proprietary closure from the pool onto integrators, and transfers legal risk from contributors (whose code retains guaranteed free status) to violators.",
+    "absent_voices": "Proprietary-stack vendors and corporate buyers of closed derivatives are outside license governance entirely; end users receiving reciprocal-derived code embedded in violating shipped firmware are owed sources they never obtain and have no seat anywhere. They surface only as litigation counterparties, procurement memos, and complaint threads.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the reciprocity rule vanished overnight, the pool's assurance mechanism would fail: improvements would become immediately appropriable, integration-seeking firms would shift toward take-and-close behavior, contribution incentives would degrade, and the specific commons institution would dissolve into permissive pools sustained by different mechanisms (employer subsidy, foundation patronage) or into captured proprietary codebases. Arrangements demonstrably depend on the rule continuing to bind.",
+    "founding_problem": "The 1980s privatization wave: printer firmware shipped without source, proprietary Unix fragmentation, and a legal default in which code shared in cooperation was routinely appropriated and closed. The arrangement was built to answer one question: how can software remain shareable under a copyright regime tilted toward private appropriation?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Enclosure pressure is attested from outside the benefiting parties: legal-academic literature documenting appropriation dynamics in shared-code regimes, the historical record of pre-reciprocity capture (proprietary Unix fragmentation, the AT&T-driven disruption of the Berkeley CSRG), and — decisively — the compliance expenditures of the firms the rule binds, whose own procurement policies and settlement payments attest that the enclosure barrier is real enough to spend money avoiding."
+  },
+  "interval": {
+    "start": 0,
+    "end": 32
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 22,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 27,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 22,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 27,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 22,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 27,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.52,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A reciprocal software license obliges anyone who distributes a derivative of pooled commons code to release their modifications under the same terms. This story instantiates the commons reading of that obligation: the license is an institutional technology whose function is preventing enclosure of a shared resource, its principal beneficiary is the commons as a maintained institution, and its principal bearers of cost are firms seeking to exit with proprietary derivatives. The epsilon referent throughout is the standing reciprocity arrangement as it operates — the enforced obligation on integrators — assessed by this reading's own lights; it is not the permissive or proprietary arrangements this reading declines to endorse. KEY AGENTS (by structural relationship): - the_free_software_commons: Primary beneficiary (organized/trapped) — collects returned improvements, cannot exit its own constitutive rule. - proprietary_exit_maximizer_firms: Primary target (powerful/constrained) — bears the forfeited proprietary option. - contributing_developers: Dual-positioned (moderate/identity_locked) — net beneficiaries who pay in surrendered proprietary rights. - fsf_license_stewards and software_freedom_conservancy_enforcers: Agenda-setters (institutional/arbitrage, organized/constrained) — author the terms and enforce compliance respectively, with sharply different exit profiles. - dual_license_commercial_vendors: Arbitraging beneficiary (powerful/arbitrage) — complies formally while selling relief from the terms. - proprietary_stack_vendors: Excluded party (institutional/mobile) — shapes the environment without holding a seat.",
+    "logic_rationale": "Extractiveness is authored medium (0.55 at interval end) because the reciprocity burden is real and concentrated — integrators genuinely lose the proprietary-closure option — but bounded: entrants retain full use, modification, and redistribution rights under identical terms, and entry remains voluntary, so the burden is a price of admission rather than confiscation. Suppression (0.52) reflects legal coercion that is substantial where triggered (violation is copyright infringement) but scoped to those who chose to incorporate the code; permissive alternatives persist robustly, so alternatives are narrowed, not collapsed (accessibility_collapse 0.45). Resistance (0.55) is real and visible: procurement bans on reciprocal dependencies, clean-room reengineering, dual-license negotiation leverage, and contested enforcement actions. Theater is low (0.20): the enforcement and stewardship activity is substantively functional, with only a modest campaign-and-symbolism component. The measurement series traces enforcement-capacity maturation (suppression_requirement rising from 0.25 to 0.65 by the enforcement-professionalization peak, then easing as capacity strained and server-side use began escaping the distribution trigger), a corresponding extractiveness arc peaking mid-interval before leakage and substitution pulled it down slightly, and slowly accumulating theater as stewardship activity became partly self-referential. The trajectory is non-monotonic but not oscillatory: no intermittent-reinforcement cycle is claimed, and all three metric series share one time grid. Suppression here is predominantly structural (legal liability, dependency lock-in) with a minor internalized component (community norms that stigmatize closure attempts); the scalar does not distinguish them, which the omegas partially cover.",
+    "directionality_logic": "The commons is the structural beneficiary: it collects every returned improvement and bears no comparable cost, placing it at the beneficiary end of d. Proprietary exit-maximizer firms are the targets: they pay the transfer in forfeited closure, and their constrained (not trapped, not mobile) exit keeps their effective extraction high but short of the full-target pole — they can leave, expensively. Contributing developers net out as beneficiaries (guaranteed access to others' work exceeds their surrendered rights for most), but their identity_locked exit raises their effective exposure above what a mobile beneficiary would show, since they cannot credibly threaten departure. Dual-license vendors derive toward the beneficiary/subsidy end through their arbitrage-grade exit: they can monetize either side of the terms at will. Deliberately, no directionality_overrides are authored: overrides key on power atoms, and this story's two powerful seats (exit-maximizer firms and dual-license vendors) require corrections in opposite directions, so a power-atom override would corrupt one while fixing the other; the needed differentiation is carried by exit_options (constrained versus arbitrage) instead, which the derivation chain already reads.",
+    "perspectival_gap": "The seats should compute materially differently. From the agenda-setter seats the arrangement is a functioning protection regime they administer: low personal extraction, genuine coordination achievement. From the payer seat the identical structure operates as a compulsory levy on business-model freedom backed by copyright enforcement. Contributing developers experience both faces at once — protected contributor and conscripted non-proprietor — and their computed position should sit between the commons and the integrator poles. The engine derives this divergence from the authored directionalities and exits; nothing in the claimed_type adjudicates it.",
+    "mandatrophy_analysis": "The founding problem — enclosure of cooperatively produced code under appropriation-defaulting copyright — is still live (server-side use, locked-down shipping, and machine-learning ingestion are current enclosure vectors), so the mandate has not outlived its function and no mandatrophy resolution is declared. The tangled_rope classification is what prevents mislabeling in both directions: reading the arrangement as pure rope erases the real asymmetric burden borne by integration-seeking firms; reading it as pure snare erases the genuine assurance function that keeps the pool stocked at all. The R5 mismatch check comes up clean: founding_problem_status is live and disappearance_verdict is world_rearranges, so no dead-mandate-plus-rearranging-world flag fires, and the absence of any seat capturing gains diffusely enough to constitute capture is reflected by gain_flow pointing at the commons seat rather than at any administrator.",
+    "kernel_context": "This file instantiates one reading of the kernel gpl_reciprocity_obligation, namely copyleft_as_commons_reading: the reciprocity clause understood as institutional technology for preserving a shared resource against enclosure. The kernel's sibling readings — copyleft_as_freedom_reading (viral licensing as preservation of end-user freedoms against proprietary capture) and copyleft_as_restriction_reading (viral licensing as a constraint imposed on business models) — are separate constraints authored in their own files, each with its own epsilon, beneficiary structure, and classification; they are referenced here only through reading_relations and omegas, never averaged into this story's metrics."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "copyleft_as_freedom_reading",
+      "copyleft_as_restriction_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'GPL copyleft': the single natural-language concept covers three structurally distinct claims instantiated from one kernel (gpl_reciprocity_obligation). This file authors the commons reading (beneficiary: the commons as institution; victim: exit-maximizing integrators; medium epsilon over the standing arrangement). The freedom reading shifts the beneficiary set toward end users and authors epsilon from a rights-preservation seat; the restriction reading shifts the victim set toward all commercial integrators and authors epsilon from a business-liberty seat. The stories are linked pairwise via affects_constraints so contamination and legitimacy-flow analysis can traverse the family; the upstream freedom reading historically supplies the rhetorical legitimacy the commons reading builds on, which is documented in each file's kernel_context."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "reciprocal_commons_pooling",
+    "drift_state": {
+      "moment": "contemporary_server_side_ai_ingestion_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "copyleft_as_freedom_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "copyleft_as_restriction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "commons_survival_requires_mandatory_reciprocity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "individual_exit_rights_yield_to_commons_continuity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "This constraint is one reading of kernel gpl_reciprocity_obligation (copyleft_as_commons_reading). What structurally changes under the sibling readings — copyleft_as_freedom_reading and copyleft_as_restriction_reading — and where exactly is the disagreement located?",
+      "resolution_mechanism": "Cross-file comparison of the sibling stories' beneficiary/victim declarations, epsilon referents, and computed per-seat classifications; the disagreement is located in which seat counts as the beneficiary (commons institution versus end users versus unrestricted integrators) and therefore in what the reciprocity burden is extracted FOR.",
+      "impact": "Under the freedom reading the beneficiary set shifts to end users and epsilon is authored near zero from that seat (the burden is the point, not a cost); under the restriction reading the victim set widens to commercial integrators generally and epsilon rises. Classification of the same license text could range from rope-flavored to snare-flavored depending on the instantiated reading; only the sibling files carry those verdicts.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one kernel, three readings, three distinct constraints; this story's metrics are valid only within the commons reading."
+    },
+    {
+      "id": "reciprocity_necessity_vs_preference",
+      "question": "Is mandatory reciprocity a genuine structural necessity for sustaining the code commons, or an institutional preference that rival coordination technologies (permissive licensing plus employer subsidy, foundation patronage, consortium funding) could satisfy equally?",
+      "resolution_mechanism": "Comparative longitudinal analysis of permissive versus reciprocal ecosystems: contribution rates, corporate appropriation events, and pool durability matched on project scale and age, treating license-choice shocks as natural experiments.",
+      "impact": "If rival mechanisms sustain equivalent pooling, the coordination half of the tangled-rope structure weakens and the measured extraction reads increasingly as rent-setting by stewards rather than the price of the commons; if reciprocal terms uniquely resist appropriation, the coordination claim strengthens and the extraction is confirmed as functional.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the commons genuinely depends on the reciprocity obligation or merely prefers it."
+    },
+    {
+      "id": "saas_leakage_effectiveness_gap",
+      "question": "Does the observed compliance record reflect effective enclosure prevention, or is an increasing share of commons-derived value flowing out through server-side deployment that never triggers the distribution-based reciprocity condition?",
+      "resolution_mechanism": "Audit-scale estimation of production deployments running modified commons code as unredistributed network services, contrasted with distributed-binary compliance volume, across the interval's latter third.",
+      "impact": "Substantial untriggered leakage would accelerate the practice-drift assessment, depress the effective protection the commons receives, push theater_ratio upward as formal compliance becomes a shrinking fraction of actual use, and date a transition toward inertial maintenance earlier than the scalar metrics alone indicate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reciprocity rule still binds the dominant deployment mode, or protects a shrinking slice of usage."
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

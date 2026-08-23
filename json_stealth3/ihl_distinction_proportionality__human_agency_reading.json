@@ -1,0 +1,368 @@
+{
+  "header": {
+    "constraint_id": "ihl_distinction_proportionality__human_agency_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ihl_human_agency",
+    "story_uid": "0c2d1eec-7ca0-4182-9cb6-7a899e08f4f1"
+  },
+  "base_properties": {
+    "extractiveness": 0.73,
+    "suppression": 0.67,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Human Final Targeting Decision Requirement (Human-Agency Reading of IHL Distinction/Proportionality)",
+    "topic_domain": "legal/military/technological",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "icrc_interpretive_authorities",
+      "ihl_targeting_legal_profession",
+      "civilian_populations_in_armed_conflict",
+      "humanitarian_disarmament_coalition"
+    ],
+    "victims": [
+      "autonomous_weapons_developers",
+      "military_operational_commands"
+    ]
+  },
+  "interval": {
+    "start": 2013,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.73
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.67
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is one reading of the kernel ihl_distinction_proportionality (the human_agency_reading). What structural differences would prevail under the sibling readings, outcomes_based_reading and categorical_prohibition_reading?",
+      "resolution_mechanism": "Observe which reading consolidates in treaty text, state practice, and national military doctrine over the coming decade; the consolidated reading's constraint supersedes this one's beneficiary/victim structure.",
+      "impact": "Under outcomes_based_reading, epsilon falls sharply (suppression becomes performance-contingent and interpretive rents shrink); under categorical_prohibition_reading, epsilon rises further (all autonomy suppressed and the victim set expands to include human-supervised systems).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: this story instantiates the human-agency reading; sibling readings would change the constraint's epsilon and victim set."
+    },
+    {
+      "id": "locus_of_lawfulness_disagreement",
+      "question": "Where exactly do the readings locate lawfulness of lethal force: is it constituted by who decides (human agency) or by how well the decision performs (outcome quality)?",
+      "resolution_mechanism": "Conceptual analysis of what Additional Protocol I's feasible-precautions and constant-care language can bear: whether those clauses specify a decision-maker or only a decision quality.",
+      "impact": "If the texts specify decision quality only, the human-agency reading loses its textual anchor and collapses toward the outcomes-based sibling; if they presuppose a responsible human agent, this reading holds and the foreclosure of the outcomes-based sibling is confirmed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The specific structural element on which the kernel's readings diverge."
+    },
+    {
+      "id": "ratification_genuineness",
+      "question": "Does nominal human ratification inside compressed sensor-to-engagement loops constitute the irreducible moral judgment the standard requires, or is it performative compliance?",
+      "resolution_mechanism": "Operator studies and engagement telemetry: time available per decision, override rates, automation-bias incidence, and whether reviewing operators ever reject machine nominations under combat conditions.",
+      "impact": "If ratification is largely ceremonial, the theater ratio is understated and the coordination function degrades toward staged maintenance; if operators exercise real judgment under pressure, the function is genuine and the current theater estimate stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether preserved human decision points deliver real judgment or rubber-stamp theater."
+    },
+    {
+      "id": "relative_civilian_protection_performance",
+      "question": "Does a rested, accountable human decision-maker actually discriminate combatants from civilians and proportion force better than a well-engineered autonomous system under equivalent conditions?",
+      "resolution_mechanism": "Standardized scenario-battery evaluations plus post-conflict casualty auditing comparing human-in-the-loop and autonomous engagements.",
+      "impact": "If machines outperform fatigued, biased, or vengeful humans, the civilian-protection benefit weakens, the reading's coordination justification narrows to accountability alone, and the effective burden on developers and commands rises without the protective payoff.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the intended protected class actually collects protection from the human-decision standard."
+    },
+    {
+      "id": "binding_instrument_trajectory",
+      "question": "Will the human-decision standard harden into binding treaty law, or dissipate into voluntary guidelines and national doctrine?",
+      "resolution_mechanism": "Track CCW and UNGA outcomes, national implementations, and export-control harmonization through the late 2020s.",
+      "impact": "Treaty hardening raises suppression and locks the current beneficiary structure for a generation; dissipation leaves the standard as soft law with eroding enforcement capacity and eventual mandatrophy risk.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the enforcement machinery consolidates or decays."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This file instantiates ONE reading of a contested kernel. The kernel is IHL's distinction and proportionality obligations as applied to lethal force; this story authors the human_agency_reading: lethal force is lawful only where an identifiable human being makes the final targeting decision, grounded in Additional Protocol I's distinction/proportionality duties and the Martens Clause's principles of humanity. The reading's constraint suppresses the entire fully-autonomous design space by construction — any system lacking a human final decision is unlawful regardless of demonstrated discrimination performance — while authorizing human-supervised autonomy. The epsilon referent is the standing arrangement under contest: the human-decision requirement as it actually operates, assessed by this reading's own lights. The reading endorses the requirement morally but authors its operating costs honestly rather than presenting the costless picture its advocacy materials give: categorical closure of a design space without performance evidence, tempo and scale costs on commands, sunk-cost destruction for developers, and compounding interpretive centrality flowing to the custodial institutions. Moral endorsement and cost accounting are kept separate — the claim and the metrics are independent authored facts.\n\nKEY AGENTS (by structural relationship):\n- icrc_interpretive_authorities: Primary beneficiary (institutional/arbitrage) — collects interpretive centrality and agenda control\n- ihl_targeting_legal_profession: Secondary beneficiary (organized/identity_locked) — professional indispensability multiplied by every preserved human decision\n- autonomous_weapons_developers: Primary target (powerful/constrained) — flagship product lines ruled unlawful irrespective of performance\n- military_operational_commands: Primary target (institutional/constrained) — tempo, scale, and link-vulnerability costs\n- frontline_operators: Mixed seat (moderate/constrained) — decision burden and prosecution exposure, offset by retained refusal authority\n- civilian_populations_in_armed_conflict: Intended protected class (powerless/trapped) — promised protection, partially delivered\n- humanitarian_disarmament_coalition: Agenda ally (organized/mobile) — quotable demand anchoring campaigns and funding\n- resisting_major_powers: Payer with arbitrage exit (institutional/arbitrage) — blocks binding instruments, develops freely\n- future_battlefield_civilians: Excluded voice — governed by the winning standard without a seat in the process\n- independent_technology_assessors: Analytical observer — supplies the performance data the contest consumes",
+    "logic_rationale": "Extractiveness is high (0.73) because the requirement binds by construction rather than by evidence: a fully autonomous system is unlawful whatever its measured discrimination record, so the burden on developers and commands is decoupled from any showing they could make. Suppression (0.67) is a raw structural property, unscaled by power or scope: the enforcement machinery — CCW mandates, the eleven Guiding Principles, UNGA resolutions, national doctrine, export controls, command-responsibility exposure — has matured steadily since 2013 but stops short of a binding treaty, and major-power arbitrage keeps exits partly open. Theater ratio (0.38) reflects a genuine doctrinal and training function increasingly diluted by compressed-loop ratification, where the preserved 'human decision' is a click-through on machine nominations under automation bias. Accessibility collapse is low (0.30): understanding the standard does not close the outcomes-based alternative, which remains live and funded. Resistance (0.62) is sustained consensus-blocking by major military powers plus industry lobbying. The measurement series run on one shared time grid — every tracked metric is authored at every examined year — with an enforcement-ratchet trajectory (rising suppression_requirement) and no oscillation modeled; the 2026 endpoints carry projected basis flags.",
+    "perspectival_gap": "The seats compute differently from the same structure. From the ICRC and legal-profession seats the arrangement is the constitution of lawful warfare they steward — its demands are the price of law itself. From the developer and command seats it is a categorical closure imposed without performance evidence, borne by those with the least exit. From the operator seat it is simultaneously burden (kill-decision responsibility under time pressure, prosecution exposure) and protection (retained authority to refuse, insulation from blame for errors no human chose). Inter-institutionally, the ICRC's arbitrage-grade exit (its standing survives any single state's defection) contrasts with commands' constrained exit (doctrine and liability follow them across jurisdictions). Same-level divergence appears between developers (powerful, constrained — market segment closed) and resisting major powers (institutional, arbitrage — free to develop outside the standard), showing that nominal power parity masks exit asymmetry. The identity-lock on the legal profession is professional: self-concept constituted through custodianship of the human-judgment doctrine; if overwhelming performance data broke that frame, the seat's resistance to the outcomes-based sibling would collapse.",
+    "directionality_logic": "Declared beneficiaries map to low directionality: the ICRC collects compounding interpretive centrality (every citation of 'meaningful human control' deepens its custodial standing), and the legal profession collects multiplied indispensability. Civilian populations are the intended protected class, but derivation would read their beneficiary declaration as full subsidy; the override to d=0.18 corrects for partial realized delivery — the standard binds unevenly, no treaty exists, and whether the human in the loop outperforms the machine is exactly what the protection-effectiveness omega leaves open. Developers and commands sit near the full-target end: they bear the transfer with constrained exit. Resisting major powers are declared payers but their arbitrage exit dampens effective burden well below trapped payers — their restraint under the standard would be a competitive gift to rivals, so they simply decline to internalize it. Operators mix payer and beneficiary positions: burden and retained moral agency in one seat.",
+    "mandatrophy_analysis": "The tangled_rope claim prevents mislabeling in both directions. Reading the requirement as pure rope (the advocacy framing: a costless moral necessity) erases the asymmetric extraction — design-space closure without performance evidence, and authority rents flowing to interpretive custodians. Reading it as pure snare (the industry framing: jurisdictional rent-seeking dressed as ethics) erases the genuine coordination function — traceable accountability for machine-age killing solves a real collective-action problem that no accepted performance-certification mechanism currently replaces. On genealogy: the founding problem (killing escaping human moral agency, first industrialized, now automatable) predates this reading's crystallization around 2013 and remains live — automation is accelerating, not receding — so no mandatrophy resolution is declared and no sunset clause exists; the arrangement presents itself as a permanent constitutional feature of IHL rather than transitional support. The mismatch consumer should note status=live paired with verdict=world_rearranges: arrangements genuinely depend on it, and the dependency is growing, not atrophying."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ihl_distinction_proportionality__outcomes_based_reading",
+      "ihl_distinction_proportionality__categorical_prohibition_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'IHL obligations on autonomous weapons' decomposes into three structurally distinct constraints — readings of one kernel — per the epsilon-invariance principle. This member instantiates the human-agency reading. The members' epsilon values differ because each reading constitutes a different constraint with a different beneficiary/victim structure, not because one constraint is measured different ways: the outcomes-based sibling renders suppression performance-contingent (low epsilon), the categorical sibling extends suppression to human-supervised systems (higher epsilon, expanded victim set). Edges record family kinship and mutual citation of the same Additional Protocol I / Martens Clause textual base; no strict upstream/downstream causal ordering is asserted among the readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.18
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "icrc_interpretive_authorities",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Publishes interpretive guidance on what distinction and proportionality require as weapon systems automate; convenes states, issues joint appeals with the UN Secretary-General, and supplies the doctrinal language that treaties and national policies quote. Every state or court adopting the human-decision standard cites this body's interpretations, compounding its custodial standing, access, and agenda leverage. Exit is meaningless: the organization is constituted by this custodial role."
+    },
+    {
+      "name": "ihl_targeting_legal_profession",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Military lawyers, academy instructors, and tribunal practitioners whose services become mandatory at every preserved human decision point: vetting target lists, certifying that a human will make the engagement decision, training operators, advising commanders. Each preserved decision multiplies career-relevant legal work. Their professional self-understanding is bound to the doctrine that law enters war through human judgment; abandoning the standard would dissolve the role they have built careers inhabiting."
+    },
+    {
+      "name": "autonomous_weapons_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Defense contractors building systems that select and engage targets without a human confirming each engagement. Under the human-decision standard their flagship product lines are unlawful however well they demonstrate target discrimination, so sunk research must be re-architected around human confirmation nodes or abandoned. They can lobby, rebrand autonomy as decision support, or sell where the standard does not bind, but the core market segment they invested in is closed wherever it does."
+    },
+    {
+      "name": "military_operational_commands",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Commands planning against adversaries fielding massed, machine-speed systems. Requiring a human to make each final engagement decision caps reaction time, forces communication links that can be jammed or targeted, and places personnel inside the decision chain where they can be killed or captured. Their planning alternatives — shedding the human node or fighting at machine speed — are precisely what the standard forbids, and doctrine and liability follow them across jurisdictions."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Soldiers and remote operators who must review machine nominations and confirm engagements under time pressure, carrying legal and moral responsibility for each one. The duty exposes them to automation-bias accusations, prosecution risk when reviews are rushed, and the weight of kill decisions. It also keeps them inside the moral and legal community: they retain authority to refuse an unlawful engagement rather than execute a machine's output, and they are not left holding blame for errors no human chose."
+    },
+    {
+      "name": "civilian_populations_in_armed_conflict",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "People living where these systems would operate. The standard promises them that a human being accountable to law will weigh their presence before force is released, rather than a classifier's confidence score. How much protection actually arrives depends on whether the standard binds the belligerents above them, whether the human in the loop is attentive rather than ceremonial, and whether human judgment outperforms machine judgment in their particular battlespace — none of which they control or can verify."
+    },
+    {
+      "name": "humanitarian_disarmament_coalition",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "NGO networks campaigning against autonomous weapons. The human-decision standard gives their campaigns a concrete, quotable demand, anchors their diplomatic strategy in the CCW and UNGA processes, and sustains membership and funding around an objective that seems winnable short of full prohibition. Their organizational health is tied to the standard remaining both urgent and unachieved; universal achievement tomorrow would convert them into compliance monitors."
+    },
+    {
+      "name": "resisting_major_powers",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Major military powers investing heavily in autonomy who block consensus on binding instruments and decline to internalize the human-final-decision rule. They bear reputational cost and cede normative ground, but no treaty binds them, their rivals' restraint under the standard is a competitive gift, and they can shop for permissive partners and markets. Their resistance is why the standard's reach remains uneven."
+    },
+    {
+      "name": "future_battlefield_civilians",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Populations of wars not yet fought, in whose battlespaces the winning standard will govern life-and-death sorting. They have no seat in the rooms where the standard is being settled; whichever reading prevails will have been chosen without them, though they will live inside its consequences longest."
+    },
+    {
+      "name": "independent_technology_assessors",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers and testing bodies measuring how well automated systems actually discriminate combatants from civilians and how faithfully human oversight operates under combat time pressure. They publish the performance data the interpretive debate consumes but hold no vote on which reading becomes law."
+    }
+  ],
+  "gain_flow": "icrc_interpretive_authorities",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves a real collective-action problem: absent a shared rule fixing who may decide a killing, every state's automation choices impose unpriced risks on other states' soldiers and civilians, and no one can attribute responsibility for machine-caused deaths. The standard makes lethal decision-authority traceable to identifiable, trainable, prosecutable human agents across all parties.",
+    "transfer_function": "Moves final engagement authority from automated processing pipelines to designated human decision-makers; moves the costs of that reservation — slower engagement cycles, vulnerable communication links, re-engineered product lines — onto commands and manufacturers; moves interpretive authority, doctrinal ownership, and professional indispensability toward the ICRC and the IHL legal profession.",
+    "absent_voices": "Future battlefield civilians have no seat anywhere in the process. The technical communities that build and test the systems participate only as witnesses, not as voting parties; the states most invested in autonomy engage mainly to block rather than to shape. Consensus in the CCW therefore reflects the preferences of states willing to sit through the process, not of those whose conduct the standard would govern most.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the human-final-decision requirement vanished overnight, procurement pipelines would redirect toward fully autonomous engagement, operational architectures would reorganize around machine-speed targeting, the accountability framework for machine-caused deaths would lose its anchor, and the interpretive institutions whose centrality depends on the standard would lose their central object — the governance of lethal force would rearrange around whichever performance standard replaced it.",
+    "founding_problem": "Ensuring that killing in war remains governed by human moral judgment and accountable human agency — a problem first posed by industrialized warfare and answered by the Martens Clause, reposed when precision-strike automation began compressing the human role in targeting, and now posed acutely by systems able to complete the sensor-to-engagement loop without one.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the ICRC-centered beneficiary set: major militaries' own directives (for example, U.S. DoD Directive 3000.09's requirement for appropriate levels of human judgment over force-application decisions), UN General Assembly resolutions adopted by wide margins, and open letters from AI and robotics researchers attesting the accountability-gap concern. No comparable external body attests that the problem is solved."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "human_judgment_constitutes_lawful_force",
+    "drift_state": {
+      "moment": "contemporary_autonomous_systems_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "outcomes_based_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "categorical_prohibition_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "human_moral_judgment_irreducible_at_force_application",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "meaningful_human_control_required_for_lawful_engagement",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

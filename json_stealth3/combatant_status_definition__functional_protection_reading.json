@@ -1,0 +1,335 @@
+{
+  "header": {
+    "constraint_id": "combatant_status_definition__functional_protection_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ca3_functional_floor",
+    "story_uid": "465d4553-9bde-41bf-ad8c-81c6b18870c5"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.35,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.62,
+    "claimed_type": "rope",
+    "human_readable": "Common Article 3 Functional Protection Floor (Status-Independent Minimum Treatment)",
+    "topic_domain": "international_humanitarian_law/law_of_armed_conflict",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "detained_persons_all_categories",
+      "nonstate_armed_groups",
+      "icrc_protection_mandate"
+    ],
+    "victims": [
+      "state_intelligence_services"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 75
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 28,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 46,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 57,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 66,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 28,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 46,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 57,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 66,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 28,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 46,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 57,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 66,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.5
+    }
+  ],
+  "omegas": [
+    {
+      "id": "status_gate_severability",
+      "question": "Are Common Article 3 minimum protections constitutively tied to combatant-status categories, or fully severable from status determination?",
+      "resolution_mechanism": "Comparative state practice across detainee categories combined with the jurisprudential record (Tadic-line 'minimum yardstick' holdings, Hamdan-line applicability holdings): if the floor is granted uniformly wherever status is disputed, severability is confirmed; systematic status-conditioned withholding would refute it.",
+      "impact": "If protections prove status-contingent in binding practice, this reading collapses toward the state-centric sibling's structure and effective extraction for non-privileged detainees rises sharply; if severable, the low-extraction profile authored here holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the floor's protections depend on combatant-status determination."
+    },
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is one reading of the kernel combatant_status_definition — the functional_protection_reading. How does the reading contest distribute structurally across the sibling readings?",
+      "resolution_mechanism": "Structural comparison of the three instantiated readings: state_centric_reading (status as a gate to POW-tier protections; non-state detainees left outside privileged tiers) and national_liberation_reading (status extended to organized liberation movements under AP I Art. 1(4)) instantiate other files. The disagreement is located at a single node: whether the mapping from detainee to protection runs through a status determination or through the bare fact of custody.",
+      "impact": "Adopting a sibling reading changes the victim set (categories of detainees left unprotected or newly privileged) and redistributes epsilon across seats; it does not change the floor's existence. This file's low-epsilon, universal-floor structure is specific to the functional reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story instantiates the functional_protection_reading of the combatant_status_definition kernel; siblings alter the status-to-protection mapping."
+    },
+    {
+      "id": "incommunicado_visibility_gap",
+      "question": "Does the measured compliance picture reflect actual detention conditions, given that denial of ICRC access concentrates exactly where abuse risk is highest?",
+      "resolution_mechanism": "Triangulate released-detainee testimony, forensic and documentary evidence of undisclosed detention sites, and retrospective access records; compare treatment indicators for accessible versus access-denied custodial populations.",
+      "impact": "If access-denied detention is systematically worse, theater_ratio understates the rhetoric-practice gap and the floor's persistence leans harder on enforcement machinery than the authored metrics suggest, shifting computed seat classifications toward enforced-hybrid territory at the margins.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Visibility gap between accessible and incommunicado detention populations."
+    },
+    {
+      "id": "reciprocity_asymmetry_persistence",
+      "question": "Does the floor persist primarily through reciprocity expectations or through active enforcement, given that dominant detaining states capture many detainees but rarely have personnel captured in return?",
+      "resolution_mechanism": "Track compliance trajectories of high-capture/low-captured states across enforcement-capacity fluctuations (tribunal funding cycles, prosecutorial attention, ICRC access negotiations); a floor that decays when enforcement slackens while reciprocity remains thin is enforcement-carried, not self-sustaining.",
+      "impact": "If persistence is enforcement-carried, the rope reading holds only while enforcement capacity holds, and enforcement decay becomes the leading indicator of drift toward rhetorical-only operation; if reciprocity and professional-norm internalization carry it, the rope reading is robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reciprocity versus enforcement as the load-bearing persistence mechanism."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the functional_protection_reading of the combatant_status_definition kernel: the claim that every person detained in connection with an armed conflict receives Common Article 3's minimum protections — humane treatment, medical care, individual judicial process before any sentence — regardless of combatant status, so that no status determination stands between a captive and humane treatment. The sibling readings (state_centric_reading, national_liberation_reading) answer the same kernel question differently and are separate constraint files; per the epsilon-invariance principle this file authors only this reading, with one stable epsilon over one referent: the standing status-independent-floor arrangement, assessed by the reading's own protective lights. KEY AGENTS (by structural relationship): - detained_persons_all_categories: Primary beneficiary (powerless/trapped) — receives the protection floor unconditionally - state_intelligence_services: Primary cost-bearing seat (institutional/constrained) — loses interrogation and incommunicado-holding options - detaining_states: Agenda-setter and contingent beneficiary (institutional/constrained) — administers compliance, draws reciprocity - nonstate_armed_groups: Dual-positioned (organized/constrained) — their detainees are covered; they bear compliance duties they did not help draft - icrc_protection_mandate: Co-administrator and institutional collector (institutional/constrained) — the floor is its access license - war_crimes_prosecutors: Analytical observer (institutional/analytical) — adjudicates violations of the floor - families_of_missing_detainees: Excluded seat (powerless/trapped) — the floor's registration machinery is their only thread to the disappeared. The claim (rope) and the metrics are authored independently: the metrics describe low extraction with real resistance and a visible enforcement history, and the engine computes per-seat classifications from the structural data without reference to the claim.",
+    "key_agents": [
+      "- detained_persons_all_categories: Primary beneficiary (powerless/trapped) — every captive in an armed conflict, whatever their affiliation, receives humane treatment, judicial process, and ICRC contact without any status test",
+      "- state_intelligence_services: Primary cost-bearing seat (institutional/constrained) — the floor forecloses coercive interrogation, prolonged incommunicado holding, and summary disposal; they resist and route around visibility",
+      "- detaining_states: Agenda-setter with contingency-beneficiary position (institutional/constrained) — ratify, administer, and fund compliance; draw reciprocity when their own personnel are captured",
+      "- nonstate_armed_groups: Dual beneficiary/payer (organized/constrained) — their captured members gain unconditional coverage; they owe humane-detention and court obligations they often lack capacity to meet",
+      "- icrc_protection_mandate: Co-administrator and institutional collector (institutional/constrained) — conducts visits, registration, and family-news transmission; collects access and mandate from the floor",
+      "- war_crimes_prosecutors: Analytical observer (institutional/analytical) — treat floor violations as chargeable conduct; their rulings feed back into the reading's authority",
+      "- families_of_missing_detainees: Excluded seat (powerless/trapped) — absent from treaty diplomacy; depend entirely on the floor's registration and notification machinery"
+    ],
+    "logic_rationale": "Extractiveness is low (0.20) because the floor transfers restraint rather than rent: the compliance burden (registration, review, trial machinery, access) is the coordination's price, not a transfer any seat collects as profit. Suppression (0.35, structural scalar) is moderate-low: the constraint closes abusive alternatives for detaining authorities but leaves the sibling readings and off-book routing channels (rendition, undisclosed sites) partly open, so alternatives are narrowed, not collapsed — hence accessibility_collapse 0.40 rather than mountain-grade. Resistance is high (0.62) because the seat that pays most sharply — state intelligence services — has fought the floor continuously since 1949 (status-gate arguments, the post-9/11 'unlawful combatant' campaign, black-site programs), and that fight is documented in litigation and inquiry records. Theater_ratio (0.31) reflects real but incomplete performance: manuals and doctrine cite the floor widely while practice diverges in access-denied settings; it peaked around the post-9/11 defiance era and has partially receded. The suppression_requirement series is authored deliberately as a distinct construct from the structural suppression scalar: it traces enforcement-machinery intensity (tribunal activity, prosecutorial exposure, ICRC leverage), which cycled with conflict waves — rising through decolonization-era scrutiny and the 1990s tribunal boom, peaking in the Hamdan-era confrontation, easing with partial normalization. The oscillation is driven by external conflict cycles, not by intermittent reinforcement as an extraction device. A sliver of the suppression picture is internalized rather than structural: professional military identity carries the floor beyond enforcement reach, which the reciprocity omega tracks.",
+    "perspectival_gap": "The same text is four different lived constraints. From the detainee seat it is a shield with no cost attached. From the intelligence-services seat it is a leash that removed settled tools, experienced as pure imposition — the seat most likely to compute the arrangement as extraction. From the detaining-state seat it is an insurance policy resented during wars in which it holds all the captives and pays all the premiums, valued in wars where its own personnel fall captive. From the ICRC seat it is an operating license: the floor is the legal hook that turns a request to visit into a claim. The engine computes these divergent per-seat classifications from power, exit, and directionality data; nothing in the authored claim adjudicates between them.",
+    "directionality_logic": "Detainees sit at the full-beneficiary end (d near 0): the constraint subsidizes them unconditionally and they are trapped, so effective extraction inverts toward subsidy — matching the expected structural delta of low epsilon for all detainees. State intelligence services sit near the full-target end (d near 1): declared cost-bearers, institutional power but constrained exit, bearing the sharpest concentrated costs. Detaining states sit mid-range: they pay compliance costs and draw reciprocity plus systemic stability, and as agenda-setters they could in principle denounce — but customary-law persistence makes denunciation nearly worthless, so their exit is nominal. Non-state armed groups are dual-positioned: strong beneficiary (coverage without status tests their opponents control) carrying payer duties. The ICRC collects mandate and access — a genuine institutional collection, though not rent extracted from other seats. No directionality_overrides are authored: the override mechanism is keyed by power atom, and this story contains three institutional seats requiring three different directionalities, so a power-atom-level override would corrupt the differentiation that the beneficiary/victim declarations and exit-option spread already encode correctly.",
+    "mandatrophy_analysis": "The rope claim guards against two mislabels. First, against snare: the intelligence-services seat bears real, concentrated costs, but nobody collects those costs as rent — the value released flows to detainees as protection, which is why the gain_flow seat is the detainee population and not any administering body. Reading the intelligence seat's resentment as evidence of extraction would invert a protective floor into predation. Second, against piton: a humanitarian floor is the canonical candidate for rhetorical ossification — cited in every manual, honored in breach — and the theater_ratio series is the tripwire; a sustained crossing above 0.5 would indicate the floor persisting as performance while practice diverges, the piton signature. The founding problem (atrocities against detainees in conflicts where no status framework reached) is live — corroborated from outside the beneficiary set by tribunal jurisprudence and UN inquiry findings — so no mandatrophy resolution is declared, and the constraint remains under active observation for lifecycle drift.",
+    "kernel_context": "Kernel: combatant_status_definition — the contested question of whether entitlement to protections in detention runs through a combatant-status determination. This file instantiates the functional_protection_reading: the floor attaches to the bare fact of custody, and status determination is removed as a precondition for humane treatment and fair-trial guarantees. Sibling readings: state_centric_reading (status requires formal state military organization meeting Article 4 criteria; non-state actors categorically outside privileged tiers) and national_liberation_reading (status extended to organized anti-colonial/anti-occupation movements under AP I Art. 1(4)). Relation choices: to state_centric_reading, 'influences' — the universal floor does not logically eliminate POW-tier status gating (a party can hold both: floor for all, privileges by status), but it drains the gate's practical stakes and forces states to justify exclusions, reshaping the sibling's operating environment. To national_liberation_reading, 'coexists_with' — the NL extension upgrades detainees above the floor while this reading guarantees the floor beneath; both remain live positions held by different parties with no logical resolution between them. Reference frame: this reading holds the kernel's legitimate state to be the elementary-considerations-of-humanity baseline — protection flowing from custody itself. Drift: substantial axiom_overriding at the contemporary moment, openly contested (acknowledged) after the post-9/11 status-gate campaign attacked the foundational premise, partially rebutted by the Hamdan-line holdings."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "combatant_status_definition__state_centric_reading",
+      "combatant_status_definition__national_liberation_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'combatant status' conflates three structurally distinct claims about the status-to-protection mapping, decomposed per the epsilon-invariance principle into three linked stories sharing the combatant_status_definition kernel. This file (functional_protection_reading) authors the universal-floor claim with low epsilon for all detainees and no status gate. combatant_status_definition__state_centric_reading authors the status-as-gate claim, under which detainees failing Article 4 criteria sit outside privileged protections — structurally higher epsilon concentrated on non-state detainees, with state militaries as beneficiaries. combatant_status_definition__national_liberation_reading authors the AP I 1(4) extension claim, intermediate in structure: expanded privileged tier for liberation movements, contested by states that never accepted 1(4). The upstream text (Common Article 3 itself, highest empirical entrenchment — customary-law status affirmed across jurisdictions) feeds all three readings; this reading exerts structural influence on the state-centric sibling by lowering the payoff of status gating without foreclosing it. Epsilon values differ across the family because the referent arrangements differ: floor-for-all, gate-by-status, and expanded-tier respectively — measuring one with another's observable would be measuring a different constraint."
+  },
+  "stakeholders": [
+    {
+      "name": "detained_persons_all_categories",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Any person deprived of liberty in connection with an armed conflict — irregular fighters, civilians, suspected spies, downed aircrew, medical personnel — is entitled to humane conditions, medical care, correspondence, and individual judicial process before any penal sentence, without first passing any test of membership in a recognized force. Nothing about their situation is voluntary: captivity is the entry condition, and the floor shapes what happens inside it."
+    },
+    {
+      "name": "state_intelligence_services",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Conduct interrogation and intelligence exploitation of captured persons. The floor forecloses prolonged incommunicado holding, coercive techniques, and quiet disposal of low-value detainees, and it puts every facility they run on a register a neutral visitor may demand to see. When denied carve-outs by their political principals they build off-book channels — renditions, undisclosed sites — which is the closest thing to exit the legal regime leaves them, and even that route exposes them to prosecutorial scrutiny."
+    },
+    {
+      "name": "detaining_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Ratified the 1949 Conventions, administer detention under them, and collectively author the regime's evolution through diplomatic conferences and customary practice. Individually they fund court-martial machinery, detainee registration, and neutral access, and they draw the return benefit when their own personnel fall captive — thin in wars where they hold all the prisoners, substantial where the flow reverses. Treaty withdrawal is formally available and a handful of states have exercised it, but customary-law persistence and reputational cost mean exit purchases almost nothing."
+    },
+    {
+      "name": "nonstate_armed_groups",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Their captured members receive the floor's protections without any status determination their opponents control — coverage that status-gated regimes would withhold. In exchange they are expected to run humane detention and functioning courts they frequently lack the capacity for, under rules drafted in conferences they had no seat at. They cannot renegotiate the terms; their practical lever is the reciprocity of observing them."
+    },
+    {
+      "name": "icrc_protection_mandate",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Visits places of detention, registers detainees, transmits family news, and reports violations confidentially to the responsible authorities. The floor is what converts a request to enter a facility into a legal claim; without it the institution's detention work rests on ad hoc consent. It collects mandate, access, and institutional centrality, holds no coercive power, and depends on belligerent cooperation for every visit it conducts."
+    },
+    {
+      "name": "war_crimes_prosecutors",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International and hybrid tribunals adjudicate detainee-treatment cases and treat the floor's guarantees as chargeable conduct whenever breached, for any victim category. Their rulings — treating the minimum as binding irrespective of status — feed back into the reading's authority and raise the expected cost of violation for every other seat."
+    },
+    {
+      "name": "families_of_missing_detainees",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Relatives of persons taken in conflict who have received no confirmation of custody, location, or condition. The floor's registration and notification machinery is the only standing mechanism between their relatives and disappearance, yet they hold no seat in treaty diplomacy or military planning; their stake reaches the system only when neutral access is actually granted."
+    }
+  ],
+  "gain_flow": "detained_persons_all_categories",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Establishes a single minimum standard of detainee treatment binding on every party to every armed conflict, including parties with no recognized status: it solves the collective-action problem in which each side's mistreatment of captives invites reciprocal escalation, and it removes the incentive each side otherwise has to classify its captives out of legal coverage altogether.",
+    "transfer_function": "Moves restraint and procedural burden — registration, review, trial machinery, neutral access — from detaining authorities toward bodily security and judicial guarantees for every detained person; secondarily it confers monitoring access and institutional standing on the ICRC, funded by the compliance obligations it monitors.",
+    "absent_voices": "Detainees themselves were absent from the 1949 diplomacy and every revision since — their interests enter only vicariously through ICRC delegations. Families of the disappeared likewise have no seat. Non-state armed groups had no voice in the original drafting and gained only indirect representation in the 1977 protocol process; their position would be double-edged: demand for the protection, objection to obligations imposed without their consent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the floor vanished overnight, detainee treatment in every ongoing conflict would fall back to captor discretion and status litigation: each side would have standing incentives to classify captives out of all coverage, the documented pre-1949 pattern of reprisal spirals and disappearance would resume, the ICRC would lose its treaty hook for demanding access, and families of the captured would lose the only registration machinery that reaches across lines.",
+    "founding_problem": "The inter-war and Second World War record: detainees in civil wars and occupied territories — partisans, hostages, suspected irregulars — were tortured, summarily executed, or disappeared because no legal category covered them and no minimum bound their captors. The 1949 drafters built Common Article 3 to bind all parties to a conflict, recognized or not, precisely because status frameworks had failed every population that did not fit them.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroboration comes from outside the benefiting parties: international tribunal jurisprudence (the Tadic chamber's minimum-yardstick holding and successors) treats the floor as binding law in non-international armed conflicts; UN commissions of inquiry and investigative bodies continue to document detainee abuse in contemporary conflicts, confirming the underlying problem has not receded. The ICRC also attests continued liveness but sits inside the beneficiary set, so the load-bearing corroboration rests on the tribunals, UN bodies, and the published record of wartime litigation."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "elementary_considerations_of_humanity_baseline",
+    "drift_state": {
+      "moment": "contemporary_post_hamdan_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "state_centric_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "national_liberation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "protection_entitlement_independent_of_status",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "custody_triggers_regularly_constituted_court_process",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

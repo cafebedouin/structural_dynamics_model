@@ -1,0 +1,305 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dependency_trap",
+    "story_uid": "b24bb7a4-6910-478d-b579-3e24772c0ad1"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.6,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "snare",
+    "human_readable": "Unconditional Income Support — Dependency Trap Reading (Work-Incentive Erosion)",
+    "topic_domain": "economic/political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "political_officeholders",
+      "welfare_administrative_bureaucracy"
+    ],
+    "victims": [
+      "ubi_transfer_recipients",
+      "general_taxpayers"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.6
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_multiplicity",
+      "question": "This file instantiates only the dependency_trap_reading of the income_support_conditionality kernel; the freedom_floor_reading and wage_subsidy_reading instantiate structurally different constraints over the same transfer arrangement. Which reading governs the arrangement's classification?",
+      "resolution_mechanism": "Side-by-side compilation of the three reading-files over the identical structural referent (an unconditional transfer regime), comparing computed types, victim sets, and epsilon values across readings.",
+      "impact": "Under the freedom_floor_reading, recipients flip from victims to beneficiaries and epsilon collapses toward the coordination floor; under the wage_subsidy_reading, employers enter the beneficiary set while the taxpayer channel persists. The snare verdict holds only within this reading's structural commitments.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "One kernel, three readings: this constraint is the dependency-trap instantiation only; sibling readings are separate files with different victim sets."
+    },
+    {
+      "id": "labor_supply_response_sign",
+      "question": "Does unconditional transfer receipt actually reduce employment and accelerate skill decay, and by how much?",
+      "resolution_mechanism": "Natural experiments — Alaska permanent fund dividends, GiveDirectly trials, negative income tax pilots, lottery-winner panels — measuring employment, hours, and skill proxies over multi-year horizons.",
+      "impact": "A null or small labor-supply response dissolves the trap mechanism and removes the recipient victim channel, collapsing this reading's structure toward the freedom-floor sibling; a large, cumulative response confirms trapped exit and sustains the snare profile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The empirical crux on which this reading stands or falls: the sign and magnitude of the labor-supply response to unconditional transfers."
+    },
+    {
+      "id": "exit_cost_compounding",
+      "question": "Is the re-entry cost of transfer-supported non-employment cumulative and persistent (scarring), or transient?",
+      "resolution_mechanism": "Longitudinal wage trajectories after multi-year non-employment spells among transfer recipients versus matched controls, tracking skill proxies, reference networks, and offered wages at re-entry.",
+      "impact": "Persistent scarring locks recipients' exit options at trapped and sustains high effective extraction; transient costs downgrade exit to constrained and pull the computed type toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the exit-cost mechanism compounds over duration of receipt or washes out."
+    },
+    {
+      "id": "non_work_normative_valence",
+      "question": "Is time outside employment a capability loss borne by the recipient (harm), or acquired freedom to refuse coercive work (benefit)?",
+      "resolution_mechanism": "Not resolvable by data alone: it turns on whether flourishing is indexed to labor-market participation (this reading's axiom) or to the option value of refusal (the freedom-floor sibling's axiom). Resolvable only at the level of framework choice between readings.",
+      "impact": "Determines whether recipients sit in the victim set at all; flipping the valence flips this reading's central victim channel and reverses the directionality of the recipient seat.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "The normative dispute over the valence of non-work that separates this reading from its freedom-floor sibling."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "An unconditional income-support regime pays every resident a subsistence-level transfer regardless of work status, funded by compulsory taxation. This story authors the constraint as seen from the dependency-trap reading: the arrangement converts a temporary income floor into a durable exit from labor-force participation — with search pressure removed, recipients' skills, references, and networks decay each year outside employment, and re-entry wages fall accordingly — while the transfer rolls onward and the taxing machinery grows with it. The beneficiaries are the officeholders who convert the dependent constituency into reliable electoral support and the administrative apparatus whose budget scales with enrollment; the victims are the recipients themselves (compounding capability and lifetime-earnings losses) and the taxpayers who fund transfers the reading classes as non-productive. The epsilon referent is the standing arrangement under contest — the universal unconditional transfer regime — assessed by this reading's own lights; the sibling readings over the same arrangement are separate constraint stories, not averaged here. The claim/metric gap is deliberate: the arrangement is CLAIMED as snare from this seat while the metrics independently describe its operation; the engine measures any divergence.",
+    "key_agents": [
+      "- political_officeholders: Agenda setter (institutional/arbitrage) — sets transfer levels and defends expansion; collects electoral allegiance from the dependent constituency",
+      "- welfare_administrative_bureaucracy: Secondary beneficiary (organized/constrained) — staffs disbursement; budget and headcount scale with enrollment",
+      "- ubi_transfer_recipients: Primary target (powerless/trapped) — receive the transfer; bear compounding skill decay and falling re-entry wages",
+      "- general_taxpayers: Primary target (moderate/constrained) — fund the transfer compulsorily; no opt-out",
+      "- future_taxpayers: Excluded voice (powerless/trapped) — inherit accumulated fiscal commitments; no seat today",
+      "- labor_economists: Analytical observer (analytical/analytical) — estimate labor-supply responses from natural experiments; no vote"
+    ],
+    "logic_rationale": "Extraction is high (0.72 at interval end) because it runs on two channels at once: recipients surrender skill formation and lifetime-earnings trajectory, and taxpayers surrender taxed income funding transfers this reading classes as non-productive; both channels scale with enrollment and duration. Suppression (0.60) is temporal-compounding rather than legal-barrier suppression: there is no means-test cliff to trip, but each year outside employment raises the effective cost of return through skill decay, reference-network attrition, and employer discounting of résumé gaps, while taxpayer exit is blocked by compulsory taxation. Theater ratio (0.42) reflects a growing share of activity devoted to performing compassion — pilot announcements, dignity framing, expansion ceremonies — relative to the protective function the founding problem specified. Accessibility collapse is moderate (0.45): work, relocation, and informal insurance remain nominally available but degrade with duration of receipt, so alternatives persist yet weaken. Resistance (0.60) is real and recurring: workfare reform movements, taxpayer coalitions, and conditionality legislation repeatedly contest the arrangement. The measurement series run on one shared time grid (t = 0, 10, 20, 30, 40, 50) with every tracked metric authored at every point; the trajectories are monotonic ratchets, not cycles — expansion begets enrollment duration, duration begets dependence, dependence begets defensive electoral mobilization, which begets further expansion.",
+    "perspectival_gap": "The agenda-setter seat and the payer seats should compute very different types from the same structural data. From the officeholder seat the arrangement is compassionate governance it designed, funds from general revenue it does not depend on, and defends against conditionality amendments; from the recipient seat the same payment is a floor that quietly repriced its future labor at ever-lower wages; from the taxpayer seat it is a compulsory levy with no service rendered in exchange. The bureaucracy seat sits near the beneficiary pole with constrained exit — careers are welded to the agency. The engine computes this divergence from the power/exit asymmetries (institutional-arbitrage setters versus powerless-trapped and moderate-constrained payers); the authored claim does not adjudicate it.",
+    "directionality_logic": "Beneficiary declarations drive the derivation: political_officeholders and welfare_administrative_bureaucracy sit near the subsidized end (low d, low or negative effective extraction). Victim declarations drive the opposite pole: general_taxpayers bear the fiscal channel with constrained exit (high d). ubi_transfer_recipients are the subtle case — cash flows TO them, but this reading's structural claim is that the cash is the retention mechanism: it purchases the non-participation whose costs (skill decay, scarred trajectories) the recipients themselves bear, with trapped exit pushing them toward the full-target end despite the material inflow. The derivation from victim declaration plus trapped exit produces that high-d placement directly, so no directionality override is needed. Future taxpayers are excluded rather than seated — they feed the absent-voices answer, not the directionality arithmetic.",
+    "mandatrophy_analysis": "The founding problem — protecting survival when wage labor fails — has not simply died: destitution risk persists, so the arrangement cannot be dismissed as a zombie on the dead-mandate test alone. But the status is contested, not live: this reading holds the protective function has been substantially superseded by a patronage-and-retention function, while defenders hold the protective need is as urgent as ever. The classification machinery prevents two mislabelings symmetrically. Against the rope mislabel: declaring the victim set and the enforcement data blocks the safety-net coordination story from computing as pure coordination — the same structure that pools risk also retains recipients and levies taxpayers, and the tangled-rope gate would demand naming who is coordinated and who pays. Against the piton mislabel: the gains demonstrably accrue to named seats (officeholder electoral returns, bureaucratic budgets), so the diffuse-gains cell — the piton signature — does not obtain; a captured arrangement stays captured under either cost class, and the prohibitive cost-to-fix (withdrawing transfers from a mobilized dependent constituency) explains persistence without invoking inertia.",
+    "kernel_context": "This story instantiates the dependency_trap_reading of the income_support_conditionality kernel: unconditional income support undermines work incentives, creating long-term dependency and skill atrophy. Sibling readings over the same kernel: freedom_floor_reading (the same arrangement read as decommodification of labor power producing positive freedom to refuse coercive work — recipients as beneficiaries, epsilon near the coordination floor) and wage_subsidy_reading (the same arrangement read as an employer subsidy enabling wage suppression while maintaining worker subsistence — employers entering the beneficiary set). Those readings are separate constraint stories with their own epsilon values, victim sets, and classifications; this file authors only the dependency-trap structure and links to its siblings via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "freedom_floor_reading",
+      "wage_subsidy_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'unconditional income support' covers three structurally distinct claims, decomposed per the epsilon-invariance principle into a three-story constraint family sharing one referent (the unconditional transfer regime) but not one epsilon: dependency_trap_reading (this file — recipients and taxpayers as victims, snare), freedom_floor_reading (recipients as beneficiaries, near-zero extraction), and wage_subsidy_reading (employers as beneficiaries, taxpayers as victims). The files link via affects_constraints. The upstream empirical layer — the labor-supply natural-experiment literature — feeds all three: this reading cites disincentive findings as confirming evidence, while the freedom-floor sibling cites null-result findings as confirming evidence; the family shares a referent, not a verdict."
+  },
+  "stakeholders": [
+    {
+      "name": "political_officeholders",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Set transfer levels, eligibility breadth, and program framing; campaign on protecting and expanding the payment; assemble the legislative coalitions that sustain it. The constituency receiving the transfer reliably supports them at the polls, and proposals to attach work conditions to the payment draw concentrated opposition from that constituency. They fund the program from general revenue they do not personally depend on, and can pivot to other platforms or offices if the politics turn."
+    },
+    {
+      "name": "welfare_administrative_bureaucracy",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Staff the disbursement machinery: enrollment, payment processing, fraud screening, outreach. Agency headcount and budget scale with program size and enrollment, giving the agency a durable institutional interest in broad coverage, and its technical memoranda shape what expansions reach the legislative agenda. Career paths inside the agency are tied to the program's continuation; movement to unrelated portfolios is rare."
+    },
+    {
+      "name": "ubi_transfer_recipients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Receive a monthly payment sufficient for subsistence regardless of work status. With the acute pressure to accept available work removed, job search thins; each year outside formal employment erodes skills, references, and networks, and employers discount the resulting gaps, lowering the wages on offer at re-entry. The payment covers necessities but not the assets or retraining that would fund a return to credential-bearing work, so the practical route off the program runs through accepting entry-level wages after capabilities have already depreciated. Individually they have no leverage over program design; their collective weight registers mainly as defensive electoral mobilization against conditionality."
+    },
+    {
+      "name": "general_taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the transfer through payroll and general taxation. They receive no direct service in exchange beyond the argued stability dividend, and their tax share rises with enrollment and with each expansion. Opting out individually is not possible; reducing the aggregate burden requires winning national political contests against a constituency that mobilizes defensively around the payment. Emigration or shadow-economy exit carries costs most households cannot absorb."
+    },
+    {
+      "name": "future_taxpayers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Will inherit whatever fiscal obligations and program commitments accumulate during the current period. They have no vote, no lobby, and no seat in the legislative coalitions that set transfer levels today; their interests surface only indirectly, through deficit projections and actuarial warnings issued by third parties."
+    },
+    {
+      "name": "labor_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Estimate labor-supply responses to unconditional transfers using natural experiments — Alaska's dividend, GiveDirectly trials, negative income tax pilots, lottery-winner panels — and publish elasticity and skill-decay estimates. Their findings feed legislative testimony and reform proposals on all sides of the conditionality dispute, but they hold no vote and bear none of the program's costs or benefits."
+    }
+  ],
+  "gain_flow": "political_officeholders",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a universal consumption floor decoupled from employment status: survival is pooled society-wide rather than contingent on any particular job, and the elimination of means-testing removes the administrative overhead and take-up gaps of targeted programs.",
+    "transfer_function": "Moves taxed income from employed households to every resident irrespective of work status; secondarily moves electoral allegiance toward the officeholders who maintain the payment, and moves years of labor-force participation out of the formal economy as receipt duration lengthens.",
+    "absent_voices": "Future taxpayers would object to the accumulated fiscal commitments but have no seat — they register only through third-party actuarial warnings. The pre-transfer trajectories of current recipients were altered without a consent point at which the lifetime cost of extended non-participation was priced. Entry-level employers facing thinning applicant pools observe the labor-supply effect but hold no formal seat in program design. All three stand outside the legislative coalition that sustains the arrangement.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the unconditional transfer and its taxing machinery vanished overnight, recipient households would lose their subsistence floor immediately and re-enter job search en masse at depressed wages; the administrative agencies built around disbursement would dissolve or shrink; the electoral coalitions organized around defending the payment would lose their binding issue; and the fiscal share currently absorbed by taxpayers would release back to households or alternative spending. Every named seat's situation reorganizes — nothing about the current arrangement survives its removal unchanged.",
+    "founding_problem": "Mass destitution when wage labor fails: industrial downturns, technological displacement, and old-age poverty before pension systems left people outside work with no income and no floor, and earlier means-tested relief reached them late, stigmatized, and partially.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Economic historians' documentation of pre-welfare-era destitution and the failure of early means-tested relief corroborates the founding problem's reality from outside the benefiting parties, as do OECD and ILO income-security assessments of unprotected populations. On the status question the parties divide along the kernel's fault line: program defenders attest the protective need is live (persistent unemployment and displacement risk), while labor economists publishing disincentive findings and taxpayer-side reform coalitions attest that the arrangement's operative function has shifted toward retention and patronage. No source outside the benefiting parties attests that the original protective function remains the dominant one."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "labor_participation_social_contract",
+    "drift_state": {
+      "moment": "contemporary_universal_expansion_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "wage_subsidy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditional_transfers_erode_work_capacity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "labor_participation_constitutes_flourishing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

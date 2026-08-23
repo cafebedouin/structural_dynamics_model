@@ -1,0 +1,375 @@
+% ============================================================================
+% CONSTRAINT STORY: npt_treaty_text__nnws_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-12
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_npt_treaty_text__nnws_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: npt_treaty_text__nnws_reading
+ *   human_readable: NPT Article VI as Binding Disarmament Obligation with Conditional NNWS Restraint (Non-Nuclear-Weapon States Reading)
+ *   domain: international_law/arms_control/treaty_interpretation
+ *
+ * SUMMARY:
+ *   This story instantiates ONE reading of the NPT treaty text as contested
+ *   kernel: the non-nuclear-weapon-states reading, under which Article VI
+ *   imposes a binding disarmament obligation on all parties — and effectively
+ *   on the five recognized nuclear-weapon states — and NNWS non-proliferation
+ *   compliance is conditional restraint, consideration exchanged for NWS
+ *   disarmament performance rather than an open-ended surrender of the
+ *   nuclear option. The standing arrangement under contest (the ε referent,
+ *   assessed by this reading's own lights) is the NPT regime as it has
+ *   actually operated since the 1995 indefinite extension: NNWS accepting
+ *   safeguards and permanent restraint while NWS retain and modernize
+ *   arsenals and dispute the obligation's bindingness. The reading is
+ *   operationalized through Review Conference majority politics, the
+ *   Humanitarian Initiative, and, since 2017, the TPNW as a rival
+ *   codification built on this reading's legal pedigree. Sibling readings
+ *   (nws_reading, withdrawal_threshold_reading) are separate constraints in
+ *   separate files; per the ε-invariance principle this story contains one
+ *   stable ε for one reading and does not hedge across readings. KEY AGENTS
+ *   (by structural relationship): - nuclear_weapon_states_p5: nominal target
+ *   of the reading's pressure (institutional/arbitrage) — rejects
+ *   bindingness, absorbs stigma, but nets the regime's largest material flow;
+ *   - nnws_coalition_leadership: agenda-setting core of the coalition
+ *   (organized/identity_locked) — drafts, convenes, shepherds; -
+ *   nonaligned_nnws_bloc: mass beneficiary of voice and bargaining cover
+ *   (organized/constrained); - nato_aligned_nnws: squeezed dual-positioned
+ *   payers (powerful/trapped); - disarmament_civil_society_networks:
+ *   beneficiary collecting standing and resources (organized/mobile); -
+ *   hibakusha_communities: excluded moral authority (powerless/trapped); -
+ *   iaea_verification_apparatus and treaty_regime_analysts: observer seats.
+ *
+ * KEY AGENTS:
+ *   - nuclear_weapon_states_p5: declared victim of the reading's pressure machinery (institutional/arbitrage) — bears stigma, boycott costs, and legal exposure, yet receives the restraint flow the frame sustains; net position nearer beneficiary than the victim declaration alone suggests
+ *   - nnws_coalition_leadership: agenda_setter (organized/identity_locked) — middle-power core that sets RevCon agendas, ran the Humanitarian Initiative, and shepherded the TPNW; exit would forfeit a decades-built diplomatic identity
+ *   - nonaligned_nnws_bloc: beneficiary (organized/constrained) — supplies the votes behind majority positions; receives leverage, insurance, and a principled account of its own restraint
+ *   - nato_aligned_nnws: payer with secondary beneficiary position (powerful/trapped) — blocks consensus at RevCons under alliance direction while absorbing domestic pressure to join the prohibition regime; extended deterrence is the benefit they cannot replace
+ *   - disarmament_civil_society_networks: beneficiary (organized/mobile) — conference organization, drafting support, ratification campaigns; standing and funding rose sharply after 2017
+ *   - hibakusha_communities: excluded (powerless/trapped) — survivors and downwind communities whose testimony anchors the reading's moral case but who hold no vote in the forums where it is contested
+ *   - iaea_verification_apparatus: observer (institutional/analytical) — administers the safeguards whose acceptance is the consideration NNWS pay; cited selectively by both coalitions
+ *   - treaty_regime_analysts: observer (analytical/analytical) — academic and think-tank trackers of regime health whose compliance assessments both sides invoke
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(npt_treaty_text__nnws_reading, 0.58).
+domain_priors:suppression_score(npt_treaty_text__nnws_reading, 0.45).
+domain_priors:theater_ratio(npt_treaty_text__nnws_reading, 0.58).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(npt_treaty_text__nnws_reading, extractiveness, 0.58).
+narrative_ontology:constraint_metric(npt_treaty_text__nnws_reading, suppression_requirement, 0.45).
+narrative_ontology:constraint_metric(npt_treaty_text__nnws_reading, theater_ratio, 0.58).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(npt_treaty_text__nnws_reading, accessibility_collapse, 0.2).
+narrative_ontology:constraint_metric(npt_treaty_text__nnws_reading, resistance, 0.78).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(npt_treaty_text__nnws_reading, tangled_rope).
+narrative_ontology:human_readable(npt_treaty_text__nnws_reading, "NPT Article VI as Binding Disarmament Obligation with Conditional NNWS Restraint (Non-Nuclear-Weapon States Reading)").
+narrative_ontology:topic_domain(npt_treaty_text__nnws_reading, "international_law/arms_control/treaty_interpretation").
+
+domain_priors:requires_active_enforcement(npt_treaty_text__nnws_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(npt_treaty_text__nnws_reading, 'de40ea2b-b3f7-4112-86f5-202b4902c887').
+narrative_ontology:cs_kernel_codification('de40ea2b-b3f7-4112-86f5-202b4902c887', fixed_text).
+narrative_ontology:cs_authority_grounding('de40ea2b-b3f7-4112-86f5-202b4902c887', lineage).
+narrative_ontology:cs_interpretation_layer_present('de40ea2b-b3f7-4112-86f5-202b4902c887').
+narrative_ontology:cs_reading_relation('de40ea2b-b3f7-4112-86f5-202b4902c887', npt_treaty_text__nws_reading, coexists_with).
+narrative_ontology:cs_reading_relation('de40ea2b-b3f7-4112-86f5-202b4902c887', npt_treaty_text__withdrawal_threshold_reading, influences).
+narrative_ontology:cs_axiom('de40ea2b-b3f7-4112-86f5-202b4902c887', foundational, article_vi_binding_disarmament_obligation).
+narrative_ontology:cs_axiom_status(article_vi_binding_disarmament_obligation, holdable).
+narrative_ontology:cs_axiom_grounding('de40ea2b-b3f7-4112-86f5-202b4902c887', article_vi_binding_disarmament_obligation, conventional).
+narrative_ontology:cs_axiom('de40ea2b-b3f7-4112-86f5-202b4902c887', foundational, nonproliferation_restraint_conditional_on_disarmament_performance).
+narrative_ontology:cs_axiom_status(nonproliferation_restraint_conditional_on_disarmament_performance, holdable).
+narrative_ontology:cs_axiom_grounding('de40ea2b-b3f7-4112-86f5-202b4902c887', nonproliferation_restraint_conditional_on_disarmament_performance, instrumental).
+narrative_ontology:cs_reference_frame('de40ea2b-b3f7-4112-86f5-202b4902c887', grand_bargain_reciprocal_obligations).
+narrative_ontology:cs_drift_state('de40ea2b-b3f7-4112-86f5-202b4902c887', post_tpnw_entry_into_force, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('de40ea2b-b3f7-4112-86f5-202b4902c887', '').
+narrative_ontology:cs_kernel_id(npt_treaty_text__nnws_reading, npt_treaty_text).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(npt_treaty_text__nnws_reading, nnws_coalition_leadership).
+narrative_ontology:constraint_beneficiary(npt_treaty_text__nnws_reading, nonaligned_nnws_bloc).
+narrative_ontology:constraint_beneficiary(npt_treaty_text__nnws_reading, disarmament_civil_society_networks).
+narrative_ontology:constraint_victim(npt_treaty_text__nnws_reading, nuclear_weapon_states_p5).
+narrative_ontology:constraint_victim(npt_treaty_text__nnws_reading, nato_aligned_nnws).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(npt_treaty_text__nnws_reading, nato_aligned_nnws).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% A rotating core of middle powers — Austria, Mexico, Ireland, South Africa, Brazil, New Zealand, Kazakhstan among them — drafts Review Conference working papers, convened the Humanitarian Initiative conferences, and shepherded the TPNW from resolution to entry into force. Their multilateral standing and diplomatic self-conception are built on disarmament leadership accumulated over decades; stepping back would forfeit a niche no other portfolio replaces, and their delegations staff the conferences, draft the consensus texts, and decide which proposals reach the floor.
+narrative_ontology:constraint_stakeholder(npt_treaty_text__nnws_reading, nnws_coalition_leadership, agenda_setter,
+    organized, generational, identity_locked, global).
+
+% The majority voting bloc of non-nuclear-weapon states supplies the votes that carry General Assembly disarmament resolutions and Review Conference majority positions. The reading gives them bargaining cover — a principled account of why their restraint continues — plus voice and insurance against unilateral abandonment of the bargain's second half. They pay bloc-discipline costs and forgo independent hedging arrangements they might otherwise negotiate singly; open defection to the arsenal-states' framing would cost them their standing within the movement.
+narrative_ontology:constraint_stakeholder(npt_treaty_text__nnws_reading, nonaligned_nnws_bloc, beneficiary,
+    organized, generational, constrained, global).
+
+% The five states recognized as armed under the treaty reject the binding-obligation characterization of Article VI, boycotted the TPNW negotiations, issue joint statements against the prohibition regime, and lobby allied non-nuclear states to stay out of it. They absorb the reputational and agenda costs of this pressure and judge them tolerable; throughout the interval they retain and modernize their arsenals. Their rejection is costless in any enforceable sense — no mechanism compels their performance — while the continued abstention of the rest of the treaty's membership, which this reading's conditionality frame helps sustain, is the arrangement's largest material flow and lands on them.
+narrative_ontology:constraint_stakeholder(npt_treaty_text__nnws_reading, nuclear_weapon_states_p5, payer,
+    institutional, generational, arbitrage, global).
+
+% United States-allied non-nuclear-weapon states in Europe and East Asia sit between two pulls: alliance positions directing them to oppose the prohibition regime, and domestic and regional majorities sympathetic to it. They block consensus at Review Conferences, absorbing isolation costs within the coalition they formally belong to, while relying on extended deterrence they cannot replace and cannot openly renounce. Every available position — blocking, joining, abstaining — carries a cost, and the pressure on them intensifies with each coalition campaign cycle.
+narrative_ontology:constraint_stakeholder(npt_treaty_text__nnws_reading, nato_aligned_nnws, payer,
+    powerful, generational, trapped, continental).
+narrative_ontology:stakeholder_secondary_role(npt_treaty_text__nnws_reading, nato_aligned_nnws, beneficiary).
+
+% NGO coalitions such as ICAN organize the humanitarian conferences, supply drafting and evidentiary support to like-minded delegations, and run ratification campaigns in national parliaments. Their funding, media standing, and access rose sharply after the 2017 Nobel Peace Prize; they convert the reading's legal argument into public campaigns and legislative pressure. They can redirect attention to other portfolios when campaigns wind down, and periodically do.
+narrative_ontology:constraint_stakeholder(npt_treaty_text__nnws_reading, disarmament_civil_society_networks, beneficiary,
+    organized, biographical, mobile, global).
+
+% Survivors of Hiroshima and Nagasaki and downwind communities from the test sites — the Marshall Islands, Semipalatinsk, French Polynesia — provide the testimonial core of the humanitarian argument. They testify when invited at humanitarian conferences and TPNW meetings but hold no vote in the Review Conference or any decision forum; both coalitions invoke their moral authority while the interpretive contest proceeds without them. Their position in the debate is fixed by history and cannot be exited.
+narrative_ontology:constraint_stakeholder(npt_treaty_text__nnws_reading, hibakusha_communities, excluded,
+    powerless, biographical, trapped, local).
+
+% The agency administers the safeguards system whose acceptance by non-nuclear-weapon states constitutes the consideration side of the bargain. Its inspection mandate and budget scale with each state's compliance commitments, and its compliance findings are cited selectively by both coalitions. It briefs the Review Conferences technically but holds no seat in the interpretive contest over what the treaty's obligations require.
+narrative_ontology:constraint_stakeholder(npt_treaty_text__nnws_reading, iaea_verification_apparatus, observer,
+    institutional, generational, analytical, global).
+
+% Academic and think-tank specialists who track regime health, publish the compliance assessments and bargain-integrity analyses that both coalitions quote, and map the erosion or resilience of the review process. Their stake is reputational rather than material, and their assessments feed both sides' briefs.
+narrative_ontology:constraint_stakeholder(npt_treaty_text__nnws_reading, treaty_regime_analysts, observer,
+    analytical, biographical, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(npt_treaty_text__nnws_reading, nuclear_weapon_states_p5).
+narrative_ontology:fixing_cost_class(npt_treaty_text__nnws_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the collective-action problem of roughly 180 individually leverageless states facing five arsenal states: a shared legal interpretation converts scattered dissatisfaction into bloc positions, Review Conference majority politics, and eventually a rival treaty, keeping disarmament on the agenda and giving each NNWS a principled, collectively backed account of why its restraint continues.
+% TRANSFER_FUNCTION: Moves reputational and agenda-setting capital from the nuclear-weapon states (stigma, diplomatic isolation, defensive agenda costs) to coalition leadership and civil society networks; and, through the conditionality frame's legitimating effect, sustains the flow of restraint-compliance from the non-nuclear membership toward the arsenal states — foregone nuclear latency, safeguards acceptance, and permanent abstention delivered against a deferred promise of disarmament performance.
+% ABSENT_VOICES: Hibakusha and downwind-community survivors would object that interpretive maneuvering substitutes for elimination and that their testimony is invoked without granting them any decision seat; they stand outside the Review Conference and coalition leadership structures except as invited witnesses. NNWS publics bearing deterrence risks and safeguard costs likewise have no seat — representation runs through delegations, not populations.
+% DISAPPEARANCE_RATIONALE: If the binding-obligation reading vanished overnight, Review Conferences would lose their central axis of contest, the TPNW's legal-pedigree argument (which cites Article VI directly) would collapse, Non-Aligned Movement cohesion on disarmament would fragment into national positions, and the arsenal states would face pressure that is unstructured and therefore weaker. The regime's legitimacy contest would rearrange around raw interest alignment rather than a shared account of who owes what.
+% FOUNDING_PROBLEM: The 1968 bargain: non-nuclear-weapon states would forgo nuclear weapons and accept safeguards; the nuclear-weapon states would negotiate in good faith toward cessation of the arms race and nuclear disarmament (Article VI). This reading was built to hold the arsenal states to the second half of that exchange — a problem that sharpened decisively when the 1995 indefinite extension removed the treaty's temporal lever without securing a time-bound disarmament framework in return.
+% FOUNDING_PROBLEM_CORROBORATION: Corroborated from outside the benefiting parties: the ICJ's 1996 advisory opinion affirmed unanimously that Article VI imposes an obligation to pursue negotiations (while leaving timing indeterminate); the arsenal states' own Review Conference statements and the 2022 P5 joint statement acknowledge disarmament commitments even while disputing the obligation's bindingness; successive General Assembly resolutions carried by wide majorities attest the problem's persistence. The payer side's reluctant acknowledgments are the strongest available corroboration, since they come from the seat that would benefit most from declaring the problem dead.
+narrative_ontology:disappearance_verdict(npt_treaty_text__nnws_reading, world_rearranges).
+narrative_ontology:founding_problem_status(npt_treaty_text__nnws_reading, live).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(npt_treaty_text__nnws_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_stealth3', 'agent/example_platform_commission.json',
+    'stealth/ox-alpha', 'max_tokens=65536,temperature=model_default,reasoning=model_default').
+narrative_ontology:story_seed(npt_treaty_text__nnws_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(npt_treaty_text__nnws_reading, 0.58, 'stealth/ox-alpha', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(npt_treaty_text__nnws_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(npt_treaty_text__nnws_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(npt_treaty_text__nnws_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   CLAIM/METRIC INDEPENDENCE, stated openly: the manifest hypothesis for this reading was a moderate-epsilon rope; my independent structural judgment is tangled_rope, and I author that claim untuned to the predicted engine output. The structure carries BOTH a genuine coordination function AND asymmetric extraction through the same machinery: the Review Conference / Humanitarian Initiative / TPNW apparatus coordinates roughly 180 states into a common interpretive front (a real solution to the collective-action problem of individually leverageless states facing five arsenal states), while that same apparatus extracts reputational and agenda payment from the NWS and channels standing, agenda control, and resources to coalition leadership and civil society. Continuous active enforcement is required — every RevCon cycle, every MSP, every ratification campaign — without which the reading loses force within a few years. Hence requires_active_enforcement: true, beneficiaries and victims both declared. Metrics, authored independently: extractiveness 0.58 reflects the reading's own assessment of the standing arrangement — the NNWS payment (permanent restraint plus safeguards) against NWS non-delivery has widened nearly monotonically since 1995, with brief relief at the 2000 unequivocal undertaking and 2010 Action Plan. Suppression 0.45 is a raw structural property, unscaled: the reading cannot coerce anyone — NWS simply exit its jurisdiction by rejection — so its suppressive force is limited to coalition discipline and alliance pressure on wavering NNWS. Theater_ratio 0.58 is high but constitutive rather than decayed: declaratory performance IS this constraint's method of operation (pledges, consensus fights, anniversary declarations), though the rising trend signals growing performative share as behavioral purchase on arsenals stays near zero. Accessibility_collapse 0.20 is low: understanding this reading collapses no alternatives — the nws_reading remains fully available and is chosen by interest, not ignorance. Resistance 0.78 is high: NWS boycott TPNW proceedings, issue joint statements against the prohibition regime, and lobby allied NNWS. The suppression_requirement series OSCILLATES (spikes at consensus crises in 2005 and 2015, relief as the TPNW channel opened post-2017) — this is channel-split dynamics, not intermittent reinforcement: enforcement demand migrates between the RevCon channel (where NWS sit and block) and the TPNW channel (voluntary association, low suppression). Scalars were measured at t30, the settled post-oscillation state. All three series share one seven-point grid.
+ *
+ * PERSPECTIVAL GAP:
+ *   The seats should compute sharply different types from identical structural data. From the nuclear_weapon_states_p5 seat, the arrangement is an illegitimate stigma machine — an interpretive move with no enforcement warrant that imposes costs they never consented to; they experience it as something to be resisted and contained, and their arbitrage-grade exit (simple rejection) means effective extraction against them is heavily damped. From the nnws_coalition_leadership seat, the same structure is law-enforcement: the faithful application of a bargain's own terms against defaulting parties. From the nato_aligned_nnws seat it is a squeeze with no clean exit — every available position (block consensus, join TPNW, abstain) carries a cost. From the nonaligned bloc seat it is voice and insurance. The engine computes these divergences from power, exit, and directional data; the authored claim does not adjudicate them.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Beneficiary/victim declarations drive the derivation: coalition leadership, the nonaligned bloc, and civil society networks derive low d (subsidized seats); the NWS and NATO-aligned NNWS derive high d from their victim declarations. Two overrides correct the derivation where indirect flows dominate. First, nuclear_weapon_states_p5 (power_atom: institutional): the derivation from their victim declaration yields d near the full-target end, but their NET structural position is beneficiary-of-record — the conditionality frame sustains the restraint flow (foregone nuclear latency, safeguards compliance, permanent abstention by 180+ states) that lands on them at near-zero cost, dwarfing the stigma they shed. Override d = 0.30. Second, nato_aligned_nnws (power_atom: powerful): derived d from their payer declaration is high, but extended-deterrence benefits under the very arrangement they help defend offset much of the pressure cost. Override d = 0.55. The remaining seats need no override: the derivation from declared relations plus exit options captures them.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   No mandatrophy is resolved: the founding problem — holding the arsenal states to the second half of the 1968 exchange — is demonstrably live (arsenals persist and are modernizing across all five), founding_problem_status is live, and the disappearance verdict is world_rearranges, so the mismatch consumer finds no zombie flag. The live risk runs the OTHER direction: piton-drift. If the TPNW channel fully substitutes for the Review Conference channel (omega: tpnw_channel_substitution), the machinery where NWS are actually seated decays into pure ritual while the prohibition channel performs to audiences already converted — theater_ratio's steady climb (0.35 to 0.58) is the early signature. The classification guards against two mislabels: reading the structure as pure extraction (snare) would erase the real coordination achievement — a durable, low-coercion collective front that has kept disarmament on the agenda for three decades; reading it as pure coordination (rope) would erase the identifiable payers and the capital flows through the same machinery. Tangled_rope names both halves.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    kernel_reading_indexicality,
+    'This constraint is one reading (nnws_reading) of the npt_treaty_text kernel; what structurally changes under the sibling readings, and where exactly is the disagreement located?',
+    'Comparative classification across the sibling stories (npt_treaty_text__nws_reading, npt_treaty_text__withdrawal_threshold_reading): the disagreement is located in the bindingness of Article VI and in whose restraint is conditional on whose performance.',
+    'Under the nws_reading the referent''s extraction profile inverts: NNWS obligations become the primary constraint and NWS seats compute near-beneficiary, while this reading''s seats flip toward target. Classification is reading-indexed; cross-reading averages are meaningless.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_indexicality, conceptual, 'Committer structure: reading-indexed classification of a contested treaty-text kernel.').
+
+omega_variable(
+    article_vi_justiciability,
+    'Is Article VI''s bindingness ever judicially determinable in a way that fixes what performance it requires and by when, or is it inherently indeterminate?',
+    'Test the justiciability frontier: the ICJ 1996 advisory opinion affirmed an obligation to pursue negotiations but left timing and content indeterminate; subsequent litigation (e.g., Marshall Islands nuclear disarmament cases, dismissed for lack of dispute) marks the boundary.',
+    'If justiciable-and-breached, the extraction finding against the standing arrangement hardens and the reading''s leverage grows; if inherently indeterminate, the reading''s operative content decays toward declaratory performance and theater_ratio should be revised upward.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(article_vi_justiciability, conceptual, 'Whether the reading''s core legal claim has determinate operative content.').
+
+omega_variable(
+    conditionality_direction_of_flow,
+    'Does the conditional-restraint frame extract from NWS (pressure converting into compliance) or from NNWS (a legitimating story that sustains their continued one-sided payment)?',
+    'Counterfactual and comparative analysis: NNWS restraint and hedging levels under periods of unconditional framing versus conditionality-forward framing; TPNW-era defection and hedge indicators; whether NWS behavior shifts measurably after pressure peaks.',
+    'Determines whether the reading is corrective (rope-side: extracting compliance from NWS) or subsidy-legitimating (capture-side: extracting continued restraint from NNWS on NWS''s behalf) — directly modulates the interpretation of gain_flow and the excess-extraction verdict.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(conditionality_direction_of_flow, empirical, 'Direction of the frame''s material extraction flow.').
+
+omega_variable(
+    tpnw_channel_substitution,
+    'Is the TPNW channel reinforcing the reading''s enforcement capacity or substituting for it (draining energy and attendance from the Review Conference channel where NWS are actually seated)?',
+    'Track RevCon participation and outcome quality against TPNW meeting growth across successive cycles; compare coalition resource allocation and diplomatic attention between channels.',
+    'Substitution predicts continued theater_ratio growth and eventual piton-drift of the RevCon machinery; reinforcement predicts stabilization of suppression_requirement and renewed functional content.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(tpnw_channel_substitution, empirical, 'Channel dynamics between the treaty-review and prohibition-regime enforcement venues.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(npt_treaty_text__nnws_reading, 0, 30).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(npt_nnws_tr_t0, npt_treaty_text__nnws_reading, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(npt_nnws_tr_t5, npt_treaty_text__nnws_reading, theater_ratio, 5, 0.32).
+narrative_ontology:measurement(npt_nnws_tr_t10, npt_treaty_text__nnws_reading, theater_ratio, 10, 0.45).
+narrative_ontology:measurement(npt_nnws_tr_t15, npt_treaty_text__nnws_reading, theater_ratio, 15, 0.38).
+narrative_ontology:measurement(npt_nnws_tr_t20, npt_treaty_text__nnws_reading, theater_ratio, 20, 0.52).
+narrative_ontology:measurement(npt_nnws_tr_t25, npt_treaty_text__nnws_reading, theater_ratio, 25, 0.55).
+narrative_ontology:measurement(npt_nnws_tr_t30, npt_treaty_text__nnws_reading, theater_ratio, 30, 0.58).
+
+% Extraction over time
+narrative_ontology:measurement(npt_nnws_be_t0, npt_treaty_text__nnws_reading, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(npt_nnws_be_t5, npt_treaty_text__nnws_reading, base_extractiveness, 5, 0.4).
+narrative_ontology:measurement(npt_nnws_be_t10, npt_treaty_text__nnws_reading, base_extractiveness, 10, 0.5).
+narrative_ontology:measurement(npt_nnws_be_t15, npt_treaty_text__nnws_reading, base_extractiveness, 15, 0.46).
+narrative_ontology:measurement(npt_nnws_be_t20, npt_treaty_text__nnws_reading, base_extractiveness, 20, 0.55).
+narrative_ontology:measurement(npt_nnws_be_t25, npt_treaty_text__nnws_reading, base_extractiveness, 25, 0.56).
+narrative_ontology:measurement(npt_nnws_be_t30, npt_treaty_text__nnws_reading, base_extractiveness, 30, 0.58).
+
+% Suppression requirement over time
+narrative_ontology:measurement(npt_nnws_su_t0, npt_treaty_text__nnws_reading, suppression_requirement, 0, 0.3).
+narrative_ontology:measurement(npt_nnws_su_t5, npt_treaty_text__nnws_reading, suppression_requirement, 5, 0.28).
+narrative_ontology:measurement(npt_nnws_su_t10, npt_treaty_text__nnws_reading, suppression_requirement, 10, 0.4).
+narrative_ontology:measurement(npt_nnws_su_t15, npt_treaty_text__nnws_reading, suppression_requirement, 15, 0.34).
+narrative_ontology:measurement(npt_nnws_su_t20, npt_treaty_text__nnws_reading, suppression_requirement, 20, 0.48).
+narrative_ontology:measurement(npt_nnws_su_t25, npt_treaty_text__nnws_reading, suppression_requirement, 25, 0.43).
+narrative_ontology:measurement(npt_nnws_su_t30, npt_treaty_text__nnws_reading, suppression_requirement, 30, 0.45).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(npt_treaty_text__nnws_reading, identity_coordination).
+narrative_ontology:affects_constraint(npt_treaty_text__nnws_reading, npt_treaty_text__nws_reading).
+narrative_ontology:affects_constraint(npt_treaty_text__nnws_reading, npt_treaty_text__withdrawal_threshold_reading).
+
+% DUAL FORMULATION NOTE:
+% Constraint-family decomposition of the npt_treaty_text kernel. The single treaty text decomposes into three structurally distinct constraints: this file (nnws_reading) and npt_treaty_text__nws_reading differ on obligation CONTENT — who owes performance, whose restraint is conditional on whose compliance — and therefore carry different epsilon values, different beneficiary/victim structures, and different types; npt_treaty_text__withdrawal_threshold_reading varies the EXIT dimension (the price Article X charges for leaving). The text's calculated final-document ambiguity is the kernel; the readings are not angles on one constraint but distinct constraints that happen to cite the same words. Downstream coupling: this reading's conditionality thesis exerts structural pressure on the exit-threshold reading — declared NWS non-performance lowers the political legitimacy cost of withdrawal talk (North Korea's 2003 withdrawal statement explicitly invoked NWS failure to fulfill Article VI), which is why affects_constraints carries the edge in this direction.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(npt_treaty_text__nnws_reading, institutional, 0.3).
+constraint_indexing:directionality_override(npt_treaty_text__nnws_reading, powerful, 0.55).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

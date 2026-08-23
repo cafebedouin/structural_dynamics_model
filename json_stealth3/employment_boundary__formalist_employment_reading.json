@@ -1,0 +1,355 @@
+{
+  "header": {
+    "constraint_id": "employment_boundary__formalist_employment_reading",
+    "version": "1.0",
+    "generated_date": "2026-07-01",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eb_formalist",
+    "story_uid": "0087b4a1-ac03-4e91-ae92-f33454d2f48d"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.65,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Formalist Employment Boundary (Contract-and-Supervision Reading)",
+    "topic_domain": "economic/labor/social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_labor_intermediaries",
+      "platform_growth_capital",
+      "on_demand_service_consumers"
+    ],
+    "victims": [
+      "platform_gig_workers",
+      "state_social_insurance_budgets",
+      "compliance_bearing_traditional_employers"
+    ],
+    "vindicated_propositions": [
+      "formalist_classification_doctrine",
+      "freedom_of_contract_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.65,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest_employment_boundary",
+      "question": "This file instantiates the formalist_employment_reading of the employment_boundary kernel; how would the sibling readings (substantive_employment_reading, hybrid_security_reading) restructure the constraint's victim and beneficiary sets?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions operating under each reading (ABC-test states versus ballot-locked contractor carve-outs versus EU presumption-of-employment regimes): measure who gains protected status, who inherits contribution obligations, and where externalized costs land.",
+      "impact": "Under the substantive reading, platform_gig_workers enter the protected set and platform_labor_intermediaries inherit employer obligations, relocating epsilon from workers and state budgets to platform margins; under the hybrid reading a constructed intermediate category splits the current binary and changes which costs are externalized at all.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of the employment_boundary kernel; siblings are separate constraints with different epsilon and different party sets."
+    },
+    {
+      "id": "flexibility_preference_authenticity",
+      "question": "How much of surveyed platform-worker preference for contractor status reflects authentic preference versus adaptive rationalization formed under income necessity?",
+      "resolution_mechanism": "Longitudinal panels comparing stated preferences at entry, under earnings adequacy, and after exposure to equivalent employment offers; discrete-choice designs that decouple schedule freedom from benefit loss.",
+      "impact": "If preference is largely adaptive, the 'chose flexibility' justification thins and effective extraction on the worker seat rises; if authentic, part of the measured burden is a price workers knowingly accept, damping chi on that seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Authenticity of the consent that legitimizes exclusion from the employment relation."
+    },
+    {
+      "id": "externalization_fiscal_magnitude",
+      "question": "What is the annual magnitude of safety-net spending (Medicaid, SNAP, EITC, uncompensated injury care, UI drawn without employer contributions) attributable to contractor-classified platform work?",
+      "resolution_mechanism": "Linked administrative datasets matching platform-work participation to public-assistance uptake against matched employee controls; state unemployment-insurance solvency actuarial reviews.",
+      "impact": "Large magnitudes center the extraction story on the transfer into public budgets (raising the salience of state budgets and diffuse taxpayers as payers); small magnitudes confine the extraction to the worker-intermediary dyad.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Size of the fiscal transfer that externalized labor costs impose on public budgets."
+    },
+    {
+      "id": "operative_constraint_frame_underdetermination",
+      "question": "Is the binding constraint the legal classification test, or the app-level control architecture (dispatch algorithms, rating systems, deactivation) that makes the formalist test bite?",
+      "resolution_mechanism": "Counterfactual from jurisdictions mandating algorithmic-transparency and deactivation-due-process rules without touching classification: if worker outcomes improve materially, the code layer carries coercive weight independent of the legal label.",
+      "impact": "Framing the app architecture as the operative constraint yields a more directly coercive classification for platform control practices than the legal-boundary frame computed here; this story authors the legal-boundary frame per its constraint_id.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "CS-framing under-determination: legal test versus code architecture as the constraint proper."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A body of statutory definitions and common-law tests (agency/control tests, IRS factor tests, ABC-style variants) fixes employment status by contract formation and direct supervision. Platform intermediaries classify drivers and couriers as independent contractors, placing them outside minimum-wage, overtime, unemployment-insurance, and workers'-compensation coverage. The avoided cost appears as platform margin, investor valuation, and somewhat lower consumer prices, while income volatility, injury risk, and downturn support migrate to workers' households and public safety-net budgets. Persistence is actively engineered: arbitration clauses, deactivation discipline, sustained litigation, and heavily funded ballot initiatives have defended the line wherever legislatures moved to redraw it.\n\nKEY AGENTS (by structural relationship):\n- platform_labor_intermediaries: agenda-setting beneficiary (institutional/arbitrage) — writes the agreements, funds the defense, collects the labor-cost spread\n- platform_gig_workers: primary target (powerless/constrained) — bears volatility, uncovered injury risk, and unpaid time\n- state_social_insurance_budgets: payer with latent agenda capacity (institutional/constrained) — absorbs externalized downturn and injury costs\n- compliance_bearing_traditional_employers: secondary target (powerful/constrained) — competes against rivals freed from payroll obligations they still carry\n- on_demand_service_consumers: incidental beneficiary (moderate/mobile) — receives price and speed advantages\n- platform_growth_capital: beneficiary (powerful/arbitrage) — valuations rest on the subsidized unit economics\n- courts_and_labor_regulators: administering seat (institutional/constrained) — adjudicate the boundary's width\n- general_taxpayer_base: excluded seat (moderate/trapped) — funds the safety net without a procedural voice\n\nFamily note: this file is one reading of the employment_boundary kernel. The substantive reading (economic-dependence criterion) and the hybrid reading (third-category construction) are separate constraints with different victim sets, different beneficiary obligations, and different epsilon values; they are linked through network.affects_constraints rather than averaged into this file.",
+    "key_agents": [
+      "platform_labor_intermediaries — agenda-setting beneficiary (institutional/arbitrage): drafts contractor agreements, funds ballot defenses, collects the spread between contractor terms and employment terms",
+      "platform_gig_workers — primary target (powerless/constrained): bear income volatility, vehicle and insurance costs, uncovered injury risk, and unpaid waiting time",
+      "state_social_insurance_budgets — payer with latent agenda capacity (institutional/constrained): absorb downturn support and injury costs without corresponding contributions; hold legislative power blunted by ballot preemption",
+      "compliance_bearing_traditional_employers — secondary target (powerful/constrained): carry payroll taxes and benefit obligations their platform competitors avoid",
+      "on_demand_service_consumers — incidental beneficiary (moderate/mobile): receive low prices and fast fulfillment partly financed by unbundled labor protections",
+      "platform_growth_capital — beneficiary (powerful/arbitrage): equity returns rest on unit economics priced on the classification spread",
+      "courts_and_labor_regulators — administering seat (institutional/constrained): apply and uphold the tests that set the boundary's operating width",
+      "general_taxpayer_base — excluded seat (moderate/trapped): finance the safety-net absorption without any seat in classification design"
+    ],
+    "logic_rationale": "Epsilon is authored at 0.70 because the gap between contractor terms and employment terms is large and persistent — payroll taxes, unemployment-insurance and workers'-compensation contributions, paid leave, and wage floors together are conventionally estimated at roughly a quarter of wage costs — and the burden divides between individual households and public budgets. Suppression is authored at 0.65 and read as a RAW STRUCTURAL PROPERTY, unscaled by power or scope: the boundary persists through arbitration enforcement, deactivation discipline, litigation strategy, and ballot measures, not through participant consensus. Theater_ratio at 0.32 reflects a real but growing performative layer — 'flexibility' and 'entrepreneurship' framing performed as consent while dispatch control tightens — alongside the test's continuing genuine classificatory work for truly autonomous contractors. Accessibility_collapse at 0.40: alternatives remain partly open — leaving platform work, jurisdictions adopting different tests, portable-benefit experiments. Resistance at 0.68: sustained litigation, strike actions, countervailing ballot campaigns, and supranational directive pressure; note that this resistance is coalition-generated, since individual worker seats are powerless but the class has demonstrated mobilizing capacity. The claim (tangled_rope) and these metrics were authored independently: I believe the structure is a genuine coordination function (a low-dispute bright-line test that also serves genuinely independent contractors) fused with asymmetric extraction (cost externalization), and the metrics describe how it currently operates. Temporal series run on ONE shared grid — points 0/3/6/9/12/15 correspond approximately to 2010/2013/2016/2019/2022/2025 — with all three tracked metrics authored at every point. The trajectory is monotonic, not cyclical: platform scale-up deepened the spread, and each legislative challenge (AB5, directive negotiations) triggered an enforcement ratchet (ballot lock-ins, arbitration hardening), which is why suppression_requirement is tracked here — this story specifically traces enforcement-capacity intensification, not merely shifting extraction.",
+    "perspectival_gap": "Seats should compute differently. From the intermediary seat, the arrangement is a coordination structure it built and defends: predictable classification, flexible supply, low dispute costs. From the worker seat, the same structure operates as enforced exclusion from protections that adjacent workers receive for identical tasks. The state-budget seat computes an unfunded mandate: it pays for downturns it did not price. The sharpest same-level contrast is lateral: platform_labor_intermediaries and compliance_bearing_traditional_employers hold similar nominal power (both 'powerful'/institutional-grade commercial actors) yet occupy opposite relations to the boundary — one wrote the rule it benefits from, the other is bound by the older regime the rule circumvents. Their exit options diverge accordingly: intermediaries hold arbitrage (relocation across jurisdictions, agreement redesign, app restructuring), while traditional employers are constrained by their own supervision-intensive business models, which they cannot convert to the contractor form without dismantling themselves.",
+    "directionality_logic": "Declared structure maps to directionality as follows. platform_labor_intermediaries and platform_growth_capital sit near the beneficiary pole: they collect the spread and can move capital and operations freely. on_demand_service_consumers are declared beneficiaries with mobile exit, placing them near-symmetric-low; their indirect tax incidence nudges their true position slightly toward symmetric, but not enough to warrant an override. platform_gig_workers are declared victims with nominally 'constrained' exit, but the derivation would UNDERSHOOT their target-position: multi-apping presents as mobility while every alternative sits inside the same contractor classification, and deactivation threat binds conduct within each app. Hence the explicit override: power_atom 'powerless' to d_value 0.85, encoding near-full-target position despite the apparent mobility. state_social_insurance_budgets are victims with constrained exit — high directionality — and their latent agenda-setting capacity does not lower it, because ballot preemption and interstate competition for platform presence keep the capacity mostly unexercised. compliance_bearing_traditional_employers bear a comparative-extraction: the constraint costs them competitiveness relative to exempt rivals, so they compute near the target end despite never signing a platform contract. courts_and_labor_regulators declare no beneficiary or victim position; their seat derives from the canonical fallback for an administering institutional actor.",
+    "mandatrophy_analysis": "The founding problem — drawing a protect/non-protect line for premises-bound supervised work — is CONTESTED, not dead, so the mismatch consumer finds no clean zombie flag here; but the theater series rising from 0.18 to 0.32 marks early atrophy of the test's descriptive accuracy even as its allocative function hardens. Two drift paths are live. If the flexibility rhetoric detaches fully from observable scheduling control, theatrical maintenance dominates a hardened enforcement core — a piton-flavored shell over snare-flavored mechanics. If instead the substantive reading captures courts or legislatures, the boundary rearranges wholesale. The tangled_rope classification is what prevents mislabeling in both directions: a pure-rope reading would erase the excluded victim set (workers, state budgets, compliant competitors); a pure-snare reading would erase the genuine bright-line service the test performs for genuinely autonomous contractors — consultants, tradespeople, true freelancers — whom the substantive reading would sweep into protection they did not seek. The hybrid reading exists precisely because the coordination and extraction components are hard to separate; this file holds them together as one structure, as the delta specification requires."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "substantive_employment_reading",
+      "hybrid_security_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the employment boundary' conflates three structurally distinct claims distinguished by their classification criterion. This file (formalist reading: contract form plus direct supervision decides) is the doctrinally upstream member — the common-law baseline from which the others emerged. substantive_employment_reading (economic dependence plus algorithmic control decides) is downstream, citing precisely the mismatches this reading externalizes; its epsilon is higher on the platform-worker axis and its beneficiary obligations extend to platform_labor_intermediaries. hybrid_security_reading constructs a third category and partially dissolves both binaries. Per the epsilon-invariance principle these are three files with three stable epsilon values and three distinct victim sets, linked bidirectionally through affects_constraints; no single file may hedge across readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "platform_labor_intermediaries",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operates marketplaces matching customers to drivers and couriers. Drafts the contractor agreements and arbitration clauses, funds ballot initiatives and litigation that defend the classification, and adjusts app design and terms when rulings threaten it. Collects the difference between contractor-term labor costs and what employment terms would require. When a jurisdiction tightens its test, it can shift operations, renegotiate, or sponsor a statewide ballot measure overriding the legislature."
+    },
+    {
+      "name": "platform_growth_capital",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Holds equity in the intermediaries. The classification spread underwrites the unit economics and growth narrative on which valuations rest. Exits through secondary sales or public offerings once milestones priced on subsidized labor costs are achieved; portfolio mobility means no single jurisdiction's rules bind it for long."
+    },
+    {
+      "name": "on_demand_service_consumers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Buys rides, deliveries, and errands at prices and speeds made possible in part by unbundled labor protections. Switches easily between competing apps and bears no direct obligation. Carries a small indirect share through taxes that fund safety-net programs covering platform workers during downturns and injuries."
+    },
+    {
+      "name": "platform_gig_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Drives and delivers under algorithmic dispatch. Bears vehicle costs, insurance gaps, income volatility, and unpaid waiting time; engaged hours have no wage floor, and no unemployment-insurance contributions accrue on their behalf. Can decline trips, but refusal lowers dispatch priority, and account deactivation ends income immediately. Multi-apping spreads risk across apps but every alternative sits inside the same contractor classification, and organizing efforts meet barriers that classification itself creates — no collective-bargaining coverage, arbitration-forced individual disputes. Vehicle purchases lock capital into continuing the work."
+    },
+    {
+      "name": "state_social_insurance_budgets",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Public unemployment-insurance funds, Medicaid, food assistance, and earned-income credits absorb costs when classified-out workers hit downturns or injuries without employer contributions behind them. Legislatures hold the formal power to redefine the tests — several adopted broader standards — but face funded ballot preemption and interstate competition for platform presence, which blunts exercise of that power. Cannot exit the obligation to serve residents."
+    },
+    {
+      "name": "compliance_bearing_traditional_employers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Taxi fleets, courier firms, restaurants, and logistics companies that pay payroll taxes, unemployment-insurance contributions, minimum wages, and workers'-compensation premiums. Compete against platforms whose prices embed the avoided versions of these same costs. Cannot adopt the contractor form without dismantling the supervised, premises-bound operations that define them, so they lobby for enforcement parity instead."
+    },
+    {
+      "name": "courts_and_labor_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Adjudicate classification disputes applying common-law agency tests, statutory definitions, and administrative guidance. Each ruling widens or narrows the boundary's operating width; appellate precedent locks in outcomes beyond a single case. Bound by prior doctrine and by the statutes legislatures enact, they administer the line rather than choose it afresh."
+    },
+    {
+      "name": "general_taxpayer_base",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Funds the safety-net programs that absorb externalized labor costs through general taxation. Has no procedural seat in classification design, rulemaking, or litigation; its interests surface only diffusely through fiscal politics and budget hearings, mediated by representatives balancing many other claims."
+    }
+  ],
+  "gain_flow": "platform_labor_intermediaries",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Maintains a bright-line, low-dispute test separating employment from independent contracting: it cuts classification transaction costs, gives firms and workers predictable status, and preserves legal room for genuinely self-directed contracting that both sides of such relationships value.",
+    "transfer_function": "Moves the costs of labor protection — wage floors, overtime premiums, unemployment-insurance and workers'-compensation contributions, paid leave — away from platforms onto individual workers (income volatility, unpaid time, equipment, injury risk) and onto public safety-net budgets that backstop the gaps.",
+    "absent_voices": "Workers deactivated for asserting employee-like claims, workers in jurisdictions where organizing invites retaliation, and the general taxpayer base financing the safety-net absorption have no procedural seat; they stand outside hearing rooms dominated by platform counsel and funded ballot committees. The excluded seat general_taxpayer_base records the fiscal principal's absence; deactivated and retaliated-against workers appear in the record only as anonymized arbitration respondents.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the contractor classification collapsed overnight, platform pricing would rise to carry employment-term costs, coverage in thin-margin markets and off-peak hours would contract, thousands of firms' unit economics and valuations would reprice, workers' take-home patterns would shift toward wages-withholdings, and state insurance funds would begin receiving the contributions they currently forgo — the on-demand service economy would reorganize around whichever intermediate forms the successor rules permit.",
+    "founding_problem": "Industrial labor law needed a line between dependent wage earners, who received protective regulation, and genuinely autonomous traders, who did not; the contract-plus-supervision test drew that line in an era when work meant fixed premises, visible bosses, and verifiable hours.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: labor-law historians trace the test's master-servant and factory-supervision lineage, and international labor-body reporting on platform work documents the mismatch between premises-era supervision and algorithmic dispatch — both attest that the test answered a workplace that no longer matches platform operations. Platform-commissioned surveys attest continuing flexibility demand, so attestation runs along the dispute's own lines; the sources standing outside all benefiting parties support the historical founding problem and document the contest over whether it remains the right question."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "common_law_supervision_test_baseline",
+    "drift_state": {
+      "moment": "post_algorithmic_management_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "substantive_employment_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_security_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "contractual_form_dispositive_of_status",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "supervision_absence_presumes_autonomy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

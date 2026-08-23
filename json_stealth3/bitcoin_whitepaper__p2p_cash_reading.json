@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__p2p_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "ff089912-691d-4cbd-9a62-f8fb82454c04"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Peer-to-Peer Electronic Cash Reading — Standing Fee-Market Arrangement",
+    "topic_domain": "economic/technological/monetary",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "miners",
+      "long_term_holders",
+      "lightning_node_operators"
+    ],
+    "victims": [
+      "small_value_transactors",
+      "unbanked_remittance_users"
+    ],
+    "vindicated_propositions": [
+      "nakamoto_consensus_double_spend_prevention",
+      "permissionless_censorship_resistance"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "miners",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate hashing hardware and pool infrastructure that validate blocks and secure the ledger. They receive newly issued bitcoin on a fixed issuance schedule plus whatever transaction fees users attach to their transactions. Their capital is highly specialized — application-specific hardware whose resale value is mostly limited to other proof-of-work chains — so leaving means writing down equipment. They signal preferences on protocol changes through hashpower allocation and public statements, and during congestion periods their revenue rises with the fee rates users are forced to bid."
+    },
+    {
+      "name": "core_protocol_developers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Write and review the reference software that full nodes run. Protocol changes they decline to merge generally do not happen, and changes they endorse carry decisive weight with node operators. Their standing, conference invitations, grant funding, and career paths are bound up with the project; most have spent a decade or more inside its culture and its interpretive traditions. Developers who dissented from the prevailing capacity policy historically forked away and lost audience, funding, and relevance."
+    },
+    {
+      "name": "long_term_holders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold significant bitcoin balances acquired early or through institutional vehicles. Every limitation on new supply and on block capacity tends to raise the value of what they hold, and fee-driven scarcity reinforces the asset-narrative that attracts new buyers. They can sell or diversify into other assets at any time, and many hedge exposure elsewhere. They fund advocacy, media presence, and lobbying that favors supply conservatism and capacity restraint."
+    },
+    {
+      "name": "small_value_transactors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Use the network for everyday payments — purchases, wages, family transfers. When block space is contested they must bid in fee auctions or wait for confirmation; during congestion spikes a payment costing cents at baseline can cost several dollars, which erases the point of a small transfer. Many respond by keeping balances on custodial applications that batch transactions off-chain, accepting a trusted intermediary again, or by abandoning on-chain use entirely during expensive periods."
+    },
+    {
+      "name": "unbanked_remittance_users",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Live in economies with unstable currencies or thin banking coverage — the population the founding document addressed. Legacy remittance corridors charge them double-digit percentages of every transfer. Using the chain directly requires smartphone access, fee budgeting, and technical literacy; when fees spike they are the first priced out of the block space, and they have no seat in the repositories, mining pools, or holder forums where capacity policy is effectively decided."
+    },
+    {
+      "name": "lightning_node_operators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Run routing nodes and channel-management services on the second-layer payment network. On-chain fee scarcity is what pushes payment volume down to their layer, where they earn routing fees and liquidity-leasing income. They depend on the main chain for opening and closing channels, so sustained on-chain fee levels raise their operating costs even as they raise their volume. They can redeploy capital to other ventures relatively easily."
+    },
+    {
+      "name": "regulated_exchanges",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate licensed trading venues where most newcomers acquire the asset. They profit from trading volume and custody fees that appreciation drives, while absorbing compliance costs, banking-access risk, and legal liability in every jurisdiction they serve. Capacity policy matters to them chiefly through its effect on price narrative and withdrawal-fee complaints. They can list or delist assets and relocate incorporation between jurisdictions."
+    },
+    {
+      "name": "big_block_fork_communities",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Argued through 2015-2017 that raising the block-size limit was the faithful reading of the founding document, ran competing clients, and ultimately split the chain in August 2017. They now maintain their own ledger with a fraction of the hashpower, liquidity, and developer attention. Their objection survives mainly as a standing critique of the capacity policy rather than as a live seat in the governing conversation."
+    },
+    {
+      "name": "monetary_policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the arrangement from universities, think tanks, and independent research shops. They publish fee-market analyses, security-budget projections, and adoption studies, and they assess whether the network still delivers the properties its founding document promised. They hold no balances at stake in the design choices and can criticize any faction without exit costs."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Produces a single agreed transaction history among mutually distrusting strangers without any trusted intermediary — solving double-spending in a permissionless setting — and keeps that history appendable by anyone regardless of nationality, creditworthiness, or political standing.",
+    "transfer_function": "Moves transaction fees from transactors to miners alongside the scheduled issuance subsidy; moves scarcity premium to existing holders whenever supply or block capacity stays tight; moves cross-border value from senders to recipients minus fees; and increasingly moves small-payment traffic off-chain to custodial and routing intermediaries.",
+    "absent_voices": "The unbanked and remittance-sending population the founding document named has no seat in protocol governance, which runs through developer repositories, miner signaling, and holder-weighted forums. Small merchants who stopped accepting on-chain payments and users priced out during fee spikes object from outside the process. Big-block advocates participated until the 2017 split removed them from the table.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Demand for censorship-resistant value transfer would not vanish: users would consolidate on rival chains, stablecoins, or informal rails; miners' specialized capital would strand; and the layered payment industry built around the asset would reorganize within months around the next credible permissionless ledger.",
+    "founding_problem": "Online commerce depended on trusted financial intermediaries to process electronic payments: reversibility raised costs, excluded whole classes of users, and gave intermediaries veto power over lawful transfers. The founding document proposed direct peer-to-peer transfers secured by proof-of-work so that no trusted party would be required.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "World Bank remittance-price surveys attest that the transfer-cost problem persists at scale. Documented payment blockades and account freezes — the 2010 donation blockade, the 2022 emergency-measures account freezes in Canada — are attested by courts, journalists, and civil-liberties organizations outside any cryptocurrency constituency. What remains disputed is not whether the founding problem exists but whether this arrangement still serves it for ordinary-sized payments."
+  },
+  "interval": {
+    "start": 0,
+    "end": 17
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 17,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 17,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 17,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the p2p_cash_reading of the bitcoin_whitepaper kernel: Bitcoin as a censorship-resistant medium of exchange for direct electronic transactions. The constraint under assessment is the STANDING ARRANGEMENT — the current protocol with its conservative block capacity, fixed issuance schedule, and the fee market that emerged once blocks filled in 2017 — assessed by the cash reading's own lights. By that reading, the arrangement retains a genuine and hard-won coordination core (permissionless consensus, censorship-resistant settlement) while imposing a fee-market toll that prices ordinary-sized payments off the chain and denies the founding document's intended beneficiaries reliable access. The victim set is therefore those denied transactional access by fee markets: small-value transactors and unbanked remittance users. Sibling readings (digital_gold_reading, protocol_ossification_reading) are separate constraints with their own epsilon values, beneficiary structures, and victim sets; they are linked, not folded in here.\n\nKEY AGENTS (by structural relationship):\n- miners: Agenda-setting fee collectors (institutional/constrained) — enforce consensus via hashpower, receive subsidy and fees\n- core_protocol_developers: Kernel interpreters and capacity-policy gatekeepers (organized/identity_locked)\n- long_term_holders: Scarcity-premium beneficiaries (powerful/arbitrage) — fund capacity conservatism\n- small_value_transactors: Priced-out payers (powerless/constrained) — bear the fee auction\n- unbanked_remittance_users: Intended beneficiaries turned excluded payers (powerless/trapped)\n- lightning_node_operators: Layer-two beneficiaries (moderate/mobile) — volume pushed to their layer\n- regulated_exchanges: Institutional beneficiaries carrying compliance burdens (institutional/arbitrage)\n- big_block_fork_communities: Expelled dissenters (moderate/mobile) — exited via the 2017 split\n- monetary_policy_analysts: Analytical observers (analytical/analytical)",
+    "logic_rationale": "Extractiveness is authored at 0.62 because the standing arrangement charges transactors a market-clearing price for block space that is decoupled from the marginal cost of including a small transaction, and because the intended cash use-case — frequent, small, direct payments — is precisely the use-case the fee market prices out first. Suppression is 0.58: the capacity policy persists not by participant preference but by active enforcement — reference-client gatekeeping, social-layer pressure on dissenting developers, and the demonstrated fate of minority chains — though alternatives outside the system (rival chains, custodial layers) remain reachable, which caps suppression below snare-grade. Theater_ratio 0.30 reflects the growing share of activity that is rhetorical maintenance of the cash identity (whitepaper invocations, decentralization signaling) while actual small-payment behavior migrates off-chain. Accessibility_collapse 0.45 and resistance 0.60 are honest for a constructed, contested arrangement: workable alternatives exist and real resistance occurred (client wars, the 2017 split, the user-activated soft fork).\n\nThe temporal series run on ONE shared grid (t = 0, 3, 6, 9, 12, 15, 17, mapping 2009 to 2026) with every tracked metric authored at every point. The extractiveness series is cyclical-with-ratchet: fee spikes track halving-cycle demand waves (2017, 2021, the 2024 inscription wave), and after each cycle the baseline floor resets higher than before — congestion auctions let miners capture windfall revenue while the post-peak floor ratchets upward, so the oscillation is partly an extraction mechanism (intermittent peak pricing) rather than noise. The suppression_requirement series is authored because this story specifically traces enforcement-capacity change: the enforcement machinery (client gatekeeping, social-layer discipline, fork rejection) was built up during the 2015-2018 capacity wars and has held roughly stable since. Values reflect the interval-end state; the 2026 extractiveness dip records post-inscription fee cooling, not resolution.",
+    "perspectival_gap": "The seats compute differently and should. From the miner seat the arrangement is infrastructure they built and defend, with fee revenue as earned compensation for securing the ledger — a coordination-first experience. From the small-transactor and unbanked seats the same structure operates as a toll gate that excludes them from the very use-case the founding document promised — an exclusion-first experience. The holder seat experiences the arrangement as virtuous scarcity; the core-developer seat experiences it as stewardship under permanent siege, with their authority fused to the capacity policy they defend (professional and ideological identity-lock: exit would mean forfeiting a decade of accumulated standing inside the project's culture — break that frame and the gatekeeping position dissolves). Inter-institutional dynamics: miners and core developers are co-administrators with divergent exits — miners are constrained by sunk ASIC capital, developers by identity — and divergent exposure to fee levels. Same-level lateral dynamics: small_value_transactors and lightning_node_operators are both non-elite participants, differentiated by capital mobility — the operator monetizes the scarcity that prices the transactor out. Coalition potential for the powerless seats is real and precedented: the 2017 user-activated soft fork showed coordinated full-node users overriding miner preference, which is why the payer seats' powerlessness is conditional, not absolute.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation: miners (fee recipients, agenda-setters) sit near the beneficiary end; long_term_holders (arbitrage exit, scarcity gains) sit nearest the full-beneficiary pole; lightning_node_operators benefit incidentally from pushed-down volume; small_value_transactors (constrained exit) sit near the full-target end; unbanked_remittance_users (trapped, no governance seat) sit at the extreme target end — trapped or identity-locked targets amplify effective extraction, and arbitrage-grade exit dampens it. Spatial scope is global, which modestly amplifies effective extraction for the payer seats because verification and remedy are harder at that scope. One explicit override is declared: core_protocol_developers carry power atom 'organized', and the structural derivation — which reads only beneficiary/victim declarations and exit options — cannot see their position. They appear in neither list, yet they are not symmetric bystanders: the standing arrangement sustains their interpretive authority and funding (a positional benefit) while they bear real stewardship costs and collect no fees. The override sets d = 0.42, slightly beneficiary-side of symmetric, capturing positional benefit net of stewardship burden. Suppression (0.58) is authored as a raw structural property and is deliberately left unscaled; only extractiveness is scaled by directionality and scope in the engine's computation.",
+    "mandatrophy_analysis": "The founding problem — trusted-intermediary dependence and payment censorship — is live, corroborated from outside the benefiting set, so this is not a resolved-mandatrophy case and no zombie flag is expected from the status-by-verdict mismatch (status live x world_rearranges). The classification discipline cuts both ways here. Calling the arrangement a snare would erase the genuine coordination achievement: permissionless double-spend prevention demonstrably works and no party can simply turn it off. Calling it a rope would erase the asymmetric toll: the fee market transfers systematically from the poorest-intended users to miners and holders, enforced by gatekeeping that expelled its organized opposition. Tangled rope names both halves. The live danger is mandate MIGRATION rather than mandate death: the cash mandate atrophies into a settlement-layer and asset function while the cash vocabulary persists — the founding document's title still reads peer-to-peer electronic cash, and that retained language is the theatrical component the theater_ratio measures. If the cash reading loses its last on-chain foothold (fee floors rising with each halving per the security_budget_decay omega), the arrangement completes its migration and this story's successor would need re-authoring against the gold reading's referent instead.",
+    "kernel_context": "Kernel: bitcoin_whitepaper — the founding document as a fixed text grounding protocol legitimacy. This file instantiates the p2p_cash_reading: the text specifies a censorship-resistant medium of exchange for direct electronic transactions, block capacity should serve affordable ordinary payments, and fee-gated exclusion counts as denial of access. Sibling readings are separate constraints: digital_gold_reading (scarce asset optimized for store of value; different epsilon referent — the scarcity regime rather than the payment arrangement — and a beneficiary-dominated structure) and protocol_ossification_reading (governance-legitimacy constraint holding that protocol changes are illegitimate short of near-universal consensus; victims are proposed-change advocates). The epsilon referent HERE is the standing arrangement under contest — the current protocol and its fee market — never the cash reading's endorsed alternative of expanded capacity. Relations: the cash reading COEXISTS with the gold reading (factions hold both simultaneously; a single portfolio can even hold both), and INFLUENCES the ossification reading (every fee spike revives capacity legitimacy contests, supplying the ossification position with its principal adversary and shaping its operating environment without resolving the dispute)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This story instantiates the p2p_cash_reading of the bitcoin_whitepaper kernel; would the digital_gold_reading or protocol_ossification_reading of the same protocol text produce a different constraint with a different victim set and a different epsilon?",
+      "resolution_mechanism": "Author the sibling stories (digital_gold_reading, protocol_ossification_reading) against their own referents and compare computed classifications; divergence in victim sets, beneficiary structures, and epsilon locates where the readings genuinely disagree.",
+      "impact": "If the gold reading consolidates as the dominant practice, the extraction measured here describes a transitional phase of a migrating mandate rather than a stable arrangement, and the cash reading's victim set becomes evidence of obsolescence rather than of ongoing extraction; if the cash reading regains ground (capacity expansion, sustained low fees), the standing arrangement re-classifies toward rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: one reading of a contested kernel; sibling readings instantiate structurally different constraints over the same text."
+    },
+    {
+      "id": "fee_market_necessity",
+      "question": "Is the transaction-fee market a necessary security mechanism (spam deterrence, long-run miner compensation as the issuance subsidy decays) or a constructed scarcity rent produced by the deliberate refusal to expand block capacity?",
+      "resolution_mechanism": "Compare chains with larger blocks and lower fees against Bitcoin on security level, spam incidence, and validation decentralization; simulate the security budget under alternative capacity policies across successive halvings.",
+      "impact": "If the fee market is necessary, part of the measured extraction is the irreducible price of the coordination itself and the classification shifts rope-ward; if it is constructed rent riding on gatekeeping, the arrangement is more snare-like than the tangled_rope claim suggests and the payer seats' effective extraction rises.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fee-market extraction is security cost or gatekept rent."
+    },
+    {
+      "id": "security_budget_decay",
+      "question": "Will the declining issuance subsidy force fee levels high enough that on-chain cash use becomes impossible for ordinary payments, completing the migration from cash to settlement layer?",
+      "resolution_mechanism": "Track the fee-to-subsidy ratio across the 2024, 2028, and 2032 halvings and model miner revenue sufficiency at observed fee floors.",
+      "impact": "A rising forced-fee trajectory pushes effective extraction past the tangled-rope band toward snare for the transactor seats and dates the mandate migration; a stable or falling ratio supports the coordination framing and keeps the cash reading satisfiable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Security-budget dynamics may force further extraction from transactors."
+    },
+    {
+      "id": "offchain_substitution_effect",
+      "question": "Do the Lightning Network and custodial off-chain layers restore the cash properties this reading demands (low fees, small payments, directness), or do they reintroduce the trusted-intermediary structure the founding document was written to abolish?",
+      "resolution_mechanism": "Measure routing reliability, channel economics, custody concentration in Lightning wallets, and the effective censorship-resistance of layered payments compared with on-chain payments.",
+      "impact": "If substitution works, the standing arrangement's toll on small payments is partially mitigated and the cash reading remains satisfiable within the protocol; if it fails, the cash reading is structurally unsatisfiable on this chain, the victim set widens to include all small-value users, and the arrangement's coordination story covers progressively less of its actual function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether layered solutions restore cash properties or quietly rebuild the intermediary."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_gold_reading",
+      "protocol_ossification_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Bitcoin' conflates at least three structurally distinct constraints sharing one kernel text, decomposed per the epsilon-invariance principle: this p2p_cash_reading (epsilon 0.62 over the standing fee-market arrangement; victims are fee-excluded transactors), digital_gold_reading (referent is the asset's scarcity regime; beneficiary-dominated), and protocol_ossification_reading (governance-legitimacy constraint; victims are proposed-change advocates). Each carries its own epsilon, beneficiaries, and victims; measuring one with another's observable was the confusion in the label, not in the structure. Causal texture: the cash reading supplies the recurring legitimacy pressure that the ossification reading exists to resist, and the gold reading supplies the economic constituency that funds both — hence the edges from this story to both siblings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.42
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "direct_p2p_electronic_cash_arrangement",
+    "drift_state": {
+      "moment": "post_fee_market_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "digital_gold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "protocol_ossification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "onchain_payments_for_ordinary_users",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "fee_gated_access_is_exclusion",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "miners",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

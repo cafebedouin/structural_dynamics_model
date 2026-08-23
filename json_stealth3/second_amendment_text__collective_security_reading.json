@@ -1,0 +1,341 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_text__collective_security_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-13",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "second_amendment_csr",
+    "story_uid": "e5fe6ec8-cf27-4496-b51c-7925b32ba965"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.55,
+    "theater_ratio": 0.5,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment — Collective-Security Reading (Militia-Conditioned Right)",
+    "topic_domain": "constitutional law/political theory/firearms policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_regulatory_apparatus",
+      "national_guard_system",
+      "general_public"
+    ],
+    "victims": [
+      "individual_gun_owners",
+      "unorganized_militia_members"
+    ],
+    "vindicated_propositions": [
+      "miller_militia_relationship_test",
+      "collective_rights_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 1934,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1934,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1954,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1974,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1994,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1934,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1954,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1974,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1994,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1934,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1954,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1974,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1994,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.55
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contingency",
+      "question": "This constraint is one reading of the second_amendment_text kernel — the collective_security_reading. How much of the authored structure (beneficiary/victim sets, ε, classification) is contingent on that reading rather than on the underlying text?",
+      "resolution_mechanism": "Compare the sibling-reading files (individual_right_reading, originalist_civic_virtue_reading): where their beneficiary/victim structures invert this one's — gun owners as beneficiaries, the regulatory apparatus as the constrained seat — the structure is reading-indexed, not text-indexed.",
+      "impact": "If the individual_right_reading governs, this story's directionality map inverts and its classification does not transfer; the corpus must treat the three readings as separate constraints, never averaged.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed contingency of the entire structural surface on the collective-security reading."
+    },
+    {
+      "id": "prefatory_clause_interpretive_force",
+      "question": "The disagreement between readings is located in one structural element: does the prefatory clause ('A well regulated Militia...') condition the operative clause's right, or merely announce a purpose without limiting it?",
+      "resolution_mechanism": "Doctrinal adjudication of the clause relationship — the specific interpretive move (conditioning vs. announcement) is the pivot on which the victim set and ε turn.",
+      "impact": "If the clause merely announces purpose, this reading's conditioned-right arrangement collapses into the individual-right arrangement and the regulatory apparatus loses its beneficiary position.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Location of the kernel contest in the prefatory clause's interpretive force."
+    },
+    {
+      "id": "militia_institution_referent",
+      "question": "Does the 'organized civic defense' condition have a live institutional referent (the National Guard and state defense forces), or is the referent vestigial — a category maintained in statute while the practice it names has atrophied?",
+      "resolution_mechanism": "Institutional data: militia enrollment, the Guard's arms-custody relationship to its members, and which statutory militia obligations are actually enforced.",
+      "impact": "If vestigial, the theater_ratio is understated and the arrangement drifts toward performance-maintained operation — a condition conditioning rights on a structure that no longer exists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the militia referent of the condition is live or vestigial."
+    },
+    {
+      "id": "post_heller_operative_persistence",
+      "question": "After the 2008 federal repudiation, does this arrangement persist as operative law (state constitutional provisions, militia clauses, administrative structures), or only as legacy residue awaiting attrition?",
+      "resolution_mechanism": "Survey state constitutional law and enforcement practice: count jurisdictions where militia-relationship reasoning still decides cases and licensing regimes still operate under collective-security justification.",
+      "impact": "If legacy residue, the interval's end-state values overstate present operation — current measurements describe an arrangement in terminal decay rather than live enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the arrangement operates post-repudiation or persists as residue."
+    },
+    {
+      "id": "regulatory_apparatus_self_perpetuation",
+      "question": "Do the licensing and permit regimes serve the collective-security purpose the condition names, or has the apparatus's self-maintenance (fee revenue, enforcement budgets, administrative continuity) become an independent driver?",
+      "resolution_mechanism": "Cost-benefit audits of licensing regimes against measured security outcomes; compare jurisdictions with and without permit requirements on those outcomes.",
+      "impact": "If self-maintenance dominates, the extraction measured here is bureaucratic rent riding on the condition — pushing the arrangement's operation toward pure extraction and strengthening the case that the founding problem is dead.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the apparatus serves the named purpose or self-perpetuates."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "state_regulatory_apparatus",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "State legislatures, police agencies, and licensing bureaus set the terms on which arms access is conditioned: permit requirements, fees, waiting periods, category restrictions. They collect licensing revenue and justify enforcement budgets against the collective-security mandate. Their exit from the arrangement is redefinition — they write the conditions and can rewrite them; what they cannot do is abandon the condition without conceding the regulatory authority it carries."
+    },
+    {
+      "name": "national_guard_system",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The institutional descendant of the founding-era militia. It receives the constitutional anchoring the militia clause provides — its status as the organized militia is what the condition's 'organized civic defense' points to. It does not administer licensing, but its institutional continuity, federal funding, and civic role depend on the militia framework remaining the constitutional referent for arms-bearing."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives the collective-security provision the condition exists to secure, and funds the apparatus that administers it. Every member is also inside the regulatory perimeter — background checks and category restrictions apply to all purchasers regardless of militia relevance. Exit from the framework means relocating among states; the federal constitutional floor travels with them."
+    },
+    {
+      "name": "individual_gun_owners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the condition's costs directly: permit fees, waiting periods, registration requirements, and exclusion from restricted categories. The scope of what they may keep and bear is set by a condition they do not administer. Relocating to a permissive state is available but costly — arms are durable goods, and for many owners the practice carries personal and family investment; the federal floor follows them across state lines."
+    },
+    {
+      "name": "unorganized_militia_members",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The statutory residue of the constitutional militia: able-bodied citizens liable to militia duty who are not enrolled in any organized force. Membership attaches by age and status, not choice, so it cannot be resigned. They carry the condition's civic obligation without the organized structure the condition presupposes; the category they belong to persists in statute while the institution it names has largely atrophied."
+    },
+    {
+      "name": "private_militia_organizers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Citizens who would organize armed civic defense outside state command structures. The condition reserves 'organized' civic defense to state-controlled institutions, so these groups cannot gain standing within the constitutional framework no matter how they structure themselves. They appear in the conversation only as objects of legislation restricting private paramilitary organization, not as participants in defining the condition."
+    },
+    {
+      "name": "federal_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate the condition's scope: what counts as a militia relationship, which regulations serve collective security, where the condition's limits sit. Their doctrines defined and redefined the arrangement's operation across the interval, and their 2008 repudiation of the militia-relationship test reshaped where it can still govern. They collect no fees and bear no compliance costs; their stake is interpretive authority."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Produce the historical and doctrinal analyses the courts draw on — ratification debates, militia statutes, founding-era practice. The profession spans generations and holds no budget or compliance stake; its product shapes which understandings of the condition are available to decision-makers."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Channels the citizenry's arms-bearing capacity into state-organized civic defense: the militia system addresses the founding-era collective-security problem — defense without a standing army — while keeping armed force subordinate to civil authority, and standardizes the terms on which arms access is conditioned on that organization.",
+    "transfer_function": "Moves regulatory discretion over arms possession from individuals to state legislative and administrative bodies; moves licensing revenue and enforcement funding from the regulated population to the apparatus; moves security provision from private self-help to collectively organized defense.",
+    "absent_voices": "Citizens who hold their arms-keeping as a personal capacity rather than a civic function would object that the condition subordinates their claim to a structure they did not join; they sit outside the legislative and judicial forums where the condition is administered, entering only as litigants and voters. Private militia organizers (a named excluded seat) are defined out of the conversation entirely by the condition's 'organized' requirement.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the conditioned-right arrangement vanished overnight — the right became unconditional and the condition's regulatory authority lapsed — licensing regimes would lose their constitutional anchor, state police-power approaches to arms would reorganize around general public-safety doctrines, the National Guard's constitutional anchoring would need re-founding, and the apparatus would lose its fee and enforcement base. The regulatory perimeter around arms would not persist on inertia alone.",
+    "founding_problem": "The founding-era problem: securing collective defense without a standing army, which the founding generation regarded as an instrument of tyranny. The militia system — the armed citizenry organized under state authority — was the chosen solution, and the amendment protected that system from federal neglect or disarmament.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Founding-era sources outside any modern beneficiary set — state ratification debates and the anti-standing-army papers of The Federalist — attest the original problem. Military historians, also outside the beneficiary set, attest that the militia mechanism itself has been absorbed by a standing army and an institutionalized Guard. No party outside the benefiting apparatus attests that the original problem persists in its original militia-dependent form; the live contest is between 'the security problem persists, the mechanism changed' and 'both the problem-as-framed and the mechanism are gone.'"
+  },
+  "gain_flow": "state_regulatory_apparatus",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "second_amendment_text__individual_right_reading",
+      "second_amendment_text__originalist_civic_virtue_reading"
+    ],
+    "dual_formulation_note": "The second_amendment_text kernel decomposes into three structurally distinct constraints — one per reading — because the readings assign different beneficiary/victim sets and different ε to the same text (ε-invariance: one reading, one ε). This file is the collective_security_reading. Influence across the family ran in both directions historically: this reading was upstream through the Miller era, when its militia-relationship test governed federal doctrine; the individual_right_reading became upstream after 2008 and now shapes this reading's operating environment by constraining where militia-relationship reasoning may still govern. Each family file links the others via affects_constraints."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "militia_conditioned_civic_defense_settlement",
+    "drift_state": {
+      "moment": "post_heller_post_bruen_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "severe",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "individual_right_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "originalist_civic_virtue_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "militia_clause_conditions_operative_clause",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "militia_relationship_defines_protected_arms",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The constraint instantiated here is the collective-security reading of the Second Amendment: the militia clause conditions the right to keep and bear arms on organized civic defense, and the state may regulate arms to serve collective security. Its ε referent is the standing militia-conditioned arrangement — the licensing, permit, and category-restriction apparatus operating under collective-security justification — as this reading itself assesses it, never a rival arrangement. The reading sees genuine coordination (collective security without a standing army; armed force subordinated to civil authority) and real asymmetric cost (gun owners bear compliance burdens; the apparatus collects fees, budgets, and discretion). The measurement interval covers the modern regulatory era (1934–2024), over which regulation expanded well beyond militia-related purposes while the militia institutions naming the condition atrophied, and federal doctrine repudiated the reading in 2008 — leaving state-level persistence. This story is one member of a three-file constraint family decomposing the second_amendment_text kernel (see network.dual_formulation_note); the sibling readings are separate constraints with their own ε and are not averaged here. Claim and metrics are authored independently: the claimed type states what the structure shows, and the metrics describe the arrangement's actual operation under this reading's lights.",
+    "key_agents": [
+      "state_regulatory_apparatus: agenda-setter and primary beneficiary seat (institutional/arbitrage) — writes the conditions, collects the fees and enforcement budgets",
+      "individual_gun_owners: primary target seat (moderate/constrained) — bears licensing and compliance costs under a condition it does not administer",
+      "national_guard_system: institutional beneficiary (institutional/constrained) — the organized-militia referent the condition names",
+      "general_public: diffuse beneficiary with payer overlay (organized/constrained) — receives collective security, funds the apparatus, sits inside the regulatory perimeter",
+      "unorganized_militia_members: secondary target seat (moderate/trapped) — involuntary statutory membership, obligation without structure",
+      "private_militia_organizers: excluded seat — defined out of the condition by its 'organized' requirement",
+      "federal_courts: interpretive authority (institutional/analytical) — adjudicates the condition's scope; repudiated the reading federally in 2008",
+      "constitutional_scholars: analytical observer — supplies the doctrinal history all seats draw on"
+    ],
+    "logic_rationale": "Extraction (0.52 at interval end) is moderate and non-monotonic: it rose from 0.40 (1934) as federal and state regulation expanded past militia-related purposes — the 1968 act and the 1990s permit regimes restricted arms with no militia relationship — then fell after 2008 as federal enforcement retrenched, leaving state-level operation. Suppression (0.55) tracks the enforcement machinery's build-and-decay: it is the state's coercive perimeter (criminal penalties, permit denial), a raw structural property not scaled by power or scope, and the reading sees much of it as the legitimate price of the condition it endorses. Theater (0.50) is the clearest drift: the condition names 'organized civic defense,' but general militia service atrophied through the interval, so an increasing share of the arrangement's justification is performed rather than practiced — the National Guard is a real referent but a thinning one for a condition applied to the whole arms-owning population. Accessibility collapse is low (0.45): rival understandings of the text never collapsed and ultimately prevailed federally. Resistance (0.62) was sustained and organized across the interval. All series share one six-point grid (1934/1954/1974/1994/2008/2024); every tracked metric is authored at every point, with no metric-specific grids.",
+    "perspectival_gap": "The agenda-setter and beneficiary seats experience this arrangement as civic architecture: the apparatus administers a mandate, the Guard inherits a constitutional anchoring, the public receives security provision. The payer seats experience the same structure as conditioned subordination: gun owners pay for and comply with a condition they do not administer, and unorganized-militia members carry an obligation whose organizing structure has decayed. The excluded seat experiences definitional foreclosure — no reorganization of their own conduct gains them standing. The engine computes these per-seat classifications from the power, exit, and role data; this commentary does not adjudicate them.",
+    "directionality_logic": "The apparatus sits nearest the beneficiary pole: it writes the conditions, collects the fees, and funds enforcement from the mandate (d near 0.0). The Guard is a beneficiary without administration — it collects constitutional anchoring and the civic role the condition names (low d). The general public is a diffuse beneficiary with a payer overlay: it receives the security provision and funds the apparatus while sitting inside the regulatory perimeter (low-to-moderate d). Gun owners are the primary target: they bear the transfer under constrained exit — relocation is costly, the federal floor follows them, and arms are durable, identity-laden goods (high d). Unorganized-militia members are the most trapped target: membership attaches by statute without consent, and the structure their obligation names has atrophied (d nearest 1.0 among the seats). Private militia organizers are excluded rather than positioned — the condition defines them out of the structure entirely.",
+    "mandatrophy_analysis": "The founding problem — collective defense without a standing army — has been transformed rather than solved: a standing army exists, and the Guard institutionalized the militia function. The arrangement persists while its naming justification ('organized civic defense' conditioning private arms) increasingly describes a category rather than a practice. Classification as tangled_rope is what keeps the mandatrophy question honest: it preserves the genuine coordination core (the Guard's anchoring, subordination of armed force to civil authority, standardized conditioning of access) instead of reading the whole arrangement as pure extraction, while the rising theater ratio and the decoupling of regulation from militia purpose mark the drift the omega variables track. The founding-problem status is authored contested — collective security remains live even as the militia mechanism is obsolete — so no dead-mandate verdict is asserted; the regulatory_apparatus_self_perpetuation omega is the instrument that would resolve it.",
+    "kernel_context": "Kernel: second_amendment_text — the fixed constitutional text whose prefatory and operative clauses different parties read differently. This file instantiates the collective_security_reading: the militia clause conditions the operative right on organized civic defense, and the state may regulate arms to serve collective security. Sibling readings, each a separate constraint file with its own ε and beneficiary/victim structure: individual_right_reading (the operative clause guarantees an individual right independent of militia service; personal self-defense is the core protected activity) and originalist_civic_virtue_reading (the founding-era militia is the universal armed citizenry; the right protects citizen-soldier capacity). This reading's ε is authored only for the standing militia-conditioned arrangement as this reading assesses it. The reading-relations are authored as forecloses for both siblings because conditioned-versus-independent (and state-organized-institution-versus-universal-armed-citizenry) are scope contradictions of one fixed text: no single commitment framework can hold both premises, the personhood-boundary class of genuine foreclosure rather than mere coexistence of live positions."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

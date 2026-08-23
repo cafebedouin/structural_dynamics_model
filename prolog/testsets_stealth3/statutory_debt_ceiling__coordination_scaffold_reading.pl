@@ -1,0 +1,379 @@
+% ============================================================================
+% CONSTRAINT STORY: statutory_debt_ceiling__coordination_scaffold_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-11
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_statutory_debt_ceiling__coordination_scaffold_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: statutory_debt_ceiling__coordination_scaffold_reading
+ *   human_readable: Statutory Debt Limit — Coordination-Scaffold Reading
+ *   domain: constitutional/political economy/fiscal governance
+ *
+ * SUMMARY:
+ *   This story instantiates the coordination-scaffold reading of the
+ *   statutory debt limit: Congress sets a single aggregate ceiling on federal
+ *   debt and delegates issuance execution to Treasury between periodic
+ *   adjustments, retaining power-of-the-purse oversight at the aggregate
+ *   level without approving each bond auction. On this reading the instrument
+ *   is a transitional delegation device — routinely raised or suspended
+ *   (modern suspensions carry explicit expiration dates), operated with low
+ *   extraction, and punctuated by rare binding episodes that this reading
+ *   treats as deviations rather than structure. The file is one member of a
+ *   three-story family decomposing the colloquial 'debt ceiling' label (see
+ *   network.dual_formulation_note); epsilon here is authored for THIS
+ *   reading's referent only — the standing arrangement as this reading sees
+ *   it — and is not averaged or hedged across sibling readings. The
+ *   claim/metric independence rule is observed: claimed_type is scaffold (the
+ *   reading's structural assertion), while the metrics are authored
+ *   descriptively, including the post-2011 rise in theater and episodic
+ *   extractiveness that the reading itself registers as drift from its
+ *   reference frame. KEY AGENTS (by structural relationship): - us_congress:
+ *   Agenda setter (institutional/constrained) — sets and periodically adjusts
+ *   the aggregate limit; changing the mechanism itself requires the same
+ *   legislative process. - us_treasury: Primary operational beneficiary
+ *   (institutional/trapped) — executes issuance under delegated authority;
+ *   bears episodic operational burden when the limit binds. -
+ *   bond_market_participants: Beneficiary (powerful/mobile) — continuous,
+ *   predictable issuance supply; reprices tail risk during binding windows. -
+ *   taxpaying_public: Residual beneficiary (moderate/constrained) —
+ *   uninterrupted fiscal operations; diffuse tail-risk bearer during binding
+ *   windows. - congressional_budget_office: Analytical observer
+ *   (institutional/analytical) — projects exhaustion dates and scores
+ *   adjustment options. - automatic_authority_advocates: Excluded voice
+ *   (moderate/constrained) — reform proposals lacking floor access.
+ *
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(statutory_debt_ceiling__coordination_scaffold_reading, 0.16).
+domain_priors:suppression_score(statutory_debt_ceiling__coordination_scaffold_reading, 0.15).
+domain_priors:theater_ratio(statutory_debt_ceiling__coordination_scaffold_reading, 0.3).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(statutory_debt_ceiling__coordination_scaffold_reading, extractiveness, 0.16).
+narrative_ontology:constraint_metric(statutory_debt_ceiling__coordination_scaffold_reading, suppression_requirement, 0.15).
+narrative_ontology:constraint_metric(statutory_debt_ceiling__coordination_scaffold_reading, theater_ratio, 0.3).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(statutory_debt_ceiling__coordination_scaffold_reading, accessibility_collapse, 0.2).
+narrative_ontology:constraint_metric(statutory_debt_ceiling__coordination_scaffold_reading, resistance, 0.3).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(statutory_debt_ceiling__coordination_scaffold_reading, scaffold).
+narrative_ontology:human_readable(statutory_debt_ceiling__coordination_scaffold_reading, "Statutory Debt Limit — Coordination-Scaffold Reading").
+narrative_ontology:topic_domain(statutory_debt_ceiling__coordination_scaffold_reading, "constitutional/political economy/fiscal governance").
+
+domain_priors:requires_active_enforcement(statutory_debt_ceiling__coordination_scaffold_reading).
+narrative_ontology:has_sunset_clause(statutory_debt_ceiling__coordination_scaffold_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(statutory_debt_ceiling__coordination_scaffold_reading, 'e59d674a-d55d-4129-9048-786e12574798').
+narrative_ontology:cs_kernel_codification('e59d674a-d55d-4129-9048-786e12574798', formalized).
+narrative_ontology:cs_authority_grounding('e59d674a-d55d-4129-9048-786e12574798', lineage).
+narrative_ontology:cs_interpretation_layer_present('e59d674a-d55d-4129-9048-786e12574798').
+narrative_ontology:cs_reading_relation('e59d674a-d55d-4129-9048-786e12574798', statutory_debt_ceiling__extraction_snare_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e59d674a-d55d-4129-9048-786e12574798', statutory_debt_ceiling__constitutional_nullity_reading, forecloses).
+narrative_ontology:cs_axiom('e59d674a-d55d-4129-9048-786e12574798', foundational, aggregate_limit_constitutes_legitimate_delegation).
+narrative_ontology:cs_axiom_status(aggregate_limit_constitutes_legitimate_delegation, holdable).
+narrative_ontology:cs_axiom_grounding('e59d674a-d55d-4129-9048-786e12574798', aggregate_limit_constitutes_legitimate_delegation, conventional).
+narrative_ontology:cs_axiom('e59d674a-d55d-4129-9048-786e12574798', secondary, periodic_reauthorization_suffices_for_oversight).
+narrative_ontology:cs_axiom_status(periodic_reauthorization_suffices_for_oversight, holdable).
+narrative_ontology:cs_axiom_grounding('e59d674a-d55d-4129-9048-786e12574798', periodic_reauthorization_suffices_for_oversight, instrumental).
+narrative_ontology:cs_reference_frame('e59d674a-d55d-4129-9048-786e12574798', routine_aggregate_checkpoint).
+narrative_ontology:cs_drift_state('e59d674a-d55d-4129-9048-786e12574798', post_2011_brinkmanship_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('e59d674a-d55d-4129-9048-786e12574798', '').
+narrative_ontology:cs_kernel_id(statutory_debt_ceiling__coordination_scaffold_reading, statutory_debt_ceiling).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(statutory_debt_ceiling__coordination_scaffold_reading, us_congress).
+narrative_ontology:constraint_beneficiary(statutory_debt_ceiling__coordination_scaffold_reading, us_treasury).
+narrative_ontology:constraint_beneficiary(statutory_debt_ceiling__coordination_scaffold_reading, bond_market_participants).
+narrative_ontology:constraint_beneficiary(statutory_debt_ceiling__coordination_scaffold_reading, taxpaying_public).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(statutory_debt_ceiling__coordination_scaffold_reading, us_treasury).
+narrative_ontology:constraint_victim(statutory_debt_ceiling__coordination_scaffold_reading, taxpaying_public).
+narrative_ontology:constraint_vindicates(statutory_debt_ceiling__coordination_scaffold_reading, congressional_power_of_the_purse).
+narrative_ontology:constraint_vindicates(statutory_debt_ceiling__coordination_scaffold_reading, aggregate_delegation_of_borrowing_execution).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Sets the aggregate limit in statute and adjusts it by raise, suspension, or suspension-with-expiration-date. Between adjustments it takes no action on borrowing; at each adjustment it decides the new aggregate. Changing the mechanism itself — replacing the periodic vote with automatic adjustment to enacted law, for example — requires the same legislative process, which has repeatedly produced proposals but no enactment. Individual members rotate; the institution's fiscal calendar assumes the aggregate exists.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__coordination_scaffold_reading, us_congress, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Executes all federal borrowing under the delegated authority: runs auctions, manages the operating cash balance, and — when the limit binds — deploys extraordinary measures (suspending certain investments, swapping securities) to keep paying obligations while headroom lasts. It gains continuous issuance authority it would not have under per-issue approval; it bears the operational strain and default-contingency planning when the limit binds. It cannot decline the mandate or issue outside the law.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__coordination_scaffold_reading, us_treasury, beneficiary,
+    institutional, biographical, trapped, national).
+narrative_ontology:stakeholder_secondary_role(statutory_debt_ceiling__coordination_scaffold_reading, us_treasury, payer).
+
+% Buy and hold Treasury securities issued on a continuous, scheduled calendar. The aggregate checkpoint gives them a predictable supply path and preserves the issuer's record of honoring obligations between adjustments; during binding windows they reprice tail risk, widening yields on bills maturing near the projected exhaustion date. They can reallocate portfolios globally and do so when United States fiscal-process risk rises.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__coordination_scaffold_reading, bond_market_participants, beneficiary,
+    powerful, immediate, mobile, global).
+
+% Relies on uninterrupted federal payments — salaries, benefits, contracts — financed by continuous borrowing, and benefits from the financing stability the delegation supports. During binding windows it bears the tail risk of payment disruption and the small risk-premium costs embedded in financing. Exit is limited: residence, taxation, and currency exposure tie the public to the sovereign's fiscal operations.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__coordination_scaffold_reading, taxpaying_public, beneficiary,
+    moderate, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(statutory_debt_ceiling__coordination_scaffold_reading, taxpaying_public, payer).
+
+% Projects the date remaining borrowing headroom exhausts, scores the debt-limit interaction with budget resolutions, and publishes the estimates Congress uses to schedule adjustments. Takes no position on the mechanism's design; its analyses are inputs to the agenda-setter's decisions.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__coordination_scaffold_reading, congressional_budget_office, observer,
+    institutional, generational, analytical, national).
+
+% Policy experts, former officials, and some legislators who propose replacing the periodic vote with automatic adjustment of the limit to match already-enacted law (indexing approaches, discharge-procedure variants). Their proposals are repeatedly introduced but rarely receive committee or floor consideration; they argue from outside the active agenda that the periodic vote adds default risk without adding oversight.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__coordination_scaffold_reading, automatic_authority_advocates, excluded,
+    moderate, generational, constrained, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(statutory_debt_ceiling__coordination_scaffold_reading, diffuse).
+narrative_ontology:fixing_cost_class(statutory_debt_ceiling__coordination_scaffold_reading, cheap).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the delegation problem in sovereign borrowing: Congress retains a single aggregate veto point over total federal debt while Treasury executes issuance continuously through regular auctions — one number to adjust instead of thousands of individual issuances to approve.
+% TRANSFER_FUNCTION: Moves issuance discretion from Congress to Treasury (Congress sheds per-issue approval; Treasury gains operational autonomy within the aggregate) and returns a periodic reauthorization decision to Congress. During the rare binding windows it transiently shifts payment-timing risk onto program schedules and liquidity risk onto market participants; in routine operation no systematic wealth transfer occurs.
+% ABSENT_VOICES: Advocates of automatic debt authority and scholars who treat the limit as legally superseded would object that the periodic vote manufactures gratuitous default risk for no oversight gain; they sit outside the legislative agenda — their proposals rarely receive floor time or committee consideration, so the adjustment debate proceeds without their preferred alternative on the table.
+% DISAPPEARANCE_RATIONALE: Treasury's issuance calendar, auction settlement, and cash management run against the limit as a standing parameter; market participants price issuance supply around the checkpoint cycle; Congress's appropriations and reconciliation processes assume the aggregate exists. Overnight removal would force an immediate replacement decision — automatic authority, per-issue approval, or unconditional delegation — and issuance operations, market pricing conventions, and the congressional fiscal calendar would all reorganize around whichever replaced it.
+% FOUNDING_PROBLEM: World War I finance: the Liberty Loan Acts required returning to Congress for each bond issuance, which could not scale to wartime borrowing volumes. Congress responded by granting Treasury aggregate ceilings within which it could issue freely — delegating execution while keeping a single oversight point.
+% FOUNDING_PROBLEM_CORROBORATION: Academic fiscal-history scholarship on the Liberty Loan Acts and cross-national institutional comparison corroborate the founding problem from outside the operating seats: every advanced democracy must reconcile delegated borrowing execution with legislative purse authority, most without a separate ceiling — confirming the problem is real while indicating this mechanism is one solution among several. Congressional Research Service histories corroborate as well but sit adjacent to the congressional seat. No corroborating source outside the benefiting parties attests that the problem is dead.
+narrative_ontology:disappearance_verdict(statutory_debt_ceiling__coordination_scaffold_reading, world_rearranges).
+narrative_ontology:founding_problem_status(statutory_debt_ceiling__coordination_scaffold_reading, live).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(statutory_debt_ceiling__coordination_scaffold_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_stealth3', 'agent/example_platform_commission.json',
+    'stealth/ox-alpha', 'max_tokens=65536,temperature=model_default,reasoning=model_default').
+narrative_ontology:story_seed(statutory_debt_ceiling__coordination_scaffold_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(statutory_debt_ceiling__coordination_scaffold_reading, 0.16, 'stealth/ox-alpha', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(statutory_debt_ceiling__coordination_scaffold_reading_tests).
+:- end_tests(statutory_debt_ceiling__coordination_scaffold_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Epsilon is authored low (0.16 at interval end) because on this reading the arrangement's costs to governed parties sit near the coordination floor: Treasury's delegated-execution savings and the market's issuance predictability outweigh episodic operational friction, and no seat captures rents (receipt surface: diffuse — affirmatively checked across every named seat). Suppression is authored low (0.15) as a raw structural property, unscaled by power or scope: alternatives (automatic authority, unconditional delegation, constitutional reinterpretation) remain legally available and intellectually live; nothing is coerced out of existence. Theater_ratio (0.30) reflects the growing share of performative activity — messaging votes, symbolic bills, rhetorical positioning — relative to the functional adjustment vote; it rose sharply across 2000-2011 and partially receded under the suspension regime. Accessibility_collapse (0.20) is low because understanding the mechanism does not close alternatives — reform proposals are well specified and repeatedly introduced. Resistance (0.30) captures episodic obstruction during binding windows against a background of routine passage. The temporal series share one grid (1940/1955/1970/1985/2000/2011/2024) with every tracked metric authored at every point. The suppression_requirement series tracks enforcement-CAPACITY evolution — the extraordinary-measures apparatus formalized after 1985 — which is a different quantity from the structural suppression scalar: the apparatus grew to manage the limit's operation, not to suppress exits; omega enforcement_apparatus_function holds open the alternative reading of that growth.
+ *
+ * PERSPECTIVAL GAP:
+ *   The seats compute differently from the same structure. From the agenda-setter seat (Congress), the mechanism is orderly self-constrained delegation — a checkpoint it controls. From Treasury's seat, the same structure is operational autonomy interrupted by episodic binding stress; its trapped exit reflects statutory mandate, not extraction-bearing. From the market seat, the checkpoint is predictability punctuated by tail risk. Because no victims are declared under this reading, no seat derives a full-target directionality; the sharpest divergence the engine should find is between the agenda-setter's low-effective-extraction experience and the public's diffuse tail-risk exposure during binding windows. If the sibling snare reading is structurally accurate of the standing arrangement, that divergence inverts — the same seats recompute with victims declared and concentrated extraction on the targeted side.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Beneficiary declarations drive the derivation: us_congress, us_treasury, bond_market_participants, and taxpaying_public all sit toward the beneficiary end (low d), with Treasury's trapped exit and the public's constrained exit pulling them slightly off the floor — trappedness here encodes mandate-binding and sovereign residence, not extraction exposure. No victims are declared: on this reading the arrangement extracts at near-coordination-floor levels and no group bears systematic asymmetric costs; episodic cost-bearers (Treasury cash managers during extraordinary measures, programs facing payment timing) are transient, not structural. No directionality overrides are authored: the structural derivation from beneficiary declarations plus exit options produces the correct profile without correction, and overriding would import the sibling readings' contested structure into this file.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The scaffold claim does anti-mislabeling work in both directions. Against the snare mislabel: authoring beneficiaries without victims, low epsilon, and a diffuse receipt surface prevents routine coordination from being scored as extraction — the engine cannot derive a victim seat from this structural data. Against the rope mislabel: the has_sunset_clause authorship (dated suspensions, episodic reauthorization) asserts the arrangement is transitional by design, distinguishing it from a permanent coordination equilibrium. The R5 interview records the founding problem (wartime delegation of bond issuance) as live, corroborated from outside the operating seats, paired with disappearance_verdict world_rearranges — the live-times-rearranges cell carries no zombie flag, correctly, because the mandate has not outlived its function. The omegas keep the contested boundaries open: whether brinkmanship episodes reveal the sibling snare structure (brinkmanship_deviation_status), whether the sunset structure is real or perpetual recurrence (sunset_clause_interpretation), and whether the enforcement apparatus serves coordination or subsidizes standoff (enforcement_apparatus_function). Fixing_cost is authored 'cheap' on its own evidence: replacing the ceiling is a one-line statutory amendment mechanically, and the benefit (eliminating episodic tail risk) exceeds that mechanical cost — the obstacle is preference and agenda control, not cost class; gain_flow 'diffuse' and fixing_cost 'cheap' together place this story outside the piton cell, consistent with the scaffold claim.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    kernel_reading_contest,
+    'This story instantiates the coordination_scaffold_reading of the statutory_debt_ceiling kernel. Do the sibling readings (extraction_snare_reading, constitutional_nullity_reading) instantiate structurally different constraints with materially different epsilon over the same statutory instrument?',
+    'Cross-reading corpus comparison: compile all three sibling stories and compare computed effective extraction, seat structures, and type outputs; divergence in epsilon beyond the coordination-type Boltzmann floor confirms the decomposition into distinct constraints rather than one observable-dependent constraint.',
+    'If the snare reading''s structural account is accurate of the standing arrangement, this story''s low epsilon misdescribes the referent and classification migrates toward tangled_rope or snare; if the nullity reading is adopted, the instrument''s legal foundation collapses and the arrangement dissolves into a different institutional problem entirely.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_contest, conceptual, 'Committer-frame omega: this file is one reading of a contested kernel; sibling readings instantiate different constraints over the same statute.').
+
+omega_variable(
+    brinkmanship_deviation_status,
+    'Are the episodic standoffs (1985, 1995-96, 2011, 2013, 2023) transient deviations within a coordination scaffold, or do their recurrence and severity reveal that the underlying structure is the weaponized boundary the sibling snare reading describes?',
+    'Frequency-and-severity baseline: compare episode rate and market cost per decade against the routine-adjustment baseline; test whether neutral agenda rules (automatic indexing of the limit to enacted law) eliminate episodes — if episodes vanish under neutral rules they are behavioral noise, if they persist structurally the scaffold account is incomplete.',
+    'Sustained escalation would shift this reading''s referent toward the snare reading''s constraint: effective extraction rises, victim groups become declarable, and the classification migrates from scaffold to tangled_rope or snare.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(brinkmanship_deviation_status, empirical, 'Whether episodic brinkmanship is noise within coordination or evidence of extraction structure underneath.').
+
+omega_variable(
+    sunset_clause_interpretation,
+    'Does the episodic reauthorization structure (dated suspensions, periodic raises) constitute a genuine sunset clause making the arrangement transitional, or is the recurrence itself the steady state — a permanent mechanism wearing transitional clothing?',
+    'Legislative-history analysis: identify whether any reauthorization across the 80+ adjustments has been framed or received as terminal (a transition to automatic authority or unconditional delegation); absence of any terminal instance indicates recurrence is the design, not a transition.',
+    'If recurrence is the steady state, the scaffold claim degrades: the arrangement is better read as a rope with ritual renewal (or, if renewal is captured, toward piton dynamics), and the has_sunset_clause authorship should be revised in a successor story.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(sunset_clause_interpretation, conceptual, 'Whether episodic reauthorization is a real sunset mechanism or permanent recurrence.').
+
+omega_variable(
+    enforcement_apparatus_function,
+    'Does the growing extraordinary-measures apparatus (post-1985 formalization of accounting maneuvers, X-date projection, payment-prioritization planning) serve the coordination function — managing the limit''s operation — or does it lower the cost of brinkmanship by extending how long standoffs can run?',
+    'Compare episode duration and economic cost before versus after apparatus maturation (pre/post 1985 and pre/post 2011 playbook formalization); if episodes lengthen as capability grows, the apparatus subsidizes brinkmanship rather than coordination.',
+    'If the apparatus enables brinkmanship, the suppression_requirement series reflects an enforcement ratchet serving extraction-adjacent behavior, and this reading''s low-suppression account understates the arrangement''s coercive dimension.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(enforcement_apparatus_function, empirical, 'Function of the extraordinary-measures apparatus: coordination support or brinkmanship subsidy.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(statutory_debt_ceiling__coordination_scaffold_reading, 1940, 2024).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(stat_tr_t1940, statutory_debt_ceiling__coordination_scaffold_reading, theater_ratio, 1940, 0.05).
+narrative_ontology:measurement_basis(stat_tr_t1940, observed).
+narrative_ontology:measurement(stat_tr_t1955, statutory_debt_ceiling__coordination_scaffold_reading, theater_ratio, 1955, 0.06).
+narrative_ontology:measurement_basis(stat_tr_t1955, observed).
+narrative_ontology:measurement(stat_tr_t1970, statutory_debt_ceiling__coordination_scaffold_reading, theater_ratio, 1970, 0.1).
+narrative_ontology:measurement_basis(stat_tr_t1970, observed).
+narrative_ontology:measurement(stat_tr_t1985, statutory_debt_ceiling__coordination_scaffold_reading, theater_ratio, 1985, 0.15).
+narrative_ontology:measurement_basis(stat_tr_t1985, observed).
+narrative_ontology:measurement(stat_tr_t2000, statutory_debt_ceiling__coordination_scaffold_reading, theater_ratio, 2000, 0.22).
+narrative_ontology:measurement_basis(stat_tr_t2000, observed).
+narrative_ontology:measurement(stat_tr_t2011, statutory_debt_ceiling__coordination_scaffold_reading, theater_ratio, 2011, 0.38).
+narrative_ontology:measurement_basis(stat_tr_t2011, observed).
+narrative_ontology:measurement(stat_tr_t2024, statutory_debt_ceiling__coordination_scaffold_reading, theater_ratio, 2024, 0.3).
+narrative_ontology:measurement_basis(stat_tr_t2024, observed).
+
+% Extraction over time
+narrative_ontology:measurement(stat_be_t1940, statutory_debt_ceiling__coordination_scaffold_reading, base_extractiveness, 1940, 0.08).
+narrative_ontology:measurement_basis(stat_be_t1940, observed).
+narrative_ontology:measurement(stat_be_t1955, statutory_debt_ceiling__coordination_scaffold_reading, base_extractiveness, 1955, 0.07).
+narrative_ontology:measurement_basis(stat_be_t1955, observed).
+narrative_ontology:measurement(stat_be_t1970, statutory_debt_ceiling__coordination_scaffold_reading, base_extractiveness, 1970, 0.09).
+narrative_ontology:measurement_basis(stat_be_t1970, observed).
+narrative_ontology:measurement(stat_be_t1985, statutory_debt_ceiling__coordination_scaffold_reading, base_extractiveness, 1985, 0.12).
+narrative_ontology:measurement_basis(stat_be_t1985, observed).
+narrative_ontology:measurement(stat_be_t2000, statutory_debt_ceiling__coordination_scaffold_reading, base_extractiveness, 2000, 0.13).
+narrative_ontology:measurement_basis(stat_be_t2000, observed).
+narrative_ontology:measurement(stat_be_t2011, statutory_debt_ceiling__coordination_scaffold_reading, base_extractiveness, 2011, 0.24).
+narrative_ontology:measurement_basis(stat_be_t2011, observed).
+narrative_ontology:measurement(stat_be_t2024, statutory_debt_ceiling__coordination_scaffold_reading, base_extractiveness, 2024, 0.16).
+narrative_ontology:measurement_basis(stat_be_t2024, observed).
+
+% Suppression requirement over time
+narrative_ontology:measurement(stat_su_t1940, statutory_debt_ceiling__coordination_scaffold_reading, suppression_requirement, 1940, 0.05).
+narrative_ontology:measurement_basis(stat_su_t1940, observed).
+narrative_ontology:measurement(stat_su_t1955, statutory_debt_ceiling__coordination_scaffold_reading, suppression_requirement, 1955, 0.05).
+narrative_ontology:measurement_basis(stat_su_t1955, observed).
+narrative_ontology:measurement(stat_su_t1970, statutory_debt_ceiling__coordination_scaffold_reading, suppression_requirement, 1970, 0.08).
+narrative_ontology:measurement_basis(stat_su_t1970, observed).
+narrative_ontology:measurement(stat_su_t1985, statutory_debt_ceiling__coordination_scaffold_reading, suppression_requirement, 1985, 0.15).
+narrative_ontology:measurement_basis(stat_su_t1985, observed).
+narrative_ontology:measurement(stat_su_t2000, statutory_debt_ceiling__coordination_scaffold_reading, suppression_requirement, 2000, 0.22).
+narrative_ontology:measurement_basis(stat_su_t2000, observed).
+narrative_ontology:measurement(stat_su_t2011, statutory_debt_ceiling__coordination_scaffold_reading, suppression_requirement, 2011, 0.3).
+narrative_ontology:measurement_basis(stat_su_t2011, observed).
+narrative_ontology:measurement(stat_su_t2024, statutory_debt_ceiling__coordination_scaffold_reading, suppression_requirement, 2024, 0.26).
+narrative_ontology:measurement_basis(stat_su_t2024, observed).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(statutory_debt_ceiling__coordination_scaffold_reading, enforcement_mechanism).
+narrative_ontology:affects_constraint(statutory_debt_ceiling__coordination_scaffold_reading, extraction_snare_reading).
+narrative_ontology:affects_constraint(statutory_debt_ceiling__coordination_scaffold_reading, constitutional_nullity_reading).
+
+% DUAL FORMULATION NOTE:
+% The colloquial label 'the debt ceiling' decomposes, per the epsilon-invariance principle, into three structurally distinct constraints sharing one statutory instrument: this coordination-scaffold reading (low extraction, episodic reauthorization, delegated execution), the extraction-snare reading (weaponized boundary enabling legislative-minority extraction under default threat), and the constitutional-nullity reading (void instrument superseded by Fourteenth Amendment Section 4). The readings differ in epsilon because they differ in what the instrument IS taken to be — the referent arrangement changes, not the observable. This file links both siblings; structurally, the coordination reading supplies the operating mechanism whose binding episodes the snare reading characterizes and whose constitutional validity the nullity reading denies.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

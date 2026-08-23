@@ -1,0 +1,333 @@
+{
+  "header": {
+    "constraint_id": "us_constitution_1787__positivist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ucpr",
+    "story_uid": "8a5e83d3-d513-4292-bec4-75ed49516626"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.26,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Positivist Reading of the U.S. Constitution: Meaning Is Text Plus Amendments, Courts Confined to Text",
+    "topic_domain": "constitutional law/legal theory/political philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "constitutional_amendment_coalitions",
+      "elected_branches",
+      "state_legislatures"
+    ],
+    "victims": [
+      "discrete_and_insular_minorities",
+      "pre_codification_rights_movements"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 240
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 160,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 240,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 160,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 240,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 120,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 160,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 240,
+      "value": 0.58
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_contest_location",
+      "question": "Across the three readings of us_constitution_1787, is the live disagreement located in the SOURCE of meaning (current text vs ratification-era semantics vs evolving society) or in the LOCUS of authorized change (amendment gate vs judicial judgment)?",
+      "resolution_mechanism": "Cross-reading comparison holding the referent fixed: compute each sibling reading's victim set and epsilon over the same standing arrangement and locate where the victim sets actually diverge.",
+      "impact": "If the contest is chiefly about the change locus, this reading and the living_reading converge more than their labels suggest (both can honor amendment as a channel), and the sharp victim-set differences attributed to textual confinement shrink; if it is about the meaning source, the originalist sibling diverges less from this one than commonly assumed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Where the kernel contest is actually located across the sibling readings."
+    },
+    {
+      "id": "amendment_channel_viability",
+      "question": "Is Article V a live democratic mechanism or effectively closed - and does the positivist arrangement therefore gate rights claims without a working release valve?",
+      "resolution_mechanism": "Amendment-frequency and state-legislature application data across eras; comparison of rights-won-by-amendment rates in the progressive-era wave against the post-1971 idle period.",
+      "impact": "If the channel is dead, the arrangement's extraction concentrates sharply on textually unanchored claimants and the payer seats' computed extraction hardens toward the snare side; if revivable, the gating is coordination-priced and the rope side of the ledger strengthens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the amendment gate has a functioning release valve."
+    },
+    {
+      "id": "minority_protection_substitutes",
+      "question": "Do non-judicial substitutes - statutory overlays, federalism, electoral coalitions - adequately protect claims the text does not anchor, or does the arrangement leave them systematically exposed?",
+      "resolution_mechanism": "Compare trajectories of textually anchored versus unanchored rights claims across the amendment-active and amendment-idle eras, controlling for political salience.",
+      "impact": "If substitutes suffice, the victim extraction attributed to judicial confinement is overstated and the coordination reading gains; if not, the payer seats' computed extraction stands and the asymmetric half of the ledger is confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the arrangement's gating costs are offset outside the courts."
+    },
+    {
+      "id": "interpretive_discipline_internalization",
+      "question": "Is the enforcement of text-bound judging structural (confirmation politics, institutional sanction) or internalized (the professional self-conception of the judge as a restrained applier of the words)?",
+      "resolution_mechanism": "Observe sitting judges' interpretive behavior after the external pressure that selected them recedes - life tenure decouples daily output from sponsoring coalitions; divergence patterns separate imposed from absorbed discipline.",
+      "impact": "If substantially internalized, effective suppression exceeds the structural measure and persists through personnel turnover; if mostly structural, enforcement tracks confirmation politics and flips with appointments.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized enforcement of the textual discipline."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers the arrangement day to day: decides what the enacted text permits, declines readings that outrun the words, and thereby enforces the discipline that meaning lives in the document. Bears the arrangement's cost in foregone latitude - questions the text does not answer get no judicial answer - and its method is policed externally by confirmation politics and internally by professional expectation. Exit means leaving the bench; a sitting judge cannot adopt a rival method without institutional consequence."
+    },
+    {
+      "name": "constitutional_amendment_coalitions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Transient supermajorities - two-thirds of each House of Congress plus three-quarters of state legislatures - that alone may add to or alter the text. While assembled they hold the only legitimate pen; when the coalition dissolves its members revert to ordinary actors bound by whatever text they wrote. The channel's exclusivity is what they collect; assembling it is rare and expensive."
+    },
+    {
+      "name": "elected_branches",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Congress and the presidency keep the policy-making authority the arrangement withholds from courts: no rival interpreter stands above them, and questions the text leaves open return to them as politics rather than migrating into judicial discretion. They durably receive the interpretive authority the bench forgoes."
+    },
+    {
+      "name": "state_legislatures",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Fifty legislatures each hold one vote in the three-quarters ratification gate - a veto over any change and, jointly, the initiative to force one. Individually they can block but not make meaning; they are also bound by federal constitutional limits they did not choose, most extensively since the Reconstruction-era amendments nationalized rights enforcement."
+    },
+    {
+      "name": "discrete_and_insular_minorities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Groups whose treatment turns on constitutional limits they cannot reach: their protection must be written into the text or won by persuading supermajorities, because the arrangement gives courts no mandate to protect what the words do not mention. Historically the wait ran generations - abolition and universal suffrage each required amendment, and the first followed a civil war. Leaving the jurisdiction is possible in principle and ruinous in practice for most members."
+    },
+    {
+      "name": "pre_codification_rights_movements",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organized movements pressing claims the text does not yet contain - abolition before the Thirteenth Amendment, woman suffrage before the Nineteenth, and present-day movements around privacy, reproduction, or digital labor where the words are silent or hostile. They bear the full latency of the amendment gate: decades of persuasion, defeat, and retry, with no judicial shortcut available under this reading."
+    },
+    {
+      "name": "territorial_residents",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Residents of the District of Columbia, Puerto Rico, Guam, the Virgin Islands, American Samoa, and the Northern Marianas live under the Constitution's limits but hold no voting member of Congress and no state legislature to ratify amendments. They are bound by a mechanism whose legitimacy story is democratic participation they are structurally denied; their objection never enters the room because the room is constituted by the very representation they lack."
+    },
+    {
+      "name": "legal_academy",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Constitutional scholars, law schools, and the journal literature: they map the interpretive regimes, referee method disputes in print and classroom, train the judges and staffers who carry methods into institutions, and supply the arguments confirmation committees draw on. An analytical seat - neither collecting nor paying - though their method allegiances shape which reading has institutional carriers."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Fixes constitutional meaning in a publicly inspectable text and reserves its revision to one supermajoritarian procedure, so courts, officials, states, and citizens transact under a single stable referent and fundamental change requires breadth approximating consensus rather than winning five votes.",
+    "transfer_function": "Moves interpretive authority from courts to the enacted text and the amendment process; moves the cost of constitutional change onto those whose claims require amendment - they must assemble supermajorities - and moves the benefit of determinacy to every actor transacting under the rules.",
+    "absent_voices": "Territorial residents and the disenfranchised of earlier epochs (enslaved people until 1865, women before 1920 in most of the country) are bound by the text yet excluded from both ratification and amendment. They would object that an arrangement legitimated as democratic routes all change through a franchise that historically excluded them; under this reading their objection has no institutional address short of the amendment gate itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the arrangement vanished overnight - if constitutional meaning decoupled from the enacted text and its amendment canon - courts would become the primary meaning-makers by default, amendment coalitions would lose their exclusive channel, and textually unanchored movements would redirect effort from supermajority-building to litigation. Branch relations would renegotiate: Congress would police courts it can no longer out-write, and the determinacy that markets, states, and officials transact under would degrade until a successor regime stabilized.",
+    "founding_problem": "Securing supreme law that outlives factions: the Articles period showed statutes and confederal rules rewritten at will by shifting legislative majorities. The 1787 design answered with a fixed text alterable only by a deliberately difficult supermajoritarian process, so that neither temporary majorities nor judicial officers could rewrite fundamental rules unilaterally.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the beneficiary set: Anti-Federalist as well as Federalist writers attested the instability problem in 1787-88 while disputing the remedy; comparative constitutional scholarship finds formal amendment rules in the large majority of modern written constitutions, attesting the stability problem is general rather than a rationalization; and living-constitutionalist scholars - opponents of this reading - concede the stability problem is real while denying that amendment should be its only channel."
+  },
+  "gain_flow": "elected_branches",
+  "fixing_cost": "cheap",
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested kernel us_constitution_1787 - the positivist reading: constitutional meaning is what the enacted text says plus whatever the Article V amendment process adds, and judicial interpretation is confined to that text. Per the epsilon-referent rule, extractiveness is authored for the standing arrangement under contest - the positivist arrangement itself - assessed by the reading's own lights, which openly concede that claims the text does not anchor must wait on supermajoritarian amendment and price that wait as the cost of keeping meaning in democratic hands. The claim and the metrics are independent authored facts: claimed_type records the structure I believe true (a genuine coordination core carrying a real asymmetric gating cost), while the metrics describe the arrangement's operation as the historical record shows it.\n\nKEY AGENTS (by structural relationship):\n- federal_judiciary: administering enforcer (institutional/constrained) - applies the text, declines extra-textual readings, forfeits the latitude a rival reading would grant\n- constitutional_amendment_coalitions: primary beneficiary (organized/constrained) - transient supermajorities holding the only legitimate pen\n- elected_branches: primary beneficiary (institutional/constrained) - durably receives the interpretive authority courts forgo\n- state_legislatures: secondary beneficiary (organized/constrained) - co-owners of the ratification gate, individually unable to move it\n- discrete_and_insular_minorities: primary target (powerless/trapped) - protection must arrive as text or as supermajority consent\n- pre_codification_rights_movements: secondary target (organized/constrained) - bear the amendment gate's full latency\n- territorial_residents: excluded voice (powerless/trapped) - bound by the mechanism, unrepresented in it\n- legal_academy: analytical observer (analytical/analytical) - maps the interpretive regimes and supplies their institutional carriers",
+    "logic_rationale": "Extractiveness ends at 0.62 because the arrangement's conceded cost is real and currently unbuffered: rights claims without textual anchoring face a gate whose release valve has produced one technical amendment since 1971, while the interpretive counter-revival re-tightens judicial confinement. Suppression (0.58) is enforcement of an interpretive discipline - confirmation litmus tests, scholarly sanction, court-majority policing of method - coercive within the profession though not carceral; it is authored raw and unscaled, per the structural-property rule. Theater (0.26) is low-moderate: textual citation is mostly doing real work under the revived method, with a residual performative share inherited from the mid-century pretense. Accessibility_collapse (0.30) is low because the kernel contest keeps rival readings fully alive - understanding this arrangement does not close off the alternatives, it sharpens the argument among them. Resistance (0.60) reflects sustained opposition from living-constitutionalist jurists and scholars and from movements that need judicial shortcuts the reading denies. The measurement series run on one shared seven-point grid (every tracked metric authored at every point, t0=1787 through t240=2027); the trajectory oscillates rather than drifting monotonically - extraction peaked when the gate failed catastrophically (emancipation required civil war), fell while the amendment valve demonstrably worked and while courts bypassed the gate altogether, and climbs again as the valve idles and the method consolidates. The oscillation is driven by two exogenous factors - amendment-channel viability and interpretive-method fashion - not by intermittent reinforcement; base_properties are measured at the interval's end phase (re-tightened gate, idle valve).",
+    "perspectival_gap": "The seats should compute differently. From the amendment-coalition and elected-branch seats the arrangement is a coordination achievement they operate and profit from: determinacy plus exclusive democratic authorship. From the trapped, powerless payer seats the same structure is a gate they cannot open: protection arrives only as text or supermajority consent, and the supermajority threshold is calibrated precisely so that they, numerically, cannot meet it alone. Coalition power exists - the Reconstruction and suffrage amendments prove it - but historically required catastrophe or generations of organization, which is the cost, not the absence, of the path. The judiciary seat is genuinely dual: it administers the discipline and bears it, giving up the latitude a sibling reading would grant, so its computed position should sit nearer symmetry than either pole. The engine computes these divergences from the structural data; nothing in the authored claim adjudicates them.",
+    "directionality_logic": "Beneficiaries (amendment coalitions, elected branches, state legislatures) derive low directionality - the arrangement subsidizes them with authorship and retained authority. Payers (discrete minorities, pre-codification movements) derive high directionality - trapped exit and powerless-or-overmatched power place them near the full-target end, and national scope amplifies the difficulty of verifying the gate's fairness. The judiciary sits near the middle: it runs the arrangement and is run by it, which the secondary_role declares and the derivation reads. No directionality overrides are authored: the beneficiary/victim declarations plus exit options already differentiate the seats, and the one genuinely dual-positioned agent is handled by its declared secondary role rather than by an override. Receipt: the extraction's gains demonstrably land on the elected_branches, which durably receive the interpretive authority courts forgo - amendment coalitions collect only episodically, so the receipt seat is the durable one. Fixing is cheap in the binary cost-class sense: interpretive regimes have flipped twice within living memory (the New Deal transformation, the textualist consolidation) without formal amendment, so the cost of fixing, while real, is not prohibitive relative to the benefit.",
+    "mandatrophy_analysis": "The founding problem - supreme law that outlives factions - is live, so this is not a resolved mandate kept alive by inertia; the arrangement still performs its designed function wherever the text answers and the valve works. The classification guards against two mislabels. Against pure-rope mislabeling: the gating cost is not coordination overhead but asymmetric incidence - the supermajority threshold is passable by majorities and structurally impassable by the minorities it gates, which is why victims are declared and active enforcement is declared. Against snare mislabeling: the coordination function is genuine and primary - determinacy, inspectability, and democratic ownership of meaning are real goods delivered to every transacting actor, and the exit it blocks (informal judicial evolution) is blocked by argument and method, not by suppressing the claimants' existence. The live risk is drift: if the amendment valve stays idle while judicial confinement consolidates, the arrangement approaches a gate without a release valve and the payer seats' computed extraction hardens - the measurement series is built to catch exactly that transition.",
+    "kernel_context": "Kernel: us_constitution_1787 - the 1787 U.S. Constitution together with its Article V extension canon, treated as one persisting commitment that different parties read differently. This file instantiates the positivist_reading: meaning is what the current enacted text says plus democratic amendments; courts are confined to the text; the reading is text-bound but not historically bound. Sibling readings, authored as separate constraints: the originalist_reading (meaning fixed at ratification; the framers' semantic context binding) and the living_reading (meaning evolves with society; the text an aspirational framework). Expected structural delta for this reading: a moderate constraint set - judicial activism constrained, amendment elevated to the primary democratic mechanism, and no historical-semantics tether."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_constitution_1787__originalist_reading",
+      "us_constitution_1787__living_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the Constitution constrains government' conflates three structurally distinct constraints that share a text but differ in victim set, epsilon, and failure mode: the originalist reading tethers judges to ratification-era semantics; the living reading licenses society-driven evolution; the positivist reading confines judges to the current text and routes all change through the amendment gate. They are modeled as a linked family, not one story with a measurement parameter: each carries its own stable epsilon over the same standing arrangement, and the coupling runs through shared institutional carriers (the judiciary and the confirmation pipeline), so a purity shift in any one propagates to the others. This file links both siblings via affects_constraints."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": false,
+    "reference_frame": "enacted_text_plus_amendment_canon",
+    "drift_state": {
+      "moment": "contemporary_textualist_revival",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "originalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "living_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "current_text_semantics_bind_judges",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "amendment_exclusive_meaning_change_channel",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__narrow_warning_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "beta_narrow",
+    "story_uid": "fd3fd43d-8190-4fad-92e7-c808df923a75"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.34,
+    "theater_ratio": 0.14,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.32,
+    "claimed_type": "scaffold",
+    "human_readable": "Beta Designation Doctrine — Narrow Warning Reading (Time-Bounded Testing Disclosure)",
+    "topic_domain": "technology law / software liability / consumer protection",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "prerelease_software_publishers",
+      "early_adopter_test_users",
+      "general_availability_customers"
+    ],
+    "vindicated_propositions": [
+      "real_world_testing_necessity_thesis",
+      "informed_consent_risk_allocation_principle"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "prerelease_software_publishers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Draft the beta license terms, apply the designation, and define the testing window for their pre-release builds. During the window they are shielded from full product liability for defects inherent to unfinished software; they fund the arrangement with support load, telemetry infrastructure, and reputational exposure from public bugs. When the product reaches general availability the shield lapses and ordinary warranty and tort exposure resumes. They control when the window opens and closes."
+    },
+    {
+      "name": "early_adopter_test_users",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Opt into beta programs through click-through licenses, supplying the diverse real-world usage environments that internal testing cannot replicate. They receive early access, influence over feature direction, and usually free or discounted use; they absorb residual defect costs inside the window — crashes, data loss, instability — that the designation places on their side of the ledger. Declining the beta returns them to the ordinary consumer position but forfeits the access; waiting for general availability is a real but costly alternative."
+    },
+    {
+      "name": "general_availability_customers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Purchase software after the testing window closes, under preserved base product liability. They benefit twice over: products arrive having been exercised by the test cohort, and their own purchases carry full warranty and tort protection because the narrow reading refuses to extend the shield past the window. They can switch vendors freely and are the constituency that punishes publishers who ship GA-quality failures."
+    },
+    {
+      "name": "consumer_protection_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Police the disclosure half of the arrangement: whether beta terms are presented comprehensibly, whether the designation conceals material defects beyond testing risk, and whether a 'beta' label is being used to dodge obligations on a product that is functionally finished. They bring enforcement actions under consumer statutes and set the practical standard for what a genuine testing disclosure looks like."
+    },
+    {
+      "name": "beta_dispute_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate whether a particular designation was a bona fide testing phase or a liability shelter: how long the window ran, whether the defect at issue was inherent to pre-release status or an ordinary product failure, and whether the disclosure actually reached the user's understanding. Their rulings define where the sunset line sits in practice."
+    },
+    {
+      "name": "platform_api_dependents",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Businesses that build production systems on interfaces the publisher has labeled beta. They sink integration cost into the beta surface, then bear breakage, deprecation, and migration costs when the interface changes or the window closes — risks they never negotiated, because the beta license is offered on a take-it-or-leave-it basis to the downstream developer community as a whole. Leaving means rewriting against a different platform at prohibitive cost."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the risk-allocation problem of getting pre-release software into real-world conditions: developers need heterogeneous usage environments and fault discovery at scale before general availability, and willing users want early access. The bounded designation lets both transact by capping the publisher's tail liability to a genuine testing window while leaving ordinary liability intact everywhere else.",
+    "transfer_function": "Moves residual defect risk — crashes, data loss, instability, uncompensated bug consequences — from publishers to self-selected test users during the bounded window; moves early-access utility and feature influence back to those users; and, on expiry of the window, shifts failure costs back to publishers under preserved base liability.",
+    "absent_voices": "Platform API dependents would object: they bear unpriced breakage risk from beta surfaces they depend on but had no seat in drafting the license. Also the click-through test users for whom 'informed' consent is nominal — the reading's legitimacy rests on comprehension, and those who never understood what they accepted were not effectively in the conversation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the bounded designation vanished overnight, publishers would split three ways: delaying release until internal testing suffices (slower iteration, fewer real-world fault discoveries), shipping at general availability with full liability (chilling small-developer pre-release distribution), or adopting blanket disclaimers (leaving users worse off than the bounded regime). The current pattern of rapid public iteration with a defined liability boundary would reorganize around whichever of those imperfect substitutes each publisher could afford.",
+    "founding_problem": "Early commercial software carried catastrophic latent-defect exposure: developers faced potentially ruinous liability for bugs that are inevitable in unfinished software, while buyers had no way to distinguish a mature product from an experimental one. The beta designation emerged to mark experimental status publicly and to bound the developer's exposure to a genuine testing period.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the benefiting parties: UCC and Magnuson-Moss warranty legislative history and the pre-doctrine case-law record on software warranty disclaimers document the liability-chilling problem the designation answered; the software engineering literature on field-testing necessity attests the underlying technical problem independently of any party's commercial interest. Publishers obviously attest the problem as well, but the external legal-historical and engineering sources carry the corroboration."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.34,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the narrow warning reading of the beta-designation kernel: a beta label is a time-bounded testing disclosure, base product liability survives outside the window, and the window must be a genuine testing phase. Under this reading the arrangement is a transitional device whose entire justification is the transition from development to stable release — hence scaffold, with the sunset definitional rather than decorative. The ε referent is the standing beta-designation arrangement as this reading assesses it by its own lights: bounded, disclosed, liability-preserving operation, which leaves only residual risk-transfer extractiveness. The sibling readings (expansive_shield_reading, severity_carve_out_reading) are separate constraints in separate files; per the ε-invariance principle this file does not hedge across them. KEY AGENTS (by structural relationship): - prerelease_software_publishers: agenda-setting beneficiary (institutional/arbitrage) — drafts terms, defines the window, collects the shield - early_adopter_test_users: dual-positioned risk-bearers (moderate/constrained) — supply testing labor, bear residual defect costs, gain early access - general_availability_customers: protected beneficiaries (organized/mobile) — buy under preserved liability - consumer_protection_agencies: enforcement seat (institutional/analytical) - beta_dispute_courts: adjudicative seat defining where the sunset line sits (institutional/analytical) - platform_api_dependents: excluded cost-bearers (powerful/trapped) — bear unpriced breakage risk with no seat",
+    "logic_rationale": "Extractiveness is low (0.22 at interval end) because the narrow reading preserves base liability outside the window and confines the shield to genuine testing risk; what remains is the irreducible residuum — even a consensual, disclosed risk trade leaves the test cohort bearing uncompensated defect costs, and the publisher captures the avoided-liability value. Suppression (0.34) is authored as a raw structural property and is NOT scaled by power or scope — only extractiveness is scaled by the engine; the level reflects take-it-or-leave-it click-through licensing offset by the real alternative of waiting for general availability. Theater ratio (0.14) is low: post-correction, the disclosure function is mostly real, with a residual band of legacy labels maintained for brand familiarity rather than signal. Accessibility collapse (0.30) is low because alternatives stay open — decline the beta, wait for GA, switch vendors. Resistance (0.32) is moderate: consumer advocates and some courts actively resist stretched designations, which is what held the correction. The measurement series share one six-point grid (t=0,6,12,18,24,30) across all three tracked metrics. The trajectory is a rise-and-correct arc, not monotonic drift: through the middle of the interval the perpetual-beta phenomenon (multi-year 'beta' labels on finished products) pushed extractiveness, theater, and the enforcement burden up together; regulatory scrutiny and label retirements then pulled all three back down. The suppression_requirement series is authored deliberately because this story tracks enforcement-capacity change — the narrow reading's core demand is duration policing, and the historical record shows enforcement surging against window abuse and relaxing as norms re-settled.",
+    "perspectival_gap": "The seats compute differently from the same structure. From the publisher seat the arrangement is earned flexibility the publisher pays for in support load, telemetry infrastructure, and public bug exposure — a tool it administers. From the test-user seat it is a priced risk trade whose price (residual defect costs) is real but consented to. From the GA-customer seat it is nearly invisible except as delivered product quality and intact warranty rights. From the excluded API-dependent seat the same designation reads as unpriced counterparty risk imposed without negotiation. The engine derives these divergent classifications from the structural data; the authored scaffold claim does not adjudicate among them.",
+    "directionality_logic": "Publishers sit near the beneficiary pole (listed beneficiary, arbitrage-grade exit — they control the window's length and can restructure terms). General-availability customers sit near the beneficiary pole with mobile exit. Test users are the story's one deliberate override: the derivation chain reads their presence in the beneficiaries array and would place them near-subsidized, but they are the receiving end of the transfer function — residual defect risk lands on them — so their true position is near-symmetric. The override (moderate -> 0.45) corrects this; the moderate power atom is held uniquely by the test-user cohort in this story, so the keying is unambiguous. Regulators and courts occupy analytical seats whose extraction exposure is negligible. API dependents bear real costs but hold an excluded seat: they appear in no beneficiaries/victims array, so the derivation underweights them — recorded here as commentary-grade structural residue, not a correction-grade override.",
+    "mandatrophy_analysis": "The scaffold classification does double work. Against the extraction reading: it records that the beta regime solves a genuine risk-allocation problem — labeling it a snare would erase the real coordination that makes pre-release software distribution possible at all. Against the complacency reading: the sunset is definitional under this reading, so any operation in which the window detaches from genuine testing is not this constraint operating well but this constraint failing into its expansive sibling. The founding problem remains live (pre-release software still exists and still needs bounded field testing), so mandatrophy is not resolved; the live risk is forward decay — if windows systematically outrun testing need, the arrangement persists past its function and drifts piton-ward or snare-ward. Omega genuine_testing_phase_boundary carries that monitoring question.",
+    "kernel_context": "Kernel: beta_designation_doctrine — the contested commitment that a 'beta' designation modifies a software product's liability posture. This file instantiates the narrow_warning_reading: the designation is a time-bounded testing disclosure, base product liability is preserved, and the duration must be a genuine testing phase. Sibling readings, authored as separate constraints: expansive_shield_reading (comprehensive waiver, indefinite duration, all software contexts) and severity_carve_out_reading (designation categorically unavailable for life-safety, financial, or other critical systems). The narrow reading's foundational axioms contradict the expansive reading's premises outright and merely coexist with the carve-out reading's domain-limiting premise."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is one reading of the beta_designation_doctrine kernel; which reading will the adjudicating institutions consolidate, and what does each consolidation change structurally?",
+      "resolution_mechanism": "Track doctrinal consolidation in appellate treatment of beta-dispute cases and in consumer-statute amendments: adoption of the expansive reading would convert the shield into an indefinite comprehensive waiver; adoption of the severity carve-out would remove critical-system domains from the arrangement entirely.",
+      "impact": "Expansive consolidation raises epsilon sharply and converts the scaffold into a steady-state shield (snare-flavored); carve-out consolidation shrinks the arrangement's domain without changing its internal structure; narrow consolidation stabilizes the scaffold.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which reading of the beta-designation kernel prevails, and the structural consequences of each."
+    },
+    {
+      "id": "genuine_testing_phase_boundary",
+      "question": "What counts as a genuine testing phase, and are declared windows set in good faith relative to actual testing need?",
+      "resolution_mechanism": "Audit release cadence against declared windows: compare bug-fix throughput, crash-rate stabilization, and feature-completion signals at window close against the publisher's own telemetry; systematic excess of window length over demonstrated testing need indicates bad-faith duration.",
+      "impact": "If windows systematically outrun genuine testing need, the sunset becomes decorative, the scaffold decays toward a steady-state shield, and the arrangement drifts piton- or snare-ward with rising theater_ratio.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether declared testing windows track genuine testing phases in good faith."
+    },
+    {
+      "id": "informed_consent_adequacy",
+      "question": "Is click-through beta consent sufficiently informed for the risk transfer to count as consensual rather than extracted?",
+      "resolution_mechanism": "Comprehension studies of beta license terms and differential opt-in behavior when material risk terms are plainly summarized at the point of consent.",
+      "impact": "If consent is nominal for a substantial fraction of test users, their effective directionality rises toward the target pole, residual extractiveness exceeds the authored 0.22, and the arrangement shifts toward tangled_rope territory despite preserved base liability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Adequacy of the informed consent on which the reading's legitimacy rests."
+    },
+    {
+      "id": "perpetual_beta_reversion_risk",
+      "question": "Will the post-correction convergence toward bounded windows persist, or revert to perpetual-beta practice under competitive pressure?",
+      "resolution_mechanism": "Longitudinal tracking of designation durations and window-renewal behavior across major platforms; watch for renewed multi-year 'beta' labels on functionally complete products.",
+      "impact": "Reversion reproduces the mid-interval peak — rising extractiveness, theater, and enforcement burden — and dates a scaffold-degradation transition; persistence confirms the correction as a durable norm.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of the correction against perpetual-beta relapse."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__expansive_shield_reading",
+      "beta_designation_doctrine__severity_carve_out_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial doctrine 'a beta designation shields software developers from liability' decomposes into three structurally distinct readings with different epsilon, different victim structures, and different temporal form. This file instantiates the narrow warning reading (time-bounded disclosure, preserved base liability, genuine-phase duration — scaffold-shaped, low extraction). The expansive_shield_reading (indefinite comprehensive waiver) is its contradictory sibling: the narrow reading's foundational axioms logically exclude it within any single framework. The severity_carve_out_reading (categorical exclusion of critical systems) is domain-limiting rather than contradictory and coexists with this reading as a live position held by other parties. Each reading is authored as its own story with its own stable epsilon; the family is linked through affects_constraints per the epsilon-invariance decomposition rule."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.45
+    }
+  ],
+  "gain_flow": "prerelease_software_publishers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "bounded_testing_disclosure_baseline",
+    "drift_state": {
+      "moment": "contemporary_perpetual_beta_aftermath",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_shield_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "severity_carve_out_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "shield_expires_with_genuine_testing_phase",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "base_product_liability_preserved_outside_window",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

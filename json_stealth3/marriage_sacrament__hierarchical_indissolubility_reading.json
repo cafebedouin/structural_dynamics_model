@@ -1,0 +1,362 @@
+{
+  "header": {
+    "constraint_id": "marriage_sacrament__hierarchical_indissolubility_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hier_indiss_meas",
+    "story_uid": "18b85e45-4624-4148-9c0c-8b5da3e2af59"
+  },
+  "base_properties": {
+    "extractiveness": 0.76,
+    "suppression": 0.7,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sacramental Marriage Hierarchical Indissolubility Regime",
+    "topic_domain": "religious/canonical/political-sociological",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "catholic_magisterium",
+      "canon_tribunal_establishment",
+      "faithful_married_laity"
+    ],
+    "victims": [
+      "divorced_catholics_in_new_unions",
+      "divorced_catholics_denied_new_marriage",
+      "spouses_denied_bond_dissolution"
+    ],
+    "vindicated_propositions": [
+      "indissolubility_constitutive_doctrine",
+      "hierarchical_adjudication_necessity_thesis"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.76,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.73,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.7,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of the marriage_sacrament kernel: marriage as an ontological reality — a bond constituted by consent, not merely an ideal — whose status can be pronounced on only by hierarchical adjudication operating under canon law. Under this reading, indissolubility is constitutive rather than aspirational, tribunal jurisdiction over bond-status is exclusive, and a new union contracted without a declaration of nullity places the parties outside sacramental communion. The regime carries a genuine coordination core (a fixed guarantee of bond security for the married majority, uniform status across jurisdictions, a historic protective aim against unilateral abandonment) and simultaneously imposes asymmetric, actively enforced costs on divorced members seeking new unions or release from destructive marriages. The interval maps abstractly onto the codification-to-reform era of modern canon law (roughly the 1918 code through the procedural reforms a century later); the grid is a shared abstraction, not calendar years. This file is one member of a two-story constraint family; see network.dual_formulation_note for the decomposition and the linked sibling.",
+    "key_agents": [
+      "catholic_magisterium: Agenda-setter (institutional / identity_locked) — defines the bond doctrine and reserves all bond-status adjudication to courts under its jurisdiction",
+      "canon_tribunal_establishment: Primary beneficiary-administrator (organized / constrained) — collects fees, salaries, and institutional perpetuation from adjudication volume",
+      "faithful_married_laity: Secondary beneficiary (organized / constrained) — receives the bond-security guarantee; one divorce away from the target side of the ledger",
+      "divorced_catholics_in_new_unions: Primary target (powerless / identity_locked) — bears sacramental exclusion enforced indefinitely",
+      "divorced_catholics_denied_new_marriage: Secondary target (powerless / constrained) — bears tribunal-gate costs, delays, and uncertainty",
+      "spouses_denied_bond_dissolution: Acute target (powerless / trapped) — no release from dangerous or dead bonds short of death",
+      "internal_reform_theologians: Excluded voice (moderate / constrained) — discernment proposals circulate without adjudicative office",
+      "historians_of_canon_law: Analytical observer (analytical / analytical) — independent record of the machinery's development"
+    ],
+    "logic_rationale": "Extraction is authored high (0.76 at interval end) because the regime's heaviest costs — indefinite sacramental exclusion, tribunal delay and fees, denial of dissolution in dangerous marriages — are decoupled from any service the excluded party can decline, and the adjudication demand is largely created by the doctrine's own rigor. Suppression (0.70) is authored as a RAW structural property, unscaled by power or scope: the enforcement machinery is canon-law monopoly on bond-status determination plus sacramental denial, supplemented by internalized self-exclusion (see omega suppression_structural_vs_internalized for the mechanism split). Theater ratio (0.32) is moderate-low: adjudication performs real epistemic work on validity, but a growing share of activity is ritual reaffirmation of permanence running alongside quietly expanding informal accommodations. Accessibility collapse (0.58) and resistance (0.62) reflect the middle position: within the frame, alternatives (couple-level dissolution, competing adjudicators, pastoral case-by-case closure) are unavailable, but exit to other traditions exists and is exercised, and resistance is real — mass informal communion reception by the excluded, reform theology, synodal pressure, and declining practice. The temporal series run on ONE shared grid (t=0,20,40,60,80,100; all three metrics authored at every point): extractiveness rises monotonically as tribunal volume and the annulment economy grew on top of the doctrinal base; suppression shows an enforcement-capacity build peaking mid-interval followed by slight procedural relaxation while the formal rule persisted (an enforcement ratchet, then partial softening — not a cycle, so no intermittent-reinforcement reading applies); theater creeps upward as formal permanence is ritually affirmed over expanding informal exception-handling. Coordination type is declared identity_coordination: the regime's dominant function is boundary maintenance — determining who counts as validly bound, against evolving criteria of impediment and nullity. No boltzmann_floor_override is authored; the type default stands.",
+    "perspectival_gap": "The engine computes per-seat classifications from the structural data, and the seats should diverge sharply. From the magisterium seat the arrangement is load-bearing order: without exclusive adjudication the communion has no determinate answer to what marriage is, and the teaching office's distinctive authority thins into opinion. From the tribunal seat it is a professional vocation and a functioning court system with ordinary burdens. From the faithful-married-laity seat it sits near symmetric: security purchased with contributions and conformity. From the three payer seats the same structure computes as enforced exclusion — an indefinite bar on communion, a paid and delayed gate to recognized new unions, or no exit at all from a destructive bond. The historian seat sees centuries of accretion rather than design. None of these perceptions is adjudicated by the authored claim; the divergence is the datum.",
+    "directionality_logic": "Beneficiary/victim declarations drive derivation without overrides. The magisterium sits nearest the full-beneficiary end: it collects adjudicative authority itself and bears essentially none of the exclusion costs. The tribunal establishment derives low-to-moderate d — it collects fees and careers while administering, bearing little personal extraction. Faithful married laity derive moderately low d: real coordination benefit, indirect costs (contributions, witness burdens), and forward-looking exposure since any member is one marital breakdown from the paying side. The three payer groups derive high d: divorced members in new unions sit near the full-target end, amplified by identity_lock (their sacramental and communal life is fused with the community that excludes them); divorced members awaiting or deterred from adjudication are amplified by constrained exit; spouses denied dissolution are amplified by trapped status — no exit from the bond exists within the framework at all. Larger spatial scope (global communion) modestly amplifies effective extraction for targets via verification difficulty, per the engine's scope modifier. No directionality_overrides are authored: the derivation from declarations plus exit options reproduces these relationships, and overriding would substitute assertion for structure.",
+    "mandatrophy_analysis": "The tangled_rope claim guards both mislabelings. Calling the regime pure extraction ignores the coordination good that holds the married majority in place — a fixed guarantee that one's own bond cannot be undone by the other spouse's later choice, uniformity of marital status across jurisdictions, and the historic protective aim against arbitrary abandonment; remove those and the arrangement loses its acceptance base overnight. Calling it pure coordination ignores the asymmetric costs borne by a minority who never chose the tribunal's jurisdiction over their consciences, enforced through the withholding of communion. On mandatrophy: the founding problem retains a live core (protection of vulnerable spouses from unilateral abandonment is attested by external historians and echoed in ecumenical dialogue), but the machinery's present-day center of gravity — adjudicating validity amid impediment complexity — is a problem partly manufactured by the doctrine's own rigor, and the exclusion of the remarried addresses no failure of the original protective aim. Hence founding_problem_status is authored 'contested' rather than resolved: the parties dispute whether the protective core still requires this machinery, which is precisely the question the sibling reading answers differently.",
+    "kernel_context": "Kernel: marriage_sacrament — the persisting commitment that sacramental marriage binds spouses in a union with determinate status before God and community. This file instantiates the hierarchical_indissolubility_reading: the bond is ontological (constituted by exchanged consent, not merely held as an ideal), and only adjudication operating through the hierarchy's courts can pronounce on its status. Sibling: civic_pastoral_reading instantiates the same kernel as a pastoral relationship whose permanence is an ideal served by compassionate, case-by-case discernment that may in individual cases recognize the bond as ended. The disagreement is located in exactly one structural element: whether the bond's persistence is constitutive (an adjudicable fact) or aspirational (a discernible ideal). The reading_relations edge to the sibling is authored as foreclosure rather than coexistence: within any single framework that takes the bond's persistence as constitutive, discernment-based dissolution contradicts the ontology — a party holding this reading is logically committed to rejecting the sibling's core premise. Sociologically the two readings coexist across factions of one communion, but no single party can hold both premises at once."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "civic_pastoral_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'Catholic marriage discipline' decomposes into two eps-invariant readings of the kernel marriage_sacrament. This story authors the hierarchical_indissolubility_reading: eps 0.76, victim set comprising divorced members in unrecognized new unions, divorced members gated behind tribunal adjudication, and spouses denied dissolution of dangerous bonds. The sibling story (civic_pastoral_reading) authors the pastoral-discernment reading: permanence as ideal, case-by-case discernment replacing tribunal exclusivity — a different victim set (chiefly the conscientious burden of ambiguity and inconsistent application rather than sacramental exclusion) and materially lower extraction, since the exclusion mechanism is replaced by discernment. The eps-invariance test forced the split: assessing the regime as validity-discovery service reads low extraction; assessing it as communion-access gating reads high — two structurally distinct constraints sharing a label, not one constraint with a measurement parameter. Each file links the other via affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is one reading of kernel marriage_sacrament (reading: hierarchical_indissolubility_reading). What would the sibling reading civic_pastoral_reading change structurally, and where is the disagreement located?",
+      "resolution_mechanism": "Authorship of the sibling story against the same structural axes: the sibling replaces tribunal-exclusive adjudication with case-by-case discernment, converts the constitutive bond into an aspirational ideal, and thereby removes the Eucharistic-exclusion mechanism and shrinks the tribunal victim set. The disagreement is located in a single element: constitutive vs. aspirational status of the bond's persistence.",
+      "impact": "If the sibling reading displaced this one, the measured exclusion extraction collapses (no category of persons is barred from communion by bond-status), the tribunal apparatus demotes from gatekeeper to optional advisory service, and this constraint's classification would migrate toward low-extraction coordination; the current classification is valid only within this reading's frame.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this file is one of two readings of the marriage_sacrament kernel; the sibling reading would restructure the victim set and delete the exclusion mechanism."
+    },
+    {
+      "id": "annulment_discovery_vs_paid_gatekeeping",
+      "question": "Does tribunal nullity determination discover a pre-existing invalidity (so that nothing is dissolved and the burden is the price of an epistemic service), or does the annulment process in practice function as a paid, delayed gatekeeping toll on ending marriages?",
+      "resolution_mechanism": "Comparative study of tribunal outcomes against the civil-divorce facts of the same unions, concession-rate patterns across tribunals and eras, and petitioner testimony on whether decrees track new information or ratify settled facts. Where decrees overwhelmingly confirm what petitioners already knew, the gate reading dominates.",
+      "impact": "If the process is discovery, a large share of the measured burden is adjudication cost of a real epistemic service and effective extraction drops accordingly. If it is gatekeeping, the regime operates as a monetized toll on marital exit and effective extraction rises further, sharpening the snare-side of the hybrid.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the annulment process is epistemic discovery or de facto dissolution-for-pay."
+    },
+    {
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is the measured suppression structural (canon-law monopoly on bond status, sacramental denial, tribunal gatekeeping) or internalized (self-exclusion from communion, perceived unworthiness persisting even where discipline technically permits reception), and in what proportion?",
+      "resolution_mechanism": "Post-exit suppression trajectory: survey and pastoral-record analysis of members who leave the communion for traditions permitting new unions. If exclusion-feeling and abstention patterns persist after the structural barrier is removed, a substantial share is internalized.",
+      "impact": "If internalized, effective suppression exceeds the structural measure — targets carry the barrier with them after exit — and remedies aimed at the formal rules alone would overestimate relief. If predominantly structural, rule-level reform would release most of the measured pressure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Split between structural and internalized components of the enforcement burden."
+    },
+    {
+      "id": "payer_coalition_potential",
+      "question": "Could the payer groups — individually powerless, collectively numbering in the millions across the communion — convert diffuse grievance into organized pressure capable of moving the discipline, as synodal consultation episodes hint?",
+      "resolution_mechanism": "Track organization density over time: durable advocacy associations of affected members, voting or consultative weight at synods, and whether tribunal-volume declines or regional discipline divergences follow organized campaigns rather than demographic drift.",
+      "impact": "High coalition potential would raise the resistance trajectory and make enforcement-cost escalation the binding limit on the regime; negligible coalition potential leaves the payer seats structurally static regardless of numbers, sustaining high effective extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether diffuse payer grievance can aggregate into enforcement-relevant power."
+    },
+    {
+      "id": "exit_identity_lock_durability",
+      "question": "What specifically binds divorced members to remain inside the communion that excludes them rather than exiting to traditions permitting new unions — and how durable is that bind across generations?",
+      "resolution_mechanism": "Exit cohort studies: retention rates of divorced members versus matched non-divorced members, stated reasons for staying (sacramental life, family formation, communal identity), and intergenerational transmission of affiliation in households marked by exclusion.",
+      "impact": "If the identity lock weakens generationally, exit drains the visible victim pool and measured suppression falls while the remaining trapped remnant experiences intensified isolation — the classification sharpens toward the snare side for whoever remains. If the lock holds, the payer population stays in place and the hybrid structure is stable indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability and mechanism of the identity fusion that keeps excluded members inside the regime."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "catholic_magisterium",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Popes, dicasteries, and the world's bishops teach that a consummated sacramental marriage creates a bond that nothing but death ends, and they reserve every judgment about whether a given marriage was validly formed to courts operating under canon law. Codes and disciplinary norms issue from Rome; bishops enforce them locally. What flows to this seat is adjudicative authority itself: because no married couple and no local pastor may declare a bond ended, the center of the communion becomes the indispensable interpreter of every marriage's status. Abandoning that reservation would mean repudiating the authority structure's own warrant — not available short of institutional rupture."
+    },
+    {
+      "name": "canon_tribunal_establishment",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Diocesan tribunals employ judges, defenders of the bond, advocates, and notaries who gather evidence, interview witnesses, and issue decrees on whether marriages were validly contracted. Petitioner fees, salaries, chancery offices, and university chairs in canon law persist because adjudication volume persists. The governing rules come from above, but day-to-day case-handling norms are set inside tribunal practice. Leaving the work means leaving the canonical profession altogether."
+    },
+    {
+      "name": "faithful_married_laity",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Married members in good standing receive a fixed guarantee: once their bond is declared valid, it cannot be undone by either spouse's later choice, and their standing before the community is secure without periodic recertification. They contribute financially, raise children inside the system, and serve as witnesses when neighbors' marriages come up for review. Any of them is one marital breakdown away from the paying side of the ledger, and most know it."
+    },
+    {
+      "name": "divorced_catholics_in_new_unions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Members whose first marriage ended in civil divorce and who have entered a new union without a declaration of nullity. The communion's discipline treats their new union as incompatible with full sacramental participation: they are barred from communion and from most public ministries. Staying usually means living indefinitely in sacramental exclusion while attending, contributing, and raising children in their parishes; leaving means surrendering the sacramental and communal life that structures their families' weeks and years."
+    },
+    {
+      "name": "divorced_catholics_denied_new_marriage",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Divorced members not yet in new unions who wish to marry again inside the church. While the first bond stands, no priest will contract a second sacramental marriage; the only sanctioned route is petitioning a tribunal for a declaration of nullity — months to years of document gathering, witness interviews, and fees, with an uncertain outcome. Until a decree issues, the options are celibacy, a new union without sacramental recognition, or departure from the communion."
+    },
+    {
+      "name": "spouses_denied_bond_dissolution",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Members inside marriages that are violent, chronically destructive, or effectively dead. The framework permits separation of households and lives but never dissolution of the bond while both spouses live, so no new recognized union is possible regardless of circumstance. Safety and flourishing depend on private arrangements the system accommodates only as separation, with the door to any future recognized union closed until a spouse dies."
+    },
+    {
+      "name": "internal_reform_theologians",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Moral and pastoral theologians, many teaching in Catholic universities, who argue that individual discernment can establish when a first bond was never integrally lived, opening a path back to the sacraments without wholesale doctrinal revision. Their proposals circulate through journals, synod interventions, and advisory documents, but they hold no adjudicative office; tribunals retain exclusive jurisdiction over every case."
+    },
+    {
+      "name": "historians_of_canon_law",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic scholars tracing matrimonial jurisprudence from late-antique penitential practice through the medieval decretals, the twentieth-century codifications, and recent procedural reforms. They document when adjudication centralized, how decree volumes moved, and what the machinery cost at each stage. They collect no fee and issue no decree; their publications are the main independent record of the system's development."
+    }
+  ],
+  "gain_flow": "canon_tribunal_establishment",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates a global communion on the meaning of sacramental marriage: provides a fixed, uniform norm for family formation, guarantees that no spouse can unilaterally redefine another's bond, and routes all bond-status questions through one adjudicative authority so that marital standing is identical across parishes and jurisdictions.",
+    "transfer_function": "Moves bond-status adjudication away from the married parties and their pastors to the hierarchical tribunal system; moves sacramental access away from divorced members in unrecognized new unions; confers recognized-standing status on marriages declared valid and withholds it otherwise; moves fees and professional livelihood to the tribunal apparatus.",
+    "absent_voices": "Petitioners appear in tribunal proceedings only as suppliers of testimony, never as votes; internal reform theologians publish without adjudicative office; the Orthodox economia tradition and Protestant churches permitting new unions stand wholly outside the adjudication and would contest the exclusivity claim. Their objections are recorded in ecumenical dialogue and synodal submissions but carry no decisional weight.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the regime vanished overnight, every tribunal would close, tens of thousands of pending nullity cases would lose their forum, communion discipline for divorced members in new unions would flip immediately, and the teaching office would lose the juridical keystone that makes bond-status determination its distinctive function. Marriage preparation, parish ministry to separated members, and canon-law education would all reorganize around whatever replaced adjudication; the surrounding civil legal systems would notice little, but the communion's internal architecture would rearrange.",
+    "founding_problem": "Early Christian communities confronted marriage cultures in which men could dismiss wives at will (Deuteronomic divorce provisions, Roman no-fault repudiation), leaving abandoned spouses — disproportionately women — without provision or standing. The church's refusal of dissolution distinguished it and shielded vulnerable spouses from arbitrary abandonment. Medieval canon law later added the problem of determining validity amid growing complexity of impediments, dynastic politics, and clandestine marriages, which is what made adjudication machinery necessary at scale.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties by: academic historians of early Christian and medieval marriage practice (documenting the anti-abandonment genealogy and the later centralization of validity adjudication); Orthodox and Protestant ecumenical dialogue responses (attesting the protective concern as real while disputing adjudicative exclusivity); and testimony of affected laity gathered in diocesan synod and listening processes. Magisterial and tribunal self-attestation of the founding problem exists but is not counted here; the protective-core claim stands on external historical scholarship even as the necessity-of-this-machinery claim remains disputed by the sibling reading's adherents."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "constitutive_indissoluble_bond_under_apostolic_adjudication",
+    "drift_state": {
+      "moment": "contemporary_synodal_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "civic_pastoral_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "indissolubility_is_constitutive_not_aspirational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "bond_status_requires_hierarchical_adjudication",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "new_union_after_undissolved_bond_precludes_communion",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

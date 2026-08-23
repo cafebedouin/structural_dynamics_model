@@ -1,0 +1,379 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__protocol_ossification_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-06",
+    "status": "ACTIVE",
+    "story_uid": "b3613042-fdb7-4ac9-adee-11d91b5b1e47"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.66,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Near-Universal Consensus Gate on Bitcoin Base-Layer Change",
+    "topic_domain": "cryptocurrency_economics/monetary_systems/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "long_term_hodlers",
+      "incumbent_miner_operators",
+      "custodial_exchanges_and_funds"
+    ],
+    "victims": [
+      "base_layer_feature_developers",
+      "privacy_dependent_users",
+      "high_fee_small_transactors"
+    ],
+    "vindicated_propositions": [
+      "credible_scarcity_doctrine",
+      "social_consensus_layer_thesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "bitcoin_core_maintainers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Hold merge responsibility for the reference client most nodes run. They decide which protocol proposals receive sustained review and which stall; they cannot activate a change alone, but their review queue is the narrow passage every proposal must survive. Their standing in the community rests on stewardship of the existing rules, and their careers and social worlds are inside the project, so proposing or merging a divisive change would cost them that standing.",
+      "secondary_role": "beneficiary"
+    },
+    {
+      "name": "economic_full_node_operators",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Run fully-validating nodes and choose which software version to accept. Each operator's refusal to adopt a new rule set is an effective veto, and their aggregate adoption decisions are what activation consists of. They gain predictable validation rules and freedom from forced upgrades. Running a node is a hobby-or-business commitment relatively few users undertake, so this seat is small relative to the holder population.",
+      "secondary_role": "beneficiary"
+    },
+    {
+      "name": "long_term_hodlers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Hold the asset across years or decades as a savings vehicle, with portfolios and public identities organized around the promise that issuance and the supply cap will never change. Every protocol revision is a tail risk to that promise. Selling is the only exit, and selling contradicts the thesis they hold; many are also the loudest voices policing deviation from the stability line."
+    },
+    {
+      "name": "incumbent_miner_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate warehouses of single-purpose hashing hardware whose resale value outside this network is near zero. Changes to proof-of-work, difficulty adjustment, or block subsidy would strand that capital; stability protects the amortization schedules. They periodically attempt to push favored changes, as in the 2017 agreement to back larger blocks, but their structural interest lies with the rules their machines already implement."
+    },
+    {
+      "name": "custodial_exchanges_and_funds",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Custody the majority of coins and provide the on-ramps most newcomers use. Predictable rules minimize their operational and compliance overhead. Unlike committed holders, they can follow whichever chain markets reward and list competing assets freely, so their loyalty runs to liquidity rather than to any particular rule set."
+    },
+    {
+      "name": "base_layer_feature_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Design and champion protocol improvements: covenant opcodes, signature-hash modes that would enable more robust second-layer designs, cross-input signature aggregation, stronger privacy tooling. Their proposals pass through years of review, mailing-list debate, and public criticism, and most die without activation. Their expertise and reputations are ecosystem-specific; pivoting to other networks carries a community cost, and building on higher layers instead means abandoning the problems they wanted to solve at the base."
+    },
+    {
+      "name": "privacy_dependent_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Need transactions that surveillant employers, creditors, or governments cannot easily trace: people remitting wages, escaping confiscation, or refusing commercial surveillance. Meaningful on-chain privacy improvements require the kind of protocol change the consensus gate blocks, so they rely on workarounds with weaker guarantees. Moving to privacy-focused alternative networks exposes them to delisting and legal attention, so every exit is worse than the position."
+    },
+    {
+      "name": "high_fee_small_transactors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Send small or urgent payments and face fees that spike whenever block space saturates. Scaling the base layer would relieve them, but capacity changes are exactly what the consensus gate resists; the available relief routes run through custodial services that reintroduce the intermediaries the system was built to remove. Alternative networks exist but lack the merchant acceptance and liquidity they depend on."
+    },
+    {
+      "name": "altchain_innovators",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Experiment with the features the gate blocks, such as scheduled hard-fork cadences, rich scripting, and privacy defaults, on separate networks. They are outside the conversation that decides Bitcoin's rules; their exclusion is maintained by the norm itself, since importing their innovations would require the very changes the gate vetoes. They would open the gate to feature competition if they had a seat."
+    },
+    {
+      "name": "protocol_governance_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study decentralized governance comparatively: activation histories, veto patterns, and fork outcomes across networks. They take no position in activation fights and bear none of the costs; their contribution is the comparative record the other seats argue from."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents network partition: any base-protocol change adopted over substantial dissent risks splitting the ledger into two incompatible currencies, destroying the fungibility and security budgets of both sides. The near-universal threshold ensures only changes acceptable to essentially all validators, miners, merchants, and holders activate, and it keeps the monetary schedule constant and independently auditable.",
+    "transfer_function": "Moves protocol-amendment rights from change proponents (feature developers, unserved user classes) to the most conservative adopters: any sufficiently large minority of node operators can veto a change indefinitely, so effective control concentrates in the least change-inclined coalition. It also moves optionality from future users, whose use cases are foreclosed, to present holders, who receive certainty.",
+    "absent_voices": "Future users and not-yet-existing use cases have no seat. Developers of blocked proposals sit inside the conversation but without merge-path leverage. High-fee-region users participate mostly as exchange customers rather than node operators. Altchain builders running the foreclosed experiments are outside the conversation entirely and would object that the veto is exercised over experiments they were never permitted to run.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the near-universal threshold vanished overnight and plurality acceptance sufficed, competing client teams would ship conflicting changes on a regular cadence; the first contested activation would split the ledger, exchanges would suspend withdrawals amid the ambiguity, and the store-of-value premium built on the promise that the rules never change would reprice sharply. The ecosystem would reorganize around whatever governance equilibrium emerged from the first split.",
+    "founding_problem": "A sequence of near-miss and actual partitions, including the March 2013 accidental chain split, the 2015 mid-year fork scare, and the 2017 block-size war ending in the Bitcoin Cash split, showed that protocol changes pushed without overwhelming support can permanently divide the network and destroy value on both sides.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the benefiting parties: independent engineering post-mortems of the 2013 levelDB split, exchange incident-response documentation for chain-split handling, academic distributed-systems literature on consensus thresholds, and notably the blocked developers themselves, who attest the founding problem was real while disputing that it justifies the current veto breadth."
+  },
+  "gain_flow": "long_term_hodlers",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the protocol_ossification_reading of the bitcoin_whitepaper kernel: the governance norm under which changes to Bitcoin's base consensus rules are illegitimate unless they approach universal acceptance, with stability held as the system's primary virtue. The norm has a genuine coordination core, since any change adopted over substantial dissent risks partitioning the ledger into two incompatible currencies, and a real extraction asymmetry, since the effective veto belongs to the most change-resistant adopters while every constituency whose use case requires base-layer modification (on-chain privacy, base-layer scaling, covenant and signature-hash features) pays for the incumbents' certainty. Per the epsilon-invariance principle this is one of three linked family stories; the sibling readings (p2p cash, digital gold) are separate files with their own epsilon, beneficiaries, and victims. Epsilon's referent here is the standing consensus-gate arrangement itself, assessed as it operates, never the arrangement any reading would prefer. The reading's own adherents experience low effective extraction through their beneficiary directionality, while blocked constituencies experience high effective extraction; the engine computes that per-seat divergence from the structural data. Assumptions: interval 0-10 maps to 2015-2025, the norm's operative life from the block-size war's onset to the present; metric values are endpoint-assessed at 2025.",
+    "key_agents": [
+      "long_term_hodlers: primary beneficiary (powerful/identity_locked) — collects the stability premium; their thesis fuses with the immutability guarantee",
+      "economic_full_node_operators: enforcement core and secondary beneficiary (organized/constrained) — each operator's upgrade refusal is an effective veto; collectively they are what activation consists of",
+      "bitcoin_core_maintainers: agenda setter (institutional/identity_locked) — control the review gate every proposal passes; cannot activate alone but can starve any proposal",
+      "incumbent_miner_operators: secondary beneficiary (powerful/constrained) — single-purpose capital protected by rule stability",
+      "custodial_exchanges_and_funds: institutional beneficiary (institutional/arbitrage) — profit from predictability but can follow any winning chain",
+      "base_layer_feature_developers: primary target (moderate/constrained) — proposals die in review; careers and reputation are ecosystem-specific",
+      "privacy_dependent_users: target (powerless/trapped) — need base-layer privacy changes the gate blocks; every exit is worse than the position",
+      "high_fee_small_transactors: target (powerless/constrained) — priced out at saturation; relief routes run through custodians",
+      "altchain_innovators: excluded (moderate/mobile) — run the foreclosed experiments elsewhere; no seat in the conversation",
+      "protocol_governance_analysts: analytical observer (analytical/analytical) — comparative record, no stake in activation"
+    ],
+    "logic_rationale": "Extractiveness 0.60: the coordination core is real and load-bearing — split prevention is why even blocked developers accept slow governance — but the veto asymmetry taxes every change-proposing constituency, and a decade of foreclosed use cases has accumulated as dead-weight loss borne by identifiable seats. Suppression 0.66 is a raw structural property, unscaled; only extractiveness is scaled by directionality and scope in the engine's computation. Enforcement is social-technical: review gatekeeping, node-refusal mechanics, exchange listing discipline, and ostracism of proposal authors framed as attacks. Alternatives exist (forks, altchains, layers) but exiting forfeits network effects and liquidity, so suppression is substantial without being total. Theater_ratio 0.32: security review and testing are genuine work, but a growing share of stability discourse is purity performance — rhetoric declaring the rules never change that overstates a record which includes SegWit and Taproot. Accessibility_collapse 0.55: alternatives partially collapse once the norm is understood, since fork exits have historically failed and retained little value, yet layers and rival networks keep substitute paths visible. Resistance 0.55: a continuous proposal stream (covenants, new sighash modes, drivechain debates) and the memory of the block-size war keep contestation alive; the victim classes are fragmented across developers, users, and outsiders with no coalition mechanism, which caps realized resistance. The three measurement series share one grid (t=0,2,4,6,8,10) so every metric is authored at every examined point. Suppression_requirement is authored because enforcement machinery visibly hardened over the interval — purity tests, proposal-abandonment patterns, and the maturation of social sanction — not merely because extraction shifted.",
+    "perspectival_gap": "The payer seats and the beneficiary/agenda seats should compute different types from identical structure. From the maintainer and hodler seats the norm is the constitution that makes the asset what it is: change is risk, and the gate is prudence. From the blocked-developer and unserved-user seats the same gate is a veto machine that converts their roadmaps into petitions before a hostile jury. Two institutional actors illustrate same-power divergence: custodial exchanges (institutional, arbitrage-grade exit) experience the norm as cheap predictability they can abandon at any reorganization, while maintainers (institutional, identity-locked stewardship) experience it as an identity they cannot walk away from. Identity-lock mechanisms differ by seat: hodlers fuse ideologically, where exit equals thesis betrayal; maintainers fuse professionally and communally, where standing dissolves on departure; developers are locked by career path dependence, since their expertise is ecosystem-specific. If the hodler identity frame broke — for instance, if a credible competing scarce asset absorbed the store-of-value premium — the beneficiary coalition's willingness to enforce would drop sharply.",
+    "directionality_logic": "Beneficiary declarations drive hodlers, miners, and custodians toward the beneficiary end of directionality; identity-lock pushes hodlers furthest, since their only exit contradicts their thesis, while custodians' arbitrage-grade exit places them nearest the beneficiary pole despite institutional power, because they can follow any chain. Victim declarations drive developers (constrained: reputation and career lock), privacy users (trapped: every exit is worse than the position), and fee-burdened transactors (constrained) toward the target end, with trapped seats nearest full-target. Maintainers and node operators are agenda-setter seats with partial benefit; the derivation places them mid-range, which matches their mixed position — they administer the norm, absorb its pressures, and collect standing from it. No directionality_overrides are authored: the derivation handles every seat, and the available override granularity (one d per power atom) would misprice this story's divergent institutional seats — custodians and maintainers share the institutional atom but sit at opposite ends, so any single override damages one of them.",
+    "mandatrophy_analysis": "The tangled_rope classification guards against both mislabels. Calling this a snare ignores that split-prevention is a genuine coordination function the victims themselves depend on — even blocked developers do not want casually contested hard forks — and that enforcement is consent-adjacent, since operators choose their own software. Calling it a rope ignores the veto asymmetry: the threshold grants the most conservative coalition a permanent tax on every change-proposing constituency, and the beneficiary set is identifiable and concentrated enough to collect. Mandatrophy status: the founding problem (partition catastrophe) is still live, so the mandate has not outlived its function and no resolved-mandatrophy flag is declared. The founding_problem_severity_decay omega tracks whether replay-protection maturity and institutional split-handling eventually decay the mandate while the norm persists at full strength; the drift path from tangled_rope toward inertial maintenance would run through that omega resolving affirmatively.",
+    "kernel_context": "This story instantiates the protocol_ossification_reading of the bitcoin_whitepaper kernel. The whitepaper is silent on amendment procedure, and the three declared readings disagree exactly there: the p2p_cash_reading reads the text as a payments specification whose base layer should evolve toward transactional utility; the digital_gold_reading reads it as a scarcity charter whose credibility requires an unchanging issuance schedule; this reading reads it as a constitution whose amendment threshold approaches unanimity and elevates stability to the primary virtue. Sibling relations are typed as influences in both valences: this reading structurally reinforces the gold reading, since immutability is the load-bearing wall of credible scarcity, and structurally constrains the cash reading, since the changes cash utility requires are precisely what the gate blocks. The disagreement is located in the governance metarule, not in the text's payment or scarcity content; each sibling is a separate constraint file with its own epsilon and victim set. Drift note: this reading's reference frame, the immutable original design, sits at minor, acknowledged practice-drift — the protocol has in fact changed several times, including with this reading's adherents' assent, and the community narrates those changes as consensus-compliant exceptions rather than recognizing them as departures from the frozen-design ideal."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This story instantiates the protocol_ossification_reading of the bitcoin_whitepaper kernel; would instantiating the p2p_cash_reading or digital_gold_reading instead yield a different constraint with a different victim set and epsilon?",
+      "resolution_mechanism": "Author and compile the sibling stories and compare victim sets, directionality distributions, and computed types across the family.",
+      "impact": "Under the p2p_cash reading the same governance norm presents a larger victim set (all cash-utility use cases) and higher epsilon; under the digital_gold reading the victim set shrinks and the norm computes closer to pure coordination.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-contest routing: sibling readings instantiate different constraints from the same text."
+    },
+    {
+      "id": "consensus_threshold_naturalness",
+      "question": "Is the near-universal activation threshold a discovered requirement of secure decentralized consensus, or a socially constructed norm that happens to serve incumbent holders?",
+      "resolution_mechanism": "Comparative governance study across proof-of-work networks with different change cadences: do lower thresholds systematically produce instability, or do mature replay-protection and exchange practices contain split risk at lower thresholds?",
+      "impact": "If constructed, the norm loses its naturality defense and reclassifies toward heavier extraction; if discovered, the coordination component strengthens and the rope share rises.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Naturality of the supermajority threshold."
+    },
+    {
+      "id": "veto_diffusion_vs_concentration",
+      "question": "Does the veto embedded in the consensus requirement rest diffusely across thousands of node operators, or effectively in the small set of maintainers and influential voices who control which proposals ever reach an adoption decision?",
+      "resolution_mechanism": "Trace the activation pipeline historically: catalog proposals that died at review or discussion stage versus those that reached signaling, and identify where each death occurred.",
+      "impact": "Effective concentration converts the norm from coordination with a conservative tilt into enforced extraction with a coordination cover story; confirmed diffusion supports the tangled-rope reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Where the veto actually sits."
+    },
+    {
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is the enforcement that holds the stability norm in place structural (activation mechanics, review gatekeeping, exchange listing behavior) or internalized (ideological fusion in which protocol change has become unthinkable for community members)?",
+      "resolution_mechanism": "Post-exit trajectory analysis of splinter communities: if members who leave for other networks continue enforcing purity norms, the suppression is partly internalized; if enforcement dissolves on exit, it is structural.",
+      "impact": "Internalized suppression raises the effective suppression above the structural measure and predicts persistence of the norm even if activation mechanics change; purely structural suppression would relax quickly if the gatekeeping seats changed hands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of the norm's enforcement."
+    },
+    {
+      "id": "founding_problem_severity_decay",
+      "question": "Has the severity of the founding problem (chain-split catastrophe) decayed as replay protection, exchange procedures, and institutional split-handling matured, while the norm persists at full strength?",
+      "resolution_mechanism": "Incident-rate and cost analysis of splits and near-splits after 2017 versus before; assess whether a modern contentious split would still be catastrophic.",
+      "impact": "Confirmed decay shifts the story toward mandate-outlived-function territory and flags inertial drift; persistent severity confirms the mandate remains live.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding problem still justifies the veto breadth."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper__p2p_cash_reading",
+      "bitcoin_whitepaper__digital_gold_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the bitcoin_whitepaper kernel per the epsilon-invariance principle: the colloquial label 'Bitcoin' conflates a payments specification (p2p_cash_reading), a scarcity charter (digital_gold_reading), and a governance metarule (this story). Each sibling is a separate file with its own epsilon, beneficiaries, and victims; this story links both because the governance norm is cited as evidence within the gold reading and operates as a binding condition on the cash reading. Upstream/downstream: the gold reading lends this norm its beneficiary structure; this norm degrades the cash reading's operating environment."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "satoshi_design_immutability",
+    "drift_state": {
+      "moment": "contemporary_post_taproot_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "p2p_cash_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "digital_gold_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "near_universal_consensus_gates_protocol_change",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "monetary_stability_is_primary_virtue",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

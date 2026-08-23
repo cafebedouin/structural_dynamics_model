@@ -1,0 +1,367 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__shared_liability",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "c6d58370-0139-4a1c-ad90-b43279eccb8e",
+    "created_at": "2026-08-05T09:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.45,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Joint AI Liability Distributed Along the Value Chain by Causal Contribution and Control",
+    "topic_domain": "technology governance/legal theory/regulatory design",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "liability_insurers",
+      "compliance_legal_complex",
+      "ai_harm_claimants"
+    ],
+    "victims": [
+      "foundation_model_developers",
+      "enterprise_ai_deployers",
+      "small_value_chain_suppliers"
+    ],
+    "vindicated_propositions": [
+      "causal_contribution_apportionment_doctrine",
+      "control_correlates_with_responsibility_principle",
+      "multi_pocket_recovery_solvency_principle"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ai_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Drafts and maintains the attribution formula built on contribution and control factors, issues apportionment guidance, accredits conformity-assessment bodies, and enforces through market surveillance and referral to courts. Collects nothing directly; its institutional standing depends on the regime functioning credibly. Exit is not a meaningful category from this seat - it is defined by administering the rule."
+    },
+    {
+      "name": "foundation_model_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build and license the underlying models. They bear assessed liability shares reflecting capability creation, mandatory insurance, documentation obligations covering training data and evaluations, and the indemnification demands of downstream customers. They can relocate research operations or withhold releases from strict jurisdictions, but cannot serve major markets without accepting the allocation; their scale buys caps, carve-outs, and clause-drafting leverage that smaller actors cannot obtain."
+    },
+    {
+      "name": "enterprise_ai_deployers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Integrate models into products and services and stand first in line when users are injured. They carry allocated shares reflecting deployment decisions, plus duties to monitor, log, and report incidents. They buy cover, push indemnification upstream where bargaining strength allows, and absorb residual exposure where it does not. Leaving the arrangement would mean leaving the market for AI-augmented offerings."
+    },
+    {
+      "name": "small_value_chain_suppliers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Data labelers, plugin authors, and niche integrators operating on take-it-or-leave-it contract terms. They receive indemnification clauses drafted by stronger counterparties that assign them shares poorly matched to their actual contribution or control, and they lack the audit trails and counsel needed to contest apportionments. Their realistic way out is abandoning AI-dependent revenue lines entirely."
+    },
+    {
+      "name": "liability_insurers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Underwrite the mandatory and voluntary cover the regime makes necessary, collecting premiums across both the developer and deployer tiers. They shape effective allocation through policy wording, exclusions, and risk pricing, and their actuarial assessments frequently become the de facto contribution estimates that courts and contracting parties rely on. They can withdraw from lines, reprice annually, and move capital between jurisdictions."
+    },
+    {
+      "name": "compliance_legal_complex",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Law firms, audit shops, and consultancies that design indemnification webs, produce the contribution-and-control assessments, defend apportionment disputes, and certify conformity. Their revenue scales with the complexity of the allocation machinery, and their expertise concentrates in the few hubs that draft the standard clauses everyone else signs."
+    },
+    {
+      "name": "ai_harm_claimants",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "People physically, financially, or reputationally injured by AI-mediated failures. The arrangement offers them multiple solvent pockets to pursue instead of a single judgment-proof operator, but collecting means multi-party litigation against defendants backed by insurers and standard defenses, and outcomes turn on contribution assessments the claimants rarely control. After injury they cannot exit the dispute; before injury they cannot opt out of living alongside deployed systems."
+    },
+    {
+      "name": "open_source_contributors",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Volunteers and nonprofit labs whose weights, datasets, and components circulate through commercial chains without any contract. Allocation formulas written for commercial actors reach them through derivative deployments, exposing them to liabilities they cannot price or insure, yet they were absent from the consultations that shaped the formula. Their commitment to open release is constitutive of why they contribute at all, which makes withdrawal an identity cost rather than a merely financial one."
+    },
+    {
+      "name": "academic_tort_theorists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars of tort law, AI governance, and economics who trace whether apportionments track contribution or bargaining power, run comparative analyses across attribution regimes, and supply the conceptual vocabulary in which courts and legislators argue. They neither collect nor pay; their stake is the coherence of the doctrine itself."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the attribution and incentive problem in multi-actor AI production. Without a distribution rule, no single link in the chain internalizes system-level harm risk: the proximate operator may be judgment-proof, upstream contributors face no consequence, and safety investment is starved at every seam. Distributing liability by assessed contribution and control gives every participant a marginal incentive roughly proportional to its ability to prevent harm, and gives injured parties recovery paths spanning the whole chain.",
+    "transfer_function": "Moves money (damage awards, settlements, insurance premiums, compliance and documentation spend) and information (incident reports, evaluation logs, contribution assessments) from AI producers and deployers toward claimants, insurers, and the legal and compliance sector. Through contractual indemnification it also moves decision rights over risk allocation, typically from weakly positioned suppliers toward whichever counterparty drafts the master agreement.",
+    "absent_voices": "Open-source contributors would object that allocation formulas written around commercial contracting reach them through derivative deployments while granting them no seat in the consultation process; they are absent because outreach ran through industry associations and member-state ministries. Below-threshold victims - people harmed in amounts that never justify multi-party litigation - would object that the regime multiplied procedure faster than recovery; they are scattered, unrepresented, and invisible at the negotiating table.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the allocation rule vanished overnight, the indemnification webs already priced into thousands of commercial contracts would unwind through renegotiation and litigation, insurers would reprice or suspend cover pending a replacement rule, pending apportionment disputes would lose their deciding framework, and injured parties would fall back on whatever single-seat rule each jurisdiction still holds on its books. Deployment decisions, product roadmaps, and insurance availability would all reorganize around the successor arrangement.",
+    "founding_problem": "Multi-actor AI production broke the single-point liability model: when a system trained by one firm, adapted by a second, and operated by a third injures someone, the proximate operator is often judgment-proof while upstream contributors face no consequence, leaving victims uncompensated and no participant holding a marginal incentive to invest in prevention.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: pre-regime court records and ombudsman reports documenting injured parties left uncompensated behind insolvent deployers; consumer-protection agencies' incident registries; and the academic tort-literature diagnosis of the liability gap. None of these sources sits inside the insurer or legal-services seats that profit from the regime."
+  },
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.45
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A regulatory regime assigns liability for AI-mediated harm jointly across the value chain, apportioning shares by assessed causal contribution and degree of control: capability creators, adapters, integrators, and deployers each answer for the portion of a failure attributable to their layer. Apportionment proceeds through technical contribution assessments, standardized contractual indemnification, and court adjudication; mandatory and voluntary insurance grew up around it immediately. The intended effect is that every participant holds a marginal safety incentive and no injured party is stranded behind a judgment-proof operator. The observed effect adds a second layer: an insurance and compliance economy has formed on top of the allocation machinery, apportionment increasingly settles by bargaining rather than evidence, and contractual allocation drifts toward weak bargaining positions.\n\nKEY AGENTS (by structural relationship):\n- ai_regulators: Agenda setter (institutional/analytical) - enacts and administers the attribution formula\n- foundation_model_developers: Primary target (powerful/constrained) - upstream capability creators bearing assessed shares\n- enterprise_ai_deployers: Primary target (organized/constrained) - integration-layer actors facing first contact with harm\n- small_value_chain_suppliers: Secondary target (powerless/constrained) - absorb contractual pass-through of allocated shares\n- liability_insurers: Principal collector (institutional/arbitrage) - premiums across both tiers; pricing shapes effective allocation\n- compliance_legal_complex: Secondary collector (organized/mobile) - runs the assessment and indemnification apparatus\n- ai_harm_claimants: Intended beneficiary carrying litigation burden (powerless/constrained)\n- open_source_contributors: Excluded voice (moderate/identity_locked) - reached by formulas they never helped write\n- academic_tort_theorists: Analytical observer (analytical/analytical)\n\nThis story is one reading of the liability_attribution kernel; the sibling readings are separate files with their own epsilon and beneficiary/victim structures, linked via network.affects_constraints. The claim/metric relationship is deliberate: the reading is CLAIMED as tangled_rope on structural grounds while the authored metrics independently describe rising extractive operation - the divergence, if the engine computes one, is the datum.",
+    "logic_rationale": "Extraction is 0.62 at interval end: even judged by this reading's own fairness-of-contribution lights, the standing arrangement imposes net transfers well beyond coordination cost - premiums sized to regulation rather than loss experience, compliance fixed costs that bite small actors hardest, and litigation expenditure that scales with apportionment disputes. Suppression is 0.45: the regime is mandatory where enacted, but suppression here is structural rather than internalized - mandates, contractual lock-in, and market-access dependence - while alternative attribution philosophies remain live political options and jurisdictional arbitrage persists, so alternatives are pressured, not eliminated. Theater ratio 0.32 reflects a specific mechanism: contribution assessments in opaque model chains are often settled by negotiation and precedent rather than measurement, so a growing share of the apportionment exercise is ritual confirming shares the parties had already agreed to fight about. Accessibility collapse is 0.42 - understanding the regime does not dissolve the alternatives, because single-seat attribution remains legislatively reachable. Resistance 0.55 tracks sustained producer lobbying, apportionment litigation, and relocation threats. The temporal series run on ONE shared grid (every tracked metric authored at t = 0,2,4,6,8,10,12) so the engine samples a complete matrix; the suppression_requirement series is authored because the story specifically traces enforcement-capacity build-out (guidance issuance, accreditation, contractual standardization) over the interval, not merely shifting extraction; the trajectories are monotonic - no cyclical dynamic is claimed, and none is asserted. Final series values equal the base_properties scalars by construction of the interval endpoint.",
+    "perspectival_gap": "The payer and collector seats should compute differently. From the regulator's seat the arrangement is a working solution to a real incentive failure; from the two primary payer seats it is a compulsory cost structure whose incidence they contest; from the small-supplier seat it is a regressive pass-through machine wearing a fairness formula; from the insurer seat it is a constructed market; from the claimant seat it is a promise of solvency wrapped in procedural burden. Identity-lock dynamics concentrate in the excluded open-source seat: the fusion is ideological - open release is constitutive of the contributor self-concept, so the relevant exit (withholding contributions, relicensing) is unthinkable in identity terms even when financially available, which is precisely why the seat was safe to leave out of the consultation. If that identity frame broke - if contributors began treating their output as priced labor - the excluded seat would convert into an organized payer bloc with litigation capacity, changing the resistance profile materially.",
+    "directionality_logic": "The structural declarations drive the computation: liability_insurers and compliance_legal_complex are declared beneficiaries with arbitrage/mobile exit, placing their derived directionality near the subsidized end; the three payer groups are declared victims with constrained exit, placing them near the full-target end, with the small suppliers' combination of powerless power and constrained exit sitting deepest. Ai_harm_claimants hold beneficiary as primary role with payer as secondary_role - their net position is positive (many pockets to pursue) but dragged down by litigation cost and assessment-dependence, and expressing that duality through secondary_role rather than a directionality override is deliberate: the override surface keys on power_atom, so overriding the powerless atom to lift the claimant seat would simultaneously distort the small-supplier seat, which shares that atom but sits at the opposite pole. No directionality_overrides are authored because the derivation from declarations plus exit options reproduces the true relationships for every seat; the one candidate (claimants) is better handled structurally, as described.",
+    "mandatrophy_analysis": "The classification discipline cuts both ways here. Reading the arrangement as pure rope would erase the measurable rents - premium volumes untethered from loss curves, compliance revenue scaling with procedural complexity, indemnification clauses migrating burden to the weakest signatories - and would launder a constructed market as coordination cost. Reading it as a snare would erase the genuine coordination achievement: before allocation, no participant internalized chain-level harm risk, and victims routinely ate total losses behind judgment-proof operators; the founding problem is corroborated as live from outside the benefiting parties. Tangled_rope holds both facts visible: real coordination function, asymmetric extraction riding on it. Mandatrophy has not resolved - the founding problem persists (status live) and the arrangement still performs its core function, so the persistence question is about extraction growth, not vestigiality; the rising theater_ratio series is the early-warning channel to watch for the negotiated-apportionment ritual displacing evidentiary assessment.",
+    "kernel_context": "This constraint instantiates the shared_liability reading of the liability_attribution kernel: liability for AI-system harm should be distributed across the value chain in proportion to each actor's causal contribution and degree of control. The kernel's other declared readings are developer_liability (primary liability concentrates in capability creators) and deployer_liability (primary liability concentrates in parties controlling deployment context). The disagreement is located in a single structural element: whether the allocation principle admits a primary seat at all. Shared_liability denies primacy by construction; each single-seat reading asserts one. Strict foreclosure between shared_liability and either sibling is blunted by hybrid regimes (a primary seat with supplementary chain-wide contribution) that a single framework can hold, so the relations authored here are coexists_with rather than forecloses; the sharpest logical conflict in this kernel family runs between the two single-seat readings themselves, and that edge belongs to their files, not this one."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Does distributing liability by causal contribution and control (this reading) yield materially different total extraction than concentrating it on developers or on deployers?",
+      "resolution_mechanism": "Comparative analysis across jurisdictions operating the three readings: measure aggregate compliance-plus-premium-plus-litigation cost per unit of covered harm, and victim recovery rates, under each allocation principle. Cross-reference the sibling stories liability_attribution__developer_liability and liability_attribution__deployer_liability.",
+      "impact": "If total extraction is roughly invariant across readings, the kernel contest redistributes burden rather than creating or destroying it, and per-seat classification differences are the real signal; if shared_liability uniquely multiplies coordination overhead, the reading itself carries a distinct extraction penalty no sibling shares.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is one reading of the liability_attribution kernel; sibling readings change the victim-set composition and the insurance-market consequences."
+    },
+    {
+      "id": "apportionment_measurability",
+      "question": "Can causal contribution actually be measured in opaque multi-component AI chains, or is every apportionment a negotiated estimate dressed as measurement?",
+      "resolution_mechanism": "Audit studies comparing formally assessed contribution shares against counterfactual ablation evidence and post-hoc incident reconstruction; track convergence or divergence as interpretability tooling matures.",
+      "impact": "If contribution is measurable, the regime's coordination function is genuine and its extraction is the contested part; if it is not, the apportionment layer is largely theatrical, theater_ratio is understated, and the arrangement drifts toward piton-like ritual resting on a snare-like contractual core.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the attribution formula's inputs are epistemically accessible or permanently estimated."
+    },
+    {
+      "id": "allocation_regressivity",
+      "question": "Does contractual allocation systematically shift assigned shares toward weakly positioned value-chain actors, defeating the contribution-and-control principle in operation?",
+      "resolution_mechanism": "Contract-population study: compare indemnification clauses and final settled allocations against independent contribution assessments across firm-size strata.",
+      "impact": "Confirmed regressivity would establish that the effective constraint extracts disproportionately from the powerless seat, raising effective extraction at that seat far above the story-level scalar and supporting targeted-allocation remedies; absence of regressivity would strengthen the rope-side reading of the allocation machinery.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bargaining power corrupts the contribution principle via contract design."
+    },
+    {
+      "id": "insurance_pricing_welfare",
+      "question": "Do liability premiums track expected harm (efficient risk signaling that improves safety investment) or regulatory demand plus market concentration (rent)?",
+      "resolution_mechanism": "Actuarial decompositions separating loss-cost components from expense and profit loadings; natural experiments from jurisdictions entering or leaving the regime.",
+      "impact": "Rent-heavy pricing confirms the insurer seat as the principal capturer and supports the tangled_rope verdict with a named extraction channel; cost-reflective pricing would recast much of measured extraction as genuine coordination cost.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Welfare status of the insurance layer the regime calls into being."
+    },
+    {
+      "id": "claimant_recovery_net_effect",
+      "question": "Does multi-pocket liability actually raise net recovery for injured parties once multi-party litigation cost and opacity-driven defense success are counted?",
+      "resolution_mechanism": "Longitudinal claims data comparing realized recovery rates and time-to-recovery before and after regime adoption, stratified by harm severity.",
+      "impact": "If net recovery falls, the declared beneficiary seat is nominal only and the claimant secondary_role dominates, weakening the coordination half of the tangled_rope structure; if it rises, the arrangement's beneficiary declaration is confirmed as substantive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the intended beneficiary seat realizes net benefit or bears hidden payer costs."
+    },
+    {
+      "id": "cs_framing_underdetermination",
+      "question": "Is the commitment-system kernel the statutory attribution formula itself, or the interpretive doctrine of causal contribution that legitimizes the formula from above it?",
+      "resolution_mechanism": "Examine whether courts and agencies adjudicate disputes by appealing to the statutory text or to the underlying fairness doctrine when text and doctrine diverge; if doctrine governs, the kernel sits one layer higher than declared.",
+      "impact": "Adopting the doctrine-as-kernel framing would classify this as a lineage-grounded interpretive tradition with heavier drift absorption and would shift the computed CS pattern; the statute-as-kernel framing adopted here treats interpretation as a buffer below a formalized rule.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Two coherent framings of the same commitment structure produce different cs_structure classifications."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__developer_liability",
+      "liability_attribution__deployer_liability"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'AI liability'. The label conflates three structurally distinct allocation claims: developer-primary, deployer-primary, and chain-wide proportional distribution. Each has its own stable epsilon, its own victim set, and its own insurance-market consequence, so each is a separate story per the epsilon-invariance principle. Family topology: the single-seat readings are upstream baselines (higher legislative familiarity, established doctrinal roots); this shared_liability story is downstream - it is argued FOR and AGAINST by citation to both single-seat baselines, and its contractual and insurance infrastructure creates structural conditions any sibling implementation would inherit or dismantle. All three files link one another via network.affects_constraints."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "proportional_attribution_by_contribution_and_control",
+    "drift_state": {
+      "moment": "contemporary_post_operationalization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "deployer_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "responsibility_tracks_causal_contribution_and_control",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "multi_actor_harms_require_multi_pocket_recovery_paths",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "liability_insurers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

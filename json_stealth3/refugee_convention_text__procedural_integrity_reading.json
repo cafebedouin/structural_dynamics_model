@@ -1,0 +1,352 @@
+{
+  "header": {
+    "constraint_id": "refugee_convention_text__procedural_integrity_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "refugee_proc_integrity",
+    "story_uid": "a92a1311-2758-4870-b018-bb8d744c345a"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.52,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Refugee Convention — Procedural Integrity Reading",
+    "topic_domain": "international_law/migration_governance/human_rights",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "claimants_in_individualized_procedure",
+      "destination_states",
+      "domestic_asylum_courts",
+      "immigration_legal_aid_sector",
+      "unhcr_supervisory_machinery"
+    ],
+    "victims": [
+      "claimants_denied_procedural_access",
+      "frontline_host_states"
+    ],
+    "vindicated_propositions": [
+      "non_refoulement_principle",
+      "individualized_assessment_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 1951,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1951,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1967,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1951,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1951,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1967,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.52,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_allocation",
+      "question": "Which reading of the refugee_convention_text kernel governs the regime's operative arrangement — procedural safeguard (this file), unbendable humanitarian mandate, or sovereign-discretion floor — given that each reading assigns a different victim set and a different epsilon to the same treaty text?",
+      "resolution_mechanism": "Authoritative interpretive consolidation — an ICJ advisory opinion, a treaty-body general comment with state acceptance, or crystallized state practice — revealing which reading commands actual adherence.",
+      "impact": "Under the expansive sibling the victim set widens to generalized-violence and non-state-persecution claimants and measured extraction rises; under the restrictive sibling the victim set shrinks to those denied even minimal process and measured extraction falls. The values authored in this file hold only for the procedural-integrity instantiation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the refugee_convention_text kernel; sibling readings reassign the victim set and the epsilon over the identical text."
+    },
+    {
+      "id": "procedural_outcome_separability",
+      "question": "Can fair process actually be delivered while outcomes remain formally subordinate to procedure, or do systematic grant-rate disparities across adjudicators and jurisdictions show the procedure laundering arbitrary outcomes?",
+      "resolution_mechanism": "Large-N study of decision variance among statistically comparable claimants across adjudicators, regions, and time, controlling for claim characteristics.",
+      "impact": "If outcomes track adjudicator identity rather than claim merit, the procedural guarantee functions as legitimation rather than safeguard, and the arrangement drifts toward pure extraction despite its formal fairness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reading's core wager — outcome subordination to process — survives contact with decision-variance data."
+    },
+    {
+      "id": "offshore_guarantee_possibility",
+      "question": "Can any extraterritorial processing arrangement satisfy full procedural guarantees (counsel, competent interpretation, independent appeal, protection against return), or is offshore siting inherently incompatible with them?",
+      "resolution_mechanism": "Comparative audit of offshore regimes' grant rates, appeal usage, and counsel access against domestic baselines in the same receiving systems.",
+      "impact": "If incompatible, externalization is this reading's defining violation and effective extraction concentrates almost entirely on intercepted claimants; if compatible, part of the measured extraction reflects implementation deficits rather than structural design.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the reading's offshore-permissible-with-guarantees position describes a realizable configuration."
+    },
+    {
+      "id": "narrowing_elimination_boundary",
+      "question": "Where does permissible definitional narrowing end and elimination of substantive review begin — do safe-third-country designation and first-country-of-asylum doctrines preserve individualized review somewhere, or abolish it in effect?",
+      "resolution_mechanism": "Comparative doctrine analysis tracking whether claimants routed through designation schemes retain a merits hearing in any jurisdiction.",
+      "impact": "Fixes the boundary of the victim set: routes preserving review keep claimants inside the safeguard; routes abolishing review move them wholesale into the denied-access class, raising measured extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Location of the line the reading draws between flexible thresholds and forbidden abolition of review."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This file instantiates the procedural-integrity reading of the 1951 Refugee Convention / 1967 Protocol: the treaty binds states to give every asylum claimant a fair individualized determination — registration, hearing, reasons, appeal, and protection against return throughout — while leaving the substantive protection threshold deliberately flexible. On this reading the operative guarantee is the process itself: states may narrow who qualifies, but may not abolish the hearing, and the correctness of outcomes is secondary to the integrity of the procedure that produced them. The standing arrangement this story measures is the regime as actually operated: functioning adjudication in many jurisdictions alongside a documented and expanding record of pushbacks, offshore handling without equivalent guarantees, and expedited tracks without counsel. The colloquial label 'the Refugee Convention' decomposes into structurally distinct readings with different victim sets; this file authors only the procedural-integrity instantiation (see network.dual_formulation_note).\n\nKEY AGENTS (by structural relationship):\n- claimants_denied_procedural_access: Primary target (powerless/trapped) — bears the arrangement's downside with no hearing and no alternative forum\n- claimants_in_individualized_procedure: Protected seat (powerless/trapped) — receives the safeguard the reading exists to secure\n- frontline_host_states: Cost-concentrated party (organized/constrained) — absorbs arrivals by geography with partial reimbursement\n- destination_states: Dual-positioned party (institutional/arbitrage) — funds the machinery, gains removal legitimacy, shifts handling abroad\n- unhcr_supervisory_machinery: Administrator (institutional/constrained) — supervises, guides, and documents without compulsion power\n- domestic_asylum_courts: Institutional beneficiary (institutional/identity_locked) — their function is constituted by the guarantee\n- immigration_legal_aid_sector: Practice beneficiary (organized/mobile) — the procedural rights generate their caseload\n- refugee_led_organizations: Excluded voice (powerless/trapped) — lived experience with no formal seat\n- migration_policy_researchers: Analytical observer (analytical/analytical) — tracks variance and procedural quality",
+    "logic_rationale": "Extractiveness is authored at 0.62 for the standing arrangement as this reading assesses it: the safeguard is real for claimants who reach a functioning procedure, but a large and growing class never reaches one — pushbacks, offshore siting, and expedited tracks remove the hearing precisely where deterrence incentives are strongest, and the reading counts a claimant denied a hearing as bearing the arrangement's full downside regardless of what a hypothetical hearing would have concluded. Suppression is 0.52 as a raw structural property (unscaled by power or scope): the treaty holds states to obligations they continuously maneuver against, while the alternatives states prefer — bilateral externalization, designation schemes — remain only partly suppressed. Theater_ratio 0.38 mixes functional adjudication with a thick declaratory layer: commemorative declarations, compact review cycles, and supervision reports that catalog violations without altering them. Accessibility_collapse 0.42: understanding the text's flexibility does not trap states, which construct workarounds readily, and offers claimants no alternative forum since neighboring doors close in sequence. Resistance 0.62 reflects decades of documented non-compliance pressure — border pushback normalization, externalization design, funding leverage, and open defiance in several jurisdictions. All three temporal series share one grid (1951, 1967, 1985, 2001, 2015, 2026). Suppression_requirement is authored because this story specifically traces enforcement-capacity change: soft supervisory reporting hardened into judicialized enforcement peaking around 2015, then partially eroded as externalization architectures were designed to evade adjudicative jurisdiction. Endpoint values equal the base_properties scalars.",
+    "perspectival_gap": "The payer seats and the constituted-function seats should compute differently. From the denied-claimant position the arrangement presents as enforced exposure with no counterweight: no hearing, no forum, no exit. From the court and legal-aid positions the same arrangement presents as the coordination structure that constitutes their professional existence — they experience it as the source of their function, not as a cost. Destination states straddle: they collect removal legitimacy and burden relief while paying funding and occasional litigation losses. Frontline hosts experience geographic cost concentration with constrained exit; a hosting-states coalition could convert their diffuse position into bargaining power, and the possibility is noted rather than assumed — historically such coalitions have fragmented under bilateral side-payments. The engine computes per-seat classifications from these structural positions; the authored claim does not adjudicate them.",
+    "directionality_logic": "Declared beneficiaries derive low directionality: claimants inside procedure are subsidized by the guarantee; domestic_asylum_courts and immigration_legal_aid_sector have their function constituted by it; unhcr_supervisory_machinery rides on it for mandate and budget; destination_states benefit through removal legitimacy and burden-shifting, tempered by funding costs, placing them nearest symmetric among the beneficiaries. Declared victims derive high directionality: claimants_denied_procedural_access sit at the full-target end — they bear the entire downside with zero exit and no alternative forum; frontline_host_states sit near the target end — structural cost concentration by geography with constrained exit. The victim-set boundary is procedural access itself, which is this reading's distinguishing structural claim.",
+    "mandatrophy_analysis": "The founding problem — mid-century mass displacement with no obligatory hearing and no non-return guarantee — remains live at record displacement levels, so no mandatrophy resolution is declared and none of the lifecycle indicators suggest a dead mandate carried by inertia. The classification discipline matters in both directions: a pure-coordination reading would render the denied-access class invisible, because their harm is precisely the absence of the safeguard and vanishes from any measurement taken over the safeguard's beneficiaries; a pure-extraction reading would erase the genuine protection delivered to the millions who pass through functioning procedures. The hybrid keeps both facts load-bearing and locates the analytic attention at the boundary — procedural access — where the victim set is determined.",
+    "kernel_context": "Kernel: refugee_convention_text (the 1951 Convention and 1967 Protocol as a stabilized commitment). This file instantiates the procedural_integrity_reading. Sibling readings: restrictive_sovereignty_reading (minimum floor permitting maximum sovereign discretion) and expansive_humanitarian_reading (unbendable humanitarian mandate with broadened definitions). Relation choices: this reading INFLUENCES the restrictive sibling — procedural jurisprudence sets the legitimacy conditions that restrictive measures must survive, so restrictive policy adapts by acquiring procedurally defensible forms; this reading COEXISTS WITH the expansive sibling — the two emphases are held simultaneously by different actors (adjudicators and states versus advocacy coalitions), neither logically eliminating the other, since a single framework can hold fair process and broad definitions together."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "refugee_convention_text__restrictive_sovereignty_reading",
+      "refugee_convention_text__expansive_humanitarian_reading"
+    ],
+    "dual_formulation_note": "'The Refugee Convention' is a colloquial label covering at least three structurally distinct constraints — readings of one kernel — with different victim sets and different epsilon values. This file authors the procedural-integrity reading only, with a single stable epsilon over the standing regime assessed by this reading's lights. The restrictive-sovereignty and expansive-humanitarian siblings are separate stories linked here: the procedural reading sits upstream of the restrictive sibling (its jurisprudence defines the legitimacy conditions restrictive measures must survive) and coexists with the expansive sibling as rival emphases within the same coalition space. Any attempt to average epsilon across the three readings would measure none of them."
+  },
+  "stakeholders": [
+    {
+      "name": "claimants_in_individualized_procedure",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Filed a claim inside a working determination system. Receives registration, a hearing with interpretation, written reasons, and at least one appeal layer; many are ultimately refused and returned, but the hearing and its record are what they receive. Cannot choose forum or adjudicator; leaving the territory before decision forfeits the claim, and after refusal the usual destination is the country they fled."
+    },
+    {
+      "name": "claimants_denied_procedural_access",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Intercepted at land or sea borders, pushed back, held in offshore or transit processing, or routed into expedited tracks without counsel or competent interpretation. No individual hearing of the claim occurs; they bear return, detention, or prolonged legal invisibility. Every neighboring door closes in sequence, so there is nowhere to take the claim instead."
+    },
+    {
+      "name": "frontline_host_states",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Geography delivers arrivals to them first regardless of fiscal capacity. They run registration, reception, and hosting at scale with partial international reimbursement, and their schools, labor markets, and border services absorb the difference. Tightening standards draws supervisory criticism; sustaining standards beyond capacity feeds domestic political backlash. Exiting would mean denouncing the treaty or closing borders to trade and neighbors alike."
+    },
+    {
+      "name": "destination_states",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Wealthy states of intended destination. They finance the supervisory machinery, accept comparatively small shares of the hosted population relative to capacity, and obtain a defensible record for returning unsuccessful claimants because a recognized procedure ran somewhere. They can relocate handling through funding partnerships and designation schemes, and their own commitments are largely self-defined and revisable in practice."
+    },
+    {
+      "name": "unhcr_supervisory_machinery",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The treaty's designated supervisor. Issues interpretive guidance, convenes the executive committee, runs status determination under mandate in dozens of states lacking national systems, and publishes documentation of state practice. Its budget, field presence, and mandate scope all depend on the regime continuing; it catalogs violations it has no power to compel anyone to remedy."
+    },
+    {
+      "name": "domestic_asylum_courts",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "National tribunals and courts that review determinations and build the case law giving the treaty domestic force. Their dockets, doctrines, and professional authority expanded with the procedural guarantee; the adjudicative function has become what these institutions are. Retiring the function would require redefining the institutions themselves."
+    },
+    {
+      "name": "immigration_legal_aid_sector",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Lawyers, NGOs, and funded advice providers whose daily practice is representing claimants through the procedure. The procedural rights generate the caseload; funding formulas follow it; expertise accumulates in this channel and transfers only partially to adjacent migration work."
+    },
+    {
+      "name": "refugee_led_organizations",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Associations led by former refugees and claimants with lived experience of the procedures. They hold no formal seat in the executive committee, in treaty supervision, or in compact governance. They would press for procedures designed with participants rather than for them, and for the denied-access experience to count as evidence in the record."
+    },
+    {
+      "name": "migration_policy_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic and statistical observers tracking grant-rate variance, procedural-quality indicators, and pushback documentation across jurisdictions. They publish findings and testify; they hold no enforcement power, and their seat is analytical."
+    }
+  ],
+  "gain_flow": "destination_states",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of assigning responsibility for displaced persons: individualized determination produces portable, mutually recognizable statuses, so each state can rely on the legibility of another's procedure rather than on its mercy, and no single state faces the arrival burden alone without a rule for passing claims on.",
+    "transfer_function": "Moves adjudicative burden and hosting responsibility toward states of first contact; moves removal legitimacy to states that can show a recognized procedure ran; moves protection, or its denial, to claimants depending on whether they reach the procedure at all.",
+    "absent_voices": "Refugee-led organizations and claimants themselves have no formal seat in the executive committee, treaty supervision, or compact governance; they would object that process integrity is currently defined for participants rather than with them. Frontline host states are also under-weighted in burden-sharing negotiation relative to the costs geography assigns them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the procedural guarantee vanished overnight, status determination would fragment into purely discretionary national practices, chain refoulement would resume along closed-border sequences, the supervisory machinery and the domestic adjudicative dockets built on the guarantee would lose their object, and the removal-legitimacy that destination states currently trade on would evaporate — the entire architecture of who may hear, decide, and return whom would rearrange.",
+    "founding_problem": "Post-war mass displacement with no legal category obligating anyone to admit, hear, or refrain from returning the displaced: states expelled and denied entry arbitrarily, and no procedure existed to distinguish flight from persecution-driven fear at all.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: historical-demographic scholarship on mid-century displacement independently attests the founding conditions; ICRC operational records attest the persistence of the underlying displacement and return dynamics; frontline host state submissions to the executive committee attest the live burden-allocation problem from the paying seat; refugee-led testimony attests it from the affected seat. UNHCR documentation also attests it but sits inside the benefiting set and is therefore treated as partial corroboration only."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "restrictive_sovereignty_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "expansive_humanitarian_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "process_integrity_non_negotiable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "outcome_subordinate_to_procedure",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "fair_individualized_determination_baseline",
+    "drift_state": {
+      "moment": "contemporary_externalization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

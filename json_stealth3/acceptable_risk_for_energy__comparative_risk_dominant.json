@@ -1,0 +1,404 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_for_energy__comparative_risk_dominant",
+    "version": "1.0",
+    "generated_date": "2026-06-14",
+    "status": "ACTIVE",
+    "story_uid": "09dd5d25-d70f-4680-9032-8977be6b4e9a"
+  },
+  "base_properties": {
+    "extractiveness": 0.63,
+    "suppression": 0.58,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Comparative-Risk-Only Acceptability Standard for Nuclear Energy",
+    "topic_domain": "risk_assessment/energy_policy/public_safety_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "nuclear_operators_licensees",
+      "grid_consumers",
+      "climate_policy_institutions"
+    ],
+    "victims": [
+      "reactor_host_communities",
+      "uranium_mining_communities",
+      "waste_burden_future_generations",
+      "liability_backstop_taxpayers",
+      "climate_vulnerable_populations"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_regulatory_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Drafts and administers the licensing methodology by which reactor hazards are evaluated: probabilistic safety assessments, dose-limit compliance, and periodic reviews framed against the generation mix that would replace the plant. Staff are recruited and trained inside the probabilistic-assessment tradition; submissions arguing from categorical prohibitions rather than quantified comparison are ruled procedurally out of order. The agency publishes the risk comparisons that anchor parliamentary debates on fleet continuation."
+    },
+    {
+      "name": "nuclear_operators_licensees",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Operate reactor fleets and sell the output. Continuation depends on passing periodic reviews framed as comparisons against replacement generation; owners fund the studies and advocacy that sustain that framing. Assets are site-bound with multi-decade book lives; divesting mid-life strands capital, so owners defend continuation even while diversifying into gas and renewables. Statutory liability ceilings cap their worst-case losses."
+    },
+    {
+      "name": "grid_consumers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive electricity whose carbon content is lowered by reactor output, and pay through retail tariffs, decommissioning levies folded into bills, and the tax share of accident-liability backstops. Individual households cannot opt out of the pooled arrangements; engagement is occasional and electoral."
+    },
+    {
+      "name": "climate_policy_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Ministries, treaty secretariats, and scenario bodies that count reactor output toward decarbonization targets and publish pathways in which nuclear substitutes fossil capacity. Their target arithmetic assumes the fleet continues; redesigning pathways to exclude nuclear forces wholesale revision of compliance plans and renegotiation inside treaty frameworks."
+    },
+    {
+      "name": "reactor_host_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Live beside reactor sites and repository candidates. Site municipalities receive employment, tax-base transfers, and negotiated community funds; the surrounding population carries evacuation-zone exposure and post-incident stigma that depresses property values. Households cannot relocate the hazard; moving away means abandoning homes and local economies built around the site."
+    },
+    {
+      "name": "uranium_mining_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Inhabit districts where uranium extraction and milling occur, frequently on Indigenous or historically marginalized territory. Exposure arises at the front end of the fuel cycle, far from the consuming grids; monitoring and remediation commitments have been repeatedly deferred, and residents lack the economic base to relocate."
+    },
+    {
+      "name": "waste_burden_future_generations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Will inherit spent fuel and vitrified waste held in interim storage pending repository programs that successive governments have postponed. They hold no seat in any current proceeding; their interests enter only as projections prepared by present-day analysts, and each postponement shifts custody costs and uncertainty outward."
+    },
+    {
+      "name": "liability_backstop_taxpayers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Stand behind statutory liability ceilings: insurance and operator reserves cover losses up to the cap, and claims beyond it fall to public accounts. The arrangement is invisible in ordinary budgets and surfaces only in severe accidents; taxpayers neither chose the ceiling nor can decline the exposure."
+    },
+    {
+      "name": "climate_vulnerable_populations",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Face drought, flood, and heat mortality that decarbonization is supposed to reduce. Their prospective losses are the quantity against which reactor hazards are judged tolerable, yet they are absent from the siting, licensing, and liability negotiations where that judgment is made. If displaced fossil generation actually retires they share the air-quality and climate gains; if the trade stalls they absorb continued fossil harm on both ends of the comparison."
+    },
+    {
+      "name": "absolute_threshold_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Jurists, ethicists, and movement lawyers who argue that some hazards — long-lived waste without a demonstrated repository route, accident exposure imposed without consent — should be categorically barred regardless of system-wide comparisons. Licensing procedures classify categorical arguments as non-quantitative and inadmissible, limiting their participation to commentary outside the decision record."
+    },
+    {
+      "name": "independent_risk_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic and institute researchers who compute mortality-per-TWh tables, externality valuations, and accident-frequency updates for all generation technologies. Defenders and opponents of reactor fleets alike cite their outputs; the researchers hold no enforcement role and publish across the whole dispute."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Supplies one shared, quantitative decision standard for choosing among hazardous generation options under uncertainty — enabling licensing, portfolio planning, and cross-border regulatory harmonization, and preventing locality-level vetoes from freezing the entire generation mix.",
+    "transfer_function": "Moves concentrated site, accident-tail, and deferred-waste risk onto host communities, mining districts, future custodians, and public liability accounts; moves dispatchable low-carbon power and target-compliance credit to consumers and climate institutions; moves license continuity and capped-loss protection to operators.",
+    "absent_voices": "Absolute-threshold advocates are procedurally excluded from licensing records (categorical arguments are classified as non-quantitative); future waste custodians have no representative and enter only as analyst projections; climate-vulnerable populations are cited as the comparand that legitimizes reactor risk but hold no seat in siting, licensing, or liability negotiation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal of the comparative-only standard would force every renewal and new-build decision onto an unbargained absolute question. Most existing fleets would fail a categorical review while waste routes remain undemonstrated, forcing near-term fossil backfill in nuclear-dependent grids, an emissions and price shock, and stranded operator assets — while host, mining, future-custodian, and taxpayer seats simultaneously shed imposed exposures. Both halves of the arrangement rearrange.",
+    "founding_problem": "Early nuclear expansion required a defensible public rationale for licensing an unprecedented hazard whose worst case exceeded ordinary industrial bounds, and that rationale had to survive comparison against the visibly lethal incumbent system — coal smog, mining disasters — and later against climate change.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Partly corroborated from outside the benefiting parties: UNSCEAR mortality compilations and IPCC pathway literature independently attest both the severity of the fossil alternative and the reality of the decarbonization problem. But no attester outside the benefiting set affirms that the comparative-only form — the absence of any absolute floor — remains necessary rather than habitual: categorical-limit advocates, the German constitutional-political exit of 2011, and parts of the public-health literature explicitly deny it. That silence outside the beneficiary set is itself signal."
+  },
+  "interval": {
+    "start": 1979,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1979,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1986,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.63
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1979,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1986,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1979,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1986,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2011,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is the governance norm that nuclear risk is acceptable only insofar as it compares favorably against the available alternative — chiefly coal's particulate mortality and climate catastrophe — with no absolute threshold at which reactor risk would be unacceptable in itself. This standard is administered through probabilistic licensing methodology, sustained by operator-funded comparative studies, and reinforced by procedural rules that classify categorical-limit arguments as inadmissible. It coordinates a genuine collective problem (choosing a generation mix under uncertainty) while concentrating site, tail, and intergenerational risk on seats that did not bargain for it. This file instantiates ONE reading (comparative_risk_dominant) of the kernel acceptable_risk_for_energy; the sibling readings catastrophic_tail_dominant and expected_value_dominant are separate constraint files with their own epsilon values and classifications, linked via network.affects_constraints. Epsilon's referent is the standing comparative-only arrangement as this reading itself assesses it — the reading judges the overall trade net-justified, which is why epsilon stays well below snare range despite the real concentration asymmetry. The claim (tangled_rope) and the metric values are independent authored facts: the claim states what this reading believes is structurally true; the metrics describe observed operation; the engine computes per-seat classifications and any claim/metric divergence is signal, not error.",
+    "key_agents": [
+      "- nuclear_regulatory_agencies: Agenda-setter (institutional/identity_locked) — administers the comparative licensing methodology and defines what counts as admissible risk argument",
+      "- nuclear_operators_licensees: Primary beneficiary (powerful/constrained) — collects license continuity, revenue, and capped liability under the arrangement",
+      "- reactor_host_communities: Primary target (powerless/trapped) — bears concentrated site and evacuation-zone risk",
+      "- uranium_mining_communities: Front-end target (powerless/trapped) — bears extraction-phase exposure far from consuming grids",
+      "- waste_burden_future_generations: Intergenerational target (powerless/trapped, civilizational horizon) — inherits deferred waste custody with no seat",
+      "- liability_backstop_taxpayers: Residual target (powerless/trapped) — absorbs tail losses beyond statutory liability ceilings",
+      "- climate_vulnerable_populations: Comparand constituency (powerless/trapped, global) — their prospective climate losses ground the acceptability judgment; they hold no negotiating seat",
+      "- climate_policy_institutions: Secondary beneficiary (institutional/constrained, global) — target arithmetic depends on fleet continuation",
+      "- absolute_threshold_advocates: Excluded voice (moderate/constrained) — categorical-limit arguments ruled procedurally inadmissible",
+      "- independent_risk_analysts: Analytical observer (analytical/analytical) — computes the comparison tables every camp cites"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.63 (terminal measurement): the standard concentrates non-consensual site risk, defers waste custody indefinitely, and socializes catastrophic tails through liability ceilings — real transfers the reading itself concedes, though it judges the aggregate trade justified, which holds epsilon below snare range. Suppression is 0.58 and is authored as a RAW STRUCTURAL PROPERTY, unscaled by power or scope (only extractiveness is engine-scaled by directionality and scope): procedural admissibility rules and harmonized international frameworks block categorical alternatives, but exits demonstrably exist (Germany's exit, Austria's ban), so suppression stays well below total. Theater ratio 0.35: the comparative computations are real, but each crisis cycle produces ritualized reassurance reviews whose conclusions are largely pre-decided. Accessibility_collapse 0.40 — the categorical-standard alternative remains legally instantiated and achievable, so alternatives do not collapse. Resistance 0.55 — recurrent mass mobilization that has won outright in several polities. The measurement series run on ONE shared eight-point grid (1979, 1986, 1990, 2000, 2011, 2015, 2020, 2025) so every tracked metric is authored at every examined point. The pattern is CYCLICAL, not monotonic: crisis (Three Mile Island-era formalization, Chernobyl 1986, Fukushima 2011) drives an enforcement ratchet (suppression_requirement spikes to 0.62 and 0.66), followed by partial decay as normalization proceeds (0.55, 0.50; 0.60, 0.56) — two-plus full cycles visible in the series. The oscillation is partly functional (genuine post-accident learning) and partly an extraction mechanism: each ratchet's new machinery is retained in decayed form between crises, so the floor of both suppression and theater steps upward across cycles. Independent of the cycle, base_extractiveness trends upward (0.50 to 0.63) via a second mechanism this reading's own logic exposes: the standard is INVARIANT to the comparand improving. As renewable-plus-storage costs fall, the fossil-alternative justification thins, yet the no-absolute-floor clause means the standard never tightens in response — the extraction ratchet runs on the comparand's decay, not on crisis events.",
+    "perspectival_gap": "The seats should compute differently. From the agenda-setter and operator seats, the arrangement appears as a hard-won coordination achievement that made any low-carbon buildout administratively possible; from the host, mining, future-custodian, and taxpayer seats, the same structure operates as imposed risk without bargaining. Same-power lateral divergence is stark: French and German regulators entered Fukushima 2011 with identical institutional standing, near-identical methodological training, and access to the same comparative data — and reached opposite fleet verdicts within months. What differentiated them was not power but exit-option structure: German grids had import capacity, domestic coal alternatives, and a renewable buildout path, while French fleet dependency made exit prohibitively costly. Equal global standing, divergent constraint experience, driven entirely by constraint-specific substitutability. Identity-lock dynamics bind the agenda-setter seat: agency staff professional identity is constituted BY the probabilistic-comparative tradition — acknowledging an absolute floor would amount to admitting the method cannot answer the question citizens actually ask ('how much is too much'), which is why categorical submissions are ruled procedurally inadmissible rather than answered. If that identity frame broke (a jurisdiction adopting a categorical standard and surviving economically), the admissibility barrier would lose its enforcement backbone quickly.",
+    "directionality_logic": "Declared beneficiaries (operators, consumers, climate institutions) sit near the beneficiary end: operators collect license continuity and capped liability directly; consumers receive the power product while paying decommissioning levies and backstop taxes (dual-positioned, pulling them off the pure-beneficiary pole toward symmetry); climate institutions collect target compliance. Declared victims sit near the target end: host communities (trapped, local scope — verification easy but exit nil), mining communities (trapped, regional), future custodians (trapped at civilizational horizon, maximal d since no exit is conceivable), taxpayers (trapped behind invisible liability ceilings), and climate-vulnerable populations (dual-positioned per the manifest delta: they supply the comparand that legitimizes the trade and would share its gains if delivered, but bear the downside if it stalls, holding no seat where the bargain is struck). The engine derives per-seat directionality from these declarations plus exit structure; no overrides were needed because the structural data already differentiates the dual-positioned seats from the pure poles.",
+    "mandatrophy_analysis": "The founding problem — licensing an unprecedented hazard against a visibly lethal incumbent — retains a live core: the climate alternative is not hypothetical, and UNSCEAR/IPCC data corroborate the comparison's material. But the no-absolute-floor clause has detached from that necessity: it originated as a way to keep the comparison honest and now functions to prevent the comparison from ever concluding unfavorably, since the standard is structurally incapable of tightening when the alternative improves. The R5 mismatch (status contested x verdict world_rearranges) flags this capture-risk without collapsing the arrangement into pure extraction. Mandatrophy discipline prevents both symmetrical errors: reading the whole arrangement as a snare ignores the genuine coordination function (without a shared comparative standard, locality vetoes freeze every generation mix, and the fossil incumbent kills deterministically in the interim); reading it as pure rope ignores the concentrated, unconsented imposition on five distinct payer seats. The theater_ratio trajectory (0.20 to 0.35, stepping upward across crisis cycles) is the early-warning indicator for piton drift: if the comparative machinery continues accreting ritual review while the underlying waste question stays frozen, the arrangement trends toward performance-maintained inertia.",
+    "kernel_context": "This file instantiates the comparative_risk_dominant reading of the kernel acceptable_risk_for_energy. The kernel asks what makes energy-system risk acceptable; three stabilized readings answer differently. This reading grounds acceptability wholly in comparison against available alternatives and denies any absolute threshold; the catastrophic_tail_dominant sibling installs an unconditional veto on irreversible intergenerational burdens regardless of comparison; the expected_value_dominant sibling makes annual expected cost the deciding computation. Each sibling is a separate constraint file with its own epsilon, victim set, and classification — this file's epsilon refers only to the standing comparative-only arrangement as assessed by this reading's own lights. The disagreement's location: whether acceptability has any floor independent of the alternatives menu."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contingency",
+      "question": "This story is one reading (comparative_risk_dominant) of kernel acceptable_risk_for_energy. Which reading should govern acceptability judgments, and how does the computed classification shift under each?",
+      "resolution_mechanism": "Political or legal settlement of the acceptability-criterion dispute, or corpus meta-analysis across the three sibling files comparing computed per-seat classifications against observed policy outcomes (fleet continuations, exits, relicensing records).",
+      "impact": "Adopting catastrophic_tail_dominant converts the waste-custodian and host seats to categorical-victim status and pushes classification toward snare; adopting expected_value_dominant compresses the victim set to probability-weighted cost bearers and lowers measured extraction across seats.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Classification is contingent on kernel-reading selection; siblings are separate files linked via network.affects_constraints."
+    },
+    {
+      "id": "comparand_parity_erosion",
+      "question": "This reading's warrant requires the fossil alternative to remain materially worse than nuclear. As renewable-plus-storage costs decline, does the standing standard tighten as the comparand improves — and if it structurally cannot, at what parity point does the no-absolute-floor clause lose factual warrant?",
+      "resolution_mechanism": "System-level cost and reliability studies of firm low-carbon portfolios without nuclear, tracked against the replacement-generation assumptions embedded in actual licensing reviews.",
+      "impact": "If parity arrives and the standard does not tighten, the no-absolute-floor clause is exposed as serving its administrators rather than tracking the comparison, and the arrangement trends snare for the payer seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the comparand's decay invalidates the reading's warrant faster than licensing practice adapts."
+    },
+    {
+      "id": "consent_vs_compensation_hosts",
+      "question": "Are host-community compensation packages (employment, tax transfers, community funds) genuine consent to site risk, or acquiescence produced by economic dependence on the site?",
+      "resolution_mechanism": "Longitudinal survey and exit-behavior data comparing communities with and without compensation schemes, including post-announcement property-market responses.",
+      "impact": "Genuine consent lowers the host-seat extraction estimate and supports the coordination reading; dependence-driven acquiescence raises it and strengthens the imposed-risk reading of the arrangement.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the host seat's position reflects bargained exchange or structural capture of the local option set."
+    },
+    {
+      "id": "intergenerational_override_legitimacy",
+      "question": "The reading's temporal-urgency premise treats present climate mortality as overriding deferred waste custody. Is that priority ordering a legitimate weighting, or an illegitimate discount of parties with no representation?",
+      "resolution_mechanism": "Cross-jurisdictional ethical and legal analysis of intergenerational obligations, plus revealed preference in repository-program funding trajectories (whether custody spending tracks stated urgency or defers systematically).",
+      "impact": "If the override is judged illegitimate, the future-custodian seat computes as a trapping mechanism and the arrangement trends snare from that seat; if legitimate, the current classification holds and the sibling catastrophic_tail reading loses its strongest attack vector.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legitimacy of the temporal-urgency-over-waste precedence that distinguishes this reading from its siblings."
+    },
+    {
+      "id": "tail_socialization_magnitude",
+      "question": "How large is the segment of catastrophic accident cost that sits outside operator balance sheets under statutory liability ceilings?",
+      "resolution_mechanism": "Actuarial reconstruction of full-probability loss distributions for severe accidents versus insured layers and state backstop provisions across jurisdictions.",
+      "impact": "A large uninsured segment raises the taxpayer seat's extraction share and the arrangement's overall measured extraction; a small segment supports the reading that operators internalize their own risk.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude of the liability-ceiling socialization channel through which tail risk reaches public accounts."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_for_energy__catastrophic_tail_dominant",
+      "acceptable_risk_for_energy__expected_value_dominant"
+    ],
+    "dual_formulation_note": "The colloquial question 'is nuclear risk acceptable?' decomposes into three structurally distinct constraints, one per reading of kernel acceptable_risk_for_energy: they differ in victim set (who counts as harmed), temporal weighting (whose losses dominate), and threshold structure (absolute floor vs relative ranking vs computed balance). Authoring them as one story would force observable-dependent epsilon; instead each reading gets its own file, linked via affects_constraints. This reading currently dominates regulatory practice and thereby shapes the operating environment of the expected_value_dominant sibling (which must internalize counterfactual fossil baselines to stay policy-relevant) while coexisting with the catastrophic_tail_dominant sibling as rival live camps."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "comparative_alternative_baseline",
+    "drift_state": {
+      "moment": "contemporary_renewables_parity_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "expected_value_dominant",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "no_absolute_risk_threshold",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "climate_urgency_precedence_over_waste_horizon",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "system_level_comparison_supersedes_local_consent",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

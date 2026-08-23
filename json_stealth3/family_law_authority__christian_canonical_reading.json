@@ -1,0 +1,398 @@
+{
+  "header": {
+    "constraint_id": "family_law_authority__christian_canonical_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "0fbd1bdc-613c-4d53-af22-4120287540ef"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.6,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Marriage as Sacrament under Ecclesiastical Authority — Christian Canonical Reading",
+    "topic_domain": "legal/political/religious",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "magisterium_and_tribunals",
+      "ordained_parish_clergy",
+      "devout_laity"
+    ],
+    "victims": [
+      "trapped_spouses_of_valid_marriages",
+      "divorced_remarried_denied_communion",
+      "annulment_petitioners"
+    ],
+    "vindicated_propositions": [
+      "sacramental_indissolubility_doctrine",
+      "canonical_form_necessity_tametsi",
+      "ecclesial_jurisdiction_over_matrimony"
+    ]
+  },
+  "interval": {
+    "start": 1563,
+    "end": 2015
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1563,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1650,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1750,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1918,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1563,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1650,
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1750,
+      "value": 0.77,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1850,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1918,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1563,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1650,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1750,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1918,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.31,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This classification describes only the christian_canonical_reading of the family_law_authority kernel — do downstream consumers pool it with sibling readings (hindu_dharmashastra, muslim_shariat, parsi_zoroastrian, secular_contractual), which instantiate structurally different constraints?",
+      "resolution_mechanism": "Compare compiled classifications across the five reading-files as separate constraints; verify that epsilon, victim sets, and types are never averaged or transferred across readings.",
+      "impact": "Pooling would misattribute the secular reading's low extraction or the shariat reading's repudiation asymmetries to this arrangement; keeping readings separate keeps per-seat chi computations indexical to THIS reading's beneficiary/victim structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame guard: this story is one reading of a contested kernel, classified in isolation."
+    },
+    {
+      "id": "denominational_composition_variance",
+      "question": "How much does the reading's internal Catholic/Protestant composition change its measured extraction, given that Catholic indissolubility and Protestant governed-divorce are both inside this single reading?",
+      "resolution_mechanism": "Parameterize the instantiation by denominational weight: recompute epsilon for a mainline-Protestant-majority polity (divorce governable and remarriage possible inside the frame) versus a Catholic-canonical-form polity.",
+      "impact": "The authored epsilon of 0.62 weights the Catholic juridical core, per the kernel's expected structural delta; a Protestant-weighted instantiation would sit nearer 0.45-0.50 with softer suppression, because exit-by-divorce exists inside the frame rather than only outside it.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Intra-reading variance between Catholic no-divorce permanence and Protestant denominational divorce governance."
+    },
+    {
+      "id": "annulment_substitution_question",
+      "question": "Does tribunal annulment function as prohibited-but-gatekept divorce, making the operative cost a discretionary toll rather than an absolute bar?",
+      "resolution_mechanism": "Grant-rate and processing-time series around the 2015 streamline motu proprio, plus cross-diocese variation; if grants scale with documentation quality and tribunal staffing rather than with underlying facts about consent, gatekeeping rent dominates the trapping effect.",
+      "impact": "If substitution dominates, the arrangement traps fewer people absolutely but concentrates extraction in discretionary adjudication — raising the tribunal-facing seats' weight in chi and lowering the trapping component borne by the resigned majority.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the annulment apparatus is a substitute divorce channel under hierarchical gatekeeping."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the suppression holding sanctioned and trapped members structural (communion denial, parish social cost, residual legal entanglement in concordat systems) or internalized (sacramental conscience rendering exit unthinkable even where civil exits exist)?",
+      "resolution_mechanism": "Post-exit suppression trajectory of lapsed members: if sanction pressure fades immediately upon leaving the fold while distress persists, internalization dominates; if former members report relief once outside enforcement reach, structural mechanisms dominate.",
+      "impact": "If internalized, measured suppression understates the suppression members carry with them, and enforcement decay alone would predict faster erosion of the arrangement than will actually occur.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism in an identity-locked population."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the christian_canonical_reading of the family_law_authority kernel, marriage is constituted as a sacrament (Catholic) or a church-governed covenant (Protestant), and its validity, permanence, and dissolution fall under ecclesiastical jurisdiction: the church prescribes the required form, adjudicates whether particular unions were validly contracted, and disciplines members through communion access. The arrangement solves real coordination problems — verification of unions, impediment screening, deterrence of clandestine marriage, credible lifetime care commitments — while extracting deference, material support, and jurisdictional control from laity, and imposing severe costs on identifiable classes (spouses in unions tribunals decline to null, the divorced-and-remarried barred from communion, petitioners subjected to intrusive scrutiny). Assumptions stated: the epsilon referent is the standing ecclesiastical-authority arrangement itself, assessed by this reading's own lights — never the secular alternative it competes with; the metrics weight the Catholic juridical core per the kernel's expected structural delta, with the intra-reading Catholic/Protestant variance carried as an omega rather than hedged into epsilon; the measurement interval anchors at the Council of Trent (whose decree on canonical form marks the great enforcement intensification) and closes at the 2015 tribunal-streamline reform. The claim (tangled_rope) and the metrics are independently authored facts; the engine computes per-seat classifications from the structural data.",
+    "key_agents": [
+      "- magisterium_and_tribunals: Agenda-setter (institutional/arbitrage) — declares doctrine on validity and permanence, writes and revises canon law, runs diocesan tribunals; collects deference, fees, and authority; alone controls the interpretive machinery through which exceptions are processed",
+      "- ordained_parish_clergy: Beneficiary (organized/constrained) — officiates under the required form, prepares couples, refers dissolution questions upward; draws livelihood, status, and pastoral authority from administering the system",
+      "- devout_laity: Coordinated beneficiary with payer costs (organized/identity_locked) — receives the standardized family framework and transmits it; pays tithes, offerings, volunteer labor, and deference; cannot contemplate exit without losing faith community and self-concept",
+      "- trapped_spouses_of_valid_marriages: Primary target (powerless/trapped) — in marriages experienced as irretrievably broken but not declared null; exits are discretionary annulment, spousal death, or apostasy",
+      "- divorced_remarried_denied_communion: Sanctioned target (moderate/identity_locked) — lives under open communion denial while remaining attached, attending, contributing, and absorbing the sanction",
+      "- annulment_petitioners: Dual-positioned target-beneficiary (moderate/trapped) — purchases exit by submitting their past life to institutional judgment; outcomes hinge on tribunal personnel and paperwork",
+      "- civil_family_law_regimes: Excluded rival authority (institutional/arbitrage) — runs parallel registration and dissolution systems this reading does not recognize as touching valid sacramental marriages",
+      "- comparative_family_law_scholars: Analytical observer (analytical/analytical) — studies the jurisdictional partition across eras; no stake in the arrangement's persistence"
+    ],
+    "logic_rationale": "Epsilon is 0.62: the arrangement's extraction is real but not total — formation standards, impediment screening, and communal support are delivered as promised, and most participants are net-willing; the concentrated costs fall on the trapped, sanctioned, and petitioning classes, and on the diffuse deference-and-resources flow from the whole laity to the hierarchy. Suppression is 0.60 as a raw structural property (unscaled by power or scope): enforcement is active (tribunals, communion discipline, required canonical form) and alternatives are suppressed within the frame, but in pluralistic societies civil exit exists externally, so the binding force is partly identity-lock rather than bare barrier. Theater is 0.31 and rising: tribunal nullity grants increasingly declare to have never existed marriages that patently functioned as marriages — performative maintenance of an absolutist doctrine — though weddings, adjudication, and parish life remain substantively functional. Accessibility_collapse is 0.60: understanding the sacramental frame closes the civil-only and divorce options internally for adherents, while external civil exits persist. Resistance is 0.60: the Reformation began partly as resistance to this jurisdiction; secularization movements, concordat renegotiations, organized advocacy by the divorced-and-remarried, and internal magisterial dissent have contested it continuously. Temporal series share one eight-point grid (1563-2015) across all three tracked metrics: enforcement peaks at Trent (0.82), decays as civil marriage spreads (0.72 by 1850), partially re-tightens under the 1983 disciplinary restoration (0.66), and relaxes with the 2015 tribunal streamlining (0.60); base extractiveness follows a parallel arc with a 1985 uptick; theater climbs late as the nullity apparatus expands.",
+    "perspectival_gap": "The seats compute differently because the structure hands them different objects. From the magisterial seat the arrangement is a treasury of administered permanence: cases resolved, doctrine guarded, exceptions processed mercifully through the tribunal the seat itself controls. From the trapped-spouse seat the same tribunal is an arbitrary gate whose outcome depends on paperwork and personnel, holding their life hostage to discretion. From the devout-laity seat it is a gift and a discipline simultaneously — received framework, paid deference. From the sanctioned seat it is a wound carried inside belonging: communion denied, community retained. The engine computes these per-seat divergences from power, exit, and directional position; nothing in the authored claim adjudicates them.",
+    "directionality_logic": "Beneficiary declarations map to low directionality: the magisterium and tribunals subsidize themselves from the arrangement (lowest d — they collect fees, deference, jurisdiction, and volunteer labor, and the gain_flow receipt lands on this seat); parish clergy collect livelihood and status from administering it (low d, dampened further by their constrained exit); devout laity receive the coordination framework and pay only diffuse costs (low-to-symmetric d, with their secondary payer role registering tithes and deference). Victim declarations map to high directionality: trapped spouses sit nearest the full-target end (high d, amplified by trapped exit); the divorced-and-remarried carry high d amplified by identity-lock — they cannot leave, so the extraction binds; annulment petitioners hold high d while in process, partially offset by the benefit realized on success, which their secondary beneficiary role encodes. Civil regimes are excluded rather than coordinated — the reading does not recognize their jurisdiction, so they sit outside the d computation as a rival claimant.",
+    "mandatrophy_analysis": "The tangled_rope classification is load-bearing here in both directions. Labeling the arrangement a pure snare would erase why billions participated voluntarily and why its formation standards solved genuine verification and commitment problems that scattered communities could not solve bilaterally; the coordination function is real and continuously exercised. Labeling it a pure rope would erase the tribunal gatekeeping rents, the communion-denial discipline aimed at the remarried, and the identifiable trapped classes whose exit runs through institutional discretion. It is not a scaffold: no sunset clause exists and the doctrine claims perpetual, divinely instituted status. It is not a piton: enforcement is active, adjudication volume is real, and the administrator both maintains the arrangement and profits from it — the cost-asymmetry test for piton fails because a concentrated beneficiary exists. It is not a mountain: nothing about it emerges naturally; every element is enacted and enforced, which is why resistance has moved it repeatedly across the interval. On fixing_cost: the hierarchy can cheaply tune enforcement practice (it did, in 2015) but cannot fix — remove — the constraint itself, because indissolubility is held divinely instituted and irreformable; revision would unravel the authority structure's self-grounding. Hence fixing_cost is prohibitive even though marginal enforcement adjustments are cheap. The founding problem is contested rather than dead: the regulatory gap the arrangement addressed was real and is now largely absorbed by civil law, but the hierarchy attests continuing necessity — the R5 mismatch surface, not the narrative, is what consumers should read.",
+    "kernel_context": "This story is ONE READING of the family_law_authority kernel: the christian_canonical_reading, instantiating marriage as sacrament under ecclesiastical authority (Catholic indissolubility; denominational governance with permitted divorce on the Protestant side; validity judged by church authority). Sibling readings are separate constraints in separate files: hindu_dharmashastra_reading (sacramental samskara under dharmic texts and custom), muslim_shariat_reading (nikah as civil-religious contract under Quran and hadith), parsi_zoroastrian_reading (community-preserving institution under Zoroastrian religious law), and secular_contractual_reading (civil contract between autonomous individuals under state law). The disagreement is located in two structural elements: WHERE validity resides (ecclesial judgment vs. scriptural-customary prescription vs. contract registration), and WHETHER dissolution is ever licit inside the frame (never for Catholic canon law; denominationally for Protestant polities; contractually for nikah; at will civilly). Relation choices follow that location: this reading coexists_with the three non-Christian religious readings (different parties hold each simultaneously; neither eliminates the other within any single party's framework), and influences the secular_contractual_reading — Catholic theology recognizes natural marriages as valid without sacrament, so the framework does not logically foreclose civil contracting, but the concordat system, mixed-marriage dispensations, and the claim that civil divorce cannot dissolve what God joined all create structural downstream pressure on the secular reading's legitimacy conditions. Committer structure is otherwise routed to the omega variables (kernel_reading_indexicality, denominational_composition_variance). Drift note: relative to this reading's reference frame (indissoluble_sacramental_jurisdiction), tribunal practice in the contemporary post-streamline era has drifted substantially — mass nullity grants and accelerated processes absorb what strict doctrine forbids — and the drift is officially unacknowledged: the doctrine of indissolubility is reaffirmed even as the adjudicative machinery routes around its practical force."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "family_law_authority__hindu_dharmashastra_reading",
+      "family_law_authority__muslim_shariat_reading",
+      "family_law_authority__parsi_zoroastrian_reading",
+      "family_law_authority__secular_contractual_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'religious governance of marriage' covers five structurally distinct arrangements; per the epsilon-invariance principle each is a separate constraint story with its own epsilon, victim set, and type, linked as a constraint family. This file authors the christian_canonical_reading alone: its extraction is driven by tribunal-gatekept sacramental permanence and communion discipline. Expected deltas for siblings: the secular_contractual_reading's extraction is driven by registration and dissolution market power rather than sacramental trapping; the muslim_shariat_reading's victim structure centers on repudiation asymmetries inside a contract form; the hindu_dharmashastra and parsi_zoroastrian readings center on customary and community-enforced obligation. The edges declare the family so contamination propagation and cross-reading comparison treat the five as kin, never as one measurable thing."
+  },
+  "stakeholders": [
+    {
+      "name": "magisterium_and_tribunals",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Declares doctrine on the nature and permanence of marriage, writes and revises canon law, operates diocesan tribunals that judge whether particular unions were validly contracted, and disciplines members through communion access. Collects tribunal fees, deference, and institutional authority, and sets the terms on which remarriage becomes possible. Its position depends on the core teaching remaining unchanged, while it alone controls the interpretive machinery through which practical exceptions are processed."
+    },
+    {
+      "name": "ordained_parish_clergy",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Officiates weddings under the required form, prepares couples, keeps registers, and refers dissolution questions to tribunals. Draws salary, housing, status, and pastoral authority from administering the marriage system. Vows and ordination make departure costly, and professional identity is bound up with the sacramental system served."
+    },
+    {
+      "name": "devout_laity",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Receives a standardized framework for forming families — courtship norms, wedding rites, impediment screening, communal recognition, parish support networks — and transmits it to children. Pays tithes, offerings, and extensive volunteer labor sustaining parishes, and owes deference to clerical judgment on family decisions. Leaving would mean leaving the faith community and a self-understood identity; most members do not regard that as a live option even when they chafe at particular rules."
+    },
+    {
+      "name": "trapped_spouses_of_valid_marriages",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Lives in marriages experienced as irretrievably broken but not declared null by tribunals. Available exits inside the system: a successful annulment petition (discretionary, costly, uncertain), the death of a spouse, or leaving the church entirely. Until one occurs, no new union is recognized by the community; forming one anyway costs communion and standing."
+    },
+    {
+      "name": "divorced_remarried_denied_communion",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Ended a prior marriage by civil divorce and formed a new union, and now lives under open sanction: barred from communion, designated irregular, sometimes removed from ministries and parish roles. Most remain attached believers — attending, raising children in the faith, contributing money and labor — and absorb the sanction rather than leave, because leaving would cost the community and identity the sanction threatens."
+    },
+    {
+      "name": "annulment_petitioners",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Submits a broken marriage to tribunal scrutiny: assembling documents, testifying under examination about courtship and consent, paying fees that are often subsidized, waiting months or years. A favorable decision restores eligibility to marry in the church; outcomes depend heavily on tribunal staffing, documentation quality, and local practice. The process puts a person's past intimate life under institutional judgment as the price of exit."
+    },
+    {
+      "name": "civil_family_law_regimes",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Runs parallel registration and dissolution systems under state law. In concordat countries its jurisdiction was historically subordinated to canon law; elsewhere it competed with the church system and won the general population. From inside this reading its decrees do not dissolve valid sacramental marriages, and its claim to family-law authority is precisely what the reading's jurisdictional assertion excludes from the conversation."
+    },
+    {
+      "name": "comparative_family_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Studies how ecclesiastical and civil systems partition marriage jurisdiction across eras and countries, publishing analyses the church reads unevenly. Holds no stake in the arrangement's persistence and can place it alongside sibling systems without allegiance to any."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Standardizes the formation of marriages across dispersed congregations: screens impediments (consanguinity, affinity, prior bonds), prescribes required form (authorized officiant, witnesses, records), registers unions centrally, adjudicates disputed validity and dissolution through tribunals, and surrounds family life with rites, catechesis, and mutual-aid structures. It solves verification and commitment problems that scattered premodern communities could not solve bilaterally: proving a union occurred, deterring clandestine or bigamous ones, and making lifetime care commitments credible.",
+    "transfer_function": "Moves deference and obedience on intimate-life decisions from laypersons and families to clerical officeholders; moves material support (tithes, offerings, tribunal fees, volunteer labor) from laity to parishes and dioceses; and moves adjudicative jurisdiction over marriage formation and dissolution from civil or familial hands to ecclesiastical courts. Historically it also transmitted legitimacy itself: children's status, inheritance, and community standing flowed through church-recognized unions.",
+    "absent_voices": "Civil family-law regimes and the couples they register stand outside this reading's adjudication — the rival authority is not seated at the table. Spouses in mixed marriages historically faced dispensations and privilege-dissolutions negotiated largely over their heads. Wives in unbreakable unions of earlier centuries rarely had standing to initiate proceedings; tribunals heard petitions, but the machinery was staffed, priced, and scheduled by the hierarchy. Contemporary organized groups of divorced-and-remarried faithful advocate for change and remain outside the decision channels.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would reopen validity and dissolution questions for every union in the frame: remarriage eligibility flips for the divorced, tribunal adjudications vanish mid-process, parish economies lose marriage-linked revenue and volunteer labor, concordat and mixed-marriage arrangements unwind, and the communion-discipline system loses its principal object. Civil systems would absorb registration and dissolution, but the identity consequences for adherents would rearrange communities rather than merely swapping administrators.",
+    "founding_problem": "Early and medieval Christianity confronted unions formed without witnesses or records, bigamy, unilateral repudiation of wives, and marriages across religious lines — with weak or absent civil registration to police any of it. The arrangement was built to make unions verifiable, permanent, and church-governed: to stop clandestine marriage, protect wives and children against arbitrary male dissolution as the tradition framed that duty, and bind family formation into the salvation-economy the church administered.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroboration exists from outside the benefiting parties, and it cuts both ways: secular historiography of canon law (scholarship on clandestine marriage and the Tridentine response) attests that the original verification gap was real; comparative family-law scholarship attests that civil registration and divorce law have since absorbed those regulatory functions in most jurisdictions. The claim that the founding problem is still live rests chiefly on magisterial documents — on the benefiting parties themselves. Stated plainly: external sources corroborate a real founding problem that is now largely closed; only internal sources attest continuing necessity, and that asymmetry is itself signal."
+  },
+  "gain_flow": "magisterium_and_tribunals",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hindu_dharmashastra_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "muslim_shariat_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "parsi_zoroastrian_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "secular_contractual_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "marriage_indissoluble_by_divine_institution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "ecclesial_authority_determines_marital_validity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "indissoluble_sacramental_jurisdiction",
+    "drift_state": {
+      "moment": "contemporary_post_streamline_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

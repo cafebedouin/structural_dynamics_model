@@ -1,0 +1,348 @@
+{
+  "header": {
+    "constraint_id": "unclos_sovereignty_boundary__strict_eez_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "f647c98a-9d4d-43ee-a416-fdad9686b907"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Strict EEZ Exclusivity Regime (UNCLOS Article 57 Reading)",
+    "topic_domain": "international_law/maritime_governance/geopolitical_strategy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "coastal_eez_states",
+      "small_island_developing_states"
+    ],
+    "victims": [
+      "overlapping_maritime_claimants",
+      "distant_water_fishing_fleets",
+      "landlocked_geographically_disadvantaged_states",
+      "historic_access_fishing_communities"
+    ],
+    "vindicated_propositions": [
+      "unclos_article_57_exclusivity_doctrine",
+      "equidistance_equitable_delimitation_practice",
+      "treaty_precedence_over_historic_usage"
+    ]
+  },
+  "interval": {
+    "start": 1982,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1982,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1996,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2002,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1982,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1996,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2002,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1982,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1996,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2002,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.2
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_structural_delta",
+      "question": "This constraint is the strict_eez_reading of kernel unclos_sovereignty_boundary; what structural changes would adoption of a sibling reading produce?",
+      "resolution_mechanism": "Generate and classify the sibling stories (historical_rights_reading, non_ratifier_enforcement_reading) and compare beneficiary/victim sets, epsilon, and computed types; the divergence locates the structural element the readings disagree on.",
+      "impact": "Under historical_rights_reading, historic users enter the beneficiary set and enclosing coastal states become targets — a victim/beneficiary inversion of this story. Under non_ratifier_enforcement_reading, the enforcement basis detaches from ratification status and the payer set shifts toward coastal enforcement monopolies. Classification of this story is valid only for the strict reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is one of three readings of the UNCLOS sovereignty kernel; sibling readings instantiate different constraints."
+    },
+    {
+      "id": "customary_law_crystallization",
+      "question": "Has 200-nautical-mile exclusivity crystallized into customary international law binding even non-participating states, making the constraint self-sustaining rather than enforcement-dependent?",
+      "resolution_mechanism": "State-practice and opinio juris surveys; behavior of persistent objectors; whether non-party states respect zone limits absent any enforcement contact.",
+      "impact": "If crystallized, the suppression requirement falls over time as norm internalization replaces patrol-and-prosecution, and the constraint drifts toward stable coordination with low enforcement overhead; if not, permanently high enforcement cost confirms the tangled_rope profile with durable extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the regime persists by norm internalization or by continuous coercive maintenance."
+    },
+    {
+      "id": "enforcement_target_composition",
+      "question": "Is the measured suppression directed primarily at resource-access violations (unlicensed fishing, unpermitted survey) or at sovereignty-framework alternatives (assertions that zone limits do not govern entitlement)?",
+      "resolution_mechanism": "Classify enforcement incidents, prosecutions, and diplomatic protests by target type across a sample period; compare ratios.",
+      "impact": "If suppression mostly targets resource theft, it serves the coordination function and net extraction is lower than the scalar suggests; if suppression of alternative entitlement frameworks dominates, the constraint actively forecloses competing sovereignty conceptions and drifts toward the snare boundary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Composition of the enforcement burden: coordination-serving versus framework-suppressing."
+    },
+    {
+      "id": "coastal_beneficiary_cohesion",
+      "question": "Do coastal states constitute a single beneficiary class, or do enforcement-exporting great powers and rent-collecting small island states hold opposite incentive structures within the same nominal seat?",
+      "resolution_mechanism": "Coalition and voting analysis in convention bodies; divergence in enforcement spending versus license revenue; compliance asymmetries between capable and incapable coastal states.",
+      "impact": "If the seat splits, effective extraction concentrates differently than a unified-beneficiary derivation predicts — great powers may be net payers of enforcement cost while micro-states are pure rent recipients, changing which seats compute as subsidized.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Internal heterogeneity of the coastal-state beneficiary seat."
+    },
+    {
+      "id": "baseline_climate_stability",
+      "question": "Does sea-level rise and coastline retreat destabilize the regime's fixed-baseline premise, threatening to extinguish or shift the zones of low-lying coastal and island states?",
+      "resolution_mechanism": "Track state practice on baseline freezing declarations, tribunal treatment of shifting baselines, and any convention-body response to ambulatory-versus-fixed baseline claims.",
+      "impact": "If baselines shift with the coast, current island-state beneficiaries become victims as their zones contract — a beneficiary-set inversion driven by physics rather than politics; if baselines freeze, the regime absorbs climate drift and the beneficiary structure holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Climate-driven instability in the geographic foundation of the zone system."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the strict reading of the Law of the Sea convention, every coastal state holds exclusive rights to the living and non-living resources of a 200-nautical-mile belt measured from agreed baselines, and no claim predicated on historic usage, mid-ocean feature occupation, or alternative entitlement construction carries validity inside another state's zone. The arrangement solves a real collective-action problem — it converted a widening free-for-all of unilateral claims into delimited, administrable zones — while simultaneously transferring control of immense resource wealth to whoever sits on the relevant coastline, regardless of need, history, or investment. Enforcement is continuous and material: patrols, licensing regimes, seizures, and adjudication all operate constantly to hold the exclusivity in place against both resource intruders and states that reject the exclusivity premise itself.\n\nKEY AGENTS (by structural relationship):\n- coastal_eez_states: Primary beneficiary-administrator (institutional/constrained) — administers zones, collects rents, bound by the treaty that founds their claims\n- small_island_developing_states: Concentrated beneficiary (organized/constrained) — zone revenues dominate budgets, no physical enforcement capacity\n- overlapping_maritime_claimants: Primary target (powerful/trapped) — asserted entitlements voided inside neighbors' zones, fixed by geography\n- distant_water_fishing_fleets: Secondary target (organized/mobile) — historic grounds enclosed, capital can relocate\n- landlocked_geographically_disadvantaged_states: Structural loser (moderate/trapped) — residual paper rights dependent on neighbor goodwill\n- historic_access_fishing_communities: Excluded voice (powerless/trapped) — cross-boundary grounds closed, no seat in the regime\n- maritime_delimitation_tribunals: Analytical observer (institutional/analytical) — adjudicates and defines what counts as valid entitlement",
+    "key_agents": [
+      "- coastal_eez_states: Primary beneficiary-administrator (institutional/constrained) — bears administration cost, collects exclusive resource control",
+      "- small_island_developing_states: Concentrated beneficiary (organized/constrained) — collects zone rents without enforcement capacity",
+      "- overlapping_maritime_claimants: Primary target (powerful/trapped) — loses asserted access, cannot relocate the overlap",
+      "- distant_water_fishing_fleets: Secondary target (organized/mobile) — pays license walls, retains fleet mobility",
+      "- landlocked_geographically_disadvantaged_states: Structural loser (moderate/trapped) — bears exclusion with residual paper rights",
+      "- historic_access_fishing_communities: Excluded voice (powerless/trapped) — bore enclosure with no representation",
+      "- maritime_delimitation_tribunals: Analytical observer (institutional/analytical) — sees the full structure, adjudicates it"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.62 because the regime transfers control of fisheries, hydrocarbons, and seabed minerals to coastal states in proportion to geography alone — a rock generates the same 200-mile entitlement as a continent — while excluded users receive license fees charged back to them or nothing at all. The figure is well below snare territory because the same structure delivers broad, genuinely valued goods: delimited boundaries, stock-management units, investment security for offshore development, and a large reduction in interstate conflict over adjacent waters. Suppression is authored at 0.70 as a raw, unscaled structural property: holding exclusivity requires continuous patrol, prosecution, VMS monitoring, hot-pursuit agreements, and legal proceedings against both intruders and states asserting that the exclusivity premise does not govern. Theater ratio is low (0.20): the regime's activity is overwhelmingly functional (licenses issued, boundaries drawn, cases adjudicated), with a modest performative component — zones proclaimed but never policed, marine protected areas declared without enforcement, symbolic presence operations. Accessibility collapse is 0.60: within the treaty framework, alternatives collapse sharply (a ratifying party cannot consistently hold overlay claims), but non-party practice and customary-law argumentation keep partial alternatives alive outside the framework. Resistance is 0.55: sustained litigation, refusal to delimit, gray-zone presence operations, and non-ratification are real and ongoing but stop short of systemic rejection. The claimed type (tangled_rope) is stated from the structure — genuine coordination function plus asymmetric extraction plus enforcement dependence — independently of these metric values; the engine computes per-seat types from the data. All three temporal series run on one shared seven-point grid (1982–2024) so no metric is sampled against another metric's end-state value.",
+    "perspectival_gap": "The seats should compute very differently. From the small-island beneficiary seat the arrangement is close to pure subsidy: zone revenue arrives without enforcement burden, and the seat experiences the constraint as rope-like or better. From the overlapping-claimant seat the identical structure operates as enforced dispossession — a great-power actor whose asserted entitlements are declared void inside a neighbor's line, with no geographic exit; that seat computes snare-flavored. The distant-water fleet seat sits between: real loss, but capital mobility damps the trap. These are same-level actors — all sovereign states, nominally equal in the system — yet geography differentiates their exit options completely: the claimant and the landlocked state are trapped by coastlines they cannot move, the fleet is mobile, the coastal administrator is constrained by its own treaty obligations. The tribunal seat observes the whole structure without collecting or paying. The engine derives this divergence from the structural data; nothing in the authored claim adjudicates it.",
+    "directionality_logic": "Beneficiary declarations drive the derivation: coastal_eez_states and small_island_developing_states sit near the beneficiary end (d near 0.0) — the regime subsidizes them with exclusive control they did not pay open-market prices for. Victim declarations drive the target end: overlapping_maritime_claimants and landlocked_geographically_disadvantaged_states are trapped (geography supplies no exit), pushing them toward the full-target end (d near 1.0); distant_water_fishing_fleets are victims whose fleet mobility moderates their position below full-target; historic_access_fishing_communities are powerless and trapped, at the extreme target end despite extracting nothing back. The regime's global spatial scope makes verification of compliance harder everywhere, so the engine scales effective extraction upward modestly across seats. Suppression is deliberately left unscaled — it is a structural property of the enforcement machinery, not a per-seat quantity. No directionality overrides are authored: the beneficiary/victim declarations plus exit options already produce the correct qualitative ordering, and the arithmetic belongs to the engine.",
+    "mandatrophy_analysis": "The founding problem — allocating offshore resources before extraction technology outran any legal order — remains live: fisheries pressure, energy security, and deep-sea prospecting have intensified since codification, so there is no mandate that has outlived its function and no mandatrophy declaration. The classification discipline cuts both ways here. Reading the regime as pure rope would erase the excluded: the landlocked state, the displaced fishing community, and the overlapping claimant all bear real, enforced losses that a coordination-only framing renders invisible. Reading it as pure snare would mispredict its persistence: the regime endures partly because even its losers receive navigation guarantees, delimited certainty, and residual rights, and a pure-extraction model cannot explain why shipping states and disadvantaged states continue to comply. Tangled rope holds both facts. The low theater ratio and live founding problem jointly argue against piton drift, and the enforcement dependence argues against any mountain reading — the exclusivity is a constructed, defended arrangement, not a natural limit, which is exactly what the emerges_naturally=false declaration records.",
+    "kernel_context": "This story instantiates the strict_eez_reading of the kernel unclos_sovereignty_boundary: the position that EEZ boundaries are exclusive and enforceable per the convention's Article 57 200-nautical-mile measure, with no overlay claims valid. Sibling readings — historical_rights_reading (historic usage creates sovereign rights predating and overriding zone provisions) and non_ratifier_enforcement_reading (navigation freedoms as customary law enforceable by naval presence independent of ratification) — are separate constraints with their own epsilon, beneficiary/victim structures, and classifications, linked through network.affects_constraints. They are not averaged into this story's metrics, and this story's epsilon refers solely to the strict-reading arrangement described here."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "unclos_sovereignty_boundary__historical_rights_reading",
+      "unclos_sovereignty_boundary__non_ratifier_enforcement_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the UNCLOS maritime sovereignty regime' decomposes into three structurally distinct readings of one kernel (a fixed treaty text): strict EEZ exclusivity (this story — treaty-valid zones, overlay claims void), historical rights (usage-based entitlement overriding zone limits), and non-ratifier enforcement (customary navigation law enforced by naval presence regardless of ratification). Per the epsilon-invariance principle each reading is authored as its own story with its own epsilon, beneficiary/victim structure, and classification; the edges declared here express the constraint-family linkage, not causal dominance. The 1982 codification (in force 1994) is the upstream text whose legitimacy conditions the sibling readings contest."
+  },
+  "stakeholders": [
+    {
+      "name": "coastal_eez_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Ratified the convention and administer 200-nautical-mile zones off their coasts: issue fishing and drilling licenses, run patrol and surveillance programs, prosecute intrusions, and negotiate delimitation with neighbors. License fees, royalties, and resource rents flow to their treasuries. Departing the convention would strip their own zone claims of their legal foundation, so exit is available on paper but ruinous in practice even where specific rules chafe."
+    },
+    {
+      "name": "small_island_developing_states",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Micro-states whose maritime zones dwarf their land area; access-agreement fees, tuna licensing, and seabed royalties fund large shares of government budgets. They coordinate as a bloc in convention bodies and in regional fisheries arrangements. They possess no naval capacity to defend their zones physically and depend on the legal framework holding and on partner-state enforcement cooperation; their entire fiscal model rides on the exclusivity remaining valid."
+    },
+    {
+      "name": "overlapping_maritime_claimants",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "States whose asserted maritime entitlements overlap neighbors' 200-mile zones through historic-use claims, mid-ocean feature claims, or expansive baseline constructions. Inside the neighbor's zone their overlay assertions carry no validity under the strict reading. Geography fixes them against the overlap: they cannot move away from it, so their live options are concession, prolonged litigation, or sustained physical presence calibrated to stay short of open war."
+    },
+    {
+      "name": "distant_water_fishing_fleets",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Industrial fleets from states without nearby surplus stocks that once worked waters now enclosed by coastal zones. They buy access licenses where offered, shift effort to remaining high-seas grounds or other states' zones, or risk seizure and fines. Capital mobility gives them more exit than any shore-bound actor, but every new enclosure raises operating costs somewhere else in the system."
+    },
+    {
+      "name": "landlocked_geographically_disadvantaged_states",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "States with no coastline or only marginal coastal access. They hold formal rights to participate in neighbors' surplus living resources and a revenue share from shelf areas beyond 200 miles, but exercising either depends on neighbor goodwill and domestic capacity they often lack. They traded away any claim to enclosed waters in exchange for navigation guarantees and these residual rights; geography offers no exit from the bargain."
+    },
+    {
+      "name": "historic_access_fishing_communities",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Shore communities whose seasonal grounds crossed what are now several states' zones. Access ended when the lines closed; they hold no seat in convention bodies and surface only as domestic compensation cases or cultural-loss testimony. Their objection to the enclosure lives in oral tradition and displaced-fleet registries rather than anywhere in the treaty process that drew the lines."
+    },
+    {
+      "name": "maritime_delimitation_tribunals",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International courts and arbitral panels that adjudicate boundary disputes and interpret the convention's zone rules. They take cases from consenting parties, publish reasoned rulings that define what counts as valid entitlement, and depend entirely on state compliance rather than coercive power. Their rulings reshape the practical meaning of the 200-mile rule without administering any part of it."
+    }
+  ],
+  "gain_flow": "coastal_eez_states",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Standardizes offshore resource jurisdiction: one 200-nautical-mile measure from agreed baselines converts a proliferating mass of unilateral claims into delimited, administrable zones; enables stock assessment, licensing, hydrocarbon development, and enforcement under known rules; and removes the most common immediate casus belli between adjacent states.",
+    "transfer_function": "Moves exclusive control of fisheries, hydrocarbons, and seabed minerals within 200 miles of a coast from open access (and from historically present users) to the adjacent coastal state; moves license fees, compliance costs, and foreclosed access value from foreign and excluded users to coastal treasuries.",
+    "absent_voices": "Historic-access fishing communities, indigenous maritime peoples, and non-state resource users had no seats at the Law of the Sea conference, which admitted states only; landlocked delegations attended but were outnumbered by the coastal-state bloc; future generations bearing stock depletion under licensed intensive fishing were unrepresented. They remain outside the amendment machinery, which runs exclusively through state parties.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If exclusive-zone limits vanished overnight, adjacent waters would revert to contested open access: naval standoffs over fishing grounds and hydrocarbon fields would multiply, coastal states would race to convert legal claims into physical garrisons, license-revenue-dependent island budgets would collapse, and distant-water fleets would surge into former zones until stocks crashed or force intervened. Arrangements across food supply, energy development, and naval posture depend on the lines holding.",
+    "founding_problem": "Mid-century technology extended fishing and drilling far beyond territorial seas while coastal states unilaterally claimed ever-wider belts; the founding problem was allocating offshore resources among states — and preventing an armed free-for-all — before extraction capacity outran any legal order.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: landlocked and distant-water state delegations accepted the zone concept in exchange for navigation guarantees (conference records show the trade, not beneficiary self-attestation); shipping states comply with zone limits they gain no resource rent from; and the regime's dispute bodies remain continuously engaged — behavior consistent with a still-live allocation problem rather than a solved one. No reliance is placed on coastal-state assertions of the problem's liveness."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "historical_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "non_ratifier_enforcement_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "treaty_delimitation_supersedes_historic_usage",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "zones_require_agreement_or_equity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "article_57_treaty_delimitation",
+    "drift_state": {
+      "moment": "contemporary_post_arbitration_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
