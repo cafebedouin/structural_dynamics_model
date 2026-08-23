@@ -3526,6 +3526,13 @@ the computed layer (tangled_rope ×4 seats, both constructions), divergent at th
 **Resolution evidence** (`audits/2026-06-10_oq77_serial_kill_condition/`): serial 10/10 rc=0 at n=39 — the exact crash size — with byte-identical outputs; 12 simultaneous co-resident invocations 12/12 rc=0 (pure co-residency ruled out); serial archive runs kernel_v1 n=1106 rc=0 and original_v6 n=3380 ×3 byte-identical complete reports (8,785-node component BFS — deterministic topology/stack-depth defect ruled out to 87× crash size). The exact crashing corpus is unreconstructible (transient mid-generation testsets state). Mechanism inside the concurrent regime remains unidentified (the mutating prep-phase interleave was not simulated); if a segfault ever recurs under SERIAL operation, reopen via the kill-condition's "recurs serially" branch with this audit as baseline.
 **Carry-forward:** the triage-list premise stands independently of this close (build_discipline.md rung-4: never cite a corpus statistic from a concurrently-built run — the manifest must be from one coherent run). Side-finding filed as OQ-95 (phantom network nodes from dangling `affects_constraint/2` targets, witnessed during this audit's probe validation).
 
+**OQ-301 round 2 (2026-08-23) — recorded at OQ-77 AND OQ-182 in identical words so the two cannot
+drift.** OQ-301 round 2 found the regime absent on the current substrate (arm A: 0 failures in 150
+serial runs, swipl 10.0.2, frozen 285-file snapshot; `audits/2026-08-17_giant_comp_segv_hang/`).
+Because the round-1 baseline was reported-not-witnessed and the round-1 binary is purged, this
+neither confirms nor refutes the co-residency attribution; the challenge is recorded **unresolvable
+in principle**.
+
 ## OQ-78 — The ε authoring idiom: a 0.68 mode + 8/2 last-digit grid compresses the ε perturbation axis
 
 **Ω-type:** Ω_E (a measurement caveat on the corpus, quantifiable and trackable as it grows).
@@ -7525,6 +7532,13 @@ gate active+satisfied (0.35+0.25+0.25+0.15=1.0). Revert path (revert-on-red) unu
 - **Twin product** remains OPEN (448 twins over a near-vacuous name-prefix gate; deferred to a rebuild
   with a real authored `topic_domain`). Evidence: `audits/2026-06-25_oq182_trajectory_revive/`
   (`c0_finding.md`, `c_gen_finding.md`, `c_gen_successor_finding.md`, `c_prov_kernel_v1_finding.md`).
+
+**OQ-301 round 2 (2026-08-23) — recorded at OQ-77 AND OQ-182 in identical words so the two cannot
+drift.** OQ-301 round 2 found the regime absent on the current substrate (arm A: 0 failures in 150
+serial runs, swipl 10.0.2, frozen 285-file snapshot; `audits/2026-08-17_giant_comp_segv_hang/`).
+Because the round-1 baseline was reported-not-witnessed and the round-1 binary is purged, this
+neither confirms nor refutes the co-residency attribution; the challenge is recorded **unresolvable
+in principle**.
 
 ---
 
@@ -15215,171 +15229,24 @@ witnessed defect; building a second on the strength of an argument rather than a
 apparatus-begets-apparatus move this repo warns about. It is filed with its control preserved so
 the next instance gets it free.
 
-## OQ-301 — giant_comp SIGSEGV/hang round 2: preregistered and staged; owner session hung and was closed with the arms unrun
+## OQ-301 — giant_comp SIGSEGV/hang round 2: RESOLVED — the failure regime is absent on the current substrate (0/150), cause permanently unattributable
 
-**Ω-type:** Ω_E (empirical — the arms are runnable and the readings are pre-committed in the
-prereg's decision table).
+**Ω-type:** Ω_E (empirical — the arms were runnable and the readings were pre-committed).
 
-**Status:** partial — audit dir marked PARTIAL (stub WRITEUP.md); no round-2 arm has recorded
-results. **Return plan RULED (operator, 2026-08-19, second-instance reviewed) — see the ruling
-block below; execution is a DEDICATED session** (idle machine per prereg; not the tail of a
-working session — co-residency is the confound this OQ family chases).
+**Status:** resolved — round-2 **arm A ran 2026-08-23: 0 failures in 150 serial, single-process, otherwise-idle `run_giant_component_analysis` invocations** on swipl 10.0.2 against a frozen 285-file corpus snapshot (`corpus_fp ea0c60a50e6d7b063b7a51d9154f5893`), every clean row emitting byte-identical output (7,740 B); exact one-sided 95% upper bound on the per-run rate **1.98%** under independence, `P(0/150 | p₀=.07)=1.9e-5`. **Read exactly as ruled: "the failure regime is not reproducible on the current system" — NOT "interpreter-resolved"** (round 1's 7/100 baseline is reported-not-witnessed and its binary is purged; interpreter, corpus and `run_pipeline.py` all moved in the window; a state-dependent failure is not tested by 150 runs in one 4-minute window on one box). Arms B–F, the valgrind pass and the crashing-frame question are **moot**; Step 3 / arm A′ was never entered and the watcher was never built. Closing as `resolved` follows the OQ-285 precedent (a mis-aimed question that still yielded a real answer); the unattributability rides the OQ-77/OQ-182 notes, not this token.
 **Priority:** 2
-**Deps:** blocked_on_human the `gc_thread=false` ship — watcher: the operator's ruling on stop-and-ask (b) of the round-2 plan (a B×C "both clean" reading would make it a shippable mitigation; it is an engine change and is never shipped by an executor), blocked_on_human a symbol-bearing swipl for frame naming — watcher: a decision to source-build swipl or to install `swi-prolog-nox-dbgsym` interactively; this is the live dependency and it stands regardless of interpreter version (arm F itself is MOOT at 10.0.2 — its stated prerequisite is satisfied — so arm F is not a Dep)
-**Origin:** operator ruling 2026-08-17 — the owning instance hung waiting on shells and was
-closed; "mark it as partial and I'll return to it." Marked by a different instance the same day.
-**Files:** `audits/2026-08-17_giant_comp_segv_hang/` (PREREGISTRATION.md, round2_arms.sh,
-WRITEUP.md stub), `prolog/giant_component_analysis.pl`.
+**Deps (retired on close):** were two `blocked_on_human` edges — the `gc_thread=false` ship (watcher: the operator's ruling on stop-and-ask (b)) and a symbol-bearing swipl for frame naming (watcher: a decision to source-build or install `swi-prolog-nox-dbgsym`). Both are moot on a clean arm A: nothing needs mitigating and nothing crashed to name. The second stands as a live capability gap regardless of interpreter version, but it is no longer this OQ's dependency.
+**Origin:** operator ruling 2026-08-17 — the owning instance hung waiting on shells and was closed; "mark it as partial and I'll return to it." Return plan RULED 2026-08-19, re-ruled with R1–R7/RA/RB 2026-08-23, executed the same day.
+**Files:** `audits/2026-08-17_giant_comp_segv_hang/` (WRITEUP.md, audit_log.md, PREREGISTRATION.md + its dated Round-2 amendments, round2_arms.sh, r7_trigger_control.py, raw/arm_A.tsv), `python/run_pipeline.py`.
+**Evidence:** `audits/2026-08-17_giant_comp_segv_hang/WRITEUP.md` (verdict, zero classification, declared limits) and `audit_log.md` (the 23 substrate lines, the three Step-0.4 controls, the frozen detector, the Step-1b plants, the arm-A counts re-derived with the pinned expressions). Commits `4c55e3027` (apparatus, pre-result), `3c8f6d359` (arm A + WRITEUP). KNOWN_STATE 2026-08-23. **The 0 is a TESTED absence** — both did-not-complete cells were fired by plants through this driver (`rc=124 @ 25,029 ms`; `rc=137 @ 30,004 ms ≥ KTHRESH 29,000`) — but the **0 cores and 0 stacks are UNTESTED instruments**: the controls exercised the channels, not the failure.
 
-**The question.** Round 1 (owner session) reported **7/100 failures** (6 hang at 25 s, 1 SIGSEGV)
-on serial, single-process `run_giant_component_analysis` over the live corpus (n=279), every
-failure truncating at exactly 967 bytes of output. **REPORTED-NOT-WITNESSED (marked on ruling,
-2026-08-19): the round-1 evidence never reached the audit dir, so the 7/100 baseline is an
-assertion, not a witnessed measurement** — load-bearing for the closure label in the ruling
-block, and the round-1 binary is purged, so it can never be upgraded to witnessed. That challenges OQ-182's co-residency attribution (its N=10
-cure battery had P(10 clean | p₀=0.07) = 0.48 — "cured" and "got lucky" were not
-distinguished; a power objection, not a claim the serialization fix was wrong) and makes
-OQ-77 a reopen candidate. Round 2 is fully preregistered (n=150/arm, arms A–F, B×C decision
-table committed before any run, arm-D buffering caveat) with the driver staged.
+**Re-entry condition (the only forward move).** A recurrence under serial operation. `run_prolog` now emits an `[OQ-301]` warning naming this OQ whenever its 3-attempt retry fires on `giant_component_analysis` (two-sided control: `audits/2026-08-17_giant_comp_segv_hang/r7_trigger_control.py`), so the in-pipeline regime is watched; **a standalone-serial regression is NOT** — that is the channel's declared blind spot. On a recurrence, the driver, the frozen detector and the controls are staged: `TAG=<fresh> ./round2_arms.sh A` reproduces arm A, and arm A′ (Set W with a gdb sampler — `eu-stack -p` does not return on this kernel) is specified in PREREGISTRATION.md but deliberately unbuilt. Arm E is deferred pending its own prereg amendment; **arm F is MOOT** (10.0.2 satisfies its stated prerequisite).
 
-### Return plan (RULED 2026-08-19 — supersedes the resume list below where they conflict)
+**Three record corrections (re-witnessed at execution 2026-08-23, not carried over from the plan).**
+1. The sysctl pass is DONE: `/etc/sysctl.d/50-debug.conf` carries `kernel.yama.ptrace_scope=0` and `kernel.core_pattern=/tmp/core.%e.%p`, both live in `/proc`. The 2026-08-18 "core dumped with no core" hazard is **resolved on this box** — a core was written at the bound and deleted.
+2. This entry's claim that `/var/log/dpkg.log` "is unrotated, beginning 2026-08-18" was **false**: it begins 2022-02-16, so the transition is recoverable and is recovered — `2026-08-18 00:13:15 upgrade swi-prolog-nox 9.2.9-2-g2a3e80b8e-jammyppa2 → 10.0.2-0-jammyppa2`, then `02:50:35 install 10.0.2-1-gb8d8f931a-nobleppa2` (the running package). The entry's `02:50:43` named only the second of two events.
+3. gdb, elfutils and valgrind were installed 2026-08-18 (11:29–11:52). elfutils is present but **non-functional for live attach here** — `eu-stack -p` hangs on a plain `sleep` with `ptrace_scope=0`; gdb works.
 
-1. **Sysctl pass FIRST, unconditionally** (operator sudo, ~2 min): `kernel.yama.ptrace_scope=0`
-   + a `core_pattern` that writes a file (persist via `/etc/sysctl.d/`). Not conditional on arm
-   A failing — at the reported round-1 rate arm A expects ~10 failures, every one occurring with
-   capture broken; round 1's capture was equally broken, so the pass is not a comparison
-   variable. **Caveat, recorded so it does not enter the record unqualified: the sysctl pass
-   does NOT make hangs analyzable.** A hang produces no core; its instrument is attach, and
-   `round2_arms.sh` has **no attach-on-timeout hook** (verified 2026-08-19 — bare `timeout
-   $TMO`, then next iteration). The executing session must either add the hook (amending the
-   prereg in the same commit) or record explicitly that hangs — 6/7 of the reported failure
-   mass — remain uncaptured in round 2. "Failures preserve something analyzable" is true only
-   of the SIGSEGV mode.
-2. **Arm A alone next** (default flags, n=150, swipl 10.0.2): the does-the-regime-survive-the-
-   upgrade test. Before any result line, `audit_log.md` records the prereg md5 AND the frozen
-   failure detector: `TMO=25` (matches round 1's reported 25 s), rc=124 hang / rc=139 segv /
-   rc≠0 fail, per-run output byte count (967-byte truncation signature checkable per row), and
-   the exact swipl version — so a later reader can see what "clean" was defined as; on a new
-   interpreter, a detector that stopped tripping is indistinguishable from hangs that stopped.
-3. **Pre-committed reading.** 0/150 ⇒ close as **"the failure regime is not reproducible on the
-   current system"** — NOT "interpreter-resolved." Three compounding reasons: the 7/100
-   baseline is reported-not-witnessed (above); the round-1 binary is purged, so attribution can
-   never be checked; and the interpreter is the salient but demonstrably not the only change in
-   the window (`run_pipeline.py` moved and was resolved in it). Attributing the cure to the
-   upgrade from a single post-change observation is the OQ-251 single-variable-isolation error
-   run in reverse. The honest close — regime absent now, cause permanently unattributable — is
-   still a real result and still moots arms B–D/F, valgrind, and the symbol question.
-   **Any failures** (even 1/150) ⇒ the regime persists; proceed to arms B–D per the prereg's
-   decision table (capture already fixed by step 1).
-
-**What resuming needs, in order (pre-ruling list — step order superseded by the ruled plan
-above):** (1) create `audit_log.md` with the prereg md5 logged
-BEFORE any result line — the prereg's freeze is currently asserted in its own header, not
-witnessed; (2) run `./round2_arms.sh A B C D` (serial, idle machine, corpus fingerprinted
-around each arm by the driver); (3) read strictly against the pre-committed decision table.
-Arm F additionally needs a source-built swipl 9.3.x; naming the crashing frame needs an
-interactive `sudo apt install` of the dbgsym package (prereg §Out of scope — operator
-action). At marking time the working tree carried an uncommitted `python/run_pipeline.py`
-modification of unknown ownership — adjudicate it before assuming the tree is clean for the
-re-run.
-
-**Interpreter update changes this OQ's shape (added 2026-08-18).** The system swipl is now
-**10.0.2** (`swi-prolog-nox 10.0.2-1-gb8d8f931a-nobleppa2`, installed 2026-08-18 02:50:43
-per `/var/log/dpkg.log`). **Arm F's stated prerequisite — "a source-built swipl 9.3.x" — is
-therefore SATISFIED, and the source build is unnecessary.** But the cheaper and more
-important consequence runs the other way: **round 1's 7/100 failure rate was measured on
-the older interpreter**, and the 9.2.9 → 10.0.2 transition point is not recoverable
-(`/var/log/dpkg.log` is unrotated, beginning 2026-08-18). So arms A–D now measure a
-DIFFERENT system than round 1 did. **Re-run a round-1-equivalent baseline arm on 10.0.2
-before reading A–D against round 1's rate** — otherwise the comparison confounds
-interpreter version with the effect under test, which is the same single-variable-isolation
-error OQ-251 was closed on. Related: `docs/technical/swipl_load_path_and_probe_gotchas.md`
-§16 (version pin + which witnesses are stamped to which version).
-
-**The gdb / core-dump route is BLOCKED, and not for the reason the prereg states (added
-2026-08-18).** The prereg files "naming the crashing static function" as out of scope
-because `swi-prolog-nox-dbgsym` "needs an interactive `sudo apt install` — operator
-action." That is not the binding constraint. Verified on this machine 2026-08-18:
-
-1. **No dbgsym package exists to install.** `apt-cache policy swi-prolog-nox-dbgsym`
-   returns nothing; the PPA we run from
-   (`ppa.launchpadcontent.net/swi-prolog/stable/ubuntu noble/main`) publishes no dbgsym,
-   and no ddebs source is configured. `apt-cache search swi-prolog` lists 10 packages,
-   none of them `-dbg`/`-dbgsym`. Ubuntu's own `swi-prolog-nox 9.0.4+dfsg-3.1ubuntu4`
-   (noble/universe) would have a ddeb, but that is a DIFFERENT, older build than the one
-   that crashed.
-2. **The prereg's `.gnu_debuglink` hash is stale.** It names
-   `3d54da59530c9f6a780ae566ccc0d393e641de24.debug`; the installed binary's build-id is
-   now `c1d498fd0e1a6134341d083b73ede33f4d5f119c`. The round-1 binary was **purged**
-   2026-08-18 01:55:39, so symbols for the binary that actually segfaulted are
-   unobtainable — round 1 cannot be retro-debugged at any price.
-3. **`gdb` is not installed** (candidate `15.1-1ubuntu1~24.04.1`, one `sudo apt install`
-   away — this part genuinely is operator action).
-4. **Core dumps are silently discarded, which is the real trap.** `ulimit -c` is 0; and
-   raising it does not help, because `/proc/sys/kernel/core_pattern` is
-   `|/wsl-capture-crash %t %E %p %s` and **`/wsl-capture-crash` does not exist**.
-   Positive control run 2026-08-18: a deliberate `kill -SIGSEGV` under
-   `ulimit -c unlimited` printed `Segmentation fault (core dumped)` and **left no core
-   anywhere** (`/tmp`, `/var/lib/apport/coredump/` empty since 2022, no `coredumpctl`).
-   The shell's "(core dumped)" is success-shaped output for a core that was piped into a
-   missing binary — Pattern 6, at the OS layer.
-
-**Sequencing consequence for round 2 (this is the operative part).** Do NOT start with the
-debugger. Cheapest-first:
-(a) **Re-run a round-1-equivalent arm on 10.0.2.** The crash may simply be gone — round 1
-    ran on the pre-upgrade interpreter (see the entry above), so this single arm can moot
-    arm F and the whole symbol question.
-(b) **If it still crashes, fix core capture BEFORE running arms A–D**, not after: at
-    7/100, a round-2 run without working cores burns 150 executions per arm and preserves
-    nothing analyzable. Needs `ulimit -c unlimited` plus a `core_pattern` that writes a
-    file (`/etc/sysctl.d/` persists it — `wsl.conf` has `systemd=true`).
-(c) Only then is `gdb` worth installing, and even then it yields addresses/offsets, not
-    function names, until a symbol-bearing swipl exists — which means building from source
-    (arm F's original idea) or moving to the distro package. Both are real spends; neither
-    is unblocked by an `apt install`.
-
-**Two corrections to (c), from the tooling survey later the same day (2026-08-18).** Both
-make the picture BETTER than the paragraph above states, and one of them is a hard blocker
-nobody had named.
-
-- **Symbols are only half-missing, so "addresses not names" was too pessimistic.** The
-  `swipl` executable is stripped and exports **8** dynamic symbols — but the engine core
-  lives in `libswipl.so.10` (`/usr/lib/swi-prolog/lib/x86_64-linux/`), which exports
-  **822**. Anything crashing inside the Prolog engine therefore symbolizes to a real
-  function name from the dynamic symtab, with no dbgsym at all. The residue is exactly the
-  prereg's wording: `static` functions are not in the dynamic symtab, so a static resolves
-  as *nearest-exported-symbol + offset*. That is a large improvement over a bare address
-  and is obtainable today. **Consequence: `valgrind` is the better route than gdb+core** —
-  it reports the invalid read/write at the moment it happens, needs neither a core dump
-  (which this box discards, see above) nor dbgsym.
-  **CORRECTION, tested the same day — the "nearest-exported + offset" half of the claim
-  immediately above is FALSE; do not rely on it.** Two-sided test against a live swipl
-  (2026-08-18): forward lookup WORKS — `info address PL_next_solution` → `0x…583`,
-  `PL_halt` → `0x…ca0`, so the 822 exported symbols are real and usable. **Reverse lookup
-  does not.** `info symbol $pc` returns *"No symbol matches $pc"*, and a live backtrace
-  renders every engine frame as `?? () from libswipl.so.10` (gdb reports
-  *"Shared library is missing debugging information"* and does NOT fall back to
-  nearest-symbol inside a stripped library). Since giant_comp would crash in interpreter
-  internals — static, not exported — the realistic yield is **library + load-base offset,
-  no function name**. That is what the prereg said in the first place: **its "out of scope"
-  verdict on naming the crashing static function STANDS, and the bullet above overstated
-  the improvement.** What valgrind still genuinely buys, and why it is worth having anyway:
-  the error KIND (invalid read/write of size N, use-after-free, uninitialised value) at the
-  moment of occurrence, with no core and no dbgsym — diagnostic even while unnamed. Naming
-  the frame still needs a symbol-bearing swipl: source build (arm F's original idea) or the
-  distro package.
-- **`ptrace_scope = 1` blocks attaching to a hung process — and hangs are 6 of the 7
-  round-1 failures, i.e. the DOMINANT mode.** Witnessed 2026-08-18: `gdb -p <pid>` against
-  a non-child returned *"ptrace: Inappropriate ioctl for device. No stack."* So the whole
-  live-inspection route (gdb attach, `eu-stack`, `py-spy dump`) is closed until
-  `kernel.yama.ptrace_scope=0` is set (or the tool is run under `sudo`). **This matters more
-  than the core-dump fix**: a hang produces no core by definition, so cores were never the
-  instrument for 6/7 of the failures — attach was, and attach is off. Fix it in the same
-  sysctl pass as `core_pattern`, BEFORE arms A–D.
-- Not worth installing here: **`perf`** — `linux-tools-6.18.33.2-microsoft-standard-WSL2`
-  does not exist in any configured source, so `perf` cannot match this WSL2 kernel.
-
----
 
 ## OQ-302 — boltzmann_invariant_mountain/2 is unconditionally inconclusive: the bound-`false` call its own header warns against, live at boltzmann_compliance.pl:577
 

@@ -37,6 +37,11 @@ would make nearly every audit `live` and the bit would stop discriminating.
   committed witness is the pasted content in `audit_log.md`.
 - `corpus_snapshot/` (git-excluded, per-machine) — the frozen 285-file corpus. Committed witness is
   its count + fingerprint in `audit_log.md`.
+- `r7_trigger_control.py` / `r7_trigger_control.txt` — the two-sided control for the R7
+  `run_prolog` watcher landed by this close, exercised THROUGH `run_prolog` (not by calling
+  the helper) so it witnesses that the warning is CALLED: fires on a signalled giant_comp
+  retry whether giant_comp is named in the goal or only in the modules, declines on an
+  unrelated goal, declines when no retry fires.
 - **No core files and no stack files exist.** Nothing crashed. The RA ledger
   (`path + size + md5 + readelf -n`) is empty for that reason, not because collection was skipped.
 

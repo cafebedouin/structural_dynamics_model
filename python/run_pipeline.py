@@ -577,13 +577,25 @@ def run_prolog(modules: list[str], goal: str, timeout: int = 300,
                ) -> subprocess.CompletedProcess:
     """Run a SWI-Prolog command, retrying TRANSIENT runtime deaths.
 
-    Measured 2026-08-17 on the live corpus (n=279): `run_giant_component_analysis`
-    fails **7 times in 100** serial, single-process, otherwise-idle invocations —
-    6 futex deadlocks (both OS threads parked; ~1 s of CPU done, then forever) and
-    1 SIGSEGV inside libswipl 9.2.9. The failure is per-invocation and independent,
-    so 3 attempts takes ~7% to ~0.03%. Root cause is upstream and unresolved
-    (audits/2026-08-17_giant_comp_segv_hang/); this is the operational mitigation,
-    not a fix — do not delete it when the upstream bug closes without re-measuring.
+    Round 1 (2026-08-17, live corpus n=279, swipl 9.2.9) REPORTED `run_giant_
+    component_analysis` failing **7 times in 100** serial, single-process,
+    otherwise-idle invocations — 6 futex deadlocks and 1 SIGSEGV inside libswipl.
+    The failure looked per-invocation and independent, so 3 attempts takes ~7% to
+    ~0.03%. That is why this retry exists.
+
+    Round 2 (2026-08-23, swipl 10.0.2, frozen 285-file corpus snapshot) found the
+    regime ABSENT: **0 failures in 150 serial runs**, byte-identical output on every
+    row, 95% upper bound ~2% on the per-run rate under independence
+    (audits/2026-08-17_giant_comp_segv_hang/WRITEUP.md).
+
+    **That does NOT license deleting this retry**, for four compounding reasons:
+    round 1's evidence never reached the audit directory and its binary is purged,
+    so the 7/100 baseline is reported-not-witnessed and unrecheckable; the
+    interpreter, the corpus and this file all moved in the window, so nothing
+    attributes the disappearance to a cause; 150 runs in one window on one box are
+    not independent draws if the failure is state-dependent; and the regime is
+    recorded absent-now, not disproven. Delete it only after re-measuring — and the
+    warning below is what tells you a re-measurement is owed.
 
     Retry ONLY on death-by-signal and timeout. An ordinary goal failure (rc=1) or a
     Prolog ERROR is deterministic: retrying it burns minutes and hides a real defect.
@@ -617,12 +629,38 @@ def run_prolog(modules: list[str], goal: str, timeout: int = 300,
             last_exc = e
             if final:
                 raise
+            _warn_oq301_retry(modules, goal, attempt, attempts, "timeout")
         except PrologError as e:
             last_exc = e
             # Only a signal death is transient; a goal failure is not.
             if final or not getattr(e, "signalled", False):
                 raise
+            _warn_oq301_retry(modules, goal, attempt, attempts, "death by signal")
     raise last_exc  # unreachable; kept so the contract is total
+
+
+def _warn_oq301_retry(modules: list[str], goal: str, attempt: int,
+                      attempts: int, kind: str) -> None:
+    """OQ-301 watcher: say so, loudly, when THIS retry fires on giant_comp.
+
+    OQ-301 round 2 measured 0/150 on 2026-08-23, so a retry firing here is a
+    RECURRENCE of a regime recorded absent — the re-entry condition for
+    audits/2026-08-17_giant_comp_segv_hang/, whose driver, frozen detector and
+    controls are staged and ready to run.
+
+    Scope, stated because it is the channel's known blind spot: this fires on the
+    IN-PIPELINE regime only. A standalone-serial regression goes unwatched.
+    """
+    if "giant_component_analysis" not in goal and not any(
+            "giant_component_analysis" in m for m in modules):
+        return
+    print(
+        f"[OQ-301] giant_comp retry FIRED ({kind}; attempt {attempt}/{attempts}). "
+        f"Round 2 (2026-08-23) measured 0 failures in 150 serial runs on swipl "
+        f"10.0.2, so this is a RECURRENCE, not the known regime. Re-entry: "
+        f"audits/2026-08-17_giant_comp_segv_hang/ "
+        f"(TAG=<fresh> ./round2_arms.sh A).",
+        file=sys.stderr, flush=True)
 
 
 def _run_prolog_once(modules: list[str], goal: str, timeout: int,

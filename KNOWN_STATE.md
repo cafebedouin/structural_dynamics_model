@@ -45,6 +45,70 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-23 — [landed] OQ-301 RESOLVED: the giant_comp failure regime is ABSENT (0/150) and permanently unattributable — plus a core-capture hazard cleared and an attach instrument that does not work here
+**Files:** ISSUES.md, python/run_pipeline.py, audits/2026-08-17_giant_comp_segv_hang/round2_arms.sh, audits/2026-08-17_giant_comp_segv_hang/PREREGISTRATION.md, audits/2026-08-17_giant_comp_segv_hang/WRITEUP.md, audits/2026-08-17_giant_comp_segv_hang/audit_log.md, audits/README.md, audits/INVESTIGATIONS.md, .claude/skills/plan-review/RUNS.md
+**Tier:** correction-key
+
+**The result.** Round-2 arm A ran 150 serial, single-process, otherwise-idle
+`run_giant_component_analysis` invocations on swipl 10.0.2 against a frozen 285-file corpus
+snapshot: **0 failures**, every clean row emitting byte-identical output (7,740 B), wall 1,369–1,470
+ms (max 5.9% of the 25 s timeout). Exact one-sided 95% upper bound on the per-run rate **1.98%**
+under independence; `P(0/150 | p₀=.07)=1.9e-5`. Round 1 (2026-08-17, swipl 9.2.9, live corpus
+n=279) had *reported* 7/100.
+
+**How it may be cited — this is the correction-key part.** "The failure regime is not reproducible
+on the current system." **Never "the interpreter fixed it."** Round 1's evidence never reached the
+audit directory and its binary is purged, so its 7/100 is reported-not-witnessed and unrecheckable;
+interpreter, corpus and `run_pipeline.py` all moved in the window; and 150 runs in one 4-minute
+window on one box are not independent draws if the failure is state-dependent. The OQ-77/OQ-182
+co-residency challenge is recorded **unresolvable in principle** — an identical note now sits at
+BOTH entries so they cannot drift. Arms B–F, the valgrind pass and the crashing-frame question are
+moot; arm A′ and its watcher were never built.
+
+**Two substrate facts a future session will otherwise re-learn the slow way.**
+
+1. **`eu-stack -p` does not return on this WSL2 kernel.** Observed twice against a plain `sleep`
+   with `ptrace_scope=0` and matching uid — the easiest possible attach — hanging until an external
+   bound. `gdb -p <pid> -batch -ex 'thread apply all bt'` returns symbolized frames in seconds.
+   elfutils is installed and looks available; it is not. Any plan naming `eu-stack` as its attach
+   instrument on this box is naming a broken one.
+2. **The 2026-08-18 "core dumped with no core" hazard is RESOLVED here — and its first control was a
+   false negative for a reason worth keeping.** `ulimit -c <bound>; sleep 30 & kill -SEGV $!` printed
+   `(core dumped)` and left no `/tmp/core.sleep.*` — because the SEGV beat the `exec`, so the
+   crashing process's `comm` was still `bash` and `core_pattern`'s `%e` wrote `core.bash.<pid>`.
+   **`%e` is the comm at crash time, so a core file's NAME is confirmation, never the key**; collect
+   by mtime window or by set-difference around the run. With a 0.5 s settle the core appears as
+   expected: channel confirmed end to end, at the bound, not `unlimited`.
+
+**A watcher now exists for the only forward move.** `run_prolog` emits an `[OQ-301]` warning naming
+the OQ whenever its 3-attempt retry fires on `giant_component_analysis`, and its docstring records
+why the 0/150 does **not** license deleting the retry. Two-sided control committed
+(`audits/2026-08-17_giant_comp_segv_hang/r7_trigger_control.py`): fires through `run_prolog` on a
+signalled retry for giant_comp (goal-named or module-named), declines for an unrelated goal and
+declines when no retry fires. Declared blind spot: it watches the IN-PIPELINE regime only; a
+standalone-serial regression goes unwatched.
+
+**Convention landed (operator ruling, R2).** `audits/README.md`: **the `Fired:` bit tracks the OQ's
+QUESTION, not apparatus self-test or record hygiene.** This close scores `no` despite firing four
+detector plants, substituting a broken instrument, and correcting three record errors — because
+nearly every audit does those, and counting them would drive the rate to ~1 and stop the bit
+discriminating.
+
+**Three record corrections to OQ-301's own entry** (re-witnessed at execution): the sysctl pass is
+done; `/var/log/dpkg.log` is NOT "unrotated, beginning 2026-08-18" (it begins 2022-02-16, so the
+9.2.9→10.0.2 transition is recoverable and is now recovered — `00:13:15` upgrade to
+`10.0.2-0-jammyppa2`, `02:50:35` install of `10.0.2-1-gb8d8f931a-nobleppa2`, the running package);
+the three debug tools are installed, with the elfutils caveat above.
+
+**Also worth a line:** the single pre-upgrade `giant_comp` row in `outputs/prolog_children.log`
+took 5.27 s; all 14 post-upgrade rows sit at 1.24–1.66 s. In-pipeline wall time fell ~3.5× across
+the upgrade, so `TMO=25` has far more headroom than when it was chosen.
+
+Commits `4c55e3027` (apparatus, pre-result), `3c8f6d359` (arm A + WRITEUP), and this one.
+Evidence: `audits/2026-08-17_giant_comp_segv_hang/` (WRITEUP.md, audit_log.md, raw/arm_A.tsv).
+
+---
+
 ## 2026-08-23 — [landed] Out-of-cycle CLAUDE.md demotion pass (15,174 → 10,986 words); build_discipline.md glossary; first OQ-276 catch-rate reading (watcher fired, routed BLOCKED-ON-YOU); apparatus summary line corrected
 **Files:** CLAUDE.md, docs/technical/build_discipline.md, ISSUES.md, python/apparatus_instrument.py, KNOWN_STATE.md
 **Tier:** landed

@@ -149,6 +149,16 @@ Machine-checked by `python3 python/apparatus_instrument.py --check` in `scripts/
 operator's seat. Pre-adoption dirs are exempt; a voluntarily backfilled `Fired:` line still
 counts toward the rate.
 
+**The bit tracks the OQ's QUESTION, not apparatus self-test or record hygiene** (operator ruling,
+2026-08-23, on the OQ-301 round-2 close). An audit whose *controls* fired, whose *instruments* were
+substituted, or which corrected stale lines in an OQ entry along the way, still scores `no` if its
+own question came back pure confirmation. Reason: nearly every audit fires a control and corrects a
+record, so counting those as `live` would drive the rate to ~1 and the bit would stop
+discriminating — which is the one thing this instrument exists to do. Worked instance: the OQ-301
+round-2 close is **`no`** (0/150 on "does the failure regime still occur"), even though it fired
+four detector plants, substituted a broken attach instrument, found three plan defects and
+corrected three record errors. Those go in the writeup body, not into the bit.
+
 Body sections are flexible; the reader contract is not: the **headline carries the verdict**
 ("proxy only" in the body means "proxy only" in the title — build_discipline → *over-confident
 moves* #1), **results paste their witnesses** (paste-or-untag), and a closing **Residue**
