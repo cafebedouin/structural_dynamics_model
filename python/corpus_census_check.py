@@ -117,7 +117,7 @@ STAMPED_FILE_COUNTS = {
     "testsets_kimi": 1005,
     "testsets_sonnet": 1001,
     "testsets_stealth": 1005,   # stamped 2026-08-22 (complete)
-    "testsets_nemotron": 852,   # stamped 2026-08-22 (growing; the 2x trigger tolerates the residue)
+    "testsets_nemotron": 996,   # re-stamped 2026-08-22 after the residue pass (9 seed-persistent failures)
     "testsets_sonnet2": 1003,   # stamped 2026-08-22
     "testsets_haiku2": 996,     # stamped 2026-08-22
     "testsets_stealth2": 1005,  # stamped 2026-08-22
