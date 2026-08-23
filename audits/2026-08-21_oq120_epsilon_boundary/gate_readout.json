@@ -1,0 +1,146 @@
+{
+ "summary": {
+  "decisive_predicate_control": {
+   "positive_C1_shape_scores_decisive": true,
+   "negative_moved_not_decisive_shape_declines": true,
+   "note": "positive arm is C1's PLANTED shape (authored-decoy grade); the naturally-arising arm is the decline count below"
+  },
+  "snare_eps_MOVED_all_live_transitions": 4717,
+  "snare_eps_DECISIVE_all_live_transitions": 1,
+  "rope_eps_DECISIVE_all_live_transitions": 1936,
+  "N_eps": 9351,
+  "N_reach": 9344,
+  "N_rail": 9191,
+  "n_qualifying_transitions": 9853,
+  "n_unknown_endpoint_transitions": 178,
+  "n_transitions_total_live": 122031,
+  "n_snare_eps_attributed_any": 4717,
+  "n_snare_eps_attributed_in_N_rail": 4527,
+  "n_snare_eps_pair_exactly_rope_snare": 0,
+  "n_snare_eps_DECISIVE_in_N_rail": 1,
+  "n_rope_eps_DECISIVE_in_N_rail": 1852,
+  "n_snare_eps_DECISIVE_pair_exactly_rope_snare": 0,
+  "snare_eps_DECISIVE_mt_pairs": {
+   "tangled_rope -> snare": 1
+  },
+  "models_with_snare_eps_DECISIVE": [
+   "claude-haiku-4-5-20251001"
+  ],
+  "models_contributing_to_N_rail": [
+   "claude-haiku-4-5-20251001",
+   "claude-sonnet-4-5-20250929",
+   "claude-sonnet-5",
+   "gemini-2.5-flash",
+   "kimi-k2.6",
+   "nvidia/nemotron-3-ultra-550b-a55b:free",
+   "stealth/ox-alpha"
+  ],
+  "legs_contributing_to_N_rail": [
+   "testsets",
+   "testsets_flash",
+   "testsets_flash2",
+   "testsets_flash3",
+   "testsets_flash_think",
+   "testsets_flash_think2",
+   "testsets_haiku",
+   "testsets_haiku2",
+   "testsets_haiku3",
+   "testsets_kimi",
+   "testsets_kimi2",
+   "testsets_nemotron",
+   "testsets_sonnet",
+   "testsets_sonnet2",
+   "testsets_sonnet3",
+   "testsets_stealth",
+   "testsets_stealth2",
+   "testsets_stealth3"
+  ],
+  "models_with_snare_eps_transition": [
+   "claude-haiku-4-5-20251001",
+   "claude-sonnet-4-5-20250929",
+   "claude-sonnet-5",
+   "gemini-2.5-flash",
+   "kimi-k2.6",
+   "nvidia/nemotron-3-ultra-550b-a55b:free",
+   "stealth/ox-alpha"
+  ],
+  "archive_kernel_v1": {
+   "N_eps": 1231,
+   "N_reach": 1231,
+   "N_rail": 860,
+   "n_snare_eps": 647
+  },
+  "stratum_authored_eps_range_rope_or_snare": {
+   "claude-haiku-4-5-20251001|off": {
+    "min": 0.0,
+    "max": 0.95,
+    "n": 687
+   },
+   "claude-haiku-4-5-20251001|unknown": {
+    "min": 0.0,
+    "max": 0.92,
+    "n": 156
+   },
+   "claude-sonnet-4-20250514|unknown": {
+    "min": 0.42,
+    "max": 0.42,
+    "n": 1
+   },
+   "claude-sonnet-4-5-20250929|unknown": {
+    "min": 0.12,
+    "max": 0.82,
+    "n": 27
+   },
+   "claude-sonnet-5|off": {
+    "min": 0.02,
+    "max": 0.93,
+    "n": 674
+   },
+   "claude-sonnet-5|unknown": {
+    "min": 0.08,
+    "max": 0.81,
+    "n": 35
+   },
+   "gemini-2.5-flash|off": {
+    "min": 0.01,
+    "max": 0.95,
+    "n": 1260
+   },
+   "gemini-2.5-flash|on": {
+    "min": 0.0,
+    "max": 0.95,
+    "n": 723
+   },
+   "kimi-k2.6|on": {
+    "min": 0.0,
+    "max": 0.96,
+    "n": 354
+   },
+   "kimi-k3|unknown": {
+    "min": 0.68,
+    "max": 0.68,
+    "n": 1
+   },
+   "nvidia/nemotron-3-ultra-550b-a55b:free|off": {
+    "min": 0.02,
+    "max": 0.95,
+    "n": 285
+   },
+   "stealth/ox-alpha|on": {
+    "min": 0.02,
+    "max": 0.96,
+    "n": 549
+   },
+   "unprovenanced": {
+    "min": 0.05,
+    "max": 0.92,
+    "n": 269
+   }
+  }
+ },
+ "_rows": {
+  "count": 132246,
+  "moved_to": "gate_readout_rows.jsonl.gz",
+  "note": "The per-transition rows were split out of this file and gzipped. They are DERIVED: `analyze.py` regenerates both from raw/. The full uncompressed JSON was 100MB+, over GitHub's hard limit."
+ }
+}

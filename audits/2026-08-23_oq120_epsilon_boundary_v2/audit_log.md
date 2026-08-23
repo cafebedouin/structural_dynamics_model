@@ -75,3 +75,21 @@ frozen-evidence citation that is not tracked would vanish on a fresh clone, so t
 right and the fix was to commit, not to re-word. Final gate state recorded below.
 
 **FINAL: `GATE: GREEN`, exit 0, all 28 rows** (transcript: `gate_close.txt`).
+
+## Storage form (2026-08-23) — appended, no finding changed
+
+The bulk artifacts were re-packaged after the first commit pushed two files over GitHub's 100 MB
+hard limit (105 MB and 91 MB), blocking a concurrent instance's push. **No number, finding or
+conclusion changed** — only how the same bytes are stored:
+
+- `gate_readout.json` keeps its **cited path** and now holds the summary + per-stratum table
+  (~3 KB). Its 132,246 per-transition rows moved to `gate_readout_rows.jsonl.gz` beside it, one
+  JSON object per line. Both are DERIVED: `analyze.py` regenerates them from `raw/`.
+- `raw/tm_*.json` (the primary datum, ~97 MB) is now `raw/tm_sweep_json.tar.gz` — 19 files,
+  **verified byte-identical on round-trip extraction**. `sweep_log.txt`, `strata.json` and the
+  per-leg `out_*.txt`/`err_*.txt` remain uncompressed.
+- The superseded defective run is `raw_PREFIX_double_emission/superseded_run.tar.gz`; its
+  `README.md` stays uncompressed so the negative-control provenance is readable without extracting.
+
+Directory totals went 370 MB → 12 MB (v1) and 190 MB → 8.9 MB (v2). The oversized blobs were purged
+from the four unpushed commits that carried them.

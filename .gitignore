@@ -64,3 +64,9 @@ json/pilot_*/
 *.egg-info/
 build/
 dist/
+
+# OQ-120-class audit bulk: per-transition row dumps are DERIVED (analyze.py regenerates
+# them from raw/) and ran to 100MB+, over GitHub's hard limit. Commit the gzipped form.
+audits/**/gate_readout_rows.json
+audits/**/raw/tm_*.json
+audits/**/raw_PREFIX_*/tm_*.json
