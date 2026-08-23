@@ -15225,6 +15225,7 @@ results. **Return plan RULED (operator, 2026-08-19, second-instance reviewed) �
 block below; execution is a DEDICATED session** (idle machine per prereg; not the tail of a
 working session — co-residency is the confound this OQ family chases).
 **Priority:** 2
+**Deps:** blocked_on_human the `gc_thread=false` ship — watcher: the operator's ruling on stop-and-ask (b) of the round-2 plan (a B×C "both clean" reading would make it a shippable mitigation; it is an engine change and is never shipped by an executor), blocked_on_human a symbol-bearing swipl for frame naming — watcher: a decision to source-build swipl or to install `swi-prolog-nox-dbgsym` interactively; this is the live dependency and it stands regardless of interpreter version (arm F itself is MOOT at 10.0.2 — its stated prerequisite is satisfied — so arm F is not a Dep)
 **Origin:** operator ruling 2026-08-17 — the owning instance hung waiting on shells and was
 closed; "mark it as partial and I'll return to it." Marked by a different instance the same day.
 **Files:** `audits/2026-08-17_giant_comp_segv_hang/` (PREREGISTRATION.md, round2_arms.sh,

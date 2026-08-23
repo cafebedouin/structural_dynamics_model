@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "f6d6e7c1b5dcd3b2f5f497d1cc37303a6876a0f7",
+    "store_version": "3c7cd005e216f4e3732095fd60b4f5de59565262",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-23T12:47:31"
+    "generated_at": "2026-08-23T15:57:30"
   },
-  "issues_sha": "231a0e56f6e5ca9dd984d3acd929e560ab865b2775f72ad7e13114b15ff1091d",
+  "issues_sha": "b8b659a95d628eabdda90e7db9fd801f42215dedc9a092ef11ad5f736e9c2cf2",
   "n_entries": 355,
   "active_token_set": [
     "investigating",
@@ -1413,7 +1413,10 @@
       "status": "partial",
       "priority": 2,
       "summary": "giant_comp SIGSEGV/hang round 2: preregistered and staged; owner session hung and was closed with the arms unrun",
-      "deps": [],
+      "deps": [
+        "blocked_on_human the `gc_thread=false` ship — watcher: the operator's ruling on stop-and-ask (b) of the round-2 plan (a B×C \"both clean\" reading would make it a shippable mitigation; it is an engine change and is never shipped by an executor)",
+        "blocked_on_human a symbol-bearing swipl for frame naming — watcher: a decision to source-build swipl or to install `swi-prolog-nox-dbgsym` interactively; this is the live dependency and it stands regardless of interpreter version (arm F itself is MOOT at 10.0.2 — its stated prerequisite is satisfied — so arm F is not a Dep)"
+      ],
       "cross_refs": [],
       "mentioned_in": [
         "OQ-77",
