@@ -287,7 +287,7 @@ do not fold `trajectory` back into the parallel `tasks` list.
   depends on the corpus's reading-sets and `unknown` distribution — a 97-story corpus leaves branches
   unexercised.) **To get a full manifest-bearing `per_constraint` output for a non-default corpus
   WITHOUT overwriting the canonical `pipeline_output.json`, use `classify_corpus(corpus_path,
-  output_name, expected_model)` (`run_pipeline.py:147`)** — gate-free json_report path with built-in
+  output_name, expected_model)` (`run_pipeline.py:368`)** — gate-free json_report path with built-in
   refusals (zero-glob, load-completeness, single-model fingerprint, raw freshness); serialize calls
   (they share the raw artifact). Precedent: kernel_v1/original_v6/twins, 2026-07-01–02. **When
   citing counts across such runs, name BOTH the corpus and the code state** — "HEAD yields N" is
