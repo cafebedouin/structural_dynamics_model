@@ -68,10 +68,13 @@ seat into the machine. The honest move for cases the deterministic layer can't d
   and listed by `activations`. `[GATE]` → `scripts/gate.sh` (all four checkers). `[PUSH]` →
   gate-green + docs-current, then push.
 - The **SessionStart** hook (runs `activations`) and a **PostToolUse** hook (runs
-  `issues_status --check` on every `ISSUES.md` edit) live in **`.claude/settings.json`, which is
-  gitignored** (`.gitignore:47` ignores all of `.claude/`). So the *logic* travels (this file,
-  `omega_resolver.py`, `scripts/gate.sh`) but the *hook wiring is machine-local* — a fresh clone has
-  the commands but must re-wire the hooks (or just run the commands directly). Hooks only take effect
+  `issues_status --check` on every `ISSUES.md` edit) live in **`.claude/settings.json`, which IS
+  COMMITTED** (`.gitignore` excludes `.claude/*` and then negates `!.claude/settings.json`,
+  `!.claude/agents/` and `!.claude/skills/`). So BOTH the *logic* (this file, `omega_resolver.py`,
+  `scripts/gate.sh`) and the *hook wiring* travel to a fresh clone. **Corrected 2026-08-23** — this
+  paragraph previously said settings.json was gitignored and the wiring machine-local, which was
+  false in both directions and is the same stale premise that talked an OQ-337 planner out of a
+  gate row over `.claude/skills/plan-review/RUNS.md`. Hooks only take effect
   after `/hooks` reload or a `claude` restart (the settings watcher doesn't watch a `.claude/` that
   was empty at session start).
 

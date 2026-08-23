@@ -136,9 +136,13 @@ determinism-boundary "floor" (priority/type stay a declared seat), and the gotch
   documentation-currency check); (3) if both hold, `git push origin main`, else report what is
   blocking. Always show the gate output as the witness — never push on an unverified claim.
 
-**Hooks are versioned project apparatus — `.claude/settings.json` is COMMITTED; everything else
-under `.claude/` is machine-local** (`.gitignore` uses `.claude/*` + a negation; the bare
-`.claude/` form makes the negation silently inert — the comment there explains why). Three hooks
+**Hooks are versioned project apparatus — `.claude/settings.json`, `.claude/agents/` and
+`.claude/skills/` are ALL COMMITTED; the rest of `.claude/` is machine-local** (`.gitignore` uses
+`.claude/*` + three negations; the bare `.claude/` form makes a negation silently inert — the
+comment there explains why). **So files under `agents/`/`skills/` ARE git-witnessable and a fresh
+clone HAS them — a gate row over one is legitimate** (corrected 2026-08-23: the old "everything
+else under `.claude/` is machine-local" wording was stale, and had already talked a planner out of
+a gate row as impossible-by-construction — OQ-337). Three hooks
 fire on their own, so expect them rather than being surprised: `SessionStart` prints the
 activation menu; `PostToolUse` re-runs the `ISSUES.md` grammar gate whenever you edit that file;
 `PreToolUse` injects the KNOWN_STATE `tripwire`/`correction-key` entries naming any file you are
