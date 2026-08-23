@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "67c8b4a073ec55c9625cbfe9ba6883af9c4263f0",
+    "store_version": "f997c0a9e4729f0668eb0a88eb1f6e30bc4e3411",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-23T08:54:52"
+    "generated_at": "2026-08-23T10:16:48"
   },
-  "issues_sha": "f7a0879f23dbfa71861d6751f7aafa1deec748d90da67d4052f260480c9422a7",
+  "issues_sha": "a5c81f1e73156f8915ae4c6870f86d7f8de001ad2c681801f4f837e0e17ab665",
   "n_entries": 351,
   "active_token_set": [
     "investigating",
@@ -13,10 +13,10 @@
   ],
   "per_status": {
     "resolved": 170,
-    "mitigated": 18,
+    "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 139,
+    "open": 138,
     "partial": 5
   },
   "active": [
@@ -1832,26 +1832,6 @@
       "mentioned_in": [
         "OQ-227",
         "OQ-265"
-      ]
-    },
-    {
-      "id": "OQ-337",
-      "status": "open",
-      "priority": 3,
-      "summary": "Ledger appends that fail SILENTLY: two blocked registrations to `plan-review/RUNS.md`, and nothing notices",
-      "deps": [
-        "splits_from OQ-306"
-      ],
-      "cross_refs": [
-        "OQ-276",
-        "OQ-306",
-        "OQ-338"
-      ],
-      "mentioned_in": [
-        "OQ-276",
-        "OQ-306",
-        "OQ-326",
-        "OQ-338"
       ]
     },
     {
@@ -5042,6 +5022,29 @@
         "OQ-310",
         "OQ-328",
         "OQ-333"
+      ]
+    },
+    {
+      "id": "OQ-337",
+      "status": "mitigated",
+      "priority": 3,
+      "summary": "Ledger appends that fail SILENTLY: two blocked registrations to `plan-review/RUNS.md`, and nothing notices",
+      "deps": [
+        "splits_from OQ-306",
+        "blocked_on_condition OQ-338's remedy is DESIGNED — that is, its"
+      ],
+      "cross_refs": [
+        "OQ-276",
+        "OQ-306",
+        "OQ-338"
+      ],
+      "mentioned_in": [
+        "OQ-120",
+        "OQ-141",
+        "OQ-276",
+        "OQ-306",
+        "OQ-326",
+        "OQ-338"
       ]
     }
   ]

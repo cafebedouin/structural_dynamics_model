@@ -8096,9 +8096,16 @@ audit_log.md, stratum_series.txt, rb_skew_rederived.txt, load-time timings).
 
 **Ω-type:** Ω_E (a mechanism gap — whether a required append happened is checkable).
 
-**Status:** open — minted 2026-08-21 from the OQ-306 close.
+**Status:** mitigated — 2026-08-23. The grammar half is built and gated (compose-at-planning /
+allocate-at-landing + gate row `ledger grammar`); the shared-vs-local adjudication and the stated
+control burden stay open. See **Mitigation** below.
 **Priority:** 3
-**Deps:** splits_from OQ-306
+**Deps:** splits_from OQ-306, blocked_on_condition OQ-338's remedy is DESIGNED — that is, its
+entry carries a design rather than the current one-line sketch. Watcher: the ripening sentence
+placed in OQ-338's own entry. Declared honestly as a PROSE watcher and not a mechanical one —
+there is no machine-readable event for "a sketch became a design", and the sentence is sited
+where the person designing that remedy will actually be reading at the moment it ripens. A
+sentence sited HERE would be invisible then, which is the whole failure mode.
 
 **Origin.** `.claude/skills/plan-review/RUNS.md` has had **two** appends fail without anything
 going red. The first is recorded in the file's own head note (the planning session's Phase-3
@@ -8136,13 +8143,123 @@ local ones is the open question, not a foregone conclusion.
 if a session can be blocked from writing, an obligation placed on it is unenforceable by
 construction. (2) If it stays an obligation, give it a checkable consequence: a run-id referenced
 by an executor prompt with no matching row should fail something. (3) Do NOT reach for a gate row
-reflexively — `RUNS.md` lives under `.claude/`, which is machine-local except for
+reflexively — ~~`RUNS.md` lives under `.claude/`, which is machine-local except for
 `settings.json`, so a repo gate cannot see it on a fresh clone. That constraint is the interesting
-part of the problem.
+part of the problem.~~ **[SUPERSEDED 2026-08-23 — THE PREMISE WAS FALSE. `RUNS.md` has been
+git-TRACKED since its creation commit `742b295b`: `.gitignore` excludes `.claude/*` and then
+negates `!.claude/settings.json`, `!.claude/agents/` and `!.claude/skills/`. A fresh clone of a
+repo where the file is tracked HAS the file, so a gate row over it is legitimate — and one now
+exists (`ledger grammar`). Witness: `git ls-files .claude/` returns five paths. The stale claim
+was in CLAUDE.md's hooks paragraph and in `docs/technical/omega_resolver.md`; both corrected in
+`f997c0a9`. Note what this cost: the sentence did not merely sit there being wrong, it reasoned
+the planner OUT of the available remedy and called the false constraint "the interesting part of
+the problem". The surviving half of (3) still stands on its own merits — see the blind-spot
+section below, which is about what a check can and cannot adjudicate, not about file visibility.]**
+
+**A FOURTH instance, 2026-08-23 — the same cause, one day before the remedy landed.** The OQ-120
+plan's executor prompt instructed its executor to mint `2026-08-21-2`, stating as its premise that
+"it does not exist yet". It did: the OQ-326 row, which was ITSELF already a reassignment away from
+`2026-08-21-1` for the same reason. Minting as instructed would have filed a THIRD target under an
+id that had already collided once. Caught, again, only because the executor re-derived the pin
+instead of trusting it, declined under the receiver's licence to refuse, and reassigned to
+`2026-08-21-3`. **This was the third consecutive blocked planning-time append and the fourth id
+collision.** Recorded here rather than in the entry title, which still reads "two blocked
+registrations" — that was the count at minting on 2026-08-21, and it is left unedited so the
+entry's own growth stays legible; read the title as a mint-time figure, not a total.
 
 **Control burden.** Any detector owes a two-sided control: it must fire on a referenced-but-absent
 run-id and DECLINE on a correctly registered one. Both cases are naturally available today — the
 file now holds one retroactively-registered row and one originally-registered row.
+
+---
+
+## Mitigation (2026-08-23) — landed, with what is NOT covered stated first
+
+**NOT COVERED, first, because a mitigation note is exactly where this gets buried.** The
+`ledger grammar` gate row **cannot see a missing append.** A run that never landed a row leaves
+`RUNS.md` perfectly grammatical, and the checker reports green. The absence detector this entry's
+*Control burden* specifies — fires on a referenced-but-absent run-id, declines on a registered one
+— **was NOT built, and the burden is recorded UNMET.** What was built is a grammar/uniqueness
+checker, which is a different instrument answering a different question. The argument that the
+absence class is now removed *by construction* (executor prompts no longer carry ids, so there is
+no id to be referenced-but-absent) is a **prevention claim, and it is itself uncontrolled** — it
+has no positive control, because the thing it predicts is a non-event. Operator condition 2
+established that the checker does not discharge the burden; it did not state what follows for
+status. **Whether a declared-UNMET burden gates any future move to `resolved`, and what event
+would discharge it, is pending R-A.** An UNMET with no attached obligation is a declaration a cold
+reader cannot act on, so this sentence exists to keep the obligation visible rather than filed.
+
+**D1 — the append is the LANDING CHAIN's obligation, not the planning session's.** A plan-mode
+session structurally cannot write the ledger; three of the four failures were exactly that block,
+and an obligation placed on a party that cannot discharge it is unenforceable by construction. So:
+the planner **composes** the row with the literal placeholder `<allocated-at-append>` and carries
+it verbatim in both the checkpoint deliverable and the executor prompt; **a planner never claims an
+id**; the **first write-capable session** to touch the run allocates the id by deriving it from the
+file at that moment and appends (planner-after-approval → executor-at-start → evaluator-
+retroactively, each link first checking whether an earlier one already landed it). The lander makes
+exactly two modifications — substitute the id, insert a provenance field if reassigned — and
+**reports** rather than corrects any value that looks wrong, because a corrected value is a
+fabrication with a helpful motive, sourced from the party the meter is measuring. Landed in
+`c4832806` (`.claude/skills/plan-review/SKILL.md`).
+*Attribution, stated openly: this grammar was **planner-designed**, not operator-ruled. Whether
+plan approval ratifies it, and how the record should attribute it, are **pending R1** — both
+halves, the ratification as well as the attribution.*
+
+**D2 — mechanical check for what is mechanically checkable.** `python/runs_ledger_check.py --check`,
+gate row **`ledger grammar`** (`4c770b13`, flipped from reporting-only to blocking in `8a999c24`
+per R-B once the first live run was green). It enforces row arity, id grammar, date agreement, id
+**uniqueness**, the mandatory `post-impl gaps:` prefix, `UNRECORDED` never in fields 1–2, and the
+absence of unfilled placeholders — all consistency properties decidable from the file alone, which
+is why this is not the reflexive gate row the entry forestalls: the blind-spot section's target is
+a check adjudicating between two self-consistent instruments, and that is untouched. 13 controls
+ride every run, two-sided: it fires on a planted duplicate `2026-08-21-1` (the reconstructed
+instance-3 state) and declines on the live file. The row is named `ledger grammar` and not
+`runs ledger` deliberately — a row named for the ledger reading green would be skimmed as "the
+ledger is in good order", which is the claim it refuses to make.
+
+**D3 — act local; the shared-vs-local question stays OPEN** (operator-ruled 2026-08-21, Q2 option
+3). This remedies one instance of three. OQ-338's remedy is a sketch ("a lockfile is the obvious
+shape"), not a design, and adjudicating now would generalize from the one instrument in front of
+us — the arc's original error in different clothes. Current **lean, recorded as a lean and not an
+adjudication**: three local mechanisms, because the three instances have different substrates,
+different writers and different channels, and no single reader sees all three. The question ripens
+when **OQ-338's remedy is DESIGNED** — which is earlier than its close, and is why the Deps edge
+fires on the design event rather than the close. A ripening sentence is placed in OQ-338's own
+entry, where the designer will be reading; this note is its mirror.
+
+> **And the sentence in OQ-338 is not a belt-and-braces fallback — it is the ONLY live mechanism.
+> Verified at close, 2026-08-23:** `omega_resolver.ACTIVE = {open, investigating, partial}`, so
+> the moment this entry went to `mitigated` it left the active frontier (144 → 143 active), and a
+> `blocked_on_condition` edge on an inactive OQ **routes nothing** — it will never surface in the
+> menu's BLOCKED list, and no watcher will ever wake it. The edge is retained as a machine-readable
+> record of the dependency, and it is honest as a record; it is inert as routing. Anyone reasoning
+> "the Deps edge will bring this back when OQ-338 is designed" is wrong, and this paragraph exists
+> so that nobody has to discover it by the OQ silently never returning. (That `mitigated` is
+> excluded from the frontier at all is itself open — OQ-141.)
+
+**Premise correction.** Constraint (3) above was false and is marked superseded in place. `RUNS.md`
+is git-tracked; a gate row over it was available the whole time. CLAUDE.md and
+`docs/technical/omega_resolver.md` both carried the stale claim and are corrected in `f997c0a9`
+(R4, operator-ruled 2026-08-23: applied rather than presented as a diff, since `.gitignore` either
+carries the negations or it does not — and ruled explicitly NOT to generalize into a standing
+licence to amend CLAUDE.md).
+
+**Also open:** **R3** — allocate-at-landing closes the collision class by construction, and closing
+it also closed the race's landing-time witness. The harmful race (two landers deriving before
+either appends) now surfaces only as a duplicate-id gate red *after the fact*; the benign
+interleaving leaves no trace at all, since two adjacent ids read as two sequential runs. Whether
+that division is acceptable, or landing wants its own observable, is unruled. **R5** — a
+retroactive registration whose PLANNING date is unreconstructible cannot write fields 1–2 and
+cannot mark them `UNRECORDED` either. Ruled deliberately open (operator, 2026-08-21): no instance
+exists to design against, and picking among the options with no instrument in hand is the same
+generalizing-from-zero that made D3 correct.
+
+**Witness of the mitigation's own first use.** This run's row was landed under the new grammar
+before anything else was built (`2026-08-21-4`, allocated at landing from a two-instrument
+derivation). **Under the old planning-time-claim grammar it would have carried `2026-08-21-1` —
+the fifth collision.** The remedy's first live exercise was also its first prevented defect.
+
+---
 
 **THE BLIND SPOT THIS ARC EXPOSED, and — stated first, because the claim implies the wrong
 remedy without it — THE REMEDY IS A PROCEDURE, NOT AN APPARATUS.**
@@ -8197,6 +8314,20 @@ the same shape in a corpus denominator.
 the same session. What was missing is that **nothing refuses**. Every subsequent run in that
 session carried an ad-hoc guard (`if pgrep -x swipl; then exit 1`), which worked — but it lives in
 shell history, not in the repo, so it protects exactly one session.
+
+> **RIPENING TRIGGER — read this BEFORE you finish designing the remedy below (placed 2026-08-23
+> by OQ-337's mitigation; this is the copy that reaches you at the moment it matters).** OQ-337
+> and this entry are two of three instances of one shape in the OQ-306 arc: *a pass is recorded
+> and nothing enforces it* (the third is the vacuous gate selftest control). Whether the three
+> want a SHARED mechanism or three local ones was deliberately left open, because adjudicating it
+> with only ONE designed instrument in hand would generalize from a single case — the arc's own
+> original error. **The moment this entry carries a DESIGN rather than the current one-line
+> lockfile sketch, that condition is met: there are then two designed instruments, and the
+> shared-vs-local adjudication should be re-run before this OQ closes.** Do it here, while the
+> design is in front of you; OQ-337's `blocked_on_condition` edge names this exact event, and its
+> current lean — three local mechanisms, because the instances have different substrates, writers
+> and channels, and no single reader sees all three — is a lean recorded for you to test, not a
+> conclusion to inherit.
 
 **What resolves it.** A refusal at the point of launch rather than a rule at the point of reading:
 `run_pipeline.py` / `classify_corpus` refuse to start when another instance holds the shared
