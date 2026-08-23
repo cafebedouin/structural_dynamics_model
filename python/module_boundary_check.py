@@ -351,7 +351,6 @@ CORPUS_DIRS = {
     "testsets_haiku2":   "Same-model REDRAW of testsets_haiku (claude-haiku-4-5 batch, thinking disabled; the haiku floor; 2026-08-22).",
     "testsets_stealth3": "Second same-commit redraw (stealth/ox-alpha; stealth2 vs stealth3 = the pure thinking-on floor; 2026-08-22).",
     "testsets_stealth2": "Same-model REDRAW of testsets_stealth at prompt e03e2210 (redraw + prompt change; 2026-08-22).",
-    "testsets_glm":      "Model-named leg (z-ai/glm-5.2:free via OpenRouter, reasoning off; 2026-08-21).",
     "testsets_nemotron": "Model-named leg (nvidia/nemotron-3-ultra-550b-a55b:free via OpenRouter, reasoning off; 2026-08-21).",
     "testsets_nemotron_think": "Regime-contrast leg (nvidia/nemotron-3-ultra-550b-a55b:free, reasoning ON/default; 2026-08-22).",
     "probsets":         "Probe story packs — data, same shape as a testset leg.",
@@ -367,6 +366,9 @@ CORPUS_DIRS = {
 # they ever come apart, fork the lists and record why at both sites (a false unification here
 # would be exactly the defect OQ-306 exists to remove, one level up).
 ALL_ARM_C_LEGS = list(LIVE_LEGS)
+# 2026-08-23: the two lists diverged silently for two days (four certified Flash legs sat in
+# CORPUS_DIRS but not LIVE_LEGS). They are allowed to differ — but the difference must be SAID.
+CORPUS_DIRS_NOT_LIVE = sorted(k for k in CORPUS_DIRS if k.startswith("testsets") and k not in LIVE_LEGS)
 DEFAULT_ARM_C_LEGS = ALL_ARM_C_LEGS
 
 
@@ -1729,7 +1731,7 @@ def main(argv: list[str]) -> int:
             print(f"  {e}")
         print(f"module_boundary_check: RED — {len(problems)} boundary problem(s)")
         return 1
-    print(f"module_boundary_check: GREEN — {stats['files']} engine files, "
+    print(f"module_boundary_check: GREEN — [CORPUS_DIRS not in LIVE_LEGS: {CORPUS_DIRS_NOT_LIVE or 'none'}] {stats['files']} engine files, "
           f"{stats['modules']} modules, {stats['sites']} bypass site(s) over "
           f"{stats['bypasses']} predicate(s), all declared in {stats['rows']} allowlist "
           f"row(s); arms C/F/G scanned leg(s): {', '.join(stats['legs'])} "

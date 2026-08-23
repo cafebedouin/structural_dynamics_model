@@ -18291,6 +18291,16 @@ same commit) launched 2026-08-22 ~10:15 to get the pure Anthropic floors (~$40 +
 exact-agreement is ~3% (Claude `.x8` vs Flash `.x5` rails) — use |Δε|, never exact match, across
 families.
 
+**Stamp-vs-substance gap, found 2026-08-23 and closed the same day.** The four Flash legs of 2026-08-21
+(flash2/flash3/flash_think/flash_think2) were certified, committed and READ for two days while
+registered only in `module_boundary_check.CORPUS_DIRS` (the boundary scanner) — never in
+`shared/corpus_legs.LIVE_LEGS` (refusal scope) or the census stamps. The two lists are allowed to
+differ (distinct questions, per the docstring) but the difference was SILENT: nothing printed it, and
+the floor table above was built from legs the census did not cover. Closed: all four registered and
+stamped (944/958/988/992), the parked empty `testsets_glm` dir and row removed, and the boundary
+check's GREEN line now prints `CORPUS_DIRS not in LIVE_LEGS` so a divergence is always said.
+Registration is part of "landed" from here — a leg is not landed until LIVE_LEGS + STAMPED + re-pin.
+
 **Steps.** (1) land and certify each floor leg (`classify_corpus` GREEN, OQ-58 sweep, register:
 `CORPUS_DIRS`, `LIVE_LEGS`, `STAMPED_FILE_COUNTS`, census re-pin); (2) reclassify EVERY leg at
 one engine commit; (3) `paired_agreement.py` + `epsilon_distance.py` over all pairs; (4) build the
