@@ -1,0 +1,385 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__freedom_imperative_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "2650dda4-f950-453e-80f9-4802f844ed36"
+  },
+  "base_properties": {
+    "extractiveness": 0.88,
+    "suppression": 0.82,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.71,
+    "claimed_type": "snare",
+    "human_readable": "Proprietary Software Licensing Regime (Freedom Imperative Reading)",
+    "topic_domain": "economic/technological/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_software_vendors",
+      "ip_lawyers",
+      "license_compliance_industry",
+      "platform_gatekeepers"
+    ],
+    "victims": [
+      "software_users",
+      "independent_developers",
+      "security_researchers",
+      "educational_institutions",
+      "global_south_tech_ecosystems"
+    ],
+    "vindicated_propositions": [
+      "software_freedom_as_human_right",
+      "user_autonomy_over_computation"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_software_vendors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Control source code, distribution channels, and licensing terms for dominant software products. Extract monopoly rents through artificial scarcity of copyable goods. Enforce restrictions via copyright law, DRM, EULAs, and trade secrecy. Lobby for stronger IP enforcement internationally. Can pivot to services/support models but resist because licensing extracts more."
+    },
+    {
+      "name": "ip_lawyers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build practices around licensing compliance, infringement litigation, patent prosecution, and trade secret protection. The proprietary regime creates continuous demand for legal services. Would lose a major practice area if software freedom became the norm, but skills transfer to other IP domains."
+    },
+    {
+      "name": "license_compliance_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sell audit tools, compliance consulting, and license management SaaS to enterprises terrified of BSA/FAST raids. Entire business model depends on proprietary licensing complexity and enforcement threat. Would need to pivot to open source compliance (smaller market) if regime collapsed."
+    },
+    {
+      "name": "platform_gatekeepers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Control app stores, OS distribution, and hardware signing keys. Extract 15-30% commissions and enforce proprietary-only distribution policies. Use security/curation framing to justify gatekeeping. The proprietary software model is their revenue foundation; they actively suppress sideloading and alternative distribution."
+    },
+    {
+      "name": "software_users",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Depend on proprietary software for work, communication, finance, healthcare, and civic participation. Cannot inspect, modify, or share the software they rely on. Forced into upgrade cycles, subscription traps, and data extraction. Switching costs are high (retraining, data lock-in, network effects). Some migrate to free alternatives but face compatibility barriers."
+    },
+    {
+      "name": "independent_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Cannot legally study, modify, or build upon proprietary libraries and platforms they depend on. Forced to work around artificial restrictions or pay licensing fees. Patent thickets and API copyright claims (e.g., Oracle v. Google) create litigation risk. Many contribute to free software but cannot sustain full-time work without proprietary income."
+    },
+    {
+      "name": "security_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Cannot legally audit proprietary code for vulnerabilities (DMCA 1201, CFAA, EULA prohibitions). Must choose between responsible disclosure (often ignored or met with legal threats) and silence. Zero-day markets exploit this asymmetry. The constraint directly prevents them from doing their job of protecting users."
+    },
+    {
+      "name": "educational_institutions",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Forced to teach proprietary tools (Microsoft, Adobe, MATLAB, etc.) because industry demands those skills. Pay massive license fees that drain budgets from actual education. Cannot give students source code to study. Graduates enter workforce with tool dependency, not computational understanding."
+    },
+    {
+      "name": "global_south_tech_ecosystems",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Proprietary licensing extracts wealth from developing economies to US/EU vendors. Local tech sectors cannot build on proprietary foundations. Software piracy criminalizes necessary access. Free software is the only viable path to technological sovereignty but faces institutional pressure to adopt proprietary 'standards'."
+    },
+    {
+      "name": "free_software_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Articulate and campaign for the ethical claim that software freedom is an inalienable right. Build free alternatives (GNU, Linux, FSF, SFC, FSFE). Provide legal defense (GPL enforcement). Their constraint is the counter-norm they seek to impose: all software must respect user freedom."
+    },
+    {
+      "name": "policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Study the economic, social, and political effects of software licensing regimes. Compare innovation rates, security outcomes, and power distributions under proprietary vs. free models. Their analysis informs but does not determine the constraint's operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The proprietary licensing regime claims to coordinate software production by granting temporary monopolies that incentivize investment in development. This is the 'IP incentivizes innovation' coordination story.",
+    "transfer_function": "Moves control over software (source access, modification rights, distribution rights) from users to vendors. Moves monetary payment (licenses, subscriptions, compliance costs) from users, developers, institutions to vendors, lawyers, and compliance industry. Moves legal risk onto researchers, educators, and independent developers.",
+    "absent_voices": "Users in restrictive jurisdictions (where free software is discouraged or banned), workers whose labor is mediated by proprietary platforms they cannot audit, future generations who inherit locked-down computational infrastructure. They are absent because the regime defines them as 'licensees' not rights-holders.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the proprietary licensing regime vanished overnight, vendors would lose legal enforcement of artificial scarcity. Users would gain immediate rights to study, modify, and share all software. Vendors would pivot to services/support/freemium models. The software economy would reorganize around freedom-respecting models within months. Power would shift from gatekeepers to users and developers.",
+    "founding_problem": "Early commercial software (1970s-80s) faced rampant copying with no legal framework. Vendors sought copyright protection to prevent unauthorized redistribution and fund development. The proprietary model emerged as a pragmatic solution to fund software production in a market economy.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (funding software development) is solved by multiple demonstrated models: free software (Linux, GCC, Python, PostgreSQL), open core, SaaS, crowdfunding, public funding, corporate sponsorship. The proprietary licensing regime persists despite the founding problem being solved — confirmed by economic studies (e.g., Lerner & Tirole 2002, Nagle 2019) and the thriving free software ecosystem. The FSF and academic researchers outside the vendor beneficiary set corroborate this."
+  },
+  "interval": {
+    "start": 1983,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1983,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1998,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.88
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1983,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1983,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.82
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The freedom imperative reading (FSF/Stallman position) evaluates the proprietary software licensing regime as a fundamental ethical violation. The regime uses copyright, patent, trade secret, and contract law to deny users the four essential freedoms: to run, study, modify, and share software. This reading asserts these freedoms are inalienable rights, not negotiable permissions. The constraint story models the proprietary licensing system as seen from this reading: a snare that extracts control and wealth from users while suppressing free alternatives through legal and technical enforcement. The claimed type (snare) diverges from the regime's self-presentation as a coordination mechanism (rope) — this divergence is the measurement.",
+    "logic_rationale": "Extractiveness is very high (0.88) because the regime transfers nearly all control over software from users to vendors, converting copyable goods into artificial scarcity rent streams. Suppression is high (0.82) and rising: DMCA 1201, CFAA, EULAs, DRM, hardware signing, and trade agreements (TRIPS, ACTA, TPP) create overlapping enforcement layers. Theater ratio is low (0.12) because the extraction is real and acknowledged — vendors openly defend their right to restrict. Accessibility collapse (0.78) reflects that free alternatives exist but face massive structural barriers (network effects, hardware lock-in, patent threats). Resistance (0.71) is substantial: free software movement, open source, right-to-repair, security research exemptions, and global south adoption of free software.",
+    "directionality_logic": "Proprietary vendors, platform gatekeepers, IP lawyers, and compliance industry are structural beneficiaries (d near 0.0) — they collect rents and control the rules. Users, independent developers, security researchers, educators, and global south ecosystems are structural targets (d near 1.0) — they bear the costs with constrained or trapped exit. Free software advocates are agenda setters for the counter-constraint (d analytical). Policy analysts are pure observers. The derivation chain from beneficiary/victim declarations + power + exit produces this directionality gradient.",
+    "perspectival_gap": "From the vendor/gatekeeper seat, the regime is a rope (coordination via IP incentives). From the user/developer/researcher seats, it is a snare (extraction via artificial scarcity). From the free software advocate seat, it is a snare that must be abolished. The engine computes these per-seat classifications from the structural data — the freedom imperative reading's claim (snare) matches the computed type for the victim seats, not the beneficiary seats.",
+    "mandatrophy_analysis": "The founding problem (funding software development) is dead — multiple working funding models exist for free software. The regime persists because beneficiaries (vendors, gatekeepers, lawyers) extract sufficient rents to maintain enforcement, while victims face high coordination costs to dismantle it. This is classic mandatrophy: the mandate (IP incentivizes innovation) has outlived its function but the constraint persists through institutional inertia and active enforcement.",
+    "kernel_context": "This constraint is the freedom_imperative_reading of the software_source_status kernel. Sibling readings: pragmatic_development_reading (open source as superior methodology), property_rights_reading (software as IP with creator restriction rights), utilitarian_hybrid_reading (licensing should maximize aggregate welfare). This reading structurally differs by placing all proprietary software in the victim set, asserting inalienable user rights to source access, and categorically rejecting licensing restrictions as illegitimate."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_structure",
+      "question": "Is the freedom_imperative_reading a distinct constraint from its siblings, or a different evaluation of the same constraint?",
+      "resolution_mechanism": "Apply ε-invariance test: if changing the reading changes the beneficiary/victim structure, extractiveness, or suppression of the proprietary licensing regime, they are distinct constraints. The freedom imperative reading puts ALL proprietary software in the victim set; pragmatic reading does not. This ε difference confirms distinct constraints.",
+      "impact": "Confirms this JSON models one reading of a kernel, not a parameterized evaluation. Requires separate JSON files for each sibling reading linked via network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether readings of the software_source_status kernel are distinct constraints per ε-invariance"
+    },
+    {
+      "id": "property_rights_foreclosure",
+      "question": "Does the freedom imperative reading's core premise (software freedom as inalienable right) logically foreclose the property rights reading (creator's right to restrict) within any single framework?",
+      "resolution_mechanism": "Analyze whether a single legal/ethical framework can simultaneously hold 'users have inalienable right to source' and 'creators have legitimate right to deny source'. If mutually exclusive, relation = forecloses. If different parties can hold each without contradiction, relation = coexists_with.",
+      "impact": "Determines cs_structure.reading_relations entry for property_rights_reading. A forecloses relation means the kernel has a genuine logical fracture; coexists_with means political contestation without logical contradiction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between freedom imperative and property rights readings"
+    },
+    {
+      "id": "extraction_measurement_stability",
+      "question": "Does the extractiveness metric (0.88) remain stable across different operationalizations of 'proprietary software regime' (e.g., desktop vs. SaaS vs. embedded)?",
+      "resolution_mechanism": "Decompose the regime into sub-constraints (desktop licensing, SaaS terms, firmware locks, API copyright) and measure ε for each. If ε varies widely, the regime is a constraint family needing decomposition per ε-invariance.",
+      "impact": "If ε varies, this story should be split into multiple constraint stories linked via network.affects_constraints. Current ε is a regime-level aggregate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the proprietary licensing regime has a single stable ε or requires decomposition"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__pragmatic_development_reading",
+      "software_source_status__property_rights_reading",
+      "software_source_status__utilitarian_hybrid_reading",
+      "dmca_1201_anti_circumvention",
+      "software_patent_regime",
+      "right_to_repair_legislation"
+    ],
+    "dual_formulation_note": "This is the freedom_imperative_reading of the software_source_status kernel. The kernel decomposes into four constraint stories (this + three siblings) with different ε, beneficiary/victim structures, and claimed types. Linked via affects_constraints. The dual formulation is: the same kernel label ('software freedom') covers structurally distinct constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.9
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "pragmatic_development_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "property_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "utilitarian_hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "software_freedom_is_inalienable_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "proprietary_software_is_injustice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "user_freedom_as_primary_axiom",
+    "drift_state": {
+      "moment": "contemporary_proprietary_dominance",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "software_source_status"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

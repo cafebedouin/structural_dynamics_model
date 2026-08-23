@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "latin_correctness__continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_latin_correctness__continuity_reading",
+    "measurement_id_prefix": "latin_continuity",
+    "story_uid": "31bc62e5-2c45-4eb9-a166-ad3ea374e8e8"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.08,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Medieval Latin as Organic Continuation of Classical Latin",
+    "topic_domain": "historical_linguistics/intellectual_history/philology",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "vindicated_propositions": [
+      "organic_linguistic_change_preserves_legitimacy",
+      "vernacular_phonology_is_natural_evolution",
+      "expanded_vocabulary_legitimate_inheritance"
+    ]
+  },
+  "interval": {
+    "start": 1800,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.12
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The continuity reading of latin_correctness holds that Medieval Latin constitutes the legitimate, unbroken continuation of Classical Latin through organic linguistic change — phonological shifts, morphological simplifications, and vocabulary expansion driven by vernacular contact and new conceptual needs. This reading treats the medieval developments not as corruptions but as the natural evolutionary trajectory of a living language. The constraint operates in modern philological discourse as a Mountain claim: it presents linguistic continuity as a structural fact of language change, not a constructed normative standard. No victim set exists because medieval users are understood as legitimate inheritors of the Latin tradition; the reading does not extract from or suppress any party. The sibling readings (rupture_reading, hybrid_reading) contest this framing by positing a fixed Classical standard or domain-restricted legitimacy, but the continuity reading's ε-invariant referent is the standing arrangement of organic language change itself, assessed by its own lights.",
+    "logic_rationale": "Extractiveness is near-zero (0.05) because the continuity reading imposes no transfer of resources, status, or epistemic authority — it describes a natural process. Suppression is minimal (0.08) because alternatives (other readings) persist in the scholarly field without coercive exclusion. Theater ratio is low (0.12) — the reading's scholarly apparatus (critical editions, historical grammars) performs genuine analytical work. Accessibility collapse is very high (0.92) because once organic change is accepted as the mechanism of linguistic legitimacy, the alternatives (fixed standard, domain restriction) lose their descriptive footing — they become category errors. Resistance is low (0.15) because the reading meets little active opposition; the contest is interpretive, not coercive. The claimed_type is mountain, independent of these metrics, per the claim/metric independence rule.",
+    "directionality_logic": "No beneficiaries or victims declared. Medieval Latin users (historical) are the legitimate inheritors — not beneficiaries extracting rents. Modern scholars holding this reading are analytical observers, not agenda-setters extracting from a constituency. The constraint's directionality derivation finds no structural extraction to amplify or damp.",
+    "perspectival_gap": "The rupture_reading and hybrid_reading seats would compute different effective extractions because they posit different structural relationships: rupture_reading sees a fixed standard being violated (extraction from Classical purity), hybrid_reading sees domain-restricted legitimacy (partial extraction). The continuity reading's Mountain classification from its own seat reflects the absence of extraction in its own structural logic.",
+    "mandatrophy_analysis": "Not applicable — this is a descriptive claim about linguistic reality, not a mandate that could atrophy. The founding problem (accounting for Medieval Latin's legitimacy) remains live in philological methodology.",
+    "kernel_context": "This constraint instantiates the continuity_reading of the latin_correctness kernel. The kernel is the contested commitment 'what counts as correct Latin.' Sibling readings: rupture_reading (Classical Latin as fixed textual standard; medieval usage = corruption) and hybrid_reading (Classical norms for literary/rhetorical domains; medieval forms legitimate for technical/practical domains). This reading's structural delta: low ε, no victim set, vernacular phonology and expanded vocabulary treated as natural evolution."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "How does the continuity_reading's structural profile change if evaluated from the rupture_reading's or hybrid_reading's framing of the latin_correctness kernel?",
+      "resolution_mechanism": "Comparative constraint story generation for each sibling reading, then cross-reading structural analysis of ε, beneficiary/victim sets, and claimed_type divergence.",
+      "impact": "If sibling readings produce substantially different ε or victim structures, the kernel's contestation is structural, not merely terminological. This would confirm the ε-invariance principle's requirement for separate constraint stories per reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee structure of latin_correctness kernel: continuity_reading vs rupture_reading vs hybrid_reading"
+    },
+    {
+      "id": "natural_law_vs_constructed_standard",
+      "question": "Is the continuity reading's claim about organic linguistic change a genuine natural law (Mountain) or a constructed scholarly consensus that benefits continuity-oriented philologists?",
+      "resolution_mechanism": "Historical analysis of whether the 'organic change = legitimacy' principle was ever contested by medieval actors themselves, or whether it is a modern retrospective imposition.",
+      "impact": "If constructed, the Mountain claim is a false summit — beneficiaries would be continuity-oriented philological traditions, and FSM would trigger reclassification to tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether linguistic continuity is a natural law or a constructed scholarly framing"
+    }
+  ],
+  "stakeholders": [],
+  "six_questions": {
+    "coordination_function": "Provides a coherent descriptive framework for understanding Medieval Latin as the unbroken evolutionary continuation of Classical Latin, enabling philological work across the classical/medieval boundary without positing a rupture.",
+    "transfer_function": "No transfer of resources, status, or authority — the reading describes a natural linguistic process, it does not move anything between parties.",
+    "absent_voices": "Medieval Latin users themselves (historical actors) cannot speak to modern classificatory disputes. Contemporary scholars committed to rupture_reading or hybrid_reading are present in the field as competing positions, not absent voices.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "If the continuity reading vanished overnight, Medieval Latin texts would still exhibit the same linguistic features; the organic changes would still have occurred. The reading is a descriptive claim about historical reality, not a constraint organizing social arrangements. The world does not rearrange.",
+    "founding_problem": "How to account for the legitimacy of Medieval Latin's divergences from Classical norms without declaring them corruptions or errors — i.e., how to read Medieval Latin as Latin rather than as failed Classical Latin.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by the ongoing production of critical editions, historical grammars, and lexical studies that treat Medieval Latin as a legitimate object of study in its own right (e.g., the Dictionary of Medieval Latin from British Sources, the Mittellateinisches Wörterbuch). These enterprises, conducted by scholars across multiple national traditions and methodological orientations, corroborate that the problem of Medieval Latin's legitimacy remains live and unresolved — not merely a continuity-reading talking point."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "rupture_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "organic_change_preserves_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "vernacular_phonology_is_natural_evolution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "classical_latin_transmission_continuum",
+    "drift_state": {
+      "moment": "modern_philological_consensus",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "network": {
+    "affects_constraints": [
+      "latin_correctness__rupture_reading",
+      "latin_correctness__hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint is the continuity_reading of the latin_correctness kernel. The kernel decomposes into three structurally distinct readings with different ε values and victim/beneficiary structures. The continuity_reading claims Mountain status (ε≈0.05, no victims); rupture_reading claims Mountain status for the fixed standard but with a victim set (medieval users as corrupt); hybrid_reading claims Tangled Rope (coordination in technical domains, extraction in literary domains). The ε-invariance principle requires separate stories because the referent 'latin_correctness' yields different ε under each reading."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "mountain",
+    "downstream_of": [
+      "latin_correctness"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

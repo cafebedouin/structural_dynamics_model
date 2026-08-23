@@ -1,0 +1,342 @@
+{
+  "header": {
+    "constraint_id": "fifth_republic_constitution__parliamentary_constraint_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_fifth_republic_constitution__parliamentary_constraint_reading",
+    "measurement_id_prefix": "frc_pcr",
+    "story_uid": "3f5c33c7-b2bf-4568-9305-b28ee8f79e8e"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.45,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.38,
+    "claimed_type": "rope",
+    "human_readable": "Parliamentary Constraint on Presidential Policy Implementation (Fifth Republic)",
+    "topic_domain": "constitutional_law/political_systems/comparative_government",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "legislative_majority"
+    ],
+    "victims": [
+      "president"
+    ],
+    "vindicated_propositions": [
+      "parliamentary_sovereignty_doctrine",
+      "responsible_government_principle",
+      "democratic_accountability_norm"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 66
+  },
+  "stakeholders": [
+    {
+      "name": "president",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Formally heads state and appoints Prime Minister but requires legislative authorization for policy implementation. When Assembly withholds confidence or blocks legislation, the President bears the cost of constrained executive action — cannot implement agenda, may face cohabitation or dissolution. Exit is constrained by fixed term and constitutional role; cannot easily abandon the office or its constraints."
+    },
+    {
+      "name": "prime_minister",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Leads government and implements policy but must maintain confidence of the Assembly. The PM is the effective policy executor when parliamentary majority supports the government; during cohabitation, the PM's agenda-setting power expands relative to the President. Exit depends on parliamentary support — loss of confidence forces resignation."
+    },
+    {
+      "name": "legislative_majority",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Controls legislative agenda and confidence votes, thereby constraining or enabling presidential policy. Benefits from the constitutional requirement that executive action requires legislative authorization — this gives the majority leverage over policy direction and executive appointments. Exit is mobile: majority can shift at elections, and individual deputies can defect."
+    },
+    {
+      "name": "legislative_opposition",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lacks formal gatekeeping power over executive action but can obstruct, publicize, and mobilize. Would object to both presidential overreach and majority tyranny but is structurally excluded from the confidence mechanism that authorizes policy. Exit is constrained by electoral calendar and institutional rules favoring majority."
+    },
+    {
+      "name": "constitutional_council",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicates constitutional disputes between President, Prime Minister, and Parliament. Interprets the scope of presidential vs. parliamentary authority, especially during cohabitation. Does not collect rents or bear costs from the constraint; provides the authoritative reading that stabilizes or shifts the constraint's operation."
+    },
+    {
+      "name": "citizens_voters",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from democratic accountability — the constraint ensures executive action reflects legislative will, which in turn reflects electoral mandate. Bear indirect costs when constraint produces gridlock or cohabitation instability. Exit is mobile at elections but constrained between them; no direct institutional exit from the constitutional framework."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures democratic accountability by requiring that executive policy implementation reflect the will of the elected legislature — solves the problem of unchecked executive power in a semi-presidential system.",
+    "transfer_function": "Transfers policy authorization power from the President to the legislative majority: the President's formal agenda-setting is conditioned on parliamentary confidence, moving effective governing authority to the PM and Assembly majority.",
+    "absent_voices": "Territorial collectivities (regions, overseas territories) and non-parliamentary social movements — would object to centralization of policy authorization in national legislature but are excluded from the confidence mechanism.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the parliamentary confidence requirement vanished overnight, the President would become a de facto sovereign executive able to implement policy without legislative consent — the Fifth Republic would shift toward hyper-presidentialism, the PM would become a mere subordinate, and the constitutional balance would fundamentally reorganize.",
+    "founding_problem": "The Fourth Republic's chronic governmental instability — frequent cabinet collapses, legislative fragmentation, and executive weakness — which paralyzed policy implementation and undermined democratic legitimacy.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "De Gaulle's 1958 Bayeux speech and the constitutional debates attest the founding problem was governmental instability. Contemporary constitutional scholars (e.g., Duhamel, Carcassonne) and the Constitutional Council's jurisprudence corroborate that the original instability problem has been substantially solved, but the constraint persists in a form that now addresses a different problem (preventing presidential dominance) — attested by opposition parties and academic critics outside the original benefiting coalition."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 66,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 66,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 66,
+      "value": 0.45
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the parliamentary constraint reading of the French Fifth Republic constitution: the President is a coordinated executive who requires legislative authorization (via Prime Ministerial responsibility to the Assembly) for policy implementation. The reading emphasizes that the 1958 Constitution's architecture — particularly Articles 20, 21, 49, and 50 — makes the government responsible to Parliament, not to the President alone. When the Assembly withholds confidence (Art. 49) or censures the government (Art. 50), the President's policy agenda is blocked, placing the executive in a victim/payer position. The legislative majority is the structural beneficiary, holding the authorization gate. This reading coexists with the hyper-presidential reading (which reads the same text as granting the President direct democratic legitimacy) and the cohabitation equilibrium reading (which sees a negotiated dual executive). The claimed type is 'rope' — genuine democratic coordination — but metrics show modest extraction and suppression reflecting periods of cohabitation and presidential resistance.",
+    "logic_rationale": "Base extractiveness is low (0.22) because the constraint primarily coordinates democratic accountability rather than extracting rents. Suppression (0.45) reflects the constitutional enforcement machinery (dissolution power, Constitutional Council review) needed to maintain the confidence requirement. Theater ratio (0.18) is low — the parliamentary sessions, confidence votes, and legislative process are functional, not performative. Accessibility collapse (0.52) is moderate: alternatives (presidential decree, Article 16 emergency powers, EU-level governance) exist but are constitutionally bounded. Resistance (0.38) is moderate — Presidents regularly test the constraint's boundaries but operate within the constitutional framework. The temporal series shows extractiveness lowest during strong parliamentary majorities (1980s-1990s), rising during cohabitation periods (1986-88, 1993-95, 1997-2002) and again after the 2000 term alignment reduced cohabitation frequency.",
+    "directionality_logic": "The President is the primary payer (d near target end) when Assembly withholds confidence — bears costs of blocked agenda, forced cohabitation, or dissolution risk. The legislative majority is the primary beneficiary (d near beneficiary end) — holds authorization power and extracts policy concessions. The Prime Minister sits near symmetric (d ~0.5) — agenda-setter when supported by majority, constrained when not. The Constitutional Council is analytical (d=0.5). Citizens are beneficiaries with mobile exit. Legislative opposition is excluded — their exclusion is structural, not a bug.",
+    "perspectival_gap": "From the President's seat (especially under hyper-presidential reading), the constraint appears as extraction — a parliamentary veto on democratic mandate. From the legislative majority's seat, it appears as coordination — democratic accountability mechanism. The engine computes this divergence from the structural data: same constraint, different directionality per seat. The hyper-presidential reading would assign the President d=0.15 (beneficiary) and legislative majority d=0.7 (payer); this reading inverts that. The divergence IS the measurement.",
+    "mandatrophy_analysis": "The founding problem (Fourth Republic instability) is substantially solved — governments no longer collapse weekly. Yet the parliamentary constraint persists and has been repurposed: it now primarily prevents presidential dominance rather than ensuring governmental stability. This is not pure mandatrophy (the constraint still solves a live problem: unchecked executive power) but a shifted function. The founding_problem_status='contested' captures this: the original beneficiaries (proponents of stable government) would say the problem is dead; current beneficiaries (parliamentary majorities checking presidential power) say it's live. Corroboration from outside the beneficiary set (opposition parties, scholars) confirms the shift.",
+    "kernel_context": "This constraint is the parliamentary_constraint_reading of the fifth_republic_constitution kernel. Sibling readings: hyper_presidential_reading (President as direct sovereign embodying national will, minimally constrained by legislature) and cohabitation_equilibrium_reading (dual executive requiring negotiated authority allocation between President and Prime Minister). This reading instantiates the kernel as a system where parliamentary confidence is the gate for executive action; the hyper-presidential reading treats parliamentary confidence as advisory; the cohabitation reading treats it as a trigger for negotiated dual authority."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Does the parliamentary constraint reading describe a distinct constraint from the hyper-presidential reading, or are they interpretive frames on a single constraint?",
+      "resolution_mechanism": "Compare ε values across readings: if hyper-presidential reading yields substantially higher extractiveness (President extracts from legislature) while this reading yields low extractiveness (legislature constrains President), they are structurally distinct constraints sharing a kernel. If ε is invariant, they are frames on one constraint.",
+      "impact": "If distinct constraints, each gets its own classification and the kernel is a family. If one constraint, the classification must reconcile the divergent ε — suggesting the kernel itself is ambiguous.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel supports multiple ε-invariant constraints or one constraint with contested interpretation."
+    },
+    {
+      "id": "cohabitation_as_distinct_mode",
+      "question": "Is cohabitation a distinct constraint mode (triggering the cohabitation_equilibrium_reading) or a phase of the same parliamentary constraint?",
+      "resolution_mechanism": "Measure extractiveness and suppression during cohabitation vs. unified majority periods. If metrics shift discontinuously at cohabitation boundaries, it is a mode switch. If they shift continuously, it is a phase.",
+      "impact": "If mode switch, the kernel has three readings each with distinct metrics. If phase, the parliamentary constraint reading absorbs cohabitation as a variable-intensity phase.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether cohabitation constitutes a structural regime change within the kernel."
+    },
+    {
+      "id": "term_alignment_drift",
+      "question": "Has the 2000 quinquennat reform (aligning presidential and legislative terms) structurally weakened the parliamentary constraint by making cohabitation rare?",
+      "resolution_mechanism": "Compare pre-2000 and post-2002 extractiveness/suppression trajectories controlling for majority size. If post-2002 shows sustained higher presidential extractiveness and lower parliamentary constraint activation, the reform altered the constraint's structure.",
+      "impact": "If confirmed, the constraint has drifted toward hyper-presidential operation without textual change — a practice drift that the parliamentary constraint reading must acknowledge as erosion of its reference frame.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether electoral calendar reform has shifted the constraint's operational equilibrium."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "fifth_republic_constitution__hyper_presidential_reading",
+      "fifth_republic_constitution__cohabitation_equilibrium_reading",
+      "french_electoral_system__two_round_majoritarian",
+      "eu_supranational_governance__domestic_parliamentary_control"
+    ],
+    "dual_formulation_note": "This reading is one of three in the fifth_republic_constitution constraint family. The parliamentary_constraint_reading claims the kernel instantiates a rope (democratic coordination via confidence requirement). The hyper_presidential_reading claims the same kernel instantiates a snare (President extracts from legislature via plebiscitary legitimacy). The cohabitation_equilibrium_reading claims a tangled_rope (dual executive coordinates via negotiated authority but extracts via mutual veto). All three share the kernel_id but author different ε, beneficiaries, victims, and claimed types."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hyper_presidential_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "cohabitation_equilibrium_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "parliamentary_confidence_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "president_subordinate_to_assembly_on_policy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "parliamentary_sovereignty_framework",
+    "drift_state": {
+      "moment": "contemporary_term_aligned_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "fifth_republic_constitution"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

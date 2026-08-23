@@ -1,0 +1,345 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_legitimacy__risk_stratification_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-14",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_vaccine_mandate_legitimacy__risk_stratification_reading",
+    "measurement_id_prefix": "vml_rsr",
+    "story_uid": "a6a9eb23-bf00-46b9-82b7-0885ef0c0548"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.55,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Risk-Stratified Vaccine Mandate Legitimacy Threshold",
+    "topic_domain": "public_health/constitutional_law/bioethics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "vulnerable_populations",
+      "public_health_infrastructure"
+    ],
+    "victims": [
+      "targeted_mandate_subjects"
+    ],
+    "vindicated_propositions": [
+      "proportionality_doctrine",
+      "least_restrictive_means_principle"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Define the actuarial risk threshold, designate high-risk settings, and issue targeted mandate orders. They bear the burden of demonstrating that the threshold is met and that less restrictive alternatives are insufficient. Their legitimacy depends on maintaining public trust in the proportionality calculus."
+    },
+    {
+      "name": "legislatures",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enact the statutory framework authorizing risk-stratified mandates, setting the legal threshold and procedural safeguards. They benefit politically from appearing to balance rights and safety, but face electoral pressure from both mandate opponents and vulnerable-population advocates."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate challenges to specific mandates against the proportionality standard. They set the effective threshold through case law — what counts as sufficient actuarial evidence, what less-restrictive alternatives must be tried first. Their rulings define the constraint's operational boundary."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Immunocompromised individuals, elderly in congregate care, and others who cannot be protected by their own vaccination. They gain protection when mandates reduce community transmission in their environments. They have no exit from their vulnerability and no leverage over threshold-setting."
+    },
+    {
+      "name": "public_health_infrastructure",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hospital systems, long-term care facilities, and disease surveillance networks. They benefit from reduced outbreak burden and staffing stability when mandates cover their workforce and residents. They advocate for threshold triggers but cannot unilaterally impose mandates."
+    },
+    {
+      "name": "targeted_mandate_subjects",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Healthcare workers, long-term care staff, and other groups designated by the risk threshold. They bear the compliance burden (vaccination, testing, masking, or job loss) when the threshold is triggered. Their exit options are limited: change profession, seek exemption, or comply. The threshold determines whether they are in the payer seat at all."
+    },
+    {
+      "name": "bodily_autonomy_absolutists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Advocates and individuals who hold that any state-compelled medical intervention violates a non-derogable right. They are structurally excluded from the threshold-setting process because the risk-stratification framework presupposes that some coercion can be legitimate — their categorical rejection has no purchase within the framework."
+    },
+    {
+      "name": "anti_vaccine_movements",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organized opposition to vaccine mandates on safety, efficacy, or conspiracy grounds. They challenge the actuarial evidence itself rather than the proportionality structure. The framework treats their objections as empirical disputes to be resolved by evidence, not as threshold-setting inputs."
+    },
+    {
+      "name": "bioethics_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the threshold's coherence, its application across jurisdictions, and its drift over time. They do not set policy but shape the intellectual framework courts and legislatures draw on. Their exit is analytical — they can change frameworks without personal cost."
+    },
+    {
+      "name": "epidemiologists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produce the actuarial risk estimates that trigger or withdraw mandates. Their models determine whether the threshold is met. They are observers of the legal framework but architects of its factual predicate."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents disease outbreaks in high-risk settings through targeted immunization requirements triggered by demonstrable actuarial risk exceeding a proportionality threshold, avoiding the overbreadth of blanket mandates while preserving protection for those who cannot protect themselves.",
+    "transfer_function": "Moves the compliance burden (vaccination, testing, masking, or employment consequences) from vulnerable populations who bear disproportionate harm onto targeted mandate subjects (healthcare workers, congregate care staff/residents) when and only when actuarial evidence shows the risk threshold is met.",
+    "absent_voices": "Absolute bodily autonomy advocates who reject any state coercion as categorically impermissible are structurally excluded — the framework's premise is that coercion CAN be legitimate if proportional. Anti-vaccine movements challenging the empirical predicate are treated as evidentiary disputes, not threshold-setting participants. Both would object to the framework's existence but have no seat in its calibration.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the proportionality threshold as the operative legal test, constitutional doctrine would collapse to one of two poles: either blanket mandate authority (public health primacy) or categorical prohibition (bodily autonomy primacy). The risk-stratification framework is the specific doctrinal mechanism that mediates between them; its disappearance forces a regime change.",
+    "founding_problem": "How to reconcile state public health authority with individual bodily integrity in a pluralistic constitutional order — specifically, how to permit coercive health measures when genuinely necessary while preventing their deployment as routine governance tools.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Constitutional courts in multiple jurisdictions (German Bundesverfassungsgericht 2022 Measles Protection Act ruling, Canadian Supreme Court 2021 Trinity Western, ECHR 2021 Vavřička) have articulated proportionality frameworks for vaccine mandates as a live doctrinal question. Legal scholars outside the public health establishment (e.g., Gostin & Wiley critiquing Jacobson's breadth, Epstein on police power limits) corroborate that the founding problem remains contested — the proportionality test is not settled law but a contested middle ground."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the risk_stratification_reading of the vaccine_mandate_legitimacy kernel. The reading holds that mandate legitimacy is contingent on a demonstrable actuarial risk threshold: blanket mandates fail proportionality because they impose on low-risk populations without sufficient justification, but targeted mandates covering high-risk settings (healthcare, congregate care) and populations are permissible when evidence shows the threshold is met. The constraint is the proportionality test itself — the legal/constitutional rule that conditions state coercion on a calibrated risk assessment. It is a tangled_rope: it performs genuine coordination (protecting the vulnerable through targeted immunization) while extracting compliance from designated groups, and it requires active enforcement (mandate orders, exemption adjudication, penalty mechanisms). The victim set (targeted_mandate_subjects) varies with the threshold definition — a structural delta noted in the kernel context.",
+    "logic_rationale": "Extractiveness is moderate (0.45) because the constraint extracts compliance only from groups where actuarial risk justifies it, not from the general population. Suppression (0.55) reflects that enforcement is targeted and subject to judicial review, not blanket. Theater ratio (0.25) is low-moderate: the threshold test is functional, but some jurisdictions perform proportionality analysis ritualistically while applying mandates broadly. Accessibility collapse (0.50) is moderate — targeted subjects have constrained exit (change jobs, seek exemptions) but not total closure. Resistance (0.60) is significant from both excluded seats (autonomy absolutists, anti-vaccine movements) and from payer-seat actors challenging threshold calibration.",
+    "directionality_logic": "Public health authorities, legislatures, and courts are agenda_setters (d near 0.0 — they control the threshold). Vulnerable populations and public health infrastructure are beneficiaries (d low — they gain protection). Targeted_mandate_subjects are payers (d high — they bear compliance costs when threshold triggers). Bodily_autonomy_absolutists and anti_vaccine_movements are excluded (d undefined — they are outside the framework's coordination logic). Observers (bioethicists, epidemiologists) sit at d=0.5 analytically. The threshold mechanism means payer status is conditional — the same individual may be a payer in a pandemic wave and not between waves.",
+    "perspectival_gap": "From the agenda_setter seats, the constraint is a calibrated coordination mechanism that prevents the greater harm of blanket mandates. From the payer seat, it is an extraction mechanism whose trigger threshold is set by others and whose actuarial basis they cannot independently verify. From the excluded seats, it is a legitimating veneer for state coercion. The engine computes these divergent classifications from the structural data — the claimed_type (tangled_rope) captures the coordinator's view, but payer seats may compute as snare if the threshold is routinely met.",
+    "mandatrophy_analysis": "The founding problem (reconciling public health authority with bodily integrity) remains contested — the proportionality framework has not resolved it but institutionalized the contest. Mandatrophy is not resolved: the framework persists because neither extreme reading has displaced it, not because the founding problem is solved. The constraint's extraction has drifted upward over the interval (0.25→0.45) as threshold triggers expanded from narrow (specific outbreaks) to broader (endemic disease management), suggesting mandatrophy drift toward snare if the trend continues.",
+    "kernel_context": "This constraint is the risk_stratification_reading of the vaccine_mandate_legitimacy kernel. Sibling readings: bodily_autonomy_primacy_reading (medical self-sovereignty absolute; state coercion categorically impermissible) and public_health_primacy_reading (state duty to prevent collective harm justifies mandate authority; unvaccinated status = externality). This reading occupies the proportionality middle ground: coercion permissible iff actuarial risk exceeds threshold. The structural delta: victim set size varies by threshold definition; the coordination mechanism between extreme readings but may collapse into one if threshold becomes trivial or impossible to meet."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the risk_stratification_reading a stable constitutional doctrine or an unstable compromise that will collapse into one of the extreme readings?",
+      "resolution_mechanism": "Longitudinal analysis of constitutional court decisions: if proportionality analysis becomes increasingly deferential (collapsing to public_health_primacy) or increasingly strict (collapsing to bodily_autonomy_primacy), the middle reading is transient.",
+      "impact": "If the reading is transient, its claimed_type (tangled_rope) describes a temporary doctrinal state, not a stable constraint. The constraint story would need a sunset_clause or reclassification as scaffold.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the risk-stratification middle ground is a stable equilibrium or a transitional doctrine."
+    },
+    {
+      "id": "threshold_operationalization",
+      "question": "What actuarial risk threshold (R0, IFR, hospitalization rate, etc.) and what evidentiary standard actually trigger the mandate? The framework is indeterminate without this specification.",
+      "resolution_mechanism": "Comparative analysis of statutory thresholds and judicial applications across jurisdictions; empirical study of how often thresholds are met vs. claimed.",
+      "impact": "A low threshold with weak evidence collapses the reading into public_health_primacy (de facto blanket mandates). A high threshold with strong evidence collapses it toward bodily_autonomy_primacy (mandates never triggered). The constraint's actual extractiveness depends entirely on this calibration.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The indeterminacy of the actuarial threshold that makes the constraint's operational extraction unknowable without specification."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal penalties, employment consequences) or internalized (professional ethics, social pressure on healthcare workers to comply)?",
+      "resolution_mechanism": "Post-mandate surveys of targeted subjects: if compliance persists after legal mandate lifts, internalized suppression is significant.",
+      "impact": "If internalized, effective suppression is higher than legal measures suggest — the constraint operates through professional identity as well as law. This would increase payer-seat extraction beyond the authored 0.45.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in targeted mandate enforcement."
+    },
+    {
+      "id": "victim_set_variability",
+      "question": "How does the victim set (targeted_mandate_subjects) change when the threshold definition shifts between epidemiological indicators (R0 vs. IFR vs. hospital capacity)?",
+      "resolution_mechanism": "Scenario modeling: apply different threshold definitions to the same epidemiological data and map the resulting mandated populations.",
+      "impact": "If victim set composition shifts dramatically (e.g., from healthcare workers to all essential workers), the constraint's extraction redistributes across populations — a structural instability in the payer seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sensitivity of the victim set to threshold definition — the declared structural delta."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading",
+      "vaccine_mandate_legitimacy__public_health_primacy_reading"
+    ],
+    "dual_formulation_note": "This constraint and its two siblings form the vaccine_mandate_legitimacy constraint family. Each reading instantiates a different constraint from the same kernel with different ε values, victim sets, and coordination/extraction balances. The risk_stratification_reading has moderate ε (0.45) because it limits mandates to threshold-meeting cases; bodily_autonomy_primacy_reading would have ε≈0 (no mandates = no extraction) but high suppression for those who want mandates; public_health_primacy_reading would have higher ε (broader mandates) but lower suppression per mandate (less judicial scrutiny)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "public_health_primacy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "proportionality_requirement_for_state_coercion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "actuarial_risk_threshold_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "proportionality_constitutionalism",
+    "drift_state": {
+      "moment": "post_covid_emergency_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

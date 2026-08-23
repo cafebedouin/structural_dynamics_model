@@ -1,0 +1,322 @@
+{
+  "header": {
+    "constraint_id": "latin_correctness__rupture_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "595a24b0-2db9-49c2-8ef3-a4297e0a3b6e"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.85,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Classical Latin Purity Standard (Rupture Reading)",
+    "topic_domain": "historical_linguistics/intellectual_history/philology",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "classical_philologists",
+      "critical_edition_editors",
+      "classics_departments"
+    ],
+    "victims": [
+      "medieval_latin_scholars",
+      "vernacular_technical_domains",
+      "ecclesiastical_latin_practitioners"
+    ],
+    "vindicated_propositions": [
+      "classical_latin_purity_doctrine",
+      "textual_reconstruction_necessity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_frame",
+      "question": "Is the rupture_reading one framing of a contested kernel (latin_correctness) rather than an independent constraint?",
+      "resolution_mechanism": "Comparative analysis of sibling readings (continuity_reading, hybrid_reading) to determine whether they share a common kernel commitment or are structurally independent constraints.",
+      "impact": "If confirmed as a kernel reading, the constraint's ε and victim structure are reading-indexed; the engine must treat sibling readings as separate constraints linked by network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee frame: this constraint is a reading of the latin_correctness kernel."
+    },
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "Does the classical standard provide a genuine coordination function (stable text for scholarship) or is the coordination story a cover for extracting epistemic authority from medievalists?",
+      "resolution_mechanism": "Counterfactual: if medieval Latin were rehabilitated tomorrow, would classical scholarship lose its ability to coordinate on texts, or would it simply lose its gatekeeping power?",
+      "impact": "If coordination is genuine, the constraint is tangled_rope; if cover, it is snare. The engine's classification will reflect the authored metrics and structural data.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's coordination function is structurally real or a legitimating narrative."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of medieval Latin structural (academic hiring, editorial boards, funding) or internalized (medievalists accepting the 'corruption' label)?",
+      "resolution_mechanism": "Post-exit trajectory: if medievalists who leave classical departments still frame their work in terms of 'deviation from classical norm', suppression is partially internalized.",
+      "impact": "If internalized, effective suppression is higher than structural measures suggest; the constraint travels with the agent after formal exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the marginalization of medieval Latin."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.82,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The rupture_reading asserts that Classical Latin is a fixed textual standard recoverable only by reconstructing ancient sources, and that all medieval Latin usage constitutes corruption. This constraint operates through editorial norms, academic curricula, and publishing gatekeeping to delegitimize medieval Latin. It presents itself as a natural law of philology (a mountain) but is a constructed normative standard that extracts epistemic authority and institutional resources from medievalists and vernacular-adjacent domains. The constraint has intensified over the last two centuries as classical philology professionalized and medieval studies were marginalized.",
+    "key_agents": [
+      "classical_philologists: Primary agenda_setter (institutional/arbitrage) — defines and enforces the standard",
+      "critical_edition_editors: Primary beneficiary (organized/constrained) — their expertise is validated by the constraint",
+      "medieval_latin_scholars: Primary payer (moderate/identity_locked) — their work is delegitimized, exit requires identity rupture",
+      "vernacular_technical_domains: Payer (powerless/trapped) — forced to adopt anachronistic classical forms",
+      "ecclesiastical_latin_practitioners: Payer (organized/identity_locked) — living liturgical usage branded as corrupt",
+      "linguistic_historians: Observer (analytical/analytical) — sees the constraint as prescriptive imposition on natural language change"
+    ],
+    "logic_rationale": "High extractiveness (0.78) because the constraint redirects authority, positions, and funding from medievalists to classicists while providing a coordination function (stable classical texts) that could be achieved without delegitimizing medieval Latin. Suppression (0.82) is high because the constraint's persistence depends on active exclusion: editorial boards reject medieval forms, hiring committees privilege classical training, funding bodies follow the classical canon. Theater ratio (0.42) reflects that the purity performance (recitation contests, 'correctness' examinations) exceeds the functional need for a stable textual standard. Accessibility collapse (0.85) is high because once the standard is internalized, medieval forms are not merely alternative but 'wrong'. Resistance (0.55) is moderate: medievalists have created parallel institutions (Medieval Latin journals, conferences) but remain structurally marginalized.",
+    "directionality_logic": "Classical philologists and editors are structural beneficiaries (d near 0.0): they collect the rents of gatekeeping. Medieval Latin scholars are targets (d near 1.0): they pay through marginalization and must justify their object of study. Vernacular technical domains are trapped payers (d=1.0): they cannot exit because their source texts are medieval. Ecclesiastical practitioners are identity-locked payers: their liturgical identity fuses with medieval Latin, making exit existentially costly. Linguistic historians are analytical observers (d=0.5).",
+    "perspectival_gap": "From the agenda-setter seat, the constraint is a rope: it solves the coordination problem of textual stability. From the payer seats, it is a snare: the coordination story is cover for extracting authority. The engine computes this divergence from the structural data; the authored claimed_type (tangled_rope) reflects the generating model's assessment that both functions are real but extraction dominates.",
+    "mandatrophy_analysis": "The founding problem (textual instability of classical Latin) is largely solved — critical editions have stabilized the corpus. The constraint persists as a boundary-maintenance mechanism: it defines who is a 'real' Latinist and allocates prestige accordingly. This is mandatrophy: the mandate (provide a stable standard) has atrophied, but the constraint remains because it now serves to extract resources from medievalists. The classification as tangled_rope (not snare) prevents mislabeling the genuine coordination function as pure extraction, while the high extractiveness metrics prevent mislabeling the extraction as mere coordination.",
+    "kernel_context": "This constraint is the rupture_reading of the latin_correctness kernel. Sibling readings: continuity_reading (medieval Latin as legitimate organic continuation) and hybrid_reading (classical norms for literary domains, medieval forms legitimate for technical/practical domains). The rupture_reading forecloses both siblings: its core premise that medieval Latin is corruption logically contradicts continuity's premise of legitimate continuation and hybrid's premise of domain-specific legitimacy. The kernel's codification is fixed_text (the ancient corpus); authority grounds in lineage (transmission from antiquity); an interpretation layer (editorial practice) absorbs drift."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "latin_correctness__continuity_reading",
+      "latin_correctness__hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the latin_correctness kernel. The rupture_reading asserts medieval Latin is corruption; continuity_reading asserts organic continuation; hybrid_reading asserts domain-specific legitimacy. The three readings share the kernel (the Latin textual tradition) but instantiate different constraints with different ε, victim sets, and classifications. They are linked via network.affects_constraints to enable contamination analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "classical_philologists",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Define and enforce the classical Latin standard through editorial boards, hiring committees, curricula, and grant review. Their authority derives from controlling the canon; they benefit from the constraint by monopolizing the definition of 'correct' Latin and the resources that follow."
+    },
+    {
+      "name": "critical_edition_editors",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Produce critical editions adhering to the classical standard. Their specialized expertise is validated and remunerated because the constraint makes classical textual reconstruction the gold standard. Exit means leaving the field or accepting marginalization."
+    },
+    {
+      "name": "medieval_latin_scholars",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Study medieval Latin texts that the constraint declares corrupt. They must constantly justify their object of study, publish in separate venues, and compete for fewer positions. Their professional identity is fused with medieval Latin; exiting requires abandoning their research identity."
+    },
+    {
+      "name": "vernacular_technical_domains",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Scholars of medieval law, medicine, theology, and administration whose source texts are in medieval Latin. The constraint forces them to either adopt anachronistic classical forms (distorting their sources) or accept delegitimization. They have no institutional leverage to change the standard."
+    },
+    {
+      "name": "ecclesiastical_latin_practitioners",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The Catholic Church and other Christian traditions use medieval/ecclesiastical Latin as a living liturgical and administrative language. The rupture_reading brands their living usage as corrupt. Their identity is constituted through this usage; exit is not an option without schism."
+    },
+    {
+      "name": "linguistic_historians",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Study language change across the Latin continuum. They observe the constraint as a prescriptive imposition that contradicts the empirical reality of linguistic continuity. They neither collect rents nor pay them, but their work is marginalized by the constraint's dominance in classical departments."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a fixed textual standard for classical Latin, enabling consistent editing, translation, and teaching across generations and institutions.",
+    "transfer_function": "Moves epistemic authority, academic positions, publication venues, and funding from medieval Latin practitioners to classical philologists; delegitimizes medieval forms as 'corrupt' and redirects resources to classical reconstruction.",
+    "absent_voices": "Medieval Latin practitioners (especially in ecclesiastical and technical domains) who would argue for the legitimacy of their living tradition; vernacular scholars whose source texts are medieval and who are excluded from classical departments; students who would benefit from a unified Latin curriculum but are forced to choose between classical and medieval tracks.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint vanished overnight, medieval Latin would be rehabilitated as a legitimate stage of the language; editorial practices would incorporate medieval forms; academic structures would merge classical and medieval Latin positions; funding and publishing would redistribute. The entire field of Latin studies would reorganize.",
+    "founding_problem": "The need for a stable textual standard for classical Latin after the fragmentation of medieval textual traditions made authoritative texts unreliable.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Textual historians (e.g., Reynolds & Wilson, 'Scribes and Scholars') document that by the late 19th century critical editions had established stable texts for virtually all classical authors. The constraint persists not because textual instability remains a problem, but because it now functions as a boundary-maintenance mechanism that allocates prestige and resources. No corroborating source outside the classical philology beneficiary set attests that the founding problem is still live."
+  },
+  "gain_flow": "classical_philologists",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "latin_correctness"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "continuity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "medieval_latin_is_corrupt",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "classical_standard_requires_reconstruction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "ancient_classical_corpus",
+    "drift_state": {
+      "moment": "modern_philology",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "header": {
+    "constraint_id": "climate_mitigation_imperative__opportunity_cost_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "climate_mitigation_opp_cost",
+    "story_uid": "3c70317f-1e3b-4cf2-a7e8-33a2c1834595"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.45,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Opportunity Cost Imperative: Fastest Carbon Reduction Per Dollar Per Year",
+    "topic_domain": "energy_policy/climate_mitigation/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "renewable_energy_industry",
+      "near_term_emission_reducers",
+      "ratepayer_advocates"
+    ],
+    "victims": [
+      "nuclear_industry",
+      "nuclear_host_communities",
+      "baseload_reliability_advocates"
+    ],
+    "vindicated_propositions": [
+      "marginal_abatement_rate_optimization",
+      "deployment_speed_as_primary_metric"
+    ]
+  },
+  "interval": {
+    "start": 2010,
+    "end": 2030
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_frame",
+      "question": "Is the opportunity_cost_reading a distinct constraint from its sibling readings of the climate_mitigation_imperative kernel, or a parameter variation within a single constraint?",
+      "resolution_mechanism": "Apply the ε-invariance test: if measuring the constraint by carbon-per-dollar-per-year gives substantially different extractiveness/suppression than measuring by portfolio_reliability or system_decentralization, they are distinct constraints.",
+      "impact": "If distinct, each reading gets its own constraint story with independent ε and classification; if not, the kernel is a single constraint with observer-relative metrics.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three kernel readings are structurally distinct constraints per ε-invariance."
+    },
+    {
+      "id": "optimization_metric_dispute",
+      "question": "Is marginal carbon abatement per dollar per year the correct optimization metric for mitigation policy, or does it exclude value of firm capacity, grid stability, and long-term optionality?",
+      "resolution_mechanism": "Compare system-level integrated resource plans that internalize firm capacity value against levelized cost of energy + storage portfolios; observe whether opportunity_cost metric changes when full system costs are modeled.",
+      "impact": "If firm capacity value materially changes the optimal portfolio, the opportunity_cost_reading's metric is incomplete and its extractiveness on nuclear is partially artifactual; if not, the metric stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the opportunity cost metric captures full system value or excludes nuclear's reliability contribution."
+    },
+    {
+      "id": "nuclear_victim_status",
+      "question": "Is nuclear's exclusion from opportunity_cost-optimal portfolios extraction (victim) or efficient allocation (non-victim)?",
+      "resolution_mechanism": "Track capital flows: if nuclear projects are denied financing available to renewables with equal or lower carbon-per-dollar-per-year, that is extraction; if nuclear simply cannot meet the metric on its own terms, it is efficient allocation.",
+      "impact": "If extraction, the constraint is tangled_rope or snare with nuclear as victim; if efficient allocation, nuclear is not a victim and the constraint may be rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether nuclear's position in the constraint is victim (extraction) or non-competitive (efficient outcome)."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.45
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The opportunity_cost_reading instantiates the climate_mitigation_imperative kernel as a constraint that prioritizes deployment speed per dollar above all other metrics. It argues that nuclear's high capital intensity (typically $6-9/W) and long lead times (10-15 years) mean each dollar spent on nuclear avoids less carbon per year than the same dollar spent on wind, solar, and storage. This reading treats the mitigation problem as a rate optimization: maximize d(CO2_avoided)/d($)/dt. Nuclear enters the victim set because capital allocated to it is diverted from faster alternatives; renewables are beneficiaries because they capture the redirected capital. The constraint is actively enforced through policy mechanisms: green taxonomies excluding nuclear, financing rules favoring short-lead-time projects, and procurement targets keyed to annual deployment rates.",
+    "logic_rationale": "Extractiveness (0.65) reflects substantial capital diversion from nuclear to renewables — nuclear projects face higher cost of capital, exclusion from green bonds, and longer permitting; renewables receive production tax credits, streamlined permitting, and priority grid interconnection. Suppression (0.45) is moderate: nuclear is not banned but is structurally disadvantaged in policy frameworks that adopt the opportunity cost metric. Theater ratio (0.25) is low-moderate: the metric has genuine analytical grounding in integrated assessment models, but its elevation to primary policy criterion serves institutional interests (renewable industry, near-term political cycles). Accessibility collapse (0.48) reflects that nuclear remains technically available but economically non-viable under the metric. Resistance (0.52) captures nuclear industry lobbying, host community advocacy, and reliability-focused pushback.",
+    "directionality_logic": "Renewable industry and ratepayer advocates are structural beneficiaries (d ≈ 0.1-0.2): they receive capital flows, policy preference, and lower near-term rates. Nuclear industry and host communities are structural targets (d ≈ 0.8-0.9): they bear higher financing costs, exclusion from green finance, and community economic loss. Baseload reliability advocates are partial targets (d ≈ 0.6): their technical argument is acknowledged but subordinated to the rate metric. Policymakers are agenda_setters (d ≈ 0.3): they design the metric but face political pressure from both sides. Energy modelers are observers (d ≈ 0.5): they supply the analytical infrastructure but do not directly capture gains.",
+    "perspectival_gap": "From the renewable industry / near-term emission reducer seat, the constraint is genuine coordination (rope-like): it solves the collective action problem of maximizing mitigation rate. From the nuclear industry / host community seat, it is extraction (snare-like): a metric chosen to disadvantage their technology. From the policymaker seat, it is a tangled rope: the coordination function (maximizing carbon reduction rate) is real, but the metric choice extracts from nuclear to benefit renewables. The engine computes this divergence from the structural data.",
+    "mandatrophy_analysis": "The founding problem (urgent decarbonization) is live and escalating. The opportunity_cost_reading claims the metric remains optimal; portfolio_optimization_reading claims the problem has shifted to reliability; systems_transition_reading claims the problem was never just carbon. The constraint shows rising extractiveness over 2010-2030 as renewable costs fall and the metric's advantage over nuclear widens — this is not mandatrophy (the function is not atrophied) but metric entrenchment: the original coordination metric becomes more extractive as the technology landscape shifts.",
+    "kernel_context": "This constraint is the opportunity_cost_reading of the climate_mitigation_imperative kernel. Sibling readings: portfolio_optimization_reading (mitigation requires maximizing all low-carbon sources; nuclear necessary for reliable baseload) and systems_transition_reading (mitigation requires transforming energy systems toward decentralization and democratic control; nuclear perpetuates extractive centralization). This reading's structural delta: nuclear enters victim set; renewables are beneficiaries; the constraint's ε is measured in carbon-per-dollar-per-year."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_mitigation_imperative__portfolio_optimization_reading",
+      "climate_mitigation_imperative__systems_transition_reading",
+      "green_finance_taxonomy",
+      "renewable_portfolio_standards",
+      "nuclear_licensing_reform"
+    ],
+    "dual_formulation_note": "Part of the climate_mitigation_imperative constraint family (kernel decomposition per ε-invariance). This reading optimizes for deployment rate; portfolio_optimization_reading optimizes for portfolio reliability; systems_transition_reading optimizes for system architecture. The three readings have different ε, different victim/beneficiary sets, and different type classifications."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "renewable_energy_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receives the bulk of redirected mitigation capital: production tax credits, investment tax credits, green bond eligibility, streamlined permitting, and priority grid interconnection. Their business models align with the opportunity cost metric — short lead times, modular deployment, rapidly falling costs. Exit is mobile: they can deploy globally wherever policy favors the metric."
+    },
+    {
+      "name": "near_term_emission_reducers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Entities (utilities, corporates, municipalities) mandated to hit near-term emission targets. They benefit from the metric because it points to the fastest compliance path. They also pay indirectly when system costs rise from integration challenges (storage, transmission) that the metric does not fully capture. Exit is constrained by regulatory mandates."
+    },
+    {
+      "name": "ratepayer_advocates",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for lowest near-term electricity rates. The opportunity cost metric favors technologies with lowest LCOE and shortest deployment, which correlates with near-term rate impacts. They benefit from avoided nuclear cost overruns but may pay for integration costs later. Exit is constrained — captive ratepayers cannot choose their utility's resource mix."
+    },
+    {
+      "name": "nuclear_industry",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bears the extraction: higher cost of capital (green bond exclusion), longer permitting timelines, no production tax credit parity, and policy frameworks that treat nuclear as 'not additional' in clean energy standards. Their exit is constrained — massive sunk costs, site-specific licensing, and workforce specialization make pivoting difficult. They argue the metric ignores firm capacity value."
+    },
+    {
+      "name": "nuclear_host_communities",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Communities dependent on nuclear plants for tax base, high-wage employment, and local economy. When plants close or new builds are cancelled due to policy disadvantage, they lose revenue with no replacement. Exit is trapped — geographic immobility, specialized workforce, and loss of community identity. They are not consulted in the metric choice."
+    },
+    {
+      "name": "baseload_reliability_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Grid operators, reliability councils, and industrial consumers who value firm capacity. They pay when the metric drives portfolios toward variable renewables without adequate firm capacity, increasing blackout risk or requiring expensive overbuild/storage. Their exit is constrained — they must operate the grid that results from policy choices. They argue the metric is incomplete."
+    },
+    {
+      "name": "climate_policymakers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Design and enforce the opportunity cost metric through green taxonomies, clean energy standards, financing rules, and procurement targets. They justify it as maximizing mitigation per public dollar. They face pressure from both renewable and nuclear constituencies. Their exit is analytical — they can change the metric but face political cost."
+    },
+    {
+      "name": "energy_modelers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produce the integrated assessment models (IAMs) and system optimization models that underpin the opportunity cost metric. They supply the analytical infrastructure but do not directly capture gains. Their exit is analytical — they can change modeling assumptions but face peer review and institutional inertia. Some now model firm capacity value, challenging the metric."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Directs scarce mitigation capital to the technologies that avoid the most carbon per dollar per year, solving the collective action problem of maximizing near-term emission reduction rate across a fragmented global energy system.",
+    "transfer_function": "Moves capital (public subsidies, private finance, green bond proceeds, permitting priority, grid interconnection queue position) from nuclear projects (slow, capital-intensive) to wind, solar, and storage projects (fast, modular). The transfer is enacted through policy mechanisms that adopt carbon-per-dollar-per-year as the primary eligibility criterion.",
+    "absent_voices": "Nuclear host communities (trapped, local) and future generations who may face reliability shortfalls from variable-heavy portfolios (not yet born, no voice). Also excluded: Global South nations where nuclear may be the only firm low-carbon option but lack capital for renewable+storage overbuild — they are not in the room when the metric is set by OECD policymakers and modelers.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the opportunity cost metric vanished overnight, green taxonomies would likely include nuclear, financing would equalize, and nuclear new-build pipelines would expand. Capital would flow to both nuclear and renewables based on broader criteria (reliability, land use, lifecycle impacts). The renewable industry would lose its policy preference; nuclear communities would regain economic viability. The mitigation portfolio would rearrange toward technology neutrality.",
+    "founding_problem": "Post-2010 climate policy faced a perceived urgency gap: emissions were rising, renewable costs were falling rapidly, and nuclear new builds were consistently over budget and behind schedule. The opportunity cost metric emerged as a decision rule to maximize near-term carbon reduction given finite political capital and public funds.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "IPCC AR6 WGIII (2022) includes nuclear in most illustrative mitigation pathways but notes its deployment is below model projections. IEA (2023) reports nuclear construction starts at 20-year lows while renewable deployment accelerates. Nuclear industry (World Nuclear Association) attests the problem is not urgency but policy bias. Independent systems analysts (e.g., MIT Energy Initiative 'Future of Nuclear' 2018) corroborate that firm capacity value is underweighted in pure LCOE/rate metrics. No single outside arbiter has settled the dispute."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "climate_mitigation_imperative"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "portfolio_optimization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "systems_transition_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "carbon_per_dollar_per_year_optimization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "deployment_speed_trumps_firm_capacity_value",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "urgent_decarbonization_imperative",
+    "drift_state": {
+      "moment": "contemporary_energy_modeling_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

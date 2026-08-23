@@ -1,0 +1,343 @@
+{
+  "header": {
+    "constraint_id": "press_reformation_causation__mutual_shaping",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_press_reformation_causation__mutual_shaping",
+    "measurement_id_prefix": "press_reformation_mutual_shaping",
+    "story_uid": "e5c64dc1-d6af-4fca-b0c5-31814248a3de",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.55,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.7,
+    "claimed_type": "scaffold",
+    "human_readable": "Printing Press–Reformation Mutual Shaping Dynamic",
+    "topic_domain": "historical/technological/religious",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "protestant_reformers",
+      "vernacular_printers",
+      "literate_lay_publics"
+    ],
+    "victims": [
+      "catholic_church_authority",
+      "manuscript_scribes",
+      "censored_authors"
+    ]
+  },
+  "interval": {
+    "start": 1517,
+    "end": 1648
+  },
+  "stakeholders": [
+    {
+      "name": "protestant_reformers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Luther, Calvin, Zwingli and their networks used the press to bypass ecclesiastical gatekeepers, distributing vernacular Bibles and polemics at scale. They gained unprecedented reach for their theology but became dependent on printers' technical choices and commercial rhythms. Exit meant returning to manuscript circulation or oral preaching — possible but drastically reduced impact."
+    },
+    {
+      "name": "vernacular_printers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Printers in Wittenberg, Basel, Geneva, and Antwerp found a massive new market for Reformation texts. They profited from the surge in demand but faced censorship raids, confiscation of stock, and the need to navigate shifting political protections. Their exit options included moving to freer cities or switching to safer commercial printing — feasible but costly."
+    },
+    {
+      "name": "catholic_church_authority",
+      "role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "The Roman Curia, local bishops, and the Inquisition lost monopoly control over religious discourse. They responded with the Index Librorum Prohibitorum, pre-publication licensing, and the Council of Trent's doctrinal hardening. Their exit from the constraint would mean abandoning doctrinal unity claims — structurally impossible for the institution's self-conception."
+    },
+    {
+      "name": "literate_lay_publics",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Urban artisans, merchants, and minor nobility gained direct access to scripture and theological debate in their own languages. This enabled new forms of piety and political identity but also exposed them to persecution, confessional violence, and the burden of choosing between competing authorities. Exit meant conformity or exile."
+    },
+    {
+      "name": "manuscript_scribes",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Monastic and commercial scribes saw their livelihood collapse as printed books replaced hand-copied manuscripts. Some transitioned to proofreading or compositing in print shops; most were displaced without equivalent alternatives. Their structural position offered no organized resistance."
+    },
+    {
+      "name": "censored_authors",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Radical reformers (Anabaptists, Spiritualists), humanist critics of both sides, and heterodox thinkers found their works banned, burned, or published only anonymously abroad. The press that enabled mainstream reformers also enabled their suppression through centralized censorship apparatus. Exit meant silence, exile, or martyrdom."
+    },
+    {
+      "name": "political_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Princes and city councils (German electors, Swiss cantons, Scandinavian monarchs) exploited the press to legitimize state churches, seize church lands, and standardize administrative languages. They bore costs of religious war and social disruption but gained unprecedented tools for bureaucratic centralization and ideological control. Their exit options included switching confessions (cuius regio) or suppressing print entirely — both exercised in practice."
+    },
+    {
+      "name": "historical_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Modern historians (Eisenstein, Febvre & Martin, Pettegree, Rubin) analyze the co-evolution from archival evidence. They neither collect rents nor bear costs from the historical constraint but their interpretive frameworks shape how the mutual shaping thesis is received in contemporary discourse."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The press solved the coordination problem of synchronizing theological dissent across linguistic and political boundaries: reformers in Saxony, Switzerland, and the Low Countries could read each other's works, cite common authorities, and build a shared movement without ever meeting.",
+    "transfer_function": "The arrangement transferred interpretive authority from Latin-literate clergy to vernacular readers; transferred economic value from manuscript culture to print capitalism; transferred political legitimacy from universal church to territorial rulers who could claim to protect 'true religion' in their domains.",
+    "absent_voices": "Illiterate peasant majorities (80-90% of population) who experienced the Reformation through oral preaching and ritual change rather than reading; women excluded from university training and guild printing; non-European printing traditions (Ottoman, Chinese, Korean) that developed under entirely different constraints; Jewish communities subject to both Christian censorship and their own rabbinic print controls.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mutual shaping dynamic vanished — i.e., if the press had not enabled Reformation spread, or reformers had not driven press adaptation — the Reformation likely remains a local academic dispute; print culture develops as a humanist scholarly tool rather than a mass medium; the modern public sphere and nation-state vernaculars emerge differently or later.",
+    "founding_problem": "How to disseminate religious reform ideas beyond the local manuscript networks that ecclesiastical authorities could easily monitor and suppress, while simultaneously creating a sustainable economic basis for producing and distributing vernacular texts at scale.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Catholic historians (Jedin, Hubert) and secular historians (Febvre, Eisenstein) agree the founding problem — breaking the Church's information monopoly — was solved by the 1550s. The mutual shaping dynamic that solved it (press enabling reform, reform driving press innovation) ceased to be the primary driver once confessional boundaries hardened and state churches established their own print regimes."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_structure",
+      "question": "Is the mutual_shaping reading of press_reformation_causation a single constraint with stable ε, or does it conflate distinct constraints (press-as-enabler vs. reformers-as-drivers) that should be decomposed per ε-invariance?",
+      "resolution_mechanism": "Test whether ε for 'press enables Reformation spread' differs from ε for 'Reformation shapes press development' when measured from the same stakeholder seats. If they differ, decompose into two constraint stories linked via network.affects_constraints.",
+      "impact": "If decomposed, each sub-constraint gets its own classification (likely scaffold for press-as-enabler, tangled_rope for reformers-shaping-press). If unified, the single ε = 0.45 represents a genuine bidirectional system.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the mutual shaping label covers one ε-invariant constraint or two structurally distinct ones."
+    },
+    {
+      "id": "symmetry_of_causation",
+      "question": "Was the causation truly bidirectional and symmetrical, or did the press's material affordances (standardization, fixity, combinability) constrain reformers more than reformers constrained the press?",
+      "resolution_mechanism": "Compare the rate of press technology change (type design, distribution networks, business models) driven by Reformation demand vs. the rate of theological change constrained by print's material logic (e.g., need for authoritative editions, citation practices, vernacular standardization).",
+      "impact": "If asymmetrical (press constrained reformers more), the constraint leans toward technological_determinism structurally. If symmetrical, mutual_shaping holds as a distinct reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Directional balance of the bidirectional causation claim."
+    },
+    {
+      "id": "scaffold_sunset_naturalness",
+      "question": "Does the mutual shaping dynamic have a genuine sunset (end of Reformation era) or does it persist in transformed form (modern media–social movement co-evolution)?",
+      "resolution_mechanism": "Trace whether the structural relationship — new communication technology enables dissent, dissent shapes technology's development — recurs with pamphlets→newspapers→radio→internet. If recurrent, the 'scaffold' classification applies only to the historical instantiation, not the pattern.",
+      "impact": "If recurrent pattern, the constraint is a piton (degraded scaffold) or a new scaffold instance per era. If historically unique, has_sunset_clause: true is accurate for this constraint_id.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the scaffold sunset is historical contingency or structural necessity."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1517,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1530,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1555,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1580,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1618,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1648,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1517,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1530,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1555,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1580,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1618,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1648,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1517,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1530,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1555,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1580,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1618,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1648,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The printing press (c. 1450) and the Protestant Reformation (1517+) co-evolved in a bidirectional causal loop: the press's material affordances — standardization, fixity, combinability, and scalable reproduction — enabled reformers to bypass ecclesiastical censorship and synchronize dissent across Europe; simultaneously, reformers' urgent demand for vernacular Bibles, polemical pamphlets, and confessional literature drove printers to innovate in typography, distribution networks, and business models. This mutual shaping dynamic peaked during the Reformation era (1517–1648) and transformed as confessional boundaries hardened and state churches established licensed print regimes. The constraint is neither a Mountain (technology determining history) nor a pure Rope (voluntary coordination) but a Scaffold: an enabling structure with a historical sunset, whose coordination function (mass dissemination of reform ideas) was genuine but whose extraction function (confessional control, censorship, print monopoly rents) grew over time.",
+    "logic_rationale": "Extractiveness rises from 0.20 to 0.55 as confessional states monetize print monopolies and enforce censorship, then falls to 0.45 as the Peace of Westphalia stabilizes the system. Suppression peaks at 0.70 during the height of confessional warfare (1580s) when both sides deploy pre-publication licensing and the Index. Theater ratio remains low (0.10–0.30) because the press's coordination function (actual dissemination) was real throughout, not performative. Accessibility collapse at 0.50 reflects that manuscript culture and oral transmission persisted as alternatives but became marginal for authoritative texts. Resistance at 0.70 captures the Catholic Church's sustained counter-reformation, radical reformers' persistence, and political authorities' strategic switching.",
+    "directionality_logic": "Reformers and printers are structural beneficiaries (d ≈ 0.2–0.3): they gained reach, revenue, and institutional footholds. Catholic authority and manuscript scribes are targets (d ≈ 0.8–0.9): they lost monopoly control and livelihoods. Lay publics sit near symmetric (d ≈ 0.5): genuine access gain but also new burdens of choice and persecution. Political authorities are agenda-setters with arbitrage exit (d ≈ 0.15): they shaped the constraint to their advantage and could switch confessions. Censored authors are trapped victims (d ≈ 0.95). The engine computes per-seat χ from these structural positions.",
+    "perspectival_gap": "From the reformer's seat, the press is a Rope (voluntary coordination enabling their message). From the Catholic authority's seat, it is a Snare (extraction of doctrinal control via enforced censorship). From the printer's seat, it is a Tangled Rope (coordination of production/distribution with extraction via monopoly privileges). The engine computes this divergence; the claimed_type 'scaffold' represents the system-level historical phase, not any single seat's experience.",
+    "mandatrophy_analysis": "The founding problem (breaking the Church's information monopoly) was solved by the 1550s — the mutual shaping dynamic that solved it became a stable confessional print regime. The constraint persists in transformed shape (state-licensed print, censorship apparatus) but its original coordination function is complete. This is mandatrophy resolved: the scaffold served its transitional purpose and was replaced by successor constraints (confessional print monopolies, later public sphere emergence).",
+    "kernel_context": "This constraint instantiates the 'mutual_shaping' reading of the press_reformation_causation kernel. Sibling readings: 'technological_determinism' (press caused Reformation unidirectionally) and 'strategic_deployment' (reformers used neutral press as tool). This reading asserts bidirectional co-evolution with neither pole fully determining the other. The kernel is the historical relationship itself; readings are interpretive frameworks that instantiate different constraints with different ε values and stakeholder structures."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.03
+  },
+  "network": {
+    "affects_constraints": [
+      "press_reformation_causation__technological_determinism",
+      "press_reformation_causation__strategic_deployment",
+      "confessional_print_monopolies",
+      "vernacular_standardization"
+    ],
+    "dual_formulation_note": "The press_reformation_causation kernel decomposes into three readings: technological_determinism (press as Mountain-like driver), strategic_deployment (press as Rope-like tool), and mutual_shaping (this constraint, press as Scaffold with bidirectional causation). Each has distinct ε: technological_determinism ε ≈ 0.1 (low extraction, high naturalness claim), strategic_deployment ε ≈ 0.3 (moderate extraction, coordination-focused), mutual_shaping ε = 0.45 (bidirectional, historical sunset). They form a constraint family linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.5
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "technological_determinism",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "strategic_deployment",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bidirectional_causation_press_reformation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "press_as_scaffold_with_sunset",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "reformation_era_mutual_shaping",
+    "drift_state": {
+      "moment": "post_westphalia_print_regime",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

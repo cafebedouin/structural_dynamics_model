@@ -1,0 +1,329 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_scope__individual_right_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_second_amendment_scope__individual_right_reading",
+    "measurement_id_prefix": "sa_indiv",
+    "story_uid": "79a60d10-55cc-4f9b-ae5d-dd84c552c797"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.58,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment Individual Right Reading (Heller/Bruen Line)",
+    "topic_domain": "constitutional_law/rights_jurisprudence",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "individual_citizens",
+      "gun_rights_organizations"
+    ],
+    "victims": [
+      "state_regulatory_authority",
+      "public_safety_interests"
+    ],
+    "vindicated_propositions": [
+      "pre_existing_natural_right_to_arms",
+      "originalist_textualism",
+      "strict_scrutiny_for_fundamental_rights"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 230
+  },
+  "stakeholders": [
+    {
+      "name": "individual_citizens",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Gain constitutionally protected access to firearms for self-defense unconnected to militia service. Bear indirect costs through gun violence externalities and political polarization. Exit from the constraint's effects is constrained by national scope and identity attachment to gun ownership."
+    },
+    {
+      "name": "gun_rights_organizations",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Organize litigation, lobbying, and cultural advocacy to expand and defend the individual right reading. Collect membership dues, political influence, and cultural capital from the constraint's enforcement. Can shift strategy across jurisdictions but are structurally committed to this reading."
+    },
+    {
+      "name": "state_regulatory_authority",
+      "role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lose regulatory flexibility to enact gun safety measures (waiting periods, assault weapon bans, licensing regimes). Must justify any regulation under strict scrutiny or historical tradition test. Bear political costs of both regulating and failing to regulate. Cannot exit the constitutional framework."
+    },
+    {
+      "name": "public_safety_interests",
+      "role": "payer",
+      "agent": false,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the measurable costs of gun homicide, suicide, accidental shootings, and domestic violence lethality that correlate with firearm density. Have no institutional voice in constitutional interpretation; exit is impossible for victims of gun violence. The constraint's operation extracts safety from this group to subsidize the individual right."
+    },
+    {
+      "name": "federal_courts",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate the scope of the right through strict scrutiny and historical tradition tests (Heller, McDonald, Bruen, Rahimi). Set the enforcement trajectory by selecting which regulations survive. Their institutional legitimacy is partially bound to the constraint's coherence."
+    },
+    {
+      "name": "gun_control_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for regulations that the individual right reading structurally forecloses. Their preferred policy solutions (universal background checks, assault weapon bans) are ruled off the table by the constraint's current interpretation. Remain in the political conversation but are excluded from the constitutional conversation."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produce the historical, textual, and doctrinal arguments that feed judicial decision-making. Split between originalist, living constitutionalist, and critical approaches. Their work shapes the constraint's intellectual legitimacy but they hold no enforcement power."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a constitutional baseline for individual self-defense that preempts complete disarmament by the state, solving the coordination problem of credible commitment to individual protection against tyranny and crime.",
+    "transfer_function": "Transfers regulatory authority over firearms from state legislatures to individual right-holders, enforced by courts striking down regulations that fail strict scrutiny or the historical tradition test. The transfer moves political power and risk-allocation from collective governance to individual exercise.",
+    "absent_voices": "Victims of gun violence and their communities are structurally absent from the constitutional interpretation process; the Court's historical tradition test looks to founding-era laws (enacted by white male property holders) rather than contemporary impacted populations. Future generations who will live with the constraint's mortality externalities are also absent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the individual right reading vanished overnight, states would immediately enact comprehensive gun safety regimes (licensing, waiting periods, bans on certain weapons/classes), the political economy of gun manufacturing would shift, and firearm homicide/suicide rates would likely decline based on international and intranational evidence. The constitutional conversation would restructure around collective or civic right frameworks.",
+    "founding_problem": "The founding generation feared a standing army and disarmed populace would enable tyranny; the Second Amendment was designed to ensure the people could constitute a militia as a check on federal power, with individual arms possession as the necessary predicate.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Originalist scholars (e.g., Scalia in Heller, Amar, Volokh) attest the founding problem was individual arms for militia readiness; living constitutionalist scholars (e.g., Stevens dissent, Waldman, Cornell) and historians (e.g., Rakove, Cornell) attest the founding problem was collective militia preservation against federal overreach, not individual self-defense. No consensus exists outside the benefiting parties (gun rights advocates)."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 230,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 230,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 230,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story models the individual right reading of the Second Amendment as crystallized in District of Columbia v. Heller (2008) and expanded in New York State Rifle & Pistol Association v. Bruen (2022). The reading holds that the Second Amendment protects an individual right to possess firearms for self-defense unconnected to militia service, triggering strict scrutiny (Heller) and a historical tradition test (Bruen) for any regulation. The claimed type is tangled_rope: the constraint coordinates a genuine function (constitutional baseline against disarmament) while extracting regulatory authority from states and safety from the public. The engine will compute per-seat classifications from the structural data authored here.",
+    "logic_rationale": "Extractiveness (0.65) reflects the broad coverage (all individuals, all firearm types in common use) and the high bar for regulation (strict scrutiny/historical tradition). Suppression (0.58) captures judicial invalidation of democratically enacted safety laws. Theater ratio (0.28) acknowledges performative originalism — the historical tradition test is applied selectively (e.g., Bruen's treatment of colonial vs. Reconstruction-era laws). Accessibility collapse (0.52) is moderate: states retain some regulatory space (background checks, prohibitions on felons/mentally ill, sensitive places) but the constraint's logic pushes toward further collapse. Resistance (0.72) is high: state non-compliance, circuit splits, scholarly critique, and public opinion majorities for stronger regulation.",
+    "directionality_logic": "Individual citizens are beneficiaries (d ~0.2) but also payers through externalized violence costs. Gun rights organizations are pure beneficiaries (d ~0.1) with mobile exit. State regulatory authority is the primary payer (d ~0.9) — institutionally trapped, bears full enforcement cost. Public safety interests are trapped payers (d ~1.0) with zero exit. Courts are agenda_setters with analytical exit (d ~0.5). Gun control advocates are excluded — their exclusion is the constraint's enforcement mechanism. The directionality derivation from beneficiary/victim declarations plus exit options produces this gradient.",
+    "perspectival_gap": "From the individual_citizen seat, the constraint appears as a protective mountain (right against tyranny). From state_regulatory_authority, it appears as a snare (extraction of police power). From public_safety_interests, it appears as a snare with trapped exit. From federal_courts, it appears as a rope (coordination of constitutional doctrine) with rising theater. The engine computes these divergences from the single structural dataset — the authored claim does not adjudicate them.",
+    "mandatrophy_analysis": "The founding problem (tyranny prevention via armed populace) is contested as live vs. dead. If dead, the constraint persists as pure extraction (piton/snare). If live, it remains tangled_rope. The mandated function (militia readiness) has atrophied — no state uses unorganized militia for defense — but the constraint expanded rather than sunset. This is mandatrophy: the arrangement outlived its function and metastasized into a broader individual right. The founding_problem_status=contested and disappearance_verdict=world_rearranges together flag this as a capture/zombie candidate.",
+    "kernel_context": "This constraint is the individual_right_reading of the second_amendment_scope kernel. Sibling readings: collective_right_reading (Second Amendment protects state authority to maintain militias, not individual ownership) and civic_right_reading (Second Amendment protects individual right conditioned on civic militia participation). This reading forecloses the collective reading's core premise (state-only right) but coexists with the civic reading as a live alternative framework. The disagreement is located in the operative clause's subject ('the people') and the prefatory clause's operative force."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "Is this constraint one reading of the second_amendment_scope kernel, and does the kernel structure require that sibling readings be modeled as separate constraints rather than measurement variations?",
+      "resolution_mechanism": "Apply the ε-invariance test: if collective_right_reading and civic_right_reading yield structurally different ε, beneficiary/victim sets, and claimed_types, they are separate constraints. The BGS decomposition precedent applies.",
+      "impact": "If confirmed, the three readings form a constraint family linked by network.affects_constraints. The individual_right_reading's high ε is reading-indexed, not topic-indexed — the collective reading would author near-zero ε for the same referent.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment to kernel/reading decomposition per DP-001 ε-invariance principle."
+    },
+    {
+      "id": "historical_tradition_test_coherence",
+      "question": "Does the Bruen historical tradition test function as a genuine coordination mechanism (identifying legitimate regulations) or as an extraction mechanism (delegitimizing modern regulations by anchoring to founding-era exclusions)?",
+      "resolution_mechanism": "Empirical survey of post-Bruen lower court decisions: if regulations analogous to founding-era laws are upheld while novel regulations are struck down, the test coordinates; if even founding-era analogues are rejected or the test is applied asymmetrically, it extracts.",
+      "impact": "If extraction mechanism, the constraint's theater_ratio is understated and suppression is higher — the test is cover for judicial veto. If coordination mechanism, the constraint's claimed tangled_rope classification is descriptively accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the historical tradition test coordinates or extracts."
+    },
+    {
+      "id": "public_safety_externalities_measurement",
+      "question": "What is the causal magnitude of the individual right reading's contribution to firearm homicide, suicide, and domestic violence lethality rates, controlling for other factors?",
+      "resolution_mechanism": "Natural experiments from state-level variation post-Bruen, synthetic control studies comparing similar states with different regulatory regimes, and international comparison with comparable nations lacking individual right constitutional protections.",
+      "impact": "If causal magnitude is large, public_safety_interests extraction is severe and the constraint trends toward snare. If small, the extraction is modest and tangled_rope holds. This directly affects the victim set's weight in χ computation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Magnitude of safety externalities extracted from public_safety_interests."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of gun control advocacy structural (judicial invalidation, preemption) or internalized (chilling effect on legislators, Overton window shift)?",
+      "resolution_mechanism": "Track legislative proposal rates and enactment rates pre/post-Heller/Bruen in states with different political compositions. If proposal rates drop without judicial action, internalized suppression is present.",
+      "impact": "If internalized, effective suppression exceeds the structural measure — the constraint extracts compliance before enforcement. This would increase the constraint's classification severity for the state_regulatory_authority and gun_control_advocates seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression of regulatory alternatives."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "second_amendment_scope__collective_right_reading",
+      "second_amendment_scope__civic_right_reading",
+      "commerce_clause_firearms_regulation",
+      "fourteenth_amendment_incorporation"
+    ],
+    "dual_formulation_note": "This constraint decomposes the 'Second Amendment scope' natural-language concept into three structurally distinct readings per the ε-invariance principle. The individual_right_reading has substantially higher extractiveness (0.65) than the collective_right_reading would (near 0.05, as it empowers states) and the civic_right_reading (moderate ~0.35, as it conditions rights on service). All three share the fixed_text kernel_codification but diverge on authority_grounding and axioms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "collective_right_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "civic_right_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "pre_existing_natural_right_to_arms",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "strict_scrutiny_for_fundamental_rights",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "founding_era_individual_right_understanding",
+    "drift_state": {
+      "moment": "post_bruen_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "header": {
+    "constraint_id": "copyright_constitutional_mandate__judicial_ambiguity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_copyright_constitutional_mandate__judicial_ambiguity_reading",
+    "measurement_id_prefix": "ccm_jar",
+    "story_uid": "53851724-a997-4bcb-946e-85ed9b1e5d67"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Judicial Deference to Congressional Copyright Term Extensions (Rational Basis Review)",
+    "topic_domain": "constitutional_law/intellectual_property",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "congress",
+      "copyright_holder_corporations"
+    ],
+    "victims": [
+      "public_domain",
+      "constitutional_fixity"
+    ],
+    "vindicated_propositions": [
+      "legislative_supremacy_in_ip_policy",
+      "judicial_restraint_doctrine"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the copyright_constitutional_mandate kernel, or does it describe the kernel itself?",
+      "resolution_mechanism": "Compare structural predictions across the three declared readings (judicial_ambiguity, public_scaffold, corporate_enclosure). If each produces different ε, beneficiary/victim sets, and type classifications, they are distinct constraints linked by network.affects_constraints.",
+      "impact": "If not distinct, the kernel is being double-counted. If distinct, each reading gets its own story and the family structure is captured in network edges.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether judicial_ambiguity_reading is a structurally separable constraint from its sibling readings"
+    },
+    {
+      "id": "rational_basis_as_rubber_stamp",
+      "question": "Does rational basis review in copyright term cases function as genuine constraint on Congress or as a near-automatic upholding mechanism?",
+      "resolution_mechanism": "Empirical survey of post-Eldred term extension challenges: rate of invalidation, dissent frequency, and whether any extension has been struck down under rational basis.",
+      "impact": "If rubber-stamp, suppression is higher and the coordination function is largely performative — the constraint drifts toward snare. If genuine constraint, extraction stays lower and tangled_rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the deference standard has bite or is purely theatrical"
+    },
+    {
+      "id": "beneficiary_capture_of_deference_doctrine",
+      "question": "Does the judicial deference doctrine primarily serve congressional institutional interests, or has it been captured by corporate rights holders who lobby for extensions?",
+      "resolution_mechanism": "Legislative history analysis of CTEA 1998 and subsequent extension pressures: lobbying expenditures, campaign contributions, and whether Congress acts on its own initiative or at industry behest.",
+      "impact": "If captured, the true beneficiary shifts from congress to copyright_holder_corporations, altering directionality for the congressional seat and the constraint's classificatory profile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether congressional authority is the genuine beneficiary or a pass-through for corporate extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1976,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1998,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2003,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1976,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2003,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1976,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2003,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 1976,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the judicial_ambiguity_reading of the copyright_constitutional_mandate kernel: the doctrine that copyright term length falls within a zone of legislative discretion, with courts applying rational basis review to congressional extensions. The constraint is the deference standard itself — not the Copyright Clause text, not the extensions, but the judicial practice of treating 'limited times' as a legislative judgment call. From this reading's perspective, the constraint coordinates by giving Congress stable authority to calibrate copyright terms to changing economic conditions, while extracting by disabling the constitutional text's limiting function. The claimed type is tangled_rope because the deference doctrine solves a genuine coordination problem (legislative flexibility in IP policy) but asymmetrically extracts from the public domain and constitutional fixity by making 'limited times' judicially unenforceable. The engine will compute per-seat classifications from the structural data below.",
+    "key_agents": [
+      "Congress (institutional agenda_setter/beneficiary) — sets term lengths, collects institutional authority from deference",
+      "Copyright holder corporations (beneficiary) — lobby for and capture value from term extensions",
+      "Public domain / the public (payer/victim) — loses access to works that would have entered public domain",
+      "Constitutional fixity (victim, non-agent) — the 'limited times' constraint is rendered inoperable",
+      "Courts (agenda_setter/observer) — administer the deference doctrine, frame it as judicial restraint",
+      "Constitutional originalists/textualists (excluded) — would enforce 'limited times' as meaningful limit but lack institutional voice in precedent"
+    ],
+    "logic_rationale": "Extractiveness (0.42) is low-to-moderate: the deference doctrine doesn't directly extract value but enables the extraction cascade — each extension transfers public domain value to rights holders. Suppression (0.58) is moderate: courts actively suppress constitutional challenges by applying rational basis review, but the constraint doesn't use physical coercion. Theater ratio (0.48) is significant: the doctrine is framed as judicial restraint and democratic deference, but functions to insulate extensions from meaningful review. Accessibility collapse (0.62) is elevated: once rational basis is accepted, textualist/originalist alternatives that would enforce 'limited times' collapse. Resistance (0.52) is moderate: academic critique and dissenting opinions exist but haven't shifted the doctrinal equilibrium. The measurement series shows extraction, theater, and suppression all rising from 1976 (pre-CTEA) through Eldred (2003) to present, tracking the scaffold-to-enclosure transition the deference doctrine enables.",
+    "directionality_logic": "Congress sits near the beneficiary end (d ~ 0.15): it gains institutional authority and legislative flexibility without bearing the public domain costs. Copyright holder corporations are beneficiaries (d ~ 0.2): they capture extension value but don't administer the constraint. The public/public domain are payers (d ~ 0.85): they bear the full cost of delayed entry with no exit option — the constraint applies universally. Courts are near-symmetric (d ~ 0.5): they gain institutional legitimacy from deference framing but bear reputational costs when deference looks like abdication. Constitutional fixity is a non-agent victim — it bears the structural cost of being rendered inoperative. The directionality derivation from beneficiary/victim declarations plus exit options (public has no exit from copyright terms) produces this gradient.",
+    "perspectival_gap": "From the congressional/agenda-setter seat, the constraint is genuine coordination: legislative discretion adapts copyright to new technologies and markets. From the public/payer seat, the same structure is extraction: 'limited times' becomes 'whatever Congress says,' and the public domain shrinks. Courts experience the constraint as institutional role-maintenance — deference protects judicial legitimacy by avoiding policymaking, but Eldred dissents show the reputational cost. The engine computes these seat divergences from the structural data; the claimed type (tangled_rope) reflects the authoring seat's assessment that both coordination and extraction are structurally real.",
+    "mandatrophy_analysis": "The founding problem (legislative flexibility to calibrate copyright terms) remains live — technology and markets do change. But the arrangement has drifted: deference has become so deferential that 'limited times' imposes no discernible limit. The mandatrophy is not that the founding problem died, but that the solution (rational basis review) has metastasized into a permission structure for perpetual extension. The constraint persists because Congress benefits from unconstrained authority, courts avoid difficult line-drawing, and rights holders capture the value — no coalition has both incentive and power to reset the boundary.",
+    "kernel_context": "This constraint is the judicial_ambiguity_reading of the copyright_constitutional_mandate kernel. Sibling readings: public_scaffold_reading (copyright exists to enrich public domain; monopoly is temporary means to public-good end) and corporate_enclosure_reading (copyright is property right requiring maximal protection; 'limited times' means maximal extension short of explicit perpetuity). This reading instantiates the deference doctrine as the operational constraint: rational basis review makes 'limited times' a legislative judgment, not a judicial limit."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "copyright_constitutional_mandate__public_scaffold_reading",
+      "copyright_constitutional_mandate__corporate_enclosure_reading",
+      "copyright_term_extension_act_1998",
+      "eldred_v_ashcroft_precedent"
+    ],
+    "dual_formulation_note": "This story is one of three in the copyright_constitutional_mandate constraint family. The kernel is the Constitution's 'limited Times' clause (Article I, Section 8, Clause 8). The three readings decompose the kernel into structurally distinct constraints with different ε, beneficiary/victim sets, and classifications. judicial_ambiguity_reading = deference doctrine (tangled_rope, ε=0.42). public_scaffold_reading = the constitutional limit as operational constraint (rope/scaffold, ε≈0.1). corporate_enclosure_reading = the maximalist property claim (snare, ε≈0.75). They are linked by network.affects_constraints because the deference doctrine (this story) structurally enables the enclosure reading's project while suppressing the scaffold reading's enforcement."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "congress",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets copyright term lengths through legislation. Gains institutional authority and legislative flexibility from judicial deference — courts treat term choices as policy judgments Congress is entitled to make. Does not bear the cost of delayed public domain entry. Can adjust terms at will subject only to the near-toothless rational basis test. Exit is irrelevant — Congress is the constraint's author."
+    },
+    {
+      "name": "copyright_holder_corporations",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Major rights holders (Disney, Warner, Sony, etc.) lobby for term extensions and capture the economic value of delayed public domain entry. They benefit from the deference doctrine because it makes extensions legislatively easy and judicially safe. They have exit options — they can exploit works globally regardless of U.S. term length — but they invest heavily in maintaining the constraint because U.S. terms set global baselines through trade agreements."
+    },
+    {
+      "name": "public_domain_users",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Creators, educators, archivists, and the general public who would use works entering the public domain. Bear the full cost of each term extension: 20+ years of lost access per extension. Exit is constrained — they cannot opt out of copyright law, cannot practically lobby against extensions, and cannot access works until terms expire. The deference doctrine means their only recourse is political (electing different legislators), which has failed repeatedly."
+    },
+    {
+      "name": "constitutional_fixity",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The constitutional text 'for limited Times' as an operative constraint on legislative power. Bears the structural cost of being rendered judicially unenforceable — the clause exists but does no work. Has no exit, no voice, no power. Listed as non-agent payer because it is a structural victim, not a human actor."
+    },
+    {
+      "name": "courts",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administer the rational basis deference doctrine. Frame it as judicial restraint and democratic deference. Gain institutional legitimacy from avoiding policymaking but bear reputational costs when deference appears to abdicate the judicial duty to enforce constitutional limits (as in Eldred dissents). Exit is analytical — they could adopt a different standard (intermediate scrutiny, textualist enforcement) but stare decisis and institutional incentives discourage it."
+    },
+    {
+      "name": "constitutional_originalists",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Judges, scholars, and advocates who argue 'limited times' imposes a meaningful, judicially enforceable limit. Structurally excluded from the operative constraint because precedent (Eldred) binds lower courts and deters Supreme Court reconsideration. Would object that deference renders the constitutional text a nullity. Their exit is trapped — they must either work within the deference framework or dissent without effect."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides stable legislative authority to calibrate copyright terms to changing economic and technological conditions without judicial second-guessing of policy judgments.",
+    "transfer_function": "Moves the enforcement burden of 'limited times' from courts (who would have to define and enforce a limit) to Congress (which faces no effective judicial check), enabling value transfer from the public domain to rights holders through serial term extensions.",
+    "absent_voices": "The public domain itself — future creators, users, and audiences who would benefit from timely entry of works — are structurally absent. They cannot lobby, litigate, or vote on extensions that affect works not yet created. Constitutional text ('limited Times') is also absent as an operative voice; it is present as text but silenced as constraint.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If rational basis deference vanished overnight and courts applied meaningful scrutiny to 'limited times,' Congress would lose its unconstrained extension authority. Term extensions would require genuine justification tied to the constitutional purpose. The public domain would resume growing on schedule. Rights holders would lose the certainty of serial extensions. The copyright system would reorganize around a judicially enforced limit.",
+    "founding_problem": "Early copyright law faced uncertainty about whether courts would second-guess legislative term choices, creating instability for rights holders and disincentivizing investment. The deference doctrine emerged to give Congress clear authority to set terms without judicial interference.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Congress and rights holders attest the problem is live (changing markets require legislative flexibility). Public domain advocates, originalist scholars, and Eldred dissenters (Breyer, Stevens) attest the founding problem is substantially solved — legislative authority is settled — and the doctrine now serves as cover for enclosure. The corroboration from outside the beneficiary set (dissenting justices, academic critics) supports the shifted-function reading."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "copyright_constitutional_mandate"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "corporate_enclosure_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "public_scaffold_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "rational_basis_suffices_for_limited_times",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "legislative_discretion_in_ip_calibration",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "eldred_precedent_framework",
+    "drift_state": {
+      "moment": "post_golan_contemporary",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,388 @@
+{
+  "header": {
+    "constraint_id": "border_normative_status__sovereignty_primary",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_border_normative_status__sovereignty_primary",
+    "measurement_id_prefix": "border_sov_primary",
+    "story_uid": "adba6d1e-5020-43d6-9c3c-4e2d01fcae95"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.63,
+    "resistance": 0.54,
+    "claimed_type": "rope",
+    "human_readable": "Sovereignty-Primary Border Authority (Self-Determination Reading)",
+    "topic_domain": "political_philosophy/international_law/migration_studies",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "states",
+      "citizen_polities",
+      "territorial_communities"
+    ],
+    "victims": [
+      "excluded_migrants",
+      "asylum_seekers",
+      "stateless_persons",
+      "displaced_non_citizens"
+    ],
+    "vindicated_propositions": [
+      "state_sovereignty_doctrine",
+      "collective_self_determination_principle",
+      "territorial_integrity_norm"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Claim foundational authority to control borders as expression of popular sovereignty. Set admission criteria, enforce exclusion, and define the political community. Benefit from the legitimacy and control this authority provides. Can modify border policy through domestic law and international agreements; exit from the constraint would mean relinquishing sovereign control."
+    },
+    {
+      "name": "citizen_polities",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The constituted political community that exercises self-determination through border control. Gain collective autonomy, cultural continuity, and democratic self-governance from the ability to define membership. Bear costs of enforcement through taxation. Exit is constrained by nationality and territorial attachment; leaving the polity requires migration to another state."
+    },
+    {
+      "name": "territorial_communities",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Sub-state communities (regions, municipalities, indigenous groups) that benefit from the state's border authority as it protects their local way of life, resources, and political distinctiveness. Their situation varies: some gain protection, others experience border enforcement as disruptive to cross-border ties. Exit options are constrained by local rootedness."
+    },
+    {
+      "name": "excluded_migrants",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals denied entry or legal status by border enforcement. Bear the full cost of exclusion: denied life opportunities, family separation, exposure to danger in countries of origin, precarious existence in transit. Have no meaningful exit from the constraint — they cannot appeal to a higher authority that overrides state exclusion, and return to origin may be impossible or fatal. Their voice is structurally absent from the sovereign decision."
+    },
+    {
+      "name": "asylum_seekers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "A subset of excluded migrants with well-founded fear of persecution. International law nominally protects their right to seek asylum, but the sovereignty-primary reading treats this as a discretionary exception rather than a constraint on exclusion authority. They bear extreme costs: detention, refoulement, death. Exit options are near-zero; the constraint actively prevents their movement to safety."
+    },
+    {
+      "name": "stateless_persons",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals with no recognized nationality, excluded by all states. The sovereignty-primary reading treats statelessness as a gap between sovereign authorities rather than a failure of the system — each state's exclusive authority to define its membership leaves no positive obligation to admit the stateless. They bear permanent exclusion with no polity to claim them. Exit is structurally impossible."
+    },
+    {
+      "name": "displaced_non_citizens",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Long-term residents, guest workers, and their families who lack citizenship but have built lives within a territory. The sovereignty-primary reading treats their displacement (deportation, denial of status) as a legitimate exercise of exclusion authority — their ties are an externality. They bear severe costs but have slightly more exit options than the stateless (voluntary return, regularization campaigns). Their voices are excluded from the sovereign decision."
+    },
+    {
+      "name": "international_human_rights_bodies",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Treaty bodies, UN special procedures, regional courts that monitor state compliance with human rights obligations. They observe the constraint's operation, document its impact on excluded migrants, and issue findings — but lack enforcement power against sovereign primary claims. Their analytical seat sees the full structure: coordination for citizens, extraction from the excluded."
+    },
+    {
+      "name": "migrant_advocacy_networks",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Civil society organizations, legal aid networks, transnational advocacy groups that represent excluded migrants. They would object to the sovereignty-primary reading's legitimization of exclusion but are structurally excluded from the sovereign decision-making arena. Their influence operates through shame, litigation, and public pressure — not through the constraint's internal logic."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of defining the political community that can exercise collective self-determination: who constitutes the 'self' that determines. Border authority provides a clear, enforceable boundary between members and non-members, enabling democratic governance, resource allocation, and cultural continuity within a defined territory.",
+    "transfer_function": "Moves the power to decide membership and the benefits of political inclusion (rights, protections, resources, voice) from a universal human pool to a bounded citizenry. The cost — exclusion, denial of entry, precarity — is transferred to non-members, particularly those seeking admission. The transfer is enforced by state coercion at borders and through internal immigration control.",
+    "absent_voices": "Excluded migrants, asylum seekers, stateless persons, and displaced non-citizens are structurally absent from the sovereign decision that defines them as outsiders. They have no vote, no standing in the constituent power, no access to the deliberative process that draws the boundary. International human rights bodies and migrant advocacy networks speak for them but are excluded from the authoritative interpretation of the constraint.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the sovereignty-primary border norm vanished overnight, the global migration regime would fundamentally reorganize: states would lose their foundational claim to exclude, opening pathways for universal freedom of movement claims; the citizen/non-citizen distinction would lose its normative anchor; international law would shift from state-centric to person-centric; the political architecture of the last 350 years would require reconstruction.",
+    "founding_problem": "The Westphalian order's founding problem: how to end religious war and establish political order in a fragmented Europe. The solution was territorial sovereignty — each prince determines the religion (later, the political constitution) of his territory, with borders as the line where his authority becomes exclusive. Collective self-determination later inherited this structure: the 'people' replaces the prince, but the border remains the instrument of their self-rule.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The sovereignty-primary reading's genealogy is attested by state practice, diplomatic history, and international legal doctrine (all within the beneficiary set). Critics from outside — postcolonial scholars, migration theorists, human rights lawyers — argue the founding problem was never 'how to enable self-determination' but 'how to entrench European state power,' and that the colonial history of borders (drawn without consent of bordered peoples) disproves the self-determination narrative. No corroboration from outside the beneficiary set for the claim that borders *as currently drawn and enforced* serve collective self-determination."
+  },
+  "interval": {
+    "start": 1648,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1648,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1789,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1885,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1945,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1648,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1789,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1885,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1945,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1648,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1789,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1885,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1945,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the sovereignty-primary reading of the contested kernel 'border_normative_status.' The reading asserts that territorial boundaries are legitimate instruments of collective self-determination and that states possess foundational authority to exclude non-members. It claims the constraint type 'rope' (pure coordination for self-determination) while the authored metrics reveal substantial extraction from excluded migrants and active enforcement — a structural profile the engine will compute as tangled_rope. The claim/metric divergence is deliberate: the reading's self-understanding vs. the structural reality it produces. The kernel has two other readings: freedom_primary (borders as rights violations) and qualified_sovereignty (borders as limited, proportional authority). This story authors only the sovereignty-primary reading per the ε-invariance principle.",
+    "logic_rationale": "Extractiveness (0.62) reflects that the border regime transfers life opportunities from excluded migrants to citizen polities — the standing arrangement under contest is assessed by this reading as having moderate extraction because the reading sees exclusion as legitimate exercise of authority, not extraction. But the structural data (victims array) shows the extraction is real. Suppression (0.71) is high because the constraint depends on active border enforcement, detention, deportation — without coercion, the boundary collapses. Theater ratio (0.28) is low-moderate: border enforcement has real coordination function (defining the polity) but growing performative elements (symbolic walls, deterrence theater). Accessibility collapse (0.63) reflects that the sovereignty-primary norm makes open borders conceptually incoherent within its framework. Resistance (0.54) is moderate: the reading faces sustained contestation from freedom_primary and qualified_sovereignty readings, but the institutional architecture of sovereignty remains dominant.",
+    "directionality_logic": "States and citizen_polities are structural beneficiaries (d near 0.0) — they collect the gains of self-determination, control the rule-setting, and have arbitrage-grade exit (can modify the constraint through law/diplomacy). Excluded_migrants, asylum_seekers, stateless_persons are full targets (d near 1.0) — trapped, powerless, bearing the full cost of exclusion with no voice. Territorial_communities sit near symmetric (d ~0.5) — they benefit from protection but bear local costs. Displaced_non_citizens are constrained targets (d ~0.75) — some exit via regularization but structurally excluded. International_human_rights_bodies and migrant_advocacy_networks are analytical/excluded observers (d ~0.25/0.5) — they see the structure but cannot change it from within.",
+    "perspectival_gap": "From the state/citizen seat, the constraint appears as rope: a genuine coordination mechanism that solves the 'who constitutes the people' problem. From the excluded migrant seat, it appears as snare: pure extraction enforced by violence, with the coordination story as cover. From the international body seat, it appears as tangled_rope: real coordination function (order, stability) married to asymmetric extraction (rights denial). The engine computes this divergence from the structural data; the authored claim (rope) does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (Westphalian order, ending religious war) is historically dead — the conditions that made territorial sovereignty the solution no longer obtain. But the arrangement persists and has been repurposed for democratic self-determination. The status is 'contested' because beneficiaries (states) claim the problem is live (self-determination requires borders) while excluded parties and external critics argue the mandate has atrophied into a mechanism for hoarding privilege. The classification prevents mislabeling by surfacing the victim set: if this were pure coordination, there would be no structurally excluded class bearing costs without voice. The presence of victims with trapped exit makes it at minimum tangled_rope, not rope.",
+    "kernel_context": "This constraint is the sovereignty_primary reading of the kernel 'border_normative_status.' The kernel is the question: what normative status do territorial borders have? The sovereignty_primary reading answers: borders are legitimate instruments of collective self-determination; states have foundational authority to exclude. Sibling readings: freedom_primary (borders impermissibly restrict fundamental right to movement; exclusion requires extraordinary justification) and qualified_sovereignty (states retain border authority but must exercise it proportionately to legitimate interests and consistently with human rights). This reading coexists with both in global discourse but forecloses freedom_primary's core premise within any single framework that takes state authority as foundational. It influences qualified_sovereignty by setting the baseline from which qualifications are negotiated."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the sovereignty_primary reading a distinct constraint from the kernel 'border_normative_status,' or does it represent the kernel itself?",
+      "resolution_mechanism": "Structural decomposition test: if freedom_primary and qualified_sovereignty produce different ε values, different victim sets, and different enforcement logics when applied to the same referent (the standing border regime), then the kernel is a label covering multiple constraints. The ε-invariance principle requires separate stories.",
+      "impact": "If the kernel is one constraint with observer-dependent classification, the engine's per-seat computation would handle the divergence. If it decomposes into three constraints (as authored here), each gets its own ε, stakeholders, and type — and they are linked via network.affects_constraints. This story assumes decomposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel label covers one constraint or a constraint family."
+    },
+    {
+      "id": "sovereignty_primary_vs_freedom_primary_foreclosure",
+      "question": "Does the sovereignty_primary reading logically foreclose the freedom_primary reading within a single commitment framework, or do they merely coexist as competing political positions?",
+      "resolution_mechanism": "Test: can a single legal-political framework simultaneously hold that (a) states have foundational authority to exclude non-members as an exercise of collective self-determination, AND (b) freedom of movement is a fundamental human right that borders impermissibly restrict? If no framework can hold both as foundational, the relation is 'forecloses.' If different parties hold each while the framework remains unsettled, 'coexists_with.'",
+      "impact": "If 'forecloses,' the engine treats the readings as mutually exclusive attractors — adopting one collapses the other. If 'coexists_with,' both remain live in the corpus with contamination edges. This story authors 'coexists_with' based on the empirical fact that international law contains both sovereignty and human rights commitments in unresolved tension.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between sovereignty_primary and freedom_primary readings."
+    },
+    {
+      "id": "extraction_legitimacy_gap",
+      "question": "From the sovereignty_primary reading's own lights, is the extraction borne by excluded migrants a legitimate cost of coordination (like taxation) or an illegitimate byproduct?",
+      "resolution_mechanism": "Internal doctrinal analysis: does the reading's normative framework contain a principle that limits extraction (e.g., proportionality, necessity, non-refoulement) or does it treat exclusion as categorically authorized? The qualified_sovereignty reading answers 'limited'; sovereignty_primary's answer determines whether its claimed_type 'rope' is internally coherent.",
+      "impact": "If the reading internally limits extraction, its claimed_type 'rope' may be sincere. If it treats exclusion as categorically authorized, the victim set is a structural feature, not a bug — making the claimed_type 'rope' a false summit. This omega routes the question to the engine's false_summit_mountain detection (adapted for rope claims).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the reading's own normative logic admits limits on extraction from the excluded."
+    },
+    {
+      "id": "colonial_border_legitimacy",
+      "question": "Does the sovereignty_primary reading's claim that borders serve collective self-determination apply to borders drawn by colonial powers without consent of the bordered peoples?",
+      "resolution_mechanism": "Historical-material analysis: if the reading's legitimacy claim depends on the border expressing the will of a self-determining people, then colonial borders (most of the Global South) lack that legitimacy. The reading must either (a) restrict its claim to 'legitimate borders only' (shrinking its scope), (b) argue colonial borders were ratified by post-independence peoples, or (c) accept that its claim covers illegitimate borders too (exposing extraction).",
+      "impact": "If the reading cannot account for colonial borders without admitting extraction, its claimed_type 'rope' is undermined globally. The victim set expands to include entire populations subjected to borders they never consented to. This is a major scope ambiguity for the constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the sovereignty-primary legitimacy claim survives contact with the colonial history of most existing borders."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "border_normative_status__freedom_primary",
+      "border_normative_status__qualified_sovereignty",
+      "refugee_protection_regime",
+      "citizenship_acquisition_rules",
+      "internal_migration_controls"
+    ],
+    "dual_formulation_note": "This constraint is one member of the border_normative_status kernel family. The three readings (sovereignty_primary, freedom_primary, qualified_sovereignty) decompose the colloquial 'border norm' into structurally distinct constraints with different ε, different victim sets, and different enforcement logics. They are linked via affects_constraints. The sovereignty_primary reading claims the coordination function (self-determination) and treats exclusion as its legitimate instrument. The freedom_primary reading claims the extraction function (rights violation) and treats coordination as cover. The qualified_sovereignty reading occupies the intermediate zone where both functions are acknowledged and balanced. The ε values differ substantially: sovereignty_primary ε ≈ 0.62 (this story), freedom_primary ε ≈ 0.85 (extraction-dominant), qualified_sovereignty ε ≈ 0.45 (balanced)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "qualified_sovereignty",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_exclusion_authority_foundational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "collective_self_determination_requires_border_control",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "westphalian_sovereignty",
+    "drift_state": {
+      "moment": "contemporary_human_rights_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "westphalian_sovereignty_kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

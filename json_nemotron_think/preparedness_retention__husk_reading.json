@@ -1,0 +1,330 @@
+{
+  "header": {
+    "constraint_id": "preparedness_retention__husk_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "5d6b88d5-8276-4103-9257-478fdb16fd9c"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.85,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.5,
+    "claimed_type": "snare",
+    "human_readable": "Preparedness as Memorial Performance (Husk Reading)",
+    "topic_domain": "disaster_preparedness/governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "disaster_management_agencies",
+      "political_leadership"
+    ],
+    "victims": [
+      "general_public",
+      "frontline_responders",
+      "vulnerable_populations"
+    ],
+    "vindicated_propositions": [
+      "institutional_legitimacy_through_visible_compliance"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "This constraint is the husk_reading of the preparedness_retention kernel; how do the sibling readings (competence_reading, hybrid_reading) structurally differ in their beneficiary/victim maps and extraction profiles?",
+      "resolution_mechanism": "Author separate constraint stories for competence_reading and hybrid_reading; compare their base_properties and stakeholder structures to this reading.",
+      "impact": "If competence_reading shows low extractiveness and high genuine coordination, the kernel is stratified (hybrid_reading correct). If husk_reading alone captures the dominant institutional pattern, the kernel is a contested cover story.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Commitment-system framing: this reading vs. sibling readings of the same kernel"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of genuine competence-building structural (budget rules, mandate design) or internalized (frontline responders believe drills equal competence)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if responders who leave the system still treat ritual as competence, internalized component is high.",
+      "impact": "If internalized, effective suppression is higher than structural measure; the constraint persists even without active enforcement because the targets carry the suppression with them.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in interpersonal/institutional constraints"
+    },
+    {
+      "id": "residual_coordination_function",
+      "question": "Do the rituals retain any genuine coordination value (e.g., minimal familiarity with procedures) or is the coordination story pure cover?",
+      "resolution_mechanism": "Natural experiment: compare outcomes in jurisdictions that replaced ritual drills with competence-based training vs. those that kept rituals.",
+      "impact": "If residual coordination exists, the constraint is tangled_rope not snare; if zero, snare classification is robust.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint has any genuine coordination function beneath the ceremonial layer"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.8
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Disaster preparedness systems in many jurisdictions have evolved into memorial performances: mandated drills, inspections, and compliance paperwork create the appearance of readiness while the tacit skills, equipment maintenance, and organizational memory needed for actual response atrophy. Resources flow to visible compliance (auditable drills, certified checklists) rather than to the costly, invisible work of retaining live competence (scenario-based training, equipment rotation, experienced personnel retention). The constraint is the system of mandated preparedness rituals; the husk reading claims this system is a snare — extraction of legitimacy and budgets under a coordination cover — with victims being the public and responders who face disasters without real capacity.",
+    "key_agents": [
+      "disaster_management_agencies: Primary agenda_setter and beneficiary (institutional legitimacy) — institutional/identity_locked",
+      "political_leadership: Beneficiary (cheap visibility) — institutional/mobile",
+      "general_public: Primary victim (payer) — powerless/trapped",
+      "frontline_responders: Victim (payer) — moderate/constrained",
+      "vulnerable_populations: Victim (payer) — powerless/trapped",
+      "independent_experts: Observer — analytical/analytical",
+      "alternative_training_providers: Excluded — moderate/constrained"
+    ],
+    "logic_rationale": "Extractiveness is high (0.75) because budgets and personnel time are captured by ritual compliance rather than competence-building. Suppression is high (0.8) because mandates and funding rules actively suppress alternative training models. Theater ratio is very high (0.85) — the constraint's visible activity is almost entirely performative. Accessibility collapse (0.65) reflects that once the ritual framework is understood, alternatives (competence-based training) are structurally inaccessible due to locked resource flows. Resistance (0.5) is moderate: frontline responders and experts critique the system but lack leverage to change mandates. The claimed type is snare: the coordination story (preparedness) is cover for extraction of legitimacy and resources.",
+    "perspectival_gap": "From the agency seat, the constraint feels like coordination (they run drills, produce reports, satisfy audits). From the public/responder seats, the same structure operates as extraction: their taxes and labor fund rituals that do not protect them. The engine computes this divergence from the structural data: agenda_setter/beneficiary seats get low directionality (subsidy), payer seats get high directionality (extraction).",
+    "directionality_logic": "Disaster management agencies and political leadership are beneficiaries: they collect legitimacy and budget authority (d near 0.0). General public, frontline responders, and vulnerable populations are payers: they bear the cost of failed response when disasters strike (d near 1.0). Frontline responders have constrained exit (cannot easily leave profession), making their effective extraction higher. Vulnerable populations are trapped (no jurisdictional exit). Alternative training providers are excluded (their coordination function would compete with the ritual).",
+    "mandatrophy_analysis": "The founding problem (post-catastrophe readiness) is dead: the original catastrophe is historical, and the current rituals do not maintain the competence they were built to ensure. The arrangement persists because it solves a different problem: institutional legitimacy and budget protection. This is mandatrophy — the mandate has outlived its function but the constraint remains. The classification as snare (not rope or tangled_rope) prevents mislabeling the coordination cover as genuine function.",
+    "kernel_context": "This constraint is the husk_reading of the preparedness_retention kernel. The sibling readings are competence_reading (preparedness as live exercised knowledge) and hybrid_reading (stratified: technical competence in specialized institutions, ceremonial memory elsewhere). This reading claims the dominant institutional pattern is memorial performance; the competence_reading claims drills preserve competence; the hybrid_reading claims a split. The three readings share the same referent (the preparedness system) but instantiate different constraints with different ε and beneficiary/victim structures."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "emergency_response_capacity",
+      "public_trust_in_institutions"
+    ],
+    "dual_formulation_note": "This is the husk_reading of the preparedness_retention kernel. The competence_reading and hybrid_reading are sibling constraints. The kernel decomposes because the label 'preparedness' conflates a genuine coordination function (specialized institutions) with a ceremonial extraction layer (broad societal drills). Each reading authors its own ε and stakeholder map."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "disaster_management_agencies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "They mandate and conduct drills and inspections to demonstrate preparedness, but allocate resources to visible compliance rather than deep skill retention. Their legitimacy and budget authority depend on the appearance of preparedness; their institutional identity is fused with the ritual framework."
+    },
+    {
+      "name": "political_leadership",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "They benefit from the appearance of preparedness without investing in costly long-term competence. Drills provide photo opportunities and audit trails; real competence requires sustained funding with no immediate visibility. They can move on before disasters expose the gap."
+    },
+    {
+      "name": "general_public",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "They pay taxes for preparedness but receive only ritualistic drills. When disaster strikes, the lack of live competence costs lives and livelihoods. They cannot exit the jurisdiction and have no voice in preparedness priorities."
+    },
+    {
+      "name": "frontline_responders",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "They participate in drills that don't build real competence, and when real events occur, they lack the tacit skills needed. They can change jobs but at high personal cost; many internalize the ritual as competence, making suppression partly internalized."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "They are disproportionately harmed when response capacity fails (e.g., evacuation plans that exist only on paper). They have no voice in preparedness priorities and no exit options."
+    },
+    {
+      "name": "independent_experts",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "They observe the gap between ritual and competence through after-action reviews and comparative studies, but are excluded from decision-making. Their analyses are cited in reports but do not shift resource allocation."
+    },
+    {
+      "name": "alternative_training_providers",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "They could provide competence-based, scenario-driven training but are excluded by the compliance framework that rewards checkbox drills. Their exclusion is structural: the mandate specifies ritual forms, not competence outcomes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The arrangement claims to coordinate societal readiness for disasters through standardized drills and inspections.",
+    "transfer_function": "Resources (funding, time, attention) are transferred from actual competence-building (training, equipment, maintenance) to visible compliance activities (drills, paperwork, inspections), benefiting institutional legitimacy at the expense of response capacity.",
+    "absent_voices": "Vulnerable populations and frontline responders who would demand real competence over ritual are structurally excluded; alternative training providers who could offer competence-based approaches are kept out by the compliance framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the memorial performance disappeared, disaster management agencies would lose their primary legitimacy signal, political leadership would lose a cheap visibility tool, and the public would initially be less 'drilled' but resources could be redirected to actual training — the system would reorganize around genuine competence or collapse.",
+    "founding_problem": "The arrangement was built to ensure societal readiness for disasters after a catastrophic event revealed unpreparedness.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Independent disaster studies (e.g., post-event investigations like the 2005 Hurricane Katrina reviews, 2011 Fukushima reports) attest that drill compliance does not correlate with response effectiveness; the agencies themselves acknowledge 'drill fatigue' but maintain the rituals for accountability."
+  },
+  "gain_flow": "disaster_management_agencies",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "preparedness_is_ceremonial_not_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "institutional_legitimacy_requires_visible_compliance",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_catastrophe_preparedness_mandate",
+    "drift_state": {
+      "moment": "contemporary_audit_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "header": {
+    "constraint_id": "doomsday_clock_metric__objective_index_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_doomsday_clock_metric__objective_index_reading",
+    "measurement_id_prefix": "dcm_oir",
+    "story_uid": "f7ebc855-49e1-4c73-9036-02121a7cc3f0"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.75,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Doomsday Clock as Objective Risk Index (Expert Synthesis Reading)",
+    "topic_domain": "science_communication/normative_epistemology/risk_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "scientific_expert_community",
+      "bulletin_atomic_scientists"
+    ],
+    "victims": [
+      "democratic_public",
+      "policy_makers_excluded_from_interpretation"
+    ],
+    "vindicated_propositions": [
+      "expert_synthesis_authority",
+      "empirical_risk_quantification_possible",
+      "unified_existential_risk_metric_validity"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 77
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the Doomsday Clock a single constraint with measurement-dependent classification, or three structurally distinct constraints (readings) sharing a label?",
+      "resolution_mechanism": "Decompose the kernel into separate constraint stories per reading; if each yields stable ε and distinct beneficiary/victim structures across readings, the kernel is a label conflating multiple constraints.",
+      "impact": "If three constraints, each gets independent classification; the objective_index_reading would be assessed on its own extraction/suppression profile without averaging over performative or hybrid readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel label 'Doomsday Clock' covers one constraint or a constraint family."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of normative framing structural (institutional gatekeeping by the Bulletin's Science and Security Board) or internalized (public and policymakers accept expert monopoly as appropriate)?",
+      "resolution_mechanism": "Post-exclusion discourse analysis: if challenged normative framings reappear in alternative forums (UN policy processes, civil society reports), suppression is structural; if absent even in open forums, internalized component is significant.",
+      "impact": "If internalized, effective suppression exceeds the structural measure — the constraint travels with agents after formal exit from the Clock's discourse.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in expert monopoly on risk interpretation."
+    },
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "Is the expert synthesis function genuinely necessary for existential risk coordination (irreducible complexity), or does it serve as a cover for expert authority capture?",
+      "resolution_mechanism": "Counterfactual comparison: if a democratic deliberation process with expert input produced comparable risk rankings, the synthesis is not structurally necessary; if expert-only synthesis consistently outperforms, coordination function is genuine.",
+      "impact": "If coordination is genuine, the constraint is tangled_rope; if synthesis is unnecessary cover, it trends toward snare (extraction riding a vestigial coordination story).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the expert monopoly on Clock-setting is functionally necessary or extractive."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 77,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 77,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 77,
+      "value": 0.75
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Doomsday Clock, maintained by the Bulletin of the Atomic Scientists since 1947, is read in this constraint story as an objective index tracking measurable existential risk levels through expert synthesis of empirical indicators. This reading treats the Clock's minute-hand settings as the output of a scientific assessment process — aggregating nuclear, climate, biological, and AI risk indicators into a single authoritative metric. The reading claims the Clock solves a genuine coordination problem: providing a unified, credible risk signal that coordinates global policy attention across disparate threat domains. Structurally, however, the expert monopoly on interpretation extracts authority from democratic accountability: the Bulletin's Science and Security Board sets the Clock without formal accountability to affected publics or elected representatives, and the 'objective index' framing suppresses contestation over the normative choices embedded in risk synthesis (weighting, threshold selection, horizon definition). The constraint has intensified over time: as the Clock expanded from nuclear-only to multi-threat, the expert synthesis grew more complex and less transparent, while the performative maintenance of objectivity (theater) increased to defend the authority claim against rising contestation from the performative_tool_reading and hybrid_legitimacy_reading.",
+    "logic_rationale": "Base extractiveness (0.42) reflects the expert community's capture of interpretive authority over existential risk — a valuable resource in risk governance — while the coordination function (unified risk signal) remains real but partial. Suppression (0.75) is high because the 'objective index' framing actively marginalizes normative disagreement about risk valuation; alternatives like deliberative democratic risk assessment are excluded from the Clock's authoritative channel. Theater ratio (0.25) captures the growing gap between the claimed scientific objectivity and the actual normative judgments in multi-threat synthesis. Accessibility collapse (0.6) is moderate: alternative risk frameworks (IPCC, Global Risks Report, national assessments) exist but lack the Clock's symbolic focality. Resistance (0.4) reflects sustained contestation from the other two readings and from policy actors who reject expert monopoly. The temporal series shows extraction and suppression rising together as the Clock's scope expanded — a classic tangled_rope trajectory where coordination function atrophies relative to extraction.",
+    "perspectival_gap": "From the scientific_expert_community seat (beneficiary), the constraint appears as a rope: a necessary coordination mechanism that solves the problem of fragmented risk signals. From the democratic_public seat (payer), it appears as a snare: an expert monopoly that extracts interpretive authority while suppressing normative contestation. The bulletin_atomic_scientists seat (agenda_setter) experiences it as a scaffold under strain — the founding nuclear-signaling problem is largely solved, but the multi-threat expansion lacks a clear sunset. The engine will compute these per-seat divergences from the structural data.",
+    "directionality_logic": "The Bulletin's Science and Security Board (agenda_setter) and the broader scientific_expert_community (beneficiary) sit at the low-d end: they control the synthesis methodology, collect the authority rents, and face arbitrage-grade exit (they could leave the Bulletin but the institution persists). The democratic_public and policy_makers_excluded_from_interpretation (payers) sit at the high-d end: they bear the costs of excluded normative input and policy distortion, with trapped to constrained exit (they cannot easily exit the risk governance regime the Clock shapes). Rival_expert_groups (excluded) are structurally blocked from the synthesis process — their exclusion is the enforcement mechanism. Science_communication_scholars (observer) sit at analytical d=0.5.",
+    "mandatrophy_analysis": "The founding problem (nuclear danger signaling to policymakers/public) is contested: the original signaling function has partially succeeded (nuclear taboo established) but the Clock expanded to climate, bio, AI without a new mandate. The expert community benefits from the expanded scope (authority over broader risk domain), while the democratic public bears the cost of an unaccountable multi-threat index. The classification as tangled_rope (not snare) acknowledges the residual coordination value — the Clock still focuses attention — but the extraction/suppression profile shows the coordination function is no longer the primary driver of persistence. The mandate has atrophied; the constraint persists because the Bulletin extracts authority from maintaining it, and no actor has sufficient incentive to dismantle the focal point.",
+    "kernel_context": "This constraint is the objective_index_reading of the contested kernel 'doomsday_clock_metric'. The kernel is the Doomsday Clock as a stabilized commitment in existential risk governance. Three readings instantiate distinct constraints: (1) objective_index_reading (this story) — claims the Clock tracks measurable risk through expert synthesis; beneficiary = scientific authority, victim = democratic accountability. (2) performative_tool_reading — claims the Clock is strategically set to maximize policy impact/mobilization; beneficiary = Bulletin institutional visibility, victim = public trust (manipulated). (3) hybrid_legitimacy_reading — claims the Clock irreducibly entangles scientific judgment and normative stakes; beneficiary = the entangled expert-normative authority structure, victim = any pure-frame account. This reading (objective_index) forecloses the performative_tool_reading's core premise (strategic setting) within a single framework — if the Clock is objectively determined by empirical indicators, it cannot be strategically chosen for impact. It coexists_with the hybrid_legitimacy_reading — both remain live positions held by different epistemic communities (Bulletin leadership vs. science studies scholars). It influences the hybrid_legitimacy_reading by setting the empirical baseline that the hybrid reading then argues is normatively loaded."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.03
+  },
+  "network": {
+    "affects_constraints": [
+      "nuclear_risk_governance",
+      "climate_policy_framework",
+      "ai_governance",
+      "global_catastrophic_risk_prioritization"
+    ],
+    "dual_formulation_note": "This constraint (objective_index_reading) and its siblings (performative_tool_reading, hybrid_legitimacy_reading) form a constraint family decomposing the 'Doomsday Clock' label. Each has distinct ε, beneficiary/victim structure, and claimed_type. The objective_index_reading claims rope/tangled_rope with ε≈0.42; performative_tool_reading would claim snare with higher ε; hybrid_legitimacy_reading would claim tangled_rope with different beneficiary structure (entangled authority)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.7
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "bulletin_atomic_scientists",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The Bulletin's Science and Security Board (SASB) sets the Clock's minute-hand position through a closed expert deliberation process. They control the methodology, select the indicators, and authorize the annual statement. They justify the Clock as a scientific synthesis, collect institutional prestige and funding from its authority, and face minimal exit pressure — the Bulletin's brand is the Clock. Their situation is maintaining the Clock's relevance across expanding threat domains while defending the expert-monopoly framing against democratic and performative critiques."
+    },
+    {
+      "name": "scientific_expert_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The broader community of existential risk researchers (nuclear physicists, climate scientists, AI safety researchers, biosecurity experts) gains epistemic authority and policy access through the Clock's expert-synthesis framing. Their work is legitimated by inclusion in the Clock's indicator base; they can exit by publishing alternative assessments, but the Clock's focality makes their alternatives less visible. They benefit from the constraint's suppression of normative contestation — it validates their technical authority as sufficient for risk governance."
+    },
+    {
+      "name": "democratic_public",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Global publics bear the consequences of existential risk policy shaped by the Clock's authoritative signal, but have no formal role in the synthesis process. The 'objective index' framing treats risk valuation as a technical matter, excluding normative disagreements about acceptable risk levels, intergenerational equity, and distributional justice. Exit is trapped: the Clock's discourse shapes the Overton window for existential risk policy; opting out means accepting policy made on terms set by the expert monopoly. The extraction is the transfer of normative authority from democratic deliberation to expert synthesis."
+    },
+    {
+      "name": "policy_makers_excluded_from_interpretation",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "National governments and intergovernmental bodies (UN, IAEA, IPCC) consume the Clock as an authoritative input but have no seat at the setting table. They bear the cost of policy distortion when the Clock's expert synthesis misaligns with national risk assessments or democratic mandates. Their exit is constrained: they can commission parallel assessments (and do), but the Clock's media focality gives it disproportionate agenda-setting power. Some policy makers privately endorse the expert monopoly (reducing their own accountability), creating a secondary beneficiary dynamic."
+    },
+    {
+      "name": "rival_expert_groups",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Alternative expert bodies (e.g., IPCC for climate, WHO for bio, national academies) produce competing risk assessments but are structurally excluded from the Clock's synthesis. They would challenge the Bulletin's methodology, indicator selection, and weighting if admitted. Their exclusion is actively maintained: the SASB controls participation, and the 'objective index' framing delegitimizes alternative syntheses as 'politicized' or 'less rigorous.' They are the absent voices the constraint's suppression targets."
+    },
+    {
+      "name": "science_communication_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic researchers in science communication, science and technology studies, and risk governance analyze the Clock as a case study in expert authority, boundary work, and the politics of quantification. They neither collect nor pay; they document the structural dynamics this constraint story formalizes. Their analytical exit is absolute — they can study any framing."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a synthesized, authoritative indicator of existential risk level that coordinates global attention and policy response across diverse threat domains (nuclear, climate, biological, AI) — solving the problem of fragmented, domain-specific risk signals that fail to capture systemic interactions.",
+    "transfer_function": "Moves interpretive authority over existential risk assessment from democratic deliberation and multi-institutional processes to a closed expert synthesis conducted by the Bulletin's Science and Security Board; the Clock's setting transfers legitimacy to the Bulletin's judgment, concentrating agenda-setting power in a non-accountable body.",
+    "absent_voices": "Affected populations in the Global South (disproportionately exposed to climate and biological risks), future generations (bear long-horizon risks without representation), dissenting scientific voices who challenge the synthesis methodology (e.g., critics of nuclear risk quantification, AI timeline estimates), and civil society organizations advocating for participatory risk governance — all are structurally excluded from the SASB's closed process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Clock vanished overnight, existential risk governance would reorganize around competing authorities: the IPCC for climate, IAEA for nuclear, emerging AI governance bodies, and national security establishments. The focal point for multi-threat risk communication would fragment; media attention would diffuse; the Bulletin would lose its primary platform. The rearrangement would be contested — some actors would push for a replacement focal point, others would welcome the fragmentation as democratic opening.",
+    "founding_problem": "Post-WWII nuclear scientists (Rabinovich, Langsdorf, Szilard) needed a visible, authoritative signal to communicate nuclear danger to policymakers and the public when technical details were inaccessible and governmental secrecy blocked democratic debate. The Clock was built as a 'wake-up call' — a simple metaphor translating expert judgment into public urgency.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Original Bulletin founders attested to the signaling purpose in historical records (Rabinovich 1984, Langsdorf 1969). Contemporary critics: Seth Baum (Global Catastrophic Risk Institute) argues the nuclear signaling problem is substantially solved and the Clock now serves expert legitimacy; Sharon Squassoni (former SASB chair) attests the problem has evolved to multi-threat complexity requiring the current form; science studies scholars (Jasanoff, Wynne) document the Clock's role in constructing expert authority rather than merely signaling danger."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "performative_tool_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_legitimacy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "existential_risk_empirically_quantifiable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "expert_synthesis_sufficient_for_legitimate_risk_governance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "objective_risk_index_ideal",
+    "drift_state": {
+      "moment": "contemporary_multi_threat_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

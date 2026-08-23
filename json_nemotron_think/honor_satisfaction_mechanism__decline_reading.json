@@ -1,0 +1,348 @@
+{
+  "header": {
+    "constraint_id": "honor_satisfaction_mechanism__decline_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_honor_satisfaction_mechanism__decline_reading",
+    "measurement_id_prefix": "hsm_decline",
+    "story_uid": "e44f91a5-1313-48d0-9ada-7c81e702c239"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.55,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Honor Satisfaction Mechanism — Decline Reading",
+    "topic_domain": "historical_sociology/legal_history/normative_systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "aristocratic_elites",
+      "honor_claimants",
+      "military_officer_corps"
+    ],
+    "victims": [
+      "duel_participants",
+      "seconds",
+      "families_of_duelists"
+    ],
+    "vindicated_propositions": [
+      "honor_as_social_capital",
+      "violence_as_dispute_resolution",
+      "personal_risk_as_honest_signal"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "aristocratic_elites",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Authored and maintained the codes duello; used dueling to police membership in the honor group and settle disputes without state interference. Their status depended on willingness to duel, but they controlled the rules and could often avoid fighting through apologies or seconds' negotiations. Exit meant losing caste — they were identity_locked to the practice until alternative status markers (wealth, state service) matured."
+    },
+    {
+      "name": "honor_claimants",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Men who invoked the code to demand satisfaction for insults. They gained leverage — the threat of a duel forced apologies or public submissions without shots fired. But they were also bound: refusing a legitimate challenge meant social death. As courts offered defamation remedies, their exit options improved from constrained toward mobile."
+    },
+    {
+      "name": "military_officer_corps",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Officers were the most frequent duelists; the code was enforced by regimental honor councils. Duels demonstrated courage (career currency) but killed promising officers. The corps benefited from the cohesion the ritual produced but paid in blood. As state law criminalized dueling, they became payers — caught between regimental honor and military law."
+    },
+    {
+      "name": "duel_participants",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The principals who faced pistols or swords. Once challenged, refusal meant permanent dishonor; acceptance meant ~15-25% mortality per encounter (higher for swords). No exit once the process started — seconds managed the mechanics, but the participant's body bore the cost. Declining frequency meant fewer faced this trap over time."
+    },
+    {
+      "name": "seconds",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Friends or peers tasked with arranging terms, loading pistols, and sometimes fighting in place of the principal. They risked prosecution as accessories and carried moral weight for enabling death. Their role was identity-defining — to refuse was to betray friendship and honor. As dueling faded, the role atrophied but the identity binder persisted in memoir literature."
+    },
+    {
+      "name": "families_of_duelists",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Widows, children, parents who bore the economic and social costs of a death or disability. Had no voice in the challenge, no standing in the code, no exit from the consequences. Their victimization was structural — the mechanism externalized its costs onto kin who could not participate in the honor economy."
+    },
+    {
+      "name": "legal_authorities",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts and legislatures that criminalized dueling (e.g., 1819 UK statute, 1839 French law, Prussian 1850s edicts). Initially they suppressed the practice; later they provided the substitute mechanism (defamation law, libel courts) that made dueling obsolete. Their role shifted from external suppressor to internal替代 — they did not just ban, they built the exit ramp."
+    },
+    {
+      "name": "bourgeois_professionals",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Lawyers, doctors, merchants, journalists who needed reputation but were barred from the aristocratic code or chose not to enter it. They developed parallel mechanisms — press duels, literary feuds, professional censure — and lobbied for legal defamation remedies. Their exclusion was not passive; they actively built the alternative that displaced the old mechanism."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Resolved honor disputes among armed elites through a ritualized, bounded violence that prevented unbounded blood feuds and provided a clear status hierarchy — who would risk death, who would apologize, who would negotiate. The code duello supplied procedural legitimacy: seconds, witnesses, agreed weapons, surgeons — making the violence legible and containable.",
+    "transfer_function": "Moved the risk of death and injury from the honor claimant (who initiated the challenge) to the duel participant (who bore the physical cost). Moved social honor — the willingness to fight became the honest signal of status — from those who could avoid the field to those who could not. Transferred dispute resolution authority from kinship/feud logic to a pseudo-legal ritual with its own jurisprudence (the code).",
+    "absent_voices": "Women (wives, mothers, sisters) who bore widowhood and destitution but had no standing to object; commoners who were sometimes killed as bystanders or forced into service as seconds; religious authorities (Catholic and Protestant) who condemned dueling as suicide/murder but were overruled by military and aristocratic power; early jurists who argued for state monopoly on violence but lacked enforcement capacity until the 19th century.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "When dueling vanished (last fatal duel in France 1967, Germany 1850s, UK 1840s, US 1850s), the honor disputes did not disappear — they migrated to courts (libel, defamation), press (public shaming), professional bodies (censure), and parliamentary privilege. The world rearranged: the coordination function (bounded dispute resolution) was absorbed by legal systems; the extraction function (risk of death) was eliminated; the status signal (willingness to fight) was replaced by institutional credentials and public reputation.",
+    "founding_problem": "How to resolve status disputes among armed, proud men who recognized no superior judge — without triggering endless private warfare that destroyed the social order the elites depended on. The code duello was the answer: a self-administered, ritualized violence that substituted one death for a hundred.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Norbert Elias (The Civilizing Process) documents the state monopoly on violence displacing private violence; Stephen Banks (A Polite Exchange of Bullets) shows legal defamation replacing dueling in England; Robert Nye (Masculinity and Male Codes of Honor) demonstrates the founding problem (private violence among elites) was solved by state law and bourgeois reputation markets — corroborated by historians outside the aristocratic beneficiary class."
+  },
+  "interval": {
+    "start": 1700,
+    "end": 1900
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1700,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1740,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1780,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1820,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1860,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1700,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1740,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1780,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1820,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1860,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1700,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1740,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1780,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1820,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1860,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The honor satisfaction mechanism — dueling as the institutionalized way gentlemen resolved status injuries — persisted from the early 18th century to the late 19th century at declining frequency until it became a fringe practice. This decline_reading treats the constraint as a single mechanism that weakened gradually: the same code duello operated throughout, but enforcement (social pressure to fight), participation rates, and lethal outcomes all dropped. Epsilon falls because fewer men were compelled to risk death, and the social cost of refusal declined as legal alternatives emerged. The mechanism did not become cognitively unthinkable (contraction_reading) nor fracture into distinct mechanisms (composite_reading) — it simply thinned out.",
+    "logic_rationale": "Base extractiveness starts high (0.78) because the mechanism extracted life and limb from participants who had no exit; it falls to 0.12 by 1900 as legal defamation and professional censure provided exits. Suppression mirrors this: social death for refusers was the enforcement engine, and its power waned as honor became decoupled from violence. Theater ratio rises from 0.18 to 0.85 — early duels were earnest (real risk, real resolution); late duels were often performative (deloping, negotiated apologies, bloodless 'satisfaction') maintaining the ritual after its function migrated to courts. Accessibility collapse is moderate (0.42) because alternatives (courts, press, apology) existed throughout but were imperfect substitutes for elite men. Resistance rises (0.58) as the mechanism lost legitimacy — more men refused, more authorities prosecuted, more publics condemned.",
+    "directionality_logic": "Aristocratic elites and honor claimants are structural beneficiaries (d ~ 0.15-0.25) — they controlled the code, gained status from willingness to fight, and could often avoid the field. Military officers sit near symmetric (d ~ 0.45) — they benefited from the cohesion but paid disproportionately in deaths. Duel participants, seconds, and families are targets (d ~ 0.85-0.95) — trapped or identity_locked, bearing mortality and ruin. Legal authorities shift from suppressor (d ~ 0.7 early) to agenda_setter of the replacement (d ~ 0.1 late) — their role transformation is the structural story. Bourgeois professionals are excluded but mobile (d ~ 0.3) — they built the exit ramp.",
+    "perspectival_gap": "The engine should compute sharp seat divergence: from the aristocrat's seat this was a rope (coordination with manageable cost); from the participant's seat a snare (extraction with no exit); from the officer's seat a tangled rope (cohesion bought with blood); from the legal authority's seat a scaffold (temporary support for order until law matured). The claim (tangled_rope) reflects the system-level view — genuine coordination + asymmetric extraction + active enforcement — but the per-seat types will differ.",
+    "mandatrophy_analysis": "The founding problem (private violence among elites) is dead — state law solved it. The mechanism persisted 50-100 years past its functional expiry because the honor identity binder (identity_locked seconds, aristocratic self-concept) created inertial maintenance. This is mandatrophy: the mandate (resolve honor disputes) was fulfilled by courts, but the arrangement (dueling) lingered as theater. The theater_ratio trajectory (0.18→0.85) is the mandatrophy signature — function atrophied, performance remained.",
+    "kernel_context": "This is the decline_reading of the honor_satisfaction_mechanism kernel. The kernel is the persistent commitment: 'honor injuries require personal risk to satisfy.' Three readings instantiate different constraints from this kernel: (1) decline_reading (this file) — the mechanism weakened gradually but remained conceptually available; (2) contraction_reading — dueling became cognitively unthinkable, a category-level impossibility; (3) composite_reading — multiple distinct mechanisms operated (state monopoly, bourgeois norms, insurance, category-shift). This reading emphasizes frequency decline and epsilon drop via enforcement/social cost; it coexists with contraction_reading (different parties held different views on cognitive availability) and influences composite_reading (the frequency data constrain the multi-mechanism account)."
+  },
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "Was the honor satisfaction mechanism's coordination function (preventing feuds) genuine and irreducible, or was the violence always the point — extraction dressed as order?",
+      "resolution_mechanism": "Counterfactual: in regions/periods where dueling was suppressed early (e.g., Massachusetts 1720s, Prussia 1790s), did elite feuding increase? If not, the coordination claim is weak; if yes, the mechanism did real work.",
+      "impact": "If coordination was genuine, the mechanism was a tangled rope (coordination + extraction); if coordination was cover, it was a snare. The decline_reading's claimed_type depends on this.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's coordination function was real or rhetorical."
+    },
+    {
+      "id": "decline_driver_state_vs_culture",
+      "question": "Did dueling decline primarily because state enforcement (criminalization, prosecution) raised the cost, or because cultural honor codes internally shifted (bourgeois reputation replaced aristocratic violence)?",
+      "resolution_mechanism": "Compare jurisdictions: France (early criminalization, persistent dueling) vs England (later criminalization, earlier cultural shift) vs US South (weak state, persistent culture) vs US North (strong state, rapid shift). Disentangle legal vs cultural drivers.",
+      "impact": "If state-driven, the constraint's suppression metric reflects external force; if culture-driven, suppression reflects internalized norm change — affecting how the engine models the decline trajectory.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's weakening was pushed from outside or rotted from within."
+    },
+    {
+      "id": "kernel_reading_relations",
+      "question": "Does the decline_reading foreclose, coexist with, or influence the contraction_reading and composite_reading of the honor_satisfaction_mechanism kernel?",
+      "resolution_mechanism": "Structural analysis: decline_reading says 'frequency dropped but concept remained available'; contraction_reading says 'concept became unavailable.' These can coexist (different social strata experienced different cognitive availability) but cannot both be the whole story. Composite_reading says 'multiple mechanisms' — decline_reading's single-mechanism arc influences but does not foreclose it.",
+      "impact": "Determines reading_relations in cs_structure. Coexistence with contraction_reading means both were live positions; influence on composite_reading means the frequency data constrain the multi-mechanism model.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relationship between this reading and its sibling readings of the same kernel."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Was the suppression that enforced dueling structural (legal penalties for refusal, regimental cashiering) or internalized (the duelist genuinely believed death preferable to dishonor)?",
+      "resolution_mechanism": "Post-exit trajectories: officers who refused duels and survived socially (e.g., Wellington's 1829 duel refusal) vs those destroyed. Memoir evidence on whether seconds/principals felt compelled or chose. If internalized, suppression persists after legal barriers fall.",
+      "impact": "If internalized, the constraint's effective suppression is higher than legal measures suggest — the target carried the suppression internally. This affects the decline_reading's suppression trajectory: internalized suppression decays slower than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanism in the honor mechanism."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "legal_dueling_prohibition",
+      "defamation_law_emergence",
+      "state_monopoly_violence",
+      "professional_censure_systems",
+      "parliamentary_privilege_evolution"
+    ],
+    "dual_formulation_note": "Part of the honor_satisfaction_mechanism constraint family with contraction_reading and composite_reading. This reading emphasizes gradual frequency decline and epsilon drop; contraction_reading emphasizes cognitive unthinkability; composite_reading emphasizes mechanism plurality. All three share the kernel 'honor injuries require personal risk to satisfy.'"
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "contraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "composite_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "honor_satisfaction_requires_violent_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_law_cannot_substitute_for_personal_risk",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "aristocratic_honor_code",
+    "drift_state": {
+      "moment": "bourgeois_legal_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

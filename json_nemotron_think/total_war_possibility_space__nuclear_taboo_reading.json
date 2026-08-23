@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "total_war_possibility_space__nuclear_taboo_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_total_war_possibility_space__nuclear_taboo_reading",
+    "measurement_id_prefix": "twps_ntr",
+    "story_uid": "ea8e3820-8427-4168-98d6-83a5ba76464d"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Nuclear Taboo: Normative Prohibition of Total War",
+    "topic_domain": "international_relations/strategic_studies/institutional_history",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "nuclear_weapon_states",
+      "norm_entrepreneurs"
+    ],
+    "victims": [
+      "non_nuclear_weapon_states_npt",
+      "non_nuclear_weapon_states_non_npt",
+      "potential_proliferators"
+    ],
+    "vindicated_propositions": [
+      "nuclear_use_categorically_impermissible",
+      "nonproliferation_as_global_public_good"
+    ]
+  },
+  "interval": {
+    "start": 1945,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "taboo_causal_efficacy_vs_deterrence",
+      "question": "Is the nuclear taboo causally independent of material deterrence, or is it epiphenomenal to mutual vulnerability?",
+      "resolution_mechanism": "Counterfactual analysis of crises where deterrence held but taboo rhetoric was absent (e.g., early Cold War), and cases where taboo rhetoric appeared without stable deterrence (e.g., post-1991). Requires disaggregating normative inhibition from calculated restraint.",
+      "impact": "If epiphenomenal, the constraint reduces to deterrence_equilibrium_reading; if independent, the normative layer generates distinct enforcement mechanisms and extraction patterns.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the taboo has autonomous causal force or merely rationalizes deterrence."
+    },
+    {
+      "id": "taboo_universality_vs_nuclear_privilege",
+      "question": "Does the taboo apply symmetrically to all nuclear possessors, or does it legitimate the existing nuclear hierarchy?",
+      "resolution_mechanism": "Compare enforcement intensity against established vs. aspirant proliferators; track whether taboo discourse constrains nuclear-armed states' modernization and doctrinal expansion.",
+      "impact": "If the taboo primarily constrains aspirants while legitimizing incumbents' arsenals, the extraction is structural hierarchy maintenance, not universal prohibition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the taboo functions as universal norm or club good for nuclear incumbents."
+    },
+    {
+      "id": "kernel_reading_nuclear_taboo",
+      "question": "This constraint is the nuclear_taboo_reading of the contested kernel total_war_possibility_space. How does this reading's structural claim differ from its siblings?",
+      "resolution_mechanism": "Compare the three readings' beneficiary/victim structures, enforcement mechanisms, and predictions about taboo erosion. The nuclear_taboo_reading predicts weakening when norm entrepreneurs exit; deterrence_equilibrium_reading predicts stability while mutual vulnerability holds; space_contraction_reading predicts irreversibility.",
+      "impact": "Different readings imply different constraint types, different stakeholder seats, and different temporal trajectories. The engine must compute each reading as a separate constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer frame: this reading instantiates nuclear taboo as constructed normative prohibition with active enforcement, distinct from deterrence equilibrium and strategic unthinkability."
+    },
+    {
+      "id": "suppression_mechanism_npt_regime",
+      "question": "Is the NPT regime's suppression structural (sanctions, export controls, security guarantees) or internalized (states believe proliferation is illegitimate)?",
+      "resolution_mechanism": "Track compliance trajectories after regime pressure eases (e.g., post-JCPOA Iran, post-1994 South Africa). If suppression persists without enforcement, internalization is significant.",
+      "impact": "If substantially internalized, the constraint's effective suppression exceeds structural measures — states carry the prohibition as identity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the non-proliferation regime."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1945,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1968,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1945,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1968,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1945,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1968,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.75
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The nuclear taboo reading holds that total war became normatively prohibited through a constructed taboo against nuclear use, independent of the material capability to wage it. The constraint is not that nuclear war is impossible — arsenals exist and deterrence operates — but that nuclear use has been moved from the realm of strategic calculation to the realm of the morally unthinkable. This taboo generates its own enforcement machinery: the NPT regime, IAEA safeguards, export control regimes (NSG), security assurances, and no-first-use pledges. The reading predicts the taboo weakens if norm entrepreneurs (disarmament NGOs, middle-power states like Ireland, Mexico, Austria) exit the enforcement coalition, and that non-nuclear states face a qualitatively different constraint structure — they are bound by the taboo while nuclear-armed states retain the weapons the taboo nominally condemns.",
+    "logic_rationale": "Extractiveness (0.68) is substantial: non-nuclear states surrender the sovereign option to acquire nuclear weapons and accept intrusive verification, while nuclear states retain arsenals and modernization programs. The asymmetry is the extraction. Suppression (0.75) is high because the regime actively prevents proliferation through sanctions, interdiction, and security guarantees — not merely through persuasion. Theater ratio (0.28) is low-moderate: the taboo has real behavioral effect (no nuclear use since 1945), but a growing share of enforcement activity maintains the hierarchy rather than preventing use. Accessibility collapse (0.58) reflects that alternatives (nuclear hedging, latent capability) exist but carry escalating costs. Resistance (0.45) is moderate: NPT review conferences reveal persistent non-nuclear dissatisfaction, but overt defiance is rare.",
+    "directionality_logic": "Nuclear weapon states are structural beneficiaries: they collect status, strategic monopoly, and institutional authority while bearing the costs of maintenance (which they would bear regardless). Norm entrepreneurs are beneficiaries: they gain moral authority and institutional influence. Non-nuclear NPT states are payers: they accept constraint without the compensating strategic asset. Non-NPT nuclear states (India, Pakistan, Israel, North Korea) occupy a distinct payer/excluded seat: they bear isolation costs but gain the strategic asset. Potential proliferators are trapped payers: the regime is designed to make their exit prohibitively costly. The analytical observer seat sees the full structure.",
+    "perspectival_gap": "From the nuclear weapon state seat, the arrangement is coordination: preventing use, managing proliferation, providing security assurances. From the non-nuclear NPT state seat, the same structure is extraction: a permanent hierarchy enforced through a bargain (Article VI disarmament) that has not been honored. From the non-NPT nuclear state seat, the constraint is exclusion: they are punished for acquiring what the incumbents keep. The engine computes this divergence from the structural data — the declared beneficiary/victim lists and power/exit asymmetries drive the per-seat classification.",
+    "mandatrophy_analysis": "The founding problem (preventing nuclear use and limiting spread) remains live, but the original bargain (non-proliferation for disarmament) is dead. The constraint persists not because the coordination function works — the taboo prevents use but the hierarchy generates its own instability — but because no coalition can dismantle it. Nuclear states won't disarm; non-nuclear states can't force them; norm entrepreneurs lack enforcement power. This is not a piton (the taboo has real function) but a tangled rope where the coordination function (preventing use) is real but the extraction (permanent hierarchy) is structural and enforced.",
+    "kernel_context": "This constraint is the nuclear_taboo_reading of the kernel total_war_possibility_space. Sibling readings: deterrence_equilibrium_reading (total war deterred by mutual vulnerability, not norm) and space_contraction_reading (nuclear weapons removed total war from the strategically thinkable, not merely the preferable). This reading asserts the taboo is a constructed normative prohibition with independent causal force, generating distinct enforcement mechanisms and a hierarchical extraction structure. The other readings locate the constraint in material deterrence or cognitive unthinkability respectively."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "nuclear_nonproliferation_regime",
+      "extended_deterrence_architecture",
+      "nuclear_disarmament_obligation"
+    ],
+    "dual_formulation_note": "Part of the total_war_possibility_space constraint family. This reading (nuclear_taboo_reading) decomposes the kernel into a normative prohibition with active enforcement. The deterrence_equilibrium_reading models the same kernel as material mutual vulnerability; the space_contraction_reading models it as cognitive unthinkability. All three share the referent (total war possibility space) but instantiate different constraints with different ε, different stakeholder structures, and different temporal dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "nuclear_weapon_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The five NPT-recognized nuclear weapon states (US, Russia, UK, France, China) plus de facto possessors. They set the rules of the non-proliferation regime, control the Security Council enforcement machinery, and benefit from a permanent legal monopoly on nuclear weapons. They bear maintenance costs but these are sunk costs of great-power status. Their exit option is arbitrage: they can reinterpret obligations (e.g., modernization not disarmament) without regime collapse."
+    },
+    {
+      "name": "norm_entrepreneurs",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Middle-power states (Ireland, Mexico, Austria, New Zealand, South Africa) and transnational networks (ICAN, Pugwash, IPPNW) that champion the taboo. They gain moral authority, diplomatic influence, and institutional positions by policing the norm. Their exit is mobile: they can shift advocacy focus, but the taboo's persistence depends on their sustained pressure."
+    },
+    {
+      "name": "non_nuclear_weapon_states_npt",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The 186 NPT non-nuclear parties. They accepted the taboo's constraints (no acquisition, IAEA safeguards) in exchange for Article VI disarmament commitments and peaceful use cooperation. The disarmament bargain has not been honored; peaceful use cooperation is conditional. Their exit is constrained: withdrawal triggers Article X crisis, sanctions risk, and security vulnerability. They pay through sovereignty costs and intrusive verification."
+    },
+    {
+      "name": "non_nuclear_weapon_states_non_npt",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "India, Pakistan, Israel — states with nuclear weapons outside the NPT. They bear the taboo's normative condemnation and partial sanctions but gained the strategic asset. They are excluded from the regime's benefits (peaceful cooperation, security assurances) but not from its normative claim. Their exit is constrained: they cannot rejoin as non-nuclear states, and the regime refuses to recognize their status."
+    },
+    {
+      "name": "potential_proliferators",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "States assessed as having proliferation intent or capacity (historically Iran, Libya, Syria; currently none declared). They face the full enforcement machinery: sanctions, interdiction, sabotage, military threat. The constraint is designed to make their exit (acquisition) prohibitively costly. They are the primary extraction targets — the regime's suppression is calibrated to them."
+    },
+    {
+      "name": "security_analysts_strategic_community",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic strategists, think tanks, government advisory bodies. They analyze the taboo's stability, model erosion scenarios, and advise policymakers. They neither collect nor pay; they map the structure. Their analytical exit means they can adopt any reading (taboo, deterrence, unthinkability) without material consequence."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents nuclear use by moving it from strategic calculation to moral prohibition; coordinates expectations that nuclear weapons will not be used, enabling a world where major powers do not fight total war.",
+    "transfer_function": "Moves sovereignty over ultimate weapons decisions from non-nuclear states to the nuclear-armed incumbents, mediated through the NPT regime. Non-nuclear states transfer the option to acquire; nuclear states retain the weapons and the authority to authorize or deny others' access.",
+    "absent_voices": "States that never joined the NPT and acquired weapons anyway (India, Pakistan, Israel, North Korea) — they would argue the taboo is hypocritical hierarchy maintenance. Future generations who inherit the taboo's enforcement costs without the founding fear. Victims of nuclear testing and uranium mining (indigenous communities, downwinders) — excluded from the regime's beneficiary calculus.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the nuclear taboo and NPT regime vanished overnight, multiple states would likely pursue nuclear weapons within years (Japan, South Korea, Germany, Saudi Arabia, Turkey, Iran). The nuclear hierarchy would collapse into multi-polar proliferation. The coordination function (preventing use via norm) would disappear, leaving only deterrence — which the taboo reading argues is insufficient without the normative layer.",
+    "founding_problem": "After 1945, the demonstration of nuclear destruction created a shared recognition that total war had become suicidal. The founding problem was how to prevent nuclear use while managing the spread of nuclear technology — solved by constructing a normative prohibition (the taboo) and institutionalizing it through the NPT (1968).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Nuclear weapon states attest the problem (preventing use) is live and the taboo works. Non-nuclear states (NAM, G77) attest the problem (preventing use) is live but the bargain (disarmament) is dead — the taboo persists as hierarchy. Disarmament NGOs attest the problem is live and the taboo must deepen to elimination. No single corroboration exists outside the benefiting parties; the status is genuinely contested across the stakeholder seats."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "total_war_possibility_space"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "deterrence_equilibrium_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "space_contraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "nuclear_use_categorically_impermissible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "nonproliferation_as_global_public_good",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "npt_article_vi_bargain",
+    "drift_state": {
+      "moment": "post_2010_modernization_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

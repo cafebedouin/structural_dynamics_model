@@ -1,0 +1,336 @@
+{
+  "header": {
+    "constraint_id": "sex_gender_category__identity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_sex_gender_category__identity_reading",
+    "measurement_id_prefix": "sgc_id",
+    "story_uid": "b41b986a-49d9-4abd-82fe-6dee1e2321a7"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.35,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Gender Category Membership by Self-Identification",
+    "topic_domain": "social/legal/identity",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "trans_women",
+      "trans_men",
+      "nonbinary_people"
+    ],
+    "victims": [
+      "cis_women",
+      "gender_critical_feminists"
+    ],
+    "vindicated_propositions": [
+      "gender_self_determination_right",
+      "inclusive_category_membership",
+      "depathologization_of_trans_identities"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "trans_women",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Gain legal recognition as women through self-declaration without medical gatekeeping. Access women's spaces, services, and legal protections. Also become visible targets for misogyny and transphobia. Their gender identity is core to self-concept; exit from the category is not a live option."
+    },
+    {
+      "name": "trans_men",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Gain legal recognition as men through self-declaration. Access men's spaces and legal status. Face misogyny (as former women) and transphobia. Some lose access to women's spaces they previously used (shelters, healthcare). Gender identity is core to self-concept."
+    },
+    {
+      "name": "nonbinary_people",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Gain recognition for non-binary gender markers where available (X markers, self-ID). The binary woman/man framework of self-ID laws may not fully accommodate non-binary identities; some laws only allow switching between M/F. Benefit from depathologization but may remain partially unrecognized."
+    },
+    {
+      "name": "cis_women",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lose exclusive legal claim to sex-based protections (sports categories, intimate spaces, shortlists, data collection). Some experience this as extraction of hard-won rights; others experience expanded solidarity. Cannot exit sex class (reproductive biology constrains exit). Feminist organizations split on whether inclusion strengthens or undermines sex-based analysis."
+    },
+    {
+      "name": "gender_critical_feminists",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lose the legal and conceptual framework that grounds sex-based oppression analysis in immutable biology. Their advocacy for sex-based rights is recast as exclusionary. Face professional and social sanctions for dissent. Cannot exit the sex class that structures their political analysis."
+    },
+    {
+      "name": "legal_administrative_systems",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Implement self-ID laws: update birth certificates, passports, driver's licenses on declaration. Manage downstream conflicts — prison placement, shelter access, sports eligibility, data collection. Bear administrative costs of transition but gain simplified procedure over medical-gatekeeping model."
+    },
+    {
+      "name": "medical_gatekeepers",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Lose gatekeeping authority over legal gender recognition (psychiatric diagnosis, hormone requirements, surgery requirements). Professional identity built on clinical expertise in gender transition is displaced by administrative self-declaration. Some clinicians support depathologization; others see loss of clinical oversight as harmful."
+    },
+    {
+      "name": "equality_monitoring_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Track impacts on sex-discrimination law, gender pay gap reporting, violence against women statistics, service provision. Must decide whether to monitor by sex, gender identity, or both. Their methodological choices shape what harms become visible."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a clear, administratively simple rule for legal gender recognition that respects self-determination and includes trans people in their affirmed categories without medical gatekeeping barriers.",
+    "transfer_function": "Moves the authority to define category boundaries from medical/legal gatekeepers (psychiatric diagnosis, hormonal/surgical requirements) to individual self-declaration; moves access to sex-based protections, spaces, and data categories from cis-women-only to inclusive of trans women (and trans men to men's categories).",
+    "absent_voices": "Detransitioners who report harm from rapid affirmation; people with disorders of sexual development (intersex) whose biological categories are collapsed into gender identity frameworks; women in global south jurisdictions where sex-segregated spaces are critical for safety and religious practice; religious communities with sex-segregated worship and ritual; parents of gender-questioning minors excluded from medical decision-making under affirmation-only models.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If self-ID recognition vanished overnight, legal systems would revert to biology-based or hybrid (medical-gatekeeping) models. Trans people's identity documents would mismatch their presentation, creating daily friction. Sports, prisons, shelters, and single-sex services would revert to sex-based rules. Data collection on sex discrimination would regain coherence but trans people would lose legal recognition.",
+    "founding_problem": "The medical gatekeeping model (hybrid_reading) pathologized trans identities, required invasive and sterilizing procedures for legal recognition, created years-long waiting lists, and denied trans people autonomy over their legal classification — treating gender variance as a psychiatric condition requiring professional oversight rather than a human variation deserving self-determination.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "WHO ICD-11 (2019) depathologized trans identities, removing them from mental disorders chapter. UN Independent Expert on SOGI, Human Rights Committee, and Council of Europe have affirmed self-determination model. Major medical associations (WPATH, AMA, APA, BMA) support depathologization and informed-consent care. Gender-critical feminists and some clinicians contest whether the problem was correctly diagnosed, arguing the medical model protected against regret and ensured differential diagnosis."
+  },
+  "interval": {
+    "start": 2010,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the identity_reading of the contested sex_gender_category kernel: the claim that category membership in 'woman'/'man' is determined solely by subjective gender identity (self-identification), without medical or biological prerequisites. This reading has been adopted in varying forms in Argentina (2012), Malta (2015), Ireland (2015), Denmark (2014), and multiple other jurisdictions, and drives current policy debates in UK, US, Canada, Australia, and EU. The constraint presents as a coordination mechanism (simple, dignified recognition) but generates asymmetric impacts: trans people gain legal recognition and access, while cis women lose exclusive claim to sex-based protections and gender-critical feminists lose their analytical framework. Conflict over space access (prisons, shelters, sports, changing rooms) is high despite low administrative enforcement costs.",
+    "logic_rationale": "Extractiveness (0.45) reflects asymmetric transfer: cis women and gender-critical feminists bear costs (lost exclusivity of sex-based categories) while trans people gain recognition. Not pure extraction because the coordination function (dignified, barrier-free recognition) is genuine and valued by beneficiaries. Suppression (0.35) is moderate: the constraint suppresses biology-based classification in law and policy, but enforcement is administrative (changing a marker on a form) rather than coercive — though downstream space-access conflicts generate social suppression. Theater ratio (0.22) is low: the recognition function is real, not performative, though performative compliance (compelled pronoun use, diversity statements) exists at margins. Accessibility collapse (0.58) is moderate: once self-ID is the legal rule, biology-based alternatives collapse for administrative purposes, but social reality maintains parallel categorizations. Resistance (0.68) is high: organized opposition from gender-critical feminists, some religious groups, some medical professionals, and segments of the public.",
+    "directionality_logic": "Trans women/men/nonbinary people are structural beneficiaries (d near 0.0): constraint subsidizes their recognition, identity_locked exit means they cannot leave the category without self-negation. Cis women are structural payers (d near 0.8): bear costs of lost sex-based exclusivity, constrained exit (cannot exit sex class). Gender-critical feminists are payers (d near 0.9): lose analytical framework, face sanctions for dissent, constrained exit. Legal/administrative systems are agenda_setters (d ~0.3): they administer and gain simplified procedure but bear downstream conflict costs. Medical gatekeepers are excluded (d ~0.7): lose authority, professional identity trapped. Equality bodies are observers (d=0.5): analytical seat.",
+    "perspectival_gap": "From trans people's seat: the constraint is a rope — genuine coordination solving the problem of medical gatekeeping, with minimal coercion. From gender-critical feminists' seat: the constraint is a snare — the inclusion story covers extraction of sex-based rights, enforced by institutional capture. From cis women's seat (split): some experience rope (solidarity expansion), others experience tangled_rope (genuine inclusion + real costs). The engine computes this divergence from the structural data: identity_locked exit for trans people vs constrained exit for cis women, different power positions, asymmetric beneficiary/victim declarations.",
+    "mandatrophy_analysis": "The founding problem (medical gatekeeping pathologization) remains live in many jurisdictions (UK, US states, parts of EU still require medical diagnosis). Where self-ID is adopted, the mandate has partially resolved the founding problem but generated new contested problems (space access, data integrity, safeguarding). The constraint shows mandatrophy risk if self-ID laws persist unchanged while the space-access conflicts intensify — the administrative simplicity that justified the constraint becomes a liability when downstream conflicts require nuanced solutions the constraint forbids.",
+    "kernel_context": "This constraint is the identity_reading of the sex_gender_category kernel. The kernel is the concept 'woman' (and 'man') as a social/legal category. Sibling readings: biology_reading (category = immutable reproductive biology: chromosomes, gametes, anatomy at birth) and hybrid_reading (category = biology + social/medical transition with gatekeeping). This reading declares self-identification as necessary and sufficient. The structural delta: trans women included in 'woman'; victim set expands to include trans women experiencing misogyny; cis women lose exclusive claim to sex-based protections; low boundary enforcement costs (administrative self-declaration) but high conflict over space access (prisons, shelters, sports, changing rooms)."
+  },
+  "omegas": [
+    {
+      "id": "natural_kind_vs_social_construction",
+      "question": "Is the category 'woman' a natural kind grounded in reproductive biology, or a social construction open to self-determination?",
+      "resolution_mechanism": "Interdisciplinary consensus across philosophy of biology, feminist theory, and trans studies — unlikely to be resolved empirically; remains a conceptual framing contest.",
+      "impact": "If natural kind, biology_reading is the Mountain and identity_reading is a constructed Snare. If social construction, identity_reading is a Rope/Tangled Rope and biology_reading is a Piton (degraded natural-law claim). Classification of all three readings hinges on this.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether sex/gender categories are natural kinds or social constructions — the root framing ambiguity for the entire kernel."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of biology-based classification structural (legal/administrative replacement) or internalized (ideological capture making dissent unspeakable)?",
+      "resolution_mechanism": "Post-reform tracking: if dissent persists and alternative categorizations remain socially available, suppression is primarily structural. If dissent is silenced and self-censorship spreads, internalized component is significant.",
+      "impact": "If internalized suppression is high, the constraint's effective suppression exceeds the structural measure — targets carry the suppression with them. Would increase effective extraction for gender-critical feminists and cis women who cannot articulate dissent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanism in the displacement of biology-based frameworks."
+    },
+    {
+      "id": "extraction_measurement_under_contested_victimhood",
+      "question": "How to measure extraction when both trans people (denied recognition) and cis women (losing sex-based protections) claim victimhood?",
+      "resolution_mechanism": "Comparative rights-impact assessment: quantify loss of legal protections for cis women vs gain for trans people; track space-access conflict outcomes; measure deterrence of dissent.",
+      "impact": "If extraction is symmetrical (both sides lose/gain comparably), tangled_rope is confirmed. If extraction flows overwhelmingly one way, classification shifts toward rope or snare. Current metrics assume moderate asymmetry favoring trans beneficiaries.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Methodological ambiguity in measuring extraction when victimhood is claimed by opposing groups."
+    },
+    {
+      "id": "committer_structure_kernel_reading",
+      "question": "This constraint is one reading (identity_reading) of the sex_gender_category kernel. How do the sibling readings (biology_reading, hybrid_reading) structurally differ in their beneficiary/victim sets and coordination functions?",
+      "resolution_mechanism": "Author separate constraint stories for biology_reading and hybrid_reading with their own ε, stakeholders, and classifications. Link via network.affects_constraints. Compare computed seat types across readings.",
+      "impact": "If biology_reading computes as Mountain (natural law) for all seats, identity_reading's claim to be coordination is challenged. If hybrid_reading computes as Tangled Rope with different victim set, the kernel's contest is mapped structurally rather than rhetorically.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame structural delta: this reading's beneficiary/victim/enforcement profile vs sibling readings of the same kernel."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "sex_gender_category__biology_reading",
+      "sex_gender_category__hybrid_reading",
+      "single_sex_service_provision",
+      "gender_based_violence_data_collection",
+      "sports_eligibility_rules"
+    ],
+    "dual_formulation_note": "This constraint (identity_reading) and its siblings (biology_reading, hybrid_reading) form a constraint family decomposing the 'sex/gender category' kernel. Each reading has distinct ε, beneficiary/victim sets, and coordination functions. The identity_reading treats self-ID as sufficient (low enforcement, high inclusion); biology_reading treats biology as necessary/sufficient (high naturalness, zero inclusion of trans people); hybrid_reading treats medical transition as necessary (moderate enforcement, conditional inclusion). They are not the same constraint viewed differently — they are structurally distinct arrangements for the same category boundary."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "biology_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "self_identification_sufficient_for_category_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "trans_women_are_women",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "gender_self_determination_is_a_human_right",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "self_determination_framework",
+    "drift_state": {
+      "moment": "contemporary_gender_recognition_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "sex_gender_category"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

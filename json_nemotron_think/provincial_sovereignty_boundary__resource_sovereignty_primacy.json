@@ -1,0 +1,335 @@
+{
+  "header": {
+    "constraint_id": "provincial_sovereignty_boundary__resource_sovereignty_primacy",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_provincial_sovereignty_boundary__resource_sovereignty_primacy",
+    "measurement_id_prefix": "psbrsp",
+    "story_uid": "2d71a496-926a-47bf-8081-3a53b26415ce"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.85,
+    "resistance": 0.7,
+    "claimed_type": "mountain",
+    "human_readable": "Provincial Resource Sovereignty as Territorial Sovereignty (s.92A)",
+    "topic_domain": "political_economy/federalism/resource_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "provincial_governments",
+      "resource_industries"
+    ],
+    "victims": [
+      "federal_government",
+      "national_climate_coordination",
+      "equalization_recipient_provinces",
+      "indigenous_nations"
+    ],
+    "vindicated_propositions": [
+      "provincial_resource_ownership_s92a",
+      "territorial_sovereignty_primacy",
+      "unilateral_exit_constitutional_right"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 42
+  },
+  "omegas": [
+    {
+      "id": "mountain_vs_constructed_sovereignty",
+      "question": "Is provincial resource sovereignty a genuine constitutional mountain (irreducible bedrock) or a constructed claim that benefits identifiable provincial and industrial actors?",
+      "resolution_mechanism": "Comparative constitutional analysis: if other federal systems with similar resource distributions lack equivalent sovereignty claims, the claim is constructed; if the claim persists across regime changes without enforcement, it approaches mountain status.",
+      "impact": "If constructed, FSM triggers reclassification to tangled_rope (coordination of resource development + asymmetric extraction from federal capacity); if mountain, the claim is immune to extraction metrics.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Natural-law vs. constructed ambiguity for a Mountain claim with declared beneficiaries"
+    },
+    {
+      "id": "extraction_referent_ambiguity",
+      "question": "Does the constraint's extraction run from provinces→federal (provincial sovereignty extracts federal policy capacity) or federal→provinces (federal climate policy extracts provincial resource rents)?",
+      "resolution_mechanism": "Measure net fiscal and regulatory flows: if provinces capture resource rents that would otherwise fund federal programs, extraction is provinces→federal; if federal carbon pricing reduces provincial royalty revenue, extraction is federal→provinces. The reading's own framing determines which flow is 'legitimate' vs 'extraction'.",
+      "impact": "Reverses the directionality of payer/beneficiary seats and flips which stakeholders are targets vs beneficiaries in the engine's computation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Direction of extraction depends on which reading's referent is adopted"
+    },
+    {
+      "id": "suppression_mechanism_constitutional_vs_political",
+      "question": "Is the suppression of federal climate policy structural (constitutional text, court doctrine) or political (provincial resistance, intergovernmental negotiation)?",
+      "resolution_mechanism": "Track court outcomes: if federal climate legislation survives s.92A challenges, suppression is political; if courts consistently strike down federal measures citing s.92A, suppression is structural.",
+      "impact": "Structural suppression supports Mountain classification (irreducible limit); political suppression supports Tangled Rope (active enforcement required).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs political suppression mechanism for constitutional constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 42,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 42,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 42,
+      "value": 0.8
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Section 92A of the Constitution Act 1982 grants provinces exclusive authority over non-renewable natural resources, forestry, and electrical energy. The resource_sovereignty_primacy reading interprets this as grounding absolute provincial sovereignty — resource control equals territorial sovereignty, federal climate and fiscal policy constitutes illegitimate extraction, and unilateral exit is a constitutional right. This reading is advanced by resource-rich provinces (Alberta, Saskatchewan, Newfoundland) and supported by resource industry associations. The claimed_type is Mountain (constitutional bedrock), but the metrics show rising extraction (federal policy capacity displaced), active suppression (court challenges to federal carbon pricing, equalization disputes), and increasing theater (federal-provincial performative negotiations). The engine will compute per-seat classifications from the structural data below.",
+    "key_agents": [
+      "provincial_governments: Primary agenda_setter and beneficiary (institutional/arbitrage) — sets resource policy, collects royalties, challenges federal intrusion",
+      "resource_industries: Primary beneficiary (powerful/mobile) — receives favorable provincial regulation and royalty regimes",
+      "federal_government: Primary payer (institutional/constrained) — loses regulatory authority over climate, energy, equalization",
+      "equalization_recipient_provinces: Payer (organized/constrained) — receive reduced transfers when resource provinces keep more revenue",
+      "indigenous_nations: Excluded (organized/trapped) — title and consultation rights overridden by provincial resource decisions",
+      "citizens: Payer (moderate/constrained) — bear climate costs and service cuts from federal-provincial fiscal fights",
+      "constitutional_courts: Observer (institutional/analytical) — adjudicate s.92A scope, define the boundary"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.45 (1982) to 0.75 (2024) as provincial resource revenues grow and federal climate policy expands — the constraint increasingly displaces federal capacity. Suppression rises from 0.50 to 0.80 as provinces litigate federal carbon pricing, challenge equalization formula, and assert unilateral exit rhetoric. Theater ratio grows from 0.15 to 0.40 as intergovernmental meetings become performative while real decisions shift to courts and unilateral provincial action. Accessibility_collapse at 0.85 reflects that accepting 'resource control = sovereignty' makes federal climate coordination structurally impossible. Resistance at 0.70 reflects sustained federal, judicial, and inter-provincial pushback. The claimed Mountain type asserts naturalness (emerges_naturally: true) but declared beneficiaries trigger FSM evaluation.",
+    "directionality_logic": "Provincial governments and resource industries are structural beneficiaries: they collect rents and regulatory control (d near 0.0). Federal government, equalization-recipient provinces, indigenous nations, and citizens are payers: they lose policy capacity, fiscal transfers, consultation rights, and climate mitigation (d near 1.0). Constitutional courts sit near analytical (d ~0.5). The reading's own framing inverts this — it claims federal policy extracts from provinces — but the engine's χ computation reads the constraint's actual operation: provincial sovereignty extracts federal authority.",
+    "perspectival_gap": "From the provincial seat, the constraint is genuine coordination (resource development, revenue certainty) — a Rope. From the federal seat, it is extraction with suppression — a Snare. From indigenous nations' seat, it is exclusionary extraction — a Snare. From equalization-recipient provinces, it is fiscal extraction — a Tangled Rope (they benefit from equalization but lose when resource provinces opt out). The engine computes this seat divergence from power/exit/beneficiary declarations.",
+    "mandatrophy_analysis": "The founding problem (provincial economic self-determination via resource control) is contested: provinces say it remains live; federal government says 1982 settled it. The arrangement persists with rising extraction and theater, suggesting mandatrophy — the 1982 settlement's coordination function (ending federal-provincial resource wars) has atrophied into a sovereignty claim that blocks climate coordination. The constraint now serves as a piton for provincial political identity rather than a functional resource-management tool.",
+    "kernel_context": "This constraint is the resource_sovereignty_primacy reading of the provincial_sovereignty_boundary kernel. Sibling readings: constitutional_subordination (provinces are creatures of federal constitution; no inherent sovereignty) and compact_federalism (Confederation as compact among sovereign provinces; exit negotiable). This reading asserts s.92A ownership = full territorial sovereignty; federal climate policy = illegitimate extraction; unilateral exit = constitutional right. The other readings are separate constraints (other files), linked via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_subordination",
+      "compact_federalism"
+    ],
+    "dual_formulation_note": "BGS-pattern decomposition of provincial_sovereignty_boundary kernel: ehrenfest_barrier (constitutional_text_s92a) → spectral_universality (provincial_ownership_confirmed) → eigenvector_thermalization (resource_sovereignty_primacy). This reading is the contested downstream claim (eigenvector_thermalization analog) with substantial extraction; the upstream Mountain claims (text, ownership) have negligible extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "provincial_governments",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enact and enforce resource development laws, collect royalties, negotiate pipeline approvals, challenge federal carbon pricing and environmental assessment in court. Threaten unilateral exit (Alberta Sovereignty Act, Saskatchewan First Act) to extract federal concessions. Control the regulatory apparatus that implements s.92A."
+    },
+    {
+      "name": "resource_industries",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Oil sands, mining, forestry, and hydro companies operate under provincial regimes. They lobby for favorable royalty rates, streamlined permitting, and provincial defense against federal regulation. They can relocate capital globally but depend on provincial political protection for existing assets. Fund think tanks and political parties advancing resource sovereignty."
+    },
+    {
+      "name": "federal_government",
+      "role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Loses regulatory authority over GHG emissions, energy projects, and environmental assessment when provinces invoke s.92A. Carbon pricing backstop applies only where provinces refuse equivalent systems. Equalization payments become politically toxic when resource provinces claim fiscal independence. Must negotiate every national standard."
+    },
+    {
+      "name": "equalization_recipient_provinces",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive equalization transfers calculated partly from national average fiscal capacity. When resource provinces keep 100% of resource revenue (vs. 50% pre-2007), the national average rises, reducing transfers to have-not provinces. They support federal climate policy but lack leverage against resource provinces."
+    },
+    {
+      "name": "indigenous_nations",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Hold constitutionally protected title and consultation rights (s.35) that provinces routinely override via resource permitting. Not parties to 1982 amendment; no veto over provincial resource laws. Court victories (Tsilhqot'in, Yahey) are implemented slowly. Provincial sovereignty claim treats Indigenous jurisdiction as subordinate to provincial ownership."
+    },
+    {
+      "name": "citizens",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear costs of climate inaction (wildfires, floods, heat), service cuts from federal-provincial fiscal fights, and higher energy prices from fragmented regulation. No direct exit from federal system; provincial exit rhetoric threatens national programs (healthcare, pensions). Vote in both federal and provincial elections but cannot coordinate a national climate mandate."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Supreme Court of Canada adjudicates s.92A scope (Reference re Greenhouse Gas Pollution Pricing Act, References re Impact Assessment Act). Defines the boundary between provincial resource ownership and federal POGG/national concern. Their rulings determine whether the constraint operates as Mountain (hard boundary) or Tangled Rope (negotiated boundary)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates resource development, revenue collection, and regulatory authority within provincial jurisdictions, avoiding duplication and federal-provincial conflict over resource management.",
+    "transfer_function": "Moves regulatory authority over resource development, climate policy, and fiscal capacity from federal to provincial control; moves resource rents from federal equalization pool to provincial treasuries.",
+    "absent_voices": "Indigenous nations (excluded from 1982 amendment, no veto over provincial resource laws), future generations (bear climate costs of blocked federal policy), have-not provinces (lose equalization when resource provinces opt out), federal climate bureaucracy (dismantled by provincial challenges).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If provincial resource sovereignty vanished overnight, federal government would regain exclusive authority over resource-related GHG regulation, energy infrastructure, and environmental assessment. National carbon pricing would be uniform. Equalization would be recalculated without provincial resource revenue opt-outs. Indigenous consultation would shift to federal Crown duty. The federation's fiscal and climate architecture would fundamentally reorganize.",
+    "founding_problem": "Pre-1982 federal control over resource taxation and export (National Energy Program) was perceived by producing provinces as extraction of their resource wealth without consent. Provinces needed constitutional guarantee of ownership and revenue control to secure economic self-determination.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Provincial governments (Alberta, Saskatchewan, Newfoundland) attest the problem remains live — federal climate policy is 'NEP 2.0'. Federal government and legal scholars (e.g., Peter Hogg, Kerry Wilkins) attest the 1982 amendment settled ownership; current conflicts are about regulatory scope, not ownership. Indigenous leaders (AFN, ITK) attest the founding problem excluded them — s.92A entrenched provincial control over lands subject to unextinguished title."
+  },
+  "gain_flow": "provincial_governments",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_subordination",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "compact_federalism",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "resource_ownership_equals_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "unilateral_exit_constitutional_right",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "s92a_provincial_ownership_regime",
+    "drift_state": {
+      "moment": "contemporary_climate_federalism",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "provincial_sovereignty_boundary__constitutional_text_s92a"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "header": {
+    "constraint_id": "notability_guidelines__deliberative_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "dadcf0d6-0a0b-437c-8edf-48dd9ba01b30"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.45,
+    "claimed_type": "scaffold",
+    "human_readable": "WP:N as Perpetual Negotiation Process",
+    "topic_domain": "digital_commons_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "wikipedia_readers",
+      "active_editors"
+    ],
+    "victims": [
+      "excluded_article_subjects",
+      "marginalized_knowledge_communities"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "How does the deliberative reading of WP:N structurally relate to the deletionist and inclusionist readings of the same kernel?",
+      "resolution_mechanism": "Map the structural deltas: deletionist_reading treats notability as fixed epistemic filter (high extraction, low coordination); inclusionist_reading treats notability as exclusionary gatekeeping (high extraction, suppression of alternatives); deliberative_reading treats notability as emergent from AfD process (coordination function primary, extraction secondary). Resolution requires tracing how each reading's beneficiary/victim structure and claimed_type diverge from the shared kernel.",
+      "impact": "If the three readings compute to different constraint types from the same kernel, the kernel itself is a contested commitment structure requiring family-level analysis. If they compute to the same type, the contest is rhetorical not structural.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment kernel decomposition: one kernel (WP:N), three readings with distinct structural profiles"
+    },
+    {
+      "id": "deliberative_inclusion_ambiguity",
+      "question": "Does the AfD deliberation process genuinely incorporate marginalized epistemic perspectives, or does it structurally reproduce exclusion through source reliability requirements?",
+      "resolution_mechanism": "Longitudinal analysis of AfD outcomes for topics from oral traditions, Global South knowledge, and non-institutional expertise. Compare retention rates and argument patterns against mainstream institutional topics.",
+      "impact": "If deliberation systematically excludes marginalized knowledge despite procedural openness, the scaffold's coordination function is partial and extraction toward dominant epistemic communities is higher than measured. Would shift classification toward tangled_rope for affected communities.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the deliberative mechanism is structurally inclusive or reproduces epistemic hierarchy"
+    },
+    {
+      "id": "perpetual_vs_transitional_tension",
+      "question": "Can a 'perpetual negotiation process' satisfy the scaffold requirement of a sunset clause, or does perpetuity indicate a rope or tangled_rope?",
+      "resolution_mechanism": "Examine whether individual AfD deliberations function as discrete scaffolds (each with sunset at closure) while the meta-process persists, or whether the constraint is the meta-process itself which lacks sunset. Analyze community discourse on whether notability policy is 'finished' or permanently provisional.",
+      "impact": "If the meta-process has no sunset and no transitional justification, scaffold classification fails; the constraint becomes rope (if extraction low) or tangled_rope (if extraction asymmetric). The has_sunset_clause declaration applies per-deliberation, not to the standing arrangement.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Tension between perpetual process framing and scaffold's transitional requirement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Wikipedia's notability guideline (WP:N) is commonly treated as a fixed inclusion threshold. The deliberative reading reconceives it as a perpetual negotiation process: notability boundaries are not inputs to Articles for Deletion (AfD) but outputs of AfD deliberation. Each AfD functions as a temporary scaffold — a structured deliberation with a declared sunset (the closure of discussion) that produces a contingent notability judgment for that topic at that time. The meta-process has no sunset, but each instantiation does. The constraint coordinates a global editor community around the collective action problem of encyclopedic scope without a central editorial board. Extraction takes the form of editorial labor invested in deliberation and the systematic disadvantage of knowledge forms that do not map to 'reliable sources' as conventionally defined.",
+    "logic_rationale": "Extractiveness is moderate (0.35) because the primary cost is editorial labor in deliberation, not resource transfer to a concentrated beneficiary. Suppression is low (0.25) because alternatives exist (other wikis, personal sites, other platforms) and exit is possible, though costly for topics dependent on Wikipedia's visibility. Theater ratio is low (0.20) — AfD deliberations are genuine coordination events, not performative rituals, though procedural formalism increases over time. Accessibility collapse is moderate (0.40) — the 'reliable sources' criterion creates a structural barrier for non-institutional knowledge, but the deliberative process itself remains open to new arguments. Resistance is moderate (0.45) — constant meta-debate about notability (deletionist vs inclusionist) indicates the constraint is actively contested, not naturalized.",
+    "directionality_logic": "Active editors (agenda_setters) have low directionality (d ~0.2) — they administer the process and benefit from its coordination function. Wikipedia readers (beneficiaries) have very low d (~0.1) — they receive curated content without bearing deliberation costs. Excluded article subjects (payers) have high d (~0.8) — they bear the cost of exclusion with trapped exit (cannot easily create an alternative Wikipedia article). Marginalized knowledge communities (payers) have high d (~0.75) — constrained exit (can fork but lose Wikipedia's network effects) and identity_locked dynamics (their epistemic identity is bound to the knowledge being excluded). Wikimedia Foundation (agenda_setter) has very low d (~0.05) — institutional beneficiary of the coordination infrastructure.",
+    "perspectival_gap": "From the active editor seat, the constraint is a genuine rope/scaffold — a coordination mechanism they built and maintain. From the marginalized knowledge community seat, the same structure operates as a snare — the 'reliable sources' requirement extracts their epistemic contributions while excluding their knowledge forms. The engine computes this divergence from the structural data: same constraint, different power/exit/scope positions yield different effective extraction. The deliberative reading's claim (scaffold) reflects the editor seat; the inclusionist reading's claim (snare) reflects the marginalized community seat. Both are structurally true from their respective seats.",
+    "mandatrophy_analysis": "The founding problem (managing encyclopedic scope at scale without central editorial control) remains live — Wikipedia's growth has not eliminated the coordination problem. However, the original justification (preventing vandalism/vanity pages) has been partially superseded by automated tools and established editor culture. The scaffold persists because the coordination problem evolves (new topic areas, new epistemic communities) rather than because the original problem is solved. Mandatrophy is not resolved — the constraint continues to serve its coordination function, though its extraction profile has shifted toward epistemic communities excluded by the 'reliable sources' criterion.",
+    "kernel_context": "This constraint is the deliberative_reading of the notability_guidelines kernel. The kernel is the standing WP:N policy text and its institutionalization in Wikipedia governance. Sibling readings: deletionist_reading (notability as fixed epistemic quality filter, claimed mountain/rope), inclusionist_reading (notability as structural gatekeeping excluding marginalized knowledge, claimed snare). This reading treats notability as the emergent output of AfD deliberation — a governance scaffold where each deliberation is a temporary support for a contingent boundary decision. The three readings share the kernel but instantiate different constraints with different beneficiary/victim structures, different claimed_types, and different epsilon values."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "notability_guidelines__deletionist_reading",
+      "notability_guidelines__inclusionist_reading"
+    ],
+    "dual_formulation_note": "Constraint family decomposition of the notability_guidelines kernel. Three readings instantiate three constraints: deletionist_reading (low epsilon, claimed mountain/rope), deliberative_reading (moderate epsilon, claimed scaffold), inclusionist_reading (high epsilon, claimed snare). All three share the same kernel text but differ in structural relationship declarations: deletionist names no victims; deliberative names excluded subjects and marginalized communities as victims; inclusionist names marginalized communities as primary victims with systemic extraction. The deliberative reading influences both siblings by providing the procedural mechanism (AfD) that the deletionist reading relies on for legitimacy and the inclusionist reading targets as the site of exclusion."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "active_editors",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Initiate and participate in AfD deliberations, apply notability guidelines, enforce closure. They bear the labor cost of deliberation but gain epistemic authority and community standing through participation. Exit is constrained — leaving means abandoning invested reputation and the primary platform for their editorial work."
+    },
+    {
+      "name": "wikipedia_readers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receive curated, relatively reliable encyclopedic content without participating in deliberation. They bear indirect costs when topics they value are deleted, but can switch to other information sources with low friction. Their benefit is the coordination output: a usable encyclopedia."
+    },
+    {
+      "name": "excluded_article_subjects",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Topics (individuals, organizations, events) that fail AfD and are deleted. They have no voice in the deliberation, no recourse to appeal, and no alternative platform with Wikipedia's visibility. The constraint extracts their potential encyclopedic representation without consent or compensation."
+    },
+    {
+      "name": "marginalized_knowledge_communities",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Communities whose knowledge traditions (oral history, indigenous epistemologies, Global South scholarship, non-institutional expertise) do not produce 'reliable sources' as Wikipedia defines them. They can organize to create sources or advocate in AfD, but the structural barrier is high. Forking to alternative wikis loses Wikipedia's network effects and search dominance. Their epistemic identity is often bound to the knowledge being excluded (identity_locked dynamics)."
+    },
+    {
+      "name": "afd_participants",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Editors who regularly participate in Articles for Deletion discussions. They perform the deliberative labor that produces notability judgments. Their authority derives from sustained participation. Exit is constrained by reputation investment and the lack of alternative venues with equivalent deliberative throughput."
+    },
+    {
+      "name": "deletionist_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Editors who argue for strict notability standards and frequent deletion. They benefit from the deliberative process as a mechanism to enforce quality thresholds. They are not direct payers or beneficiaries of extraction — they are ideological proponents of one reading of the kernel."
+    },
+    {
+      "name": "inclusionist_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Editors who argue for broad inclusion and oppose deletion. They benefit from the deliberative process as a mechanism to defend marginal topics. Like deletionists, they are ideological proponents, not direct extraction targets."
+    },
+    {
+      "name": "wikimedia_foundation",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hosts the platform, employs staff who support community processes, and bears legal/financial responsibility. The Foundation benefits from the coordination infrastructure that sustains Wikipedia's value proposition. It can modify platform affordances but cannot unilaterally override community consensus on notability. Exit is arbitrage-grade — it could restructure governance but would lose the volunteer editor base."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Resolves the collective action problem of determining which topics warrant encyclopedic coverage by structuring community deliberation through Articles for Deletion (AfD) rather than imposing fixed criteria or central editorial control.",
+    "transfer_function": "Moves editorial authority from fixed notability standards to emergent consensus built through AfD deliberation; transfers inclusion/exclusion outcomes from pre-defined rules to negotiated boundaries. The 'currency' is editorial labor and epistemic recognition — editors invest labor to argue for/against inclusion; topics gain or lose the recognition of an encyclopedic article.",
+    "absent_voices": "Potential article subjects who never enter AfD because they lack awareness or access to Wikipedia's processes; knowledge holders from oral traditions and non-Western epistemologies not represented in the reliable source ecosystem; future readers who would benefit from articles that never get created because their topics cannot meet the source requirement; Wikipedias in smaller languages that inherit English Wikipedia's notability framework without equivalent source ecosystems.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If AfD deliberation vanished overnight, notability would revert to either rigid bureaucratic criteria (deletionist outcome: mass deletions by fixed rules) or uncontrolled inclusion (inclusionist outcome: vanity pages, vandalism, loss of reliability). The negotiated boundary itself would collapse, reorganizing Wikipedia's epistemic boundaries and its credibility as a reference work. The coordination function would need replacement — either algorithmic, bureaucratic, or market-based.",
+    "founding_problem": "Early Wikipedia (2001-2005) faced uncontrolled growth with no shared standard for article inclusion, leading to vandalism, vanity pages, promotional content, and unreliable articles. The community needed a mechanism to collectively judge notability without a central editorial board, using the only resource they had: volunteer editorial labor structured through discussion.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Wikimedia Foundation annual reports (2015-present) document ongoing scope management challenges as article count grows. Academic studies of Wikipedia governance (Halfaker et al. 2013 on newcomer retention; Forte & Bruckman 2008 on deletion processes; Geiger & Halfaker 2013 on AfD as socialization) attest the coordination problem remains live. The deletionist and inclusionist readings themselves corroborate the problem's persistence by offering competing solutions — if the problem were solved, the contest would not persist."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "consensus_building_process",
+    "drift_state": {
+      "moment": "contemporary_editorial_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "deletionist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "inclusionist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "notability_is_process_output",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "afd_deliberation_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "scaffold",
+    "downstream_of": [
+      "notability_guidelines__deletionist_reading",
+      "notability_guidelines__inclusionist_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

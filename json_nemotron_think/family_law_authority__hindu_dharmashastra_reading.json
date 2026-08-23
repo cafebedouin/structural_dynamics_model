@@ -1,0 +1,415 @@
+{
+  "header": {
+    "constraint_id": "family_law_authority__hindu_dharmashastra_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_family_law_authority__hindu_dharmashastra_reading",
+    "measurement_id_prefix": "fla_hindu_dharmashastra",
+    "story_uid": "483fc744-473b-4709-9aa8-988d20926856"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hindu Dharmashastra Marriage as Sacramental Samskara (Pre-1955)",
+    "topic_domain": "religious_governance/family_law/comparative_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "upper_caste_householders",
+      "joint_family_karta",
+      "religious_authorities_pandits",
+      "husband_patriarch"
+    ],
+    "victims": [
+      "wives_ritual_participants",
+      "lower_caste_individuals",
+      "inter_caste_couples",
+      "junior_coparceners",
+      "widows_seeking_remarriage"
+    ],
+    "vindicated_propositions": [
+      "marriage_as_sacramental_samskara",
+      "caste_endogamy_as_dharmic_order",
+      "joint_family_property_regime",
+      "indissolubility_of_marriage"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "husband_patriarch",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Holds authority over family ritual, property management, and wife's role. Benefits from wife's ritual labor and joint family property control. Exit from the constraint means loss of religious status, family authority, and property rights; socially constrained by caste and religious identity."
+    },
+    {
+      "name": "wife_ritual_participant",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Marriage is sacramental indissoluble bond; role defined as ritual participant (saha-dharmini) not autonomous contractor. No independent property rights in joint family; dependent on husband's family for maintenance. Exit (divorce, separation) is religiously impossible and socially fatal — identity fused with marital role. Bears costs of indissolubility, caste endogamy restrictions, and lack of autonomy."
+    },
+    {
+      "name": "upper_caste_householders",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Caste endogamy preserves ritual purity, social capital, and property within caste group. Benefits from exclusion of lower castes from marriage alliances and the joint family system that consolidates wealth. Can navigate within caste networks; exit from endogamy norms means loss of caste status but mobility within caste is high."
+    },
+    {
+      "name": "lower_caste_individuals",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Excluded from marriage alliances with upper castes by dharmic prescription; confined to endogamous pools that reinforce occupational and ritual hierarchy. Constraint extracts marriage market access and ritual dignity. Exit from caste endogamy is structurally blocked by upper caste enforcement and internalized hierarchy; conversion or migration are rare and costly exits."
+    },
+    {
+      "name": "inter_caste_couples",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Marriage across caste lines is prohibited by dharmashastra; such unions face social ostracism, violence, and legal non-recognition pre-1955. The constraint extracts the possibility of chosen partnership. Exit options are nearly zero — separation enforced by family/community, or flight with total social rupture."
+    },
+    {
+      "name": "joint_family_karta",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "situation": "Manages joint family property under Mitakshara or Dayabhaga rules; authority derived from seniority and gender. Benefits from consolidated property control and labor of junior members. Can manipulate partition rules; exit (partition) is possible but costly and reduces power — arbitrage-grade exit within the system."
+    },
+    {
+      "name": "junior_coparceners",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Have birth-right in joint family property but no management power until partition. Labor and earnings absorbed into joint pool. Constraint extracts labor and delays independent property control. Exit via partition is legally available but socially discouraged and economically risky."
+    },
+    {
+      "name": "widows_seeking_remarriage",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Pre-1955, widow remarriage prohibited for upper castes by dharmashastra (except in some regional customs). Constraint extracts life autonomy, sexuality, and social participation. Identity as 'widow' is ritually fixed; exit via remarriage is religiously forbidden and socially punished. Dependent on natal or marital family for survival."
+    },
+    {
+      "name": "religious_authorities_pandits",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Interpret dharmashastra texts, officiate marriages, adjudicate caste and marriage disputes. Authority grounded in textual lineage and ritual knowledge. Benefit from monopoly on sacramental validation and dispute resolution. Can move between patronage networks; institutional role provides mobility."
+    },
+    {
+      "name": "reformist_hindu_intellectuals",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Brahmo Samaj, Arya Samaj, and other reformers challenged indissolubility, caste endogamy, and widow remarriage bans from within Hindu tradition. Structurally excluded from orthodox authority; their voices suppressed by orthodox pandits and colonial courts deferring to 'custom'. Exit from orthodox framework into reformist or secular frameworks is possible but costly."
+    },
+    {
+      "name": "colonial_legal_officials",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Anglo-Hindu law (colonial courts applying dharmashastra as 'personal law') codified and froze certain interpretations. Observed and administered the constraint but did not originate it. Their role was to adjudicate disputes using pandit testimony, creating a feedback loop that rigidified custom."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates intergenerational property transmission (joint family), ritual continuity (samskara), caste boundary maintenance (endogamy), and gendered division of ritual labor. Solves the problem of social reproduction in a hierarchical, agrarian society by fixing roles, property rules, and marriage pools.",
+    "transfer_function": "Moves ritual labor, reproductive labor, and property control from wives and junior members to husband/karta; moves marriage market access and ritual dignity from lower castes to upper castes; moves authority over family disputes from individuals to religious elders; moves autonomy from all parties to the sacramental framework.",
+    "absent_voices": "Women's autonomous voices (no independent legal personality), lower caste perspectives on endogamy (enforced by upper caste power), inter-caste couples (structurally excluded), children's interests (subsumed under family), reformist Hindus (marginalized by orthodox-colonial alliance). These voices are absent from the dharmashastra textual tradition and the colonial courts that administered it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the sacramental indissoluble marriage with caste endogamy and joint family property vanished overnight, the entire social architecture of pre-1955 Hindu society would reorganize: property would individualize, caste boundaries would become permeable, women would gain marital autonomy, and the ritual economy of the family would collapse. The 1955 Hindu Marriage Act and 1956 Succession Act were precisely this rearrangement — partial, contested, and incomplete.",
+    "founding_problem": "How to maintain social order, ritual purity, and intergenerational property transmission in a stratified agrarian society without centralized state administration of family life. The dharmashastra provided a self-enforcing, textually grounded framework that aligned religious duty (dharma) with social function.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (agrarian social order without state family law) is dead — the Indian state now administers family law (Hindu Marriage Act 1955, Succession Act 1956). Corroboration: B.R. Ambedkar's parliamentary debates on the Hindu Code Bill, the Law Commission reports, and the fact that the Indian state explicitly replaced dharmashastra with statutory law. Orthodox pandits contested this; the state's own legislative record confirms the founding problem was deemed solved by state law."
+  },
+  "interval": {
+    "start": 1800,
+    "end": 1955
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1920,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1940,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1955,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1940,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1955,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1850,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1920,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1940,
+      "value": 0.83
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1955,
+      "value": 0.82
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Hindu dharmashastra reading of family law authority treats marriage as a sacramental samskara (sacrament) — indissoluble, caste-endogamous, embedded in joint family property rules, with the wife as ritual participant (saha-dharmini) rather than autonomous contractor. This reading governed Hindu personal law until the 1955 Hindu Marriage Act introduced divorce and the 1956 Succession Act reformed property rights. The constraint exhibits strong coordination functions (property transmission, ritual continuity, caste order) alongside asymmetric extraction (gender hierarchy, caste hierarchy, generational hierarchy). Active enforcement came from religious authorities, family councils, social ostracism, and colonial courts that codified 'Anglo-Hindu law' by freezing custom. The claimed type is tangled_rope — genuine coordination inextricably bound with extraction — and the metrics reflect high extractiveness and suppression with near-total accessibility collapse for victims.",
+    "logic_rationale": "Extractiveness (0.78) is high because the constraint extracts autonomy, labor, property control, and marriage choice from wives, lower castes, junior coparceners, and widows — and this extraction is structural, not incidental. Suppression (0.82) is very high because exit is blocked by religious doctrine (indissolubility), social enforcement (caste ostracism), identity fusion (wife as ritual participant), and legal non-recognition of alternatives. Theater ratio (0.45) reflects that ritual performance (saptapadi, kanyadaan) is real coordination but increasingly performative as property and gender tensions grow. Accessibility collapse (0.88) is near-total pre-1955: divorce, inter-caste marriage, widow remarriage, and nuclear family property were structurally unavailable. Resistance (0.55) is moderate — reform movements existed but were marginalized until state intervention.",
+    "directionality_logic": "Husband/karta sits near beneficiary end (d ~ 0.15): collects ritual labor, property control, and authority; constrained exit but high power. Wife is identity-locked target (d ~ 0.95): fused identity, no exit, bears extraction. Lower caste individuals are trapped (d ~ 0.9): structural exclusion, internalized hierarchy. Junior coparceners are constrained payers (d ~ 0.7): delayed autonomy, partition possible but costly. Religious authorities are agenda-setters with mobility (d ~ 0.2): interpretive monopoly, institutional power. Colonial officials are analytical observers (d ~ 0.5): administer but don't originate.",
+    "perspectival_gap": "From the karta/pandit seat, this is a rope: genuine coordination of property, ritual, and caste order with minimal coercion (participants 'voluntarily' follow dharma). From the wife/lower caste seat, this is a snare: indissolubility and endogamy are cover for extraction, enforced by identity fusion and social death. The engine computes this divergence from structural data — the same constraint is rope for the powerful and snare for the powerless.",
+    "mandatrophy_analysis": "The founding problem (agrarian social reproduction without state family law) is dead — solved by state legislation. Yet the constraint persists in customary practice, cultural expectations, and partial legal survivals (e.g., joint family property rules under Mitakshara coparcenary until 2005 amendment). This is mandatrophy: the mandate (dharmic social order) outlived its function (agrarian reproduction), but the constraint persists through cultural inertia and identity politics. The 1955/1956 Acts were the mandatrophy resolution attempt — incomplete because they retained joint family property and did not fully secularize marriage.",
+    "kernel_context": "This constraint is the hindu_dharmashastra_reading of the family_law_authority kernel. The kernel is the contested authority over marriage formation, dissolution, and property across religious communities in South Asia. Sibling readings: muslim_shariat_reading (nikah as civil contract), christian_canonical_reading (sacrament under ecclesiastical authority), parsi_zoroastrian_reading (community-preserving institution), secular_contractual_reading (civil contract between autonomous individuals). This reading claims textual authority from dharmashastra (Manu, Yajnavalkya, etc.) and customary practice; its distinctive axioms are sacramental indissolubility, caste endogamy, joint family property, and wife as ritual participant. The 1955 Hindu Marriage Act was a state imposition of the secular_contractual_reading onto this kernel, creating the modern contested field."
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_reading_identity",
+      "question": "Is this constraint a single reading of the family_law_authority kernel, or does it represent the kernel itself?",
+      "resolution_mechanism": "Structural decomposition: if changing the observable (e.g., measuring extraction by gender vs. caste vs. generation) changes epsilon, the label 'Hindu marriage' conflates multiple constraints. Test by writing separate stories for gender extraction, caste extraction, and property coordination within the same textual tradition.",
+      "impact": "If multiple constraints, each gets its own epsilon and classification; the kernel becomes a family of linked stories via network.affects_constraints. If single constraint, epsilon is stable across observables.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the dharmashastra reading is one epsilon-invariant constraint or a conflation of multiple constraints (gender, caste, property) under one label."
+    },
+    {
+      "id": "customary_vs_textual_authority",
+      "question": "Does the constraint's authority derive from dharmashastra texts or from customary practice that the texts merely rationalize?",
+      "resolution_mechanism": "Historical analysis of regional variation: if practice varies widely while texts are constant, custom drives the constraint; if practice tracks textual interpretation, texts drive it. Colonial court records (privy council decisions) show the interaction.",
+      "impact": "If custom-driven, the constraint is more adaptive (rope-like); if text-driven, more rigid (snare-like). Affects claimed_type and emergence_naturally assessment.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Text vs. custom as the real source of the constraint's binding force."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (caste ostracism, legal non-recognition, economic dependency) or internalized (identity fusion, dharmic self-concept, ritual necessity)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: track individuals who exited (conversion, migration, reformist marriage) — if suppression persists after structural barriers removed, internalized component is significant.",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests; the constraint travels with the agent. Affects omega weighting in classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in interpersonal/religious constraints."
+    },
+    {
+      "id": "joint_family_coordination_extraction_boundary",
+      "question": "Is the joint family property system a genuine coordination mechanism (risk pooling, economies of scale) or an extraction mechanism (karta control, junior member disempowerment)?",
+      "resolution_mechanism": "Counterfactual: compare economic outcomes of partitioned vs. joint families in similar agro-ecological zones; test whether partition improves welfare of junior members without collapsing risk pooling.",
+      "impact": "If genuine coordination, the property rule is rope-like; if extraction, snare-like. This boundary determines whether the tangled_rope classification holds or splits.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether joint family property coordination justifies its extraction or masks it."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "family_law_authority__muslim_shariat_reading",
+      "family_law_authority__christian_canonical_reading",
+      "family_law_authority__parsi_zoroastrian_reading",
+      "family_law_authority__secular_contractual_reading",
+      "hindu_succession_mitakshara_coparcenary",
+      "hindu_adoption_maintenance_act_1956"
+    ],
+    "dual_formulation_note": "The family_law_authority kernel decomposes into five readings (hindu_dharmashastra, muslim_shariat, christian_canonical, parsi_zoroastrian, secular_contractual) with different epsilon values and victim/beneficiary structures. This reading (hindu_dharmashastra) has the highest extractiveness (0.78) due to caste-gender-generational intersectionality. The secular_contractual_reading (post-1955 statutory law) influences this reading by overriding indissolubility and modifying property rules, but the dharmashastra reading persists in customary practice and cultural authority."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "muslim_shariat_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "christian_canonical_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "parsi_zoroastrian_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "secular_contractual_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "marriage_as_sacramental_samskara",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "caste_endogamy_as_dharmic_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "wife_as_ritual_participant_not_contractor",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "indissolubility_of_marriage",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "joint_family_property_by_birthright",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "classical_dharmashastra_order",
+    "drift_state": {
+      "moment": "post_hindu_code_bills_1955_56",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "family_law_authority"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

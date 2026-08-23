@@ -1,0 +1,317 @@
+{
+  "header": {
+    "constraint_id": "gpl_copyleft_scope__strong_copyleft_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "56f0d6db-2a78-4ce8-8fca-ed7466e58c65"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.78,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "GPL Section 2(b) Strong Copyleft — Derivative Work Boundary Extends to All Code Coupling",
+    "topic_domain": "software_licensing/intellectual_property/open_source_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "free_software_communities",
+      "gpl_projects"
+    ],
+    "victims": [
+      "proprietary_vendors",
+      "proprietary_developers"
+    ],
+    "vindicated_propositions": [
+      "software_freedom_requires_copyleft_propagation",
+      "dynamic_linking_creates_derivative_work"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Is the GPL's derivative work boundary a single settled legal fact, or an irreducibly contested kernel where strong_copyleft_reading, narrow_scope_reading, and enforcement_vacuum_reading instantiate different constraints with different ε values?",
+      "resolution_mechanism": "Authoritative judicial precedent on specific coupling forms (dynamic linking, plugin architectures, RPC boundaries) that resolves the interpretive dispute, or persistent pluralism where enforcement capacity determines which reading operates in which context.",
+      "impact": "If single settled fact, one reading is correct and others are errors; if contested kernel, each reading is a distinct constraint with its own beneficiary/victim structure and classification — the corpus must model all three as a constraint family linked by network.affects_constraints.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether GPL scope is one constraint or a kernel generating multiple constraints"
+    },
+    {
+      "id": "enforcement_credibility",
+      "question": "Are FSF enforcement threats against dynamic linking patterns structurally credible (backed by litigation capacity and community pressure), or performative (dependent on voluntary compliance)?",
+      "resolution_mechanism": "Track actual litigation outcomes, settlement terms, and compliance behavior changes after enforcement notices — not merely the volume of threats issued.",
+      "impact": "If credible, suppression is structural and the snare classification holds; if performative, the constraint's effective suppression is lower and the classification may drift toward tangled_rope (coordination with weak enforcement).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement machinery makes the copyleft threat structurally real"
+    },
+    {
+      "id": "derivative_work_boundary_ambiguity",
+      "question": "Where does the derivative work boundary actually fall for modern coupling forms: dynamic linking, shared address space, RPC/IPC, plugin architectures, containerized microservices?",
+      "resolution_mechanism": "Case law on specific technical coupling forms, or legislative clarification of 'derivative work' in software context.",
+      "impact": "Boundary location directly determines victim set: each coupling form ruled 'not derivative' removes a class of proprietary developers from the victim pool and reduces ε; each form ruled 'derivative' expands the snare's reach.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Technical boundary of what counts as derivative work under GPL 2(b)"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1999,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2007,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.78
+    }
+  ],
+  "interval": {
+    "start": 1991,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "GPL Section 2(b) requires that any work based on the Program — including combined or dynamically linked works — be licensed under the GPL. The strong copyleft reading interprets 'work based on the Program' to extend to all forms of code coupling: dynamic linking, shared libraries, plugin architectures, and any technical integration that creates a combined work at runtime. This reading structurally excludes proprietary vendors from incorporating GPL-licensed components without releasing their entire combined work under GPL. Free software communities gain a structural guarantee that code combining with GPL components remains free. Enforcement threats against dynamic linking patterns are credible through FSF litigation capacity and community pressure. The constraint operates as a high-extraction snare: proprietary developers who need GPL components face a binary choice (release source or don't use), with no middle-ground licensing option.",
+    "logic_rationale": "Extractiveness is high (0.82) because the constraint forces proprietary vendors to either surrender their proprietary codebase (full source release) or forgo GPL components entirely — a binary extraction with no proportional alternative. Suppression is high (0.78) because the constraint actively suppresses proprietary alternatives: vendors cannot legally distribute combined works, and the FSF's compliance program creates enforcement pressure. Theater ratio is moderate (0.35) — the copyleft mechanism is genuinely functional for its stated purpose, but compliance theater (dual licensing, LGPL workarounds, clean-room reimplementation) absorbs increasing effort. Accessibility collapse (0.68) reflects that proprietary alternatives to GPL components exist but are often technically inferior or economically nonviable. Resistance (0.75) captures sustained industry pushback: LGPL creation, permissive license migration, legal challenges, and the rise of 'open core' models to circumvent copyleft.",
+    "directionality_logic": "Proprietary vendors and proprietary developers are structural targets (d near 1.0): they bear the full cost of the constraint — either releasing proprietary code or losing access to GPL components. Their exit is constrained: rewriting GPL components is costly, and market pressure to use standard libraries is high. Free software communities and GPL projects are structural beneficiaries (d near 0.0): they receive the guarantee that improvements to GPL code remain free, and their ecosystem is protected from proprietary enclosure. FSF/enforcement entities are agenda_setters: they administer the license, set interpretation, and initiate enforcement. Courts are observers: they adjudicate boundary disputes but do not bear the constraint's costs or benefits. The directionality derivation from beneficiary/victim declarations + exit options produces this structure without overrides.",
+    "perspectival_gap": "From the FSF/free-software seat, the constraint is a genuine coordination mechanism (rope-like) that solves the collective-action problem of preventing proprietary capture of communal code. From the proprietary vendor seat, the same structure operates as pure extraction (snare) — a binary tax on using standard infrastructure. The engine computes this divergence from the declared structural positions; the claimed_type (snare) reflects the authoring seat's assessment that the extraction is asymmetric and enforcement-dependent, not that the coordination function is absent.",
+    "mandatrophy_analysis": "The founding problem (preventing proprietary enclosure through combination) remains live — proprietary incentives to enclose free code have not diminished. The constraint is not a piton (atrophied function); enforcement activity and compliance infrastructure are actively maintained. The snare classification correctly identifies asymmetric extraction without mislabeling the coordination function as absent — the coordination function exists but operates asymmetrically: free software communities coordinate through the constraint, while proprietary vendors are excluded from that coordination unless they surrender their proprietary position.",
+    "kernel_context": "This constraint is the strong_copyleft_reading of the contested kernel gpl_copyleft_scope. The kernel is GPL Section 2(b)'s derivative work language. Sibling readings: narrow_scope_reading (derivative work boundary follows traditional copyright doctrine, constrains only direct derivatives, not aggregation/plugins/certain dynamic linking) and enforcement_vacuum_reading (absence of definitive precedent allows both readings to coexist as licensed plurality; actual constraint depends on which interpretive community has enforcement capacity in context). This reading instantiates a high-epsilon snare with proprietary vendors as structural victims and free software communities as structural beneficiaries."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_copyleft_scope__narrow_scope_reading",
+      "gpl_copyleft_scope__enforcement_vacuum_reading",
+      "lgpl_library_exception",
+      "agpl_network_copyleft"
+    ],
+    "dual_formulation_note": "This constraint decomposes the colloquial label 'GPL copyleft' into a constraint family. strong_copyleft_reading has high ε (snare) because it extends derivative work boundary to all coupling forms. narrow_scope_reading would have lower ε (tangled_rope or rope) because its boundary is narrower and coordination function dominates. enforcement_vacuum_reading would have context-dependent ε. All three are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "proprietary_vendors",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Cannot legally incorporate GPL components into proprietary products without releasing the combined work under GPL. Face binary choice: open-source their proprietary codebase (surrendering competitive advantage) or forgo GPL components (incurring rewrite costs or inferior alternatives). Exit requires massive reengineering investment or business model change. FSF compliance program targets commercial distributors."
+    },
+    {
+      "name": "proprietary_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individual developers or small firms building proprietary applications who need GPL-licensed libraries. Same binary choice as vendors but with fewer resources for clean-room reimplementation or legal defense. Often pressured by employers to avoid GPL dependencies entirely, narrowing their technical options."
+    },
+    {
+      "name": "free_software_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receive structural guarantee that any code combining with GPL components remains free. The constraint protects the commons from enclosure: improvements, extensions, and integrations flow back. They can exit by migrating to permissive licenses, but the GPL network effect makes exit costly for established projects. Benefit is the ecosystem integrity itself, not monetary rent."
+    },
+    {
+      "name": "gpl_projects",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Individual GPL-licensed projects (Linux kernel, GCC, coreutils, etc.) benefit from the constraint because any proprietary fork or integration must contribute back. They administer the license terms through their own governance. Exit would mean relicensing (requires contributor agreement) or abandoning the project."
+    },
+    {
+      "name": "fsf_enforcement",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Free Software Foundation stewards the GPL license text, publishes authoritative interpretations (FAQ, compliance guides), and operates the compliance program (enforcement notices, litigation support, settlement negotiation). They set the interpretive agenda for what 'derivative work' means. They do not directly collect monetary rents but gain institutional relevance and donor support from enforcement activity."
+    },
+    {
+      "name": "courts_legal_system",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate specific disputes over GPL scope: whether dynamic linking creates derivative works, whether plugin architectures are 'mere aggregation,' whether RPC boundaries matter. No jurisdiction has produced definitive precedent on all coupling forms. Rulings create localized precedent but global uniformity is absent. They bear no direct cost/benefit from the constraint's operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of preventing proprietary enclosure of free software: without copyleft, any contributor's code could be absorbed into proprietary products without reciprocation, undermining the incentive to contribute to the commons. The constraint ensures that improvements and integrations flow back to the community.",
+    "transfer_function": "Moves source code availability from proprietary vendors/developers (who would keep combined works closed) to the public domain/commons (where GPL requires combined works to be released). The transfer is binary: either the proprietary party releases source, or they cannot legally distribute the combined work.",
+    "absent_voices": "Proprietary developers who want to use GPL libraries in closed products without releasing source — they are structurally excluded from the licensing conversation because the GPL's terms deny them the permission they seek. Also absent: users who would benefit from proprietary-GPL integration products that never get built due to the constraint.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strong copyleft constraint vanished overnight, proprietary vendors would immediately incorporate GPL components into closed products without source release. The free software ecosystem would lose its structural guarantee of reciprocity. Linux kernel, GCC, and core infrastructure would face proprietary forks capturing improvements. The entire free software economy would reorganize around permissive licenses or collapse into open-core models.",
+    "founding_problem": "Preventing proprietary enclosure of free software through combination and linking: early free software (Emacs, GCC) was being incorporated into proprietary Unix variants without source release, breaking the reciprocity that sustained the commons.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "FSF and free software community attest the problem is live — proprietary incentives to enclose free code persist (evidenced by ongoing compliance cases and open-core business models). Industry representatives (proprietary vendors, BSA, etc.) attest the founding problem is substantially solved or that the constraint now overreaches — they argue modern software architecture makes the derivative work boundary ambiguous and the constraint captures innocent coupling. Independent legal scholars (e.g., Pamela Samuelson, Lawrence Rosen) corroborate the boundary ambiguity but differ on whether the strong reading is correct."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "narrow_scope_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "enforcement_vacuum_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "copyleft_propagates_through_all_coupling",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "dynamic_linking_creates_derivative_work",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "gpl_copyleft_scope_strong",
+    "drift_state": {
+      "moment": "contemporary_legal_uncertainty",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

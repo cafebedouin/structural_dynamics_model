@@ -1,0 +1,310 @@
+{
+  "header": {
+    "constraint_id": "legitimacy_of_imposed_practice__exogenous_override_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_legitimacy_of_imposed_practice__exogenous_override_reading",
+    "measurement_id_prefix": "legitimacy_imposed_exogenous",
+    "story_uid": "402f12c7-6851-4944-9187-0a9a32fc52d9"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.76,
+    "resistance": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "State Decree Authority Sufficient to Displace Prior Practice",
+    "topic_domain": "political/historical/cultural_imposition",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "state_modernization_agenda",
+      "urban_administrators"
+    ],
+    "victims": [
+      "rural_populations",
+      "traditional_authorities"
+    ],
+    "vindicated_propositions": [
+      "state_sovereignty_doctrine",
+      "legal_positivism_authority",
+      "modernization_theory_linear_progress"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_structure",
+      "question": "This constraint is one reading (exogenous_override_reading) of the contested kernel legitimacy_of_imposed_practice. What structural elements distinguish it from the sibling readings endogenous_climb_reading and hybrid_scaffolding_reading?",
+      "resolution_mechanism": "Compare the three readings' beneficiary/victim structures, suppression mechanisms, and coordination claims. The exogenous reading claims decree alone suffices; endogenous claims internalization required; hybrid claims scaffolded imposition works. Each produces different ε and different victim sets.",
+      "impact": "If the readings are not structurally distinct, they collapse into one constraint with measurement-dependent ε, violating ε-invariance. Distinct readings must author separate constraint stories linked via network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee structure: which reading of the legitimacy kernel this constraint instantiates"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.82) primarily structural (legal penalties, administrative coercion, resource denial) or internalized (rural populations accepting the new practice as legitimate over time)?",
+      "resolution_mechanism": "Post-reform trajectory analysis: if suppression metrics persist after legal enforcement relaxes, internalization component is significant. Compare regions with identical laws but different enforcement intensity.",
+      "impact": "If substantially internalized, effective suppression exceeds the structural measure — targets carry the constraint with them. This would increase χ for rural populations beyond what structural coercion alone predicts, reinforcing snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in state imposition of cultural practices"
+    },
+    {
+      "id": "decree_effectiveness_boundary",
+      "question": "Where is the boundary between 'decree displaces practice' (this reading's claim) and 'decree creates legal fiction while practice persists informally' (the observed rural non-compliance)?",
+      "resolution_mechanism": "Longitudinal compliance data: measure formal adoption vs. actual practice at 5, 10, 20 year intervals. The boundary is where formal compliance diverges from behavioral compliance without converging.",
+      "impact": "If the boundary is narrow (decree quickly becomes fiction), the constraint's claimed coordination function collapses and extraction is nearly pure — snare classification strengthens. If wide (decree gradually internalizes), tangled_rope becomes plausible.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether legal mandate alone produces behavioral displacement or only formal compliance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.85,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.82,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the exogenous override reading of the legitimacy_of_imposed_practice kernel: the claim that state decree authority alone is sufficient to displace prior cultural practices, with compliance following from legal mandate regardless of whether the affected populations internalize the new practice. The structural delta specifies two domains — Calendar (pure override: legal abolition of traditional calendar, rural non-compliance, practical workarounds) and Dress (partial override: coercive enforcement of new dress codes, but incomplete displacement of traditional garments). Beneficiaries are the state modernization agenda and urban administrators who gain administrative legibility and symbolic capital. Victims are rural populations bearing adjustment costs without consultation, and traditional authorities displaced from their normative role. The constraint is claimed as a snare: the coordination story (modernization, standardization) is cover for extraction (administrative control, symbolic dominance) enforced through coercion with suppressed alternatives.",
+    "key_agents": [
+      "state_modernization_agenda: Primary beneficiary/agenda_setter (institutional/arbitrage) — sets the mandate, captures administrative legibility",
+      "urban_administrators: Secondary beneficiary/agenda_setter (organized/arbitrage) — implement decree, gain career advancement through enforcement metrics",
+      "rural_populations: Primary victim/payer (powerless/trapped) — bear adjustment costs, face penalties for non-compliance, no exit from state reach",
+      "traditional_authorities: Victim/excluded (organized/constrained) — displaced from normative authority, co-opted or suppressed",
+      "historical_analysts: Observer (analytical/analytical) — evaluate long-term displacement vs. persistence of informal practice"
+    ],
+    "logic_rationale": "Extractiveness (0.78) is high because the state extracts compliance labor, cultural disruption costs, and symbolic submission from rural populations without compensation. Suppression (0.82) is very high because the constraint's persistence depends on active coercion: legal penalties, denial of state services for non-compliance, surveillance of rural areas, and co-optation of traditional leaders. Theater ratio (0.45) is moderate: the modernization rhetoric performs a coordination function (standardization, progress narrative) but nearly half the enforcement activity defends the payment exclusivity rather than genuine public good. Accessibility collapse (0.76) is high because once the decree is issued, traditional practices are legally abolished — alternatives exist only informally and at risk. Resistance (0.68) is substantial: rural non-compliance, practical workarounds (dual calendar use, hidden traditional dress), and periodic uprisings document active resistance. The measurement series shows extractiveness rising as enforcement intensifies (years 0-10), then stabilizing; theater rising as modernization rhetoric thickens; suppression peaking early then modulating as informal persistence becomes managed rather than eliminated.",
+    "directionality_logic": "State modernization agenda and urban administrators are structural beneficiaries (d near 0.0): they collect administrative legibility, symbolic capital, and career advancement from the decree. Rural populations are full targets (d near 1.0): they bear all adjustment costs, face penalties, have no meaningful exit (trapped by state territorial monopoly). Traditional authorities are targets with constrained exit (d ~ 0.8): displaced from authority, can sometimes negotiate co-optation but cannot restore prior status. Historical analysts sit at analytical (d = 0.5): they observe the structure without bearing costs or collecting benefits. The derivation chain from beneficiary/victim declarations + power + exit produces these directionalities without overrides.",
+    "perspectival_gap": "From the state/urban administrator seat, the constraint appears as genuine coordination: standardization reduces transaction costs, enables modern administration, creates legible populations. From the rural population seat, the same structure operates as enforced extraction: they pay the costs of disruption, gain no voice, and the 'modernization' benefits accrue elsewhere. From the traditional authority seat, it is displacement: their normative role is abolished, replaced by state-appointed intermediaries. The engine computes these divergent per-seat classifications from the structural data — the authored claim (snare) reflects the rural/traditional seat experience, while the state seat would compute rope or tangled_rope.",
+    "mandatrophy_analysis": "The founding problem (administrative illegibility of diverse local practices) was real but the arrangement has outlived it: modern states now have statistical/administrative tools to manage diversity without abolition. The mandate persists because the extraction (compliance labor, symbolic submission) benefits the state apparatus, and the cost to fix (political risk of recognizing traditional authority) exceeds what administrators bear. This is classic mandatrophy: the constraint's function has atrophied but the structure remains because no party is hurt enough to fix it and the administrator benefits from its persistence. The theater ratio captures the performative maintenance of the modernization narrative.",
+    "kernel_context": "This constraint is the exogenous_override_reading of the legitimacy_of_imposed_practice kernel. Sibling readings: endogenous_climb_reading (displacement requires internalization; imposed commitments fail without bottom-up adoption), hybrid_scaffolding_reading (top-down mandate succeeds when reinforced by ideological messaging generating quasi-endogenous pull; pure decree fails, pure climb is slow). This reading claims decree alone suffices; the structural delta (rural non-compliance, practical workarounds) contradicts the claim, which is why the metrics describe a snare while the claim asserts coordination sufficiency."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "legitimacy_of_imposed_practice__endogenous_climb_reading",
+      "legitimacy_of_imposed_practice__hybrid_scaffolding_reading",
+      "state_administrative_legibility_standardization",
+      "rural_traditional_authority_displacement"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the colloquial label 'state imposition of cultural practices' into three structurally distinct readings of the legitimacy kernel. The exogenous reading (this story) claims decree suffices and authors high extraction/suppression. The endogenous reading claims internalization required and would author lower suppression but higher resistance. The hybrid reading claims scaffolded imposition works and would author intermediate metrics with ideological coordination function. All three share the kernel_id and are linked via affects_constraints."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "state_modernization_agenda",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets the legal mandate abolishing traditional calendar and dress codes. Justifies it as modernization, standardization, and progress. Captures administrative legibility (uniform timekeeping, identifiable citizens) and symbolic capital (state as modernizer). Can shift policy if political cost exceeds benefit — has arbitrage-grade exit from this specific mandate."
+    },
+    {
+      "name": "urban_administrators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Implement the decree through local bureaucracy: issue fines, deny services to non-compliers, report compliance metrics. Gain career advancement from enforcement success. Benefit from simplified administration (uniform codes). Constrained exit: transferring out of enforcement roles is possible but career-costly; they are invested in the system."
+    },
+    {
+      "name": "rural_populations",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the costs: learn new calendar for official business while maintaining traditional calendar for agriculture/rituals; purchase new clothing; face fines or service denial for non-compliance. No consultation in the mandate. No meaningful exit — state territorial monopoly means they cannot escape the jurisdiction. Practical workarounds (dual practice, hidden traditional dress) are their only resistance."
+    },
+    {
+      "name": "traditional_authorities",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Displaced from normative authority over timekeeping and dress. Some co-opted as state intermediaries (enforcing decree locally); others suppressed. Their legitimacy derives from tradition, which the decree declares obsolete. Constrained exit: they can collaborate (gaining state patronage but losing traditional credibility) or resist (risking removal), but cannot restore the prior normative order."
+    },
+    {
+      "name": "historical_analysts",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Evaluate long-term outcomes: does the decree produce genuine behavioral displacement or only formal compliance? Measure informal persistence of traditional practices. Assess whether modernization benefits materialize or whether extraction dominates. Their analysis shapes future policy but they bear no direct costs from the constraint."
+    }
+  ],
+  "gain_flow": "state_modernization_agenda",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Standardizes timekeeping and dress across a diverse territory to enable modern administration: tax collection, conscription, census, legal proceedings, and market regulation all require legible, uniform categories.",
+    "transfer_function": "Moves compliance labor, cultural disruption costs, and symbolic submission from rural populations to the state apparatus. The state gains administrative legibility and modernization legitimacy; rural populations lose autonomous timekeeping, traditional dress, and normative authority of local leaders.",
+    "absent_voices": "Rural populations had no representation in the legislative bodies that issued the decrees. Traditional authorities were not consulted; their objections were treated as obstruction. Women's specific burdens (garment production, calendar management for domestic rituals) were invisible to the male-dominated administration. These voices are structurally excluded by the constraint's design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the decree and its enforcement vanished overnight, rural populations would revert to traditional calendar and dress within months (dual practice already exists). Traditional authorities would reclaim normative role. Urban administrators would lose enforcement metrics and simplified categories. The state would need new administrative tools for managing diversity. The world rearranges because arrangements depend on this constraint.",
+    "founding_problem": "Early modern states faced administrative illegibility: diverse local calendars, dress codes, and measurement systems made taxation, conscription, and governance inefficient. The founding problem was the state's inability to 'see' and administer its population uniformly.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historical sociologists (Scott, Foucault, Weber) outside the state modernization agenda attest that the administrative illegibility problem was real in the 18th-19th centuries. Contemporary state capacity researchers attest that modern statistical/administrative tools (sampling, digital records, localized administration) have substantially solved the founding problem without requiring cultural abolition. The state's own archives show the decree persisted long after administrative necessity faded."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "endogenous_climb_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_scaffolding_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_decree_sufficient_for_displacement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "internalization_not_required_for_compliance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "legal_positivist_state_authority",
+    "drift_state": {
+      "moment": "contemporary_administrative_capacity",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

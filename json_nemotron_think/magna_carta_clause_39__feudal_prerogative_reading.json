@@ -1,0 +1,308 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_clause_39__feudal_prerogative_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_magna_carta_clause_39__feudal_prerogative_reading",
+    "measurement_id_prefix": "magna_carta_clause_39__feudal_prerogative_reading",
+    "story_uid": "40d1b37b-e643-46b6-b901-fd2c06a52a53"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.15,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.22,
+    "claimed_type": "rope",
+    "human_readable": "Magna Carta Clause 39 — Feudal Prerogative Reading",
+    "topic_domain": "constitutional_law/legal_history/political_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "crown",
+      "elite_peers"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "feudal_contract_mutual_obligation",
+      "peer_judgment_as_aristocratic_privilege"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Does the feudal prerogative reading reflect genuine 13th-century understanding, or is it a retrospective narrowing constructed to oppose later liberal due process readings?",
+      "resolution_mechanism": "Comparative analysis of 1215-1300 legal records, baronial charters, and royal court rolls to determine whether 'liber homo' and 'per legem terre' were understood narrowly (aristocratic peers) or broadly (all free men).",
+      "impact": "If retrospective, the reading's low extractiveness claim against traditional authority is a modern analytical artifact; if contemporary, the clause genuinely functioned as intra-aristocratic coordination with minimal extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the feudal prerogative reading is historically authentic or polemically constructed."
+    },
+    {
+      "id": "scope_of_liber_homo",
+      "question": "What population did 'liber homo' (free man) actually cover in 1215 practice — only tenants-in-chief and knights, or a broader class including free tenants and burgesses?",
+      "resolution_mechanism": "Domesday Book cross-referencing, Hundred Rolls analysis, and plea roll evidence for who actually invoked Clause 39 protections in 13th-century courts.",
+      "impact": "A narrow scope (barons/knights only) confirms the feudal prerogative reading's restricted beneficiary set; a broader scope pushes toward the originalist_limitation_reading's intermediate position.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Historical scope of the clause's protected class."
+    },
+    {
+      "id": "enforcement_reality_13th_century",
+      "question": "Was Clause 39 actually enforced against the crown in the 13th century, or did it remain aspirational until later reissues and statutory confirmations?",
+      "resolution_mechanism": "Case law survey of 1215-1300: instances where royal courts honored peer-judgment demands versus cases where the crown overrode them.",
+      "impact": "If unenforced, the clause's coordination function was theoretical and its extractiveness near zero (pure theater); if enforced, it imposed real procedural costs on royal authority.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint had operational teeth in its founding era."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 600,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 600,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 600,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 800,
+      "value": 0.1
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 800
+  },
+  "commentary": {
+    "narrative_context": "Magna Carta Clause 39 ('No free man shall be seized... except by the lawful judgment of his peers or by the law of the land') is the kernel. This reading — the feudal prerogative reading — treats the clause as a narrow procedural guarantee negotiated by the baronial elite to constrain King John's arbitrary justice while preserving the feudal hierarchy intact. 'Free men' means the warrior aristocracy (tenants-in-chief, knights); 'peers' means social equals within that hierarchy. The clause coordinates dispute resolution among peers, preventing blood feuds and royal caprice that threaten the feudal contract. The crown concedes it to secure loyalty; the elite peers gain predictable procedure. The unfree majority (villeins, serfs) are structurally excluded. Extraction is low (0.18) because the constraint operates as mutual obligation within the feudal order, not as a check on hierarchical authority per se. Theater rises over centuries as the clause becomes a symbolic totem rather than an operational procedural rule.",
+    "key_agents": [
+      "crown: Primary agenda_setter (conceded charter, enforces through royal courts) — institutional/generational/arbitrage",
+      "elite_peers: Primary beneficiaries (barons, knights gain peer-judgment protection) — powerful/biographical/constrained",
+      "serfs_villeins: Excluded (no standing under Clause 39) — powerless/immediate/trapped",
+      "royal_courts: Administer the procedure — institutional/generational/analytical",
+      "church: Witness and guarantor of the charter — institutional/generational/analytical"
+    ],
+    "logic_rationale": "Low extractiveness (0.18) reflects that the constraint primarily coordinates intra-aristocratic relations; the crown loses arbitrary power over nobles but gains systemic stability. Suppression is minimal (0.15) — the clause creates a procedural path, it doesn't coerce compliance through force. Theater ratio starts near zero (genuine operational procedure in 1215) and rises as the clause becomes a constitutional symbol detached from feudal practice. Accessibility collapse is moderate (0.35) — alternative dispute mechanisms (royal courts, seigneurial courts) persist alongside peer judgment. Resistance is low (0.22) — the barons wanted this constraint; the crown conceded it under pressure but the arrangement serves mutual feudal interests.",
+    "perspectival_gap": "From the crown's seat (agenda_setter), the constraint is a costly but necessary concession to maintain feudal legitimacy — directionality moderate (d ~0.35). From elite_peers' seat (beneficiary), it is a hard-won protection against royal arbitrariness — directionality low (d ~0.15). From serfs_villeins' seat (excluded), the constraint is irrelevant to their condition — directionality analytical (d ~0.5). The engine computes these divergences from the structural data; the feudal reading's claim that the clause preserves hierarchy means the crown is not a pure target.",
+    "directionality_logic": "The crown appears in beneficiaries because the feudal reading treats the charter as a mutual settlement: the crown trades arbitrary power for stabilized rule. Elite_peers are beneficiaries because they gain procedural security. No victims are declared because the constraint does not extract from a subordinated class — it coordinates among the ruling stratum. Serfs_villeins are excluded stakeholders, not victims of this constraint (their subordination rests on other constraints). Royal_courts and church are observers/guarantors. The override for crown (d=0.32) corrects the derivation which would otherwise treat any constrained party as a target.",
+    "mandatrophy_analysis": "The founding problem (baronial rebellion against John's arbitrary justice) is dead — the specific 1215 crisis is long resolved. Yet the clause persists because it was reissued, confirmed by statute, and mythologized. The feudal prerogative reading does not claim the clause solved a live problem today; it describes the clause's original structural function. The mandatrophy is not resolved — the constraint's form outlived its feudal function, but this reading treats that as a historical fact, not a defect. The liberal_due_process_reading is the one that claims living mandate.",
+    "kernel_context": "This constraint is the feudal_prerogative_reading of kernel magna_carta_clause_39. Sibling readings: liberal_due_process_reading (universal individual rights against arbitrary state power) and originalist_limitation_reading (limits only specific royal abuses documented in 1215 context). This reading holds that Clause 39 preserves the feudal hierarchy by granting narrow procedural privileges to the warrior aristocracy; it does not establish universal rights or limit the crown's authority over the unfree population. The epsilon referent is the 1215 charter as a feudal settlement, assessed by this reading's lights."
+  },
+  "stakeholders": [
+    {
+      "name": "crown",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "situation": "Conceded Clause 39 under baronial pressure in 1215; reissued it to secure loyalty. Enforces it through royal courts but interprets 'liber homo' and 'peers' narrowly to preserve royal prerogative over the unfree. Gains legitimacy and stabilized feudal order; loses arbitrary power over the baronage. Exit means ignoring the charter — but that risks renewed rebellion and loss of legitimacy."
+    },
+    {
+      "name": "elite_peers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Barons, tenants-in-chief, and knights who forced the charter. They invoke 'judgment by peers' to avoid royal courts where the king controls outcomes. Their protection is real but class-bound: they do not extend it to their own tenants. Exit from the feudal system is constrained — their identity, land tenure, and military obligation are fused with the hierarchy the clause preserves."
+    },
+    {
+      "name": "serfs_villeins",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The unfree majority (villeins, serfs, cottars) who comprise 70-80% of the population. They have no standing to invoke Clause 39; their disputes are heard in seigneurial courts controlled by their lords. They are structurally excluded from the clause's protections — not victimized by this constraint specifically, but by the feudal order it helps preserve. Their exit is trapped: bound to land, identity, and labor obligations."
+    },
+    {
+      "name": "royal_courts",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administer justice under the charter's terms. Develop procedural forms (writs, assizes, juries) that partially satisfy 'lawful judgment' while retaining royal control. Over centuries, they absorb the clause's language into common law procedure, transforming peer judgment into jury trial. They are both enforcers and interpreters of the constraint."
+    },
+    {
+      "name": "church",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Witnessed and guaranteed the 1215 charter (Archbishop Langton). Provided the moral-theological framework for 'law of the land' as divine/natural law. Later, ecclesiastical courts operate parallel to royal courts, offering alternative forums. The church's role is supervisory and legitimating, not directly subject to the clause's procedural rule."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides predictable dispute resolution among the warrior aristocracy, preventing blood feuds and royal caprice that destabilize the feudal contract. The peer-judgment procedure replaces private violence and arbitrary royal judgment with a structured, reciprocal process among social equals.",
+    "transfer_function": "Moves adjudicative authority from sole royal discretion to a peer-judgment procedure for a narrow class of free men. The transfer is not of resources but of decision-rights: the crown surrenders the power to judge barons arbitrarily; barons accept the crown's courts for lesser matters but claim peer judgment for matters of life, limb, and land.",
+    "absent_voices": "The unfree majority (villeins, serfs, women of all classes) who comprise most of the population but have no standing under Clause 39. They are structurally excluded from its protections; their 'judgment' remains seigneurial and arbitrary. They would object to the clause's celebration as a liberty charter, but they are not in the conversation — then or now.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Clause 39 vanished overnight in 1215, the baronial rebellion would resume; royal justice would revert to pure discretion; blood feuds among the aristocracy would increase. The feudal contract would lose its key procedural stabilizer. In later centuries, its disappearance would unravel centuries of common law procedural development built on its language.",
+    "founding_problem": "Barons' rebellion against King John's arbitrary justice and financial exactions (arbitrary disseisin, excessive reliefs, wardship abuses, hostility to baronial courts). The barons needed a binding limit on royal power to secure their tenure and status; the crown needed to end the rebellion and retain the throne.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Contemporary chronicles (Roger of Wendover, Matthew Paris, Barnwell Chronicler) and the charter's own preamble attest to the baronial rebellion as the founding crisis. Modern historians (J.C. Holt, David Carpenter, Nicholas Vincent) corroborate the specific grievances from royal records, pipe rolls, and baronial charters. No serious historian disputes the 1215 crisis as the founding problem; the dispute is over the clause's subsequent meaning."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "liberal_due_process_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "originalist_limitation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "feudal_hierarchy_preserved",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "peer_judgment_narrow_scope",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "feudal_contract_1215",
+    "drift_state": {
+      "moment": "contemporary_constitutional_era",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "magna_carta_clause_39__liberal_due_process_reading",
+      "magna_carta_clause_39__originalist_limitation_reading"
+    ],
+    "dual_formulation_note": "This constraint is the feudal_prerogative_reading of kernel magna_carta_clause_39. The liberal_due_process_reading treats the same text as establishing universal procedural rights; the originalist_limitation_reading treats it as addressing only documented 1215 abuses. All three share the fixed text kernel but instantiate different constraints with different beneficiary/victim structures, extractiveness, and claimed types. This reading has the lowest extractiveness against traditional authority and the narrowest beneficiary set."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.32
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "magna_carta_clause_39"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

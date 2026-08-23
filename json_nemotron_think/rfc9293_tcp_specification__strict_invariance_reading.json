@@ -1,0 +1,313 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__strict_invariance_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_rfc9293_tcp_specification__strict_invariance_reading",
+    "measurement_id_prefix": "rfc9293_strict",
+    "story_uid": "8c1d0068-7225-409c-ae5d-8f3f4d83d264"
+  },
+  "base_properties": {
+    "extractiveness": 0.03,
+    "suppression": 0.15,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "RFC 9293 TCP Invariant State Machine (Strict Invariance Reading)",
+    "topic_domain": "technological/network_protocol",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "protocol_implementers",
+      "application_developers",
+      "network_operators",
+      "end_users"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "tcp_interoperability_guarantee",
+      "specification_authority",
+      "invariant_state_machine_correctness",
+      "independent_implementation_convergence"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ietf_tcp_maintainers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Maintain the TCP specification through the IETF standards process. Produce RFCs, errata, and bis documents. Their authority derives from the voluntary consensus of the technical community. They do not enforce compliance; interoperability pressure does."
+    },
+    {
+      "name": "os_vendors_stack_implementers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Implement the TCP state machine in operating system kernels (Linux, Windows, BSD, etc.). They benefit from a single authoritative specification that eliminates pairwise compatibility negotiation. They bear the cost of exact conformance testing and maintenance. Exit means abandoning the dominant transport protocol, which is practically infeasible for general-purpose OS vendors."
+    },
+    {
+      "name": "application_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build applications assuming TCP's reliable, ordered byte-stream semantics. They benefit from the guarantee that any compliant stack will behave identically. They can switch to other transports (QUIC, SCTP, UDP-based) with effort, so exit is mobile. Their reliance on the specification is total for TCP-based applications."
+    },
+    {
+      "name": "middlebox_vendors",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build network appliances (firewalls, NATs, load balancers, optimizers) that modify TCP headers, state, or timing in-path. This reading classifies their modifications as specification violations. They would argue that deployed middleboxes define the real protocol. Their exit from this reading's framework means accepting the 'violation' label or changing product behavior."
+    },
+    {
+      "name": "network_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate the routers, links, and infrastructure that carry TCP traffic. They benefit from predictable, standard-compliant endpoint behavior that makes network management tractable. They also deploy middleboxes, creating a tension captured by the middlebox_realism_reading. Exit from TCP is not viable; the constraint is the substrate of their operation."
+    },
+    {
+      "name": "end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Use applications that run over TCP. They benefit from 'it just works' interoperability. They have no direct relationship to the specification and can switch applications or networks freely (arbitrage-grade exit at the user level). They are the ultimate beneficiaries of the coordination."
+    },
+    {
+      "name": "competing_transport_protocols",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Developers of QUIC, SCTP, and other transports. They observe the TCP specification as a coordination anchor they must either interoperate with or displace. They do not pay TCP's conformance costs nor collect its interoperability benefits directly. Their analytical seat tracks whether TCP's invariant model remains the coordination standard."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single, exact state machine specification so that any two independently developed implementations can interoperate without prior coordination, pairwise negotiation, or runtime discovery of each other's behavioral quirks.",
+    "transfer_function": "Moves the burden of interoperability from pairwise implementation negotiation to specification compliance: each implementer invests in exact conformance to the invariant state machine, and in return gains universal connectivity with all other compliant implementations.",
+    "absent_voices": "Middlebox vendors and network appliance manufacturers who modify TCP behavior in-path (header rewriting, state manipulation, timing alteration). They are structurally excluded by this reading's premise that such modification is a specification violation rather than a legitimate adaptation. They would argue that the deployed middlebox population *is* the real protocol.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the invariant specification vanished overnight, implementations would diverge within release cycles. Interoperability would fracture into version-specific compatibility matrices. The internet would reorganize around either a new coordination point (a successor specification) or a regime of bilateral compatibility layers and middlebox-driven de facto standards — the very fragmentation the specification was created to prevent.",
+    "founding_problem": "Early TCP implementations (pre-RFC 793, pre-RFC 1122) diverged in state machine behavior, retransmission logic, and window management in ways that broke interoperability between independently developed stacks. A single authoritative state machine was needed to allow independent implementations to work together without coordination.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The IETF standards process itself, decades of multi-vendor interoperability testing (e.g., TCP/TCP interop events), and the documented history of pre-standardization fragmentation (the 'TCP wars' of the 1980s) all corroborate this from outside any single beneficiary. No single vendor or implementer controls this corroboration."
+  },
+  "interval": {
+    "start": 1981,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1981,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1989,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1981,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1989,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1981,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1989,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1999,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "RFC 9293 (and its predecessors RFC 793, RFC 1122, RFC 7414) specifies the TCP state machine as an invariant: every conforming implementation must replicate the same state transitions, timer behaviors, and packet processing rules. This strict invariance reading holds that the specification is the coordination anchor — deviation is not 'optimization' or 'adaptation,' it is violation. The constraint is a pure Rope: it solves a genuine collective-action problem (independent implementation interoperability) with minimal coercive overhead; participants are net beneficiaries; alternatives (other transports, non-compliant stacks) are not suppressed. The extractiveness is near-zero (0.03) — the cost of conformance is the price of admission to the interoperability club, not extraction by a beneficiary. Suppression is low (0.15) — no one is forced to use TCP; QUIC, UDP, and other transports exist. Theater is negligible (0.05) — the specification does real coordination work. The measurement series shows remarkable stability over four decades.",
+    "logic_rationale": "The claimed type (rope) and metrics align: near-zero extractiveness, low suppression, negligible theater, moderate accessibility collapse (TCP dominance makes alternatives harder but not impossible), near-zero resistance (no one opposes the specification itself). The specification emerged from a coordination need, not extraction. The beneficiary set is broad and symmetric — implementers, applications, operators, users all gain. No party collects rents from the constraint's operation. The 'victims' mentioned in the kernel delta are not extraction victims; they are parties harmed when *others* violate the rope — a different structural category.",
+    "directionality_logic": "All declared beneficiaries (implementers, applications, operators, users) sit at d ≈ 0.0–0.2: the constraint subsidizes them by providing a coordination good they could not produce alone. The excluded middlebox vendors sit at d ≈ 0.8–0.9: the constraint's logic treats their core business (in-path modification) as violation. But this is not extraction — it is the coordination function drawing a boundary. The agenda setters (IETF maintainers) sit at d ≈ 0.1: they bear maintenance costs but gain legitimacy and standards authority. No seat experiences high effective extraction.",
+    "perspectival_gap": "The middlebox_realism_reading would compute a radically different seat map: middlebox vendors become beneficiaries (their modifications are 'real TCP'), end users become payers (middlebox breakage causes silent failures), and the specification becomes a snare (enforcing an ideal that doesn't match deployed reality). The optimization_latitude_reading would compute a third map: implementers gain latitude (beneficiary), but application developers lose guarantee precision (payer). The engine computes these divergences from the same structural data under different reading framings.",
+    "mandatrophy_analysis": "The founding problem (interoperability of independent implementations) remains live. The specification has not atrophied into a piton — it continues to do coordination work. It has not become a snare — no party extracts from it. It has not become a tangled rope — there is no asymmetric extraction layered on the coordination. It remains a rope, albeit one under practice_drift pressure from middlebox deployments.",
+    "kernel_context": "This constraint is the strict_invariance_reading of the rfc9293_tcp_specification kernel. Sibling readings: optimization_latitude_reading (permits implementation latitude for performance within semantic bounds), middlebox_realism_reading (holds that deployed middlebox population defines real TCP; specification authority is subordinate to network reality). This reading's core premise — zero tolerance for deviation, specification as invariant anchor — forecloses the middlebox_realism_reading within any single framework (you cannot simultaneously hold 'deviation is violation' and 'middlebox modification defines the protocol'). It coexists with the optimization_latitude_reading (different parties hold different views on permissible implementation latitude without logical contradiction). This reading influences the optimization_latitude_reading by setting the baseline conformance standard that latitude is measured against."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the strict_invariance_reading a distinct constraint with its own ε, or a framing of the same constraint as the sibling readings?",
+      "resolution_mechanism": "Apply the ε-invariance test: if measuring the constraint under this reading yields ε ≈ 0.03 (coordination cost) while the middlebox_realism_reading yields ε ≈ 0.4 (extraction by middlebox vendors from endpoints), they are different constraints. The test confirms distinct ε values — this is a distinct constraint story.",
+      "impact": "Confirms this JSON represents a valid ε-invariant constraint story per DP-001. The sibling readings require their own JSON files with their own ε, stakeholders, and classifications.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment that this reading instantiates a distinct constraint with ε ≈ 0.03"
+    },
+    {
+      "id": "middlebox_violation_vs_adaptation",
+      "question": "Are middlebox modifications specification violations (this reading) or legitimate adaptations that define the real protocol (middlebox_realism_reading)?",
+      "resolution_mechanism": "Empirical: measure the fraction of TCP connections that traverse at least one modifying middlebox, and the fraction of those modifications that cause observable interoperability failure. If modification is near-universal and mostly benign, the middlebox_realism_reading gains empirical ground. If modification is rare or failure-prone, this reading's violation framing holds.",
+      "impact": "If modifications are universal and benign, this reading's suppression metric understates the constraint's effective suppression (it suppresses the *actual* protocol). If modifications are failure-prone, this reading's coordination function is vindicated and the middlebox_realism_reading describes a degraded state, not a valid alternative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether middlebox modifications are violations or the real protocol"
+    },
+    {
+      "id": "optimization_latitude_boundary",
+      "question": "Where is the boundary between permissible optimization (optimization_latitude_reading) and specification violation (this reading)?",
+      "resolution_mechanism": "Catalog specific implementation behaviors: RACK loss detection, TLP, BBR congestion control, SYN cookie variations, timestamp options. Determine which are explicitly permitted by RFC 9293 (or its bis successors) and which rely on 'semantic bounds' not in the invariant state machine. The boundary is where implementation choice affects on-wire interoperability with other compliant stacks.",
+      "impact": "A wide latitude boundary makes this reading's 'zero tolerance' claim empirically false (implementations already vary widely without breaking interoperability). A narrow boundary vindicates this reading's strictness. The boundary location determines whether optimization_latitude_reading coexists_with or forecloses this reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Where permissible optimization ends and violation begins"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "rfc9293_tcp_specification__optimization_latitude_reading",
+      "rfc9293_tcp_specification__middlebox_realism_reading",
+      "quic_transport_protocol",
+      "tcp_congestion_control_algorithms"
+    ],
+    "dual_formulation_note": "This constraint is the strict_invariance_reading of the rfc9293_tcp_specification kernel. The kernel decomposes into three constraint stories with distinct ε values: this reading (ε ≈ 0.03, rope), optimization_latitude_reading (ε ≈ 0.15, tangled_rope — coordination with implementation latitude extraction), and middlebox_realism_reading (ε ≈ 0.4, snare — middlebox vendors extract from endpoints via in-path modification). The ε-invariance principle requires separate stories; the label 'TCP specification' conflates them."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "optimization_latitude_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "middlebox_realism_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "specification_is_authoritative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "deviation_is_violation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "rfc9293_invariant_state_machine",
+    "drift_state": {
+      "moment": "contemporary_middlebox_deployment",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

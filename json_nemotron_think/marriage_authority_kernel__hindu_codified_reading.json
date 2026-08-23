@@ -1,0 +1,387 @@
+{
+  "header": {
+    "constraint_id": "marriage_authority_kernel__hindu_codified_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_marriage_authority_kernel__hindu_codified_reading",
+    "measurement_id_prefix": "marriage_authority_kernel__hindu_codified_reading",
+    "story_uid": "f37fd472-0533-4922-a493-918b163d2ce3"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.52,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hindu Marriage Act Authority as Interpreted by Civil Courts",
+    "topic_domain": "comparative_law/constitutional_pluralism/religious_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "hindu_male_heirs",
+      "dominant_caste_hindu_families",
+      "state_courts",
+      "hindu_religious_institutions"
+    ],
+    "victims": [
+      "hindu_women",
+      "lower_caste_hindus",
+      "interfaith_couples_hindu_partner",
+      "hindu_lgbtq_individuals"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "hindu_male_heirs",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from unequal inheritance rights, easier divorce access, and guardianship preference under HMA. Their position is reinforced by judicial interpretation that treats male lineage as primary. Exit to secular code (Special Marriage Act) requires family consent and social ostracism risk."
+    },
+    {
+      "name": "hindu_women",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear unequal divorce grounds (cruelty vs desertion asymmetries), limited maintenance rights, secondary guardianship, and restricted property claims. Judicial interpretation has expanded rights incrementally (2005 amendment, 2020 coparcenary ruling) but structural asymmetries persist. Exit via Special Marriage Act faces family/community pressure."
+    },
+    {
+      "name": "state_courts",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate and interpret HMA provisions, creating binding precedent. Supreme Court and High Courts have expanded women's rights incrementally while maintaining the codified religious law framework. They hold institutional authority to define the content of 'Hindu law' and their interpretations are enforced by state machinery."
+    },
+    {
+      "name": "dominant_caste_hindu_families",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Use HMA framework to consolidate property and status within caste endogamy. Court enforcement of restitution of conjugal rights and guardianship serves caste boundary maintenance. They have resources to navigate litigation and shape judicial outcomes through precedent."
+    },
+    {
+      "name": "hindu_religious_institutions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Mathas, temples, and caste associations intervene in litigation (amicus, party) to defend 'Hindu law' authenticity. They benefit from state recognition of religious authority over family. Their interpretive claims constrain judicial innovation, though courts occasionally override them."
+    },
+    {
+      "name": "lower_caste_hindus",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Customary marriage/divorce practices overridden by codified HMA which reflects dominant-caste norms. Lose community-based dispute resolution and face court procedures biased toward propertied litigants. Conversion to Buddhism/Christianity sometimes used as exit but triggers new legal disabilities."
+    },
+    {
+      "name": "interfaith_couples_hindu_partner",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hindu partner faces pressure to convert non-Hindu spouse or marry under Special Marriage Act (30-day notice enables family/community interference). HMA does not recognize interfaith marriage; state courts enforce this boundary. Anti-conversion laws in several states compound the constraint."
+    },
+    {
+      "name": "hindu_lgbtq_individuals",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "HMA defines marriage as heterosexual sacrament; no recognition of same-sex or trans marriages. 2018 Navtej decriminalization did not extend to marriage. Special Marriage Act similarly excludes. Litigation pending (Supreme Court 2023) but legislative route blocked. No functional exit within Indian law."
+    },
+    {
+      "name": "feminist_legal_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Produce doctrinal critiques, empirical studies of judicial outcomes, and law reform proposals. Document how HMA interpretation reproduces gender hierarchy despite formal equality guarantees. Their work informs litigation strategy and legislative advocacy but they hold no adjudicative power."
+    },
+    {
+      "name": "muslim_personal_law_board",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer parallel Muslim personal law system (Shariat Application Act 1937). Would object to uniform civil code that HMA model might generalize. Excluded from HMA adjudication but structurally positioned as sibling reading in the kernel contest. Their authority derives from community recognition, not state codification."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides uniform, state-enforceable rules for Hindu marriage, divorce, maintenance, guardianship, and succession — replacing fragmented customs with a single legislated code administrable by civil courts.",
+    "transfer_function": "Transfers gendered rights (unilateral divorce access, maintenance quantum, guardianship preference, coparcenary property) from women to men; transfers dispute-resolution authority from community/kin to state courts; transfers interpretive authority from religious texts to judicial precedent.",
+    "absent_voices": "Muslim women under uncodified shariat (triple talaq until 2019, polygamy, unequal inheritance); Christian women under 1872 Act (limited divorce grounds until 2001); Parsi women under 1936 Act (gender asymmetry in adultery grounds); secular couples under Special Marriage Act (30-day notice enables harassment); all would object to their respective constraints but are not parties to HMA adjudication.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If HMA and its judicial interpretation vanished overnight, Hindu marriage/divorce would revert to uncodified customs (highly variable, caste-specific, no uniform court enforcement) or shift to Special Marriage Act (secular but procedurally burdensome). Gender equity outcomes would diverge: some customs more egalitarian, others less. State courts would lose primary jurisdiction over Hindu family disputes.",
+    "founding_problem": "Post-independence need to codify Hindu personal law into a uniform, modern statute administrable by secular courts — replacing uncodified smriti texts and diverse customs that British courts had selectively enforced — to fulfill constitutional directive (Article 44) while respecting religious identity (Articles 25-26).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Constituent Assembly debates (1948-50) and Hindu Code Bill debates (1951-55) record the legislative intent: Ambedkar, Nehru, and progressive members framed codification as gender justice; conservative members opposed it as religious interference. Feminist historians (Agnes 2001, Dhagamwar 1992, Vatuk 2013) attest the founding problem was gender reform within religious framework — not mere administrative uniformity. Judicial records (Shah Bano 1985, Sarla Mudgal 1995, Shayara Bano 2017) show the contest persists."
+  },
+  "interval": {
+    "start": 1955,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1955,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1976,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1955,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1976,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1955,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1976,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Hindu Marriage Act 1955 codified Hindu personal law into a uniform statute administered by civil courts. This reading of the marriage_authority_kernel instantiates state-enforced religious law: the Act's provisions on marriage validity, divorce grounds, maintenance, guardianship, and succession are authoritatively interpreted by the Supreme Court and High Courts. The constraint coordinates a uniform framework for ~80% of India's population but extracts gendered and caste-asymmetric costs. The claimed type is tangled_rope: genuine coordination (uniform justiciable rules) coexists with asymmetric extraction (women, lower castes, interfaith/LGBTQ parties bear disproportionate burdens). Metrics reflect the 2024 endpoint; the measurement series shows extractiveness declining 1955-2015 (progressive amendments, judicial expansion of women's rights) then rising 2015-2024 (stalling reforms, anti-conversion laws, same-sex marriage denial). Theater ratio rises as coordination function (uniform adjudication) is increasingly performed while substantive equity gains plateau.",
+    "logic_rationale": "Extractiveness (0.58) reflects persistent gender asymmetry in divorce grounds (cruelty vs desertion), maintenance (husband's duty but wife's income counted), guardianship (father primary), and property (2005 amendment equalized daughters but implementation lags). Suppression (0.52) comes from state enforcement of religious boundary: HMA applies automatically to Hindus (broadly defined), Special Marriage Act exit requires 30-day public notice enabling interference, anti-conversion laws penalize religious switching. Theater (0.38) captures the gap between judicial rhetoric of 'gender justice' and doctrinal conservatism (e.g., 2023 same-sex marriage ruling deferring to legislature). Accessibility collapse (0.58): alternatives exist (customary law, SMA, conversion) but each carries high social/legal cost. Resistance (0.48): sustained feminist litigation and legislative advocacy but institutionalized within the framework.",
+    "directionality_logic": "Hindu male heirs and dominant-caste families are structural beneficiaries (d ~0.2-0.3): they collect inheritance, divorce, and guardianship advantages; exit to SMA is low-cost for them. Hindu women are primary targets (d ~0.7-0.8): bear extraction, constrained exit (family pressure, child custody risk). State courts sit near symmetric (d ~0.5): they administer the constraint and gain institutional authority but face legitimacy challenges. Religious institutions are beneficiaries (d ~0.25): state recognition of their interpretive claims. Lower-caste Hindus and interfaith/LGBTQ parties are trapped targets (d ~0.85-0.9): no functional exit, structural exclusion.",
+    "perspectival_gap": "The agenda-setter seat (state courts) computes as rope/tangled_rope: they see genuine coordination function (uniform adjudication, incremental rights expansion) and experience the constraint as institutional mandate. The payer seats (women, lower castes, interfaith/LGBTQ) compute as snare/tangled_rope: same structure operates as enforced extraction with suppressed alternatives. The beneficiary seats (male heirs, dominant castes, religious institutions) compute as rope: they experience net coordination benefit. The engine computes this divergence from the structural data — the authored claim does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (codify Hindu law for gender justice + uniform administration) is contested: progressive framers say the problem persists (gender equity incomplete); conservative framers say codification itself was the error (religious autonomy violated); originalist framers say the problem was solved by 1955/2005 amendments. The constraint persists because no coalition can agree on replacement: UCC advocates want secular code; religious conservatives want uncodified custom; feminists want reformed HMA. This deadlock is mandatrophy — the arrangement's mandate (gender justice via codification) has outlived its consensus but no exit coalition forms.",
+    "kernel_context": "This constraint is the hindu_codified_reading of the marriage_authority_kernel. The kernel is the contested question: 'What grounds the authority of marriage/family law in India?' Sibling readings: muslim_shariat_reading (Shariat via personal law boards/qazis), christian_canonical_reading (Canon law via 1872 Act), parsi_communal_reading (Parsi custom via 1936 Act), secular_civil_reading (constitutional individual rights via Special Marriage Act 1954). This reading differs structurally: uniform codified statute + state court interpretation (vs. community boards, ecclesiastical courts, or secular rights). Expected delta: uniform rules within Hindu community; state courts adjudicate; moderate gender equity (better than Muslim reading's pre-2019 triple talaq/polygamy, worse than secular reading's formal equality)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Is the hindu_codified_reading a genuine coordination mechanism (uniform justiciable rules) or a religious extraction mechanism (state enforcement of patriarchal norms)?",
+      "resolution_mechanism": "Counterfactual: if HMA were replaced by secular civil code with identical procedural provisions but gender-neutral substantive rules, would coordination costs increase? If yes, the religious framing carries coordination value; if no, it is pure extraction.",
+      "impact": "If coordination value is irreducible, the tangled_rope classification holds. If extraction is reducible without coordination loss, the constraint is a snare with coordination cover. This determines whether reform should target interpretation (within HMA) or replacement (UCC).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the religious framing of HMA carries irreducible coordination value or is extractive cover."
+    },
+    {
+      "id": "gender_equity_comparability",
+      "question": "Can 'moderate gender equity' be measured comparably across the five kernel readings when each operates on different normative baselines (religious text, custom, constitutional rights)?",
+      "resolution_mechanism": "Develop a structured index of substantive rights (divorce access, maintenance, custody, property, remarriage) scored per reading, then weight by enforcement effectiveness. Compare deltas from a counterfactual 'formal equality' baseline.",
+      "impact": "If comparability fails, the 'moderate' claim is ungrounded and cross-reading extraction rankings are unreliable. The engine's coupling analysis across readings would rest on incommensurable metrics.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Commensurability of gender equity measurement across structurally different personal law systems."
+    },
+    {
+      "id": "state_enforcement_legitimacy",
+      "question": "Does state court enforcement of codified Hindu law violate constitutional secularism (basic structure) or fulfill constitutional directive (Article 44 UCC)?",
+      "resolution_mechanism": "Supreme Court constitutional bench ruling on whether personal law codification is 'law in force' (Article 372) immune from Part III challenge, or 'law' subject to fundamental rights review (pending since Narasu 1951, referred 2019).",
+      "impact": "If enforcement is unconstitutional, the constraint's suppression component is illegitimate state action — reclassification toward snare. If constitutional, the tangled_rope stands with state as legitimate agenda-setter.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Constitutional legitimacy of state enforcing religious personal law."
+    },
+    {
+      "id": "caste_gender_intersection_extraction",
+      "question": "Does HMA extraction operate primarily on gender axis, caste axis, or their intersection — and does the kernel reading framework capture intersectional extraction?",
+      "resolution_mechanism": "Empirical study of litigation outcomes disaggregated by caste and gender: do lower-caste women face compounded disadvantages in maintenance, custody, property claims under HMA adjudication compared to dominant-caste women and lower-caste men?",
+      "impact": "If intersectional extraction is significant, the current beneficiary/victim lists (separate gender and caste groups) understate structural extraction. The constraint may be snare for lower-caste women but tangled_rope for dominant-caste women.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether extraction is intersectional and the kernel reading framework captures it."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "marriage_authority_kernel__muslim_shariat_reading",
+      "marriage_authority_kernel__christian_canonical_reading",
+      "marriage_authority_kernel__parsi_communal_reading",
+      "marriage_authority_kernel__secular_civil_reading",
+      "special_marriage_act_1954",
+      "hindu_succession_act_1956",
+      "anti_conversion_laws_state_level"
+    ],
+    "dual_formulation_note": "This constraint is the hindu_codified_reading of the marriage_authority_kernel. The kernel decomposes into five constraint stories (one per reading) because each reading has distinct ε (extractiveness), distinct beneficiary/victim structures, and distinct coordination/extraction balance. The ε-invariance principle requires separate stories: measuring 'marriage authority' via Hindu law yields different structural properties than via Shariat or secular code. The stories are linked via affects_constraints. The HMA reading influences the secular_civil_reading (SMA exists as exit option, creates competitive pressure) and is influenced by muslim_shariat_reading (Shah Bano 1985 triggered HMA amendment debates; Shayara Bano 2017 triple talaq ruling cited HMA reform trajectory)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "muslim_shariat_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "christian_canonical_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "parsi_communal_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "secular_civil_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "codified_hindu_law_governs_hindu_marriage",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "state_courts_authoritatively_interpret_hindu_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "gender_equity_within_hindu_law_is_legislative_not_judicial",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "codified_hindu_law_framework",
+    "drift_state": {
+      "moment": "contemporary_constitutional_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

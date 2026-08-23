@@ -1,0 +1,309 @@
+{
+  "header": {
+    "constraint_id": "feudal_oath_reciprocity__vassal_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "123a0eaa-f852-4057-9d97-131d5cfe6933"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.22,
+    "claimed_type": "rope",
+    "human_readable": "Feudal Oath Reciprocal Obligations (Vassal Coordination Reading)",
+    "topic_domain": "historical/legal/political",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "vassals",
+      "lords"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "charter_law_binding",
+      "reciprocal_obligation_doctrine",
+      "mutual_enforceability_principle"
+    ]
+  },
+  "interval": {
+    "start": 1000,
+    "end": 1300
+  },
+  "stakeholders": [
+    {
+      "name": "vassals",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Hold land tenure (fief) in exchange for defined military service (typically 40 days/year) and counsel. Can petition feudal courts when lords exceed charter bounds (excessive service demands, arbitrary dispossession). Exit is constrained: abandoning the fief means loss of status and livelihood; appeal to king is possible but distant and uncertain."
+    },
+    {
+      "name": "lords",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Grant fiefs and receive defined service. Administer feudal courts that hear vassal complaints. Benefit from predictable military levies and counsel. Can alienate or subdivide fiefs within charter limits. Exit is mobile: can commute service to scutage, sell wardships, or negotiate terms with vassals; the charter framework is a tool they wield, not a cage."
+    },
+    {
+      "name": "king_emperor",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Ultimate feudal overlord; charters theoretically derive from royal concession. Intervenes in great disputes (e.g., Magna Carta moments) but day-to-day enforcement is local. Sees the charter system as a coordination layer that stabilizes the military aristocracy — useful while it lasts, replaceable when central bureaucracy matures."
+    },
+    {
+      "name": "church",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Claims moral oversight of oaths (sacramental character) and runs ecclesiastical courts that hear perjury cases. Does not administer feudal tenure but can excommunicate oath-breakers. Its reading (ecclesiastical_mediation) overlaps but is not identical to the charter reading."
+    },
+    {
+      "name": "serfs_peasants",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Work the land that fiefs comprise. Bear the economic extraction (rents, labor services) that funds the vassal-lord exchange. Have no standing in feudal courts, no voice in charter negotiation, and no exit — flight is punished as fugitive serfdom. Their objection would be to the entire feudal extraction stack, not to the charter's reciprocity per se."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates military defense and land tenure in a landscape without centralized state capacity: vassals provide defined military service and counsel; lords provide defined land tenure and protection. The charter text fixes the terms so neither side can unilaterally escalate.",
+    "transfer_function": "Moves military service (40 days/year standard) and counsel from vassals to lords; moves land tenure (heritable fief) and protection from lords to vassals. The charter bounds both flows — no open-ended extraction.",
+    "absent_voices": "Serfs and peasants who fund the system through agrarian surplus but have no standing in charter courts. Ecclesiastical authorities who claim a higher moral bound (Christian charity) on the same oaths. Both would object to different aspects: serfs to the extraction stack, church to the purely secular enforceability.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If charter-enforced reciprocity vanished overnight, the vassal-lord military-tenure nexus would lose its coordination mechanism. Lords would revert to arbitrary extraction; vassals would withhold service or seek alternative patrons. The feudal military system would fracture until a new coordination layer (royal bureaucracy, mercenary contracts, or allodial consolidation) emerged.",
+    "founding_problem": "Coordinating heavy cavalry defense and land tenure across fragmented polities after Carolingian collapse, where no central state could pay standing armies or enforce contracts.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Medievalist consensus (e.g., Duby, Reynolds, Bartlett) outside feudal beneficiary lineages: the charter system solved a 10th–11th century coordination vacuum; by 1300 royal taxation, mercenary companies, and Roman law revival had obsoleted its founding problem. The arrangement persisted as inert form (piton drift) after the problem died."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1050,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1100,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1150,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1200,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1250,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1300,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1050,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1100,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1150,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1200,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1250,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1300,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1050,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1100,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1150,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1200,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1250,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1300,
+      "value": 0.12
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the vassal_coordination_reading of the feudal oath kernel: the charter text (e.g., Magna Carta, local coutumiers, homage charters) establishes fixed, bounded, mutually enforceable obligations between vassal and lord. The reading treats the oath as a coordination device — a Rope — not an extraction license. Both parties are beneficiaries: vassals get heritable tenure and legal redress; lords get reliable levies and counsel. No structural victim exists within the vassal-lord dyad (serfs are excluded, not victims of this specific constraint). The claimed_type is rope; metrics reflect low extractiveness, low suppression, low theater — the charter courts functioned as genuine coordination enforcement.",
+    "logic_rationale": "Extractiveness stays low (0.12→0.18) because the charter bounds are specific (40 days, defined reliefs, inheritance rules) and courts enforce them against both parties. Suppression is low (0.10→0.12) because enforcement is bilateral — vassals sue lords successfully in feudal courts (e.g., Curia Regis rolls). Theater rises slightly (0.05→0.10) as royal courts begin absorbing feudal jurisdiction, making some charter proceedings performative. Accessibility_collapse is moderate (0.55): alternatives (allodial hold, commutation to scutage, appeal to king) exist but are costly. Resistance is low (0.22) because the system works for its principals — the coordination function is live through 1200.",
+    "directionality_logic": "Vassals and lords are mutual beneficiaries (d ≈ 0.4–0.5): each gains more from the coordination than they pay in constraint compliance. The king is an analytical observer (d ≈ 0.0). The church is an analytical observer with a competing reading. Serfs are excluded — they bear the agrarian extraction that funds the feudal layer, but that extraction is a separate constraint (manorialism), not this charter-reciprocity constraint. The engine will compute per-seat χ from these structural positions.",
+    "perspectival_gap": "The vassal seat and lord seat should compute similarly (both near-symmetric coordination beneficiaries). The serf seat (excluded) would compute as high-extraction if the manorial constraint were in view — but this story isolates the charter-reciprocity layer. The engine's per-seat classification will show rope for vassal/lord, while a combined feudal-system story would show snare for serfs. This seat divergence is the measurement the corpus exists to take.",
+    "kernel_context": "This constraint is the vassal_coordination_reading of kernel feudal_oath_reciprocity. Sibling readings: lord_extraction_reading (oath authorizes maximal extraction bounded only by vassal capacity) and ecclesiastical_mediation_reading (oath bound by Christian charity and sacramental obligation, limiting secular extraction). This reading treats the charter text as the operative kernel — fixed, secular, mutually enforceable. The lord_extraction_reading forecloses mutual enforceability; the ecclesiastical_mediation_reading coexists as a moral overlay. This reading's axioms distinguish it: charter reciprocity as conventional law, vassal enforceability against lords as actionable right.",
+    "mandatrophy_analysis": "The founding problem (coordinating cavalry defense without a state) died by 1300. The charter framework persisted as piton drift — theatrical maintenance of feudal forms (parlements, hereditary offices) while royal taxation and mercenaries did the real coordination work. The mandatrophy is resolved: the arrangement's coordination function is dead; its persistence was inertial/theatrical. This reading captures the live coordination phase (1000–1200), not the zombie phase."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "This constraint is one reading (vassal_coordination_reading) of the contested kernel feudal_oath_reciprocity. What structural elements do the sibling readings (lord_extraction_reading, ecclesiastical_mediation_reading) change, and how would those changes reclassify the constraint?",
+      "resolution_mechanism": "Compare the three readings' beneficiary/victim structures, enforcement mechanisms, and epsilon referents. The lord_extraction_reading adds victims (vassals as payers) and raises ε; the ecclesiastical_mediation_reading adds a moral authority layer that suppresses extraction but introduces ecclesiastical courts as parallel enforcement.",
+      "impact": "If lord_extraction_reading is the empirically dominant reading for a given region/period, the constraint reclassifies from rope to snare/tangled_rope. If ecclesiastical_mediation_reading dominates, suppression rises (ecclesiastical courts) but extraction falls (charity bounds). The kernel's classification is reading-indexed, not kernel-indexed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment-system committer structure: one kernel, three readings, three constraints."
+    },
+    {
+      "id": "mutual_enforceability_historical_reality",
+      "question": "Did vassals actually enforce charter bounds against lords in practice, or was 'mutual enforceability' a juridical fiction masking lord dominance?",
+      "resolution_mechanism": "Quantitative analysis of feudal court records (Curia Regis, Parlement rolls, coutumier verdicts): frequency of vassal-initiated suits against lords, success rates, and remedy enforcement. Compare to lord-initiated suits.",
+      "impact": "If vassal enforcement was rare/ineffective, the coordination function is illusory — the constraint is a false-summit rope (actually tangled_rope or snare). If enforcement was real and bilateral, the rope classification holds for the live period.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the charter's mutual enforceability was operational or theoretical."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity_feudal",
+      "question": "Is the measured suppression (0.12) structural (feudal court access barriers, appeal costs) or internalized (vassals accepting lord dominance as natural order)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: examine vassals who successfully appealed to royal courts or migrated to allodial regions — did they continue to self-limit claims, or did they fully exercise charter rights? If internalized suppression persisted after structural barriers fell, the effective suppression is higher.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — vassals carry the suppression with them. This would raise the computed χ for vassals and could shift classification toward tangled_rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the vassal-lord charter relationship."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "feudal_manorial_extraction",
+      "royal_taxation_bureaucracy",
+      "mercenary_contract_system"
+    ],
+    "dual_formulation_note": "This is the vassal_coordination_reading of kernel feudal_oath_reciprocity. The lord_extraction_reading and ecclesiastical_mediation_reading are sibling constraints. All three share the kernel_id but have distinct ε, beneficiaries/victims, and claimed_type. This reading asserts rope (low ε, mutual beneficiaries); lord_extraction_reading asserts snare/tangled_rope (high ε, vassals as victims); ecclesiastical_mediation_reading asserts scaffold/rope (moderate ε, church as agenda_setter)."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "lord_extraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ecclesiastical_mediation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "charter_reciprocity_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "vassal_enforceability_against_lord",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "feudal_charter_law_framework",
+    "drift_state": {
+      "moment": "post_centralized_state_emergence",
+      "direction": "codification_collapse",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

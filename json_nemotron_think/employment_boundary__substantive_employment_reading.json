@@ -1,0 +1,333 @@
+{
+  "header": {
+    "constraint_id": "employment_boundary__substantive_employment_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_employment_boundary__substantive_employment_reading",
+    "measurement_id_prefix": "emp_boundary_substantive",
+    "story_uid": "960e91bc-daf3-4d00-b2bd-22bed393048b"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Employment Boundary — Substantive Reading (Economic Dependence + Algorithmic Control)",
+    "topic_domain": "labor_economics/platform_economy/social_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "platform_companies",
+      "venture_capital_backers"
+    ],
+    "victims": [
+      "platform_workers",
+      "dependent_contractors"
+    ],
+    "vindicated_propositions": [
+      "economic_dependence_defines_employment",
+      "algorithmic_control_equals_subordination",
+      "contract_form_is_irrelevant_to_employment_status"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint is one reading (substantive_employment_reading) of the contested kernel employment_boundary. What would the sibling readings (formalist_employment_reading, hybrid_security_reading) change structurally in the constraint's beneficiary/victim sets and extraction profile?",
+      "resolution_mechanism": "Comparative constraint story generation: author the formalist and hybrid readings as separate constraint stories with their own ε, beneficiaries, victims, and claimed_type; map structural deltas across the three.",
+      "impact": "If the formalist reading produces a mountain or rope (low ε, no victims) while the substantive reading produces a tangled_rope (moderate ε, platform_workers as victims), the kernel's classification is reading-dependent — the engine must track per-reading classifications, not a single kernel classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee-frame routing: this constraint is a reading of employment_boundary kernel; sibling readings instantiate different constraints with different structural profiles."
+    },
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "Does the platform's algorithmic coordination function (matching, pricing, routing) genuinely require the contractor classification, or is the classification a separable extraction layer that could be removed while preserving coordination?",
+      "resolution_mechanism": "Natural experiment from jurisdictions implementing employment reclassification (e.g., Spain's Rider Law, California AB5/Prop22, EU Platform Work Directive): measure whether coordination efficiency (match speed, utilization, pricing) degrades when employment protections are mandated.",
+      "impact": "If coordination survives reclassification, the contractor classification is pure extraction (snare); if coordination degrades substantially, the classification is a tangled_rope where extraction and coordination are structurally entangled.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's coordination and extraction components are structurally separable — the core empirical question for tangled_rope vs snare classification."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (algorithmic deactivation, contract terms, legal barriers to organizing) or internalized (workers accepting 'entrepreneur' identity, fear of deactivation preventing resistance)?",
+      "resolution_mechanism": "Post-reclassification suppression trajectory: if suppression persists after employment status is granted (e.g., algorithmic discipline continues under employment), reclassify as partially internalized; if suppression drops to legal-enforcement baseline, it was primarily structural.",
+      "impact": "If internalized, the constraint's effective suppression is higher than structural measures suggest — workers carry the suppression with them after formal reclassification, requiring cultural/organizational remediation beyond legal change.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural vs. internalized suppression mechanism in algorithmic management."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.68,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The substantive employment reading holds that employment is defined by economic dependence and algorithmic control, not contract form. Under this reading, the current classification of platform workers as independent contractors is a constraint that excludes them from employment protections (social insurance, job security, collective bargaining rights). The constraint extracts value by transferring the cost of social protections from platforms to workers and the public, while platforms retain algorithmic control over work allocation, pricing, and discipline. The constraint requires active enforcement (contractual terms, algorithmic deactivation, lobbying against reclassification) and has identifiable beneficiaries (platform companies, investors) and victims (platform workers). The claimed type is tangled_rope: platforms provide genuine coordination (matching supply/demand, reducing search costs) but this coordination is entangled with asymmetric extraction (workers bear precarity, platforms capture rents).",
+    "logic_rationale": "Base extractiveness (0.52) reflects the gap between the value workers create and the protections they receive — platforms capture the surplus that would fund social insurance in a standard employment relationship. Suppression (0.68) is high because the constraint persists through active mechanisms: algorithmic deactivation threats, contractual prohibition on collective action, and sustained lobbying/legal campaigns against reclassification. Theater ratio (0.38) captures the 'partnership/entrepreneur' framing that masks the employment reality — real coordination exists but a growing share of enforcement defends the classification itself. Accessibility collapse (0.72) is high because workers lack viable exit: alternative platforms impose similar terms, traditional employment is scarce, and algorithmic blacklisting prevents mobility. Resistance (0.71) is high and rising: worker organizing, strategic litigation, and regulatory action across multiple jurisdictions.",
+    "directionality_logic": "Platform companies are structural beneficiaries (d near 0.0): they collect the surplus from avoided social insurance contributions, control the algorithmic infrastructure, and set contract terms. Their exit is arbitrage-grade — they can relocate, restructure, or lobby. Platform workers are structural targets (d near 1.0): they bear the full cost of precarity (income volatility, no sick pay, no unemployment insurance, algorithmic discipline), and their exit options are constrained — leaving means losing platform-specific capital (ratings, algorithmic visibility) with no portable alternative. Dependent contractors (workers on multiple platforms but still algorithmically controlled) sit at d ~ 0.8. Regulators and courts are analytical observers (d = 0.5) but their rulings shift the constraint's effective extraction. Traditional employers are indirect beneficiaries (d ~ 0.2) — the contractor model depresses labor standards across sectors.",
+    "perspectival_gap": "From the platform seat, the arrangement is a rope: genuine coordination solving search/matching/pricing problems with minimal coercion. From the worker seat, it is a snare: the coordination story is cover for extracting labor without protections. The engine computes this divergence from the structural data — the authored claim (tangled_rope) asserts both functions are real and entangled, which is exactly what the per-seat computation should reveal: coordination for the platform, extraction for the worker.",
+    "mandatrophy_analysis": "The founding problem (coordinating flexible labor in digital markets) remains contested: platforms argue it is live and requires the contractor model; workers and courts increasingly find the problem solved by technology itself — algorithmic coordination does not require employment misclassification. The constraint persists because platforms capture the gains of coordination while externalizing its social costs. Mandatrophy is not resolved: the arrangement has not transitioned to a scaffold (no sunset clause, no transitional logic) and is not a piton (platforms actively defend it, extraction is not atrophied). It is an active tangled_rope where the coordination function is real but the extraction layer has thickened over time.",
+    "kernel_context": "This constraint is the substantive_employment_reading of the employment_boundary kernel. Sibling readings: formalist_employment_reading (employment = formal contract + direct supervision; platform workers are contractors) and hybrid_security_reading (platform workers need a third category with tailored protections). This reading asserts the kernel's normative core is economic dependence + algorithmic control; the formalist reading asserts it is contractual form; the hybrid reading asserts the kernel is under-specified and requires new categories. All three readings are live in contemporary policy and legal disputes."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_work_directive_implementation",
+      "algorithmic_management_transparency",
+      "portable_benefits_schemes"
+    ],
+    "dual_formulation_note": "Part of the employment_boundary constraint family. The substantive reading (this story) produces tangled_rope with platform_workers as victims. The formalist reading produces rope/mountain with no victims (coordination only). The hybrid reading produces scaffold (transitional third category with sunset). The three readings share the kernel but instantiate different constraints with different ε, beneficiary/victim sets, and claimed types. Linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "platform_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Provide labor through platform algorithms that control work allocation, pricing, and discipline. Classified as independent contractors despite economic dependence on a single platform (or oligopoly of platforms). Bear full precarity: income volatility, no sick pay, no unemployment insurance, no pension contributions, algorithmic deactivation without recourse. Exit is constrained — leaving loses platform-specific capital (ratings, algorithmic visibility); alternative platforms impose similar terms; traditional employment is scarce in their regions/sectors."
+    },
+    {
+      "name": "dependent_contractors",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Work across multiple platforms but remain algorithmically controlled by each. Have slightly more exit leverage (multi-homing) but still lack employment protections. Benefit marginally from schedule flexibility that the contractor form nominally permits, but this flexibility is largely illusory due to algorithmic incentives that penalize cherry-picking."
+    },
+    {
+      "name": "platform_companies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design and own the algorithmic infrastructure that coordinates labor supply and demand. Set contract terms classifying workers as contractors. Capture the surplus from avoided employer-side social contributions (15-30% of labor cost depending on jurisdiction). Actively enforce the classification through contractual terms, algorithmic discipline (deactivation, downranking), and sustained lobbying/litigation against reclassification. Exit is arbitrage-grade: can restructure corporate form, relocate jurisdiction, or pivot business model."
+    },
+    {
+      "name": "venture_capital_backers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Fund platform growth predicated on the contractor model's unit economics. The classification lowers labor costs and regulatory risk, increasing valuation multiples. Benefit from the extraction without operational involvement. Exit is arbitrage-grade: capital is mobile across jurisdictions and sectors."
+    },
+    {
+      "name": "traditional_employers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit indirectly from the platform model depressing labor standards and normalization of precarious work. The contractor classification creates a low-floor reference point that weakens bargaining power in adjacent sectors. Not directly involved in platform operations but structurally aligned with the classification's persistence."
+    },
+    {
+      "name": "labor_unions_and_worker_organizations",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Attempt to organize platform workers but face structural barriers: algorithmic fragmentation of the workforce, contractual prohibitions on collective action, legal uncertainty about bargaining status. Would object to the classification if they had standing; their exclusion is maintained by the same legal/contractual architecture that defines workers as contractors."
+    },
+    {
+      "name": "regulators_and_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate the employment boundary through litigation (misclassification lawsuits), legislation (ABC tests, platform work directives), and regulatory guidance. Their rulings shift the constraint's effective extraction by mandating reclassification or creating hybrid categories. They see the full structure but are not themselves collectors or payers of the constraint's transfers."
+    },
+    {
+      "name": "social_insurance_systems",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the fiscal externalities of the contractor classification: workers without unemployment insurance, pension gaps, uncompensated workplace injuries. Cannot exit the constraint — they must cover the shortfall when platform workers access safety nets without employer contributions. The constraint transfers costs from platforms to the public fisc."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Platforms algorithmically match labor supply to demand in real time, solving search, pricing, routing, and trust problems that would be prohibitively costly for individual workers and customers to solve bilaterally.",
+    "transfer_function": "Transfers the cost of social protections (unemployment insurance, pensions, health/safety, paid leave) from platforms to workers and public systems, while transferring algorithmic control rights (allocation, discipline, data) from workers to platforms.",
+    "absent_voices": "Platform workers in Global South jurisdictions without labor voice; migrant workers on platforms who face deportation risk if they challenge classification; workers who have been deactivated and cannot speak; future workers who will enter under whatever classification prevails.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the contractor classification vanished overnight, platforms would be legally required to provide employment protections (social contributions, paid leave, unfair dismissal protection, collective bargaining rights). This would increase platform labor costs by 15-30%, likely reducing platform margins or increasing consumer prices. Workers would gain statutory protections. The platform business model would reorganize around employment — some platforms might exit markets, others would automate more aggressively, some would adopt hybrid models. The labor market structure would fundamentally rearrange.",
+    "founding_problem": "Early platform markets needed to coordinate highly fragmented, variable labor supply with unpredictable demand in real time. The contractor classification was adopted (or emerged) as a way to avoid the rigidities of employment law (fixed shifts, scheduling constraints, high fixed costs per worker) while scaling rapidly across jurisdictions.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Platform companies attest the problem is live: they argue algorithmic flexibility requires contractor status (corroborated by some labor economists who emphasize two-sided market efficiency). Workers, courts (Spain Supreme Court 2020, UK Supreme Court 2021 Uber ruling, Dutch courts), ILO (2021 platform work report), and OECD (2023 platform economy analysis) attest the founding problem is substantially solved — algorithmic coordination does not require misclassification; employment-compliant platforms exist (e.g., Just Eat in UK post-ruling, delivery platforms in Spain post-Rider Law). The corroboration from outside the beneficiary set (courts, international organizations, compliant platforms) supports the shifted-function reading."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "employment_boundary_kernel"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "formalist_employment_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_security_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "economic_dependence_defines_employment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "algorithmic_control_equals_subordination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "classical_employment_paradigm",
+    "drift_state": {
+      "moment": "platform_economy_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

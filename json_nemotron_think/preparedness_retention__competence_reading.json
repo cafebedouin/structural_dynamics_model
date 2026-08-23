@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "preparedness_retention__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "45072d1c-eb29-48b4-99d6-2b2aa2fe0033"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.15,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Preparedness as Live Exercised Competence",
+    "topic_domain": "governance/disaster_preparedness",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "population_at_risk",
+      "emergency_response_personnel",
+      "critical_infrastructure_operators"
+    ],
+    "victims": [
+      "fiscal_authorities_when_overinvested"
+    ],
+    "vindicated_propositions": [
+      "competence_decays_without_exercise",
+      "adaptive_capacity_requires_regular_stress_testing"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "emergency_management_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design, mandate, and fund drill cycles and inspection regimes. They set scenario complexity, frequency standards, and after-action review protocols. Their authority derives from statutory mandate and professional accreditation. Exit means leaving the profession or jurisdiction — costly but possible."
+    },
+    {
+      "name": "population_at_risk",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Receive the safety dividend of maintained response competence — faster evacuation, effective sheltering, restored services. They do not run drills but their survival depends on them. Exit is geographic relocation or political advocacy; neither is trivial."
+    },
+    {
+      "name": "emergency_response_personnel",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Gain skill retention and team cohesion from regular exercises; bear the time, physical risk, and opportunity cost of participation. Many are volunteers or cross-trained staff. Exit is changing role or employer — feasible but loses institutional memory."
+    },
+    {
+      "name": "critical_infrastructure_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Water boards, grid operators, port authorities — they rely on exercised competence for continuity of service. They fund specialized drills and gain operational reliability. Exit means regulatory non-compliance or asset sale; both carry extreme cost."
+    },
+    {
+      "name": "fiscal_authorities_when_overinvested",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the marginal cost when drill frequency or scale exceeds the competence-retention inflection point. They audit cost-effectiveness and can redirect budgets. Exit means political reallocation — constrained by mandate and public scrutiny."
+    },
+    {
+      "name": "accreditation_and_standards_bodies",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Define competence benchmarks, certify exercise programs, and publish after-action methodologies. They do not run drills but set the yardstick for 'live exercised knowledge.' Their exit is intellectual — revising standards."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the competence decay problem: individual and collective emergency response skills degrade without regular, realistic exercise. Drills and inspections synchronize distributed actors, validate procedures, and reveal gaps before a real event.",
+    "transfer_function": "Moves resources (budget, personnel time, equipment wear) from fiscal authorities and operating agencies into exercised competence — maintained procedural fluency, calibrated team coordination, verified equipment readiness, and updated situational awareness.",
+    "absent_voices": "Communities that have never experienced a major disaster and therefore cannot viscerally validate the competence claim; future generations who inherit the preparedness level but had no say in its calibration; marginalized groups whose specific vulnerabilities may not be exercised in standard scenarios.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If mandated drills and inspections vanished, competence would decay on a known curve (skills half-life 6–18 months). Response times would lengthen, coordination would fracture, equipment failures would go undetected. The safety dividend would erode measurably within 2–3 cycles.",
+    "founding_problem": "After several major disasters where response failed due to unexercised plans, rusty skills, and untested coordination, governments instituted mandatory drill cycles to convert static plans into living capability.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "After-action reports from recent events (e.g., 2021 European floods, 2023 Türkiye-Syria earthquake) show exercised units outperformed non-exercised ones. Independent academic studies (e.g., PERC 2022, NIST disaster resilience grants) corroborate the competence-decay curve. No major emergency management body disputes the founding problem's persistence."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.13
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the competence_reading of the preparedness_retention kernel: the claim that drills and inspections are genuine competence-preserving practices, not ceremonial performances. The reading asserts a low ceremony-to-competence ratio — resource allocation optimizes for skill retention and adaptive capacity. The primary beneficiary is population safety; the only potential victim is fiscal efficiency when investment exceeds the competence-retention inflection point. This reading stands in structural tension with two sibling readings: husk_reading (which claims drills are memorial performance lacking live competence) and hybrid_reading (which claims competence is stratified — retained in specialized institutions but ceremonial elsewhere).",
+    "key_agents": [
+      "emergency_management_agencies: agenda_setter (institutional/constrained) — designs and mandates drill regimes",
+      "population_at_risk: beneficiary (organized/constrained) — receives safety dividend",
+      "emergency_response_personnel: beneficiary/payer (organized/mobile) — gains skill retention, bears participation cost",
+      "critical_infrastructure_operators: beneficiary/payer (powerful/arbitrage) — funds specialized drills, gains reliability",
+      "fiscal_authorities_when_overinvested: payer (institutional/constrained) — bears marginal cost past inflection point",
+      "accreditation_and_standards_bodies: observer (analytical/analytical) — sets competence benchmarks"
+    ],
+    "logic_rationale": "Extractiveness is low (0.12) because the transfer function moves resources into demonstrated competence, not into private capture. Suppression is low (0.15) — enforcement is professional accreditation and statutory mandate, not coercion of unwilling participants; most response personnel volunteer for exercises. Theater ratio is low (0.18) — after-action reviews genuinely change procedures; the gap between exercise and real event is the target of improvement, not a performance. Accessibility collapse is moderate (0.35) — alternatives (ad-hoc response, mutual aid) exist but are reliably inferior. Resistance is low (0.25) — the constraint is widely accepted as necessary by those it governs. The slight upward drift in all three metrics over 40 years reflects bureaucratization of exercise programs (more paperwork, compliance checking) without proportional competence gain.",
+    "directionality_logic": "Emergency management agencies sit near the beneficiary end (d ~ 0.2) — they control the constraint and gain institutional legitimacy. Population at risk is full beneficiary (d ~ 0.05) — pure safety gain, no cost. Response personnel are near symmetric (d ~ 0.45) — gain skills, pay time/risk. Infrastructure operators are beneficiary-leaning (d ~ 0.3) — high gain, high voluntary investment. Fiscal authorities when overinvested are the only target (d ~ 0.75) — they pay marginal excess. Standards bodies are analytical (d = 0.5 by definition).",
+    "mandatrophy_analysis": "The founding problem (competence decay without exercise) remains live — corroborated by independent after-action studies. The constraint has not outlived its function. Mandatrophy risk is low but rising slightly as exercise programs accumulate compliance overhead (theater_ratio drift from 0.12 to 0.18). The reading's axioms are empirically contingent — if evidence showed drills don't improve outcomes, the reading would be falsified, not foreclosed by drift.",
+    "kernel_context": "This constraint is the competence_reading of the preparedness_retention kernel. Sibling readings: husk_reading (preparedness as memorial performance — drills are rituals lacking live competence) and hybrid_reading (preparedness as stratified — technical competence retained in specialized institutions like Rijkswaterstaat and water boards, while broader societal memory becomes ceremonial). This reading asserts low ceremony-to-competence ratio and resource allocation optimized for skill retention; beneficiary is population safety, victim is none (or fiscal efficiency if over-invested)."
+  },
+  "omegas": [
+    {
+      "id": "competence_reading_kernel_framing",
+      "question": "Does the competence_reading accurately describe the dominant preparedness regime, or does it describe an aspirational ideal that the hybrid_reading better captures as a stratified reality?",
+      "resolution_mechanism": "Comparative analysis of drill outcomes across institution types: if specialized institutions (water boards, nuclear regulators) show high competence-retention while generalist agencies show ceremonial patterns, the hybrid_reading's stratification claim is empirically supported and the competence_reading applies only to a subset.",
+      "impact": "If hybrid_reading's stratification is validated, the competence_reading's claim of uniformly low ceremony-to-competence ratio is falsified for the general case — the constraint family would need domain-specific decomposition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the competence_reading describes the whole kernel or only the specialized-institution stratum."
+    },
+    {
+      "id": "inflection_point_fiscal_victim",
+      "question": "At what investment level does preparedness spending shift from competence-retention to fiscal waste, making fiscal authorities genuine victims?",
+      "resolution_mechanism": "Marginal analysis of exercise frequency vs. measured competence retention curves; identify the plateau where additional drills yield no measurable skill improvement.",
+      "impact": "If the inflection point is low and current spending exceeds it, the fiscal_authorities_when_overinvested victim class is large and the constraint trends toward tangled_rope. If spending is below inflection, the victim class is theoretical and the constraint remains rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Location of the competence-retention inflection point relative to current expenditure."
+    },
+    {
+      "id": "husk_reading_foreclosure_boundary",
+      "question": "Does the competence_reading's core premise (drills preserve live competence) logically foreclose the husk_reading (drills are ceremonial), or can both be true at different organizational levels?",
+      "resolution_mechanism": "Logical analysis of the two claims: if 'drills preserve competence' is a universal claim about the practice, it contradicts 'drills are ceremonial.' If it is an existential claim ('some drills preserve competence'), they coexist. The reading_relations declaration depends on this distinction.",
+      "impact": "If forecloses, the kernel has a genuine logical schism; if coexists_with, the kernel hosts a stratification that the hybrid_reading explicitly models.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical relationship between competence_reading and husk_reading premises."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_retention__husk_reading",
+      "preparedness_retention__hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the preparedness_retention kernel into three structurally distinct readings. The competence_reading claims uniformly low ceremony-to-competence ratio (rope). The husk_reading claims high ceremony-to-competence ratio (piton/snare). The hybrid_reading claims stratified competence (tangled_rope at system level). They are linked because each cites the same institutional practices but interprets their function differently."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.3
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "husk_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "drills_preserve_operational_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "ceremony_competence_ratio_is_low",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "resource_allocation_optimizes_for_skill_retention",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "live_exercised_competence_framework",
+    "drift_state": {
+      "moment": "contemporary_institutional_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

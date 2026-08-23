@@ -1,0 +1,282 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__narrow_warning_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_beta_designation_doctrine__narrow_warning_reading",
+    "measurement_id_prefix": "beta_narrow_warning",
+    "story_uid": "2da77ae5-f79f-4dbb-b908-8380e56b2de9"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.15,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.15,
+    "claimed_type": "scaffold",
+    "human_readable": "Beta Designation as Time-Bounded Testing Disclosure (Narrow Warning Reading)",
+    "topic_domain": "technology_law/software_liability/consumer_protection",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "software_developers",
+      "beta_users"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "consumer_product_liability_preservation",
+      "good_faith_testing_disclosure_requirement"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Does the narrow_warning_reading instantiate a distinct constraint from the expansive_shield_reading and severity_carve_out_reading of the beta_designation_doctrine kernel?",
+      "resolution_mechanism": "Structural decomposition: if the three readings produce different ε values, different beneficiary/victim structures, and different constraint types, they are distinct constraints linked by network.affects_constraints.",
+      "impact": "If distinct, each reading gets its own constraint story with independent classification; the kernel is a family, not a single constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee-frame commitment: this story is one reading of a contested kernel; the other readings are separate constraints."
+    },
+    {
+      "id": "genuine_testing_phase_boundary",
+      "question": "What constitutes a 'genuine testing phase' versus indefinite beta used as liability shield?",
+      "resolution_mechanism": "Case law analysis of duration, feature completeness, user base size, and monetization during beta; regulatory guidance on testing phase termination criteria.",
+      "impact": "If boundary is unenforceable, the scaffold's sunset clause becomes nominal and the constraint drifts toward piton or snare; if enforceable, scaffold classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Operationalizing the sunset condition that makes this a scaffold rather than an indefinite waiver."
+    },
+    {
+      "id": "user_informed_consent_effectiveness",
+      "question": "Does 'users informed' in practice mean meaningful consent or click-through theater?",
+      "resolution_mechanism": "Empirical study of beta user comprehension, disclosure prominence, and ability to decline participation without losing access to essential services.",
+      "impact": "If consent is theater, beta_users shift from beneficiary to payer (victim), raising extractiveness and potentially reclassifying to tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the coordination function's informed-consent premise holds structurally."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The beta_designation_doctrine kernel governs how 'beta' labeling affects software liability. This constraint story instantiates the narrow_warning_reading: beta designation is a time-bounded testing disclosure regime that preserves base product liability and requires the beta period to be a genuine testing phase. Under this reading, the constraint operates as a scaffold — a temporary coordination mechanism allowing developers to test with informed users while preserving users' full legal rights. The liability limitation (if any) expires automatically when the testing phase ends. This reading stands in structural opposition to the expansive_shield_reading (which treats beta as comprehensive liability waiver of indefinite duration) and coexists with the severity_carve_out_reading (which categorically bars beta for critical systems).",
+    "key_agents": [
+      "software_developers: Primary beneficiary (moderate/organized power, constrained exit) — gains testing period with disclosure obligations",
+      "beta_users: Secondary beneficiary (organized/moderate power, constrained exit) — receives early access with full liability rights preserved",
+      "courts_regulators: Agenda setter (institutional power, analytical exit) — enforces time-bounds and good-faith requirements",
+      "expansive_shield_proponents: Excluded (powerful/institutional power, trapped exit) — would extend beta shield indefinitely",
+      "critical_system_operators: Observer (institutional power, analytical exit) — subject to severity carve-out regardless"
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) because the constraint primarily coordinates a testing period rather than extracting value; the preserved liability means no transfer from users to developers. Suppression is low (0.15) because alternatives exist (wait for general release, use competing products) and the constraint does not block exits. Theater ratio is low (0.12) because the testing disclosure function is genuine and the sunset is enforced by courts. Accessibility collapse is low (0.25) because users and developers retain full contractual and tort alternatives outside the beta frame. Resistance is low (0.15) because this reading aligns with established product liability principles. The scaffold classification fits: temporary support for software testing with explicit sunset (end of genuine testing phase), coordination function (structured testing with disclosure), and no asymmetric extraction.",
+    "directionality_logic": "Software developers are beneficiaries (d ~ 0.2) — they gain a structured testing period but bear disclosure costs and lose the shield when testing ends. Beta users are beneficiaries (d ~ 0.1) — they get early access with full liability rights intact; the constraint subsidizes their position. Courts/regulators are agenda_setters (d ~ 0.5 symmetric) — they administer the time-bounds. Expansive shield proponents are excluded — their preferred reading is foreclosed by this constraint's premises. The directionality derivation from beneficiary declarations + exit options yields low d for both developer and user seats, consistent with scaffold coordination.",
+    "perspectival_gap": "From the developer seat, the constraint looks like a rope (pure coordination: testing disclosure for mutual benefit). From the expansive_shield_proponent seat, it looks like a mountain (immutable liability rule they cannot overcome). From the beta_user seat, it looks like a mountain (preserved liability rights that feel like natural law). The engine computes these per-seat divergences from the structural data; this reading's claim of scaffold reflects the authoring seat's structural assessment.",
+    "mandatrophy_analysis": "The founding problem (safe structured testing for evolving software) remains live — software complexity and release velocity have increased, making testing phases more necessary, not less. The arrangement has not outlived its function. Mandatrophy is not resolved; the scaffold remains functional. The sunset clause (end of genuine testing) prevents drift into piton by forcing re-evaluation when testing concludes.",
+    "kernel_context": "This constraint is the narrow_warning_reading of the beta_designation_doctrine kernel. Sibling readings: expansive_shield_reading (beta as comprehensive liability waiver, indefinite duration) and severity_carve_out_reading (beta categorically unavailable for life-safety/financial/critical systems). This reading forecloses the expansive_shield_reading (mutually exclusive premises on liability preservation and duration) and coexists_with the severity_carve_out_reading (different scope: this reading governs non-critical systems' beta testing; severity carve-out governs critical systems where beta is barred entirely)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__expansive_shield_reading",
+      "beta_designation_doctrine__severity_carve_out_reading"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the beta_designation_doctrine kernel into three structurally distinct readings with different ε values, beneficiary/victim structures, and constraint types. The narrow_warning_reading (this story) has low ε (0.18), scaffold type, preserved liability. The expansive_shield_reading has high ε (~0.7), snare/tangled_rope type, liability waiver. The severity_carve_out_reading has near-zero ε for critical systems (mountain/rope), categorical bar. They are linked via affects_constraints."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "software_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Develop and release software in beta to gather real-world usage data, feedback, and bug reports. Must provide clear disclosure that the product is in testing, not feature-complete, and that full liability rights apply. Gains structured testing period but cannot use beta label indefinitely or for monetized production use. Exit means moving to general release (losing beta protections) or abandoning the product."
+    },
+    {
+      "name": "beta_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Opt into using pre-release software with full knowledge it is in testing. Retain all standard product liability rights — can sue for defects, data loss, or harm under existing consumer protection law. Benefit from early access and ability to shape the product. Exit means stopping use and potentially migrating data; constrained by switching costs and lack of alternatives for novel software."
+    },
+    {
+      "name": "courts_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate whether a given 'beta' designation meets the narrow_warning_reading criteria: genuine testing phase, time-bounded, good-faith disclosure, preserved liability. Enforce sunset by rejecting beta defenses for products that have exited genuine testing. Set precedent on what constitutes 'genuine testing' vs. indefinite beta. Their enforcement capacity determines whether the scaffold's sunset holds."
+    },
+    {
+      "name": "expansive_shield_proponents",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Large platform companies and industry groups advocating that beta designation should confer broad liability immunity regardless of duration or testing genuineness. Their preferred reading (expansive_shield_reading) is structurally foreclosed by this constraint's premises. They are excluded from the narrow_warning_reading's coordination function because their model requires suppressing user liability rights — the very thing this reading preserves."
+    },
+    {
+      "name": "critical_system_operators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Operators of life-safety, financial, medical, and infrastructure systems. Subject to the severity_carve_out_reading which categorically bars beta designation regardless of testing status. They observe this constraint but are governed by a different reading of the same kernel. Their situation is analytically relevant for boundary disputes: when does a system become 'critical' enough for the carve-out?"
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables structured, time-bounded software testing with real users by providing a recognized 'beta' designation that signals testing status while preserving all existing liability rights — solving the coordination problem of how developers can safely test in production without users losing legal protections.",
+    "transfer_function": "Moves no value from users to developers. The arrangement transfers information (testing status disclosure) from developers to users, and transfers temporary forbearance from strict release standards from regulators to developers — conditioned on genuine testing and automatic sunset.",
+    "absent_voices": "End-users who lack technical literacy to understand 'beta' implications; small developers without legal resources to navigate disclosure requirements; jurisdictions without developed product liability frameworks where beta designation may be the only consumer protection signal.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the narrow_warning_reading vanished, developers would either lose the structured testing safe harbor (reverting to full liability during testing, chilling innovation) or courts would default to the expansive_shield_reading (stripping user liability rights). The mobile app ecosystem, SaaS development practices, and consumer protection expectations would reorganize around whichever reading fills the vacuum.",
+    "founding_problem": "Early personal computing and internet software had no standard way to distinguish testing releases from production releases, leading to either chilled innovation (developers afraid to release early) or user harm (users treating beta as production with no recourse). The beta designation doctrine emerged to create a middle ground: structured testing with informed consent and preserved rights.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Software engineering literature on continuous deployment and beta testing practices (independent of vendor advocacy) corroborates that structured testing phases remain necessary. Consumer protection agencies (FTC, EU Commission) have affirmed that beta labeling does not waive liability. Courts in multiple jurisdictions have rejected indefinite beta shields. No corroboration comes solely from developer beneficiaries."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "scaffold",
+    "downstream_of": [
+      "beta_designation_doctrine"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_shield_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "severity_carve_out_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "beta_designation_preserves_base_liability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "beta_phase_must_be_genuine_testing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "time_bounded_testing_disclosure_framework",
+    "drift_state": {
+      "moment": "contemporary_continuous_deployment_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

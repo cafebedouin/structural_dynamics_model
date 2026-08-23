@@ -1,0 +1,304 @@
+{
+  "header": {
+    "constraint_id": "software_control_legitimacy__freedom_imperative_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "story_uid": "5125f21a-10d0-4663-9289-d75653811828"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.72,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.82,
+    "resistance": 0.68,
+    "claimed_type": "mountain",
+    "human_readable": "Software Freedom Imperative (FSF/GNU reading)",
+    "topic_domain": "software_engineering/political_economy/intellectual_property",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "users_as_rights_holders"
+    ],
+    "victims": [
+      "proprietary_software_vendors"
+    ],
+    "vindicated_propositions": [
+      "four_freedoms_doctrine",
+      "software_freedom_as_human_right"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "users_as_rights_holders",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "Depend on software for daily life, work, communication, and civic participation. The freedom imperative asserts they have a fundamental right to control their computing: to run, study, modify, and share software. Their identity as autonomous agents is fused with this claim — accepting proprietary software is experienced as surrendering agency. Exit from the proprietary ecosystem requires adopting free software exclusively, which entails significant switching costs (hardware compatibility, application gaps, social coordination)."
+    },
+    {
+      "name": "proprietary_software_vendors",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build business models on restricting user control: licensing rather than selling, prohibiting reverse engineering, controlling distribution channels, and collecting behavioral data. The freedom imperative demands they abandon these restrictions — effectively expropriating their core IP and revenue model. They can comply (open-source their code, shift to services/support), resist (lobby for stronger IP law, use technical measures like DRM), or exit the market. Exit is constrained by sunk costs in proprietary codebases and shareholder obligations."
+    },
+    {
+      "name": "free_software_developers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Write and maintain software under copyleft licenses (GPL family) that legally enforce the four freedoms. They set the normative agenda through the Free Software Foundation, GNU Project, and affiliated organizations. They benefit from the constraint because it validates their labor model and expands the commons they draw from. Their exit options are strong — they can move between projects, fork codebases, and operate outside proprietary ecosystems entirely."
+    },
+    {
+      "name": "regulators_and_legislators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Confront policy questions: right-to-repair mandates, public procurement preferences for open source, interoperability requirements (DMA in EU), and whether software freedom constitutes a consumer right or a developer privilege. They observe the conflict between vendor IP claims and user autonomy claims. Their analytical seat lets them see the full structure, but they are not directly constrained by the freedom imperative unless they codify it into law."
+    },
+    {
+      "name": "pragmatic_end_users",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Want software that works reliably for their immediate tasks. They lack technical capacity to exercise freedoms 1 and 3 (study and modify source code) and often lack viable free-software alternatives for specialized needs (CAD, proprietary formats, industry-specific tools). They are structurally excluded from the freedom discourse because their practical constraints make the four freedoms theoretical. If the freedom imperative were enforced categorically, they would lose access to tools they depend on, with no realistic path to replacing them."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a global software commons around the principle that users must control their computing. Solves the problem of vendor lock-in, surveillance, and planned obsolescence by establishing a normative and legal baseline (copyleft) that prevents enclosure of the software commons.",
+    "transfer_function": "Transfers decision-making authority over software behavior from vendors to users. Vendors lose the right to restrict use, modification, and distribution; users gain the legal and practical ability to inspect, alter, and share software. The transfer is not monetary but capacitative: control over computation moves from centralized vendors to distributed users.",
+    "absent_voices": "Pragmatic end-users who lack technical capacity to exercise source-code freedoms and depend on proprietary tools for livelihood (see pragmatic_end_users stakeholder). Small proprietary vendors in developing economies who cannot afford the compliance burden of copyleft or the business-model pivot to services. Hardware manufacturers who rely on proprietary firmware for device differentiation and security certification.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the freedom imperative vanished overnight, copyleft licenses would lose their normative force, vendors would accelerate enclosure (SaaS-only models, hardware-locked bootloaders, AI-model-as-service), and the free software ecosystem would fragment into permissive-licensed fragments vulnerable to proprietary capture. The software commons would collapse into a series of vendor-controlled silos within 5-10 years.",
+    "founding_problem": "The 1980s shift from shared academic/industrial software culture to proprietary enclosure: vendors began distributing binaries only, using copyright and trade secret law to prevent users from fixing bugs, adapting software, or understanding what it does. Stallman's printer-driver incident (denied source code for a Xerox 9700) crystallized the problem: users had become helpless dependents on vendor benevolence.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is corroborated by independent observers outside the FSF orbit: Shoshana Zuboff's surveillance capitalism thesis (vendor extraction of behavioral surplus), the right-to-repair movement (farmers, hospitals, independent repair shops blocked by DRM and copyright), and EU Digital Markets Act findings (gatekeeper control over software distribution). No major institutional actor disputes that vendor control has intensified since the 1980s; the dispute is whether the freedom imperative is the correct remedy."
+  },
+  "interval": {
+    "start": 1983,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1983,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1998,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2007,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1983,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2007,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1983,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2007,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The freedom imperative reading (originating in Stallman's GNU Manifesto and the Four Freedoms) asserts that proprietary software — software that denies users the freedom to run, study, modify, and share — is ethically illegitimate. This reading instantiates a constraint: all software must respect user freedom. From this reading's perspective, the standing arrangement (proprietary dominance) extracts from users by denying them control over their computing. The constraint's claimed_type is mountain (fundamental right, natural law), but it declares beneficiaries (users) and victims (vendors), triggering FSM evaluation. The engine will compute per-seat types: users experience coordination (rope), vendors experience extraction (snare/tangled_rope).",
+    "logic_rationale": "Extractiveness (0.78) reflects the categorical demand that vendors abandon their core business model — a total transfer of control rights. Suppression (0.72) reflects the enforcement needed: copyleft licenses, legal action against GPL violators, political advocacy for right-to-repair and interoperability mandates. Theater is low (0.12) because the movement's coordination function (building a free software commons) is genuine and its primary activity; enforcement serves the freedom claim, not a hidden extraction agenda. Accessibility collapse (0.82) is high for vendors: once the freedom claim is accepted, the proprietary model has no legitimate fallback. Resistance (0.68) is substantial: vendors lobby, litigate, and deploy technical countermeasures (DRM, Tivoization, SaaS).",
+    "directionality_logic": "Users are structural beneficiaries (d ≈ 0.15): the constraint subsidizes them with control rights they otherwise lack. Their identity_locked exit (ideological fusion with the freedom claim) keeps d from reaching 0.0. Proprietary vendors are structural targets (d ≈ 0.85): the constraint extracts their IP control and revenue model. Their constrained exit (sunk costs, fiduciary duties) keeps d from reaching 1.0. Free software developers sit near beneficiary (d ≈ 0.2) — they gain commons access but bear maintenance burden. Regulators are analytical (d = 0.5 by definition). Pragmatic users are excluded — they bear costs (lost tool access) without the ideological framework that makes the tradeoff meaningful.",
+    "perspectival_gap": "The payer seat (vendors) and beneficiary seat (users) compute different types: vendors experience a snare (coercive extraction with no coordination benefit for them); users experience a rope (genuine coordination solving vendor lock-in). The agenda-setter seat (free software developers) experiences a scaffold — the copyleft mechanism is transitional, meant to become unnecessary when freedom is the norm. The engine computes this divergence from the structural data; the claimed mountain type is the reading's self-presentation, not the engine's verdict.",
+    "mandatrophy_analysis": "The freedom imperative prevents mislabeling by naming the extraction explicitly: vendor control IS the extraction, not a coordination service. The mandate (user freedom) has not atrophied — surveillance capitalism and right-to-repair struggles confirm the founding problem is live. The constraint is not a piton: theater is low, enforcement is functional, and the commons continues expanding (Linux, Android kernel, GNU toolchain, RISC-V). Mandatrophy is unresolved because the proprietary model persists and adapts (SaaS, AI-as-service), creating new enclosure frontiers.",
+    "kernel_context": "This constraint is the freedom_imperative_reading of the software_control_legitimacy kernel. Sibling readings: pragmatic_openness_reading (open source as development methodology), property_rights_reading (creator authority to restrict), commons_reading (negotiated collective governance). This reading forecloses property_rights_reading (categorical rejection of proprietary control), coexists_with pragmatic_openness_reading (different parties hold both), and influences commons_reading (pushes toward stronger copyleft). Foundational axioms: user_control_fundamental_right (deontological), proprietary_software_illegitimate (deontological). Reference frame: four_freedoms_doctrine. Drift: contemporary_surveillance_capitalism era shows substantial authority_erosion of proprietary model, unacknowledged by vendors."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_framing",
+      "question": "Does the freedom_imperative_reading instantiate a distinct constraint from the software_control_legitimacy kernel, or is it the kernel itself?",
+      "resolution_mechanism": "Compare structural predictions: if the kernel is the contested question and readings are answers, each reading should produce a different constraint with different beneficiary/victim sets. Verify that pragmatic_openness, property_rights, and commons readings would author different stakeholders and metrics.",
+      "impact": "If this reading IS the kernel (not a reading of it), the constraint family decomposition fails and network.affects_constraints links become incoherent. The committer frame requires treating it as one reading among siblings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the freedom imperative is a reading of the kernel or the kernel itself."
+    },
+    {
+      "id": "natural_law_vs_constructed_norm",
+      "question": "Is the four-freedoms claim a genuine natural law (mountain) or a constructed normative demand that benefits identifiable agents (false summit)?",
+      "resolution_mechanism": "Test FSM signature: mountain claim + declared beneficiaries + non-zero extractiveness from vendor seat. If the engine reclassifies vendor seat as snare/tangled_rope while user seat computes as rope, the mountain claim is a false summit for vendors but genuine coordination for users.",
+      "impact": "If false summit, the mountain claim functions as ideological cover for a constraint that extracts from vendors. If genuine mountain, the extraction metric is mis-specified — a natural law cannot extract. The omega documents the ambiguity; the engine resolves via FSM.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Natural-law status of the freedom claim vs. its constructed benefit to users-as-rights-holders."
+    },
+    {
+      "id": "universal_vs_cultural_freedom",
+      "question": "Is the user freedom claim genuinely universal (universal scope) or culturally specific to hacker/Western libertarian traditions?",
+      "resolution_mechanism": "Empirical survey of non-Western free software communities (e.g., Chinese GNU/Linux users, Brazilian telecentros, Indian Kerala model): do they adopt the four freedoms as intrinsic rights or as pragmatic tools? If the latter, spatial_scope should be regional/cultural, not universal.",
+      "impact": "If culturally specific, the universal scope declaration inflates effective extraction (scope modifier) and misrepresents the constraint's actual reach. The pragmatic_end_users stakeholder would be larger and more central.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Universality of the freedom claim across cultural contexts."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "software_control_legitimacy__pragmatic_openness_reading",
+      "software_control_legitimacy__property_rights_reading",
+      "software_control_legitimacy__commons_reading"
+    ],
+    "dual_formulation_note": "This reading and property_rights_reading are logical contraries within the software_control_legitimacy kernel: one asserts user control as fundamental right, the other asserts creator control as property right. They cannot both be true in a single legal framework (forecloses relation). The pragmatic_openness_reading and commons_reading occupy intermediate positions that coexist with both but are pulled toward this reading's stricter copyleft boundary."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "property_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pragmatic_openness_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "commons_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "user_control_fundamental_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "proprietary_software_illegitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "four_freedoms_doctrine",
+    "drift_state": {
+      "moment": "contemporary_surveillance_capitalism",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "software_control_legitimacy"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,572 @@
+{
+  "header": {
+    "constraint_id": "reading_acquisition_legitimacy__whole_language_meaning_primacy",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_reading_acquisition_legitimacy__whole_language_meaning_primacy",
+    "measurement_id_prefix": "ral_wlmp",
+    "story_uid": "8a9463bc-6498-41a9-9d5b-32aa2d63cfc0",
+    "created_at": "2026-08-03T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.78,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Whole Language Meaning Primacy in Reading Instruction",
+    "topic_domain": "education_policy/cognitive_science/literacy_pedagogy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "whole_language_advocates",
+      "teacher_education_programs",
+      "authentic_literature_publishers"
+    ],
+    "victims": [
+      "struggling_readers",
+      "children_from_low_literacy_homes",
+      "classroom_teachers_denied_tools"
+    ],
+    "vindicated_propositions": [
+      "reading_is_meaning_making",
+      "authentic_texts_support_engagement"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_reading",
+      "question": "Is this constraint one reading of a contested kernel (reading_acquisition_legitimacy) rather than a standalone claim?",
+      "resolution_mechanism": "Structural decomposition of the kernel into its sibling readings (phonics_decoding_primacy, balanced_literacy_integration, structured_literacy_remediation) and verification that each has distinct ε, beneficiaries, and victims.",
+      "impact": "If confirmed, this reading's ε is reading-indexed over the fixed referent (the standing arrangement of reading instruction legitimacy), not a property of 'reading instruction' simpliciter. Sibling readings are separate constraints linked by network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint instantiates the whole_language_meaning_primacy reading of the reading_acquisition_legitimacy kernel; sibling readings are distinct constraints."
+    },
+    {
+      "id": "decoding_emergence_empirical",
+      "question": "Does decoding actually emerge naturally from meaning-focused immersion for all children, or only for a subset with sufficient phonological awareness and print exposure?",
+      "resolution_mechanism": "Longitudinal studies tracking decoding acquisition in whole language vs. explicit phonics classrooms, controlling for home literacy environment; neuroimaging of reading circuit development under different instructional regimes.",
+      "impact": "If decoding emergence is not universal, the constraint's coordination function is partial and its extraction from non-emergent readers is structural — supporting tangled_rope or snare classification. If universal, the coordination function is genuine and extraction lower — supporting rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the core coordination claim (decoding emerges naturally) holds empirically across the population."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of phonics alternatives structural (curriculum mandates, teacher certification requirements, publisher gatekeeping) or internalized (teacher belief that phonics is 'inauthentic,' professional identity fused with meaning-first pedagogy)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: track teachers who move to structured literacy — do they experience persistent internal resistance, or does suppression dissolve when structural barriers are removed?",
+      "impact": "If internalized, effective suppression is higher than structural measures suggest — teachers carry the constraint with them. If structural, suppression is removable by policy change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for phonics exclusion."
+    },
+    {
+      "id": "balanced_literacy_capture",
+      "question": "Does the whole language reading structurally capture the balanced_literacy_integration reading (making it a veneer for meaning-primacy), or do they remain distinct positions?",
+      "resolution_mechanism": "Analyze balanced literacy curricula for time allocation to explicit phonics vs. guided reading/running records; track whether 'balanced' implementations systematically under-dose decoding instruction.",
+      "impact": "If captured, balanced_literacy_integration is not a genuine sibling but a downstream variant — this reading influences it without foreclosing it. If distinct, they coexist as separate constraint stories.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether balanced literacy is a genuine integration or a captured variant of whole language."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.78
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 50,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 50,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 50,
+        "value": 0.75
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 50,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.4
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 50,
+        "value": 0.7
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.3
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 50,
+        "value": 0.7
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.25
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 50,
+        "value": 0.6
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 50,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.2
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 50,
+        "value": 0.55
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.2
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 50,
+        "value": 0.65
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 50,
+        "value": 0.8
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.3
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 50,
+        "value": 0.78
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 50,
+        "value": 0.75
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.15
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 50,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.2
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 50,
+        "value": 0.7
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.25
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 50,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.1
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 50,
+        "value": 0.6
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The whole language meaning primacy reading asserts that reading is fundamentally meaning-making and that legitimate instruction immerses children in authentic literature from day one, allowing decoding to emerge naturally through engagement with meaningful text. Teachers act as facilitators rather than direct instructors; struggling readers receive individualized support via running records and guided reading. This reading dominated teacher education and curriculum policy from the 1970s through 1990s, faced empirical challenge from cognitive science and the National Reading Panel (2000), and persists in balanced literacy implementations that retain meaning-primacy while nominally including phonics. The constraint coordinates reading instruction around a shared professional vision but extracts from children who do not naturally acquire decoding — disproportionately those from low-literacy homes and those with dyslexia.",
+    "key_agents": [
+      "struggling_readers: Primary targets (powerless/trapped) — bear extraction when decoding fails to emerge",
+      "whole_language_advocates: Primary beneficiaries (institutional/identity_locked) — professional identity and institutional position depend on the reading",
+      "classroom_teachers: Dual-positioned (moderate/identity_locked) — constrained by approach but professionally identified with it",
+      "phonics_advocates: Excluded (organized/trapped) — would object but structurally marginalized in teacher education",
+      "cognitive_scientists: Observers (analytical/analytical) — see full structure from evidence base",
+      "parents_of_struggling_readers: Payers (moderate/constrained) — bear costs of tutoring and remediation",
+      "authentic_literature_publishers: Beneficiaries (organized/arbitrage) — sell materials aligned with the approach"
+    ],
+    "logic_rationale": "Extractiveness (0.72) is high because the constraint systematically fails a subset of learners (20-30% by most estimates) while continuing to claim universal efficacy. Suppression (0.78) is high because alternatives (explicit phonics) are actively marginalized in teacher preparation, curriculum adoption, and professional discourse — not merely dispreferred. Theater ratio (0.52) reflects that the coordination function (teaching reading) is real but increasingly performative as evidence accumulates that the core mechanism (natural decoding emergence) does not work for all. Accessibility collapse (0.71) is high because the meaning-primacy framing makes alternatives appear 'inauthentic' or 'drill-and-kill' — once accepted, the frame closes off alternatives conceptually. Resistance (0.68) is substantial from cognitive scientists, parents, and structured literacy advocates but has not displaced the constraint in many institutions. The measurement series shows rising extractiveness and suppression from 1970-2000 as evidence mounted but institutional commitment deepened, then stabilization at high levels (2000-2020) as balanced literacy absorbed the challenge without changing core premises.",
+    "directionality_logic": "Whole language advocates (teacher educators, professional organizations) are structural beneficiaries: they control curriculum, certification, and professional development — d near 0.0 (beneficiary end). Struggling readers and children from low-literacy homes are full targets: they bear the cost of reading failure with no exit — d near 1.0. Classroom teachers are identity-locked: professional identity is fused with the facilitator role; exit means abandoning professional self-concept — d ~0.75. Parents of struggling readers are constrained payers: they can purchase tutoring (mobile-ish) but cannot change school instruction — d ~0.65. Phonics advocates are trapped at the organizational level: they have evidence but cannot access the institutional levers — d ~0.85. Publishers have arbitrage exit: they can publish whatever sells — d ~0.15.",
+    "perspectival_gap": "From the advocate/agenda-setter seat, the constraint is genuine coordination: a humane, child-centered approach that solves the problem of reading engagement. From the struggling reader/payer seat, it is extraction: a system that withholds the explicit instruction they need and blames them for the failure. The engine computes this divergence from the structural data — the claimed_type (tangled_rope) reflects the authoring-seat judgment that both coordination and extraction are structurally real, not that one is 'true' and the other 'false.'",
+    "mandatrophy_analysis": "The founding problem (making reading meaningful rather than rote) remains live — but the solution (decoding emerges naturally) is empirically contested. The constraint persists not because the founding problem is solved, but because the professional identity structure built around the solution resists revision. This is mandatrophy: the mandate (teach reading meaningfully) has outlived the specific means (whole language) that claimed to fulfill it, but the means has become the mandate. The theater_ratio rise (0.18→0.52) tracks this: coordination activity increasingly performs the mandate rather than fulfilling it.",
+    "kernel_context": "This constraint instantiates the whole_language_meaning_primacy reading of the reading_acquisition_legitimacy kernel. Sibling readings: phonics_decoding_primacy (reading IS decoding; explicit systematic phonics), balanced_literacy_integration (reading requires both; balance explicit phonics with authentic literature), structured_literacy_remediation (instruction designed for vulnerable learners first; explicit cumulative diagnostic). The kernel is distributed — no single authority adjudicates it; authority is grounded in practice (teacher community) and extraction (institutional benefit from preventing revision). The interpretation layer (teacher education, professional development) absorbs drift by rebranding (balanced literacy) without revising core premises."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "reading_acquisition_legitimacy__balanced_literacy_integration",
+      "reading_acquisition_legitimacy__phonics_decoding_primacy",
+      "reading_acquisition_legitimacy__structured_literacy_remediation"
+    ],
+    "dual_formulation_note": "This constraint family decomposes 'reading instruction legitimacy' into four structurally distinct claims with different ε, beneficiaries, and victims. Whole language meaning primacy (this story) has high ε because its core coordination claim (decoding emerges naturally) fails for a substantial minority. Phonics decoding primacy has lower ε (explicit instruction works for ~95% with proper implementation) but higher suppression of meaning-focused practices. Balanced literacy integration claims coordination of both but often functionally captures whole language premises. Structured literacy remediation targets the extraction victims of the other three. The ε-invariance principle requires separate stories: each reading's ε is stable under its own measurement basis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "struggling_readers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Children who do not naturally acquire decoding through immersion. They experience reading failure, are often labeled as having learning disabilities, and receive remedial interventions that may not address the instructional gap. They cannot exit the school system; their families may lack resources for private tutoring. The constraint extracts years of educational opportunity and self-efficacy."
+    },
+    {
+      "name": "children_from_low_literacy_homes",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Children who enter school with limited print exposure and phonological awareness. The whole language approach assumes a literacy-rich environment that these children do not have. They fall behind immediately and the gap compounds. They are structurally trapped in classrooms that do not provide the explicit instruction they need."
+    },
+    {
+      "name": "classroom_teachers_denied_tools",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Teachers trained in whole language who discover it fails some students. They are professionally identified as 'facilitators of meaning-making'; adopting explicit phonics feels like betraying their professional identity. They bear the daily frustration of watching children struggle without effective tools. Exit requires reconstructing professional self-concept — extremely costly."
+    },
+    {
+      "name": "whole_language_advocates",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "University faculty, professional organization leaders, and curriculum authors who built careers and institutions around the meaning-primacy framework. They control teacher certification standards, conference programming, and journal editorships. Their professional identity and institutional authority are fused with the constraint. They genuinely believe in the approach but also benefit from its institutional entrenchment."
+    },
+    {
+      "name": "teacher_education_programs",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "University-based preparation programs whose curriculum, faculty expertise, and accreditation are built around whole language/balanced literacy. Changing would require massive restructuring, faculty retraining, and admitting past error. They benefit from stable enrollment and institutional inertia."
+    },
+    {
+      "name": "authentic_literature_publishers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Publishers of trade books, leveled readers, and classroom libraries marketed for whole language/balanced literacy classrooms. They have a commercial interest in the approach but can pivot to decodable texts if the market shifts — they have arbitrage-grade exit."
+    },
+    {
+      "name": "phonics_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Researchers, practitioners, and parent advocates who promote explicit systematic phonics. They are structurally excluded from teacher education, curriculum adoption committees, and mainstream professional discourse. Their evidence is dismissed as 'reductionist' or 'not authentic.' They cannot exit the exclusion — the institutional gates are closed."
+    },
+    {
+      "name": "parents_of_struggling_readers",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Parents who watch their children fail to learn to read. They often pay for private tutoring (Orton-Gillingham, structured literacy) at significant financial and emotional cost. They can move districts or choose private school (constrained exit) but cannot change the instructional approach in their assigned public school."
+    },
+    {
+      "name": "cognitive_scientists",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers in reading science (neuroscience, psychology, linguistics) who study how reading is acquired. They have converged on the necessity of explicit phonics for most learners. They observe the constraint from outside the professional education system; their evidence is systematically discounted by the institutional agenda-setters."
+    }
+  ],
+  "gain_flow": "whole_language_advocates",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a shared professional vision for reading instruction that replaces rote phonics drills with meaningful engagement in authentic literature; coordinates teacher practice around child-centered facilitation rather than scripted direct instruction.",
+    "transfer_function": "Moves instructional time and cognitive load from explicit decoding instruction to comprehension and meaning-making activities; moves the cost of reading failure onto struggling readers (who bear lifelong consequences) and their families (who pay for remediation); moves professional authority and resources to whole language-aligned teacher educators and publishers.",
+    "absent_voices": "Phonics advocates and structured literacy practitioners are structurally excluded from teacher education and curriculum decisions. Parents of dyslexic children are absent from policy tables where instructional approaches are chosen. Cognitive scientists who study reading acquisition are treated as outsiders to 'real classroom practice.' These voices would object to the claim that decoding emerges naturally for all children.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the whole language meaning primacy constraint vanished overnight, teacher education would need to restructure around explicit phonics; curriculum materials would shift from leveled readers to decodable texts; professional development would pivot from running records to diagnostic phonics assessment; struggling readers would receive explicit instruction from day one; the professional identity of 'facilitator' would be replaced by 'explicit instructor.' The entire literacy education ecosystem would reorganize.",
+    "founding_problem": "Mid-20th century reading instruction was dominated by basal readers with controlled vocabulary and isolated phonics drills that many children found meaningless and disengaging. The founding problem was: how to make reading instruction meaningful, engaging, and connected to authentic language use — so that children become readers who want to read, not just decoders who can read.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem (meaningless drill) is attested by historical accounts of 1950s-60s reading instruction and by progressive educators (Goodman, Smith, Holdaway). However, the SOLUTION (decoding emerges naturally) is contested: cognitive scientists (Adams, Stanovich, Seidenberg, Castles) attest that the problem is real but the solution is empirically false for a substantial minority. The National Reading Panel (2000) and subsequent synthesis reports corroborate that explicit phonics is necessary for many learners. No independent source outside the whole language tradition corroborates that natural emergence works universally."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "phonics_decoding_primacy",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "balanced_literacy_integration",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "reading_acquisition_legitimacy__structured_literacy_remediation",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "decoding_emerges_naturally_from_meaning_engagement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "authentic_texts_are_superior_to_decodable_texts_for_engagement_and_development",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "progressive_literacy_tradition",
+    "drift_state": {
+      "moment": "post_national_reading_panel_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

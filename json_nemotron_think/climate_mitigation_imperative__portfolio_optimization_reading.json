@@ -1,0 +1,303 @@
+{
+  "header": {
+    "constraint_id": "climate_mitigation_imperative__portfolio_optimization_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_climate_mitigation_imperative__portfolio_optimization_reading",
+    "measurement_id_prefix": "climate_mitigation_imperative__portfolio_optimization_reading",
+    "story_uid": "09a5fef3-ea40-450b-929b-4a7e334d6361"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "rope",
+    "human_readable": "Portfolio Optimization Reading of Climate Mitigation Imperative",
+    "topic_domain": "energy_policy/climate_mitigation/technology_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "nuclear_industry",
+      "grid_operators"
+    ],
+    "victims": [
+      "fossil_fuel_industry",
+      "ratepayers"
+    ],
+    "vindicated_propositions": [
+      "carbon_intensity_neutrality",
+      "baseload_necessity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_committer_structure",
+      "question": "This constraint is one reading (portfolio_optimization_reading) of the contested kernel climate_mitigation_imperative. What structural elements differ between this reading and its siblings (opportunity_cost_reading, systems_transition_reading)?",
+      "resolution_mechanism": "Compare beneficiary/victim sets, extraction metrics, and coordination functions across the three readings. The kernel context declares the expected structural delta for this reading: nuclear enters beneficiary set, fossil fuels are primary victim, constraint is technology-neutral carbon intensity.",
+      "impact": "If the structural delta holds, this reading instantiates a distinct constraint with its own ε and classification. If the delta collapses, the readings may not be structurally distinct constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment structure: kernel identity and reading differentiation"
+    },
+    {
+      "id": "baseload_necessity",
+      "question": "Is nuclear baseload genuinely necessary for grid reliability, or can alternatives (storage, demand response, interconnection, overbuilding renewables) provide equivalent reliability at lower system cost?",
+      "resolution_mechanism": "Empirical analysis of grid reliability metrics in high-renewable systems with and without nuclear; cost-optimization modeling under technology-neutral carbon constraints.",
+      "impact": "If baseload necessity is falsified, the coordination function claimed by this reading collapses and the constraint reclassifies toward snare (extraction without coordination). If validated, the coordination function stands and the reading remains rope or tangled_rope depending on extraction asymmetry.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the claimed coordination function (nuclear baseload necessity) is empirically warranted"
+    },
+    {
+      "id": "subsidy_extraction_boundary",
+      "question": "Are the policy supports directed to nuclear (subsidies, loan guarantees, liability caps, streamlined licensing) properly characterized as coordination costs (necessary to overcome first-mover barriers) or as extraction (rent transfer to nuclear industry)?",
+      "resolution_mechanism": "Cost-benefit analysis of nuclear support policies compared to support for other low-carbon technologies; counterfactual modeling of nuclear deployment without targeted supports.",
+      "impact": "If supports are extraction, the constraint is tangled_rope (coordination + asymmetric extraction). If supports are coordination costs, the constraint is rope. The boundary determines whether the beneficiary set (nuclear_industry) is a genuine coordination beneficiary or an extractive capture.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether nuclear policy supports are coordination costs or extractive rents"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint story represents the portfolio_optimization_reading of the climate_mitigation_imperative kernel. The reading asserts that effective climate mitigation requires a technology-neutral approach that maximizes deployment of all low-carbon sources, and that nuclear energy is necessary to provide reliable baseload power complementing variable renewables. The constraint operates through policy mechanisms (subsidies, clean energy standards, licensing reform) that channel support to nuclear while suppressing fossil fuels. The claimed_type is rope (genuine coordination), but the authored metrics show moderate extraction and suppression, reflecting the contested nature of whether nuclear supports are coordination costs or rents. The engine will compute per-seat classifications from the structural data.",
+    "key_agents": [
+      "nuclear_industry: Primary beneficiary (powerful/arbitrage) — receives subsidies, loan guarantees, liability caps",
+      "fossil_fuel_industry: Primary victim (powerful/constrained) — loses market share and asset value",
+      "grid_operators: Beneficiary (institutional/analytical) — gain reliability tool",
+      "ratepayers: Payer (organized/constrained) — bear cost of subsidies and potential stranded assets",
+      "renewable_energy_industry: Dual (powerful/constrained) — benefit from low-carbon mandate but face nuclear competition",
+      "climate_vulnerable_populations: Beneficiary (powerless/trapped) — benefit from mitigation",
+      "policy_makers: Agenda setter (institutional/analytical) — design and enforce portfolio standards",
+      "anti_nuclear_activists: Excluded (organized/trapped) — oppose nuclear on safety/waste grounds",
+      "independent_energy_analysts: Observer (analytical/analytical) — evaluate system costs and reliability"
+    ],
+    "logic_rationale": "Extractiveness (0.55) reflects the transfer of public funds and ratepayer surcharges to nuclear industry, which is substantial but framed as coordination cost. Suppression (0.45) reflects the constraint's active displacement of fossil fuels and potential crowding-out of other low-carbon options. Theater_ratio (0.20) is low because the reliability coordination function is genuinely performed by nuclear plants where they operate. Accessibility_collapse (0.60) is moderate: alternatives exist but are constrained by the baseload necessity claim. Resistance (0.50) is moderate: fossil fuel industry and anti-nuclear groups resist, but policy momentum is strong. The measurement series shows extractiveness and theater rising over the interval as nuclear support policies expand and the portfolio mandate tightens.",
+    "directionality_logic": "Nuclear_industry and grid_operators are structural beneficiaries (d near 0.0) — they receive direct subsidies and operational advantages. Fossil_fuel_industry is a structural target (d near 1.0) — the constraint explicitly aims to displace them. Ratepayers are payers (d ~0.7) — they bear costs through surcharges and taxes. Renewable_energy_industry is near symmetric (d ~0.5) — they gain from the low-carbon mandate but lose market share to subsidized nuclear. Climate_vulnerable_populations are beneficiaries (d ~0.1) — they gain from mitigation but have no voice. Policy_makers are agenda_setters (d ~0.2) — they design the constraint and capture political benefits. Anti_nuclear_activists are excluded (d ~0.8) — they bear waste/safety risks without influence. Independent_analysts are observers (d=0.5).",
+    "perspectival_gap": "The nuclear_industry and policy_maker seats experience this as genuine coordination (rope): they see a real reliability problem solved by technology-neutral policy. The fossil_fuel_industry and ratepayer seats experience it as extraction (snare/tangled_rope): they see a targeted subsidy regime displacing competitive alternatives. The renewable_energy_industry seat is ambivalent: coordination benefit from the carbon mandate, extraction cost from nuclear favoritism. The engine computes this divergence from the declared structural positions.",
+    "mandatrophy_analysis": "The founding problem (reliability under decarbonization) remains contested. If storage and grid integration solve reliability, the constraint's coordination function atrophies and it becomes a piton (inertial maintenance of nuclear subsidies). Currently the mandate is live, but the drift_state shows authority_erosion as distributed energy paradigms gain traction. The constraint is not yet mandatrophic but shows early signs of mandate drift.",
+    "kernel_context": "This constraint is the portfolio_optimization_reading of the climate_mitigation_imperative kernel. Sibling readings: opportunity_cost_reading (nuclear is net-harmful due to capital intensity and timeline) and systems_transition_reading (nuclear perpetuates extractive centralization). This reading's structural delta: nuclear enters beneficiary set (receives subsidy/support); fossil fuels are primary victim; constraint is technology-neutral carbon intensity. The three readings instantiate three distinct constraints with different ε, beneficiary/victim structures, and classifications."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_mitigation_imperative__opportunity_cost_reading",
+      "climate_mitigation_imperative__systems_transition_reading"
+    ],
+    "dual_formulation_note": "This reading (portfolio_optimization) and its siblings (opportunity_cost, systems_transition) form a constraint family decomposing the climate_mitigation_imperative kernel. Each reading has a distinct ε: portfolio_optimization shows moderate extraction (nuclear subsidies); opportunity_cost shows low extraction (excludes nuclear); systems_transition shows high extraction (centralized nuclear perpetuates inequality). The ε-invariance principle requires separate stories because the observable (mitigation portfolio composition) yields different extraction depending on which reading's framing is adopted."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.1
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "nuclear_industry",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receives production tax credits, loan guarantees, liability limitation (Price-Anderson), and streamlined licensing. Uses political influence to maintain and expand supports. Can exit by moving capital to other sectors or jurisdictions, but has sunk costs in nuclear supply chain."
+    },
+    {
+      "name": "fossil_fuel_industry",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Loses market share to mandated low-carbon portfolio. Faces stranded asset risk. Can partially exit by diversifying into renewables, but core business model is threatened. Uses lobbying and litigation to delay displacement."
+    },
+    {
+      "name": "grid_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Gain a dispatchable, carbon-free baseload resource that simplifies reliability planning. Their mandate is reliability; nuclear reduces the need for massive storage overbuild. They are not direct financial beneficiaries but gain operational certainty."
+    },
+    {
+      "name": "ratepayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the cost of nuclear subsidies through electricity surcharges and tax expenditures. Also bear risk of cost overruns and waste liabilities. Exit is limited: can reduce consumption or install distributed generation, but grid connection remains mandatory for most."
+    },
+    {
+      "name": "renewable_energy_industry",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from the overarching low-carbon mandate and clean energy standards. However, faces competition from subsidized nuclear for policy support and market share. Capital allocation is constrained by investor expectations and policy signals."
+    },
+    {
+      "name": "climate_vulnerable_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Benefit from any effective mitigation. Have no voice in energy portfolio decisions. Bear disproportionate climate impacts if mitigation fails. Cannot exit the climate system; their structural position is pure beneficiary with zero agency."
+    },
+    {
+      "name": "policy_makers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Design and enforce the portfolio optimization constraint through legislation, regulation, and appropriations. Capture political benefits from appearing to act on climate while supporting incumbent energy interests. Their exit is analytical: they can change the constraint but face electoral and institutional incentives to maintain it."
+    },
+    {
+      "name": "anti_nuclear_activists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Oppose nuclear on safety, waste, proliferation, and cost grounds. Are structurally excluded from the portfolio optimization framing, which treats nuclear as a neutral low-carbon option. Their opposition is overridden by the constraint's technology-neutral premise. They bear waste/safety risks if nuclear expands but cannot influence the portfolio mandate."
+    },
+    {
+      "name": "independent_energy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Evaluate system costs, reliability, and emissions outcomes under different portfolio scenarios. Provide evidence for all three readings. Have no material stake in the constraint's operation; their exit is analytical (they can change their assessment)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensuring reliable electricity supply while decarbonizing by maintaining a technology-neutral portfolio that includes nuclear baseload.",
+    "transfer_function": "Moves public funds (subsidies, ratepayer surcharges, tax expenditures) to nuclear industry; moves market share and asset value from fossil fuels to low-carbon sources including nuclear.",
+    "absent_voices": "Communities affected by nuclear waste and uranium mining (often Indigenous and low-income); future generations bearing long-term waste management costs; distributed energy advocates who argue for decentralized alternatives; Global South nations pressured to adopt nuclear under technology-neutral frameworks without domestic capacity.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the portfolio optimization mandate vanished overnight, nuclear would lose policy support and likely decline relative to cheaper renewables+storage; fossil fuels would persist longer in the mix; the low-carbon transition would proceed on a different trajectory with different reliability investments and different distributional outcomes.",
+    "founding_problem": "The need to decarbonize electricity systems while maintaining grid reliability, given the intermittency of wind and solar and the perceived limits of storage and demand response at scale.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Grid operators and some climate scientists (e.g., IPCC WGIII scenarios) corroborate the reliability challenge at high renewable penetrations. Renewable advocates, storage developers, and systems analysts contest it, citing falling storage costs, grid integration solutions, and demand-side flexibility. No consensus exists outside the nuclear-benefiting parties (nuclear industry, some grid operators, some governments)."
+  },
+  "gain_flow": "nuclear_industry",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "opportunity_cost_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "systems_transition_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "technology_neutral_decarbonization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "nuclear_baseload_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "integrated_resource_planning_paradigm",
+    "drift_state": {
+      "moment": "contemporary_net_zero_policy_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

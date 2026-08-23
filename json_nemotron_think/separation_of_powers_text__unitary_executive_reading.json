@@ -1,0 +1,416 @@
+{
+  "header": {
+    "constraint_id": "separation_of_powers_text__unitary_executive_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_separation_of_powers_text__unitary_executive_reading",
+    "measurement_id_prefix": "unitary_exec",
+    "story_uid": "64565e27-c5b1-4ab8-ba79-0a8fa3848de8",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.58,
+    "claimed_type": "mountain",
+    "human_readable": "Unitary Executive Principle — All Executive Power Vests in the President",
+    "topic_domain": "constitutional/administrative",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "president",
+      "executive_branch",
+      "unitary_executive_theorists"
+    ],
+    "victims": [
+      "independent_agencies",
+      "congress",
+      "judiciary",
+      "career_civil_service"
+    ],
+    "vindicated_propositions": [
+      "constitutional_text_fixes_executive_structure",
+      "presidential_accountability_requires_unitary_control"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "president",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Claims constitutional authority to direct all executive branch officers, remove agency heads at will, and control administrative policy. Uses unitary executive theory to justify centralized control over independent agencies. Gains direct political control over regulatory and enforcement decisions previously made by insulated agency heads."
+    },
+    {
+      "name": "executive_branch",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Gains unified command structure with all administrative power flowing through the White House. Political appointees replace independent commissioners; policy coordination becomes direct rather than negotiated. Loses the buffering function that insulated technical expertise from political cycles."
+    },
+    {
+      "name": "unitary_executive_theorists",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Academic and legal advocates (Federalist Society, OLC alumni) who developed and promote the theory. Gain institutional influence, judicial appointments, and intellectual authority when the theory prevails. Their career capital is tied to the theory's ascendance."
+    },
+    {
+      "name": "independent_agencies",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "FTC, NLRB, Fed, SEC, CFPB, and similar multimember commissions with statutory removal protections. Lose structural independence when presidential removal power becomes absolute. Commissioners become subordinate political appointees; expert decision-making yields to White House directives. No exit — the constraint targets their statutory design."
+    },
+    {
+      "name": "congress",
+      "role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Loses ability to create insulated expert bodies through statute. The legislative tool of designing agency independence (for-cause removal, multimember commissions, fixed terms) is declared unconstitutional. Can only respond by not creating agencies or by accepting presidential control — a structural loss of legislative architecture."
+    },
+    {
+      "name": "judiciary",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Cedes interpretive authority over administrative structure to the executive branch's reading of Article II. The courts' role shifts from reviewing agency independence to enforcing presidential removal power. Loses the functionalist balancing framework (Humphrey's Executor, Morrison v. Olson) that permitted nuanced structural analysis."
+    },
+    {
+      "name": "career_civil_service",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Merit-protected experts in agencies lose insulation from political direction. Policy judgments based on technical expertise are overridden by political appointees implementing presidential priorities. Exit is constrained by specialization and pension vesting; whistleblower protections become the only structural safeguard."
+    },
+    {
+      "name": "regulated_entities",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Regulated industries gain a single political access point (the White House) instead of navigating independent commission processes. But lose predictability and expert adjudication — policy shifts with each administration. Net effect varies by industry and administration alignment."
+    },
+    {
+      "name": "public_interest_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Consumer, environmental, labor, and civil rights groups that relied on independent agency expertise and insulation from political pressure. Lose a venue where technical records and statutory mandates could prevail over presidential politics. No structural seat in the unitary executive framework."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Academic observers analyzing the theory's textual basis, historical practice, and institutional consequences. Split between originalist proponents, functionalist critics, and formalist alternatives. Their analysis shapes the intellectual environment but does not directly control outcomes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of unified executive command: ensures democratic accountability by concentrating all executive authority in an elected President who can direct policy implementation, resolve interagency conflicts, and answer to voters for administrative outcomes.",
+    "transfer_function": "Moves decision-making authority over regulatory enforcement, rulemaking, and adjudication from independent multimember commissions (statutorily insulated from presidential removal) to the President and political appointees. Transfers structural independence — the agencies' statutory design — to presidential control.",
+    "absent_voices": "The regulated public who benefit from expert, politically insulated adjudication (e.g., NLRB unfair labor practice hearings, FTC consumer protection, Fed monetary independence). Future Congresses that lose the legislative tool of agency design. Career civil servants whose professional judgment is structurally overridden. These voices are not in the room when the theory is litigated — the case is framed as President vs. Agency, not President vs. The Public's Interest in Expert Administration.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the unitary executive reading vanished overnight, independent agencies would retain their statutory removal protections. Congress could continue designing insulated expert bodies. The administrative state's structure would revert to the post-Humphrey's Executor equilibrium — multimember commissions, for-cause removal, functionalist balancing. The presidential appointment power would remain but not the removal power over independent officers. The administrative state's architecture would fundamentally reorganize.",
+    "founding_problem": "The founding generation debated whether the executive power should be unitary or plural. The 1787 Constitution settled on a single President (Article II, Section 1) but was silent on whether Congress could create executive officers removable only for cause. The founding problem was: how to ensure presidential accountability and energetic execution while permitting Congress to structure administration for expertise and insulation from politics.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Originalist scholars (Calabresi, Prakash, Kagan) attest the founding problem is live — the text demands unity. Functionalists (Strauss, Sunstein, Lessig) and historical institutionalists (Novak, Mashaw) attest the problem is substantially solved by 200+ years of practice — Congress has created independent agencies since 1789 (e.g., the Comptroller, early territorial governors). The Supreme Court itself has swung: Myers (1926) for unity, Humphrey's Executor (1935) for independence, Morrison (1988) for balance, Seila Law (2020) and Collins (2021) back toward unity. No external consensus exists — the contest is the point."
+  },
+  "interval": {
+    "start": 1935,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1935,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1988,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1935,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1988,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1935,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1988,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.68
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The unitary executive reading of Article II asserts that 'the executive Power' vested in the President includes the power to remove all executive officers at will, rendering independent agencies (with for-cause removal protections) unconstitutional. This reading has migrated from a fringe academic theory (1980s OLC opinions) to controlling Supreme Court doctrine (Seila Law, Collins, potentially extending to Humphrey's Executor). The constraint story captures this reading as a structural claim: the Constitution itself is a mountain — a fixed, natural-law-like limit on congressional power to structure administration. But descriptively, the reading's operation extracts institutional independence from agencies, legislative architecture from Congress, and interpretive authority from courts, transferring all to the presidency. The claimed_type (mountain) diverges from the metric profile (high extraction, active enforcement, moderate accessibility collapse) — this divergence is the false summit signal.",
+    "logic_rationale": "Extractiveness (0.72) is high because the reading removes the statutory independence of dozens of agencies, transferring their decision authority to the President. Suppression (0.68) is high because maintaining the reading requires active judicial enforcement — overruling Humphrey's Executor, limiting Morrison, policing congressional statute design. Theater_ratio (0.42) is moderate: the theory has genuine textual arguments (Article II text, Take Care Clause) but a growing share of its operation serves partisan control rather than coordinate accountability. Accessibility_collapse (0.35) is moderate — alternatives (functionalist balancing, formalist non-delegation) persist in dissent and scholarship. Resistance (0.58) is significant — the administrative state, Congress, and the bar mount sustained opposition.",
+    "directionality_logic": "The President and executive branch are structural beneficiaries (d near 0.0) — they collect the transferred authority. Independent agencies, Congress, and the judiciary are structural payers (d near 1.0) — they lose statutory design, legislative tools, and interpretive framework. Career civil service is a payer with constrained exit (d ~0.7). Regulated entities are dual-positioned: benefit from single access point but pay in lost predictability (d ~0.5). Public interest advocates are excluded (no seat). Constitutional scholars are analytical observers (d = 0.5 by definition).",
+    "perspectival_gap": "From the President's seat (agenda_setter/beneficiary), the constraint is genuine coordination — solving the problem of divided executive authority. From the independent agencies' seat (payer/trapped), it is pure extraction — their statutory independence is taken without compensation. From Congress's seat (payer/constrained), it is a structural disarmament — the legislative tool of agency design is confiscated. From the judiciary's seat (payer/agenda_setter), it is a forced cession of interpretive authority. The engine computes these divergences from the structural data; the authored claim (mountain) does not adjudicate them.",
+    "mandatrophy_analysis": "The founding problem (accountable energetic execution) is contested — originalists say live, functionalists say solved by 200 years of practice. The reading persists because it serves current executive branch interests (mandatrophy: the mandate of textual unity has outlived its founding justification and now extracts power). The classification prevents mislabeling: a formalist would call this coordination (rope); a functionalist would call it extraction (snare). The structural data shows both — coordination of command AND asymmetric extraction from agencies/Congress — making it a false summit mountain (claimed natural law, computed extractive).",
+    "kernel_context": "This constraint is the unitary_executive_reading of the separation_of_powers_text kernel. Sibling readings: formalist_reading (strict non-delegation, impermeable boundaries) and functionalist_reading (flexible framework, intelligible principle). This reading claims the constitutional text itself fixes executive structure as unitary — all executive power in the President, no congressional power to create independent officers. The formalist reading agrees on textual fixity but locates it in legislative non-delegation; the functionalist reading denies textual fixity entirely. All three claim the same kernel (the constitutional text) but instantiate different constraints with different victim/beneficiary structures and different ε values."
+  },
+  "omegas": [
+    {
+      "id": "unitary_executive_as_false_summit",
+      "question": "Is the unitary executive principle a genuine constitutional mountain (fixed by text) or a constructed constraint that benefits the executive branch?",
+      "resolution_mechanism": "Historical analysis of founding-era practice: did the First Congress understand itself as barred from creating for-cause removal protections? The 1789 Treasury debate and subsequent practice (Comptroller, territorial governors) are the key evidence.",
+      "impact": "If mountain: ε ≈ 0, classification holds. If constructed: ε ≈ 0.7+, reclassifies to tangled_rope or snare via false_summit_mountain signature. The beneficiary structure (executive branch gains) is the trigger.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Natural-law vs. constructed status of the unitary executive principle — the core FSM ambiguity."
+    },
+    {
+      "id": "kernel_reading_structural_delta",
+      "question": "How does this reading's victim/beneficiary structure differ from its siblings?",
+      "resolution_mechanism": "Compare the three readings' stakeholder mappings: formalist_reading makes Congress the primary victim (loses delegation power), judiciary the beneficiary (gains non-delegation enforcement); functionalist_reading makes no structural victims (all branches retain flexibility); unitary_executive_reading makes independent agencies and Congress victims, executive branch beneficiary.",
+      "impact": "Confirms the ε-invariance principle: same kernel label, different constraints, different ε. Each reading must be a separate story.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural differentiation of the three separation-of-powers readings — why they are three constraints, not one."
+    },
+    {
+      "id": "foreclosure_vs_coexistence",
+      "question": "Does the unitary executive reading logically foreclose the functionalist reading within a single constitutional framework, or do they coexist as competing positions?",
+      "resolution_mechanism": "Test: can a single judge or official consistently apply both? A judge applying unitary executive theory (no independent agencies) cannot simultaneously apply functionalist balancing (agencies permitted if intelligible principle). The premises contradict. But different judges in the same system can hold different readings — coexistence across seats.",
+      "impact": "Determines reading_relations: forecloses (within-seat logical contradiction) vs coexists_with (across-seat competition). Affects cs_axiom_contradiction computation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between unitary executive and functionalist readings — foreclosure within framework vs coexistence across actors."
+    },
+    {
+      "id": "drift_acknowledgment_gap",
+      "question": "Does the administrative state's practice acknowledge the drift from the unitary executive reference frame, or does it operate in denial?",
+      "resolution_mechanism": "Examine agency statutes, judicial opinions, and OLC memos: do they explicitly argue 'Humphrey's Executor is wrong but binding' (acknowledged drift) or 'Humphrey's Executor correctly implements Article II' (denial)? Current doctrine mixes both.",
+      "impact": "Acknowledged drift (acknowledged=true) enables revival_pressure dynamics; denied drift (acknowledged=false) enables authority_erosion dynamics. Affects terminal attractor computation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the authority structure recognizes the gap between founding reference frame and contemporary practice."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "separation_of_powers_text__formalist_reading",
+      "separation_of_powers_text__functionalist_reading",
+      "administrative_state_architecture",
+      "presidential_removal_power",
+      "congressional_delegation_authority"
+    ],
+    "dual_formulation_note": "This is one of three constraint stories decomposing the 'separation of powers' kernel. The unitary_executive_reading extracts from independent agencies and Congress to benefit the President. The formalist_reading extracts from Congress to benefit the judiciary (via non-delegation enforcement). The functionalist_reading has negligible extraction — it permits all three branches to negotiate structure. Their ε values differ by 0.5+. They are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "formalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "functionalist_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "all_executive_power_vests_in_president",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "independent_agencies_are_unconstitutional",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "presidential_removal_power_is_absolute",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "founding_era_unitary_executive",
+    "drift_state": {
+      "moment": "contemporary_administrative_state",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "separation_of_powers_text"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

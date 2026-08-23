@@ -1,0 +1,359 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__digital_gold_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_bitcoin_whitepaper__digital_gold_reading",
+    "measurement_id_prefix": "btc_dg",
+    "story_uid": "b6fd9959-917e-4994-a4da-797944d8ec80"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.48,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Digital Gold Reading — Scarcity-Optimized Store of Value",
+    "topic_domain": "economic/technological/governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "early_adopters",
+      "long_term_holders",
+      "miners",
+      "institutional_treasuries"
+    ],
+    "victims": [
+      "late_entrants",
+      "high_frequency_users",
+      "merchants",
+      "developing_nation_users"
+    ],
+    "vindicated_propositions": [
+      "fixed_supply_monetary_policy",
+      "decentralized_consensus_security",
+      "non_sovereign_store_of_value"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "early_adopters",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Acquired BTC at negligible cost during 2009-2013; hold concentrated supply. Their wealth grows with every halving and adoption wave. They shape narrative through forums, conferences, and early institutional access. Exit is trivial — they can sell any amount into deep liquidity."
+    },
+    {
+      "name": "long_term_holders",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Accumulated BTC over multiple cycles; treat it as primary savings vehicle. Benefit from appreciation but lack the agenda-setting concentration of early adopters. Can exit to fiat or other assets but face tax events and slippage at size."
+    },
+    {
+      "name": "miners",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Secure the network and enforce protocol rules (including 21M cap). Revenue shifts from block subsidy to transaction fees over time. Their capital is specialized (ASICs, energy contracts) — exit means selling hardware at depreciation or switching chains with different economics."
+    },
+    {
+      "name": "institutional_treasuries",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Allocate treasury reserves to BTC as inflation hedge (MicroStrategy model, ETFs). Benefit from appreciation narrative they help legitimize. Exit is liquid but reputational — selling signals loss of conviction in the thesis."
+    },
+    {
+      "name": "late_entrants",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Enter at progressively higher price levels; each halving reduces new supply while demand grows. Pay premium to early holders for the same scarcity guarantee. Exit requires finding a later entrant — the Ponzi-adjacent dynamic where late buyers fund early sellers."
+    },
+    {
+      "name": "high_frequency_users",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Need cheap, reliable on-chain transactions (remittances, daily spending, DeFi). Fee market prices them out during congestion — they pay miner fees that subsidize network security but make small transactions uneconomical. Exit to L2s or altchains involves technical friction and trust trade-offs."
+    },
+    {
+      "name": "merchants",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Want to accept BTC for goods/services but face volatile fees and settlement uncertainty. The digital gold reading treats merchant adoption as secondary — fees are a feature, not a bug. Many dropped BTC payments after 2017 fee spike; those remaining use custodial processors that reintroduce counterparty risk."
+    },
+    {
+      "name": "developing_nation_users",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "In high-inflation economies (Argentina, Turkey, Nigeria, etc.) need censorship-resistant savings AND cheap payments. Digital gold reading prices them out of both — on-chain fees exceed daily wages; L2 access requires smartphones, data, and technical literacy they lack. Their exclusion is structural: the fee market optimizes for high-value settlement, not inclusion."
+    },
+    {
+      "name": "protocol_developers",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Maintain reference implementation, propose BIPs, review code. Their authority derives from technical competence and community trust. They interpret the whitepaper's intent but cannot force upgrades — consensus requires miner/node signaling. Exit means forking (which has failed repeatedly) or walking away."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a decentralized, censorship-resistant scarce asset with predictable, algorithmic issuance that no single party can debase — solving the coordination problem of trust-minimized digital scarcity.",
+    "transfer_function": "Moves purchasing power from late entrants (buying at higher prices) to early holders via appreciation; moves transaction fees from on-chain users to miners as block subsidy declines. The fee market allocates scarce blockspace to highest bidders.",
+    "absent_voices": "Unbanked populations in high-inflation economies who need both store-of-value AND medium-of-exchange; merchants who need predictable low fees; future generations who inherit a system where 90%+ of supply is already issued. They are absent because the fee market and price appreciation structurally exclude low-value, high-frequency use cases.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished overnight, the $1T+ institutional store-of-value allocation would seek alternatives (gold, other crypto, TIPS), miner economics would collapse without fee revenue, and the 'digital gold' narrative legitimizing crypto as asset class would evaporate — capital and talent would reorganize around competing scarcity claims.",
+    "founding_problem": "Need for a decentralized, non-sovereign store of value resistant to monetary debasement by central banks — a digital asset with absolute scarcity enforced by code, not policy.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent macro analysts (e.g., Lyn Alden, Zoltan Pozsar) document ongoing fiat debasement trends; institutional investors outside early adopter circle (Fidelity, BlackRock ETF filings) cite inflation hedge as primary thesis; central bank researchers (BIS, Fed papers) acknowledge demand for non-sovereign reserves. No corroboration from the beneficiary set alone."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the digital_gold_reading of the bitcoin_whitepaper kernel: Bitcoin as a scarce digital asset optimized for store of value and inflation hedging, where asset appreciation is prioritized and transaction fees are an acceptable cost of security. The constraint is the 21M supply cap + halving schedule + fee market that together create artificial scarcity extracting from late entrants. Beneficiaries (early adopters, long-term holders, miners, institutions) capture appreciation; victims (late entrants, high-frequency users, merchants, developing-nation users) pay the premium. The claimed type is tangled_rope — genuine coordination (decentralized consensus, credible scarcity) coexists with asymmetric extraction (early adopters enriched at late entrants' expense, fee market prices out low-value use). The engine computes per-seat classifications from this structural data; the authored claim and metrics are independent.",
+    "logic_rationale": "Extractiveness (0.72) is high because the supply cap creates a zero-sum transfer from buyers to holders — every late entrant pays a scarcity premium that accrues to early holders. Suppression (0.48) is moderate: protocol rules suppress alternative monetary policies (no debasement, no tail emission), but exit to other chains/L2s exists (unlike a true snare). Theater (0.28) is low-moderate: the protocol functions as designed, but 'store of value' narrative increasingly serves to justify fee market that excludes the very users Satoshi's whitepaper centered ('peer-to-peer electronic cash'). Accessibility collapse (0.55) reflects network effects and liquidity moats — alternatives exist but lack Bitcoin's credibility. Resistance (0.45) captures ongoing blocksize wars, Lightning adoption friction, and Ossification debate.",
+    "directionality_logic": "Early adopters and institutional treasuries are structural beneficiaries (d ~ 0.1-0.2) — they collect appreciation and/or legitimize the asset. Miners are agenda-setters with partial beneficiary position (d ~ 0.3) — they enforce rules but depend on fee revenue. Late entrants, high-frequency users, and merchants are payers (d ~ 0.7-0.8) — they pay scarcity premium and fees with constrained exit. Developing-nation users are trapped payers (d ~ 0.9) — priced out of both savings and payment functions. Protocol developers sit near analytical (d ~ 0.5) — they maintain the code but cannot unilaterally change economics.",
+    "perspectival_gap": "From the early-adopter/institutional seat, this is a mountain-like coordination achievement: absolute scarcity enforced by math, not trust. From the developing-nation-user seat, it is a snare: the same scarcity prices them out of the financial inclusion the whitepaper promised. From the merchant/high-frequency seat, it is a piton: the payment function atrophied while the store-of-value narrative persists theatrically. The engine computes this seat divergence from the structural data — the authored claim (tangled_rope) does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (non-sovereign store of value) remains live — fiat debasement continues globally. However, the arrangement's persistence now depends on extraction from late entrants rather than solving the original coordination problem for all users. The digital gold reading has mandatrophy in the payment function (atrophied to L2s) but not in the store-of-value function (still live). This prevents mislabeling the whole as pure extraction — the coordination function is real but asymmetrically distributed.",
+    "kernel_context": "This constraint is the digital_gold_reading of the bitcoin_whitepaper kernel. Sibling readings: p2p_cash_reading (Bitcoin as censorship-resistant medium of exchange for direct electronic transactions) and protocol_ossification_reading (Bitcoin protocol changes are illegitimate unless approaching universal consensus; stability is the primary virtue). The digital_gold_reading prioritizes asset appreciation over transaction throughput; the p2p_cash_reading prioritizes low fees and on-chain capacity; the protocol_ossification_reading prioritizes rule stability above all. All three claim lineage from the same whitepaper but instantiate different constraints with different beneficiary/victim structures and different ε values."
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_scarcity",
+      "question": "Is Bitcoin's 21M cap a discovered natural law of digital scarcity (mountain) or a constructed parameter that benefits identifiable early adopters (false summit)?",
+      "resolution_mechanism": "Counterfactual analysis: if Satoshi had chosen 210M or 2.1M, would the coordination function hold? If yes, the specific number is constructed; if no, there is something special about 21M. Also: measure whether early-adopter concentration correlates with cap choice across forked chains.",
+      "impact": "If constructed, FSM signature triggers reclassification to tangled_rope (already claimed) with false_summit_override_target; if natural law, mountain certification path opens but requires accessibility_collapse ~0.9+ and resistance ~0.05 which this constraint does not meet.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the scarcity parameter is a natural limit or a parameter choice that enriches early participants."
+    },
+    {
+      "id": "fee_market_coordination_or_extraction",
+      "question": "Does the fee market coordinate blockspace allocation efficiently (rope) or extract from low-value users to subsidize miner revenue (snare component)?",
+      "resolution_mechanism": "Compare Bitcoin's fee market outcomes to theoretical efficient allocation (Vickrey auction benchmarks) and to alternative designs (EIP-1559, fixed-fee chains). Measure deadweight loss from users priced out vs. security budget funded.",
+      "impact": "If coordination dominates, the tangled_rope's coordination function is genuine; if extraction dominates, the snare component is larger than authored and the constraint may compute as snare for payer seats.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the fee market is a genuine coordination mechanism or an extractive barrier."
+    },
+    {
+      "id": "lightning_resolves_victim_set",
+      "question": "Does Lightning Network adoption structurally resolve the victim set (late entrants, high-frequency users, merchants, developing-nation users) or merely shift extraction to L2 operators?",
+      "resolution_mechanism": "Track Lightning adoption metrics: node count, channel capacity, routing success rates, fee levels, custodial vs. non-custodial usage. Measure whether developing-nation users access non-custodial Lightning at scale.",
+      "impact": "If Lightning resolves victim set at scale, the extraction component shrinks and the constraint may compute as rope for more seats. If custodial capture persists, the victim set remains and the tangled_rope classification holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether L2 scaling genuinely includes excluded users or recreates extraction at another layer."
+    },
+    {
+      "id": "committer_structure_kernel_reading",
+      "question": "How does the digital_gold_reading's structural commitment to scarcity-above-throughput foreclose, coexist with, or influence the sibling readings of the bitcoin_whitepaper kernel?",
+      "resolution_mechanism": "Map the logical relations: does scarcity_above_throughput axiom foreclose p2p_cash_reading's low-fee requirement? Does institutional adoption (digital_gold) create political pressure for ossification (influences protocol_ossification_reading)?",
+      "impact": "Determines cs_structure.reading_relations and whether axioms are holdable or overridden. If digital_gold_reading forecloses p2p_cash_reading within a single framework, they cannot coexist in one protocol governance — one must exit (BCH fork) or submit.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relations between this reading and its kernel siblings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_lightning_network",
+      "bitcoin_institutional_custody",
+      "bitcoin_miner_economics"
+    ],
+    "dual_formulation_note": "This constraint (digital_gold_reading) and p2p_cash_reading decompose the 'Bitcoin' label into two ε-distinct constraints: one with high extractiveness (store-of-value scarcity premium) and one with low extractiveness (medium-of-exchange fee market). They share the same kernel (whitepaper + consensus rules) but instantiate different constraints per the ε-invariance principle. The protocol_ossification_reading is a meta-constraint on the kernel's evolution."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "p2p_cash_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "protocol_ossification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "scarcity_above_throughput",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "fee_market_as_security_budget",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "satoshi_whitepaper_vision",
+    "drift_state": {
+      "moment": "post_institutional_adoption_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

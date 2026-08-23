@@ -1,0 +1,322 @@
+{
+  "header": {
+    "constraint_id": "licensing_statute_mandate__rent_seeking_suppression",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_licensing_statute_mandate__rent_seeking_suppression",
+    "story_uid": "6addfb79-61eb-4828-9df3-d69746f30429"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "snare",
+    "human_readable": "Statutory Licensing as Incumbent Rent Extraction",
+    "topic_domain": "economic/political/social",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "incumbent_practitioners",
+      "licensing_boards",
+      "professional_associations"
+    ],
+    "victims": [
+      "prospective_entrants",
+      "consumers_via_higher_prices"
+    ],
+    "vindicated_propositions": []
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_practitioners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Established practitioners who hold licenses and benefit from restricted entry. They enjoy higher wages, reduced competition, and professional status. Their organizations lobby to maintain and expand scope-of-practice restrictions. Exit is easy — they already hold the credential and can practice anywhere recognized."
+    },
+    {
+      "name": "licensing_boards",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "State-appointed boards that administer exams, set continuing-education requirements, investigate complaints, and define scope of practice. They collect fees, control the pipeline, and are staffed predominantly by incumbent practitioners. They benefit from budget growth and institutional prestige. They can move between board service and private practice."
+    },
+    {
+      "name": "professional_associations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Trade organizations (e.g., AMA, ABA, state dental societies) that lobby for stricter licensing laws, oppose scope-of-practice expansions for adjacent professions, and fund political campaigns. They collect dues from incumbents and exist to protect members' economic interests. They have high mobility — they operate in the policy arena, not the clinical one."
+    },
+    {
+      "name": "prospective_entrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals seeking to enter the profession — recent graduates, career-changers, immigrants with foreign credentials, or workers from adjacent occupations. They face tuition costs, exam fees, years of supervised training, and arbitrary scope barriers. Exit means abandoning the career path entirely or migrating to a less-restrictive jurisdiction (which may not recognize their investment)."
+    },
+    {
+      "name": "consumers_via_higher_prices",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Patients and clients who pay elevated prices for services due to artificially restricted supply. They have no individual negotiating power, limited ability to assess quality independently, and often face geographic or insurance-network constraints on provider choice. Exit means forgoing care, traveling farther, or paying out-of-network rates."
+    },
+    {
+      "name": "consumer_advocacy_groups",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organizations representing patient interests, low-income access advocates, and anti-poverty groups. They argue licensing restricts access and raises costs without measurable quality gains. They are structurally excluded from licensing-board deliberations and legislative hearings dominated by provider interests."
+    },
+    {
+      "name": "state_legislators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Elected officials who enact licensing statutes and oversee boards. They hear testimony overwhelmingly from incumbent practitioners and professional associations. Consumer voices are diffuse and under-resourced. They can advance or block reform but face concentrated lobbying pressure from beneficiaries."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The stated coordination function is ensuring minimum competence to protect consumers from harm. The actual function, per this reading, is restricting labor supply to extract rents for incumbents — the coordination story is a cover.",
+    "transfer_function": "Moves economic rents from prospective entrants (who pay tuition, fees, and foregone wages during barriers) and consumers (who pay higher prices for reduced choice) to incumbent practitioners (higher wages), licensing boards (fees and budgets), and professional associations (dues and political influence).",
+    "absent_voices": "Consumers who pay higher prices, prospective entrants blocked by barriers (especially low-income and immigrant workers), and reform advocates are structurally excluded from licensing-board rulemaking and legislative hearings where scope expansions are decided. Their opposition is diffuse and under-resourced compared to organized incumbents.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If statutory licensing vanished overnight, entry barriers would collapse, supply would expand rapidly, prices would fall, and incumbent rents would disappear. New quality-assurance mechanisms (reputation markets, certification, insurance requirements) would emerge but would not replicate the entry-restriction function. The labor market would reorganize around open competition.",
+    "founding_problem": "The historical founding problem was consumer protection from incompetent or fraudulent practitioners in 19th-century medicine and law — a genuine information-asymmetry problem where consumers could not assess quality before purchase.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Economic studies (Kleiner 2006, Friedman & Kuznets 1945) document that licensing raises prices 10-30% without consistent quality gains. Consumer groups (Consumer Reports, Public Citizen) attest to access restrictions and cost inflation. The FTC and DOJ Antitrust Division have repeatedly found licensing boards acting anti-competitively. Corroboration comes from outside the beneficiary set — no independent body validates the current scope of licensing as necessary for safety."
+  },
+  "interval": {
+    "start": 0,
+    "end": 70
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 28,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 42,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 56,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 28,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 42,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 56,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 28,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 42,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 56,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.8
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Statutory occupational licensing began as a consumer-protection response to information asymmetry in 19th-century medicine and law. Over the 20th century, it expanded to cover 25-30% of the U.S. workforce, extending to occupations with low inherent risk (interior designers, hair braiders, florists). This reading holds that the expansion was driven not by consumer demand for safety but by incumbent practitioners capturing the regulatory apparatus to restrict supply and raise wages. The safety justification persists as a cover story; the constraint's persistence depends on active suppression of alternatives (reciprocity barriers, scope-of-practice bans, criminal penalties for unlicensed practice) and exclusion of consumer voices from rulemaking. The metrics reflect high extraction (rents captured), high suppression (active enforcement against alternatives), low theater (the safety function is real but minor relative to the rent-extraction function), moderate accessibility collapse (alternatives like certification exist but are legally subordinated), and moderate resistance (sporadic reform efforts, FTC actions, state-level sunrise/sunset reviews).",
+    "logic_rationale": "Extractiveness is high (0.75) because the wage premium for licensed workers (10-30% across studies) represents a direct transfer from consumers and excluded workers to incumbents, sustained by state coercion. Suppression is very high (0.8) because the system actively criminalizes unlicensed practice, blocks reciprocity, and uses boards to define scope expansively — alternatives are not merely unavailable but legally forbidden. Theater ratio is low (0.2) because the safety function, while real at the margin, explains little of the observed scope and severity; the constraint is not 'performing' coordination — it is actively extracting. Accessibility collapse is moderate (0.6) because certification, reputation, and liability insurance exist as alternatives but are legally inferior. Resistance is moderate (0.5) because reform faces concentrated opposition from organized incumbents and diffuse beneficiaries among consumers.",
+    "directionality_logic": "Incumbent practitioners, licensing boards, and professional associations are structural beneficiaries (d near 0.0) — they collect rents, control the rules, and face mobile exit. Prospective entrants and consumers are structural targets (d near 1.0) — they pay the transfer, face constrained exit (entrants have sunk costs; consumers have geographic/insurance lock-in), and are powerless individually. Consumer advocacy groups are excluded — they would oppose but lack structural access. State legislators are observers with institutional power but captured incentives.",
+    "perspectival_gap": "From the incumbent/board seat, the constraint appears as necessary quality assurance — they genuinely believe the safety story and experience the system as coordination. From the entrant/consumer seat, the same structure operates as enforced extraction — barriers are arbitrary, costs are prohibitive, and alternatives are suppressed. The engine computes this divergence from the declared roles, power, and exit options; the authored claim (snare) reflects the entrant/consumer structural reality.",
+    "mandatrophy_analysis": "The founding problem (consumer protection from fraud/incompetence) is contested — it may have been genuine in 1890 but is arguably dead or vastly over-satisfied for many currently licensed occupations (e.g., interior design, hair braiding). The arrangement persists because the beneficiaries (incumbents, boards, associations) capture the regulatory machinery and the victims (entrants, consumers) are structurally excluded from the agenda. This is classic mandatrophy: the mandate outlived its function, but the constraint remains because the cost to fix it (political confrontation with organized incumbents) exceeds what any single victim bears, while the beneficiaries concentrate the gains.",
+    "kernel_context": "This constraint is the 'rent_seeking_suppression' reading of the contested kernel 'licensing_statute_mandate'. The kernel is the statutory credential requirement itself. Sibling readings: 'public_safety_coordination' (the constraint genuinely coordinates minimum competence for consumer protection) and 'graduated_access_filter' (the constraint creates tiered market access that sorts by class and prior resources). This reading asserts the primary function is rent extraction for incumbents; the safety coordination is a cover story. The structural delta from the sibling readings: beneficiaries are incumbents/boards/associations; victims are entrants and consumers; extraction is artificial scarcity."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "This constraint is one reading of the contested kernel 'licensing_statute_mandate'. What structural elements do the sibling readings ('public_safety_coordination', 'graduated_access_filter') change, and where is the disagreement located?",
+      "resolution_mechanism": "Decompose the kernel into separate constraint stories per the ε-invariance principle. Each reading gets its own ε, stakeholders, and classification. Link via network.affects_constraints. The disagreement is located in the primary function attribution: rent extraction vs. safety coordination vs. class sorting.",
+      "impact": "If the safety coordination reading is empirically validated for a given occupation, that occupation's licensing constraint may be a Tangled Rope (coordination + extraction) rather than a pure Snare. If the graduated-access reading holds, the victim structure expands to include class-sorted groups. The committer structure must not be folded into one constraint's metrics.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment to generating this reading as a clean ε-invariant constraint per kernel-reading discipline (Rules 1-4)."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal barriers, criminal penalties, board enforcement) or internalized (entrants believe they need the license, consumers believe unlicensed care is dangerous)?",
+      "resolution_mechanism": "Post-reform suppression trajectory: in jurisdictions that relaxed licensing (e.g., hair braiding, interior design), measure whether consumer demand for licensed providers persists after legal barriers fall. If demand persists, internalized suppression is significant.",
+      "impact": "If suppression is substantially internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after legal exit. This would amplify effective extraction for identity-locked entrants who have internalized the licensing frame.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in licensing."
+    },
+    {
+      "id": "safety_benefit_magnitude",
+      "question": "What is the actual magnitude of consumer safety benefit from licensing, net of alternative quality-assurance mechanisms (certification, reputation, liability, insurance)?",
+      "resolution_mechanism": "Natural experiments from deregulation events (e.g., Colorado's sunset reviews, Florida's hair braiding deregulation, Scope-of-practice expansions for NPs/PAs). Compare adverse-event rates before/after controlling for confounders.",
+      "impact": "If safety benefits are near zero for a given occupation, the constraint is a pure Snare. If benefits are substantial but extraction is also high, it becomes a Tangled Rope. The ε value hinges on this decomposition — the 'coordination story' must be quantitatively grounded, not assumed.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the coordination function has measurable magnitude or is purely pretextual."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "licensing_statute_mandate__public_safety_coordination",
+      "licensing_statute_mandate__graduated_access_filter"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the single label 'occupational licensing' into three structurally distinct claims with different ε values, beneficiary/victim structures, and types. The rent-seeking suppression reading (this story) has high ε (0.75), incumbents as beneficiaries, entrants/consumers as victims, and classifies as Snare. The public_safety_coordination reading would have low ε, consumers as beneficiaries, and classify as Rope or Mountain. The graduated_access_filter reading would have moderate ε, class-sorted victims, and classify as Tangled Rope. They are linked via affects_constraints because the safety claim is cited to justify the rent-extraction structure, and the class-sorting effect is a downstream consequence of the barriers."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_safety_coordination",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "graduated_access_filter",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "licensing_primarily_serves_incumbent_rent_extraction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "safety_justification_is_pretextual",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "consumer_protection_origin_myth",
+    "drift_state": {
+      "moment": "contemporary_licensing_expansion_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "licensing_statute_mandate__public_safety_coordination"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

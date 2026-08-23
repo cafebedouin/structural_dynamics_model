@@ -1,0 +1,367 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__wage_subsidy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "c47e9dd9-6a7a-44dd-9946-8c11f46e7eac"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.55,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unconditional Income Support as Employer Wage Subsidy",
+    "topic_domain": "political_economy/social_policy/labor_economics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "employers",
+      "platform_intermediaries"
+    ],
+    "victims": [
+      "low_wage_workers"
+    ],
+    "vindicated_propositions": [
+      "wage_subsidy_thesis",
+      "reserve_wage_suppression_mechanism"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "stakeholders": [
+    {
+      "name": "employers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Set wage floors in low-wage sectors. When unconditional income support establishes a public subsistence floor, employers can offer wages below what workers would otherwise accept, capturing the difference between the market-clearing wage and the new reservation wage. They lobby for UBI designs that maintain labor supply elasticity while suppressing wage costs."
+    },
+    {
+      "name": "platform_intermediaries",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Digital labor platforms (gig economy, crowdwork) treat UBI as a de facto wage floor that lets them pay piece rates below subsistence. Workers accept platform terms because the public income floor covers basic needs; the platform captures the surplus. Platforms advocate for portable benefits and UBI pilots that externalize their labor reproduction costs."
+    },
+    {
+      "name": "low_wage_workers",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive unconditional income support but face wage offers that adjust downward by approximately the transfer amount. Their reservation wage falls because the public floor covers survival; employers compete on the margin above the floor. Exit from low-wage work is constrained by skill specificity, geographic immobility, and the UBI itself being calibrated at subsistence — not empowerment — level."
+    },
+    {
+      "name": "policy_advocates_freedom_floor",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocate UBI as decommodification of labor — the freedom to refuse coercive work. They benefit intellectually and politically from the emancipatory framing. In the wage_subsidy reading, their advocacy inadvertently legitimizes a policy that employers capture; they are not the wage-suppressors but their framing provides cover for the subsidy effect."
+    },
+    {
+      "name": "policy_advocates_dependency_trap",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Warn that unconditional income undermines work incentives and creates long-term dependency. Their voice is excluded from the wage_subsidy reading's coalition because it predicts a different behavioral response (labor supply reduction) than what the wage_subsidy mechanism requires (labor supply maintenance at lower wages). They are structurally excluded by the reading's assumption that workers cannot refuse work."
+    },
+    {
+      "name": "state_administrators",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design and administer the income support program. They choose conditionality levels, clawback rates, and integration with tax systems. Their design choices determine whether the transfer functions as a wage floor (high clawback = employer subsidy) or as genuine decompression (low clawback = exit option). They face political pressure from both employer groups and labor advocates."
+    },
+    {
+      "name": "labor_economists",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Study incidence of income support on wage setting, labor supply, and poverty dynamics. They provide the empirical evidence on whether UBI is captured by employers (wage_subsidy reading), reduces labor supply (dependency_trap reading), or expands refusal capacity (freedom_floor reading). Their analyses are cited by all three readings selectively."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a public income floor that prevents destitution while maintaining labor supply for low-wage service, care, and gig sectors that cannot automate easily and would otherwise face wage pressure from subsistence needs.",
+    "transfer_function": "Moves public funds (tax revenue) to employers and platform intermediaries via suppressed wage offers. Workers receive the transfer but their net gain is offset by lower wage offers; the incidence falls on capital through reduced labor costs. Taxpayers fund the subsidy; employers capture it.",
+    "absent_voices": "Workers who would genuinely exit coercive or degrading low-wage jobs if UBI provided a true freedom floor — precarious migrants, care workers, gig drivers in monopsonistic markets. They are absent because the wage_subsidy reading assumes labor supply is inelastic at the subsistence margin; their potential refusal is what the reading's structure suppresses.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the unconditional income support vanished overnight, low-wage employers would face immediate labor shortages or be forced to raise wages to subsistence levels. Sectors dependent on below-subsistence wage offers (gig platforms, certain care work, seasonal agriculture) would restructure — automate, consolidate, or shrink. The labor market would reorganize around a higher wage floor.",
+    "founding_problem": "Post-1980 labor markets failed to deliver subsistence wages for expanding low-wage service and care sectors. Traditional welfare created high marginal tax rates that trapped recipients. UBI was proposed as a universal floor that would simplify administration and avoid poverty traps — but the wage_subsidy reading argues it became a subsidy for the very employers who suppressed wages.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Labor economists (Guy Standing, Philippe Van Parijs, Karl Widerquist) and historical analyses of welfare reform (EITC incidence studies, negative income tax experiments) corroborate that public income floors can be captured by employers via wage adjustment. Employer groups' strategic silence on UBI when it subsidizes their labor costs — contrasted with opposition to minimum wage hikes — is corroborating evidence from outside the benefiting parties."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.67,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.34,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.54,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55,
+      "basis": "projected"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the wage_subsidy_reading of the income_support_conditionality kernel. The kernel is the policy concept of unconditional income support (UBI, negative income tax, guaranteed minimum income). Three readings contest its structural operation: the freedom_floor_reading sees emancipation, the dependency_trap_reading sees work disincentive, and this reading — wage_subsidy_reading — sees employer capture. The constraint is the standing arrangement: a public income floor that, under this reading, functions as a subsidy to employers who can now pay wages below what workers would accept without the floor. The constraint type is tangled_rope because it has a genuine coordination function (preventing destitution, maintaining labor supply) AND asymmetric extraction (employers capture the subsidy via wage suppression, workers bear the cost through stagnant wages). Active enforcement is required: the state must administer the transfer, set clawback rates, and maintain the legal framework that makes the income floor unconditional while labor markets remain monopsonistic.",
+    "logic_rationale": "Extractiveness (0.68) is substantial: the transfer from taxpayers to low-wage workers is largely intercepted by employers via wage adjustment. Studies of EITC and negative income tax experiments show 20-50% incidence on wages; in monopsonistic gig platforms, capture approaches 100%. Suppression (0.55) is moderate: workers cannot easily refuse work because UBI is calibrated at subsistence, not empowerment, and exit options are constrained by skill/geography. Theater ratio (0.35) reflects the emancipatory framing that legitimizes the policy while the wage_subsidy mechanism operates beneath. Accessibility collapse (0.50) is moderate: alternatives (unionization, minimum wage, sectoral bargaining) exist but are politically weakened. Resistance (0.45) is moderate: labor organizing pushes for higher floors and conditionality, but the universalist framing fractures coalition potential.",
+    "directionality_logic": "Employers and platforms are structural beneficiaries (d near 0.1-0.2): they collect the subsidy via wage suppression, control job design, and have arbitrage-grade exit (capital mobility, automation). Low-wage workers are structural targets (d near 0.8-0.9): they bear the incidence through stagnant wages, have constrained exit (skills, geography, subsistence-level UBI), and face monopsonistic employers. Policy advocates for freedom_floor are incidental beneficiaries (d ~0.3): they gain political capital but their framing enables the capture. Dependency_trap advocates are excluded (d not applicable): their prediction of labor supply reduction contradicts the wage_subsidy mechanism's requirement of maintained supply. State administrators are agenda_setters (d ~0.4): they design the clawback rates that determine incidence but face cross-pressures. Labor economists are analytical observers (d=0.5).",
+    "perspectival_gap": "The payer seat (low_wage_workers) and beneficiary seats (employers, platforms) compute differently: from the employer seat, the constraint is a coordination mechanism that stabilizes labor supply at lower cost; from the worker seat, it is a trap where the public floor becomes the ceiling. The freedom_floor advocate seat experiences it as emancipation; the dependency_trap seat (excluded) predicts collapse. The engine computes this divergence from the structural data — the authored claim (tangled_rope) does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (subsistence wage failure in low-wage sectors) remains contested: some argue UBI solves it, others that it institutionalizes the failure. The mandate has not atrophied — the coordination function (destitution prevention) is live — but the extraction function (employer capture) has grown as gig platforms and monopsonistic labor markets expanded. The theater ratio rise reflects this: more performative 'freedom' framing as the subsidy effect becomes more visible. The constraint is not a piton — it is actively maintained and expanded (pilots, legislation) — but it is not a pure rope either, because the coordination is real and the extraction is structural.",
+    "kernel_context": "This constraint is the wage_subsidy_reading of the income_support_conditionality kernel. The kernel is the policy concept of unconditional income support. Sibling readings: freedom_floor_reading (UBI decommodifies labor, creates positive freedom to refuse work) and dependency_trap_reading (UBI undermines work incentives, creates long-term dependency). This reading asserts that the structural operation of unconditional income support in monopsonistic low-wage labor markets is employer subsidy via wage suppression. The three readings differ on the behavioral response at the reservation wage margin: freedom_floor assumes elastic refusal, dependency_trap assumes elastic withdrawal, wage_subsidy assumes inelastic acceptance at lower wages."
+  },
+  "omegas": [
+    {
+      "id": "wage_adjustment_mechanism",
+      "question": "Is the wage suppression effect driven by structural market power (monopsony, platform control) or by behavioral reservation wage shifts (workers accepting less because survival is guaranteed)?",
+      "resolution_mechanism": "Natural experiments from UBI pilots with varying clawback rates and labor market tightness; structural estimation of labor supply elasticities at the intensive vs. extensive margin; platform-level data on wage offers before/after income floor introduction.",
+      "impact": "If structural market power dominates, the subsidy incidence is a rent transfer requiring antitrust/sectoral bargaining remedies. If behavioral reservation wage shift dominates, the effect is a feature of the policy design (clawback rates, universality) amenable to calibration. The tangled_rope classification holds either way but the fixing_cost and gain_flow differ.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. behavioral driver of employer capture."
+    },
+    {
+      "id": "kernel_reading_disagreement",
+      "question": "The three readings of the income_support_conditionality kernel (wage_subsidy, freedom_floor, dependency_trap) make contradictory predictions about labor supply response at the reservation wage. Which prediction holds under what conditions?",
+      "resolution_mechanism": "Meta-analysis of UBI/negative income tax experiments stratified by labor market structure (monopsony vs. competitive), clawback design, and demographic group. Cross-reading adversarial collaboration on a shared empirical protocol.",
+      "impact": "If wage_subsidy prediction holds in monopsonistic sectors but freedom_floor holds in competitive sectors, the constraint is domain-specific — a tangled_rope in gig/care, a rope in manufacturing. This would require decomposing the kernel into sector-specific constraints.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Irreducible disagreement across readings of the same kernel on the core behavioral mechanism."
+    },
+    {
+      "id": "subsidy_incidence_fraction",
+      "question": "What fraction of the unconditional income transfer is captured by employers via wage suppression versus retained by workers as net income gain?",
+      "resolution_mechanism": "Incidence estimation from EITC expansions (20-30% employer capture), negative income tax experiments (10-50%), and gig platform studies (up to 80% in algorithmic monopsony). Need unified framework for cross-sector comparison.",
+      "impact": "If incidence >50% employer capture, the constraint is strongly extractive (snare-adjacent tangled_rope). If <20%, it is coordination-dominant (rope-adjacent). The 0.68 extractiveness score assumes ~40-50% incidence based on current evidence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantitative incidence of the public transfer on private wage setting."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_conditionality__freedom_floor_reading",
+      "income_support_conditionality__dependency_trap_reading",
+      "labor_market_flexibilization",
+      "gig_platform_algorithmic_management",
+      "sectoral_bargaining_coverage"
+    ],
+    "dual_formulation_note": "This constraint (wage_subsidy_reading) and its two siblings (freedom_floor_reading, dependency_trap_reading) form a constraint family decomposing the income_support_conditionality kernel. Each reading instantiates a different constraint with different beneficiary/victim structures and different ε values. The wage_subsidy_reading has employers as beneficiaries and workers as victims (ε=0.68). The freedom_floor_reading has workers as beneficiaries and no clear victims (ε≈0.15). The dependency_trap_reading has future taxpayers as victims and current non-workers as beneficiaries (ε≈0.45). They are linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "public_floor_enables_wage_suppression",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "labor_supply_inelastic_at_subsistence_margin",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "emancipatory_framing_legitimizes_capture",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_fordist_welfare_settlement",
+    "drift_state": {
+      "moment": "platform_economy_expansion",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

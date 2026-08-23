@@ -1,0 +1,325 @@
+{
+  "header": {
+    "constraint_id": "substance_control_authority__legalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_substance_control_authority__legalization_reading",
+    "measurement_id_prefix": "scalr",
+    "story_uid": "2370340e-536d-4753-96bf-54e3a1503bad",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Authority to Regulate Drug Markets as Legal Commerce",
+    "topic_domain": "public_health_policy/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "state_regulatory_authority",
+      "licensed_producers",
+      "consumers_users",
+      "public_health_authorities",
+      "third_party_communities"
+    ],
+    "victims": [
+      "consumers_users",
+      "unlicensed_producers_black_market"
+    ],
+    "vindicated_propositions": [
+      "regulated_markets_reduce_harm_vs_prohibition",
+      "state_regulation_eliminates_black_markets",
+      "quality_control_protects_consumers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_regulatory_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enacts and enforces the legal framework for drug markets: licensing, quality standards, taxation, age/quantity limits, advertising restrictions. Collects tax revenue and licensing fees. Bears enforcement costs (inspections, compliance, black market suppression). Can amend legislation but faces political constraints."
+    },
+    {
+      "name": "licensed_producers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operate legally licensed production and distribution. Capture the legal market share previously held by black market. Pay licensing fees and taxes, comply with quality/access regulations. Benefit from state enforcement against unlicensed competitors. Exit requires abandoning licensed operations or moving to another jurisdiction."
+    },
+    {
+      "name": "consumers_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Access regulated products with known potency/purity, age-gated purchase, and legal protection. Pay higher prices inclusive of taxes and compliance costs; face quantity limits and purchase restrictions. If dependent, cannot easily exit consumption; if recreational, can substitute or reduce use. Previously criminalized, now legal but regulated."
+    },
+    {
+      "name": "unlicensed_producers_black_market",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Previously supplied the entire market; now criminalized and actively suppressed by state enforcement. Lose market share to licensed producers. Face arrest, asset seizure, violence from competitors. Cannot legally transition to licensed status (barriers: capital, compliance, criminal record). Exit means leaving the trade entirely or moving to jurisdictions without legalization."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Gain regulatory tools: product standards, potency labeling, health warnings, consumption data, revenue earmarked for treatment/prevention. Shift from punitive to health-oriented approach. Bear responsibility for monitoring outcomes (overdose rates, youth access, dependence). Their authority expands but depends on political will and funding."
+    },
+    {
+      "name": "law_enforcement",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce the new regulatory regime: inspect licensed facilities, suppress unlicensed supply, enforce age/quantity limits. Resources shift from low-level possession arrests to regulatory compliance and black market interdiction. Institutional culture and metrics adjust; some units resist mission change. Budget and prestige tied to enforcement volume."
+    },
+    {
+      "name": "third_party_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Experience reduced drug-related crime, violence, and public disorder as black markets shrink. Property values and local safety improve. May host licensed retail outlets (zoning disputes). Bear externalities if regulation fails (e.g., increased public consumption, youth access). Cannot easily relocate; voice matters in local regulatory decisions."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Evaluates the constraint's net effects across all seats: extraction vs. coordination, suppression vs. protection, displacement vs. elimination of black markets, health outcomes, fiscal impacts, equity across communities. No material stake; provides the engine's computational seat."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Regulates drug markets as legal commerce to ensure product quality and potency transparency, control access through age and quantity limits, eliminate unregulated black markets and their associated violence, and generate state revenue through taxation and licensing to fund public health and enforcement.",
+    "transfer_function": "Moves tax revenue and licensing fees from consumers and licensed producers to the state; moves market share and profit from unlicensed black market operators to licensed producers; moves regulatory compliance costs (testing, labeling, security, record-keeping) to all legal market participants; moves enforcement costs from criminalizing users to regulating commerce.",
+    "absent_voices": "People who use drugs and oppose any state regulation of their consumption on autonomy grounds; abolitionist drug policy advocates who view state-regulated markets as legitimizing and entrenching harmful substances; communities disproportionately impacted by previous prohibition who may not trust state regulation to repair harms; indigenous and traditional use communities whose practices may not fit commercial regulatory frameworks.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the legal regulatory framework vanished overnight, licensed markets would collapse; unregulated black markets would rapidly re-expand to meet demand; product quality and potency transparency would be lost; state tax revenue and regulatory capacity would evaporate; users would return to criminal victimization and unregulated supply harms; law enforcement would revert to prohibition-era posture; third-party communities would see crime and disorder resurge.",
+    "founding_problem": "The failure of prohibition to control drug markets: unregulated black markets produced unsafe products of unknown potency, fueled organized crime and violence, criminalized millions of users (disproportionately marginalized communities), failed to protect third parties from drug-related crime and disorder, and consumed vast enforcement resources without reducing supply or demand.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Public health research documenting prohibition's harms (overdose crisis driven by unregulated fentanyl-adulterated supply, mass incarceration for possession, racial disparities in enforcement); economic analyses of black market externalities (violence, corruption, lost tax revenue); law enforcement testimony on prohibition's enforcement futility (e.g., LEAP - Law Enforcement Action Platform); historical record of alcohol prohibition's identical failure mode."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story models the legalization reading of the substance_control_authority kernel: state authority exercised through legal regulated markets with quality and access controls, replacing criminal prohibition. The constraint coordinates legal commerce (solving prohibition's quality/access/safety failures) while extracting via taxation, licensing, and compliance costs. It actively enforces against the residual black market. The claimed type is tangled_rope — genuine coordination function (quality control, black market displacement, public health tools) with asymmetric extraction (state revenue, licensed producer profits, consumer compliance costs borne disproportionately by users). The engine will compute per-seat classifications from the structural data authored here.",
+    "logic_rationale": "Extractiveness (0.48) reflects significant but not dominant extraction: state captures tax revenue (~20-30% retail), licensed producers capture market rents, consumers pay compliance-inflated prices. Suppression (0.52) is moderate: enforcement targets unlicensed supply and regulatory violations, not users per se, but requires active interdiction. Theater ratio (0.28) rises over time as regulatory capture and industry lobbying shape rules toward incumbent licensed producers' interests. Accessibility collapse (0.45) is partial: legal access exists but is gated (age, quantity, geography); black market persists at margins. Resistance (0.48) comes from residual black market, anti-legalization political forces, and users facing access restrictions. All metrics authored at shared time points (0,5,10,15,20) for aligned temporal analysis.",
+    "directionality_logic": "State regulatory authority: structural beneficiary (collects revenue, sets rules, arbitrage exit) — d near 0.15. Licensed producers: beneficiaries (capture legal market, constrained exit) — d ~0.25. Consumers/users: dual — genuine beneficiaries of quality/safety but payers of taxes/compliance costs; net directionality depends on use pattern (dependent users more target-like, d~0.6; recreational users more symmetric, d~0.45). Unlicensed producers: full targets/payers (criminalized, trapped) — d~0.95. Public health authorities: beneficiaries (expanded tools, data, funding) — d~0.2. Law enforcement: agenda setters with shifted mission — d~0.3 (enforcement costs but institutional maintenance). Third-party communities: beneficiaries (reduced crime/disorder) — d~0.25. Analytical observer: d=0.5 by definition.",
+    "perspectival_gap": "The state/licensed producer seats experience this as coordination: they built and maintain a functional regulated market that solves prohibition's failures. The consumer/user seat experiences both coordination (safer supply) and extraction (taxes, restrictions) — net classification depends on dependency level and access barriers. The unlicensed producer seat experiences pure suppression/extraction (criminalization, market loss). The engine computes this divergence from the structural power/exit/role data; the authored claim does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (prohibition's failure) remains live — the harms prohibition produced persist as the justification for regulation. However, the constraint risks mandatrophy if: (1) regulatory capture shifts rules toward licensed producer profits over public health; (2) tax rates exceed the black market displacement threshold, reviving unregulated supply; (3) access restrictions recreate the exclusion that drove black markets. The theater_ratio rise (0.15→0.28) signals early Goodhart drift: compliance metrics (license counts, inspection pass rates) may substitute for outcome metrics (overdose deaths, youth access, black market share). The constraint is not yet a piton — its coordination function is real and actively maintained — but the trajectory warrants monitoring.",
+    "kernel_context": "This constraint is the legalization_reading of the substance_control_authority kernel. The kernel is the persistent commitment: 'the state has authority to control psychoactive substances.' The legalization reading instantiates this as 'state authority to regulate drug markets as legal commerce with quality/access controls.' Sibling readings: prohibition_reading (state authority to criminalize use/possession to protect third parties from drug-related crime and social disorder) and harm_reduction_reading (state authority to accept drug use while minimizing health harms through public health interventions). This reading forecloses prohibition_reading (mutually exclusive core premises: legal commerce vs. criminalization) and coexists with harm_reduction_reading (complementary: regulated markets + harm reduction services can operate simultaneously)."
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_reading_structure",
+      "question": "How does the legalization reading's structural relationship to the substance_control_authority kernel differ from its sibling readings, and what classification consequences follow from the reading's specific beneficiary/victim structure?",
+      "resolution_mechanism": "Compare the three readings' constraint stories side-by-side: map each reading's beneficiary/victim declarations, directionality profiles, and claimed types. The engine's per-seat classification will reveal whether the kernel's authority structure computes differently under each reading.",
+      "impact": "If prohibition_reading computes as snare (high extraction from users via criminalization) and legalization_reading computes as tangled_rope (coordination + asymmetric extraction), the kernel itself is not a single constraint but a generator of structurally distinct constraints. The committer frame's value is exposing this structural divergence.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-reading structural delta and its classification consequences"
+    },
+    {
+      "id": "black_market_elimination_vs_displacement",
+      "question": "Does the legal regulated market structurally eliminate the black market, or merely displace it to the margins (e.g., unregulated potency products, tax-evading sales, jurisdictions without legalization)?",
+      "resolution_mechanism": "Longitudinal market share data: track licensed vs. unlicensed market volume over time in legalized jurisdictions. If unlicensed share approaches zero and stays there, elimination; if it stabilizes at >10-15%, displacement with persistent residual.",
+      "impact": "If displacement not elimination, the constraint's suppression requirement remains high indefinitely (enforcement against persistent black market), and the coordination function is incomplete — the 'eliminate black markets' vindicated proposition fails. This would increase effective extraction (ongoing enforcement costs) and potentially shift classification toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulated markets fully eliminate or only partially displace unregulated supply"
+    },
+    {
+      "id": "tax_rate_laffer_curve_for_regulated_drugs",
+      "question": "At what tax rate does the legal market's price advantage over the black market disappear, causing consumers to return to unregulated supply and undermining the constraint's coordination function?",
+      "resolution_mechanism": "Econometric estimation of price elasticity of demand for regulated vs. unregulated products; natural experiments from jurisdictions with different tax rates; black market price monitoring.",
+      "impact": "If current tax rates are near or above the threshold, the constraint's extractiveness is self-undermining: higher extraction revives the black market it was meant to eliminate. This creates a structural ceiling on extraction that the state may not respect, converting coordination into extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural ceiling on extraction before coordination function collapses"
+    },
+    {
+      "id": "suppression_mechanism_regulatory_vs_criminal",
+      "question": "Is the suppression exerted by this constraint primarily regulatory (licensing penalties, fines, compliance orders) or criminal (arrest, incarceration for unlicensed activity), and does this distinction affect the suppression metric's meaning?",
+      "resolution_mechanism": "Analyze enforcement data: proportion of actions that are administrative vs. criminal; severity distribution of penalties; whether users face criminal penalties for regulatory violations (e.g., possession over limit).",
+      "impact": "If suppression is largely criminal (arrest/incarceration for black market participation), the constraint inherits prohibition's carceral machinery despite its regulatory framing — suppression metric understates continuity. If primarily administrative, the constraint genuinely shifts suppression modality. This affects whether the constraint is a clean break or a reformed continuation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Modality of suppression in the legalized regime: regulatory vs. criminal"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_authority__prohibition_reading",
+      "substance_control_authority__harm_reduction_reading",
+      "public_health_surveillance_infrastructure",
+      "tax_revenue_allocation_drug_markets",
+      "licensed_cannabis_market_regulations"
+    ],
+    "dual_formulation_note": "This constraint (legalization_reading) and prohibition_reading are mutually exclusive instantiations of the substance_control_authority kernel — they foreclose each other within any single legal framework. The harm_reduction_reading coexists with both: a jurisdiction can have legal regulated markets AND harm reduction services (safe consumption sites, drug checking). The three readings form a constraint family linked by the kernel; each has distinct beneficiary/victim structures and classification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "drug_markets_are_legitimate_commerce",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "state_regulation_reduces_net_harm_vs_prohibition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "regulated_legal_market_framework",
+    "drift_state": {
+      "moment": "contemporary_implementation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

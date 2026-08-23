@@ -1,0 +1,293 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_obligation_kernel__performance_only_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sacrifice_obligation_perf_only",
+    "story_uid": "af7c6c7f-a3e1-46e1-8400-d0e2adc9f8a4"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.88,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.94,
+    "resistance": 0.12,
+    "claimed_type": "mountain",
+    "human_readable": "Sacrifice Obligation Requires Physical Performance (Study Does Not Fulfill)",
+    "topic_domain": "religious/halakhic/commitment_system",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [],
+    "victims": [
+      "jewish_people"
+    ],
+    "vindicated_propositions": [
+      "divine_command_korbanot",
+      "halakhic_bindingness_perpetual",
+      "physical_performance_necessary"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "committer_structure_kernel_reading",
+      "question": "This constraint is one reading (performance_only_reading) of the contested kernel sacrifice_obligation_kernel. Sibling readings: messianic_suspension_reading, study_as_exercise_reading, symbolic_archive_reading. What structural elements do the readings disagree on?",
+      "resolution_mechanism": "Map each reading's beneficiary/victim structure, extractiveness referent, and authority grounding. The disagreement is located on: (1) whether the obligation persists as binding command (performance_only, messianic_suspension) vs. transformed/fulfilled by study (study_as_exercise) vs. dissolved into cultural archive (symbolic_archive); (2) whether extractiveness is experienced by the commanded (performance_only) or borne by a substitute practice (study_as_exercise); (3) whether the halakhic authority's maintenance of the obligation constitutes extraction or preservation.",
+      "impact": "If performance_only_reading is the only reading with high extractiveness and no human beneficiary, it occupies a unique structural position: a mountain-claimed constraint with snare-level extraction metrics but no extractor. This would trigger false_summit_mountain logic only if beneficiaries were declared — here the 'beneficiary' is the vindicated proposition (divine command), not an agent.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading decomposition: structural disagreement locus across four readings of sacrifice_obligation_kernel"
+    },
+    {
+      "id": "extraction_without_extractor",
+      "question": "Can a constraint exhibit high extractiveness (ε ≈ 0.82) without a human beneficiary collecting the extraction? The performance_only_reading describes 1,900 years of unfulfillable obligation extracting life-orientation, study labor, and messianic yearning from the entire Jewish people, yet names no agent who benefits.",
+      "resolution_mechanism": "Compare with piton constraints where extraction persists without concentrated beneficiary. If the halakhic system itself (as institution) captures the extraction (authority, coherence, continuity), then halakhic_authority is a beneficiary. If the extraction is genuinely diffuse — the obligation's persistence serves no one's interest but persists due to identity_locked exit — then the constraint is a mountain with anomalous extractiveness, or a piton where the 'agenda_setter' is also trapped.",
+      "impact": "If halakhic_authority is beneficiary, reclassify toward snare/tangled_rope with agenda_setter as beneficiary. If genuinely no beneficiary, the high ε on a mountain claim is a false summit of a different kind: natural-law framing (divine command) masking structural extraction experienced by the commanded.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether high extractiveness without human beneficiary implies hidden institutional beneficiary or genuine structural anomaly"
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "The jewish_people stakeholder has exit_options: identity_locked. What specific identity-fusion mechanism binds them? Is it covenantal identity (the obligation constitutes the people), communal enforcement (social cost of exit), internalized theological frame (disobedience = spiritual defect), or halakhic process identity (the system has 'become' its function)?",
+      "resolution_mechanism": "Interview data from exiters (secular, converts out, Reform affiliates): does the obligation persist as felt demand after formal exit? Measure suppression persistence post-exit. If suppression persists, internalized component is high.",
+      "impact": "If internalized suppression is high, effective suppression exceeds structural measure — the constraint travels with the agent. This would increase χ for the payer seat even without active enforcement. Affects piton vs. snare classification for the payer seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of identity_locked exit for jewish_people under unfulfillable sacrifice obligation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.88
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1950
+  },
+  "commentary": {
+    "narrative_context": "The performance_only_reading of the sacrifice obligation kernel holds that the biblical command to bring korbanot (sacrifices) in the Jerusalem Temple remains binding halakhah, but its physical performance has been impossible since the Temple's destruction in 70 CE. Study of sacrifice laws (kodshim) is meritorious preparation but does not fulfill the mitzvah. The obligation therefore persists as an unfillable demand on every Jew for 1,950 years. The constraint is framed as divine law (mountain), but its operational metrics show high extractiveness (ε=0.82) — the commanded population expends massive cognitive, emotional, and communal resources on an obligation that cannot be discharged. No human agent collects this extraction; the 'beneficiary' is the vindicated proposition of divine command perpetuity. The halakhic authority (agenda_setter) maintains the obligation's bindingness without being able to enable its fulfillment.",
+    "key_agents": [
+      "halakhic_authority: agenda_setter (institutional/generational/analytical/universal) — maintains the obligation's binding status through interpretive tradition",
+      "jewish_people: payer (organized/generational/identity_locked/universal) — commanded but unable to perform; bears the extractiveness",
+      "messianic_expectants: excluded (moderate/biographical/constrained/universal) — hold sibling reading (messianic_suspension) but are not in the performance_only conversation",
+      "secular_jews: excluded (powerless/biographical/mobile/national) — would reject bindingness but are structurally outside halakhic discourse",
+      "academic_observers: observer (analytical/civilizational/analytical/universal) — analyze the constraint from outside the commitment system"
+    ],
+    "logic_rationale": "Extractiveness is high (0.82) because the obligation demands total life-orientation toward an impossible performance — daily prayers for Temple restoration, study of kodshim, architectural/ritual preparation, messianic yearning — with zero fulfillment probability. Suppression is high (0.88) because exit from the obligation requires exit from Jewish identity/halakhic system (identity_locked), not merely non-compliance. Theater_ratio is low (0.15) because the performance_only_reading genuinely believes the obligation is real and binding; the study/preparation is not theatrical substitute but sincere preparation. Accessibility_collapse is near-total (0.94) — no alternative fulfillment exists within this reading (study explicitly does not fulfill). Resistance is near-zero (0.12) — within the commitment system, resisting the obligation is incoherent (denying divine command). The claimed_type is mountain (divine law, emerges_naturally) but metrics describe a constraint that extracts heavily from its subjects without human beneficiary — a structural anomaly the engine will detect.",
+    "perspectival_gap": "From the halakhic_authority seat (analytical, generational), the constraint is a mountain: divine law, unchangeable, zero extraction (God commands, we obey). From the jewish_people seat (identity_locked, generational), the constraint is experienced as snare-level extraction: a demand that cannot be met, extracting lifelong orientation with no discharge. The engine computes this divergence from the structural data — the agenda_setter has analytical exit and beneficiary-directionality (d≈0.0), the payer has identity_locked exit and victim-directionality (d≈1.0). The vindicated_propositions (divine_command) receive no rents but are the structural 'beneficiary' in the reading's own logic.",
+    "directionality_logic": "halakhic_authority: beneficiary-directionality (d≈0.1) — the authority's legitimacy and coherence derive from maintaining the obligation; it is subsidized by the system's continuity. jewish_people: full target directionality (d≈0.95) — commanded, unable to perform, identity_locked exit (exit = leaving the people/covenant), universal scope. messianic_expectants: not in this reading's stakeholder set (excluded from performance_only conversation). secular_jews: mobile exit (d≈0.3) — can exit the halakhic system with moderate social cost. academic_observers: analytical (d=0.5) — symmetric observer. The engine derives d from beneficiary/victim declarations + exit_options + power. No beneficiaries declared (vindicated_propositions are not agents), so only victims drive high d for the payer seat.",
+    "mandatrophy_analysis": "The founding problem (centralized sacrificial worship in Temple) is dead (Temple destroyed 70 CE, no restoration). The arrangement persists without its founding problem — classic mandatrophy. But the reading claims the problem is NOT dead (divine command persists regardless of Temple). The mismatch (founding_problem_status=dead per historical fact, but reading claims live) is the mandatrophy signal. The halakhic_authority could 'fix' it by adopting study_as_exercise or messianic_suspension readings (cheap fix — interpretive shift), but does not because the performance_only reading is structurally necessary to the authority's self-understanding as guardian of unchanged divine law. Fixing_cost=prohibitive not because of material cost but because the fix would dissolve the authority's grounding. Gain_flow=diffuse — no seat captures the extraction; it dissipates as unfulfilled yearning and study labor.",
+    "kernel_context": "This constraint is the performance_only_reading of the sacrifice_obligation_kernel. The kernel is the biblical command to bring korbanot (sacrifices). Four readings contest the kernel's current status: (1) performance_only_reading (this constraint): obligation persists, requires physical performance, study is preparatory only; (2) messianic_suspension_reading: obligation divinely suspended until messianic restoration, study maintains readiness; (3) study_as_exercise_reading: study of sacrifice law constitutes genuine exercise/fulfillment of the mitzvah; (4) symbolic_archive_reading: sacrifice law is cultural-historical archive, study preserves identity but makes no halakhic claim. This reading forecloses study_as_exercise (direct contradiction on fulfillment), coexists with messianic_suspension and symbolic_archive (different frameworks), and influences messianic_suspension by maintaining the 'unfulfilled obligation' frame that messianic_suspension must respond to."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "sacrifice_obligation_kernel__messianic_suspension_reading",
+      "sacrifice_obligation_kernel__study_as_exercise_reading",
+      "sacrifice_obligation_kernel__symbolic_archive_reading"
+    ],
+    "dual_formulation_note": "Four-reading constraint family for sacrifice_obligation_kernel. performance_only_reading (this) claims obligation persists unchanged → high extractiveness, no fulfillment. messianic_suspension_reading claims divine suspension → lower extractiveness, study as readiness. study_as_exercise_reading claims study fulfills → near-zero extractiveness (coordination fulfilled). symbolic_archive_reading claims no halakhic claim → mountain (cultural fact). ε values differ radically across readings: this reading ε≈0.82, study_as_exercise ε≈0.05, messianic_suspension ε≈0.35, symbolic_archive ε≈0.02. Linked via affects_constraints for contamination propagation analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "halakhic_authority",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The rabbinic leadership (poskim, roshei yeshiva, halakhic decisors) maintains the bindingness of the sacrifice obligation through interpretive tradition. They authoritatively rule that study does not fulfill, prayer for restoration is required, and the obligation remains intact. Their legitimacy derives from being the chain of transmission (mesorah) from Sinai. They do not personally 'collect' the extraction but their authority is sustained by the system's continuity. Exit for them is analytical — they can reinterpret, but doing so would undermine their authority's grounding in lineage."
+    },
+    {
+      "name": "jewish_people",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "The entire Jewish people (within the halakhic system) are commanded to bring sacrifices but cannot. They bear the extractiveness: daily prayers for Temple restoration (3x daily), study of kodshim tractates, architectural/ritual preparation (e.g., Temple Institute), messianic yearning, and the psychological burden of perpetual unfulfillment. Exit requires leaving the covenantal identity — conversion out, secularization, or joining movements that reject halakhic bindingness. Even those who exit often carry residual suppression (internalized obligation). The obligation is universal in scope (all Jews, all times since 70 CE)."
+    },
+    {
+      "name": "messianic_expectants",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "situation": "A subgroup within the halakhic world who hold the messianic_suspension_reading: they believe the obligation is divinely suspended, not binding in current form, and study maintains operational readiness for restoration. They are excluded from the performance_only_reading's conversation because that reading treats the obligation as actively binding now. Their exit to the performance_only frame is constrained — adopting it would require abandoning their reading of divine suspension. They are not victims of this reading's extraction (they don't experience the obligation as unfulfilled demand) but they are structurally excluded from shaping it."
+    },
+    {
+      "name": "secular_jews",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Jews who do not accept halakhic authority. They would reject the sacrifice obligation's bindingness entirely. They are excluded from the halakhic conversation (not part of the commitment system). Their exit from the constraint is mobile — they simply don't participate. However, they may experience indirect suppression via communal/familial pressure or Israeli state rabbinate policies influenced by the halakhic system. They are the 'absent voices' who would object to the obligation's persistence if they were in the room."
+    },
+    {
+      "name": "academic_observers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars of halakha, religious studies, anthropology, history who analyze the sacrifice obligation from outside the commitment system. They do not bear the obligation's extraction nor benefit from its maintenance. They observe the structural dynamics: the 1,950-year persistence of an unfulfillable command, the identity_locked exit, the interpretive work maintaining bindingness. Their seat is analytical — they see the full structure including the sibling readings the insiders cannot simultaneously hold."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Originally coordinated centralized divine service through the Jerusalem Temple: a single locus for atonement, thanksgiving, and communal gathering, solving the coordination problem of distributed local altars (bamot) and unifying the people around one sanctuary.",
+    "transfer_function": "Moves life-orientation, study labor (thousands of hours of kodshim learning), messianic yearning, prayer focus, and communal resources (Temple Institute, sacrificial animal preparation) from the jewish_people (payer) to... no human recipient. The transfer terminates in the unfillable obligation itself — the 'divine command' as vindicated proposition. The halakhic_authority (agenda_setter) receives authority/legitimacy maintenance, not the extraction itself.",
+    "absent_voices": "Secular Jews, Reform/Conservative/Reconstructionist movements, Jewish atheists, and Jews-by-choice who reject halakhic bindingness — they would argue the obligation is historically conditioned, not perpetually binding, and that study or ethical action fulfills the spiritual intent. They are excluded because the halakhic conversation defines participation as acceptance of the system's axioms. Also absent: women's voices in traditional halakhic process (though women bear the obligation's extractiveness equally in this reading).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the performance_only_reading's obligation vanished overnight (e.g., halakhic consensus shifted to study_as_exercise or messianic_suspension), the jewish_people's daily prayer liturgy would change (removal of Temple restoration prayers), kodshim study would shift from 'preparation' to 'fulfillment' or 'historical study', messianic yearning would lose its central ritual focus, the Temple Institute would dissolve or repurpose, and the halakhic_authority's lineage-grounded legitimacy would face a crisis. Jewish practice and identity would reorganize around a fulfillable or suspended obligation.",
+    "founding_problem": "How to serve God through centralized sacrificial worship in the Jerusalem Temple, replacing distributed local altars (bamot) and unifying the people around one divinely chosen sanctuary.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historical and archaeological consensus: the Temple was destroyed in 70 CE and has not been rebuilt. The centralized sacrificial system ceased. No corroborating source outside the halakhic system's own beneficiaries (the halakhic_authority) attests that the founding problem persists. The halakhic_authority itself claims the problem is live (divine command persists regardless of Temple), but this is self-assertion from the benefiting seat. External corroboration (history, archaeology, non-Orthodox Jewish movements, academic scholarship) uniformly attests the founding problem is dead."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "messianic_suspension_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "study_as_exercise_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "symbolic_archive_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "physical_performance_necessary_for_korban",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "study_is_preparatory_only_not_fulfillment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "sinaitic_korban_obligation",
+    "drift_state": {
+      "moment": "post_churban_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

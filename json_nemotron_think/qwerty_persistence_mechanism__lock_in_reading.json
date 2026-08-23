@@ -1,0 +1,313 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence_mechanism__lock_in_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_qwerty_persistence_mechanism__lock_in_reading",
+    "measurement_id_prefix": "qwerty_lockin",
+    "story_uid": "d3cf1ea9-8a40-4a70-b3c1-d7a79eb69198"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "QWERTY Keyboard Layout Persistence via Path-Dependent Lock-In",
+    "topic_domain": "economic/technological/historical",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [],
+    "victims": [],
+    "vindicated_propositions": [
+      "path_dependence_theory",
+      "network_effects_coordination"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "lock_in_empirical_validity",
+      "question": "Is the QWERTY lock-in effect empirically robust, or does historical evidence show that QWERTY was actually efficient and alternatives failed on merit?",
+      "resolution_mechanism": "Comparative historical analysis of typing speed studies, market adoption data, and controlled experiments between QWERTY and Dvorak layouts; resolution of the David vs. Liebowitz-Margolis debate.",
+      "impact": "If lock-in is empirically weak, the constraint reclassifies toward naturalization_reading; if robust, it supports the lock-in reading's claim of market failure without extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical status of the QWERTY lock-in claim."
+    },
+    {
+      "id": "committer_structure_kernel_readings",
+      "question": "How do the three readings of the qwerty_persistence_mechanism kernel structurally relate?",
+      "resolution_mechanism": "Structural mapping of each reading's beneficiary/victim architecture, extraction profile, and coordination claims; the kernel is the persistence question, not a single constraint.",
+      "impact": "Clarifies that lock_in_reading has no individual beneficiary/victim, while beneficiary_extraction_reading has manufacturers as beneficiaries and users as victims; naturalization_reading has neither. This drives distinct ε values and classifications.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment-system framing: one kernel, three distinct constraints."
+    },
+    {
+      "id": "collective_suboptimality_measurement",
+      "question": "How to quantify the collective social cost of QWERTY persistence without a transfer recipient?",
+      "resolution_mechanism": "Welfare economics estimation of deadweight loss from suboptimal standard: productivity loss, retraining costs, innovation foreclosure — summed across all users with no offsetting rent capture.",
+      "impact": "If measurable and large, strengthens the market-failure claim; if negligible, weakens the lock-in reading's divergence from naturalization.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Quantifying collective cost in the absence of extraction."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.3,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The QWERTY keyboard layout, originally designed for mechanical typewriters to prevent jamming, persists as the dominant standard for digital keyboards despite the disappearance of its original functional rationale. The lock-in reading (Paul David, 1985) argues that QWERTY's persistence is a canonical case of path-dependent market failure: early historical accident gave QWERTY a head start, network effects and switching costs created a coordination equilibrium that no individual actor can profitably deviate from, and the resulting standard is collectively suboptimal — users bear typing inefficiency costs, but no single beneficiary extracts those costs. The constraint is the self-reinforcing coordination equilibrium itself, not an enforced rule. Its extractiveness is low because the costs are deadweight loss, not transfers; suppression is moderate because switching costs (retraining, compatibility) suppress alternatives without coercion; theater is low because there is no performative maintenance of a defunct function — the coordination function (interoperability) is real, just suboptimal.",
+    "key_agents": [
+      "early_typists: Adopters of the first commercial typewriters; locked into QWERTY by training investment (powerless/identity_locked)",
+      "typewriter_manufacturers: Standardized on QWERTY early; benefited from installed base but did not actively suppress alternatives (organized/constrained)",
+      "touch_typists: Professionals with QWERTY-specific human capital; benefit individually from not retraining but collectively worse off (moderate/identity_locked)",
+      "dvorak_advocates: Proponents of technically superior alternative; excluded by network effects (excluded/trapped)",
+      "economic_historians: Analytical observers debating the lock-in hypothesis (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.15) reflects deadweight loss from suboptimal coordination, not transfer. Suppression (0.30) captures switching costs that raise the barrier to alternative adoption — not active enforcement. Theater (0.10) is low because the coordination function (universal key layout) is genuinely performed. Accessibility collapse (0.60) is moderate: alternatives exist (Dvorak, Colemak) but network effects make them inaccessible for most. Resistance (0.40) reflects persistent advocacy for alternatives and occasional organizational switching attempts. The claimed type 'rope' reflects the reading's core claim: a pure coordination equilibrium that solves interoperability but fails to reach the global optimum. The engine will compute per-seat types from the structural data; the lock-in reading predicts symmetric costs across users (no extraction), so all user seats should compute near rope or mountain, while the analytical seat sees the market failure.",
+    "perspectival_gap": "The lock-in reading and the naturalization_reading disagree on whether the coordination equilibrium is efficient. The lock-in reading sees collective suboptimality; the naturalization_reading sees revealed preference adequacy. The beneficiary_extraction_reading sees active rent extraction by manufacturers. These are three distinct constraints with different ε values, not perspectives on one constraint. The engine's per-seat computation will show: for lock_in_reading, all user seats have similar directionality (symmetric costs), so their effective extraction is uniformly low; for beneficiary_extraction_reading, manufacturers have low directionality (beneficiaries) and users high (targets), producing extraction asymmetry.",
+    "directionality_logic": "No individual beneficiary or victim declared in base_properties — the lock-in reading posits symmetric costs across all users. Early typists and touch_typists are identity_locked (retraining cost is identity-fused skill loss). Manufacturers are constrained (they could switch standards but would lose compatibility). Dvorak advocates are trapped (no market entry). Economic historians are analytical. The engine derives directionality from these exit options and the absence of beneficiary/victim declarations: all non-analytical seats get d ≈ 0.5 (symmetric), so effective extraction ≈ base extractiveness for all. This matches the reading's claim of market failure without extraction.",
+    "mandatrophy_analysis": "The constraint has no mandate — it is an emergent coordination equilibrium. Mandatrophy does not apply. The founding problem (interoperability of mechanical typewriters) is dead, but the arrangement persists because the coordination function (universal key layout) remains live. The mismatch (dead founding problem, live coordination function) is the essence of path dependence, not mandatrophy.",
+    "kernel_context": "This constraint is the lock_in_reading of kernel qwerty_persistence_mechanism. Sibling readings: naturalization_reading (QWERTY is genuinely adequate; alternatives lost fairly) and beneficiary_extraction_reading (manufacturers/incumbents actively maintained QWERTY to protect training investments and market position). The lock-in reading claims no individual beneficiary, collective suboptimality, market failure without extraction. The naturalization_reading claims no market failure. The beneficiary_extraction_reading claims asymmetric extraction. These are three distinct constraints with different ε and beneficiary/victim structures."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "qwerty_persistence_mechanism__naturalization_reading",
+      "qwerty_persistence_mechanism__beneficiary_extraction_reading"
+    ],
+    "dual_formulation_note": "The qwerty_persistence_mechanism kernel decomposes into three constraint stories. Lock_in_reading: ε≈0.15, no beneficiaries/victims, claimed rope. Naturalization_reading: ε≈0.05, no beneficiaries/victims, claimed mountain. Beneficiary_extraction_reading: ε≈0.60, beneficiaries=[typewriter_manufacturers, incumbent_typists], victims=[users, alternative_layout_developers], claimed snare. The lock-in reading influences the beneficiary_extraction_reading by providing the coordination substrate that extraction could exploit; it coexists_with naturalization_reading as competing empirical claims."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "early_typists",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "First generation of professional typists; invested heavily in QWERTY motor skills. The layout became their professional identity; retraining would mean loss of livelihood and status. They bear the cost of the suboptimal layout daily but cannot exit without career disruption."
+    },
+    {
+      "name": "typewriter_manufacturers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Early manufacturers (Remington, etc.) adopted QWERTY as a de facto standard. They benefited from the installed base of typists and did not need to actively suppress alternatives — network effects did the work. They could have switched to a superior layout but would lose compatibility with the typist pool."
+    },
+    {
+      "name": "touch_typists",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Contemporary professional typists and knowledge workers. They bear the ongoing efficiency cost of QWERTY (slower speeds, higher error rates) but benefit from not having to retrain and from universal compatibility. Their QWERTY skill is fused to their professional identity; exit is personally costly."
+    },
+    {
+      "name": "dvorak_advocates",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Proponents of the Dvorak Simplified Keyboard (and later alternatives like Colemak). They argue for technical superiority but face insurmountable switching costs: no employer will buy Dvorak hardware, no OS makes it default, no colleague can use their keyboard. They are structurally excluded from the coordination equilibrium."
+    },
+    {
+      "name": "economic_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars (Paul David, Liebowitz & Margolis, etc.) who study QWERTY as a test case for path dependence vs. market efficiency. They have no material stake; their exit is analytical — they can change their interpretation without cost."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a universal key layout so that any typist can use any keyboard, any document can be typed on any machine, and training investments are portable across employers and devices.",
+    "transfer_function": "No transfer occurs. The constraint imposes a deadweight loss: all typists type slower and with more errors than they would on a superior layout, but no party collects the difference. The social cost is the gap between actual and potential typing productivity, summed across billions of users over decades.",
+    "absent_voices": "Future generations of typists who will inherit the suboptimal standard; alternative layout designers who cannot gain market entry; ergonomists who see preventable repetitive strain injuries. They are absent because the coordination equilibrium has no mechanism to internalize their interests.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the QWERTY coordination equilibrium vanished overnight (e.g., a universal, costless switch to Dvorak), typing productivity would jump, retraining costs would be incurred once, and the keyboard market would reorganize around the new standard. The world would rearrange because the constraint currently structures the entire human-computer text interface.",
+    "founding_problem": "Mechanical typewriters jammed when adjacent keys were struck in rapid succession. The QWERTY layout separated common letter pairs to slow typing down and prevent jams. This was a genuine coordination problem: manufacturers needed a layout that worked reliably on mechanical machines.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The mechanical jamming problem is undisputed historical fact (typewriter engineering literature). The lock-in reading's claim that the founding problem is dead while the arrangement persists is corroborated by the complete disappearance of mechanical typewriters from mainstream use (museums, collectors only). No beneficiary of the lock-in reading disputes this; the debate is about whether the persistence is efficient (naturalization) or extractive (beneficiary_extraction)."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "naturalization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "beneficiary_extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "path_dependence_causes_suboptimal_lock_in",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "network_effects_override_technical_superiority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "historical_accident_initial_condition",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

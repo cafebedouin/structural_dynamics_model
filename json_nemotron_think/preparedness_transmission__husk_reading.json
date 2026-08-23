@@ -1,0 +1,306 @@
+{
+  "header": {
+    "constraint_id": "preparedness_transmission__husk_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_preparedness_transmission__husk_reading",
+    "measurement_id_prefix": "pthr",
+    "story_uid": "9d8a24f9-de22-4f79-a974-5b31757e646f",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.78,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.22,
+    "claimed_type": "piton",
+    "human_readable": "Civil Defense Drill & Inspection Ritual (Husk Reading)",
+    "topic_domain": "disaster_risk_management/institutional_memory/civil_defense",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "civil_defense_bureaucracy",
+      "compliance_contractors"
+    ],
+    "victims": [
+      "taxpayers",
+      "frontline_responders",
+      "at_risk_populations"
+    ],
+    "vindicated_propositions": [
+      "preparedness_obligation_satisfied_by_ritual_compliance",
+      "institutional_continuity_preserves_capability"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_dispute",
+      "question": "Is the preparedness_transmission kernel a live exercised capability (competence_reading), a hollow ritual (husk_reading), or a stratified hybrid (hybrid_reading)?",
+      "resolution_mechanism": "Comparative after-action analysis of novel flood events against drill scenarios; independent audit of operational knowledge retention vs. protocol compliance rates across generations.",
+      "impact": "If husk_reading is structurally dominant, the constraint classifies as piton with high theater_ratio; if competence_reading holds, it classifies as rope with low theater; if hybrid_reading, the system decomposes into engineering (rope) and civilian (piton/snare) sub-constraints.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the preparedness_transmission kernel is structurally accurate."
+    },
+    {
+      "id": "residual_coordination_function",
+      "question": "Does the drill/inspection ritual retain any genuine coordination function (e.g., communications exercise, inter-agency contact maintenance) beneath the theater?",
+      "resolution_mechanism": "Network analysis of drill participation graphs: measure whether drills create/maintain operational links that activate during real events, vs. purely ceremonial attendance.",
+      "impact": "If residual coordination exists, theater_ratio overstates hollowness and the constraint may be tangled_rope (coordination + extraction) rather than piton; if zero, piton classification is reinforced.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether any real coordination survives the ritual form."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is compliance with the drill/inspection regime driven by structural enforcement (budget conditions, legal mandate) or internalized ritual identity (professional self-concept as 'prepared')?",
+      "resolution_mechanism": "Post-exit suppression trajectory: track agencies that lose mandate/funding — do they continue drills voluntarily? If yes, internalized; if they stop immediately, structural.",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests — the constraint persists even without external enforcement, making reform harder.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for ritual compliance."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Civil defense systems established during the Cold War and post-1950s flood disasters created formal drill and inspection regimes to maintain readiness across generations. The husk_reading of the preparedness_transmission kernel argues that while the ritual form persists — annual exercises, checkbox inspections, compliance certificates — the operational knowledge that once animated them has hollowed out. Drills now test only pre-specified failure modes from historical scenarios; they lack adaptive capacity for novel flood dynamics (compound events, urban pluvial flooding, climate-shifted return periods). Inspection routines verify paperwork and equipment presence, not functional integration. The bureaucracy administering the system benefits from the appearance of preparedness (budget protection, legitimacy), contractors profit from ritual execution, while taxpayers, frontline responders, and at-risk populations bear the cost of a capability illusion. The constraint persists through institutional inertia and professional identity fusion — 'we are the preparedness agency' — not through active enforcement.",
+    "key_agents": [
+      "civil_defense_bureaucracy: Primary agenda_setter (institutional/generational/arbitrage) — administers the regime, collects legitimacy/budget from ritual performance",
+      "compliance_contractors: Beneficiary (organized/biographical/mobile) — paid to design/run drills and inspections, no accountability for operational outcomes",
+      "frontline_responders: Payer (organized/biographical/constrained) — train on hollow scenarios, bear operational risk when real events deviate from scripts",
+      "at_risk_populations: Payer (powerless/generational/trapped) — believe they are protected by the system; discover gaps only during disasters",
+      "taxpayers: Payer (moderate/biographical/constrained) — fund the ritual apparatus, receive compliance theater in return",
+      "independent_auditors: Observer (analytical/generational/analytical) — commission after-action reviews that repeatedly find capability gaps"
+    ],
+    "logic_rationale": "The constraint is claimed as piton: a former coordination mechanism (rope) whose function has atrophied, leaving mostly performance. Theater_ratio is high (0.78) and rising over 40 years — the defining metric. Extractiveness is moderate (0.45) because the system still extracts real resources (funding, personnel time, political attention) while delivering diminishing real preparedness. Suppression is low (0.30) and declining — compliance is now voluntary/ritualistic, not coerced. Accessibility_collapse is moderate (0.52): alternative preparedness models exist (adaptive management, community resilience, scenario-free training) but are marginalized by the ritual's institutional capture. Resistance is very low (0.22): few challenge the ritual because it satisfies accountability checkboxes and challenging it threatens professional identities. The temporal grid shows theater rising, extraction creeping up, suppression falling — the classic piton trajectory: enforcement decays, theater replaces function, extraction persists by inertia.",
+    "directionality_logic": "Civil_defense_bureaucracy sits at d ≈ 0.15 (beneficiary end): collects budget/legitimacy, controls the ritual design, has arbitrage-grade exit (can reform or abolish the regime). Compliance_contractors at d ≈ 0.20: paid beneficiaries with mobile exit. Frontline_responders at d ≈ 0.75: bear risk from hollow training, constrained exit (career-embedded, cannot easily leave the system). At_risk_populations at d ≈ 0.85: trapped, no exit, bear catastrophic consequences. Taxpayers at d ≈ 0.55: moderate extraction, constrained exit (cannot opt out of funding). The directionality derivation from beneficiary/victim declarations + exit options produces this gradient; no overrides needed.",
+    "perspectival_gap": "The bureaucracy (agenda_setter) experiences the constraint as coordination — they built it, they run it, they see the paperwork flow. Frontline responders and at-risk populations experience it as extraction — they pay in risk and trust, receive theater. The engine computes this seat divergence from the structural data; the claimed piton type reflects the analytical observer's view that the coordination function has atrophied.",
+    "mandatrophy_analysis": "The founding mandate — maintain readiness across generations when direct disaster memory fades — is dead for novel flood scenarios. The ritual persists because the bureaucracy's legitimacy and budget depend on NOT admitting the mandate has expired. Mandatrophy is resolved: the arrangement is a zombie, maintained by the beneficiaries of its appearance. The piton classification captures this: no concentrated beneficiary captures the extraction (it's diffuse: budget, legitimacy, contractor fees), the administrator could change it but the cost to fix (admitting failure, rebuilding knowledge) exceeds what it bears.",
+    "kernel_context": "This constraint is the husk_reading of the preparedness_transmission kernel. The kernel is the claim that 'civil defense drills and inspections transmit preparedness across generations.' Three readings contest this kernel: competence_reading (drills are live exercised knowledge — each generation re-validates capability), husk_reading (this constraint — ritual form persists, operational knowledge hollowed out), and hybrid_reading (stratified: engineering competence high, civilian coordination decayed). This JSON instantiates ONLY the husk_reading as a clean ε-invariant constraint. The sibling readings are separate constraint stories (preparedness_transmission__competence_reading, preparedness_transmission__hybrid_reading) linked via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "flood_response_protocol",
+      "evacuation_planning",
+      "early_warning_system",
+      "preparedness_transmission__competence_reading",
+      "preparedness_transmission__hybrid_reading"
+    ],
+    "dual_formulation_note": "The preparedness_transmission kernel decomposes into three constraint stories: competence_reading (rope — live coordination), husk_reading (piton — atrophied ritual), hybrid_reading (tangled_rope — engineering coordination + civilian extraction). This husk_reading is the civilian-coordination stratum; it affects and is affected by the competence_reading (which it undermines by crowding out real training) and the hybrid_reading (which it partially constitutes)."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "civil_defense_bureaucracy",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Administers the national civil defense drill and inspection regime. Designs exercise scenarios, sets inspection criteria, certifies compliance. Collects legitimacy and budget protection from the appearance of preparedness. Can reform or abolish the regime but chooses not to because the ritual satisfies political accountability and the cost of rebuilding genuine knowledge exceeds institutional risk tolerance."
+    },
+    {
+      "name": "compliance_contractors",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Private firms contracted to design, execute, and evaluate drills and inspections. Paid per exercise cycle. No liability for operational outcomes — only for procedural compliance. Have mobile exit (can shift to other compliance markets) but benefit from the ritual's stable revenue stream. Their incentive is to maximize ritual complexity (more billable hours) not operational relevance."
+    },
+    {
+      "name": "frontline_responders",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Fire, EMS, and emergency management personnel required to participate in drills and maintain inspection readiness. Train on scripted scenarios that do not match emerging flood dynamics (compound events, flash urban flooding, cascading infrastructure failure). Bear the operational risk when real events deviate — they improvise without institutional backup. Exit is constrained: career-embedded, specialized skills, pension-locked. Some supplement with self-funded adaptive training."
+    },
+    {
+      "name": "at_risk_populations",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Communities in floodplains, coastal zones, and urban drainage basins who believe the civil defense system provides functional protection. Discover the capability gap only during disasters — evacuation routes untested for novel scenarios, shelters unequipped for duration, warning systems calibrated to historical not shifted thresholds. No exit: geographic, economic, and social ties bind them. Bear catastrophic consequences of the ritual's failure."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the civil defense apparatus through general revenue and targeted levies. Receive compliance certificates and public assurances. Cannot easily trace funding to operational outcomes. Exit is constrained: cannot opt out of taxation, political accountability channels are mediated by the same bureaucracy. Some pressure for reform via legislative oversight but face institutional capture."
+    },
+    {
+      "name": "independent_auditors",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Academic researchers, legislative auditors, and post-disaster review commissions who examine the system after events. Repeatedly document the gap between drill performance and real-world capability. Their reports are acknowledged ceremonially but not structurally acted upon — the ritual absorbs critique as 'lessons learned' without changing the scenario library. They see the full structure but lack enforcement power."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Originally: ensure cross-generational readiness for known flood threats through practiced, standardized response. Now: maintain institutional legitimacy and budget justification by performing the form of preparedness — the ritual coordinates internal bureaucracy and contractor relations, not operational capability.",
+    "transfer_function": "Moves funding and personnel time from taxpayers and frontline responders to civil defense bureaucracy and compliance contractors. Moves the illusion of protection to at-risk populations. Moves accountability risk from the bureaucracy (which can cite compliance) to responders (who improvise when scripts fail).",
+    "absent_voices": "Communities that would demand adaptive preparedness if they knew the drills don't match their risk; whistleblowers within the bureaucracy who see the capability gap but face career retaliation; younger responders who never experienced the founding threats and recognize the ritual's irrelevance but lack voice in scenario design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the drill/inspection ritual vanished overnight, the capability gap would be exposed. The bureaucracy would lose its primary legitimacy artifact. Funding would face immediate scrutiny. Responders would be forced to improvise or demand real training. At-risk populations would lose the illusion of protection, triggering political demand for functional systems. The world rearranges because the ritual is the only thing holding the current institutional configuration together.",
+    "founding_problem": "After the 1953 North Sea flood and Cold War civil defense mobilization, governments needed to maintain flood and disaster readiness across generations when direct operational experience faded. The drill/inspection regime was built to transmit tacit knowledge through standardized practice, ensuring that each cohort of responders and managers could execute proven procedures without having lived through the founding disasters.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Independent after-action reports from Hurricane Katrina (2005), Central European floods (2002, 2013, 2021), and Hurricane Harvey (2017) document that scripted drills failed to prepare responders for novel flood dynamics. Academic studies on institutional memory decay in disaster agencies (e.g., Birkland 2006, Kapucu 2008, recent OECD reviews) confirm that ritual compliance correlates negatively with adaptive capacity. The civil defense bureaucracy itself attests the problem is live (citing ongoing threats), but this is self-interested corroboration; no external validator confirms the founding problem persists in its original form."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "piton",
+    "downstream_of": [
+      "preparedness_transmission"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "competence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "ritual_compliance_satisfies_preparedness_obligation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "operational_knowledge_is_recoverable_from_form",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "formal_preparedness_regime",
+    "drift_state": {
+      "moment": "contemporary_climate_flood_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

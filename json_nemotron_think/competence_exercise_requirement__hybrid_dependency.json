@@ -1,0 +1,301 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_requirement__hybrid_dependency",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_competence_exercise_requirement__hybrid_dependency",
+    "measurement_id_prefix": "cerhd",
+    "story_uid": "e9aaddc5-ad36-4c29-910c-1ce5da7f9914"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Competence Exercise Requirement",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "public_passengers",
+      "regulators",
+      "training_providers"
+    ],
+    "victims": [
+      "frontline_operators",
+      "small_operators"
+    ],
+    "vindicated_propositions": [
+      "hybrid_exercise_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Set and enforce the requirement for hybrid competence exercise (simulation plus periodic real-world anchoring). They justify it as necessary for safety. They control licensing and oversight, and benefit from institutional authority and budgets tied to the regulatory regime."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Must complete both simulation sessions and real-world line operations/audits. They bear the time, fatigue, and career risk of these exercises. Exit is constrained by licensing requirements and industry norms; leaving the profession is the only full exit."
+    },
+    {
+      "name": "public_passengers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Benefit from the safety assurance that the hybrid regime aims to provide. They have no practical exit from reliance on high-reliability organizations (aviation, nuclear, etc.) and no voice in setting the exercise standards."
+    },
+    {
+      "name": "training_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sell simulation hardware, software, and services mandated by the hybrid requirement. They benefit financially from the simulation foundation component. They can exit by shifting to other markets, but the regulatory mandate creates a captive revenue stream."
+    },
+    {
+      "name": "small_operators",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Bear disproportionate costs of the hybrid regime because they lack economies of scale for simulation and real-world anchoring. They cannot easily exit the market due to capital commitments and regulatory barriers, but they are not the primary targets of the constraint's design."
+    },
+    {
+      "name": "safety_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the effectiveness of hybrid exercise regimes across industries. They do not directly pay or collect from the constraint but produce evidence that influences regulatory evolution."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures that competence in high-reliability domains is maintained through a combination of simulation-based training (which allows safe practice of rare scenarios) and periodic real-world anchoring (which preserves tacit skills and organizational learning that simulation alone cannot capture).",
+    "transfer_function": "Moves time, money, and operational risk from frontline operators and small operators to regulators and training providers, in exchange for a safety assurance that benefits the public. The transfer is mediated by regulatory mandate and market for simulation services.",
+    "absent_voices": "Critics who argue that high-fidelity simulation with advanced debriefing is sufficient (simulation_as_adequate_exercise reading) are structurally excluded from regulatory rulemaking. Also absent are voices from operators who have experienced catastrophic events and argue only those provide true competence (catastrophe_as_necessary_anchor reading).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the hybrid requirement vanished, regulators would likely revert to either pure simulation mandates (driven by cost pressure) or pure real-world experience requirements (driven by traditionalist factions). Training providers would lose mandated simulation revenue. Frontline operators would see a shift in training burden. The safety assurance landscape would reorganize around a new equilibrium.",
+    "founding_problem": "Early high-reliability operations relied solely on apprenticeship and line experience, which proved insufficient for rare catastrophic scenarios. Pure simulation was introduced but found to erode tacit skills and organizational memory over time. The hybrid regime was built to solve the dual problem of rare-event preparedness and skill retention.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Regulators and training providers attest the dual problem persists. Independent safety analysts and some operator unions attest that the founding problem is substantially solved by modern simulation, and the hybrid regime now serves as rent extraction. No consensus exists outside the benefiting parties."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.6
+    }
+  ],
+  "commentary": {
+    "narrative_context": "High-reliability organizations (aviation, nuclear, healthcare) face a constraint: competence requires both simulation foundation and periodic real-world anchoring. Regulators mandate this hybrid regime. The constraint is claimed as a tangled rope: it coordinates safety (genuine coordination) but extracts disproportionate resources from frontline operators and small operators (asymmetric extraction). The engine will compute per-seat classifications from the structural data; the claimed type and metrics are authored independently.",
+    "logic_rationale": "Base extractiveness (0.45) reflects the resource transfer from operators to training providers and regulatory apparatus. Suppression (0.6) reflects active enforcement excluding pure-simulation or pure-experience alternatives. Theater ratio (0.3) indicates some performative compliance (e.g., checklist exercises) but the core function remains substantive. Accessibility collapse (0.5) shows alternatives exist but are structurally discouraged. Resistance (0.4) captures operator pushback on cost and fatigue. Measurements share a single time grid (0-30 years) showing gradual extraction increase as simulation technology expands, theater creep, and stable enforcement.",
+    "directionality_logic": "Regulators are agenda_setters with arbitrage exit (d near 0.0). Frontline operators and small_operators are payers with constrained exit (d near 1.0). Public_passengers are beneficiaries but trapped (d near 0.5). Training_providers are beneficiaries with mobile exit (d near 0.0). Safety_analysts are observers (d=0.5). The engine derives directionality from these structural positions.",
+    "perspectival_gap": "From the regulator's seat, the hybrid regime is a necessary coordination mechanism. From the frontline operator's seat, it is an extractive burden with limited exit. The engine computes this divergence; the authored claim does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (rare-event preparedness + skill retention) is contested: some argue modern simulation solves both, making the real-world component rent-seeking. Others argue real-world anchoring is irreplaceable. The constraint persists because no coalition has enough power to change the regulatory mandate, and the cost of fixing (redesigning training systems) is prohibitive for any single actor.",
+    "kernel_context": "This constraint is the hybrid_dependency reading of the contested kernel 'competence_exercise_requirement'. Sibling readings: simulation_as_adequate_exercise (simulation alone suffices) and catastrophe_as_necessary_anchor (only real catastrophic events provide exercise). This reading asserts both simulation and periodic real-world anchoring are structurally necessary."
+  },
+  "omegas": [
+    {
+      "id": "hybrid_necessity_empirical_basis",
+      "question": "Is the claim that competence requires both simulation and real-world anchoring empirically substantiated, or is it a constructed constraint that benefits training providers and regulators?",
+      "resolution_mechanism": "Controlled studies comparing safety outcomes under pure simulation, hybrid, and pure real-world regimes; meta-analysis of incident data before/after hybrid mandate adoption.",
+      "impact": "If empirical support is weak, the constraint may be a false summit (mountain claim with beneficiaries) or a snare; if strong, it remains a genuine tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the hybrid requirement's coordination function is empirically validated or a cover for extraction."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of pure-simulation alternatives structural (regulatory barriers) or internalized (industry belief that real-world anchoring is morally necessary)?",
+      "resolution_mechanism": "Post-deregulation observation: if a jurisdiction allows pure simulation and operators voluntarily retain real-world anchoring, suppression is partly internalized.",
+      "impact": "If internalized, effective suppression is higher than structural measures suggest; the constraint persists even without active enforcement.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Structural vs. internalized suppression in the hybrid regime."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_requirement__simulation_as_adequate_exercise",
+      "competence_exercise_requirement__catastrophe_as_necessary_anchor"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the competence_exercise_requirement kernel. The hybrid reading asserts both simulation and real-world anchoring are necessary; the simulation_as_adequate reading asserts simulation suffices; the catastrophe reading asserts only real catastrophic events provide exercise. The three readings form a constraint family linked by mutual structural influence."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_adequate_exercise",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "catastrophe_as_necessary_anchor",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_requires_hybrid_exercise",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_foundation_necessary",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "hybrid_exercise_regime",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

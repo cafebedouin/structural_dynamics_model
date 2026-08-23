@@ -1,0 +1,337 @@
+{
+  "header": {
+    "constraint_id": "reformation_composite__political_realignment_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_reformation_composite__political_realignment_reading",
+    "measurement_id_prefix": "reformation_political",
+    "story_uid": "7837bf4a-b2b8-4dbe-bb20-c687d401d5c0"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cuius Regio Eius Religio as Sovereignty Assertion",
+    "topic_domain": "historical/political/religious",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "territorial_rulers",
+      "emerging_nation_states"
+    ],
+    "victims": [
+      "imperial_authority",
+      "papal_authority",
+      "religious_dissenters"
+    ],
+    "vindicated_propositions": [
+      "state_sovereignty_against_universal_empire",
+      "territorial_religious_uniformity_as_political_order"
+    ]
+  },
+  "interval": {
+    "start": 1517,
+    "end": 1648
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the reformation_composite kernel, or does it describe the same structural constraint as the theological_fragmentation_reading and technological_mediation_reading under different observables?",
+      "resolution_mechanism": "Decompose the Reformation into separate constraint stories per reading (per ε-invariance principle): political_realignment_reading (this story), technological_mediation_reading, theological_fragmentation_reading. Each gets its own ε, stakeholders, and classification. Link via network.affects_constraints.",
+      "impact": "If the three readings share a single ε, the kernel is one constraint with measurement-dependent classification (violates ε-invariance). If they have distinct ε values, they are a constraint family linked by structural influence.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the Reformation kernel decomposes into multiple ε-invariant constraints or one observable-dependent constraint"
+    },
+    {
+      "id": "political_vs_theological_extraction_boundary",
+      "question": "How much of the measured extraction (ε=0.78) is political sovereignty extraction versus theological conformity enforcement? Are they separable?",
+      "resolution_mechanism": "Compare territories where rulers adopted reform without theological conviction (e.g., Henry VIII, some German princes) against territories with genuine theological movements (e.g., Geneva, Württemberg). Measure extraction differential.",
+      "impact": "If political extraction operates independently of theological enforcement, the constraint is a political snare wearing theological cover. If inseparable, the tangled_rope classification holds: coordination (religious uniformity) and extraction (sovereignty) are structurally fused.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Separability of political extraction from theological coordination function"
+    },
+    {
+      "id": "imperial_papal_victim_structure",
+      "question": "Do imperial authority and papal authority experience this constraint as a unified victim class, or do they occupy distinct structural positions with different exit options and directionalities?",
+      "resolution_mechanism": "Trace the divergent trajectories: papal authority loses direct territorial control but retains spiritual authority and eventually adapts (Counter-Reformation); imperial authority (Habsburg) loses effective sovereignty over German territories permanently. Different outcomes suggest different structural positions.",
+      "impact": "If distinct, the victim class should be split in stakeholders with different power/exit profiles. If unified, the current single victim declaration is adequate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether imperial and papal authority are structurally distinct victim seats"
+    },
+    {
+      "id": "cuius_regio_coordination_genuineness",
+      "question": "Does cuius regio eius religio solve a genuine coordination problem (religious peace, reduced internal conflict) or is the coordination story entirely cover for sovereignty extraction?",
+      "resolution_mechanism": "Measure internal religious violence before/after cuius regio adoption in adopting vs. non-adopting territories. Compare the Schmalkaldic War, French Wars of Religion, Thirty Years' War casualty rates against counterfactual.",
+      "impact": "If genuine coordination, tangled_rope is correct. If coordination is negligible and extraction dominates, the constraint may be a snare with theological cover. This determines the beneficiary/victim balance.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the coordination function of territorial religious uniformity is structurally real or performative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1517,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1529,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1555,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1618,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1648,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1517,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1529,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1555,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1618,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1648,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1517,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1529,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1555,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1618,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1648,
+      "value": 0.82
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Reformation, read as a political realignment event, centers on the principle cuius regio eius religio (whose realm, his religion) established at Augsburg (1555) and confirmed at Westphalia (1648). Emerging territorial rulers — German princes, Scandinavian monarchs, Henry VIII in England — used religious differentiation to seize ecclesiastical assets, assert legislative supremacy over church affairs, and withdraw from imperial and papal jurisdiction. The constraint is the territorial state church system: a package of enforced religious uniformity, confiscated church property, and jurisdictional sovereignty that territorial rulers imposed on their populations and extracted from universal authorities. The coordination function is real — religious uniformity reduced internal confessional conflict and provided a legitimation basis for territorial sovereignty — but the extraction is asymmetric: territorial rulers gained sovereign rights (taxation, legislation, appointment) while imperial and papal authority lost effective governance capacity over German and northern European territories. Religious dissenters (Anabaptists, Calvinists in Lutheran territories, Catholics in Protestant territories, etc.) bore the suppression costs. The measurement series tracks three phases: pre-Augsburg fluidity (1517-1555), the Augsburg settlement and its breakdown (1555-1618), and the Thirty Years' War/Westphalia resolution (1618-1648).",
+    "logic_rationale": "Extractiveness (0.78) is high because territorial rulers extracted substantial sovereign rights (episcopal appointments, church taxation, legislative control over doctrine) from imperial/papal authority and imposed conformity costs on dissenting populations. Suppression (0.82) is very high because the constraint's persistence depended on active enforcement: state church visitations, mandatory attendance laws, exile/execution of dissenters, and military suppression of resistance (Peasants' War, Schmalkaldic War, Thirty Years' War). Theater ratio (0.45) is moderate: theological justification was sincere for many actors (Luther, Calvin, Catholic reformers) but the political extraction function grew more visible over time, especially after 1555 when the Augsburg settlement legitimated territorial confiscation of church property. Accessibility collapse (0.88) is near-mountain level: once cuius regio was established, religious exit required physical migration (the confessional migration system), making alternatives structurally inaccessible for most subjects. Resistance (0.75) is high: imperial authority, papal authority, and dissenting populations mounted sustained military, legal, and theological resistance across 130 years.",
+    "directionality_logic": "Territorial rulers are primary beneficiaries (d ≈ 0.15): they collect sovereign rights, church assets, and legitimacy with near-arbitrage exit (they set the rules). Emerging nation-states (Sweden, Denmark, England) are beneficiaries at institutional scale (d ≈ 0.20). Imperial authority (Habsburg) is a primary victim (d ≈ 0.85): loses effective sovereignty over German territories, trapped by the constitutional structure of the Empire. Papal authority is a victim (d ≈ 0.75): loses jurisdiction, revenue, and appointment rights in northern Europe but retains spiritual authority and adapts via Counter-Reformation (more mobile than imperial). Religious dissenters are victims (d ≈ 0.90): identity_locked exit (confessional migration only), bear full conformity costs. Urban merchant classes and peasant populations are payers with constrained exit (d ≈ 0.70-0.80).",
+    "perspectival_gap": "The territorial ruler seat experiences this as a rope/scaffold: genuine coordination (religious peace, legitimation) with manageable enforcement costs. The imperial authority seat experiences it as a snare: extraction of sovereign rights with no exit from the imperial constitution. The dissenter seat experiences it as a snare: pure extraction of conscience and property with identity-locked exit. The papal authority seat experiences it as a tangled rope: loses territorial jurisdiction but gains Counter-Reformation coordination function. The engine computes these divergences from the structural data; the claimed_type (tangled_rope) reflects the constraint's aggregate structure.",
+    "mandatrophy_analysis": "The founding problem (fragmented imperial authority, papal overreach, demand for German national church) was substantially resolved by 1648: territorial sovereignty was recognized, papal jurisdiction in the Empire ended, and the confessional map stabilized. Yet the state church system persisted for centuries — in Germany until 1918, in Scandinavia until 2000, in England to present. The mandate (religious uniformity as political order) atrophied into institutional inertia: established churches became pitons (theatrical maintenance, diffuse costs, no concentrated beneficiary). This reading captures the extraction phase (1517-1648); the piton phase requires a separate constraint story.",
+    "kernel_context": "This constraint is the political_realignment_reading of the reformation_composite kernel. Sibling readings: technological_mediation_reading (printing press as primary driver, constraint_id: reformation_composite__technological_mediation_reading) and theological_fragmentation_reading (competing soteriologies as primary driver, constraint_id: reformation_composite__theological_fragmentation_reading). This reading treats cuius regio eius religio as the primary observable and territorial rulers as beneficiaries extracting sovereignty from imperial/papal authority. The technological reading treats information infrastructure as the constraint; the theological reading treats doctrinal incompatibility as the constraint. All three share the same historical referent but author different ε values, different beneficiary/victim structures, and different claimed types."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "reformation_composite__technological_mediation_reading",
+      "reformation_composite__theological_fragmentation_reading",
+      "westphalian_sovereignty_system",
+      "state_church_establishment_europe"
+    ],
+    "dual_formulation_note": "The reformation_composite kernel decomposes into three constraint stories with distinct ε values. This reading (political_realignment) has ε=0.78 (high extraction). The technological_mediation_reading likely has lower ε (coordination via information infrastructure). The theological_fragmentation_reading likely has moderate ε (coordination via doctrinal boundary maintenance). The political reading extracts sovereignty from universal authorities; the technological reading coordinates dissent across distances; the theological reading coordinates belief communities. They form a constraint family linked by structural influence: the political reading's cuius regio settlement shaped the operating environment for the other two."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "territorial_rulers",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "German princes, Scandinavian kings, and English monarchs who adopt Reformation to seize ecclesiastical lands, taxation rights, episcopal appointments, and legislative control over doctrine. They set the confessional policy for their territories (cuius regio), enforce it through visitations and consistories, and use religious uniformity as a legitimation basis for sovereign authority. Their exit is arbitrage-grade: they choose the confession that maximizes political advantage (Lutheran, Reformed, Anglican, or remaining Catholic)."
+    },
+    {
+      "name": "emerging_nation_states",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Consolidating monarchies (France, Spain, Sweden, Denmark, England) that use religious policy to centralize authority. In Protestant cases, they become the territorial rulers above. In Catholic cases (France, Spain), they extract gallican liberties from papal authority (concordat of Bologna, patronato real) using the Reformation threat as leverage. They benefit from weakened universal authorities but face different constraint dynamics than German princes."
+    },
+    {
+      "name": "imperial_authority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "The Habsburg Holy Roman Emperor (Charles V, Ferdinand I, Maximilian II, Rudolf II, Ferdinand II, Ferdinand III) loses effective sovereignty over German territories as princes claim jus reformandi. The imperial constitution (Reichsrecht) binds the emperor to defend the Catholic Church but provides no enforcement mechanism against Protestant estates. Trapped in a universalist framework that requires religious unity to function, the emperor cannot exit the constraint without dissolving the Empire. Bears extraction of legislative, judicial, and fiscal rights to the estates."
+    },
+    {
+      "name": "papal_authority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The Roman papacy loses jurisdiction, revenue (annates, Peter's pence), and appointment rights across northern Europe. Unlike the emperor, the papacy has constrained exit: it can (and does) launch Counter-Reformation (Council of Trent, Jesuits, Index, Inquisition) to reclaim territory and reform internally. Retains spiritual authority and southern European territories. The constraint extracts territorial governance but not the papacy's core claim to spiritual primacy."
+    },
+    {
+      "name": "religious_dissenters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Anabaptists, spiritualists, anti-Trinitarians, Calvinists in Lutheran territories, Lutherans in Catholic territories, Catholics in Protestant territories, Jews. Forced into confessional migration (the only exit) or conformity. Identity_locked because religious identity fuses with salvation ontology — exit is not merely costly but existentially unthinkable for many. Bear suppression (exile, execution, property loss, civil disabilities) without political representation. The constraint's suppression is experienced as total."
+    },
+    {
+      "name": "urban_magistrates_and_councils",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Imperial free cities (Nuremberg, Augsburg, Strasbourg, Ulm, etc.) that adopt Reformation to seize church property, control clergy, and assert autonomy from both bishop and emperor. They benefit from ecclesiastical assets and legislative independence but pay enforcement costs (visitations, poor relief, school systems) and face imperial legal challenges. Their exit is constrained: they must negotiate within the imperial framework."
+    },
+    {
+      "name": "merchant_and_artisan_classes",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Urban populations subject to magistrate confessional policies. Pay through mandatory church attendance, tithes redirected to state church, exclusion from guilds/civic office for non-conformists. Some benefit from secularized church poor relief and school systems. Exit is constrained: migration possible but economically costly; confessional affinity networks facilitate movement to co-religionist cities."
+    },
+    {
+      "name": "peasant_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Rural populations bound to lord's confessional policy by serfdom/tenancy and geographic immobility. Bear the brunt of wartime suppression (Thirty Years' War devastation), mandatory attendance, tithe burdens. The Peasants' War (1524-25) showed the cost of resistance. No meaningful exit; identity_locked for those who internalize the territorial confession, trapped for those who do not."
+    },
+    {
+      "name": "historical_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analytical seat observing the constraint's operation across the full interval. Sees the structural asymmetry: territorial rulers gain sovereignty, imperial/papal authority lose governance capacity, populations bear suppression. The kernel contest (political vs. technological vs. theological) is visible from this seat as a classification dispute about the same historical referent."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Territorial religious uniformity solves the coordination problem of legitimate authority in a fragmenting imperial system: it provides a clear jurisdictional boundary (the ruler's territory = the church's territory), a legitimation source (divine right mediated through state church), and a conflict-reduction mechanism (subjects know which confession is legal, reducing confessional violence within territories). The Peace of Augsburg (1555) and Westphalia (1648) institutionalize this as a European coordination system.",
+    "transfer_function": "Moves sovereign rights (legislation, taxation, judicial authority, episcopal appointments) and ecclesiastical assets (land, tithes, endowments) from imperial/papal authority to territorial rulers. Moves conformity costs (conscience, migration, civil disabilities) from territorial rulers to dissenting populations. Moves enforcement costs (visitations, consistories, military suppression) from universal authorities to territorial states.",
+    "absent_voices": "The non-elite populations whose religious lives were reorganized without consultation: peasant communities, urban poor, women (excluded from confessional politics), Jewish communities (subject to expulsion/restriction regimes intensified by confessionalization), and colonial subjects (the Reformation's sovereignty logic extended to papal donation of Americas). Also absent: the pre-Reformation imperial reform movement that sought a national German church under imperial authority — a third way foreclosed by the princes' appropriation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If cuius regio eius religio and the territorial state church system vanished in 1555, the Holy Roman Empire would lack a constitutional settlement for religious difference, likely leading to earlier and more chaotic confessional wars. The territorial sovereigns would lose their primary legitimation basis and ecclesiastical revenue stream. The papacy would retain theoretical jurisdiction but no enforcement mechanism in Germany. The confessional migration system (millions displaced) would not have formed. The Westphalian sovereignty order — built on the cuius regio principle extended to full territorial sovereignty — would lack its historical foundation.",
+    "founding_problem": "The Holy Roman Empire's constitutional failure to integrate rising territorial sovereignty with universal imperial authority, combined with papal fiscal extraction (annates, reservations, indulgences) from German lands, and the demand for a 'Reformation in head and members' that the imperial-papal system could not deliver. Territorial rulers needed a legal basis to appropriate ecclesiastical resources and legislate for their territories without imperial interference.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem (imperial constitutional failure + papal extraction + demand for reform) is attested as dead by the Peace of Westphalia (1648), which recognized territorial sovereignty (jus belli ac pacis, jus reformandi) and ended papal jurisdiction in the Empire — corroborated by the imperial estates themselves (the beneficiaries) and by contemporary jurists (Grotius, Pufendorf) outside the benefiting parties. The arrangement (state churches) persisted for centuries after the problem was resolved, confirming mandatrophy."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "reformation_composite__technological_mediation_reading",
+      "reformation_composite__theological_fragmentation_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "theological_fragmentation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "technological_mediation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "territorial_sovereignty_supersedes_universal_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "religious_uniformity_is_political_order",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "imperial_papal_universalism",
+    "drift_state": {
+      "moment": "westphalian_settlement",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

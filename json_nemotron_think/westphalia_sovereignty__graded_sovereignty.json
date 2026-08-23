@@ -1,0 +1,370 @@
+{
+  "header": {
+    "constraint_id": "westphalia_sovereignty__graded_sovereignty",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_westphalia_sovereignty__graded_sovereignty",
+    "measurement_id_prefix": "wsg",
+    "story_uid": "a61ee321-c899-49db-aa07-d38b171ecf44",
+    "created_at": "2026-08-03T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.78,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Graded Sovereignty: Intervention Legitimacy Calibrated to State Capacity",
+    "topic_domain": "international_law/political_theory/state_systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "capacity_evaluation_authorities",
+      "powerful_states",
+      "international_organizations"
+    ],
+    "victims": [
+      "weak_states",
+      "failed_states",
+      "fragile_states"
+    ],
+    "vindicated_propositions": [
+      "graded_sovereignty_doctrine",
+      "capacity_based_intervention_legitimacy"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_framing_contest",
+      "question": "Is the Westphalian sovereignty kernel a categorical inviolability (absolute_non_intervention), a conditional status (conditional_responsibility), or a scalar capacity (graded_sovereignty)?",
+      "resolution_mechanism": "Comparative analysis of UN Security Council practice, ICJ jurisprudence, and state practice over 1990-2026 to identify which framing dominates authoritative interpretations.",
+      "impact": "If absolute_non_intervention is the true kernel, graded_sovereignty is a deviation; if graded_sovereignty is the kernel, absolute_non_intervention is a myth. Determines whether this reading is a foreclosure or a coexistence.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Irreducible ambiguity about which reading correctly captures the Westphalian kernel."
+    },
+    {
+      "id": "capacity_metrics_legitimacy",
+      "question": "What metrics constitute 'state capacity' for intervention calibration, and who authoritatively defines them?",
+      "resolution_mechanism": "Trace the genealogy of capacity indices (World Bank CPIA, Fragile States Index, OECD DAC criteria) and their adoption in UN/regional organization mandates.",
+      "impact": "If metrics are contested or politicized, the coordination function degrades to extraction; if metrics are stable and accepted, the coordination function is genuine.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Legitimacy of the measurement apparatus that operationalizes the scalar."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of weak-state autonomy structural (enforced by powerful states/institutions) or internalized (weak states accept hierarchical status as legitimate)?",
+      "resolution_mechanism": "Post-intervention trajectory analysis: if weak states resist intervention legitimacy claims after capacity improves, suppression is structural; if they endorse the hierarchy, internalized component is significant.",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests — the constraint persists even without active enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the graded sovereignty hierarchy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.78
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "commentary": {
+    "narrative_context": "The graded sovereignty reading reinterprets the Westphalian kernel from a binary (sovereign/not) to a scalar: territorial authority exists on a spectrum from full (Western democracies) to nominal (failed states). Intervention legitimacy is calibrated to capacity deficits — the less capacity a state demonstrates, the more legitimate external intervention becomes. This creates a de facto tiered state system where powerful states and international organizations act as capacity-evaluation authorities, gaining legitimacy to intervene in weak states. The constraint is actively enforced through UN Security Council resolutions, regional organization mandates, and bilateral intervention doctrines. Weak states bear the costs of lost autonomy and paternalistic oversight; powerful states gain discretionary intervention rights. The coordination function is managing state failure and transnational threats; the extraction function is the concentration of intervention legitimacy in the hands of capacity evaluators.",
+    "key_agents": [
+      "capacity_evaluation_authorities: Primary agenda_setter (institutional/analytical) — defines capacity metrics, authorizes interventions",
+      "powerful_states: Primary beneficiary (institutional) — gains intervention legitimacy, shapes evaluation criteria",
+      "international_organizations: Agenda_setter/beneficiary (institutional) — operationalizes evaluations, gains relevance",
+      "weak_states: Primary payer (organized/powerless) — loses autonomy, subject to conditional sovereignty",
+      "failed_states: Payer (powerless) — nominal sovereignty, maximal intervention legitimacy",
+      "fragile_states: Payer (moderate) — contested sovereignty, conditional intervention risk",
+      "populations_in_weak_states: Excluded (powerless) — affected by interventions but not consulted",
+      "scholars_observers: Observer (analytical) — analyzes the system without stakes"
+    ],
+    "logic_rationale": "Extractiveness (0.72) is high because the constraint transfers substantial autonomy from weak to strong states under the guise of capacity assessment. Suppression (0.78) is high because the tiered hierarchy is maintained by active enforcement (Security Council resolutions, conditionality, military intervention) and the collapse of the absolute sovereignty alternative for weak states. Theater ratio (0.42) is moderate: capacity assessments and humanitarian justifications are real but increasingly performative as the same powerful states that benefit from the hierarchy also dominate the evaluation machinery. Accessibility collapse (0.65) reflects that weak states cannot practically claim absolute sovereignty; resistance (0.55) is moderate — weak states resist rhetorically and occasionally materially, but structural power asymmetry limits effective resistance. The measurement series (1990-2026) shows rising extractiveness and suppression as the post-Cold War order institutionalized the hierarchy, with theater rising as humanitarian language expands to cover strategic interventions.",
+    "perspectival_gap": "From the capacity_evaluation_authorities seat, the constraint is a rope: genuine coordination to manage state failure and protect populations. From the weak_states seat, it is a snare: extraction of autonomy with no exit. From the powerful_states seat, it is a tangled rope: they coordinate (gain legitimacy for interventions they want) and extract (avoid accountability for interventions they impose). The engine will compute these divergences from the structural data — the declared beneficiaries, victims, power levels, and exit options.",
+    "directionality_logic": "Beneficiaries: capacity_evaluation_authorities (d ~0.1), powerful_states (d ~0.25), international_organizations (d ~0.15) — they set the rules and collect legitimacy rents. Victims: weak_states (d ~0.85), failed_states (d ~0.95), fragile_states (d ~0.75) — they bear autonomy losses with constrained exit. Populations_in_weak_states are excluded (d ~0.9) — they experience intervention effects but have no voice in capacity evaluations. Scholars_observers are analytical (d=0.5). Overrides adjust powerful_states upward from derived ~0.1 because they also bear intervention costs (blood/treasure), making them less than full beneficiaries.",
+    "mandatrophy_analysis": "The founding problem (managing state failure and transnational threats) is live but contested — the arrangement has drifted from a transitional post-Cold War mechanism to a permanent hierarchical system. The mandate has not been resolved; instead, the capacity-evaluation apparatus has become self-justifying. The constraint persists because the beneficiaries (powerful states, international organizations) control the evaluation metrics and have no incentive to sunset the hierarchy. This is a classic mandatrophy: the coordination function (managing failure) has been captured by the extraction function (legitimizing intervention).",
+    "kernel_context": "This constraint is the 'graded_sovereignty' reading of the 'westphalia_sovereignty' kernel. The kernel is the Westphalian sovereignty concept. Sibling readings: 'absolute_non_intervention' (sovereignty as categorical inviolability) and 'conditional_responsibility' (sovereignty as conditional on protecting populations, R2P). This reading instantiates sovereignty as a scalar capacity metric, creating a hierarchical state system. It forecloses absolute_non_intervention (cannot hold both scalar and categorical inviolability in one framework) and coexists_with conditional_responsibility (both are live positions in international discourse, held by different coalitions)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "westphalia_sovereignty__absolute_non_intervention",
+      "westphalia_sovereignty__conditional_responsibility"
+    ],
+    "dual_formulation_note": "The Westphalian kernel decomposes into three constraint stories: absolute_non_intervention (mountain claim, low extraction), conditional_responsibility (rope/tangled_rope, moderate extraction), and graded_sovereignty (tangled_rope, high extraction). The graded_sovereignty reading structurally depends on the absolute_non_intervention reading as its foil — the hierarchy only makes sense against a background of nominal equality. It influences conditional_responsibility by providing a capacity-based metric that R2P advocates can adopt or reject."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "capacity_evaluation_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "International organizations (UN, World Bank, IMF), powerful states, and NGOs that define and measure state capacity (CPIA, Fragile States Index, governance indicators). They set the criteria that determine intervention legitimacy, control the evaluation process, and gain institutional relevance and resources from the hierarchy. They can exit by changing metrics or withdrawing from evaluation roles."
+    },
+    {
+      "name": "powerful_states",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Permanent Security Council members and other major powers. They gain discretionary intervention legitimacy in weak states, shape capacity criteria to serve strategic interests, and avoid accountability for selective enforcement. They bear some costs (military, diplomatic, reputational) but these are far outweighed by the strategic autonomy gained. They can exit the constraint by reverting to absolute sovereignty claims, but benefit too much to do so."
+    },
+    {
+      "name": "international_organizations",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "UN Secretariat, regional organizations (AU, EU, OAS), development banks. They operationalize capacity evaluations, authorize peacekeeping and state-building missions, and gain budgetary and mandate expansion from the hierarchy. Their exit is constrained by institutional inertia and dependence on powerful state funding."
+    },
+    {
+      "name": "weak_states",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "States with limited administrative capacity but functioning governments (e.g., many Global South states). They face conditional sovereignty: aid, trade, and security cooperation depend on capacity scores. They lose policy autonomy (conditionality), suffer intervention risk, but cannot exit the system — leaving means losing all international recognition and support."
+    },
+    {
+      "name": "failed_states",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "States with collapsed central authority (e.g., Somalia 1990s, Yemen, South Sudan). They have nominal sovereignty only; intervention legitimacy is maximal. They bear the full costs of external administration, trusteeship, or military intervention with zero capacity to resist or shape evaluation criteria. Exit is impossible — they are the object of the constraint, not agents within it."
+    },
+    {
+      "name": "fragile_states",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "States on the margins of failure (e.g., Afghanistan post-2001, DRC, Haiti). They face continuous evaluation, conditional aid, and threat of escalated intervention. They have some agency to improve scores but are structurally disadvantaged — the metrics reflect institutional capacities they lack. Exit is theoretically possible (build capacity) but practically blocked by the same structural deficits the metrics measure."
+    },
+    {
+      "name": "populations_in_weak_states",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Citizens of weak, fragile, and failed states. They experience the humanitarian and security consequences of interventions (positive and negative) but have no voice in capacity evaluations or intervention decisions. Their consent is neither sought nor required; they are the putative beneficiaries of the coordination function but structurally excluded from its governance."
+    },
+    {
+      "name": "scholars_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "International lawyers, political theorists, IR scholars. They analyze the constraint's legitimacy, efficacy, and justice from outside the system. They do not collect rents or bear costs directly, but their discourse shapes the legitimacy of the evaluation apparatus over long time horizons."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Manages the problem of state failure and transnational threats (terrorism, pandemics, migration, environmental collapse) by providing a calibrated framework for legitimate external intervention when a state cannot fulfill its core functions.",
+    "transfer_function": "Transfers autonomy and decision-making authority from weak/fragile/failed states to capacity_evaluation_authorities and powerful_states, in the form of intervention rights, conditionality, and conditional sovereignty. The transfer is calibrated: the lower the measured capacity, the greater the transfer.",
+    "absent_voices": "Populations in weak states (excluded stakeholder) — they would object to paternalistic interventions that undermine self-determination, but are structurally excluded from the evaluation and authorization process. Also absent: non-Western conceptualizations of sovereignty (e.g., African Union's 'non-indifference' vs. 'non-interference') that challenge the scalar metric.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If graded sovereignty vanished overnight, the international system would revert to a contested binary: either absolute non-intervention (weak states gain full autonomy but lose protection) or ad hoc interventionism (powerful states intervene without any legitimacy framework). The tiered hierarchy, capacity metrics, and conditional aid regimes would collapse, reorganizing North-South relations, UN mandate structures, and development finance.",
+    "founding_problem": "The post-Cold War proliferation of state failure (Somalia, Rwanda, Balkans) created a legitimacy vacuum: absolute sovereignty prevented intervention in genocide and collapse, but unregulated intervention invited abuse. A calibrated framework was needed to distinguish legitimate from illegitimate intervention.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem is attested by UN Secretariat reports (1992 Agenda for Peace, 2000 Brahimi Report) and the Responsibility to Protect (2005) as a live challenge. However, Global South states (Non-Aligned Movement, G77) and critical scholars (Chimni, Anghie) corroborate that the problem has been instrumentalized: the capacity metric serves powerful state interests, not the original humanitarian intent. No neutral arbiter confirms the problem remains as originally framed."
+  },
+  "gain_flow": "powerful_states",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "westphalia_sovereignty__absolute_non_intervention",
+      "westphalia_sovereignty__conditional_responsibility"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "absolute_non_intervention",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "conditional_responsibility",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sovereignty_is_scalar_capacity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "intervention_legitimacy_calibrated_to_capacity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "westphalian_hierarchy",
+    "drift_state": {
+      "moment": "post_cold_war",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

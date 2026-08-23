@@ -1,0 +1,343 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "isc_ffr",
+    "story_uid": "36e4867d-beeb-4569-a1ab-21d93f22bfbd"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.1,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support as Freedom Floor",
+    "topic_domain": "political_economy/social_policy/labor_economics",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "income_support_recipients"
+    ],
+    "victims": [
+      "employers",
+      "taxpayers"
+    ],
+    "vindicated_propositions": [
+      "decommodification_enables_positive_freedom",
+      "exit_option_structures_labor_market_coordination"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "income_support_recipients",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive unconditional income support sufficient for basic subsistence. This provides a genuine exit option from coercive, low-wage, or dangerous work. They can refuse exploitative offers, negotiate better conditions, pursue education or caregiving, or accept work on their own terms. The support is not withdrawn for refusing work, making the exit option structural rather than theoretical."
+    },
+    {
+      "name": "employers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lose the coercive firing power that conditioned labor supply on survival necessity. Must now offer wages and conditions attractive enough to recruit workers who have a genuine fallback. This raises labor costs, particularly for low-wage, high-turnover sectors. Some firms adapt by improving productivity; others lobby for conditionality restoration or import labor. Their 'loss' is the removal of a structural subsidy to low-road business models."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the income support through general taxation. They also benefit from a more stable society, reduced poverty-related costs (healthcare, crime, emergency services), and a labor market where work is genuinely voluntary. The net fiscal incidence is contested; this reading holds that the coordination gains (better job matches, reduced precarity externalities) offset or exceed the gross transfer cost."
+    },
+    {
+      "name": "social_security_administration",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers the unconditional payment infrastructure: universal enrollment, automatic delivery, no means-testing bureaucracy. The administrative burden collapses relative to conditional systems (no caseworkers, sanctions machinery, compliance monitoring). The agency's role shifts from behavioral enforcement to payment reliability — a genuine coordination function."
+    },
+    {
+      "name": "policy_commentariat",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the constraint's effects across readings. Produce evidence on labor supply elasticities, wage dynamics, poverty traps, and fiscal sustainability. Their analyses are cited by all three sibling readings selectively. They do not bear the constraint's costs or collect its benefits directly."
+    },
+    {
+      "name": "precariat_excluded",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Undocumented migrants, informal economy workers, and those without bank accounts or address registration who fall through the universal enrollment net. They would object to the claim that the support is truly unconditional and universal, but their exclusion is structural (administrative invisibility) not intentional. The freedom floor has a hole where they stand."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of matching labor to work without coercion: workers need a genuine fallback to make 'quit' a credible option, which forces employers to make offers worth accepting. The unconditional floor replaces the disciplinary function of poverty with a voluntary matching function.",
+    "transfer_function": "Moves resources from general taxation (taxpayers) to all residents unconditionally (income_support_recipients). Employers face an indirect transfer via higher equilibrium wages for undesirable work — they pay more for labor that was previously subsidized by worker desperation.",
+    "absent_voices": "The precariat_excluded (undocumented, unbanked, administratively invisible) are structurally absent from the universal claim. Employers in low-road sectors who would face the largest wage adjustments are politically vocal but analytically absent from the 'coordination' framing — they frame their loss as 'labor shortage' not 'lost coercion'.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional support vanished overnight, the exit option collapses. Workers return to survival-constrained job acceptance. Employers regain coercive firing power. Low-wage sectors revert to high-turnover, low-investment models. Poverty-related externalities spike. The labor market reorganizes around desperation rather than mutual agreement.",
+    "founding_problem": "The conditional welfare state created a poverty trap: means-testing and work requirements made the support withdraw faster than wages rose, making transition to work financially irrational for many. Simultaneously, the threat of destitution coerced workers into accepting any job, subsidizing exploitative employers. The founding problem was a welfare system that simultaneously trapped recipients in dependency AND subsidized coercive labor markets.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "OECD and ILO analyses of welfare reform trajectories (outside the beneficiary set) document the poverty trap dynamic. Employer surveys from the 1990s welfare reform era (US, UK) explicitly noted 'discipline' benefits of conditionality — corroborating the coercive subsidy claim. The 'dependency trap' reading's own evidence (work disincentive studies) corroborates the trap mechanism but disputes the normative framing."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story models the freedom_floor_reading of the income_support_conditionality kernel. The reading asserts that unconditional income support — a universal, non-means-tested, non-work-conditioned payment — functions as a rope: it solves a genuine coordination problem (voluntary labor matching) by providing a structural exit option from coercive work. Beneficiaries are income_support_recipients (low-wage workers, unemployed, caregivers, precariat) who gain positive freedom to refuse. Employers enter the victim/payer set because they lose the coercive firing power that survival-conditionality provided; they must now compete for labor on equal terms. Taxpayers fund the transfer but are net beneficiaries via reduced precarity externalities. The constraint is claimed as rope (coordination) with low extraction, low suppression, and minimal theater. The claim/metric independence is maintained: the metrics describe a genuine coordination floor; the engine will compute per-seat types from the structural data.",
+    "logic_rationale": "Extractiveness is low (0.15) because the transfer is not extracted from a targeted group for another's gain — it is a universal floor funded by general taxation, and the coordination gains (better matches, reduced turnover, lower poverty costs) are broadly distributed. Suppression is low (0.1) because no enforcement machinery compels participation; the constraint is an offer, not a mandate. Theater is low (0.1) because the administrative apparatus is minimal (universal enrollment, automatic payment) and performs its stated function. Accessibility_collapse is low (0.2) because the labor market remains fully operational — alternatives (work, entrepreneurship, education) expand rather than collapse. Resistance is low (0.2) because the primary opposition is political (pre-implementation), not operational resistance from those governed by the constraint.",
+    "directionality_logic": "Income_support_recipients are structural beneficiaries (d ~ 0.1): the constraint subsidizes their exit option. Employers are structural payers (d ~ 0.7): they lose coercive power and face higher wage bills for undesirable work — the constraint extracts their previous subsidy. Taxpayers sit near symmetric (d ~ 0.5): they fund the floor but gain social stability and labor market efficiency. The social_security_administration is agenda_setter with analytical exit (d ~ 0.2): it administers but does not extract. The precariat_excluded are trapped (d ~ 0.9) but excluded from the beneficiary set — an omega documents this gap.",
+    "perspectival_gap": "The employer seat and recipient seat should compute differently: from the recipient position, the constraint is a genuine coordination floor enabling refusal; from the low-road employer position, the same structure operates as a cost increase and loss of disciplinary leverage. The engine computes this divergence from the structural data. The wage_subsidy_reading would invert this: employers as beneficiaries (wage suppression), recipients as payers (inflation erosion). The dependency_trap_reading would make recipients payers (skill atrophy) and state as agenda_setter (behavioral enforcement).",
+    "mandatrophy_analysis": "The founding problem (poverty trap + coercive labor subsidy) is contested: the dependency_trap_reading claims the problem persists (work disincentives), the wage_subsidy_reading claims the problem shifted (employer capture), this reading claims the problem is substantially solved by decommodification. The constraint persists not from inertia but from active political coalition (recipients + taxpayers benefiting from stability). If the founding problem is dead (automation eliminates low-wage work), the constraint becomes a scaffold with sunset pressure. If live, it remains a rope.",
+    "kernel_context": "This is the freedom_floor_reading of the income_support_conditionality kernel. The kernel is the contested rule: 'income support should be conditional on work-seeking/availability.' Three readings instantiate different constraints: (1) dependency_trap_reading — conditionality prevents dependency; unconditional support is a snare on recipients. (2) wage_subsidy_reading — unconditionality subsidizes employers; a snare on workers via wage suppression. (3) freedom_floor_reading (this story) — unconditionality decommodifies labor; a rope coordinating voluntary exchange. The structural delta: in this reading, employers enter victim set (lose coercive power), low-wage workers exit victim set (gain exit option), type shifts from snare to rope."
+  },
+  "omegas": [
+    {
+      "id": "adequacy_of_freedom_floor",
+      "question": "Is the unconditional payment level actually sufficient to constitute a genuine exit option from coercive work, or does it merely supplement inadequate wages (wage_subsidy_reading's claim)?",
+      "resolution_mechanism": "Empirical measurement of reservation wage shifts and job refusal rates post-implementation, compared to cost-of-living benchmarks and job quality indices.",
+      "impact": "If inadequate, the constraint degrades to tangled_rope (coordination cover for employer subsidy) or snare (inadequate trap). If adequate, rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the payment level delivers the claimed positive freedom."
+    },
+    {
+      "id": "employer_power_reconstitution",
+      "question": "Do employers reconstitute coercive power through other channels (algorithmic management, monopsony, immigration policy, credit dependence) such that the exit option is nominal?",
+      "resolution_mechanism": "Longitudinal study of labor market power indicators (quit rates, wage markdowns, non-compete prevalence, worker surveillance) in jurisdictions with unconditional floors.",
+      "impact": "If coercive power reconstitutes, the constraint's coordination function is undermined — extraction shifts from direct (poverty) to structural (market power), potentially reclassifying to tangled_rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the freedom floor survives employer counter-mobilization."
+    },
+    {
+      "id": "precariat_exclusion_gap",
+      "question": "Does the universal enrollment mechanism actually reach the most coerced workers (undocumented, informal, unbanked), or does the freedom floor have a structural hole at the bottom?",
+      "resolution_mechanism": "Administrative data linkage between payment rolls and informal economy surveys; ethnographic work with excluded populations.",
+      "impact": "If exclusion is systematic and large, the constraint's coordination claim is partial — it coordinates for the visible workforce while leaving the most vulnerable in the snare. This would require a nested constraint story for the excluded stratum.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Universality of the exit option in practice."
+    },
+    {
+      "id": "reading_foreclosure_structure",
+      "question": "Does the freedom_floor_reading's core premise (unconditional support creates positive freedom) logically foreclose the dependency_trap_reading's premise (unconditional support creates dependency) within a single policy framework, or do they coexist as competing coalitions?",
+      "resolution_mechanism": "Analyze whether any implemented system has adopted the freedom_floor premise while formally rejecting the dependency_trap premise (or vice versa), and whether hybrid designs are logically stable.",
+      "impact": "If forecloses, the kernel has a binary structural split. If coexists_with, the kernel sustains permanent policy oscillation. This reading assesses coexists_with.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical relation between freedom_floor and dependency_trap readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_coercion",
+      "conditional_welfare_administration",
+      "minimum_wage_enforcement"
+    ],
+    "dual_formulation_note": "This constraint (freedom_floor_reading) decomposes the income_support_conditionality kernel with dependency_trap_reading and wage_subsidy_reading. The three readings share the kernel (the conditionality rule) but instantiate different constraints with different ε, different beneficiary/victim sets, and different types. This reading's ε (0.15) is low because the referent is the unconditional floor assessed as coordination; dependency_trap_reading's ε would be high (snare on recipients); wage_subsidy_reading's ε would be high (snare on workers via employer capture). They are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "wage_subsidy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditional_income_creates_positive_freedom",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "decommodification_enables_labor_refusal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "universal_unconditional_support_as_freedom_floor",
+    "drift_state": {
+      "moment": "contemporary_policy_debate",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "income_support_conditionality"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "header": {
+    "constraint_id": "maat_order_principle__reciprocity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_maat_order_principle__reciprocity_reading",
+    "measurement_id_prefix": "maat_reciprocity",
+    "story_uid": "addcecde-12e7-4541-b364-a78a3a0e949b"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ma'at Reciprocal Obligation: Pharaoh's Duty to Maintain Cosmic Balance",
+    "topic_domain": "ancient_history/political_philosophy/religious_studies",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "egyptian_population",
+      "priesthood",
+      "bureaucracy"
+    ],
+    "victims": [
+      "peasantry",
+      "conscripted_laborers"
+    ],
+    "vindicated_propositions": [
+      "cosmic_balance_through_reciprocal_obligation",
+      "pharaonic_legitimacy_conditional_on_maat"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the Ma'at kernel, or does it collapse into the divine_mandate_reading in practice?",
+      "resolution_mechanism": "Textual analysis of Middle Kingdom wisdom literature (e.g., Prophecy of Neferti, Admonitions of Ipuwer) vs. New Kingdom royal inscriptions: do they articulate Pharaoh's obligation as conditional (reciprocity) or inherent (divine mandate)?",
+      "impact": "If reciprocal language is rhetorical only and Pharaoh's Ma'at-embodiment is treated as ontological in practice, the reciprocity_reading collapses into divine_mandate_reading and extraction ceiling vanishes.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the reciprocity reading is a live structural alternative or a textual veneer over divine mandate."
+    },
+    {
+      "id": "extraction_ceiling_enforceability",
+      "question": "Does the reciprocity norm (moderate extraction ceiling) have operational teeth, or is resistance/withdrawal of support purely theoretical?",
+      "resolution_mechanism": "Historical record of successful resistance to Pharaonic over-extraction: Harem Conspiracy, tomb robberies as protest, First Intermediate Period breakdowns, priesthood interventions. Measure whether 'justified resistance' ever constrained extraction.",
+      "impact": "If resistance never materially constrained Pharaonic extraction, the ceiling is theoretical and the constraint operates as snare; if resistance did constrain, tangled_rope with genuine reciprocity holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the reciprocity norm's extraction ceiling was enforceable in practice."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is suppression of alternatives to Ma'at-order structural (state monopoly on violence, ideological monopoly) or internalized (cosmic fear, identity fusion with Egyptian order)?",
+      "resolution_mechanism": "Compare suppression intensity during periods of strong central state (Old Kingdom, New Kingdom) vs. intermediate periods: if suppression persists without state enforcement, internalized component is significant.",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests; targets carry cosmic-order internalization after exit attempts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in cosmic-order constraint."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The reciprocity reading of Ma'at holds that cosmic order (Ma'at) is maintained through mutual obligations: Pharaoh must provide justice, stability, and proper resource distribution (via redistribution, temple economies, corvée management), and in return the population owes labor, taxes, and ritual participation. Crucially, Pharaoh is SUBJECT to Ma'at — failed obligations justify resistance or withdrawal of support. This creates a moderate extraction ceiling grounded in the reciprocity norm. The constraint is actively enforced through priesthood interpretation, bureaucratic administration, and ritual performance. It coordinates resource allocation and identity (Egyptian cosmic citizenship) while extracting labor and surplus — a genuine tangled rope.",
+    "logic_rationale": "Extractiveness 0.45: Pharaoh extracts substantial surplus (taxes, corvée, temple donations) but reciprocity norm and justified resistance create a ceiling. Suppression 0.4: structural enforcement exists (state monopoly, ideological apparatus) but resistance is normatively licensed, creating exit pressure. Theater 0.3: rituals (Opet Festival, Sed Festival) are functional coordination but increasingly performative in Late Period. Accessibility collapse 0.5: alternatives (foreign mercenary service, banditry, religious heterodoxy) exist but carry cosmic/social death. Resistance 0.55: historical record shows periodic successful resistance (First Intermediate Period, Harem Conspiracy, tomb robberies as economic protest) but high individual cost.",
+    "directionality_logic": "Pharaoh (agenda_setter, institutional power, identity_locked exit) sits near d=0.3: benefits from extraction but bound by reciprocity norm — constraint subsidizes legitimacy while extracting. Priesthood/bureaucracy (beneficiary, organized power, constrained exit) sit near d=0.25: collect rents from interpretation/administration but depend on Pharaoh's Ma'at-performance. Peasantry/conscripts (payer, powerless, trapped) sit near d=0.85: bear extraction with minimal exit. Population broadly (beneficiary, powerless, constrained) sit near d=0.5: receive justice/distribution but pay for it. The reciprocity norm compresses the d-spread relative to divine_mandate_reading where Pharaoh would be d≈0.1.",
+    "perspectival_gap": "From Pharaoh's seat: Ma'at is the coordination mechanism that makes rule possible — genuine rope. From peasant seat: Ma'at is the ideology that makes extraction feel like cosmic duty — snare. From priesthood seat: Ma'at is the source of their interpretive authority — beneficiary. The engine computes this divergence from the structural data; the reciprocity reading's claimed tangled_rope captures the structural truth that all three seats are simultaneously real.",
+    "mandatrophy_analysis": "The founding problem (coordinating Nile flood agriculture, defense, and cosmic order in a unified polity) remains live but transformed: the reciprocity norm that capped extraction atrophied as Pharaonic power centralized (New Kingdom imperial extraction), then the constraint persisted as piton-theater in Late Period/Ptolemaic when Pharaohs were foreign and Ma'at became purely performative. The reciprocity reading specifically captures the Middle Kingdom articulation where the ceiling was most operative.",
+    "kernel_context": "This constraint is the reciprocity_reading of the maat_order_principle kernel. Sibling readings: divine_mandate_reading (Pharaoh embodies Ma'at ontologically, cannot violate it), distributed_maintenance_reading (all actors from Pharaoh to commoner sustain Ma'at through proper conduct in their station). This reading differs by making Pharaoh's obligation conditional and enforceable: Pharaoh is subject to Ma'at, failed obligations justify resistance, extraction has a reciprocity-grounded ceiling."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "pharaonic_taxation",
+      "temple_economy",
+      "corvee_labor_system",
+      "nile_flood_management",
+      "royal_succession"
+    ],
+    "dual_formulation_note": "Part of maat_order_principle constraint family. This reciprocity_reading extracts the conditional-obligation strand; divine_mandate_reading extracts the ontological-embodiment strand; distributed_maintenance_reading extracts the universal-duty strand. All three share the Ma'at kernel but instantiate different constraints with different ε, beneficiaries, and types."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "pharaoh",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Administers Ma'at through law, redistribution, temple endowments, and military defense. Embodies the reciprocal obligation: must provide justice, stability, and proper distribution. Collects surplus via taxation and corvée but is bound by reciprocity norm — over-extraction risks loss of legitimacy, priesthood opposition, and justified resistance. Identity fused with kingship role; exit means cosmic and political death."
+    },
+    {
+      "name": "priesthood",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Interprets and ritualizes Ma'at; controls temple economies (land, labor, redistribution). Benefits from Pharaoh's endowments and Ma'at-performance. Can constrain Pharaoh through oracular authority and ritual legitimacy. Exit constrained by temple estates and religious identity; could defect to rival cults but loses institutional position."
+    },
+    {
+      "name": "bureaucracy",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Manages taxation, corvée allocation, granaries, and justice administration. Collects rents from position (corruption, patronage). Depends on Pharaonic Ma'at-performance for institutional stability. Exit constrained by specialized skills and institutional embeddedness; could serve foreign powers but loses status."
+    },
+    {
+      "name": "peasantry",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Provides agricultural surplus, corvée labor, and military service. Receives flood management, grain redistribution in famine, local justice, and cosmic order maintenance. Exit nearly impossible: tied to land, monitored by bureaucracy, cosmic fear of desert (isfet). Resistance takes forms of flight, banditry, tomb robbery, or petition — all high-risk."
+    },
+    {
+      "name": "conscripted_laborers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Drafted for state projects (pyramids, temples, quarries, military campaigns). Receive rations and cosmic merit but bear extreme physical cost. No exit during service; desertion punished severely. Their labor is the extraction base for monumental Ma'at-performance."
+    },
+    {
+      "name": "foreign_mercenaries",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Serve Egyptian state but stand outside Ma'at reciprocity. Not bound by cosmic obligations, not entitled to Ma'at-justice. Their exclusion defines the boundary of the reciprocal community. Would argue for contractual rather than cosmic obligation if present."
+    },
+    {
+      "name": "cosmic_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Sees the full structure: Ma'at as a coordination-extraction system that stabilized Nile civilization for millennia through reciprocal obligation, with a genuine ceiling on extraction that distinguished it from pure despotism, but which degraded as imperial extraction outpaced reciprocity enforcement."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates Nile flood agriculture, surplus redistribution, defense, and cosmic-order maintenance across a unified polity — solving the collective action problem of large-scale hydraulic civilization through a single sacred framework.",
+    "transfer_function": "Moves agricultural surplus, corvée labor, and ritual participation from population to Pharaoh/state/temples; moves justice, stability, famine relief, cosmic legitimacy, and identity (Egyptian-ness) from Pharaoh/state to population.",
+    "absent_voices": "Women's voices in Ma'obligation (beyond queen/goddess roles); foreign residents (Nubians, Libyans, Asiatics) subject to extraction but excluded from Ma'at-reciprocity; dissenting theological voices (Atenist interlude, heterodox priesthoods) suppressed by orthodoxy.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Ma'at-reciprocity vanished overnight, Pharaonic legitimacy would collapse, redistribution systems would fail, corvée would become pure coercion, priesthood would lose interpretive monopoly, and the polity would fragment into warlordism or foreign conquest — as seen in Intermediate Periods.",
+    "founding_problem": "Coordinating large-scale hydraulic agriculture, defense, and cosmic-order maintenance in a unified Nile polity required a single framework that bound ruler and ruled in mutual obligation, preventing both tyrannical over-extraction and chaotic under-coordination.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Middle Kingdom texts (Prophecy of Neferti, Admonitions of Ipuwer, Loyalist Teaching) attest the reciprocity norm as live and binding. New Kingdom imperial practice and Late Period theological treatises attest its attenuation. Egyptological consensus (Assmann, Hornung, Kemp) corroborates the Middle Kingdom as peak reciprocity articulation; the founding problem's status is contested between 'live but transformed' and 'dead but ritualized' readings."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "maat_order_principle"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "divine_mandate_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "distributed_maintenance_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "pharaoh_subject_to_maat",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "reciprocity_binds_extraction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "failed_obligation_justifies_resistance",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "reciprocal_kingship_framework",
+    "drift_state": {
+      "moment": "late_new_kingdom_imperial_peak",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

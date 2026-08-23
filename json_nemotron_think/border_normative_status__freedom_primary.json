@@ -1,0 +1,391 @@
+{
+  "header": {
+    "constraint_id": "border_normative_status__freedom_primary",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "76adb680-b9a8-46c4-aac5-d8fec106c885"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.88,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.91,
+    "resistance": 0.73,
+    "claimed_type": "snare",
+    "human_readable": "Border Regime as Impermissible Restriction on Freedom of Movement",
+    "topic_domain": "political_philosophy/international_law/migration_studies",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "citizenries_of_wealthy_states",
+      "border_enforcement_agencies",
+      "capital_owners_in_destination_states"
+    ],
+    "victims": [
+      "excluded_migrants",
+      "asylum_seekers",
+      "displaced_domestic_workers",
+      "stateless_persons"
+    ],
+    "vindicated_propositions": [
+      "freedom_of_movement_as_fundamental_human_right",
+      "border_abolitionism",
+      "equality_of_opportunity_across_borders"
+    ]
+  },
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_freedom_primary",
+      "question": "This constraint is one reading (freedom_primary) of the contested kernel border_normative_status. Sibling readings: sovereignty_primary (states have foundational authority to exclude), qualified_sovereignty (states retain control but must exercise proportionately). What structural elements do the readings genuinely disagree on versus merely emphasis?",
+      "resolution_mechanism": "Map each reading's beneficiary/victim structure, enforcement justification, and disappearance verdict. The freedom_primary reading declares excluded_migrants as rights-holders whose exclusion is violation; sovereignty_primary declares them as legitimate non-members; qualified_sovereignty declares them as subjects of proportionate control.",
+      "impact": "If readings share the same ε referent (the standing border regime) but author different beneficiary/victim structures, they are distinct constraints linked by network.affects_constraints. If they author different ε referents, they are different topics entirely.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment kernel decomposition: border_normative_status has three declared readings with different structural grammars"
+    },
+    {
+      "id": "coordination_function_absence",
+      "question": "From the freedom_primary reading, does the border regime possess ANY genuine coordination function, or is the coordination story (security, order, welfare state sustainability) entirely cover for extraction?",
+      "resolution_mechanism": "Test whether open borders arrangements (e.g., Schengen internal borders, historical open borders eras) produce coordination collapse or functional alternatives. If coordination persists without exclusion, the coordination story is falsified for this reading.",
+      "impact": "If no coordination function exists, claimed_type = snare is structurally correct. If a minimal coordination function exists (e.g., infectious disease control), claimed_type = tangled_rope with very high extraction asymmetry.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the border regime's coordination claims are structurally real or rhetorical cover"
+    },
+    {
+      "id": "suppression_mechanism_borders",
+      "question": "Is the suppression of movement structural (walls, laws, detention, deportation) or partially internalized (would-be migrants self-exclude due to perceived illegitimacy, fear, or identity fusion with 'citizen' vs 'foreigner' categories)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if suppression persists after physical barriers are removed (e.g., internalized belief that 'I have no right to move'), reclassify as partially internalized. Compare migration flows when legal pathways open vs. remain closed.",
+      "impact": "If internalized, the constraint's effective suppression is higher than structural measures suggest — the target carries the suppression with them. This affects χ computation for identity_locked agents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in border enforcement"
+    },
+    {
+      "id": "displaced_domestic_worker_victimhood",
+      "question": "In what structural sense are 'displaced domestic workers' victims of the border regime from the freedom_primary reading? Is this wage competition, moral injury from complicity, or lost solidarity?",
+      "resolution_mechanism": "Trace the causal chain: border regime -> restricted labor supply -> wage effects for domestic workers. But also: border regime -> racialized labor hierarchy -> degraded conditions for all workers. Distinguish extraction via borders from extraction via capital.",
+      "impact": "If domestic workers are co-victims with migrants, cross-class coalition becomes structurally possible. If they are beneficiaries (wage protection), the victim set is narrower and coalition harder.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether domestic workers are victims or beneficiaries of border restrictions in this reading"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.88
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The freedom_primary reading of the border_normative_status kernel asserts that freedom of movement is a fundamental human right, and that borders which restrict it are presumptively impermissible. Exclusion requires extraordinary justification that almost no contemporary border regime meets. The standing arrangement under contest is the global border regime: a system of territorial exclusion enforced by wealthy states against would-be migrants, asylum seekers, and stateless persons. From this reading, the regime extracts life chances, economic opportunity, and bodily autonomy from the globally disadvantaged, transferring them to citizenries of wealthy states and to border enforcement apparatuses. The coordination story (security, welfare state sustainability, democratic self-determination) is evaluated as cover; the empirical record shows borders harden as migration pressure rises, not as security threats materialize. The constraint is classified as a snare: pure extraction maintained by coercion, with alternatives (open borders, regional free movement, visa liberalization) actively suppressed.",
+    "key_agents": [
+      "excluded_migrants: Primary target (powerless/trapped) — bears extraction of freedom, opportunity, life",
+      "asylum_seekers: Primary target (powerless/trapped) — bears extraction plus persecution risk",
+      "displaced_domestic_workers: Secondary target (moderate/constrained) — bears wage suppression and moral injury from racialized hierarchy",
+      "citizenries_of_wealthy_states: Primary beneficiary (institutional/arbitrage) — collects rent from exclusion, controls rule-making",
+      "border_enforcement_agencies: Agenda setter (institutional/analytical) — administers extraction, expands mission",
+      "capital_owners_in_destination_states: Secondary beneficiary (powerful/arbitrage) — captures labor arbitrage from segmented markets",
+      "stateless_persons: Excluded victim (powerless/trapped) — bears double exclusion",
+      "migration_advocates: Observer (organized/analytical) — documents violation, litigates, organizes"
+    ],
+    "logic_rationale": "Extractiveness (0.82) is very high: the border regime transfers the vast majority of global income variance (place premium) from would-be migrants to destination-state citizenries. Suppression (0.88) is near-maximal: walls, detention, deportation, visa regimes, carrier sanctions, and externalization (e.g., EU-Turkey deal, US Remain in Mexico) create a layered enforcement stack. Theater ratio (0.45) is moderate: security theater (terrorism, crime) and welfare theater (fiscal burden) are real but diminishing as justifications; the enforcement stack increasingly serves only exclusion. Accessibility collapse (0.91) is extreme: for most of humanity, legal migration pathways are effectively nonexistent. Resistance (0.73) is high: migrants resist through irregular movement, asylum claims, legal challenges; advocacy networks resist through litigation, sanctuary, direct action; some sending states resist through diplomatic pressure. The claimed_type is snare: the constraint extracts from the powerless, benefits the powerful, requires active enforcement, and suppresses alternatives. No genuine coordination function survives scrutiny from this reading.",
+    "perspectival_gap": "From the agenda_setter seat (border_enforcement_agencies), the constraint appears as necessary coordination: managing sovereignty, security, and public order. From the payer seats (excluded_migrants, asylum_seekers, displaced_domestic_workers), it appears as violent extraction: denying life chances for accidents of birth. From the beneficiary seats (citizenries_of_wealthy_states, capital_owners), it appears as protective coordination: preserving wages, welfare, and cultural cohesion. The engine computes per-seat χ from these structural positions. The freedom_primary reading denies the agenda_setter's coordination claim as legitimate, but the structural positions remain: the agenda_setter administers, the payers pay, the beneficiaries collect.",
+    "directionality_logic": "Citizenries_of_wealthy_states and capital_owners are structural beneficiaries: they collect the place premium (d ≈ 0.1-0.2). Border_enforcement_agencies are agenda_setters who also benefit institutionally (budget, mission, authority) (d ≈ 0.15). Excluded_migrants, asylum_seekers, and stateless_persons are full targets: trapped, identity-locked (cannot change birth nationality), bearing the full extraction (d ≈ 0.95-1.0). Displaced_domestic_workers are partial targets: they bear wage suppression and hierarchy effects but have citizenship exit options (d ≈ 0.6-0.7). Migration_advocates are analytical observers (d = 0.5 by definition). The directionality derivation from beneficiary/victim declarations + exit options produces these d values; no overrides needed.",
+    "mandatrophy_analysis": "The border regime's founding problem (Westphalian interstate conflict management) is dead — interstate war among wealthy states has been eliminated by nuclear deterrence and economic integration, not by borders. The regime persists as a zombie arrangement extracting from the globally poor. The mandatrophy is unresolved: the constraint's mandate (manage conflict) has evaporated, but its extraction machinery has hypertrophied. This is not a scaffold (no sunset clause) and not a piton (active enforcement, concentrated beneficiaries). It is a snare whose coordination cover story has collapsed.",
+    "kernel_context": "This constraint is the freedom_primary reading of the border_normative_status kernel. The kernel is the normative status of borders: are they legitimate instruments of collective self-determination (sovereignty_primary), proportionate exercises of state authority (qualified_sovereignty), or impermissible restrictions on a fundamental human right (freedom_primary)? This reading instantiates the third position. Sibling readings: sovereignty_primary (states have foundational authority to exclude non-members), qualified_sovereignty (states retain border control but must exercise it proportionately to legitimate interests and consistently with human rights). The freedom_primary reading forecloses sovereignty_primary (logical contradiction: foundational authority vs. impermissible restriction) and coexists_with qualified_sovereignty (different parties hold each; qualified_sovereignty is the dominant legal framework in international law)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "global_migration_governance",
+      "asylum_system",
+      "citizenship_regimes",
+      "labor_market_segmentation",
+      "global_inequality_structure"
+    ],
+    "dual_formulation_note": "This constraint (freedom_primary) and sovereignty_primary are dual formulations of the border_normative_status kernel. They share the same referent (the global border regime) but author opposite beneficiary/victim structures and opposite claimed_types (snare vs. rope/mountain). The qualified_sovereignty reading occupies an intermediate structural position."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "excluded_migrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Would-be migrants from low-income countries who are denied legal pathways to move. They bear the full cost of the border regime: wage differentials of 10x-20x (place premium), family separation, physical danger in irregular movement, exploitation in informal labor markets. Exit is trapped — they cannot change their nationality, and legal pathways are effectively closed. Some are identity_locked: their self-concept and life plans are constituted by the places they cannot reach."
+    },
+    {
+      "name": "asylum_seekers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "People fleeing persecution who encounter the border regime as a barrier to safety. They bear extraction plus mortal risk: pushbacks, detention, refoulement, years in camps. The regime's coordination story (refugee protection) is directly falsified by its operation — the right to seek asylum exists in law but is made practically inaccessible by enforcement. Exit is trapped: they cannot return, and forward movement is blocked."
+    },
+    {
+      "name": "displaced_domestic_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Workers in wealthy countries who experience wage suppression and degraded conditions from labor market segmentation enforced by borders. The border regime creates a racialized, precarious migrant workforce that employers use to discipline domestic labor. These workers are structurally co-victims with migrants, but political rhetoric pits them against each other. Exit is constrained: they can vote, organize, move within the country, but cannot easily escape the national labor market structure."
+    },
+    {
+      "name": "citizenries_of_wealthy_states",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Citizens of high-income states who capture the place premium — the massive wage and opportunity differential created by border exclusion. They control the political agenda on migration through democratic processes that exclude the affected. Their exit is arbitrage-grade: they can move freely to most countries, access global labor markets, and opt out of the costs of enforcement (which are socialized). They benefit from both the exclusion rent and the cheap goods/services produced by excluded labor."
+    },
+    {
+      "name": "border_enforcement_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The administrative and coercive apparatus that designs, implements, and expands border enforcement: CBP, ICE, Frontex, national border guards, detention systems, deportation machinery. They set the operational agenda, lobby for expanded budgets and authorities, and produce the knowledge that justifies their own expansion. Their exit is analytical: they understand the system from inside but are structurally committed to its perpetuation. They are the constraint's administrators and its most concentrated institutional beneficiary."
+    },
+    {
+      "name": "capital_owners_in_destination_states",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Employers and investors in wealthy countries who benefit from segmented global labor markets. Borders create a reserve army of labor that cannot fully enter, depressing wages and disciplining domestic workers. They lobby for 'guest worker' programs that maximize exploitation while minimizing rights. Their exit is arbitrage-grade: capital moves freely while labor is trapped. They are secondary beneficiaries — the primary extraction flows to citizenries as political rents, but they capture economic rents."
+    },
+    {
+      "name": "stateless_persons",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "People with no recognized nationality who bear double exclusion: denied the rights of citizens everywhere, and denied the minimal protections of the refugee regime. The border regime renders them permanently rightless. Exit is trapped in the deepest sense: there is no state that claims them, and no state that will admit them. They are the limit case of the border regime's extraction."
+    },
+    {
+      "name": "migration_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "NGOs, lawyers, activists, scholars, and international organizations that document border violence, litigate rights violations, provide humanitarian aid, and advocate for open borders or expanded pathways. They see the full structure but cannot directly alter it. Their exit is analytical: they can leave the field, but their professional identity is often fused with the struggle. They are the analytical seat that names the constraint as snare."
+    },
+    {
+      "name": "sending_states",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Countries of origin that lose human capital through emigration but gain remittances. They are structurally excluded from the rule-making that determines their citizens' mobility. Some cooperate with enforcement (readmission agreements) in exchange for visa concessions or aid. Their exit is constrained: they cannot unilaterally open destination states' borders, but they can resist externalization and organize regionally (e.g., African Union free movement protocol)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Manages cross-border movement through centralized state control, allocating territory-based rights, distributing public goods, and maintaining interstate order. Claims to solve: security threats, welfare state sustainability, democratic self-determination, cultural cohesion.",
+    "transfer_function": "Moves freedom of movement, economic opportunity (place premium), bodily safety, and life chances from would-be migrants and asylum seekers to citizenries of wealthy states and capital owners. Moves enforcement costs (taxpayer-funded) to domestic publics. Moves political agency from the globally affected to national electorates.",
+    "absent_voices": "Would-be migrants who never reach borders (deterred by visa regimes, carrier sanctions, information barriers). Stateless persons with no state to speak for them. Future generations who will inherit a segmented world. Non-human animals and ecosystems bisected by border walls. The global poor who never get to vote on the regimes that exclude them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the border regime vanished overnight, global labor markets would integrate, place premiums would collapse, remittances would be replaced by wages earned at destination, refugee camps would empty, detention centers would close, and the global distribution of income and opportunity would fundamentally reorganize. Wealthy states would lose their exclusion rent; capital would lose its segmented labor markets; domestic workers would gain bargaining power from global solidarity; migrants would gain full mobility. The world would rearrange radically.",
+    "founding_problem": "The Westphalian system built borders to manage interstate conflict and allocate territorial sovereignty after religious wars (1648). The modern border regime was consolidated in the late 19th/early 20th century to control labor migration (Chinese Exclusion, European emigration controls) and solidify nation-states.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "International relations scholars (e.g., John Mueller, Steven Pinker) document the long decline of interstate war among major powers, attributed to nuclear deterrence, economic integration, and democratic peace — not border enforcement. Migration historians (e.g., Adam McKeown, Aristide Zolberg) show that modern border controls were built for labor exclusion and racial hierarchy, not interstate security. The interstate war problem is solved; the border regime persists for extraction."
+  },
+  "gain_flow": "citizenries_of_wealthy_states",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "global_inequality_structure"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "sovereignty_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "qualified_sovereignty",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "freedom_of_movement_fundamental_human_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "exclusion_requires_extraordinary_justification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "place_premium_as_unjust_extraction",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "open_borders_natural_right",
+    "drift_state": {
+      "moment": "contemporary_border_regime",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

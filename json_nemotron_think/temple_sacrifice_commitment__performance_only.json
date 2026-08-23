@@ -1,0 +1,311 @@
+{
+  "header": {
+    "constraint_id": "temple_sacrifice_commitment__performance_only",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_temple_sacrifice_commitment__performance_only",
+    "measurement_id_prefix": "tsc_perf",
+    "story_uid": "ff1d3581-db32-4c40-88ca-18a6965006c0"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.05,
+    "theater_ratio": 0.85,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.1,
+    "claimed_type": "piton",
+    "human_readable": "Material Performance Requirement for Temple Sacrifice (Dormant)",
+    "topic_domain": "religious/halakhic/commitment_system",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "traditionalist_authorities",
+      "identity_maintaining_community"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "divine_command_eternal",
+      "temple_restoration_certainty"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "traditionalist_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Rabbinic authorities who maintain the halakhic requirement for material sacrifice performance. They administer the study tradition (kodashim tractates, Temple service liturgy) as preparation for restoration. Their interpretive authority derives from the claim that the divine command remains binding in its original material form. They benefit from the constraint's persistence as it anchors their authority in an unchangeable divine mandate."
+    },
+    {
+      "name": "identity_maintaining_community",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Lay communities (particularly Haredi and Religious Zionist) for whom the sacrifice commitment functions as an identity boundary. They invest time in study, liturgy, and Temple Institute activities. The constraint's persistence provides continuity with ancestral practice and distinguishes them from liberal movements. They bear the cost of maintaining a practice whose material fulfillment is currently impossible, including cognitive dissonance and opportunity cost of study directed toward a dormant telos."
+    },
+    {
+      "name": "reformist_voices",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Progressive halakhic voices, ethical critics, and liberal denominations who argue the sacrifice commitment has been superseded or transformed. They would object to the performance_only reading's claim that material instantiation remains obligatory, and to the potential future restoration without ethical evolution (animal welfare, gender egalitarianism). They are structurally excluded from the authoritative interpretive chain."
+    },
+    {
+      "name": "potential_future_priests",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Future kohanim who would be obligated to perform sacrifices if restoration occurred. They have no current voice but would bear the full material burden (ritual impurity management, animal slaughter, professional specialization). Their exclusion is structural — they do not yet exist — but the constraint binds them prospectively. The omega variable 'future_victim_set_if_restoration' tracks this."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "External scholar of commitment systems, religious law, or halakhic theory. Sees the full structure: a constraint that was once a coordination mechanism (Temple service) now persists as a dormant husk (piton) while generating a low-epsilon coordination rope (study) pointed at a future that may never arrive or may arrive transformed."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Historically coordinated the centralized Temple sacrificial system — a complex resource-allocation and identity-coordination mechanism requiring priestly rotations, animal supply chains, purity maintenance, and pilgrim management. Currently coordinates a study practice (kodashim learning, Temple Institute activity) that maintains readiness and communal identity toward a postulated future restoration.",
+    "transfer_function": "Transfers interpretive authority and communal loyalty to traditionalist authorities who hold the performance_only reading. Transfers identity-maintenance costs (study time, cognitive commitment, Temple Institute donations) to the identity_maintaining_community. Transfers prospective material burden to potential_future_priests. No current material transfer occurs because the constraint cannot be materially satisfied.",
+    "absent_voices": "Reformist halakhic voices who read the commitment as transformed (symbolic_transformation reading) or superseded; animal welfare ethicists who would challenge restoration; feminist critics who would challenge gendered priestly roles; secular Israelis who would bear political costs of Temple Mount contention. These voices are excluded from the authoritative interpretive chain (traditionalist_authorities) that maintains the performance_only reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the performance requirement constraint vanished overnight, the study rope (kodashim learning, Temple Institute, liturgical references) would lose its teleological anchor — the 'toward-what' of its coordination. The traditionalist_authorities would lose the unchangeable divine mandate that anchors their interpretive authority. The identity_maintaining_community would lose a core differentiator from liberal movements. The world of halakhic practice and Jewish communal politics would rearrange significantly.",
+    "founding_problem": "How to maintain the divine service obligation after the Temple's destruction (70 CE) made material performance impossible, while preserving the claim that the obligation itself remains binding and unabrogated.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Traditionalist authorities (Rambam Hilkhot Beit HaBechirah, contemporary poskim) attest the problem remains live — the obligation is eternal, only conditions prevent fulfillment. Historical critics (Josephus, early Christian writers, modern scholars) attest the problem was 'solved' by transformation (prayer substituting for sacrifice, symbolic_transformation reading). The corroboration split mirrors the kernel contest itself — no external neutral arbiter exists."
+  },
+  "interval": {
+    "start": 0,
+    "end": 1950
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The performance_only reading of the temple_sacrifice_commitment kernel holds that the biblical mandate for animal sacrifice in the Jerusalem Temple requires material instantiation — actual animals, actual altar, actual priestly service. Study of sacrifice law (kodashim), liturgical commemoration, and Temple Institute preparations are, on this reading, archival preservation of a defunct practice. They do not 'occupy' the commitment; they preserve its memory. The constraint (material performance requirement) is a piton: its primary function atrophied with the Temple's destruction (70 CE), but it persists through institutional inertia and theatrical maintenance via study. The study practice itself is a separate, low-epsilon rope coordinating readiness for a postulated messianic restoration. No current victim set exists because the constraint cannot be enforced materially, but a future victim set (kohanim obligated to perform, animals slaughtered, political conflict over Temple Mount) would emerge if restoration were attempted without ethical evolution.",
+    "logic_rationale": "Extractiveness is near-zero (0.05) because no material performance occurs and study costs are low/voluntary. Suppression is near-zero (0.05) because no one is coerced into study or prevented from dissenting (exit is mobile for reformists). Theater ratio is high (0.85) because the study/liturgy apparatus performs the constraint's former function theatrically — maintaining the appearance of occupancy while the material referent is absent. Accessibility collapse is moderate (0.3) because alternative readings (symbolic_transformation, study_as_exercise) exist and are live in other communities. Resistance is low (0.1) because the constraint's dormancy makes it unthreatening; resistance would target a restoration attempt, not the dormant requirement. The measurement series shows the historical trajectory: high extraction/suppression when Temple stood (T=0), collapsing after destruction, with theater rising as study replaced performance.",
+    "directionality_logic": "Traditionalist_authorities are beneficiaries (d ~ 0.1) — they collect interpretive authority and communal loyalty from the constraint's persistence. Identity_maintaining_community are symmetric beneficiaries/payers (d ~ 0.5) — they gain identity coherence but pay study costs. Reformist_voices are excluded (d not computed) — they would be targets if restoration occurred. Potential_future_priests are excluded but prospectively trapped (d ~ 1.0 if restoration) — they would bear full material burden with zero exit. The engine will compute per-seat χ from these structural positions.",
+    "perspectival_gap": "From the traditionalist_authorities seat, the constraint is a living divine mandate temporarily in abeyance — a mountain-like obligation. From the identity_maintaining_community seat, it is a coordination rope (low cost, high identity value). From the analytical_observer seat, it is a piton — a degraded coordination mechanism persisting theatrically. The reformist_voices seat sees a snare-in-waiting. The engine computes these divergences from the structural data; the claimed_type (piton) represents the analytical observer's structural assessment.",
+    "mandatrophy_analysis": "The mandate (divine command for material sacrifice) has outlived its material conditions. The performance_only reading explicitly diagnoses this as mandatrophy: the arrangement persists (piton) while its founding problem (how to perform divine service) is contested — traditionalists say live, critics say dead. The study rope is the mandatrophic residue: a coordination mechanism detached from its telos, maintained because the authority structure (traditionalist_authorities) extracts legitimacy from denying the mandate's abrogation. The classification prevents mislabeling this as pure extraction (snare) because current extraction is negligible, and prevents mislabeling as coordination (rope) because the coordination target (material performance) is absent. Piton captures the theatrical persistence of a dead mandate.",
+    "kernel_context": "This constraint story instantiates the 'performance_only' reading of the 'temple_sacrifice_commitment' kernel. Sibling readings: 'study_as_exercise' (study IS performance), 'hybrid_preparatory' (study maintains suspended commitment), 'symbolic_transformation' (prayer/study ARE the new instantiation). This reading declares the commitment a dormant husk — material instantiation required, study merely archival. The kernel contest centers on whether the divine command's form is fixed (performance_only) or transformable (other three readings)."
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_reading",
+      "question": "This constraint is one reading (performance_only) of the contested kernel 'temple_sacrifice_commitment'. What are the structural consequences of treating the performance requirement as a dormant piton versus a live mandate?",
+      "resolution_mechanism": "Compare classification outputs across all four kernel readings. If performance_only computes as piton while study_as_exercise computes as rope, the kernel contest maps to a type contest. Track whether the engine's per-seat classification diverges across readings for the same agents.",
+      "impact": "If the kernel contest is structurally a type contest (different readings → different constraint types), the framework validates kernel decomposition. If all readings compute the same type despite different ε, the contest is evaluative not structural.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commiter-frame omega: structural mapping of kernel contest to type contest"
+    },
+    {
+      "id": "future_victim_set_if_restoration",
+      "question": "If Temple restoration were attempted, would the performance_only reading generate a victim set (kohanim, animals, political actors) that reclassifies the constraint from piton to snare/tangled_rope?",
+      "resolution_mechanism": "Counterfactual modeling: specify restoration scenario (messianic, political, gradual) and compute χ for potential_future_priests, animal_welfare_subjects, palestinian_jerusalem_residents. If χ exceeds snare threshold for any group, the dormant piton contains a latent snare.",
+      "impact": "Latent snare detection would mean the piton classification is temporally indexed — currently piton, potentially snare. This affects mandatrophy resolution: a constraint with latent victims has not truly resolved its mandate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Latent victim set in restoration counterfactual"
+    },
+    {
+      "id": "theater_vs_genuine_coordination",
+      "question": "Is the study rope (kodashim learning, Temple Institute) genuine low-epsilon coordination for a plausible future, or is it entirely theatrical maintenance of the piton?",
+      "resolution_mechanism": "Measure study community's actual preparation behaviors (Temple Institute vessel production, priestly training, architectural planning) vs. purely liturgical engagement. If material preparation exceeds symbolic commemoration, coordination function is non-zero.",
+      "impact": "If study is genuine coordination (rope), the piton has a functional symbiote. If study is purely theatrical, the piton stands alone — higher theater_ratio, stronger mandatrophy signal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the study practice is functional coordination or pure theater"
+    },
+    {
+      "id": "natural_law_vs_constructed_ambiguity",
+      "question": "Traditionalist authorities claim the performance requirement is divine law (mountain-like naturalness). Analytical observers see a constructed halakhic category. Is the piton classification stable against the mountain claim?",
+      "resolution_mechanism": "False summit mountain (FSM) test: if traditionalist authorities are declared beneficiaries on a mountain claim, FSM triggers reclassification to tangled_rope. Here we claim piton, not mountain, so FSM does not apply directly. But the ambiguity remains: does the authority structure's mountain-claim function as extraction cover?",
+      "impact": "If the mountain claim is cover for authority extraction, the piton's theater_ratio understates the constraint's extractive history. The mandate's 'divine' framing may be the extraction mechanism.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the divine-law framing is structural cover for authority extraction"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "temple_sacrifice_commitment__study_as_exercise",
+      "temple_sacrifice_commitment__hybrid_preparatory",
+      "temple_sacrifice_commitment__symbolic_transformation",
+      "kodashim_study_rope",
+      "temple_institute_coordination"
+    ],
+    "dual_formulation_note": "This constraint (performance_only) and its three siblings form the temple_sacrifice_commitment kernel family. Each reading instantiates a different constraint with different ε: performance_only (piton, ε≈0.05), study_as_exercise (rope, ε≈0.1), hybrid_preparatory (scaffold?, ε≈0.2), symbolic_transformation (mountain?, ε≈0.0). The performance_only reading forecloses symbolic_transformation (material vs. symbolic instantiation are mutually exclusive in a single framework) but coexists_with study_as_exercise and hybrid_preparatory (different parties hold them simultaneously)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.5
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "study_as_exercise",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_preparatory",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "temple_sacrifice_commitment__symbolic_transformation",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "material_instantiation_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "study_is_archival_not_occupational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "temple_service_operative",
+    "drift_state": {
+      "moment": "post_destruction_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "piton",
+    "downstream_of": [
+      "temple_sacrifice_commitment"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

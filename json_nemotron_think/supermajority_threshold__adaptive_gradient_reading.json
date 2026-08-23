@@ -1,0 +1,329 @@
+{
+  "header": {
+    "constraint_id": "supermajority_threshold__adaptive_gradient_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_supermajority_threshold__adaptive_gradient_reading",
+    "measurement_id_prefix": "supermajority_threshold__adaptive_gradient_reading",
+    "story_uid": "42c7ff66-3093-4cd6-bb92-ad6b12600b71",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.45,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.5,
+    "claimed_type": "rope",
+    "human_readable": "Supermajority Threshold (Adaptive Gradient Reading)",
+    "topic_domain": "constitutional_theory/political_economy/institutional_design",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "the_polity",
+      "democratic_process"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "constitutional_stability_requires_calibrated_thresholds",
+      "reversibility_costs_must_inform_amendment_rules"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "majority_factions",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Seek to amend the constitution through simple majoritarian procedures but are blocked by the supermajority threshold. They bear the cost of delayed or prevented reforms. Exit involves constitutional crisis or extra-legal action."
+    },
+    {
+      "name": "minority_factions",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Use the supermajority threshold to block changes that threaten their interests. They benefit from the veto power the threshold confers. Exit is difficult because their protection is embedded in the constitutional structure."
+    },
+    {
+      "name": "the_polity",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Gains systemic stability and protection against transient majoritarian passions. The threshold acts as a coordination mechanism ensuring changes reflect deep consensus. Exit is not meaningful for the polity as a whole."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interpret and enforce the supermajority threshold. They administer the constraint and can influence its calibration through jurisprudence. They are the primary institutional actors capable of tuning the threshold."
+    },
+    {
+      "name": "future_generations",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the long-term reversibility costs of constitutional decisions made today. They have no voice in current threshold calibration and cannot exit the consequences of present constitutional rigidity or instability."
+    },
+    {
+      "name": "comparative_constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study supermajority thresholds across jurisdictions, measure consensus formation rates and reversibility costs, and provide evidence for calibration. They do not directly bear costs or collect benefits from any specific threshold."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents constitutional instability from transient majorities while allowing adaptation when deep, persistent consensus exists. The threshold solves the collective-action problem of distinguishing fleeting preferences from enduring democratic will.",
+    "transfer_function": "Transfers veto power over constitutional change from simple majorities to supermajorities, effectively moving decision authority from current majorities to a broader consensus requirement that includes minority acquiescence.",
+    "absent_voices": "Future generations who bear reversibility costs but cannot participate in current calibration debates; marginalized groups whose consensus formation rates may differ from the majority and are not captured in existing measurement frameworks.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the supermajority threshold vanished overnight, constitutional amendments would proceed by simple majority, likely increasing amendment frequency, reducing minority protections, and potentially destabilizing the constitutional order. The polity would reorganize around new amendment dynamics.",
+    "founding_problem": "Balancing constitutional stability against democratic responsiveness: preventing both frequent destabilizing changes driven by transient majorities and permanent entrenchment of outdated provisions that block necessary adaptation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Comparative constitutional law scholars (e.g., Richard Albert, Yaniv Roznai) and political scientists studying amendment difficulty (e.g., John Dinan) attest from outside the benefiting parties that the balancing problem persists and that empirical calibration of thresholds remains debated. No consensus exists on optimal thresholds."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.45,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The adaptive gradient reading views the supermajority threshold not as an intrinsic safeguard or a permanent veto, but as a functional tool whose legitimacy depends on continuous calibration to empirically measurable social consensus formation rates and the reversibility costs of constitutional decisions. This reading rejects both the consensus safeguard framing (which treats the threshold as a fixed expression of deep democratic will) and the minoritarian veto framing (which treats it as an entrenched privilege). Instead, it sees the threshold as a parameter that must be evidence-tuned: too low and it fails to prevent instability (rope tension), too high and it becomes a snare extracting consensus from majorities. The constraint's extraction is moderate because current thresholds in many systems are partially miscalibrated; suppression is moderate because the threshold is enforced by courts but alternatives (informal amendment, judicial interpretation) persist; theater is low because the threshold performs a genuine coordination function when calibrated.",
+    "key_agents": [
+      "majority_factions: Primary payer (powerful/constrained) — bears cost of blocked reforms",
+      "minority_factions: Primary beneficiary (moderate/constrained) — gains veto protection",
+      "the_polity: Coordination beneficiary (organized/mobile) — gains systemic stability",
+      "constitutional_courts: Agenda setter (institutional/analytical) — administers and can tune threshold",
+      "future_generations: Excluded (powerless/trapped) — bears long-run reversibility costs",
+      "comparative_constitutional_scholars: Observer (analytical/analytical) — provides calibration evidence"
+    ],
+    "logic_rationale": "Extractiveness (0.35) reflects that current thresholds often exceed what consensus formation rates justify, creating moderate extraction from majorities. Suppression (0.45) is moderate because courts enforce the threshold but informal amendment pathways and judicial review provide partial alternatives. Theater (0.15) is low because the threshold performs real coordination (preventing instability) rather than mere performance. Accessibility collapse (0.65) is high because constitutional amendment rules are entrenched and alternatives (revolution, judicial reinterpretation) are costly. Resistance (0.5) is moderate: majorities push for lower thresholds, minorities defend higher ones, scholars advocate calibration. The claimed type 'rope' reflects the reading's view that a well-calibrated threshold is pure coordination; the metrics reflect the real-world miscalibration that introduces extractive elements.",
+    "perspectival_gap": "From the majority_factions seat, the threshold appears as a snare (high extraction, constrained exit). From the minority_factions seat, it appears as a rope (coordination benefit, low extraction). From the_polity seat, it is a rope when calibrated, tangled_rope when miscalibrated. From constitutional_courts, it is an agenda-setting tool they administer. The engine will compute these seat-specific classifications from the structural data.",
+    "directionality_logic": "Majority_factions are payers (d near 1.0) because they bear the cost of supermajority requirements. Minority_factions are beneficiaries (d near 0.0) because they gain veto power. The_polity is a coordination beneficiary (d near 0.2) gaining stability. Constitutional_courts are agenda_setters (d near 0.3) with institutional power to shape calibration. Future_generations are excluded (d near 0.8) bearing irreversibility costs with no voice. Scholars are observers (d=0.5). Exit options differentiate: majorities have constrained exit (can push amendments but face high threshold), minorities have constrained exit (protected but locked in), polity has mobile exit (can migrate but not from constitutional order), courts have analytical exit (can reinterpret), future generations are trapped, scholars are analytical.",
+    "mandatrophy_analysis": "The threshold's original mandate (balancing stability and responsiveness) remains live but contested. The adaptive gradient reading prevents mislabeling coordination as extraction by insisting on empirical calibration: if the threshold matches actual consensus formation rates, it is a rope; if it exceeds them, it becomes a snare. The mandate has not atrophied because the balancing problem persists, but the fixed threshold in many constitutions has become a piton (theatrical maintenance of an outdated calibration). The reading's evidence-based tuning requirement is the antidote to mandatrophy.",
+    "kernel_context": "This constraint is the adaptive_gradient_reading of the supermajority_threshold kernel. Sibling readings: consensus_safeguard_reading (threshold ensures deep democratic consensus) and minoritarian_veto_reading (threshold empowers blocking minorities). This reading differs by grounding legitimacy in measurable performance (consensus formation rates, reversibility costs) rather than intrinsic value. The structural disagreement is located in the threshold's calibration parameter: consensus_safeguard treats it as fixed by principle, minoritarian_veto treats it as a power resource, adaptive_gradient treats it as an empirical variable."
+  },
+  "omegas": [
+    {
+      "id": "calibration_empirical_gap",
+      "question": "What are the actual social consensus formation rates and reversibility costs for constitutional changes in existing polities, and how do current supermajority thresholds compare?",
+      "resolution_mechanism": "Comparative empirical study of amendment success rates, public opinion dynamics, and policy reversal costs across jurisdictions with varying thresholds.",
+      "impact": "If current thresholds systematically exceed empirically justified levels, the adaptive gradient reading's claim that they are miscalibrated snares is validated; if thresholds match empirical optima, the consensus_safeguard reading gains support.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether existing supermajority thresholds are empirically calibrated to consensus formation rates and reversibility costs."
+    },
+    {
+      "id": "kernel_reading_structure",
+      "question": "How does the adaptive_gradient_reading structurally relate to the consensus_safeguard_reading and minoritarian_veto_reading of the supermajority_threshold kernel?",
+      "resolution_mechanism": "Analyze whether the adaptive reading's core premise (legitimacy requires empirical calibration) logically forecloses, coexists with, or influences the sibling readings' premises (fixed deep consensus vs. entrenched minority veto).",
+      "impact": "Determines the reading_relations in cs_structure and whether the kernel contains genuine foreclosure pairs or a coexisting triplet.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relationships among the three declared readings of the supermajority_threshold kernel."
+    },
+    {
+      "id": "threshold_reversibility_measurement",
+      "question": "Can reversibility costs of constitutional decisions be measured in a way that is both politically legitimate and methodologically sound?",
+      "resolution_mechanism": "Develop and test metrics for constitutional decision reversibility (e.g., amendment frequency, judicial reversal rates, policy feedback loops) across diverse constitutional systems.",
+      "impact": "If reversibility costs are measurable, the adaptive gradient reading's calibration framework becomes operational; if not, the reading's empirical claim is undermined.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility of measuring constitutional reversibility costs for threshold calibration."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_amendment_process",
+      "judicial_review_standards",
+      "federalism_power_allocation"
+    ],
+    "dual_formulation_note": "This adaptive_gradient_reading decomposes the supermajority_threshold kernel with consensus_safeguard_reading and minoritarian_veto_reading. The adaptive reading treats the threshold as a tunable parameter (ε varies with calibration), while the sibling readings treat it as a fixed principle (consensus safeguard) or a power resource (minoritarian veto). The ε-invariance principle requires separate stories because the referent (the threshold) is evaluated under different calibration assumptions, yielding different extraction profiles."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.8
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "consensus_safeguard_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "minoritarian_veto_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "threshold_legitimacy_requires_empirical_calibration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "constitutional_stability_and_adaptability_are_measurable",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "evidence_based_calibration_framework",
+    "drift_state": {
+      "moment": "contemporary_constitutional_practice",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_legitimacy__public_health_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_vaccine_mandate_legitimacy__public_health_primacy_reading",
+    "measurement_id_prefix": "vaccine_mandate_ph",
+    "story_uid": "c89e9f06-a917-4b91-ac85-9440197dc42e"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vaccine Mandate Authority — Public Health Primacy Reading",
+    "topic_domain": "public_health/constitutional_law/bioethics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "public_health_bureaucracy"
+    ],
+    "victims": [
+      "unvaccinated_individuals"
+    ],
+    "vindicated_propositions": [
+      "state_duty_prevent_collective_harm",
+      "unvaccinated_status_negative_externality",
+      "police_power_justifies_health_mandates"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_bureaucracy",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Designs, promulgates, and enforces vaccine mandates through regulatory rulemaking and emergency orders. Gains expanded institutional authority, budget, and policy reach through mandate administration. Justifies mandates as necessary to prevent collective harm from disease spread. Can shift between agencies and advisory roles if political winds change."
+    },
+    {
+      "name": "unvaccinated_individuals",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face employment termination, educational exclusion, travel restrictions, and social marginalization for declining vaccination. Bear the direct coercive force of the mandate. Some hold sincere religious or philosophical objections; others distrust institutions or assess personal risk differently. Exit requires either compliance (vaccination) or accepting severe civic and economic exclusion. Limited ability to organize politically due to stigma."
+    },
+    {
+      "name": "vaccinated_population",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive the primary coordination benefit: reduced disease transmission, protected healthcare capacity, and restored social functioning. Also bear indirect costs (tax funding for mandate enforcement, potential adverse events). Generally supportive of mandates but not the constituency capturing the authority gains. Can exit by relocating to jurisdictions with different policies."
+    },
+    {
+      "name": "immunocompromised_individuals",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cannot be vaccinated or mount adequate immune response; depend entirely on population-level suppression of pathogen circulation for survival. Have no meaningful exit — their safety is structurally bound to the mandate's coordination function. Do not capture authority gains; their interest is purely in the public health outcome."
+    },
+    {
+      "name": "legislative_bodies",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enact enabling statutes for mandate authority, appropriate funding, and conduct oversight hearings. Some legislators leverage mandate politics for electoral gain; others seek to constrain executive overreach. Share institutional interest in maintaining legislative primacy over emergency powers. Can shift policy direction through new legislation but face political costs."
+    },
+    {
+      "name": "courts",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate constitutional challenges to mandates (free exercise, due process, equal protection, non-delegation). Apply varying standards of review (rational basis, strict scrutiny, Jacobson reasonableness). Their rulings shape the enforceable boundary of mandate authority but they do not administer mandates nor bear their costs. Institutional legitimacy depends on perceived neutrality."
+    },
+    {
+      "name": "employers_institutions",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Compelled to enforce mandates on employees/students (verification, termination, accommodation processes). Bear compliance costs, litigation risk, and workforce disruption. Some support mandates for operational stability; others resist as overreach. Cannot easily exit — non-compliance brings fines and liability. Caught between state coercion and constituent pressure."
+    },
+    {
+      "name": "vaccine_manufacturers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Gain guaranteed demand, liability shields, and regulatory priority through mandate-driven procurement. Capture significant financial gains but do not administer mandates. Their interest aligns with mandate expansion but they are not the authority-holding bureaucracy. Can redirect production globally if national markets shift."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Achieves population-level immunity sufficient to interrupt pathogen transmission, protect healthcare system capacity, and safeguard those who cannot be vaccinated — a genuine collective action problem where individual vaccination decisions create externalities.",
+    "transfer_function": "Moves compliance costs, bodily autonomy burdens, and civic exclusion onto unvaccinated individuals; moves institutional authority, budgetary control, and policy discretion to public health bureaucracy; moves financial gains to vaccine manufacturers; moves epidemiological protection to the general and immunocompromised populations.",
+    "absent_voices": "Children and future cohorts subject to mandate precedent without current political voice; undocumented immigrants excluded from both mandate protections and enforcement data; global populations in vaccine-scarce regions whose access is affected by high-income country mandate-driven procurement. The bodily_autonomy_primacy reading's constituency is structurally excluded from the public health bureaucracy's decision loop.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If mandate authority vanished overnight, vaccination rates would drop in key subpopulations, endemic transmission would resume, immunocompromised individuals would lose their primary protection layer, public health agencies would lose a core regulatory lever, and manufacturers would face demand collapse. The epidemiological and institutional landscape would reorganize within months.",
+    "founding_problem": "Recurrent epidemic cycles overwhelming healthcare infrastructure and causing mass mortality/morbidity before vaccines; the free-rider problem where individual vaccination decisions under-protect the collective; the need for a state capacity to respond to novel pathogens with speed and coordination.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historical epidemiology (smallpox, polio eradication) corroborates the coordination necessity. The public health bureaucracy attests the problem remains live (novel pathogen threat, waning immunity, variant evolution). The bodily_autonomy_primacy reading and risk_stratification reading attest the founding problem is either solved by less coercive means or never justified blanket authority — legislative dissent, judicial opinions, and international policy divergence (e.g., Nordic non-mandate approaches achieving similar outcomes) corroborate the contested status from outside the benefiting bureaucracy."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.78
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the public_health_primacy_reading of the vaccine_mandate_legitimacy kernel: the claim that the state's duty to prevent collective harm justifies mandatory vaccination authority, framing unvaccinated status as a negative externality. The reading asserts that mandate authority is a legitimate exercise of police power for public health coordination. The authored metrics describe a constraint with substantial and rising extractiveness (bureaucracy gains authority beyond epidemiological necessity), high and escalating suppression (coercive enforcement expanding in scope and severity), and growing theater (compliance performativeness decoupled from transmission dynamics). The claimed_type is tangled_rope — genuine coordination function (population immunity) coexisting with asymmetric extraction (authority capture by bureaucracy, costs borne by refusers).",
+    "logic_rationale": "Extractiveness (0.68) reflects the gap between the epidemiological justification (targeted, proportional measures) and the actual mandate scope (broad, often indiscriminate, persisting after emergency phase). Suppression (0.78) is high because the constraint's persistence depends on active enforcement — employment termination, school exclusion, travel bans — not voluntary compliance. Theater (0.42) captures the growing share of enforcement activity that serves bureaucratic self-preservation rather than transmission reduction (e.g., mandates for low-transmission settings, booster requirements without transmission-blocking evidence). Accessibility collapse (0.62) is moderate: alternatives (exemptions, testing, remote work) exist but are narrowing. Resistance (0.71) is high and sustained across legal, political, and civil society channels.",
+    "directionality_logic": "Public health bureaucracy is the structural beneficiary (d ~ 0.15): it sets the agenda, collects authority gains, and has arbitrage-grade exit (can rotate to advisory roles, NGOs, academia). Unvaccinated individuals are full targets (d ~ 0.9): they bear the coercive force, have constrained exit (comply or accept exclusion), and moderate power (some legal/political recourse but stigmatized). Vaccinated population and immunocompromised are beneficiaries of the coordination function (d ~ 0.3-0.4) but not the extraction. Employers are payers (d ~ 0.65): they bear enforcement costs with constrained exit. Manufacturers are beneficiaries (d ~ 0.2) with arbitrage exit. Courts are analytical observers (d = 0.5).",
+    "perspectival_gap": "From the bureaucracy's seat, the constraint is a rope (coordination solving a real collective action problem). From the unvaccinated seat, it is a snare (pure extraction suppressing exits). From the immunocompromised seat, it is a mountain (their survival structurally depends on it). From the employer seat, it is a tangled rope (they coordinate compliance but extract nothing). The engine computes this divergence from the structural data — the authored claim does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (epidemic control) is real but the mandate's proportionality has drifted. The bureaucracy's authority has expanded beyond the epidemiological necessity — mandates persist for pathogens with lower severity, broader age groups, and diminishing transmission-blocking efficacy. This is mandatrophy: the coordination function (population immunity) has been partially achieved or changed context, but the authority structure persists and expands. The risk_stratification reading captures this drift by demanding actuarial proportionality; the bodily_autonomy reading rejects the premise entirely. The tangled_rope classification captures the hybrid: coordination remains real but extraction has layered on top.",
+    "kernel_context": "This constraint is the public_health_primacy_reading of the vaccine_mandate_legitimacy kernel. The kernel is the contested commitment: 'the state may compel vaccination.' Three readings instantiate different constraints from this kernel: (1) this reading — public health primacy, state duty justifies mandate, unvaccinated = externality; (2) bodily_autonomy_primacy_reading — medical self-sovereignty absolute, state coercion categorically impermissible; (3) risk_stratification_reading — mandate legitimacy contingent on actuarial risk threshold, blanket mandates fail proportionality. This reading's ε (0.68) assesses the standing mandate regime as the public health bureaucracy sees it: high extraction because the regime exceeds proportional necessity. The bodily_autonomy reading would author higher ε for the same regime; the risk_stratification reading would author lower ε for targeted mandates but higher for blanket ones."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Does the public_health_primacy_reading logically foreclose the bodily_autonomy_primacy_reading within a single legal framework, or do they coexist as competing but structurally compatible positions?",
+      "resolution_mechanism": "Constitutional doctrine analysis: if a framework can simultaneously recognize a state duty to prevent harm AND a sphere of medical self-sovereignty (e.g., via strict scrutiny with compelling interest test), they coexist. If the duty is treated as categorically overriding, the bodily_autonomy reading is foreclosed.",
+      "impact": "If forecloses, the kernel has a binary structure — one reading wins, the other is excluded. If coexists_with, the kernel sustains permanent contestation with shifting dominance. This changes the CS drift analysis: foreclosure implies terminal attractor; coexistence implies cyclical or stable pluralism.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the two primacy readings are logically mutually exclusive or can both be live in one framework."
+    },
+    {
+      "id": "proportionality_threshold_ambiguity",
+      "question": "At what epidemiological threshold does this reading's mandate authority become disproportionate — and who decides?",
+      "resolution_mechanism": "Judicial review standards (Jacobson reasonableness vs. strict scrutiny), legislative sunset provisions, or independent epidemiological trigger metrics. The reading's silence on a specific threshold is the ambiguity.",
+      "impact": "If no threshold exists, the reading tends toward unbounded authority (extraction without coordination limit). If a threshold exists and is binding, the reading self-limits toward rope. The risk_stratification reading exists precisely to operationalize this threshold.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the reading contains an internal proportionality brake or requires external constraint."
+    },
+    {
+      "id": "bureaucracy_capture_vs_mission",
+      "question": "Is the measured extractiveness driven by public health bureaucracy's self-interested authority expansion, or by genuine mission demands in a changing pathogen landscape?",
+      "resolution_mechanism": "Compare mandate scope/timing to independent epidemiological indicators (R0, IFR, healthcare capacity, variant immune escape). If mandates expand when indicators contract, capture is indicated. If mandates track indicators with lag, mission demand is indicated.",
+      "impact": "If capture, the extraction is structural and the tangled_rope classification understates the snare component. If mission-driven, the rising ε reflects genuine coordination difficulty and the classification is accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether authority growth tracks epidemiological necessity or bureaucratic self-preservation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading",
+      "vaccine_mandate_legitimacy__risk_stratification_reading",
+      "public_health_emergency_powers",
+      "school_vaccination_requirements",
+      "healthcare_worker_mandates"
+    ],
+    "dual_formulation_note": "This reading and its two siblings form the vaccine_mandate_legitimacy constraint family. The public_health_primacy_reading (this story) claims the kernel authorizes broad mandate authority. The bodily_autonomy_primacy_reading claims the kernel forbids any mandate. The risk_stratification_reading claims the kernel authorizes only proportionate, risk-calibrated mandates. Their ε values diverge because they assess different structural referents: this reading assesses the actual standing mandate regime; the bodily_autonomy reading assesses the same regime as categorically extractive; the risk_stratification reading assesses a hypothetical calibrated regime. They are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "gain_flow": "public_health_bureaucracy",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "jacobson_police_power_tradition",
+    "drift_state": {
+      "moment": "post_covid_emergency_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "risk_stratification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_duty_prevent_collective_harm_justifies_mandate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "unvaccinated_status_creates_negative_externality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "public_health_emergency_powers"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

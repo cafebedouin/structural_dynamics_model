@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__simulation_as_proxy",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_competence_exercise_validity__simulation_as_proxy",
+    "measurement_id_prefix": "cev_sim_proxy",
+    "story_uid": "900332e5-316d-4409-bbf5-2737fad420c2"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.55,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation Validity as Competence Exercise Proxy",
+    "topic_domain": "safety_engineering/organizational_learning/competence_retention",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "regulators",
+      "operators",
+      "simulation_vendors"
+    ],
+    "victims": [
+      "frontline_workers",
+      "public_communities"
+    ],
+    "vindicated_propositions": [
+      "simulation_validity_doctrine",
+      "regulatory_compliance_sufficiency"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Set and enforce standards that accept simulation metrics as proof of competence retention. They gain regulatory legitimacy and measurable compliance data without requiring costly or risky real exercises. They can point to simulation records to demonstrate oversight effectiveness."
+    },
+    {
+      "name": "operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Nuclear, chemical, aviation, and other high-hazard facility operators. They meet regulatory requirements through scheduled simulations rather than full-scale exercises or continuous drill cycles. This is cheaper, less disruptive to operations, and produces auditable records. They bear residual risk if simulation proves inadequate, but that risk is delayed and diffuse."
+    },
+    {
+      "name": "simulation_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Companies that design, build, and run simulation facilities and scenarios. They have a direct financial interest in the regulatory doctrine that simulation counts as valid exercise. They shape scenario design, fidelity standards, and assessment metrics. Their market exists because the constraint creates demand for their product."
+    },
+    {
+      "name": "frontline_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Control room operators, shift supervisors, maintenance crews, emergency responders. They participate in simulations that are scored as 'successful' but know the gaps: no real radiation, no real toxic release, no real time pressure with lives at stake, no organizational chaos. If a real event occurs, they bear the consequence of any competence gap. Exit means leaving the profession or the facility."
+    },
+    {
+      "name": "public_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Communities surrounding high-hazard facilities. They are told safety is assured because regulators accept simulation records. They have no voice in whether simulation is sufficient, no exit from geographic exposure, and bear the full consequence if competence has decayed beneath the simulation veneer."
+    },
+    {
+      "name": "safety_critics",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Independent safety researchers, former regulators, worker representatives, and engineers who argue simulation creates false confidence. They point to events where sim-trained operators failed (Fukushima, Deepwater Horizon, Texas City). They are structurally excluded from the regulatory compliance process that defines 'valid exercise.'"
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Sees the full structure: a regulatory framework that substituted a measurable proxy (simulation metrics) for the unmeasurable target (actual competence under catastrophe conditions), creating a coordination benefit (standardized, repeatable, auditable) that carries an extraction tail (competence decay shifted to workers and public)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a standardized, repeatable, auditable way for high-hazard industries to exercise emergency response competence without waiting for real catastrophes. Solves the genuine problem: how to demonstrate and maintain readiness when real events are (thankfully) rare.",
+    "transfer_function": "Moves resources (training budget, operational downtime, regulatory attention) from continuous drill cycles and full-scale exercises to discrete simulation events. Moves risk from organizations (who get compliance certificates) to frontline workers and public communities (who bear the consequence if the proxy fails). Moves epistemic authority from operational experience to simulation metrics.",
+    "absent_voices": "Frontline workers who experience the sim-reality gap daily; communities downstream of facilities who have no say in the validation standard; independent safety researchers whose evidence of proxy failure is treated as anecdotal rather than structural. They are absent from the regulatory rulemaking that defines 'valid exercise' and from the certification audits that accept simulation records.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If simulation ceased to count as valid exercise overnight, operators would be forced back to continuous drill cycles, full-scale exercises, and alternative competence maintenance regimes. Regulatory frameworks would lose their primary compliance metric. The entire certification and oversight infrastructure would need restructuring. The safety case for many facilities would collapse without the simulation record.",
+    "founding_problem": "After a sequence of major accidents (Three Mile Island 1979, Bhopal 1984, Challenger 1986, Piper Alpha 1988), regulators and industry needed a way to demonstrate continuous competence retention without requiring real catastrophes. The founding problem was: how to prove readiness when the thing you're readying for must never happen.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Regulatory bodies (NRC, IAEA, OSHA, EASA) and operators attest the founding problem is solved: simulation provides auditable, repeatable evidence of competence. Independent safety researchers (e.g., Perrow, Reason, Hollnagel), worker unions (USW, IFPTE), and post-accident investigation boards (Columbia, Deepwater Horizon, Fukushima) attest the founding problem persists: simulation measures performance in a proxy environment, not competence in the target environment. The corroboration is split along the beneficiary/payer line."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the 'simulation_as_proxy' reading of the contested kernel 'competence_exercise_validity.' The reading asserts that simulation-based drills — proxy-catastrophes — are valid and sufficient exercises for maintaining operational competence in high-hazard domains (nuclear, chemical, aviation, oil/gas). The regulatory framework (NRC, IAEA, OSHA PSM, EASA) codifies this: a successful simulation equals a valid competence demonstration. The coordination function is real — it solved the genuine problem of how to exercise readiness without real disasters. But the extraction tail grew: simulation metrics replaced the thing they proxy for; scenario fidelity plateaued while regulatory acceptance hardened; operators optimized for simulation scores rather than deep competence; vendors shaped the standard to their product. The claimed_type is tangled_rope because the reading presents itself as pure coordination (rope) while the metrics reveal asymmetric extraction (payers: workers/public; beneficiaries: regulators/operators/vendors) sustained by active enforcement (regulatory compliance).",
+    "logic_rationale": "Extractiveness (0.65) is substantial because the constraint extracts actual competence maintenance and replaces it with simulation compliance — the gap between proxy and target is the extraction. Suppression (0.55) is moderate because alternatives (continuous refresh, full-scale exercises, red-teaming) are not banned but are structurally discouraged: they cost more, lack the auditable metric, and don't satisfy the regulatory checkbox. Theater_ratio (0.45) is rising because an increasing share of simulation activity is performative — scripting scenarios to known parameters, coaching crews, grading on checklist compliance rather than adaptive response. Accessibility_collapse (0.50) reflects that alternatives exist but require swimming upstream against the regulatory current. Resistance (0.55) comes from workers, critics, and post-accident findings, but has not shifted the regulatory baseline.",
+    "directionality_logic": "Regulators are agenda_setters with arbitrage-grade exit (they write the rules, face no personal consequence) — d near 0.0 (beneficiary). Operators are beneficiaries with constrained exit (they could push for real exercises but lose competitive parity and regulatory goodwill) — d ~0.25. Simulation_vendors are beneficiaries with mobile exit — d ~0.15. Frontline_workers are payers with constrained exit (profession-specific human capital, facility-specific knowledge) — d ~0.75. Public_communities are payers with trapped exit (geographic, generational) — d ~0.95. Safety_critics are excluded — their structural position is outside the constraint's coordination/extraction calculus. The engine computes per-seat χ from these structural positions.",
+    "perspectival_gap": "From the regulator/operator seat: this is a rope — a genuine coordination mechanism that solved a real problem cheaply and audibly. From the worker/public seat: this is a snare — the coordination story is cover for extracting real readiness and replacing it with a metric that looks like readiness. The engine will compute different types for different seats from the same structural data. That divergence is the measurement.",
+    "mandatrophy_analysis": "The founding problem (demonstrating competence without real catastrophes) was real and the simulation solution was a genuine coordination innovation. But the mandate has outlived its function: simulation adequacy is now treated as proven rather than provisional; the proxy has become the target; competence decay beneath the simulation veneer is the mandate's exhaust. The constraint is not a pure snare — it still coordinates — but it is not a pure rope either. Tangled_rope captures the hybrid: the coordination function is real but the extraction tail is structural and growing. The mandatrophy is unresolved: the arrangement persists because it solves the regulators' and operators' problem (compliance, cost, liability management) even as it fails the workers' and public's problem (actual competence).",
+    "kernel_context": "This constraint is the 'simulation_as_proxy' reading of the contested kernel 'competence_exercise_validity.' The kernel is the question: what counts as valid exercise for competence retention in high-hazard domains? This reading instantiates the constraint: simulation counts; drills are proxy-catastrophe; regulatory compliance on simulation metrics is sufficient. Sibling readings: 'continuous_refresh_hybrid' (simulation necessary but not sufficient; requires continuous drill cycles) and 'real_catastrophe_only' (only real catastrophe truly exercises competence; simulation is insufficient substitute). This reading forecloses real_catastrophe_only (mutually exclusive core premises) and coexists_with continuous_refresh_hybrid (different parties hold both; regulators accept simulation but increasingly require refresh cycles)."
+  },
+  "omegas": [
+    {
+      "id": "simulation_real_world_gap",
+      "question": "Is the gap between simulation performance and real catastrophe response structural (unbridgeable by fidelity improvements) or bridgeable (closable with better scenarios, stress inoculation, VR/AR, AI-driven adaptive opponents)?",
+      "resolution_mechanism": "Longitudinal studies comparing simulation metrics to real-event performance where real events occur; controlled experiments varying simulation fidelity dimensions; post-accident forensic analysis of operator decisions vs. simulation training records.",
+      "impact": "If structural, the constraint's core premise (simulation_sufficiency) is false — the coordination function is a mirage and the constraint is a snare. If bridgeable, the extraction is a maturity gap and the constraint could evolve toward rope with investment.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the sim-real gap is a fundamental limit or an engineering challenge."
+    },
+    {
+      "id": "regulatory_capture_of_validity",
+      "question": "Does the regulatory framework's acceptance of simulation as sufficient serve industry convenience and vendor markets over actual safety outcomes?",
+      "resolution_mechanism": "Trace the history of simulation standard-setting (ANSI/ANS, IAEA NS-G-2.15, NRC RG 1.219): who wrote the standards, who testified, what evidence was required, what alternatives were considered and rejected. Compare regulatory stringency for simulation validation vs. real exercise validation.",
+      "impact": "If capture is structural, the beneficiary declarations are understated — operators and vendors are not incidental beneficiaries but co-authors of the constraint. The constraint would reclassify toward snare. If the framework is evidence-driven, the current tangled_rope classification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the validation standard is evidence-based or interest-shaped."
+    },
+    {
+      "id": "competence_decay_measurement",
+      "question": "Can we measure actual competence decay under simulation-only regimes, or is the decay inherently unobservable until a real catastrophe reveals it?",
+      "resolution_mechanism": "Develop latent competence indicators: decision-making latency under novel stressors, cross-scenario adaptation metrics, physiological stress markers, team communication pattern analysis. Validate against simulator-to-real transfer studies in domains with higher event frequency (aviation, military).",
+      "impact": "If measurable, the extraction becomes visible and contestable — regulators could mandate decay monitoring. If inherently unobservable until failure, the constraint's extraction is structurally hidden and the mandatrophy is unresolvable without a real event.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the extraction (competence decay) is observable or latent."
+    },
+    {
+      "id": "committer_structure_ambiguity",
+      "question": "Is the 'simulation_as_proxy' reading a stable interpretation of the competence_exercise_validity kernel, or does it contain an internal contradiction: it claims simulation is sufficient while depending on the unproven assumption that simulation metrics track real competence?",
+      "resolution_mechanism": "Formal analysis of the reading's axioms: simulation_sufficiency_for_competence (conventional) + proxy_catastrophe_equivalence (empirically_contingent). If the empirical axiom is challenged but the conventional axiom holds, the reading persists by convention despite empirical contradiction — a classic CS drift pattern.",
+      "impact": "If the reading rests on a conventional axiom that shields an empirically challenged axiom from revision, the CS drift_state (axiom_overriding, unacknowledged) is confirmed. The reading's legitimacy depends on the interpretation_layer absorbing the empirical challenge without surfacing kernel revision.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the reading's axiom structure protects it from empirical falsification."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__continuous_refresh_hybrid",
+      "competence_exercise_validity__real_catastrophe_only",
+      "regulatory_compliance_substitution",
+      "safety_culture_metrics_as_proxy"
+    ],
+    "dual_formulation_note": "This constraint is one member of the competence_exercise_validity kernel family. The three readings decompose the colloquial 'simulation vs. real exercise' debate into structurally distinct constraints with different ε values, beneficiary/victim structures, and drift profiles. simulation_as_proxy has ε≈0.65 (substantial extraction); continuous_refresh_hybrid likely has lower ε (coordination dominates); real_catastrophe_only likely has near-zero ε (no coordination function, pure epistemic claim). They are linked via network.affects_constraints to enable contamination propagation analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "continuous_refresh_hybrid",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "real_catastrophe_only",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_sufficiency_for_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "proxy_catastrophe_equivalence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "regulatory_simulation_adequacy_framework",
+    "drift_state": {
+      "moment": "post_fukushima_deepwater_horizon",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "competence_exercise_validity_kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

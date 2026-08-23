@@ -1,0 +1,294 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__constitutional_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_fisa_702_statutory_text__constitutional_floor_reading",
+    "measurement_id_prefix": "fisa_702_const_floor",
+    "story_uid": "ccde9e45-991d-4824-87a8-48e38b7ff631"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.35,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.68,
+    "claimed_type": "mountain",
+    "human_readable": "Fourth Amendment Warrant Requirement for 702 Queries of U.S. Person Communications",
+    "topic_domain": "constitutional_law/national_security/surveillance_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "us_persons",
+      "privacy_advocates_civil_liberties_orgs"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "fourth_amendment_warrant_requirement",
+      "constitutional_floor_doctrine",
+      "carpenter_digital_privacy_extension"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "us_persons",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Their communications content is protected from warrantless government searches under this reading; they bear no compliance costs but gain constitutional privacy protection. Exit from the constraint's protection would mean leaving U.S. jurisdiction or accepting surveillance — neither is a meaningful exit for most."
+    },
+    {
+      "name": "executive_branch",
+      "role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must obtain probable cause warrants for 702 queries of U.S. person communications; bears operational delays, resource costs for FISA Court proceedings, and loss of speed/secrecy in intelligence gathering. Cannot exit the constraint without constitutional amendment or Supreme Court reversal."
+    },
+    {
+      "name": "fisa_court",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicates individualized probable cause warrant applications for 702 queries; bears increased caseload and responsibility for constitutional compliance. The court's legitimacy depends on faithful application of the warrant requirement this reading establishes."
+    },
+    {
+      "name": "congress",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enacted FISA 702 statute; oversees implementation but cannot override constitutional floor. Legislative fixes must operate within the warrant requirement this reading establishes."
+    },
+    {
+      "name": "foreign_intelligence_targets",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Non-U.S. persons abroad targeted under 702; their communications with U.S. persons are incidentally collected and would require warrants for query under this reading. They have no standing in U.S. constitutional framework and no voice in the adjudication."
+    },
+    {
+      "name": "privacy_advocates_civil_liberties_orgs",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocate for this reading as the correct constitutional interpretation; benefit from the constraint's enforcement as it aligns with their mission. Can shift advocacy focus but remain committed to this constitutional frame."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the boundary between legitimate foreign intelligence gathering and unconstitutional domestic surveillance by requiring judicial pre-approval for any search of U.S. person communications content.",
+    "transfer_function": "Moves the burden of justification from post-hoc rationalization to pre-search probable cause showing, transferring decision authority from executive branch to Article III court for each query of U.S. person communications.",
+    "absent_voices": "Foreign intelligence targets (non-U.S. persons abroad) whose communications with U.S. persons would be subject to warrant requirements under this reading; they have no constitutional standing and no voice in U.S. courts. Also, future U.S. persons whose communications patterns haven't yet been established.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, 702 queries of U.S. person communications would proceed without warrants, fundamentally altering the privacy-surveillance balance. The executive branch would revert to warrantless querying of the 702 database for U.S. person communications; FISA Court role would shrink to collection approval only; U.S. person privacy protections would depend solely on statutory minimization procedures.",
+    "founding_problem": "The founding problem was preventing general warrants and unreasonable searches of private communications, extended to modern digital communications collected incidentally under foreign intelligence authorities.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Supreme Court in Carpenter v. United States (2018) affirmed Fourth Amendment protection for digital communications data; FISA Court opinions (e.g., 2018 FISC memorandum opinion) have acknowledged constitutional questions about 702 queries; legal scholars outside the intelligence community (e.g., PCLOB reports) corroborate the constitutional floor reading."
+  },
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 13,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 13,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 13,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the constitutional_floor_reading of the fisa_702_statutory_text kernel. It asserts that the Fourth Amendment imposes a probable cause warrant requirement for any government search of U.S. person communications content, including queries of the 702 database, regardless of the foreign intelligence purpose of the original collection. The reading reframes 702 from a foreign intelligence statute to a criminal procedure question: every query of a U.S. person's communications is a Fourth Amendment search requiring individualized judicial approval. The claimed_type is mountain (constitutional requirement emerging naturally from the Fourth Amendment), but base extractiveness ε=0.25 reflects compliance costs imposed on the executive branch's preferences for speed and secrecy — a divergence the engine will measure.",
+    "logic_rationale": "Extractiveness (0.25) measures the constraint's cost to executive operational preferences, not extraction from citizens. Suppression (0.35) reflects the constraint's blocking of warrantless query alternatives. Theater ratio (0.12) is low — the warrant process is functional, not performative. Accessibility collapse (0.88) is high: once the constitutional floor is recognized, statutory alternatives cannot lower it. Resistance (0.68) is substantial: the executive branch has consistently resisted extending warrant requirements to 702 queries. The measurement grid shows rising extractiveness and suppression from 2008 enactment through Carpenter (2018) to present, tracking judicial and public pressure.",
+    "directionality_logic": "U.S. persons are structural beneficiaries (d near 0.0) — the constraint subsidizes their privacy. Executive branch is the primary target (d near 1.0) — bears compliance costs. FISA Court sits near symmetric (d≈0.5) — administers the constraint but gains institutional legitimacy. Congress is analytical observer. Foreign targets are excluded — no standing. Privacy advocates are beneficiaries but with mobile exit (can shift focus).",
+    "perspectival_gap": "The payer seat (executive branch) experiences this as substantial extraction (operational friction, secrecy loss) while beneficiary seats (U.S. persons, privacy advocates) experience it as coordination (privacy protection). The engine computes this divergence from the structural data — the claimed mountain type reflects the beneficiary/analytical perspective, while the metrics reflect the executive's lived experience.",
+    "mandatrophy_analysis": "The founding problem (preventing general warrants) remains live in the digital age — Carpenter confirms it. But the executive branch argues the foreign intelligence exception resolves it. The constraint is not mandatrophic: its function (constitutional floor) is actively contested, not atrophied. The theater ratio stays low because the warrant process does real work, though the executive treats it as friction.",
+    "kernel_context": "This constraint is the constitutional_floor_reading of kernel fisa_702_statutory_text. Sibling readings: incidental_collection_reading (permits warrantless queries of incidentally collected U.S. person data for foreign intelligence purposes) and foreign_target_strict_reading (constrains collection to foreign targets but is silent on query-stage warrants). This reading forecloses the incidental_collection_reading's core premise (warrantless queries permitted) within any single framework, but coexists with foreign_target_strict_reading (which addresses collection targeting, not query-stage searches)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the fisa_702_statutory_text kernel, or does it represent the only valid interpretation?",
+      "resolution_mechanism": "Supreme Court ruling on whether 702 queries of U.S. person communications constitute Fourth Amendment searches requiring warrants. If Court adopts this reading, sibling readings are foreclosed; if Court adopts sibling reading, this reading becomes a dissenting position.",
+      "impact": "If this reading is foreclosed, the constitutional floor collapses to statutory minimization; if upheld, sibling readings become non-operative for U.S. person queries.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constitutional_floor_reading is a live constitutional interpretation or a policy preference masquerading as constitutional law."
+    },
+    {
+      "id": "structural_delta_ambiguity",
+      "question": "Does the 'search' classification for 702 queries depend on the collection's legitimacy, or is it independent as this reading asserts?",
+      "resolution_mechanism": "Judicial resolution of the 'query-as-search' question in pending/future litigation (e.g., Mohamud, Hasbajrami, or new challenges).",
+      "impact": "If queries are searches independent of collection legitimacy, this reading's structural delta holds; if queries inherit collection's legitimacy, the incidental_collection_reading's framework prevails.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the Fourth Amendment search inquiry separates collection from query."
+    },
+    {
+      "id": "extraction_referent_ambiguity",
+      "question": "Is ε=0.25 (executive compliance costs) the correct referent, or should extraction be measured from U.S. person privacy loss under sibling readings?",
+      "resolution_mechanism": "Comparative analysis: measure ε for each reading from its own structural perspective. This reading's ε is executive compliance cost; sibling readings' ε would be U.S. person privacy extraction.",
+      "impact": "Different referents produce different ε values for the same kernel — confirming they are distinct constraints per ε-invariance principle.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "ε-invariance test: each reading of the kernel has its own ε referent; comparing across readings requires separate stories."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "fisa_702_statutory_text__incidental_collection_reading",
+      "fisa_702_statutory_text__foreign_target_strict_reading"
+    ],
+    "dual_formulation_note": "This constraint and its siblings form the fisa_702_statutory_text constraint family. Each reading instantiates a different constraint with different ε referents: this reading (ε=0.25, executive compliance), incidental_collection_reading (ε≈0.60, U.S. person privacy extraction), foreign_target_strict_reading (ε≈0.15, collection targeting compliance). Linked via affects_constraints for contamination propagation analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "classical_fourth_amendment_warrant_requirement",
+    "drift_state": {
+      "moment": "post_carpenter_digital_privacy_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "incidental_collection_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "foreign_target_strict_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "fourth_amendment_applies_to_database_queries",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "probable_cause_warrant_required_pre_query",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

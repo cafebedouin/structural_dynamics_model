@@ -1,0 +1,299 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__real_catastrophe_only",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "f3ad081e-4c90-4b4e-a29a-06471347764e"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.55,
+    "theater_ratio": 0.7,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Real Catastrophe Only Validates Competence",
+    "topic_domain": "safety_engineering/organizational_learning/competence_retention",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_training_industry",
+      "safety_regulators"
+    ],
+    "victims": [
+      "operating_organizations",
+      "workers_public"
+    ],
+    "vindicated_propositions": [
+      "competence_requires_live_fire_testing",
+      "simulation_cannot_replicate_systemic_stress"
+    ]
+  },
+  "interval": {
+    "start": 1980,
+    "end": 2025
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "Is the claim that only real catastrophe validates competence a reading of the contested kernel 'competence_exercise_validity', and what would sibling readings change structurally?",
+      "resolution_mechanism": "Trace institutional discourse across nuclear, aviation, chemical, and medical safety domains to map which actors hold which reading; the kernel persists because no reading has achieved foreclosure.",
+      "impact": "If this is one reading among three, the constraint's ε and victim/beneficiary structure are reading-indexed; the sibling readings instantiate different constraints with different extraction profiles. The engine must not average across them.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is the real_catastrophe_only reading of the competence_exercise_validity kernel; siblings are simulation_as_proxy and continuous_refresh_hybrid."
+    },
+    {
+      "id": "simulation_industry_capture",
+      "question": "Does the simulation/training industry actively suppress adoption of continuous-refresh or hybrid models to protect its mandated-drill revenue stream?",
+      "resolution_mechanism": "Follow lobbying expenditures, standards-committee composition, and regulatory-comment records across domains; look for coordinated opposition to drill-frequency increases or scenario-diversity mandates.",
+      "impact": "If capture is documented, the beneficiary declaration for simulation_training_industry shifts from incidental to structural extraction; the constraint's coordination function is narrower than claimed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulation industry rent-seeking shapes the regulatory mandate that enforces the constraint."
+    },
+    {
+      "id": "competence_decay_measurement",
+      "question": "Can competence decay be measured without a catastrophic trigger, or is the decay inherently latent until exercised?",
+      "resolution_mechanism": "Longitudinal studies of teams with known drill histories but no catastrophic events; compare performance on novel scenarios vs. rehearsed ones; measure skill-transfer decay rates.",
+      "impact": "If decay is measurable without catastrophe, the continuous_refresh_hybrid reading gains empirical ground; if decay is truly latent, the real_catastrophe_only reading's foundational axiom is strengthened.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the core empirical claim of this reading (decay is invisible until real catastrophe) is falsifiable."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of alternative competence-validation models structural (regulatory mandate, liability frameworks) or internalized (safety culture treats drill compliance as competence proof)?",
+      "resolution_mechanism": "Post-deregulation or post-accident suppression trajectory: if organizations voluntarily maintain drill-heavy regimes when mandates relax, suppression is partly internalized.",
+      "impact": "If internalized, effective suppression is higher than the structural measure suggests; the constraint persists even without active enforcement.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural vs. internalized suppression mechanism in safety-culture contexts."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.63
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.67
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.69
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The constraint is the claim that only real catastrophic events genuinely exercise and validate organizational safety competence; simulations, drills, and tabletop exercises are structurally insufficient substitutes. This reading of the competence_exercise_validity kernel holds that competence retention decays invisibly under simulation-only regimes, and that a clean safety record reflects luck or systemic redundancy rather than proven adequacy. The simulation industry and regulators benefit from the mandate structure; operating organizations pay for drills that don't validate readiness; workers and the public bear the tail risk when untested competence fails. The claimed type is tangled_rope: there is a genuine coordination function (standardized drills create shared procedural language, cross-team familiarity, and regulatory legibility) but it is coupled with asymmetric extraction (simulation vendors capture mandated spend, regulators gain legibility without accountability, real competence remains unproven). The measurement series shows rising extractiveness and theater ratio over 45 years as drill mandates expanded while novel-accident rates did not correspondingly fall.",
+    "logic_rationale": "Extractiveness (0.65) reflects the gap between mandated drill costs and validated competence gains; the simulation industry collects rents proportional to mandate scope, not marginal training value. Theater ratio (0.70) is high because drill compliance became a proxy for competence — organizations perform drills to satisfy auditors, not to discover unknown failure modes. Suppression (0.55) is moderate: liability frameworks and insurance requirements make alternative validation models legally risky, but the suppression is partly cultural (safety culture equates drill compliance with competence). Accessibility collapse (0.60) reflects that alternative models exist (continuous refresh, red-teaming, operational learning) but are marginalized by the compliance regime. Resistance (0.50) comes from operating organizations that see drill costs rising without incident-rate improvements, and from safety researchers documenting the simulation-competence gap.",
+    "directionality_logic": "Simulation_training_industry is the primary beneficiary (collects mandated revenue, shapes standards — d near 0.1). Safety_regulators are secondary beneficiaries (gain legibility, enforcement authority, institutional legitimacy — d near 0.2). Operating_organizations are payers (bear drill costs, liability exposure if drills don't prevent accidents, constrained exit due to license requirements — d near 0.8). Workers_public are payers/victims (bear tail risk when untested competence fails, no exit from systemic risk — d near 0.9). Safety_analysts are observers (analytical seat, d=0.5). The directionality derivation from beneficiary/victim declarations plus exit options produces this gradient; no overrides needed.",
+    "perspectival_gap": "From the regulator/industry seat, the constraint appears as rope: drills coordinate terminology, expose gross errors, create auditable records. From the operating-organization seat, it appears as snare: costs rise, novel scenarios aren't tested, compliance crowds out operational learning. From the worker/public seat, it appears as mountain: the risk is structural and inescapable. The engine computes these per-seat classifications from the structural data; the divergence is the measurement.",
+    "mandatrophy_analysis": "The founding problem (validating competence for high-hazard operations) is contested: major accidents (Bhopal, Challenger, Deepwater Horizon, Fukushima) occurred in heavily drilled organizations, suggesting the mandate solved a narrower problem (procedural compliance) than the one it claimed to solve (competence validation). The arrangement persists because no stakeholder has both the incentive and the power to replace it: industry captures the revenue, regulators capture the legitimacy, organizations fear liability if they deviate, and the public lacks technical standing. This is classic mandatrophy — the mandate outlived its function but persists through distributed inertia.",
+    "kernel_context": "This constraint is the real_catastrophe_only reading of the contested kernel 'competence_exercise_validity'. The kernel asks: what counts as valid exercise of safety competence? Three readings coexist: (1) real_catastrophe_only (this reading) — only actual catastrophic events genuinely test competence; simulation masks decay. (2) simulation_as_proxy — simulation counts as valid exercise; drills are proxy-catastrophe that keep competence occupied. (3) continuous_refresh_hybrid — simulation is necessary but not sufficient; competence retention requires continuous drill cycles with novelty injection, not one-time validation. This reading coexists_with the others; no single framework forecloses them, but they compete for regulatory adoption and institutional resources."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__simulation_as_proxy",
+      "competence_exercise_validity__continuous_refresh_hybrid"
+    ],
+    "dual_formulation_note": "This is the real_catastrophe_only reading of the competence_exercise_validity kernel. The sibling readings instantiate different constraints with different ε values and different beneficiary/victim structures. They are linked because they share the same kernel question but answer it with different structural commitments. The upstream constraint (simulation_as_proxy) historically influenced this one by establishing the mandate regime this reading critiques."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "simulation_training_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Provides mandated simulator hardware, scenario software, instructor certification, and recurring training services to nuclear, aviation, chemical, and medical operators. Revenue scales with regulatory drill-frequency mandates. Actively shapes standards through industry associations and standards committees. Can pivot across domains and jurisdictions; exit is arbitrage-grade."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Mandate drill frequencies, scenario requirements, and certification standards. Gain legibility into operator readiness, enforcement authority, and institutional legitimacy from the compliance regime. The drill mandate is a primary regulatory lever; alternatives (continuous assessment, operational learning metrics) are less auditable. Exit is analytical — they study the system but are not subject to it."
+    },
+    {
+      "name": "operating_organizations",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pay for mandated drills, simulator time, instructor fees, and downtime. Bear liability if drills don't prevent accidents. License requirements constrain exit — they cannot operate without regulatory approval, which requires drill compliance. Some invest in supplementary validation (red teams, operational learning) but these don't substitute for mandated drills."
+    },
+    {
+      "name": "workers_public",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the tail risk when untested competence fails catastrophically (plant workers, nearby communities, passengers, patients). Have no exit from systemic risk — cannot choose operators based on validation regime. Their safety depends on a competence-validation system they cannot audit or influence."
+    },
+    {
+      "name": "safety_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the simulation-competence gap across domains. Publish on drill decay rates, scenario fidelity limits, and alternative validation models. Their work informs but does not determine regulatory choices. They see the full structure but occupy no seat within it."
+    }
+  ],
+  "gain_flow": "simulation_training_industry",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Creates a shared, auditable, cross-organizational language for emergency response: standardized terminology, practiced handoffs, verified equipment familiarity, and regulatory legibility that enables licensing and insurance.",
+    "transfer_function": "Moves mandated training budgets from operating organizations to the simulation industry; moves regulatory legitimacy from outcome-based oversight to process-compliance oversight; moves tail risk from the system to workers and the public.",
+    "absent_voices": "Frontline operators who know drill scenarios by heart but have never faced novel cascading failures; communities downstream of high-hazard sites who bear risk without representation in standards committees; insurers who price based on drill compliance rather than demonstrated resilience.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the drill mandate vanished, the simulation industry would lose its primary revenue anchor; regulators would lose their most auditable lever; operating organizations would face liability-pressure to develop alternative validation (likely continuous refresh or operational learning); workers/public would face a transition period with no mandated validation at all. The safety-validation ecosystem would reorganize — possibly toward the continuous_refresh_hybrid model, possibly toward fragmentation.",
+    "founding_problem": "Post-WWII high-hazard industries (nuclear, aviation, chemical) needed a scalable, auditable way to validate that operators could execute emergency procedures under stress. Live exercises were too dangerous; tabletop drills were too weak. Full-scope simulation promised a middle ground: realistic stress without real consequences.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The simulation industry and regulators attest the problem is live (new hazards, workforce turnover, technology change). Major accident investigation boards (Columbia, Deepwater Horizon, Fukushima) and independent safety researchers attest the founding problem is substantially unsolved by the current mandate — drills validate procedure execution, not systemic competence under novel stress. No external corroboration supports the claim that mandated drills alone validate competence."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_proxy",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "continuous_refresh_hybrid",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "only_real_catastrophe_validates_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_masks_competence_decay",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "simulation_sufficiency_paradigm",
+    "drift_state": {
+      "moment": "post_major_accident_investigation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

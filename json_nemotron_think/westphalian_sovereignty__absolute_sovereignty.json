@@ -1,0 +1,402 @@
+{
+  "header": {
+    "constraint_id": "westphalian_sovereignty__absolute_sovereignty",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_westphalian_sovereignty__absolute_sovereignty",
+    "measurement_id_prefix": "wsa",
+    "story_uid": "fff512b1-43f7-48a0-aabb-a8a72e6f5a38"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.75,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Absolute Westphalian Sovereignty",
+    "topic_domain": "international_law/political_philosophy/global_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "sovereign_states",
+      "authoritarian_regimes",
+      "powerful_states"
+    ],
+    "victims": [
+      "domestic_populations_under_repression",
+      "oppressed_minorities",
+      "dissidents",
+      "stateless_persons"
+    ],
+    "vindicated_propositions": [
+      "westphalian_sovereignty_doctrine",
+      "non_interference_principle",
+      "territorial_integrity_norm"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the absolute sovereignty reading a genuine instantiation of the Westphalian kernel, or a constructed expansion that serves extractive state interests?",
+      "resolution_mechanism": "Genealogical analysis of Westphalian texts vs. 19th-20th century state practice; compare what the 1648 treaties actually established vs. what later state practice claimed they established.",
+      "impact": "If constructed expansion, the constraint's claimed Mountain/Rope framing collapses; the high ε reflects rent-seeking by states, not coordination necessity. Reclassifies from contested coordination to extractive structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether absolute sovereignty is the kernel's original meaning or a later state-serving construction"
+    },
+    {
+      "id": "natural_law_vs_constructed_ambiguity",
+      "question": "Is the non-interference principle a structural feature of the international system (like gravity) or a human-made convention maintained by power?",
+      "resolution_mechanism": "Counterfactual: if all states ceased enforcing non-interference tomorrow, would the principle persist? Historical test: did non-interference survive the Concert of Europe, the League, the UN Charter revisions?",
+      "impact": "If constructed convention, the constraint cannot be Mountain; high suppression and beneficiary structure indicate Tangled Rope or Snare. If natural structural feature, extraction metrics must be reinterpreted as coordination costs.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Mountain vs. constructed constraint ambiguity — core FSM trigger"
+    },
+    {
+      "id": "enforcement_mechanism_asymmetry",
+      "question": "Does the enforcement of non-interference operate symmetrically (all states equally constrained) or asymmetrically (powerful states intervene selectively while invoking sovereignty for themselves)?",
+      "resolution_mechanism": "Dataset of interventions 1945-present: code by intervener power, target power, UNSC authorization, sovereignty invocation. Measure asymmetry index.",
+      "impact": "Asymmetric enforcement means the coordination function is cover for powerful-state extraction; the constraint is Snare for weak states, Rope for powerful ones. Engine would compute per-seat type divergence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Symmetry of enforcement — determines whether coordination is genuine or cover"
+    },
+    {
+      "id": "r2p_as_drift_or_new_kernel",
+      "question": "Is Responsibility to Protect (R2P) a drift within the Westphalian kernel (authority_erosion) or a rival kernel that forecloses absolute sovereignty?",
+      "resolution_mechanism": "Analyze UNGA resolutions, UNSC practice, ICJ opinions: does R2P language treat sovereignty as conditional (forecloses absolute) or as responsibility-entailing (coexists with modified absolute)?",
+      "impact": "If forecloses: absolute_sovereignty reading is structurally displaced, not just eroded. If coexists_with: both readings remain live in different institutional seats. Engine computes foreclosure from axiom contradiction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "R2P's structural relationship to the absolute sovereignty reading"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of external intervention structural (UNSC veto, treaty law, military deterrence) or internalized (states self-censor, populations accept impunity as order)?",
+      "resolution_mechanism": "Post-intervention suppression trajectory: when intervention occurs (Kosovo, Libya), does sovereignty discourse collapse or rebound? Measure discursive recovery time.",
+      "impact": "If internalized, effective suppression exceeds structural measure — populations and NGOs carry the constraint internally. Engine's χ computation would understate extraction for identity-locked victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in sovereignty enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 95,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 95,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 95,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.75
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The absolute sovereignty reading asserts that states possess unconditional authority over their domestic affairs and that external interference is categorically illegitimate. This reading traces to the 1648 Peace of Westphalia but was substantially constructed in 19th-century European state practice and codified in UN Charter Article 2(4) and 2(7). The constraint operates as a tangled rope: it coordinates international order by establishing clear jurisdictional boundaries (preventing endless intervention wars) while simultaneously extracting impunity for domestic repression — authoritarian regimes are the primary beneficiaries, their domestic populations the primary victims. The coordination function (interstate peace) is real but has been layered with extractive rent-seeking (regime protection). The claimed type is tangled_rope; the metrics show rising extraction and theater over the post-1945 period as the human rights regime created pressure that the absolute reading defends against through performative sovereignty rituals.",
+    "key_agents": [
+      "sovereign_states: Primary agenda_setter (institutional/generational/arbitrage/global) — sets and enforces the non-interference rule through UNSC vetoes, treaty regimes, diplomatic practice",
+      "authoritarian_regimes: Primary beneficiary (powerful/biographical/constrained/national) — gains impunity for domestic repression behind the sovereignty shield",
+      "domestic_populations_under_repression: Primary victim (powerless/biographical/trapped/national) — bears the extraction (rights violations, no external recourse)",
+      "oppressed_minorities: Victim (powerless/biographical/identity_locked/national) — identity-locked to territory, exit blocked by both regime and sovereignty norm",
+      "dissidents: Victim (powerless/immediate/trapped/local) — direct targets of repression, no exit",
+      "stateless_persons: Victim (powerless/biographical/trapped/universal) — fall through sovereignty cracks entirely",
+      "human_rights_ngos: Excluded (organized/generational/mobile/global) — would challenge but structurally excluded from UNSC decision-making",
+      "international_courts: Observer (institutional/generational/analytical/global) — ICJ, ICC interpret but lack enforcement",
+      "powerful_states: Agenda_setter (institutional/generational/arbitrage/global) — enforce sovereignty selectively; intervene when convenient, invoke sovereignty when not"
+    ],
+    "logic_rationale": "Extraction (0.52) is substantial: the sovereignty shield transfers the cost of repression from regimes to populations. Suppression (0.75) is high: the constraint persists through active enforcement (UNSC vetoes, non-intervention treaties, diplomatic pressure, military deterrence). Theater (0.42) is rising: sovereignty rituals (UNGA speeches, treaty ratifications) increasingly perform coordination while extraction continues. Accessibility collapse (0.72) is high for victims: once the sovereignty frame is accepted, alternatives (intervention, R2P, ICC referral) appear illegitimate or impossible. Resistance (0.58) is moderate: human rights movement, R2P, ICC create friction but have not displaced the core norm. The measurement series on a shared grid (0-100, normalized 1648-2024) shows extraction and theater rising together post-1945 — Goodhart drift where sovereignty performance substitutes for genuine coordination.",
+    "perspectival_gap": "The engine will compute divergent per-seat types: from the sovereign_state/agenda_setter seat, the constraint appears as Rope (genuine coordination of interstate order). From the authoritarian_regime/beneficiary seat, it appears as Snare (pure extraction of impunity). From the domestic_population/payer seat, it appears as Snare (extraction with no coordination benefit). From the powerful_state seat, it appears as Tangled Rope (coordination for them, extraction for others). This divergence IS the measurement — the claimed tangled_rope captures the structural hybridity but the engine quantifies how each seat experiences it.",
+    "directionality_logic": "Sovereign states and powerful states are structural beneficiaries (d ≈ 0.15-0.25): they collect the coordination gains (stable borders, non-interference) and control enforcement. Authoritarian regimes are concentrated beneficiaries (d ≈ 0.1): they extract maximum impunity. Domestic populations, minorities, dissidents, stateless persons are targets (d ≈ 0.85-0.95): they bear repression costs with trapped/identity_locked exit. Human rights NGOs are excluded (d ≈ 0.6): they pay advocacy costs but cannot access decision nodes. International courts are analytical observers (d = 0.5): they interpret but do not collect or pay. The derivation chain: beneficiary/victim declarations + power level + exit options → directionality. Overrides used for powerful_states (derived d would be ~0.15 as institutional beneficiary, but their selective intervention makes them partial targets too → override to 0.35).",
+    "mandatrophy_analysis": "The founding problem (ending religious/interstate wars) is contested: states claim it remains live; human rights scholars argue it was substantially solved by 1945 and the arrangement now persists as mandate atrophy. The sovereignty shield has outlived its interstate peace function and now primarily serves regime protection — classic mandatrophy. The classification prevents mislabeling: calling this pure Snare ignores the genuine coordination function (interstate peace); calling it pure Rope ignores the asymmetric extraction (regime impunity). Tangled Rope captures both: the coordination is real but the extraction is structural and enforced.",
+    "kernel_context": "This constraint is the absolute_sovereignty reading of the contested westphalian_sovereignty kernel. Sibling readings: conditional_sovereignty (sovereignty entails responsibility; systematic human rights violations trigger legitimate intervention) and graduated_sovereignty (sovereignty exists on a spectrum determined by state capacity and governance legitimacy). The absolute reading forecloses neither sibling — all three remain live positions in different institutional seats (absolute: UNSC permanent members, authoritarian states; conditional: R2P advocates, Western democracies; graduated: development agencies, some Global South states). The disagreement is located on the conditionality axiom: whether sovereignty's legitimacy is unconditional (this reading) or conditional on responsibility/governance (siblings)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "r2p_doctrine",
+      "humanitarian_intervention_norm",
+      "icc_jurisdiction",
+      "universal_jurisdiction_principle",
+      "refugee_protection_regime"
+    ],
+    "dual_formulation_note": "Westphalian sovereignty kernel decomposes into three readings: absolute_sovereignty (this story, high ε tangled_rope), conditional_sovereignty (lower ε rope/scaffold), graduated_sovereignty (variable ε by state). This story's high ε reflects the extraction layer authoritarian regimes add onto the coordination kernel. The conditional and graduated readings represent attempts to strip the extraction layer while preserving coordination."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.3
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "sovereign_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Collectively constitute the international legal order; set the sovereignty rules through UN Charter, customary law, diplomatic practice. Benefit from stable borders and non-interference. Can exit by withdrawing from treaties or ignoring norms (arbitrage-grade exit for powerful states, constrained for weak states). Administer the constraint through UNSC vetoes and treaty bodies."
+    },
+    {
+      "name": "authoritarian_regimes",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Exploit the sovereignty shield to repress domestic populations without external accountability. Gain impunity for human rights violations. Constrained exit: they cannot leave the sovereign state system without losing power; they depend on the very norm they exploit. Some (North Korea, Myanmar) are more trapped; others (China, Russia) have arbitrage-grade exit via UNSC veto."
+    },
+    {
+      "name": "domestic_populations_under_repression",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the full cost of repression (violence, displacement, impoverishment) with no external recourse. The sovereignty norm blocks intervention, asylum access, ICC referral. Exit is physically trapped (closed borders) and normatively trapped (sovereignty makes their suffering a domestic matter). No coalition power — fragmented, surveilled, repressed."
+    },
+    {
+      "name": "oppressed_minorities",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Targeted repression based on identity (ethnic, religious, sexual, political). Identity-locked: their self-concept is fused to the territory and community; exit means abandoning identity. Sovereignty norm denies them both protection and self-determination. The constraint extracts their security and political agency for regime stability."
+    },
+    {
+      "name": "dissidents",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Direct targets of state repression (imprisonment, torture, killing). Immediate time horizon: survival is daily. Exit options: prison, exile, death. Sovereignty shield means no diplomatic protection, no humanitarian corridor, no ICC arrest warrant execution. The constraint extracts their lives for regime continuity."
+    },
+    {
+      "name": "stateless_persons",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Fall through the cracks of the sovereignty system entirely — no state claims them, all states exclude them. The sovereignty norm that protects state authority also denies them rights. Universal scope: statelessness is a global condition produced by the sovereign state system. Trapped: no state to exit to, no state to protect them."
+    },
+    {
+      "name": "human_rights_ngos",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Document abuses, advocate for intervention, litigate in international courts. Structurally excluded from UNSC decision-making where sovereignty enforcement happens. Mobile exit: can operate across borders but cannot access the enforcement node. Their voice is the absent_voices in Q4 — they would object to absolute sovereignty but are not in the room where vetoes are cast."
+    },
+    {
+      "name": "international_courts",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "ICJ, ICC, regional courts interpret sovereignty and its limits. ICJ has upheld absolute sovereignty in some cases (Nicaragua v. USA) but also recognized erga omnes obligations. ICC can prosecute but lacks enforcement — depends on state cooperation. Analytical seat: they see the full structure but neither collect nor pay. Their judgments map the constraint's boundaries."
+    },
+    {
+      "name": "powerful_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "P5 UNSC members + other great powers. Enforce sovereignty selectively: invoke it to block intervention in their spheres (Russia in Syria, China in Xinjiang, USA in Iraq) while intervening elsewhere (Kosovo, Libya, Iraq 2003). Benefit from the coordination function (stable great power relations) while extracting impunity for their own interventions. Arbitrage-grade exit: they can ignore the norm when convenient because they control the enforcement machinery."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates international order by establishing clear jurisdictional boundaries between states, preventing endless intervention wars, and providing a stable framework for diplomacy, trade, and treaty-making. Solves the Hobbesian problem of the international state of nature.",
+    "transfer_function": "Transfers impunity for domestic repression from accountability to state authority; moves the protection burden from populations to regimes. The extraction flows from repressed populations (who lose rights, security, recourse) to authoritarian regimes (who gain impunity) and powerful states (who gain non-interference for their spheres of influence). The coordination gain (interstate peace) is distributed broadly; the extraction gain (regime protection) is concentrated.",
+    "absent_voices": "Domestic populations under repression, stateless persons, future generations who will inherit the sovereignty system, and diaspora communities who cannot vote in the UN. They are structurally excluded: no seat at UNGA, no veto at UNSC, no standing at ICJ. Their absence is not accidental — the sovereignty norm defines them as internal matters, not international subjects.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If absolute sovereignty vanished overnight, the UNSC veto system would lose its primary justification, R2P would become the default framework, ICC jurisdiction would become universal, humanitarian intervention would be normalized, and authoritarian regimes would face immediate accountability pressure. The international order would reorganize around conditional sovereignty — the world would rearrange fundamentally.",
+    "founding_problem": "The post-1648 need to end European religious wars by establishing territorial integrity and non-interference as the basis for interstate coexistence. The Peace of Westphalia created a system where cuius regio, eius religio became cuius regio, eius imperium — the ruler's authority within territory became absolute to prevent external religious intervention.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "International legal scholars outside state beneficiaries (Antonio Cassese, James Crawford, Martti Koskenniemi) attest the founding problem was interstate war prevention, not domestic impunity. State practice since 1945 (UN Charter, Genocide Convention, human rights treaties, R2P) shows contested evolution: the founding problem was substantially solved for interstate war but the arrangement persisted and expanded into domestic impunity. No non-beneficiary scholar asserts the founding problem remains live in its original form."
+  },
+  "gain_flow": "authoritarian_regimes",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "westphalian_territorial_integrity",
+    "drift_state": {
+      "moment": "post_r2p_adoption",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "conditional_sovereignty",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "graduated_sovereignty",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sovereignty_unconditional",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "non_interference_categorical",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "westphalian_sovereignty_kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

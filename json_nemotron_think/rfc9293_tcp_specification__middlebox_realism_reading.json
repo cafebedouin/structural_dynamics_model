@@ -1,0 +1,378 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__middlebox_realism_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_rfc9293_tcp_specification__middlebox_realism_reading",
+    "measurement_id_prefix": "rfc9293_middlebox_realism",
+    "story_uid": "470b4721-0395-4a12-849d-886fe38d44cd"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.78,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "TCP Specification vs. Middlebox-Enforced Reality",
+    "topic_domain": "network_protocol_engineering/internet_standards/distributed_systems_coordination",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "isp_middlebox_operators",
+      "enterprise_middlebox_operators",
+      "state_surveillance_operators"
+    ],
+    "victims": [
+      "application_developers",
+      "end_users",
+      "protocol_designers"
+    ],
+    "vindicated_propositions": [
+      "postel_robustness_principle",
+      "end_to_end_principle_as_ideal"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "isp_middlebox_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Deploy and operate middleboxes (NATs, firewalls, DPI, traffic shapers) across global internet infrastructure. They set de facto protocol behavior by modifying packets in flight. They benefit from surveillance capability, traffic management control, and policy enforcement leverage. Their exit options are strong — they control the infrastructure layer."
+    },
+    {
+      "name": "enterprise_middlebox_operators",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Operate middleboxes for corporate policy enforcement (DLP, compliance monitoring, access control). They benefit from the ability to inspect and modify employee traffic. Their exit is constrained by regulatory requirements and organizational inertia — they cannot easily abandon middlebox deployments."
+    },
+    {
+      "name": "state_surveillance_operators",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate middleboxes for national security surveillance, censorship, and traffic analysis. They benefit from the protocol's susceptibility to inspection and modification. Their exit options are maximal — they mandate middlebox deployment by law."
+    },
+    {
+      "name": "application_developers",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build applications assuming TCP semantics from RFC 9293. Middlebox interference breaks assumptions (connection termination, packet modification, protocol ossification), forcing workarounds (TLS, QUIC, keepalives). They bear development and maintenance costs. Exit is constrained — they must reach users through middlebox-laden paths."
+    },
+    {
+      "name": "end_users",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Experience privacy loss, reduced protocol features, and connection failures due to middlebox interference. They have no meaningful exit — they cannot choose ISP middlebox policies, and encrypted alternatives (QUIC) are often blocked. They bear the cost of extracted autonomy without consent."
+    },
+    {
+      "name": "protocol_designers",
+      "role": "payer",
+      "secondary_role": "observer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Design and standardize transport protocols (IETF TCPM, QUIC working groups). Their specifications become aspirational when middleboxes ossify the wire image. They bear the cost of designing around middlebox intolerance. Exit is constrained — they must achieve deployability through the existing middlebox population."
+    },
+    {
+      "name": "encryption_protocol_developers",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Develop encrypted transports (QUIC, TLS 1.3, MASQUE) to restore endpoint autonomy. They would object to middlebox interference as a design principle but are structurally excluded from the de facto standardization process — middlebox vendors and operators do not participate in good faith."
+    },
+    {
+      "name": "network_researchers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Measure and analyze the gap between RFC specifications and deployed behavior. They document middlebox prevalence, ossification patterns, and protocol evolution barriers. They neither collect nor pay — they observe the structural dynamics."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "TCP provides a reliable, ordered byte stream delivery service across heterogeneous, unreliable networks — solving the genuine coordination problem of universal interoperable transport without requiring per-path negotiation.",
+    "transfer_function": "Middleboxes extract endpoint autonomy (control over packet handling, privacy of payload, freedom to evolve protocols) and transfer it to middlebox operators as surveillance capability, policy enforcement leverage, and traffic shaping authority.",
+    "absent_voices": "Encryption advocates, alternative transport protocol designers, privacy advocates, and users in censored regimes — they would object to middlebox interference but are structurally excluded from the de facto standardization process where middlebox vendors and operators determine wire-image tolerance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the middlebox population vanished overnight, endpoints would regain full control over packet handling, encryption would work end-to-end without interception, new transport protocols could deploy without ossification barriers, and the Internet would reorganize around the end-to-end principle — the de facto constraint is the middlebox population itself.",
+    "founding_problem": "Reliable transport across unreliable, heterogeneous networks with diverse middlebox behaviors — the original problem was achieving interoperability; middleboxes emerged as a solution to network management but became a constraint on protocol evolution.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Middlebox vendors and network operators attest the problem is live (need for traffic management, security inspection, IPv4 exhaustion mitigation via NAT). Encryption advocates, QUIC designers, and IETF transport area participants attest the founding problem (reliable transport) is substantially solved and the arrangement persists as ossification — independent measurement studies (e.g., PATHspider, Middlebox Measurement Platform) corroborate the shifted-function reading."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.69
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.78
+    }
+  ],
+  "commentary": {
+    "narrative_context": "RFC 9293 specifies TCP as an invariant state machine for reliable byte-stream delivery. In practice, the deployed middlebox population (NATs, firewalls, DPI, traffic shapers, censors) modifies packets in flight — terminating connections, rewriting headers, blocking unknown options, enforcing policy. The specification has become aspirational: implementations must conform to middlebox tolerance, not the RFC. Middlebox operators (ISPs, enterprises, states) benefit from the extracted control — surveillance, policy enforcement, traffic shaping. Endpoints (applications, users, protocol designers) bear the cost — broken assumptions, privacy loss, ossification. The constraint is a Tangled Rope: genuine coordination (TCP works for most traffic) coexists with asymmetric extraction (middleboxes extract autonomy). Active enforcement is the middlebox population itself — it persists because no single party can unilaterally remove it, and beneficiaries actively maintain it.",
+    "logic_rationale": "Extractiveness (0.72) is high because middleboxes systematically extract endpoint autonomy for beneficiary gain. Suppression (0.78) is higher because the constraint persists through active packet modification — endpoints cannot opt out. Theater ratio (0.48) is moderate: the RFC still governs implementation in middlebox-free paths (data centers, QUIC-over-UDP), but a growing share of the wire image is shaped by middlebox tolerance. Accessibility collapse (0.71) is high — once middleboxes are deployed, alternatives (new TCP options, alternative transports) collapse unless they mimic existing tolerated patterns. Resistance (0.52) is moderate: encryption (TLS 1.3, QUIC) and protocol ossification countermeasures exist but middleboxes adapt (QUIC blocking, SNI inspection).",
+    "directionality_logic": "Middlebox operators (ISPs, enterprises, states) are structural beneficiaries — they collect surveillance/control value (d near 0.0). Application developers, end users, protocol designers are targets — they bear extraction with constrained/trapped exit (d near 1.0). Network researchers are analytical observers (d=0.5). Encryption protocol developers are excluded — their exit is constrained by the same middlebox population they try to circumvent. The derivation chain from beneficiary/victim declarations + exit options produces the correct directional gradient.",
+    "perspectival_gap": "From the ISP middlebox operator seat, the arrangement is coordination — they enable IPv4 longevity (NAT), enforce policy, provide security. From the application developer seat, the same structure is extraction — they build workarounds for broken semantics. From the end user seat, it is a snare — they have no voice and no exit. The engine computes this per-seat divergence from the structural data; the claimed type (tangled_rope) reflects the aggregate structural truth.",
+    "mandatrophy_analysis": "The founding problem (reliable transport) is live but substantially solved by TCP itself. The mandate has outlived its function: middleboxes now persist for extraction (surveillance, control) not coordination. The specification's authority is subordinate to deployed behavior — a classic mandatrophy where the standard becomes a ritual citation while the real constraint is the middlebox population. This reading prevents mislabeling the coordination function (TCP reliability) as pure extraction, while exposing the extraction layered onto it.",
+    "kernel_context": "This constraint is the middlebox_realism_reading of kernel rfc9293_tcp_specification. Sibling readings: strict_invariance_reading (RFC 9293 specifies an invariant state machine implementations must replicate exactly) and optimization_latitude_reading (RFC 9293 specifies behavioral outcomes but permits implementation latitude for performance). The structural disagreement is located on specification authority: this reading holds it is subordinate to deployed middlebox behavior; strict_invariance holds it is normative; optimization_latitude holds it is a semantic target with implementation freedom. The three readings form a constraint family linked by network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_structure",
+      "question": "This constraint is one reading (middlebox_realism_reading) of contested kernel rfc9293_tcp_specification. Sibling readings: strict_invariance_reading, optimization_latitude_reading. Where is the structural disagreement located?",
+      "resolution_mechanism": "Comparative analysis of the three constraint stories: each instantiates a different beneficiary/victim structure and extraction profile from the same RFC text. The disagreement is located on whether specification authority is normative (strict), semantic with latitude (optimization), or aspirational subordinate to deployed behavior (this reading).",
+      "impact": "If strict_invariance_reading is structurally true, middlebox interference is non-compliance (bug). If this reading is structurally true, middlebox interference is the de facto standard (feature). Classification diverges: strict → mountain/rope; this → tangled_rope/snare.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame ambiguity: which reading of the RFC 9293 kernel instantiates the actual constraint?"
+    },
+    {
+      "id": "surveillance_vs_management_ambiguity",
+      "question": "What fraction of observed middlebox behavior is legitimate network management (NAT traversal, congestion signaling) versus surveillance/policy extraction (DPI, censorship, traffic shaping)?",
+      "resolution_mechanism": "Longitudinal measurement studies classifying middlebox interventions by stated purpose vs. observable effect; regulatory disclosure requirements for middlebox vendors.",
+      "impact": "If predominantly management, extraction is lower and coordination function stronger (rope-leaning). If predominantly surveillance/policy, extraction is higher and coordination is cover (snare-leaning). Current 0.72 extractiveness assumes substantial surveillance fraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of middlebox interventions that are extractive vs. coordinative."
+    },
+    {
+      "id": "encryption_restoration_efficacy",
+      "question": "Will encryption (QUIC, TLS 1.3, ECH) actually restore endpoint autonomy, or will middleboxes adapt (blocking, interception, mandated proxies) preserving the extraction?",
+      "resolution_mechanism": "Deployment tracking: QUIC adoption rates, middlebox QUIC-blocking prevalence, regulatory mandates for lawful access. Natural experiment in jurisdictions with/without encryption restrictions.",
+      "impact": "If encryption restores autonomy, extractiveness declines and constraint may shift toward rope/scaffold. If middleboxes adapt, extractiveness stabilizes or rises and constraint hardens as snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether cryptographic restoration of endpoint autonomy is structurally viable against adaptive middleboxes."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.22
+  },
+  "network": {
+    "affects_constraints": [
+      "rfc9293_tcp_specification__strict_invariance_reading",
+      "rfc9293_tcp_specification__optimization_latitude_reading",
+      "quic_deployment_ossification",
+      "tls13_middlebox_interference",
+      "internet_censorship_infrastructure"
+    ],
+    "dual_formulation_note": "Kernel rfc9293_tcp_specification decomposes into three readings with distinct ε and stakeholder structures. This reading (middlebox_realism) has ε=0.72 (high extraction from endpoints to middlebox operators). strict_invariance_reading has ε≈0.05 (specification as mountain — negligible extraction). optimization_latitude_reading has ε≈0.25 (moderate extraction from implementation variance). The readings are linked because the strict invariance claim is often cited to delegitimize middlebox behavior, while the optimization latitude claim is cited to justify implementation divergence — both are invoked in the discourse this reading analyzes."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "strict_invariance_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "optimization_latitude_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "specification_authority_subordinate_to_deployed_behavior",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "middlebox_ossification_extracts_endpoint_autonomy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "rfc9293_formal_specification",
+    "drift_state": {
+      "moment": "middlebox_ossification_era",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

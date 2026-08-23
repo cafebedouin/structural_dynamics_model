@@ -1,0 +1,295 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+    "measurement_id_prefix": "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+    "story_uid": "2da93159-e8d1-4e9e-9e1c-b569b769c7de"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.22,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Derivative Work Trigger — Narrow Linking Permissive Reading",
+    "topic_domain": "software_licensing/copyright_law/open_source_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "proprietary_software_vendors",
+      "corporate_legal_departments"
+    ],
+    "victims": [
+      "end_users_of_proprietary_modules",
+      "free_software_developers",
+      "fsf_copyleft_goal"
+    ],
+    "vindicated_propositions": [
+      "copyright_law_allows_aggregation_exception",
+      "dynamic_linking_is_not_derivative_work"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "legal_uncertainty_derivative_work_boundary",
+      "question": "Does the narrow linking permissive reading reflect settled copyright law or an unsettled judicial question?",
+      "resolution_mechanism": "Appellate court rulings on GPL enforcement cases involving dynamic linking, or legislative clarification of derivative work definition in software context.",
+      "impact": "If settled law, the reading is a mountain (fixed legal boundary); if unsettled, it is a contested interpretation whose adoption extracts value from the commons — classification shifts from tangled_rope toward snare or rope depending on enforcement dynamics.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the legal boundary between linking and derivation is fixed or contested."
+    },
+    {
+      "id": "committer_frame_narrow_linking_permissive",
+      "question": "This constraint is one reading of the contested kernel 'gpl_derivative_work_trigger'. What structural elements differ between this reading and its siblings?",
+      "resolution_mechanism": "Compare the beneficiary/victim sets, extractiveness metrics, and coordination claims across the three declared readings (broad_copyleft_reading, interface_boundary_reading, narrow_linking_permissive_reading).",
+      "impact": "If sibling readings produce materially different ε values or beneficiary structures, the kernel decomposes into distinct constraints per ε-invariance; if they converge, the kernel may be a single constraint with observational variance.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment-system framing: this reading instantiates narrow_linking_permissive_reading of kernel gpl_derivative_work_trigger; siblings are broad_copyleft_reading and interface_boundary_reading."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.22
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The GPL's derivative work trigger is a contested kernel. This reading — narrow_linking_permissive_reading — asserts that linking (static or dynamic) to a GPL-covered library constitutes mere aggregation, not derivation, so only modifications to the GPL code itself propagate copyleft obligations. The reading creates a structural wall protecting proprietary modules: vendors may incorporate GPL libraries into proprietary products without releasing their own source. Users of those proprietary modules lose the source-availability guarantee the GPL aims to secure; the FSF's propagation goal is frustrated. The reading claims to be a clarifying coordination mechanism (defining a clean boundary), but its operation extracts value from the commons for proprietary benefit — a tangled rope.",
+    "logic_rationale": "Extractiveness (0.68) is high because the reading enables proprietary capture of GPL'd code's value without reciprocal contribution. Suppression (0.22) is low — the reading is permissive, it does not coerce; it removes a coercive threat (GPL enforcement against linking). Theater ratio (0.31) is moderate: the 'clean boundary' rhetoric performs coordination while the material effect is extraction. Accessibility collapse (0.42) is moderate: alternative licensing (LGPL, permissive licenses) exists but the GPL's dominance makes the boundary practically significant. Resistance (0.55) is substantial: the FSF, many developers, and some courts reject this reading.",
+    "directionality_logic": "Proprietary vendors and their legal departments are structural beneficiaries (d near 0.0): they gain incorporation rights without cost. End users of proprietary modules are payers (d near 1.0): they lose source access and modification rights. Free software developers are payers (d ~0.7): their contributed code becomes a free input for proprietary products. The FSF is excluded (not a party to the transaction but its mission is impaired). Courts are observers (analytical seat) — they adjudicate but do not collect or pay.",
+    "perspectival_gap": "From the proprietary vendor seat, the reading looks like a rope (genuine coordination: a clear, stable boundary that enables innovation). From the end-user and free-developer seats, it looks like a snare (extraction disguised as interpretation). The engine computes this divergence from the declared beneficiaries/victims and exit options; the authored claim (tangled_rope) acknowledges both coordination and extraction.",
+    "mandatrophy_analysis": "The GPL's founding problem (preventing proprietary enclosure of free code) is live. This reading claims the problem is solved for linking scenarios, but the corroboration from outside beneficiaries (FSF, user advocates, many jurisdictions) says the problem persists. The mismatch (founding_problem_status=live, disappearance_verdict=world_rearranges) flags capture risk: the arrangement persists because it benefits powerful vendors, not because the coordination problem is solved.",
+    "kernel_context": "This constraint instantiates the narrow_linking_permissive_reading of kernel gpl_derivative_work_trigger. Sibling readings: broad_copyleft_reading (linking creates derivative work, triggering copyleft) and interface_boundary_reading (clean API boundaries are non-derivative even with tight coupling). The narrow reading forecloses the broad reading in any single legal framework (direct contradiction on whether linking is derivation). It coexists with the interface_boundary_reading as an alternative permissive argument — both are advanced by overlapping but distinct communities (corporate counsel vs. some legal scholars)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_derivative_work_trigger__broad_copyleft_reading",
+      "gpl_derivative_work_trigger__interface_boundary_reading",
+      "lgpl_library_exception",
+      "permissive_license_adoption"
+    ],
+    "dual_formulation_note": "This reading decomposes the GPL derivative work trigger kernel with broad_copyleft_reading and interface_boundary_reading. The narrow reading's ε (0.68) is substantially higher than the broad reading's (near 0) because it enables proprietary extraction; the interface_boundary_reading sits between. All three share the same kernel text but instantiate different constraints per ε-invariance."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.12
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.68
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "proprietary_software_vendors",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Incorporate GPL-covered libraries into proprietary products via dynamic linking without releasing proprietary source. They advocate the narrow reading in court and compliance programs. Exit is arbitrage-grade: they can switch to permissively-licensed alternatives if the reading is rejected."
+    },
+    {
+      "name": "corporate_legal_departments",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advise on GPL compliance strategies that rely on the narrow reading. They shape internal policies and external advocacy (e.g., through trade associations). Exit is mobile: they can adopt conservative compliance if legal risk rises."
+    },
+    {
+      "name": "end_users_of_proprietary_modules",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Use proprietary software that incorporates GPL libraries under the narrow reading. They receive no source code, cannot modify or repair the GPL components, and depend on the vendor for updates. Exit is trapped: switching costs are high, alternatives may not exist."
+    },
+    {
+      "name": "free_software_developers",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Contribute code to GPL projects expecting copyleft propagation. The narrow reading allows their work to be embedded in proprietary products without reciprocity. Exit is constrained: they can relicense new contributions but cannot retroactively change existing GPL code."
+    },
+    {
+      "name": "fsf_copyleft_goal",
+      "role": "excluded",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The Free Software Foundation's mission to ensure all users have the four freedoms. The narrow reading directly frustrates this goal by permitting proprietary enclosures. The FSF is not a party to the linking transaction but its doctrinal objective is impaired; it would object if present in the compliance decision."
+    },
+    {
+      "name": "courts",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate GPL enforcement cases involving dynamic linking. Their rulings determine which reading becomes binding precedent in each jurisdiction. They neither collect extraction nor pay it; they observe and decide."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produce academic analysis of the derivative work boundary in software copyright. Their work influences courts and compliance practice but they have no direct stake in the extraction."
+    }
+  ],
+  "gain_flow": "proprietary_software_vendors",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Defines a clear, bright-line boundary between aggregation and derivation in software copyright, reducing litigation risk and enabling composable software development across license boundaries.",
+    "transfer_function": "Moves the value of GPL-covered code (development effort, network effects, user base) from the free software commons into proprietary products, without reciprocal source disclosure. The transfer is from free software developers and end users to proprietary vendors.",
+    "absent_voices": "End users of proprietary modules are structurally excluded from the compliance decision — they have no seat at the table when vendors and lawyers decide whether to rely on the narrow reading. The FSF's copyleft goal is also excluded as a non-agent doctrinal commitment.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the narrow reading vanished overnight (e.g., a supreme court ruling that linking creates derivative works), proprietary vendors would have to either release source for linked modules, rewrite using alternative libraries, or negotiate LGPL/exception licenses. The mobile/embedded/IoT software supply chain would reorganize rapidly. The commons would regain source-availability guarantees for linked code.",
+    "founding_problem": "Early free software licenses lacked a clear boundary for 'derivative work' in the context of dynamic linking and library usage. The GPLv2 (1991) and GPLv3 (2007) left the boundary ambiguous, creating legal uncertainty for developers who wanted to combine GPL and proprietary code.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proprietary vendors and some legal scholars attest the boundary uncertainty persists and the narrow reading resolves it. The FSF, most free software developers, and several appellate decisions (e.g., Artifex v. Hancom, VMware v. Hellwig) attest the founding problem is the proprietary enclosure itself, not uncertainty — the narrow reading is a solution that benefits the enclosers. No neutral third party corroborates the narrow reading as a pure coordination fix."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "broad_copyleft_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "interface_boundary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "linking_is_aggregation_not_derivation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "only_modifications_trigger_gpl_obligations",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "linking_aggregation_boundary",
+    "drift_state": {
+      "moment": "contemporary_court_decisions",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

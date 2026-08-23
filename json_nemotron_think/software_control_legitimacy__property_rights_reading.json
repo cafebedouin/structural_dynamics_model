@@ -1,0 +1,310 @@
+{
+  "header": {
+    "constraint_id": "software_control_legitimacy__property_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_software_control_legitimacy__property_rights_reading",
+    "measurement_id_prefix": "swctl_pr",
+    "story_uid": "63fca4cc-8724-47b3-97ad-d9a5b259257b"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Software Control as Property Right — Proprietary Licensing Regime",
+    "topic_domain": "economic/technological/legal",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "software_vendors",
+      "investors"
+    ],
+    "victims": [
+      "foss_advocates",
+      "software_users"
+    ],
+    "vindicated_propositions": [
+      "property_rights_doctrine",
+      "commercial_sustainability_thesis",
+      "labor_desert_justification"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "software_vendors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Define and enforce license terms that restrict use, modification, and distribution. Collect license fees and control product roadmaps. Justify restrictions as necessary to recoup R&D investment and fund ongoing development. Can pivot to open-core or SaaS models if enforcement weakens."
+    },
+    {
+      "name": "investors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Provide capital expecting returns protected by IP exclusivity. Benefit from the ability to restrict and monetize software artifacts. Diversify across portfolios; exit via acquisition or public markets. Their returns depend on the enforceability of vendor control."
+    },
+    {
+      "name": "foss_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build and maintain free/open alternatives that compete with proprietary software. Denied return on investment when proprietary network effects, IP thickets, and vendor lock-in suppress adoption. Exit means abandoning the field or accepting proprietary dependencies; constrained by ecosystem momentum and compatibility requirements."
+    },
+    {
+      "name": "software_users",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pay license fees and accept restrictions on modification, redistribution, and repair. Receive polished, supported, integrated products in return. Exit is constrained by switching costs, data lock-in, institutional mandates, and lack of viable alternatives for specialized domains."
+    },
+    {
+      "name": "competition_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Investigate whether IP enforcement crosses into anti-competitive conduct (refusal to license, tying, predatory pricing). Can impose remedies that alter the constraint's enforcement but do not set the underlying property regime."
+    },
+    {
+      "name": "open_source_maintainers",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Contribute labor to commons-based production under the assumption that code remains free. Their work is sometimes incorporated into proprietary products without reciprocity (permissive licenses) or they face legal risk from patent claims. Would object to expansion of proprietary control but are structurally excluded from legislative and judicial IP-setting processes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates capital allocation to software development by guaranteeing creators exclusive control over copies and derivatives, enabling them to capture returns on investment and sustain commercial R&D.",
+    "transfer_function": "Moves control over use, modification, and distribution from users to vendors; moves monetary payment from users (and downstream businesses) to vendors and investors; moves developmental agency from the commons to controlled roadmaps.",
+    "absent_voices": "Users in developing economies priced out of proprietary stacks; developers in jurisdictions with weak IP enforcement who cannot participate in the proprietary economy; future innovators blocked by patent thickets and API copyright claims; repair technicians and right-to-repair advocates denied access to diagnostic software.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If exclusive control vanished overnight, the commercial proprietary software model would collapse: venture capital would flee, vendors would shift to SaaS/hosted models or open-core, FOSS would become the default for infrastructure, and the entire economy of software licensing would reorganize around services and support rather than copy restriction.",
+    "founding_problem": "Early commercial software (1970s–80s) had no effective protection against copying; companies could not recoup development costs, leading to underinvestment and market failure for complex applications.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historical accounts from early software industry participants (e.g., Gates' 1976 'Open Letter to Hobbyists', contemporaneous trade press) attest to the copying problem. Economic historians (e.g., Bessen & Meurer on software patents, Lampe & Moser on copyright) document the investment response. FOSS advocates and development economists (e.g., Lerner & Tirole, von Hippel) attest that alternative funding models (corporate sponsorship, services, commons-based peer production) now solve the founding problem without exclusive control."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.65
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The property rights reading of software control legitimacy asserts that creators hold a legitimate property right in their code, entitling them to restrict use, modification, and distribution. This reading underpins the proprietary software industry: copyright and contract law enforce license terms, vendors monetize through per-copy or per-seat fees, and investors fund development expecting IP-protected returns. The constraint is CLAIMED as a coordination mechanism (enabling commercial sustainability) but operates with substantial extraction (restricting user freedoms, suppressing commons alternatives, enabling rent extraction via lock-in). The engine will compute per-seat types from the structural data; the authored claim (tangled_rope) and metrics are independent.",
+    "logic_rationale": "Extractiveness (0.45) reflects moderate but structural extraction: users pay above marginal cost, FOSS contributors lose potential returns, lock-in enables pricing power. Suppression (0.65) is higher because persistence depends on active legal/technical enforcement (copyright, DRM, contract, patent) not voluntary participation. Theater ratio (0.3) is low-moderate: enforcement is genuinely functional for the coordination claim, but a growing share (audit trails, license compliance tooling, anti-circumvention) serves extraction maintenance. Accessibility collapse (0.5) is partial: FOSS alternatives exist and grow, but network effects and compatibility constraints limit exit. Resistance (0.55) is significant: FOSS movement, right-to-repair, regulatory scrutiny (DMA, essential facilities), and user pushback are active.",
+    "directionality_logic": "Vendors and investors are structural beneficiaries (d near 0.0): they collect rents, set terms, have arbitrage-grade exit (pivot models, diversify). FOSS advocates and users are structural targets (d near 1.0): they bear restrictions, pay transfers, have constrained exit (ecosystem lock-in, identity_locked for maintainers). Competition authorities are analytical observers. The derivation chain from beneficiary/victim declarations + exit options produces this gradient; no overrides needed.",
+    "perspectival_gap": "From the vendor seat, the constraint is genuine coordination: they built it, they maintain it, it funds the product. From the FOSS advocate seat, the same structure is extraction: their labor is enclosed, their alternatives suppressed by network effects the constraint reinforces. From the user seat, it is a mixed deal: real product value received, but at monopoly-inflated cost with freedom loss. The engine computes this divergence; the claim does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (inability to monetize software without copy control) is contested as live. Vendors and investors attest it remains live (piracy, free-rider problem). FOSS advocates and development economists attest it is substantially solved by alternative models (corporate-sponsored FOSS, SaaS, services). The arrangement persists partly because the original mandate (enable commercial software) has been joined by a secondary mandate (protect incumbent rent streams) — a classic mandatrophy signature. The classification (tangled_rope) captures this: the coordination function is real but extraction has layered onto it and now sustains the enforcement machinery.",
+    "kernel_context": "This constraint is the property_rights_reading of the contested kernel 'software_control_legitimacy'. Sibling readings: freedom_imperative_reading (proprietary software is ethically illegitimate), pragmatic_openness_reading (open source is better methodology but proprietary is legitimate alternative), commons_reading (software control is negotiated collective governance of shared infrastructure). This reading instantiates a constraint where exclusive control is a legitimate property right; the siblings instantiate constraints where it is illegitimate, optional, or subject to collective negotiation respectively."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the property_rights_reading a distinct constraint from its sibling readings, or a framing of the same underlying arrangement?",
+      "resolution_mechanism": "Apply the ε-invariance test: if measuring extraction under the property rights framing yields a different ε than under the freedom imperative framing, they are distinct constraints. The structural delta (different victim sets, different beneficiary sets, different coordination claims) indicates distinct constraints.",
+      "impact": "If distinct, each reading gets its own constraint story with its own ε, stakeholders, and classification. If same constraint, the framework must model observer-relative classification — which the ε-invariance principle forbids.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's readings map to distinct constraints per ε-invariance."
+    },
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "Is the coordination function (enabling commercial R&D) genuine and separable from the extraction (restricting user freedom, suppressing commons), or is the coordination story cover for extraction?",
+      "resolution_mechanism": "Counterfactual: if enforcement were limited to commercial redistribution (not personal use, modification, repair, interoperability), would commercial R&D still be funded? Evidence from FOSS commercial models (Red Hat, SUSE, cloud providers) suggests yes — coordination survives without full extraction.",
+      "impact": "If separable, the constraint is a tangled_rope where extraction is layered onto coordination. If inseparable, the property rights claim itself is the extraction mechanism and the constraint may be a snare from the user/FOSS seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the property right's coordination and extraction components are structurally separable."
+    },
+    {
+      "id": "suppression_mechanism_mix",
+      "question": "Is the measured suppression primarily structural (legal/technical barriers) or does it include internalized suppression (users/developers believing proprietary control is natural/legitimate)?",
+      "resolution_mechanism": "Post-reform suppression trajectory: if jurisdictions that legalize personal-use copying, repair, or interoperability see persistent behavioral avoidance of those freedoms, internalized suppression is present.",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests; the constraint persists partly through ideological capture, not just enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression in proprietary software regime."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "software_patent_enforcement",
+      "api_copyright_regime",
+      "drm_anti_circumvention",
+      "saas_terms_of_service"
+    ],
+    "dual_formulation_note": "This constraint (property_rights_reading) and its siblings (freedom_imperative_reading, pragmatic_openness_reading, commons_reading) form a constraint family decomposing the colloquial label 'software IP legitimacy.' Each has distinct ε, victim/beneficiary structure, and claimed type. The property rights reading has the highest ε (moderate extraction) and claims tangled_rope; freedom imperative claims snare (ε higher from user seat); pragmatic openness claims rope (low ε); commons claims scaffold (transitional governance)."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_imperative_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pragmatic_openness_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "commons_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creator_has_exclusive_control_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "commercial_sustainability_requires_exclusion",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "classical_ip_framework",
+    "drift_state": {
+      "moment": "digital_era_commons_expansion",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "software_control_legitimacy"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

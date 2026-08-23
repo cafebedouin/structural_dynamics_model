@@ -1,0 +1,291 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__targeting_efficiency_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_income_support_commitment__targeting_efficiency_reading",
+    "measurement_id_prefix": "isc_te",
+    "story_uid": "32d2290d-6ee6-4005-821a-8ff49ad9871e",
+    "created_at": "2026-08-03T14:22:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.55,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.48,
+    "claimed_type": "rope",
+    "human_readable": "Means-Tested Income Support Targeting Principle",
+    "topic_domain": "political_economy/social_policy/welfare_state",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "targeted_program_recipients",
+      "low_income_families_with_children"
+    ],
+    "victims": [
+      "near_poor_excluded_by_cliffs",
+      "taxpayers_funding_administration"
+    ],
+    "vindicated_propositions": [
+      "resource_scarcity_requires_targeting",
+      "means_testing_maximizes_poverty_reduction_per_dollar"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint is one reading (targeting_efficiency_reading) of the contested kernel income_support_commitment. What does the sibling reading freedom_floor_reading change structurally?",
+      "resolution_mechanism": "Compare the beneficiary/victim structures and ε values across the three readings. The freedom_floor_reading instantiates a UBI constraint with universal beneficiaries and concentrated taxpayer victims; the dependency_trap_reading instantiates work-conditioned support with different exclusion dynamics.",
+      "impact": "If the kernel framing is accepted, this reading's ε=0.42 for the targeted system competes with freedom_floor_reading's ε for UBI (which this reading claims is higher). The classification divergence between readings measures the kernel's contestedness.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee frame: this reading's constraint vs. sibling readings' constraints from same kernel"
+    },
+    {
+      "id": "ubi_as_snare_claim",
+      "question": "Does the targeting_efficiency_reading's claim that UBI funded by cannibalizing targeted programs constitutes a snare (ε≈0.7, victims=current recipients) hold under empirical scrutiny?",
+      "resolution_mechanism": "Micro-simulation of UBI replacement financing: if UBI is funded by eliminating targeted programs + broad-based taxes, trace net transfers for current targeted recipients. Compare extraction/suppression metrics of the resulting universal system.",
+      "impact": "If confirmed, the freedom_floor_reading's instantiated constraint classifies as snare from this reading's seat, creating a cross-reading extraction asymmetry. If false, the readings' conflict is about values not structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether UBI replacement extracts from current targeted recipients as this reading claims"
+    },
+    {
+      "id": "administrative_extraction_vs_coordination",
+      "question": "Is the targeted system's administrative burden (means-testing, cliffs, stigma) structural extraction from recipients, or necessary coordination cost?",
+      "resolution_mechanism": "Compare administrative cost per transfer dollar in targeted vs. universal systems; measure labor supply effects at eligibility cliffs; survey recipient experience of compliance burden.",
+      "impact": "If administrative burden is extractive (not coordination), the targeted system's ε rises toward tangled_rope/snare. If coordination, the reading's rope claim holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether means-testing overhead is coordination cost or extractive friction"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.55) structural (eligibility rules, cliffs, bureaucratic gatekeeping) or internalized (recipients believing they don't deserve more, stigma preventing claims)?",
+      "resolution_mechanism": "Post-reform suppression trajectory: if suppression persists after eligibility expansion or automation reduces gatekeeping, reclassify as partially internalized.",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests — recipients carry the suppression with them after policy changes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in means-tested welfare"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The targeting_efficiency_reading instantiates the constraint that income support should be concentrated on demonstrated need via means-testing, opposing universal basic income. This reading claims the targeted system is efficient coordination (rope): it solves the genuine coordination problem of allocating scarce fiscal resources to those most in need. The authored metrics describe a system with moderate extraction (0.42) from administrative burden, eligibility cliffs excluding the near-poor, and stigma costs — and rising theater (0.38) as compliance rituals increasingly serve bureaucratic self-justification rather than accurate targeting. The claim/metric gap is deliberate: the reading claims rope while metrics show extractive friction; the engine measures that divergence.",
+    "logic_rationale": "Extractiveness (0.42) reflects administrative overhead (15-20% of benefits), cliff effects that penalize earnings, and stigma costs — real but not dominant. Suppression (0.55) comes from eligibility rules that actively gatekeep, not merely passive exclusion. Theater ratio (0.38) rising over time: fraud-prevention rituals and work-requirement compliance consume growing administrative capacity without improving targeting accuracy. The measurement series runs on a shared time grid (T=0,10,20,30) so every metric is authored at every examined point.",
+    "directionality_logic": "Targeted recipients are structural beneficiaries (d≈0.2): they receive concentrated transfers but face compliance burden and cliffs. Near-poor excluded by cliffs are payers (d≈0.8): they bear tax costs without receiving benefits, and face marginal tax rates >100% at phase-out boundaries. Taxpayers are moderate payers (d≈0.6). Administrators are agenda_setters with arbitrage exit (d≈0.15). The engine derives directionality from these structural positions.",
+    "perspectival_gap": "From the agenda_setter (administrator) seat, the system is coordination: it rations scarce funds. From the near_poor_excluded seat, it is extraction: they fund a system that excludes them by design. From the targeted_recipient seat, it is ambiguous: benefit receipt coexists with compliance extraction. The engine computes this divergence; the authored claim (rope) does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (post-war poverty alleviation via targeted relief) is contested: targeting_efficiency_reading says it's live (need persists), freedom_floor_reading says it's dead (universal floor is now feasible), dependency_trap_reading says it's live but misdiagnosed (work disincentives are the real problem). The targeted system persists despite UBI proposals — not because the founding problem is solved, but because no coalition can agree on replacement. This is mandatrophy: the arrangement outlives its consensus but not its function.",
+    "kernel_context": "This constraint is the targeting_efficiency_reading of the income_support_commitment kernel. Sibling readings: freedom_floor_reading (instantiates UBI as freedom-enabling universal floor), dependency_trap_reading (instantiates work-conditioned support as anti-dependency). This reading claims UBI funded by cannibalizing targeted programs would be a snare extracting from current recipients (Queens parent loses $19,100). The kernel contest is over whether scarcity requires targeting (this reading), whether universality enables freedom (freedom_floor), or whether unconditionality creates dependency (dependency_trap)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__freedom_floor_reading",
+      "income_support_commitment__dependency_trap_reading"
+    ],
+    "dual_formulation_note": "Kernel income_support_commitment decomposes into three constraint stories: targeting_efficiency_reading (this file, ε=0.42 claimed rope), freedom_floor_reading (UBI, ε≈0.3 claimed rope by proponents but ε≈0.7 snare from this reading's seat), dependency_trap_reading (work-conditioned, ε≈0.5 tangled_rope). All three share the kernel's commitment to income support but instantiate different constraints with different beneficiary/victim structures. Linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "targeted_program_recipients",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive means-tested benefits (e.g., Queens parent: $31,100/year across housing, nutrition, child support). Face compliance burden: recertification, asset tests, work requirements. Lose benefits sharply at income cliffs (effective marginal tax rates >100%). Stigma reduces take-up. Cannot exit the system without losing survival income; changing programs requires navigating bureaucratic maze."
+    },
+    {
+      "name": "near_poor_excluded_by_cliffs",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Earn slightly above eligibility thresholds (e.g., $45,000-$60,000 for family of three). Pay full taxes funding the system but receive zero transfers. Face effective marginal tax rates exceeding 100% if they increase earnings and lose residual benefits. No voice in program design; political representation captures middle-class tax concerns not near-poor exclusion. Exit options: reduce earnings to qualify (perverse incentive) or relocate to lower-cost jurisdiction."
+    },
+    {
+      "name": "taxpayers_funding_administration",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Fund both transfers and administrative overhead (~15-20% of program costs). Organized through taxpayer associations, business groups, fiscal conservative coalitions. Can exit via tax avoidance, relocation, or political pressure for reform. Benefit from social stability the system provides but contest its cost and efficiency."
+    },
+    {
+      "name": "welfare_administrators",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design and enforce eligibility rules, manage compliance apparatus, adjudicate appeals. Collect institutional rents: budget authority, staffing, rule-making power. Justify the system as fraud prevention and targeting accuracy. Can transition to private-sector consulting or policy roles; their exit is arbitrage-grade. The compliance machinery they maintain is the constraint's active enforcement."
+    },
+    {
+      "name": "ubi_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Argue for universal unconditional cash transfers as replacement. Structurally excluded from current program design — their proposal would dismantle the administrators' authority and the targeted recipients' concentrated benefits. Would benefit from universal floor but lose targeted intensity. Their voice appears in pilot programs and legislative proposals but not in operational rule-making."
+    },
+    {
+      "name": "policy_analysts",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Evaluate targeting efficiency, cliff effects, administrative costs, and labor supply responses across regimes. No material stake in the constraint's persistence. Provide evidence for all three readings. Their exit is analytical: they can change frameworks without personal cost."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allocates scarce fiscal resources to those with demonstrated material need, avoiding universal dilution that would reduce per-recipient adequacy or require politically infeasible tax increases.",
+    "transfer_function": "Moves tax revenue from broad taxpayer base (concentrated on middle/upper income) to low-income households with children, disabilities, or unemployment — mediated by administrative apparatus that verifies need and enforces eligibility boundaries.",
+    "absent_voices": "The near-poor excluded by cliffs (stakeholder near_poor_excluded_by_cliffs) would object to funding a system that excludes them at the margin. Future generations who will bear debt from current welfare financing are not represented. Non-citizen residents with need but no eligibility are structurally absent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If means-testing vanished overnight, either (a) universal replacement at current spending levels would slash per-recipient benefits by ~60% (world rearranges for current recipients), or (b) spending would need to triple to maintain adequacy (world rearranges for taxpayers). The targeted system's beneficiaries and payers both depend on its current calibration.",
+    "founding_problem": "Post-WWII/War on Poverty: how to alleviate material deprivation without creating permanent dependency or requiring confiscatory taxation — solved by concentrating aid on demonstrable need via means-testing.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Targeting_efficiency_reading proponents (CBPP, progressive policy institutes) attest the problem is live: poverty persists, targeting remains fiscally necessary. Freedom_floor_reading proponents (UBI advocates, some labor economists) attest it's dead: universality is now affordable and targeting's administrative costs exceed its savings. Dependency_trap_reading proponents (conservative welfare reformers) attest it's live but misdiagnosed: the problem is work disincentives, not targeting per se. No consensus outside beneficiary sets."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "resources_are_finite_and_must_be_targeted",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "need_based_allocation_maximizes_poverty_reduction_per_dollar",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "means_tested_welfare_state",
+    "drift_state": {
+      "moment": "ubi_proposal_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

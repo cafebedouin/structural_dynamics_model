@@ -1,0 +1,390 @@
+{
+  "header": {
+    "constraint_id": "biblical_authority__conciliar_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_biblical_authority__conciliar_reading",
+    "measurement_id_prefix": "biblical_authority__conciliar_reading",
+    "story_uid": "19a6bbe3-97c5-45ca-8df0-c4d3a1bfb08e"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.32,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Scripture Interpreted Through Ecumenical Councils and Patristic Consensus",
+    "topic_domain": "theology/religious_studies/history_of_christianity",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "episcopal_collegiality",
+      "autocephalous_churches",
+      "patristic_scholars"
+    ],
+    "victims": [
+      "rapid_doctrinal_adaptation_advocates",
+      "laity_seeking_immediate_pastoral_response"
+    ],
+    "vindicated_propositions": [
+      "conciliar_infallibility",
+      "tradition_as_living_continuity",
+      "sacraments_as_mysteries"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the conciliar reading of biblical authority a distinct constraint from sola scriptura and magisterial tradition readings, or do they share a single ε-measured structure?",
+      "resolution_mechanism": "Apply ε-invariance test: if measuring extraction via conciliar consensus mechanisms yields different ε than measuring via magisterial decree or individual interpretation, they are separate constraints. Decompose per DP-001.",
+      "impact": "If single constraint, ε must be invariant across readings — but conciliar extraction (episcopal collegiality) differs structurally from papal extraction (magisterium) and sola scriptura extraction (none claimed). Likely three distinct constraints in a family.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the biblical_authority kernel decomposes into three ε-invariant constraints"
+    },
+    {
+      "id": "episcopal_extraction_naturalness",
+      "question": "Is the episcopal collegiality beneficiary structure a genuine coordination function (maintaining doctrinal unity across autocephalous churches) or extractive cover for clerical privilege?",
+      "resolution_mechanism": "Compare doctrinal stability outcomes in conciliar vs non-conciliar traditions under similar external pressures; measure whether episcopal consensus actually prevents fragmentation or merely ritualizes it.",
+      "impact": "If coordination is genuine, tangled_rope stands; if extractive cover, reclassifies toward snare. The 'moderate clerical extraction' delta suggests hybrid.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether episcopal beneficiary status reflects coordination necessity or rent-seeking"
+    },
+    {
+      "id": "conciliar_adaptivity_ceiling",
+      "question": "Can conciliar consensus mechanisms adapt doctrine rapidly enough for contemporary pastoral crises, or does the victim class (rapid adaptation seekers) face structural impossibility?",
+      "resolution_mechanism": "Track time-to-consensus on novel bioethical, technological, and social questions across autocephalous churches; compare to magisterial and congregational response times.",
+      "impact": "If adaptation is structurally impossible, victim extraction is high and constraint trends toward snare; if slow but functional, tangled_rope holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the conciliar mechanism's latency is feature or bug for the victim class"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 325,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 451,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 787,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1054,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1453,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1917,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1964,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 325,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 451,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 787,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1054,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1453,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1917,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1964,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 325,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 451,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 787,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1054,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1453,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1917,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1964,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.32
+    }
+  ],
+  "interval": {
+    "start": 325,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the Orthodox/conciliar reading of biblical authority: Scripture is not self-interpreting (contra sola scriptura) nor subject to a living magisterium (contra Roman Catholic tradition-scripture reading), but is authoritatively interpreted through the ecumenical councils (325-787) and the ongoing patristic consensus they instantiate. Tradition is understood as living continuity — the Holy Spirit guiding the Church through time — not as a static deposit guarded by a central magisterium. The constraint coordinates interpretation across autocephalous (self-governing) churches through shared conciliar reception, not juridical enforcement. Extraction is moderate and episcopal: bishops collectively benefit from the hermeneutic monopoly, but no single bishop or patriarch extracts unilaterally. Victims are those needing rapid doctrinal adaptation — the conciliar mechanism's consensus requirement creates structural latency. Theater ratio is significant (0.45): conciliar rhetoric often exceeds actual conciliar practice (no ecumenical council since 787; pan-Orthodox councils attempted but not universally received). Suppression is moderate: dissent is managed through canonical discipline and non-communion rather than inquisitorial coercion.",
+    "key_agents": [
+      "episcopal_collegiality: Primary beneficiary/agenda_setter (institutional/identity_locked) — holds hermeneutic authority collectively",
+      "autocephalous_churches: Beneficiary/coordinated (institutional/constrained) — gain unity without centralization",
+      "patristic_scholars: Beneficiary (organized/mobile) — expertise constitutes the coordination mechanism",
+      "rapid_doctrinal_adaptation_advocates: Victim/payer (moderate/constrained) — blocked by consensus latency",
+      "laity_seeking_immediate_pastoral_response: Victim/payer (powerless/trapped) — no exit from episcopal discernment timeline",
+      "ecumenical_dialogue_partners: Observer/excluded (institutional/analytical) — Protestant and Catholic interlocutors",
+      "sola_scriptura_adherents: Excluded (organized/mobile) — competing reading, structurally outside conciliar frame"
+    ],
+    "logic_rationale": "Extractiveness (0.38) reflects real but moderate episcopal rent: the hermeneutic monopoly enables clerical status and institutional continuity, but the conciliar mechanism genuinely coordinates 14+ autocephalous churches without a papacy — a non-trivial coordination achievement. Suppression (0.32) is lower than magisterial systems: dissenters can leave for other traditions (exit exists), and intra-Orthodox dissent is often tolerated as 'theologoumena' unless it threatens conciliar dogma. Theater (0.45) is high because the last universally received ecumenical council was 787; subsequent 'pan-Orthodox' councils lack universal reception, making conciliar rhetoric partly performative. Accessibility collapse (0.42) is moderate: alternative interpretations exist (Protestant, Catholic, secular) but the conciliar frame presents itself as the only authentic continuity. Resistance (0.55) is significant: modern secular pressures, intra-Orthodox jurisdictional disputes, and pastoral demands for faster adaptation all challenge the mechanism.",
+    "perspectival_gap": "From the episcopal_collegiality seat, this is a ROPE: genuine coordination solving the problem of doctrinal unity without centralization. From the rapid_adaptation_advocates seat, it is a SNARE: consensus latency extracts pastoral relevance. From autocephalous_churches, it is TANGLED ROPE: they gain unity (coordination) but cede speed (extraction). The engine computes this divergence from power/exit asymmetry: episcopal_collegiality holds identity_locked exit (cannot leave episcopal identity without losing self); laity are trapped (no alternative pastoral structure within tradition); scholars are mobile (can work in academia).",
+    "directionality_logic": "Episcopal_collegiality is structural beneficiary: collects hermeneutic authority, institutional continuity, and sacramental validity monopoly. Directionality d ≈ 0.15 (near beneficiary end). Autocephalous_churches are coordinated beneficiaries: gain unity without Rome; d ≈ 0.35 (modest beneficiary). Patristic_scholars are incidental beneficiaries: their expertise is the mechanism; d ≈ 0.4 (near symmetric). Rapid_adaptation_advocates are targets: their needs are structurally filtered by consensus latency; d ≈ 0.75. Laity_seeking_pastoral_response are trapped targets: no exit within tradition; d ≈ 0.85. Ecumenical_partners are analytical observers: d = 0.5 (analytical seat). Sola_scriptura_adherents are excluded: their reading is structurally incompatible (different kernel reading), not coordinated.",
+    "mandatrophy_analysis": "The founding problem (doctrinal unity across pentarchy without imperial enforcement) was LIVE at 325-787. Post-1054, the problem shifted: unity without papacy AND without empire. Post-1453, unity under Ottoman millet system then modern nation-states. Today, the founding problem (conciliar unity) is CONTESTED: some say it's solved (we have unity), others say it's failed (jurisdictional chaos in diaspora), others say it's the wrong problem (unity requires papacy). The constraint persists not because the founding problem is live, but because the episcopal_collegiality beneficiary structure has identity_locked exit — bishops cannot abandon conciliar ecclesiology without ceasing to be Orthodox bishops. This is mandatrophy: the mechanism outlives its coordination necessity, maintained by identity fusion of the beneficiary class.",
+    "kernel_context": "This constraint is the conciliar_reading of the biblical_authority kernel. Sibling readings: sola_scriptura_reading (Scripture alone sufficient, self-interpreting) and tradition_scripture_reading (Scripture requires tradition; magisterium guards deposit). The conciliar reading differs structurally: beneficiary is episcopal collegiality (not papacy or individual conscience); coordination mechanism is conciliar reception (not magisterial decree or private judgment); victim is rapid doctrinal adaptation (not doctrinal chaos or magisterial rigidity). All three readings are live positions held by different Christian communions — they coexist as a constraint family."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "biblical_authority__sola_scriptura_reading",
+      "biblical_authority__tradition_scripture_reading",
+      "orthodox_autocephaly_structure",
+      "orthodox_sacramental_theology"
+    ],
+    "dual_formulation_note": "Part of biblical_authority constraint family (kernel_id: biblical_authority). Three readings decompose the colloquial 'biblical authority' into ε-invariant constraints: conciliar (this), sola_scriptura, tradition_scripture. Conciliar reading has moderate ε (0.38) from episcopal extraction; sola_scriptura claims ε≈0 but has hidden extraction (pastoral gatekeeping); tradition_scripture has higher ε (0.55+) from magisterial extraction. Link via affects_constraints for contamination analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "episcopal_collegiality",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Bishops collectively hold the hermeneutic authority to interpret Scripture through conciliar reception. They convene synods, guard the patristic consensus, and define the boundaries of doctrinal development. Their episcopal identity is fused with this role — a bishop who rejects conciliar authority ceases to function as an Orthodox bishop. They benefit from institutional continuity, sacramental validity monopoly, and the status of being the Church's living teaching office. Exit would require abandoning episcopal identity itself."
+    },
+    {
+      "name": "autocephalous_churches",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Self-governing churches (Constantinople, Alexandria, Antioch, Jerusalem, Moscow, Serbia, Romania, Bulgaria, Georgia, Cyprus, Greece, Poland, Albania, Czech Lands, America, etc.) that maintain communion through shared conciliar faith. They gain doctrinal unity without submitting to a central papacy — the conciliar mechanism coordinates them horizontally. But they are constrained: breaking conciliar consensus risks schism, and they cannot unilaterally adapt doctrine. Their exit option is constrained — they could declare autocephaly unilaterally (as Ukraine 2019) but this fractures the coordination they benefit from."
+    },
+    {
+      "name": "patristic_scholars",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Theologians, historians, and monastics whose expertise in the patristic corpus constitutes the living continuity of tradition. They staff theological faculties, serve on synodal commissions, and produce the commentaries that mediate councils to the present. They benefit professionally and spiritually from the conciliar hermeneutic — their specialization IS the coordination mechanism. But they are mobile: they can work in secular academia, convert to other traditions, or dissent as private theologoumena without losing their vocation."
+    },
+    {
+      "name": "rapid_doctrinal_adaptation_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Clergy, theologians, and lay activists who argue that the conciliar mechanism's consensus latency fails contemporary pastoral crises: bioethics (IVF, genetic editing), technology (AI personhood, digital communion), sexuality (LGBTQ+ inclusion), and interfaith marriage. They pay the cost of doctrinal stasis: pastoral credibility loss, youth attrition, and perceived irrelevance. Their exit is constrained — they can advocate internally (slow), schism (rare, costly), or leave for Protestant/Catholic/secular frameworks (identity loss). They are not 'organized' as a single body but as a cross-jurisdictional tendency."
+    },
+    {
+      "name": "laity_seeking_immediate_pastoral_response",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Ordinary faithful facing concrete pastoral situations — remarriage after civil divorce, gender transition of a family member, end-of-life decisions for loved ones — who need timely episcopal discernment but encounter multi-year synodal processes or 'not yet consensus' responses. They bear the human cost of conciliar latency with no voice in the mechanism. Exit is trapped: leaving Orthodoxy means abandoning the sacramental life they believe is necessary for salvation; staying means accepting the timeline. Their powerlessness is structural — conciliar ecclesiology has no lay synodal vote."
+    },
+    {
+      "name": "ecumenical_dialogue_partners",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Roman Catholic magisterium, Protestant world communions (Lutheran, Reformed, Anglican), and interfaith dialogue offices that engage Orthodoxy as a dialogue partner. They analyze the conciliar reading from outside: Catholics see it as 'incomplete magisterium'; Protestants see it as 'traditionalism without sola scriptura safeguard'. They have analytical exit (they are not subject to it) but institutional interest — ecumenical convergence requires understanding the constraint's internal logic. They do not collect or pay extraction."
+    },
+    {
+      "name": "sola_scriptura_adherents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Evangelical, Reformed, and non-denominational Christians who hold the sibling reading: Scripture alone is sufficient and self-interpreting. They are structurally excluded from the conciliar frame — their hermeneutic rejects the very premise of conciliar authority. They would object to the claim that councils interpret Scripture authoritatively, arguing this adds human tradition to God's Word. But they are mobile: they have their own vibrant ecclesial structures and face no coercion from the conciliar mechanism. Their exclusion is the kernel disagreement itself, not suppression."
+    }
+  ],
+  "gain_flow": "episcopal_collegiality",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Maintains doctrinal unity and sacramental communion across 14+ autocephalous churches without a central papacy, using the ecumenical councils (325-787) and their patristic reception as the shared hermeneutic standard. Solves the coordination problem: how can independent churches recognize each other as the same Church?",
+    "transfer_function": "Moves hermeneutic authority and doctrinal development pace from individual bishops, local churches, or the laity to the collective episcopal collegiality operating through conciliar consensus. The transfer is: speed and flexibility (from adaptation seekers) → stability and unity (to episcopal collegiality and autocephalous churches).",
+    "absent_voices": "The laity have no formal synodal voice in conciliar reception — the mechanism is episcopal. Women are excluded from the episcopal order that holds the hermeneutic key. Non-Chalcedonian Oriental Orthodox (who accept only three councils) are excluded from the 'full conciliar consensus' despite sharing most of the patristic tradition. Modern secular bioethicists and scientists whose expertise bears on doctrinal questions have no seat at synodal tables.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the conciliar reading vanished overnight, autocephalous churches would lose their primary unity mechanism — either fragmenting into jurisdictional isolation, adopting a papal model (some would), or drifting toward congregationalism. The episcopal_collegiality beneficiary structure would collapse. Laity would lose the sacrimal continuity they rely on. Rapid_adaptation_advocates would gain immediate pastoral flexibility but lose the tradition they seek to reform from within. The Orthodox world would reorganize fundamentally.",
+    "founding_problem": "How to maintain doctrinal unity and sacramental communion across the pentarchy (Rome, Constantinople, Alexandria, Antioch, Jerusalem) after the Arian controversy showed that imperial enforcement of doctrine failed, and local bishops could not be trusted to interpret Scripture individually. The conciliar mechanism — bishops gathering in council, their definitions received by the whole Church — was built to solve this specific 4th-century problem.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Orthodox historians (Fr. John Meyendorff, Fr. Alexander Schmemann) attest the 4th-century founding problem was real and the conciliar mechanism solved it. Catholic historians (Congar, Ratzinger) corroborate that the conciliar model worked for the first millennium but argue it became insufficient after 1054. Protestant scholars (Pelikan, McGrath) attest the conciliar model is structurally distinct from both papal and sola scriptura models. No non-Orthodox source corroborates that the founding problem remains live in its original form — the consensus outside the beneficiary set is that the problem has mutated or been superseded."
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "conciliar_patristic_framework",
+    "drift_state": {
+      "moment": "contemporary_autocephalous_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sola_scriptura_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "tradition_scripture_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "conciliar_consensus_as_hermeneutic",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "tradition_as_living_continuity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "episcopal_collegiality_over_papal_primacy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

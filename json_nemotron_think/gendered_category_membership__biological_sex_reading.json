@@ -1,0 +1,363 @@
+{
+  "header": {
+    "constraint_id": "gendered_category_membership__biological_sex_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_gendered_category_membership__biological_sex_reading",
+    "measurement_id_prefix": "gcm_bio_sex",
+    "story_uid": "0f7b3ebc-c39a-4c63-9122-464fa13af1ab",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.72,
+    "claimed_type": "mountain",
+    "human_readable": "Biological Sex as Sole Basis for Gender Category Membership",
+    "topic_domain": "social_ontology/political_philosophy/bioethics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "cisgender_women",
+      "sex_based_rights_advocates"
+    ],
+    "victims": [
+      "transgender_women",
+      "non_binary_people",
+      "intersex_people"
+    ],
+    "vindicated_propositions": [
+      "sex_binary_immutability",
+      "sex_based_protection_necessity"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "cisgender_women",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Positioned as the primary beneficiaries of sex-segregated spaces (prisons, shelters, sports, changing rooms). They organize politically to maintain biological sex as the legal criterion for 'woman' category, arguing that gender identity inclusion threatens their safety, fairness, and hard-won sex-based rights. Exit from this position means abandoning a core political identity and advocacy infrastructure."
+    },
+    {
+      "name": "transgender_women",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Excluded from 'woman' category and sex-segregated spaces aligned with their gender. Bear costs of legal exclusion, denial of appropriate facilities, heightened violence risk in male-designated spaces, and systematic identity invalidation. Cannot exit the constraint without detransition (which carries its own severe costs) because gender identity is experienced as immutable and the constraint denies its validity."
+    },
+    {
+      "name": "non_binary_people",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Erased by the binary biological sex framework entirely. Neither male nor female category fits; legal recognition is denied or requires misgendering. Bear costs of administrative invisibility, healthcare barriers, and identity invalidation. Exit is identity-locked: the constraint denies the existence of their category."
+    },
+    {
+      "name": "intersex_people",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Biological sex markers (chromosomes, anatomy) do not cleanly fit the binary the constraint asserts. Historically subjected to non-consensual medical interventions to fit the binary. The constraint's claim of 'immutable biological markers' directly contradicts their embodied reality. Exit options are minimal: legal systems rarely accommodate intersex variations."
+    },
+    {
+      "name": "sex_based_rights_advocates",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Organizations and legal actors who lobby, litigate, and draft legislation to enshrine biological sex as the sole criterion for gender category. They control the policy agenda in multiple jurisdictions. Have institutional power and resources; can shift strategies across forums (courts, legislatures, international bodies)."
+    },
+    {
+      "name": "gender_identity_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocate for gender identity as the basis for category membership. Structurally excluded from the biological-sex framework's definition of legitimacy; their testimony is dismissed as 'ideology' in bio-sex legislative hearings. They operate parallel advocacy infrastructures and have achieved legal recognition in many jurisdictions."
+    },
+    {
+      "name": "social_role_feminists",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Feminist theorists and activists who ground 'woman' in sustained social role/oppression rather than biology. Excluded from both the bio-sex and gender-identity framings as primary reference points. They argue both readings miss the material reality of gendered socialization and structural oppression."
+    },
+    {
+      "name": "legislators_courts",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "State actors who enact and adjudicate the legal definition of 'sex' and 'gender'. They hold enforcement power (laws, court orders, administrative rules). Their decisions determine which reading governs access to sex-segregated spaces, identity documents, and anti-discrimination protections. They can switch between readings via legislation or precedent."
+    },
+    {
+      "name": "analytical_observers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars in philosophy, sociology, law, biology who analyze the constraint from outside the partisan contest. They map the structural relationships, track the empirical effects of different legal regimes, and evaluate the coherence of each reading's claims. No material stake in the outcome."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a bright-line, administratively simple rule for allocating access to sex-segregated spaces (prisons, shelters, sports, changing rooms, single-sex services) and for collecting sex-disaggregated data. The binary biological criterion is claimed to be objective, verifiable, and stable — solving the coordination problem of 'who counts as a woman' without subjective assessment.",
+    "transfer_function": "Moves access to woman-only spaces, resources, legal protections, and social recognition from transgender women, non-binary people, and intersex people to cisgender women. Transfers the burden of proof: under this rule, trans women must prove they are 'really male' to be excluded; under identity rules, the burden shifts. Transfers epistemic authority from self-knowledge to medical/legal verification of biology.",
+    "absent_voices": "Transgender women, non-binary people, and intersex people are structurally excluded from the legislative and judicial forums where bio-sex definitions are codified. Their testimony is often excluded from hearings on 'women's rights' bills, or presented only as 'opposing views' rather than as directly affected parties. Intersex people are almost never consulted on binary-sex legislation that erases their existence.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the biological-sex rule vanished overnight, sex-segregated spaces would immediately face the coordination problem it claims to solve: who qualifies for access? Prisons, shelters, sports leagues, and data systems would need new eligibility criteria. Legal protections framed in terms of 'sex' would become ambiguous. The world would reorganize around either gender identity, social role, or a patchwork of context-specific rules — a substantial rearrangement.",
+    "founding_problem": "The need for a clear, stable, and objectively verifiable criterion to define the category 'woman' for the purpose of sex-based rights, protections, and single-sex spaces — rights won by the feminist movement on the basis of female biology (reproductive vulnerability, physical dimorphism, historical subordination). The biological sex reading claims this problem remains live because gender identity is subjective and unverifiable.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem's liveness is attested by sex-based rights organizations (e.g., Women's Declaration International, Fair Play For Women) and some UN human rights mechanisms that recognize sex-based protections. It is contested by trans rights organizations (e.g., ILGA World, Transgender Europe), medical associations (WPATH, AMA), and many feminist groups who argue the problem is solved by gender identity recognition. No neutral arbiter corroborates either side; the dispute is the live political conflict."
+  },
+  "interval": {
+    "start": 2010,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.85
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the 'biological sex reading' of the contested kernel 'gendered category membership.' The reading asserts that category membership in 'woman' and 'man' is grounded exclusively in immutable biological markers (chromosomes, gametes, reproductive anatomy at birth). It claims the status of natural law (Mountain) — that sex is a biological fact, not a social construct, and that sex-based rights depend on this ontological foundation. However, the authored metrics reveal a constraint that requires active legislative and judicial enforcement, suppresses the self-identification and lived reality of trans and non-binary people, and extracts from them the recognition, safety, and resources that flow from category membership. Cisgender women are declared as beneficiaries (protected from 'category dilution'), but this beneficiary claim is structurally contested — trans advocates argue cis women are not harmed by inclusion, and the 'protection' narrative functions as extraction cover. The measurement series (2010-2030) tracks the constraint's intensification: rising extractiveness as anti-trans legislation proliferates, rising theater as 'women's rights' rhetoric increasingly masks animus, and rising suppression as legal recognition of gender identity is rolled back. The claimed Mountain type diverges sharply from the metric profile — a classic False Summit candidate.",
+    "logic_rationale": "Extractiveness (0.78) is high because the constraint transfers category membership and its material benefits (safe spaces, fair competition, legal recognition) from trans/non-binary/intersex people to cis women, while denying the former any pathway to inclusion. Suppression (0.85) is very high because the constraint's persistence depends on legal bans on gender recognition, exclusion from facilities, censorship of trans-affirming care, and the criminalization of 'misgendering' in some jurisdictions — active coercion, not passive coordination. Theater ratio (0.32) is moderate: the coordination function (bright-line rule for sex-segregated spaces) is real but increasingly overshadowed by performative 'protection' rhetoric that does not withstand scrutiny (e.g., no evidence of trans women threatening cis women in shelters). Accessibility collapse (0.68) is substantial: once the biological binary is accepted as the only legitimate criterion, alternative frameworks (identity, social role) are treated as incoherent or dangerous. Resistance (0.72) is high: trans people, allies, medical bodies, courts, and international human rights mechanisms actively contest the constraint.",
+    "directionality_logic": "The biological sex reading claims cis women are beneficiaries (d → 0.0) because the rule 'protects' their spaces. But structurally, cis women are also agenda_setters who wield institutional power to enforce the rule — their directionality is complex. Trans women are identity-locked payers (d → 1.0): the constraint denies their identity, and exit requires detransition (existentially costly). Non-binary and intersex people are trapped (d = 1.0): the binary erases them entirely. Sex-based rights advocates are institutional agenda_setters with arbitrage exit (d → 0.0). Gender identity advocates and social role feminists are excluded organized actors with mobile exit — they operate parallel frameworks. Legislators/courts are institutional agenda_setters with arbitrage exit (they can choose which reading to enforce). Analytical observers sit at d = 0.5 (symmetric). The engine will compute per-seat χ from these structural positions.",
+    "perspectival_gap": "From the bio-sex reading's seat (agenda_setter/beneficiary), the constraint appears as a Mountain: a natural fact that organizes reality. From the trans woman's seat (identity_locked payer), it is a Snare: pure extraction enforced by law, suppressing her existence. From the non-binary person's seat, it is a Mountain of erasure: a natural law that says they do not exist. From the legislator's seat, it is a Tangled Rope: they must coordinate competing rights claims but the bio-sex rule gives them a simple (if brutal) decision procedure. The engine computes these divergent seat types from the single structural dataset — the claim/metric independence is essential here. The reading's self-description as Mountain is the False Summit; the metrics reveal the extraction.",
+    "mandatrophy_analysis": "The founding problem (clear criterion for sex-based rights) was live in 1970s feminism. The biological sex reading claims it remains live because gender identity is 'subjective.' But the constraint has outlived its coordination function: sex-segregated spaces can be (and are) administered via gender identity with safeguards; sports can use hormone thresholds; prisons use individualized risk assessment. The mandate has atrophied into a vehicle for excluding trans people — the extraction (exclusion) persists while the coordination justification thins. This is mandatrophy: the original problem (male violence against women, unfair competition) is not solved by excluding trans women (who are not the primary perpetrators), but the arrangement persists because it now serves a different function (boundary maintenance for a political coalition). The 'protection' narrative is the theatrical maintenance of a degraded function.",
+    "kernel_context": "This constraint is the biological_sex_reading of the contested kernel 'gendered_category_membership.' The kernel is the question: 'What grounds membership in the categories woman/man?' This reading instantiates the constraint: membership = immutable biological sex (chromosomes, reproductive anatomy at birth). Sibling readings: gender_identity_reading (membership = subjective identity/self-declaration) and social_role_reading (membership = sustained social performance/recognition). The three readings are mutually exclusive as universal criteria — a single legal framework cannot simultaneously define 'woman' by biology, identity, AND social role. This reading forecloses the siblings: if biology is the sole criterion, identity and social role are definitionally irrelevant. The committer structure (which reading one adopts) is the axis of contestation."
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_boundary",
+      "question": "Is the binary biological sex criterion a genuine natural law (Mountain) or a constructed boundary that serves political interests (False Summit)?",
+      "resolution_mechanism": "Examine whether the constraint's operation matches Mountain metrics (negligible extraction, no enforcement needed, no victims) or whether the high extraction/suppression/enforcement profile reveals a constructed constraint. Track whether 'biological sex' remains stable as a legal criterion when intersex variations, hormonal conditions, and medical transitions are accounted for.",
+      "impact": "If natural law: the constraint is a genuine Mountain; beneficiaries/victims are misidentified. If constructed: False Summit Mountain → reclassifies to Tangled Rope or Snare via FSM signature. The beneficiary claim (cis women protected) would be exposed as extraction cover.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "FSM candidate: Mountain with declared beneficiaries and high extraction/suppression. The natural-law claim is the core ambiguity."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.85) primarily structural (legal bans, facility exclusion, medical gatekeeping) or does it include a substantial internalized component (trans people internalizing invalidation, cis women internalizing fear)?",
+      "resolution_mechanism": "Longitudinal study of trans people's psychological distress in jurisdictions that switch from identity-recognition to bio-sex rules. If distress persists after legal barriers are removed (internalized), suppression is higher than structural measure. If distress tracks legal regime (structural), suppression is accurately measured.",
+      "impact": "If internalized suppression is substantial, the constraint's effective suppression exceeds the structural measure — targets carry the suppression after legal exit. This would increase χ for identity-locked payers beyond the engine's structural calculation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in interpersonal/identity constraints."
+    },
+    {
+      "id": "cis_women_as_beneficiaries_or_cover",
+      "question": "Are cisgender women genuine net beneficiaries of the biological sex rule, or is their beneficiary status a political cover story for anti-trans extraction?",
+      "resolution_mechanism": "Comparative analysis of cis women's outcomes (safety, sports participation, shelter access) in jurisdictions with bio-sex rules vs. gender identity rules. If outcomes are equivalent or better under identity rules, the beneficiary claim is falsified. Track whether bio-sex advocacy organizations also oppose other women's rights (reproductive rights, LGBTQ+ rights) — suggesting coalition politics over material benefit.",
+      "impact": "If cis women are not genuine beneficiaries, the constraint has NO concentrated beneficiary — it extracts from trans/non-binary/intersex people without a clear recipient. This would reclassify toward Piton (diffuse extraction, no capturer) or Snare (extraction for its own sake). The FSM override would target Snare, not Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the declared beneficiary group actually receives net benefit or is instrumentally positioned."
+    },
+    {
+      "id": "kernel_committer_structure",
+      "question": "How does the kernel-reading structure (three mutually exclusive universal criteria) shape the constraint's classification dynamics?",
+      "resolution_mechanism": "Analyze whether the foreclosure relations among readings create a structural dynamic where each reading's enforcement intensity is driven by the threat of the others' legitimacy. Model the kernel as a three-way contest where each reading's ε is inflated by the need to foreclose alternatives.",
+      "impact": "If foreclosure pressure drives extraction, the high ε is not intrinsic to the bio-sex rule but relational — it extracts BECAUSE it must defeat identity and social role readings. This would link the three constraint stories in a contamination network where each reading's classification depends on the others' status.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame structural delta: foreclosure relations among kernel readings as extraction driver."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gendered_category_membership__gender_identity_reading",
+      "gendered_category_membership__social_role_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the kernel 'gendered_category_membership'. The kernel decomposes into: biological_sex_reading (this story), gender_identity_reading, and social_role_reading. Each has distinct ε, beneficiaries, victims, and claimed_type. They are linked by foreclosure relations: this reading forecloses both siblings (biology-as-sole-criterion logically excludes identity and social role as criteria). The upstream constraint (biological sex as natural kind) influences downstream constraints (sex-segregated space allocation, identity document policy, anti-discrimination law)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gender_identity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "social_role_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sex_is_immutable_binary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "women_have_sex_based_rights",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "biological_sex_essentialism",
+    "drift_state": {
+      "moment": "contemporary_gender_identity_recognition",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "gendered_category_membership"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

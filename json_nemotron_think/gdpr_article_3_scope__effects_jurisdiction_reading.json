@@ -1,0 +1,331 @@
+{
+  "header": {
+    "constraint_id": "gdpr_article_3_scope__effects_jurisdiction_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_gdpr_article_3_scope__effects_jurisdiction_reading",
+    "measurement_id_prefix": "gdpr_art3_effects",
+    "story_uid": "30d496ab-67f0-47fa-a1d5-c421a470bd8f"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.78,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GDPR Article 3(2) Effects Jurisdiction — Extraterritorial Protection via Targeting/Monitoring Test",
+    "topic_domain": "technology_governance/international_law/privacy_regulation",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "eu_data_subjects"
+    ],
+    "victims": [
+      "non_eu_controllers"
+    ],
+    "vindicated_propositions": [
+      "eu_data_protection_fundamental_right",
+      "extraterritorial_effects_jurisdiction_principle",
+      "targeting_monitoring_test_legitimate"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "eu_supervisory_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Enforce GDPR against controllers worldwide through fines (up to 4% global turnover), adequacy decisions, and coordination via the European Data Protection Board. They interpret the targeting/monitoring test, issue guidelines, and pursue cross-border cases. Their authority derives from EU law but reaches non-EU entities through the effects jurisdiction claim."
+    },
+    {
+      "name": "eu_data_subjects",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Receive data protection rights (access, erasure, portability, objection) regardless of where the controller is established. Their protection follows them extraterritorially when a non-EU controller targets EU markets or monitors EU behavior. They can lodge complaints with any EU supervisory authority, but practical enforcement against distant controllers depends on cooperation mechanisms."
+    },
+    {
+      "name": "non_eu_controllers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear substantial compliance costs: appointing EU representatives, conducting DPIAs, implementing technical measures, responding to data subject requests, and facing liability for violations. Large platforms (US tech firms) absorb this as cost of EU market access; smaller firms may exit EU markets entirely. They benefit from legal certainty and unified standard but the cost asymmetry is pronounced. Exit means foregoing the EU market or restructuring to avoid targeting/monitoring triggers."
+    },
+    {
+      "name": "non_eu_governments",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Object to extraterritorial application of EU law as infringing sovereignty (e.g., US CLOUD Act tensions, blocking statutes). They would argue for territorial jurisdiction limits and mutual legal assistance treaties instead of unilateral effects jurisdiction. Their voice is absent from the EDPB/CJEU interpretive process but they shape the enforcement environment through adequacy negotiations and trade pressure."
+    },
+    {
+      "name": "adequacy_decision_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Assess whether non-EU legal frameworks provide essentially equivalent protection (adequacy decisions). Their decisions determine whether data can flow freely or require additional safeguards. They operate within the effects jurisdiction framework but their assessments create de facto standards that non-EU states adopt to maintain data flows — a structural influence channel."
+    },
+    {
+      "name": "eu_court_of_justice",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Authoritatively interprets Article 3(2) targeting/monitoring test (e.g., Google Spain, Weltimmo, Schrems II). Its rulings define the extraterritorial reach and bind all EU supervisory authorities. It does not directly collect extraction but its interpretations determine the constraint's operational scope and enforcement intensity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single, harmonized data protection standard that follows EU residents' data wherever it is processed, eliminating regulatory arbitrage where controllers locate in weak jurisdictions to evade protection obligations.",
+    "transfer_function": "Transfers compliance burden and operational costs from EU data subjects (who would otherwise bear privacy harms) to non-EU controllers who target or monitor EU residents. The transfer is mediated by enforcement: fines, adequacy conditions, and the threat of market exclusion move resources toward the EU data protection regime.",
+    "absent_voices": "Non-EU governments and their regulators who view effects jurisdiction as sovereignty infringement; non-EU controllers below the radar of enforcement (small firms, non-commercial actors) who bear disproportionate compliance costs without representation in EDPB guideline formation; data subjects in non-EU jurisdictions whose data gets caught in adequacy negotiations but who have no standing in EU process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If effects jurisdiction vanished overnight, non-EU controllers would no longer face GDPR obligations for processing EU resident data unless they had EU establishments. Global data flows would reorganize around territorial jurisdiction; adequacy mechanisms would collapse; EU data subjects would lose protection for cross-border processing; non-EU states would assert exclusive jurisdiction over controllers on their territory. The Brussels Effect standard-setting dynamic would dissolve.",
+    "founding_problem": "Pre-GDPR directive allowed controllers to evade EU data protection by processing EU resident data outside the EU, creating a regulatory race to the bottom and leaving EU residents unprotected against foreign surveillance and commercial exploitation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "CJEU Schrems II (2020) confirmed the problem persists: US surveillance law still permits access to EU data transferred to US controllers. EDPB annual reports document ongoing cross-border enforcement gaps. Academic commentary (Kuner, Bygrave, Greenleaf) outside EU institutions corroborates that the founding problem — extraterritorial data processing evading protection — remains live despite GDPR."
+  },
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.78
+    }
+  ],
+  "commentary": {
+    "narrative_context": "GDPR Article 3(2) asserts jurisdiction over non-EU controllers who target EU residents (offering goods/services) or monitor their behavior within the EU. This effects jurisdiction reading treats extraterritorial reach as a legitimate jurisdictional claim grounded in the effects on EU data subjects' fundamental rights. The constraint operates through active enforcement: supervisory authorities impose fines, the EDPB coordinates cross-border enforcement, adequacy decisions condition data flows, and the CJEU authoritatively interprets the targeting/monitoring test. Non-EU controllers bear high compliance costs; EU data subjects receive protection that follows their data. The coordination function (harmonized standard preventing regulatory arbitrage) coexists with asymmetric extraction (disproportionate burden on non-EU controllers, especially smaller ones).",
+    "logic_rationale": "Extractiveness (0.72) reflects the substantial compliance burden transferred to non-EU controllers — DPIAs, EU representatives, technical measures, breach notification, data subject request handling — which scales with the controller's EU-facing activity but is decoupled from marginal cost of protection. Suppression (0.78) is high because the constraint's persistence depends on active enforcement machinery (fines up to 4% global turnover, adequacy withdrawal, CJEU invalidation of transfer mechanisms) that suppresses exit alternatives. Theater ratio (0.38) is moderate: the protection function is real but a growing share of enforcement activity targets procedural compliance (record-keeping, DPIA formalities) rather than substantive privacy outcomes. Accessibility collapse (0.58) reflects that alternatives exist (adequacy, SCCs, BCRs, not targeting EU) but each carries significant cost or uncertainty. Resistance (0.65) captures sustained pushback: US-EU trade tensions, Schrems litigation, blocking statute threats, and controller non-compliance.",
+    "directionality_logic": "EU supervisory authorities and CJEU are structural beneficiaries (d near 0.0) — they gain authority, resources, and global standard-setting power. EU data subjects are beneficiaries (d ~ 0.2) — they receive protection but face practical enforcement gaps. Non-EU controllers are targets (d ~ 0.85) — they bear costs with constrained exit (market access vs. compliance). Non-EU governments are excluded (no directionality in the engine's sense — they are outside the constraint's operational scope but structurally opposed). Adequacy bodies sit near symmetric (d ~ 0.5) — they exercise authority but within the constraint's framework.",
+    "perspectival_gap": "From the EU supervisory authority seat, the constraint is genuine coordination: a unified standard solving the regulatory arbitrage problem. From the non-EU controller seat (especially mid-size firms), the same structure operates as enforced extraction with no meaningful negotiation. The engine computes this divergence from the declared roles, power levels, and exit options — the claimed_type (tangled_rope) acknowledges both coordination and extraction are structurally present.",
+    "mandatrophy_analysis": "The founding problem (regulatory arbitrage evading EU data protection) remains live per Schrems II and ongoing cross-border enforcement gaps. However, the constraint has accumulated extraction layers: fines as revenue, adequacy as leverage, procedural compliance industry. The mandatrophy risk is that the coordination function (protecting EU residents) becomes a cover for institutional empire-building (global standard-setting authority, fine revenue, regulatory reach). The founding_problem_status = live and disappearance_verdict = world_rearranges together flag that the arrangement still solves a real problem but has grown extractive appendages.",
+    "kernel_context": "This constraint is the effects_jurisdiction_reading of the gdpr_article_3_scope kernel. It instantiates the reading that Article 3(2) establishes legitimate extraterritorial jurisdiction based on effects on EU residents (targeting/monitoring test). Sibling readings: territorial_sovereignty_reading (jurisdiction bounded by territory; extraterritorial application exceeds authority) and market_access_reading (GDPR as conditional market access requirement; extraterritoriality is Brussels Effect standard-setting, not jurisdictional assertion). This reading coexists with both siblings as live positions held by different institutional actors, but influences the market_access_reading by legitimizing enforcement that creates the Brussels Effect."
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_reading_identity",
+      "question": "This constraint is one reading (effects_jurisdiction_reading) of the contested kernel gdpr_article_3_scope. How does the kernel's multiplicity affect the classification of this specific reading?",
+      "resolution_mechanism": "Decompose the kernel into its sibling readings (territorial_sovereignty_reading, market_access_reading) as separate constraint stories. Compare their ε values, beneficiary/victim structures, and computed types. The kernel's contestation is irreducible to a single story.",
+      "impact": "If the sibling readings compute to different types (e.g., market_access_reading as rope, territorial_sovereignty_reading as mountain), the kernel itself has no single classification — only the readings do. This validates the ε-invariance principle: one kernel, multiple constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-reading decomposition identity: this story is one reading of a contested kernel, not the kernel itself."
+    },
+    {
+      "id": "effects_vs_territorial_jurisdiction_ambiguity",
+      "question": "Is the effects jurisdiction claim a genuine extension of protective jurisdiction (recognized in international law) or an unprecedented assertion of legislative jurisdiction that violates sovereign equality?",
+      "resolution_mechanism": "Track state practice and opinio juris: do non-EU states accept effects jurisdiction for data protection (acquiesce via adequacy, mirror laws) or reject it (blocking statutes, diplomatic protests)? The trajectory of acceptance/rejection resolves the ambiguity.",
+      "impact": "If accepted as protective jurisdiction, the constraint's coordination function strengthens (rope-ward). If rejected as legislative overreach, the extraction/suppression character dominates (snare-ward). The current ambiguous state sustains the tangled_rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether effects jurisdiction is accepted international law or sovereign overreach."
+    },
+    {
+      "id": "brussels_effect_vs_jurisdictional_assertion",
+      "question": "Does the extraterritorial reach operate primarily as jurisdictional assertion (binding law) or as market-access conditioning (de facto standard-setting through the Brussels Effect)?",
+      "resolution_mechanism": "Measure compliance behavior: do non-EU controllers comply because they accept EU jurisdiction's legitimacy, or because EU market access is economically indispensable? Survey controller motivation; track adequacy adoption vs. genuine legal internalization.",
+      "impact": "If market-access conditioning dominates, the constraint's extraction is economic coercion rather than legal obligation — shifting classification toward snare. If jurisdictional acceptance dominates, the coordination function is genuine — sustaining tangled_rope or rope.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether compliance reflects legal legitimacy or economic coercion."
+    },
+    {
+      "id": "enforcement_effectiveness_vs_paper_tiger",
+      "question": "Is the suppression metric (0.78) reflective of actual enforcement capacity against non-EU controllers, or does it measure paper powers (fines on paper, uncollectible judgments)?",
+      "resolution_mechanism": "Track collection rates on GDPR fines against non-EU controllers, adequacy withdrawal frequency, and CJEU ruling implementation. Compare to domestic enforcement effectiveness.",
+      "impact": "If enforcement is largely ineffective (paper tiger), the constraint's suppression is performative — theater_ratio understates the gap. The true extraction may be lower (controllers ignore it) or higher (compliance theater costs without protection benefit). Reclassification toward piton or snare depending on which side captures the gap.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether active enforcement machinery delivers real suppression or performative threat."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "gdpr_chapter_v_transfers",
+      "gdpr_article_27_representative",
+      "eu_us_data_privacy_framework",
+      "schrems_ii_transfer_mechanisms"
+    ],
+    "dual_formulation_note": "This constraint (effects_jurisdiction_reading) is one of three readings of the gdpr_article_3_scope kernel. The territorial_sovereignty_reading treats jurisdiction as territorially bounded (mountain candidate). The market_access_reading treats extraterritoriality as conditional market access/Brussels Effect (rope candidate). This reading treats it as legitimate effects jurisdiction with active enforcement (tangled_rope). The three readings have different ε values, different victim/beneficiary structures, and different computed types — they are distinct constraints linked by kernel membership."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.82
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "territorial_sovereignty_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "market_access_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "effects_basis_legitimate_jurisdiction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "fundamental_rights_follow_data_subject",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "effects_jurisdiction_principle",
+    "drift_state": {
+      "moment": "post_schrems_ii",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "header": {
+    "constraint_id": "family_law_authority__muslim_shariat_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fla_msr",
+    "story_uid": "be95fb01-528a-4c07-9815-72b1fc016ca5"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Marriage as Civil Contract (Nikah) under Sharia Personal Law",
+    "topic_domain": "legal/religious/governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "husbands",
+      "religious_authorities",
+      "patriarchal_family_structures"
+    ],
+    "victims": [
+      "wives",
+      "women_seeking_divorce",
+      "children_of_polygynous_marriages"
+    ],
+    "vindicated_propositions": [
+      "quranic_family_law_authority",
+      "sharia_as_personal_law",
+      "male_guardianship_in_marriage",
+      "mahr_as_womens_financial_protection"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "husbands",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold unilateral talaq right (pre-2019 triple talaq), may take up to four wives, owe mahr but control its payment timing. Benefit from asymmetric divorce access and polygyny permission. Bear mahr obligation and potential maintenance costs. Exit from marriage is structurally easy; exit from the legal framework requires migration or secular court opt-out where available."
+    },
+    {
+      "name": "wives",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive mahr (dower) as Quranic right; may negotiate khula (consensual divorce with mahr return) or seek faskh (judicial dissolution) on limited grounds. Cannot initiate unilateral divorce equivalent to talaq; polygyny of husband permitted without consent. Exit from marriage requires husband's cooperation or court process with high evidentiary burden. Exit from framework similarly constrained."
+    },
+    {
+      "name": "religious_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Interpret and administer sharia personal law through qazi courts, fatwa bodies, and waqf boards. Define valid talaq procedures, mahr enforceability, polygyny conditions. Derive authority from Quranic mandate and communal recognition. State recognition of personal law systems reinforces their jurisdiction. Exit options include migration to jurisdictions with different personal law regimes."
+    },
+    {
+      "name": "state_courts",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate appeals from personal law bodies, enforce mahr decrees, rule on constitutional challenges (e.g., Shayara Bano 2017 triple talaq judgment). Navigate tension between Article 25 (religious freedom) and Articles 14/15/21 (equality, life, liberty). Legislative override capacity (Muslim Women Protection of Rights on Marriage Act 2019). Not bound by sharia but constrained by political compromise."
+    },
+    {
+      "name": "womens_rights_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Campaign for uniform civil code, khula reform, polygyny restriction, mahr enforcement. Litigate strategic cases (Shayara Bano, Danial Latifi). Operate outside personal law adjudication structures; arguments heard in constitutional courts but not in qazi proceedings. Mobilize public opinion and legislative pressure. Exit from framework is their goal — not trapped by it."
+    },
+    {
+      "name": "children_of_polygynous_marriages",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Experience resource dilution, contested guardianship, inheritance complexity across multiple households. No voice in father's marriage decisions. Legal status varies by jurisdiction — some recognize all children equally, others privilege first wife's offspring. Exit from family structure impossible during minority."
+    },
+    {
+      "name": "quranic_text_and_hadith_corpus",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The kernel's fixed textual anchor. Surah An-Nisa 4:3 (polygyny), 4:34 (qiwamah), 2:228-229 (divorce waiting periods), 4:4 (mahr). Interpretive tradition (fiqh) mediates between text and practice. No agency — but the authority_grounding of the reading rests on its fixity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a recognized, enforceable framework for marriage formation, dissolution, financial obligation (mahr), child legitimacy, and inheritance across Muslim communities — solving coordination between families, protecting women's financial claim via mahr, and establishing clear lineage rules.",
+    "transfer_function": "Moves unilateral divorce power (talaq) and polygyny permission to husbands; moves mahr obligation from husband to wife (but husband controls timing); moves adjudicative authority to religious bodies; moves constitutional oversight burden to state courts.",
+    "absent_voices": "Wives in polygynous marriages (especially subsequent wives), minor children in polygynous households, women in communities without access to khula/faskh mechanisms, queer Muslims for whom nikah is structurally unavailable. These voices are excluded from qazi proceedings and personal law board deliberations.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If sharia personal law marriage vanished overnight, Muslim marriages would default to secular civil marriage law (Special Marriage Act 1954) or customary practice. Mahr claims would become contractual debts. Polygynous marriages would lose legal recognition. Talaq would require judicial process. Religious authorities would lose adjudicative jurisdiction. The community's marriage infrastructure would reorganize around state law or informal norms.",
+    "founding_problem": "Pre-Islamic Arabian marriage practices lacked women's financial protection (no mahr), permitted unlimited polygyny, allowed arbitrary repudiation without notice or support, and left children's legitimacy uncertain. The Quranic reforms introduced mahr as women's property, capped polygyny at four with justice condition, structured talaq with waiting periods (iddah), and established lineage rules.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Classical fiqh texts (Maliki, Hanafi, Shafi'i, Hanbali) attest the founding reforms. Contemporary reformists (Asma Barlas, Amina Wadud, Abdullahi An-Na'im) argue the founding problem's justice conditions (adl in polygyny, mahr as genuine protection) are structurally unmet in current practice. Conservative ulema bodies (AIMPLB) attest the founding problem remains live and the revealed framework is sufficient. No consensus outside beneficiary circles."
+  },
+  "interval": {
+    "start": 1937,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1937,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1973,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1937,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1973,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1937,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1973,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Muslim personal law reading of family_law_authority instantiates nikah as a civil contract governed by Quranic injunctions and hadith. Its structural signature: contractual dissolution (talaq) vested unilaterally in the husband (pre-2019 including instantaneous triple talaq), polygyny permitted up to four wives with Quranic justice condition, mahr (dower) as wife's obligatory financial right, and gender-asymmetric divorce access (wives require khula/faskh with higher thresholds). The 2019 legislative ban on triple talaq shifted the extraction profile but did not eliminate the structural asymmetry. The constraint operates as tangled_rope: genuine coordination (marriage recognition, mahr protection, lineage rules) coexists with asymmetric extraction (male unilateral divorce, polygyny without spousal consent). Active enforcement through qazi courts, waqf boards, and state recognition of personal law jurisdiction.",
+    "logic_rationale": "Extractiveness 0.68 reflects persistent gender asymmetry: husbands hold exit power (talaq) and polygyny option; wives' exit (khula/faskh) requires consent or judicial proof. The 2019 triple talaq ban reduced extractiveness temporarily (0.55) but subsequent practice (talaq-e-hasan, talaq-e-ahsan) and weak mahr enforcement restored it. Suppression 0.62: community pressure, religious identity costs, and limited secular alternatives constrain exit. Theater 0.28: mahr and iddah are functional; polygyny justice condition and talaq procedural requirements increasingly performative. Accessibility_collapse 0.55: secular marriage (Special Marriage Act) exists but carries social ostracism. Resistance 0.48: sustained reform litigation and legislative pressure but institutional capture of personal law boards.",
+    "directionality_logic": "Husbands are primary beneficiaries (d near 0.2) — hold unilateral divorce, polygyny permission, control mahr timing. Religious authorities are agenda_setters with arbitrage exit (d ~0.15) — interpretive control, institutional rents. Wives are primary payers (d ~0.85) — bear asymmetric divorce burden, polygyny costs, mahr non-payment risk; constrained exit. State courts sit near symmetric (d ~0.5) — constitutional oversight burden vs. legislative authority. Women's rights advocates are excluded (d ~0.9) — bear advocacy costs, no institutional seat. Children are trapped payers (d ~1.0). The Quranic corpus is analytical observer (d=0.5 fixed).",
+    "perspectival_gap": "From husbands' and religious authorities' seats: the arrangement coordinates marriage, protects women via mahr, and preserves Quranic order — genuine rope. From wives', children's, and advocates' seats: the same structure extracts via asymmetric exit, polygyny, and weak enforcement — snare. The engine computes this divergence from power/exit asymmetries. The 2019 ban shifted husband d upward (less beneficiary) but did not equalize; khula/faskh thresholds keep wife d high.",
+    "mandatrophy_analysis": "The founding problem (pre-Islamic marriage harms) is substantially solved: mahr exists, polygyny capped, talaq structured. But the mandate persists with extraction asymmetry intact. The justice condition on polygyny (4:3) is judicially unenforceable; mahr is routinely deferred/unpaid; talaq procedures favor husband. Mandatrophy is unresolved — the arrangement's coordination function does not require the extraction asymmetry, but the asymmetry is defended as textual fidelity. The constraint is not a piton (theater_ratio 0.28) nor a scaffold (no sunset). It is a tangled_rope where coordination and extraction are structurally fused.",
+    "kernel_context": "This constraint is the muslim_shariat_reading of the family_law_authority kernel. Sibling readings: hindu_dharmashastra_reading (marriage as sacramental samskara), christian_canonical_reading (marriage as sacrament under ecclesiastical authority), parsi_zoroastrian_reading (marriage as community-preserving institution), secular_contractual_reading (marriage as civil contract between autonomous individuals under state law). This reading distinguishes itself by: contractual (not sacramental) ontology, unilateral talaq, permitted polygyny, mahr as wife's property, and Quranic/hadith textual authority mediated by fiqh."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the muslim_shariat_reading a single coherent constraint or a family of constraints (Hanafi, Maliki, Shafi'i, Hanbali, Shia Ja'fari) with materially different extraction profiles?",
+      "resolution_mechanism": "Comparative fiqh analysis across madhahib on talaq procedures, mahr enforceability, polygyny conditions, and khula access. Measure variance in base_properties metrics per school.",
+      "impact": "If intra-reading variance exceeds inter-reading variance, the kernel decomposition needs refinement — each madhhab may be a distinct reading of the same kernel.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether madhhab differences constitute separate constraints within this reading."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression experienced by wives structural (legal barriers, community enforcement) or internalized (religious identity making exit unthinkable, theological internalization of qiwamah)?",
+      "resolution_mechanism": "Post-divorce trajectory studies: if women who obtain khula/faskh still report suppressed agency in subsequent decisions, internalized component is significant. Compare with women exiting via secular law (Special Marriage Act).",
+      "impact": "If internalized suppression is substantial, effective suppression exceeds structural measure — the constraint's grip persists after formal exit. This would increase computed effective extraction for identity_locked agents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for wives."
+    },
+    {
+      "id": "mahr_enforcement_gap",
+      "question": "What is the actual enforcement rate of mahr (prompt vs. deferred) across jurisdictions, and does non-enforcement constitute extraction or coordination failure?",
+      "resolution_mechanism": "Empirical survey of family court decrees, qazi records, and women's reports on mahr receipt. Distinguish prompt (muajjal) vs. deferred (muwajjal) mahr.",
+      "impact": "Systematic non-enforcement would raise extractiveness (husband retains wife's property right) and lower coordination_function credibility. Would support reclassification toward snare for the mahr sub-constraint.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether mahr functions as genuine protection or theoretical right."
+    },
+    {
+      "id": "polygyny_justice_condition_operationalization",
+      "question": "Does the Quranic 'adl (justice) condition on polygyny (4:3) have any operational enforcement mechanism, or is it purely aspirational?",
+      "resolution_mechanism": "Case law review: have any qazi courts or civil courts denied polygyny permission or granted relief to existing wife based on failure of adl? Survey of personal law board fatwas.",
+      "impact": "If adl is entirely unenforced, polygyny permission is pure extraction (male sexual/reproductive privilege) with zero coordination justification. Would increase extractiveness and support snare classification for the polygyny sub-constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Operational status of the Quranic justice condition on polygyny."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "family_law_authority__hindu_dharmashastra_reading",
+      "family_law_authority__christian_canonical_reading",
+      "family_law_authority__parsi_zoroastrian_reading",
+      "family_law_authority__secular_contractual_reading",
+      "uniform_civil_code_debate",
+      "muslim_women_protection_of_rights_on_marriage_act_2019"
+    ],
+    "dual_formulation_note": "The family_law_authority kernel decomposes into five readings with distinct ε values. This reading (muslim_shariat_reading) has ε=0.68 (tangled_rope) due to gender-asymmetric divorce and polygyny. The secular_contractual_reading has ε≈0.15 (rope) — symmetric civil contract. The christian_canonical_reading (Catholic) has ε≈0.45 (tangled_rope) — indissolubility as coordination but asymmetric annulment access. The hindu_dharmashastra_reading has ε≈0.55 (tangled_rope) — sacramental but with customary divorce variation. The parsi_zoroastrian_reading has ε≈0.35 (rope) — community law with gender-symmetric divorce. The ε-invariance principle requires separate stories; the label 'Muslim personal law' cannot carry a single ε."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 1.0
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "secular_contractual_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "christian_canonical_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hindu_dharmashastra_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "parsi_zoroastrian_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "nikah_as_civil_contract_not_sacrament",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "husband_unilateral_talaq_as_quranic_prerogative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "polygyny_permitted_with_justice_condition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "mahr_as_wifes_exclusive_property_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "triple_talaq_in_one_sitting_as_valid_talaq",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "classical_fiqh_consensus_7th_10th_century",
+    "drift_state": {
+      "moment": "contemporary_constitutional_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "family_law_authority"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

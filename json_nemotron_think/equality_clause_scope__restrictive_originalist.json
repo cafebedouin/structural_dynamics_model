@@ -1,0 +1,380 @@
+{
+  "header": {
+    "constraint_id": "equality_clause_scope__restrictive_originalist",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "equality_restrictive_originalist",
+    "story_uid": "87074fc3-e396-4303-8edc-92218f2d10d9"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.82,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Restrictive Originalist Reading of Equality Clause Scope",
+    "topic_domain": "constitutional_law/political_philosophy/civil_rights_history",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "propertied_white_males",
+      "originalist_scholars"
+    ],
+    "victims": [
+      "women",
+      "enslaved_people",
+      "non_propertied_white_males",
+      "indigenous_peoples"
+    ],
+    "vindicated_propositions": [
+      "originalist_interpretive_methodology",
+      "fixed_constitutional_meaning_at_founding",
+      "social_contract_theory_as_constitutional_foundation"
+    ]
+  },
+  "interval": {
+    "start": 1787,
+    "end": 2025
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of a contested kernel (equality_clause_scope) rather than a standalone constraint?",
+      "resolution_mechanism": "Committer frame: the kernel_id and reading_id are declared in the generation manifest; this omega records that identity for downstream analysis.",
+      "impact": "If treated as standalone, the constraint's ε would be mis-specified — the reading's ε is indexed to the standing arrangement under contest (the exclusionary constitutional order), not to the reading's endorsed alternative.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee frame identity: this is restrictive_originalist reading of equality_clause_scope kernel"
+    },
+    {
+      "id": "sibling_reading_structural_delta",
+      "question": "What would change structurally if a sibling reading (expansive_universalist or progressive_textualist) were instantiated instead?",
+      "resolution_mechanism": "Compare beneficiary/victim sets, enforcement requirements, and legitimacy thresholds across the three readings.",
+      "impact": "Expansive_universalist eliminates the victim set entirely (universal beneficiaries); progressive_textualist shifts expansion to democratic amendment process, altering the agenda_setter role from courts to legislatures. Both would collapse the current extraction structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural delta between this reading and its siblings: beneficiary set, victim set, enforcement locus, legitimacy threshold"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (0.85) primarily structural (legal barriers, judicial doctrine) or internalized (excluded groups accepting exclusion as natural)?",
+      "resolution_mechanism": "Historical analysis of resistance movements: if suppression persists after legal barriers fall (e.g., post-13th/14th/15th/19th Amendments), internalized component is significant.",
+      "impact": "If substantially internalized, effective suppression exceeds structural measure — the constraint's extraction continues through cognitive channels even after formal barriers are removed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the exclusionary constitutional order"
+    },
+    {
+      "id": "originalist_capture_risk",
+      "question": "Are originalist judges/scholars genuine agenda_setters administering a coordination function, or are they partly captured by the narrow beneficiary set (propertied white males)?",
+      "resolution_mechanism": "Track doctrinal outcomes: when originalist methodology produces results that harm the narrow beneficiary set, does adherence hold? If not, capture is indicated.",
+      "impact": "If captured, the agenda_setter role masks beneficiary status — directionality for originalist_judges should be overridden toward beneficiary end.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the interpretive elite are coordinators or captured beneficiaries"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1787,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1865,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1870,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1920,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1954,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1787,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1865,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1870,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1954,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1787,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1865,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1870,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1920,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1954,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The restrictive originalist reading of the equality clause holds that 'equality' in the 18th-century constitutional framework applied exclusively to propertied white males as political actors within the social contract tradition. This reading treats the Constitution's equality commitments as fixed at the founding: the franchise, legal personhood, and political rights extend only to those who occupied the sovereign position in 1787. All other groups — women, enslaved people, non-propertied men, indigenous peoples — are structurally excluded; their inclusion requires formal constitutional amendment, not judicial reinterpretation. The reading presents itself as faithful to the fixed meaning of the text (mountain claim), but operates as a constraint that actively maintains a narrow beneficiary set through judicial doctrine and interpretive methodology.",
+    "key_agents": [
+      "propertied_white_males: Primary beneficiary (powerful/identity_locked) — receives full equality protections",
+      "women: Primary victim (powerless/trapped) — excluded from political equality",
+      "enslaved_people: Primary victim (powerless/trapped) — excluded from personhood and rights",
+      "non_propertied_white_males: Victim (moderate/constrained) — partial inclusion, property qualification barriers",
+      "indigenous_peoples: Victim (powerless/trapped) — excluded from the social contract entirely",
+      "originalist_judges: Agenda setter (institutional/analytical) — administers/enforces the reading",
+      "originalist_scholars: Beneficiary (organized/identity_locked) — interpretive framework validated",
+      "expansive_universalist_advocates: Excluded (organized/trapped) — would object to narrow scope",
+      "progressive_textualist_advocates: Excluded (organized/constrained) — would object to high amendment threshold",
+      "constitutional_scholars: Observer (analytical/analytical) — analyzes full structure"
+    ],
+    "logic_rationale": "Base extractiveness (0.78 at founding) is high because the constraint moves political rights, legal personhood, and sovereign authority from the excluded majority to a narrow propertied white male minority. Suppression (0.85) is very high because the constraint's persistence depends on actively excluding rival readings through judicial doctrine, constitutional structure, and the amendment threshold — not on participant preference. Theater ratio (0.42 at present) reflects that the originalist methodology performs faithful interpretation while the substantive outcome maintains exclusion; the gap has grown as formal barriers fell but interpretive resistance remains. Accessibility collapse (0.78) is high because the reading's internal logic (fixed meaning at founding) structurally closes off expansive interpretations within its own framework. Resistance (0.82) is high because the excluded groups and their allies have continuously contested this reading through social movements, litigation, and constitutional amendment.",
+    "directionality_logic": "Propertied white males are structural beneficiaries (d near 0.0) — they collect the full equality protections, political rights, and sovereign authority. Women, enslaved people, non-propertied white males, and indigenous peoples are structural targets (d near 1.0) — they bear the costs of exclusion, denied personhood, and political subordination. Originalist judges are agenda_setters (d ~0.3) — they administer the constraint but their institutional role gives them some insulation from direct extraction. Originalist scholars are beneficiaries (d ~0.15) — their interpretive framework gains legitimacy and institutional purchase from this reading. Expansive universalist and progressive textualist advocates are excluded (d ~0.7) — they would challenge the constraint but are kept out by the high legitimacy threshold. Constitutional scholars are observers (d = 0.5) — analytical seat sees the full structure.",
+    "perspectival_gap": "The beneficiary seat (propertied white males) and the agenda_setter seat (originalist judges) should compute as rope/mountain from their positions: the constraint appears as stable coordination among the sovereign political actors. The victim seats (women, enslaved, non-propertied, indigenous) compute as snare: the same structure operates as enforced extraction and denial of personhood. The engine computes this divergence from the structural data — the authored claim (tangled_rope) captures the hybrid nature: genuine coordination among the included, asymmetric extraction from the excluded.",
+    "mandatrophy_analysis": "The founding problem — constituting a stable republican government among propertied white males while preserving slavery and patriarchal property relations — is dead (founding_problem_status: dead). The arrangement persists because the interpretive methodology (originalism) has become self-validating: it treats the founding exclusions as fixed meaning rather than historical contingency. This is mandatrophy — the constraint's mandate (founding-era social contract) has outlived its function, but the interpretive machinery maintains it. The high legitimacy threshold for expansion (requiring formal amendment) prevents democratic correction, converting what was a coordination mechanism for 1787 actors into a snare for 2025 subjects.",
+    "kernel_context": "This constraint is the restrictive_originalist reading of the equality_clause_scope kernel. The kernel is the constitutional equality commitment; this reading instantiates it as fixed at the 1787 understanding, limited to propertied white males as political actors. Sibling readings: expansive_universalist (equality as universal truth applying to all humans), progressive_textualist (equality principle in text but scope expands through democratic amendment, not judicial reinterpretation). This reading forecloses the expansive_universalist reading (core premises directly contradict) and influences the progressive_textualist reading (sets high legitimacy threshold that shapes amendment politics)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "equality_clause_scope__expansive_universalist",
+      "equality_clause_scope__progressive_textualist"
+    ],
+    "dual_formulation_note": "BGS-pattern decomposition of 'equality clause scope' kernel into three structurally distinct readings with different ε values, beneficiary/victim sets, and enforcement loci. Restrictive originalist has high extraction (0.78) and high suppression (0.85); expansive universalist has near-zero extraction; progressive textualist has moderate extraction with democratic enforcement locus. All three linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "propertied_white_males",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Hold full political equality, suffrage, legal personhood, and property rights under the 1787 framework. Their identity as sovereign political actors is fused with the constitutional order — exit means abandoning the only framework that recognizes their full status. They benefit from the exclusion of others without directly administering the constraint."
+    },
+    {
+      "name": "women",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "situation": "Excluded from political equality, suffrage, and full legal personhood. The constraint denies them citizenship rights coextensive with men. Exit is structurally blocked — they cannot leave the constitutional order, and the amendment threshold (Article V) requires supermajorities they cannot achieve without the constraint's beneficiaries consenting. Their subordination is maintained through coverture, lack of suffrage, and denial of office-holding.",
+      "spatial_scope": "national"
+    },
+    {
+      "name": "enslaved_people",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "situation": "Denied legal personhood entirely — treated as property, not parties to the social contract. The constraint's equality protections do not reach them; the Constitution explicitly protects slavery (Three-Fifths Clause, Fugitive Slave Clause, 1808 importation barrier). Exit is impossible within the system; resistance meets overwhelming structural suppression. The 13th/14th/15th Amendments formally altered this but the restrictive reading treats those as narrow exceptions, not universal principles.",
+      "spatial_scope": "national"
+    },
+    {
+      "name": "non_propertied_white_males",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "situation": "White men without property qualifications face barriers to suffrage and office-holding in the early republic. Some gains through Jacksonian democracy (property qualifications dropped), but the restrictive reading treats their inclusion as contingent legislative grace, not constitutional right. Exit is constrained — they share race/gender with beneficiaries but lack the property status that defines the sovereign class.",
+      "spatial_scope": "national"
+    },
+    {
+      "name": "indigenous_peoples",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "situation": "Excluded from the social contract entirely — treated as foreign nations or domestic dependent nations, not constitutional persons. The constraint's equality protections do not apply; their sovereignty is overridden by plenary power doctrine. Exit is structurally impossible — they are subjected to U.S. constitutional authority without its protections. The restrictive reading naturalizes this exclusion as the founding design.",
+      "spatial_scope": "national"
+    },
+    {
+      "name": "originalist_judges",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "situation": "Administer and enforce the restrictive reading through judicial review. They set the interpretive agenda: original public meaning, fixed at founding, narrow scope. Their institutional legitimacy depends on maintaining this methodology. They benefit professionally and ideologically from the reading's dominance — it validates their interpretive authority. The directionality override (d=0.25) reflects partial capture: they appear as neutral coordinators but their methodology systematically favors the narrow beneficiary set.",
+      "spatial_scope": "national"
+    },
+    {
+      "name": "originalist_scholars",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "situation": "Their academic and professional standing is built on the restrictive originalist methodology. The reading validates their interpretive framework, giving them institutional positions, judicial influence, and intellectual authority. Their identity is fused with the methodology — exit means abandoning their professional self-concept. They benefit from the constraint's persistence without directly enforcing it.",
+      "spatial_scope": "national"
+    },
+    {
+      "name": "expansive_universalist_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "situation": "Advocate for equality as universal human right applying to all persons regardless of historical exclusions. They are structurally excluded from the restrictive reading's framework — their position is treated as judicial activism, not interpretation. They would object to the narrow beneficiary set but cannot register that objection within the originalist framework; their only path is constitutional amendment or Court composition change, both blocked by the high legitimacy threshold.",
+      "spatial_scope": "national"
+    },
+    {
+      "name": "progressive_textualist_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "situation": "Argue the constitutional text contains an equality principle but its application expands through democratic amendment (Article V), not judicial reinterpretation. They accept the restrictive reading's premise of fixed textual meaning but contest its scope — they would include women and minorities through formal amendment. They are excluded from the restrictive reading's interpretive community but have a structural path (amendment) that the restrictive reading makes extremely difficult.",
+      "spatial_scope": "national"
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "situation": "Analyze the full structure from outside the contest. They see the kernel (equality clause), the three readings, and the historical trajectory of inclusion/exclusion. They neither collect from nor pay into the constraint — their role is to map the structural relationships and measure the drift between founding design and contemporary operation.",
+      "spatial_scope": "universal"
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Creates stable political equality among propertied white males as the sovereign political actors of the 18th-century social contract — defines who counts as a party to the constitutional compact and coordinates their mutual rights and obligations.",
+    "transfer_function": "Moves political rights, legal personhood, suffrage, office-holding, and sovereign authority from the excluded (women, enslaved people, non-propertied white males, indigenous peoples) to propertied white males, using the Constitution's text and structure as the transfer mechanism.",
+    "absent_voices": "Women, enslaved people, indigenous peoples, and non-propertied men were not in the room at the founding — they could not consent to the social contract that defined them out of equality. Their objections were structurally impossible to register in 1787; subsequent generations face the Article V amendment threshold designed to require the beneficiaries' consent for any expansion.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the restrictive originalist reading vanished overnight, constitutional law would reorganize around broader equality principles — the 13th/14th/15th/19th/24th/26th Amendments would become the operative baseline rather than exceptions to a narrow founding design. Citizenship, suffrage, and rights doctrines would reconstruct from universal premises. The entire edifice of originalist jurisprudence would lose its anchoring constraint.",
+    "founding_problem": "How to constitute a stable republican government among propertied white male citizens while preserving slavery, patriarchal property relations, and indigenous displacement — the 1787 Constitution solved this by defining the sovereign political actors narrowly and embedding their dominance in structural mechanisms (Senate, Electoral College, Three-Fifths Clause, Article V).",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historians of the founding era (Gordon Wood, Bernard Bailyn, Edmund Morgan) attest the Constitution was designed for propertied white male sovereignty with slavery protected. Critical race theorists (Derrick Bell, Kimberlé Crenshaw) and feminist legal scholars (Catharine MacKinnon) corroborate the exclusionary design from outside the beneficiary set. The founding problem (constituting a slaveholding republic) is gone; the interpretive legacy persists."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_universalist",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "progressive_textualist",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "equality_scope_fixed_at_founding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "amendment_as_exclusive_expansion_path",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "founding_social_contract_1787",
+    "drift_state": {
+      "moment": "contemporary_originalist_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

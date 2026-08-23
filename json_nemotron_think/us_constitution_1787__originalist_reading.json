@@ -1,0 +1,377 @@
+{
+  "header": {
+    "constraint_id": "us_constitution_1787__originalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "f319ce22-b231-4185-a91f-c9da21e8db72"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.78,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.82,
+    "resistance": 0.68,
+    "claimed_type": "mountain",
+    "human_readable": "Originalist Reading: Constitutional Meaning Fixed at Ratification",
+    "topic_domain": "constitutional_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "originalist_judges",
+      "conservative_legal_movement",
+      "federalist_society_network"
+    ],
+    "victims": [
+      "modern_rights_claimants",
+      "living_constitutionalist_scholars",
+      "marginalized_groups_excluded_by_original_meaning"
+    ],
+    "vindicated_propositions": [
+      "original_meaning_fixed_at_ratification",
+      "judicial_restraint_doctrine",
+      "democratic_legitimacy_of_enacted_text"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the contested us_constitution_1787 kernel, or a free-standing constraint?",
+      "resolution_mechanism": "The constraint_id and cs_structure.reading_relations declare it as originalist_reading of kernel us_constitution_1787. Sibling readings living_reading and positivist_reading instantiate different constraints from the same kernel.",
+      "impact": "If treated as free-standing, the ε-invariance principle is violated — the same constitutional text would carry multiple ε values depending on which reading evaluates it. The kernel frame requires decomposition into separate constraint stories linked by network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment that this story instantiates one reading of a contested kernel, not the kernel itself."
+    },
+    {
+      "id": "originalism_vs_living_foreclosure",
+      "question": "Does the originalist reading's core premise (meaning fixed at ratification) logically foreclose the living reading's core premise (meaning evolves) within any single interpretive framework?",
+      "resolution_mechanism": "Examine whether a single judicial officer or legal system can simultaneously hold that constitutional meaning is both fixed at ratification AND evolves with society. If mutually exclusive, relation = forecloses; if held by different factions simultaneously, relation = coexists_with.",
+      "impact": "If forecloses, the engine's cs_foreclosure logic activates: adoption of originalist_reading by an authority structure logically displaces living_reading within that structure. If coexists_with, both remain live options across different coalitions.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relationship between originalist and living readings — foreclosure or coexistence."
+    },
+    {
+      "id": "original_meaning_epistemic_access",
+      "question": "Can the original public meaning of 1787-1788 be reliably recovered with sufficient determinacy to constrain modern cases, or is the historical evidence irreducibly underdetermined?",
+      "resolution_mechanism": "Empirical assessment of historical linguistics, Founding-era corpus linguistics, and the record of originalist judicial opinions: do they converge on determinate answers for contested modern questions, or do they produce persistent disagreement among originalists themselves?",
+      "impact": "If underdetermined, the constraint's claimed low extraction (as Mountain) is false — the interpretive discretion required to apply 'fixed meaning' to novel circumstances becomes a vector for extraction by the interpreting agents. The engine would reclassify toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the epistemic demand of originalism is practically satisfiable or masks judicial discretion."
+    },
+    {
+      "id": "suppression_mechanism_judicial_appointment",
+      "question": "Is the suppression of alternative readings primarily structural (judicial appointment power, stare decisis) or internalized (professional socialization of lawyers to treat originalism as the only legitimate method)?",
+      "resolution_mechanism": "Track the career trajectories of legal academics and judges: does suppression persist after a judge with living-constitutionalist views is appointed, or does the institutional role reshape their methodology?",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the legal profession carries the suppression with it. This would increase the omega-adjusted extraction for analytical and institutional seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the legal profession's methodological commitments."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1787,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1868,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1937,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1787,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1868,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1937,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1787,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1868,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1937,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.78
+    }
+  ],
+  "interval": {
+    "start": 1787,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The originalist reading of the U.S. Constitution asserts that constitutional meaning was fixed at ratification (1787-1788) and that the framers' intent or original public meaning is binding on all later interpreters. This reading presents itself as a Mountain — a constraint emerging naturally from the constitutional text itself, requiring only faithful application. However, the constraint's operational history shows rising extractiveness: it excludes modern social rights claims (reproductive autonomy, LGBTQ+ rights, voting rights expansions) that lack 1787 analogues, benefits a specific judicial and ideological coalition (originalist judges, Federalist Society network, conservative legal movement), and requires active enforcement through judicial appointments, doctrinal gatekeeping, and law school pipeline control. The measured suppression (0.78) reflects the institutional machinery that excludes rival interpretations from authoritative venues. The theater_ratio (0.45) captures the genuine interpretive labor of originalist methodology alongside its performative function as a legitimating device for predetermined outcomes.",
+    "key_agents": [
+      "originalist_judges: Primary agenda_setter (institutional/analytical) — sets interpretive methodology, controls doctrinal development",
+      "conservative_legal_movement: Primary beneficiary (organized/biographical) — gains policy victories through judicial doctrine without legislative majorities",
+      "federalist_society_network: Beneficiary/agenda_setter (organized/generational) — builds pipeline, coordinates appointments, defines orthodoxy",
+      "modern_rights_claimants: Primary payer (powerless/biographical) — constitutional claims foreclosed by fixed-meaning boundary",
+      "living_constitutionalist_scholars: Excluded (moderate/biographical) — would object but structurally excluded from authoritative interpretation",
+      "marginalized_groups_excluded_by_original_meaning: Payer (powerless/generational) — bear the costs of rights foreclosure",
+      "positivist_judges: Observer (institutional/biographical) — textualist but not originalist; distinct methodological seat",
+      "democratic_majorities: Excluded (organized/generational) — their policy preferences blocked by judicial originalism"
+    ],
+    "logic_rationale": "Extractiveness (0.72) is high because the constraint transfers interpretive authority from democratic majorities and later generations to a narrow historical moment, enabling a specific coalition to block rights claims without legislative accountability. Suppression (0.78) is high because the constraint's persistence depends on controlling judicial appointments, law review discourse, and bar admission standards — active exclusion of alternatives. Theater_ratio (0.45) reflects that originalist methodology involves real historical research (coordination function) but increasingly serves as a legitimating veneer for outcome-driven judging (extraction function). Accessibility_collapse (0.82) is near-Mountain level: once the originalist frame is accepted, alternative readings appear illegitimate, not merely mistaken. Resistance (0.68) remains substantial from living constitutionalists, positivist textualists, and progressive legal movements. The claimed_type is Mountain (the reading's self-presentation) but the metrics describe a constraint that actively extracts and suppresses — the engine will compute the divergence.",
+    "perspectival_gap": "From the originalist_judge seat (agenda_setter, analytical exit), the constraint appears as genuine coordination: a neutral method that prevents judicial willfulness. From the modern_rights_claimant seat (payer, trapped exit), the same structure operates as a Snare: a fixed boundary that forecloses their claims while presenting itself as inevitable. From the conservative_legal_movement seat (beneficiary, arbitrage exit), it functions as a Rope: a coordination mechanism that delivers policy wins. The engine computes these per-seat types from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Originalist judges and the Federalist Society network are structural beneficiaries (d ≈ 0.1-0.2): they control the interpretive apparatus and gain policy outcomes. Modern rights claimants and marginalized groups are structural targets (d ≈ 0.8-0.9): they bear the cost of rights foreclosure with trapped or identity-locked exit (constitutional amendment is practically impossible; emigration is the only full exit). Living constitutionalist scholars are excluded (d ≈ 0.7): they would contest but are kept out of authoritative venues. Democratic majorities are payers with constrained exit: they can amend the Constitution but the threshold is prohibitive. Positivist judges sit near symmetric (d ≈ 0.5): they share the textualist coordination benefit but reject the originalist extraction component.",
+    "mandatrophy_analysis": "The founding problem (1787) was creating a stable written constitution that could bind government and survive factional conflict. That problem is live — constitutional stability remains necessary. But the originalist reading's specific claim (meaning fixed at ratification) solves a narrower problem: preventing judicial innovation that the conservative legal movement opposes. The arrangement persists not because the founding problem requires this specific interpretive method, but because the beneficiary coalition has built institutional machinery to enforce it. The mandatrophy is unresolved: the coordination function (stable constitutional meaning) could be served by other methods (positivist textualism, common-law constitutionalism), but the extraction function (blocking disfavored rights claims) depends on originalism's specific boundary.",
+    "kernel_context": "This constraint is the originalist_reading of the contested kernel us_constitution_1787. Sibling readings: living_reading (meaning evolves with society; text is aspirational framework) and positivist_reading (meaning is text plus democratic amendments; interpretation constrained to text). The originalist reading declares a narrow constraint set (pre-1787 practices legitimate, modern social rights claims outside boundary) with high epistemic demands on historical evidence. The three readings instantiate three distinct constraints with different ε, different beneficiary/victim structures, and different types — linked by network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "us_constitution_1787__living_reading",
+      "us_constitution_1787__positivist_reading"
+    ],
+    "dual_formulation_note": "This story is one member of the us_constitution_1787 constraint family. The kernel us_constitution_1787 decomposes into three readings with distinct ε values and structural profiles: originalist_reading (high extraction, claims Mountain, computes as tangled_rope/snare), living_reading (moderate extraction, claims scaffold/rope), positivist_reading (low extraction, claims rope). The decomposition follows the ε-invariance principle: the label 'the Constitution' covers structurally distinct claims. Originalist_reading forecloses living_reading within a single authority framework; both coexist_with positivist_reading across different judicial coalitions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "originalist_judges",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Control the authoritative interpretation of the Constitution through judicial opinions. They set the methodological rules (original public meaning, original intent, original methods) and apply them to invalidate or uphold legislation. Their exit is analytical: they could adopt a different methodology but the institutional role and professional identity fuse with originalism."
+    },
+    {
+      "name": "conservative_legal_movement",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Gains policy victories (on abortion, gun rights, administrative state, religious liberty) through judicial doctrine that would not pass legislative majorities. They invest in the pipeline (law schools, clerkships, nominations) and can shift resources to other legal strategies if originalism becomes disadvantageous — arbitrage-grade exit."
+    },
+    {
+      "name": "federalist_society_network",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Builds and maintains the personnel pipeline for originalist judges, defines methodological orthodoxy, coordinates amicus strategy. They benefit from the constraint's dominance but are constrained by the need to maintain credibility within the legal profession; exit would mean abandoning a decades-long institutional investment."
+    },
+    {
+      "name": "modern_rights_claimants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Seek constitutional protection for rights unrecognized in 1787 (reproductive autonomy, same-sex marriage, gender equality, voting rights restoration). Their claims are foreclosed by the originalist boundary. Exit is trapped: constitutional amendment is practically impossible; they must wait for judicial coalition change or seek statutory remedies that originalism may also narrow."
+    },
+    {
+      "name": "living_constitutionalist_scholars",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that constitutional meaning evolves through precedent, social change, and moral progress. They are structurally excluded from authoritative interpretation — originalist dominance in the federal judiciary and legal academia's hiring networks limits their institutional voice. Exit is constrained: they can publish, teach, and litigate but cannot set binding doctrine."
+    },
+    {
+      "name": "marginalized_groups_excluded_by_original_meaning",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Groups whose rights claims depend on post-1787 constitutional development (e.g., Black Americans whose equal protection claims rely on the 14th Amendment's evolving interpretation, women seeking reproductive autonomy, LGBTQ+ individuals). Their identity is fused with the rights the constraint forecloses; exit is not merely costly but identity-destructive."
+    },
+    {
+      "name": "positivist_judges",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adhere to textualism and democratic enactment (statutes, amendments) but reject original intent/historical meaning as the exclusive interpretive guide. They occupy a distinct methodological seat: they share the coordination benefit of a fixed text but reject the extraction component of originalism's historical boundary. Their exit is analytical — they evaluate the constraint from outside its methodological commitments."
+    },
+    {
+      "name": "democratic_majorities",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Their policy preferences (enacted through legislation) are invalidated by originalist judicial review. They would object to the constraint's anti-democratic extraction but are excluded from constitutional interpretation by design. Exit is constrained: they can pursue constitutional amendment (Article V threshold prohibitive) or court-packing (politically costly and norm-eroding)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a stable, determinate rule of recognition for constitutional law: a fixed historical meaning that limits judicial discretion and binds government to the terms the People ratified. Solves the coordination problem of 'what counts as the Constitution' by anchoring it to a specific historical moment.",
+    "transfer_function": "Transfers interpretive authority from democratic majorities (acting through legislation and amendment) and from later generations (whose moral insights might expand rights) to the Founding generation's understanding, as recovered and applied by a specific contemporary judicial-ideological coalition. The transfer moves power over rights recognition from the political branches and the living to the dead and their designated interpreters.",
+    "absent_voices": "The Founding generation itself (cannot speak to modern conditions), future generations (whose interests are fixed by a past they did not choose), and the global community affected by U.S. constitutional doctrine (who have no voice in its interpretation). The excluded stakeholders (living_constitutionalist_scholars, democratic_majorities) would object to the foreclosure of evolutionary interpretation but are kept out by the constraint's institutional enforcement.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If originalism vanished overnight, the Supreme Court would revert to living constitutionalist or positivist methodologies within one appointments cycle. Reproductive rights, voting rights, affirmative action, and administrative state doctrines would shift dramatically. The conservative legal movement's primary jurisprudential asset would be lost. The constitutional order would reorganize around a different interpretive baseline.",
+    "founding_problem": "The 1787 Constitution was built to solve: (1) creating a federal government strong enough to govern but limited enough to preserve liberty; (2) entrenching fundamental law against temporary majorities; (3) providing a stable rule of recognition for legal validity. The originalist reading claims its specific method (fixed meaning) is necessary to solve these problems.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Originalists (Scalia, Barrett, Federalist Society) attest the founding problem requires fixed meaning to prevent judicial legislation. Living constitutionalists (Brennan, Dworkin, modern progressive scholars) and positivist textualists (Kagan, many academics) attest the founding problem is solved by textualism + democratic amendment + precedent, not by historical originalism. The historical record (Madison's notes, ratification debates) shows the Founders themselves disagreed on interpretive method — no consensus corroborates originalism as the exclusive solution."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "living_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "positivist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "original_meaning_fixed_at_ratification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "framers_intent_binding_on_later_generations",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "judicial_restraint_requires_historical_fixity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "original_understanding_1787",
+    "drift_state": {
+      "moment": "post_new_originalism_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

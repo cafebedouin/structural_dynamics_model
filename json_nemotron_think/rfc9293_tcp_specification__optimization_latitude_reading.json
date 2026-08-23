@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__optimization_latitude_reading",
+    "version": "1.0",
+    "generated_date": "2026-01-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_rfc9293_tcp_specification__optimization_latitude_reading",
+    "measurement_id_prefix": "rfc9293_opt_lat",
+    "story_uid": "ca42f85c-6f08-4f3f-9a31-e419cfacd383"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "TCP Specification Optimization Latitude Reading",
+    "topic_domain": "network_protocol_engineering/internet_standards/distributed_systems_coordination",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.25,
+    "beneficiaries": [
+      "tcp_implementers",
+      "application_developers",
+      "end_users",
+      "congestion_control_researchers"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "interoperable_reliable_transport",
+      "permissionless_innovation_in_congestion_control"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_reading",
+      "question": "This constraint is one reading (optimization_latitude_reading) of the contested kernel rfc9293_tcp_specification. What structural elements do sibling readings (strict_invariance_reading, middlebox_realism_reading) change?",
+      "resolution_mechanism": "Compare the three readings' beneficiary/victim structures, extractiveness assessments, and claimed types. The kernel_id and reading_id are fixed; sibling readings are separate constraint stories linked via network.affects_constraints.",
+      "impact": "If the semantic-contract reading is structurally a Rope while strict_invariance_reading computes as Mountain and middlebox_realism_reading as Tangled Rope, the kernel itself has no single classification—the classification is reading-indexed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee-frame committer structure: kernel_id, reading_id, sibling readings"
+    },
+    {
+      "id": "semantic_bounds_clarity",
+      "question": "Are the 'semantic bounds' of RFC 9293 sufficiently well-defined to prevent interoperability fragmentation when implementations exploit optimization latitude?",
+      "resolution_mechanism": "Empirical analysis of interoperability failures between modern congestion control variants (BBR, DCTCP, PCC, Copa) and legacy stacks across diverse middlebox populations. Track IETF working group discussions on semantic boundary disputes.",
+      "impact": "If bounds are ambiguous, the constraint drifts toward Tangled Rope (coordination function undermined by implementation divergence). If bounds are clear, Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the specification's semantic contract is precise enough to coordinate without central enforcement of implementation details"
+    },
+    {
+      "id": "middlebox_traversal_impact",
+      "question": "Does the optimization latitude permitted by this reading enable or undermine traversal of deployed middleboxes that inspect or modify TCP headers?",
+      "resolution_mechanism": "Measurement studies of modern congestion control variants (BBRv2, DCTCP) traversing enterprise firewalls, carrier-grade NATs, and stateful inspectors compared to legacy Reno/Cubic. Correlate with middlebox vendor firmware update cycles.",
+      "impact": "If latitude increases middlebox-induced failures, the coordination function degrades and extractiveness rises (implementers must add workaround complexity). If latency improves traversal, the Rope strengthens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Interaction between endpoint optimization freedom and path-dependent middlebox behavior"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 2022,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "RFC 9293 (2022) consolidates and obsoletes the original TCP specification (RFC 793) and decades of updates. This reading—the optimization_latitude_reading—holds that the specification defines a semantic contract (reliable, in-order byte stream with flow control and congestion signaling) but deliberately does not mandate implementation mechanisms. Endpoints may implement any congestion control, loss recovery, or pacing algorithm provided observable behavior stays within the semantic bounds. This enables high-performance variants (BBR, DCTCP, PCC, Copa) to deploy without breaking interoperability. The constraint is a Rope: it coordinates interoperable outcomes while granting implementation freedom, with low extractiveness and low suppression. The IETF standards process provides active enforcement of the semantic contract (interoperability testing, errata, bis updates) without dictating implementation internals.",
+    "logic_rationale": "Extractiveness is low (0.15) because the constraint enables rather than extracts—it creates a commons of implementation approaches. Suppression is low (0.20) because alternative congestion control algorithms are not suppressed; they are explicitly permitted within semantic bounds. Theater ratio is low (0.10) because the coordination function (interoperable reliable transport) is genuine and the enforcement machinery (IETF process, interop testing) serves that function. Accessibility collapse is moderate (0.40) because implementations must conform to the semantic contract—alternatives that violate it (e.g., non-congestion-controlled transports) are excluded. Resistance is low (0.25) because the standard is voluntarily adopted by all major OS vendors and network equipment manufacturers.",
+    "directionality_logic": "The IETF transport area (agenda_setter) administers the specification but collects no rents—its directionality is near-symmetric (d≈0.5). TCP implementers (beneficiary) gain a stable target to implement against and freedom to innovate—d near beneficiary end (d≈0.2). Application developers and end users (beneficiary) receive reliable transport without lock-in—d≈0.15. Congestion control researchers (beneficiary) gain a permissionless innovation space—d≈0.1. Middlebox vendors (observer) are affected but not coordinated by this reading—they appear in the middlebox_realism_reading. Legacy implementations (excluded) cannot easily adopt new optimizations but are not victimized by the constraint itself.",
+    "perspectival_gap": "The strict_invariance_reading would compute higher suppression and extractiveness from the implementer seat (mandated state machine replication feels like enforcement). The middlebox_realism_reading would compute higher extractiveness from the middlebox vendor seat (endpoint optimization breaks middlebox assumptions). This reading computes low values from the implementer/application seats because the semantic contract is experienced as enabling. The engine will compute per-seat types from the structural data; the divergence across readings is the measurement.",
+    "mandatrophy_analysis": "The founding problem (interoperable reliable transport across heterogeneous networks) remains live. The arrangement has not atrophied—it has evolved through the bis process to explicitly codify the optimization latitude that was always implicit. No mandatrophy: the coordination function is active and the specification is actively maintained.",
+    "kernel_context": "This constraint is the optimization_latitude_reading of kernel rfc9293_tcp_specification. Sibling readings: strict_invariance_reading (specifies invariant state machine; implementations must replicate exactly), middlebox_realism_reading (specification authority subordinate to deployed middlebox behavior; path-dependent protocol). This reading holds that the kernel is a semantic contract enabling permissionless endpoint innovation within defined behavioral bounds."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "congestion_control_algorithm_deployment",
+      "middlebox_behavior_evolution",
+      "transport_protocol_interoperability_testing"
+    ],
+    "dual_formulation_note": "Part of the rfc9293_tcp_specification constraint family (3 readings). This reading emphasizes the semantic-contract/implementation-freedom decomposition. strict_invariance_reading emphasizes state-machine fidelity. middlebox_realism_reading emphasizes path-dependence. The three readings share the same RFC text but instantiate different constraints with different ε, beneficiary structures, and classifications."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "ietf_transport_area",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Maintains the TCP specification through the IETF standards process: working groups produce bis documents, errata, and new RFCs. Administers interoperability testing at hackathons. Collects no revenue from the specification; authority derives from demonstrated competence in producing interoperable standards."
+    },
+    {
+      "name": "tcp_implementers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Implement TCP stacks in OS kernels (Linux, Windows, BSD, Fuchsia) and user-space libraries. Gain a stable semantic target (RFC 9293) and freedom to choose congestion control, loss recovery, pacing. Can ship BBR, DCTCP, Cubic, Reno, or proprietary algorithms without breaking interoperability. Exit is mobile: they could implement a different transport (QUIC, SCTP) but TCP's ubiquity makes staying beneficial."
+    },
+    {
+      "name": "application_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build applications on TCP's reliable byte-stream abstraction. Benefit from performance improvements in underlying congestion control without code changes. Exit is mobile: can migrate to QUIC, WebTransport, or application-layer protocols, but TCP's universal reach makes it the default choice."
+    },
+    {
+      "name": "end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Experience TCP through applications (web, video, messaging, gaming). Benefit from lower latency, higher throughput, better fairness as congestion control evolves. Have no direct exit—they use whatever transport the application and OS provide. Their situation improves when the constraint enables better implementations."
+    },
+    {
+      "name": "congestion_control_researchers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Design and publish new congestion control algorithms (BBR, DCTCP, PCC, Copa, etc.). The optimization latitude means they can deploy innovations in production kernels without standardizing the algorithm itself. Exit is mobile: they could research QUIC congestion control or application-layer rate adaptation, but TCP's install base makes it the primary venue."
+    },
+    {
+      "name": "middlebox_vendors",
+      "role": "observer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build firewalls, NATs, load balancers, DPI engines that inspect or modify TCP headers. Their products must correctly forward optimized TCP variants (BBR's pacing, DCTCP's ECN usage). They are not coordinated by this reading—their constraints appear in middlebox_realism_reading. They observe IETF discussions to anticipate compatibility issues."
+    },
+    {
+      "name": "legacy_tcp_implementations",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Embedded, industrial, or legacy OS TCP stacks that cannot be updated to exploit new optimization latitude (e.g., no ECN support, fixed Cubic). They interoperate at baseline semantics but cannot benefit from performance innovations. They are structurally excluded from the innovation cycle the constraint enables. Their voice is absent from IETF working groups."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Coordinates interoperable reliable byte-stream delivery across heterogeneous endpoint implementations by specifying observable behavioral outcomes (in-order delivery, no duplication, flow control, congestion signaling) while leaving the implementation path—congestion control algorithms, loss recovery, pacing—to endpoint discretion.",
+    "transfer_function": "Moves implementation freedom to endpoints; constrains only the observable semantic contract. No value transfer between parties; the constraint enables rather than extracts.",
+    "absent_voices": "Operators of ossified middlebox fleets that cannot parse or correctly forward optimized TCP variants; legacy embedded stacks that cannot be updated to exploit the latitude. They are structurally excluded from the innovation cycle the constraint enables.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the semantic contract and its permitted latitude vanished, every TCP implementation would need to converge on a single mandated algorithm or interoperability would fracture—endpoint innovation in congestion control (BBR, DCTCP, PCC, etc.) would be legally or technically foreclosed.",
+    "founding_problem": "The early Internet needed a single, universally implementable reliable transport protocol that could run over heterogeneous link layers without requiring per-network customization.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The IETF transport area working groups, the RFC series archive, and three decades of multi-vendor interoperability testing (IETF hackathons, university testbeds) all attest that the founding problem—interoperable reliable transport across diverse networks—remains live and the semantic-contract approach remains the chosen solution."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "strict_invariance_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "middlebox_realism_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "semantic_contract_sufficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "implementation_freedom_enabled",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "rfc9293_semantic_contract",
+    "drift_state": {
+      "moment": "contemporary_congestion_control_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

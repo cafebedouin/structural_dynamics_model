@@ -1,0 +1,307 @@
+{
+  "header": {
+    "constraint_id": "hebrew_living_language__liturgical_continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_hebrew_living_language__liturgical_continuity_reading",
+    "measurement_id_prefix": "hebrew_liturgical",
+    "story_uid": "6a4b31f0-cd1c-43dc-b0c5-407d223b24ac"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.08,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.12,
+    "claimed_type": "rope",
+    "human_readable": "Hebrew Living Through Liturgical Continuity",
+    "topic_domain": "historical_linguistics/language_revitalization/commitment_systems",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "jewish_liturgical_communities",
+      "hebrew_scholars",
+      "diaspora_congregations"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "hebrew_liturgical_continuity_preserves_living_status",
+      "textual_study_sustains_language_vitality",
+      "shared_liturgical_medium_enables_diaspora_cohesion"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 1954
+  },
+  "stakeholders": [
+    {
+      "name": "jewish_liturgical_communities",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Maintain the liturgical calendar, prayer texts, and study cycles that constitute the living practice of Hebrew. They set the norms of pronunciation, cantillation, and textual interpretation. Their authority derives from chain of transmission. Exit means leaving the community of practice, which carries identity costs but no legal penalties."
+    },
+    {
+      "name": "hebrew_scholars",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Study, edit, comment on, and teach the textual corpus (Bible, Mishnah, Talmud, codes, responsa, poetry). Their professional standing depends on mastery of the liturgical-textual tradition. They benefit from the language's vitality as a research medium. Exit is professionally costly but structurally open — they can shift to other languages or fields."
+    },
+    {
+      "name": "diaspora_congregations",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Participate in weekly and festival liturgy, lifecycle rituals, and communal study. They acquire Hebrew literacy through repetition and schooling. The shared liturgy lets a congregation in Buenos Aires and one in Melbourne pray identically. Exit means losing the primary vehicle for communal cohesion and textual access; identity costs are real but not coercive."
+    },
+    {
+      "name": "secular_hebrew_revivalists",
+      "role": "excluded",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Built modern Hebrew as a native spoken language in Palestine/Israel (late 19th–20th century). They explicitly rejected liturgical Hebrew as fossilized and sought generative daily speech. Their reading (native_generation_reading) competes for the 'living language' designation. They are excluded from the liturgical continuity framework by ideological choice, not structural barrier."
+    },
+    {
+      "name": "linguistic_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze Hebrew's trajectory from biblical through rabbinic, medieval, Haskalah, and modern periods. They evaluate vitality criteria (native speakers, domains of use, intergenerational transmission) without participating in the liturgical practice. Their seat is analytical — they see the full structural field across readings."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Preserves Hebrew as a shared liturgical and textual medium across geographically and temporally dispersed Jewish communities, enabling mutual intelligibility in prayer, study, and legal discourse without requiring native daily speech in a common territory.",
+    "transfer_function": "Moves the cognitive effort of textual mastery, recitation fluency, and interpretive competence from each generation to the next through communal schooling and ritual participation. No material resources are extracted; the transfer is effort and attention invested in the tradition, which returns communal cohesion and textual access.",
+    "absent_voices": "Native-generation advocates (secular revivalists, modern Israeli linguists) who argue liturgical competence without generative daily speech is 'fossilized' or 'ritualized' rather than living. Also absent: communities that lost Hebrew literacy entirely and shifted to vernaculars (Judeo-Arabic, Yiddish, Ladino) — they would dispute that liturgical continuity alone preserved Hebrew for them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If liturgical recitation and textual study ceased overnight, the primary vehicle linking modern Hebrew speakers to the biblical and rabbinic corpus would fracture. Diaspora communities would lose the shared textual medium that enables cross-community prayer and study. The chain of transmission that sustained Hebrew literacy for two millennia would break, and Hebrew would survive only as an academic subject or modern national language severed from its textual past.",
+    "founding_problem": "How to maintain Hebrew as a living sacred language — capable of sustaining prayer, study, and legal discourse — after the loss of native speech communities and territorial sovereignty following the Roman exile (70 CE and 135 CE).",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Rabbinic tradition (continuous chain of transmission documented in responsa literature). Historical linguistics scholarship outside the tradition: Geoffrey Khan (Cambridge) on Hebrew's diglossic continuity; Saul Lieberman (JTS) on textual transmission; Bernard Spolsky on language policy. Diaspora community practice: liturgical Hebrew remains the primary literacy vehicle for observant communities worldwide, corroborated by enrollment data in day schools and yeshivas across continents."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint is the liturgical_continuity_reading of the contested kernel hebrew_living_language. What structural differences distinguish it from the native_generation_reading and literary_revival_reading?",
+      "resolution_mechanism": "Compare ε, beneficiary/victim structures, and type classifications across the three constraint stories. The kernel contest is resolved by decomposition, not by adjudicating one reading as 'correct.'",
+      "impact": "If the readings are not structurally distinct, the kernel decomposition fails and the colloquial label 'Hebrew is living' remains ambiguous. If distinct, each reading gets its own classification and the engine can detect where extraction or suppression appears in one reading but not another.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment to the kernel-reading decomposition: one kernel, three constraints, three ε values."
+    },
+    {
+      "id": "liturgical_vs_native_boundary",
+      "question": "Is liturgical competence (recitation, textual study, legal discourse) sufficient for 'living language' status, or does vitality require generative daily speech by native speakers?",
+      "resolution_mechanism": "Sociolinguistic criteria: intergenerational transmission in home domains (native_generation) vs. transmission via communal institutions (liturgical). The engine classifies each reading on its own structural merits; the omega records the irreducibility of the criterion choice.",
+      "impact": "If liturgical competence suffices, this reading's claimed_type (rope) holds with low ε. If native speech is necessary, this reading's continuity claim is a cover story and ε rises (the constraint extracts effort to maintain a 'living' designation that doesn't meet the stricter criterion).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The definitional boundary between 'living through liturgy' and 'living through native speech' — a criterion choice, not an empirical fact."
+    },
+    {
+      "id": "textual_preservation_vs_generative_speech",
+      "question": "Does textual study without generative daily speech constitute language vitality, or is it preservation of a cultural artifact?",
+      "resolution_mechanism": "Measure domains of active use: liturgy, study, legal writing, correspondence (historical), vs. home, street, workplace, media (modern). The liturgical reading claims the former domains are sufficient for vitality; the native_generation reading claims they are not.",
+      "impact": "If textual domains suffice, the constraint is genuine coordination (rope) with near-zero extraction. If they don't, the 'living' claim extracts legitimacy from a vitality it doesn't possess, raising ε and potentially shifting classification toward tangled_rope or snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the functional domains of liturgical Hebrew meet a vitality threshold."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the low suppression measured here structural (no barriers to exit) or does internalized identity pressure create de facto coercion for community members?",
+      "resolution_mechanism": "Post-exit trajectory study: do individuals who leave observant communities retain Hebrew literacy, or does literacy collapse without the liturgical scaffold? If literacy persists, suppression is structural. If it collapses, internalized identity-lock operated.",
+      "impact": "If internalized, effective suppression is higher than the structural measure — the constraint carries identity-lock dynamics that the scalar suppression metric understates. This would add an omega-modulated directionality correction for community members.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in a voluntary-participation constraint."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1954,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1954,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.06
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.07
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1954,
+      "value": 0.08
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story represents the liturgical_continuity_reading of the hebrew_living_language kernel. It asserts that Hebrew remained a living language through two millennia of diaspora because Jewish communities maintained unbroken liturgical recitation and textual study — prayer, Torah reading, Talmud study, legal responsa, poetry — in Hebrew. The reading claims this practice constitutes genuine language vitality (coordination function: shared textual medium across space and time) with negligible extraction (voluntary participation, no material transfer) and no suppression (exit is identity-costly but not coerced). The claimed_type is rope. The sibling readings (native_generation_reading, literary_revival_reading) instantiate different constraints with different ε and different stakeholder structures.",
+    "logic_rationale": "Extractiveness is low (0.15) because the constraint extracts no rents — participation is voluntary, the 'cost' is cognitive effort invested in learning texts, and the 'return' is communal cohesion and textual access. Suppression is near-zero (0.08) because no enforcement machinery compels participation; communities that abandoned Hebrew (shifted to Yiddish, Judeo-Arabic, Ladino, or European languages) faced no penalty from the liturgical system itself. Theater_ratio is moderate (0.25) because some liturgical performance is performative (rote recitation without comprehension), but the study component (chevruta, shiur) is genuinely generative of understanding. Accessibility_collapse (0.35) reflects that alternatives existed (vernaculars, other languages) but the liturgical medium remained uniquely authoritative for sacred purposes. Resistance (0.12) is low because the constraint meets no organized opposition — its critics (maskilim, Zionists) built rival systems rather than attacking this one.",
+    "directionality_logic": "All named stakeholders are beneficiaries (d ≈ 0.1–0.3). Jewish_liturgical_communities are agenda_setters who also benefit — they administer the tradition and gain cohesion. Hebrew_scholars and diaspora_congregations are beneficiaries who invest effort and receive textual access and communal belonging. No stakeholder is a payer or victim. Secular_hebrew_revivalists are excluded by ideological choice (they reject this reading's criterion), not by structural barrier. Linguistic_scholars are analytical observers. The engine will compute low χ for all seats because d is low and ε is low.",
+    "perspectival_gap": "The native_generation_reading would compute this constraint as a snare (extracting effort to maintain a fossilized ritual language while denying the need for living speech). The literary_revival_reading would compute it as a piton (atrophied coordination maintained theatrically). This reading computes it as a rope. The engine's per-seat classification will show this divergence: from the liturgical community seat, it's coordination; from the secular revivalist seat (if modeled), it's extraction. The divergence is the measurement.",
+    "mandatrophy_analysis": "The founding problem (maintain Hebrew as sacred language without native speakers) remains live for diaspora observant communities. The constraint has not outlived its function — it still solves the coordination problem it was built for. Mandatrophy is not resolved; the arrangement persists because the problem persists. The modern secular revival (native_generation_reading) created a parallel vitality track but did not obsolete the liturgical one for the communities that maintain it.",
+    "kernel_context": "This constraint is the liturgical_continuity_reading of the contested kernel hebrew_living_language. Sibling readings: native_generation_reading (Hebrew lives only through native generative speech, instantiated in modern Israeli Hebrew), literary_revival_reading (Hebrew lives through Haskalah literary production — written generative competence without daily speech). This reading asserts liturgical recitation and textual study suffice for 'living' status. The three readings decompose the colloquial claim 'Hebrew is a living language' into structurally distinct constraints with different ε, different stakeholder sets, and different type classifications."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "hebrew_living_language__native_generation_reading",
+      "hebrew_living_language__literary_revival_reading"
+    ],
+    "dual_formulation_note": "The hebrew_living_language kernel decomposes into three constraint stories: liturgical_continuity_reading (this story, rope, ε≈0.15), native_generation_reading (snare or tangled_rope from diaspora view, rope from Israeli view, ε higher due to state enforcement of Hebrew), literary_revival_reading (scaffold — transitional coordination for modern Hebrew's emergence, ε moderate). Each reading has different beneficiaries, different criteria for vitality, and different temporal intervals. They are linked because each cites the others' claimed vitality as evidence for its own, and because the modern revival explicitly drew on liturgical and literary Hebrew while rejecting their sufficiency."
+  },
+  "directionality_overrides": [],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "native_generation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "literary_revival_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "liturgical_recitation_preserves_living_status",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "textual_study_sustains_vitality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "rabinic_transmission_framework",
+    "drift_state": {
+      "moment": "modern_secular_revival_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "header": {
+    "constraint_id": "press_reformation_causality__technological_determinism",
+    "version": "1.0",
+    "generated_date": "2026-08-27",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_press_reformation_causality__technological_determinism",
+    "measurement_id_prefix": "press_reformation_techdet",
+    "story_uid": "10efcdc3-b5a2-4136-a9f9-cbe4ed3b5129"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.1,
+    "claimed_type": "mountain",
+    "human_readable": "Printing Press as Autonomous Enabling Technology Making Vernacular Scripture Spread and Reformation Success Inevitable",
+    "topic_domain": "historical/technological/religious",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [],
+    "victims": [],
+    "vindicated_propositions": [
+      "technological_determinism_of_reformation"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.1,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the technological determinist reading of the printing press's role in the Reformation: the press is treated as an autonomous enabling technology — a mountain-like physical constraint — that made the spread of vernacular scripture and the success of the Reformation inevitable. Human actors (reformers, printers, authorities) are cast as downstream responders to the technological affordances. The beneficiary structure of this narrative is obscured: who gains from portraying the Reformation as technologically inevitable? The reading itself does not name beneficiaries, but the omega variables surface the ambiguity.",
+    "key_agents": [
+      "printing_press_technology: Primary constraint (mountain) — the physical apparatus and its diffusion",
+      "reformers: Downstream responders — their agency is constrained by the technology's affordances",
+      "printers_and_publishers: Downstream responders — economic actors operating within the technological logic",
+      "religious_authorities: Downstream responders — forced to react to the uncontrollable spread of vernacular scripture",
+      "historians_of_technology: Analytical observers — evaluate the determinist claim"
+    ],
+    "logic_rationale": "Metrics reflect the reading's self-presentation: low extractiveness (0.15) because the technology is portrayed as a neutral enabler; low suppression (0.1) because inevitability requires no active enforcement; near-zero theater (0.05) because the narrative presents itself as straightforward historical fact; high accessibility_collapse (0.9) because alternatives (e.g., a Reformation without print) are treated as inconceivable; low resistance (0.1) because the determinist reading meets little resistance within its own framework. The claimed_type is mountain, consistent with the reading's assertion that the press operates like a natural law.",
+    "perspectival_gap": "From the analytical observer seat, the constraint appears as a mountain. From the downstream responder seats (reformers, printers, authorities), the same historical process might be experienced as a tangled rope or snare — they faced strategic choices, extraction, and enforcement. The engine will compute per-seat classifications from the structural data; this commentary notes the expected divergence.",
+    "directionality_logic": "The reading assigns the technology a beneficiary-like position (d ~ 0.0) because it is the source of enablement; human actors are targets (d ~ 1.0) because they bear the costs of adaptation. However, the reading obscures this directionality by presenting the technology as a neutral force. No beneficiaries or victims are declared in base_properties, reflecting the reading's own silence on distributional consequences.",
+    "mandatrophy_analysis": "The determinist reading may serve a mandatrophy function: it naturalizes a historical outcome that was in fact contingent on human choices, thereby obscuring the interests that benefited from that outcome. If the founding problem (explaining the Reformation's spread) is dead — because modern historiography emphasizes contingency — but the determinist narrative persists, it functions as a piton or false summit. The omega variables capture this tension.",
+    "kernel_context": "This constraint is the technological_determinism reading of the contested kernel press_reformation_causality. Sibling readings: strategic_deployment (reformers and printers strategically weaponized printing) and co_constitution (technology and human agency co-constituted the Reformation through feedback loops). The technological determinism reading treats the press as a mountain, human actors as downstream responders, and leaves beneficiary structure unexamined."
+  },
+  "omegas": [
+    {
+      "id": "hidden_beneficiary_structure",
+      "question": "Does the technological determinist narrative conceal beneficiaries — such as later industrial capitalism, state centralization, or specific confessional interests — that gain from portraying the Reformation as an inevitable technological outcome?",
+      "resolution_mechanism": "Genealogical analysis of who cites determinist accounts and for what political/ideological purposes; comparative study of alternative historiographies.",
+      "impact": "If beneficiaries are identified, the mountain claim may be a false summit (FSM trigger), reclassifying the constraint as tangled_rope or snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the determinist reading obscures a beneficiary structure that would reclassify the constraint."
+    },
+    {
+      "id": "kernel_framing_ambiguity",
+      "question": "Is the kernel 'press_reformation_causality' best framed as a single historical causal claim, or as a family of distinct constraints (spectral universality vs eigenvector thermalization analog)?",
+      "resolution_mechanism": "Decompose the kernel into separate constraint stories for each reading and test ε-invariance: does each reading have a stable ε across measurement bases?",
+      "impact": "If the kernel decomposes cleanly, the current reading is one constraint among several; if not, the readings may be measurement bases of a single constraint, violating ε-invariance.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel admits a single ε or requires decomposition per the ε-invariance principle."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "strategic_deployment",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "co_constitution",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "printing_press_determines_reformation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "technological_inevitability_thesis",
+    "drift_state": {
+      "moment": "contemporary_historical_consensus",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "header": {
+    "constraint_id": "provincial_sovereignty_boundary__compact_federalism",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_provincial_sovereignty_boundary__compact_federalism",
+    "measurement_id_prefix": "psb_cf",
+    "story_uid": "a66392f1-8c08-458f-bf9e-317496bd582a",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.45,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Compact Federalism: Provincial Sovereignty Boundary",
+    "topic_domain": "political_economy/federalism/resource_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "have_not_provinces",
+      "federal_government"
+    ],
+    "victims": [
+      "have_provinces"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets federal legislative agenda, controls spending power and equalization formula, appoints Supreme Court justices. Claims authority to address national concerns (climate, health care) under POGG clause. Collects GST and equalization contributions; distributes transfers. Can credibly threaten to withhold transfers or use declaratory power."
+    },
+    {
+      "name": "have_provinces",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Alberta, Saskatchewan, Newfoundland & Labrador. Net contributors to equalization (approx $600B cumulative since 1957). Resource economies subject to federal climate policy (carbon price, emissions cap, tanker ban). Constitutional amendment formula requires 7/50 for most changes — effectively blocks exit. Threaten separation referendums (Alberta 2022 sovereignty act) but face economic integration costs."
+    },
+    {
+      "name": "have_not_provinces",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Quebec, Manitoba, New Brunswick, Nova Scotia, PEI. Net recipients of equalization (Quebec receives ~$13B/yr, 50% of total). Depend on federal transfers for health, education, social services. Support federal climate policy when it brings green transition funding. Exit not seriously contemplated — federation delivers net fiscal benefit. Quebec adds distinct society claim and veto expectation."
+    },
+    {
+      "name": "quebec",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Unique dual position: largest equalization recipient yet claims most extensive provincial sovereignty. Never signed 1982 Constitution Act; demands distinct society recognition, immigration control, cultural veto. Identity-locked exit: sovereignty referendums (1980, 1995) failed but movement persists as core political identity. Bill 96 (2022) asserts Quebec as nation within Canada — exit negotiated through identity, not economics."
+    },
+    {
+      "name": "indigenous_nations",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Inherent rights holders under s.35 Constitution Act 1982; not parties to 1867 compact. Federal-provincial division of powers ignores nation-to-nation relationship. Resource development on traditional territories approved by provinces without consent (e.g., TMX pipeline, Ring of Fire). Duty to consult is procedural, not veto. Exit from Canadian sovereignty not on offer — trapped in federal/provincial jurisdictional gap."
+    },
+    {
+      "name": "citizens",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Bear tax burden of federal-provincial transfers; receive portable health care, equalization-funded services. Interprovincial mobility high (Charter s.6) — can exit provincial policy regimes by moving. But cannot exit federal climate policy or equalization structure. Benefit from national risk-pooling; pay for interregional redistribution."
+    },
+    {
+      "name": "courts",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Supreme Court adjudicates division of powers (pith and substance, double aspect, POGG). Reference cases (Secession 1998, Carbon Pricing 2021) define boundary. Appointed by federal government; security of tenure. Neither collect nor pay — interpret the compact. Their readings shift the constraint's effective extraction over time."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Manages shared currency, common market, national defense, interprovincial trade, and redistributive equalization among economically diverse provinces; provides dispute resolution via courts instead of armed conflict.",
+    "transfer_function": "Moves fiscal capacity from resource-rich provinces (AB, SK, NL) to resource-poor provinces (QC, MB, NB, NS, PE) via equalization (~$24B/yr); moves policy autonomy from provinces to federal government via spending power (health transfers with conditions) and POGG doctrine (carbon pricing, emergencies).",
+    "absent_voices": "Indigenous nations with inherent title and self-government rights (excluded from 1867 compact, s.35 added 1982 without consent); territories (YT, NT, NU) without provincial status but subject to federal control; future generations bearing climate policy costs locked in by current jurisdictional stalemate.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the division of powers, either a unitary state emerges (federal government absorbs all jurisdiction) or the confederation dissolves into sovereign provinces — equalization ends, common market fragments, climate policy becomes 13 uncoordinated regimes. The 1998 Secession Reference confirmed negotiated exit, not unilateral, but negotiation requires federal participation.",
+    "founding_problem": "Uniting British North American colonies for mutual defense, transcontinental railway, and economic development while preserving distinct French-Canadian society in Quebec and regional autonomy for Maritime and Western colonies.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Constitutional scholars outside beneficiary set (Peter Russell, Jeremy Webber, Brian Slattery) attest founding compact included Quebec's distinct status and provincial sovereignty as core terms; Royal Commission on Aboriginal Peoples (1996) attests founding problem excluded Indigenous nations entirely; Alberta Sovereignty Act (2022) and Quebec Bill 96 (2022) demonstrate founding problem remains live for provinces but with divergent readings."
+  },
+  "interval": {
+    "start": 0,
+    "end": 157
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 157,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 157,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 120,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 157,
+      "value": 0.45
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The compact_federalism reading of the provincial sovereignty boundary treats Confederation as a treaty-like compact among pre-existing sovereign provinces. Provinces retain residual sovereignty; federal authority is delegated and conditional on provincial consent. Equalization is a negotiable term, not a constitutional entitlement. Climate policy falls under provincial jurisdiction (natural resources, property rights) subject to federal override only with provincial agreement. Exit is a negotiated right under duress — not unilateral secession, not federal permission. This reading is instantiated by Alberta's Sovereignty Act, Quebec's distinct society claims, and the 1998 Secession Reference's 'negotiated departure' framework. The constraint is the division of powers itself (ss. 91/92 Constitution Act 1867, s.92A 1982) as interpreted through this compact lens.",
+    "logic_rationale": "Extractiveness (0.65) reflects net fiscal transfer from have to have-not provinces plus federal policy intrusion into provincial jurisdiction (carbon pricing, health conditions). Suppression (0.45) is moderate — courts enforce boundaries but provinces retain constitutional tools (notwithstanding clause, s.92A, reference cases). Theater (0.40) rising: first ministers' conferences perform collaboration while bilateral deals replace multilateralism. Accessibility collapse (0.52): secession legally possible but economically prohibitive; constitutional amendment formula (7/50) effectively blocks structural change. Resistance (0.62) high: constant provincial litigation, sovereignty legislation, carbon tax opposition. Claimed type tangled_rope: genuine coordination (common market, defense, risk pooling) coexists with asymmetric extraction (have provinces subsidize have-not; federal spending power penetrates provincial jurisdiction).",
+    "directionality_logic": "Federal government and have-not provinces are structural beneficiaries (d ~0.15-0.25): federal collects GST, sets national standards, distributes transfers; have-not provinces receive net equalization. Have provinces are structural targets (d ~0.75): pay disproportionate equalization, face federal climate policy on their resource economies, constrained exit. Quebec occupies dual position — beneficiary of transfers (d ~0.2) but identity-locked target on sovereignty (d ~0.8). Indigenous nations are excluded targets (d ~0.9) — bear resource development costs without jurisdictional authority. Citizens are mobile payers/beneficiaries (d ~0.5). Courts are analytical observers (d=0.5).",
+    "perspectival_gap": "From federal seat: constraint is rope — coordination mechanism enabling national projects. From have-province seat: constraint is snare — extraction mechanism locking resource wealth into federal redistribution. From Quebec seat: constraint is tangled rope — coordination on fiscal terms but snare on identity/sovereignty terms. From Indigenous seat: constraint is mountain of colonial law — immovable structure denying nationhood. Engine computes per-seat classification from these structural asymmetries; authored claim does not adjudicate.",
+    "mandatrophy_analysis": "Founding problem (defence, railway, Quebec distinct society) is contested: defence/railway rationales obsolete; Quebec distinct society and regional autonomy remain live. Equalization has outlived 1957 design (resource revenue volatility not addressed; per-capita GDP formula creates perverse incentives). Federal spending power has accumulated mandates (health, climate, childcare) without provincial consent — mandatrophy unresolved. The constraint persists because no party can unilaterally rewrite it (amendment formula) and no coalition can agree on replacement.",
+    "kernel_context": "This constraint is the compact_federalism reading of the contested kernel 'provincial_sovereignty_boundary'. Sibling readings: constitutional_subordination (provinces are creatures of federal constitution; no inherent sovereignty; exit requires federal consent) and resource_sovereignty_primacy (provincial ownership of natural resources per s.92A grounds absolute sovereignty; resource control = territorial sovereignty). This reading asserts federal authority is conditional on provincial consent; equalization negotiable; climate policy subject to provincial override; exit requires negotiation not permission."
+  },
+  "omegas": [
+    {
+      "id": "compact_vs_creature_ambiguity",
+      "question": "Is the Canadian federation a compact among sovereign provinces (compact_federalism) or a hierarchical constitution where provinces are creatures of statute (constitutional_subordination)?",
+      "resolution_mechanism": "Supreme Court reference on whether provinces can unilaterally initiate secession negotiation without federal consent; or constitutional amendment attempting to entrench provincial veto.",
+      "impact": "If compact_federalism prevails, federal spending power and POGG are narrowly construed; provinces gain veto on national projects. If constitutional_subordination prevails, federal authority expands; equalization becomes non-negotiable entitlement.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Foundational ambiguity: treaty-like compact vs. hierarchical statute."
+    },
+    {
+      "id": "exit_mechanism_ambiguity",
+      "question": "Is provincial exit a negotiated right (compact_federalism), a unilateral right (resource_sovereignty_primacy), or a federally-permitted process (constitutional_subordination)?",
+      "resolution_mechanism": "Clarity Act (2000) vs. Alberta Sovereignty Act (2022) confrontation; or a province holding a clear referendum question on independence and demanding negotiation.",
+      "impact": "Negotiated exit (compact) gives federal government veto leverage. Unilateral exit (resource primacy) makes federation voluntary association. Federal-permitted exit (subordination) makes federation indissoluble without federal consent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether exit is a provincial right, federal gift, or negotiated process."
+    },
+    {
+      "id": "equalization_coordination_or_extraction",
+      "question": "Is equalization a genuine coordination function (risk pooling, national cohesion) or asymmetric extraction from have provinces to have-not provinces?",
+      "resolution_mechanism": "Economic analysis of whether equalization improves national GDP vs. merely redistributes; or political negotiation of formula renewal (next 2029).",
+      "impact": "If coordination, equalization is rope-like and non-negotiable floor. If extraction, it is snare-like and subject to provincial veto. Tangled rope classification hinges on this boundary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fiscal federalism coordinates or extracts."
+    },
+    {
+      "id": "climate_policy_jurisdictional_boundary",
+      "question": "Does federal carbon pricing/emissions cap under POGG constitute legitimate national concern or ultra vires intrusion into provincial s.92A resource jurisdiction?",
+      "resolution_mechanism": "Supreme Court carbon pricing reference (2021) upheld federal law but left boundary contested; future reference on emissions cap or oil/gas production cap will test limit.",
+      "impact": "If federal authority confirmed, provincial resource sovereignty erodes (extraction increases). If provincial jurisdiction confirmed, national climate coordination fails (coordination collapses).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether climate policy is federal coordination or provincial extraction."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "equalization_formula",
+      "federal_spending_power",
+      "carbon_pricing_backstop",
+      "constitutional_amendment_formula"
+    ],
+    "dual_formulation_note": "This constraint (compact_federalism) is one reading of the provincial_sovereignty_boundary kernel. It forecloses constitutional_subordination (mutually exclusive sovereignty premises) and coexists_with resource_sovereignty_primacy (different grounding for provincial sovereignty — compact vs. resource title). All three readings share the same constitutional text (ss.91/92/92A) but instantiate different constraints with different ε, beneficiaries, and victims."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.78
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.52
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_subordination",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "resource_sovereignty_primacy",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "provincial_sovereignty_derives_from_compact",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "federal_authority_conditional_on_provincial_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "equalization_as_negotiable_term_not_entitlement",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "id_1867_compact_of_sovereign_provinces",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "constitution_act_1867",
+      "constitution_act_1982"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

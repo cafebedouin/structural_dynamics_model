@@ -1,0 +1,335 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__option_value_preserving",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "61a44d15-df9e-43d0-90aa-6c159418f10c"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Option-Value-Preserving Acceptable Risk in Energy Pathway Selection",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "energy_system_operators",
+      "policy_makers_flexibility_faction",
+      "future_generations_under_uncertainty"
+    ],
+    "victims": [
+      "ratepayers_bearing_capacity_costs",
+      "communities_near_maintained_unneeded_infrastructure",
+      "clean_energy_innovators_crowded_out"
+    ],
+    "vindicated_propositions": [
+      "decision_flexibility_has_intrinsic_value_under_deep_uncertainty",
+      "irreversibility_warrants_pathway_preservation"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "energy_system_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operate the grid and long-term capacity planning. They design and enforce the requirement to maintain multiple generation pathways (nuclear, fossil with CCS, renewables+storage) as a hedge against deep uncertainty. They justify this as prudent risk management. They bear operational complexity costs but control the planning process and resource adequacy standards."
+    },
+    {
+      "name": "policy_makers_flexibility_faction",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Legislators and regulators who champion 'technology-neutral' or 'all-of-the-above' energy policies. They gain political cover from preserving options — avoiding commitment to any single pathway that could prove wrong. They collect support from diverse energy constituencies. Their exit is mobile: they can shift emphasis as political winds change."
+    },
+    {
+      "name": "ratepayers_bearing_capacity_costs",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Electricity customers who pay for maintaining capacity that may rarely or never run (e.g., nuclear plants kept online as hedge, gas peakers maintained for reliability). Costs appear in rates and capacity payments. Exit is constrained: they cannot individually opt out of the grid, and collective action (municipalization, distributed generation) faces high barriers."
+    },
+    {
+      "name": "communities_near_maintained_unneeded_infrastructure",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Host communities for power plants kept operational primarily as option-value hedges rather than economic merit. They bear local environmental and health externalities (air quality, water use, waste) for a plant whose system-level justification is flexibility, not utilization. Exit is trapped: relocation is economically infeasible and identity-locked to place."
+    },
+    {
+      "name": "clean_energy_innovators_crowded_out",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Developers of novel storage, advanced renewables, and grid integration technologies who find market entry slowed because capacity markets and planning reserves are partially committed to maintaining incumbent pathways as hedges. They pay opportunity cost in delayed deployment and capital access. Exit is constrained: they can pivot markets but the energy system is the primary arena."
+    },
+    {
+      "name": "anti_nuclear_absolutists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocacy groups and policy actors who argue nuclear must be phased out immediately regardless of flexibility value. They are structurally excluded from the option-value framework because their premise (nuclear is categorically unacceptable) contradicts the core coordination function (maintain all viable pathways). They would object to nuclear's inclusion in the preserved set."
+    },
+    {
+      "name": "fossil_maximalists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Industry actors and political allies who argue for unrestricted fossil expansion and reject climate constraints. They are excluded because the option-value framework conditions fossil's inclusion on CCS-readiness and eventual phase-down — a constraint they reject. They would object to any suppression of fossil pathway expansion."
+    },
+    {
+      "name": "decision_theory_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars of robust decision-making, info-gap theory, and real options analysis who evaluate whether preserving pathways genuinely improves outcomes under deep uncertainty versus merely increasing system cost. They neither collect nor pay; they assess the epistemic warrant for the coordination claim."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the genuine collective-action problem of energy planning under deep uncertainty: no single actor can bear the risk of committing to one pathway that may prove catastrophically wrong (e.g., renewables-only failing storage scaling, nuclear-only facing cost overruns, fossil-only facing climate liability). The constraint coordinates by mandating a diversified portfolio, preventing any faction from forcing premature closure of a pathway that might be needed.",
+    "transfer_function": "Moves capital and risk from ratepayers and host communities (who pay for maintaining underutilized capacity and bear local externalities) to the system as a whole (which gains resilience against unknown futures). The transfer is not a simple rent flow to a concentrated beneficiary — it is a diffuse insurance premium paid by identifiable parties for a collective option value.",
+    "absent_voices": "Future generations who would inherit the consequences of premature pathway closure are not present to object or consent. Communities in the Global South facing energy poverty are excluded from the calculus — the option-value framework assumes a wealthy-system capacity to pay for hedges. Both would likely argue for different weightings of flexibility vs. immediate access.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the option-value preservation constraint vanished overnight, energy planning would collapse into single-pathway advocacy wars. One faction would force closure of nuclear; another would block fossil phase-down; a third would gamble entirely on renewables+storage. The system would lose its hedge against deep uncertainty, and the first major surprise (storage breakthrough failure, climate tipping point, nuclear cost collapse) would cause system-wide disruption. The world rearranges because arrangements depend on the hedge.",
+    "founding_problem": "Post-1970s energy crises and early climate awareness created a planning environment where no energy pathway had proven reliable at scale: nuclear faced cost and waste crises, fossil faced climate and geopolitical risk, renewables faced intermittency and storage gaps. The option-value framework emerged to prevent betting the energy system on any single unproven horse.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Energy historians (e.g., Vaclav Smil, Daniel Yergin) document the genuine uncertainty of the 1970s-1990s period from outside the benefiting parties. However, contemporary analysts (e.g., IEA, IPCC WGIII) argue the founding problem has shifted: renewables+storage have substantially solved the intermittency gap, changing the option-value calculus. The benefiting parties (system operators, flexibility-faction policymakers) attest the problem remains live; independent analysts contest this."
+  },
+  "interval": {
+    "start": 1975,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The option-value-preserving reading of acceptable risk treats energy pathway diversity as a real options portfolio: under deep uncertainty (unknown probability distributions over future states), maintaining multiple viable pathways has intrinsic value beyond expected-cost minimization. This reading instantiates a specific constraint: planning standards and capacity mechanisms must keep nuclear, fossil-with-CCS, and renewables+storage all technically and economically viable, suppressing both anti-nuclear absolutism and unconstrained fossil expansion. The constraint is claimed as tangled_rope — it coordinates a genuine collective-action problem (no single actor can optimally hedge deep uncertainty) but extracts asymmetrically (ratepayers and host communities pay for capacity that may never run). The engine will compute per-seat classifications from the structural data.",
+    "logic_rationale": "Base extractiveness (0.42) reflects real but diffuse opportunity costs: maintaining hedging capacity costs ~10-15% above least-cost portfolios, borne by identifiable payers. Suppression (0.48) is moderate: the constraint actively excludes categorical exclusions (no-nuclear, no-fossil) but does not silence debate — advocates remain free to argue, just not to enforce closure. Theater ratio (0.28) captures that the coordination function is genuine (diversified portfolios demonstrably reduce worst-case regret) but a growing share of maintained capacity (esp. aging nuclear, unabated gas) may serve incumbency more than option value. The trajectory shows extractiveness and theater rising through 2005 then plateauing as renewables+storage matured — the hedge became less necessary but the constraint persisted.",
+    "directionality_logic": "Energy system operators are agenda_setters with constrained exit (they cannot abandon planning responsibility) — they sit near symmetric (d~0.5), bearing complexity costs but controlling the process. Policy_makers_flexibility_faction are beneficiaries with mobile exit — they gain political cover, d~0.2. Ratepayers and host communities are payers with constrained/trapped exit — they bear concentrated costs, d~0.7-0.85. Clean energy innovators are payers with constrained exit — they face market distortion, d~0.65. Excluded groups (anti-nuclear, fossil maximalists) are structurally excluded because their premises contradict the coordination function; their exclusion is the enforcement object. Analytical observers sit at d=0.5 by definition.",
+    "perspectival_gap": "From the operator's seat, the constraint is coordination: they see the genuine collective-action problem and the hedge working. From ratepayer and host community seats, it extracts: they pay for insurance they didn't choose and may not need. From clean innovator seats, it suppresses: their technologies face artificial barriers. The engine computes this divergence from the structural data — the claimed_type (tangled_rope) asserts the coordination function is real and the extraction is asymmetric, which the metrics and stakeholders support.",
+    "mandatrophy_analysis": "The founding problem (1970s-1990s deep uncertainty across all pathways) has partially resolved: renewables+storage have substantially proven viability. Yet the constraint persists with near-identical scope. This is a mandatrophy signal — the mandate (preserve all pathways) outlives its original function (hedge against total pathway failure). However, the constraint is not yet a piton: the coordination function remains live for residual uncertainties (long-duration storage, grid integration at >80% renewables, climate tail risks). The theater ratio plateau at 0.28 suggests the performative share has stabilized but not dominated. The classification as tangled_rope (not piton) captures this: genuine coordination persists alongside asymmetric extraction.",
+    "kernel_context": "This constraint is the option_value_preserving reading of the contested kernel 'acceptable_risk_energy'. The kernel is the concept of 'acceptable risk' in energy pathway selection — a stabilized commitment that different parties interpret differently. Sibling readings: catastrophic_tail_dominant (prioritizes avoiding low-probability catastrophes even at higher expected harm) and expected_value_dominant (minimizes aggregate expected harm using mortality-per-TWh metrics). This reading instantiates the constraint that acceptable risk = preserving decision flexibility under deep uncertainty via pathway diversity. The structural delta vs. siblings: this reading keeps both nuclear and fossil pathways viable (where tail-dominant closes nuclear, expected-value closes fossil); victims include opportunity costs of premature closure; suppression targets both extremes moderately."
+  },
+  "omegas": [
+    {
+      "id": "committer_structure_kernel_reading",
+      "question": "How does the option-value-preserving reading of acceptable risk structurally differ from its sibling readings in the contested kernel?",
+      "resolution_mechanism": "Compare the three readings' beneficiary/victim sets, suppression targets, and coordination functions. This reading keeps both nuclear and fossil viable; catastrophic_tail_dominant suppresses nuclear; expected_value_dominant suppresses fossil. The victim sets differ: this reading's victims bear option-premium costs; tail-dominant's victims bear catastrophic risk; expected-value's victims bear higher aggregate harm.",
+      "impact": "If the readings are structurally distinct constraints (different ε, different victims, different suppression), they must be separate stories linked by network.affects_constraints. If they are merely interpretive variants of one constraint, the ε-invariance principle is violated. This omega documents the committer-frame decomposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committers structure: this is one reading of a contested kernel; sibling readings instantiate different constraints."
+    },
+    {
+      "id": "option_value_epistemic_warrant",
+      "question": "Does preserving pathway diversity under deep uncertainty genuinely reduce worst-case regret, or has the epistemic warrant decayed as renewables+storage resolved the founding uncertainty?",
+      "resolution_mechanism": "Robust decision-making analysis comparing minmax-regret portfolios with and without pathway diversity constraints, using updated technology cost and performance distributions (post-2020). If the option value of maintaining nuclear/fossil pathways has fallen below their maintenance cost, the coordination function has atrophied.",
+      "impact": "If option value has decayed below cost, the constraint shifts from tangled_rope toward piton (atrophied coordination, persistent extraction). If option value remains positive, tangled_rope holds. This is the central empirical question for classification stability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the coordination function's epistemic warrant persists given technology learning curves."
+    },
+    {
+      "id": "suppression_mechanism_asymmetry",
+      "question": "Is the moderate suppression of both extremes (anti-nuclear absolutism, fossil maximalism) symmetric in practice, or does the enforcement machinery disproportionately target one side?",
+      "resolution_mechanism": "Track policy outcomes: count of nuclear plant closures blocked vs. fossil expansions blocked under the option-value framework; regulatory interventions citing 'fuel diversity' or 'resource adequacy' by technology type.",
+      "impact": "If suppression is asymmetric (e.g., primarily blocks nuclear closures while allowing fossil retirements), the constraint's extraction profile shifts — the coordination cover may favor one incumbent technology. This would alter victim/beneficiary structure and potentially reclassify toward snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression enforcement is symmetric across the two excluded extremes."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__catastrophic_tail_dominant",
+      "acceptable_risk_energy__expected_value_dominant"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the single label 'acceptable risk in energy policy' into three structurally distinct readings with different ε, victims, and suppression targets. The option_value_preserving reading keeps all pathways viable (moderate extraction from ratepayers/communities); catastrophic_tail_dominant closes nuclear (extracts from nuclear communities/workers); expected_value_dominant closes fossil (extracts from fossil communities/workers). They share a kernel but are different constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "expected_value_dominant",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "option_value_dominates_expected_value_under_deep_uncertainty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "irreversible_pathway_closure_warrants_insurance_premium",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_oil_crisis_portfolio_planning",
+    "drift_state": {
+      "moment": "post_renewables_storage_maturity",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

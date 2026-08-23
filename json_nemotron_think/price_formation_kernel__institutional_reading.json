@@ -1,0 +1,375 @@
+{
+  "header": {
+    "constraint_id": "price_formation_kernel__institutional_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_price_formation_kernel__institutional_reading",
+    "measurement_id_prefix": "price_formation_institutional",
+    "story_uid": "0060dd77-c392-4ff2-a927-e743b2fcd730"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.55,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Construction of Housing Price Formation",
+    "topic_domain": "economic/political/social",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "incumbent_owners",
+      "mortgage_lenders",
+      "real_estate_intermediaries",
+      "property_tax_assessors"
+    ],
+    "victims": [
+      "renters",
+      "first_time_buyers",
+      "mobile_workers"
+    ],
+    "vindicated_propositions": [
+      "housing_as_asset_paradigm",
+      "local_control_doctrine",
+      "mortgage_interest_deduction_efficiency"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_owners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Own homes in supply-constrained jurisdictions. Benefit from artificial scarcity that inflates asset values. Politically organized through homeowner associations and local electoral influence. Exit means selling and leaving the community they've invested in socially and financially."
+    },
+    {
+      "name": "mortgage_lenders",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Originate and service mortgage credit under federal guarantees (GSEs, FHA) and regulatory frameworks they helped shape. Profit from volume and interest spread on loans whose collateral value is propped up by supply constraints. Can reallocate capital across markets; not tied to any single jurisdiction."
+    },
+    {
+      "name": "real_estate_intermediaries",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Agents, brokers, platforms (Zillow, Redfin), title companies, appraisers. Collect transaction fees proportional to price levels. Benefit from complexity and opacity they help maintain. Mobile across firms and platforms; tied to the transaction volume model."
+    },
+    {
+      "name": "property_tax_assessors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "situation": "Local government revenue depends on assessed values. Assessment methodologies often lag market appreciation, but the fiscal incentive aligns with rising prices. Administer the tax treatment (Prop 13-type caps, homestead exemptions) that locks in incumbent advantage."
+    },
+    {
+      "name": "renters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Pay rents that capitalize the same scarcity premium owners capture. No equity accumulation, no tax advantages, no political voice in zoning decisions. Exit means moving to cheaper markets — often sacrificing labor market access, social networks, or school quality."
+    },
+    {
+      "name": "first_time_buyers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Face down-payment barriers inflated by price levels, lending standards that price risk onto borrowers, and competition from cash buyers. Tax treatment (MID) disproportionately benefits higher-income existing owners. Exit means delaying household formation or accepting long commutes."
+    },
+    {
+      "name": "mobile_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Labor mobility constrained by housing costs in productive metros. Bear the spatial mismatch cost — lower wages or unemployment — because they cannot afford housing near jobs. Exit is their primary leverage: they can refuse to relocate, but at career cost."
+    },
+    {
+      "name": "zoning_boards",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "situation": "Set land-use rules that determine supply elasticity. Captured by incumbent homeowner interests in practice. Their decisions are the primary structural enforcement mechanism for artificial scarcity."
+    },
+    {
+      "name": "federal_housing_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "FHFA, CFPB, HUD — set lending standards, GSE conservatorship policy, fair lending rules. Their mandates are formally about stability and access; in practice they reproduce the asset-inflation logic by backstopping the credit system that finances it."
+    },
+    {
+      "name": "urban_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the mechanism, document the welfare loss, propose supply-side remedies. Their consensus (Glaeser, Gyourko, Saiz, etc.) is that zoning is the primary driver, but political economy blocks reform. No direct stake in outcomes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates three distinct problems: (1) land-use externalities via zoning (nuisance, infrastructure loading); (2) mortgage credit risk distribution via lending standards and GSE guarantees; (3) fiscal stability of local government via property tax base. The arrangement solves genuine coordination needs but does so through mechanisms that structurally extract from non-owners.",
+    "transfer_function": "Moves wealth from renters and first-time buyers (via elevated rents and purchase prices) to incumbent owners (capital gains), mortgage lenders (interest volume on larger loans), and intermediaries (ad valorem fees). Tax treatment (mortgage interest deduction, property tax caps, 1031 exchanges) amplifies the transfer upward. Platform intermediation extracts data and transaction rents from both sides.",
+    "absent_voices": "Future residents (unborn, not yet migrated) who will inherit the constrained supply; displaced low-income communities pushed to exurbs with worse access; homeless populations for whom the price floor is absolute exclusion; construction workers who would be employed under elastic supply. They are absent because they lack political standing in the jurisdictions that set the rules.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If zoning, lending standards, tax preferences, and platform gatekeeping vanished overnight: land values would collapse in supply-constrained metros; mortgage volumes would shrink as collateral values fall; local fiscal models would crisis; construction would boom where labor markets are strong; rents would fall toward construction cost; wealth would shift from asset-holders to income-earners. The spatial economy of the US would reorganize fundamentally.",
+    "founding_problem": "The post-Great Depression settlement: (1) stabilize a collapsed housing finance system via federal mortgage insurance and secondary markets; (2) give local control over land use to manage growth externalities; (3) subsidize homeownership as a wealth-building vehicle for the middle class. The institutional architecture (FHA, VA loans, GSEs, Euclidean zoning, MID) was built to solve 1930s–1950s problems: credit freeze, urban overcrowding, returning veterans' housing.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The original problems are historically documented (New Deal housing acts, 1926 Euclid v. Ambler, 1954 Berman v. Parker). Urban economists (Glaeser & Gyourko 2003, 2018; Hsieh & Moretti 2019) corroborate that the founding problems are substantially solved or transformed: credit is no longer frozen, zoning externalities are now dominated by exclusionary effects, homeownership wealth-building works only for those who already own. The institutional beneficiaries (NAR, MBA, NLC) assert the problems remain live; independent scholarship largely disagrees."
+  },
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Housing price formation in the United States is not a natural equilibrium but a constructed outcome of four interlocking institutional pillars: (1) Euclidean zoning that restricts supply elasticity in high-productivity regions; (2) lending standards and GSE guarantees that channel credit into existing collateral rather than new production; (3) tax treatment (mortgage interest deduction, property tax caps, capital gains exclusions, 1031 exchanges) that subsidizes demand and locks in incumbents; (4) intermediary platforms (MLS, Zillow, CoreLogic, CoStar) that capture transaction rents and data rents while reinforcing opacity. The institutional reading holds that these are not separable 'distortions' but a coherent regime whose function is to convert location rent into financialized asset appreciation for incumbent owners and their financial intermediaries. The constraint is a tangled rope: it genuinely coordinates land use, credit risk, and local finance (rope function), but does so through mechanisms that extract from renters, first-time buyers, and mobile workers (snare function), and requires active enforcement (zoning boards, GSE conservatorship, tax code, platform terms of service) to persist.",
+    "logic_rationale": "Extractiveness (0.65) reflects the gap between marginal construction cost and market price in constrained metros (Gyourko-Molloy 2015: 50%+ of price is regulatory tax). Suppression (0.55) is moderate: alternatives exist (move, rent, commute) but are costly; the constraint does not rely on overt coercion but on structural exclusion. Theater ratio (0.42) is significant: zoning hearings, affordability mandates, GSE affordable housing goals, platform 'transparency' features perform coordination while the extraction machinery runs. Accessibility collapse (0.52) — alternatives are not fully collapsed (people do move, build ADUs, win lotteries) but the cost is high. Resistance (0.48) — YIMBL movements, state preemption laws (CA SB9, MT, FL), federal proposals (Housing Supply Act) show active but not yet decisive pushback.",
+    "directionality_logic": "Incumbent owners are structural beneficiaries (d ~ 0.15): they collect the scarcity rent via capital gains and imputed rent, and control the local political mechanism (zoning). Mortgage lenders are beneficiaries with arbitrage exit (d ~ 0.10): they profit from volume and spread, can reallocate nationally. Real estate intermediaries are beneficiaries with mobile exit (d ~ 0.20): they capture transaction fees, can shift platforms. Property tax assessors are agenda-setters with analytical exit (d ~ 0.25): they administer the fiscal lock-in. Renters are full targets (d ~ 0.90): trapped by labor markets, no equity, no voice. First-time buyers are constrained targets (d ~ 0.75): some escape via family transfer or high income. Mobile workers are mobile targets (d ~ 0.60): they can exit but at career cost. Zoning boards and federal regulators are agenda-setters with analytical exit (d ~ 0.30): they enforce the structure but are not its primary extractors.",
+    "perspectival_gap": "From the incumbent owner seat, the constraint appears as rope: zoning protects neighborhood character, mortgage credit enables their children to buy, tax treatment rewards their investment. From the renter seat, it appears as snare: every pillar extracts with no offsetting benefit. From the lender seat, it appears as rope with extraction: they provide genuine credit intermediation but the regulatory substrate guarantees their margins. The engine will compute these divergences from the power/exit/beneficiary structure authored above.",
+    "mandatrophy_analysis": "The founding problem (1930s credit freeze, 1950s veteran housing) is dead. The arrangement persists because the solution (supply restriction + credit expansion + tax subsidy) became the business model for the beneficiaries. Mandatrophy is resolved: the coordination function (credit access, land-use externalities) could be served by different mechanisms (by-right zoning, portfolio lending, land-value tax), but the extractive coalition blocks transition. The constraint is not a piton — it is actively maintained and expanded (e.g., GSE conservatorship 2008, platform monopolization 2010s) — but its coordination justification has atrophied.",
+    "kernel_context": "This constraint is the institutional_reading of the contested kernel 'price_formation_kernel'. The kernel is the claim 'housing prices are determined by...' with four declared readings: institutional_reading (this constraint — prices constructed by zoning, lending standards, tax treatment, platforms), naturalist_reading (prices as natural equilibrium of scarcity/preference), georgist_reading (prices separate land rent from improvement value), financialization_reading (prices driven by credit cycles and asset demand). This reading treats the institutional architecture as the primary causal structure; the other readings emphasize different causal levers or deny institutional construction altogether."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disagreement_locus",
+      "question": "Which structural element of price formation do the four readings disagree on most fundamentally: the causal primacy of institutions vs. markets, the separability of land and improvement value, the role of credit vs. real fundamentals, or the normative status of the resulting distribution?",
+      "resolution_mechanism": "Counterfactual simulation: remove each pillar (zoning, GSEs, MID, platforms) in a spatial equilibrium model and measure price decomposition. Compare with historical natural experiments (Houston no-zoning, Prop 13, GSE reform proposals).",
+      "impact": "If institutional pillars explain >50% of price variance in constrained metros, institutional_reading gains causal primacy. If credit cycles explain more, financialization_reading gains. If land/improvement separation holds empirically, georgist_reading gains. If none dominate, naturalist_reading's 'equilibrium' claim is unfalsifiable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Location of the structural disagreement among kernel readings"
+    },
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "How much of the measured extractiveness (0.65) is the necessary cost of genuine coordination (land-use externalities, credit risk pooling, local public finance) versus pure rent extraction enabled by captured institutions?",
+      "resolution_mechanism": "Decompose the 'regulatory tax' (Gyourko-Molloy) into: (a) efficient Pigouvian pricing of externalities; (b) inefficient exclusionary zoning; (c) credit subsidies to incumbents; (d) tax expenditures captured by owners; (e) platform rents. Requires micro-data on zoning stringency, loan-level pricing, tax expenditure incidence, platform take-rates.",
+      "impact": "If (a) is small relative to (b)-(e), the tangled_rope classification sharpens: coordination is a thin veneer on extraction. If (a) is large, the rope function is genuine and the extraction is a design flaw, not the purpose.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Boundary between genuine coordination cost and extractive overhead in the institutional architecture"
+    },
+    {
+      "id": "incumbent_owner_identity_lock",
+      "question": "Are incumbent owners' exit_options correctly characterized as 'constrained' rather than 'identity_locked'? Their political identity (homeowner, neighborhood defender) may fuse with the constraint such that exit is psychologically unavailable even when financially possible.",
+      "resolution_mechanism": "Survey/experiment: offer incumbent owners a buyout at 120% of market value contingent on upzoning their neighborhood. Measure acceptance vs. stated preferences. Track voting behavior on upzoning referenda vs. personal financial interest.",
+      "impact": "If identity_locked, their directionality d shifts toward 0.5 (symmetric) — they bear psychic cost of the constraint they enforce. This would reduce effective extraction for the owner seat and increase the snare character for the renter seat (the extractor is also trapped).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether incumbent owners are identity-locked into the constraint they politically maintain"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "zoning_restriction_regime",
+      "mortgage_interest_deduction",
+      "gse_conservatorship",
+      "platform_intermediation_monopoly",
+      "property_tax_cap_prop13"
+    ],
+    "dual_formulation_note": "Part of the price_formation_kernel constraint family. This reading (institutional) emphasizes the regulatory and fiscal construction of prices. The naturalist_reading treats the same price outcomes as equilibrium phenomena. The georgist_reading decomposes the price into land rent vs. improvement value. The financialization_reading emphasizes credit cycles and asset-manager demand. All four readings share the kernel 'price_formation_kernel' but instantiate different constraints with different ε, beneficiaries, and victims. This reading's ε (0.65) is higher than naturalist_reading's (near 0) because it sees extraction where naturalist sees equilibrium. It is lower than financialization_reading's (which may exceed 0.8 in boom phases) because it treats credit as a pillar among others, not the sole driver."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "naturalist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "georgist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "financialization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "housing_price_is_institutionally_constructed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "regulatory_restrictiveness_determines_extraction_magnitude",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_war_housing_settlement",
+    "drift_state": {
+      "moment": "contemporary_financialized_housing",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "price_formation_kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

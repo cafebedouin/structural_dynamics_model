@@ -1,0 +1,332 @@
+{
+  "header": {
+    "constraint_id": "salic_prohibition__cognatic_reversion_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_salic_prohibition__cognatic_reversion_reading",
+    "measurement_id_prefix": "salic_cognatic",
+    "story_uid": "cf33968a-d90c-455b-9a2f-c9b3d22f2cb6",
+    "created_at": "2026-06-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Salic Law Prohibition on Female Succession in Non-Frankish Territories (Cognatic Reversion Reading)",
+    "topic_domain": "constitutional_law/dynastic_succession/political_history",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "male_agnatic_heirs",
+      "dynastic_houses_preserving_agnatic_succession"
+    ],
+    "victims": [
+      "female_heirs_excluded_from_succession",
+      "non_frankish_territories_subject_to_frankish_law"
+    ],
+    "vindicated_propositions": [
+      "territorial_integrity_over_agnatic_purity",
+      "cognatic_primogeniture_as_natural_succession"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "salic_original_territorial_scope",
+      "question": "Was Salic Law ever understood by its Frankish authors to bind territories beyond the Frankish heartland, or is its extra-Frankish application a later legal fiction?",
+      "resolution_mechanism": "Comparative analysis of early Frankish legal manuscripts (Pactus Legis Salicae, Lex Salica) versus later glossators' commentaries; examination of whether Frankish law claimed universal jurisdiction or personal law jurisdiction.",
+      "impact": "If Salic Law was originally personal law (applying only to Franks), its territorial extension to non-Frankish lands is a constructed imposition, not a natural expansion — supporting this reading's claim of anachronism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Original territorial scope of Salic Law versus later territorialized readings"
+    },
+    {
+      "id": "coordination_function_genuineness",
+      "question": "Does the male-only succession rule genuinely prevent dynastic disputes, or does it create disputes by excluding plausible female claimants and triggering agnatic-cognatic conflicts?",
+      "resolution_mechanism": "Historical frequency analysis: compare succession crisis rates in Salic territories versus cognatic territories (e.g., England, Castile, Navarre) controlling for dynasty size and external pressures.",
+      "impact": "If Salic Law generates more disputes than it prevents, its coordination function is pretextual and the constraint is closer to snare; if it genuinely reduces disputes, the tangled_rope classification holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the claimed coordination benefit (dispute prevention) is real or cover"
+    },
+    {
+      "id": "extension_mechanisms_legitimacy",
+      "question": "By what mechanisms was Salic Law extended to non-Frankish territories (conquest, dynastic marriage, papal decree, legal fiction), and do those mechanisms carry legitimate authority?",
+      "resolution_mechanism": "Case-by-case genealogy of Salic Law reception in France (post-1316), Spain (Bourbon introduction 1713), Naples, and other territories — identifying the specific legal instrument and its contemporaneous acceptance.",
+      "impact": "If extension mechanisms are conquest or legal fiction without local consent, the constraint's legitimacy in those territories collapses; if received by local estates or cortes, the constraint has some coordination legitimacy there.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legitimacy of the mechanisms that extended Salic Law beyond Frankish lands"
+    },
+    {
+      "id": "kernel_reading_framing",
+      "question": "Is this constraint one reading of the contested kernel 'salic_prohibition', and how does it relate to the immutable_mandate_reading and sovereign_override_reading?",
+      "resolution_mechanism": "Structural comparison of the three readings' beneficiary/victim structures, claimed types, and axiomatic foundations — mapping the kernel's deformation space.",
+      "impact": "Confirms this reading instantiates a distinct constraint with its own ε, not a mere interpretation of a single constraint; the engine must treat each reading as a separate constraint story linked by network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame structuring: this story is the cognatic_reversion_reading of kernel salic_prohibition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.8
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint story represents the cognatic_reversion_reading of the salic_prohibition kernel. It treats the prohibition on female succession in non-Frankish territories as a constructed constraint — a Frankish tribal custom (Salic Law) that was never intended to bind non-Frankish lands but was extended through dynastic marriage, conquest, and legal fiction to serve the interests of male agnatic heirs and dynasties preserving agnatic succession. The reading asserts that territorial integrity and the natural right of cognatic primogeniture (eldest child regardless of sex) should prevail over the anachronistic imposition of Frankish law. The constraint extracts succession rights from female heirs and legislative sovereignty from non-Frankish territories, transferring them to male agnatic relatives and the Frankish legal tradition. Active enforcement (parlement arrêts, treaties like the Treaty of Utrecht, military suppression of rival claimants) is required to maintain the prohibition. The coordination function — preventing dynastic disputes through a clear rule — is contested: historical evidence suggests Salic Law often created disputes by excluding plausible female heirs.",
+    "key_agents": [
+      "male_agnatic_heirs: Primary beneficiary (institutional/arbitrage) — receive succession rights transferred from female heirs",
+      "dynastic_houses_preserving_agnatic_succession: Agenda setter (institutional/arbitrage) — administer and enforce the prohibition through parlements, treaties, and house laws",
+      "female_heirs_excluded_from_succession: Primary victim (powerless/trapped) — bear the full extraction, excluded from succession with no exit",
+      "non_frankish_territories_subject_to_frankish_law: Victim (organized/constrained) — lose legislative sovereignty over their own succession laws",
+      "competing_cognatic_claimants: Excluded (moderate/trapped) — would press cognatic claims but are structurally barred from the succession conversation",
+      "legal_scholars_jurists: Observer (analytical/analytical) — analyze and debate the legitimacy of Salic Law's territorial extension",
+      "papal_authority: Observer (institutional/analytical) — sometimes legitimizes, sometimes challenges the extension depending on political context"
+    ],
+    "logic_rationale": "Extractiveness is high (0.75) because the constraint transfers the crown itself — the supreme political asset — from female heirs to male agnatic relatives, and transfers legislative sovereignty from non-Frankish territories to a foreign legal tradition. Suppression is higher (0.8) because the prohibition's persistence in non-Frankish lands depends entirely on active enforcement: parlement rulings, dynastic house laws, treaties imposed by great powers, and military suppression of rival claimants (e.g., Carlist Wars). Theater ratio is moderate (0.4): the 'ancient tradition' framing is performative cover for a constraint whose actual operation is dynastic interest protection. Accessibility collapse is moderate (0.6): cognatic succession remains legally and practically available (as in England, Castile, Navarre) but is politically suppressed. Resistance is high (0.7): female heirs pressed claims (e.g., Juana of Castile, Maria Theresa), territories resisted (Navarre, Aragon), and jurists debated the law's applicability for centuries.",
+    "perspectival_gap": "From the agenda_setter seat (dynastic houses), the constraint appears as legitimate tradition preserving dynastic continuity. From the victim seats (female heirs, non-Frankish territories), it appears as foreign imposition and gendered extraction. The engine computes this divergence from the structural data: male_agnatic_heirs have arbitrage-grade exit (they can accept or renounce succession), while female_heirs_excluded_from_succession are trapped (no exit from gender), and non_frankish_territories are constrained (exit requires revolution or great-power intervention).",
+    "directionality_logic": "Male agnatic heirs and dynastic houses are structural beneficiaries (d near 0.0) — they collect the crown and legislative authority. Female heirs are full targets (d near 1.0) — they bear total extraction with identity-locked exit (cannot change sex, cannot exit gendered exclusion). Non-Frankish territories are high-target (d ~0.8) — they lose legislative sovereignty, with constrained exit (requires international treaty change or revolution). Competing cognatic claimants are excluded (d ~0.9) — their claims are structurally barred. Legal scholars and papal authority are analytical observers (d=0.5).",
+    "mandatrophy_analysis": "The founding problem (Frankish tribal need for male military leadership) is dead — the Frankish tribal context vanished by the 9th century. Yet the constraint persists and expands. This is classic mandatrophy: a coordination mechanism for one context (Frankish tribal succession) becomes an extraction mechanism when transplanted to alien contexts (feudal monarchies, early modern states) where its original justification does not apply. The constraint persists because it now benefits powerful dynastic actors who administer it, not because it solves a live coordination problem.",
+    "kernel_context": "This constraint is the cognatic_reversion_reading of the contested kernel 'salic_prohibition'. The kernel is the prohibition on female succession grounded in Salic Law. Sibling readings: immutable_mandate_reading (Salic Law as irrevocable natural/divine law embedded in dynastic constitution) and sovereign_override_reading (Salic Law as revocable positive law subject to sovereign legislative authority). This reading structurally differs by: (1) limiting Salic Law's legitimate scope to original Frankish territories, (2) privileging territorial integrity and cognatic primogeniture over agnatic purity, (3) treating the extra-Frankish application as legal fiction rather than binding law."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "salic_prohibition__immutable_mandate_reading",
+      "salic_prohibition__sovereign_override_reading",
+      "pragmatic_sanction_1713",
+      "carlist_wars_succession_constraint"
+    ],
+    "dual_formulation_note": "This story decomposes the 'Salic Law' label into three structurally distinct constraints per the ε-invariance principle. The immutable_mandate_reading treats the prohibition as mountain (natural/divine law, ε≈0). The sovereign_override_reading treats it as scaffold/rope (positive law, revocable, ε low but non-zero). This reading treats the extra-Frankish application as tangled_rope (coordination cover for extraction, ε=0.75). The ε values differ by a wide margin because the referents differ: immutable_mandate_reading assesses the Frankish tribal custom itself; this reading assesses the extra-Frankish imposition. They are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "male_agnatic_heirs",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Receive succession rights (crowns, territories, revenues) that would otherwise pass to female heirs. Their position is structural: they benefit from the constraint's operation without administering it. They can accept or renounce succession (arbitrage-grade exit), but the constraint's existence creates the option value they capture."
+    },
+    {
+      "name": "dynastic_houses_preserving_agnatic_succession",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Administer and enforce the prohibition through parlements (France), house laws (Habsburg, Bourbon), and international treaties (Utrecht 1713, Vienna 1815). They collect dynastic continuity and alliance stability from the constraint. They could change the rule (as Spain did in 1830, France in 1830 via July Monarchy) but choose not to when it serves their interest."
+    },
+    {
+      "name": "female_heirs_excluded_from_succession",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Bear total exclusion from succession solely by virtue of sex. No exit exists: they cannot change sex, cannot renounce gender, and in most periods cannot effectively press military claims. Their claims are delegitimized by the constraint itself (Salic Law declares them incapable of succeeding). Some (Isabella I of Castile, Maria Theresa, Queen Victoria) succeeded only where the constraint did not apply or was overridden."
+    },
+    {
+      "name": "non_frankish_territories_subject_to_frankish_law",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lose legislative sovereignty over their own succession laws. Territories like Navarre, Aragon, Naples, Spain (post-1713) had cognatic or mixed succession traditions overridden by Salic Law imposition. Exit requires revolution (Carlist Wars), great-power intervention, or dynastic extinction. Their estates/cortes sometimes resisted (Navarre's fueros, Aragon's cortes) but were overruled by centralizing monarchies invoking Salic Law."
+    },
+    {
+      "name": "competing_cognatic_claimants",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Would press cognatic succession claims (e.g., descendants of elder daughters excluded by Salic Law) but are structurally barred from the succession conversation. The constraint's enforcement machinery (parlement rulings, treaty recognition) treats their claims as non-justiciable. Some launch armed rebellions (Carlists in Spain, legitimists in France) but these are framed as dynastic disputes, not legal challenges to the constraint."
+    },
+    {
+      "name": "legal_scholars_jurists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze and debate Salic Law's original scope, its reception in non-Frankish lands, and the legitimacy of its extension. Figures like Brissaud, Viollet, Ganshof, and modern historians of law provide the empirical basis for this reading's claim that Salic Law was personal law, not territorial law. Their work does not change the constraint's operation but structures the intellectual field."
+    },
+    {
+      "name": "papal_authority",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Sometimes legitimizes Salic Law extension (e.g., papal recognition of Bourbon Spain's Salic Law), sometimes challenges it (e.g., papal support for female claimants when politically expedient). The papacy's position tracks its temporal interests, not a consistent legal principle. It occupies an analytical seat because it observes and occasionally intervenes but does not administer the constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a clear, unambiguous male-only succession rule that prevents dynastic disputes and fragmentation by eliminating female claimants and their potential husbands/partitions.",
+    "transfer_function": "Moves succession rights (crowns, territories, revenues) from female heirs and their issue to male agnatic relatives; moves legislative sovereignty over succession from non-Frankish territorial estates to Frankish legal tradition and the dynastic houses that administer it.",
+    "absent_voices": "Female heirs themselves (structurally silenced by the constraint's gendered exclusion); non-Frankish territorial estates and cortes that were overridden without consent (Navarre's fueros, Aragon's cortes); merchant and urban classes in non-Frankish territories who preferred stable cognatic succession over dynastic wars.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Salic prohibition vanished overnight, female heirs would immediately become eligible successors across Europe; dynastic marriage markets would reconfigure (no need to seek male-only matches for alliance); territories like Navarre and Spain would revert to their pre-Salic cognatic customs; the Carlist Wars and similar legitimacy conflicts would lose their legal basis; the Frankish legal tradition would lose its extraterritorial authority.",
+    "founding_problem": "Frankish tribal need for clear male military leadership succession in the early medieval period (5th-8th centuries), where the king's primary function was war-leader and the tribe's survival depended on unambiguous male succession.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Legal historians (Brissaud 'Histoire des institutions françaises', Viollet 'Histoire du droit civil français', Ganshof 'Frankish Institutions') document Salic Law's origin as Frankish tribal custom (Lex Salica) governing a warrior society where the king was first among warriors. No contemporary Frankish source claims universal territorial application; the law applied to Franks as a people (personal law), not to a territory. The extension to non-Frankish lands is universally acknowledged by historians to be a later development (post-1316 in France, post-1713 in Spain) driven by dynastic politics, not Frankish legal theory."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "salic_prohibition__immutable_mandate_reading",
+      "salic_prohibition__sovereign_override_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "immutable_mandate_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "sovereign_override_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "salic_law_territorially_limited_to_frankish_origin",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "cognatic_primogeniture_as_default_succession",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "frankish_tribal_succession_custom",
+    "drift_state": {
+      "moment": "early_modern_dynastic_consolidation",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

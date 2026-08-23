@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "monopoly_rulebook__tournament_orthodoxy_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "fcb669be-8181-44bd-b0e2-86188b43acd8"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.15,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Monopoly Tournament Orthodoxy Reading",
+    "topic_domain": "game_theory/social_coordination/institutional_design",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "competitive_players",
+      "tournament_organizers",
+      "ranking_systems"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "standardized_competitive_framework",
+      "skill_based_outcome_determination"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "competitive_players",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Voluntarily enter tournaments knowing the exact rule set; the immutable text lets them invest in strategic mastery that transfers across events. Exit is easy — they can stop competing — but the coordination value of a shared standard makes the constraint beneficial."
+    },
+    {
+      "name": "tournament_organizers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Administer events using the published rulebook as the sole authority; they benefit from reduced dispute resolution overhead and legitimacy derived from adherence to the canonical text. They could adopt house rules but would lose cross-event comparability and sanctioning body recognition."
+    },
+    {
+      "name": "ranking_systems",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintain Elo-style or points-based rankings across tournaments; the immutable rulebook is the substrate that makes scores commensurable. Without text fixity, rankings would conflate skill with rule-variant luck."
+    },
+    {
+      "name": "casual_house_rule_players",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "situation": "Play Monopoly with liquidity injections, free parking jackpots, and other house rules that prevent elimination and extend social play. They are not participants in the tournament ecosystem and would reject text immutability as the only legitimate frame, but their play occurs in a separate social space."
+    },
+    {
+      "name": "game_design_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Study the rulebook as a designed artifact; they evaluate whether the text's elimination mechanic serves competitive depth or merely reflects 1930s design assumptions. They neither compete nor organize."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single authoritative rule set enabling fair comparison of strategic skill across players, tables, and tournaments without rule-variance contamination.",
+    "transfer_function": "Moves nothing materially; coordinates shared understanding so that outcomes reflect skill variance rather than rule variance.",
+    "absent_voices": "Casual and house-rule players who prefer social play over competitive purity; they are not in tournament spaces but would object to text immutability as the only legitimate frame.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the immutable rulebook vanished overnight, tournament results could not be compared across events, ranking systems would lose their commensurability substrate, and competitive Monopoly would fragment into incompatible rule variants — the tournament ecosystem would reorganize around a new coordination point or dissolve.",
+    "founding_problem": "Need for a stable, authoritative rule set that allows competitive skill to be measured and compared across time and space without rule-variance contamination.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Tournament organizers (Hasbro-sanctioned event runners, world championship structures), ranking bodies, and competitive players outside the rulebook's authorship attest the problem persists — competitive play still requires a fixed text for cross-event legitimacy."
+  },
+  "interval": {
+    "start": 1935,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1935,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1935,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1935,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the tournament orthodoxy reading of the Monopoly rulebook: the printed rules are the legitimate competitive framework; strategic skill determines outcomes; house rules are noise that obscures competitive depth; text authority is immutable for ranking and comparison purposes. The reading instantiates a rope constraint — a pure coordination mechanism around a shared standard with very low extraction (epsilon ≤ 0.10), voluntary participation, and no victim set. It explicitly rejects both the extraction_demo_reading's pedagogical frame (Monopoly as capitalism critique) and the social_scaffold_reading's correction frame (house rules as necessary social lubrication).",
+    "logic_rationale": "Extractiveness is near-zero (0.08) because participation is voluntary, no material transfer occurs, and the constraint's only 'cost' is the opportunity cost of learning the standard — which is the price of admission for any coordination mechanism. Suppression is low (0.15) because the constraint operates through voluntary adoption and sanctioning-body recognition, not coercion; players who dislike the text simply don't enter tournaments. Theater ratio is low (0.10) — the rulebook's competitive function is genuine and its enforcement (tournament judges applying the text) is functional, not performative. Accessibility collapse is moderate (0.40) because alternative rule sets exist and are played socially, but they cannot serve the tournament coordination function. Resistance is low (0.15) — the constraint faces no organized opposition because it makes no claim on non-participants.",
+    "directionality_logic": "All declared stakeholders are beneficiaries or agenda_setters who benefit from the coordination function. Competitive players gain commensurable skill measurement; organizers gain dispute-reduction and legitimacy; ranking systems gain a stable substrate. No stakeholder bears net extraction — the constraint is a pure coordination good. Casual players are excluded (not victims) because they operate in a separate social space with different success criteria; they are not harmed by the tournament standard's existence.",
+    "perspectival_gap": "The engine should compute rope from every seat because the structural data shows voluntary adoption, zero extraction, and pure coordination. The extraction_demo_reading and social_scaffold_reading would compute different types from their own structural premises (snare/tangled_rope and scaffold respectively), but those are separate constraint stories with different beneficiary/victim declarations — not perspectival variants of this one.",
+    "mandatrophy_analysis": "The founding problem (cross-event skill comparability) remains live; the arrangement has not outlived its function. Mandatrophy is not resolved because the constraint continues to serve its coordination purpose without accumulating extractive layers. The slight theater_ratio rise (0.05→0.10) reflects marginal bureaucratization of tournament judging, not functional decay.",
+    "kernel_context": "This constraint is the tournament_orthodoxy_reading of the monopoly_rulebook kernel. Sibling readings: extraction_demo_reading (frames the rulebook as pedagogical demonstration of capitalist extraction; claims high epsilon, snare/tangled_rope type, victims = eliminated players) and social_scaffold_reading (frames the rulebook as requiring community correction via house rules; claims scaffold type with sunset clause, beneficiaries = social players, victims = those subjected to harsh elimination). This reading rejects both framings: it sees zero pedagogical necessity and zero social correction need — the text is a coordination standard, nothing more."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the tournament orthodoxy reading a distinct constraint with its own epsilon, or merely a perspectival slice of a single monopoly_rulebook constraint?",
+      "resolution_mechanism": "Apply the epsilon-invariance test: if measuring the constraint via tournament play yields epsilon ≈ 0.08 while measuring via extraction demo yields epsilon ≈ 0.7+, they are different constraints. The structural data (beneficiaries, victims, enforcement) diverges fundamentally across readings.",
+      "impact": "If distinct constraints, each gets its own classification and the kernel is a family linked by network.affects_constraints. If one constraint, the framework must model observable-dependent epsilon — which violates the epsilon-invariance principle.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's readings instantiate separate constraints per epsilon-invariance."
+    },
+    {
+      "id": "coordination_purity_boundary",
+      "question": "Does the tournament ecosystem's sanctioning-body revenue (entry fees, licensing) constitute extraction that this reading's epsilon fails to capture?",
+      "resolution_mechanism": "Audit whether tournament organizers or sanctioning bodies collect rents above the marginal cost of administration, and whether those rents are structurally necessary for the coordination function or contingent on the rulebook's proprietary status.",
+      "impact": "If sanctioning rents exist and are necessary, epsilon should be higher and the constraint may be tangled_rope. If rents are separable (e.g., open-source rulebook with competing tournament operators), the rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proprietary control of the rulebook text introduces extraction invisible to the pure coordination reading."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "monopoly_rulebook__extraction_demo_reading",
+      "monopoly_rulebook__social_scaffold_reading"
+    ],
+    "dual_formulation_note": "This reading and its siblings form a constraint family decomposing the monopoly_rulebook kernel. The tournament orthodoxy reading claims rope (pure coordination, epsilon ≈ 0.08); extraction_demo_reading claims snare/tangled_rope (high extraction, pedagogical frame); social_scaffold_reading claims scaffold (transitional, house rules as correction). They share the same physical text but instantiate different constraints because their epsilon referents (the standing arrangements they assess) differ structurally."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "extraction_demo_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "social_scaffold_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "text_immutability_for_ranking",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "house_rules_are_noise",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "tournament_standard_text",
+    "drift_state": {
+      "moment": "contemporary_tournament_practice",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

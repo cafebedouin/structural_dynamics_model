@@ -1,0 +1,298 @@
+{
+  "header": {
+    "constraint_id": "temple_sacrifice_obligation__messianic_suspension",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_temple_sacrifice_obligation__messianic_suspension",
+    "measurement_id_prefix": "temple_sacrifice_obligation__messianic_suspension",
+    "story_uid": "726f869a-c3c9-4ebd-84a3-175d1730489c"
+  },
+  "base_properties": {
+    "extractiveness": 0.02,
+    "suppression": 0.05,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.03,
+    "claimed_type": "mountain",
+    "human_readable": "Temple Sacrifice Obligation Suspended Pending Messianic Restoration",
+    "topic_domain": "religious/halakhic/commitment_system",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [],
+    "victims": [],
+    "vindicated_propositions": [
+      "divine_decree_suspends_obligation",
+      "messianic_restoration_as_future_adjudication",
+      "study_as_knowledge_maintenance_not_fulfillment"
+    ]
+  },
+  "interval": {
+    "start": 70,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_reading_identity",
+      "question": "This constraint is the messianic_suspension reading of the temple_sacrifice_obligation kernel. How would the sibling readings (study_as_occupation, study_as_archiving) structurally alter the beneficiary/victim sets and extractiveness profile?",
+      "resolution_mechanism": "Author separate constraint stories for each sibling reading per ε-invariance principle; compare their base_properties.extractiveness, beneficiaries, victims, and cs_structure.axioms. The kernel family is linked via network.affects_constraints.",
+      "impact": "If study_as_occupation instantiates a constraint with non-zero extractiveness (study as costly performance) and victims (those pressured to study), the kernel contains both mountain and extractive readings. If study_as_archiving shows zero extractiveness but different authority_grounding, the family maps a pure coordination vs. authority-maintenance split.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment-system kernel with three contested readings; this story instantiates only the messianic_suspension reading."
+    },
+    {
+      "id": "authority_benefit_from_suspension_narrative",
+      "question": "Does the rabbinic authority structure extract narrative/legitimacy benefit from maintaining the suspension narrative, even with zero material extraction?",
+      "resolution_mechanism": "Trace institutional resource flows (funding, allegiance, interpretive monopoly) to the suspension doctrine; compare with counterfactual where obligation is declared fulfillable now.",
+      "impact": "If authority captures legitimacy rents from the suspension claim, effective extractiveness for the authority seat may be non-zero despite base_properties.extractiveness ≈ 0. Would reclassify authority seat from mountain toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether zero material extraction masks narrative/legitimacy extraction by the agenda-setting authority."
+    },
+    {
+      "id": "suspension_as_natural_law_vs_constructed_deferral",
+      "question": "Is the suspension a genuine natural-law constraint (Temple destruction makes fulfillment objectively impossible) or a constructed halakhic deferral that could be revoked by sufficient authority?",
+      "resolution_mechanism": "Analyze whether any halakhic authority in the lineage has ever claimed power to reactivate the obligation pre-messianically; examine the logical structure of the suspension claim (divine decree vs. rabbinic enactment).",
+      "impact": "If constructed, the mountain claim is a false summit (FSM candidate) — beneficiaries would be the authority structure that avoids the crisis of an unfulfillable obligation. If natural-law, the mountain claim holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Natural-law vs. constructed-deferral ambiguity for a Mountain constraint with authority structure."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.03
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.04
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.04
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The biblical obligation to offer sacrifices in the Jerusalem Temple became impossible after the Temple's destruction in 70 CE. The messianic_suspension reading holds that the obligation is not abolished but suspended — neither fulfilled nor violated — pending messianic restoration of the Temple. Study of sacrifice law (kodshim) maintains the knowledge in waiting but does not constitute fulfillment, preparation, or occupation of the obligation. The authority structure (rabbinic lineage) defers all adjudication to the future restoration event. No current party bears the obligation; no current party extracts from it. The constraint presents as a Mountain: a fixed structural feature of the covenantal order in exile.",
+    "key_agents": [
+      "rabbinic_authority: Agenda setter (institutional/generational/analytical) — maintains the suspension doctrine through halakhic transmission",
+      "jewish_people: Beneficiary (organized/generational/identity_locked/global) — relieved of an impossible obligation while covenantal continuity is preserved",
+      "torah_scholars: Beneficiary (moderate/biographical/constrained/global) — study sacrifice law as knowledge maintenance, not compliance",
+      "messiah: Excluded (analytical/civilizational/trapped/universal) — the future restorer who alone can reactivate the obligation",
+      "secular_observers: Observer (analytical/immediate/analytical/global) — analyze the doctrinal structure from outside the commitment"
+    ],
+    "logic_rationale": "Extractiveness is near-zero (0.02) because no transfer occurs — the obligation is structurally inert in the present. Suppression is minimal (0.05) because no enforcement is needed; the suspension is accepted as the covenantal reality. Theater ratio is low (0.08) — study of kodshim is genuine intellectual engagement, not performance of compliance. Accessibility collapse is very high (0.92) — once the suspension doctrine is accepted, no alternative (rebuilding the Temple now, offering sacrifices elsewhere) is halakhically viable. Resistance is near-zero (0.03) — the constraint meets no active resistance because it demands nothing of anyone now. The metrics are stable across the interval because the structural situation (Temple destroyed, Messiah not come) is unchanged.",
+    "directionality_logic": "The rabbinic authority sits at d ≈ 0.1 (near beneficiary) — it administers a constraint that extracts nothing and requires no enforcement, preserving its interpretive role without cost. The Jewish people sit at d ≈ 0.0 (full beneficiary) — they are relieved of an impossible obligation. Scholars sit at d ≈ 0.2 (mild beneficiary) — they gain intellectual purpose without burdensome compliance. The messiah is structurally excluded (d undefined) — the constraint's reactivation condition. No payer seat exists in the current epoch, which is why extractiveness is near-zero.",
+    "perspectival_gap": "From the rabbinic authority seat, the constraint is a Mountain — the suspension is the covenantal reality, not a human choice. From a secular observer seat, it may appear as a constructed deferral that preserves authority. The engine computes per-seat types from the structural data; the authored claim (mountain) reflects the reading's own self-understanding.",
+    "mandatrophy_analysis": "The founding problem (how to maintain covenantal obligation when fulfillment is impossible) remains live — the Temple is still destroyed, exile continues. The suspension arrangement has not atrophied; it remains the active halakhic resolution. No mandatrophy resolution is declared because the problem the constraint was built to solve persists.",
+    "kernel_context": "This constraint is the messianic_suspension reading of the temple_sacrifice_obligation kernel. Sibling readings: study_as_occupation (study constitutes legitimate occupation of the obligation in the Temple's absence) and study_as_archiving (study preserves knowledge for future restoration but does not fulfill the obligation). This reading asserts the obligation is fully suspended — neither fulfilled nor violated — pending messianic restoration. Study is knowledge maintenance only."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "temple_sacrifice_obligation__study_as_occupation",
+      "temple_sacrifice_obligation__study_as_archiving"
+    ],
+    "dual_formulation_note": "This constraint, study_as_occupation, and study_as_archiving form a constraint family decomposing the temple_sacrifice_obligation kernel. Each reading instantiates a distinct constraint with different extractiveness profiles, beneficiary/victim sets, and axiom structures. This reading (messianic_suspension) has near-zero extractiveness and no victims; study_as_occupation may show non-zero extractiveness (study as costly performance) with pressured students as victims; study_as_archiving likely mirrors this reading's low extractiveness but with different authority_grounding."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "rabbinic_authority",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Transmits and adjudicates the suspension doctrine through halakhic lineage. Maintains that the obligation cannot be fulfilled,準備d, or substituted until messianic restoration. Collects no material extraction; legitimacy derives from faithful transmission of the suspension claim. Exit would mean abandoning the rabbinic office and its claim to represent the covenantal tradition."
+    },
+    {
+      "name": "jewish_people",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The collective covenantal subject. The suspension relieves them of an obligation that is objectively impossible to fulfill (no Temple, no priesthood, no altar). They bear no cost, perform no compliance, and gain covenantal continuity without rupture. Exit from the covenantal framework is identity-locked — leaving the people means leaving the constraint's scope entirely."
+    },
+    {
+      "name": "torah_scholars",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Engage in intensive study of kodshim (sacrificial law) as maintenance of knowledge-in-waiting. This study is not compliance, not preparation, not occupation — it preserves the technical knowledge for the restoration moment. They gain intellectual purpose and communal status; the cost is opportunity cost of study time, but exit (changing specialization) is constrained by professional identity and communal expectation."
+    },
+    {
+      "name": "messiah",
+      "role": "excluded",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The future restorer whose arrival reactivates the obligation. Not a participant in the current constraint — the constraint's structure is defined by his absence. He cannot exit the role because the role is defined by the constraint's reactivation condition; if he came, the constraint would dissolve into active obligation."
+    },
+    {
+      "name": "secular_observers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "immediate",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the doctrinal structure from outside the commitment. They see a religious community maintaining continuity through a suspended obligation. They neither collect nor pay; they observe the constraint's operation as a social fact."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains covenantal continuity across the catastrophe of Temple destruction by declaring the obligation suspended rather than abolished — preserving the obligation's force while acknowledging its current impossibility. Coordinates the community around a shared future orientation (messianic restoration) rather than a failed present performance.",
+    "transfer_function": "Moves nothing in the present epoch. All transfer (sacrificial offerings, priestly portions, altar service) is deferred to the messianic future. The constraint is a temporal bridge: it holds the obligation's place without demanding its execution.",
+    "absent_voices": "Proponents of study_as_occupation (who argue study fulfills the obligation now), early Christian movements (who claimed the obligation was fulfilled/superseded in Christ), reform/haskalah voices (who argued the obligation was obsolete), and contemporary Temple activists (who argue the obligation can be partially reactivated now on the Temple Mount). These voices are structurally excluded from the halakhic conversation that maintains the suspension doctrine.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the suspension doctrine vanished overnight, the obligation would revert to active but unfulfillable — creating a halakhic crisis where every Jew is in violation of a core covenantal command with no means of compliance. The community would either fracture (some attempting sacrifices, some abandoning the obligation, some declaring it abolished) or require an immediate new doctrinal resolution. The world rearranges because the suspension is the only structure holding the obligation in abeyance.",
+    "founding_problem": "How to maintain the covenantal obligation of Temple sacrifice when the Temple's destruction (70 CE) made fulfillment objectively impossible, without abolishing the obligation or declaring the covenant broken.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by the historical record of rabbinic response to the destruction (Mishnah, Tosefta, Talmud) — multiple independent traditions record the suspension doctrine as the consensus resolution. Josephus (non-rabbinic, non-beneficiary) documents the destruction and the cessation of sacrifice. Christian polemicists (adversarial witnesses) confirm the rabbinic claim that sacrifice is suspended, not abolished. The problem remains live because the Temple has not been rebuilt and the messianic restoration has not occurred."
+  },
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "study_as_occupation",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "study_as_archiving",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "obligation_suspended_until_messianic_restoration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "study_maintains_knowledge_not_fulfillment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "messianic_suspension_framework",
+    "drift_state": {
+      "moment": "contemporary_exile",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

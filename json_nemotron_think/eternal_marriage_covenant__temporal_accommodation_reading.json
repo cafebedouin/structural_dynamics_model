@@ -1,0 +1,327 @@
+{
+  "header": {
+    "constraint_id": "eternal_marriage_covenant__temporal_accommodation_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_eternal_marriage_covenant__temporal_accommodation_reading",
+    "story_uid": "8a9488bf-e977-434d-86a9-9858656af82b"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "scaffold",
+    "human_readable": "Woodruff Manifesto Temporary Suspension of Polygamous Practice",
+    "topic_domain": "religious_law/political_theology/commitment_system",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "church_institution",
+      "monogamous_members"
+    ],
+    "victims": [
+      "polygamous_families",
+      "fundamentalist_dissenters"
+    ],
+    "vindicated_propositions": [
+      "obedience_to_civil_law",
+      "church_survival_principle",
+      "continuing_revelation_authority"
+    ]
+  },
+  "interval": {
+    "start": 1890,
+    "end": 1920
+  },
+  "omegas": [
+    {
+      "id": "committer_kernel_reading_identity",
+      "question": "Is this constraint one reading of the eternal_marriage_covenant kernel, and does the temporal_accommodation_reading's structural delta (federal pressure creates temporary suspension; doctrine remains dormant pending future restoration) accurately capture its distinction from sibling readings?",
+      "resolution_mechanism": "Cross-reading structural comparison: map each reading's beneficiary/victim structure, claimed_type, and drift_state to confirm they instantiate distinct constraints with different ε values.",
+      "impact": "If readings share ε and structural data, they are not distinct constraints; the kernel decomposition fails. If distinct, each reading gets its own classification and the family linkage via network.affects_constraints is validated.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment that this JSON instantiates exactly one kernel reading per ε-invariance principle."
+    },
+    {
+      "id": "temporary_vs_permanent_suspension",
+      "question": "Is the Manifesto's suspension genuinely temporary (conditional on political constraints lifting) or a permanent capitulation disguised as temporary?",
+      "resolution_mechanism": "Historical analysis of leadership statements 1890-1904 (Second Manifesto), internal correspondence, and the trajectory of enforcement against post-Manifesto plural marriages. If enforcement intensified rather than awaiting restoration, the sunset clause is performative.",
+      "impact": "If permanent capitulation, claimed_type shifts from scaffold to piton (degraded coordination maintained theatrically) or snare (extraction of compliance without coordination benefit). The has_sunset_clause flag would be false in practice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the sunset condition is operational or rhetorical."
+    },
+    {
+      "id": "suppression_mechanism_federal_vs_internalized",
+      "question": "Is the suppression of polygamous practice primarily structural (federal legal enforcement, disfranchisement, asset seizure) or internalized (members adopting monogamy as normative, identity fusion with law-abiding citizenship)?",
+      "resolution_mechanism": "Post-1890 suppression trajectory: if suppression persists after federal pressure eases (post-statehood, post-Reed Smoot hearings), reclassify as partially internalized. Track fundamentalist schism formation as evidence of unresolved internalization.",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests — the constraint's logic persists in member self-conception after external enforcement relaxes. This affects theater_ratio and piton detection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in the suspension's maintenance."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1890,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1895,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1904,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1910,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1920,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1890,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1895,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1904,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1910,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1890,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1895,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1904,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1910,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1920,
+      "value": 0.65
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The 1890 Woodruff Manifesto officially suspended the practice of plural marriage in the LDS Church under intense federal pressure (Edmunds-Tucker Act, disincorporation, disfranchisement). The Manifesto declared compliance with the law of the land while explicitly not renouncing the doctrinal principle of eternal marriage covenant including plurality. This reading holds that the suspension is temporary — the eternal principle remains valid but dormant, awaiting restoration when political constraints lift. Federal pressure created the suspension; the doctrine remains intact but unenforced. The constraint is the institutional arrangement that maintains doctrinal validity while enforcing behavioral compliance with civil law.",
+    "logic_rationale": "Extractiveness (0.65) reflects the real costs borne by polygamous families (forced separation, economic loss, legal jeopardy) and fundamentalist dissenters (excommunication, schism). Suppression (0.75) is high because the constraint's persistence depends on active federal enforcement AND internal disciplinary machinery (excommunication, temple recommend denial). Theater ratio (0.45) is moderate: the Manifesto performs compliance for federal authorities while the doctrinal superstructure remains intact, creating a gap between public performance and private belief. The measurement series shows extractiveness peaking at the Second Manifesto (1904) when enforcement intensified, then declining slightly as accommodation normalized. Suppression requirement declines over the interval as federal pressure eases after statehood (1896) and Reed Smoot hearings (1904-1907).",
+    "directionality_logic": "Church institution (agenda_setter) is the structural beneficiary: it gains survival, statehood, and legitimacy (d near beneficiary end). Monogamous members are beneficiaries: reduced persecution, social integration (d low). Polygamous families are primary payers: bear the full costs of dissolution, social stigma, economic disruption (d near target end). Fundamentalist dissenters are payers/excluded: they reject the suspension, face excommunication, and form schismatic groups (d highest). Federal government is an external enforcer, not a stakeholder within the constraint — its pressure creates the suppression but it does not sit inside the church's commitment system. The engine derives d from these structural positions.",
+    "perspectival_gap": "From the church institution's seat, the Manifesto is genuine coordination: it solves the existential threat of disincorporation while preserving doctrinal integrity for future restoration. From polygamous families' seat, the same structure operates as enforced extraction: their covenant marriages are dissolved by institutional fiat under external coercion. From fundamentalist dissenters' seat, it is a snare: the coordination story (obedience to law) is cover for capitulation. The engine computes this seat divergence from the declared roles, power, and exit options.",
+    "mandatrophy_analysis": "The founding problem (federal destruction of the church) was live in 1890. By 1920, statehood was secured, the church was legally recognized, and the existential threat had substantially receded. Yet the suspension persisted and doctrinal dormancy became the new steady state. The mandate (survival via compliance) outlived its founding problem, but the constraint did not sunset — it became the permanent arrangement. This is a scaffold that failed to sunset, drifting toward piton: the coordination function (survival) is achieved, but the constraint remains maintained theatrically (doctrinal dormancy) without the declared transition completing. The mandatrophy_resolved flag should be false — the mandate persists without its founding problem.",
+    "kernel_context": "This constraint is the temporal_accommodation_reading of the eternal_marriage_covenant kernel. The kernel is the doctrinal claim that eternal marriage (including plurality) is required for exaltation (D&C 132). Sibling readings: immutable_commandment_reading (polygamy is eternally required, Manifesto was wrong/coerced), prophetic_override_reading (living prophet can supersede prior revelation, so Manifesto legitimately changed the doctrine). This reading holds: Manifesto suspends practice without renouncing doctrine; eternal principle remains valid but obedience to law of land takes precedence. Federal pressure creates temporary suspension; doctrine remains dormant pending future restoration when political constraints lift."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "eternal_marriage_covenant__immutable_commandment_reading",
+      "eternal_marriage_covenant__prophetic_override_reading"
+    ],
+    "dual_formulation_note": "Eternal marriage covenant kernel decomposes into three constraint stories: (1) immutable_commandment_reading — practice required, Mountain/Tangled Rope profile (high extraction from dissenters, low from faithful); (2) prophetic_override_reading — doctrine changed by living authority, Scaffold/Rope profile (coordination via continuing revelation); (3) temporal_accommodation_reading (this story) — practice suspended, doctrine dormant, Scaffold profile with conditional sunset. Each has distinct ε, beneficiaries, and drift states. Linked via affects_constraints for family contamination analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "church_institution",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Issued the 1890 Manifesto and 1904 Second Manifesto under federal threat of disincorporation and asset seizure. Gains survival, Utah statehood, legal legitimacy, and eventual mainstream acceptance. Controls the doctrinal interpretation apparatus (First Presidency, Quorum of Twelve) that maintains the suspension while preserving the eternal principle. Can arbitrate between compliance and resistance by managing the 'dormant doctrine' narrative."
+    },
+    {
+      "name": "monogamous_members",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Experience reduced federal persecution, social stigma, and economic discrimination after the Manifesto. Gain full citizenship rights (voting, office-holding) and mainstream social integration. Constrained exit: leaving the church means losing community, family networks, and eternal marriage sealing for themselves. Their situation improves materially but they must accept the doctrinal dormancy."
+    },
+    {
+      "name": "polygamous_families",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Forced to 'live the principle' covertly or dissolve plural households. Face excommunication if discovered practicing post-Manifesto plural marriage. Suffer economic loss (property seizure), legal jeopardy (cohabitation prosecutions), family separation, and social ostracism. Constrained exit: can join fundamentalist schismatics (losing mainstream standing) or submit to monogamy (violating covenant). Identity-locked for many — plural marriage was constitutive of their exaltation theology."
+    },
+    {
+      "name": "fundamentalist_dissenters",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Reject the Manifesto as illegitimate coercion. Continue plural marriage practice, forming schismatic groups (FLDS, etc.). Face excommunication, complete social exclusion from mainstream church, and ongoing federal/state prosecution. Identity-locked: their self-concept and communal identity are fused with 'living the principle' — exit means losing their entire worldview and community. They are excluded from the institutional conversation but bear the highest costs."
+    },
+    {
+      "name": "federal_government",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "External enforcer whose pressure (Edmunds Act, Edmunds-Tucker Act, disfranchisement, Reed Smoot hearings) created the suppression that shaped the Manifesto. Not a stakeholder within the church's commitment system — does not collect from the constraint, nor bear its costs. Its role is the source of the structural suppression, not a seat inside it."
+    },
+    {
+      "name": "scholars_observers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the Manifesto as a case study in religious accommodation, church-state relations, and doctrinal change. No material stake in the constraint's operation. Provide the analytical seat from which the kernel's three readings are distinguished."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the existential coordination problem of church survival under federal annihilation pressure: by suspending the practice that triggered legal destruction, the institution preserves its corporate existence, achieves statehood, and maintains the doctrinal framework for future restoration. Coordinates member behavior (compliance) with institutional survival.",
+    "transfer_function": "Moves the costs of federal compliance (dissolution of plural families, abandonment of covenant marriages, social stigma, economic loss) from the church institution onto polygamous families and fundamentalist dissenters. The institution transfers its existential risk onto its most committed members while retaining the doctrinal asset (eternal principle) for future deployment.",
+    "absent_voices": "Polygamous wives and children had no formal voice in the Manifesto process — their covenant marriages were dissolved by male priesthood leadership under external pressure. Women's organizations (Relief Society) supported the Manifesto publicly but internal dissent was unrecorded. Fundamentalist dissenters were excluded from the institutional conversation by design — their exclusion is what the enforcement machinery maintains.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Manifesto and its enforcement vanished overnight, the church would face immediate federal re-imposition of Edmunds-Tucker penalties (disincorporation, asset seizure). Polygamous families would resume open practice. Fundamentalist groups would claim vindication. The mainstream church would lose its legal legitimacy and mainstream social integration. The religious landscape would reorganize around open plural marriage vs. monogamous schism.",
+    "founding_problem": "Federal legislative and judicial assault (1862 Morrill Act through 1887 Edmunds-Tucker Act) threatened the LDS Church's corporate existence: disincorporation, seizure of all assets over $50,000, disfranchisement of polygamists, replacement of local courts with federal appointees. The church faced institutional death if it continued plural marriage practice openly.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The federal threat was substantially resolved by 1896 (Utah statehood) and 1907 (Reed Smoot seated). Non-beneficiary corroboration: U.S. government records confirm the legal threats ceased; independent historians (e.g., Sarah Barringer Gordon, Kathleen Flake) document that the existential federal pressure ended decades before the church formally abandoned the restoration narrative. The church's own 1904 Second Manifesto acknowledged the changed conditions but reaffirmed doctrinal dormancy rather than sunset."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "immutable_commandment_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "prophetic_override_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "manifesto_suspends_practice_not_doctrine",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "eternal_principle_awaits_restoration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_manifesto_accommodation_frame",
+    "drift_state": {
+      "moment": "post_second_manifesto_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "scaffold",
+    "downstream_of": [
+      "eternal_marriage_covenant"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

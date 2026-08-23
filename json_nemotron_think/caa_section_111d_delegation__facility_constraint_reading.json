@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "caa_section_111d_delegation__facility_constraint_reading",
+    "version": "1.0",
+    "generated_date": "2026-01-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_caa_section_111d_delegation__facility_constraint_reading",
+    "measurement_id_prefix": "caa_111d_facility",
+    "story_uid": "3f3afa05-3c2d-46ec-a403-c9845bcddb3e",
+    "created_at": "2026-01-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.82,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "CAA Section 111(d) Facility-Constraint Reading",
+    "topic_domain": "administrative_law/environmental_regulation/constitutional_interpretation",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "coal_fleet_operators",
+      "state_energy_autonomy_advocates",
+      "regulated_utility_shareholders"
+    ],
+    "victims": [
+      "climate_advocates",
+      "environmental_justice_communities",
+      "future_generations_interest"
+    ],
+    "vindicated_propositions": [
+      "statutory_textualism_in_environmental_law",
+      "major_questions_doctrine_application",
+      "cooperative_federalism_preservation"
+    ]
+  },
+  "interval": {
+    "start": 2015,
+    "end": 2025
+  },
+  "omegas": [
+    {
+      "id": "committer_frame_kernel_reading",
+      "question": "This constraint is one reading (facility_constraint_reading) of the contested kernel caa_section_111d_delegation. The sibling reading (systemic_transformation_reading) authorizes generation-shifting. What structural elements differ between readings?",
+      "resolution_mechanism": "Compare the two readings' beneficiary/victim structures, coordination claims, and extraction profiles. The facility reading protects coal; the systemic reading enables transition. They cannot both be authoritative in the same jurisdiction.",
+      "impact": "If the kernel is recognized as genuinely contested, both readings get separate constraint stories with independent ε. If treated as one constraint with measurement variance, ε-invariance fails and classification becomes observer-dependent.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer frame: this story is one reading of a contested kernel; sibling reading would change beneficiary/victim structure and ε"
+    },
+    {
+      "id": "textualism_vs_purpose_ambiguity",
+      "question": "Does the facility constraint reading genuinely follow from statutory text, or is textualism a cover for a policy preference protecting coal?",
+      "resolution_mechanism": "Legislative history analysis of 1970/1990 CAA amendments; comparison with how 'best system' language operates in other CAA sections; doctrinal consistency with Chevron/major questions jurisprudence.",
+      "impact": "If textualism is genuine, the constraint is a Mountain (law as written). If cover, it is a Snare/Tangled Rope extracting for coal. The theater_ratio of 0.48 reflects this ambiguity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the reading's textualist justification is structural or performative"
+    },
+    {
+      "id": "state_autonomy_vs_capture",
+      "question": "Is state autonomy over energy mix a genuine federalism benefit, or does it function as regulatory capture by coal-dependent states?",
+      "resolution_mechanism": "Track which states invoke this reading and their energy portfolio composition; measure whether 'autonomy' correlates with coal retention vs. renewable adoption.",
+      "impact": "If genuine federalism, beneficiaries include all states. If capture, beneficiaries are coal-dependent states specifically — changing the beneficiary structure from broad to narrow.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether state autonomy benefit is universal or concentrated in coal-dependent states"
+    },
+    {
+      "id": "suppression_mechanism_courts",
+      "question": "Is the suppression of systemic regulation structural (court enforcement of doctrinal limit) or internalized (EPA self-censors due to litigation risk)?",
+      "resolution_mechanism": "Post-West Virginia v. EPA: track EPA rulemaking behavior. If EPA proposes only facility-level measures without litigation pressure, suppression is internalized. If EPA proposes systemic measures and courts strike them, suppression is structural.",
+      "impact": "If internalized, effective suppression exceeds the structural measure — the constraint operates through anticipation, not just adjudication.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in administrative agency behavior"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.82
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the 'facility constraint reading' of CAA Section 111(d) — the interpretation that 'best system of emission reduction' is limited to measures implementable at individual stationary sources (heat-rate improvements, carbon capture at the plant level). This reading emerged in litigation against the Clean Power Plan (2015) and was ultimately endorsed by the Supreme Court in West Virginia v. EPA (2022). The constraint operates as a ceiling on EPA authority: it coordinates regulatory certainty and preserves state autonomy over energy mix (coordination function) while structurally protecting the coal fleet from forced retirement and extracting the cost of foregone systemic mitigation from climate advocates and environmental justice communities (asymmetric extraction). The claimed type is tangled_rope because both functions are genuinely present: the reading provides a stable interpretive anchor for regulated entities and states, but its persistence depends on active judicial enforcement and it concentrates benefits on coal interests while imposing costs on climate mitigation.",
+    "key_agents": [
+      "coal_fleet_operators: Primary beneficiary (powerful/constrained) — avoids forced retirement, captures regulatory certainty",
+      "state_energy_autonomy_advocates: Primary beneficiary (institutional/constrained) — preserves state authority over generation mix",
+      "climate_advocates: Primary victim (organized/trapped) — bears cost of regulatory ceiling on systemic mitigation",
+      "environmental_justice_communities: Secondary victim (powerless/trapped) — disproportionate pollution burden continues",
+      "federal_courts: Agenda setter (institutional/analytical) — enforces the interpretive limit through major questions doctrine",
+      "epa: Secondary agenda setter (institutional/constrained) — implements within the ceiling, self-censors systemic proposals",
+      "future_generations_interest: Excluded (powerless/trapped) — no voice in current doctrinal framework"
+    ],
+    "logic_rationale": "Extractiveness (0.68) is high because the constraint forecloses the most cost-effective mitigation pathway (generation shifting), forcing higher-cost facility-level compliance or inaction. Suppression (0.82) is very high because the constraint is maintained by Supreme Court precedent — exiting requires either Court reversal or statutory amendment. Theater ratio (0.48) reflects the genuine textualist argument layered over a policy outcome that aligns with coal protection; the ratio has risen as the major questions doctrine has expanded. Accessibility collapse (0.78) is high because once the 'facility constraint' is doctrinally entrenched, alternative readings (systemic transformation) become legally non-viable. Resistance (0.72) is significant: environmental litigants, progressive states, and congressional allies contest the reading, but the institutional pathway to change is narrow.",
+    "perspectival_gap": "From the coal fleet operator seat, this constraint is a Rope — it provides regulatory certainty and prevents arbitrary EPA overreach. From the climate advocate seat, it is a Snare — it extracts the possibility of adequate mitigation through a textualist cover story. From the Court's seat, it is a Mountain — the statute simply means what it says. The engine computes this divergence from the structural data: coal operators have constrained exit (can't leave the regulatory regime) but low directionality (beneficiaries); climate advocates have trapped exit and high directionality (victims). The same legal rule produces different constraint types at different seats.",
+    "directionality_logic": "Coal fleet operators and state autonomy advocates are declared beneficiaries — they gain regulatory certainty and protection from forced retirement. Their directionality d is low (near 0.2) because the constraint subsidizes their position. Climate advocates and EJ communities are declared victims — they bear the cost of the regulatory ceiling. Their d is high (near 0.9) because the constraint extracts their preferred policy outcome. EPA sits at moderate d (~0.5) — it both administers the constraint and is constrained by it. Courts are near d=0.1 (beneficiary of interpretive authority). Future generations are trapped (d=1.0) but excluded from the stakeholder surface — an omega documents this.",
+    "mandatrophy_analysis": "The founding problem (providing a stable, textually grounded limit on EPA authority to prevent regulatory oscillation) remains live but contested. The constraint has not resolved its mandatrophy because the coordination function (certainty, federalism) is genuinely valued by beneficiaries, while the extraction function (blocking systemic climate policy) is genuinely costly to victims. The classification as tangled_rope prevents mislabeling: calling it pure coordination (rope) would ignore the asymmetric coal protection; calling it pure extraction (snare) would ignore the genuine regulatory certainty it provides to states and regulated entities. The mandatrophy is unresolved — the constraint persists because neither side can dislodge it.",
+    "kernel_context": "This constraint is the facility_constraint_reading of kernel caa_section_111d_delegation. The sibling reading is systemic_transformation_reading, which interprets 'best system' to authorize grid-wide generation shifting and renewable substitution. The two readings foreclose each other within any single authoritative framework — a court adopting the facility constraint reading logically rules out the systemic transformation reading. This story authors only the facility constraint reading as a clean ε-invariant constraint; the systemic reading would be a separate constraint story with its own beneficiaries (renewable industry, climate advocates), victims (coal communities), and ε."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "caa_section_111d_delegation__systemic_transformation_reading"
+    ],
+    "dual_formulation_note": "Kernel caa_section_111d_delegation decomposes into two constraint stories: facility_constraint_reading (this story, ε=0.68, tangled_rope) and systemic_transformation_reading (ε≈0.35, rope/scaffold). The facility reading has higher ε because it forecloses lower-cost mitigation, concentrating extraction on climate advocates. The systemic reading has lower ε because it enables cost-effective mitigation, though it imposes transition costs on coal. They are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "coal_fleet_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Own and operate coal-fired power plants. The facility constraint reading protects them from EPA-mandated generation shifting or early retirement. They comply with heat-rate improvement requirements but avoid the existential threat of systemic regulation. Exit means retiring assets early or investing in CCS — both costly. They lobby and litigate to maintain this reading."
+    },
+    {
+      "name": "state_energy_autonomy_advocates",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "State governments (particularly coal-dependent and Republican-led) that invoke cooperative federalism to preserve authority over electricity generation mix. They benefit from the constraint's limitation on EPA because it prevents federal displacement of state energy policy. They can exit by adopting their own climate policies (some do), but the constraint protects their option not to."
+    },
+    {
+      "name": "regulated_utility_shareholders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Investors in regulated utilities with coal assets. The constraint provides regulatory certainty — they know EPA cannot force systemic changes that would strand assets. They can arbitrage by shifting capital to gas/renewables in other jurisdictions, but the constraint protects existing coal rate base."
+    },
+    {
+      "name": "climate_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Environmental NGOs, climate policy advocates, and their congressional allies. They bear the extraction: the facility constraint reading makes adequate federal mitigation legally impossible, forcing them into slower, piecemeal pathways (state policy, voluntary markets, innovation). They cannot exit the constraint — it is binding federal law until Court reversal or statutory amendment. Their resistance is high (litigation, advocacy, electoral pressure) but structurally blocked."
+    },
+    {
+      "name": "environmental_justice_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Fenceline communities disproportionately burdened by coal plant pollution. The facility constraint reading prolongs coal operation, continuing local health harms while foreclosing the federal lever that could force cleanup or retirement. They have no meaningful exit — relocation is economically impossible, and they lack political power to change the doctrine."
+    },
+    {
+      "name": "federal_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The federal judiciary, culminating in the Supreme Court, that enforces the facility constraint reading through the major questions doctrine and textualist interpretation. They set the agenda by defining the legal boundary. They benefit from the interpretive authority the constraint affirms. Their exit is analytical — they could adopt the systemic reading in a future case, but stare decisis and doctrinal commitment constrain that."
+    },
+    {
+      "name": "epa",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The agency tasked with implementing Section 111(d). It both administers the constraint (writing facility-level standards) and is constrained by it (barred from systemic approaches). It pays a bureaucratic cost: its expertise favors systemic mitigation, but it must self-censor to survive judicial review. Exit means either non-acquiescence (risking reversal) or waiting for political change."
+    },
+    {
+      "name": "future_generations_interest",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The intergenerational interest in a stable climate. Not represented in current standing doctrine. Bears the ultimate cost of the regulatory ceiling — locked-in emissions from prolonged coal operation. No exit, no voice, no standing to challenge. Their exclusion is structural to the legal framework."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a stable, textually grounded limit on EPA authority under Section 111(d), giving regulated entities and states regulatory certainty and preserving state autonomy over electricity generation mix. Solves the coordination problem of arbitrary or oscillating federal climate regulation.",
+    "transfer_function": "Transfers the option value of systemic, cost-effective climate mitigation (generation shifting, renewable substitution) from climate advocates and future generations to coal fleet operators and state autonomy advocates, in the form of regulatory protection for existing coal assets and preservation of state policy discretion.",
+    "absent_voices": "Future generations have no standing and no voice. Environmental justice communities are structurally excluded from the doctrinal conversation — their harm is local and cumulative, not the kind of 'particularized injury' courts recognize. The systemic transformation reading's beneficiaries (renewable industry, climate migrants, international partners) are absent because the constraint forecloses the regulatory pathway that would empower them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the facility constraint reading vanished overnight (e.g., Supreme Court overruled West Virginia v. EPA), EPA could immediately propose systemic generation-shifting standards. Coal retirement would accelerate. State energy offices would lose their federalism shield. The renewable industry would gain a massive federal policy tailwind. The entire U.S. climate mitigation architecture would reorganize around the systemic pathway.",
+    "founding_problem": "The Clean Air Act's 'best system of emission reduction' language was ambiguous on whether EPA could look beyond the fenceline. The facility constraint reading was built to solve the problem of regulatory unpredictability: without a clear textual limit, EPA could impose transformative requirements that states and industry could not anticipate or plan for, undermining cooperative federalism and investment certainty.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem (regulatory unpredictability) is attested by industry groups, conservative legal scholars, and Republican state attorneys general. It is contested by EPA's own historical practice (which used system-wide averaging in other CAA sections), progressive legal scholars who argue the text authorizes systemic approaches, and the D.C. Circuit's pre-West Virginia precedent. No neutral arbiter has settled whether the unpredictability problem was real or constructed."
+  },
+  "gain_flow": "coal_fleet_operators",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "systemic_transformation_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "section_111d_best_system_limited_to_facility_measures",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "major_questions_doctrine_bars_generation_shifting",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "textualist_cooperative_federalism_framework",
+    "drift_state": {
+      "moment": "post_west_virginia_v_epa",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "caa_section_111d_delegation"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

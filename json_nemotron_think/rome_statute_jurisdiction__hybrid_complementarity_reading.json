@@ -1,0 +1,373 @@
+{
+  "header": {
+    "constraint_id": "rome_statute_jurisdiction__hybrid_complementarity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_rome_statute_jurisdiction__hybrid_complementarity_reading",
+    "measurement_id_prefix": "rome_hybrid",
+    "story_uid": "536e371e-bd94-4773-9f69-b87e0f8edf5a"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.55,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rome Statute ICC Jurisdiction — Hybrid Complementarity Reading",
+    "topic_domain": "international_law/treaty_interpretation/institutional_authority",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "icc_institution",
+      "states_parties_signaling_commitment",
+      "victims_in_cooperating_situations"
+    ],
+    "victims": [
+      "states_parties_bearing_disproportionate_cooperation_costs",
+      "victims_in_non_cooperating_situations",
+      "perpetrators_facing_selective_prosecution"
+    ],
+    "vindicated_propositions": [
+      "complementarity_principle_as_admissibility_not_jurisdiction",
+      "universal_aspiration_creates_residual_authority_beyond_consent",
+      "nuremberg_lineage_grounds_international_criminal_law"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "icc_institution",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The ICC sets the agenda for international criminal justice through its prosecutor's discretion, judicial interpretations of complementarity, and requests for cooperation. It collects budgetary contributions from states parties and legitimacy from the universal justice aspiration. Its exit is constrained by treaty obligations and institutional survival imperatives — it cannot dissolve itself without states parties' consensus."
+    },
+    {
+      "name": "states_parties_signaling_commitment",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "States that ratify to signal human rights commitment but face low risk of ICC scrutiny (no active conflicts, no nationals accused). They benefit from the legitimacy signal with minimal cooperation costs. They can exit via Article 127 withdrawal with one year's notice — a real but reputational cost exit."
+    },
+    {
+      "name": "states_parties_bearing_disproportionate_cooperation_costs",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "States parties with active conflicts or weak judicial systems that must cooperate with ICC investigations (arrest surrendered persons, protect witnesses, provide evidence). They bear financial, political, and security costs while powerful non-party states face no equivalent obligation. Exit is constrained — withdrawal doesn't undo existing obligations and invites political retaliation."
+    },
+    {
+      "name": "victims_in_cooperating_situations",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Victims of crimes in situations where the state cooperates with the ICC (e.g., DRC, Uganda, CAR referrals). They gain access to a judicial forum otherwise unavailable. They are trapped — no individual exit from victimhood, no alternative forum when national courts fail."
+    },
+    {
+      "name": "victims_in_non_cooperating_situations",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Victims in situations where the state refuses cooperation (e.g., Sudan, Libya, Palestine/Israel, Afghanistan pre-2021). The ICC's jurisdiction exists on paper but enforcement fails. They pay the cost of the constraint's aspiration without its delivery — the universal promise extracts hope and attention while delivering nothing. No exit."
+    },
+    {
+      "name": "perpetrators_facing_selective_prosecution",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Mid-level perpetrators from cooperating states or weak states who face ICC prosecution while principal architects from powerful states evade accountability. They bear the enforcement costs of a system that claims universality but operates selectively. Exit is constrained — they cannot leave the jurisdictional reach once targeted."
+    },
+    {
+      "name": "powerful_non_party_states",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Permanent Security Council members and other major powers that have not ratified (US, China, Russia) or have withdrawn/unsigned (US 2002, Russia 2016, Philippines 2019). They are structurally excluded from the constraint's obligations but shape its operation through Security Council referrals/blocking, bilateral immunity agreements, and political pressure. They arbitrage — using the ICC when convenient (referrals) and blocking it when threatened."
+    },
+    {
+      "name": "assembly_of_states_parties",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The ICC's legislative and oversight body. It sets the budget, elects judges and prosecutor, and can amend the Statute. It observes the constraint's operation from the institutional governance seat — neither directly paying nor collecting, but structuring the rules."
+    },
+    {
+      "name": "international_legal_scholars",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The interpretive community that debates complementarity's scope, the ICC's legitimacy, and the treaty's meaning. They do not bear costs or collect benefits from the constraint's operation but shape the intellectual environment in which it is understood."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a permanent international forum to prosecute genocide, crimes against humanity, and war crimes when national courts are genuinely unable or unwilling — solving the impunity gap that ad hoc tribunals addressed only episodically.",
+    "transfer_function": "Moves sovereignty (jurisdictional primacy, cooperation obligations, budgetary contributions) from states parties to the ICC institution; moves accountability from domestic courts to an international forum; moves legitimacy from power-politics to legal process. The transfer is asymmetric: states parties transfer more than non-parties; powerful states transfer least.",
+    "absent_voices": "Victims in non-cooperating situations (Syria, Myanmar, Yemen, Ethiopia) who have no forum and no voice in the ASP; future generations who inherit the precedent of selective enforcement; non-state armed groups bound by IHL but excluded from the Statute's drafting.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Rome Statute vanished overnight, the ICC would dissolve, leaving no permanent international criminal court. Ad hoc tribunals would return for specific conflicts (as with Yugoslavia/Rwanda). Universal jurisdiction exercises by domestic courts would increase but remain politically fraught. The normative architecture of 'complementarity' — the principle that international justice supplements rather than supplants national justice — would lose its institutional anchor, though the principle might persist in customary law.",
+    "founding_problem": "The post-Cold War impunity gap: ad hoc tribunals (ICTY, ICTR) were slow, expensive, and politically contingent; no permanent mechanism existed to deter or punish core international crimes when states were unable or unwilling to act.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem is attested by the 1998 Rome Conference record (120 states voting for adoption) and the ICTY/ICTR completion strategies. However, powerful states (US, China, Russia) contested whether the founding problem justified the sovereignty transfer — evidenced by their non-ratification and the US ASPA (2002). The ICC's own Assembly of States Parties acknowledges the problem persists but disputes whether the current institution solves it (Review Conference 2010, 2017)."
+  },
+  "interval": {
+    "start": 1998,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1998,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2002,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2002,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2002,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Rome Statute's complementarity mechanism (Article 17) creates a hybrid constraint: the ICC has jurisdiction over core crimes but may only exercise it when national courts are genuinely unwilling or unable. This reading holds that complementarity is an admissibility filter, not a jurisdictional limit — the ICC's jurisdiction exists universally (by treaty consent of states parties) but its operation is deferred to national systems. The constraint extracts cooperation and resources from states parties while its enforcement depends on those same states. Powerful non-party states are structurally excluded from obligations but influence outcomes through Security Council politics. The claimed type (tangled_rope) reflects genuine coordination (ending impunity) fused with asymmetric extraction (selective enforcement, disproportionate burdens on weaker states parties).",
+    "logic_rationale": "Extractiveness (0.65) is substantial: the constraint transfers sovereignty and resources from states parties to an institution that cannot enforce its own orders, while powerful states free-ride. Suppression (0.55) is moderate: states can withdraw (Article 127), non-parties are not bound, but once a situation is referred or proprio motu opened, the complementarity filter limits exit for targeted states. Theater ratio (0.45) is significant: many states parties perform cooperation (enact implementing legislation, pay dues) while obstructing actual surrenders (e.g., Al-Bashir's travels to states parties). Accessibility collapse (0.50) reflects that alternatives (ad hoc tribunals, universal jurisdiction, hybrid courts) exist but are politically costly and episodic. Resistance (0.70) is high: major powers resist, African Union has threatened mass withdrawal, even states parties resist specific cooperation requests.",
+    "directionality_logic": "The ICC institution (agenda_setter/beneficiary) sits near the beneficiary end (d ~ 0.2) — it collects budget, legitimacy, and institutional survival from the constraint. States parties signaling commitment (beneficiary, mobile exit) sit at low d (~0.15). States parties bearing cooperation costs (payer, constrained exit) sit at high d (~0.75). Victims in cooperating situations (beneficiary, trapped) have low d but no exit — the constraint subsidizes them. Victims in non-cooperating situations (payer, trapped) have high d (~0.85) — they bear the aspiration's cost without its delivery. Perpetrators facing selective prosecution (payer, constrained) sit at high d (~0.8). Powerful non-party states (excluded, arbitrage) are outside the directionality calculation — they neither pay nor benefit directly but shape the field. The ASP and scholars (observers, analytical) sit at d=0.5 by definition.",
+    "perspectival_gap": "From the ICC's seat, the constraint is a rope with growing pains — a genuine coordination mechanism maturing toward universality. From states parties bearing costs, it is a snare — they pay for a system that protects them least. From victims in non-cooperating situations, it is a false summit — the mountain of universal justice appears but cannot be climbed. From powerful non-party states, it is a piton — a degraded institution they tolerate when useful, block when threatening. The engine computes these seat divergences from the structural data; the authored claim (tangled_rope) captures the hybrid structure visible from the analytical seat.",
+    "mandatrophy_analysis": "The founding problem (ending impunity for core crimes) remains live — atrocities continue, national courts still fail. But the constraint's current form may not solve it: complementarity defers to the very national systems that fail; the ICC lacks enforcement power; powerful states evade. This is mandatrophy not because the problem is solved, but because the solution has become a substitute for the solution — the ICC's existence lets states claim 'justice is handled' while impunity persists. The founding problem is contested (not dead) because parties dispute whether the ICC as constituted addresses it.",
+    "kernel_context": "This constraint is the hybrid_complementarity_reading of the rome_statute_jurisdiction kernel. Sibling readings: universalist_reading (ICC has universal mandate transcending consent; complementarity is jurisdictional, not merely admissibility) and sovereigntist_reading (ICC jurisdiction requires strict sovereign consent; complementarity preserves primacy; no residual universal authority). This reading occupies the 1998 compromise position: jurisdiction exists by treaty consent but complementarity operates as admissibility deference, creating residual universal authority that is real but operationally constrained."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the Rome Statute's complementarity mechanism a single constraint with contested interpretation, or are the universalist, sovereigntist, and hybrid readings structurally distinct constraints sharing a label?",
+      "resolution_mechanism": "Apply the epsilon-invariance test: if measuring the constraint's extractiveness under the universalist reading (ICC as universal court) yields a different epsilon than under the sovereigntist reading (ICC as conditional forum), they are distinct constraints. The hybrid reading's epsilon (0.65) should be compared against independently authored sibling stories.",
+      "impact": "If distinct constraints, each gets its own classification and the kernel is a family linked by network.affects_constraints. If one constraint, the classification must accommodate irreducible interpretive variance — which the current framework does not allow.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's contested readings are one constraint or a constraint family."
+    },
+    {
+      "id": "complementarity_nature",
+      "question": "Is complementarity (Article 17) a jurisdictional limit (the ICC lacks jurisdiction unless national courts fail) or an admissibility filter (the ICC has jurisdiction but defers to national courts)?",
+      "resolution_mechanism": "Treaty interpretation: Article 1 text ('jurisdiction over persons for the most serious crimes') vs Article 17 ('case is inadmissible'). The ICC's jurisprudence (Katanga, Gaddafi, Al-Senussi) treats it as admissibility. State practice (non-cooperation arguments) treats it as jurisdictional. The resolution changes the constraint's structural boundary.",
+      "impact": "If jurisdictional, the constraint is a scaffold (transitional, sunset via universal ratification). If admissibility, it is a tangled_rope (permanent hybrid). This reading authors admissibility; the sovereigntist reading authors jurisdictional.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether complementarity defines the ICC's jurisdiction or its exercise."
+    },
+    {
+      "id": "enforcement_dependence_structural_or_contingent",
+      "question": "Is the ICC's dependence on state cooperation for enforcement a structural feature of international law (no supranational police) or a contingent design choice that could be remedied (e.g., by a standing UN police force)?",
+      "resolution_mechanism": "Counterfactual analysis: if the Rome Statute had created an enforcement mechanism (Art 43 UN Charter style), would the constraint's extractiveness and suppression change? Historical record: the 1998 Conference rejected enforcement mechanisms as sovereignty violations. The dependence is structural to the treaty's consent basis.",
+      "impact": "If structural, the tangled_rope classification is stable — the coordination/extraction hybrid is inherent. If contingent, the constraint could evolve toward rope (with enforcement) or snare (without coordination function).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the ICC's enforcement gap is structural or remediable."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "rome_statute_jurisdiction__universalist_reading",
+      "rome_statute_jurisdiction__sovereigntist_reading",
+      "icc_cooperation_regime",
+      "universal_jurisdiction_domestic_courts",
+      "ad_hoc_tribunal_legacy"
+    ],
+    "dual_formulation_note": "This constraint is the hybrid_complementarity_reading of the rome_statute_jurisdiction kernel. The universalist_reading and sovereigntist_reading are sibling constraints. All three share the kernel's formal text but instantiate different constraints with different epsilon values, beneficiary/victim structures, and classifications. The hybrid reading's epsilon (0.65) reflects the operational reality of selective enforcement; the universalist reading's epsilon would be lower (coordination-dominant); the sovereigntist reading's epsilon would be higher (extraction-dominant from states' perspective)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.1
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "universalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sovereigntist_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "complementarity_is_admissibility_not_jurisdiction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "universal_aspiration_creates_residual_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "nuremberg_lineage_complementarity_compromise",
+    "drift_state": {
+      "moment": "contemporary_selective_enforcement_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "rome_statute_jurisdiction__kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

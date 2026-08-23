@@ -1,0 +1,369 @@
+{
+  "header": {
+    "constraint_id": "coercion_legitimacy_boundary__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_coercion_legitimacy_boundary__proportionality_reading",
+    "measurement_id_prefix": "clb_pr",
+    "story_uid": "72086c6c-8361-4457-ae91-6dacbe345d4d"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.65,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proportionality Framework for Public Health Coercion",
+    "topic_domain": "public_health_policy/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "public_health_authorities",
+      "vulnerable_populations",
+      "healthcare_infrastructure"
+    ],
+    "victims": [
+      "compelled_individuals",
+      "religious_objectors",
+      "parents_of_minors"
+    ],
+    "vindicated_propositions": [
+      "proportionality_principle",
+      "least_restrictive_means_doctrine",
+      "police_power_limitation"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the proportionality reading a distinct constraint from the kernel's other readings, or a parameterization of a single constraint?",
+      "resolution_mechanism": "Apply the epsilon-invariance test: if measuring coercion legitimacy under measles vs flu parameters yields structurally different extraction profiles (different victim sets, different enforcement intensity), they are separate constraints. The proportionality reading instantiates a case-by-case adjudication structure with moderate ε; the public_health_primary reading would instantiate a broad police-power structure with higher ε; the bodily_autonomy_primary reading would instantiate a near-zero-coercion structure with near-zero ε.",
+      "impact": "If separate constraints, each gets its own story with its own ε, stakeholders, and classification. If one constraint, the proportionality reading must absorb the full variance into a single ε, which would misrepresent the structural differences between mandating MMR vs recommending flu vaccine.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's three readings are three constraints or one parameterized constraint"
+    },
+    {
+      "id": "severity_threshold_location",
+      "question": "Where exactly does the proportionality boundary fall between diseases that justify mandates and those that do not?",
+      "resolution_mechanism": "Empirical survey of actual mandate patterns across jurisdictions and time, correlated with R0, IFR, transmission mode, and vaccine characteristics. Legal analysis of court decisions drawing the line.",
+      "impact": "If the boundary is sharp (measles yes, flu no, little contested middle), the constraint operates as a clear rule with low theater. If the boundary is a wide contested zone (COVID-19, pertussis, HPV), the constraint operates as an adjudicative process with higher theater and extraction from the adjudication itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Precision of the disease-severity threshold that triggers coercion legitimacy"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression experienced by compelled individuals primarily structural (legal penalties, school exclusion, employment consequences) or internalized (moral injury, identity conflict, community alienation)?",
+      "resolution_mechanism": "Post-mandate longitudinal studies tracking psychological and social outcomes for objectors who comply vs. those who resist. Comparison of suppression persistence after mandate removal.",
+      "impact": "If substantially internalized, the effective suppression is higher than legal penalties alone indicate — the constraint continues extracting compliance through identity channels after the formal mechanism lifts. This would increase measured suppression and affect classification toward snare for objector seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanism for vaccine objectors"
+    },
+    {
+      "id": "adjudication_extraction",
+      "question": "Does the case-by-case adjudication process itself constitute an extraction mechanism (legal costs, uncertainty, administrative burden) that falls disproportionately on the less powerful?",
+      "resolution_mechanism": "Analysis of litigation patterns, administrative costs, and compliance burdens across socioeconomic groups facing mandate challenges.",
+      "impact": "If adjudication extracts disproportionately from powerless agents, the constraint's effective extraction is higher for those seats than the base ε suggests, pushing their classification toward snare. This would also create intra-class divergence among compelled_individuals.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether proportional adjudication is itself an extractive process"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1905,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1925,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1955,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1905,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1925,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1955,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1905,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1925,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1955,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 1905,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the proportionality reading of the coercion legitimacy boundary kernel. The reading holds that state coercion for medical intervention (primarily vaccination mandates) is legitimate only when disease severity and transmission dynamics cross a threshold that makes the collective harm prevention sufficiently weighty to outweigh individual autonomy. Measles (high R0 ~12-18, high complication rate, effective vaccine) clears this threshold; seasonal influenza (lower R0 ~1.3, lower severity in general population, variable vaccine efficacy) does not. The constraint operates through case-by-case adjudication — courts and legislatures assess each disease-vaccine pair against the proportionality standard. This creates a genuine coordination function (preventing outbreaks of severe diseases) combined with asymmetric extraction (some individuals bear the burden of mandates for collective benefit), maintained by active enforcement (school exclusion, fines, employment conditions). The victim set varies by pathogen: for measles mandates, objecting parents and religious minorities are the primary payers; for diseases below the threshold, no one is compelled, so the victim set is empty. The moderate ε (0.45) reflects the extraction from compelled individuals balanced against the real coordination benefit.",
+    "logic_rationale": "Extractiveness is moderate (0.45) because the constraint does extract compliance from objectors for high-threshold diseases, but the extraction is bounded by the proportionality principle and does not extend to all vaccines. Suppression is moderate-high (0.65) because mandates carry legal penalties and exclusion consequences, but exemptions exist (medical, sometimes religious/philosophical) and the threshold limits scope. Theater ratio is low-moderate (0.25) — the proportionality framework does genuine analytical work in distinguishing diseases, but the COVID-19 period saw performative expansion of mandate logic to diseases that may not have cleared the traditional threshold. Accessibility collapse is moderate (0.55) — alternatives (home schooling, relocation, exemption claims) exist but are costly. Resistance is moderate (0.55) — sustained legal and political contestation exists but has not overturned the core framework. The measurement series shows rising extractiveness and theater during the COVID-19 period (2020 peak) with partial reversion by 2025, and suppression peaking in the same period.",
+    "directionality_logic": "Public health authorities are structural beneficiaries (d near 0.0) — they gain legitimacy, institutional power, and operational capacity from the mandate authority. Vulnerable populations are beneficiaries (d ~ 0.1-0.2) — they gain herd immunity protection without bearing mandate burdens. Compelled individuals are targets (d ~ 0.7-0.9) — they bear the physical intrusion, autonomy loss, and penalty risk. Religious objectors are more intensely targeted (d ~ 0.8-0.95) when their objections are overridden; their exit options are identity_locked (exit requires abandoning religious community/identity). Parents of minors are targets (d ~ 0.6-0.8) with constrained exit (can home school or relocate but at high cost). Healthcare infrastructure is a beneficiary (d ~ 0.15) — gains surge capacity protection. Rival frameworks (bodily_autonomy_primary, public_health_primary) are excluded from the proportionality adjudication — they would reject the case-by-case structure entirely.",
+    "perspectival_gap": "The agenda-setter seat (public health authorities, legislatures, courts) experiences this as genuine coordination with bounded extraction — the proportionality test is a real analytical filter. The compelled individual seats experience it as extraction with a coordination cover story — the case-by-case adjudication feels like a ritual that usually produces mandates for the diseases authorities want to mandate anyway. The vulnerable population seat experiences it as coordination with minimal personal cost. The engine will compute these divergences from the structural power/exit/scope data: authorities have institutional power + arbitrage exit + national scope; compelled individuals have moderate/powerless power + identity_locked/constrained exit + national scope; vulnerable populations have powerless/moderate power + constrained exit + national scope.",
+    "mandatrophy_analysis": "The founding problem (balancing collective disease prevention with individual liberty without collapsing into either absolutism) remains live and contested. The proportionality framework prevents mislabeling pure public health authoritarianism (public_health_primary) as coordination, and prevents mislabeling genuine outbreak prevention (measles mandates) as pure extraction. However, the COVID-19 period tested whether the framework's adjudicative structure had become a ritual that legitimates whatever mandates authorities prefer — the theater spike in 2020 suggests mandatrophy risk. The constraint is not resolved mandatrophy because the founding problem persists and the framework still does real discriminative work (flu mandates remain rare).",
+    "kernel_context": "This constraint is the proportionality_reading of the coercion_legitimacy_boundary kernel. The kernel is the question: when, if ever, may the state compel medical intervention? Three readings instantiate different constraints: (1) bodily_autonomy_primary — coercion categorically impermissible regardless of collective benefit; (2) proportionality_reading (this story) — coercion legitimacy scales with disease severity/transmission; measles yes, flu no; (3) public_health_primary — state may compel whenever collective harm-prevention outweighs individual autonomy. This reading's ε (0.45) reflects case-by-case adjudication extraction; the public_health_primary reading would have higher ε (broader mandates); the bodily_autonomy_primary reading would have near-zero ε (almost no coercion). They are separate constraints linked by the kernel, not parameterizations of one constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "coercion_legitimacy_boundary__public_health_primary",
+      "coercion_legitimacy_boundary__bodily_autonomy_primary",
+      "school_vaccine_mandates",
+      "healthcare_worker_vaccine_mandates",
+      "travel_vaccine_requirements"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the 'coercion legitimacy boundary' kernel into three structurally distinct constraints with different ε, victim sets, and enforcement profiles. The proportionality reading sits between the two absolutist readings, instantiating a case-by-case adjudication structure that generates moderate extraction from its selective application."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design and administer the proportionality framework: define the threshold criteria, evaluate each disease-vaccine pair, issue mandates, and enforce compliance. They gain institutional legitimacy and operational authority from the framework. Their exit is arbitrage-grade — they can shift to other public health tools (persuasion, incentives, surveillance) if mandates become politically costly."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Immunocompromised individuals, infants too young for vaccination, elderly with waning immunity. They gain herd immunity protection from mandates on high-transmission diseases without bearing the mandate burden themselves. Their exit is constrained — they cannot individually opt out of disease exposure risk, but they benefit from the collective shield mandates create."
+    },
+    {
+      "name": "healthcare_infrastructure",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Hospital systems, public health departments, emergency services. They gain surge capacity protection and reduced outbreak response costs when mandates prevent large epidemics. They can adapt to different mandate regimes (mobile exit) but prefer the stability of the proportionality framework."
+    },
+    {
+      "name": "compelled_individuals",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Adults and parents facing mandates for themselves or their children for diseases above the proportionality threshold (measles, polio, potentially COVID-19). They bear the physical intrusion, autonomy loss, risk of adverse events (rare), and penalty risk for non-compliance. Exit options: home schooling, relocation to exemption-friendly jurisdictions, medical exemptions (narrow), or compliance — all costly."
+    },
+    {
+      "name": "religious_objectors",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Individuals and communities whose sincere religious beliefs prohibit vaccination. When mandates override religious exemptions (as in several states post-2019), they face the most intense coercion: loss of community, educational exclusion, employment barriers. Exit requires abandoning religious identity and community — identity_locked. They are also partially excluded from the proportionality adjudication, which treats religious objection as a factor to be weighed rather than a trump."
+    },
+    {
+      "name": "parents_of_minors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Parents making vaccination decisions for children subject to school-entry mandates. They bear decisional burden, potential conflict with their own risk assessment, and penalties for non-compliance (school exclusion). Exit options: home schooling, private schools with different policies, relocation, medical exemptions — all costly and disruptive to family life."
+    },
+    {
+      "name": "bodily_autonomy_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Organizations and individuals who hold that medical intervention without consent is categorically impermissible. They are structurally excluded from the proportionality framework — their position is treated as outside the legitimate range of debate within the framework. They cannot exit the constraint's reach (trapped) but can advocate for its replacement."
+    },
+    {
+      "name": "public_health_maximalists",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Actors who hold that the state may compel any vaccine with positive net benefit (the public_health_primary reading). They are partially excluded from the proportionality adjudication — their preferred broader mandate authority is constrained by the proportionality threshold. They have arbitrage exit through legislative and executive channels to expand mandate scope."
+    },
+    {
+      "name": "courts_and_scholars",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Judges adjudicating mandate challenges, constitutional scholars, bioethicists. They observe and shape the proportionality boundary through rulings and analysis. Their analytical exit means they can evaluate the framework from outside its coercive force."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a principled framework for distinguishing diseases that justify state coercion from those that do not, preventing both unrestricted police power over bodies and paralysis in the face of severe epidemics. Solves the collective action problem of achieving herd immunity for high-threat diseases while preserving individual autonomy for lower-threat diseases.",
+    "transfer_function": "Moves decision-making authority from individual to state for diseases above the severity/transmission threshold (measles, polio, smallpox historically, potentially COVID-19); preserves individual authority for diseases below the threshold (seasonal flu, HPV in most jurisdictions, hepatitis B for adults). The transfer is calibrated by R0, severity, vaccine efficacy, and availability of less restrictive alternatives.",
+    "absent_voices": "Those who would reject any state authority over medical decisions (bodily_autonomy_primary reading) — they are excluded from the proportionality adjudication which presupposes that some coercion can be legitimate. Also absent: those who would mandate all recommended vaccines (public_health_primary reading) — they are constrained by the proportionality threshold. Children subject to mandates have no direct voice; their interests are represented by parents (who may object) and the state (which mandates).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the proportionality framework vanished overnight, the coercion legitimacy boundary would collapse to one of the two absolutist poles: either all vaccine mandates become illegitimate (bodily_autonomy_primary victory) or the state claims authority to mandate any vaccine with net benefit (public_health_primary victory). Current mandate patterns (measles yes, flu no) would destabilize. Legislative and judicial battles would erupt in every jurisdiction. The world would rearrange around a new boundary.",
+    "founding_problem": "How to justify state coercion for vaccination without either (a) adopting a principle that permits unlimited medical mandates whenever authorities claim collective benefit, or (b) adopting a principle that makes mandatory vaccination impossible even for diseases like smallpox or measles that kill millions without herd immunity.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem is attested by constitutional jurisprudence (Jacobson v. Massachusetts 1905 establishing police power with limits; Zucht v. King 1922 upholding school mandates; recent COVID mandate cases), by public health historians documenting the evolution from compulsory smallpox vaccination to modern school-entry requirements, and by bioethicists across the spectrum (Childress et al. on public health ethics, Gostin on public health law). No single partisan or beneficiary group owns this genealogy — it is a live contested problem in constitutional law and public health ethics."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "coercion_legitimacy_boundary"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "proportionality_as_constitutional_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "least_restrictive_means_requirement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "jacobson_proportionality_framework",
+    "drift_state": {
+      "moment": "post_covid_mandate_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__foreign_target_strict_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "d217425e-ba42-41b9-a9c2-51cea488e842"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "FISA 702 Foreign Target Statutory Constraint (Strict Reading)",
+    "topic_domain": "constitutional/national_security/surveillance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "us_persons",
+      "intelligence_community"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "statutory_foreign_target_requirement",
+      "minimization_as_deletion",
+      "domestic_query_prohibition"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "us_persons",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "U.S. persons whose international communications may be incidentally collected under 702; protected by statutory targeting restrictions (foreign target requirement), minimization procedures requiring deletion of incidentally collected U.S. person data, and categorical prohibition on FBI queries of the 702 database for domestic criminal investigations."
+    },
+    {
+      "name": "intelligence_community",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "NSA, CIA, and FBI foreign intelligence components that operate the 702 collection program; the statutory framework authorizes collection against non-U.S. persons abroad while imposing targeting, minimization, and query restrictions that structure their operations."
+    },
+    {
+      "name": "foreign_targets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Non-U.S. persons abroad who are the legitimate targets of 702 collection; they bear the surveillance burden as the objects of foreign intelligence gathering, with no access to U.S. statutory or constitutional protections."
+    },
+    {
+      "name": "fbi_domestic",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "FBI domestic law enforcement division that is categorically prohibited under this reading from querying the 702 database for domestic criminal investigations; loses an investigative tool but is constrained by the statutory foreign-target-only design."
+    },
+    {
+      "name": "fisa_court",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Foreign Intelligence Surveillance Court that reviews and approves annual certifications, targeting procedures, and minimization procedures; provides judicial oversight of the statutory framework's implementation."
+    },
+    {
+      "name": "congress",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legislative body that enacted FISA Section 702 (2008) and has reauthorized it multiple times (2012, 2017, 2023); sets the statutory framework and can amend the foreign target requirement, minimization standards, and query restrictions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables foreign intelligence collection against non-U.S. persons abroad at the speed and scale required by modern threats, while statutorily constraining that authority through the foreign target requirement, minimization procedures, and domestic query prohibitions to protect U.S. persons' Fourth Amendment interests.",
+    "transfer_function": "Moves foreign intelligence value from foreign targets (non-U.S. persons abroad) to the U.S. intelligence community; moves privacy protections to U.S. persons through statutory targeting restrictions, mandatory deletion of incidentally collected U.S. person communications, and categorical bar on FBI domestic queries of the 702 database.",
+    "absent_voices": "Foreign targets (non-U.S. persons abroad) have no representation in the U.S. legislative or judicial process that authorizes and oversees their surveillance; privacy advocates and civil liberties organizations who argue that statutory protections are insufficient in practice due to compliance incidents and broad targeting certifications are excluded from the classified FISC proceedings that interpret the statute.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the 702 statutory framework vanished overnight, foreign intelligence collection would revert to either executive authority under Article II (less constrained, no statutory minimization) or traditional FISA Title I warrants (more constrained, slower, individualized); U.S. persons would lose statutory minimization protections and the categorical domestic query prohibition, relying solely on the Fourth Amendment as interpreted by the constitutional_floor_reading.",
+    "founding_problem": "Post-9/11 intelligence gap: foreign adversaries increasingly used U.S. communications infrastructure (email, social media, cloud services) to communicate, but traditional FISA Title I required individualized probable cause warrants for each target — too slow and narrow for foreign intelligence collection at scale against non-U.S. persons abroad.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The intelligence community and executive branch attest the problem remains live, citing encryption proliferation and adversary use of U.S. platforms; the 9/11 Commission Report and multiple PCLOB reports corroborate the original intelligence gap; civil liberties groups and some legislators contest whether the current threat environment justifies 702's scope versus narrower alternatives."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the foreign_target_strict_reading of the FISA Section 702 statutory kernel. The reading holds that the statutory text — requiring that targets be non-U.S. persons reasonably believed to be located abroad, mandating minimization procedures that delete incidentally collected U.S. person communications, and prohibiting FBI queries of the 702 database for domestic criminal investigations — operates as a genuine coordination mechanism (rope) for foreign intelligence. The statutory design enables collection at scale against foreign adversaries while embedding structural protections for U.S. persons that this reading argues satisfy Fourth Amendment requirements. The claimed type is rope (coordination with built-in safeguards); the authored metrics reflect low extractiveness from U.S. persons (ε=0.15), low suppression (statutory/judicial framework, not coercion), and low theater (the framework is functional, not performative). The engine will compute per-seat classifications from the structural data.",
+    "logic_rationale": "Extractiveness is low (0.15) because the statutory framework's primary operation is foreign intelligence collection against legitimate foreign targets; U.S. persons are structurally protected by targeting restrictions, minimization-as-deletion, and domestic query prohibition. The 0.15 reflects residual risk from compliance incidents and the inherent privacy impact of incidental collection even with minimization. Suppression is low (0.20) because the constraint operates through statutory authority and FISC oversight, not through coercive suppression of alternatives — the constitutional_floor_reading and incidental_collection_reading remain live contestations. Theater ratio is low (0.10) because the minimization and query restrictions are operationally implemented, not merely performative. Accessibility collapse is moderate (0.30) because alternative frameworks (constitutional floor, incidental collection) remain structurally available. Resistance is moderate (0.40) reflecting ongoing litigation, legislative reform proposals, and compliance controversies.",
+    "directionality_logic": "U.S. persons are structural beneficiaries (d near 0.0): the statute affirmatively protects them through foreign target requirement, minimization-as-deletion, and domestic query ban. Intelligence community is agenda-setter/beneficiary (d near 0.0): they receive the foreign intelligence value authorized by the statute. Foreign targets are payers (d near 1.0): they bear the surveillance burden as legitimate targets. FBI domestic is a payer (d ~0.7): categorically prohibited from using 702 for domestic cases, losing an investigative tool. FISC and Congress are observers/agenda-setters with analytical exit. The engine derives directionality from these structural positions.",
+    "perspectival_gap": "The payer seats (foreign_targets, fbi_domestic) and beneficiary seats (us_persons, intelligence_community) will compute differently: from the intelligence community's position, the arrangement is a functional coordination mechanism they built and operate under law; from foreign targets' position, it is extraction without representation; from FBI domestic's position, it is a constraint that forecloses a useful tool. The engine computes this divergence from the structural data — the authored claim (rope) does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (foreign intelligence gap against adversaries using U.S. infrastructure) remains live per intelligence community and PCLOB corroboration. The arrangement has not atrophied into a piton — it is actively used, reauthorized, and modified. However, the tension between the statutory design (this reading) and operational practice (documented compliance incidents, FBI query controversies) creates a mandatrophy risk: if practice drifts toward the incidental_collection_reading while the statutory text remains unchanged, the constraint becomes a false summit — claimed as protective rope, operating as extractive snare. The omega variables capture this ambiguity.",
+    "kernel_context": "This constraint is the foreign_target_strict_reading of the fisa_702_statutory_text kernel. Sibling readings: incidental_collection_reading (statute permits retention and warrantless query of incidental U.S. person communications for foreign intelligence purposes) and constitutional_floor_reading (Fourth Amendment requires probable cause warrant for any government search of U.S. person communications content, independent of statutory foreign/domestic distinction). This reading instantiates the statutory text as a self-sufficient constraint that protects U.S. persons through its own terms, without requiring constitutional supplementation."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint is one reading (foreign_target_strict_reading) of the contested kernel fisa_702_statutory_text; what are the structural consequences of treating this reading as a standalone ε-invariant constraint?",
+      "resolution_mechanism": "Compare engine classifications across all three kernel readings (this reading, incidental_collection_reading, constitutional_floor_reading) to measure how the same statutory text produces divergent constraint types from different interpretive commitments.",
+      "impact": "If this reading computes as rope/mountain while sibling readings compute as snare/tangled_rope, the kernel's classification is reading-dependent — confirming the ε-invariance principle that the label 'FISA 702' covers multiple structurally distinct constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading decomposition: whether statutory text alone suffices as a constraint or requires constitutional supplementation."
+    },
+    {
+      "id": "minimization_implementation_gap",
+      "question": "Does statutory minimization in practice achieve deletion of incidentally collected U.S. person communications, or does it function as access restriction with retention (as the incidental_collection_reading claims)?",
+      "resolution_mechanism": "Declassified FISC opinions, PCLOB reports, and ODNI transparency reports on compliance incidents involving retention of U.S. person data beyond minimization timelines.",
+      "impact": "If minimization is access-restriction-with-retention, the constraint's extractiveness from U.S. persons is higher than 0.15 and the domestic query prohibition is undermined by data availability — shifting classification toward tangled_rope or snare for the us_persons seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether minimization procedures achieve statutory deletion or de facto retention."
+    },
+    {
+      "id": "fbi_query_compliance",
+      "question": "Does the FBI in practice comply with the categorical prohibition on querying the 702 database for domestic criminal investigations, or do 'foreign intelligence purpose' justifications function as a loophole?",
+      "resolution_mechanism": "DOJ OIG audits, FISC compliance opinions, and congressional oversight hearings on FBI 702 query practices (e.g., 2018-2024 query count disclosures, 'U.S. person query' metrics).",
+      "impact": "If FBI domestic queries for criminal investigations occur under foreign intelligence pretexts, the fbi_domestic seat's directionality shifts toward beneficiary (they gain access) and the us_persons seat's extraction rises — the constraint operates as tangential_rope for that seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the domestic query prohibition is structurally enforced or nominal."
+    },
+    {
+      "id": "extraction_stability_under_compliance_incidents",
+      "question": "Does the ε=0.15 assessment hold given documented compliance incidents (overcollection, retention violations, improper queries), or does the accumulation of incidents indicate structural extraction higher than the statutory design suggests?",
+      "resolution_mechanism": "Longitudinal analysis of compliance incident rates, severity, and remediation across reauthorization cycles (2008, 2012, 2017, 2023); compare to statutory design parameters.",
+      "impact": "If compliance incidents represent structural drift rather than deviations, the constraint's true extractiveness for us_persons may be 0.30-0.40, reclassifying the us_persons seat from rope to tangled_rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether documented compliance incidents reflect operational noise or structural extraction drift."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "fisa_702_statutory_text__incidental_collection_reading",
+      "fisa_702_statutory_text__constitutional_floor_reading"
+    ],
+    "dual_formulation_note": "This reading, the incidental_collection_reading, and the constitutional_floor_reading form the fisa_702_statutory_text constraint family. This reading claims the statutory text itself (foreign target requirement, minimization-as-deletion, domestic query prohibition) is a sufficient coordination mechanism (rope) protecting U.S. persons. The incidental_collection_reading claims the same statute permits retention and query of incidental collection, making it extractive (tangled_rope/snare). The constitutional_floor_reading claims the Constitution requires a warrant regardless of statute, making the statutory framework a false summit (mountain claim masking extraction). The three readings have divergent ε values (0.15, ~0.45, ~0.60) and divergent victim sets."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "incidental_collection_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "constitutional_floor_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "statutory_text_sufficient_for_fourth_amendment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "minimization_requires_deletion",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "domestic_queries_categorically_prohibited",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "statutory_foreign_target_framework",
+    "drift_state": {
+      "moment": "post_snowden_reauthorization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

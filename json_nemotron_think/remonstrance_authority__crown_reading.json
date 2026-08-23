@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "remonstrance_authority__crown_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_remonstrance_authority__crown_reading",
+    "measurement_id_prefix": "remonstrance_crown",
+    "story_uid": "9eb59173-4ccc-4ad6-b36d-c24de195cfa0"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.75,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "Remonstrance Right as Illegitimate Minoritarian Veto Protecting Particularist Privileges",
+    "topic_domain": "constitutional_history/political_economy/legal_authority",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "parlement_magistrates",
+      "venal_office_holders",
+      "provincial_estates_privileged"
+    ],
+    "victims": [
+      "crown_fiscal_authority",
+      "royal_treasury",
+      "tax_farmers_general"
+    ],
+    "vindicated_propositions": [
+      "royal_prerogative_doctrine",
+      "sovereign_legislative_monopoly",
+      "unity_of_sovereign_will"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "crown",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Issues royal edicts requiring registration by the parlements; bears fiscal and legislative costs when remonstrance blocks or delays revenue edicts; can force registration via lit de justice but at high political cost and legitimacy erosion."
+    },
+    {
+      "name": "parlement_magistrates",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Hold venal offices granting right of remonstrance; use veto to protect judicial autonomy, venal office value, and particularist privileges; frame obstruction as constitutional duty; their professional identity and social status are fused with the remonstrance right."
+    },
+    {
+      "name": "venal_office_holders",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Purchased judicial offices whose value depends on the parlement's veto power; any royal reform threatening remonstrance devalues their property; they finance and socially reinforce magistrate resistance."
+    },
+    {
+      "name": "provincial_estates_privileged",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Provincial representative bodies with negotiated tax privileges; rely on parlement remonstrance to block uniform fiscal edicts that would extend taxation to their exempt orders; coordinate with magistrates to preserve fiscal particularism."
+    },
+    {
+      "name": "royal_treasury",
+      "role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bears direct financial cost of delayed or blocked revenue edicts; incurs borrowing at penalty rates when remonstrance stalls fiscal reform; cannot exit the need for revenue but cannot compel registration without political crisis."
+    },
+    {
+      "name": "tax_farmers_general",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Finance royal revenue in advance; their contracts lose value when remonstrance disrupts tax collection; can exert market pressure but are structurally dependent on royal fiscal authority that the veto undermines."
+    },
+    {
+      "name": "third_estate",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bears the ultimate tax burden when noblesse and clergy are exempted by particularist privileges the remonstrance protects; has no voice in remonstrance proceedings and no exit from the fiscal system."
+    },
+    {
+      "name": "constitutional_theorists",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the remonstrance as either a constitutional safeguard (magistrate reading) or an illegitimate veto (crown reading); their framing shapes later historical and legal interpretation but they hold no operational power in the period."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The remonstrance purports to coordinate legislative review by allowing courts to advise the king on legality before registration, preventing arbitrary innovation. From the crown reading, this coordination story is cover for a veto that protects magistrate and privilege-holder rents.",
+    "transfer_function": "Moves effective legislative initiative and fiscal authority from the Crown to the parlements; moves fiscal rents from the royal treasury and tax-farming system to venal office holders and privileged orders via the veto's protection of exemptions; moves political legitimacy from sovereign will to corporate magistrate authority.",
+    "absent_voices": "The third estate (peasantry, urban workers, bourgeoisie outside venal office) who bear the tax burden of the veto's protection of noble and clerical exemptions; provincial populations subject to unequal taxation; future taxpayers who inherit debt from blocked reforms. They are structurally excluded from the remonstrance proceeding and the parlements' composition.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the remonstrance right vanished overnight, royal edicts would register without delay; fiscal reforms extending taxation to privileged orders would proceed; venal office values would collapse; the parlements would lose their political veto and revert to pure judicial function; the fiscal-military state would centralize revenue extraction.",
+    "founding_problem": "The remonstrance originated in the 14th-15th centuries as a mechanism for sovereign courts to advise the king on the legality and form of edicts before registration, ensuring technical conformity with fundamental laws. It evolved through the Wars of Religion and Fronde into a substantive veto right claimed as constitutional necessity.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Royal administrators (intendants, controllers-general) consistently attested from the 1660s onward that the veto blocked necessary fiscal reform; the magistrates' own registers show the evolution from procedural verification to substantive policy veto; Enlightenment jurists outside the magistrate corps (e.g., Linguet, though briefly a magistrate, wrote against the veto; the Physiocrats condemned it as anti-economic) corroborated the shifted-function reading. The Maupeou reform of 1771, which suppressed the parlements and replaced them with royal courts, demonstrates the Crown's own judgment that the founding problem was dead."
+  },
+  "interval": {
+    "start": 0,
+    "end": 140
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.77
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 140,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 140,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 120,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 140,
+      "value": 0.75
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The right of remonstrance (droit de remontrance) was the power of French sovereign courts (parlements) to protest royal edicts before registering them. Under the crown_reading, this evolved from a procedural advisory function into a substantive minoritarian veto that protected the particularist privileges of magistrates (venal office property, judicial autonomy), the nobility and clergy (tax exemptions), and provincial estates (fiscal particularism) against royal fiscal reform. The Crown experienced this as high extraction on its fiscal authority: blocked revenue edicts forced borrowing at penalty rates, delayed military funding, and prevented structural tax reform. The magistrates' constitutional claim was suppressed as illegitimate obstruction by successive royal ministries, culminating in the Maupeou coup of 1771 which abolished the parlements. This constraint story captures the Crown's structural experience of the remonstrance as a snare: a coordination cover (legislative review) masking asymmetric extraction (privilege protection) maintained by active enforcement (magistrate resistance, public opinion manipulation).",
+    "logic_rationale": "Extractiveness is high (0.82) because the veto directly transferred fiscal authority from Crown to magistrates, forcing the treasury into costly debt and blocking reforms that would have spread taxation more broadly. Suppression is high (0.75) because the Crown had to deploy lit de justice, exile magistrates, or abolish parlements to overcome the veto — active coercion against a coordinate branch. Theater ratio is moderate (0.48): the remonstrance ceremony and written remonstrances performed constitutional legitimacy, but an increasing share of activity was rent-protection. Accessibility collapse is high (0.78): no alternative path for royal edicts existed; the parlements were the mandatory registration venue. Resistance is substantial (0.62): magistrates used strike, exile, public propaganda, and aristocratic alliance to defend the veto.",
+    "directionality_logic": "The Crown is the agenda_setter (issues edicts) but becomes payer when thwarted — its directionality is pulled toward target (d ~0.7) because the constraint extracts fiscal authority from it. Magistrates are beneficiaries (collect veto rents) but also agenda_setters (initiate remonstrances) — their identity_locked exit (offices are venal, identity fused with remonstrance) keeps d low (~0.2). Venal office holders and provincial estates are beneficiaries with identity_locked/constrained exit. The royal treasury and tax farmers are payers with constrained/mobile exit. The third estate is excluded and trapped. Constitutional theorists are analytical observers.",
+    "perspectival_gap": "The engine will compute divergent seat types: from the Crown's seat, high ε + high suppression + constrained exit = snare; from the magistrate seat, low ε (they collect) + identity_locked exit = rope (they see genuine coordination); from the third estate seat, excluded + trapped = snare victim. The crown_reading's claimed_type (snare) reflects the Crown's structural experience; the magistrate_reading would claim rope or mountain. This divergence is the measurement.",
+    "mandatrophy_analysis": "The founding problem (procedural legality review) is dead — the veto evolved into a substantive policy block protecting particularist fiscal privileges. The arrangement persists because magistrates' venal property rights and noble/clerical tax exemptions depend on it. No beneficiary has incentive to reform; the Crown could fix it only at prohibitive political cost (Maupeou showed the cost). This is classic mandatrophy: the constraint's mandate (review for legality) has atrophied, but the structure persists as extraction.",
+    "kernel_context": "This constraint is the crown_reading of the contested kernel 'remonstrance_authority'. The sibling reading is magistrate_reading (remonstrance as fundamental constitutional safeguard). The crown_reading assigns high ε to royal fiscal authority thwarted, places Crown in victim set, and treats magistrate constitutional legitimacy as suppressed obstruction. The magistrate_reading inverts this: low ε (genuine coordination), Crown as agenda_setter/extractor, magistrates as victims of arbitrary power."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the remonstrance authority a single constraint with observer-dependent classification, or two distinct constraints (crown_reading and magistrate_reading) with different ε referents?",
+      "resolution_mechanism": "Apply ε-invariance test: if measuring the remonstrance from Crown's structural position yields ε=0.82 and from magistrate's position yields ε=0.15, these are two constraints, not one. The kernel decomposition into separate constraint stories with linked network.affects_constraints is the correct modeling choice.",
+      "impact": "If single constraint, classification is unstable and observer-relative. If two constraints, each gets stable ε and the engine can model their structural conflict via network edges. The current JSON models crown_reading only; magistrate_reading must be a separate file.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the remonstrance kernel decomposes into multiple ε-invariant constraints."
+    },
+    {
+      "id": "remonstrance_natural_law_vs_constructed_privilege",
+      "question": "Is the remonstrance right a genuine fundamental law of the French monarchy (mountain) or a constructed privilege that evolved into extraction (snare)?",
+      "resolution_mechanism": "Historical analysis of the remonstrance's origin: if it was a royal concession that became claimed as immemorial right, it is constructed. The Maupeou abolition (1771) and restoration (1774) demonstrate its contingent, political nature. The 1788 'droit de remontrance' restoration by Brienne confirms it as a political bargaining chip, not natural law.",
+      "impact": "If constructed, the crown_reading's snare classification holds; if fundamental law, the magistrate_reading's mountain/rope classification holds for their seat. The engine's false_summit_mountain signature would trigger if magistrate_reading claimed mountain with declared beneficiaries (magistrates).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the remonstrance's constitutional status is natural/fixed or political/constructed."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of magistrate legitimacy (by Crown) structural (royal coercion: lit de justice, exile, abolition) or internalized (magistrates' own constitutional scruples limiting their veto)?",
+      "resolution_mechanism": "Track magistrate behavior when suppression lifts: after Maupeou abolition (1771), magistrates did not abandon remonstrance claim; after 1774 restoration, they immediately resumed veto. This suggests internalized identity-lock, not merely structural coercion. The suppression metric (0.75) captures structural force; internalized dimension would require higher effective suppression.",
+      "impact": "If internalized, the magistrate seat's effective extraction is lower than structural metrics suggest (they self-limit); if purely structural, the Crown's suppression must be continuously maintained. Affects whether the constraint is snare (requires active enforcement) or piton (atrophied but identity-maintained).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for magistrate identity-locked agents."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "remonstrance_authority__magistrate_reading"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the remonstrance_authority kernel into crown_reading (veto as illegitimate extraction: high ε for Crown, magistrates as beneficiaries) and magistrate_reading (veto as constitutional safeguard: low ε, Crown as extractor). The crown_reading assigns ε=0.82 to royal fiscal authority thwarted; the magistrate_reading would assign ε≈0.15 to arbitrary royal innovation unchecked. They are linked via network.affects_constraints because the Crown's suppression of magistrate legitimacy structurally depends on the magistrate_reading's claim being falsified, and vice versa."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.7
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "magistrate_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "remonstrance_is_usurpation_not_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "royal_fiscal_authority_is_sovereign",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "ancien_regime_royal_sovereignty",
+    "drift_state": {
+      "moment": "pre_revolutionary_crisis",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
