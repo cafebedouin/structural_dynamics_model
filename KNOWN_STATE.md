@@ -45,6 +45,43 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-23 — [correction-key] `corpus_wasserstein_fracture` and `arakelov_threshold` are DRAW-DOMINATED at corpus level (sonnet2 vs sonnet3: 1.9× on the median, apparatus byte-identical); the rest of the `diagnostic` block carries a reproducible model fingerprint
+**Files:** prolog/measurement_layer.pl, prolog/json_report.pl, prolog/maxent_classifier.pl, prolog/network_dynamics.pl, prolog/grothendieck_cohomology.pl, python/audits/leg_diagnostic_table.py, python/audits/five_leg_twin_comparison.py, outputs/pipeline_output.json
+**Tier:** correction-key
+
+- **What was measured.** The top-level `diagnostic` block of all 19 per-leg `classify_corpus` outputs
+  (18 legs at one engine state — no engine `.pl` differs across their stamps — plus canonical `testsets`
+  at `885151b`), flattened to 56 scalars, with between-model spread compared to within-pair |Δ| on the
+  five PURE same-model redraw pairs (classed from `story_provenance`, not directory names; reproduces
+  OQ-347's table). `audits/2026-08-23_leg_diagnostic_table/` (WRITEUP F1–F8, `leg_diagnostic_pairs.tsv`).
+- **Citable cross-model WITH the pair floor beside the claim:** type shares, purity coverage and
+  bands, drift-event rates, `network_n_drifting`/`_severe` shares, coupling categories, monotonicity
+  shares — between/within ratio 8–38; the model fingerprint reproduces on every pure pair (kimi
+  tangled_rope 0.749/0.741, stealth 0.731/0.731/0.745, sonnet 0.689/0.695/0.691, haiku 0.614/0.635/0.617,
+  flash-off 0.42 ×3 vs flash-on 0.48/0.51).
+- **NOT citable cross-model without the pair floor — and any pre-2026-08-22 cross-leg claim on them was
+  k=1 on a statistic whose draw floor is the size of its signal:** `corpus_wasserstein_fracture` (per
+  story: sonnet2 1.124 vs sonnet3 0.602, haiku2 0.194 vs haiku3 0.492, while flash/stealth pairs agree
+  within 10%; whole-distribution shift, not a tail) and `arakelov_threshold` (between 0.25 vs within
+  0.089). **Apparatus ruled out:** re-running `classify_corpus('testsets_sonnet2')` at HEAD reproduced
+  the 2026-08-22 output byte-for-byte on all 1003 stories and the whole block. Mechanism: Wasserstein
+  transport is a pure function of the corpus-fitted `maxent_distribution/3` (`measurement_layer.pl`
+  `wasserstein_edge_transport`) — the *ensemble refit* mechanism from CLAUDE.md, now witnessed at
+  corpus level on two pure pairs. Feeds OQ-155/OQ-175.
+- **Three block members carry no information (do not read them as findings):** `boltzmann_summary` is a
+  deterministic coarsening of `coupling_summary` (`boltzmann_compliant/2` and `categorize_coupling`
+  clause 1 are the same `CouplingScore =< Threshold` test; `compliant == independent`,
+  `non_compliant == strong+weak+nonsensical` on 19/19 legs); `network_stability` is `cascading` on
+  19/19 legs because the rule is an absolute `NumSevere >= 3` against a quantity that scales with n
+  (the size-normalized carrier, `network_n_severe / n`, ranges 0.21–0.62 and is the one to read —
+  OQ-61/OQ-239); `contextuality.by_type` is mountain 1.0 / scaffold 0.0 on every leg and
+  `corpus_fraction` ≈ share(tangled_rope+snare+mountain) ±0.05 on 15/19 (residual = undetermined share).
+- **Correction to OQ-236's premise:** the `coordination_type` under-author is now KIMI (kimi2 353/1005
+  files lack it, purity coverage 0.64; post-backfill flash 0.90). Note landed on OQ-236.
+- **Not measured here:** the report-stage corpus tools (orbits, FPN, giant comp, HAC, covering,
+  fingerprint) — they have no per-leg driver and run only in the full pipeline over `testsets/`; the
+  recon's proposal A is the precondition, gated behind OQ-301.
+
 ## 2026-08-23 — [tripwire] A `blocked_on_condition` edge on a `mitigated` OQ routes NOTHING; and `.claude/agents/`+`skills/` are COMMITTED, not machine-local
 
 **Files:** `.claude/skills/plan-review/SKILL.md`, `.claude/skills/plan-review/RUNS.md`, `python/runs_ledger_check.py`, `scripts/gate.sh`, `CLAUDE.md`, `docs/technical/omega_resolver.md`, `ISSUES.md`

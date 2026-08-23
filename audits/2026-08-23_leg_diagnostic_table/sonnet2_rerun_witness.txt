@@ -1,0 +1,22 @@
+# sonnet2 re-classify witness (draw vs apparatus discriminator)
+
+original: outputs/pipeline_output.sonnet2.json (commit 791dd8b, run 2026-08-22T14:09:39Z)
+rerun:    outputs/pipeline_output.sonnet2.rerun_2026-08-23.json (commit 0d6d9a1, run 2026-08-23T16:00:38Z, classify_corpus('testsets_sonnet2', ..., 'claude-sonnet-5'))
+
+shared ids: 1003
+wasserstein_total_fracture byte-identical per story: 1003/1003
+maxent_top_type identical: 1003/1003
+signature identical: 1003/1003
+sheaf_status identical: 1003/1003
+h1_band identical: 1003/1003
+purity_band identical: 1003/1003
+maxent_entropy identical: 1003/1003
+arakelov_height identical: 1003/1003
+purity_score identical: 1003/1003
+diagnostic block identical: True
+
+# the pair itself (sonnet2 vs sonnet3, both prompt e03e2210, same sampling string)
+shared ids: 1002
+W1 median sonnet2 1.124 vs sonnet3 0.602
+top-5 share of corpus total: sonnet2 0.018 sonnet3 0.018 (not a tail effect)
+per-story ratio a/b median 1.363

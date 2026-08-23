@@ -10629,6 +10629,17 @@ composed after. What discipline should cross-leg purity comparisons carry (per-l
 strata? matched-authored subsets?), and should twin-comparison surfaces refuse un-stratified
 purity deltas?
 
+**Evidence update (2026-08-23, `audits/2026-08-23_leg_diagnostic_table/` F7).** Across the 19
+per-leg `diagnostic` blocks the exclusion hole has MOVED: post-backfill flash is at the sonnet level
+(`purity_n_no_data` flash 89–98 of ~950, coverage 0.90; sonnet 70–91, 0.91–0.93) and **kimi is the
+under-author** — kimi 276 / kimi2 333 no-data (coverage 0.70 / 0.64), with `coordination_type(`
+present in 652/1005 kimi2 files vs 866/958 flash3, 997/1005 stealth3, 992/993 haiku3. Both kimi legs
+agree (k=2: a disposition, not a draw), so the stratification discipline this OQ asks for now has a
+35%-exclusion leg to be tested against, and the June-flash figure above is the pre-backfill stratum
+only (read flash by `story_provenance` source, KNOWN_STATE 2026-08-22). Purity band SHARES (over
+scored) reproduce on every pure pair (between/within ratio 9–10), so the comparability question is
+about the composition of the scored set, exactly as minted — not about band noise.
+
 **What resolution changes:** whether any cross-leg purity table may headline a raw mean; the
 twin-comparison harness's refusal conditions.
 

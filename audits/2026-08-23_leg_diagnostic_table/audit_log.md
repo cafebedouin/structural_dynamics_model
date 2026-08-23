@@ -1,0 +1,8 @@
+# audit_log — 2026-08-23 leg diagnostic table
+
+- OPEN HEAD: 3459cc53faf7b15eb0a267cb8da45ce9f34de068 (`git rev-parse HEAD`, 2026-08-23)
+- Read-set: outputs/pipeline_output.<leg>.json (18 legs) + outputs/pipeline_output.json (canonical testsets, 885151b); prolog/testsets*/ story_provenance facts (model / prompt_commit / sampling per leg).
+- Instrument: python/audits/leg_diagnostic_table.py (no Prolog; no writes outside outputs/ and this dir).
+- Instrument run: `.venv/bin/python python/audits/leg_diagnostic_table.py` → legs=19 stats=56 numeric=52 same-model pairs=21 (pure=5).
+- Discriminator run: `run_pipeline.classify_corpus('testsets_sonnet2', 'pipeline_output.sonnet2.rerun_2026-08-23.json', 'claude-sonnet-5')` — DONE at 2026-08-23T16:00:38Z, manifest n=1003, code_commit 0d6d9a1 (log: sonnet2_rerun.log). No other swipl/pipeline process was running at launch (`pgrep -af swipl` empty — not a witness, OQ-338; the byte-identical result is).
+- CLOSE HEAD: 0d6d9a11c6829017c92b5decb3b210809cf35474 — DIFFERS from OPEN (3459cc53). Intervening: f49229e54 (census re-pinned: 19 legs, four Flash legs added), 65663807e + 0d6d9a11c (schema_shape suppression_profile notes). `git diff --name-only 3459cc5 0d6d9a1` minus testsets = prolog/schema_shape.txt, python/corpus_census_baseline.json — neither in this audit's read-set (outputs/*.json, prolog/testsets*/ provenance facts, json_report.pl / measurement_layer.pl / boltzmann_compliance.pl / logical_fingerprint.pl / network_dynamics.pl / grothendieck_cohomology.pl read-only). Blast radius on the read-set: empty. OQ-297 branch: caught-in-time, nothing to act on.
