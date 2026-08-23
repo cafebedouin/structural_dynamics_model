@@ -11852,14 +11852,14 @@ consumer requiring the role gauge).
 **Ω-type:** Ω_P at the read (whether the ritual's cost is worth the catch rate is the
 operator's value ruling); the rate itself is Ω_E (mechanically computed).
 
-**Status:** open — **RIPE as of 2026-08-23 (the watcher fired; see the consolidation read below). Earlier: the Ω_P value ruling was DECLARED NOT RIPE (operator, 2026-08-19,
+**Status:** open — **RULED 2026-08-23 (standing instrument; see the ruling below): principle stated, counts referred to, no verdict or floor published.** History: RIPE as of 2026-08-23 (the watcher fired; see the consolidation read). Earlier: the Ω_P value ruling was DECLARED NOT RIPE (operator, 2026-08-19,
 second-instance reviewed), and unlike OQ-317's calendar bound this one waits on a STRUCTURAL
 change that may never come**: it ripens only when `Fired: no` becomes reachable. The
 investigations ledger (below) is adopted to make it reachable. **Routed out of BLOCKED-ON-YOU
 2026-08-20** via the `blocked_on_condition` dep below — the menu was re-asking every session for
 a ruling declared not ripe, inviting exactly the premature read the standing prohibition forbids.
 **Priority:** 5
-**Deps:** blocked_on_human value ruling on the first catch-rate reading — the blocked_on_condition watcher (apparatus_instrument.py oq276_wake) FIRED by 2026-08-23 with 11 ledger Fired: no; the reading is below under "Consolidation read (2026-08-23)"
+**Deps:** blocked_on_condition next monthly consolidation pass (2026-09-10) re-reads the live counts — watcher: the apparatus_instrument.py `apparatus` gate row (both channels printed every run); ruled 2026-08-23 that no literal rate, floor, or verdict is published in prose — the principle is stated and readers are referred to the current counts
 
 ### Ruling (2026-08-19) — the ledger, its criterion, and the pre-committed reading
 
@@ -12058,6 +12058,33 @@ is RIPE` and closed with `catch-rate 31L/2l/0n of 33 bits (33 of 82 writeups car
    writeup bit is retired in favour of the ledger bit, or both kept with the disagreement reported.
    Routed to BLOCKED-ON-YOU via the Deps line. Not self-resolved here — the reading is the
    instrument's; the verdict on the ritual's cost is the seat this OQ exists to keep declared.
+
+### Ruling (operator, 2026-08-23) — refer to the current counts; state the principle; publish no rate
+
+Operator, same day, on the three questions above: *"it should refer readers to the current counts
+and just indicate it's a thing. … identify the principle and say the incidences will continue to
+increase, which should dictate what stays in versus what is pointed to."* Applied:
+
+- **(a) No verdict is published.** Neither "the ritual pays" nor "the dir channel is biased" is
+  written as a finding. What is written is the PRINCIPLE — *a bit attached at write-up time is a
+  yield over investigations that got written; a bit attached at registration time reaches the
+  declines; the two channels measure different populations and are reported side by side, the
+  gap between them being the information* — and a pointer to the live counts
+  (`python3 python/apparatus_instrument.py --check`, the `apparatus` gate row). The 2026-08-23
+  figures above are a dated reading, never a citable rate.
+- **(b) No floor or window is pinned.** The incidences will keep increasing; a floor pinned
+  against today's lattice would be the OQ-264 quantization mistake in a different costume, and a
+  published rate would be stale the next run. The consolidation pass re-reads the live counts;
+  that re-read is the whole of the mechanism.
+- **(c) Both bits stay.** Retiring the writeup bit would delete the comparison that makes the
+  ledger count legible.
+- **Generalised (and this is the part that governs documents, not the instrument):** *what stays
+  in an always-loaded surface is the principle; what is pointed to is the incidence* — because
+  incidences accumulate and any literal count in prose reads as current while being stale. Same
+  rule as `testsets/` carrying no count (KNOWN_STATE 2026-08-18), now stated as the criterion for
+  the CLAUDE.md/`build_discipline.md` split (CLAUDE.md → Memory Consolidation Review, 2026-08-23).
+
+The OQ stays open as a standing instrument, routed by `blocked_on_condition` to the monthly re-read.
 
 ---
 

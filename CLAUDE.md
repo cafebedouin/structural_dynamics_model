@@ -271,8 +271,9 @@ do not fold `trajectory` back into the parallel `tasks` list.
 - **Testing an ENGINE change: exercise it across ALL the corpora, not just `testsets/`.** The live
   `testsets/` is a deliberately sparse singleton (~small N) and will NOT exercise every branch or
   surface corpus-sensitive behavior — an engine change "witnessed" only there is under-witnessed.
-  Run it against all five live legs (`testsets/`, `testsets_haiku/`, `testsets_flash/`,
-  `testsets_kimi/`, `testsets_sonnet/`) AND the
+  Run it against the live legs — enumerate the CURRENT roster from
+  `python/shared/corpus_legs.py` `LIVE_LEGS` (never a remembered list; see *The live legs* in
+  Critical Distinctions) — AND the
   breadth archive `archives/datasets/kernel_v1/` (~1,106 stories) by overlaying `corpus_path` (use
   `asserta`, not plain `assertz` — see Corpus Loading). Corpus *content* changes are testset-local;
   *engine* changes are not. (Witnessed why it matters: OQ-178/OQ-51 `cs_kernel_divergence` behavior
@@ -607,8 +608,9 @@ same-turn paste as unverified regardless of the recap. Detail: BD → *Pattern 8
 
 **A denominator that silently admits non-members gets WORSE while reading STABLE (OQ-306, resolved
 2026-08-21).** Membership is by FILENAME, so `manifest.n_constraints` counted the
-`*_contradictions.pl` meta-files, and that stratum GREW (9 → 27) with nothing going red — a
-growing contaminant rewrites a time series rather than biasing it constantly. **Use the built
+`*_contradictions.pl` meta-files, and that stratum GREW (tripled over July–August 2026; live
+count: gate row `corpus census`) with nothing going red — a growing contaminant rewrites a time
+series rather than biasing it constantly. **Use the built
 membership predicates — `corpus_loader:corpus_story/1`, `corpus_member_kind/2`, denominator
 `manifest.n_stories` (`n_constraints` is a MEMBER count kept only as a same-run key); gate row
 `corpus census` guards the share over time. Count it live, never from git** (the stratum moves with
@@ -717,15 +719,26 @@ in v5, 133/1151 in original_json; 0 in v6/kernel_v1. Re-key by the in-file subje
 filename==subject) before trusting a legacy-corpus DR sweep. Provenance: OQ-20 audit, KNOWN_STATE
 2026-06-22.**
 
-**FIVE LIVE LEGS, and the beta posture (operator ruling, 2026-06-20; legs extended 2026-07).**
+**THE LIVE LEGS — a growing roster; enumerate it, never recall it (operator, 2026-08-23).**
 `prolog/testsets/` is the LIVE leg — a small, **deliberately singleton topical working set** the
-operator exercises the engine on while building it; `testsets_haiku/` + `testsets_flash/` are the
-reconciled multi-reading **twins** (the comparison baseline); `testsets_kimi/` + `testsets_sonnet/`
-are two later model-named legs. (Further legs have been registered since — `python/shared/corpus_legs.py`
-`LIVE_LEGS` and the `corpus census` baseline are authoritative, not this paragraph.)
+operator exercises the engine on while building it. Around it sits a roster of finished,
+model-named corpora that has grown from two (the `testsets_haiku/` + `testsets_flash/` **twins**,
+the original comparison baseline) through the kimi/sonnet legs to, as of late August 2026, a
+family of same-model redraw pairs, thinking-on/off regime pairs, and OpenRouter-model legs — and
+it is expected to keep moving (legs still filling, legs being added). **The roster is
+`python/shared/corpus_legs.py` `LIVE_LEGS`** (each entry annotated with model, regime, pair
+partner and fill state; the `corpus census` and `module bounds` gate rows print it every run).
+**When planning ANY cross-leg work: enumerate the current roster first, then decide which legs
+are relevant to the question** — a pure same-model redraw pair answers a draw-noise question, a
+regime pair answers a thinking-on/off question, a cross-model set answers a model-fingerprint
+question, and a leg still filling is not a finished corpus. The per-leg diagnostic contrast that
+shows which statistics carry a model fingerprint vs draw noise:
+`audits/2026-08-23_leg_diagnostic_table/WRITEUP.md`. No count of legs is published here by
+design — the one this paragraph would have carried has already changed twice this month.
 
 **Static-leg file counts (disk-verified 2026-08-18): `testsets_haiku` 960, `testsets_flash` 960,
-`testsets_kimi` 1005, `testsets_sonnet` 1001.** Finished corpora; a number here is usable.
+`testsets_kimi` 1005, `testsets_sonnet` 1001.** Finished corpora; a number here is usable. The
+later legs' sizes and fill state are annotated on their `LIVE_LEGS` entries, not repeated here.
 **`prolog/testsets/` CARRIES NO COUNT, EVER (operator ruling, 2026-08-18) — count it, never recall
 it:** topic runs land stories mid-session, so any literal is stale the moment written while still
 reading as verified (this paragraph once published 259; it was 279 six days later). Get it at the
@@ -963,11 +976,15 @@ by `python3 python/apparatus_instrument.py --check` in the gate.
 `build_discipline.md` — sound ideas, unedited density): this file 15,174 → ~10,900 words, with the
 Build Discipline section cut to tripwire + pointer and every demoted detail verified present in
 `build_discipline.md`/KNOWN_STATE before removal; a glossary block added at the top of
-`build_discipline.md`. **Standing rule from it: the always-loaded file carries the tripwire and
-the pointer, never the exposition — a promotion that adds more than ~6 lines should demote the
-body to the case-law file in the same change.** That pass also discharged residue (b) (header
-restored) and (c) (first catch-rate reading recorded in OQ-276, now BLOCKED-ON-YOU for the value
-ruling). **Declared residue for the 2026-09-10 pass:** (a) 40 borderline ISSUES entries left
+`build_discipline.md`. **The criterion for what stays in versus what is pointed to (operator
+ruling, 2026-08-23): an always-loaded surface carries the PRINCIPLE; INCIDENCES — counts, rates,
+dated instances, the growing ledger of cases — are pointed to, never published as literals here,
+because they keep accumulating and a number in prose reads as current while being stale** (the
+`testsets/`-carries-no-count rule, generalised). A promotion that brings its incidences with it
+demotes them to the case-law file or the instrument in the same change. That pass also discharged
+residue (b) (header restored) and (c) (first catch-rate reading taken; OQ-276 RULED the same day
+— principle stated, readers referred to the live `apparatus` gate row, no rate or floor published;
+it stays a standing instrument re-read each monthly pass). **Declared residue for the 2026-09-10 pass:** (a) 40 borderline ISSUES entries left
 uncompressed (30 pre-compressed pointer-blocks; 7 fresh Aug-2026 closes — OQ-151/258/259/260/
 261/262/264 — whose bodies are still-operative rulings); (d) the memory files themselves were
 NOT re-consolidated on 2026-08-23 (54 files, channel 33/33 — at cap); (e) KNOWN_STATE roll-off

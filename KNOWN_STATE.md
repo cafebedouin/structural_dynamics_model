@@ -63,8 +63,20 @@ with a positive control of three deliberately demoted strings (`443/519`, `orpha
 full gate GREEN after (2026-08-23). `build_discipline.md` gained a *How to read this file* block
 (glossary of OQ / witness / seat / Ω / altitude / surface / load-bearing / graduation step).
 
-Standing rule recorded in CLAUDE.md → Memory Consolidation Review: a promotion adding more than
-~6 lines demotes the body to the case-law file in the same change.
+Standing rule recorded in CLAUDE.md → Memory Consolidation Review, as RULED by the operator the
+same day (superseding the line-count rule first drafted): **an always-loaded surface carries the
+principle; incidences (counts, rates, dated cases) are pointed to, never published as literals,
+because they keep accumulating** — the `testsets/`-carries-no-count rule generalised to the
+CLAUDE.md / build_discipline.md split. The same ruling closed the OQ-276 questions: no verdict,
+no floor, both bits kept, readers referred to the live `apparatus` gate row (OQ-276 → *Ruling
+2026-08-23*); the OQ is back on the monthly `blocked_on_condition` watcher, not BLOCKED-ON-YOU.
+
+Same ruling, applied to the legs (operator, same turn): CLAUDE.md's "FIVE LIVE LEGS" paragraph
+is now *The live legs — a growing roster; enumerate it, never recall it*: the roster is
+`python/shared/corpus_legs.py` `LIVE_LEGS` (19 at the 2026-08-23 gate, expected to change as
+legs fill and are added — no count published in CLAUDE.md), and the planning rule is *enumerate
+the current roster, then pick the legs relevant to the question* (redraw pair / regime pair /
+cross-model set / still-filling). The engine-change testing bullet no longer names five legs.
 
 OQ-276: `apparatus_instrument.py --check` printed the WAKE line — 0 writeup / **11 ledger**
 `Fired: no` — so the ruling declared NOT RIPE on 2026-08-19 is ripe; the reading (channels

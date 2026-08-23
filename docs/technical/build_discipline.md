@@ -31,7 +31,11 @@ section below is one rule with its mechanism, the dated instance(s) that produce
 diagnostic. Read a section when the one-line tripwire in `CLAUDE.md` names it, or when you are
 about to argue a rule does not apply to your case. (Outside reader's verdict, 2026-08-23: the
 ideas are sound, the file is a postmortem system that reads as a checklist only if you already
-hold the project's vocabulary — hence this block, added the same day.)
+hold the project's vocabulary — hence this block, added the same day.) **The split criterion
+(operator, 2026-08-23): `CLAUDE.md` carries the principle; this file and the instruments carry
+the incidences — counts, rates, dated cases — because incidences keep accumulating and a literal
+in an always-loaded surface reads as current while being stale.** A count you need is taken from
+the instrument at the moment of use, never quoted from either document.
 
 Project vocabulary used throughout without re-definition:
 
