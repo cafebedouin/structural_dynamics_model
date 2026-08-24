@@ -933,6 +933,56 @@ distinction both lower patterns protect.
 
 ---
 
+### PARTIAL coverage is worse than ZERO coverage — the graded case of Pattern 6 (2026-08-24)
+
+Every instance above is BINARY: the aggregate either measured something or did not look, and the
+two collapse to one output. The graded case is worse and is not covered by the binary treatment.
+
+**Witnessed on the DP-001/OQ-25 ε-coherence seal** (OQ-365, found inside OQ-353's precondition C1).
+The chimera clause enumerates the readings it checks through `cs_story_uid`, so **the seal's
+coverage is proportional to that field's authorship** — and it reports nothing about its own
+coverage. Measured over all 37 on-disk corpora:
+
+- **14 corpora at 0% — the guard fails, zero readings checked**, load completes byte-identically
+  to a corpus that passed;
+- **9 corpora PARTIAL — the guard PASSES and checks a subset**: 0.9%, 15.0%, **64.2% (`testsets`,
+  the LIVE leg, on every pipeline run)**, 78.6%, 81.9%, then four legs at 99%+;
+- 7,829 readings never checked in total.
+
+**Why the partial stratum is the worse half, and the whole point of naming this separately.** A
+0% stratum is at least *capable* of being noticed: a check that never fires anywhere has a chance
+of reading as suspicious uniformity, and it is what a census of the guarded field will surface
+immediately. **A 64%-covered check is indistinguishable at the read site from a 100%-covered one —
+same silence, same exit code, same absence of any diagnostic — and no census of the guard's own
+output can separate them, because the output is identical.** The zero case is a hole you can see;
+the partial case is a hole that presents as coverage. And it degrades in the bad direction on its
+own: as a corpus grows with the guarded field unauthored, coverage falls while every read stays
+green — the same time-series-rewriting shape as *A denominator that silently admits non-members*,
+but on the numerator of a check rather than the denominator of a count.
+
+**The rule, which is Pattern 6's rule with the binary assumption removed.** An instrument's
+coverage is not a bit, so *"the aggregate carries its coverage"* means carrying the FRACTION, not
+the fact that it ran. Concretely: a check whose subject set is derived from an authored field must
+report `n_checked / n_total`, and a reviewer must read that ratio before reading the verdict. A
+verdict without its coverage ratio is a claim about the instrument's *reach*, not about its
+subject.
+
+**Diagnostic, and it is cheap.** For any guard keyed on an authored field, count that field's
+presence across every corpus the guard runs over — NOT the guard's output, which is exactly the
+signal that cannot discriminate. If the field is sparse anywhere, the guard is partial there and
+has never said so. (`audits/2026-08-24_oq353_statistic_floors/oq365_seal_coverage_census.py` is a
+runnable template; re-derive rather than cite its numbers.)
+
+**The trap on the REPAIR side, recorded because it is the same defect one level up.** The obvious
+fix — re-key the guard onto a field every corpus carries — is only a fix if the replacement field
+is itself total across the sparse stratum. Re-keying onto a second sparse field **trades one
+partial seal for a differently-partial one while looking repaired**, and the read site is
+unchanged. So a re-key owes a totality measurement of the NEW key over the OLD key's sparse
+stratum, taken before the re-key lands; and self-reported coverage (the rule above) should land
+FIRST, independently, so the re-key's effect is measurable rather than inferred.
+
+---
+
 ### The instrument that reports success cannot be the instrument that verifies coverage (2026-08-19)
 
 A Pattern-6 shape worth naming on its own because it lives inside *tooling written to do the
@@ -1430,11 +1480,34 @@ asserted two-sided) took minutes and immediately found two live defects in the s
    value therefore depended on *which shell ran it*. Pin the binary (`/usr/bin/grep`) in any
    script that computes a reported count.
 
+**A second way to be vacuous: the check is well-formed but AIMED AT THE WRONG OBJECT
+(2026-08-24).** The partition-sum above is vacuous *by construction* — no value could fail it.
+This variant is vacuous *by reference*: the question it asks is genuinely discriminating, and it
+is pointed at something that isn't there.
+
+Witnessed on OQ-353's plan (finding F5). A verification step required a strip witness showing
+"`:- discontiguous` / `:- dynamic` declarations are intact" after removing a predicate's fact
+lines — a real integrity question, since destroying a declaration block is exactly the way a
+line-based strip goes wrong. **On every leg the count of both directives is 0.** The predicate's
+declaration actually sits in a `:- multifile` block — including on the very leg the finding cited
+as its witness. So the check as written passes on any input whatsoever, including a strip that
+demolished every declaration in the corpus, while *reading as coverage of precisely the risk it
+names*. The discriminating check is the one on `:- multifile` (996 == 996 before and after), and
+`multifile` is the more consequential of the three, since it governs cross-file predicate
+assembly.
+
+**This shape is harder to catch than the tautological one**, because the prose is correct about
+the mechanism and wrong only about the referent — a reviewer checking whether the *concern* is
+legitimate will confirm it and move on. The catch is mechanical: **enumerate the named object in
+the actual subject before accepting the check.** A check naming a construct that occurs 0 times in
+what it checks is a check that cannot fail, whatever its prose says.
+
 **Rules.**
 - Before reporting a check as a witness, ask **"what value of the underlying quantity would
   make this line fail?"** If no such value exists — sums that balance by construction, a
   partition from a set-difference, a total recomputed from its own parts, a round-trip through
-  the code that produced it — it is a **consistency** check. Report it as arithmetic, never as
+  the code that produced it, **or a named construct that occurs zero times in the subject** — it
+  is a **consistency** check. Report it as arithmetic, never as
   verification, and build the discriminating control separately.
 - **Never positionally parse another tool's output for a reported figure** without pinning the
   shape that makes the index correct. (This is the same mechanism a peer taxonomy independently
@@ -3391,8 +3464,20 @@ promotion, with the reason and the destination it went to instead. Append; do no
 | 2026-08-23 | every `classify_corpus`/`report_corpus` in one witness sequence must run at ONE frozen HEAD | `fails-loud` — it raises `MISSING_CLASSIFY_OUTPUT` with the two commits named | KNOWN_STATE 2026-08-23 tripwire 3 |
 | 2026-08-23 | `_classify_timeout_for` under-predicts above n≈1000 and its `ceiling // 2` soft cap turns one slow run into a 247-min retry schedule | `pending-ruling` + `incidence` — the escape (`soft_timeout=0`) is documented; the calibration is OQ-356's second-order item | KNOWN_STATE 2026-08-23 tripwire 4; OQ-356 |
 | 2026-08-23 | 30 of 37 `prolog/tests/` suites are manual-only (OQ-357) | `pending-ruling` — the enforced/manual boundary is the operator's seat; it becomes a principle only once a boundary is DECLARED | OQ-357 |
+| 2026-08-24 | a name chosen to fall OUTSIDE one convention falls outside every consumer of that convention (OQ-353's arm dirs were named off the `testsets*` prefix to dodge `leg_dirs()`'s glob, and thereby dropped out of every repo checker that narrows by that same prefix) | `fails-loud` — `module bounds` went RED on the next gate run, naming the directories and the 6447 sites | `python/module_boundary_check.py` `CORPUS_DIRS`, declared with the reason and the two-way pull recorded at the site |
+| 2026-08-24 | `git diff --name-only` output must be split on LINES, not whitespace — paths may contain spaces (37,553 lines → 37,757 tokens on this repo, fragments incl. a literal `-` reaching `_is_code_path`) | already covered — *A consistency check is not a discrimination check* → "never positionally parse another tool's output without pinning the shape that makes the index correct"; whitespace-splitting a line-oriented stream is that rule's sibling | the live defect at `run_pipeline.py:1092` still needs its own tracking (OQ-352 surface; not fixed in flight) |
+| 2026-08-24 | a checker's ±N-LINE context window is a ±N-ENTRY window in a file where one line is one record (`pattern_citation_check` recovered a false `bound-probe` citation across three unrelated `INVESTIGATIONS.md` entries) | `fails-loud` + `incidence` — the gate went red immediately, and the window size is one checker's parameter rather than a principle | diagnosed in commit `e01951de2`; the C1 ledger line was restated to remove the adjacency |
+| 2026-08-24 | the DP-001/OQ-25 seal is vacuous on 14 corpora and partial on 9 more | **NOT declined — DEFERRED** by operator ruling to the Phase-2 `KNOWN_STATE.md` batch, recorded here so the deferral is not mistaken for a decline | OQ-365; the generalizable half IS promoted, as *PARTIAL coverage is worse than ZERO coverage* under Pattern 6 |
 
-**Promoted in the same pass, for contrast** (so the bar is visible from both sides): *A guard
+**Promoted in the same pass, 2026-08-24** (so the bar is visible from both sides): two
+incidence-free SHARPENINGS of rules already on the always-loaded surface, each because the existing
+wording permits the exact mistake witnessed — Pattern 6's *"aggregates carry their COVERAGE"* gains
+**coverage is a FRACTION, not a bit** (as written it is satisfied by a guard that reaches 15% of
+its subject), and *A check that CANNOT fail* gains **enumerate the named construct in the subject**
+(vacuous by reference, not only by construction). No counts, dates or leg names crossed over; the
+incidences stay here.
+
+**Promoted in an earlier pass, for contrast**: *A guard
 sweep's find-criterion must model REACHABILITY, not the value's absence* — promoted as a
 principle-only bullet with no counts, leg names or dates, because a fresh agent would otherwise
 make two silent mistakes: cite a report surface that never executed, and close a value-class

@@ -18904,16 +18904,38 @@ the ones least covered — `original_v6` is chimera-era **by declaration**, with
 policed. Any prior statement that a corpus "loads clean" is, for these corpora, a statement about
 the loader, not about ε-coherence.
 
-**What resolution would change.** Either (a) the seal reports its own coverage
-(`n_readings_checked` / `n_readings_total`) so a 15%-covered corpus stops being indistinguishable
-from a 100%-covered one, and/or (b) the invariant is re-keyed onto a field every corpus carries
-(the grouping key is `ConstraintAtom` — `cs_story_uid` is used only to ENUMERATE the readings, and
-`constraint_metric(C, extractiveness, E)` is itself enumerable without it), and/or (c) the seal
-fails closed on zero coverage rather than passing silently. **(b) looks cheap and is the one to
-scope first** — the clause's own comment says the grouping key is `ConstraintAtom`, so the
-`cs_story_uid` enumeration may be an incidental implementation choice rather than a required one.
-That is a hypothesis from reading the clause, NOT a verified claim: it must be checked against what
-`cs_story_uid` contributes to the UID-uniqueness sibling check before anything is re-keyed.
+**What resolution would change — three options, and they are NOT three alternatives
+(operator, 2026-08-24).**
+
+- **(a) the seal reports its own coverage** (`n_readings_checked` / `n_readings_total`), so a
+  15%-covered corpus stops being indistinguishable from a 100%-covered one.
+- **(b) the invariant is re-keyed** onto a field every corpus carries. The clause's own comment
+  says the grouping key is `ConstraintAtom`, so the `cs_story_uid` enumeration may be an
+  incidental implementation choice — `constraint_metric(C, extractiveness, E)` is itself
+  enumerable without it.
+- **(c) the seal fails closed on zero coverage** rather than passing silently.
+
+**SEQUENCING RULING (operator, 2026-08-24). (a) LANDS FIRST, and lands regardless of which of the
+others wins.** (a) and (c) are not alternatives to (b) — **they are the safety net under it.**
+Self-reported coverage is the thing that would have surfaced this years earlier; it is cheap and
+INDEPENDENT of whichever fix is chosen; and landing it first is what makes the re-key's effect
+**measurable at the read site rather than inferred**. Note the asymmetry that decides the order:
+whether the seal *should fail closed* on zero coverage is a real judgment call with a blast radius
+(it turns silent passes into hard refusals across 14 corpora); whether it should *say what it
+checked* is not a judgment call at all.
+
+**(b) BEING CHEAPEST IS THE ARGUMENT FOR CHECKING IT HARDEST, NOT FOR REACHING FIRST
+(operator, 2026-08-24).** Two checks are owed before anyone re-keys, and the second is the one a
+hurried reading skips:
+1. what `cs_story_uid` contributes to the UID-uniqueness sibling clause (the check the chimera
+   clause's own comment distinguishes itself from) — re-keying must not silently disarm it; and
+2. **whether `ConstraintAtom` grouping is itself TOTAL across the corpora in the PARTIAL stratum.**
+   If `ConstraintAtom` has its own sparse-field problem, the re-key **trades a 64%-covered seal for
+   a differently-partial one and the read site still looks identical** — the defect survives the
+   fix while appearing to be repaired. This is the same shape as the defect itself, one level up.
+
+Neither is established. The `ConstraintAtom` totality question in particular is unmeasured as of
+this mint, and it is a precondition of (b), not a follow-up to it.
 
 **Resolution:** the coverage census re-derived at HEAD, a ruling on (a)/(b)/(c), and — whichever
 lands — a positive control showing the seal FIRES on a planted chimera in a corpus that carries no

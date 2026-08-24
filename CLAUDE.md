@@ -583,9 +583,11 @@ Detail: BD → *Pattern 5*.
 **6. Success-shaped absorption (measured-empty vs didn't-look collapse at aggregation/channel
 boundaries).** Each component is sound; the absorption lives where they compose (`[] → 0.0`
 gradient fallback; `grep -v Warning` over load output, OQ-96; findall over partial levels read as
-a full-system verdict). **Aggregates carry their COVERAGE to the read site; channels carry
-ALLOWLISTS (`python/load_warning_gate.py` is the template); defaults-on-empty return
-`unknown`/OPEN. Sufficiency is a property of the QUESTION — fail-closed per consumer-named
+a full-system verdict). **Aggregates carry their COVERAGE to the read site — and coverage is a
+FRACTION, not a bit: a check keyed on an authored field reaches only where that field is authored,
+and PARTIAL coverage is worse than zero (a hole that presents as coverage, indistinguishable at the
+read site from full). Channels carry ALLOWLISTS (`python/load_warning_gate.py` is the template);
+defaults-on-empty return `unknown`/OPEN. Sufficiency is a property of the QUESTION — fail-closed per consumer-named
 requirement, never by global fraction.** Detail: BD → *Pattern 6*; site census OQ-97.
 
 **7. Bound-probe bypasses clause-order (a BOUND selecting argument skips the cut — census
@@ -630,7 +632,9 @@ Each is one sentence here and a full section in `build_discipline.md` under the 
   instrument owing its own decline. (*Every diagnostic needs a positive control*; *A positive
   control demonstrates DISCRIMINATION*.)
 - **A check that CANNOT fail witnesses nothing** — ask *what value would make this line fail?*;
-  none ⇒ consistency check, discrimination still owed. **Pin `/usr/bin/grep`, not `grep`, in any
+  none ⇒ consistency check, discrimination still owed. A check can be vacuous by REFERENCE as well
+  as by construction, so also **enumerate the named construct in the actual subject**: one
+  occurring 0 times there cannot fail however right its prose is. **Pin `/usr/bin/grep`, not `grep`, in any
   script computing a reported count** (a green "73 + 101 = 174" concealed a positional parse,
   2026-08-10). (*A consistency check is not a discrimination check*.)
 - **A control you ADD is itself a claim** — same-path, two-sided, riskiest-shape,

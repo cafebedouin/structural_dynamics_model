@@ -15,7 +15,7 @@ could not clear: the OQ-356 human ruling, and a cut-point ruling this phase newl
 
 ## What this phase produced
 
-- **`PREREGISTRATION.md`** (md5 `f960db2c4f6fd3be7491b33c063b814f`) — the frozen artifact: 56 declared classify-side
+- **`PREREGISTRATION.md`** (md5 `c057015d25f73dfff07fd38e4a5f4ef1`) — the frozen artifact: 56 declared classify-side
   statistics + 10 report stages + 5 `PENDING OQ-356` rows, four kinds, both exposure columns
   with their coverage, the B1–B5 bit vector replacing OQ-353's non-partitioning five labels, X1's
   counting rule, the arms, and 12 declared residues.

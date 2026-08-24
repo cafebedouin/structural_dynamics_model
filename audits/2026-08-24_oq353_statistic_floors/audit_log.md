@@ -1,6 +1,6 @@
 # OQ-353 Phase 1 — execution log
 
-**PRE-REGISTRATION md5: `f960db2c4f6fd3be7491b33c063b814f`** (`PREREGISTRATION.md`, logged here before any counted row,
+**PRE-REGISTRATION md5: `c057015d25f73dfff07fd38e4a5f4ef1`** (`PREREGISTRATION.md`, logged here before any counted row,
 per the OQ-301 precedent).
 
 Freeze-time state: HEAD `e01951de21d96a4ac5d777bd64a9adea8704b2a5`, `git status --short` empty,

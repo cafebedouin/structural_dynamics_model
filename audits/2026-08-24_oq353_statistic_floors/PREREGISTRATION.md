@@ -441,7 +441,19 @@ magnitude, because only one of them is bounded:
   strip."** The positive direction is unaffected: a large delta means the guard is load-bearing.
 
 So the WRITEUP reports B5's bit at full strength and **refuses to convert a small delta into an
-importance verdict**, saying so at the verdict's altitude. Removing this bound needs a corpus with
+importance verdict**, saying so at the verdict's altitude.
+
+> **B5 SURVIVES THE §8.1a ABSTENTION, and the Phase-2 WRITEUP states this plainly rather than
+> leaving it to be noticed.** The cut-point ruling makes B1 and B2 report numbers instead of
+> verdicts, and B3's exposed class already reports `{false, unreadable}` rather than `true`. **B5
+> is the exception, and the reason is structural: it is read against a MEASURED null floor — the
+> production leg run twice, unmodified — not against a chosen threshold, so there is nothing in it
+> for a cut-point ruling to withhold.** The consequence for the program: **the edge-semantics
+> factor is the one bit OQ-353 can still answer AS A BIT.** That is a smaller program than the OQ
+> set out with and a coherent one — the question "does the kernel guard move this statistic at
+> all" remains fully answerable, in both directions, while the questions that needed a threshold
+> return quantities instead. State it that way at the verdict's altitude; do not present the
+> reduced scope as a failure. Removing this bound needs a corpus with
 materially higher sibling density — a generation spend, not a re-read.
 
 ---
