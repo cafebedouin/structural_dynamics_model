@@ -1,0 +1,18 @@
+v6 population: 3380 files
+
+=== ARM (c) MANIFESTS ===
+  oq353_arm_c1     n=1000   sha256=56657d83bd619b3b…  dir=prolog/oq353_arm_c1
+  oq353_arm_c2     n=1000   sha256=79f3b60b760f0df4…  dir=prolog/oq353_arm_c2
+  oq353_arm_c3     n=1000   sha256=04d5925b76d2712a…  dir=prolog/oq353_arm_c3
+  discarded (unused of 3380): 380
+
+=== DISJOINTNESS (pairwise intersection MUST be 0) ===
+  |oq353_arm_c1 ∩ oq353_arm_c2| = 0
+  |oq353_arm_c1 ∩ oq353_arm_c3| = 0
+  |oq353_arm_c2 ∩ oq353_arm_c3| = 0
+  union size = 3000 (expect 3000); no duplicates: True
+  all members are v6 members: True
+
+=== CONTROL built: prolog/oq353_ctrl_symlinked_dir -> symlink TO the v6 dir ===
+  os.path.realpath -> /home/scott/bin/structural_dynamics_model/prolog/archives/datasets/original_v6
+  files visible through it: 3380 (v6 is 3380)

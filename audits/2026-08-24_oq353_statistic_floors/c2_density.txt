@@ -1,0 +1,19 @@
+=== C2: kernel-sibling density, all five pure pairs (FIRST leg), + giant_comp feasibility ===
+first leg              stories  k_total  k_ge2  st/kern  gc(a)       gc(b)        FEASIBLE
+------------------------------------------------------------------------------------------
+testsets_stealth2         1005      331    331    3.036  rc=2 THROW  rc=2 THROW      False
+testsets_sonnet2          1003      331    331     3.03  rc=2 THROW  rc=2 THROW      False
+testsets_haiku2            996      331    331    3.009  rc=0 OK     rc=0 OK          True
+testsets_flash_think       988      331    328    2.985  rc=2 THROW  rc=2 THROW      False
+testsets_flash2            944      331    326    2.852  rc=2 THROW  rc=2 THROW      False
+
+=== SELECTION ===
+  density rule ALONE (rank k_ge2, tie by stories, tie by name) would pick: testsets_stealth2/testsets_stealth3  [first leg testsets_stealth2]
+  feasibility-filtered set (giant_comp rc=0 on BOTH legs): ['testsets_haiku2/testsets_haiku3']
+  R1 selection: testsets_haiku2/testsets_haiku3  [first leg testsets_haiku2]
+  ties at top of feasible set after tie-break? no
+
+=== DEGENERACY CHECK (R1.1) ===
+  legs where k_ge2 == k_total (metric SATURATED at ceiling): ['testsets_haiku2', 'testsets_sonnet2', 'testsets_stealth2']
+  legs below ceiling: [('testsets_flash2', 326, 331), ('testsets_flash_think', 328, 331)]
+  stories/kernel range across pure-pair first legs: 2.852 .. 3.036

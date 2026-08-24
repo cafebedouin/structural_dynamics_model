@@ -77,3 +77,13 @@ audits/**/raw_PREFIX_*/tm_*.json
 # ("the whole of outputs/ byte-identical"), which is how that post-condition
 # would acquire an --exclude flag and stop meaning anything.
 .report_corpus/
+
+# OQ-353 arm corpora — BUILT, not authored. Reproducible from the committed
+# manifests + builders in audits/2026-08-24_oq353_statistic_floors/ (arm (c)
+# seed is pinned; arm (a') is a deterministic line-strip of testsets_haiku2).
+# ~4,000 files of duplicated corpus; the manifests are the tracked artifact.
+prolog/oq353_arm_c1/
+prolog/oq353_arm_c2/
+prolog/oq353_arm_c3/
+prolog/oq353_arm_astrip_haiku2/
+prolog/oq353_ctrl_symlinked_dir
