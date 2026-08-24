@@ -801,6 +801,33 @@ _REPORT_STAGES = {
 _SCOPE_DEFERRED = ("variance_analysis", "pattern_mining", "index_sufficiency")
 
 
+def _classify_output_name(leg_name: str) -> str:
+    """The canonical per-leg classify-output filename for *leg_name*.
+
+    MIRRORS python/audits/leg_diagnostic_table.py:57-59 EXACTLY, and that is the
+    point: OQ-353's Files: line names that script as the step-0 instrument to
+    "extend, do not fork", so the driver must look for the file the instrument
+    reads. Resolving to a different name would make MISSING_CLASSIFY_OUTPUT fire
+    on every leg forever while looking like a working gate.
+
+      testsets              -> pipeline_output.json      (the canonical output)
+      testsets_<short>      -> pipeline_output.<short>.json
+      anything else         -> pipeline_output.<name>.json   (archive overlays)
+
+    Deliberately ONE name, not a fallback chain. Several archive outputs on disk
+    carry the older `pipeline_output_<leg>.json` (underscore) spelling — e.g.
+    pipeline_output_original_v6.json at 3b169bb, schema 2 — and accepting both
+    spellings would be Build Discipline Pattern 2, two canonical things with no
+    queryable fact saying which is current. That v6 file is explicitly
+    non-comparable anyway, so the fresh classify OQ-353 needs is written under
+    the canonical dotted name and the legacy one is left as an artifact.
+    """
+    if leg_name == "testsets":
+        return "pipeline_output.json"
+    short = leg_name[len("testsets_"):] if leg_name.startswith("testsets_") else leg_name
+    return f"pipeline_output.{short}.json"
+
+
 def _leg_overlay(corpus_path: str) -> str:
     """classify_corpus's overlay prefix, verbatim. Do not switch to bare assertz."""
     return ("retractall(config:param(corpus_path,_)), "
@@ -965,7 +992,7 @@ def report_corpus(corpus_path: str,
     # this refusal later to make v6 pass: OQ-353 needs v6's fresh classify run
     # regardless, since the on-disk pipeline_output_original_v6.json (3b169bb,
     # schema 2) is explicitly non-comparable.
-    classify_out = OUTPUTS_DIR / f"pipeline_output_{leg_name}.json"
+    classify_out = OUTPUTS_DIR / _classify_output_name(leg_name)
     if require_classify_output:
         head = _git_head_sha()
         if not classify_out.exists():

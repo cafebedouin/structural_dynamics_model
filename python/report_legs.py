@@ -57,7 +57,7 @@ sys.path.insert(0, str(REPO_ROOT / "python"))
 import run_pipeline as R
 from run_pipeline import (ReportRefusal, report_corpus, _prompt_hash_token,
                           _TransitGuard, _REPORT_STAGES, _SCOPE_DEFERRED,
-                          _sha256_file)
+                          _sha256_file, _classify_output_name)
 
 # --------------------------------------------------------------------------
 # Fixture construction
@@ -302,6 +302,9 @@ def selftest(verbose: bool = True) -> int:
             lambda: report_corpus(str(noprov), out_dir=outd, stages=[],
                                   require_classify_output=False)))
 
+        # ---------------- classify-output naming, pinned to the consumer --
+        results.extend(_classify_name_fixtures())
+
         # ---------------- OQ-246 discrimination, synthetic ---------------
         results.extend(_oq246_synthetic(tmp))
 
@@ -482,6 +485,46 @@ def _transit_fixtures(outd: Path) -> list:
             os.utime(shared, ns=orig_times)
         else:
             shared.unlink(missing_ok=True)
+    return out
+
+
+def _classify_name_fixtures() -> list:
+    """Pin _classify_output_name to the convention its CONSUMER actually reads.
+
+    MISSING_CLASSIFY_OUTPUT is only a gate if it looks for the file that exists.
+    The first cut of this driver resolved `pipeline_output_testsets_sonnet2.json`
+    while every per-leg output on disk is `pipeline_output.sonnet2.json` — a
+    refusal that would have fired on EVERY leg forever while looking like it was
+    working. So the mapping is asserted here against the live artifacts AND
+    against leg_diagnostic_table.py's own resolution lines, which OQ-353's
+    Files: line names as the instrument to extend rather than fork.
+    """
+    out = []
+    for leg, want in [("testsets", "pipeline_output.json"),
+                      ("testsets_sonnet2", "pipeline_output.sonnet2.json"),
+                      ("testsets_flash_think2", "pipeline_output.flash_think2.json"),
+                      ("original_v6", "pipeline_output.original_v6.json")]:
+        out.append(_expect_value(f"classify name: {leg}",
+                                 _classify_output_name(leg), want))
+
+    # The consumer's own source must still spell it this way. A literal check,
+    # so a rename there turns this row red instead of silently forking.
+    ldt = (REPO_ROOT / "python" / "audits" / "leg_diagnostic_table.py")
+    src = ldt.read_text(encoding="utf-8") if ldt.exists() else ""
+    out.append(_expect_value(
+        "consumer still uses pipeline_output.<short>.json",
+        'f"pipeline_output.{leg[len(\'testsets_\'):]}.json"' in src, True))
+
+    # Two-sided against DISK: at least one leg name must resolve to a file that
+    # exists, or the whole mapping could be wrong in the same direction and every
+    # assertion above would still pass.
+    existing = sorted(pp.name for pp in (REPO_ROOT / "outputs").glob("pipeline_output.*.json"))
+    hits = [n for n in existing if n == _classify_output_name(
+        "testsets_" + n[len("pipeline_output."):-len(".json")])]
+    out.append((bool(hits),
+                f"[{'OK  ' if hits else 'FAIL'}] "
+                f"{'classify name resolves to real on-disk files':44s} "
+                f"{len(hits)} of {len(existing)} match (e.g. {hits[:3]})"))
     return out
 
 
