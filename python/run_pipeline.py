@@ -835,6 +835,29 @@ def _regenerate_orbits(progress):
 # ---------------------------------------------------------------------------
 # Phase 2: PROLOG ANALYSES (parallel)
 # ---------------------------------------------------------------------------
+#
+# STAGE PARAMETERIZATION (OQ-352, 2026-08-23). Each report stage below takes
+# `overlay` / `out_dir` (and where it is needed, `corpus_dir` and timeouts) so
+# report_corpus can run it against a NON-default leg. Every parameter defaults
+# to the literal the stage used before, so the default pipeline path is INERT BY
+# CONSTRUCTION, not by test:
+#
+#   overlay=""      -> `"" + "run_x"` is the same goal STRING as before;
+#   out_dir=OUTPUTS_DIR / corpus_dir=TESTSETS_DIR -> the same paths as before;
+#   timeouts        -> today's literals.
+#
+# `_phase_prolog`'s bare callables therefore keep working unchanged.
+#
+# DELIBERATELY NOT A STAGE-TABLE REFACTOR: a second stage implementation inside
+# report_corpus would be Build Discipline Pattern 2 (the silent fork), and a
+# table rewrite has a larger blast radius than the inertness argument can carry.
+#
+# The overlay string is `classify_corpus`'s verbatim (retractall-then-assertz):
+# ONE deterministic clause, so corpus_loader.pl's non-deterministic param read
+# cannot reach a shadowed default on backtrack. Do not switch it to a bare
+# assertz — config.pl:489 defines the default first and the loader takes the
+# first solution, so an appended clause is SILENTLY IGNORED (witnessed
+# 2026-06-13: a twin overlay loaded 44 instead of 960 with no error).
 
 def _prolog_validation():
     """Run validation_suite → output.txt."""
@@ -860,83 +883,98 @@ def _prolog_validation():
     (OUTPUTS_DIR / "output.txt").write_text(header + body + footer, encoding="utf-8")
 
 
-def _prolog_fingerprint():
-    """Run fingerprint_report → fingerprint_report.md."""
+def _prolog_fingerprint(overlay: str = "", out_dir: Path = OUTPUTS_DIR,
+                        timeout: int = 300):
+    """Run fingerprint_report → fingerprint_report.md.
+
+    OVERLAY BRANCH, and it is not cosmetic. fingerprint_report.pl runs via
+    `:- initialization(run_fingerprint_report)` (line 23), so the report fires
+    while the file LOADS — a goal-prefix overlay would have to execute before
+    `[fingerprint_report]`, and at that point `config` is not loaded, so
+    `retractall(config:param(...))` raises. The overlay path therefore loads
+    config.pl first with -l. The default path keeps the EXACT argv it had
+    before (no -l), so inertness here is a construction, not a test result.
+    """
+    if overlay:
+        cmd = ["swipl", "-l", "config.pl", "-g",
+               overlay + "[fingerprint_report], halt."]
+    else:
+        cmd = ["swipl", "-g", "[fingerprint_report], halt."]
     result = subprocess.run(
-        ["swipl", "-g", "[fingerprint_report], halt."],
+        cmd,
         cwd=str(PROLOG_DIR),
         capture_output=True,
         text=True,
-        timeout=300,
+        timeout=timeout,
     )
-    (OUTPUTS_DIR / "fingerprint_report.md").write_text(result.stdout, encoding="utf-8")
+    (out_dir / "fingerprint_report.md").write_text(result.stdout, encoding="utf-8")
 
 
-def _prolog_orbit():
+def _prolog_orbit(overlay: str = "", out_dir: Path = OUTPUTS_DIR):
     """Run orbit_report → orbit_report.md + orbit_data.json (sidecar)."""
-    invalidate(OUTPUTS_DIR / "orbit_report.md")
+    invalidate(out_dir / "orbit_report.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "dirac_classification.pl", "orbit_report.pl"],
-        "run_orbit_report",
+        overlay + "run_orbit_report",
     )
     raw = result.stdout
     if raw.strip():
         cleaned = strip_preamble(raw, _PREAMBLE_MARKERS["orbit"])
-        (OUTPUTS_DIR / "orbit_report.md").write_text(cleaned, encoding="utf-8")
+        (out_dir / "orbit_report.md").write_text(cleaned, encoding="utf-8")
     else:
-        (OUTPUTS_DIR / "orbit_report.md").write_text("", encoding="utf-8")
+        (out_dir / "orbit_report.md").write_text("", encoding="utf-8")
 
 
-def _prolog_fpn():
+def _prolog_fpn(overlay: str = "", out_dir: Path = OUTPUTS_DIR):
     """Run fpn_report → fpn_report.md."""
-    invalidate(OUTPUTS_DIR / "fpn_report.md")
+    invalidate(out_dir / "fpn_report.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "fpn_report.pl"],
-        "run_fpn_report",
+        overlay + "run_fpn_report",
     )
     raw = result.stdout
     if raw.strip():
         cleaned = strip_preamble(raw, _PREAMBLE_MARKERS["fpn"])
-        (OUTPUTS_DIR / "fpn_report.md").write_text(cleaned, encoding="utf-8")
+        (out_dir / "fpn_report.md").write_text(cleaned, encoding="utf-8")
     else:
-        (OUTPUTS_DIR / "fpn_report.md").write_text("", encoding="utf-8")
+        (out_dir / "fpn_report.md").write_text("", encoding="utf-8")
 
 
-def _prolog_maxent():
+def _prolog_maxent(overlay: str = "", out_dir: Path = OUTPUTS_DIR):
     """Run maxent_report → maxent_report.md."""
-    invalidate(OUTPUTS_DIR / "maxent_report.md")
+    invalidate(out_dir / "maxent_report.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "dirac_classification.pl",
          "maxent_classifier.pl", "maxent_report.pl"],
-        "run_maxent_report",
+        overlay + "run_maxent_report",
     )
     raw = result.stdout
     if raw.strip():
         cleaned = strip_preamble(raw, _PREAMBLE_MARKERS["maxent"])
-        (OUTPUTS_DIR / "maxent_report.md").write_text(cleaned, encoding="utf-8")
+        (out_dir / "maxent_report.md").write_text(cleaned, encoding="utf-8")
     else:
-        (OUTPUTS_DIR / "maxent_report.md").write_text("", encoding="utf-8")
+        (out_dir / "maxent_report.md").write_text("", encoding="utf-8")
 
 
-def _prolog_abductive():
+def _prolog_abductive(overlay: str = "", out_dir: Path = OUTPUTS_DIR):
     """Run abductive_report → abductive_report.md + abductive_data.json (sidecar)."""
-    invalidate(OUTPUTS_DIR / "abductive_report.md")
+    invalidate(out_dir / "abductive_report.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "dirac_classification.pl",
          "maxent_classifier.pl", "abductive_engine.pl", "abductive_report.pl"],
-        "run_abductive_report",
+        overlay + "run_abductive_report",
     )
     raw = result.stdout
     if raw.strip():
         cleaned = strip_preamble(raw, _PREAMBLE_MARKERS["abductive"])
-        (OUTPUTS_DIR / "abductive_report.md").write_text(cleaned, encoding="utf-8")
+        (out_dir / "abductive_report.md").write_text(cleaned, encoding="utf-8")
     else:
-        (OUTPUTS_DIR / "abductive_report.md").write_text("", encoding="utf-8")
+        (out_dir / "abductive_report.md").write_text("", encoding="utf-8")
 
 
-def _prolog_trajectory():
+def _prolog_trajectory(overlay: str = "", out_dir: Path = OUTPUTS_DIR):
     """Run context_profile_report (conditional) → context_profile_report.md."""
-    invalidate(OUTPUTS_DIR / "context_profile_report.md")
+    invalidate(out_dir / "context_profile_report.md")
     # Check if trajectory is enabled
     try:
         check = subprocess.run(
@@ -952,34 +990,37 @@ def _prolog_trajectory():
         enabled = False
 
     if not enabled:
-        (OUTPUTS_DIR / "context_profile_report.md").write_text("", encoding="utf-8")
+        (out_dir / "context_profile_report.md").write_text("", encoding="utf-8")
         return
 
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "dirac_classification.pl",
          "maxent_classifier.pl", "context_profile_mining.pl", "context_profile_report.pl"],
-        "run_trajectory_report",
+        overlay + "run_trajectory_report",
     )
     raw = result.stdout
     if raw.strip():
         cleaned = strip_preamble(raw, _PREAMBLE_MARKERS["trajectory"])
-        (OUTPUTS_DIR / "context_profile_report.md").write_text(cleaned, encoding="utf-8")
+        (out_dir / "context_profile_report.md").write_text(cleaned, encoding="utf-8")
     else:
-        (OUTPUTS_DIR / "context_profile_report.md").write_text("", encoding="utf-8")
+        (out_dir / "context_profile_report.md").write_text("", encoding="utf-8")
 
 
-def _prolog_covering():
+def _prolog_covering(overlay: str = "", out_dir: Path = OUTPUTS_DIR,
+                     timeout: int = 900, soft_timeout: Optional[int] = None):
     """Run covering_analysis → covering_analysis.md."""
-    invalidate(OUTPUTS_DIR / "covering_analysis.md")
+    invalidate(out_dir / "covering_analysis.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl"],
-        "run_covering_analysis",
-        timeout=900,
+        overlay + "run_covering_analysis",
+        timeout=timeout,
+        soft_timeout=soft_timeout,
     )
-    (OUTPUTS_DIR / "covering_analysis.md").write_text(result.stdout, encoding="utf-8")
+    (out_dir / "covering_analysis.md").write_text(result.stdout, encoding="utf-8")
 
 
-def _prolog_giant_comp():
+def _prolog_giant_comp(overlay: str = "", out_dir: Path = OUTPUTS_DIR,
+                       timeout: int = 900, soft_timeout: Optional[int] = 60):
     """Run giant_component_analysis → giant_component_analysis.md (+ raw.json co-product).
 
     OQ-193: pre-delete the raw.json co-product FIRST (before anything that can
@@ -991,13 +1032,23 @@ def _prolog_giant_comp():
     never silently drop its owed section while the step still reads ok (covers a
     future catch-wrapping / soft-fail regression on the Prolog side).
     """
+    # NOTE the raw.json path: giant_component_analysis.pl writes it to a
+    # HARD-CODED ../outputs/ path and cannot be redirected without an engine
+    # change, so under an overlay it is a TRANSIT file handled by
+    # report_corpus._transit_guard, not by out_dir. Pre-deleting the shared
+    # path here is still correct (OQ-193) — the guard has already snapshotted
+    # and pre-deleted it, and restores it afterwards.
     invalidate(OUTPUTS_DIR / "giant_component_analysis.raw.json",
-               OUTPUTS_DIR / "giant_component_analysis.md")
+               out_dir / "giant_component_analysis.md")
     result = run_prolog(
         ["stack.pl", "giant_component_analysis.pl"],
-        "run_giant_component_analysis",
-        timeout=900,       # absolute ceiling: original_v6 (n=3380) needs ~6 min
-        soft_timeout=60,   # live corpus runs in ~1.3s; a hang is caught here, not at 900s
+        overlay + "run_giant_component_analysis",
+        # Defaults are today's literals: absolute ceiling sized for original_v6
+        # (n=3380, ~6 min); soft cap catches a hang early (live runs in ~1.3 s).
+        # report_corpus sizes both FROM A MEASURED PROBE rather than trusting
+        # that "~6 min" comment, which encodes an unwritten superlinear guess.
+        timeout=timeout,
+        soft_timeout=soft_timeout,
     )
     if "## Provenance split (OQ-193)" not in result.stdout:
         raise RuntimeError(
@@ -1005,31 +1056,32 @@ def _prolog_giant_comp():
             "(OQ-193)' section — the owed report surface was dropped (a soft-fail "
             "or catch-wrap regression on the Prolog side); refusing to write a "
             "partial md.")
-    (OUTPUTS_DIR / "giant_component_analysis.md").write_text(result.stdout, encoding="utf-8")
+    (out_dir / "giant_component_analysis.md").write_text(result.stdout, encoding="utf-8")
 
 
-def _prolog_coupling():
+def _prolog_coupling(overlay: str = "", out_dir: Path = OUTPUTS_DIR):
     """Run coupling_protocol → coupling_protocol.md."""
-    invalidate(OUTPUTS_DIR / "coupling_protocol.md")
+    invalidate(out_dir / "coupling_protocol.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "inferred_coupling_protocol.pl"],
-        "run_coupling_protocol",
+        overlay + "run_coupling_protocol",
     )
-    (OUTPUTS_DIR / "coupling_protocol.md").write_text(result.stdout, encoding="utf-8")
+    (out_dir / "coupling_protocol.md").write_text(result.stdout, encoding="utf-8")
 
 
-def _prolog_maxent_diag():
+def _prolog_maxent_diag(overlay: str = "", out_dir: Path = OUTPUTS_DIR):
     """Run maxent_diagnostic → maxent_diagnostic_report.md."""
-    invalidate(OUTPUTS_DIR / "maxent_diagnostic_report.md")
+    invalidate(out_dir / "maxent_diagnostic_report.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "maxent_classifier.pl",
          "dirac_classification.pl", "maxent_diagnostic.pl"],
-        "run_maxent_diagnostic",
+        overlay + "run_maxent_diagnostic",
     )
-    (OUTPUTS_DIR / "maxent_diagnostic_report.md").write_text(result.stdout, encoding="utf-8")
+    (out_dir / "maxent_diagnostic_report.md").write_text(result.stdout, encoding="utf-8")
 
 
-def _prolog_commentary_census():
+def _prolog_commentary_census(overlay: str = "", out_dir: Path = OUTPUTS_DIR,
+                              corpus_dir: Path = TESTSETS_DIR):
     """Run commentary_census → commentary_census.json + commentary_census.md (OQ-134/OQ-121).
 
     Corpus-wide commentary-grade census (q6_crosscheck + extraction_reading).
@@ -1051,11 +1103,11 @@ def _prolog_commentary_census():
     Coverage is computed ONLY for sources flagged CENSUS_COVERAGE decidable;
     undecided sources ship coverage null, never a default 1.0 (Pattern 6).
     """
-    invalidate(OUTPUTS_DIR / "commentary_census.json",
-               OUTPUTS_DIR / "commentary_census.md")
+    invalidate(out_dir / "commentary_census.json",
+               out_dir / "commentary_census.md")
     result = run_prolog(
         ["stack.pl", "commentary_census.pl"],
-        "run_commentary_census",
+        overlay + "run_commentary_census",
     )
     raw = result.stdout
 
@@ -1130,14 +1182,19 @@ def _prolog_commentary_census():
     # Manifest carries corpus identity so live-vs-twin is self-labeling (never a
     # hardcoded 0 for an empty cell — the cell is empty FOR THIS corpus).
     run_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    manifest = build_manifest(run_at)
-    manifest["corpus_hash"] = _compute_corpus_hash(TESTSETS_DIR)
+    # corpus_dir defaults to TESTSETS_DIR, so build_manifest omits `corpus_path`
+    # and the default artifact stays byte-identical; under an overlay BOTH the
+    # manifest and the corpus_hash describe the leg that was actually censused.
+    # Stamping the live leg's hash onto an overlay leg's census would be exactly
+    # the mislabel corpus_hash exists to prevent (OQ-29).
+    manifest = build_manifest(run_at, corpus_dir)
+    manifest["corpus_hash"] = _compute_corpus_hash(corpus_dir)
     out = {"manifest": manifest, "sources": sources}
-    (OUTPUTS_DIR / "commentary_census.json").write_text(
+    (out_dir / "commentary_census.json").write_text(
         json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
 
     cleaned = strip_preamble(raw, _PREAMBLE_MARKERS["commentary_census"])
-    (OUTPUTS_DIR / "commentary_census.md").write_text(
+    (out_dir / "commentary_census.md").write_text(
         cleaned if cleaned.strip() else "# Commentary Census (empty)\n", encoding="utf-8")
 
 
