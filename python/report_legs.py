@@ -57,7 +57,7 @@ sys.path.insert(0, str(REPO_ROOT / "python"))
 import run_pipeline as R
 from run_pipeline import (ReportRefusal, report_corpus, _prompt_hash_token,
                           _TransitGuard, _REPORT_STAGES, _SCOPE_DEFERRED,
-                          _sha256_file, _classify_output_name)
+                          _sha256_file, _classify_output_name, _is_code_path)
 
 # --------------------------------------------------------------------------
 # Fixture construction
@@ -346,6 +346,9 @@ def selftest(verbose: bool = True) -> int:
         # ---------------- classify-output naming, pinned to the consumer --
         results.extend(_classify_name_fixtures())
 
+        # ---------------- code_dirty scoping, two-sided --------------------
+        results.extend(_code_dirty_fixtures())
+
         # ---------------- OQ-246 discrimination, synthetic ---------------
         results.extend(_oq246_synthetic(tmp))
 
@@ -526,6 +529,28 @@ def _transit_fixtures(outd: Path) -> list:
             os.utime(shared, ns=orig_times)
         else:
             shared.unlink(missing_ok=True)
+    return out
+
+
+def _code_dirty_fixtures() -> list:
+    """`code_dirty` must count what can change OUTPUT, and nothing else.
+
+    Two-sided by construction, and the UNKNOWN case is asserted to count: the denylist
+    fails CLOSED, so a path nobody anticipated must read as dirty rather than clean. An
+    allowlist would fail open here, which is the permissive direction for a provenance
+    flag and the reason this is a denylist at all.
+    """
+    out = []
+    counts = ["python/run_pipeline.py", "prolog/drl_core.pl", "scripts/gate.sh",
+              "agent/llm_call.py", "config.json", "some_new_dir/thing.rb"]
+    ignores = ["CLAUDE.md", "ISSUES.md", "KNOWN_STATE.md", "docs/seat-theorem-v1.md",
+               "audits/2026-01-01_x/compare.py", "audits/2026-01-01_x/evidence.txt",
+               "prolog/testsets_sonnet2/a.pl", "prolog/archives/datasets/original_v6/b.pl",
+               "json_nemotron_think/a.json", "outputs/pipeline_output.json"]
+    for p in counts:
+        out.append(_expect_value(f"code_dirty counts {p}", _is_code_path(p), True))
+    for p in ignores:
+        out.append(_expect_value(f"code_dirty ignores {p}", _is_code_path(p), False))
     return out
 
 

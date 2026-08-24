@@ -61,16 +61,65 @@ def _git_head_sha() -> str:
         return "unknown"
 
 
+# What `code_dirty` counts (OQ-352 execution, 2026-08-24). It used to be a bare
+# `git status --porcelain`, which counts EVERY untracked file — so writing an
+# audit-evidence file mid-session stamped `code_dirty: True` on artifacts whose code was
+# byte-identical to HEAD. One flag meant two materially different things ("tracked code
+# differs from HEAD", which affects output, and "some untracked file exists", which need
+# not), and a consumer could not tell them apart. Witnessed both ways in one session: a
+# first run dirty because uncommitted DRIVER FIXES were in the tree, a re-run dirty
+# because two untracked evidence files were.
+#
+# DENYLIST, NOT ALLOWLIST, AND THAT DIRECTION IS THE POINT. An allowlist of "code paths"
+# fails OPEN: a new source location, a new config format, a generator moved to a new
+# directory — none would count, and `code_dirty` would read False on a run that no commit
+# reproduces. That is the permissive direction for a provenance flag. A denylist fails
+# CLOSED: anything unrecognized counts as dirty until someone deliberately excludes it,
+# which is the same fail-closed-on-absence rule the rest of this file follows.
+#
+# Excluded, each because it cannot change what a run produces:
+#   *.md                — docs and trackers (CLAUDE.md, ISSUES.md, KNOWN_STATE.md, papers)
+#   audits/**           — evidence and analysis scripts, by LOCATION not extension: an
+#                         audit's .py/.txt/.json is a record OF a run, never an input to one
+#   corpus trees        — corpus identity is `corpus_hash`'s job (OQ-29). Counting a leg
+#                         mid-fill would pin `code_dirty: True` on every run for as long as
+#                         generation is in flight, which is exactly when the flag most needs
+#                         to mean something. The two questions stay separate.
+_DIRT_EXCLUDE_PREFIX = ("audits/", "outputs/", "prolog/testsets", "prolog/archives",
+                        "prolog/kernels", "json/", "json_", "issues/")
+_DIRT_EXCLUDE_SUFFIX = (".md",)
+
+
+def _is_code_path(path: str) -> bool:
+    """Can a change at *path* alter what a run produces? Unknown => YES (fail closed)."""
+    if path.endswith(_DIRT_EXCLUDE_SUFFIX):
+        return False
+    return not path.startswith(_DIRT_EXCLUDE_PREFIX)
+
+
 def _git_dirty() -> bool:
+    """Does anything that could change this run's OUTPUT differ from HEAD?
+
+    True means the artifacts were produced by a tree no commit reconstructs. False means
+    they are reproducible from HEAD, whatever documentation or audit evidence is lying
+    around the working tree.
+    """
     try:
         result = subprocess.run(
             ["git", "status", "--porcelain"],
-            cwd=str(REPO_ROOT),
-            capture_output=True,
-            text=True,
-            timeout=10,
+            cwd=str(REPO_ROOT), capture_output=True, text=True, timeout=10,
         )
-        return bool(result.stdout.strip()) if result.returncode == 0 else False
+        if result.returncode != 0:
+            return False
+        for line in result.stdout.splitlines():
+            if len(line) < 4:
+                continue
+            path = line[3:].strip().strip('"')
+            if " -> " in path:          # rename/copy: the new path is what exists now
+                path = path.split(" -> ", 1)[1]
+            if _is_code_path(path):
+                return True
+        return False
     except Exception:
         return False
 
