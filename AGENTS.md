@@ -1075,6 +1075,54 @@ single deterministic clause and refuses on swap/zero-glob/load-incomplete/seen�
 `None` for mixed-model corpora). Used by `python/audits/twin_comparison.py`. Serial only
 (one classify run at a time — OQ-77).
 
+### Run the REPORT stages on a non-default corpus (OQ-352, 2026-08-23)
+
+```bash
+python3 python/report_legs.py --legs testsets_sonnet2 testsets_sonnet3
+python3 python/report_legs.py --selftest        # gate row `report legs`
+```
+
+`classify_corpus` runs only `run_json_report`, so a per-leg output carries per-story fields
+plus the top-level `diagnostic` block and nothing else. `run_pipeline.report_corpus(corpus_path,
+out_dir, ...)` is its SIBLING for the Phase-2 report stages, writing `outputs/legs/<leg>/`. Eleven
+stages, **one fresh swipl per stage** (OQ-246) run **strictly serially** — which satisfies OQ-182
+(`trajectory`/`giant_comp` never co-resident) for free; do not parallelize it. Gates the OUTPUT as
+well as the input: each artifact must exist, be non-empty, carry its owed marker, and carry a
+manifest sidecar whose **top-level** `corpus_hash` `assert_corpus_current` accepts.
+
+**Four things that will bite before anything else.**
+
+1. **A leg needs a SAME-COMMIT classify output** or the run refuses `MISSING_CLASSIFY_OUTPUT` —
+   three of OQ-353's statistics are `json_report.pl` products, not report-stage ones. The name is
+   `pipeline_output.<short>.json`, mirroring `python/audits/leg_diagnostic_table.py:57-59`
+   exactly. **Consequence: classify and report must run at ONE frozen HEAD.** Any pass that
+   commits AFTER classifying leaves its own artifact one commit stale.
+2. **`giant_comp` currently throws on 17 of 20 corpora** (OQ-356) — 16 of 19 live legs plus
+   `original_v6`. Exclude it with `--stages` until that lands, or the run refuses
+   `ARTIFACT_ABSENT`. `testsets` passing is NOT evidence it works: its giant component is under
+   `run_phase3`'s `GCFrac > 0.10` gate, so the block never executes there.
+3. **Only `giant_comp`'s timeout is parameterized** (OQ-363). The other eight stages sit on
+   `run_prolog`'s 300 s default, sized for n≈285; `abductive` times out 3×300 s on `original_v6`.
+4. **Three artifacts are hard-coded to `../outputs/` in Prolog** (`orbit_data.json`,
+   `abductive_data.json`, `giant_component_analysis.raw.json`) and are protected by
+   `_TransitGuard`: flock lock, an on-disk journal written BEFORE the first delete,
+   restore-then-refuse recovery. Guard state lives in `.report_corpus/`, never under `outputs/`.
+   **A killed run leaves a journal; the next start restores and REFUSES rather than proceeding.**
+
+### `manifest.code_dirty` changed meaning (2026-08-24, `e9ca54785`)
+
+It was a bare `git status --porcelain`, which counts **every** untracked file — so writing an
+audit file stamped `code_dirty: True` on artifacts whose code matched HEAD. It is now a
+**fail-closed denylist**: `*.md`, `audits/**` (by location — an audit's `.py`/`.txt` is a record
+OF a run, never an input to one), corpus trees and `outputs/` are excluded; **everything else
+counts, including paths nobody anticipated.** Denylist not allowlist deliberately — an allowlist
+fails OPEN, letting a new source location read clean on a run no commit reproduces.
+
+**Reading older manifests:** a **pre-`e9ca54785` `code_dirty: True` may mean only that an
+untracked file was present.** Do not infer non-reproducibility from it without checking what was
+actually dirty. Corpus trees are excluded because corpus identity is `corpus_hash`'s job (OQ-29);
+counting a leg mid-fill would pin the flag True for as long as generation runs.
+
 **Twin comparison is N-general (≥2 legs; OQ-213(a), 2026-07-06).** `twin_comparison.py` takes
 **two or more** `--twin label=path` legs, not exactly two — it crosses every unordered pair and
 emits an N-way agreement partition (odd-leg tally per structural field, missingness complement
