@@ -46,6 +46,68 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 
+## 2026-08-24 — [HANDOFF] to the corpus-building instance: what the OQ-352 session owes it on `testsets_nemotron_think`
+**Files:** python/shared/corpus_legs.py, outputs/pipeline_output.nemotron_think.json, python/audits/leg_diagnostic_table.py, prolog/testsets_nemotron_think/, outputs/pipeline_output.raw.json
+**Tier:** landed
+
+The OQ-352 driver session (`cfa3a76e1`) committed on top of `2041be82a` and ran read-only probes
+over `testsets_nemotron_think` after it landed. This is what that session holds that the
+corpus-building instance needs in order to close out. My commit touches no `prolog/testsets*`, so
+it does not interfere with corpus work.
+
+**1. THE ONE ITEM THAT WILL SILENTLY MISLEAD — the leg's classify output is stale.**
+`outputs/pipeline_output.nemotron_think.json` carries `n_constraints: 732`,
+`per_constraint: 732`, `code_commit bdb84ee00758`, `pipeline_run_at 2026-08-23T11:04:16Z`. **The
+leg on disk is 1003.** So the leg was committed COMPLETE without a re-classify, and the output
+describes 73% of it. It is not fail-closed: `leg_diagnostic_table.py:155-157` (OQ-353's named
+step-0 instrument) prints `[note] ... on-disk files 1003 != manifest n_constraints 732 (output
+predates the current directory state)` **and still emits the row**, with `n_stories` from the
+stale manifest — a warning channel a reader may skim, with the row landing in the TSV regardless.
+`assert_corpus_current` does raise on it, but for the wrong reason (the classify path stamps no
+top-level `corpus_hash` at all) and the instrument does not call it. **Re-classify before OQ-353
+ingests the leg.**
+
+**2. `LIVE_LEGS` annotation is stale.** `python/shared/corpus_legs.py:58` still reads
+`732 and growing (free-tier cap; auto-resume)`. The leg is 1003 and the auto-resume loop
+self-terminated cleanly (`outputs/no_scope_runs_nemotron_think/auto_resume.log`:
+`2026-08-23 22:13:05 leg at 1003 — done`), so nothing needs killing — only the annotation.
+
+**3. Leg-specific findings from my run.** `giant_component_analysis` **THROWS** on this leg
+(OQ-356): GC 888/1003 = 88.5%, two unknown-purity GC members —
+`genesis_creation_cosmology__young_earth_literal` and
+`vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading`, both present in the original 732.
+So the leg cannot receive a full report-artifact set until OQ-356 lands. Corpus-relevant detail
+for OQ-236's under-authoring census: **5** stories lack `coordination_type`, but only those **2**
+score the throwing `unknown` atom — the other 3 (`latin_correctness__continuity_reading`,
+`press_reformation_causality__technological_determinism`,
+`qwerty_persistence_inevitability__path_dependency_reading`) score `-1.0`, the gate-fail sentinel,
+which is a number and is excluded safely. Authoring `coordination_type` on the two named stories
+would make the leg pass `giant_comp` even before OQ-356 — that is a corpus-side option, offered,
+not recommended over the code fix.
+
+**4. Shared-`outputs/` overlap, disclosed.** `outputs/pipeline_output.raw.json` is a SHARED
+artifact that `classify_corpus` deletes and rewrites; my three classify runs spanned roughly
+19:00–05:00 while the auto-resume loop ran until 22:13, so the windows overlapped. It now holds
+v6's raw export (47 MB, 23:29) — **if anything downstream was counting on a different raw
+artifact, it is gone and must be regenerated.** Separately, the transit guard pre-deleted and
+restored `orbit_data.json`, `abductive_data.json` and `giant_component_analysis.raw.json` many
+times; each was verified restored byte-identical against a pre-run baseline, but a concurrent
+reader inside a delete window would have seen them absent.
+
+**5. Another write window is coming.** The OQ-352 ruling owes a pair-arm re-witness
+(`testsets_sonnet2`/`sonnet3`) at post-commit HEAD, which writes `outputs/legs/*` and touches the
+three transit paths again. Serialize behind it.
+
+**Counting corrections, recorded because I made three slips in one file-set question.** The leg
+was **732** committed at `909a4cbe0`, not 735 or 957: an earlier `957` was an uncommitted mid-fill
+on-disk snapshot git cannot reconstruct; a `735` came from counting `git show <tree>` output
+including its header line, blank line and a non-`.pl` file; and a `-3 removed` was that same
+artifact. Clean arithmetic, filtered to `*.pl` and sorted: **732 → 1003, +271 added, 0 removed**,
+and the stale manifest's 732 matches the committed set exactly, which is what confirms the
+classify was run at that state. The story-level persistence claim survives all three corrections
+(both unknown-purity stories are in the original 732).
+
+
 ## 2026-08-23 — [landed] OQ-352: per-leg REPORT driver built; `giant_comp` found dead on 17 of 20 corpora
 **Files:** python/run_pipeline.py, python/report_legs.py, python/report_legs.py, python/sweeps/regenerate_orbits.py, scripts/gate.sh, .gitignore, prolog/giant_component_analysis.pl, audits/2026-08-23_oq352_report_driver/
 **Tier:** landed
