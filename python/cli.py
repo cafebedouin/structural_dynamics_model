@@ -52,6 +52,11 @@ PHYSICAL_GROUPS = {
 # Tier 2a: explicit overrides for named entry points (highest precedence).
 TOPLEVEL_OVERRIDES = {
     "run_pipeline": "pipeline",
+    # OQ-352: report_legs is the per-leg REPORT driver, a sibling of
+    # run_pipeline's classify_corpus. Overridden into `pipeline` rather than
+    # left to fall through to `misc`, where a driver nobody can find is a driver
+    # nobody runs.
+    "report_legs": "pipeline",
     "omega_resolver": "omega",
     "enhanced_report": "report-gen",
 }

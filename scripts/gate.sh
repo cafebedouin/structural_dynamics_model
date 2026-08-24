@@ -188,6 +188,25 @@ run "ledger grammar" "$PY" python/runs_ledger_check.py --check
 # tool, or promote it to a general frozen-artifact check if a second audit needs one.
 # Next consolidation pass owns the call — see CLAUDE.md "Memory Consolidation Review".
 run "oq277 freeze"   "$PY" python/audits/oq277_build_prereg.py --check
+
+# OQ-352. The per-leg REPORT driver's refusal taxonomy and transit guard.
+# FIXTURE-ONLY AND SYNTHETIC BY CHARTER: tiny corpora in a temp dir, no real leg,
+# no swipl over 1000 stories -- 2.6s on a ~55s gate. A real-leg pair inside a
+# fixture-only row is a contradiction that grows it to minutes until someone
+# deletes it, so the one real-leg OQ-246 witness is run ONCE into the WRITEUP and
+# what rides here is a synthetic mini-leg pair reproducing the accumulation tell.
+# Two-sidedness is asymmetric BY DESIGN: refusals (4a) get a fires/passes fixture
+# pair asserted BY REASON CODE, so a fixture that refuses for the wrong reason
+# fails rather than passing silently; recorded outcome tokens (4b) are asserted
+# present-and-correctly-valued and are NOT two-sided, because PROMPT_HASH_ABSENT
+# has no passing counterpart to plant -- original_v6 depends on that split, since
+# it must COMPLETE with ABSENT recorded rather than refuse.
+# The row also carries the control on the control: an isolation post-condition
+# that prolog/validation_suite.pl and THE WHOLE OF outputs/ are unchanged
+# afterward, with NO exclusions. It has already earned its keep -- it caught
+# `stages=[]` falling through a falsy test and silently running all eleven stages
+# instead of zero.
+run "report legs"    "$PY" python/report_legs.py --selftest
 echo
 if [ "$fail" = 0 ]; then echo "GATE: GREEN"; else echo "GATE: RED"; fi
 exit "$fail"
