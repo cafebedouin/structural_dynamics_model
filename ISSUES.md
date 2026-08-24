@@ -18605,6 +18605,14 @@ corpus-level surface that already exists per leg): `audits/2026-08-23_leg_diagno
 KNOWN_STATE 2026-08-23 correction-key.
 **Priority:** 2
 **Deps:** blocked_on OQ-352
+**Instrument note (2026-08-24, from OQ-352 execution).** `leg_diagnostic_table.py` prints a
+`[note]` when a leg's on-disk file count differs from its classify manifest and **emits the row
+anyway**, with `n_stories` from the stale manifest. It should adopt `report_corpus`'s softened
+test: a lagging `code_commit` whose `git diff --name-only <stamp>..HEAD` is engine-free (filtered
+through `_is_code_path`) is ACCEPTED and recorded as `CLASSIFY_STAMP_LAGS`; a delta containing an
+engine file is REFUSED; an undecidable stamp is refused. Stamp lag is structural — an artifact
+can never stamp the commit that contains it — so re-classifying is not the fix.
+
 **Files:** `python/audits/leg_diagnostic_table.py` (the step-0 instrument — extend, do not fork),
 `audits/2026-08-23_leg_diagnostic_table/leg_diagnostic_pairs.tsv` (the floor-table format), `prolog/
 archives/datasets/original_v6/` (the control), `prolog/drl_purity_network.pl:114–115` and

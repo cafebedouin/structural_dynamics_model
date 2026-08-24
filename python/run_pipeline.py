@@ -1006,6 +1006,7 @@ def report_corpus(corpus_path: str,
     for.
     """
     run_at = run_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    stamp_lag = None          # 4b recorded token, set when the classify stamp lags HEAD
     # `stages is not None`, NOT `if stages`. An explicit empty list means "run no
     # stages" (the input-refusal fixtures use it); a falsy test collapses that
     # into the None default and silently runs ALL ELEVEN — absence wearing the
@@ -1068,13 +1069,49 @@ def report_corpus(corpus_path: str,
         cdoc = json.loads(classify_out.read_text(encoding="utf-8"))
         ccommit = (cdoc.get("manifest") or {}).get("code_commit", "unknown")
         if ccommit != head:
-            raise ReportRefusal(
-                "MISSING_CLASSIFY_OUTPUT",
-                f"{classify_out.name} was produced at code_commit {ccommit[:12]} but "
-                f"HEAD is {head[:12]} — a cross-commit pair is not a same-run leg; "
-                "'HEAD yields N' is already ambiguous between engine-regime and "
-                "corpus and has caused a misread (KNOWN_STATE 2026-07-02). "
-                "Re-run classify_corpus at HEAD.")
+            # STAMP LAG IS NOT SUBSTANCE, and strict id-equality could not tell them
+            # apart (operator ruling, 2026-08-24). The gap is STRUCTURAL: an artifact can
+            # never stamp the commit that CONTAINS it. Classify-then-commit stamps the
+            # pre-commit id; commit-then-classify leaves the classification uncommitted or
+            # forces a second commit, recreating the gap one step later. Re-classifying is
+            # therefore explicitly NOT the fix — it reproduces the same lag.
+            #
+            # Refuse on ENGINE STATE, not commit id: if nothing that can alter a run
+            # changed between the stamp and HEAD, the artifact is substantively current.
+            # `_is_code_path` is REUSED from the code_dirty scoping rather than defining
+            # "engine path" a second time — it already answers exactly this question, and
+            # a second definition would be Build Discipline Pattern 2.
+            #
+            # Fail closed when the comparison is undecidable: an unresolvable stamp
+            # (rebase, shallow clone) cannot be SHOWN engine-free, so it is refused.
+            try:
+                dr = subprocess.run(
+                    ["git", "diff", "--name-only", f"{ccommit}..{head}"],
+                    cwd=str(REPO_ROOT), capture_output=True, text=True, timeout=30)
+                decidable = dr.returncode == 0
+                changed = [f for f in dr.stdout.split() if _is_code_path(f)] if decidable else None
+            except Exception:
+                decidable, changed = False, None
+
+            if not decidable:
+                raise ReportRefusal(
+                    "MISSING_CLASSIFY_OUTPUT",
+                    f"{classify_out.name} stamps code_commit {ccommit[:12]}, HEAD is "
+                    f"{head[:12]}, and the delta between them could not be computed "
+                    "(unresolvable commit?) — refusing rather than assuming engine-free")
+            if changed:
+                raise ReportRefusal(
+                    "MISSING_CLASSIFY_OUTPUT",
+                    f"{classify_out.name} was produced at code_commit {ccommit[:12]} but "
+                    f"HEAD is {head[:12]}, and {len(changed)} engine-relevant file(s) "
+                    f"changed between them: {sorted(changed)[:6]} — a real cross-commit "
+                    "pair, not a stamp lag. 'HEAD yields N' is already ambiguous between "
+                    "engine-regime and corpus and has caused a misread (KNOWN_STATE "
+                    "2026-07-02). Re-run classify_corpus at HEAD.")
+            # ACCEPTED — and RECORDED, not silent. A softened refusal that accepts
+            # invisibly is how a real staleness gets waved through later.
+            stamp_lag = {"token": "CLASSIFY_STAMP_LAGS", "stamped": ccommit,
+                         "head": head, "engine_relevant_changes": 0}
 
     # --- 4b: prompt-hash token (recorded, never halts on its own) ----------
     ph = _prompt_hash_token(corpus_dir)
@@ -1267,6 +1304,7 @@ def report_corpus(corpus_path: str,
         "retry_ledger": ledger,
         "deferred": list(_SCOPE_DEFERRED),
         "classify_output": str(classify_out) if require_classify_output else None,
+        "classify_stamp_lag": stamp_lag,
     }
     (out_dir / "report_corpus.result.json").write_text(
         json.dumps(result, indent=2), encoding="utf-8")

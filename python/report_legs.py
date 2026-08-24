@@ -349,6 +349,9 @@ def selftest(verbose: bool = True) -> int:
         # ---------------- code_dirty scoping, two-sided --------------------
         results.extend(_code_dirty_fixtures())
 
+        # ---------------- stamp-lag vs real cross-commit, two-sided --------
+        results.extend(_stamp_lag_fixtures(tmp, good))
+
         # ---------------- OQ-246 discrimination, synthetic ---------------
         results.extend(_oq246_synthetic(tmp))
 
@@ -529,6 +532,105 @@ def _transit_fixtures(outd: Path) -> list:
             os.utime(shared, ns=orig_times)
         else:
             shared.unlink(missing_ok=True)
+    return out
+
+
+def _stamp_lag_fixtures(tmp: Path, leg: Path) -> list:
+    """MISSING_CLASSIFY_OUTPUT must refuse on ENGINE STATE, not on commit id.
+
+    The gap is structural: an artifact can never stamp the commit that contains it, so a
+    strict id check refuses artifacts whose only staleness is the commit that recorded
+    them. Three sides, because two would not pin it:
+
+      same id                      -> accept (unchanged behaviour)
+      lagging id, engine-free delta-> ACCEPT and RECORD `CLASSIFY_STAMP_LAGS`
+      lagging id, engine in delta  -> REFUSE
+      unresolvable id              -> REFUSE (fail closed; cannot be SHOWN engine-free)
+
+    Real commits are used rather than synthetic ids, so the fixture exercises the actual
+    git plumbing. The engine-free pair is found by scanning history for a commit whose
+    delta to HEAD `_is_code_path` calls empty; if none exists in the scanned window the
+    control DECLARES itself unavailable rather than silently passing.
+    """
+    import subprocess
+    out = []
+    head = R._git_head_sha()
+    outd = tmp / "out_stamp"
+
+    def write_classify(commit, n):
+        target = R.OUTPUTS_DIR / R._classify_output_name(leg.name)
+        target.write_text(json.dumps(
+            {"manifest": {"code_commit": commit, "n_constraints": n}}), encoding="utf-8")
+        return target
+
+    n = len(list(leg.glob("*.pl")))
+    target = R.OUTPUTS_DIR / R._classify_output_name(leg.name)
+    existed = target.exists()
+    orig = target.read_bytes() if existed else None
+    orig_t = ((target.stat().st_atime_ns, target.stat().st_mtime_ns) if existed else None)
+    try:
+        # (1) same id -> accept
+        write_classify(head, n)
+        out.append(_expect_pass("stamp: same commit accepted",
+            lambda: report_corpus(str(leg), out_dir=outd, stages=[], require_classify_output=True)))
+
+        # (2) lagging id with an ENGINE-FREE delta -> accept AND record the token
+        log = subprocess.run(["git", "log", "--format=%H", "-40"],
+                             capture_output=True, text=True).stdout.split()
+        engine_free = None
+        for c in log[1:]:
+            d = subprocess.run(["git", "diff", "--name-only", f"{c}..{head}"],
+                               capture_output=True, text=True)
+            if d.returncode == 0 and not [f for f in d.stdout.split() if _is_code_path(f)]:
+                engine_free = c
+                break
+        if engine_free:
+            write_classify(engine_free, n)
+            res = {}
+            try:
+                res = report_corpus(str(leg), out_dir=outd, stages=[],
+                                    require_classify_output=True)
+                ok = True
+            except ReportRefusal as e:
+                ok, res = False, {"refused": e.code}
+            out.append((ok, f"[{'OK  ' if ok else 'FAIL'}] "
+                            f"{'stamp: lagging id, engine-free delta accepted':44s} "
+                            + ("" if ok else f"refused {res.get('refused')}")))
+            tok = (res.get("classify_stamp_lag") or {}).get("token")
+            out.append(_expect_value("stamp: CLASSIFY_STAMP_LAGS recorded", tok,
+                                     "CLASSIFY_STAMP_LAGS"))
+        else:
+            out.append((True, "[OK  ] " + f"{'stamp: engine-free control UNAVAILABLE':44s} "
+                              "declared, not silently passed (no engine-free commit in last 40)"))
+
+        # (3) lagging id with an ENGINE change in the delta -> refuse
+        engine_commit = None
+        for c in log[1:]:
+            d = subprocess.run(["git", "diff", "--name-only", f"{c}..{head}"],
+                               capture_output=True, text=True)
+            if d.returncode == 0 and [f for f in d.stdout.split() if _is_code_path(f)]:
+                engine_commit = c
+                break
+        if engine_commit:
+            write_classify(engine_commit, n)
+            out.append(_expect_refusal(
+                "stamp: engine change in delta refused", "MISSING_CLASSIFY_OUTPUT",
+                lambda: report_corpus(str(leg), out_dir=outd, stages=[],
+                                      require_classify_output=True)))
+        else:
+            out.append((True, "[OK  ] " + f"{'stamp: engine-change control UNAVAILABLE':44s} declared"))
+
+        # (4) unresolvable id -> refuse (fail closed)
+        write_classify("0" * 40, n)
+        out.append(_expect_refusal(
+            "stamp: unresolvable commit refused (fail closed)", "MISSING_CLASSIFY_OUTPUT",
+            lambda: report_corpus(str(leg), out_dir=outd, stages=[],
+                                  require_classify_output=True)))
+    finally:
+        if existed:
+            target.write_bytes(orig); os.utime(target, ns=orig_t)
+        else:
+            target.unlink(missing_ok=True)
     return out
 
 

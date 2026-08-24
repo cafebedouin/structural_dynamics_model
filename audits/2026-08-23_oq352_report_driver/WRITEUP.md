@@ -579,13 +579,34 @@ See §4 and OQ-356. Run with `giant_comp` excluded and every other refusal — i
    13 differ). Among the `diagnostic` block, S1 and S4 are confirmed constant across the pair;
    S2 and S3 are confirmed as OQ-355 states them (a relation and two named entries), NOT as
    whole-object constants — do not re-test them the way this prereg did.
-5. **`_classify_timeout_for` needs a ruling** (OQ-356, second-order finding): the linear
+5. **Stamp lag is not substance — the id check is softened, and OQ-353's instrument must
+   match it (2026-08-24).** An artifact can never stamp the commit that CONTAINS it:
+   classify-then-commit stamps the pre-commit id; commit-then-classify leaves the
+   classification uncommitted or forces a second commit, recreating the gap one step later.
+   **Re-classifying is NOT the fix — it reproduces the lag.** `MISSING_CLASSIFY_OUTPUT` now
+   refuses on ENGINE STATE, not commit id: on a lagging stamp it runs
+   `git diff --name-only <stamp>..HEAD`, filters through `_is_code_path` (REUSED from the
+   `code_dirty` scoping — a second definition of "engine path" would be Pattern 2), and accepts
+   iff the delta is engine-free, **recording `CLASSIFY_STAMP_LAGS` rather than accepting
+   silently**; an undecidable stamp is refused (fail closed). `leg_diagnostic_table.py` prints a
+   `[note]` on mismatch and emits the row anyway — **it should adopt the same test**, so a
+   doc-only lag is accepted and a real engine delta is refused, rather than both passing with a
+   warning.
+
+   Witnessed discriminating ACROSS TIME on one real artifact, which is stronger than a fixture
+   pair: `pipeline_output.nemotron_think.json` (stamped `560301910`) has **0** engine-relevant
+   changes vs `86a70f004` and **2** vs `97e4a58f9` — it accepts at the former and refuses at the
+   latter, because engine code genuinely landed in between. Five controls pin the four sides.
+
+6. **`_classify_timeout_for` needs a ruling** (OQ-356, second-order finding): the linear
    `0.73 s/story` under-predicts at n=3380, and `soft_timeout = ceiling // 2` turns one
    legitimately-slow run into 247 minutes. Any OQ-353 sweep over a large archive leg will meet
    this.
-6. **Operational:** the whole sequence must run at ONE frozen HEAD, because
-   `MISSING_CLASSIFY_OUTPUT` compares `manifest.code_commit` to HEAD.
-7. `python/audits/leg_diagnostic_table.py` is the instrument to **extend, not fork** — the
+7. **Operational, AMENDED 2026-08-24:** the sequence no longer needs one frozen HEAD in the
+   strict sense — a lagging stamp with an engine-free delta is now accepted (item 5). It still
+   refuses across a real engine change, so a pass landing engine code between classify and
+   report must re-classify.
+8. `python/audits/leg_diagnostic_table.py` is the instrument to **extend, not fork** — the
    driver already resolves per-leg classify outputs by that script's exact convention, pinned by
    a control.
 
