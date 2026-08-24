@@ -1,0 +1,37 @@
+############ VERIFICATION 0 — before/after diff, roster pinned to the same 19 legs ############
+
+=== stdout diff ===
+23c23,26
+< wrote /home/scott/bin/structural_dynamics_model/outputs/leg_diagnostic_table.tsv, /home/scott/bin/structural_dynamics_model/outputs/leg_diagnostic_pairs.tsv, /home/scott/bin/structural_dynamics_model/outputs/leg_diagnostic_table.json
+---
+> dropped=4 (each named on stderr with its reason)
+> verdict rows=61 (56 registry + 5 PENDING OQ-356); every B cell reads NOT_MEASURED — Phase 1 runs no arms
+> exposure: vintage=12 mixture=15 of 56 (44 vintage / 41 mixture UNTRACED — UNTRACED is NOT 'not exposed'; the counts carry their coverage)
+> wrote /home/scott/bin/structural_dynamics_model/outputs/leg_diagnostic_table.tsv, /home/scott/bin/structural_dynamics_model/outputs/leg_diagnostic_pairs.tsv, /home/scott/bin/structural_dynamics_model/outputs/leg_diagnostic_verdicts.tsv, /home/scott/bin/structural_dynamics_model/outputs/leg_diagnostic_table.json
+
+=== leg_diagnostic_table.tsv — md5 ===
+9f8bb4d40ea7eb0ab9a64c8a448e22d3  audits/2026-08-24_oq353_statistic_floors/v0_baseline/leg_diagnostic_table.tsv
+9f8bb4d40ea7eb0ab9a64c8a448e22d3  audits/2026-08-24_oq353_statistic_floors/v0_after/leg_diagnostic_table.tsv
+=== leg_diagnostic_table.tsv — diff ===
+  BYTE-IDENTICAL — 19 rows x 56 stats unchanged, no cell moved
+
+=== leg_diagnostic_pairs.tsv — md5 ===
+61d72ae122ab7f65129952e35300f7c2  audits/2026-08-24_oq353_statistic_floors/v0_baseline/leg_diagnostic_pairs.tsv
+61d72ae122ab7f65129952e35300f7c2  audits/2026-08-24_oq353_statistic_floors/v0_after/leg_diagnostic_pairs.tsv
+=== leg_diagnostic_pairs.tsv — diff ===
+  BYTE-IDENTICAL — all 52 pair rows unchanged
+
+=== stderr: what the refactor ADDED (baseline stderr was empty) ===
+  baseline stderr lines: 0
+  after    stderr lines: 24
+  added line classes:
+          1   [dropped] contextuality.by_type.piton: SHARE/RATE: non-numeric or None on 1/19 legs 
+          1   [dropped] network.stability: CATEGORICAL: non-numeric or None on 19/19 legs 
+          1   [dropped] severe_share_within_type.scaffold: SHARE/RATE: non-numeric or None on 1/19 legs 
+          1   [dropped] severe_share_within_type.unknown: SHARE/RATE: non-numeric or None on 19/19 legs 
+         19 [STAMP-REFUSAL RECORDED] <LEG>: engine-relevant files changed between the stamp and HEAD — a real cross-commit pair, not a stamp lag (stamped <SHA>, HEAD <SHA>, <N> engine-relevant) — row EMITTED with its token; rerun with --strict-stamp to refuse instead
+          1 [dropped] 4 of 56 statistics are absent from the pair table — each with its reason (was SILENT before this refactor):
+
+=== NEW artifact (did not exist before) ===
+ls: cannot access 'audits/2026-08-24_oq353_statistic_floors/v0_baseline/leg_diagnostic_verdicts.tsv': No such file or directory
+  after: 62 lines, 15 columns

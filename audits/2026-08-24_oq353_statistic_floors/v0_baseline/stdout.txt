@@ -1,0 +1,23 @@
+legs=19 stats=56 numeric=52 same-model pairs=21 (pure=5)
+  pair testsets_flash ~ testsets_flash2  [gemini-2.5-flash]  confounded:prompt
+  pair testsets_flash ~ testsets_flash3  [gemini-2.5-flash]  confounded:prompt
+  pair testsets_flash ~ testsets_flash_think  [gemini-2.5-flash]  confounded:prompt+sampling
+  pair testsets_flash ~ testsets_flash_think2  [gemini-2.5-flash]  confounded:prompt+sampling
+  pair testsets_flash2 ~ testsets_flash3  [gemini-2.5-flash]  pure
+  pair testsets_flash2 ~ testsets_flash_think  [gemini-2.5-flash]  confounded:sampling
+  pair testsets_flash2 ~ testsets_flash_think2  [gemini-2.5-flash]  confounded:sampling
+  pair testsets_flash3 ~ testsets_flash_think  [gemini-2.5-flash]  confounded:sampling
+  pair testsets_flash3 ~ testsets_flash_think2  [gemini-2.5-flash]  confounded:sampling
+  pair testsets_flash_think ~ testsets_flash_think2  [gemini-2.5-flash]  pure
+  pair testsets_haiku ~ testsets_haiku2  [claude-haiku-4-5-20251001]  confounded:prompt+sampling
+  pair testsets_haiku ~ testsets_haiku3  [claude-haiku-4-5-20251001]  confounded:prompt+sampling
+  pair testsets_haiku2 ~ testsets_haiku3  [claude-haiku-4-5-20251001]  pure
+  pair testsets_kimi ~ testsets_kimi2  [kimi-k2.6]  confounded:prompt
+  pair testsets_nemotron ~ testsets_nemotron_think  [nvidia/nemotron-3-ultra-550b-a55b:free]  confounded:prompt+sampling
+  pair testsets_sonnet ~ testsets_sonnet2  [claude-sonnet-5]  confounded:prompt
+  pair testsets_sonnet ~ testsets_sonnet3  [claude-sonnet-5]  confounded:prompt
+  pair testsets_sonnet2 ~ testsets_sonnet3  [claude-sonnet-5]  pure
+  pair testsets_stealth ~ testsets_stealth2  [stealth/ox-alpha]  confounded:prompt
+  pair testsets_stealth ~ testsets_stealth3  [stealth/ox-alpha]  confounded:prompt
+  pair testsets_stealth2 ~ testsets_stealth3  [stealth/ox-alpha]  pure
+wrote /home/scott/bin/structural_dynamics_model/outputs/leg_diagnostic_table.tsv, /home/scott/bin/structural_dynamics_model/outputs/leg_diagnostic_pairs.tsv, /home/scott/bin/structural_dynamics_model/outputs/leg_diagnostic_table.json

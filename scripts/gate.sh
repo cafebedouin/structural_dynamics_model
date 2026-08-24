@@ -207,6 +207,20 @@ run "oq277 freeze"   "$PY" python/audits/oq277_build_prereg.py --check
 # `stages=[]` falling through a falsy test and silently running all eleven stages
 # instead of zero.
 run "report legs"    "$PY" python/report_legs.py --selftest
+
+# OQ-353 Phase 1: leg_diagnostic_table now emits VERDICTS, so the instrument is
+# itself a claim ("an introduced instrument is itself a claim") and owes planted
+# fixtures. Fixture-only and synthetic -- no leg is read, no corpus is loaded,
+# seconds not minutes. Covers: one plant per bit plus one DECLINE per bit; the
+# five three-valued-B3 rows INCLUDING the NOT-exposed/SEPARATES partner, without
+# which an instrument stamping `unreadable` on every separating row would pass
+# every other fixture; the CLASSIFY_STAMP_LAGS pair (engine-free delta accepted
+# and recorded / engine-file delta refused) and the two-sided record-vs-refuse
+# disposition; that PENDING OQ-356 and NOT_MEASURED both reach the WRITTEN table
+# and stay textually distinguishable there; and that classify_bits REFUSES rather
+# than defaulting while the cut-points remain an operator ruling -- a default
+# threshold would be a fabricated value wearing a verdict's clothes.
+run "oq353 floors"   "$PY" python/audits/leg_diagnostic_table.py --selftest
 echo
 if [ "$fail" = 0 ]; then echo "GATE: GREEN"; else echo "GATE: RED"; fi
 exit "$fail"

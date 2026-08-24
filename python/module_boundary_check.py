@@ -353,6 +353,22 @@ CORPUS_DIRS = {
     "testsets_stealth2": "Same-model REDRAW of testsets_stealth at prompt e03e2210 (redraw + prompt change; 2026-08-22).",
     "testsets_nemotron": "Model-named leg (nvidia/nemotron-3-ultra-550b-a55b:free via OpenRouter, reasoning off; 2026-08-21).",
     "testsets_nemotron_think": "Regime-contrast leg (nvidia/nemotron-3-ultra-550b-a55b:free, reasoning ON/default; 2026-08-22).",
+    # OQ-353 arm corpora (2026-08-24). Story files, byte-identical to their sources except
+    # where the arm's own construction says otherwise — data, not engine code. They are
+    # gitignored and BUILT (reproducible from the manifests + builders in
+    # audits/2026-08-24_oq353_statistic_floors/), so they can be absent entirely; declaring
+    # a directory that may not exist is harmless here and keeps the narrowing explicit.
+    # NOTE, because it is the reason these needed declaring at all: the plan named them
+    # OUTSIDE the `testsets*` prefix so leg_diagnostic_table's glob would not claim them —
+    # which drops them out of every repo checker that narrows by that same prefix. The two
+    # requirements pull opposite ways; the resolution is an explicit declaration, here.
+    "oq353_arm_c1":     "OQ-353 arm (c): disjoint 1000-story subsample of original_v6 (seed 353).",
+    "oq353_arm_c2":     "OQ-353 arm (c): disjoint 1000-story subsample of original_v6 (seed 353).",
+    "oq353_arm_c3":     "OQ-353 arm (c): disjoint 1000-story subsample of original_v6 (seed 353).",
+    "oq353_arm_astrip_haiku2":
+                        "OQ-353 arm (a'): kernel-stripped twin of testsets_haiku2 — identical "
+                        "except the 996 narrative_ontology:cs_kernel_id/2 FACT lines are "
+                        "removed (declarations preserved). The edge-semantics factor.",
     "probsets":         "Probe story packs — data, same shape as a testset leg.",
     "archives":         "Archived corpora and point-in-time probes; per audits/README.md "
                         "point-in-time documents are not retro-edited.",
