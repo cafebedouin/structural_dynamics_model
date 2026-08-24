@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "e01951de21d96a4ac5d777bd64a9adea8704b2a5",
+    "store_version": "d42b9b6f20db20453d72feeaafb6836c00c4a1b7",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-24T11:40:07"
+    "generated_at": "2026-08-24T14:04:42"
   },
-  "issues_sha": "4bdb98e8a23d95757a0682838b9ad59ce99d63dd5b5cc1c8cd758eeb5416398a",
-  "n_entries": 364,
+  "issues_sha": "887ac8b4eb0c708ad2e51bd1979f66ac7973ad8cbd019f14ae76464e2274bfb8",
+  "n_entries": 366,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 150,
+    "open": 152,
     "partial": 5
   },
   "active": [
@@ -2282,6 +2282,35 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-342"
+      ]
+    },
+    {
+      "id": "OQ-365",
+      "status": "open",
+      "priority": 2,
+      "summary": "The DP-001/OQ-25 ε-coherence seal is SILENTLY SCOPED to `cs_story_uid` authorship: 14 corpora are exempt outright and 9 more are partially checked, all producing output identical to a clean pass",
+      "deps": [
+        "splits_from OQ-353"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-25",
+        "OQ-353"
+      ]
+    },
+    {
+      "id": "OQ-366",
+      "status": "open",
+      "priority": 3,
+      "summary": "OQ-353's B1/B2 cut-points: RULED UNSET (operator, 2026-08-24), reported as continuous ratios until a principled cut exists",
+      "deps": [
+        "blocked_on_human oq366-principled-cut-requires-k-gt-2",
+        "splits_from OQ-353",
+        "gates OQ-353"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-353"
       ]
     }
   ],

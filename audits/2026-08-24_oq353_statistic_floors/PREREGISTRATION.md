@@ -55,6 +55,23 @@ indistinguishable from one discovered to fit the results.
 **C1 asked whether the chimera seal ADMITS v6. The question is malformed: the seal never
 evaluates v6.**
 
+> **PRE-FREEZE NOTE ON C1'S STATUS — read this before reading C1's `Fired: live`.**
+> The plan spent three passes refining a three-outcome table — **clean / warns / refuses** — and
+> the true answer is a **FOURTH outcome the table does not contain: *not evaluated*.** C1 is
+> recorded `Fired: live` in `audits/INVESTIGATIONS.md`, and a later reader who sees that bit
+> beside a clean load will otherwise infer that the seal ran and passed v6. **It did not run.**
+> The three-outcome table presupposed that the seal evaluates whatever corpus is put in front of
+> it; that presupposition is false, and it is false for reasons that have nothing to do with v6.
+> Wherever C1's outcome is cited, the token is *not evaluated* — never *clean*.
+
+**This is not a v6 property — it is a defect in the seal, and it has its own OQ.** The seal's
+coverage is proportional to `cs_story_uid` authorship and it reports nothing about that coverage,
+so **14 corpora (7,162 stories) are exempt outright and 9 more are partially checked while
+producing output identical to a clean pass** — including the LIVE leg `testsets` at 64.2%, and
+7,829 readings unchecked in total. Tracked as **OQ-365**, with the three-arm control below cited
+as its evidence. What is recorded *here* is the local consequence for arms (b)/(c); the instrument
+defect is OQ-365's.
+
 - v6 **loads clean** at HEAD — 3380/3380 files, `corpus_constraint` 3380, census 3380 stories /
   0 non-story / 0 other, exit 0, `config_violations.log` untouched. 0 `ERROR:` lines, 0
   `[corpus] SKIPPED`, 0 failed loads, 0 `CONFIG ERROR`, 0 `CS ERROR`. 41,864 warning records
@@ -78,6 +95,30 @@ this seal exists to catch — and that check has not run on it. **Arms (b) and (
 UNVETTED ε-coherence assumption.** Bookkeeping this clean as a pass would be Pattern 5.
 
 ---
+
+## 2a. DECLARED DEVIATION from handoff item 5 — the stamp test's disposition
+
+Handoff item 5 (and plan §4.3 change 6) says to adopt `report_corpus`'s softened stamp test.
+**The VERDICT is adopted in full** — same three-way outcome, computed through the same
+`_is_code_path` imported from `run_pipeline.py` (never redefined: a second definition of "engine
+path" would be Pattern 2), fail-closed on an undecidable stamp. **The DISPOSITION deviates, and
+the reason is recorded here rather than left to be discovered.**
+
+`report_corpus` **joins** report artifacts to a same-commit classify output, so a cross-commit
+pair is a real defect there and a hard refusal is right. This instrument **tabulates historical
+classify outputs ACROSS legs**, and cross-commit spread is the very thing its `commit` column
+exists to surface — step 0's F1–F8 are exactly such a comparison. Adopting the hard refusal
+verbatim refuses **all 19 legs** (measured: every leg's output stamps a commit with real
+engine-file deltas since, because the legs were classified over several days as they landed), the
+instrument emits nothing, and **Verification 0's own before/after diff becomes unproducible —
+which would make the refactor unprovable.**
+
+So the default disposition here is **RECORD, never silent**: every leg's token is printed to
+stderr and lands in `outputs/leg_diagnostic_table.json` → `classify_stamp`. `--strict-stamp`
+restores `report_corpus`'s hard behaviour, and both sides are fixture-covered in the gate row.
+**Accepted by the operator, 2026-08-24.** The divergence is therefore declared, not accidental —
+if the two tools' stamp semantics are ever unified, this is the paragraph that says why they were
+not.
 
 ## 3. C2 — three things recorded verbatim, not as footnotes
 
@@ -325,7 +366,37 @@ fabricated value wearing a verdict's clothes. The selftest exercises the classif
 with values explicitly labelled `SYNTHETIC — NOT the frozen cut-points`, which does not pre-empt
 the ruling.
 
-**Blocked on:** the operator ruling. Phase 2 cannot read B1 or B2 without it.
+### 8.1a RULED (operator, 2026-08-24): the cut is REFUSED, not deferred — OQ-366
+
+The ruling is taken, not pending. **Do not set R_hi/R_lo from step-0 evidence.** A continuous
+1.715→∞ distribution with no gap, and 10 of 52 statistics inside the proposed band, means any cut
+named here is arbitrary — and **an arbitrary cut frozen into a pre-registration is worse than a
+declared abstention, because it manufactures the appearance of a pre-committed threshold.**
+
+1. **B1 and B2 are reported as CONTINUOUS RATIOS with the band declared `BAND_UNSET`** — not as
+   bits — unless and until a principled cut exists.
+2. This section records the refusal with the distribution pasted above.
+3. Where Phase 2's downstream logic needs a bit, it takes **the ratio plus an explicit
+   `BAND_UNSET` token — never a default.** Mechanically: `classify_bits()` returns `B1_ratio` /
+   `B2_ratio` and stamps the bits `BAND_UNSET`; `require_bits=True` **raises**
+   `CutPointsNotRuled` rather than defaulting. Both paths are gate-fixtured in `oq353 floors`,
+   and `BAND_UNSET` is asserted textually distinct from `NOT_MEASURED` and `PENDING OQ-356`.
+
+**What would license a cut — the concrete unblocking condition.** A corpus family with **more than
+two same-model draws**, which gives B1 a **distribution** rather than a difference. The pair floor
+today is a k=2 point estimate (§8.3); a third same-model draw at the same prompt and sampling turns
+that floor into something with a spread, and a cut can then be sited against the spread rather than
+asserted. **This is a generation spend, not a re-read** — no existing leg supplies it, since every
+same-model family in the roster is a pair.
+
+**Consequence, stated plainly at the verdict's altitude.** B1 and B2 join B3's exposed class as
+bits that report a **number** rather than a **verdict**. That is a smaller answer than OQ-353 hoped
+for, and it is the honest one. **A close reporting B1/B2 as continuous ratios with `BAND_UNSET` is
+a legitimate close, not a failed investigation** — the same standing §6 gives the "saturated or
+unreadable" outcome.
+
+**Tracked as OQ-366** (`blocked_on_human oq366-principled-cut-requires-k-gt-2`), so the unblocking
+condition surfaces in the `[NEXT]` queue rather than living only in this file.
 
 ### 8.2 The (c) floor's resolution limit — k=3 is the STRUCTURAL MAXIMUM
 
@@ -570,11 +641,25 @@ and stay textually distinguishable there (a tag that dies before the read site i
    stripped twin not throwing. Both dispositions are pre-written (§3.3); neither is decided after
    observation.
 8. **B5's negative magnitude reading is bounded by the seat set, not by the leg choice** (§9).
-9. **v6's ε-coherence is UNVETTED** — the seal is vacuous on it (§2). New at this freeze.
-10. **Cut-points and the B1 band are OPEN operator rulings** (§8.1, §8.3); the classifier refuses
-    rather than defaulting. New at this freeze.
+9. **v6's ε-coherence is UNVETTED** — the seal is vacuous on it (§2), and this is a defect in the
+   seal rather than a property of v6: 14 corpora exempt outright, 9 partially checked, 7,829
+   readings unchecked, the live leg at 64.2%. Tracked as **OQ-365**. C1's outcome token is
+   *not evaluated* — a fourth outcome the plan's three-outcome table does not contain.
+   New at this freeze.
+10. **Cut-points are RULED UNSET, not open** (§8.1a, operator 2026-08-24; **OQ-366**). B1/B2
+    report continuous ratios stamped `BAND_UNSET`; the classifier raises rather than defaulting
+    when a caller demands a bit. Unblocking condition: a third same-model draw — a generation
+    spend, not a re-read. New at this freeze.
 11. **The exposure columns are 44/56 and 41/56 UNTRACED** (§6), so the published exposure counts
     are a **floor**, not a census. New at this freeze.
-12. **X1's counting rule is frozen but NOT YET VALIDATED** against a published
+12. **The stamp test's DISPOSITION deviates from handoff item 5** — verdict adopted in full,
+    disposition is record-not-refuse, reason declared at §2a (operator-accepted 2026-08-24).
+    New at this freeze.
+13. **F5's directive keyword correction is owed to the BASE PLAN's text** — `:- multifile`, not
+    `:- discontiguous` (§11). Carried into the Phase-2 `ISSUES.md` batch per the operator, so the
+    plan's stated integrity check stops being one that cannot fail.
+14. **The vacuous-seal finding is owed to `KNOWN_STATE.md`** — deferred to the Phase-2 batch by
+    operator ruling, not forgotten.
+15. **X1's counting rule is frozen but NOT YET VALIDATED** against a published
     `n_sibling_edges_stripped`, because that figure is a `giant_comp` product and `giant_comp` is
     blocked (§12). The validation is Phase 2's first (a′) step, before any delta is read.

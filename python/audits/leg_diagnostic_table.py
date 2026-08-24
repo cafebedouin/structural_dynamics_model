@@ -87,6 +87,7 @@ NOT_MEASURED = "NOT_MEASURED"          # Phase 1 runs no arms; this is not a ver
 PROMPT_HASH_ABSENT = "PROMPT_HASH_ABSENT"   # OQ-352 token; never a model name
 CLASSIFY_STAMP_LAGS = "CLASSIFY_STAMP_LAGS"  # engine-free stamp lag, ACCEPTED and RECORDED
 UNTRACED = "UNTRACED"                  # exposure not established; NOT the same as "not exposed"
+BAND_UNSET = "BAND_UNSET"              # OQ-366: no principled cut exists; report the RATIO, not a bit
 PENDING_OQ356 = "PENDING OQ-356"       # registered statistic no arm can populate yet
 
 # ---------------------------------------------------------------------------
@@ -378,22 +379,26 @@ REGISTERED_PENDING = (
 
 B_BITS = ("B1_draw_bound", "B2_model_disposition", "B3_content_or_mixture",
           "B4_size_bound", "B5_guard_sensitive")
+# OQ-366: the continuous companions. B1/B2 are reported as RATIOS, not verdicts, until a
+# principled cut exists — which needs a third same-model draw (a generation spend).
+B_CONTINUOUS = ("B1_ratio", "B2_ratio")
 
 
 def write_verdicts(dropped: dict, path: Path) -> int:
     """The verdict table.  PHASE 1 RUNS NO ARMS, so every B cell is NOT_MEASURED."""
     cols = (["stat", "source", "kind", "denominator", "vintage_exposed", "mixture_exposed",
-             "in_pair_table", "drop_reason"] + list(B_BITS) + ["guard_delta", "why"])
+             "in_pair_table", "drop_reason"] + list(B_BITS) + list(B_CONTINUOUS)
+            + ["guard_delta", "why"])
     with path.open("w") as fh:
         fh.write("\t".join(cols) + "\n")
         for s in STATISTICS:
             row = [s.name, s.source, s.kind, s.denominator, s.vintage, s.mixture,
                    "no" if s.name in dropped else "yes", dropped.get(s.name, ""),
-                   *[NOT_MEASURED] * len(B_BITS), NOT_MEASURED, s.why]
+                   *[NOT_MEASURED] * (len(B_BITS) + len(B_CONTINUOUS)), NOT_MEASURED, s.why]
             fh.write("\t".join(row) + "\n")
         for name, source, kind, why in REGISTERED_PENDING:
             row = [name, source, kind, "n/a", UNTRACED, UNTRACED, "no", PENDING_OQ356,
-                   *[PENDING_OQ356] * len(B_BITS), PENDING_OQ356, why]
+                   *[PENDING_OQ356] * (len(B_BITS) + len(B_CONTINUOUS)), PENDING_OQ356, why]
             fh.write("\t".join(row) + "\n")
     return len(STATISTICS) + len(REGISTERED_PENDING)
 
@@ -643,22 +648,53 @@ class CutPointsNotRuled(RuntimeError):
     pass
 
 
-def classify_bits(obs: dict, cuts: Optional[dict] = None) -> dict:
+def classify_bits(obs: dict, cuts: Optional[dict] = None,
+                  require_bits: bool = False) -> dict:
     """Map one statistic's arm measurements to the B1–B5 vector.
 
     obs keys: ratio, within_pure_max, between_model_spread, sep_a_c, floor_c,
               sep_b_c, guard_delta, guard_null_floor, vintage_exposed, mixture_exposed.
     Any obs value of None means THAT ARM DID NOT RUN -> the bit is NOT_MEASURED.
+
+    OQ-366 RULING (operator, 2026-08-24): the cut-points are UNSET and are NOT to be
+    invented. With no cuts, this returns the CONTINUOUS quantities (`B1_ratio`,
+    `B2_ratio`) and stamps the corresponding bits BAND_UNSET — a bit that reports a
+    NUMBER rather than a VERDICT. That is a smaller answer than OQ-353 hoped for and it
+    is the honest one. `require_bits=True` is for a caller that genuinely cannot proceed
+    without a verdict: it RAISES rather than defaulting, so "never a default" holds on
+    both paths.
     """
     cuts = cuts if cuts is not None else CUTPOINTS
-    if cuts is None:
-        raise CutPointsNotRuled(
-            "cut-points are UNSET (operator ruling pending). Step 0's implicit 3/8 band "
-            "holds 10 of 52 statistics, so it is not a gap; defaulting would fabricate a "
-            "threshold. See PREREGISTRATION.md §cut-points.")
-    R_hi, R_lo, band = cuts["R_hi"], cuts["R_lo"], cuts["indeterminate_factor"]
     out = {b: NOT_MEASURED for b in B_BITS}
     tags, verdict = [], None
+
+    # Continuous quantities are ALWAYS reported — they need no cut to be meaningful.
+    wpm0, bms0, ratio0 = (obs.get("within_pure_max"), obs.get("between_model_spread"),
+                          obs.get("ratio"))
+    out["B1_ratio"] = (wpm0 / bms0) if (wpm0 is not None and bms0) else (
+        NOT_MEASURED if wpm0 is None or bms0 is None else float("inf"))
+    out["B2_ratio"] = ratio0 if ratio0 is not None else NOT_MEASURED
+    if cuts is None:
+        if require_bits:
+            raise CutPointsNotRuled(
+                "cut-points are UNSET (OQ-366, ruled). Step 0's implicit 3/8 band holds 10 "
+                "of 52 statistics, so it is not a gap; defaulting would fabricate a "
+                "threshold. Read B1_ratio / B2_ratio instead. See PREREGISTRATION.md §8.1.")
+        for b in B_BITS:
+            if obs.get("_measured", True):
+                out[b] = BAND_UNSET if b.startswith(("B1", "B2")) else out[b]
+        # B3/B4 lean on the same indeterminate band, so they are BAND_UNSET too whenever
+        # their arms ran. B5 needs only the MEASURED null floor and is unaffected.
+        if obs.get("sep_a_c") is not None:
+            out["B3_content_or_mixture"] = BAND_UNSET
+        if obs.get("sep_b_c") is not None:
+            out["B4_size_bound"] = BAND_UNSET
+        gd0, gf0 = obs.get("guard_delta"), obs.get("guard_null_floor")
+        if gd0 is not None and gf0 is not None:
+            out["B5_guard_sensitive"] = str(abs(gd0) > gf0)
+        return {**out, "verdict": None, "tags": tags,
+                "construction_bound": BAND_UNSET, "cutpoints": BAND_UNSET}
+    R_hi, R_lo, band = cuts["R_hi"], cuts["R_lo"], cuts["indeterminate_factor"]
 
     wpm, bms = obs.get("within_pure_max"), obs.get("between_model_spread")
     if wpm is not None and bms is not None:
@@ -711,7 +747,8 @@ def classify_bits(obs: dict, cuts: Optional[dict] = None) -> dict:
         cb = "construction-bound"
     elif out["B3_content_or_mixture"] in ("unreadable", "INDETERMINATE"):
         cb = "not_derivable"
-    return {**out, "verdict": verdict, "tags": tags, "construction_bound": cb}
+    return {**out, "verdict": verdict, "tags": tags, "construction_bound": cb,
+            "cutpoints": "SET"}
 
 
 # ===========================================================================
@@ -800,12 +837,29 @@ def selftest() -> int:
     print(f"cut-points used: {SYNTHETIC_CUTS['_provenance']}")
     fails = 0
 
-    print("\n-- cut-point refusal (the classifier must NOT default) --")
+    print("\n-- OQ-366: cut-points UNSET -> ratios, never a default bit --")
     try:
-        classify_bits({"ratio": 20.0}, cuts=None)
+        classify_bits({"ratio": 20.0}, cuts=None, require_bits=True)
         print("  FAIL: classify_bits invented cut-points instead of refusing"); fails += 1
     except CutPointsNotRuled:
-        print("  ok  : classify_bits REFUSES when cut-points are unruled")
+        print("  ok  : require_bits=True RAISES when cut-points are unruled (never a default)")
+    r0 = classify_bits({"within_pure_max": 0.9, "between_model_spread": 0.4, "ratio": 20.0},
+                       cuts=None)
+    for name, ok in [
+        ("no cuts -> B1/B2 read BAND_UNSET, not a verdict and not a blank",
+         r0["B1_draw_bound"] == BAND_UNSET and r0["B2_model_disposition"] == BAND_UNSET),
+        ("no cuts -> the CONTINUOUS ratios are still reported (2.25 / 20.0)",
+         abs(r0["B1_ratio"] - 2.25) < 1e-9 and r0["B2_ratio"] == 20.0),
+        ("BAND_UNSET is textually distinct from NOT_MEASURED and from PENDING OQ-356",
+         len({BAND_UNSET, NOT_MEASURED, PENDING_OQ356}) == 3),
+        ("no cuts -> construction-bound is NOT derived",
+         r0["construction_bound"] == BAND_UNSET),
+        ("B5 stays READABLE without cut-points — it needs only the MEASURED null floor",
+         classify_bits({"guard_delta": 0.5, "guard_null_floor": 0.0},
+                       cuts=None)["B5_guard_sensitive"] == "True"),
+    ]:
+        fails += (not ok)
+        print(f"  {'ok  ' if ok else 'FAIL'}: {name}")
 
     print("\n-- planted bit fixtures --")
     for name, obs, check in _fixtures():

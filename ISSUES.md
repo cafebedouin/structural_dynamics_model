@@ -18852,6 +18852,122 @@ proxy for the unknown count** — it over-counts 5 vs 2 here (2.5x), and a fixer
 safe `-1.0`. Assert on the token: `purity_score` succeeds AND `\+ number(P)`.
 
 
+## OQ-365 — The DP-001/OQ-25 ε-coherence seal is SILENTLY SCOPED to `cs_story_uid` authorship: 14 corpora are exempt outright and 9 more are partially checked, all producing output identical to a clean pass
+
+**Ω-type:** Ω_E (an instrument whose coverage is invisible at its own read site).
+
+**Status:** open — minted 2026-08-24 from OQ-353 Phase 1 precondition C1, which asked whether the
+seal ADMITS `original_v6` and discovered the question was malformed: it never evaluates it.
+**Priority:** 2
+**Deps:** splits_from OQ-353
+**Files:** `prolog/config_validation.pl` (the `config_violation/1` chimera clause, ~:199-210 — the
+`current_predicate/1` test plus the non-empty requirement on collected `cs_story_uid` keys),
+`prolog/corpus_loader.pl:243` (`validate_config_postcorpus`, the only call site),
+`audits/2026-08-24_oq353_statistic_floors/c1_control/` (the three-arm control),
+`docs/cs_load_discipline.md` (states the invariant the seal is believed to enforce).
+
+**The fact.** The chimera clause is guarded on the collected `cs_story_uid` keys being non-empty.
+Where a corpus authors no `cs_story_uid`, the guard fails, the clause contributes no violation,
+`validate_config_postcorpus` finds `Violations == []`, and the load completes **byte-identically to
+a corpus that passed the check**. The seal's coverage is therefore proportional to `cs_story_uid`
+authorship, and **it reports nothing about its own coverage** — Build Discipline Pattern 6 (an
+aggregate that does not carry its coverage to the read site) sitting inside Pattern 5 (absence
+satisfies the gate).
+
+**The control, so this is a TESTED absence and not a fact about a search
+(`audits/2026-08-24_oq353_statistic_floors/c1_control/`).** Three planted 2-story corpora:
+| arm | ε | `cs_story_uid` | result |
+|---|---|---|---|
+| `arm_fires` | 0.30 vs 0.70 | present | **FIRES** — `CS ERROR (OQ-25)`, halt, `config_violations.log` written |
+| `arm_declines_single_eps` | single | present | declines, exit 0 (two-sided partner) |
+| `arm_v6shape_no_uid` | **0.30 vs 0.70** | **absent** | **SILENT** — exit 0, no log, no diagnostic |
+The third arm carries a genuine ε conflict the seal is built to catch and says nothing.
+
+**The census (measured 2026-08-24 over all 37 on-disk corpora; re-derive before citing).**
+- **14 corpora FULLY VACUOUS — 7,162 stories, 0 readings checked:** `original_v6` (3380),
+  `original_v6_test_haiku_chi_squared` (959), `original_v6_test_flash` (886), `original_v5` (702),
+  `testsets_archive_20260525` / `testsets_backup_20260527_003713` / `testsets_backup_20260527_003909`
+  (214 ea), `original_test_testsets` (199), `testsets_sotu` (189), `original_v2` (104),
+  `original_v1` (43), `original_v4` (39), `original_v3` (18), `original_diagnostic` (1).
+- **9 corpora PARTIALLY CHECKED — the guard PASSES and checks only a subset, which is the worse
+  case because it reads identically to full coverage:** `testsets_failed_20260527_003717` 2/214
+  (0.9%), `kernel_v2_test` 15/100 (15.0%), **`testsets` — the LIVE leg — 183/285 (64.2%)**,
+  `kernel_test` 180/229 (78.6%), `kernel_v1` 906/1106 (81.9%), then the four 99%+ legs
+  (`stealth3`, `stealth2`, `stealth`, `sonnet`).
+- **7,829 readings in total that the seal does not check.**
+
+**Why this outranks the v6 confound it was found inside.** The live leg is at 64%: the seal runs on
+`testsets` on every pipeline run and silently checks two thirds of it. And the archived corpora the
+project explicitly reaches for as its breadth option (`kernel_v1`, `original_v5`, `original_v6`) are
+the ones least covered — `original_v6` is chimera-era **by declaration**, with ID reuse across runs
+(OQ-25, v7 §5.11), i.e. the exact population this seal exists to police, and it has never been
+policed. Any prior statement that a corpus "loads clean" is, for these corpora, a statement about
+the loader, not about ε-coherence.
+
+**What resolution would change.** Either (a) the seal reports its own coverage
+(`n_readings_checked` / `n_readings_total`) so a 15%-covered corpus stops being indistinguishable
+from a 100%-covered one, and/or (b) the invariant is re-keyed onto a field every corpus carries
+(the grouping key is `ConstraintAtom` — `cs_story_uid` is used only to ENUMERATE the readings, and
+`constraint_metric(C, extractiveness, E)` is itself enumerable without it), and/or (c) the seal
+fails closed on zero coverage rather than passing silently. **(b) looks cheap and is the one to
+scope first** — the clause's own comment says the grouping key is `ConstraintAtom`, so the
+`cs_story_uid` enumeration may be an incidental implementation choice rather than a required one.
+That is a hypothesis from reading the clause, NOT a verified claim: it must be checked against what
+`cs_story_uid` contributes to the UID-uniqueness sibling check before anything is re-keyed.
+
+**Resolution:** the coverage census re-derived at HEAD, a ruling on (a)/(b)/(c), and — whichever
+lands — a positive control showing the seal FIRES on a planted chimera in a corpus that carries no
+`cs_story_uid`, which is precisely what it cannot do today.
+
+---
+
+## OQ-366 — OQ-353's B1/B2 cut-points: RULED UNSET (operator, 2026-08-24), reported as continuous ratios until a principled cut exists
+
+**Ω-type:** Ω_P (a threshold that cannot be set from the evidence available; a declared abstention).
+
+**Status:** open — minted 2026-08-24. The ruling below is TAKEN, not pending; what remains open is
+the unblocking condition, which is a generation spend rather than an analysis.
+**Priority:** 3
+**Deps:** blocked_on_human oq366-principled-cut-requires-k-gt-2, splits_from OQ-353, gates OQ-353
+**Files:** `python/audits/leg_diagnostic_table.py` (`CUTPOINTS`, `classify_bits`,
+`CutPointsNotRuled`, the `BAND_UNSET` token),
+`audits/2026-08-24_oq353_statistic_floors/PREREGISTRATION.md` §8.
+
+**The evidence that forced the abstention.** OQ-353 Phase 1 measured step 0's implicit cut-points
+(ratio ≥ 8 = model-disposition, < 3 = draw-dominated) against step 0's own 52-statistic pair table.
+**The proposed band is not a gap — 10 of 52 statistics land inside [3, 8):**
+`contextuality.by_type.tangled_rope` 3.635, `type.scaffold` 4.143, `contextuality.by_type.snare`
+4.259, `type.piton` 4.639, `monotonicity.ascending` 4.822, `monotonicity.descending` 5.035,
+`severe_share_within_type.mountain` 6.867, `type.rope` 6.930, `severe_share_within_type.snare`
+6.952, `monotonicity.constant` 6.997. The full distribution runs **1.715 → ∞ with no
+discontinuity** (8 below 3, 10 inside, 34 at or above 8).
+
+**The ruling (operator, 2026-08-24).** Do not set R_hi/R_lo from this evidence. Any cut is
+arbitrary, and **an arbitrary cut frozen into a pre-registration is worse than a declared
+abstention — it manufactures the appearance of a pre-committed threshold.** Therefore:
+1. **B1 and B2 are reported as CONTINUOUS RATIOS with the band declared `BAND_UNSET`**, not as
+   bits, unless and until a principled cut exists.
+2. The pre-registration records the refusal with the distribution pasted (§8.1).
+3. Where downstream logic needs a bit, it takes the ratio plus an explicit `BAND_UNSET` token —
+   **never a default**. `classify_bits` raises `CutPointsNotRuled` rather than defaulting, and a
+   gate fixture in `oq353 floors` asserts that refusal.
+
+**What would license a cut — the concrete unblocking condition.** A corpus family with **more than
+two same-model draws**, which would give B1 a DISTRIBUTION rather than a difference. The pair floor
+today is a k=2 point estimate (OQ-353 §8.3 residue); a third same-model draw at the same prompt and
+sampling turns the floor into something with a spread, and a cut can then be sited against that
+spread rather than asserted. This is a **generation spend, not a re-read** — no existing leg
+supplies it, since the roster's same-model families are pairs.
+
+**Consequence, stated plainly.** B1 and B2 join B3's exposed class as bits that report a NUMBER
+rather than a VERDICT. That is a smaller answer than OQ-353 hoped for, and it is the honest one.
+
+**Resolution:** either a third same-model draw exists and a cut is sited against the resulting
+spread, or OQ-353 closes reporting B1/B2 as continuous ratios with `BAND_UNSET` — which is a
+legitimate close, not a failure.
+
+---
+
 ---
 
 ## OQ-356 — `giant_component_analysis` DIES on 17 of 20 corpora: `count_by_action_band/8` is the OQ-60 sweep's missed site, and an unguarded `EP >= 0.0` over a raw `effective_purity` throws on `unknown`

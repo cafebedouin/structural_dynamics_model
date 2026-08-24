@@ -15,7 +15,7 @@ could not clear: the OQ-356 human ruling, and a cut-point ruling this phase newl
 
 ## What this phase produced
 
-- **`PREREGISTRATION.md`** (md5 `c4d9f7ce5d196c5f6588df78541e247c`) — the frozen artifact: 56 declared classify-side
+- **`PREREGISTRATION.md`** (md5 `f960db2c4f6fd3be7491b33c063b814f`) — the frozen artifact: 56 declared classify-side
   statistics + 10 report stages + 5 `PENDING OQ-356` rows, four kinds, both exposure columns
   with their coverage, the B1–B5 bit vector replacing OQ-353's non-partitioning five labels, X1's
   counting rule, the arms, and 12 declared residues.
@@ -31,7 +31,14 @@ could not clear: the OQ-356 human ruling, and a cut-point ruling this phase newl
    is guarded on `cs_story_uid` being non-empty and v6 carries it on **0/3380**. A three-arm
    positive control shows the seal fires on a planted chimera, declines on coherent data, and is
    **silent on a genuine ε conflict when `cs_story_uid` is absent** — v6's exact shape. Arms
-   (b)/(c) inherit an unvetted ε-coherence assumption.
+   (b)/(c) inherit an unvetted ε-coherence assumption. **The census makes it a seal defect, not a v6
+property:** 14 corpora fully vacuous (7,162 stories), 9 partially checked while producing output
+identical to a clean pass — `testsets_failed_…` at 0.9%, `kernel_v2_test` at 15%, and **the LIVE
+leg `testsets` at 64.2%** — for **7,829 unchecked readings** in total. The partial case is the
+worse one: a 15%-covered corpus is indistinguishable from a 100%-covered one at the read site.
+**C1's outcome token is therefore *not evaluated* — a fourth outcome the plan's clean/warns/refuses
+table does not contain**, recorded as a pre-freeze note so a later reader does not read
+`Fired: live` beside a clean load and infer the seal passed v6.
 2. **The cut-points cannot be set from step-0 evidence.** Step 0's implicit `≥8 / <3` band holds
    **10 of 52 statistics**, on a continuous 1.715→∞ distribution with no gap. The plan's
    cut-point stop-and-ask fires. `classify_bits()` raises `CutPointsNotRuled` rather than
