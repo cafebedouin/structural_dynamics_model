@@ -1,0 +1,379 @@
+{
+  "header": {
+    "constraint_id": "woman_category__intersex_accommodation_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_woman_category__intersex_accommodation_reading",
+    "measurement_id_prefix": "woman_category__intersex_accommodation_reading",
+    "story_uid": "757ea2dc-b019-4240-b625-7a4e44618c66"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.45,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Woman Category: Intersex Accommodation Reading",
+    "topic_domain": "political_philosophy/law/social_policy/bioethics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "typical_female_biology_women",
+      "intersex_female_typical_people"
+    ],
+    "victims": [
+      "intersex_female_typical_people_in_sports"
+    ],
+    "vindicated_propositions": [
+      "biological_sex_nonbinary_spectrum",
+      "intersex_inclusion_in_woman_category",
+      "medical_autonomy_for_intersex_people"
+    ]
+  },
+  "interval": {
+    "start": 2000,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_structure",
+      "question": "This constraint is one reading (intersex_accommodation_reading) of the contested woman_category kernel. What structural classification do the sibling readings (sex_biology_reading, gender_identity_reading) receive, and how do their ε values differ?",
+      "resolution_mechanism": "Author separate constraint stories for sex_biology_reading and gender_identity_reading with their own ε, beneficiaries, victims, and claimed_type. Link all three via network.affects_constraints.",
+      "impact": "If sibling readings compute as different types (e.g., sex_biology_reading as mountain, gender_identity_reading as scaffold), the kernel itself has no single classification — only the readings do. This confirms the ε-invariance principle: the label 'woman category' covers multiple constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment kernel decomposition: one kernel, three readings, three constraints"
+    },
+    {
+      "id": "sports_extraction_spike",
+      "question": "Why does extractiveness spike dramatically in elite sports (ε ≈ 0.75) while remaining low in most policy domains (ε ≈ 0.15)?",
+      "resolution_mechanism": "Domain-specific measurement: compare enforcement intensity, stakeholder power asymmetry, and exit options in sports governing bodies vs. civil legal systems vs. medical protocols.",
+      "impact": "If the spike is structural (sports bodies have monopoly power over competition entry + no exit for athletes), the constraint is a tangled_rope overall but functions as a snare in the sports subdomain. This may warrant a decomposed story: woman_category__intersex_accommodation_reading__sports_subdomain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Domain-conditioned extraction variance: low ε generally, high ε in sports"
+    },
+    {
+      "id": "binary_enforcement_challenge",
+      "question": "Does this reading's spectrum model structurally foreclose binary enforcement, or does it create a dual-track system where binary categories persist in some domains (sports) while spectrum recognition operates in others (civil law)?",
+      "resolution_mechanism": "Trace institutional adoption: which bodies have adopted spectrum definitions (some national laws, medical guidelines) and which maintain binary enforcement with carve-outs (World Athletics, IOC). Measure whether carve-outs are stable or shrinking.",
+      "impact": "If dual-track is stable, this reading coexists_with sex_biology_reading institutionally. If spectrum recognition is displacing binary enforcement, this reading influences sex_biology_reading toward obsolescence. If binary enforcement reasserts (e.g., new sports bans), sex_biology_reading influences this reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural relationship between spectrum and binary enforcement across institutional domains"
+    },
+    {
+      "id": "victim_beneficiary_duality",
+      "question": "Intersex_female_typical_people are listed as both beneficiaries (category inclusion) and victims (sports extraction). Is this a genuine tangled_rope structure (same agents coordinated and extracted), or are these distinct subpopulations?",
+      "resolution_mechanism": "Disaggregate: do intersex women who never enter elite sports experience net benefit from category inclusion? Do elite intersex athletes experience net extraction despite category inclusion? Measure per-subpopulation χ.",
+      "impact": "If the same individuals are both coordinated and extracted, tangled_rope is confirmed. If distinct subpopulations, the constraint may be a rope for most and a snare for athletes — warranting decomposition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether beneficiary and victim roles attach to the same agents or different subpopulations"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression experienced by intersex women in sports structural (World Athletics regulations, eligibility bans) or internalized (medicalization pressure, identity negation), or both?",
+      "resolution_mechanism": "Post-exit trajectory: do intersex athletes who leave elite sports still experience suppression in medical/legal contexts? If suppression persists after sports exit, internalized component is significant.",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests — the constraint travels with the agent. This affects χ computation for identity_locked exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression for intersex women in sports"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.45
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the intersex_accommodation_reading of the woman_category kernel. It defines 'woman' as a biological category that acknowledges sex as a non-binary spectrum, including typical female biology plus intersex variations that do not fit the male category. This reading operates across legal, medical, and sports domains. In most policy domains (civil law, anti-discrimination, medical ethics), extractiveness is low — the category inclusion provides recognition and protection for a small population. In elite sports, however, the same category boundary becomes highly extractive: World Athletics and IOC regulations impose testosterone suppression on intersex women with differences of sex development (DSD) to compete in women's events, creating a tangled rope where inclusion in the woman category is the coordination function and mandatory medical intervention is the extraction. The Caster Semenya case (2009–present) is the paradigmatic instance. The measurement series captures the ratchet: pre-2009 minimal regulation, 2011 hyperandrogenism regulations, 2015 CAS suspension, 2018 revised DSD regulations, 2023 further tightening. The 2024 end-point value (0.35) reflects the blended ε across domains — sports extraction is high but sports population is tiny; civil law extraction is near zero.",
+    "logic_rationale": "Base extractiveness (0.35) is a domain-blended value: near-zero in civil law/medical ethics (category inclusion is protective), very high in elite sports (testosterone suppression mandates). The blended value reflects population weighting — sports affects perhaps 5-10 elite athletes globally at any time, while civil recognition affects all intersex people. Suppression (0.45) captures active enforcement in sports (regulations, testing, bans) and softer enforcement in law (non-recognition of non-binary categories in many jurisdictions). Theater ratio (0.22) is low because the coordination function (legal recognition, medical ethics) is genuine, not performative. Accessibility collapse (0.52) is moderate: binary alternatives persist in sports and many legal systems, but spectrum recognition is spreading. Resistance (0.55) is moderate: intersex advocacy, human rights bodies, and some medical organizations resist sports regulations; sex biology advocates resist spectrum recognition.",
+    "directionality_logic": "Typical_female_biology_women are beneficiaries (d ≈ 0.15): category inclusion is affirmed, no extraction. Intersex_female_typical_people are dually positioned: in civil domains they are beneficiaries (d ≈ 0.2, category inclusion); in sports they are targets (d ≈ 0.9, mandatory medicalization, no exit from elite competition without abandoning career). Sports_governing_bodies are agenda_setters (d ≈ 0.1, they write and enforce rules, collect legitimacy). Legal_policy_institutions are agenda_setters (d ≈ 0.2, they administer category definitions). Sex_biology_advocates and gender_identity_advocates are excluded (d ≈ 0.7, their preferred definitions are not adopted, but they have exit to advocacy). Bioethics_scholars are observers (d = 0.5, analytical seat). The engine will compute per-seat χ from these structural positions.",
+    "perspectival_gap": "The payer seat (intersex women in sports) and beneficiary seat (intersex women in civil law) are the same people in different domains. The engine should compute divergent types: rope/scaffold in civil domains (coordination with minimal extraction), snare/tangled_rope in sports (high extraction, active enforcement, suppressed exit). The agenda_setter seats (sports bodies, legal institutions) will compute as low-extraction beneficiaries of the coordination function. This seat divergence is the measurement — not an error to resolve.",
+    "mandatrophy_analysis": "The founding problem (binary sex classification harming intersex people) remains live: non-consensual infant surgeries continue, legal recognition is incomplete, sports bans are expanding. The arrangement has not outlived its function — but in sports, the coordination function (fair competition) has been captured by extraction (testosterone suppression as gatekeeping). The mandatrophy risk is domain-specific: civil recognition is not mandatrophic; sports regulation shows mandatrophy signals (theater rising, extraction rising, founding problem of 'fair competition' contested).",
+    "kernel_context": "This constraint is the intersex_accommodation_reading of the woman_category kernel. Sibling readings: sex_biology_reading (woman = adult human female, XX chromosomes, female reproductive anatomy — binary biology), gender_identity_reading (woman = person who identifies as woman, regardless of assigned sex — identity-based). This reading grounds category membership in biological spectrum ontology; it forecloses neither sibling logically (legal systems can recognize spectrum for civil law while sports bodies enforce binary with carve-outs), but it structurally influences both by providing an alternative ontology that institutions may adopt or resist. The kernel has no single authority — kernel_codification is distributed across medical, legal, and sports bodies."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "woman_category__sex_biology_reading",
+      "woman_category__gender_identity_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the woman_category kernel. The sex_biology_reading asserts binary chromosomal/anatomical definition (claimed_type: mountain in biology, tangled_rope in law). The gender_identity_reading asserts self-identification definition (claimed_type: scaffold in progressive law, rope in community practice). This reading asserts spectrum biology definition (claimed_type: tangled_rope overall). All three share the kernel but instantiate different constraints with different ε, beneficiaries, victims, and structural types. They are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "typical_female_biology_women",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Their category membership as women is affirmed by this reading. They gain legal protections, sports access, and social recognition without new burdens. Exit is mobile — they can engage with or ignore the spectrum discourse without losing their category status."
+    },
+    {
+      "name": "intersex_female_typical_people",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "In civil law and medical ethics, they gain category recognition and protection from non-consensual surgery — a genuine coordination benefit. In elite sports, they face mandatory testosterone suppression to compete, with no exit that preserves athletic career. Their intersex variation fuses with athletic identity: leaving competition means leaving the only context where their biology is relevant. This identity lock makes exit structurally unavailable, not merely costly."
+    },
+    {
+      "name": "intersex_female_typical_people_in_sports",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Elite athletes with DSD (e.g., 46,XY 5-ARD) who compete in women's events. World Athletics DSD regulations require testosterone ≤ 2.5 nmol/L for 6+ months via medication or surgery. Non-compliance = ban from women's events. No alternative competition category exists. Exit means career termination. The extraction is medicalization as price of entry; the coordination story (fair competition) is the cover."
+    },
+    {
+      "name": "sports_governing_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "World Athletics, IOC, international federations. They write eligibility rules, control competition entry, and define 'fairness' for women's sport. They benefit from the woman category as a stable competitive class. They have arbitrage-grade exit: they can modify rules, create new categories, or shift enforcement costs to national bodies. Their institutional continuity depends on maintaining binary categories with narrow carve-outs."
+    },
+    {
+      "name": "legal_policy_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legislatures, courts, human rights bodies, medical boards. They adopt or reject spectrum definitions in anti-discrimination law, birth certificates, medical protocols. Some jurisdictions (Malta, Portugal, Iceland, some US states) have adopted non-binary or spectrum recognition. Others maintain binary. They face analytical exit: they can change policy without personal cost, but institutional inertia resists."
+    },
+    {
+      "name": "sex_biology_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocates for binary sex classification (e.g., sex-based rights organizations, some feminist groups). They argue 'woman' must mean adult human female for sex-based protections. They are excluded from this reading's ontology but maintain parallel institutional presence. Exit is mobile — they advocate in legislatures, courts, and media without dependency on this constraint."
+    },
+    {
+      "name": "gender_identity_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocates for self-identification as the sole criterion for womanhood. They view spectrum biology as still biologizing gender. Excluded from this reading's framework but politically adjacent. Exit is mobile — they pursue identity-based recognition independently."
+    },
+    {
+      "name": "bioethics_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the ethics of intersex medicalization, sports regulation, and category ontology. They do not collect rents or bear costs from the constraint. Their seat is the engine's analytical reference."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a biologically grounded category definition that accommodates intersex variations without collapsing into identity-only or binary-only models. Solves the coordination problem of how law, medicine, and sport should classify people whose biology does not fit male/female binary — by expanding 'woman' to include female-typical intersex variations rather than creating a third category or defaulting to identity.",
+    "transfer_function": "In civil domains: transfers recognition, legal protection, and medical autonomy from binary-enforcing institutions to intersex people (gain for intersex people, cost to institutional inertia). In sports: transfers the burden of 'fairness' onto intersex women via mandatory medicalization — they pay with bodily autonomy and career viability; sports bodies collect legitimacy and binary category stability.",
+    "absent_voices": "Intersex people with male-typical biology (excluded from 'woman' category under this reading — they would need a parallel 'man' accommodation reading). People who reject spectrum ontology entirely (would argue for binary in all domains). Infants subjected to non-consensual surgery (cannot yet speak). Future intersex people whose classification will be decided by today's institutional settlements.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading vanished overnight, civil law would revert to binary sex classification in most jurisdictions (intersex people lose non-binary recognition, regain path to binary assignment). Sports would enforce strict binary with no carve-outs (intersex women banned from women's events or forced into men's events). Medical protocols would resume default assignment surgeries. The world rearranges because institutions currently use this reading (or its logic) to justify existing accommodations — removing it removes the justification.",
+    "founding_problem": "The binary sex classification system (male/female only) fails to accommodate intersex variations, causing: non-consensual infant genital surgeries to force binary conformity; legal exclusion from identity documents; sports bans for athletes who do not fit binary; medical pathologization of natural variation. This reading was built to solve that exclusion by expanding the woman category rather than multiplying categories.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "UN Human Rights Council (2019) resolution on intersex rights; Council of Europe (2017) resolution against non-consensual surgery; WHO (2024) guidance on intersex health; intersex-led organizations (OII Europe, InterACT, ILGA World) — all outside the beneficiary set of this reading (they advocate for intersex people, not for this specific ontology). Medical ethics literature (e.g., Creighton, Liao, Davis) corroborates the harm of binary enforcement."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "woman_category__sex_biology_reading",
+      "woman_category__gender_identity_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sex_biology_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gender_identity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "biological_sex_is_spectrum",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "intersex_variations_included_in_woman_category",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "binary_sex_classification_regime",
+    "drift_state": {
+      "moment": "contemporary_intersex_rights_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

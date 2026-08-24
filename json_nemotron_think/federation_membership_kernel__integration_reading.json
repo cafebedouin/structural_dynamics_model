@@ -1,0 +1,398 @@
+{
+  "header": {
+    "constraint_id": "federation_membership_kernel__integration_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_federation_membership_kernel__integration_reading",
+    "measurement_id_prefix": "fmk_int",
+    "story_uid": "861d563f-73d7-451f-bc44-e25e6bcdf69f",
+    "created_at": "2026-08-15T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Free Movement as Expansive ECJ Integration Right",
+    "topic_domain": "political_economy/federalism/migration_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "mobile_eu_workers",
+      "employers_seeking_eu_labor",
+      "eu_integration_project"
+    ],
+    "victims": [
+      "displaced_local_labor",
+      "receiving_state_welfare_systems",
+      "sending_state_brain_drain"
+    ],
+    "vindicated_propositions": [
+      "eu_citizenship_as_fundamental_status",
+      "single_market_completion_through_labor_mobility",
+      "ecj_interpretive_supremacy"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_structure",
+      "question": "Is the integration_reading a structurally distinct constraint from the member_sovereignty_reading and welfare_coordination_reading, or are they observable-dependent views of one constraint?",
+      "resolution_mechanism": "Test ε-invariance: if measuring the constraint via 'mobile worker rights' yields low extraction but measuring via 'receiving state welfare cost' yields high extraction, the label 'free movement' covers multiple constraints. Decompose per DP-001.",
+      "impact": "If ε differs across measurement bases, this JSON must split into multiple constraint stories linked by network.affects_constraints. Current authoring assumes single ε for this reading's structural referent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Commitment kernel decomposition: whether the three declared readings instantiate three constraints or one constraint with observer-dependent classification."
+    },
+    {
+      "id": "fiscal_compensation_gap",
+      "question": "Does the absence of a fiscal transfer mechanism for receiving-state welfare costs constitute a structural extraction channel or a coordination gap awaiting political resolution?",
+      "resolution_mechanism": "Track whether EU-level fiscal capacity (own resources, borrowing authority) evolves to internalize cross-border welfare costs. If it does not after multiple treaty revisions, the gap is structural extraction.",
+      "impact": "If structural, the constraint is tangled_rope with permanent asymmetric extraction. If resolvable, the extraction is transitional and the constraint trends toward rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether welfare cost externalization is a designed feature or an unresolved coordination problem."
+    },
+    {
+      "id": "brain_drain_externality",
+      "question": "Is sending-state human capital depletion an externality the integration_reading internalizes (through remittances, return migration, EU cohesion funds) or a net extractive loss?",
+      "resolution_mechanism": "Longitudinal cohort analysis of sending regions: compare GDP per capita trajectories of high-emigration vs. low-emigration NUTS-2 regions controlling for cohesion fund allocation.",
+      "impact": "If net extractive, sending_state_brain_drain is a victim seat with high χ. If internalized, the victim declaration is overstated and the constraint trends toward rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the brain drain victim seat experiences net extraction or net coordination benefit over the biographical horizon."
+    },
+    {
+      "id": "ecj_interpretive_drift",
+      "question": "Has the ECJ's expansive interpretation drifted from the Treaty's original labor-mobility coordination function into a general social-rights harmonization mandate?",
+      "resolution_mechanism": "Code ECJ free movement judgments 1990-2025 by scope: (a) worker access to labor market, (b) equal treatment in employment conditions, (c) social assistance access for economically inactive. Track share of (c) over time.",
+      "impact": "If drift toward (c) is substantial and acknowledged, the constraint's claimed_type shifts from tangled_rope (coordination+extraction) toward snare (extraction under coordination cover).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the supranational authority's interpretive expansion has exceeded the coordination function's boundary."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the integration_reading of the federation_membership_kernel: the EU Treaty's free movement provisions (TFEU Arts. 21, 45-48) as interpreted by the ECJ to establish free movement as a fundamental right constitutive of EU citizenship, with expansive scope covering not only worker access but equal treatment in social advantages and, increasingly, access to social assistance for economically inactive citizens. The ECJ's case law (Martinez Sala, Baumbast, Dano, Alimanovic) progressively extends the personal and material scope, overriding national labor market protections (posted workers directive tension, minimum wage coordination) and imposing welfare costs on receiving states without fiscal compensation. Sending states externalize brain drain costs. The coordination function (single market completion through labor mobility) coexists with asymmetric extraction (displaced local labor, unfunded welfare mandates, human capital depletion).",
+    "key_agents": [
+      "mobile_eu_workers: Primary beneficiary (organized/constrained) — gains labor market access and equal treatment",
+      "displaced_local_labor: Primary victim (moderate/trapped) — bears wage pressure and displacement without exit",
+      "receiving_state_welfare_authorities: Victim/agenda_setter (institutional/constrained) — bears unfunded mandate, administers compliance",
+      "sending_state_authorities: Victim/observer (institutional/constrained) — loses human capital, gains remittances/cohesion funds",
+      "ecj_eu_institutions: Agenda_setter (institutional/arbitrage) — interprets scope, no direct cost-bearing",
+      "national_courts: Observer/payer (organized/constrained) — implements ECJ rulings, bears legitimacy costs",
+      "eu_integration_project: Beneficiary (institutional/civilizational) — advances federal integration through rights expansion"
+    ],
+    "logic_rationale": "Extractiveness (0.68) reflects the asymmetric cost distribution: receiving states absorb welfare costs for mobile EU citizens without fiscal transfers; displaced local labor faces wage competition without compensation mechanisms; sending states lose educated workforce. Suppression (0.72) is high because national labor protections (collective bargaining, minimum wages, posting restrictions) are overridden by ECJ rulings (Laval, Viking, Ruffert) and the Posted Workers Directive enforcement gap. Theater ratio (0.28) is moderate: the coordination function (single market labor mobility) is genuine and operational, but a growing share of ECJ jurisprudence serves rights-expansion rather than market-integration. Accessibility collapse (0.65) reflects that alternatives (national labor market closure, welfare residency requirements) are legally foreclosed by EU law supremacy. Resistance (0.58) is significant: political backlash (Brexit, Eastern European resistance to posting directive reform, welfare tourism narratives) but channeled through EU institutional processes rather than exit.",
+    "perspectival_gap": "Seat divergence is structural: mobile_eu_workers experience the constraint as rope (genuine coordination, net benefit, mobile exit). Displaced_local_labor experiences it as snare (extraction, no exit, suppressed alternatives). Receiving_state_welfare_authorities experience it as tangled_rope (coordination mandate with unfunded extraction). ECJ/EU_institutions experience it as scaffold (transitional integration mechanism, but no sunset). The engine computes these per-seat types from the structural data; the claimed_type (tangled_rope) reflects the constraint's aggregate structure.",
+    "directionality_logic": "Beneficiaries declared: mobile_eu_workers (direct rights holders), employers_seeking_eu_labor (labor supply access), eu_integration_project (institutional beneficiary of rights expansion). Victims declared: displaced_local_labor (wage/displacement costs, trapped exit), receiving_state_welfare_systems (unfunded mandate, constrained exit via EU law), sending_state_brain_drain (human capital loss, no compensation). The ECJ is the agenda_setter with arbitrage-grade exit (institutional position, no personal cost). National courts are payers implementing rulings. Directionality derives from beneficiary/victim structure plus exit options: mobile workers have constrained exit (can move but lose EU rights if leave EU); displaced labor is trapped (no EU-level exit); receiving states are constrained (treaty-bound); sending states are constrained (EU membership benefit outweighs brain drain cost).",
+    "mandatrophy_analysis": "The founding problem (post-war reconstruction labor mobility, single market completion) is contested: the coordination function remains live for labor market integration, but the welfare dimension has expanded beyond the founding mandate. The integration_reading treats the welfare expansion as inherent to citizenship; the member_sovereignty_reading treats it as mandatrophy. The constraint is not resolved mandatrophy because the coordination function (labor mobility) is still live and the extraction (welfare costs) is structurally embedded in the rights architecture. Theater ratio rising suggests drift toward piton if coordination function atrophies further.",
+    "kernel_context": "This constraint is the integration_reading of the federation_membership_kernel (EU free movement as fundamental citizenship right). Sibling readings: member_sovereignty_reading (free movement bounded by national welfare capacity and labor protection; member states retain exclusion authority for economically inactive); welfare_coordination_reading (free movement through coordination of national welfare systems, not supranational harmonization; EU enforces anti-social-dumping while preserving welfare design autonomy). This reading's structural delta: displaced local labor enters victim set; receiving state welfare systems bear costs without fiscal compensation; sending state brain drain externalized; ECJ rulings override national labor market protections."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "federation_membership_kernel__member_sovereignty_reading",
+      "federation_membership_kernel__welfare_coordination_reading",
+      "posted_workers_directive_enforcement",
+      "eu_cohesion_policy_transfers",
+      "eu_citizenship_rights_expansion"
+    ],
+    "dual_formulation_note": "This is one of three constraint stories decomposing the federation_membership_kernel. The integration_reading claims free movement as expansive fundamental right (high extraction on welfare dimension). The member_sovereignty_reading claims bounded right with national welfare protection (lower extraction, higher national suppression). The welfare_coordination_reading claims coordination without harmonization (lowest extraction, coordination-dominant). Their ε values differ substantially: integration_reading ε≈0.68 (welfare costs externalized), member_sovereignty_reading ε≈0.35 (national welfare protected), welfare_coordination_reading ε≈0.22 (coordination cost only). They are linked via affects_constraints forming a constraint family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "mobile_eu_workers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "EU citizens exercising free movement for work, study, or family. Gain access to 27 labor markets, equal treatment in employment conditions, and (per ECJ case law) increasing access to social advantages. Exit is constrained: leaving the EU means losing the right; moving within the EU is the exercise of the right, not exit from it. Organized through EU-level unions and mobility platforms but individually mobile."
+    },
+    {
+      "name": "displaced_local_labor",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Workers in receiving regions/sectors facing wage pressure and displacement from mobile EU labor. No effective exit: cannot leave the national labor market without severe cost; EU law forecloses national protective measures (posting restrictions, minimum wage enforcement on posted workers). Collective bargaining coverage erodes where posted workers undercut local rates. Trapped in the sense that the constraint's suppression (ECJ overriding national protections) removes their collective exit options."
+    },
+    {
+      "name": "receiving_state_welfare_authorities",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "National, regional, and local administrations bearing costs of social assistance, healthcare, and housing for mobile EU citizens (including economically inactive per Martinez Sala/Baumbast line). No fiscal transfer mechanism internalizes these costs — EU budget is ~1% GNI, no free-movement-specific fund. Constrained exit: treaty obligation binds; non-compliance triggers infringement proceedings. Dual role: they administer the constraint (agenda_setter for implementation) but bear its unfunded costs (payer)."
+    },
+    {
+      "name": "sending_state_authorities",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Member states experiencing net emigration of skilled/educated workers (brain drain). Gain remittances and EU cohesion fund allocations (structural funds, recovery fund) but these do not fully offset human capital loss and demographic decline. Constrained exit: EU membership benefits (single market access, funds, political influence) outweigh brain drain costs. Observer role in ECJ jurisprudence — affected by rulings but not direct parties."
+    },
+    {
+      "name": "ecj_eu_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "European Court of Justice (interpretive authority), Commission (enforcement), Parliament (legislative). ECJ expands scope through preliminary rulings; Commission enforces via infringement; Parliament amends directives (e.g., Posted Workers Directive revision). Arbitrage-grade exit: institutional positions are not personally costly; the institutions gain legitimacy and competency from rights expansion. No direct cost-bearing from the constraint's extraction channels."
+    },
+    {
+      "name": "national_courts",
+      "role": "observer",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "National constitutional and supreme courts implementing ECJ preliminary rulings. Bear legitimacy costs when rulings override national welfare/solidarity provisions (e.g., German Constitutional Court PSPP/EU law supremacy tensions). Constrained exit: EU law supremacy doctrine binds; non-compliance risks institutional crisis. Observer on the merits (apply law), payer of institutional legitimacy costs."
+    },
+    {
+      "name": "eu_integration_project",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "The federal integration project as an abstract institutional beneficiary. Free movement expansion deepens EU citizenship, weakens national sovereignty barriers, and advances 'ever closer union.' No direct cost-bearing; gains institutional depth and legal integration. Arbitrage-grade exit: the project's success is measured by rights expansion itself."
+    },
+    {
+      "name": "non_eu_migrants",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Third-country nationals excluded from EU free movement rights. Would object to the two-tier mobility regime but have no standing in EU citizenship framework. Their exclusion is structural: the constraint's coordination function is explicitly for EU citizens. Trapped in national immigration regimes with no EU-level exit."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Completes the single market by removing barriers to labor mobility across 27 member states, enabling efficient allocation of human capital, arbitrage of regional unemployment disparities, and mutual recognition of professional qualifications. Solves the collective action problem of 27 sovereign labor markets fragmenting the European economic space.",
+    "transfer_function": "Moves labor market access and equal treatment rights from national sovereignty to EU citizenship status. Transfers welfare costs from mobile citizens to receiving-state taxpayers (no fiscal compensation). Transfers human capital from sending to receiving regions (brain drain). Transfers regulatory authority from national labor protections to ECJ interpretive supremacy.",
+    "absent_voices": "Non-EU migrants (excluded from citizenship rights), future generations in sending regions (demographic decline), economically inactive EU citizens in receiving states (bear political backlash without voice), posted workers in precarious conditions (captured by home-state social security, host-state labor law gaps). They are structurally excluded: the kernel defines its constituency as EU citizens; non-citizens have no standing; future generations have no vote; posted workers are governed by home-state law.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the integration_reading vanished overnight (ECJ reverted to pre-1990s worker-only scope, national welfare residency requirements restored, posting directive enforced strictly), receiving states would immediately reduce welfare access for EU migrants; national labor protections would reassert; sending states would retain more skilled workers; the EU citizenship project would lose its most expansive right. The single market would persist but with national labor market segmentation restored.",
+    "founding_problem": "Post-war European integration required labor mobility to reconstruct economies, balance regional disparities, and bind Germany into a peaceful European order. The 1957 Treaty of Rome established free movement of workers as a functional single market provision, not a citizenship right. The founding problem was economic integration through factor mobility.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The integration_reading's beneficiaries (ECJ, Commission, mobile workers) attest the founding problem is live: labor mobility remains incomplete, posting abuses persist, social rights gaps undermine mobility. The member_sovereignty_reading's proponents (national governments, trade unions in high-wage states, constitutional courts) attest the founding problem is substantially solved for workers and the current expansion serves integrationist ideology, not market completion. Academic literature (Davies, Fenwick, Cremona) corroborates the contested status: the Treaty's teleology is disputed between functional and constitutional readings."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "eu_citizenship_establishment_maastricht",
+      "ecj_martinez_sala_baumbast_jurisprudence"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "member_sovereignty_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "welfare_coordination_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "free_movement_as_constitutive_citizenship_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "ecj_expansive_interpretation_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "treaty_of_rome_functional_worker_mobility",
+    "drift_state": {
+      "moment": "post_2004_enlargements_citizenship_directive",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

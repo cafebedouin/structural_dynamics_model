@@ -1,0 +1,273 @@
+{
+  "header": {
+    "constraint_id": "war_powers_allocation__congressional_primacy_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_war_powers_allocation__congressional_primacy_reading",
+    "story_uid": "b0b7f664-f1a7-4b77-9e25-4620c5ccdf77"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.78,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.68,
+    "claimed_type": "mountain",
+    "human_readable": "Congressional Authorization Required for Offensive War (Constitutional Primacy Reading)",
+    "topic_domain": "constitutional/war_powers",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "congress",
+      "the_public"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "constitutional_war_power_allocation",
+      "separation_of_powers_doctrine",
+      "legislative_control_of_offensive_force"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "congress",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Holds the constitutional power to declare war and authorize offensive military action. The constraint protects this institutional role from executive encroachment. Exit from this role would require constitutional amendment or systemic collapse."
+    },
+    {
+      "name": "president",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Serves as commander-in-chief but is constitutionally barred from initiating offensive war without congressional authorization. Bears the political and operational costs of seeking authorization; unilateral action triggers constitutional crisis."
+    },
+    {
+      "name": "the_public",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from the constitutional check that forces deliberative, representative decision-making before offensive war. The constraint channels war decisions through elected representatives rather than a single executive."
+    },
+    {
+      "name": "federal_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicates war powers disputes when cases are justiciable. Provides interpretive rulings on the scope of congressional authorization and executive inherent authority. Does not initiate war or bear its costs directly."
+    },
+    {
+      "name": "military",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Executes authorized military operations. Bears the operational risks of war. The constraint shapes the legal basis for deployments but does not determine operational tactics."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allocates the authority to initiate offensive war between the legislative and executive branches, preventing unilateral executive war-making and ensuring collective deliberation.",
+    "transfer_function": "Transfers the decision to initiate offensive war from the president (who would otherwise act unilaterally) to Congress, requiring explicit authorization as the price of legitimacy.",
+    "absent_voices": "The executive branch's inherent-authority proponents (executive branch lawyers, unitary executive theorists) are structurally excluded from the constraint's design; they would argue for presidential discretion but are suppressed by the constitutional text and this reading's interpretation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint vanished overnight, the president would possess unchecked authority to initiate offensive war, fundamentally altering the constitutional balance, eliminating the legislative check, and enabling wars without public deliberation or representative consent.",
+    "founding_problem": "The founding problem was preventing the executive monopoly on war decisions that characterized the British monarchy, ensuring that the power to take the nation into offensive war rests with the people's representatives.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Constitutional Convention records, Federalist Papers (esp. Federalist 69), and early practice (Washington's limited unilateral actions) corroborate the founding problem. Executive-branch legal opinions (OLC memos) and modern practice since Korea constitute the contesting tradition; no neutral arbiter has settled the dispute."
+  },
+  "interval": {
+    "start": 1789,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1789,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1917,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1789,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1917,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1789,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1850,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1917,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.78
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The congressional primacy reading of the war powers allocation kernel holds that the Constitution's text, structure, and original understanding establish a Mountain constraint: offensive war requires explicit congressional authorization. This constraint is claimed as a fixed constitutional necessity (emerges_naturally: true). Descriptively, the constraint has faced persistent executive resistance, increasing performative compliance (theater), and periods of eroded enforcement, but its core claim remains that alternatives are collapsed by the constitutional design itself. The metrics reflect the constraint's actual historical operation: low extractiveness (the rule does not extract resources), high suppression of executive unilateral claims, moderate theater (performative consultations, AUMF drift), very high accessibility collapse (no legal alternative to congressional authorization for offensive war), and significant resistance (executive branch pushes inherent authority).",
+    "logic_rationale": "Extractiveness is low (0.12) because the constraint is a limit on power, not a transfer of resources. Suppression is high (0.78) because the constraint actively suppresses inherent-executive-authority claims through constitutional text, judicial doctrine, and political norms. Theater ratio is moderate (0.32) because post-1950 practice includes performative congressional consultations and broad AUMFs that mimic authorization without genuine deliberation. Accessibility collapse is very high (0.88) because the constitutional text and structure leave no recognized legal alternative for offensive war. Resistance is high (0.68) because every modern president has asserted inherent authority to some degree, creating a persistent gap between the Mountain claim and operational reality.",
+    "directionality_logic": "Congress is the primary beneficiary (d near 0.0): the constraint secures its constitutional role and prevents extraction of its war power. The public is a secondary beneficiary (d low): the constraint forces representative deliberation. The president is the primary payer (d near 1.0): bears the cost of seeking authorization and is constrained from unilateral action. The military is a payer (d high): executes wars whose legal basis depends on the constraint. Courts are observers (d=0.5): they interpret but do not initiate or bear costs. The directionality derivation from beneficiary/victim declarations plus exit options (president constrained, Congress institutional) yields these structural positions.",
+    "perspectival_gap": "From Congress's seat (agenda_setter, institutional), the constraint is a Mountain: the constitutional text is fixed, alternatives are collapsed, and resistance is mere usurpation. From the president's seat (payer, powerful), the constraint operates as a Tangled Rope or Snare: it coordinates some military actions but extracts political autonomy and is actively resisted. The engine computes this seat divergence from the structural data; the authored claim (Mountain) reflects the congressional primacy reading's self-understanding, not a reconciliation.",
+    "mandatrophy_analysis": "The founding problem (preventing executive war monopoly) remains live — the constraint has not outlived its function. However, the constraint's mandate has been partially captured by executive practice: AUMFs and unilateral actions have layered extraction onto the original coordination function. The mandatrophy risk is not obsolescence but drift: the constraint's coordination core persists while its enforcement erodes, creating a gap the engine's T17 abductive trigger would flag if extraction accumulation were tracked. We declare mandatrophy_resolved false.",
+    "kernel_context": "This constraint is the congressional_primacy_reading of the war_powers_allocation kernel. Sibling readings: inherent_executive_reading (president has inherent authority to deploy force without prior authorization) and functional_accommodation_reading (allocation varies by operational context: imminent threats permit unilateral action; prolonged campaigns require authorization). This reading claims the constitutional text establishes a Mountain; the siblings claim the same text permits executive discretion (inherent) or context-dependent allocation (functional). The structural delta: legislative branch enters victim set when bypassed; executive unilateral action constitutes extraction from congressional war power; high suppression of inherent authority claims."
+  },
+  "omegas": [
+    {
+      "id": "mountain_vs_constructed_ambiguity",
+      "question": "Is the congressional authorization requirement a genuine Mountain (fixed by constitutional nature) or a constructed constraint that benefits Congress and the public by suppressing executive power?",
+      "resolution_mechanism": "Historical analysis of founding-era understanding vs. modern practice; judicial doctrine stability; whether the constraint would persist without active political enforcement.",
+      "impact": "If Mountain, the constraint is immune to extraction metrics and FSM does not apply. If constructed, FSM triggers and the constraint reclassifies as Tangled Rope (coordination + asymmetric extraction from executive). The omega documents the irreducible ambiguity that makes FSM evaluation necessary.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Natural-law vs. constructed status of the war powers allocation rule."
+    },
+    {
+      "id": "suppression_mechanism_internalized",
+      "question": "Is the high suppression of inherent executive authority claims structural (legal barriers, judicial review) or internalized (executive branch self-restraint, norms), and what happens when internalized suppression erodes?",
+      "resolution_mechanism": "Track executive branch compliance when political cost of non-compliance is low (e.g., limited strikes, covert actions). If suppression persists without structural enforcement, internalized component is significant.",
+      "impact": "If suppression is largely internalized, the constraint's effective suppression is higher than structural measures suggest, but vulnerable to norm erosion. A shift from internalized to purely structural suppression would increase measured resistance and decrease accessibility collapse.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression of executive inherent authority claims."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "war_powers_allocation__inherent_executive_reading",
+      "war_powers_allocation__functional_accommodation_reading"
+    ],
+    "dual_formulation_note": "This constraint, the inherent_executive_reading, and the functional_accommodation_reading form a constraint family decomposing the 'war powers allocation' kernel. Each reading instantiates a different constraint with distinct ε, beneficiaries, and victims. The congressional primacy reading (this story) claims Mountain; inherent executive claims Snare (extracts from Congress); functional accommodation claims Tangled Rope (context-dependent coordination with extraction)."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "inherent_executive_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "functional_accommodation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "congressional_authorization_required_for_offensive_war",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "executive_inherent_authority_limited_to_immediate_defense",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "original_constitutional_allocation",
+    "drift_state": {
+      "moment": "contemporary_post_2001_aumf_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

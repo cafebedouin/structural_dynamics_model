@@ -1,0 +1,288 @@
+{
+  "header": {
+    "constraint_id": "zero_mathematical_status__placeholder_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "story_uid": "5508630a-483b-4f6a-8a58-6bf73b243bb8"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.55,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Zero as Placeholder-Only in Positional Notation",
+    "topic_domain": "philosophy_of_mathematics/history_of_mathematics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "positional_notation_users",
+      "computational_practitioners"
+    ],
+    "victims": [
+      "algebraists_needing_full_zero",
+      "later_mathematicians"
+    ],
+    "vindicated_propositions": [
+      "positional_notation_efficiency",
+      "notation_arithmetic_separation"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disambiguation",
+      "question": "Is the placeholder reading a distinct constraint from the number reading, or a developmental stage of the same constraint?",
+      "resolution_mechanism": "Analyze whether the structural relationship (beneficiaries, victims, enforcement) differs between the two readings, or whether they share the same ε-invariant structure with only the claimed_type differing.",
+      "impact": "If distinct constraints, each gets its own ε and classification; if developmental stages, they are temporal measurements of one constraint. The ε-invariance principle requires decomposition when ε differs.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether placeholder and number readings are separate constraints or temporal phases of one constraint."
+    },
+    {
+      "id": "extraction_intentionality",
+      "question": "Was the denial of arithmetic properties to zero an intentional extraction (protecting ontological commitments) or an emergent limitation of the notation system?",
+      "resolution_mechanism": "Historical analysis of mathematical texts: did practitioners explicitly argue zero *should not* have arithmetic properties, or did they simply fail to develop them?",
+      "impact": "If intentional, the constraint is more snare-like (coercive suppression of alternatives); if emergent, more rope-like (coordination with unrecognized limitation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the arithmetic restriction on zero was deliberate exclusion or developmental gap."
+    },
+    {
+      "id": "coordination_extraction_balance",
+      "question": "Did the notational efficiency gains of positional systems outweigh the arithmetic closure loss for the historical agents involved?",
+      "resolution_mechanism": "Comparative analysis of computational speed/error rates in positional vs. non-positional systems for period-typical problems; historical adoption patterns.",
+      "impact": "If gains clearly exceeded losses, the constraint leans rope; if losses were imposed on a minority for majority gain, it leans tangled_rope/snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net benefit/cost balance of the placeholder-only constraint for its historical participants."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 750,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 750,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 250,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 750,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The placeholder reading of zero treats it as a notational device enabling positional notation (the '0' in 101 indicating no tens) but denies it full arithmetic status — no addition, multiplication, or division rules for zero as a number. This constraint dominated mathematical practice in the Islamic world transmission to Europe (roughly 8th-16th centuries), where zero was accepted in notation but operations like division by zero remained undefined or forbidden. The coordination function is genuine: positional notation revolutionized computation. The extraction is the denial of zero's arithmetic nature, which delayed algebraic development and calculus foundations. Brahmagupta's 7th-century rules (a+0=a, a×0=0, a/0=undefined) represent the sibling number_reading that contested this constraint.",
+    "logic_rationale": "Extractiveness is intermediate (0.45): the constraint delivers massive computational coordination (positional notation) but extracts arithmetic closure from zero. Suppression is moderate (0.55): mathematical tradition actively treated division by zero as error/undefined, and algebraic workarounds were required. Theater is low (0.2): this was genuine mathematical practice, not performative. Accessibility collapse is moderate (0.4): Brahmagupta's alternative existed but was geographically/temporally separated. Resistance is moderate (0.5): Indian mathematics developed the number reading in parallel; European adoption was gradual.",
+    "directionality_logic": "Positional notation users and computational practitioners are beneficiaries (d near 0.0): they gain efficient calculation without needing zero's full arithmetic. Algebraists needing full zero and later mathematicians are payers (d near 1.0): they bear the cost of workarounds and delayed development. Mathematical tradition authorities are agenda_setters (d ~ 0.5): they enforce the convention but also rely on it for their own computational work. Modern mathematicians are observers (analytical seat).",
+    "perspectival_gap": "From the computational practitioner's seat, this is a rope (pure coordination gain). From the algebraist's seat, it is a snare (extraction of arithmetic closure). The engine computes this divergence from the structural data — the placeholder reading's claimed tangled_rope captures the hybrid nature, but per-seat classification will reveal the rope/snare split.",
+    "mandatrophy_analysis": "The founding problem (representing absence in positional notation) is dead — zero as a full number solves it better. The constraint persisted due to ontological commitments (Parmenidean 'nothing cannot be') and institutional inertia in mathematical education. The mandatrophy is resolved in modern mathematics but the historical constraint shaped development for centuries.",
+    "kernel_context": "This constraint instantiates the 'placeholder_reading' of the contested kernel 'zero_mathematical_status'. Sibling readings: 'number_reading' (Brahmagupta: zero is a number with arithmetic rules) and 'parmenidean_rejection' (zero is ontologically incoherent). This reading permits zero in notation but not in operations; intermediate extractiveness — gains notational efficiency, loses full arithmetic closure."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "zero_mathematical_status__number_reading",
+      "zero_mathematical_status__parmenidean_rejection"
+    ],
+    "dual_formulation_note": "The zero_mathematical_status kernel decomposes into three constraint stories by ε-invariance: placeholder_reading (ε≈0.45, tangled_rope), number_reading (ε≈0.15, rope), parmenidean_rejection (ε≈0.8, snare). Each has distinct beneficiary/victim structures and coordination functions. The placeholder reading historically preceded and influenced the number reading's adoption in Europe."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "positional_notation_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Merchants, astronomers, and administrators using Hindu-Arabic positional notation for trade, astronomy, and record-keeping. They gain massive computational efficiency from the placeholder zero. Exit is mobile — they could (and did) adopt alternative notation systems, but positional notation's advantages made it dominant."
+    },
+    {
+      "name": "computational_practitioners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Scribes, calculators, and early algorists whose daily work is arithmetic computation. They benefit from the speed and error-reduction of positional notation. Their exit is constrained by guild/training structures — they are trained in the system and switching costs are high."
+    },
+    {
+      "name": "algebraists_needing_full_zero",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Mathematicians developing algebra who need zero as a number (roots of equations, polynomial coefficients, limit concepts). They bear the cost of workarounds: treating zero as special case, avoiding division by zero, delayed development of negative numbers and calculus foundations. Exit is constrained — they work within the mathematical tradition that enforces the placeholder view."
+    },
+    {
+      "name": "later_mathematicians",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Generations of mathematicians (Fibonacci to Descartes to Newton) who inherit the placeholder constraint and must extend or circumvent it. They pay in delayed conceptual development: calculus requires limit concepts that treat zero as number, not placeholder. Exit is constrained by the cumulative weight of mathematical tradition."
+    },
+    {
+      "name": "mathematical_tradition_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "University masters, textbook authors, and institutional gatekeepers who define legitimate mathematical practice. They enforce the placeholder convention (division by zero as error, zero not a 'true' number) but also depend on positional notation for their own computational work. They have arbitrage-grade exit — they could adopt Brahmagupta's rules but face institutional pressure to maintain tradition."
+    },
+    {
+      "name": "modern_mathematicians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Contemporary mathematicians and historians who analyze the constraint from outside its operational period. They see the full structure: the coordination gain, the extraction cost, and the historical contingency. They neither collect nor pay; they classify."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables efficient positional notation for arithmetic computation by providing a symbol for 'no digit in this position' — solving the ambiguity of spacing in non-positional systems.",
+    "transfer_function": "Moves arithmetic closure from zero (denying it addition, multiplication, division as a number) to gain notational efficiency for positional systems. The transfer is from algebraic generality to computational specificity.",
+    "absent_voices": "Indian mathematicians (Brahmagupta, Bhaskara) who developed the number reading centuries earlier — their voices were geographically and linguistically separated from the Islamic/European transmission chain. Also, the practical needs of early algebraists whose work was marginalized as 'speculative' vs. 'practical' computation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the placeholder-only constraint vanished overnight (zero accepted as full number with Brahmagupta's rules), algebra would develop earlier: negative numbers, polynomial roots, and limit concepts would not require centuries of workarounds. The mathematical timeline compresses; calculus foundations shift from geometric to algebraic earlier.",
+    "founding_problem": "How to represent absence/empty place in positional notation without granting ontological status to 'nothing' — the Parmenidean prohibition against non-being as a being.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Mathematical historians (Katz, Ifrah, Plofker) outside the benefiting computational tradition attest that the founding problem was ontological (Parmenidean) not practical, and that Brahmagupta's number reading solved the practical problem while the placeholder reading persisted due to philosophical resistance. The consensus is that the placeholder constraint's founding problem is dead in modern mathematics."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "parmenidean_rejection",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "number_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "zero_is_notational_only",
+        "role": "foundational",
+        "status": "overridden",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "arithmetic_closure_not_required_for_notation",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "positional_notation_practice",
+    "drift_state": {
+      "moment": "brahmasphutasiddhanta_publication",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

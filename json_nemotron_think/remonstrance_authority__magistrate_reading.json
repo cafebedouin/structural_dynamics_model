@@ -1,0 +1,369 @@
+{
+  "header": {
+    "constraint_id": "remonstrance_authority__magistrate_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_remonstrance_authority__magistrate_reading",
+    "measurement_id_prefix": "remonstrance_magistrate",
+    "story_uid": "64852305-f4db-4568-b36a-e05abe28b61b"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.7,
+    "claimed_type": "mountain",
+    "human_readable": "Parlementary Remonstrance Right as Fundamental Constitutional Check",
+    "topic_domain": "constitutional_history/political_economy/legal_authority",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "tax_exempt_magistracy",
+      "parlement_office_holders",
+      "noblesse_de_robe"
+    ],
+    "victims": [
+      "crown_fiscal_authority",
+      "reforming_ministers",
+      "tax_burdened_subjects"
+    ],
+    "vindicated_propositions": [
+      "fundamental_laws_of_kingdom",
+      "ancient_liberties_doctrine",
+      "parlement_as_guardian_of_constitution",
+      "registration_as_constitutional_necessity"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "tax_exempt_magistracy",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Hold venal offices in sovereign courts (parlements) that confer nobility, tax exemption, and the right to remonstrate against royal edicts. Their institutional identity fuses with the remonstrance function — to abandon remonstrance is to abandon their reason for existing as a corps. They set the agenda by refusing registration of fiscal edicts and drafting remonstrances invoking fundamental laws."
+    },
+    {
+      "name": "parlement_office_holders",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Lower-ranking magistrates and officers whose office value depends on the parlement's institutional prestige and tax privileges. They benefit from the remonstrance right's protection of their corps' autonomy but lack individual agenda-setting power. Exit means selling office at a loss or abandoning a career built on venal office tenure."
+    },
+    {
+      "name": "noblesse_de_robe",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The broader noblesse de robe — families whose status and wealth derive from generations of judicial office-holding. They benefit from the tax exemption and social precedence secured by the parlement's constitutional claims. Their identity is bound to the 'ancient constitution' narrative; exit means social declension and loss of fiscal privilege."
+    },
+    {
+      "name": "crown_fiscal_authority",
+      "role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The king's fiscal apparatus (contrôleurs généraux, intendants) that must register edicts to raise revenue. When parlements refuse registration, the crown must either lit de justice (forced registration), exile magistrates, or negotiate — each costly in legitimacy and administrative capacity. The constraint extracts by blocking or delaying fiscal reform edicts, forcing the crown to bear higher borrowing costs or abandon reforms."
+    },
+    {
+      "name": "reforming_ministers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Ministers (Turgot, Necker, Calonne) who attempt structural fiscal reform. They bear the political cost of parlement opposition — public remonstrances delegitimize their edicts, forcing resignation or compromise. Their exit is mobile (dismissal, exile) but the constraint extracts their reform agenda and political capital."
+    },
+    {
+      "name": "tax_burdened_subjects",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Third Estate taxpayers (peasants, urban workers, bourgeois) who bear the taille, gabelle, and vingtièmes while the noblesse de robe is exempt. When remonstrance blocks fiscal reform that would broaden the tax base, the extraction falls on them. They have no voice in the remonstrance process and no exit from the fiscal burden."
+    },
+    {
+      "name": "provincial_estates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Pays d'états (Brittany, Languedoc, Burgundy) with their own tax-negotiating privileges. They would object to parlement claims to speak for 'the nation' while defending particularist exemptions. Their voice is excluded from the remonstrance dialogue, which is framed as parlement vs. crown."
+    },
+    {
+      "name": "juridical_doctrine",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The body of constitutional jurisprudence (arrêts de règlement, fundamental laws, Loisel, Loyseau) that the parlement invokes. It does not act or collect rents but provides the interpretive framework. Its 'situation' is the accumulated textual authority the magistrate reading treats as binding."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a constitutional check on arbitrary royal power by requiring royal edicts (especially fiscal) to be registered and reviewed by sovereign courts before taking force, ensuring conformity with fundamental laws.",
+    "transfer_function": "Moves fiscal reform agenda and legislative initiative from the crown to the parlements; moves tax burden from tax-exempt magistracy to Third Estate subjects; moves political legitimacy from ministers to magistrates when remonstrances force royal retreat.",
+    "absent_voices": "Provincial estates (pays d'états) whose negotiated fiscal privileges are undermined by parlement's claim to universal guardianship; Third Estate taxpayers who bear the cost of blocked reforms but have no standing to remonstrate; Enlightenment publicists (Voltaire, Linguet) who criticized parlement as a privileged corps but were excluded from the official constitutional dialogue.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the remonstrance right vanished overnight, the crown could register fiscal edicts without delay, Turgot's or Calonne's reforms might have succeeded, the tax burden would have shifted toward the privileged orders earlier, and the pre-revolutionary fiscal crisis would have resolved differently — the Ancien Régime's collapse was partly caused by the constraint's extraction blocking reform.",
+    "founding_problem": "After the Wars of Religion, the crown's legislative authority became unmoored from customary limits; parlements claimed the right to verify edicts against fundamental laws (Salic law, inalienability of domain, Catholic unity) to prevent tyrannical innovation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The magistrate reading's founding narrative is attested by parlement's own arrêts de règlement and juridical treatises (Loisel, Loyseau). Counter-corroboration: royal jurists (Boucher d'Argis, Séguier) and ministers (Richelieu, Colbert) attested the founding problem was settled by royal sovereignty; the Estates General of 1614 and 1789 were summoned precisely because the remonstrance mechanism failed to resolve the fiscal crisis — outside the beneficiary set, the founding problem is read as dead or transformed."
+  },
+  "interval": {
+    "start": 1600,
+    "end": 1789
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1600,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1648,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1661,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1715,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1750,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1774,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1787,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1789,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1600,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1648,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1661,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1715,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1750,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1774,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1787,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1789,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1600,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1648,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1661,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1715,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1750,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1774,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1787,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1789,
+      "value": 0.65
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The magistrate reading of remonstrance authority presents the parlement's right to refuse registration of royal edicts as a fundamental constitutional mechanism — a Mountain of ancient law that preserves liberty against arbitrary innovation. From this reading's seat, the remonstrance is not extraction but protection: the fundamental laws (lois fondamentales) are treated as natural limits on sovereignty, and the parlement's verification role is the constitutional guarantee that the king governs as a legitimate monarch rather than a despot. The structural reality, however, shows high and rising extractiveness (0.45→0.72) concentrated on fiscal reform edicts: each major reform ministry (Colbert, Law, Turgot, Necker, Calonne) faced remonstrance blocking tax reforms that would have touched magistrate exemptions. The constraint requires active enforcement (refusal to register, remonstrance drafting, resistance to lit de justice) and creates a beneficiary class (tax-exempt magistracy, noblesse de robe) whose identity is locked to the constraint's persistence. The claimed Mountain type diverges from the metric profile — the engine will detect this as a false summit candidate.",
+    "logic_rationale": "Extractiveness is high (0.72) because the constraint's operation systematically blocks fiscal reforms that would tax the beneficiaries, forcing the crown into debt and the Third Estate into heavier burdens. Suppression (0.65) is substantial: the crown must use lit de justice, exile, or Maupeou's 1771 suppression to overcome remonstrance — active coercion, not passive compliance. Theater ratio (0.30) reflects genuine constitutional discourse mixed with performative defense of privilege; the ratio rises as reform pressure mounts (1750-1787). Accessibility collapse (0.75) is high: once the fundamental laws doctrine is accepted, alternatives (royal absolutism, Estates General, ministerial responsibility) appear illegitimate to the magistrate seat. Resistance (0.70) is high from both crown (lit de justice, exile) and reformers (public opinion, physiocrats). The claimed_type 'mountain' is the magistrate reading's self-understanding; the metrics describe the constraint's operation as an analytical observer sees it.",
+    "perspectival_gap": "From the tax_exempt_magistracy seat (agenda_setter, identity_locked), the constraint appears as Mountain: it is the constitution itself, natural and unchangeable. From the crown_fiscal_authority seat (payer, institutional, constrained), it appears as Snare: an illegitimate veto extracting reform capacity. From the tax_burdened_subjects seat (payer, powerless, trapped), it appears as Tangled Rope: the coordination story (protection against tyranny) is real but the extraction (their disproportionate tax burden) is asymmetric. The engine computes these per-seat divergences from the structural data — the authored claim does not adjudicate them.",
+    "directionality_logic": "The magistrate corps (tax_exempt_magistracy, parlement_office_holders, noblesse_de_robe) are structural beneficiaries: they collect tax exemption, office value, and constitutional authority from the constraint (d → 0.1-0.2). The crown_fiscal_authority and reforming_ministers are targets: they bear the cost of blocked reforms and legitimacy loss (d → 0.8-0.9). The tax_burdened_subjects are also targets but powerless and trapped (d → 0.95). Provincial_estates are excluded — they would challenge the parlement's claim to speak for the nation but have no standing. The juridical_doctrine is an analytical observer (d = 0.5). The identity_locked exit for magistrates reflects professional identity fusion: the remonstrance right IS the corps' identity.",
+    "mandatrophy_analysis": "The founding problem (checking post-Wars of Religion arbitrary power) was live in 1600 but became contested by 1750: the constraint persisted while the original tyranny threat receded, and the magistrate corps became the primary obstacle to fiscal reform needed to sustain the state. The mandate atrophied into privilege protection. The constraint prevents mislabeling by maintaining a genuine coordination function (registration does catch some arbitrary edicts) while the extraction asymmetry (tax exemption for magistrates, burden on Third Estate) is structural. The mandatrophy is unresolved — the constraint was abolished in 1790, not reformed.",
+    "kernel_context": "This constraint is the magistrate_reading of the contested kernel 'remonstrance_authority'. The kernel is the historical institution of parlementary remonstrance (right of sovereign courts to refuse registration of royal edicts pending royal response). The magistrate_reading instantiates it as a fundamental constitutional Mountain preserving ancient liberties. The sibling reading crown_reading instantiates it as a Snare: an illegitimate minoritarian veto protecting particularist privileges. The structural delta: this reading authors high ε for fiscal reform edicts, places parlements in the victim set when overridden (exile, suppression), and identifies a beneficiary class of tax-exempt magistracy. The crown_reading would author low ε (minor delay), place the crown as victim of obstruction, and identify no beneficiaries (only rent-seekers)."
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_privilege",
+      "question": "Is the remonstrance right a genuine fundamental law of the French kingdom (natural/immemorial) or a constructed privilege of the noblesse de robe that acquired constitutional veneer over time?",
+      "resolution_mechanism": "Comparative analysis of pre-1600 Parlement registers: does the remonstrance practice predate the Wars of Religion as a constitutional doctrine, or does it emerge as a fiscal resistance tool later elevated to fundamental law? Historiographical consensus (Ranum, Doyle, Swann) vs. magistrate's own arrêts de règlement.",
+      "impact": "If constructed privilege, the Mountain claim is a false summit — FSM triggers reclassification to Tangled Rope (coordination + extraction). If genuine fundamental law, the Mountain claim holds and extraction metrics reflect crown's violation of natural limits, not constraint's operation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's natural-law self-presentation is historically founded or a retrospective constitutionalization of privilege."
+    },
+    {
+      "id": "coordination_extraction_separability",
+      "question": "Can the genuine coordination function (checking arbitrary edicts) be separated from the extraction function (protecting magistrate tax exemption), or are they structurally fused such that any reform preserving coordination also preserves extraction?",
+      "resolution_mechanism": "Counterfactual: if a reform edict expanded taxation to noblesse de robe but preserved registration for non-fiscal edicts (religious, judicial), would parlements still remonstrate? Historical test: 1787-88 Assembly of Notables and Estates General debates — magistrates resisted any fiscal equality even with preserved remonstrance.",
+      "impact": "If separable, the constraint is a Rope with extractive overlay (removable). If fused, it is a Tangled Rope where the coordination story is inseparable from the extraction — the fundamental laws doctrine itself encodes the privilege.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's coordination and extraction components are structurally separable or fused in the fundamental laws doctrine."
+    },
+    {
+      "id": "suppression_mechanism_historical_vs_institutional",
+      "question": "Is the measured suppression (0.65) primarily the crown's active coercion (lit de justice, exile, Maupeou) or the parlement's institutional inertia (refusal to register as routine, venal office interest)?",
+      "resolution_mechanism": "Decompose suppression events: count crown-initiated forced registrations vs. parlement-initiated refusals per decade. If crown-initiated dominates, suppression is crown's reaction to constraint; if parlement-initiated dominates, suppression is constraint's active enforcement.",
+      "impact": "If crown-driven, the constraint's suppression is lower than measured — the crown chooses confrontation. If parlement-driven, the constraint actively suppresses reform, supporting higher effective extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of suppression agency between crown and parlement in the remonstrance confrontation dynamic."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "remonstrance_authority__crown_reading",
+      "fiscal_reform_blockage__ancien_regime",
+      "venal_office_system__france"
+    ],
+    "dual_formulation_note": "This magistrate_reading and the crown_reading form a constraint family decomposing the kernel 'remonstrance_authority'. The magistrate_reading claims Mountain with high ε for fiscal edicts; the crown_reading claims Snare with low ε. They differ on beneficiary/victim assignment and the naturalness of the fundamental laws doctrine. Linked via affects_constraints for contamination propagation analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.75
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "crown_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "remonstrance_as_fundamental_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "parlement_guardian_of_liberties",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "ancien_regime_constitutional_order",
+    "drift_state": {
+      "moment": "pre_revolutionary_crisis",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "remonstrance_authority"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

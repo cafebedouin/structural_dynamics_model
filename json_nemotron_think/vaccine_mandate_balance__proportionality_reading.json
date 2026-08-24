@@ -1,0 +1,303 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_balance__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_vaccine_mandate_balance__proportionality_reading",
+    "measurement_id_prefix": "vmb_prop",
+    "story_uid": "5e95fe05-88bf-4788-afd7-e572e82e3d2b"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Proportionality Threshold for Vaccine Mandates",
+    "topic_domain": "public_health_ethics/constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "general_public",
+      "vulnerable_populations",
+      "individuals_subject_to_mandate"
+    ],
+    "victims": [
+      "state_executive_branch"
+    ],
+    "vindicated_propositions": [
+      "proportionality_principle_in_public_health_law",
+      "least_restrictive_means_doctrine",
+      "evidence_based_policy_making"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a distinct reading of the vaccine_mandate_balance kernel, or does it collapse into one of the sibling readings under scrutiny?",
+      "resolution_mechanism": "Compare the structural operation of the proportionality test across jurisdictions and pathologies; if the test's victim/beneficiary sets and extraction profile remain conditional on disease parameters in a way that cannot be reduced to the categorical premises of the sibling readings, the reading is structurally distinct.",
+      "impact": "If the reading collapses, the constraint story should be merged with the dominating sibling; if distinct, it stands as a separate constraint with its own ε and classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural distinctness of the proportionality reading within the kernel"
+    },
+    {
+      "id": "epsilon_variability_by_pathogen",
+      "question": "Does the base extractiveness (ε) of this constraint vary so widely across pathogens (smallpox vs seasonal flu) that it constitutes multiple constraints rather than one?",
+      "resolution_mechanism": "Author separate constraint stories for high-severity/high-transmission pathogens (where mandates are frequently permitted) and low-severity/low-transmission pathogens (where mandates are rarely permitted) and compare their metric profiles; if ε differs by >0.3, decompose per ε-invariance principle.",
+      "impact": "If ε is pathogen-dependent, the single constraint story masks a family of constraints; decomposition would yield distinct classifications (e.g., tangled_rope for smallpox, rope for flu).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ε-invariance requires pathogen-specific decomposition"
+    },
+    {
+      "id": "exemption_robustness_operationalization",
+      "question": "What constitutes a 'robust' exemption in practice, and does the operationalization of exemptions shift the constraint toward snare or tangled_rope?",
+      "resolution_mechanism": "Survey exemption grant rates, procedural accessibility, and judicial review standards across jurisdictions; if exemptions are theoretically robust but practically inaccessible, the constraint's effective suppression and extraction increase.",
+      "impact": "If exemptions are nominal, the constraint operates as a snare for non-exempt individuals; if genuinely accessible, it remains a rope with a safety valve.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Operational reality of exemption mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The proportionality reading of vaccine mandate balance holds that state-compelled vaccination is permissible only when three conditions are met: (1) disease severity crosses a high threshold, (2) transmission risk justifies population-level intervention, and (3) vaccine safety and efficacy data meet rigorous standards. Exemptions (medical, religious, philosophical) must be substantively available and procedurally accessible. This reading positions itself between the categorical rejection of mandates (bodily_autonomy_primary) and the permissive public health primacy view (public_health_primary). The constraint is the legal doctrine itself — the proportionality test that courts and legislatures apply. It operates as a coordination mechanism: it structures the legitimate exercise of state power, protects individuals from disproportionate mandates, and enables mandates when genuinely warranted. Its extraction is conditional: when thresholds are met, the state may impose mandates (extracting compliance from individuals); when thresholds are not met, the constraint blocks mandates (protecting individuals). The state executive branch is the primary payer — it bears the burden of proof and the political cost of meeting the test. The general public and vulnerable populations are beneficiaries of both the protection from disease (when mandates are allowed) and the protection from state overreach (when mandates are blocked). Individuals subject to mandates are beneficiaries of the test's limiting function but payers when a mandate is upheld.",
+    "key_agents": [
+      "state_executive_branch: Primary payer (powerful/constrained) — must satisfy the proportionality test to impose mandates; bears evidentiary and political costs",
+      "courts_legislature: Agenda setter (institutional/arbitrage) — articulate and enforce the proportionality standard; set the thresholds",
+      "general_public: Beneficiary (organized/constrained) — gains disease protection when mandates are justified, gains liberty protection when they are not",
+      "vulnerable_populations: Beneficiary (powerless/trapped) — disproportionately benefit from mandates that achieve herd immunity; cannot exit the risk environment",
+      "individuals_subject_to_mandate: Beneficiary/Payer (moderate/constrained) — protected from unjust mandates, but bear compliance costs when mandates pass the test",
+      "public_health_authorities: Observer (institutional/analytical) — provide evidence on severity, transmission, and vaccine safety; shape the factual predicates of the test"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.35) because the constraint itself does not extract; it gates extraction by mandates. The 0.35 reflects the average extraction potential across pathogens — higher for smallpox-like diseases, near-zero for seasonal flu. Suppression is low (0.25) because the test does not suppress alternatives (voluntary vaccination, NPIs); it only suppresses unjustified mandates. Theater ratio is low (0.15) — the test is genuinely operationalized in courts, though some jurisdictions perform proportionality analysis ritually. Accessibility collapse is moderate (0.40) — alternative legal frameworks exist (strict scrutiny, rational basis) but the proportionality test has become dominant in many systems. Resistance is moderate-high (0.55) — state actors frequently contest the stringency of the test, and judicial deference varies. The claimed type is rope: the test coordinates legitimate state action with minimal coercive overhead, participants (the public) are net beneficiaries, and alternatives (other legal standards) are not suppressed.",
+    "perspectival_gap": "The state executive branch experiences this constraint as a burden (high directionality toward target) — it must marshal evidence, survive judicial review, and absorb political backlash. The general public and vulnerable populations experience it as a protective coordination mechanism (low directionality toward beneficiary). Individuals subject to mandates experience it bidirectionally: as a shield against disproportionate mandates and as a gateway to mandated compliance. Courts experience it as an analytical framework (directionality near zero). The engine will compute these divergences from the structural data.",
+    "directionality_logic": "The state executive branch is the primary payer: it initiates mandates and must satisfy the test, bearing evidentiary costs and political risk. Its exit options are constrained (it cannot easily avoid the test when public health crises arise). Courts and legislature are agenda_setters: they define the test and enforce it, with arbitrage-grade exit (they can reform the test). The general public and vulnerable populations are beneficiaries: they gain protection without bearing the costs of the test's operation. Individuals subject to mandates are dual-role: beneficiaries of the test's limiting function, payers when a mandate is upheld. Their exit options are constrained (they cannot opt out of the legal system). Public health authorities are observers: they supply the factual predicates but do not control the legal standard.",
+    "mandatrophy_analysis": "The proportionality test was founded to solve the problem of arbitrary state power in public health — preventing both tyranny (unchecked mandates) and paralysis (categorical bans). That founding problem remains live: new pathogens emerge, vaccine technologies evolve, and the balance must be continuously recalibrated. The test has not atrophied into a piton; it is actively litigated and its thresholds are contested in each pandemic. However, there is a risk of mandatrophy if courts apply the test deferentially (rubber-stamping mandates) or if legislatures codify exemptions so broadly that the test becomes a nullity. The omega on exemption robustness captures this.",
+    "kernel_context": "This constraint is the proportionality_reading of the vaccine_mandate_balance kernel. The kernel is the contested question: under what conditions may the state compel vaccination? The proportionality reading instantiates a conditional mandate regime: mandates are permissible only when disease severity, transmission risk, and vaccine safety meet strict proportionality thresholds, and exemptions must be robust. Sibling readings: bodily_autonomy_primary (categorical ban on mandates) and public_health_primary (mandates permissible when voluntary compliance fails to achieve herd immunity). This reading coexists with both siblings — different jurisdictions and legal traditions adopt different readings simultaneously. It does not foreclose them (no single framework is logically compelled to choose only one), but it influences them by setting the dominant legal standard in many constitutional democracies, shaping the legitimacy conditions under which the other readings operate."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "vaccine_mandate_balance__bodily_autonomy_primary",
+      "vaccine_mandate_balance__public_health_primary"
+    ],
+    "dual_formulation_note": "This constraint is one member of the vaccine_mandate_balance constraint family. The three readings (proportionality_reading, bodily_autonomy_primary, public_health_primary) decompose the kernel into structurally distinct constraints with different ε profiles, beneficiary/victim sets, and classifications. The proportionality reading is the only one with conditional victim sets and pathogen-dependent ε. The bodily_autonomy_primary reading has near-zero ε (mountain-like) but high suppression of state action. The public_health_primary reading has higher ε (tangled_rope) because it permits mandates under broader conditions. All three are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "state_executive_branch",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Initiates vaccine mandates during public health emergencies. Must satisfy the proportionality test by presenting evidence on disease severity, transmission risk, and vaccine safety. Bears the evidentiary burden, litigation costs, and political accountability. Cannot easily avoid the test when crises arise; exit would mean forgoing a primary public health tool."
+    },
+    {
+      "name": "courts_legislature",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Articulate the proportionality standard (legislatures via statutes, courts via judicial review). Define the thresholds for severity, transmission, and safety. Determine the robustness required for exemptions. Can reform the test through legislation or precedent. Their exit is arbitrage-grade — they control the legal framework itself."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from the test in two ways: when mandates are upheld, gains disease protection through herd immunity; when mandates are blocked, gains protection from state overreach. Organized through democratic processes but individually constrained — cannot opt out of the legal system or the disease environment."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Immunocompromised, elderly, and other high-risk groups who depend on population-level immunity. They benefit disproportionately when mandates are justified and upheld. They are trapped in the risk environment — cannot exit the threat of severe disease, and lack the power to influence the test's application."
+    },
+    {
+      "name": "individuals_subject_to_mandate",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the compliance costs (vaccination, potential adverse effects, loss of bodily autonomy) when a mandate passes the proportionality test. Benefit from the test's limiting function when it blocks disproportionate mandates. Their exit options are constrained — they can seek exemptions (if robust), relocate, or litigate, but cannot easily escape the legal regime."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Provide the epidemiological and safety evidence that feeds the proportionality test (case fatality rates, R0 estimates, vaccine trial data). They shape the factual predicates but do not control the legal thresholds. Their role is analytical — they observe the constraint's operation and supply data, but are not directly constrained by it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective action problem of determining when state compulsion of medical intervention is legitimate. Provides a structured, evidence-based framework that balances collective protection against individual liberty, preventing both arbitrary mandates and categorical paralysis.",
+    "transfer_function": "When the test is satisfied, transfers compliance costs (vaccination, autonomy intrusion) from individuals subject to mandate to the general public (disease protection). When the test is not satisfied, transfers the risk of disease spread to the public in exchange for preserving individual liberty. The state executive branch always bears the procedural costs of meeting the test.",
+    "absent_voices": "Future generations (who inherit the precedent set by proportionality jurisprudence), non-citizen residents (who may be subject to mandates but lack political voice), and pathogen evolution itself (which changes the factual predicates unpredictably). These voices are structurally excluded from the current legal process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the proportionality test vanished overnight, two regimes would likely fill the void: either categorical mandates (public_health_primary) leading to routine compulsion for minor diseases, or categorical bans (bodily_autonomy_primary) leading to uncontrolled outbreaks of severe diseases. The legal landscape, public health practice, and the balance of state power vs individual rights would fundamentally reorganize.",
+    "founding_problem": "The proportionality test was built to solve the problem of arbitrary state power in public health — the historical pattern of either unchecked mandate authority (leading to abuse) or absolute prohibitions (leading to preventable mass death). It emerged from constitutional jurisprudence seeking a middle ground that respects both collective survival and individual dignity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem is attested by constitutional courts across multiple jurisdictions (e.g., Jacobson v. Massachusetts lineage in US, proportionality analysis in EU and Canadian law), by public health ethicists outside the state apparatus (e.g., Childress et al. on public health ethics frameworks), and by historical records of mandate abuse (e.g., forced vaccination campaigns in colonial contexts). No single beneficiary group monopolizes this attestation."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_compulsion_requires_proportional_justification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "exemptions_must_be_substantively_accessible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "classical_proportionality_framework",
+    "drift_state": {
+      "moment": "post_covid_emergency_jurisprudence",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

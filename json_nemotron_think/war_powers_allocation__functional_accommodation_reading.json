@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "war_powers_allocation__functional_accommodation_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_war_powers_allocation__functional_accommodation_reading",
+    "measurement_id_prefix": "war_powers_functional_accommodation",
+    "story_uid": "972a3fae-c980-4771-8cc7-b6ef5d7fde84"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Functional Accommodation Reading of War Powers Allocation",
+    "topic_domain": "constitutional_law/separation_of_powers/war_powers",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "executive_branch"
+    ],
+    "victims": [
+      "congress",
+      "public"
+    ],
+    "vindicated_propositions": [
+      "constitutional_flexibility_doctrine",
+      "operational_necessity_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 235
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the functional accommodation reading a distinct constraint from its sibling readings, or a contextual application of a single war powers principle?",
+      "resolution_mechanism": "Compare the ε values and beneficiary/victim structures across readings: if ε differs materially between functional accommodation and inherent executive readings, they are distinct constraints per ε-invariance.",
+      "impact": "If distinct, each reading gets its own classification; if not, the kernel has a single ε and the readings are interpretive variants.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether functional accommodation instantiates a separate constraint from congressional primacy and inherent executive readings."
+    },
+    {
+      "id": "contextual_extractiveness_variance",
+      "question": "Does the constraint's extractiveness genuinely vary by operational context (imminent vs prolonged), or is the contextual distinction a cover for consistent executive advantage?",
+      "resolution_mechanism": "Measure executive unilateral action frequency and congressional authorization rates across threat types; if 'imminent' designation correlates with executive preference rather than objective threat criteria, the variance is extractive cover.",
+      "impact": "If cover, the constraint is a snare with contextual theater; if genuine, it is a tangled rope with real coordination zones.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the imminent/prolonged distinction tracks real operational differences or executive convenience."
+    },
+    {
+      "id": "sibling_boundary_ambiguity",
+      "question": "Where does the functional accommodation reading's 'prolonged campaign' threshold end and the inherent executive reading's 'national interest' authority begin?",
+      "resolution_mechanism": "Analyze OLC opinions and congressional authorizations post-9/11: if administrations cite functional accommodation to justify actions that inherent executive proponents would claim as inherent, the boundary is porous.",
+      "impact": "Porous boundary means the readings influence each other structurally; sharp boundary means they occupy distinct constraint spaces.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural boundary between functional accommodation and inherent executive readings in the ambiguity zone."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of categorical war powers rules structural (institutional incentives, precedent) or internalized (constitutional culture accepting ambiguity as necessary)?",
+      "resolution_mechanism": "Track congressional war powers assertions after executive overreach: if Congress reasserts categorical rules when politically viable, suppression is structural; if Congress has internalized flexibility as constitutional, suppression is internalized.",
+      "impact": "If internalized, effective suppression exceeds structural measures — the constraint travels with the agents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression of categorical war powers rules."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 220,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 235,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 220,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 235,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 220,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 235,
+      "value": 0.45,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The functional accommodation reading holds that war powers allocation varies by operational context: the President may act unilaterally against imminent threats, but sustained military campaigns require congressional authorization. This reading dominates post-WWII practice and OLC doctrine. It coordinates by preventing paralysis in genuine emergencies while preserving legislative control over major wars. However, the 'imminent threat' and 'prolonged campaign' boundaries are contested, creating an ambiguity zone where both branches claim authority. The executive benefits from this ambiguity — it can characterize discretionary actions as responses to imminence — while Congress and the public bear the costs of unauthorized or poorly authorized conflicts. The constraint requires active enforcement through judicial review, political conflict, and the War Powers Resolution, but enforcement is episodic and politically contingent.",
+    "key_agents": [
+      "executive_branch: Primary agenda-setter in imminent threats; primary beneficiary in ambiguity zone (institutional/arbitrage)",
+      "congress: Agenda-setter for prolonged campaigns; payer in ambiguity zone (institutional/constrained)",
+      "public: Pays costs of military action in blood and treasure; constrained exit (organized/constrained)",
+      "courts: Observer/arbitrator; analytical exit (institutional/analytical)",
+      "foreign_populations: Excluded from the constitutional conversation; trapped (powerless/trapped)",
+      "military: Implementer; not a primary constitutional stakeholder"
+    ],
+    "logic_rationale": "Extractiveness (0.55) reflects the executive's consistent advantage in the ambiguity zone — it initiates action and defines the threat. Suppression (0.45) is the constraint's displacement of categorical rules (declare war / no unilateral action) with a contextual test that the executive controls. Theater ratio (0.4) captures performative consultations and reporting that rarely constrain outcomes. Accessibility collapse (0.5) and resistance (0.55) are moderate: categorical alternatives exist (congressional primacy, inherent executive) but are politically difficult to sustain; Congress and courts resist but inconsistently. The measurement series shows extractiveness and theater rising through the Cold War and post-9/11, with slight recent stabilization.",
+    "directionality_logic": "The executive is the structural beneficiary (d ~0.2): it controls threat characterization, initiates action, and collects the flexibility dividend. Congress is a payer (d ~0.75): it loses institutional authority in the ambiguity zone and bears political costs of challenging the executive. The public is a payer (d ~0.65): bears human and fiscal costs with constrained exit (voting, protest). Courts are near-symmetric observers (d ~0.5): they arbitrate but lack enforcement power. Foreign populations are trapped (d ~0.9): fully subject to decisions with zero voice.",
+    "perspectival_gap": "From the executive seat, the constraint is a rope — genuine coordination solving the speed-democracy dilemma. From Congress's seat, it is a snare — the ambiguity zone extracts legislative authority. From the public seat, it is a tangled rope — some coordination value (preventing paralysis) but substantial extraction (wars without accountability). The engine computes this divergence from the structural data.",
+    "mandatrophy_analysis": "The founding problem (constitutional gap for immediate action) remains live but contested — modern communications and rapid deployment reduce the genuine urgency justification. The constraint persists because it benefits the executive and Congress prefers ambiguity to accountability. Mandatrophy is unresolved: the arrangement has outlived its strict necessity but no coalition can replace it.",
+    "kernel_context": "This constraint is the functional_accommodation_reading of the war_powers_allocation kernel. Sibling readings: congressional_primacy_reading (authorization always required) and inherent_executive_reading (inherent presidential authority). The functional accommodation reading occupies the middle ground, claiming contextual allocation rather than categorical rule. It coexists with both siblings in constitutional discourse — neither sibling is foreclosed, but functional accommodation creates structural pressure on both by legitimizing the ambiguity zone they contest."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "war_powers_allocation__congressional_primacy_reading",
+      "war_powers_allocation__inherent_executive_reading",
+      "war_powers_resolution_enforcement"
+    ],
+    "dual_formulation_note": "Part of the war_powers_allocation constraint family (3 readings). Functional accommodation differs from congressional primacy by accepting unilateral action for imminence, and from inherent executive by requiring authorization for prolonged campaigns. ε is higher than congressional primacy (which has near-zero extraction) and lower than inherent executive (which has higher extraction but less coordination). The readings form a gradient: congressional primacy (mountain/rope) → functional accommodation (tangled rope) → inherent executive (snare)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "executive_branch",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Controls threat assessment and initiation of military action; characterizes situations as 'imminent' to access unilateral authority; collects flexibility dividend in the ambiguity zone; can shift between functional accommodation and inherent executive framings as convenient; exit is arbitrage-grade — it controls the constraint's application."
+    },
+    {
+      "name": "congress",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Holds formal war declaration and funding powers; sets agenda for prolonged campaigns through authorizations and appropriations; loses institutional authority when executive acts in ambiguity zone; political costs of challenging executive are high (accused of undermining troops); exit is constrained — can pass legislation but faces veto and political backlash."
+    },
+    {
+      "name": "public",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bears human, fiscal, and moral costs of military action; benefits from security provided by effective defense; has no direct decision authority; exit limited to voting, protest, and cultural pressure — all slow and indirect; organized through veterans' groups, anti-war movements, but structurally excluded from the imminent/prolonged determination."
+    },
+    {
+      "name": "courts",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Arbitrates war powers disputes when justiciable (rare — political question doctrine); issues opinions that shape the ambiguity zone boundaries (e.g., Youngstown, Hamdi); no enforcement power over executive non-compliance; analytical exit — observes and rules but does not participate in the constraint's operation."
+    },
+    {
+      "name": "foreign_populations",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Subject to military action decisions with zero constitutional voice; bears disproportionate costs (death, displacement, infrastructure destruction); no exit from the constraint's effects; structurally excluded from the U.S. constitutional conversation that authorizes force against them."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produce the interpretive frameworks (congressional primacy, functional accommodation, inherent executive) that structure the constraint; compete for influence in OLC, courts, Congress; analytical exit — they choose which reading to advance but do not bear the constraint's costs directly."
+    }
+  ],
+  "gain_flow": "executive_branch",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a framework for allocating war powers between branches based on operational urgency and duration, avoiding paralysis in genuine emergencies while maintaining legislative control over sustained conflicts.",
+    "transfer_function": "Moves decision authority from Congress to the Executive in imminent threat scenarios; moves accountability costs to the public and affected populations; moves institutional authority from Congress to Executive in the ambiguity zone where 'imminent' and 'prolonged' are contested.",
+    "absent_voices": "Foreign populations affected by military decisions; future generations bearing long-term consequences of unauthorized wars; rank-and-file service members who execute orders without constitutional voice; state governments bearing domestic costs of federal war decisions.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the functional accommodation constraint vanished overnight, the constitutional vacuum would be filled by either congressional primacy (requiring authorization for all uses of force) or inherent executive authority (unilateral presidential power), fundamentally restructuring how military decisions are made and which branch controls them.",
+    "founding_problem": "The Constitution's division of war powers (Congress declares war, President commands) created a gap for situations requiring immediate action but not rising to declared war — the founding problem was how to reconcile legislative control with executive speed in the nuclear/jet age.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historical practice from Jefferson (Barbary Wars) through Truman (Korea) to Obama (Libya) attests the problem's persistence. Congressional primacy scholars (e.g., Louis Fisher, Bruce Ackerman) and War Powers Resolution legislative history attest the problem is substantially solved by modern communications and rapid congressional convening — the urgency justification has eroded. No consensus outside the executive branch's own OLC opinions."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "congressional_primacy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "inherent_executive_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "contextual_allocation_of_war_powers",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "temporal_distinction_governs_authority",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "constitutional_original_understanding",
+    "drift_state": {
+      "moment": "post_911_authorizations",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "war_powers_allocation__congressional_primacy_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

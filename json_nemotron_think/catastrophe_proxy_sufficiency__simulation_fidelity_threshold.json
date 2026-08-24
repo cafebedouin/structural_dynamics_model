@@ -1,0 +1,287 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_proxy_sufficiency__simulation_fidelity_threshold",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_catastrophe_proxy_sufficiency__simulation_fidelity_threshold",
+    "measurement_id_prefix": "cps_sft",
+    "story_uid": "c0cf898f-ed05-4536-99c7-a7b3148cb3a3"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Catastrophe Proxy Sufficiency via Simulation Fidelity Threshold",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "simulation_technology_vendors",
+      "high_reliability_organizations",
+      "safety_regulators",
+      "training_institutions"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "competence_retention_requires_fidelity_threshold",
+      "technology_investment_coordinates_safety_practice"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Does this reading instantiate a distinct constraint from sibling readings of the catastrophe_proxy_sufficiency kernel, or does it describe the same structural phenomenon under a different label?",
+      "resolution_mechanism": "Compare ε values and beneficiary/victim structures across readings: if this reading's ε (0.18) and vendor-beneficiary structure differ materially from sibling readings, they are distinct constraints per ε-invariance.",
+      "impact": "If readings are not distinct, the kernel decomposition is invalid and the family should collapse to one story; if distinct, each reading's classification stands independently.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether simulation_fidelity_threshold is a structurally distinct constraint from catastrophe_necessity_reading, hybrid_degradation_reading, and simulation_as_proxy_catastrophe_reading"
+    },
+    {
+      "id": "fidelity_threshold_empirical_basis",
+      "question": "Is the fidelity threshold empirically grounded in competence-retention outcomes, or is it a vendor-driven specification that creates a binary sufficiency condition without validated correspondence to real catastrophe performance?",
+      "resolution_mechanism": "Longitudinal studies comparing organizations that meet vs. fail the threshold on subsequent catastrophe-adjacent performance; regulatory review of threshold-setting processes for vendor capture.",
+      "impact": "If thresholds are vendor-captured, the rope classification masks extractive coordination; if empirically grounded, the binary sufficiency condition is a genuine coordination achievement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the fidelity threshold represents validated competence science or vendor-influenced standard-setting"
+    },
+    {
+      "id": "resource_constrained_organizations_exclusion",
+      "question": "Does the binary threshold exclude resource-constrained high-reliability organizations (small nuclear operators, regional airlines, developing-nation chemical plants) from recognized competence maintenance pathways?",
+      "resolution_mechanism": "Survey of organizations below the investment threshold: do they maintain competence through alternative pathways, or do they face regulatory marginalization?",
+      "impact": "If exclusion is systematic, the rope's coordination function has a victim class not currently declared, potentially shifting classification toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the threshold creates de facto exclusion of lower-resource operators from recognized competence pathways"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08
+    }
+  ],
+  "commentary": {
+    "narrative_context": "High-reliability organizations (nuclear, aviation, chemical, healthcare) face a structural problem: catastrophic events are too rare, dangerous, or ethically impermissible to serve as routine competence-maintenance exercises. The simulation fidelity threshold reading asserts that technology-mediated simulation can substitute for real catastrophe exposure PROVIDED the simulation crosses a fidelity threshold where stress, uncertainty, and decision-density match real catastrophe conditions. This threshold is not categorical — it moves as simulation technology advances. The constraint coordinates competence maintenance across the field by establishing a technology-investment pathway: organizations invest in simulation infrastructure, vendors compete on fidelity, regulators certify thresholds, and the binary sufficiency condition (meets threshold / does not meet) replaces unbounded 'more simulation is better' with a clear coordination target. Beneficiaries are simulation technology vendors (who capture the investment flow) and the organizations/regulators/training institutions that gain a shared coordinate. No victim class is declared — participants are net beneficiaries of the coordination — but an omega flags potential exclusion of resource-constrained organizations.",
+    "key_agents": [
+      "simulation_technology_vendors: Primary beneficiary (powerful/institutional) — sells fidelity-certified simulation platforms; revenue scales with threshold adoption",
+      "high_reliability_organizations: Beneficiary (institutional) — gains a bounded, certifiable competence-maintenance pathway; bears investment cost but avoids unbounded training expenditure",
+      "safety_regulators: Agenda setter (institutional) — defines and certifies fidelity thresholds; legitimizes the coordination standard",
+      "training_institutions: Beneficiary (organized) — integrates threshold-certified simulation into curricula; gains stable demand",
+      "frontline_operators: Beneficiary (organized, constrained exit) — receives structured, high-fidelity practice; career progression tied to threshold-certified credentials",
+      "resource_constrained_operators: Excluded (powerless, trapped) — cannot meet investment threshold; may face regulatory marginalization or competence decay",
+      "affected_publics: Excluded (powerless, trapped) — bears downstream risk if competence maintenance fails; no voice in threshold-setting"
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) because the constraint's primary function is coordination — it solves a genuine collective-action problem (how to maintain competence for rare catastrophes) with minimal coercive overhead. The binary threshold reduces wasteful over-investment and provides a clear sufficiency criterion. Suppression is low (0.12) — alternatives exist (drills, tabletop exercises, apprenticeship) but are less effective; the constraint persists because it works better, not because alternatives are crushed. Theater ratio is very low (0.08) — the simulation exercises have direct functional relevance to competence. Accessibility collapse is moderate (0.35) — the threshold creates a binary gate, but organizations below it can still operate (just without the certified pathway). Resistance is low (0.15) — the field adopted the threshold because it solves a real problem. The measurement series shows extractiveness and theater declining as the threshold matures and vendor competition commoditizes baseline fidelity.",
+    "perspectival_gap": "From the vendor seat, the threshold is a market-creating coordination standard that rewards fidelity investment. From the resource-constrained operator seat, the same threshold may appear as a capital barrier that privileges well-resourced organizations. From the regulator seat, it is a risk-reduction tool with clear certification logic. The engine computes these seat divergences from the structural data; the authored claim (rope) reflects the coordination function as structurally dominant.",
+    "directionality_logic": "Vendors are structural beneficiaries (d near 0.0) — they collect the technology investment flow. High-reliability organizations are near-symmetric (d ~ 0.5) — they pay investment costs but receive a bounded, certifiable competence pathway that replaces unbounded alternatives. Regulators are agenda-setters with analytical exit (d ~ 0.3) — they shape the standard but don't directly pay or collect. Frontline operators are beneficiaries with constrained exit (d ~ 0.4) — they gain practice quality but career mobility depends on threshold-certified credentials. Resource-constrained operators are excluded (not in the coordination) — their structural position is not captured by directionality because they are outside the constraint's beneficiary/payer structure; the omega flags this gap.",
+    "mandatrophy_analysis": "The founding problem (competence retention for rare catastrophes) remains live — catastrophic events have not become more frequent or ethically practicable for routine training. The arrangement has not outlived its function; rather, technology advances have improved the coordination's efficiency (declining extractiveness over time). No mandatrophy is present — the constraint's justification (the transition to technology-mediated competence maintenance) is still the steady state, not a completed transition.",
+    "kernel_context": "This constraint is the simulation_fidelity_threshold reading of the catastrophe_proxy_sufficiency kernel. Sibling readings: catastrophe_necessity_reading (only real catastrophes suffice), hybrid_degradation_reading (simulation maintains procedures but tacit knowledge degrades without real events), simulation_as_proxy_catastrophe_reading (simulation exercises are catastrophe-equivalent practice sufficient indefinitely). This reading differs by making sufficiency technology-dependent and threshold-gated rather than categorical."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_credentialing_standards",
+      "regulatory_competence_assurance",
+      "high_reliability_training_curricula"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the catastrophe_proxy_sufficiency kernel. The catastrophe_necessity_reading, hybrid_degradation_reading, and simulation_as_proxy_catastrophe_reading are sibling constraints with different ε values and beneficiary structures. This reading's ε (0.18) reflects coordination via technology investment; the catastrophe_necessity_reading would have higher ε (real catastrophe exposure is costly); the simulation_as_proxy_catastrophe_reading would have lower ε (no threshold gate, simulation is simply sufficient). They are linked as a constraint family via affects_constraints."
+  },
+  "directionality_overrides": [],
+  "stakeholders": [
+    {
+      "name": "simulation_technology_vendors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Develop and sell high-fidelity simulation platforms certified to meet the threshold. Revenue comes from organizational subscriptions, per-seat licenses, and certification fees. They compete on fidelity metrics and lobby standards bodies to shape threshold definitions. Exit is easy — they serve multiple industries and can pivot to adjacent simulation markets."
+    },
+    {
+      "name": "high_reliability_organizations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Nuclear plant operators, airlines, chemical manufacturers, major hospitals. They invest in simulation infrastructure to meet the certified threshold. The investment is substantial but bounded — it replaces open-ended training expenditures and reduces regulatory uncertainty. They cannot easily exit the need for competence maintenance, but they can choose vendors and influence threshold evolution through industry associations."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Nuclear regulatory commissions, aviation authorities, chemical safety boards. They define the fidelity threshold criteria, certify simulation platforms, and make threshold compliance a licensing condition. They do not directly pay or collect from the constraint but shape its operation. Their exit is analytical — they observe the system's effectiveness and can revise standards."
+    },
+    {
+      "name": "training_institutions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "University nuclear engineering programs, flight academies, medical simulation centers. They integrate threshold-certified simulation into curricula and professional certification pathways. They gain stable enrollment and industry partnerships. Exit is constrained — their accreditation and relevance depend on teaching to the current threshold."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Control room operators, pilots, process engineers, surgical teams. They receive high-fidelity simulation training that counts toward certification and career progression. The training is genuinely valuable for skill maintenance. Their exit is constrained — leaving the profession means losing the investment in threshold-specific credentials; staying means recurring re-certification on the platform."
+    },
+    {
+      "name": "resource_constrained_operators",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Small research reactors, regional airlines in developing economies, municipal water treatment plants, small chemical batch producers. They face the same competence-retention problem but cannot afford threshold-certified simulation infrastructure. They rely on lower-fidelity drills, tabletop exercises, and apprenticeship. They are structurally excluded from the certified pathway and may face regulatory pressure or insurance penalties for non-compliance."
+    },
+    {
+      "name": "affected_publics",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Communities downstream of nuclear plants, chemical facilities, flight paths. They bear the consequence if competence maintenance fails. They have no voice in threshold-setting, no access to simulation vendors, and no exit from the risk exposure. Their situation is not improved or worsened directly by the threshold — they are excluded from the coordination entirely."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates competence maintenance across high-reliability organizations by establishing a technology-investment pathway to a certified simulation fidelity threshold, replacing unbounded 'more simulation is better' with a binary sufficiency criterion that regulators, vendors, and operators can coordinate around.",
+    "transfer_function": "Moves capital investment from high-reliability organizations to simulation technology vendors in exchange for fidelity-certified training infrastructure; moves regulatory certainty from regulators to organizations via threshold compliance; moves career progression clarity from training institutions to frontline operators via certified credentials.",
+    "absent_voices": "Resource-constrained high-reliability organizations (small nuclear operators, regional airlines in developing economies, municipal facilities) who cannot meet the investment threshold and face regulatory marginalization. Affected publics downstream of competence failures who bear risk but have no seat in threshold-setting. Frontline operators in excluded organizations who maintain competence through non-certified pathways.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the fidelity threshold and its certification infrastructure vanished overnight, organizations would lose the shared coordinate for 'sufficient' simulation investment. Regulators would revert to prescriptive training-hour requirements or subjective competence assessments. Vendors would compete on unbounded fidelity claims rather than threshold compliance. The field would reorganize around either under-investment (competence decay) or wasteful over-investment (unbounded fidelity arms race).",
+    "founding_problem": "How to maintain operational competence for catastrophic scenarios that are too rare, expensive, or ethically impossible to practice in reality, without imposing unbounded training costs on organizations or leaving competence to chance.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Nuclear industry (IAEA safety reports), aviation (ICAO training standards), chemical process safety (CCPS guidelines), and healthcare simulation literature independently document the competence-retention problem for rare catastrophic events. The problem is attested by regulatory bodies, professional societies, and accident investigation boards — not solely by simulation vendors."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_necessity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_degradation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "simulation_as_proxy_catastrophe_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "fidelity_threshold_is_sufficient_for_competence_retention",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "technology_investment_coordinates_competence_maintenance",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "pre_threshold_simulation_practice",
+    "drift_state": {
+      "moment": "contemporary_fidelity_standards",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

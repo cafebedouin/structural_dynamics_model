@@ -1,0 +1,587 @@
+{
+  "header": {
+    "constraint_id": "article_51_self_defense__expansive_preventive_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_article_51_self_defense__expansive_preventive_reading",
+    "measurement_id_prefix": "a51_exp_prev",
+    "story_uid": "573eb035-1476-40c5-a002-d4332bc279d7"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Article 51 Self-Defense — Expansive Preventive Reading",
+    "topic_domain": "international_law/security_studies/constitutional_interpretation",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "militarily_capable_states",
+      "defense_sectors"
+    ],
+    "victims": [
+      "target_region_populations",
+      "multilateral_veto_authority"
+    ],
+    "vindicated_propositions": [
+      "self_judged_necessity_doctrine",
+      "preemptive_force_legitimacy",
+      "non_state_actor_armed_attack_threshold"
+    ]
+  },
+  "interval": {
+    "start": 1945,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the expansive preventive reading a distinct constraint from the narrow armed attack reading and the unable/unwilling doctrine reading, or a single constraint measured differently?",
+      "resolution_mechanism": "Structural decomposition: if the three readings produce different beneficiary/victim structures, different extraction profiles, and different enforcement requirements, they are distinct constraints linked by network.affects_constraints. The ε-invariance test applies — if changing the observable (what counts as 'armed attack', 'imminence', 'necessity') changes ε, they are different constraints.",
+      "impact": "If distinct, each reading gets its own constraint story with its own ε, stakeholders, and classification. The kernel_id article_51_self_defense becomes a family label, not a single constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the Article 51 kernel decomposes into multiple structurally distinct constraints per the ε-invariance principle"
+    },
+    {
+      "id": "necessity_self_judgment_extraction",
+      "question": "Does the self-judged necessity standard function as a coordination mechanism (genuine collective security) or as an extraction enabler (cover for unilateral force by powerful states)?",
+      "resolution_mechanism": "Comparative case analysis: examine instances where states invoked preventive self-defense against non-state actors. Code outcomes: (a) multilateral endorsement vs. unilateral action, (b) proportionality of response to threat, (c) duration and scope of force used. If pattern shows powerful states acting unilaterally with disproportionate force while weaker states cannot invoke the same standard, the necessity standard is an extraction enabler.",
+      "impact": "If extraction enabler, the constraint's coordination function is cover; classification shifts toward snare. If genuine coordination with asymmetric application, remains tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether self-judged necessity is a genuine coordination standard or an extraction cover"
+    },
+    {
+      "id": "non_state_actor_attribution_boundary",
+      "question": "Where does the 'armed attack by non-state actors' threshold actually operate — as a meaningful constraint on force or as a rhetorical gateway?",
+      "resolution_mechanism": "Threshold tracing: track how the 'non-state actor armed attack' concept has been applied from Nicaragua (1986) through post-9/11 practice. Measure the evidentiary standard required in each invocation and whether it constrains the acting state's choice of target, timing, and scale.",
+      "impact": "If the threshold is consistently met by minimal evidence and does not constrain targeting decisions, it is a gateway, not a constraint — extraction is higher than the coordination story admits.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the non-state actor armed attack threshold constrains or enables preventive force"
+    },
+    {
+      "id": "multilateral_veto_erosion",
+      "question": "Has the expansive reading structurally eroded the UN Security Council's veto authority over authorized force, or does the veto remain a functional check?",
+      "resolution_mechanism": "Institutional trajectory analysis: count UNSC authorized force resolutions vs. unilateral preventive invocations over the interval. Measure veto usage patterns — are vetoes cast against expansive self-defense claims, or has the veto been circumvented by doctrinal shift?",
+      "impact": "If veto authority is circumvented, the multilateral_veto_authority victim seat experiences structural displacement — the constraint extracts from the collective security architecture itself.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the expansive reading has displaced the UNSC veto as the authorization gate for force"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1945,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1945,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1945,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.68
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1945,
+    "tn": 2024,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.2,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.45,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.15,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.38,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.25,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.42,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.1,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.28,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.3,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.7,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.25,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.62,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.2,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.55,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.15,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.48,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.35,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.68,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.3,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.58,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.25,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.52,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.15,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.4,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.4,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.55,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.35,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.48,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.3,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.45,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.25,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.38,
+        "basis": "observed"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the expansive preventive reading of Article 51 of the UN Charter — the interpretation that self-defense extends to preemptive or preventive uses of force against non-state actors or emerging threats when necessity is demonstrated by the acting state itself. The reading emerged most forcefully after 9/11 but has doctrinal roots in anticipatory self-defense arguments (Caroline test) and the Nuclear Weapons Advisory Opinion. The constraint operates as a tangled_rope: it retains a genuine coordination function (collective security against armed attack) but has developed substantial asymmetric extraction — militarily capable states and their defense sectors gain low-constraint authorization for unilateral force, while target-region populations bear the costs of preventive strikes and the multilateral veto authority (UNSC) is structurally displaced. The self-judged necessity standard is the extraction mechanism: it converts a coordination constraint (armed attack trigger) into a permissive gateway. The measurement series shows extraction, theater, and suppression all rising sharply post-2001, tracking the doctrinal shift from 'armed attack occurred' to 'emerging threat demonstrated.'",
+    "logic_rationale": "Extractiveness (0.72) is high because the constraint enables powerful states to externalize the costs of preventive force onto target populations while internalizing the security benefits. The self-judged necessity standard means the acting state is both judge and party — the classic extraction structure. Suppression (0.68) reflects the active diplomatic, legal, and military effort required to maintain the expansive reading against narrow readings and multilateral pushback. Theater ratio (0.42) is moderate: the collective security framing and legal formalism (necessity, proportionality, imminence language) perform coordination while the operational reality is permissive. Accessibility collapse (0.38) is modest — alternative frameworks (narrow reading, unable/unwilling doctrine) remain live and contested. Resistance (0.55) is significant: the narrow reading persists in ICJ jurisprudence, General Assembly resolutions, and non-aligned state practice.",
+    "directionality_logic": "Militarily capable states (agenda_setter/beneficiary) sit at d ≈ 0.15: they author the necessity determination, control the enforcement machinery (UNSC veto, military capacity), and collect the security benefits. Defense sectors (beneficiary) at d ≈ 0.2: they receive procurement and operational authorization flows but don't set the agenda. Target region populations (payer) at d ≈ 0.85: they bear the kinetic costs, displacement, and governance disruption with no exit from the targeting logic and no voice in the necessity determination. Multilateral veto authority (payer) at d ≈ 0.7: the UNSC's authorization gate is structurally bypassed by the self-judged necessity claim — the veto power is extracted from the collective security architecture. The directionality spread is wide because the constraint's core mechanism (self-judged necessity) structurally advantages the powerful and disadvantages the targeted.",
+    "perspectival_gap": "From the militarily capable state seat, the constraint appears as a necessary adaptation of collective security to non-state threats — a rope with genuine coordination value. From the target population seat, it appears as a snare — force authorized by a standard the target cannot contest, enforced by actors the target cannot influence. From the multilateral authority seat, it appears as a piton — the collective security architecture persists ceremonially but its authorization function has atrophied. The engine computes this divergence from the structural data; the claimed_type (tangled_rope) reflects the authoring seat's assessment that both coordination and extraction are structurally real.",
+    "mandatrophy_analysis": "The founding problem (response to armed attack) is contested — the narrow reading says it's live, this reading says it's evolved. The constraint shows mandatrophy markers: theater rising (0.15→0.42), extraction rising (0.25→0.72), and the original coordination function (interstate armed attack response) now handles a minority of invocations. But the constraint is not a pure piton because the coordination function against non-state actors remains genuinely contested and the enforcement machinery is actively maintained, not just performed. The mandatrophy is partial and contested — hence tangled_rope, not piton.",
+    "kernel_context": "This constraint is the expansive_preventive_reading of the article_51_self_defense kernel. Sibling readings: narrow_armed_attack_reading (self-defense constrained to actual/imminent armed attack by a state), unable_unwilling_doctrine_reading (hybrid trigger when host state is unwilling/unable to suppress non-state actor threat). This reading's structural delta: low constraint on unilateral force, self-judged necessity, beneficiaries = militarily capable states + defense sectors, victims = target region populations + multilateral veto authority."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "article_51_self_defense__narrow_armed_attack_reading",
+      "article_51_self_defense__unable_unwilling_doctrine_reading",
+      "unsc_authorization_gate",
+      "collective_security_architecture"
+    ],
+    "dual_formulation_note": "Article 51 kernel decomposes into three structurally distinct constraints per ε-invariance: (1) narrow_armed_attack_reading — low ε, Mountain from most seats; (2) unable_unwilling_doctrine_reading — moderate ε, Tangled Rope (coordination via host state responsibility + extraction via lowered threshold); (3) expansive_preventive_reading — high ε, Tangled Rope (coordination via non-state actor threat framing + extraction via self-judged necessity). The three readings share the Article 51 text but instantiate different constraints with different ε, beneficiaries, victims, and enforcement requirements. They are linked as a constraint family via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.7
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "militarily_capable_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Possess the military capacity to project force globally and the diplomatic capital to shape the necessity standard. They author the legal interpretations, control the UNSC veto, and decide when 'necessity is demonstrated.' They collect the security benefits of preventive action while externalizing kinetic costs to target regions. Their exit is arbitrage-grade: they can invoke or ignore the constraint at will."
+    },
+    {
+      "name": "defense_sectors",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receive procurement contracts, operational authorizations, and institutional legitimacy from the expansive reading. The preventive force doctrine creates sustained demand for ISR platforms, precision munitions, and expeditionary capabilities. They lobby for doctrinal expansion but do not set the necessity standard. Their exit is mobile — they can pivot to other threat narratives if this one contracts."
+    },
+    {
+      "name": "target_region_populations",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the kinetic effects of preventive strikes: casualties, displacement, infrastructure destruction, governance disruption, and long-term instability. They have no voice in the necessity determination, no access to the legal forums where the standard is shaped, and no exit from the geographic targeting logic. Their situation is defined by asymmetric exposure — they are the constraint's extraction surface."
+    },
+    {
+      "name": "multilateral_veto_authority",
+      "role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The UN Security Council's Chapter VII authorization gate is structurally bypassed when powerful states invoke self-judged preventive necessity. The veto power — the collective security architecture's core enforcement mechanism — is extracted from the multilateral system and relocated to the acting state's national decision process. The authority persists ceremonially but its functional control over force authorization has atrophied. Exit is constrained: the institution cannot abandon its mandate but cannot enforce it against the veto-holding beneficiaries."
+    },
+    {
+      "name": "narrow_reading_adherents",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "States and legal scholars who maintain the Caroline/Nicaragua standard: self-defense requires an actual or imminent armed attack by a state. They are excluded from the operational necessity determination but contest it in ICJ proceedings, UNGA debates, and treaty body interpretations. Their exclusion is structural — the expansive reading's self-judged standard does not accommodate their interpretive frame except as dissent."
+    },
+    {
+      "name": "unable_unwilling_proponents",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "States and scholars who advocate the intermediate doctrine: self-defense triggered when a non-state actor attacks from a host state unwilling/unable to suppress the threat. They are excluded from the expansive reading's self-judged necessity standard (which requires no host state nexus) but their doctrine is sometimes cited as a stepping stone to the expansive reading. They contest both the narrow reading's state-centrism and the expansive reading's limitlessness."
+    },
+    {
+      "name": "international_legal_observers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "ICJ judges, UN special rapporteurs, treaty bodies, and academic observers who track the doctrinal evolution. They document the constraint's operation across seats but do not collect from or pay into it. Their analytical seat sees the full structural asymmetry: the necessity standard's migration from objective trigger to subjective gateway, the veto authority's displacement, and the extraction flow from target populations to capable states."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a legal framework authorizing force in response to armed attack — the collective security system's core exception to the Article 2(4) force prohibition. The expansive reading claims to extend this to emerging non-state threats where the traditional interstate trigger fails.",
+    "transfer_function": "Moves the authorization gate for preventive force from the UN Security Council (multilateral, veto-constrained) to the acting state's national necessity determination (unilateral, self-judged). Transfers the costs of kinetic action (casualties, displacement, destruction) from the acting state to target region populations. Transfers procurement and operational rents to defense sectors.",
+    "absent_voices": "Target region populations are structurally excluded from the necessity determination — they cannot participate in the legal forums where 'imminence' and 'necessity' are defined. Future generations in target regions (who inherit the instability) are temporally excluded. Non-nuclear, non-permanent UNSC members are excluded from the veto calculus that enables or constrains the expansive reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expansive preventive reading vanished overnight, the authorization gate for preventive force would revert to the UNSC (narrow reading) or the unable/unwilling hybrid. Militarily capable states would lose their self-judged necessity cover for unilateral preventive action. Target region populations would face fewer preventive strikes. Defense sectors would lose a major doctrinal driver for expeditionary procurement. The collective security architecture would revert to its 1945-2001 configuration — a significant rearrangement.",
+    "founding_problem": "The UN Charter's collective security system was designed for interstate war but faced non-state actor threats operating from weak or complicit host states. The 9/11 attacks demonstrated that the 'armed attack by a state' trigger failed to capture catastrophic non-state threats. The expansive reading was built to close this perceived gap.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The 9/11 Commission Report and subsequent UN High-Level Panel reports attest the gap was real. The ICJ's Nicaragua and Nuclear Weapons opinions, the UNGA's Definition of Aggression (1974), and the non-aligned movement's consistent position attest the founding problem was not 'no trigger for non-state threats' but 'no trigger for unilateral preventive force against non-state actors without host state nexus' — a narrower gap that the unable/unwilling doctrine addresses without the expansive reading's self-judged necessity. The beneficiary states (US, UK, Israel, Russia) self-attest the problem remains live; the corroboration from outside the beneficiary set is mixed and contested."
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "article_51_self_defense__narrow_armed_attack_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "narrow_armed_attack_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "unable_unwilling_doctrine_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "necessity_is_self_judged_by_acting_state",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "non_state_actors_can_trigger_article_51_without_state_attribution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "imminence_is_elastic_and_context_dependent",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_911_preventive_self_defense_framework",
+    "drift_state": {
+      "moment": "contemporary_multi_theater_operations",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

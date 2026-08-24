@@ -1,0 +1,347 @@
+{
+  "header": {
+    "constraint_id": "ai_alignment_priority__nearterm_harms_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "2655b733-ce94-45f6-a281-8e0bf518636c"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Near-Term AI Alignment Priority: Sociotechnical Audits and Bias Mitigation for Deployed Systems",
+    "topic_domain": "ai_governance/technology_ethics/risk_assessment",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "marginalized_populations",
+      "civil_rights_organizations",
+      "audit_consulting_industry"
+    ],
+    "victims": [
+      "ai_developers",
+      "marginalized_communities",
+      "open_source_developers"
+    ],
+    "vindicated_propositions": [
+      "algorithmic_fairness_as_justice",
+      "participatory_design_epistemic_authority",
+      "deployed_system_accountability"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "marginalized_populations",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Communities historically subjected to algorithmic discrimination (racial minorities, disabled people, elderly, low-income groups). They gain protection from discriminatory deployed systems through mandated audits and bias mitigation. However, they also bear extractive costs: uncompensated consultation labor for audits, data extraction for 'bias benchmark' datasets, and token inclusion in processes that legitimize the audit industry without transferring decision-making power. Their identity is fused with the harm the constraint addresses, making exit from the category impossible."
+    },
+    {
+      "name": "ai_developers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Companies and teams building deployed AI systems (foundation model providers, application developers, enterprise AI vendors). They bear substantial compliance costs: sociotechnical audit expenses, bias mitigation engineering, documentation burdens, and delayed deployments. Large labs absorb this as overhead; smaller developers face prohibitive barriers. Exit means abandoning markets with mandatory audit regimes (EU AI Act, emerging US state laws) or moving to less regulated domains — constrained by market access needs."
+    },
+    {
+      "name": "audit_consulting_industry",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Specialized firms and consultants selling sociotechnical audit services, bias benchmark datasets, fairness tooling, and compliance frameworks. They capture a growing revenue stream from mandatory audit requirements. Their expertise becomes the de facto standard for what counts as 'aligned.' They have high exit mobility — they can pivot to adjacent compliance markets — but benefit from the constraint's expansion."
+    },
+    {
+      "name": "civil_rights_organizations",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocacy groups (ACLU, EPIC, Algorithmic Justice League, disability rights orgs) that pushed for deployed-system accountability. They gain institutional validation, funding streams for 'community engagement' in audits, and regulatory leverage. But they are constrained by dependence on the same funding ecosystems (foundations, government grants) that shape audit methodologies, limiting radical critique."
+    },
+    {
+      "name": "open_source_developers",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Independent and community developers releasing models and tools without corporate compliance infrastructure. They face asymmetric burden: the same audit requirements apply but without legal teams or audit budgets. Many withdraw models from regulated jurisdictions or cease releases. Their exit is constrained by the global nature of model distribution — geographic gating is technically fragile."
+    },
+    {
+      "name": "regulators",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government bodies (EU AI Office, FTC, state AGs, NIST) that codify audit requirements into law and enforce them. They set the agenda: which harms count, what methodologies satisfy compliance, what penalties apply. They extract institutional legitimacy and expanded authority from the constraint. Their analytical exit means they can revise requirements, but institutional inertia makes rollback unlikely."
+    },
+    {
+      "name": "affected_workers",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Workers subject to algorithmic management (gig drivers, warehouse workers, call center staff) whose harms (wage theft, discriminatory scheduling, surveillance) are distinct from the 'bias' categories centered in current audits. They are not represented in audit stakeholder processes; their harms are treated as labor issues, not alignment issues. They cannot exit algorithmic management without losing livelihood."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes shared standards for evaluating deployed AI systems' discriminatory impacts, creating a common methodology (sociotechnical audits, disparity metrics, participatory review) where none existed — replacing ad-hoc, vendor-graded 'fairness' claims with contestable, third-party-verifiable assessment.",
+    "transfer_function": "Moves compliance costs (audit fees, engineering remediation, documentation labor) from AI developers to the audit consulting industry and civil society intermediaries; moves protective benefits (reduced discriminatory outcomes, contestability mechanisms) to marginalized populations; moves regulatory authority and legitimacy to state agencies.",
+    "absent_voices": "Affected workers under algorithmic management (gig, logistics, care) whose harms fall outside the 'bias/disparity' frame centered in current audits. Global South communities whose data trains systems but who have no seat in Northern audit regimes. Disabled people whose access needs are reduced to 'fairness metrics' rather than design justice. They are structurally excluded by the audit methodology's categories and the policy venues where standards are set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If mandatory sociotechnical audits and bias mitigation requirements vanished overnight, foundation model providers would immediately cease voluntary fairness testing (already regressing post-2023), disparity documentation would become proprietary and unverifiable, regulatory enforcement would lose its technical basis, and the audit consulting industry would collapse — the entire accountability infrastructure for deployed AI discrimination would revert to vendor self-assessment.",
+    "founding_problem": "Pre-2020 AI deployment operated without any standardized accountability for discriminatory outcomes: hiring algorithms filtered by race proxy, medical allocation systems deprioritized Black patients, facial recognition misidentified people of color at scale — all deployed with no mandatory evaluation, no contestation mechanism, and no remedy for harmed populations.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem is attested by: (1) investigative journalism (Angwin et al. on COMPAS, Buolamwini/Gebru on facial recognition) — outside beneficiaries; (2) congressional testimony from impacted communities (not industry); (3) academic literature documenting deployed harms (Obermeyer et al. 2019, Raji & Buolamwini 2019). The audit consulting industry and some civil rights orgs argue the problem remains live and expanding; AI developers argue the founding problem is substantially addressed by current voluntary commitments and emerging regulation — the status is genuinely contested across seats."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'near-term harms' reading of the contested AI alignment priority kernel. The reading argues that alignment's primary obligation is preventing present discriminatory and extractive harms from already-deployed AI systems, with priority given to justice for marginalized populations. The constraint is the emerging regime of mandatory sociotechnical audits, bias metrics, and mitigation requirements (EU AI Act high-risk categories, US executive orders, NIST AI RMF, state laws like CA SB 1047). It has a genuine coordination function — creating shared, contestable standards where none existed — but also substantial extraction: a fast-growing audit consulting industry captures compliance revenue, civil rights organizations gain institutional validation but face co-optation, and marginalized communities themselves are subjected to extractive consultation practices. The claimed type is tangled_rope; the metrics reflect rising extraction and theater as the regime matures.",
+    "logic_rationale": "Base extractiveness (0.68) reflects the compliance cost burden on developers (especially small/open-source) and the extractive consultation practices targeting marginalized communities, relative to the coordination value of standardized audits. Suppression (0.62) captures the active enforcement machinery: mandatory conformity assessments, market withdrawal powers, penalty regimes — not merely voluntary standards. Theater ratio (0.45) is significant: performative 'ethics washing' audits, checklist compliance divorced from outcome improvement, and the growing gap between audit rituals and actual harm reduction. Accessibility collapse (0.55) and resistance (0.58) are moderate: alternatives (voluntary commitments, market pressure) persist but are weakening; resistance comes from developers (cost), open-source (exclusion), and marginalized communities (tokenization).",
+    "directionality_logic": "Marginalized populations are primary beneficiaries (protection from harm) but also secondary payers (extractive consultation) — identity_locked exit makes them unable to leave the harm category. AI developers are primary payers (compliance costs) with constrained exit (market access). Audit consulting industry is pure beneficiary (revenue capture) with mobile exit. Regulators are agenda_setters (institutional power, generational horizon). Civil rights organizations are beneficiaries with constrained exit (funding dependence). Open-source developers are payers with constrained exit (global distribution). Affected workers are excluded (trapped, immediate horizon) — their harms are categorically outside the audit frame.",
+    "perspectival_gap": "From the regulator/agenda_setter seat, the constraint is coordination infrastructure (rope-like). From the AI developer seat (especially small/open-source), it is extractive enforcement (snare-like). From the marginalized population seat, it is ambiguously both: genuine protection mixed with extractive consultation — the identity_locked exit means they cannot 'choose' the beneficiary framing. The audit consulting industry experiences it as pure coordination-profit (rope). The engine computes these divergences from the structural data; the claimed_type (tangled_rope) represents the author's structural judgment that no single seat's experience captures the whole.",
+    "mandatrophy_analysis": "The founding problem (unaccountable deployed discrimination) remains live and expanding with generative AI deployment. However, the constraint's mandate has already broadened from 'prevent discrimination' to 'comprehensive risk management' (EU AI Act), creating mandatrophy risk: the audit machinery now serves broader regulatory goals beyond the original justice mandate. The theater rise (0.2→0.45) signals this drift. The constraint is not yet a piton — enforcement is active, not inertial — but the extraction trajectory suggests maturation toward tangled_rope with snare characteristics for excluded seats.",
+    "kernel_context": "This constraint is the nearterm_harms_reading of the ai_alignment_priority kernel. The kernel is the contested commitment 'AI alignment should prioritize X' where X is the structural delta. This reading instantiates X = 'preventing present discriminatory/extractive harms to marginalized populations via sociotechnical audits.' Sibling readings: existential_risk_reading (X = 'preventing catastrophic loss of control over advanced AI'); integrated_reading (X = 'addressing both as complementary'). This reading coexists with both but influences the integrated_reading by forcing near-term harm weight into any synthesis. It does not foreclose either sibling — all three remain live positions in policy discourse."
+  },
+  "omegas": [
+    {
+      "id": "audit_industry_extraction_vs_coordination",
+      "question": "Does the audit consulting industry's revenue capture exceed the coordination value of standardized sociotechnical audits, making the constraint net-extractive?",
+      "resolution_mechanism": "Longitudinal study comparing discrimination outcomes in jurisdictions with mandatory audits vs. voluntary regimes, controlling for audit industry market concentration and consulting fees as share of compliance spend.",
+      "impact": "If extraction exceeds coordination value, the constraint reclassifies toward snare for developer and marginalized community seats; if coordination dominates, tangled_rope holds. The industry's market structure (concentrated vs. competitive) is the pivot.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the audit industry is a coordination enabler or an extractive capture layer."
+    },
+    {
+      "id": "marginalized_community_net_position",
+      "question": "Are marginalized communities net beneficiaries or net victims of the audit regime, given extractive consultation practices and data extraction?",
+      "resolution_mechanism": "Participatory action research with affected communities measuring: (a) material harm reduction from deployed systems post-audit mandates; (b) uncompensated labor hours in audit processes; (c) data extraction volume for bias benchmarks; (d) decision-making power transfer vs. token consultation.",
+      "impact": "If net victims, the constraint's claimed beneficiary structure is falsified — marginalized_populations moves from beneficiary to payer in the structural map, flipping the extraction asymmetry. This would be a false summit detection for the justice framing.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the stated beneficiaries actually benefit net of extraction."
+    },
+    {
+      "id": "kernel_framing_justice_vs_technical",
+      "question": "Is the alignment priority kernel fundamentally a justice claim (this reading) or a technical safety claim (existential_risk_reading), and does the framing determine the constraint's type?",
+      "resolution_mechanism": "Genealogical analysis of the term 'alignment' in ML literature (2015-present): trace whether 'alignment' originally meant value specification (technical) or harm prevention (justice), and how the bifurcation maps to institutional incentives (funding, regulatory capture, talent recruitment).",
+      "impact": "If the kernel is inherently justice-framed, the existential_risk_reading is a reframing that displaces the original mandate (mandatrophy). If inherently technical, this reading is an expansion that creates new extraction. The framing determines which reading carries the founding problem's corroboration.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's original commitment was justice or safety, and what that means for mandate drift."
+    },
+    {
+      "id": "suppression_mechanism_regulatory_vs_market",
+      "question": "Is the constraint's suppression primarily regulatory (state enforcement) or market-driven (procurement requirements, insurance, investor pressure)?",
+      "resolution_mechanism": "Track compliance adoption curves: where audits are adopted without regulatory mandate (enterprise procurement, insurance requirements), measure whether suppression metrics differ from mandated jurisdictions.",
+      "impact": "If market-driven suppression dominates, the constraint's enforcement is more diffuse and harder to contest (no single regulator to petition); if regulatory, suppression is more legible but also more politically reversible. Changes the suppression ontology.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is state-centric or market-distributed."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_alignment_priority__existential_risk_reading",
+      "ai_alignment_priority__integrated_reading",
+      "eu_ai_act_high_risk_conformity",
+      "nist_ai_rmf_adoption",
+      "algorithmic_accountability_act"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the ai_alignment_priority kernel. The existential_risk_reading (constraint_id: ai_alignment_priority__existential_risk_reading) prioritizes catastrophic loss-of-control prevention with ε ≈ 0.3 on current audits but high projected ε on future compute governance. The integrated_reading (constraint_id: ai_alignment_priority__integrated_reading) claims complementary priorities but structurally creates a unified governance regime with ε ≈ 0.55 across both horizons. All three stories link via affects_constraints. The ε-invariance principle applies: each reading has distinct ε, distinct victim/beneficiary sets, distinct coordination functions — they are separate constraints, not measurement bases of one constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "existential_risk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "integrated_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "present_harm_prevention_priority_over_speculative_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "marginalized_communities_as_epistemic_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "deployed_system_accountability_as_necessary_condition",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "emerging_ai_governance_practice",
+    "drift_state": {
+      "moment": "post_generative_ai_deployment",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "ai_alignment_priority"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

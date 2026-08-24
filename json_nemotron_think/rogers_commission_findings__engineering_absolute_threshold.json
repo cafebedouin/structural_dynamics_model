@@ -1,0 +1,350 @@
+{
+  "header": {
+    "constraint_id": "rogers_commission_findings__engineering_absolute_threshold",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rogers_eng_abs",
+    "story_uid": "b504f8c5-7ad6-40b6-8d3f-652be73a5fca"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.85,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rogers Commission Engineering Absolute Threshold: Flight Cease Until O-Ring Redesign Certified",
+    "topic_domain": "organizational_safety/technology_governance/regulatory_compliance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "flight_crew",
+      "astronaut_office"
+    ],
+    "victims": [
+      "launch_operations_directorate",
+      "program_management"
+    ],
+    "vindicated_propositions": [
+      "engineering_authority_over_flight_readiness",
+      "physical_redesign_requirement_over_risk_acceptance"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "flight_crew",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Astronauts who fly the vehicle. Their lives depend on the integrity of the O-ring seal. They have no authority over Flight Readiness Reviews and cannot exit the program without ending their careers. They are the primary beneficiaries of the absolute safety threshold."
+    },
+    {
+      "name": "astronaut_office",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "The collective body of NASA astronauts. They advocate for crew safety within the organization but hold no formal veto. Their professional identity is fused with the flight program, making exit nearly unthinkable. They benefit from the engineering veto but cannot enforce it themselves."
+    },
+    {
+      "name": "nasa_engineering",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "NASA engineering organizations (Marshall, Johnson, Headquarters) that hold veto authority over Flight Readiness Reviews post-Rogers. They set and enforce the technical safety boundary. Their authority derives from demonstrated technical competence. They can move to other engineering roles but their institutional position gives them structural power over launch decisions."
+    },
+    {
+      "name": "morton_thiokol_engineering",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Contractor engineers who originally raised the O-ring temperature concern and were overruled pre-Challenger. Post-Rogers, they hold shared veto authority through the redesigned joint verification process. They bear redesign costs and schedule pressure but gained structural authority. Exit means leaving the contract or industry."
+    },
+    {
+      "name": "program_management",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "NASA program management (Level I/II) responsible for launch cadence, budget, and schedule. They bear the costs of delays, redesign, and standby operations. They formally accept the engineering veto but face institutional pressure to maintain flight rate. Exit is constrained by career investment in the program."
+    },
+    {
+      "name": "launch_operations_directorate",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "KSC launch operations teams who execute the countdown. They absorb the operational disruption of holds, scrubs, and redesign verification. Their performance metrics tie to launch rate. They have technical knowledge but no decision authority over the threshold."
+    },
+    {
+      "name": "morton_thiokol_management",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Contractor management who overruled their engineers pre-Challenger. Post-Rogers, they fund and execute the redesign under NASA oversight. They bear financial and reputational costs. Their exit options are constrained by the sole-source nature of the SRB contract and corporate identity."
+    },
+    {
+      "name": "external_safety_panels",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "ASAP (Aerospace Safety Advisory Panel) and other independent review bodies. They audit the implementation of the absolute threshold but hold no operational authority. Their analytical exit is unconstrained; they observe and report."
+    },
+    {
+      "name": "congressional_oversight",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Congress and GAO who investigate after failures but are structurally excluded from Flight Readiness Reviews. They would object to both excessive caution (schedule/cost) and insufficient safety, but their voice enters only post-hoc through hearings and legislation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a single, unambiguous technical go/no-go criterion for flight readiness: the physical redesign of a known catastrophic failure mode must be certified before any crewed flight proceeds. This replaces probabilistic risk assessment with a deterministic engineering gate.",
+    "transfer_function": "Moves launch opportunities, schedule margin, and program budget from the launch operations directorate and program management to the engineering organizations and contractor redesign teams. The transfer is time (delay), money (redesign cost), and authority (engineering veto over management proceed).",
+    "absent_voices": "The flight crew themselves are present only as beneficiaries, not decision-makers. Congressional oversight and the public are excluded from the Flight Readiness Review room. The Rogers Commission's own recommendation for an independent safety oversight office was not implemented as a standing FRR participant.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the absolute threshold vanished overnight, NASA would revert to probabilistic risk acceptance for known failure modes. Launch cadence would accelerate, engineering veto would become advisory, and the next O-ring-type failure would likely fly with documented risk acceptance rather than physical redesign. The Shuttle program's safety culture would fundamentally reorganize around management discretion.",
+    "founding_problem": "The Challenger disaster revealed that NASA's Flight Readiness Review process allowed management to accept known, unquantified risks (O-ring erosion at low temperature) over engineering objections. The founding problem was the absence of a structural mechanism that could force physical redesign before flight when engineers identified a catastrophic hazard.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Rogers Commission report itself (presidential commission, not NASA) attests the founding problem. The NASA engineering community attests it remains live (citing Columbia foam debris as analogous). NASA management of the 1990s-2000s attested it was resolved by new processes; the CAIB (Columbia Accident Investigation Board) contradicted this, finding the same cultural pattern. External corroboration comes from the CAIB and independent safety scholars."
+  },
+  "interval": {
+    "start": 0,
+    "end": 38
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 17,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 38,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 17,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 38,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 17,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 38,
+      "value": 0.85
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Rogers Commission's central engineering finding was that the Solid Rocket Booster O-ring design was fundamentally flawed and could not be made safe for flight at low temperatures without physical redesign. This reading instantiates that finding as an absolute technical threshold: no flight until the hardware is physically redesigned and certified. Engineers hold veto authority over Flight Readiness Reviews. The constraint coordinates safety by eliminating management discretion to accept known catastrophic risks. It extracts from launch cadence (delays, cost, schedule pressure) to purchase crew safety. The claimed type is tangled_rope: genuine coordination (single unambiguous safety gate) plus asymmetric extraction (program management bears delay costs) plus active enforcement (engineering veto).",
+    "logic_rationale": "Extraction (0.65) reflects the real but bounded transfer from schedule/budget to safety: the program pays in time and money for physical redesign, but the transfer is capped by the certification endpoint. Suppression (0.85) is high because the constraint's persistence depends on actively maintaining engineering veto power against institutional pressure to fly. Theater (0.15) is low because the safety function is genuine and the veto is real, though post-Columbia analysis shows some ceremonial compliance. Accessibility collapse (0.9) is near-total: once the absolute threshold is understood, no alternative path to flight exists without physical redesign. Resistance (0.4) is moderate: management resisted the veto initially but the constraint survived Columbia, indicating institutionalization.",
+    "directionality_logic": "Flight crew and astronaut office are structural beneficiaries (d near 0): the constraint subsidizes their survival. NASA engineering and Morton Thiokol engineering are agenda_setters with analytical exit (d near 0.3): they administer the constraint and gain professional authority. Program management and launch operations are payers with constrained exit (d near 0.8): they bear delay costs but cannot leave the program easily. Morton Thiokol management are payers with constrained exit (d near 0.75): they fund redesign but hold the contract. Congressional oversight is excluded (d undefined): they bear political cost of failure but have no FRR seat.",
+    "perspectival_gap": "From the engineering seat, the constraint is a rope (pure coordination: one unambiguous safety gate). From the program management seat, it is a snare (pure extraction: schedule held hostage to engineering perfectionism). From the crew seat, it is a mountain (immutable physical law). The engine computes this divergence from the structural data: same constraint, different effective extraction per seat. The authored claimed_type (tangled_rope) captures the system-level hybrid nature.",
+    "mandatrophy_analysis": "The constraint prevents mislabeling by making the coordination function explicit (single technical gate) and the extraction explicit (management bears delay costs). The mandated redesign was completed (1987-1988), but the veto authority persists as a standing FRR requirement for any similar hazard. This is not mandatrophy: the coordination function (preventing management risk acceptance of known catastrophic hazards) remains live, as Columbia demonstrated. The constraint has not atrophied into performance; the veto is exercised.",
+    "kernel_context": "This constraint is the 'engineering_absolute_threshold' reading of the 'rogers_commission_findings' kernel. Sibling readings: 'actuarial_risk_acceptance' (risk quantification sufficient to proceed) and 'management_compliance_narrative' (documented risk awareness and mitigation sufficient to proceed). This reading treats the Commission's finding as establishing a deterministic physical boundary; the siblings treat it as establishing a risk management process. The structural delta: this reading grants engineers veto authority and makes flight cessation mandatory; the siblings grant management discretion to proceed with documented acceptance."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Does the Rogers Commission report text support an absolute engineering threshold, a risk quantification requirement, or a compliance process as the binding interpretation?",
+      "resolution_mechanism": "Textual analysis of the Commission's specific recommendations (especially Recommendation I on SRB redesign and Recommendation II on Shuttle management structure) cross-referenced with NASA's formal implementation in NSTS 07700 and FRR procedures.",
+      "impact": "If the report text forecloses probabilistic acceptance, the actuarial reading is a later construction. If the report is ambiguous, all three readings coexist as legitimate interpretations, and the engineering absolute threshold is a political achievement of the post-Challenger engineering coalition.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel text itself contains one determinate meaning or underdetermines the three readings."
+    },
+    {
+      "id": "physical_vs_social_boundary",
+      "question": "Is the O-ring temperature limit a genuine physical law (Mountain) or a socially constructed engineering judgment that hardens into a constraint?",
+      "resolution_mechanism": "Materials science analysis: does the O-ring sealing physics exhibit a sharp phase transition at the certified temperature, or a probabilistic degradation curve? If the latter, the 'absolute' threshold is a social choice of safety margin.",
+      "impact": "If physical phase transition, the constraint is a Mountain and the engineering veto merely recognizes nature. If probabilistic curve, the threshold is a chosen safety factor and the constraint is Tangled Rope (coordination on a chosen margin + extraction from schedule).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the technical boundary is physically absolute or socially chosen."
+    },
+    {
+      "id": "veto_authority_persistence",
+      "question": "Does the engineering veto authority established post-Challenger remain structurally real, or has it become ceremonial (theater) under schedule pressure?",
+      "resolution_mechanism": "Longitudinal analysis of FRR dissent records: count of engineering 'no-go' votes that stopped a flight vs. overruled dissents. Compare pre-Challenger, post-Challenger pre-Columbia, and post-Columbia eras.",
+      "impact": "If veto is routinely exercised and respected, the constraint remains Tangled Rope. If veto exists only on paper and management proceeds regardless, theater_ratio rises and the constraint drifts toward Piton (inertial performance of safety).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the active enforcement mechanism (engineering veto) remains functional over the interval."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the high suppression (0.85) structural (formal FRR veto rules, contractual redesign requirements) or internalized (engineers self-censor, management learns not to ask)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: track engineers who left NASA/contractor roles. If they continue to advocate absolute thresholds in new contexts, suppression was structural. If they adopt risk-acceptance framing, suppression was partially internalized.",
+      "impact": "If internalized, effective suppression is higher than structural measure suggests — the constraint travels with the agents. If structural, suppression drops when the formal mechanism is removed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in the engineering-management relationship."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "rogers_commission_findings__actuarial_risk_acceptance",
+      "rogers_commission_findings__management_compliance_narrative",
+      "columbia_accident_investigation_board_findings",
+      "nasa_flight_readiness_review_process"
+    ],
+    "dual_formulation_note": "This constraint decomposes the Rogers Commission findings into the engineering absolute threshold reading. The sibling readings (actuarial_risk_acceptance, management_compliance_narrative) instantiate different structural interpretations of the same kernel. This reading's ε (0.65) differs from the actuarial reading's ε (estimated ~0.35, lower extraction as risk acceptance is cheaper) and the compliance narrative's ε (estimated ~0.25, lowest extraction as documentation is cheapest). The three stories form a constraint family linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.75
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "actuarial_risk_acceptance",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "management_compliance_narrative",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "flight_safety_boundary_is_absolute_not_probabilistic",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "engineering_veto_required_for_known_catastrophic_hazards",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "absolute_technical_safety_threshold",
+    "drift_state": {
+      "moment": "post_columbia_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "rogers_commission_findings"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

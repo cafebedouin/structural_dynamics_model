@@ -1,0 +1,323 @@
+{
+  "header": {
+    "constraint_id": "secession_legitimacy_boundary__constitutional_impossibility_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_secession_legitimacy_boundary__constitutional_impossibility_reading",
+    "measurement_id_prefix": "secession_const_imposs",
+    "story_uid": "01747e20-ab5b-44a2-be83-9a31031094cc",
+    "created_at": "2026-08-04T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.88,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.18,
+    "claimed_type": "mountain",
+    "human_readable": "Constitutional Impossibility of Unilateral Secession",
+    "topic_domain": "political/federalism/constitutional",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "federal_government",
+      "non_secessionist_provinces"
+    ],
+    "victims": [
+      "secessionist_provinces",
+      "secessionist_movements"
+    ],
+    "vindicated_propositions": [
+      "constitutional_supremacy_doctrine",
+      "federal_indivisibility_principle",
+      "rule_of_law_continuity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a genuine natural law of constitutional order (Mountain) or a constructed federal claim that benefits the federal government (Snare/Tangled Rope)?",
+      "resolution_mechanism": "Comparative analysis of federal systems: if multiple independent federations converge on the same categorical prohibition without common origin, natural-law evidence strengthens; if prohibition correlates with federal power consolidation, constructed claim strengthens.",
+      "impact": "If natural law, classification holds as Mountain across all seats. If constructed with identifiable beneficiaries, False Summit Mountain triggers reclassification to Tangled Rope via FSM signature.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Natural-law vs. constructed status of the constitutional impossibility claim"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal barriers, military enforcement) or internalized (secessionist movements accept illegitimacy, political culture treats unity as sacred)?",
+      "resolution_mechanism": "Post-referendum trajectory analysis: if suppression persists after legal barriers are removed (e.g., UK/Scotland, Canada/Quebec frameworks), reclassify as partially internalized.",
+      "impact": "If internalized, effective suppression is higher than structural measure — the constraint travels with agents after formal exit options open.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in secession prevention"
+    },
+    {
+      "id": "indigenous_exclusion_legitimacy",
+      "question": "Does the constitutional impossibility reading's absolute federal authority structurally exclude Indigenous treaty-holders whose consent the treaty_primacy_reading requires?",
+      "resolution_mechanism": "Legal-theoretical audit: if the reading's axioms logically require Indigenous consent to be overridden, the exclusion is structural; if the reading can accommodate treaty rights as a separate layer, exclusion is contingent.",
+      "impact": "If structural exclusion, the reading's beneficiary set expands to include federal extraction from Indigenous nations, triggering victim declaration and potential Snare reclassification for those seats.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether constitutional impossibility structurally forecloses treaty primacy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.86
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.88
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the constitutional_impossibility_reading of the secession_legitimacy_boundary kernel. The reading holds that the written constitution categorically prohibits unilateral secession; exit is legitimate only through the constitution's own amendment procedure, which requires federal participation and typically supermajority thresholds. The federal government is the agenda-setter and primary beneficiary (territorial integrity, resource control, geopolitical standing). Secessionist provinces and movements are the structural payers — they bear the cost of denied exit — though this reading denies their victim status by declaring their claims categorically illegitimate. Indigenous nations are structurally excluded: the treaty_primacy_reading asserts their consent is a precondition no federal or provincial authority can override, but this reading's absolute federal authority renders that claim invisible. The constraint presents as a Mountain (emerges_naturally: true, near-total accessibility_collapse, minimal resistance) but declares federal beneficiaries, making it an FSM candidate. The claimed_type is Mountain; the authored metrics reflect the reading's self-understanding (low extractiveness, high suppression as constitutional enforcement, low theater). The engine will compute per-seat types from the structural data; the divergence between the federal seat (Mountain) and secessionist seats (likely Snare/Tangled Rope) is the measurement.",
+    "key_agents": [
+      "federal_government: Primary agenda_setter (institutional/arbitrage) — sets and enforces the constitutional interpretation, collects territorial integrity benefits",
+      "non_secessionist_provinces: Beneficiary (organized/constrained) — gain stability and federal transfers from unity",
+      "secessionist_provinces: Payer (powerful/identity_locked) — bear denied exit, resource capture, political autonomy loss; exit fused to identity",
+      "secessionist_movements: Payer (moderate/identity_locked) — civil society actors whose political project is declared illegitimate",
+      "indigenous_nations: Excluded (powerless/trapped) — treaty rights superseded without consent; not in the constitutional conversation",
+      "international_observers: Observer (institutional/analytical) — monitor self-determination compliance"
+    ],
+    "logic_rationale": "Extractiveness is low (0.15) from the reading's perspective: the constitutional order is framed as coordination, not extraction — the federation provides security, market integration, and conflict resolution. But structurally, the federal government controls resource revenues and political authority that secessionist units would otherwise access; the low ε reflects the reading's denial of extraction. Suppression is high (0.88) because the constraint's persistence depends on active legal and, if necessary, military enforcement against secession attempts — the constitutional text alone does not hold; enforcement machinery maintains it. Theater is low (0.12): the constitutional courts and amendment processes are functional, not performative. Accessibility_collapse is near-total (0.92): once the constitutional impossibility premise is accepted, no alternative exit path exists within the framework. Resistance is low (0.18) from the reading's view: successful secession is structurally impossible, so resistance manifests as political protest not effective challenge. The measurement grid tracks a 200-year interval (e.g., 1820–2020) showing slight extractiveness creep (federal power accumulation) and rising theater (amendment process increasingly performative as supermajorities become unattainable).",
+    "perspectival_gap": "The federal seat (agenda_setter, institutional, arbitrage exit) experiences this as Mountain — the constitutional order is the natural law of the polity. Secessionist province seats (payer, powerful, identity_locked) experience it as Snare: high effective extraction (denied resource control, political autonomy), high suppression (legal/military barrier), identity_locked exit (secession is not a policy choice but an existential identity claim). Non-secessionist provinces (beneficiary, organized, constrained) experience it as Rope — genuine coordination benefit with symmetric costs. Indigenous nations (excluded, powerless, trapped) experience it as Snare with an additional dimension: their prior sovereign authority is extinguished without consent. The engine computes these divergences from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Federal government: beneficiary (collects territorial integrity, resource control, geopolitical weight) — d near 0.0. Non-secessionist provinces: beneficiary (stability, transfers) with some payer aspects (federal oversight) — d ~0.3. Secessionist provinces/movements: payers (bear denied exit, resource capture) with identity_locked exit — d near 1.0. Indigenous nations: excluded payers (treaty rights overridden) with trapped exit — d near 1.0. International observers: analytical — d = 0.5. The reading declares 'no victim set from federal extraction because extraction claim is invalid' — this is the reading's axiom, not the structural reality. The base_properties.victims array names the structural payers; the reading's denial is recorded in commentary and omegas.",
+    "mandatrophy_analysis": "The founding problem (federal unity against fragmentation, external threat, internal conflict) is contested: federalists attest it remains live; secessionists and Indigenous nations attest it is dead or never applied to them. The constraint persists with high suppression and near-zero accessibility_collapse — classic mandatrophy markers. But the reading's Mountain claim (emerges_naturally) blocks mandatrophy resolution: if the constraint is natural law, it cannot have outlived its mandate. The FSM omega captures this tension. The theater_ratio rise suggests the amendment process is becoming performative — a piton drift signal — but the constitutional_impossibility_reading treats this as stability, not decay.",
+    "kernel_context": "This constraint is the constitutional_impossibility_reading of the secession_legitimacy_boundary kernel. Sibling readings: popular_sovereignty_reading (referendum self-legitimating), grievance_threshold_reading (injustice threshold legitimates secession), treaty_primacy_reading (Indigenous treaty consent required). This reading holds that the written constitution's text and structure categorically foreclose unilateral secession; federal authority is absolute and indivisible. The kernel's contested status arises because the same constitutional text is read by different parties as permitting or prohibiting secession under different conditions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "secession_legitimacy_boundary__popular_sovereignty_reading",
+      "secession_legitimacy_boundary__grievance_threshold_reading",
+      "secession_legitimacy_boundary__treaty_primacy_reading",
+      "federal_resource_distribution",
+      "intergovernmental_transfer_system"
+    ],
+    "dual_formulation_note": "This reading and its three siblings decompose the colloquial 'secession legitimacy' label into four structurally distinct constraints with different ε values, beneficiary/victim structures, and enforcement logics. The constitutional_impossibility_reading has the lowest ε (0.15) — it frames the constraint as coordination. The popular_sovereignty_reading and grievance_threshold_reading have higher ε (extraction from federal center to provinces). The treaty_primacy_reading has a distinct victim set (Indigenous nations) and ε reflecting colonial extraction. All four are linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.98
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Authors and enforces the constitutional interpretation that prohibits unilateral secession. Controls the amendment process (typically requiring federal legislature supermajority plus provincial consents). Collects benefits: territorial integrity, control of natural resources in secessionist regions, geopolitical standing, fiscal transfers from resource-rich provinces. Exit is arbitrage-grade: the federal government can concede secession (as UK did for Scotland referendum) but chooses not to because benefits of unity exceed costs."
+    },
+    {
+      "name": "non_secessionist_provinces",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from federal stability, equalization transfers, common market, and shared defense. Their exit is constrained — they could theoretically seek secession but have no political will to do so; the constraint serves their interest. They participate in the amendment formula that gates any secession, giving them veto power over secessionist provinces' exit."
+    },
+    {
+      "name": "secessionist_provinces",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Bear the costs of denied exit: resource revenues flow to federal center, political autonomy limited by federal jurisdiction, cultural/linguistic policies set nationally. Their exit is identity_locked — secession is not a calculable policy option but an existential identity claim (nationhood, self-determination). The constitutional impossibility reading declares their claim categorically illegitimate, fusing their political identity with the denied exit. They possess significant power (resources, population, administrative capacity) but cannot convert it into exit without federal consent."
+    },
+    {
+      "name": "secessionist_movements",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Civil society and political parties organizing for secession. Bear costs: legal persecution, political marginalization, denial of democratic mandate (referendums declared unconstitutional). Their exit is identity_locked — the movement's existence is constituted by the secession claim; abandoning it dissolves the movement. The reading's categorization of their claim as 'illegitimate' delegitimizes their political speech and assembly."
+    },
+    {
+      "name": "indigenous_nations",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Hold treaty rights that predate the federal constitution and (per treaty_primacy_reading) supersede it. The constitutional_impossibility_reading's absolute federal authority renders their consent irrelevant to secession decisions affecting their territories. They are structurally excluded from the constitutional conversation — not a party to the amendment formula, not consulted on unity decisions. Their exit is trapped: no legal path to withdraw from federal jurisdiction, no international recognition pathway, and the constitutional order treats their sovereignty as extinguished."
+    },
+    {
+      "name": "international_observers",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "UN human rights bodies, international courts, foreign governments monitoring self-determination compliance. They observe the constraint's operation but have no enforcement power within the federal system. Their analytical seat sees the full structure: federal benefit, secessionist extraction, Indigenous exclusion. They can generate diplomatic pressure but cannot alter the constitutional mechanics."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains federal unity against fragmentation, external aggression, and internal conflict by establishing a single, non-negotiable constitutional order. Solves the collective action problem of federation: no unit can defect, so all invest in shared institutions.",
+    "transfer_function": "Moves political autonomy and resource control from secessionist provinces and Indigenous nations to the federal center. The federal government collects the gains of territorial integrity (resources, strategic depth, population) while secessionist units bear the opportunity cost of denied self-government.",
+    "absent_voices": "Indigenous nations are structurally excluded — their treaty-based sovereignty claims are not recognized in the constitutional amendment formula. Secessionist movements are delegitimized — their democratic mandates (referendums, elections) are declared unconstitutional. Both would object if present; their absence is enforced by the constraint itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constitutional impossibility constraint vanished overnight, secessionist provinces would initiate negotiated exit processes (some would likely succeed), Indigenous nations would assert treaty-based veto over any territorial change affecting their lands, and the federal government would lose control of resource revenues and geopolitical standing. The federation would either reorganize as a looser confederation or dissolve.",
+    "founding_problem": "The federation was built to solve the problem of small, vulnerable colonies uniting against external threats (imperial powers, US expansion) and internal fragmentation (regional conflict, economic dislocation). The constitutional impossibility of secession was the binding commitment that made the union credible — no unit could defect when the arrangement became inconvenient.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Federal government and non-secessionist provinces attest the founding problem (external threat, internal stability) remains live, citing contemporary geopolitical risks. Secessionist provinces, Indigenous nations, and independent historians attest the founding problem is dead — the original threats have vanished, and the constraint now serves to lock in federal resource control and political dominance. No single corroborating source outside the federal beneficiary set attests the problem as unequivocally live."
+  },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "mountain",
+    "downstream_of": [
+      "secession_legitimacy_boundary"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "popular_sovereignty_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "grievance_threshold_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "treaty_primacy_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "federal_constitutional_authority_absolute",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "secession_categorically_impermissible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "written_constitutional_compact",
+    "drift_state": {
+      "moment": "contemporary_self_determination_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

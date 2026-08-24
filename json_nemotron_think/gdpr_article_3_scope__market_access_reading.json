@@ -1,0 +1,379 @@
+{
+  "header": {
+    "constraint_id": "gdpr_article_3_scope__market_access_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gdpr_a3_market",
+    "story_uid": "de5d81e5-3934-4751-8121-1eca225f46e1"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.35,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GDPR Article 3 Scope as Conditional Market Access (Brussels Effect Reading)",
+    "topic_domain": "technology_governance/international_law/privacy_regulation",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "eu_data_protection_authorities",
+      "eu_regulatory_institutions",
+      "eu_tech_firms",
+      "global_data_subjects"
+    ],
+    "victims": [
+      "non_eu_large_tech_firms",
+      "non_eu_sme_firms"
+    ],
+    "vindicated_propositions": [
+      "brussels_effect_standard_diffusion",
+      "market_access_conditionality_as_coordination",
+      "regulatory_interoperability_via_unilateral_standard"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "eu_data_protection_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Enforce GDPR against any entity processing EU residents' data, regardless of location. Issue fines up to 4% global revenue. Coordinate through EDPB to harmonize interpretation. Their authority derives from EU treaties; they gain global regulatory influence when non-EU firms comply voluntarily to access the EU market."
+    },
+    {
+      "name": "eu_regulatory_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The European Commission and Parliament gain standard-setting power without treaty negotiation. Other jurisdictions adopt GDPR-like laws (Brazil LGPD, California CCPA, India DPDP) creating de facto EU regulatory hegemony. They collect no direct revenue but accrue geopolitical influence and legislative first-mover advantage."
+    },
+    {
+      "name": "eu_tech_firms",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Home-field advantage: EU firms internalize compliance costs earlier and shape the standard through lobbying. They pay compliance costs but gain competitive moat against non-EU rivals who face higher adaptation costs. Their exit is constrained by being EU-incorporated."
+    },
+    {
+      "name": "non_eu_large_tech_firms",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Meta, Google, Amazon, Microsoft, etc. Bear massive compliance costs (DPOs, data mapping, transfer mechanisms, fines risk). But EU market is too large to exit; compliance is a market entry fee. They lobby for adequacy decisions and transfer frameworks to reduce friction. Their power lets them absorb costs smaller firms cannot."
+    },
+    {
+      "name": "non_eu_sme_firms",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Small non-EU firms face disproportionate compliance burden: legal counsel, technical measures, EU representative appointment. Many simply block EU users (geo-fencing) rather than comply — effectively excluded from the market. No lobby presence in Brussels. Exit means abandoning EU revenue entirely."
+    },
+    {
+      "name": "global_data_subjects",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receive enhanced privacy rights (access, erasure, portability) globally because firms apply GDPR standards universally for operational simplicity. But enforcement against non-EU violators remains difficult; rights are real but remedial access is uneven. Can switch services but face network effects."
+    },
+    {
+      "name": "non_eu_governments",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sovereignty concerns: foreign regulation effectively governs domestic firms' data practices. Some retaliate (China PIPL, Russia localization) or negotiate adequacy (Japan, UK, Canada). Not consulted in GDPR drafting; their firms bear costs without representation. Structural exclusion from the standard-setting process."
+    },
+    {
+      "name": "privacy_activists_civil_society",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Advocate for stronger enforcement, broader territorial scope, and replication globally. Monitor DPAs, file strategic complaints (noyb, EPIC), shape public discourse. Neither collect rents nor pay compliance costs; their leverage is reputational and litigation-based."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a single, high-baseline global privacy standard that reduces regulatory fragmentation and transaction costs for cross-border data flows. Firms comply once for EU market access and extend compliance globally (Brussels Effect), creating de facto harmonization without treaty negotiation.",
+    "transfer_function": "Moves compliance costs (legal, technical, operational) from non-EU firms — especially SMEs — to EU regulatory institutions in the form of standard-setting power and geopolitical influence. EU firms gain competitive moat. Data subjects receive privacy protections as positive externality.",
+    "absent_voices": "Non-EU SMEs that geo-fence EU users rather than comply — they are structurally excluded from the market and the policy conversation. Developing country digital economies that lose investment when firms avoid GDPR-like regulatory burdens. Their absence is not accidental: the market access mechanism selects for firms with compliance capacity.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the conditional market access mechanism vanished, global privacy standardization would fragment. Jurisdictions would compete on laxity (race to bottom) or erect incompatible walls (splinternet). The Brussels Effect — unilateral regulatory projection via market power — would collapse as a governance model. Cross-border data flows would face higher legal uncertainty and compliance multiplicity.",
+    "founding_problem": "Pre-GDPR: fragmented national implementations of the 1995 Data Protection Directive created regulatory arbitrage, inadequate protection for cross-border flows, and enforcement gaps. EU needed a unified regulation with direct effect that could project a single standard globally via its market size — solving coordination failure in transatlantic and global data governance.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Bradford (2020) 'The Brussels Effect' documents the market access mechanism from outside EU institutions. IAPP annual surveys show 70%+ of non-EU firms extend GDPR compliance globally. European Commission adequacy decisions (Japan, UK, Canada, Korea) confirm third countries adopt EU standards for market access. These sources are not EU DPAs or EU firms."
+  },
+  "interval": {
+    "start": 2016,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the 'market access reading' of GDPR Article 3 territorial scope: the Regulation operates as a conditional entry requirement for the EU digital market, not as a jurisdictional assertion over foreign sovereign territory. Compliance is a rational market strategy for firms seeking EU users; the extraterritorial reach is the Brussels Effect — unilateral regulatory diffusion via market power. This reading produces lower enforcement tension than the effects jurisdiction reading because firms self-select into compliance; the constraint persists because the EU market is too valuable to exit, not because enforcement machinery hunts down non-compliant actors globally. The beneficiary is EU regulatory influence; the extraction falls on non-EU firms bearing compliance costs as the price of market access.",
+    "key_agents": [
+      "eu_data_protection_authorities: Primary agenda_setter (institutional/analytical) — enforces, coordinates, sets interpretive agenda",
+      "eu_regulatory_institutions: Primary beneficiary (institutional/arbitrage) — gains global standard-setting power without treaties",
+      "eu_tech_firms: Beneficiary/payer (organized/constrained) — home advantage, competitive moat, but also bears costs",
+      "non_eu_large_tech_firms: Primary payer (powerful/constrained) — absorbs compliance as market entry fee, lobbies for friction reduction",
+      "non_eu_sme_firms: Primary payer (moderate/trapped) — disproportionate burden, often exits via geo-fencing",
+      "global_data_subjects: Beneficiary (organized/mobile) — receives privacy rights as positive externality",
+      "non_eu_governments: Excluded (institutional/constrained) — sovereignty concerns, no voice in standard-setting",
+      "privacy_activists_civil_society: Observer (moderate/analytical) — strategic litigation, advocacy, no direct stakes"
+    ],
+    "logic_rationale": "Extractiveness (0.42) reflects real compliance costs transferred from non-EU firms to EU regulatory influence — but lower than effects jurisdiction reading because firms voluntarily incur costs for market access. Suppression (0.35) is moderate: geo-fencing is a real exit option (unlike effects jurisdiction where jurisdiction follows the person), but the EU market size makes exit costly. Theater ratio (0.18) is low: the privacy standard has genuine coordination function (interoperability, adequacy decisions, global convergence). Accessibility collapse (0.45) is partial: alternatives exist (don't serve EU, build separate stack) but are economically painful. Resistance (0.48) is moderate: industry lobbying (Schrems II, transfer mechanisms) but also widespread voluntary adoption. The claimed_type 'tangled_rope' captures the hybrid: genuine coordination (global privacy baseline) + asymmetric extraction (non-EU firms pay, EU gains influence) + active enforcement (fines, EDPB coordination).",
+    "perspectival_gap": "From the EU DPA seat: the constraint is a rope — genuine coordination solving a real collective action problem (fragmented privacy laws), minimal coercion because firms want EU market. From the non-EU SME seat: it is a snare — the coordination story is cover; the cost of compliance is existential, exit is geo-fencing (market exclusion), and they had no voice in the standard. From the non-EU large tech seat: it is a tangled rope — they coordinate (global privacy baseline reduces their own fragmentation costs) but extract (they pay disproportionate compliance costs that cement their moat against smaller rivals). The engine computes these divergences from the structural data: power/exit asymmetry + beneficiary/victim declarations.",
+    "directionality_logic": "EU DPAs and EU institutions are structural beneficiaries (d ~ 0.1-0.2): they gain influence, collect fines, set global agenda. EU firms are near-symmetric beneficiaries with payer secondary role (d ~ 0.35): they pay compliance but gain competitive advantage. Non-EU large tech are payers with constrained exit (d ~ 0.7): they pay the transfer but cannot credibly exit the EU market. Non-EU SMEs are trapped payers (d ~ 0.9): compliance cost exceeds their capacity, exit is market abandonment. Global data subjects are beneficiaries with mobile exit (d ~ 0.2): they gain rights but can switch services. Non-EU governments are excluded (no d derivation — they are not governed by the constraint but by its spillovers). The derivation chain: beneficiary/victim declarations + power atoms + exit options → directionality values.",
+    "mandatrophy_analysis": "The founding problem (fragmented privacy laws, regulatory arbitrage) remains live — cross-border data flows still need coordination, and regulatory fragmentation persists outside the EU adequacy network. The arrangement has not outlived its function; if anything, the coordination need has grown with AI training data flows. However, the extraction asymmetry (SME exclusion, large tech moat) has intensified since 2018. This is not mandatrophy (function persists) but a tangled_rope whose extraction component has grown while coordination remains genuine. The mandate is not resolved; the tension is structural.",
+    "kernel_context": "This constraint is the market_access_reading of kernel gdpr_article_3_scope. It reads Article 3's extraterritoriality as a Brussels Effect market access condition: firms comply to reach EU users, not because EU jurisdiction legitimately extends to their territory. Sibling readings: effects_jurisdiction_reading (jurisdiction follows effects on EU residents via targeting/monitoring test — CJEU Google Spain, Weltimmo line) and territorial_sovereignty_reading (extraterritorial application exceeds legitimate authority — US CLOUD Act posture, Chinese data sovereignty laws). This reading coexists with effects_jurisdiction_reading (both live in different legal frameworks) and influences territorial_sovereignty_reading (market access mechanism demonstrates effective extraterritorial reach without formal jurisdiction claims, pressuring sovereignty-based objections)."
+  },
+  "omegas": [
+    {
+      "id": "market_access_vs_effects_jurisdiction_boundary",
+      "question": "Is the market access reading structurally distinct from the effects jurisdiction reading, or do they converge in practice on the same compliance obligations?",
+      "resolution_mechanism": "Compare CJEU case law (Google LLC v. CNIL, Meta v. Bundeskartellamt) for language: does the Court ground extraterritoriality in market access (Brussels Effect) or in effects jurisdiction (targeting test)? Track legislative drafting history of Article 3(2) recitals.",
+      "impact": "If readings converge, this constraint story duplicates effects_jurisdiction_reading with different framing — ε-invariance violation. If distinct, market access reading has lower suppression (voluntary compliance) and different beneficiary structure (EU influence vs. EU resident protection).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the two readings instantiate different constraints or the same constraint with different framings."
+    },
+    {
+      "id": "sme_exclusion_severity",
+      "question": "What proportion of non-EU SMEs geo-fence EU users vs. comply, and does this exclusion constitute a structural market distortion?",
+      "resolution_mechanism": "Empirical studies of geo-fencing rates (e.g., 'GDPR and the Death of the Small Business' literature), European Commission SME compliance cost surveys, WTO trade in services data on digital market access.",
+      "impact": "If exclusion is widespread and systematic, the constraint operates as a snare for SMEs (coordination story is cover for market closure). If rare, the tangled_rope classification holds — coordination function dominates for most actors.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether SME exclusion is a marginal edge case or a structural feature of the market access mechanism."
+    },
+    {
+      "id": "enforcement_tension_measurement",
+      "question": "How much lower is enforcement tension really under the market access reading vs. effects jurisdiction reading?",
+      "resolution_mechanism": "Compare DPA enforcement actions against non-EU firms: frequency, fine amounts, cooperation requests. Track Schrems II aftermath — did firms treat SCCs as market access compliance or jurisdictional submission?",
+      "impact": "If enforcement tension is not meaningfully lower, the 'lower tension' claim in this reading is narrative, not structural. The constraint would be more extractive (higher effective suppression) than authored.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the market access framing actually reduces coercive enforcement pressure on non-EU firms."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.03
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_adequacy_decision_framework",
+      "global_data_transfer_mechanisms",
+      "national_privacy_law_convergence",
+      "eu_digital_markets_act_interoperability"
+    ],
+    "dual_formulation_note": "This constraint (market_access_reading) and effects_jurisdiction_reading form a constraint family decomposing the kernel 'GDPR Article 3 territorial scope.' The market access reading has lower ε (0.42 vs. estimated 0.55+ for effects jurisdiction) because compliance is framed as voluntary market strategy. The territorial_sovereignty_reading is a rejection constraint (ε ≈ 0 for its proponents) that exerts countervailing pressure. All three linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.68
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "eu_data_protection_directive_1995",
+      "eu_charter_fundamental_rights_article_8"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "effects_jurisdiction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "territorial_sovereignty_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "brussels_effect_standard_diffusion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "market_access_conditionality_as_coordination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "gdpr_market_access_baseline_2018",
+    "drift_state": {
+      "moment": "post_schrems_ii_adequacy_evolution",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

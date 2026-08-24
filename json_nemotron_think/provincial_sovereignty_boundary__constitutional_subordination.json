@@ -1,0 +1,321 @@
+{
+  "header": {
+    "constraint_id": "provincial_sovereignty_boundary__constitutional_subordination",
+    "version": "1.0",
+    "generated_date": "2026-08-03",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_provincial_sovereignty_boundary__constitutional_subordination",
+    "measurement_id_prefix": "prov_sov_const_sub",
+    "story_uid": "afed2a3e-82dd-4a55-ad73-6b9ee47111c0"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.64,
+    "resistance": 0.53,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Constitutional Subordination of Provinces (Federal Veto over Exit)",
+    "topic_domain": "political_economy/federalism/resource_governance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "federal_government",
+      "centralist_provinces"
+    ],
+    "victims": [
+      "separatist_provinces",
+      "resource_provinces"
+    ],
+    "vindicated_propositions": [
+      "federal_supremacy_doctrine",
+      "constitutional_union_indivisibility"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 157
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 120,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 157,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 120,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 157,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 120,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 157,
+      "value": 0.71
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Holds the constitutional authority to veto provincial exit and to legislate in areas of equalization and climate policy. Collects the political and fiscal benefits of a unified federation. Controls the appointment of judges who interpret the constitutional boundary. Exit from this role is not applicable; the federal government is the architect and enforcer of the constraint."
+    },
+    {
+      "name": "centralist_provinces",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Provinces that benefit from federal equalization transfers and national policy frameworks. They support the federal veto because it stabilizes the fiscal union and ensures resource redistribution. Their exit options are high — they could theoretically join a different federation or become independent, but they have no incentive to do so."
+    },
+    {
+      "name": "separatist_provinces",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Provinces with strong sovereignty movements (e.g., Quebec historically). They bear the cost of being unable to exit unilaterally; the federal veto makes secession legally impossible without federal consent. They pay through lost autonomy and the inability to control their full resource revenues. Exit is constrained: they can hold referendums and negotiate, but the federal government sets the terms."
+    },
+    {
+      "name": "resource_provinces",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Resource-rich provinces (e.g., Alberta, Saskatchewan) that own natural resources under s.92A but face federal climate policy and equalization that redistributes resource wealth. They benefit from the federation's market access and stability but pay through federal overrides on environmental regulation and fiscal transfers. Exit is constrained by economic integration and federal legal barriers."
+    },
+    {
+      "name": "indigenous_nations",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Not parties to the Constitution Act 1867 or 1982; their inherent sovereignty is not recognized in the federal-provincial division of powers. They are affected by both federal and provincial laws but have no formal seat in the constitutional amending formula. Their exit from the Canadian state is not contemplated in this constraint; they are structurally excluded from the sovereignty boundary debate."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Academic and legal observers who analyze the constitutional text, jurisprudence, and political practice. They do not collect rents nor bear costs from the constraint directly. Their role is to map the competing readings (compact federalism, constitutional subordination, resource sovereignty primacy) and assess their coherence."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a unified federal state capable of national policies (equalization, climate, trade) by preventing unilateral provincial exit and establishing federal veto over sovereignty claims.",
+    "transfer_function": "Moves sovereign authority over exit and key policy domains (equalization, climate) from provinces to the federal government, consolidating decision-making at the centre.",
+    "absent_voices": "Indigenous nations, who are not parties to the constitutional division of powers but are affected by federal-provincial jurisdiction disputes; municipal governments, who have no constitutional status but bear implementation costs.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the federal veto over provincial exit and the subordination of provinces were removed, the federation would become a voluntary association; provinces could unilaterally secede, equalization and national climate policy would collapse, and the Canadian state would likely dissolve or radically reorganize.",
+    "founding_problem": "The need to create a unified political entity from distinct colonies with divergent interests, ensuring national coherence and preventing fragmentation, while accommodating regional diversity through a federal distribution of powers.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem is attested by the Fathers of Confederation records (e.g., Macdonald's speeches) and the constitutional text itself. However, the status is contested: federalists argue the problem of national unity remains live; provincial sovereigntists argue the founding problem was a compact among equals that has been betrayed."
+  },
+  "commentary": {
+    "narrative_context": "This constraint story captures the 'constitutional subordination' reading of the provincial sovereignty boundary kernel. It asserts that provinces derive their existence and powers solely from the federal Constitution (Constitution Act 1867, 1982), possess no inherent sovereignty, and cannot exit the federation without federal consent. The reading vindicates federal supremacy in equalization and climate policy and treats separatism as a constitutional nullity. The claimed type is tangled_rope because the arrangement performs a genuine coordination function (national unity, fiscal federalism, climate coordination) while simultaneously extracting sovereign authority from provinces that would otherwise claim it — especially resource-rich and separatist-leaning provinces. The engine will compute per-seat classifications from the structural data below.",
+    "logic_rationale": "Extractiveness (0.62) reflects the transfer of exit authority and policy control from provinces to the federal centre. Suppression (0.71) is high because the legal barrier to exit is absolute (Reference re Secession of Quebec) and enforced by the Supreme Court. Theater ratio (0.32) is moderate: the federal government performs 'cooperative federalism' rituals (first ministers' conferences) but the veto power is real and used. Accessibility collapse (0.64) is significant: once the constitutional rule is understood, unilateral exit is legally foreclosed. Resistance (0.53) is substantial: Quebec referendums, Alberta Sovereignty Act, and ongoing judicial challenges show active pushback.",
+    "directionality_logic": "The federal government is the primary beneficiary (d near 0.0) — it collects the authority to veto exit and set national policy. Centralist provinces are secondary beneficiaries (d ~ 0.2) — they gain fiscal stability. Separatist provinces are primary targets (d near 1.0) — they are legally barred from exiting. Resource provinces are also targets (d ~ 0.7) — they lose policy autonomy over resources. Indigenous nations are excluded (d undefined) — they are not parties to the constraint but are structurally suppressed. Constitutional scholars are analytical observers (d = 0.5). The engine will derive these directionalities from the beneficiary/victim declarations and exit options.",
+    "perspectival_gap": "From the federal seat, the constraint is a coordination mechanism that makes the federation work. From the separatist province seat, it is a snare that traps them in an unwanted union. From the resource province seat, it is a tangled rope: they get market access but lose climate policy control. The engine's per-seat computation will reveal this divergence; the authored claim does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (national unity) remains contested. The constraint has not atrophied into a piton because the federal government actively uses the veto (e.g., carbon pricing upheld, equalization maintained). However, the rising theater ratio suggests performative maintenance is increasing. If the coordination function (national unity) ceases to be live for a critical mass of provinces, the constraint could drift toward snare (pure extraction) or piton (inertial maintenance).",
+    "kernel_context": "This constraint is the 'constitutional_subordination' reading of the kernel 'provincial_sovereignty_boundary'. Sibling readings: 'compact_federalism' (provinces as sovereign compact partners, exit negotiable) and 'resource_sovereignty_primacy' (provincial resource ownership grounds absolute sovereignty). This reading forecloses both siblings within a single commitment framework: if provinces are creatures of the federal constitution, they cannot be sovereign compact partners, and resource ownership cannot ground sovereignty that overrides federal veto."
+  },
+  "omegas": [
+    {
+      "id": "committer_structure_kernel_reading",
+      "question": "Is this constraint a reading of the contested kernel 'provincial_sovereignty_boundary'?",
+      "resolution_mechanism": "Compare with sibling readings compact_federalism and resource_sovereignty_primacy to identify structural differences in beneficiary/victim sets, exit options, and claimed_type.",
+      "impact": "If this is a kernel reading, its classification is reading-indexed; the kernel itself has no single classification. The engine must treat each reading as a separate constraint story linked by network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment that this constraint is one reading of a contested kernel."
+    },
+    {
+      "id": "federal_veto_legitimacy",
+      "question": "Is the federal veto over provincial exit a genuine coordination mechanism for national unity or a tool for central extraction?",
+      "resolution_mechanism": "Historical analysis of federal use of veto power; counterfactual simulation of federation without veto; compare with federations that allow unilateral exit (e.g., EU Article 50).",
+      "impact": "If coordination, supports tangled_rope; if extraction, supports snare. Affects claimed_type and mandatrophy assessment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legitimacy of federal veto as coordination vs extraction."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of provincial exit structural (legal barriers) or internalized (political culture)?",
+      "resolution_mechanism": "Study provincial secession referendums and federal response; measure political culture after legal barriers removed (hypothetical).",
+      "impact": "If internalized, effective suppression higher than legal measure; the constraint's persistence may rely on internalized federalism as much as legal veto.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression of provincial exit."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "equalization_payments",
+      "federal_climate_policy_authority",
+      "provincial_resource_revenue_control"
+    ],
+    "dual_formulation_note": "This constraint is the constitutional_subordination reading of the provincial_sovereignty_boundary kernel. It forecloses the compact_federalism and resource_sovereignty_primacy readings. The three readings form a constraint family linked by mutual structural contradiction."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "compact_federalism",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "resource_sovereignty_primacy",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "federal_supremacy_in_constitution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "provincial_subordination_to_federal_veto",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "federal_constitutional_order",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "authority_erosion",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "federal_government",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

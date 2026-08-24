@@ -1,0 +1,361 @@
+{
+  "header": {
+    "constraint_id": "exercise_as_competence_maintenance__hybrid_decay_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_exercise_as_competence_maintenance__hybrid_decay_reading",
+    "measurement_id_prefix": "exercise_hybrid_decay",
+    "story_uid": "d8adcc7b-482e-4a99-9f73-c38575b40269"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.55,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-Based Competence Maintenance (Hybrid Decay Reading)",
+    "topic_domain": "safety_engineering/organizational_learning/crisis_preparedness",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "organizations_mandating_simulation",
+      "training_vendors",
+      "accreditation_bodies"
+    ],
+    "victims": [
+      "frontline_operators",
+      "affected_public",
+      "organizations_facing_judgment_failures"
+    ],
+    "vindicated_propositions": [
+      "procedural_standardization_reduces_variance",
+      "muscle_memory_retention_via_repetition"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "organizations_mandating_simulation",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Mandate simulation-based training for compliance and liability management. They set the curriculum, frequency, and fidelity standards. They benefit from predictable costs, measurable compliance metrics, and reduced insurance premiums. They can switch vendors or modify requirements but face institutional inertia and regulatory lock-in."
+    },
+    {
+      "name": "training_vendors",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Design and deliver simulation platforms and scenarios. They profit from recurring contracts for simulator time, scenario development, and certification. Their products emphasize procedural fidelity and measurable outputs. They can pivot to other markets but have invested heavily in simulation-specific IP and infrastructure."
+    },
+    {
+      "name": "accreditation_bodies",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Set standards that define what counts as 'competence maintenance' for licensing and certification. They legitimize simulation hours as equivalent to experience. They collect fees and institutional authority. Changing standards requires multi-stakeholder consensus and risks their legitimacy."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Undergo mandated simulation training. They gain procedural fluency but recognize the gap in judgment-under-stakes. They bear the cost of false confidence when real crises demand improvisation. Their exit options are limited by licensure requirements, career specialization, and organizational mandates."
+    },
+    {
+      "name": "affected_public",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Patients, passengers, communities near industrial sites — anyone whose safety depends on operator judgment in novel crises. They have no voice in training design, no exit from the systems that protect them, and bear the full consequences when simulation-trained operators fail at improvisation."
+    },
+    {
+      "name": "organizations_facing_judgment_failures",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organizations that suffer catastrophic failures traced to judgment gaps not covered by simulation. They pay in liability, reputation, and regulatory sanctions. They could invest in live exercises but face cost, risk, and cultural resistance. They are both agenda-setters (could change training) and payers (bear failure costs)."
+    },
+    {
+      "name": "safety_researchers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Study transfer of training from simulation to real performance. They document the procedural/judgment gap, measure decay curves, and propose alternative training architectures. They neither collect rents nor bear operational costs."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Standardizes baseline procedural competence across distributed operators and organizations: ensures everyone can execute checklists, operate equipment, and follow protocols under known failure modes. Solves the variance problem in high-reliability systems.",
+    "transfer_function": "Moves resources (budget, time, career capital) from frontline operators and organizations toward training vendors and accreditation bodies, in exchange for procedural compliance certificates. Moves risk from organizations onto the public when judgment failures occur.",
+    "absent_voices": "The affected public is structurally excluded — they cannot participate in training design or accreditation. Frontline operators who have experienced judgment failures in real crises are often excluded from curriculum committees by organizational hierarchy. Lived-catastrophe veterans who advocate for live exercises are marginalized as 'anecdotal' or 'high-risk'.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If simulation mandates vanished overnight, organizations would initially face compliance gaps and liability exposure. But within 2-3 years, a mixed economy would emerge: some would invest in live exercises and mentored judgment training; others would revert to apprenticeship models; vendors would pivot to hybrid platforms. The procedural baseline would degrade initially but judgment capacity would likely improve where live substitutes emerge.",
+    "founding_problem": "Post-WWII expansion of high-hazard industries (nuclear, aviation, chemical) created a need to verify operator competence at scale without exposing trainees or public to real catastrophic risk. Simulation promised measurable, repeatable, safe verification.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Aviation safety historians (e.g., NASA ASRS analyses, ICAO training reports) corroborate the founding problem was real and simulation solved the procedural-verification gap. Frontline operator associations (ALPA, IFATCA) and cognitive systems engineering researchers (Woods, Hollnagel, Dekker) attest the problem has shifted: procedural competence is now saturated, and the live gap is judgment under novelty — a problem simulation was not designed to solve and does not solve."
+  },
+  "interval": {
+    "start": 1960,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "High-hazard industries mandate simulation-based training to maintain operator competence. The hybrid decay reading asserts this constraint has two structurally distinct components: procedural competence (checklists, muscle memory, standard responses) which IS genuinely exercised by high-fidelity simulation, and judgment-under-stakes (improvisation, moral reasoning under pressure, novel situation synthesis) which is NOT exercised by simulation because the stakes, irreversibility, and psychological weight are absent. The constraint extracts by creating false confidence that 'competence is maintained' when only half the kernel is exercised. Victims are those harmed when operators face real crises requiring the unexercised component.",
+    "logic_rationale": "Extractiveness (0.68) reflects the widening gap between what simulation delivers (procedures) and what the mandate claims it delivers (full competence). The mandate creates a compliance floor that crowds out live exercises and mentored judgment development. Suppression (0.55) is moderate: live exercises exist but are expensive, risky, and not credited by accreditation. Theater ratio (0.45) is rising as simulation hours increase while judgment gaps persist — more hours yield diminishing returns on the procedural component while the judgment component remains unaddressed. Accessibility collapse (0.52) reflects that alternatives exist (live exercises, apprenticeship, red-teaming) but are structurally disadvantaged by cost and accreditation rules. Resistance (0.48) comes from operator groups and cognitive engineers but is fragmented across domains.",
+    "directionality_logic": "Organizations mandating simulation and training vendors are structural beneficiaries (d ~ 0.15-0.25): they collect compliance revenue, predictable costs, and liability shields. Accreditation bodies are dual-positioned (agenda_setter/beneficiary, d ~ 0.2). Frontline operators are payers with constrained exit (d ~ 0.7): they invest time in training that partially doesn't transfer, and bear psychological burden of false confidence. Affected public are trapped payers (d ~ 0.95): no voice, no exit, full consequence. Organizations facing judgment failures are powerful payers with constrained exit (d ~ 0.6): they could change the system but face institutional inertia.",
+    "perspectival_gap": "From the agenda-setter seat (organizations, accreditation), the constraint appears as genuine coordination: it solves the procedural verification problem at scale. From the payer seats (operators, public), the same structure operates as extraction: it certifies a competence that doesn't exist in the judgment domain, creating a liability shield for organizations and a risk transfer to the public. The engine computes this divergence from the declared structural positions.",
+    "mandatrophy_analysis": "The founding problem (procedural verification at scale without catastrophic risk) was live and solved. The mandate persists because the accreditation infrastructure, vendor ecosystem, and compliance metrics have become self-justifying. The mandate has not been updated to address the judgment gap because doing so would require admitting the original solution is incomplete — which threatens the legitimacy of the accreditation bodies and the business model of vendors. This is a classic mandatrophy pattern: the solution outlives the problem it solved and expands to cover a domain where it doesn't work.",
+    "kernel_context": "This constraint is the hybrid_decay_reading of kernel 'exercise_as_competence_maintenance'. Sibling readings: simulation_sufficiency_reading (simulation fully exercises the kernel; fidelity determines effectiveness) and lived_catastrophe_necessity_reading (only real catastrophe exercises the kernel; simulation is mere rehearsal). This reading decomposes the kernel into two components with different exercise requirements — the structural delta that distinguishes it from both siblings."
+  },
+  "omegas": [
+    {
+      "id": "judgment_decay_curve",
+      "question": "What is the quantitative decay curve for judgment-under-stakes capacity when only simulation is used, and how does it differ from procedural decay?",
+      "resolution_mechanism": "Longitudinal studies tracking operators from simulation-only training through first real-crisis exposure, measuring decision quality degradation over time since last live exercise.",
+      "impact": "If judgment decays significantly faster than procedures, the hybrid decay reading is empirically validated and the extractiveness of the mandate is higher than currently modeled. If decay curves are similar, the reading overstates the gap.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Differential decay rates between procedural and judgment components of competence"
+    },
+    {
+      "id": "fidelity_threshold_for_judgment",
+      "question": "Is there a simulation fidelity threshold above which judgment-under-stakes IS exercised, or is the stake-absence fundamentally irreducible?",
+      "resolution_mechanism": "Progressive fidelity experiments (VR, physiological stress induction, consequence-weighted scoring) measuring transfer to real-crisis judgment tasks.",
+      "impact": "If a threshold exists, the constraint could be reformed by mandating higher fidelity rather than live exercises — the reading would shift toward simulation_sufficiency. If irreducible, the extraction is structural and the mandate is fundamentally incomplete.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the judgment gap is a fidelity problem or a category error"
+    },
+    {
+      "id": "kernel_framing_ambiguity",
+      "question": "Does the kernel 'exercise as competence maintenance' refer to a unitary competence or a dual-component structure (procedural + judgment)?",
+      "resolution_mechanism": "Historical analysis of founding documents (ICAO Annex 1, IAEA safety guides, nuclear regulatory frameworks) to determine whether the original mandate conceptualized competence as unitary or dual.",
+      "impact": "If the kernel was always dual-component, the simulation_sufficiency reading is a category error. If the kernel was unitary and the dual decomposition is this reading's innovation, then the sibling readings are alternative framings of the same ambiguous kernel — the hybrid_decay reading is one resolution of the ambiguity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's internal structure is unitary or dual-component"
+    },
+    {
+      "id": "committer_structure_disagreement_location",
+      "question": "Where exactly do the three readings disagree structurally — on the kernel's component structure, on the exercise efficacy of simulation per component, or on the victim set definition?",
+      "resolution_mechanism": "Map each reading's claims onto a shared matrix: (components x exercise efficacy x victim set). The disagreement location is the cell(s) where readings diverge.",
+      "impact": "Locates the committer-axis disagreement for the engine's kernel-reading machinery. If readings disagree on component structure, the kernel is genuinely ambiguous. If they agree on structure but disagree on efficacy, the kernel is stable but the readings are empirical rivals. If they agree on both but disagree on victim set, the disagreement is normative.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural location of disagreement among kernel readings"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "live_exercise_mandate",
+      "apprenticeship_transmission",
+      "red_teaming_requirement",
+      "incident_learning_system"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of kernel 'exercise_as_competence_maintenance'. The simulation_sufficiency_reading treats the kernel as unitary and simulation as fully efficacious. The lived_catastrophe_necessity_reading treats the kernel as requiring real stakes. This hybrid_decay_reading decomposes the kernel into procedural (simulation-efficacious) and judgment (simulation-inefficacious) components. The three readings form a constraint family linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.6
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_sufficiency_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "lived_catastrophe_necessity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_kernel_is_dual_component",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_exercises_procedural_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "judgment_requires_stakes",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "post_ww2_procedural_verification_mandate",
+    "drift_state": {
+      "moment": "contemporary_judgment_gap_recognition",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "exercise_as_competence_maintenance"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

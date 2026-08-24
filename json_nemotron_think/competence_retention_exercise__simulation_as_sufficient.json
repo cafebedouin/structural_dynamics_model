@@ -1,0 +1,352 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__simulation_as_sufficient",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "cf4062e3-76c9-4972-ab74-c883a67c1991"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.55,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "High-Fidelity Simulation as Sufficient Catastrophe-Avoidance Competence Exercise",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "simulator_vendors",
+      "regulatory_bodies",
+      "training_infrastructure_providers"
+    ],
+    "victims": [
+      "operating_organizations",
+      "frontline_operators",
+      "public_stakeholders"
+    ],
+    "vindicated_propositions": [
+      "simulator_fidelity_achieves_cognitive_equivalence",
+      "distributed_competence_without_catastrophe"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "simulator_vendors",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design, sell, and maintain high-fidelity simulators mandated by regulators. Revenue scales with fidelity requirements and recertification cycles. They define what 'high-fidelity' means through standards bodies they dominate. Exit is trivial — they capture the mandate."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Mandate simulator hours for licensure and recurrent training. They gain legible compliance metrics, avoid political blame for accidents (\"training was current\"), and control the competence definition. They do not bear the cost of simulation infrastructure."
+    },
+    {
+      "name": "training_infrastructure_providers",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Operate training centers, employ instructors, sell courseware. They benefit from mandated volume but compete on price and fidelity. Their exit is constrained by capital investment in physical simulators."
+    },
+    {
+      "name": "operating_organizations",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Airlines, nuclear plants, chemical facilities — they pay for simulators, instructor time, crew downtime, and recurrent training programs. Costs are substantial (tens of millions annually for major airlines). They cannot exit the mandate without losing operating authority. Some invest in simulation because they believe it works; others comply because they must."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Pilots, control room operators, bridge officers. They spend careers in simulators; their licensure, promotion, and professional identity depend on simulator performance. They gain genuine skill rehearsal but also absorb the risk if simulation proves insufficient. Exit means abandoning professional identity and licensure — identity_locked."
+    },
+    {
+      "name": "public_stakeholders",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Communities near hazardous facilities, passengers, downstream populations. They bear the consequence if simulation-based competence fails to prevent catastrophe. They have no voice in simulator fidelity standards, no exit from the risk, and no visibility into training adequacy."
+    },
+    {
+      "name": "safety_culture_researchers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and independent investigators who study whether simulator performance predicts real-world catastrophe avoidance. They publish critique but have no regulatory authority. Their exit is analytical — they can change research focus."
+    },
+    {
+      "name": "accident_victims_families",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Families and communities affected by catastrophes that simulator-trained crews failed to prevent. They would object to the sufficiency claim but are structurally excluded from standards-setting and training design. Their exit from the consequence is impossible."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains distributed catastrophe-avoidance competence across high-hazard industries without requiring actual catastrophic failures to provide learning opportunities. Solves the 'rare event learning problem' by substituting structured simulation for stochastic disaster.",
+    "transfer_function": "Moves financial resources, personnel time, and career capital from operating organizations and frontline operators to simulator vendors, training infrastructure providers, and regulatory compliance regimes. Moves legitimacy from hard-won operational experience to quantifiable simulator metrics (hours, scores, scenario completion rates).",
+    "absent_voices": "Operators who have survived actual catastrophes and assert the visceral stakes, time pressure, and consequence awareness cannot be simulated. Communities living with residual risk from facilities whose safety case rests on simulator metrics. Both are excluded from fidelity standard-setting bodies.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the simulation mandate vanished overnight, operating organizations would redirect billions from simulator contracts to alternative competence maintenance (operational experience programs, near-miss analysis, red-teaming, apprentice-journeyman models). Regulatory frameworks would lose their primary compliance metric. Simulator vendors would face existential revenue collapse. Career paths defined by simulator milestones would restructure.",
+    "founding_problem": "How to maintain reliable catastrophe-avoidance competence in high-hazard industries (aviation, nuclear, chemical, maritime) when catastrophic events are too rare and too costly to serve as learning opportunities for each generation of operators.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Early simulator pioneers (Link, Redifon, CAE) and aviation regulators (FAA, ICAO 1960s-80s) attested the founding problem was real and simulation addressed it. However, accident investigators (Three Mile Island 1979, Challenger 1986, Air France 447 2009, 737 MAX 2018-19) and independent safety researchers (Reason, Perrow, Dekker, Woods) have repeatedly documented cases where simulator-trained crews failed in real catastrophes — challenging whether the founding problem was actually solved or merely displaced."
+  },
+  "interval": {
+    "start": 1960,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The claim that high-fidelity simulation constitutes genuine exercise of catastrophe-avoidance competence — that cognitive and procedural demands are structurally equivalent to real events — is the dominant regulatory and industry paradigm since the 1970s. It originated in aviation (Link Trainer, then full-motion simulators) and spread to nuclear, maritime, and process industries. The constraint coordinates competence maintenance across distributed organizations without waiting for catastrophes. But it also extracts: simulator vendors capture mandated revenue, regulators gain legible compliance, and operators bear costs while absorbing residual risk. The sibling readings (catastrophe_as_necessary, near_miss_as_bridge) contest the sufficiency claim. This story instantiates the simulation_as_sufficient reading only — its ε is assessed against the standing arrangement (mandated simulation as primary competence mechanism), not against the alternatives.",
+    "logic_rationale": "Extractiveness (0.65) reflects the large, mandated resource transfer from operators to simulation infrastructure that has grown decoupled from demonstrated marginal safety benefit — fidelity requirements escalate (Level D, then Level D+, then VR/AR) without proportional accident reduction. Suppression (0.55) is structural: regulatory mandates make simulation the only licit path; career systems make simulator performance the only promotion path. Theater ratio (0.45) captures the growing share of training that optimizes for scorer-visible metrics (procedure adherence, scenario completion) rather than adaptive expertise. Accessibility collapse (0.5) is moderate: organizations CAN invest in complementary methods (line operations safety audit, near-miss reporting, resilience engineering), but regulatory and insurance incentives pull toward simulation. Resistance (0.6) comes from line operators, some training captains, and researchers who observe simulator-real world gaps.",
+    "directionality_logic": "Simulator vendors and regulators are structural beneficiaries (d near 0.0): they collect revenue and compliance legitimacy respectively, with arbitrage-grade exit. Operating organizations are payers with constrained exit (d ~0.7): they pay the mandate but cannot leave the industry. Frontline operators are identity_locked payers (d ~0.85): their professional self-concept is fused to simulator performance; exit means identity death. Public stakeholders are trapped payers (d ~0.95): they bear consequence with zero voice. Researchers are analytical observers (d=0.5). The engine will compute per-seat χ from these structural positions.",
+    "perspectival_gap": "From the regulator/vendor seat, the constraint is a rope (genuine coordination, minimal coercion). From the frontline operator seat, it is a tangled rope (coordination benefit real but extraction via identity lock and career capture). From the public stakeholder seat, it approaches a snare (extraction of safety margin via false equivalence, suppression of alternatives). The engine computes this seat divergence from the declared power/exit/role structure — the authored claim does not adjudicate it.",
+    "mandatrophy_analysis": "The founding problem (rare-event learning) was real. The simulation solution was a genuine coordination innovation. But the arrangement has accumulated extraction: fidelity mandates escalate beyond evidence, recertification cycles shorten, vendor lock-in deepens, and the equivalence claim has become doctrinal rather than empirical. The mandate persists not because the founding problem is unsolved, but because the solution created its own beneficiary coalition that now defends the mandate's expansion. This is mandatrophy: the coordination function is real but the extraction layer has thickened around it.",
+    "kernel_context": "This constraint is the simulation_as_sufficient reading of the contested kernel competence_retention_exercise. The kernel asks: what maintains genuine catastrophe-avoidance competence? This reading answers: high-fidelity simulation is structurally equivalent to real events and suffices. Sibling readings: catastrophe_as_necessary (only real catastrophes provide visceral stakes and organizational learning), near_miss_as_bridge (near-misses and minor failures provide sufficient real-world feedback to validate simulation without full catastrophes). This reading forecloses catastrophe_as_necessary (if simulation suffices, catastrophes are not necessary) and coexists with near_miss_as_bridge (near-misses can complement simulation). Foundational axiom: simulation_fidelity_achieves_cognitive_equivalence (empirically_contingent, holdable). Reference frame: simulation_equivalence_framework. Drift: contemporary_post_accident_era shows axiom_overriding (substantial, unacknowledged) — accidents reveal simulator gaps the authority structure does not acknowledge."
+  },
+  "omegas": [
+    {
+      "id": "structural_equivalence_claim",
+      "question": "Is the claimed cognitive and procedural equivalence between high-fidelity simulation and real catastrophe avoidance empirically established, or is it an article of faith that became regulatory doctrine?",
+      "resolution_mechanism": "Systematic comparison of simulator performance metrics vs. real-event outcomes for the same crews/scenarios; neurocognitive studies of stress response in simulation vs. real emergencies; longitudinal tracking of simulator-trained crews' first real catastrophe encounters.",
+      "impact": "If equivalence is not established, the constraint's coordination function is overstated and its extraction layer (mandated fidelity escalation) lacks justification — reclassification toward snare. If equivalence holds for defined scenario envelopes, the tangled_rope classification stands with narrower coordination scope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the core equivalence claim is evidentially grounded or doctrinal"
+    },
+    {
+      "id": "extraction_coordination_boundary",
+      "question": "Where does the genuine coordination function of simulation end and the extractive layer (mandated fidelity escalation, vendor lock-in, career capture) begin?",
+      "resolution_mechanism": "Cost-benefit analysis of marginal fidelity increments; regulatory capture assessment of standards bodies; comparison of simulator training outcomes vs. alternative competence maintenance investments (operational experience, near-miss systems, resilience drills).",
+      "impact": "If the boundary is early (basic simulation suffices, escalation is rent), the constraint is snare with a thin coordination veneer. If the boundary is late (each fidelity increment has marginal safety value), tangled_rope with substantial coordination. The current metrics assume a mid-range boundary.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Locating the coordination-extraction boundary within the mandated simulation regime"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of alternative competence-maintenance paths structural (regulatory mandates, insurance requirements) or internalized (operators genuinely believe simulation is the only valid path, having never experienced alternatives)?",
+      "resolution_mechanism": "Post-deregulation natural experiments: if a jurisdiction relaxes simulator mandates, do operators voluntarily maintain simulation at current levels (internalized) or revert to cheaper alternatives (structural)? Survey operators anonymously about whether they would choose current simulation volume absent mandates.",
+      "impact": "If internalized, effective suppression is higher than structural measures suggest — operators carry the constraint with them. If purely structural, resistance would materialize rapidly if mandates relaxed. This affects whether the constraint's persistence is fragile or robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in the simulation mandate"
+    },
+    {
+      "id": "kernel_framing_alternatives",
+      "question": "Does the kernel 'competence retention exercise' admit framings beyond the three declared readings — e.g., competence as distributed system property rather than individual skill, or competence as organizational resilience rather than operator performance?",
+      "resolution_mechanism": "Review resilience engineering and Safety-II literature for alternative framings; map whether they instantiate new readings or recombine existing ones; assess if any reframes the extraction-coordination structure.",
+      "impact": "If alternative framings exist that change the constraint's ε or beneficiary structure, this reading's decomposition is incomplete — additional constraint stories needed. If the three readings exhaust the kernel's structural space, the family is complete.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the declared kernel readings exhaust the structural possibilities"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__catastrophe_as_necessary",
+      "competence_retention_exercise__near_miss_as_bridge",
+      "regulatory_capture__training_standards",
+      "simulator_vendor_lock_in",
+      "operator_identity_fusion"
+    ],
+    "dual_formulation_note": "This constraint is the simulation_as_sufficient reading of the competence_retention_exercise kernel. It differs from catastrophe_as_necessary (ε≈0.3, claimed mountain/rope) and near_miss_as_bridge (ε≈0.45, claimed rope/tangled_rope) in its ε referent (mandated simulation infrastructure) and beneficiary structure (vendors + regulators). The three stories form a constraint family linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_as_necessary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "near_miss_as_bridge",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_fidelity_achieves_cognitive_equivalence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulator_metrics_validate_competence",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "simulation_equivalence_framework",
+    "drift_state": {
+      "moment": "contemporary_post_accident_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "competence_retention_exercise"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

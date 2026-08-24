@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__hybrid_occupation",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_competence_occupation__hybrid_occupation",
+    "measurement_id_prefix": "competence_occupation__hybrid_occupation",
+    "story_uid": "d6304832-0928-452c-8e28-a41e7be43eee"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.55,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Competence Occupation: Hybrid Multi-Mechanism Exercise Requirement",
+    "topic_domain": "high_reliability_organizations/safety_training/competence_maintenance",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "training_providers",
+      "simulator_vendors",
+      "regulatory_authorities",
+      "organizational_management"
+    ],
+    "victims": [
+      "frontline_operators",
+      "safety_critical_staff"
+    ],
+    "vindicated_propositions": [
+      "competence_requires_continuous_exercise",
+      "skill_decay_is_inevitable_without_practice",
+      "multi_mechanism_training_reduces_single_point_failure"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the direct time, cognitive, and career costs of continuous multi-mechanism training (simulator sessions, refresher courses, procedural drills, line audits). Cannot opt out without losing certification/employment. Experience training as recurring burden that competes with operational duties. Exit options constrained by license requirements and industry-wide standardization."
+    },
+    {
+      "name": "safety_critical_staff",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Similar to frontline operators but in specialized roles (air traffic controllers, nuclear operators, surgical teams). Benefit from maintained competence in rare high-stakes events but bear disproportionate training load due to low-frequency high-consequence scenarios. Exit nearly impossible due to specialized credentialing."
+    },
+    {
+      "name": "training_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Commercial entities delivering simulator time, refresher courses, and procedural training. Revenue scales with training mandate scope and frequency. No consensus on optimal configuration creates expanding market for new training modalities. Can pivot across industries (aviation, nuclear, healthcare, rail)."
+    },
+    {
+      "name": "simulator_vendors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "High-capital equipment manufacturers and software providers. Benefit from regulatory requirements for high-fidelity simulation. Influence standard-setting bodies to embed simulator requirements. Long product cycles and regulatory capture create high barriers to entry for competitors."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set mandatory training requirements, approve curricula, enforce compliance through audits. Benefit from demonstrable safety action (political legitimacy, budget justification). No consensus on optimal configuration means regulations accumulate mechanisms rather than optimize. Can expand requirements without proving marginal benefit."
+    },
+    {
+      "name": "organizational_management",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear direct costs (training budgets, operational downtime, staffing coverage) and indirect costs (fatigue, turnover). Benefit from liability protection, regulatory compliance, insurance discounts. Trapped by industry-wide mandates — cannot unilaterally reduce training without competitive/regulatory penalty."
+    },
+    {
+      "name": "training_research_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic and institutional researchers studying skill decay curves, simulation fidelity, training transfer, optimal configuration. Perpetual research problem ensures sustained funding and publication venues. No stake in operational outcomes; incentive aligns with demonstrating complexity rather than finding closure."
+    },
+    {
+      "name": "traveling_public_patients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Ultimate beneficiaries of safety outcomes but no voice in training design. Bear risk if competence fails; bear cost indirectly through fares/fees. Cannot assess training adequacy; trust regulatory assurance. Exit impossible for essential transport/healthcare."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures continuous competence occupancy across safety-critical roles by mandating multiple exercise mechanisms (simulation, refresher, procedural reinforcement, line audits) so that no single failure mode (simulator unavailability, curriculum staleness, audit gaming) collapses the entire competence maintenance system.",
+    "transfer_function": "Moves time, money, and cognitive capacity from frontline operators and organizational budgets to training providers, simulator vendors, and regulatory compliance apparatus. Transfers risk from public to operators (who must maintain competence) and from operators to organizations (who must fund training).",
+    "absent_voices": "Frontline operators have limited voice in training design — unions consult but don't set curriculum. Patients/public are structurally excluded from competence standard-setting. Smaller organizations that cannot afford full multi-mechanism suites are not represented in standard-setting bodies dominated by major operators.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If multi-mechanism training mandates vanished, organizations would immediately reduce training to minimum regulatory floor (likely simulation-only or refresher-only). Simulator vendors would lose mandated revenue stream. Regulatory authorities would lose primary lever for safety assurance. Skill decay incidents would rise within 2-3 years per decay curve data. The safety case for high-reliability operations would shift from 'demonstrated competence maintenance' to 'incident-free operation' — a weaker, lagging indicator.",
+    "founding_problem": "Post-accident investigations (Three Mile Island, Bhopal, early aviation hull losses) revealed that single-mechanism training (classroom only, or simulator only) failed to maintain competence for rare high-consequence events. Skill decay curves showed proficiency halves every 6-12 months without exercise. The founding problem: how to maintain competence for events that occur once per career, using only artificial exercises.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Original accident reports (Kemeny Commission, ICAO investigations) corroborate the skill decay problem. However, major operators (airlines, nuclear utilities) and training vendors attest the problem is 'solved' by current multi-mechanism regimes. Independent researchers (NASA HF, EASA studies) attest the problem has shifted: current regimes maintain baseline competence but create new failure modes (training fatigue, checklist compliance without understanding, simulator fidelity gaps). No consensus on whether the founding problem persists in its original form or has mutated."
+  },
+  "interval": {
+    "start": 1980,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "High-reliability organizations (aviation, nuclear, healthcare, rail) require safety-critical personnel to maintain competence for rare catastrophic scenarios through continuous multi-mechanism exercise: high-fidelity simulation, periodic refresher courses, procedural reinforcement drills, and operational line audits. No consensus exists on the optimal configuration — how much of each mechanism, at what frequency, with what fidelity. The constraint presents as coordination (safety assurance) but operates with substantial extraction (perpetual training burden on frontline staff, revenue for vendor ecosystem, regulatory expansion without marginal benefit proof). The hybrid_occupation reading asserts that multiple mechanisms are structurally necessary because each covers different failure modes of the others; simulation_sufficiency and real_incident_necessity are sibling readings that claim single-mechanism sufficiency.",
+    "logic_rationale": "Extractiveness (0.65) reflects the high and rising cost of multi-mechanism mandates without evidence of optimal configuration — each new mechanism adds cost without proven marginal safety gain. Suppression (0.55) is moderate: mandates are enforced through licensing and operational authorization, but organizations retain some configuration discretion. Theater ratio (0.45) is significant and rising: compliance-driven training (checking boxes, repeat scenarios) increasingly displaces competence-deepening exercise. Accessibility collapse (0.60) reflects that alternative competence models (apprenticeship, operational experience, reduced simulation) are regulated out. Resistance (0.50) is moderate: unions negotiate training loads, but safety culture narrative limits overt opposition.",
+    "directionality_logic": "Frontline operators and safety-critical staff are primary payers (high d ~0.8): they bear time, cognitive load, career risk. Training providers and simulator vendors are primary beneficiaries (low d ~0.15): they collect revenue, face no operational risk. Regulatory authorities are agenda_setters with beneficiary characteristics (d ~0.25): they gain legitimacy/budget from expanding mandates. Organizational management is dual (d ~0.5): pays costs but gains compliance/liability shield. Public is trapped beneficiary (d ~0.3): gains safety but cannot verify training adequacy. Researchers are analytical observers (d ~0.5).",
+    "perspectival_gap": "From the regulator/training vendor seat, the constraint appears as necessary coordination (rope-like): multiple mechanisms create defense-in-depth for competence. From the frontline operator seat, it appears as extraction (snare-like): ever-expanding requirements with no off-ramp, skill maintenance for events that never occur. From organizational management, it appears as tangled rope: genuine safety coordination mixed with vendor capture and regulatory ratchet. The engine should compute this seat divergence from the structural data.",
+    "mandatrophy_analysis": "The founding problem (maintaining competence for rare events) remains live but has mutated. Original mandate was 'prevent skill decay for rare events.' Current regime adds mechanisms without removing obsolete ones, creating training fatigue that may degrade the very competence it seeks to maintain. The constraint shows mandatrophy signals: expanding scope (more mechanisms, higher frequency), rising theater ratio, no sunset or optimization review. Yet the core coordination function (preventing competence collapse) is real — not pure extraction. This is tangled rope, not snare: coordination function exists but is contaminated by asymmetric extraction.",
+    "kernel_context": "This constraint is the hybrid_occupation reading of the competence_occupation kernel. The kernel is the claim that 'competence for rare high-consequence events requires continuous exercise.' Three readings contest this kernel: (1) hybrid_occupation (this reading) — multiple mechanisms necessary, no single mechanism sufficient, optimal configuration unknown; (2) simulation_sufficiency — high-fidelity simulation alone suffices to occupy the competence kernel; (3) real_incident_necessity — only actual catastrophic incidents provide authentic conditions for competence occupation. The structural delta: hybrid_occupation treats multiple observables (simulation performance, line audit behavior, skill decay curves) as necessary and non-substitutable; training optimization becomes a perpetual research problem rather than a solvable design question."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the competence_occupation kernel a single stable commitment with multiple readings, or are these three distinct constraints incorrectly labeled as one?",
+      "resolution_mechanism": "Trace whether the three readings share a common referent (the same competence kernel) or whether they describe different competence objects (simulation competence vs operational competence vs hybrid competence). If different objects, decompose into separate constraint stories per epsilon-invariance principle.",
+      "impact": "If distinct constraints, each gets its own epsilon, stakeholders, and classification. Hybrid_occupation would likely be tangled_rope; simulation_sufficiency might be rope (if simulation industry captures regulation); real_incident_necessity might be mountain (if real incidents are truly irreducible) or scaffold (if incidents are transitional teachers).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel framing unifies or conflates structurally distinct constraints."
+    },
+    {
+      "id": "multi_mechanism_necessity",
+      "question": "Is the multi-mechanism requirement (simulation + refresher + procedural + audits) structurally necessary for competence maintenance, or does it reflect vendor capture and regulatory ratchet?",
+      "resolution_mechanism": "Natural experiments: compare safety outcomes in domains that mandate full multi-mechanism suites vs domains that permit simulation-only or experience-based maintenance. Control for system criticality and incident base rates. Measure skill decay curves under different mechanism combinations.",
+      "impact": "If multi-mechanism is necessary, hybrid_occupation's coordination function is genuine and extraction is the price of robustness. If simulation-sufficiency or experience-sufficiency holds, the additional mechanisms are extractive overlay — reclassify toward snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the coordination function requires all four mechanisms or whether some are extractive."
+    },
+    {
+      "id": "optimal_configuration_consensus",
+      "question": "Is the absence of consensus on optimal configuration a genuine epistemic limit (the problem is inherently underdetermined) or a manufactured controversy sustained by beneficiary interests?",
+      "resolution_mechanism": "Analyze whether training optimization research converges over time or whether new mechanisms are added faster than old ones are validated/retired. Track funding sources for 'optimal configuration' studies. Map citation networks for training efficacy claims.",
+      "impact": "If genuine epistemic limit, the perpetual research problem is a structural feature (scaffold-like perpetual transition). If manufactured, the constraint is a snare using 'no consensus' as cover for endless mandate expansion.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the optimization gap is a feature or a bug of the constraint's operation."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression experienced by frontline operators structural (regulatory mandates, license requirements) or internalized (professional identity fused with 'continuous training = competence')?",
+      "resolution_mechanism": "Post-exit trajectory study: track operators who leave high-reliability roles — do they maintain training behaviors voluntarily? Measure identity fusion (self-report: 'I am a pilot/controller/operator who trains continuously'). Compare suppression levels in domains with identical mandates but different professional cultures.",
+      "impact": "If internalized, effective suppression is higher than structural measure — operators carry the constraint internally. If structural, exit options (constrained) accurately reflect coercion. Affects directionality calculation for payer seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanism for frontline payer seats."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__simulation_sufficiency",
+      "competence_occupation__real_incident_necessity",
+      "regulatory_training_mandate_accumulation",
+      "simulator_fidelity_arms_race"
+    ],
+    "dual_formulation_note": "This constraint is one reading (hybrid_occupation) of the competence_occupation kernel. The sibling readings are simulation_sufficiency (constraint_competence_occupation__simulation_sufficiency) and real_incident_necessity (constraint_competence_occupation__real_incident_necessity). All three share the kernel claim 'competence requires continuous exercise' but differ on mechanism sufficiency. Hybrid_occupation asserts non-substitutability of mechanisms; simulation_sufficiency asserts simulation alone suffices; real_incident_necessity asserts only real incidents suffice. Their epsilons differ: hybrid_occupation (0.65, multi-mechanism cost), simulation_sufficiency (lower epsilon if simulation is cheaper), real_incident_necessity (near-zero epsilon if incidents are 'free' teachers, but high suppression if incidents are required)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.7
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_sufficiency",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "multi_mechanism_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "no_optimal_configuration_consensus",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_tmi_icao_competence_mandate",
+    "drift_state": {
+      "moment": "contemporary_evidence_based_training_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "competence_occupation_kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

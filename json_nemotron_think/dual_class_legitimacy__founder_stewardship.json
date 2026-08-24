@@ -1,0 +1,338 @@
+{
+  "header": {
+    "constraint_id": "dual_class_legitimacy__founder_stewardship",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_dual_class_legitimacy__founder_stewardship",
+    "measurement_id_prefix": "dual_class_founder_stewardship",
+    "story_uid": "f7077332-90bb-467c-ba80-a7bd0d10b1d5",
+    "created_at": "2026-06-11T14:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.55,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dual-Class Founder Control as Stewardship",
+    "topic_domain": "corporate_governance/securities_law/organizational_economics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "founders",
+      "founding_teams",
+      "long_horizon_investors_aligned_with_founder"
+    ],
+    "victims": [
+      "minority_shareholders",
+      "public_market_investors",
+      "index_funds"
+    ],
+    "vindicated_propositions": [
+      "long_horizon_value_creation",
+      "founder_led_innovation",
+      "mission_preservation_against_short_termism"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "founders",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Hold super-voting shares (typically 10:1 or 20:1) giving voting control far exceeding economic ownership. Set corporate strategy, appoint board, control M&A decisions. Their personal identity and legacy are fused with the company; exit means abandoning life's work. Justify control as necessary to pursue multi-decade missions without quarterly pressure."
+    },
+    {
+      "name": "founding_teams",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Early employees and co-founders granted high-vote shares or options. Benefit from founder's long-horizon protection which shields their equity value from short-term activism. Also bear cost: their own voting power is diluted by founder's super-voting shares; they cannot effectively challenge founder decisions even when they disagree."
+    },
+    {
+      "name": "minority_shareholders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold low-vote or single-vote shares (Class A). Provide the vast majority of capital but receive minimal voting power. Cannot elect directors, approve acquisitions, or block founder proposals. Exit option is selling shares — but dual-class structures often trade at a discount, and liquidity may be limited for controlled companies. Bear the cost of control premium without the benefit."
+    },
+    {
+      "name": "public_market_investors",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Institutional and retail investors buying Class A shares in public markets. Price in the governance discount but have no voice. Can exit by selling, but the discount persists as long as the structure exists. Their capital funds the founder's mission but they capture only residual returns after founder's control preferences are satisfied."
+    },
+    {
+      "name": "index_funds",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Forced holders via index inclusion. Cannot selectively exit dual-class companies without tracking error. Hold diversified portfolios where governance discounts across many controlled companies accumulate to meaningful drag. Lobby for reform (e.g., CII policies, Big Three voting guidelines) but lack leverage against founder-controlled boards."
+    },
+    {
+      "name": "board_of_directors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Nominally oversee management but in practice are appointed by and accountable to founder. Benefit from prestigious, compensated directorships with minimal accountability. Their independence is structurally compromised — the founder controls re-nomination. They administer the constraint (charter provisions, voting agreements) rather than constrain it."
+    },
+    {
+      "name": "proxy_advisors",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "ISS, Glass Lewis, etc. Issue voting recommendations on shareholder proposals (e.g., sunset provisions, equal voting rights). Their influence is advisory; they cannot compel change. Provide analytical framing that shapes institutional voter sentiment but the constraint's enforcement (charter, state law) sits outside their reach."
+    },
+    {
+      "name": "securities_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "SEC, state securities commissions. Oversee disclosure (IPO prospectuses, ongoing reporting) but not substantive governance terms. Dual-class is permitted under state corporate law (DGCL) and exchange rules (with some sunset requirements for new listings). Their role is transparency, not redistribution of control."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Insulates founder-led companies from short-term capital market pressure, enabling multi-year R&D, unconventional strategies, and mission preservation that dispersed shareholders would not support. Solves the coordination problem of aligning long-horizon execution with volatile public capital.",
+    "transfer_function": "Moves voting control from capital-proportional (one share, one vote) to founder-concentrated (super-voting shares). Transfers decision rights over strategy, M&A, board composition, and charter amendments from minority shareholders to founder. Transfers the control premium (valuation discount) from all shareholders to the founder's private benefit of control.",
+    "absent_voices": "Future shareholders who will inherit the structure without participating in the IPO; employees without equity whose livelihoods depend on founder's long-horizon bets; stakeholders (communities, customers) affected by missions that prioritize founder vision over distributed interests. They are not in the room at IPO and have no exit from consequences.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If dual-class vanished overnight, founders would lose voting control premium; boards would become accountable to all shareholders; capital would re-price governance risk; some long-horizon projects would lose protection and be cut; index funds would capture governance discount elimination; the corporate governance landscape would shift toward one-share-one-vote norm.",
+    "founding_problem": "The separation of ownership and control in public corporations creates short-termism: dispersed shareholders pressure managers for quarterly results, undermining long-horizon investment. Founders with concentrated control can resist this pressure and pursue multi-decade missions (e.g., Amazon's infrastructure build-out, Meta's metaverse pivot, Google's moonshots).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founder-stewardship narrative is attested by founders themselves (Bezos, Zuckerberg, Page/Brin, Musk) and some aligned long-horizon investors (e.g., Sequoia, Founders Fund). It is contested by corporate governance scholars (Bebchuk, Coates, Fisch), institutional investor coalitions (CII, ICGN), and empirical studies showing dual-class firms underperform on governance metrics and often destroy value after founder departure. No independent corroboration exists outside the beneficiary set."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Dual-class share structures concentrate voting control in founders (typically 10:1 or 20:1 super-voting shares) while minority shareholders hold low-vote shares. The founder_stewardship reading frames this as legitimate coordination: founders act as fiduciary stewards protecting long-horizon missions from short-term market pressure, benefiting all shareholders indirectly through superior value creation. The structural reality shows identifiable beneficiaries (founders, founding teams) and victims (minority shareholders, index funds) with active enforcement via charter provisions and state law. The constraint exhibits both coordination function (long-horizon insulation) and asymmetric extraction (control premium without economic proportion).",
+    "logic_rationale": "Extractiveness (0.62) reflects the control premium: founders capture voting rights worth 10-20x their economic stake, enforced by charter and DGCL. Suppression (0.55) is structural — minority shareholders cannot vote out founders, cannot approve M&A, face liquidity discounts; exit is selling at a discount. Theater ratio (0.32) rises over time as governance rituals (annual meetings, advisory votes) become performative while real decisions remain founder-controlled. Accessibility collapse (0.42) is moderate: single-class alternatives exist but dual-class IPOs have proliferated, reducing choice. Resistance (0.48) grows: shareholder proposals, litigation (e.g., Snap, Facebook), regulatory pressure (SEC, exchanges), but founder control blocks structural change.",
+    "directionality_logic": "Founders are structural beneficiaries (d ~0.15): they collect control premium, set agenda, face identity-locked exit. Founding teams are dual-positioned: beneficiaries of mission protection but payers of diluted voice (d ~0.35). Minority shareholders, public investors, and index funds are payers (d ~0.75-0.85): they provide capital, bear governance discount, have constrained/mobile exit. Board members are agenda_setters who benefit from the arrangement (d ~0.25). Proxy advisors and regulators are analytical observers (d ~0.5). The derivation chain from beneficiary/victim declarations + exit options produces this gradient; no overrides needed.",
+    "perspectival_gap": "From the founder seat, the constraint is genuine coordination — they built the company, bear the vision, and need protection from myopic capital. From minority shareholder seats, the same structure is extraction — they provided 90%+ of capital for <10% of votes. The board seat experiences it as comfortable administration. The engine computes per-seat types from these structural positions; the divergence is the measurement.",
+    "mandatrophy_analysis": "The founding problem (short-termism) is contested, not dead. Some founders genuinely use control for long-horizon value (Amazon, Tesla early years); others entrench after mission completion (Snap, later-stage Meta). The arrangement persists past its coordination function in many cases — a mandatrophy signal. But the reading's claim is that the problem remains live; the engine will test this via founding_problem_status x disappearance_verdict mismatch.",
+    "kernel_context": "This constraint is the founder_stewardship reading of the dual_class_legitimacy kernel. Sibling readings: minority_extraction (minority shareholders entitled to governance proportional to capital/risk) and disclosure_consent (legitimacy rests on informed consent under Securities Act disclosure, not control parity). This reading claims control is coordination; founder is fiduciary steward; dual-class protects mission from short-term pressure; Class A holders benefit indirectly via mission success. The structural delta from siblings: minority_extraction sees pure extraction with no coordination; disclosure_consent sees the constraint as valid only if disclosure was adequate at IPO — this reading asserts coordination function is sufficient regardless of consent quality."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a genuine coordination mechanism (rope/tangled_rope) or a constructed extraction mechanism (snare) dressed in stewardship language?",
+      "resolution_mechanism": "Compare long-horizon outcomes of dual-class vs. single-class firms controlling for founder presence, industry, and capital intensity. Track whether control premium correlates with mission success or founder entrenchment.",
+      "impact": "If coordination, the constraint is tangled_rope (coordination + asymmetric extraction). If extraction with coordination cover, it is snare. The founder_stewardship reading asserts the former; minority_extraction reading asserts the latter.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founder_stewardship reading's coordination claim holds structurally or is a cover story."
+    },
+    {
+      "id": "coordination_extraction_boundary",
+      "question": "How much of the voting control premium is necessary for long-horizon coordination vs. pure founder private benefit?",
+      "resolution_mechanism": "Natural experiments: sunset provisions (e.g., 7-year auto-conversion), post-founder transitions, jurisdictions with mandatory sunset (Hong Kong, UK premium listing). Measure whether mission execution degrades when control premium shrinks.",
+      "impact": "If coordination requires the full premium, the constraint is more rope-like. If partial sunset preserves coordination while reducing extraction, the current premium is partly extractive overhead.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The boundary between necessary coordination cost and extractive surplus in the control premium."
+    },
+    {
+      "id": "minority_consent_validity",
+      "question": "Does IPO disclosure of dual-class structure constitute meaningful consent by minority shareholders, or is consent structurally coerced by lack of alternatives?",
+      "resolution_mechanism": "Survey IPO investors on whether they could practically decline dual-class allocations; analyze whether dual-class IPOs are priced at a discount reflecting governance risk (implying forced acceptance) or at parity (implying willing consent).",
+      "impact": "Supports disclosure_consent sibling reading if consent is meaningful; undermines it if consent is illusory. The founder_stewardship reading does not depend on consent quality — it asserts coordination function suffices.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the disclosure_consent reading's legitimacy condition is met in practice."
+    },
+    {
+      "id": "suppression_mechanism_dual_class",
+      "question": "Is minority shareholder suppression structural (charter, law, liquidity discount) or internalized (investor resignation, index fund passivity, belief that founder control is normal)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if minority investors who sell dual-class holdings still perceive governance risk in other dual-class companies, suppression is internalized. If activism increases after negative outcomes (e.g., Meta 2022, Snap 2017), structural suppression dominates.",
+      "impact": "If internalized, effective suppression is higher than structural measure — the constraint shapes investor cognition beyond formal barriers. This affects directionality derivation for index_funds and public_market_investors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for minority shareholders."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "dual_class_legitimacy__minority_extraction",
+      "dual_class_legitimacy__disclosure_consent"
+    ],
+    "dual_formulation_note": "The dual_class_legitimacy kernel decomposes into three readings: founder_stewardship (this story, claims coordination), minority_extraction (claims pure extraction), disclosure_consent (claims legitimacy depends on consent quality). They share the same charter structure but differ on ε referent: founder_stewardship assesses the standing arrangement as coordination; minority_extraction assesses it as extraction; disclosure_consent assesses it as conditional on disclosure adequacy. Linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "minority_extraction",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "disclosure_consent",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "founder_as_fiduciary_steward",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "long_horizon_mission_primacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "founder_led_governance_model",
+    "drift_state": {
+      "moment": "contemporary_activism_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

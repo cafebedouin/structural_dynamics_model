@@ -1,0 +1,305 @@
+{
+  "header": {
+    "constraint_id": "kodashim_commandment_status__study_as_performance",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_kodashim_commandment_status__study_as_performance",
+    "measurement_id_prefix": "kodashim_study_perf",
+    "story_uid": "d52c0ca5-2731-4633-aa82-83d3cd1a5251"
+  },
+  "base_properties": {
+    "extractiveness": 0.0,
+    "suppression": 0.0,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Study of Kodashim Laws as Commandment Fulfillment",
+    "topic_domain": "religious/halakhic/commitment_system",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "kodashim_scholars",
+      "torah_students",
+      "yeshiva_institutions"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "talmud_torah_kneged_kulam",
+      "study_as_avodah_substitute",
+      "oral_torah_continuity"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_scholarly_construction",
+      "question": "Is the principle that study fulfills the sacrifice commandment a genuine structural feature of the halakhic system (Mountain), or a constructed reading that benefits the scholarly class by maintaining commandment relevance without Temple performance?",
+      "resolution_mechanism": "Historical analysis of when and how the 'study as performance' principle emerged in rabbinic literature; whether it appears as an discovered principle or an innovative response to Temple destruction.",
+      "impact": "If constructed, the constraint reclassifies from Mountain to Rope or Scaffold with identifiable beneficiaries (scholarly institutions); if natural, Mountain certification holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether study-as-fulfillment is discovered halakhic structure or scholarly innovation"
+    },
+    {
+      "id": "kernel_reading_disagreement_location",
+      "question": "What specific structural element do the three readings of kodashim_commandment_status disagree on?",
+      "resolution_mechanism": "Map each reading's axioms and reference frames to identify the precise node of divergence: the ontological status of the commandment without Temple, the definition of 'fulfillment', or the authority of post-Temple rabbinic enactment.",
+      "impact": "Locating the disagreement enables clean decomposition per ε-invariance; each reading gets its own ε over the same referent.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural locus of disagreement among study_as_performance, performance_only, messianic_deferral"
+    },
+    {
+      "id": "beneficiary_capture_of_kodashim_study",
+      "question": "Do yeshiva institutions and professional kodashim scholars materially benefit (funding, status, enrollment) from the study-as-fulfillment principle in ways that exceed the principle's intrinsic coordination value?",
+      "resolution_mechanism": "Sociological study of yeshiva funding models, enrollment patterns, and communal resource allocation tied to kodashim curriculum vs. other limmud.",
+      "impact": "If material capture exists, the Mountain claim masks extraction; the constraint would carry Tangled Rope dynamics at the institutional level.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether scholarly institutions extract rents from the study-as-fulfillment principle"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1948,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1967,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.0,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1948,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.05,
+      "basis": "observed"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "This constraint story represents the 'study_as_performance' reading of the contested kernel 'kodashim_commandment_status' — the halakhic status of Temple sacrifice commandments after the Temple's destruction. This reading, rooted in Talmudic passages (Menachot 110a, Ta'anit 27b), holds that engaging in the study of the sacrificial laws (kodashim) constitutes actual fulfillment of the commandments themselves. The kernel remains 'occupied' through intellectual engagement; no performance gap exists because study IS the performance mode available in exile. The reading carries zero extractiveness — no one is harmed by non-performance of literal sacrifices, and study is universally accessible. Beneficiaries are those who study (kodashim_scholars, torah_students, yeshiva_institutions), but the benefit is intrinsic commandment fulfillment, not external rent. The constraint claims Mountain status: the principle emerges from the internal logic of halakhah as a fixed structural feature, not a human policy choice.",
+    "key_agents": [
+      "kodashim_scholars: Primary beneficiary (institutional/identity_locked) — fulfill commandment through specialized study; institutional status depends on this principle",
+      "torah_students: Beneficiary (organized/identity_locked) — any engaged student accesses fulfillment; exit requires abandoning religious identity",
+      "yeshiva_institutions: Beneficiary/agenda_setter (institutional/constrained) — curriculum authority and communal funding tied to kodashim centrality",
+      "halakhic_decisors: Agenda_setter (institutional/analytical) — maintain and transmit the principle through psak and commentary",
+      "performance_only_adherents: Excluded (moderate/constrained) — hold competing reading; would object to Mountain claim",
+      "academic_observers: Observer (analytical/analytical) — study the constraint from outside the commitment system"
+    ],
+    "logic_rationale": "Extractiveness is zero because the arrangement creates no transfer from non-performers to performers — study is non-rivalrous and non-exclusionary. Suppression is zero because no enforcement mechanism compels study; the constraint operates through internalized religious commitment. Theater ratio is near-zero (0.05) because the study function is genuine — kodashim learning maintains detailed knowledge of Temple service that would otherwise be lost. Accessibility collapse is high (0.9) because within the commitment system, the principle that study fulfills the commandment is treated as structurally exhaustive — no alternative fulfillment mode exists without the Temple. Resistance is near-zero because the principle is broadly accepted across the traditional spectrum (even performance_only and messianic_deferral readings grant study a central role, differing only on whether it constitutes FULL fulfillment).",
+    "directionality_logic": "All named stakeholders are beneficiaries or agenda_setters — no victims exist. Kodashim_scholars and yeshiva_institutions sit at d ≈ 0.1 (beneficiary end) — they receive status and institutional coherence from the principle. Torah_students sit at d ≈ 0.0 (full beneficiary) — study is universally accessible and carries no cost beyond time/attention, which is religiously valued regardless. Halakhic_decisors sit at d ≈ 0.2 (mild beneficiary) — their authority is reinforced but not extractively. The performance_only and messianic_deferral readings are excluded from this constraint's beneficiary structure; they inhabit sibling constraints with different ε values.",
+    "perspectival_gap": "From inside the study_as_performance reading, the constraint is a Mountain — a discovered halakhic truth with zero extraction. From the performance_only reading's seat, the same principle appears as a Scaffold or Rope — a provisional coordination mechanism that papers over the Temple's absence. From the messianic_deferral seat, it appears as a Piton — a once-vital readiness mechanism now maintained partly by inertia. The engine will compute these seat divergences from the structural data; the authored claim (Mountain) reflects this reading's internal logic.",
+    "mandatrophy_analysis": "The founding problem (Temple destruction creating a performance gap for sacrifice commandments) is LIVE — the Temple remains unrebuilt. The arrangement (study-as-fulfillment) was built to solve this and continues to solve it. No mandatrophy: the constraint's function matches its founding problem. The mandate has not outlived its function because the condition (no Temple) persists. This distinguishes study_as_performance from the performance_only reading, which treats the mandate as suspended (dead founding problem, persisting husk).",
+    "kernel_context": "This constraint is the 'study_as_performance' reading of kernel 'kodashim_commandment_status'. The kernel is the halakhic status of Temple sacrifice commandments post-destruction. Sibling readings: 'performance_only' (commandment suspended without Temple; study is preparation only) and 'messianic_deferral' (commandment temporally suspended but not obsolete; study maintains readiness for restoration). This reading asserts study IS fulfillment — the kernel remains fully occupied through intellectual engagement. Zero extractiveness, no victims, full commandment force maintained."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "kodashim_commandment_status__performance_only",
+      "kodashim_commandment_status__messianic_deferral"
+    ],
+    "dual_formulation_note": "This constraint, performance_only, and messianic_deferral form the kodashim_commandment_status constraint family. They share the same kernel (Torah sacrifice commandments) but instantiate different constraints with different ε values: study_as_performance ε=0.0 (Mountain), performance_only ε≈0.3 (Snare or Piton — suspended commandment creates vacuum filled by rabbinic enactments), messianic_deferral ε≈0.15 (Rope or Scaffold — readiness maintenance with deferred fulfillment). The ε-invariance principle requires separate stories because the referent (the standing arrangement of kodashim commandments) yields different extraction profiles under each reading's lights."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.0
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "kodashim_scholars",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Specialized scholars who devote careers to kodashim literature. Their professional identity, communal status, and institutional positions (rosh yeshiva, posek, lecturer) depend on the principle that kodashim study is not merely preparatory but constitutively fulfills the commandments. Exit would require abandoning their professional-religious identity — the principle is fused with their self-concept as Torah scholars."
+    },
+    {
+      "name": "torah_students",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Students in yeshiva/kollel frameworks who engage in kodashim study as part of standard curriculum. They access commandment fulfillment through study without barriers — any committed student can participate. The benefit is intrinsic (religious fulfillment); the cost is time/attention which is religiously valued regardless. Exit from the benefit would mean ceasing Torah study, which is identity-incompatible for this population."
+    },
+    {
+      "name": "yeshiva_institutions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Institutions that structure curricula, allocate resources, and confer authority around kodashim mastery. They benefit from the principle's centrality — it justifies kodashim's place in the core curriculum, attracts students/donors, and validates the institutional model. As agenda_setters, they transmit and enforce the principle through curriculum design and rabbinic appointments. Exit is constrained: shifting away would undermine institutional legitimacy and funding."
+    },
+    {
+      "name": "halakhic_decisors",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Poskim and roshei yeshiva who authoritatively maintain the study-as-fulfillment principle through psak, commentary, and oral transmission. They do not personally extract from the constraint but administer the commitment system that sustains it. Their authority derives from mastery of the tradition that includes this principle. Exit is analytical — they could theoretically reject the principle but would lose standing within the tradition."
+    },
+    {
+      "name": "performance_only_adherents",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Those (including some modern Orthodox and academic Talmud scholars) who hold the 'performance_only' reading: without a Temple and altar, the sacrifice commandments are literally suspended; study is valuable preparation but not fulfillment. They are excluded from this constraint's beneficiary structure because they reject its core axiom. Their objection would be that the principle obscures the Temple's centrality and delays messianic expectation. Exit from exclusion requires adopting this reading, which contradicts their halakhic/ideological commitment."
+    },
+    {
+      "name": "academic_observers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars of religion, halakhic history, and Jewish studies who analyze the constraint from outside the commitment system. They neither benefit nor pay; they map the structural dynamics. Their exit is analytical — they can engage or disengage without identity cost."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains the operative force of the sacrifice commandments (kodashim) after the Temple's destruction by transposing physical performance into intellectual engagement, preserving the commandments as live obligations rather than historical artifacts.",
+    "transfer_function": "Moves nothing material. The arrangement transfers 'commandment fulfillment status' from the domain of physical sacrifice (no longer possible) to the domain of Torah study (universally accessible). No agent loses; all engaged students gain.",
+    "absent_voices": "The 'performance_only' and 'messianic_deferral' readings' adherents are structurally excluded from this constraint's beneficiary set — they would object that study-as-fulfillment either diminishes the Temple's uniqueness (performance_only) or complacently settles for intellectual substitute (messianic_deferral). They are present in the broader discourse but not in this constraint's coordination logic.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the study-as-fulfillment principle vanished overnight, the kodashim commandments would become inert historical text within the halakhic system. Yeshiva curricula would restructure (kodashim would become elective, not core), the conceptual framework of 'avodah shebalev' (service of the heart) would lose its primary halakhic anchor, and the continuity of sacrificial law as live obligation would rupture. The halakhic world would rearrange around a vacuum.",
+    "founding_problem": "The destruction of the Second Temple (70 CE) rendered the physical performance of sacrifice commandments impossible, creating a categorical gap: commandments that are Torah obligations with no available performance mode.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding problem (Temple destruction = performance impossibility) is attested by all three readings — performance_only, messianic_deferral, and study_as_performance all agree the Temple is destroyed and physical sacrifices cannot be offered. The disagreement is only on the commandment's status post-destruction. No party disputes the founding problem's reality; it is corroborated by historical fact, not merely by beneficiary assertion."
+  },
+  "uke_scope": {
+    "epsilon_bin": "none",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "performance_only",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "messianic_deferral",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "talmud_torah_as_avodah",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "study_fulfills_kodashim_commandments",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "study_fulfillment_framework",
+    "drift_state": {
+      "moment": "contemporary_post_1967",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

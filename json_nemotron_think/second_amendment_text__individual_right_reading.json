@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_text__individual_right_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sa_ir",
+    "story_uid": "f4cb8f95-d16c-4a61-b5fa-37b7d9a0e26a"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment — Individual Right Reading (Heller/Bruen Line)",
+    "topic_domain": "constitutional_law/firearms_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "individual_gun_owners",
+      "gun_rights_advocacy_orgs",
+      "firearms_industry"
+    ],
+    "victims": [
+      "prohibited_possessors_felons",
+      "prohibited_possessors_domestic_abusers",
+      "residents_in_restrictive_jurisdictions",
+      "gun_violence_victims"
+    ],
+    "vindicated_propositions": [
+      "individual_self_defense_right",
+      "operative_clause_independence_from_militia",
+      "textual_originalism_methodology"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "individual_gun_owners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold a constitutionally protected right to possess firearms for self-defense in the home (Heller) and carry in public (Bruen). Benefit from judicial invalidation of bans and restrictive permitting. Exit options limited by state-level variation — can relocate but face federal floor. Organized through advocacy groups (NRA, GOA, FPC) that litigate and lobby."
+    },
+    {
+      "name": "gun_rights_advocacy_orgs",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Litigate to expand the right, fund test cases, grade legislators, mobilize voters. Capture the institutional agenda on firearms policy — set the terms of debate, choose the courts, frame the history. Collect membership dues and donations that scale with perceived threat level. Exit is arbitrage-grade: can shift venues (state vs federal), forums (legislative vs judicial), and narratives."
+    },
+    {
+      "name": "firearms_industry",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Commercial beneficiary of expanded legal markets — every invalidated restriction increases addressable market. Funds advocacy directly and through trade associations (NSSF). Protected by PLCAA from most tort liability. Exit is mobile: can shift product lines, distribution channels, and marketing emphasis across jurisdictions."
+    },
+    {
+      "name": "prohibited_possessors_felons",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Categorically barred from firearm possession under federal law (18 U.S.C. § 922(g)(1)) and state analogues, regardless of offense nature, time elapsed, or rehabilitation. Violation carries mandatory minimums. No individualized relief mechanism in most jurisdictions. Trapped by status — exit requires executive clemency or judicial restoration, both rare and politicized."
+    },
+    {
+      "name": "prohibited_possessors_domestic_abusers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Barred under 18 U.S.C. § 922(g)(8)-(9) based on protective orders or misdemeanor convictions. Rahimi (2024) upheld the prohibition but narrowed to dangerousness findings. Still categorical in practice — no individualized hearing in many states. Trapped by relationship status and court orders they cannot unilaterally modify."
+    },
+    {
+      "name": "residents_in_restrictive_jurisdictions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Subject to permitting regimes (may-issue → shall-issue post-Bruen, but sensitivity/good-character clauses persist), assault weapon bans, magazine limits, waiting periods, registration. Bear compliance costs, delays, denials. Exit is constrained: can move but face employment, family, housing ties. Bruen's history-and-tradition test creates litigation pressure but compliance burden remains during pendency."
+    },
+    {
+      "name": "gun_violence_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the externalized harm of expanded legal access — shootings, suicides, domestic homicides, accidental discharges. No standing in the constitutional calculus of the right; their interests appear only in state police-power justifications that courts increasingly discount. Exit is structural: cannot opt out of the risk environment created by pervasive legal carry and ownership."
+    },
+    {
+      "name": "state_legislatures_restrictive",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Enact and defend regulations (permitting, bans, sensitivity zones) under Bruen's history-and-tradition framework. Must analogize modern laws to founding-era analogues — a judicial test that constrains legislative creativity. Constrained exit: can repeal or amend but face primary challenges, preemption suits, and judicial invalidation."
+    },
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicates the scope of the right via history-and-tradition test (Bruen). Lower courts apply; Supreme Court sets the framework. Not a beneficiary in the extraction sense — collects no rents — but structurally administers the constraint. Exit is analytical: can only be changed by appointments, constitutional amendment, or court-packing."
+    },
+    {
+      "name": "public_health_researchers",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study firearm injury epidemiology, policy effects, prevention. Dickey Amendment legacy suppressed funding; post-2019 appropriations restored some. Provide evidence that the constraint's beneficiaries and agenda-setters routinely discount. Analytical exit — can publish, testify, but cannot compel policy uptake."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a judicially enforceable floor for individual firearm possession and carry, resolving the pre-Heller ambiguity where circuits split on individual vs collective right. Coordinates expectations of owners, police, prosecutors, and legislatures around a core self-defense entitlement.",
+    "transfer_function": "Transfers regulatory authority from legislatures to courts — the history-and-tradition test (Bruen) moves the locus of firearms policy from democratic majorities to judicial historical analogy. Transfers risk from state (disarmed populace) to individuals (gun violence victims, prohibited persons). Transfers compliance costs to residents in restrictive jurisdictions and prohibited possessors.",
+    "absent_voices": "Gun violence victims and their communities — disproportionately Black and Brown urban populations — are structurally excluded from the constitutional calculus. The right's beneficiaries (organized gun owners) are predominantly white, rural/suburban, male. Future generations who will inherit the mortality burden have no voice. Public health apparatus was actively silenced (Dickey Amendment) for two decades.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the individual right reading vanished overnight, the collective security reading would become controlling. Permitting regimes would revert to may-issue or be eliminated entirely (no individual right to carry). Assault weapon bans, magazine limits, universal background checks, and registration would face no Second Amendment barrier. The firearms industry would lose its constitutional shield. Police would lose the 'armed citizen' assumption in encounter protocols. The entire regulatory architecture of the last 15 years would invert.",
+    "founding_problem": "Founding-era fear that the new federal government would disarm the state militias by prohibiting individual arms ownership, leaving states defenseless against federal tyranny and citizens unable to participate in the militia system. The right was understood as protecting the individual's capacity to keep and bear arms for militia service and personal self-defense as a corollary.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Originalist historians outside the gun-rights movement (Jack Rakove, Saul Cornell, Carol Anderson) argue the founding problem was collective — ensuring state militia viability — not individual self-defense. The Heller majority's historical narrative has been contested in peer-reviewed journals (Fordham Law Review, Yale Law Journal) and in Bruen dissents. No consensus among historians; the corroborating sources for the individual-right framing are predominantly law-office history produced by advocates."
+  },
+  "interval": {
+    "start": 2008,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story captures the individual-right reading of the Second Amendment operative clause ('the right of the people to keep and bear arms shall not be infringed') as crystallized in District of Columbia v. Heller (2008), incorporated in McDonald v. Chicago (2010), and expanded in New York State Rifle & Pistol Association v. Bruen (2022). The reading treats the prefatory militia clause as merely announcing a purpose, not limiting the operative clause's guarantee. Personal self-defense — especially in the home — is the core protected activity. The constraint is the legal rule-set that flows from this reading: categorical protection for common-use arms, history-and-tradition test for regulations, strong presumption against permitting regimes. It is a tangled rope: genuine coordination (provides a stable, enforceable floor for self-defense rights, resolves circuit splits) coexists with asymmetric extraction (categorical disarmament of felons and domestic abusers without individualized hearings, externalization of mortality risk onto gun violence victims, regulatory capture of state police power by judicial history test).",
+    "logic_rationale": "Extractiveness (0.58) reflects the constraint's dual nature: it provides real coordination value (clear right, judicial enforceability) but extracts heavily from prohibited possessors (lifetime bans without individualized review) and residents of restrictive jurisdictions (compliance costs, delays, denials). The mortality externality on gun violence victims is a structural extraction not priced into the constraint. Suppression (0.72) is high because the constraint's persistence depends on active judicial enforcement — lower courts applying Bruen's history-and-tradition test, striking laws, enjoining enforcement. Theater (0.38) is moderate: the history-and-tradition test has performative elements (cherry-picked analogues, law-office history) but produces real invalidations. Accessibility collapse (0.62) reflects that alternatives (moving, non-firearm self-defense, legislative reform) exist but are constrained. Resistance (0.75) is high: the reading faces sustained political, scholarly, and state-level resistance.",
+    "directionality_logic": "Individual gun owners and advocacy orgs are structural beneficiaries (d ≈ 0.15-0.25): they collect the right's protection, control the litigation agenda, face minimal compliance burden. Firearms industry is a beneficiary with mobile exit (d ≈ 0.2). Prohibited possessors (felons, domestic abusers) are full targets (d ≈ 0.9-1.0): trapped by status, bear categorical bans with no relief. Residents in restrictive jurisdictions are constrained payers (d ≈ 0.6-0.7): bear compliance costs but have some mobility and political recourse. Gun violence victims are trapped payers (d ≈ 0.95): bear externalized mortality risk with zero voice in the constitutional calculus. State legislatures are constrained agenda-setters (d ≈ 0.5): they administer regulations but under judicial straitjacket. Federal judiciary is the analytical/administering seat (d ≈ 0.5). The derivation chain from beneficiary/victim declarations + exit options produces these directionalities.",
+    "perspectival_gap": "From the beneficiary seats (gun owners, advocacy orgs), the constraint appears as a genuine rope — a coordination mechanism securing a natural right against majoritarian erosion. From the payer seats (prohibited possessors, gun violence victims), it appears as a snare — categorical extraction enforced by state power with no exit. The agenda-setter seats (judiciary, restrictive legislatures) experience it as a tangled rope: they must administer a framework they did not choose, under rules (history-and-tradition) that constrain their discretion. The engine computes this divergence from the structural data; the claimed_type (tangled_rope) reflects the authoring seat's assessment that both coordination and extraction are structurally real.",
+    "mandatrophy_analysis": "The founding problem (federal disarmament of militias) is historically dead — the militia system has been replaced by the National Guard and standing military. Yet the arrangement persists and expands. The mandatrophy is not resolved: the constraint has colonized new domains (public carry, assault weapons, magazine limits) far beyond the founding concern. The coordination function (individual self-defense floor) is real but the extraction function has grown disproportionately. The history-and-tradition test acts as a ratchet: each new regulation must find a founding-era analogue, which becomes harder as technology and society diverge, so the constraint's extractive reach expands over time. This is classic mandatrophy — the original mandate is dead but the constraint not only persists but metastasizes.",
+    "kernel_context": "This constraint is the individual_right_reading of the second_amendment_text kernel. Sibling readings: collective_security_reading (militia clause conditions the right; state may regulate for collective security) and originalist_civic_virtue_reading (founding-era militia = universal armed citizenry; right protects citizen-soldier capacity). This reading forecloses the collective_security_reading within any single legal framework — the core premises are logically incompatible. It coexists_with the originalist_civic_virtue_reading, which shares the individual-right conclusion but differs on the civic-duty framing and historical scope. This reading influences both siblings by setting the controlling Supreme Court precedent (Heller/Bruen) that they must respond to."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is the individual-right reading a genuine discovery of the Amendment's original meaning, or a constructed doctrine serving contemporary political interests?",
+      "resolution_mechanism": "Convergence of independent historical scholarship (not law-office history) on the founding-era understanding of 'the people,' 'keep and bear arms,' and the militia clause's syntactic function.",
+      "impact": "If constructed, the constraint's claimed natural-law status (deontological axiom) collapses to conventional/instrumental — reclassifying the extraction as political choice rather than rights vindication.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether this reading reflects original meaning or modern construction."
+    },
+    {
+      "id": "naturalness_ambiguity",
+      "question": "Does the right protected by this reading exist as a pre-political natural right, or is it a positive-law creation of the constitutional text and judicial interpretation?",
+      "resolution_mechanism": "Cross-jurisdictional comparison: do jurisdictions without a Second Amendment analogue (UK, Japan, Germany) lack the self-defense protections this reading treats as fundamental?",
+      "impact": "If natural right, the constraint is a mountain (emerges_naturally) misclassified as tangled_rope. If positive law, the extraction metrics are correctly calibrated and the claimed_type is a false summit.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Natural-right vs positive-law ontology of the protected activity."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression experienced by prohibited possessors and restrictive-jurisdiction residents primarily structural (legal penalties, enforcement) or internalized (chilling effect, compliance culture, identity foreclosure)?",
+      "resolution_mechanism": "Post-Bruen natural experiment: measure compliance rates, chilling effects, and self-censorship in jurisdictions where laws remain on books but are enjoined or unenforced.",
+      "impact": "If substantially internalized, the constraint's effective suppression exceeds the legal-penalty measure — the constraint operates through identity and norm internalization, not just state force.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanisms for payer seats."
+    },
+    {
+      "id": "history_tradition_test_coherence",
+      "question": "Is the Bruen history-and-tradition test a coherent, neutrally applicable legal standard, or an indeterminate method that produces results aligned with the judiciary's policy preferences?",
+      "resolution_mechanism": "Inter-circuit consistency analysis: do different circuits applying the same test reach the same results on identical regulations? Measure variance in historical analogue selection.",
+      "impact": "If incoherent, the constraint's coordination function degrades — the 'floor' becomes a moving target, increasing theater_ratio and decreasing legitimacy. The constraint shifts toward piton or snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Coherence of the judicial test that administers the constraint."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "federal_firearms_regulatory_framework",
+      "state_permit_regimes",
+      "red_flag_laws",
+      "assault_weapon_bans",
+      "universal_background_check_mandates",
+      "second_amendment_text__collective_security_reading",
+      "second_amendment_text__originalist_civic_virtue_reading"
+    ],
+    "dual_formulation_note": "This constraint is one member of the second_amendment_text constraint family. The three readings decompose the Amendment's colloquial label into structurally distinct claims with different ε, different beneficiary/victim sets, and different types. The individual_right_reading has the highest extractiveness (0.58) because it categorically protects a broad class of arms and carries, disarms prohibited possessors without individualized review, and externalizes mortality risk. The collective_security_reading would have near-zero extractiveness (mountain-like) but is foreclosed by current precedent. The originalist_civic_virtue_reading sits between — lower extraction than individual_right (civic-duty framing implies collective responsibility) but higher than collective_security."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "collective_security_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "originalist_civic_virtue_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_self_defense_core",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "operative_clause_independent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "heller_mcdonald_framework",
+    "drift_state": {
+      "moment": "post_bruen_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "header": {
+    "constraint_id": "dignified_death__relational_autonomy",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_dignified_death__relational_autonomy",
+    "measurement_id_prefix": "dignified_death_relational_autonomy",
+    "story_uid": "9e6a6ea1-6f1b-4751-8d65-bdd6f92b9b20"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Relational Autonomy Model for Dignified Death Decisions",
+    "topic_domain": "bioethics/medical_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "relational_network"
+    ],
+    "victims": [
+      "unrepresented_patients",
+      "overridden_clinicians"
+    ],
+    "vindicated_propositions": [
+      "shared_decision_making_doctype",
+      "relational_personhood_thesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "patient_in_triad",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Participates in shared deliberation with family and clinicians; values and preferences are central but not determinative. May experience procedural safeguards as protective or as dilution of self-determination. Exit means refusing the triad process and demanding unilateral authority (often legally blocked) or accepting clinical paternalism."
+    },
+    {
+      "name": "family_members",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Hold recognized standing in the deliberation; their relational knowledge and caregiving burden give them procedural weight. May bear emotional cost of decision-making and subsequent guilt or conflict. Exit means withdrawing from the process (risking patient isolation) or seeking legal guardianship to override."
+    },
+    {
+      "name": "treating_clinician",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Frames medical options, assesses capacity, and often chairs the deliberation; professional authority and liability exposure give structural agenda-setting power. Benefits from shared responsibility and legal safe harbor. Exit means refusing to participate in assisted dying (conscience clause) or transferring care — both professionally costly but feasible."
+    },
+    {
+      "name": "ethics_committee",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Designs and enforces procedural safeguards (capacity assessment, cooling-off periods, documentation requirements). Collects institutional legitimacy from managing the process. Exit is not applicable — the committee IS the enforcement structure."
+    },
+    {
+      "name": "legal_system",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enacts statutory frameworks that authorize or prohibit the triad model; courts adjudicate disputes when the process breaks down. The legal framework's legitimacy depends on appearing to balance autonomy and protection. Exit means legislative repeal or judicial reinterpretation — slow, high-stakes, politically mediated."
+    },
+    {
+      "name": "unrepresented_patients",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Patients without family or social network to form the triad; the model's procedural safeguards assume a relational context that does not exist for them. They face either exclusion from the process (decision defaults to clinicians/state) or simulated participation with appointed surrogates who lack relational knowledge. No meaningful exit — they are structurally invisible to the coordination mechanism."
+    },
+    {
+      "name": "overridden_clinicians",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Clinicians whose medical judgment is subordinated to the triad's consensus (e.g., when family insists on treatment clinician judges futile, or when patient requests hastened death clinician cannot support). Bear moral distress and liability risk without decisional authority. Exit means conscience objection (career-costly) or leaving the specialty."
+    },
+    {
+      "name": "autonomy_primary_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocate for unilateral patient self-determination (advance directives, voluntary assisted dying on request). View the triad model as paternalistic dilution of autonomy. Excluded from the triad's internal deliberation but active in legislative and litigation challenges to procedural safeguards."
+    },
+    {
+      "name": "sanctity_primary_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Oppose any intentional life-termination as intrinsically wrong. View the triad model as a procedural veneer for euthanasia. Excluded from the deliberation but politically potent in blocking legalization. Their exit would be total withdrawal from the healthcare system — not observed."
+    },
+    {
+      "name": "bioethics_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the triad model's coherence, empirical outcomes, and philosophical foundations. No material stake in individual decisions; professional reputation tied to the discourse. Exit is intellectual disengagement — always available."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates end-of-life decisions across three epistemically distinct perspectives — patient's values, family's relational knowledge and caregiving reality, clinician's medical expertise — through structured deliberation with procedural safeguards (capacity assessment, cooling-off periods, documentation, ethics review) that aim to prevent both premature death and unwanted prolongation of suffering.",
+    "transfer_function": "Moves final decision authority from unilateral patient choice (autonomy model) or clinical paternalism (sanctity model) to a negotiated triad consensus. The transfer is not purely financial — it moves moral responsibility, legal liability, emotional burden, and epistemic authority across the three seats. The relational network (functioning triad) receives the benefit of shared legitimacy; unrepresented patients and overridden clinicians bear the cost of structural misfit.",
+    "absent_voices": "Unrepresented patients (no family to complete the triad) are structurally silenced by the model's relational premise. Autonomy-primary advocates (patient as sole authority) and sanctity-primary advocates (life as inviolable) are excluded from the triad's internal deliberation but contest it externally through litigation and legislation. Dissenting family members whose views are overridden by consensus are present but not heard — the process records consensus, not dissent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the triad model vanished overnight, jurisdictions would revert to either pure autonomy frameworks (patient-alone decision, as in some assisted dying laws) or clinical/legal paternalism (clinician or court decides, as in traditional medical ethics), or legislative prohibition (sanctity model). The coordination vacuum would be filled by one of the sibling readings — the world would rearrange around a different authority structure.",
+    "founding_problem": "Mid-20th century medicalization of death created a crisis: clinicians held de facto life-ending authority without accountability; patients had no recognized voice; families were excluded from decisions about their dying relatives. The triad model was built to solve the legitimacy vacuum by distributing authority across the three parties who actually live with the consequences.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem is attested by bioethics historians (Jonsen, Siegler, Winslade) and early clinical ethics committee records from outside the benefiting clinical establishment. Autonomy-primary advocates corroborate that clinician paternalism was the dominant problem but argue the triad over-corrected. Sanctity-primary advocates dispute the problem framing entirely, asserting the crisis was manufactured to legitimize killing. No single corroborator outside all three readings exists — the genealogy itself is contested terrain."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The relational autonomy model for dignified death decisions distributes authority across a patient-family-clinician triad with procedural safeguards. It emerged in the 1980s-90s as a response to clinician paternalism and the perceived inadequacy of pure autonomy models. The constraint is claimed as a rope — a genuine coordination problem (aligning three perspectives on a high-stakes, irreversible decision) with high procedural overhead. Extraction is moderate (0.38): the triad structure extracts compliance from unrepresented patients and overridden clinicians, but the coordination function is real and the safeguards serve a protective purpose. Suppression is moderate (0.42): the model's legal enforcement blocks both unilateral patient requests and clinician unilateral decisions, but alternatives (pure autonomy, sanctity) remain live in public discourse and some jurisdictions. Theater is low-moderate (0.28) and rising: early ethics committees were substantive deliberative bodies; later proceduralization has made some safeguards performative (checkbox capacity assessments, mandatory waiting periods that serve no epistemic function).",
+    "logic_rationale": "Extractiveness 0.38 reflects that the triad's procedural overhead (ethics review, cooling-off periods, documentation) imposes real costs — time, emotional labor, foregone autonomy — that fall disproportionately on unrepresented patients and clinicians whose judgment is subordinated. But the coordination function is genuine: without structured deliberation, the three perspectives cannot be integrated, leading to either unilateral decisions or paralyzed conflict. Suppression 0.42 reflects that the model actively prevents both pure autonomy and pure sanctity arrangements from operating where it is law, but does not eliminate them as live alternatives elsewhere. Theater 0.28 captures the drift from substantive ethics consultation to procedural compliance theater. The claim (rope) and metrics are independently authored — the engine will compute per-seat types from the structural data.",
+    "directionality_logic": "The relational_network (functioning triad) is the structural beneficiary: it collects the legitimacy and risk-distribution benefits of shared decision-making. Unrepresented_patients are full targets (d ≈ 0.9): the model's relational premise excludes them by design, and they have no exit — trapped. Overridden_clinicians are high targets (d ≈ 0.75): they bear moral distress and liability without authority, exit is constrained (conscience objection is career-costly). Patient_in_triad and family_members sit near symmetric (d ≈ 0.5): they gain protection and relational integrity but cede unilateral authority. Treating_clinician, ethics_committee, and legal_system are agenda_setters with beneficiary subsidy (d ≈ 0.15-0.25): they control the process and gain institutional legitimacy. Autonomy_primary_advocates and sanctity_primary_advocates are excluded (d not computed — they are not governed by the constraint but contest its legitimacy).",
+    "perspectival_gap": "The payer seats (unrepresented_patients, overridden_clinicians) experience the constraint as a snare: extraction without coordination benefit, no meaningful exit. The beneficiary seats (patient_in_triad, family_members) experience it as a rope: genuine coordination with shared costs. The agenda_setter seats (clinician, ethics_committee, legal_system) experience it as a scaffold: transitional coordination meant to stabilize a domain in flux, but with no sunset clause — the 'temporary' procedural framework has become permanent. The engine will compute this divergence from the structural data; the authored claim (rope) reflects the coordinator's self-understanding, not the victims' experience.",
+    "mandatrophy_analysis": "The founding problem (clinician paternalism, patient voicelessness) is contested as live/dead. If dead (autonomy-primary view: advance directives and legal reforms solved it), the triad persists as mandatrophy — a coordination structure whose function has atrophied but whose procedural overhead remains. If live (relational view: new medical technologies create novel decision contexts), the constraint remains a rope. If the problem was never the true driver (sanctity view: the triad was always a Trojan horse for euthanasia), it is a snare from inception. The classification prevents mislabeling by forcing the structural question: who benefits from the triad's persistence, and does the coordination function still match the problem?",
+    "kernel_context": "This constraint instantiates the 'relational_autonomy' reading of the contested kernel 'dignified_death'. Sibling readings: 'autonomy_primary' (dignity = self-determination; patient has final authority) and 'sanctity_primary' (dignity = intrinsic life value; intentional life-termination always prohibited). This reading's structural delta: beneficiary = relational_network (the functioning triad); victims = those excluded by the triad structure (unrepresented_patients, overridden_clinicians). Moderate ε (0.38). Claimed type: rope. The kernel's ambiguity — whether dignity is a property of the individual, the relationship, or life itself — is the structural fault line across readings."
+  },
+  "omegas": [
+    {
+      "id": "committer_structure_ambiguity",
+      "question": "Is the relational_autonomy reading a genuine coordination structure, or does it function as a procedural veneer for expanding assisted dying access (as sanctity_primary alleges) or as a paternalistic barrier to autonomy (as autonomy_primary alleges)?",
+      "resolution_mechanism": "Compare jurisdictions with triad models vs. pure autonomy models on: (a) rate of assisted dying requests granted, (b) rate of unrepresented patients receiving default life-prolongation, (c) clinician moral distress scores. If triad jurisdictions show higher grant rates than autonomy jurisdictions, the veneer hypothesis gains support; if they show lower unrepresented-patient harm, the coordination hypothesis gains support.",
+      "impact": "If veneer: reclassify as snare (coordination story is cover for extraction toward death). If paternalistic barrier: reclassify as tangled_rope (genuine coordination + asymmetric extraction against autonomy). If genuine coordination: rope stands.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the triad model's coordination function is authentic or instrumental to a sibling reading's agenda."
+    },
+    {
+      "id": "procedural_safeguard_authenticity",
+      "question": "Do the procedural safeguards (capacity assessment, cooling-off periods, ethics review) perform genuine epistemic work, or have they become performative compliance theater that extracts time and emotional labor without improving decision quality?",
+      "resolution_mechanism": "Empirical study of safeguard outcomes: do cooling-off periods change decisions? Do ethics committee reviews alter clinical plans? Do capacity assessments using standardized tools correlate with independent psychiatric evaluation? Measure decision regret at 6/12 months across jurisdictions with varying safeguard intensity.",
+      "impact": "If performative: theater_ratio is understated; constraint drifts toward piton. If genuine: rope classification holds; extraction is the price of coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's rising theater_ratio reflects real functional decay or measurement artifact."
+    },
+    {
+      "id": "unrepresented_patient_exclusion_mechanism",
+      "question": "Is the exclusion of unrepresented patients a necessary consequence of the relational premise (no relations = no triad), or a design choice that could be remedied by appointed relational proxies (e.g., patient advocates, community representatives)?",
+      "resolution_mechanism": "Survey jurisdictions with triad models: how are unrepresented patients handled? Compare outcomes (treatment intensity, place of death, family satisfaction proxy) for unrepresented patients under triad vs. autonomy vs. sanctity frameworks. Test whether appointed proxies improve alignment with inferred patient values.",
+      "impact": "If remediable design choice: the victim set is contingent, not structural — constraint could be reformed without abandoning relational premise. If necessary consequence: the relational premise itself generates structural victims, supporting tangled_rope or snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the triad's structural exclusion of the relationally isolated is fixable within the model."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "dignified_death__autonomy_primary",
+      "dignified_death__sanctity_primary"
+    ],
+    "dual_formulation_note": "The dignified_death kernel decomposes into three constraint stories: autonomy_primary (patient-final-authority), relational_autonomy (this story — triad deliberation), sanctity_primary (life-inviolable). Each reading instantiates a distinct constraint with different beneficiary/victim structures and ε values. They form a constraint family linked by shared kernel_id. The relational_autonomy reading coordinates identity (what kind of death counts as dignified) across the triad; the autonomy_primary reading coordinates individual preference; the sanctity_primary reading coordinates adherence to transcendent norm. All three claim to solve the founding problem of medicalized death but disagree on what the problem IS."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.3
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "autonomy_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sanctity_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dignity_grounded_in_relational_context",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "decision_authority_distributed_across_triad",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "shared_decision_making_emergence_1980s",
+    "drift_state": {
+      "moment": "contemporary_legalization_wave",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "dignified_death_kernel"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

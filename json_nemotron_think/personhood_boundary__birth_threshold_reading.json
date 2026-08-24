@@ -1,0 +1,320 @@
+{
+  "header": {
+    "constraint_id": "personhood_boundary__birth_threshold_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_personhood_boundary__birth_threshold_reading",
+    "measurement_id_prefix": "personhood_boundary__birth_threshold_reading",
+    "story_uid": "b943425d-df16-4ae0-b22a-86491183839f"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.45,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Personhood Begins at Birth; All Born Humans Possess Moral Standing",
+    "topic_domain": "moral_philosophy/historical_ethics/commitment_systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "born_humans"
+    ],
+    "victims": [
+      "state_authority"
+    ],
+    "vindicated_propositions": [
+      "universal_human_dignity_at_birth",
+      "prohibition_on_infanticide",
+      "equal_protection_under_law"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "natural_law_vs_constructed_norm",
+      "question": "Is the birth threshold for personhood a genuine natural moral law (Mountain) or a constructed norm that benefits identifiable agents (Tangled Rope/Snare)?",
+      "resolution_mechanism": "Cross-cultural historical analysis of personhood boundaries; convergence/divergence of independent moral traditions on birth as threshold; empirical test of whether the constraint persists without active enforcement.",
+      "impact": "If natural law, classification should be Mountain with emerges_naturally=true and negligible extraction. If constructed, current Tangled Rope classification stands and extraction metrics reflect enforcement costs borne by state authority.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the birth threshold is a mind-independent moral fact or a socially maintained commitment."
+    },
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "How does this reading's structural relationship to the personhood_boundary kernel differ from its sibling readings?",
+      "resolution_mechanism": "Comparative analysis of the three readings' beneficiary/victim sets, enforcement requirements, and authority grounding. The engine computes per-reading classifications from structural data.",
+      "impact": "If sibling readings produce different constraint types (e.g., fitness_contingent_reading as Snare extracting from disabled infants), the kernel's internal structure explains contestation patterns.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committee-frame omega: this constraint is the birth_threshold_reading of kernel personhood_boundary; siblings are fitness_contingent_reading and potential_based_reading. Structural deltas: this reading includes all born infants in beneficiary set (protected class), forecloses state exclusion authority; siblings exclude subsets of born humans."
+    },
+    {
+      "id": "enforcement_as_extraction_on_state",
+      "question": "Does the active enforcement of universal birth personhood constitute asymmetric extraction from state authority, or is the state's compliance cost the price of legitimate coordination?",
+      "resolution_mechanism": "Measure state capacity diverted to enforcing universal protection vs. counterfactual exclusionary regimes; assess whether states gain net legitimacy benefit exceeding enforcement cost.",
+      "impact": "If net extraction from state, Tangled Rope classification strengthens. If net coordination benefit to state, Rope classification may apply.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint's coordination function (universal protection) generates net benefit for the enforcing authority or net cost."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 250,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 250
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the birth_threshold_reading of the personhood_boundary kernel: the claim that personhood attaches at birth and all born humans possess full moral standing. Historically, this reading emerged from natural law traditions, religious doctrines (e.g., ensoulment at birth), and modern human rights frameworks (UDHR Article 1, CRC). It functions as a constraint on state power — prohibiting infanticide, mandating equal legal protection, and denying state authority to exclude any born human from personhood. The reading claims Mountain status (natural moral fact), but its historical trajectory shows rising enforcement costs (suppression_requirement increasing from 0.3 to 0.45 over 250 time units) and moderate extraction from state exclusionary authority (extractiveness 0.35). The constraint requires active enforcement through criminal law, child protection systems, and international monitoring. Its beneficiaries are all born humans; its cost-bearers are state authorities that lose exclusionary discretion. Two sibling readings contest the kernel: fitness_contingent_reading (personhood requires demonstrated capacities) and potential_based_reading (personhood requires potential for rational agency). Both exclude subsets of born humans that this reading protects.",
+    "logic_rationale": "Extractiveness (0.35) reflects the constraint's transfer of exclusionary power from state to protected class — states lose the authority to define personhood boundaries. Suppression (0.45) captures the coercive machinery needed to prevent exclusionary practices (infanticide, selective neglect, discriminatory laws). Theater ratio (0.15) is low: enforcement machinery (courts, child welfare, international bodies) performs genuine protective work, though performative rhetoric exists. Accessibility collapse (0.65) is moderately high: alternative personhood boundaries (fitness, potential) remain conceptually available but are legally foreclosed in jurisdictions adopting this reading. Resistance (0.55) reflects persistent philosophical contestation and pockets of non-compliance (e.g., neonatal euthanasia debates, abortion-as-infanticide framings). The claimed_type is tangled_rope because the constraint combines genuine coordination (universal protection solving the 'who counts' problem) with asymmetric extraction (state loses exclusionary power) and requires active enforcement.",
+    "directionality_logic": "Born humans are structural beneficiaries (d ~ 0.15): the constraint subsidizes their survival and legal standing. State authority is the primary payer (d ~ 0.85): it bears enforcement costs and loses exclusionary discretion. Medical professionals are secondary payers (d ~ 0.7): constrained in treatment decisions for severely disabled newborns. Fitness-contingent and potential-based advocates are excluded (d not computed): their readings are foreclosed within frameworks adopting this constraint. Moral philosophers are observers (d = 0.5): analytical seat, neither collecting nor paying. The engine will derive directionality from these structural positions plus exit options: born humans are identity_locked (cannot exit personhood), state authority is constrained (can reform but not abolish without regime change), medical professionals are constrained (professional ethics bind them).",
+    "perspectival_gap": "From the born human seat (identity_locked, universal scope), the constraint appears as Mountain — natural, unchosen, defining their moral existence. From the state authority seat (institutional, national scope, constrained exit), it appears as Tangled Rope — coordination function (stable citizenry) mixed with extraction (lost exclusionary power). From the excluded advocate seats, it appears as Snare — their coherent alternative readings are suppressed by the constraint's enforcement. The engine computes these per-seat types from the structural data; the divergence is the measurement.",
+    "mandatrophy_analysis": "The founding problem — 'prevent arbitrary exclusion of born humans from moral/legal protection' — remains live (contested status). The constraint has not atrophied into a Piton: enforcement is active, not theatrical; extraction is not diffuse but targeted at exclusionary authority. No concentrated beneficiary captures the extraction — protection is universal. Mandatrophy is not resolved: the constraint's function (universal protection) is still the live problem it was built to solve, though the fitness/potential readings contest whether the solution is over-inclusive.",
+    "kernel_context": "This constraint is the birth_threshold_reading of kernel personhood_boundary. Sibling readings: fitness_contingent_reading (personhood contingent on demonstrated fitness; pre-fitness entities lack moral standing) and potential_based_reading (personhood grounded in potential for rational agency; severely disabled infants may lack standing). This reading's structural delta: all born infants in beneficiary set (protected class); killing any born human is homicide; no state authority to exclude. The three readings form a constraint family linked by network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "personhood_boundary__fitness_contingent_reading",
+      "personhood_boundary__potential_based_reading"
+    ],
+    "dual_formulation_note": "Kernel personhood_boundary decomposes into three readings with distinct ε values and beneficiary/victim structures. birth_threshold_reading (this story): ε≈0.35, beneficiaries=born_humans, victims=state_authority, type=tangled_rope. fitness_contingent_reading: ε higher (excludes disabled infants), beneficiaries=fit_humans, victims=pre_fitness_infants, type=snare. potential_based_reading: ε moderate, beneficiaries=potential_agents, victims=severely_disabled_infants, type=tangled_rope. The upstream reading (birth_threshold) influences downstream readings by setting the dominant legal baseline that siblings must contest."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "born_humans",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "All born humans are the protected class. They cannot exit personhood — it constitutes their moral and legal identity. The constraint guarantees them protection from killing, equal legal standing, and inclusion in the moral community. They do not administer the constraint; they receive its protection. Their situation is defined by vulnerability: without this constraint, they are exposed to infanticide, abandonment, and legal exclusion."
+    },
+    {
+      "name": "state_authority",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The state enacts and enforces laws implementing universal birth personhood (criminal prohibitions on infanticide, child protection statutes, equal protection clauses). It bears the cost of enforcement (courts, police, welfare systems) and loses the sovereign authority to define personhood boundaries (e.g., cannot exclude disabled infants, cannot permit exposure). The state cannot easily exit this constraint — abandoning it would trigger legitimacy collapse and international sanction — but can reform its implementation. The state also benefits from the coordination function: a stable, universally protected citizenry."
+    },
+    {
+      "name": "medical_professionals",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Physicians and neonatologists are constrained in treatment decisions for severely disabled newborns. They cannot withhold life-sustaining treatment based on quality-of-life judgments that would constitute a personhood determination. Professional ethics and law bind them to preserve all born human life. Their exit options are constrained: they can advocate for policy change, but cannot individually opt out of the constraint without professional sanction. They bear moral distress costs in marginal cases."
+    },
+    {
+      "name": "fitness_contingent_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Philosophers, bioethicists, and policy advocates who hold that personhood requires demonstrated capacities (consciousness, rationality, autonomy). They argue that anencephalic infants, persistent vegetative state patients, and severely cognitively disabled humans lack moral standing. Their reading is excluded from legal frameworks adopting the birth threshold. They can publish, debate, and lobby — they are not silenced — but their view cannot be implemented as law without overturning the constraint."
+    },
+    {
+      "name": "potential_based_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocates (often from disability ethics, religious traditions, or specific philosophical frameworks) who ground personhood in potential for rational agency. They argue that severely disabled infants who lack such potential may not possess full moral standing. Like fitness-contingent advocates, they are excluded from legal implementation but remain active in academic and policy discourse. Their reading specifically targets the birth threshold's inclusion of severely disabled infants."
+    },
+    {
+      "name": "moral_philosophers",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analytical observers who study the kernel contest, map the structural relationships between readings, and evaluate the constraint's classification. They do not collect rents from the constraint nor bear its enforcement costs. Their exit is analytical — they can adopt any reading as an intellectual position without material consequence."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the 'who counts as a person' coordination problem by establishing a bright-line, non-negotiable threshold (birth) that is publicly verifiable and requires no capacity assessment. This prevents sliding exclusions, factional disputes over fitness criteria, and state arbitrariness in defining the protected class.",
+    "transfer_function": "Transfers exclusionary authority from state to protected class: the state loses the power to define personhood boundaries; born humans gain indefeasible protection. The transfer is not monetary but jurisdictional — the state's sovereign prerogative to exclude is extinguished for the born.",
+    "absent_voices": "Pre-born humans (fetuses) are structurally absent — they are not in the conversation because the constraint defines them as outside the personhood boundary. Severely disabled infants who cannot self-advocate are present only through proxies (parents, guardians, state). Future generations who might prefer a different personhood boundary are absent by definition.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the birth threshold constraint vanished overnight, states would immediately regain authority to define personhood boundaries. Infanticide laws would be challenged or repealed. Disabled infants would lose equal protection guarantees. The fitness-contingent and potential-based readings would become legally implementable. The moral and legal landscape would reorganize around contested capacity assessments.",
+    "founding_problem": "Prevent arbitrary state exclusion of born humans from moral and legal protection; solve the coordination problem of 'who counts' with a bright-line rule that requires no capacity assessment and resists sliding exclusions.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem is attested by the drafting history of the UDHR and CRC (state delegates from multiple traditions), by the historical record of infanticide and exposure practices that the constraint was built to abolish, and by contemporary disability rights movements that cite the constraint as essential protection. No single beneficiary group controls the corroboration — states, NGOs, and independent scholars all attest the problem's reality, though they contest whether the birth threshold is the correct solution."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "personhood_boundary__fitness_contingent_reading",
+      "personhood_boundary__potential_based_reading"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "fitness_contingent_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "potential_based_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "all_born_humans_possess_moral_standing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "personhood_attaches_at_birth_not_capacity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "universal_birth_personhood",
+    "drift_state": {
+      "moment": "contemporary_bioethics_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

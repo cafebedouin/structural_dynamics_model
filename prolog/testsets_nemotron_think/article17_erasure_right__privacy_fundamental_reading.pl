@@ -1,0 +1,334 @@
+% ============================================================================
+% CONSTRAINT STORY: article17_erasure_right__privacy_fundamental_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-11
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_article17_erasure_right__privacy_fundamental_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: article17_erasure_right__privacy_fundamental_reading
+ *   human_readable: Article 17 Right to Erasure (Privacy Fundamental Reading)
+ *   domain: technology_governance/data_protection_law/competition_policy
+ *
+ * SUMMARY:
+ *   Article 17 GDPR (Right to Erasure / 'Right to be Forgotten') is
+ *   interpreted in this reading as the legal instantiation of individual data
+ *   sovereignty — a fundamental right that limits corporate data retention by
+ *   giving each person a unilateral deletion claim against data controllers.
+ *   The reading centers the data subject as primary beneficiary, treats
+ *   platforms and controllers as constrained parties bearing compliance
+ *   costs, advocates for broad interpretation of 'personal data' and 'undue
+ *   delay,' and insists on low epistemic friction for requests (no
+ *   requirement to prove harm, specify exact records, or justify the
+ *   request). This constraint story captures the privacy-fundamentalist
+ *   framing: the erasure right is a coordination mechanism that solves the
+ *   collective-action problem of data control, not an extraction mechanism.
+ *
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(article17_erasure_right__privacy_fundamental_reading, 0.35).
+domain_priors:suppression_score(article17_erasure_right__privacy_fundamental_reading, 0.45).
+domain_priors:theater_ratio(article17_erasure_right__privacy_fundamental_reading, 0.3).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(article17_erasure_right__privacy_fundamental_reading, extractiveness, 0.35).
+narrative_ontology:constraint_metric(article17_erasure_right__privacy_fundamental_reading, suppression_requirement, 0.45).
+narrative_ontology:constraint_metric(article17_erasure_right__privacy_fundamental_reading, theater_ratio, 0.3).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(article17_erasure_right__privacy_fundamental_reading, accessibility_collapse, 0.6).
+narrative_ontology:constraint_metric(article17_erasure_right__privacy_fundamental_reading, resistance, 0.65).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(article17_erasure_right__privacy_fundamental_reading, rope).
+narrative_ontology:human_readable(article17_erasure_right__privacy_fundamental_reading, "Article 17 Right to Erasure (Privacy Fundamental Reading)").
+narrative_ontology:topic_domain(article17_erasure_right__privacy_fundamental_reading, "technology_governance/data_protection_law/competition_policy").
+
+domain_priors:requires_active_enforcement(article17_erasure_right__privacy_fundamental_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(article17_erasure_right__privacy_fundamental_reading, '19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8').
+narrative_ontology:cs_kernel_codification('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8', formalized).
+narrative_ontology:cs_authority_grounding('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8', lineage).
+narrative_ontology:cs_interpretation_layer_present('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8').
+narrative_ontology:cs_reading_relation('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8', article17_erasure_right__competitive_moat_reading, coexists_with).
+narrative_ontology:cs_reading_relation('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8', article17_erasure_right__censorship_mechanism_reading, influences).
+narrative_ontology:cs_axiom('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8', foundational, erasure_right_as_fundamental_privacy_right).
+narrative_ontology:cs_axiom_status(erasure_right_as_fundamental_privacy_right, holdable).
+narrative_ontology:cs_axiom_grounding('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8', erasure_right_as_fundamental_privacy_right, deontological).
+narrative_ontology:cs_axiom('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8', foundational, broad_interpretation_low_friction_access).
+narrative_ontology:cs_axiom_status(broad_interpretation_low_friction_access, holdable).
+narrative_ontology:cs_axiom_grounding('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8', broad_interpretation_low_friction_access, conventional).
+narrative_ontology:cs_reference_frame('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8', eu_fundamental_rights_framework).
+narrative_ontology:cs_drift_state('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8', post_gdpr_implementation_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('19ff67c6-5e05-4ee9-a3ef-d1d2c14bc4c8', '').
+narrative_ontology:cs_kernel_id(article17_erasure_right__privacy_fundamental_reading, article17_erasure_right).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(article17_erasure_right__privacy_fundamental_reading, data_subjects).
+narrative_ontology:constraint_beneficiary(article17_erasure_right__privacy_fundamental_reading, competing_platforms).
+narrative_ontology:constraint_beneficiary(article17_erasure_right__privacy_fundamental_reading, civil_society_privacy_orgs).
+narrative_ontology:constraint_victim(article17_erasure_right__privacy_fundamental_reading, platform_operators).
+narrative_ontology:constraint_victim(article17_erasure_right__privacy_fundamental_reading, data_controllers).
+narrative_ontology:constraint_vindicates(article17_erasure_right__privacy_fundamental_reading, data_sovereignty_doctrine).
+narrative_ontology:constraint_vindicates(article17_erasure_right__privacy_fundamental_reading, informational_self_determination).
+narrative_ontology:constraint_vindicates(article17_erasure_right__privacy_fundamental_reading, privacy_as_fundamental_right).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Individuals whose personal data is processed by platforms and controllers. They hold a unilateral right to demand erasure without proving harm, shifting the burden of compliance to data controllers. Their exit from the data economy is constrained — they cannot easily avoid generating data in digital society, but the erasure right gives them a structural lever to limit retention.
+narrative_ontology:constraint_stakeholder(article17_erasure_right__privacy_fundamental_reading, data_subjects, beneficiary,
+    organized, biographical, constrained, continental).
+
+% Large technology platforms (search engines, social media, cloud providers) that process massive volumes of personal data. They bear the technical and operational costs of building erasure pipelines, verifying requests, and cascading deletion across backups and third parties. They cannot exit the EU market without massive revenue loss, so compliance is the only viable path. They lobby for narrow interpretations and technical exemptions.
+narrative_ontology:constraint_stakeholder(article17_erasure_right__privacy_fundamental_reading, platform_operators, payer,
+    institutional, generational, constrained, global).
+
+% Organizations of all sizes that determine purposes and means of processing personal data — from SMEs to public authorities. They face disproportionate compliance burdens relative to platforms: lack dedicated legal/engineering teams, struggle with technical implementation of cascading erasure, and face the same penalties for non-compliance. The right acts as a fixed cost that scales poorly for smaller controllers.
+narrative_ontology:constraint_stakeholder(article17_erasure_right__privacy_fundamental_reading, data_controllers, payer,
+    moderate, biographical, constrained, continental).
+
+% National supervisory authorities (DPAs) and the European Data Protection Board that enforce Article 17. They interpret the right, issue guidelines, adjudicate complaints, and impose fines. Their resources are stretched by complaint volumes; they prioritize systemic cases over individual requests. They shape the operational meaning of 'undue delay,' 'manifestly unfounded,' and 'technical feasibility.'
+narrative_ontology:constraint_stakeholder(article17_erasure_right__privacy_fundamental_reading, data_protection_authorities, agenda_setter,
+    institutional, generational, analytical, continental).
+
+% Newer or smaller platforms and alternative service providers. This reading holds that the erasure right creates a level playing field by forcing incumbents to open data silos and respect portability/deletion, reducing lock-in. They benefit from the right's constraint on dominant platforms' data accumulation, though they also bear compliance costs.
+narrative_ontology:constraint_stakeholder(article17_erasure_right__privacy_fundamental_reading, competing_platforms, beneficiary,
+    moderate, biographical, constrained, continental).
+
+% NGOs and advocacy groups (EDRi, Privacy International, noyb, national digital rights orgs) that litigate, campaign, and submit amicus briefs to expand the erasure right's scope. They fund strategic litigation (e.g., against Google, Meta) and push DPAs toward broad interpretation. They are not directly subject to the constraint but structurally benefit from its enforcement.
+narrative_ontology:constraint_stakeholder(article17_erasure_right__privacy_fundamental_reading, civil_society_privacy_orgs, beneficiary,
+    organized, generational, mobile, global).
+
+% Researchers who rely on persistent datasets for longitudinal studies, public health, social science, and AI training. Broad erasure rights threaten dataset integrity and reproducibility. They have no formal seat in GDPR governance; their interests are represented only through narrow research exemptions (Art. 89) that vary by member state. They would object to unlimited erasure but are structurally excluded from the legislative and enforcement conversation.
+narrative_ontology:constraint_stakeholder(article17_erasure_right__privacy_fundamental_reading, academic_researchers, excluded,
+    moderate, biographical, constrained, global).
+
+% Competition authorities, consumer protection agencies, and international bodies (OECD, UN) that monitor GDPR's spillover effects on markets, innovation, and global data flows. They analyze whether the erasure right distorts competition, creates compliance moats, or becomes a template for other jurisdictions. They do not enforce Article 17 but shape its international reception.
+narrative_ontology:constraint_stakeholder(article17_erasure_right__privacy_fundamental_reading, regulatory_observers, observer,
+    institutional, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the collective action problem of individual data control against corporate data accumulation: gives each data subject a unilateral, legally enforceable right to demand deletion of their personal data without negotiating case-by-case, shifting the burden of proof and implementation to the data controller.
+% TRANSFER_FUNCTION: Moves compliance costs, technical deletion burden, and legal risk from data subjects to data controllers and processors. Moves control rights over data retention from controllers (who previously decided retention periods unilaterally) to subjects (who can trigger deletion). Transfers enforcement resources to DPAs and judicial systems.
+% ABSENT_VOICES: Academic researchers who lose datasets; archival and historical preservation institutions; small businesses disproportionately burdened by fixed compliance costs; journalists and public-interest investigators who rely on data persistence for accountability. These voices were structurally excluded from the legislative process that centered individual rights over collective knowledge interests.
+% DISAPPEARANCE_RATIONALE: If Article 17 vanished overnight, platforms and controllers would face no legal obligation to honor deletion requests. Data retention would become irreversible by default. The power asymmetry between data subjects and controllers would worsen: individuals would lose their only structural lever to limit profiling, algorithmic decision-making, and perpetual data accumulation. The data economy would reorganize around permanent retention.
+% FOUNDING_PROBLEM: The founding problem was the inability of individuals to control their personal data once shared with corporations: data controllers held all power over retention, reuse, profiling, and onward transfer, with no effective mechanism for individuals to withdraw consent, demand deletion, or limit the temporal scope of processing.
+% FOUNDING_PROBLEM_CORROBORATION: European Data Protection Board guidelines, CJEU case law (Google Spain SL v. AEPD, Recht op vergetelheid), independent civil society analyses (EDRi, Privacy International, noyb strategic litigation), and academic literature on power asymmetry in data economies (Zuboff, Cohen, Hildebrandt) all corroborate that the founding problem remains live and the right addresses a genuine structural gap.
+narrative_ontology:disappearance_verdict(article17_erasure_right__privacy_fundamental_reading, world_rearranges).
+narrative_ontology:founding_problem_status(article17_erasure_right__privacy_fundamental_reading, live).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(article17_erasure_right__privacy_fundamental_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-23',
+    'no_scope_rebuild_nemotron_think', 'agent/example_platform_commission.json',
+    'nvidia/nemotron-3-ultra-550b-a55b:free', 'max_tokens=65536,temperature=model_default,reasoning=model_default').
+narrative_ontology:story_seed(article17_erasure_right__privacy_fundamental_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(article17_erasure_right__privacy_fundamental_reading, 0.35, 'nvidia/nemotron-3-ultra-550b-a55b:free', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(article17_erasure_right__privacy_fundamental_reading_tests).
+:- end_tests(article17_erasure_right__privacy_fundamental_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Base extractiveness (0.35) reflects the compliance burden the constraint imposes on controllers — real but bounded by proportionality (Art. 17(3) exemptions, technical feasibility limits). Suppression (0.45) is moderate: the constraint is legally enforceable with significant fines (up to 4% global turnover), but controllers have legitimate exemptions (freedom of expression, legal claims, public interest) and technical defenses. Theater ratio (0.30) captures performative compliance (generic 'we respect your privacy' banners, difficult-to-use request portals) versus functional erasure pipelines. Accessibility collapse (0.60) is elevated for data subjects: without the right, alternatives for deletion are near-zero; for controllers, alternatives (data minimization, anonymization) exist but are costly. Resistance (0.65) is high: platforms have litigated scope, built minimal portals, resisted cascading deletion to backups, and lobbied for 'right to be forgotten' narrowing.
+ *
+ * PERSPECTIVAL GAP:
+ *   The engine will compute divergent seat types: from the data_subject seat, the constraint computes as rope (genuine coordination, net benefit, low extraction). From the platform_operator seat, it computes as tangled_rope or snare (coordination function exists but extraction is asymmetric — they pay for a right they cannot use). From the data_controller seat (SMEs), it may compute as snare (high fixed cost, minimal benefit). The privacy_fundamental_reading claims rope universally; the engine's per-seat divergence measures the reading's blind spot.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Data subjects are structural beneficiaries (d ~ 0.25): they collect the right's protection, bear no compliance cost, but have constrained exit from data-generating activities. Platform operators are structural targets (d ~ 0.80): they bear disproportionate compliance costs, have constrained exit from EU market, and the constraint directly limits their core business model (data accumulation). Data controllers (SMEs, public bodies) are also targets (d ~ 0.70) with fewer resources. DPAs are agenda_setters (d ~ 0.10): they wield enforcement discretion. Competing platforms are beneficiaries (d ~ 0.35): they gain from incumbent constraints but bear their own compliance costs. Civil society orgs are beneficiaries (d ~ 0.15) with mobile exit. Academic researchers are excluded (no d derivation — non-participants).
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding problem (individual powerlessness against corporate data retention) remains live — data accumulation and profiling have intensified since 2018. The constraint has not atrophied; its mandate is actively contested but not obsolete. Mandatrophy risk is low for this reading: the right's function tracks an expanding problem. However, if enforcement remains stuck at performative compliance (theater rising, effective erasure stagnant), the constraint could drift toward piton — maintained theatrically while failing its coordination function.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    committer_structure_kernel_reading,
+    'How does this reading''s classification change if the kernel (Article 17) is read through a different normative frame?',
+    'Generate sibling constraint stories for competitive_moat_reading and censorship_mechanism_reading; compare their ε, beneficiary/victim structures, and computed seat types. The divergence across readings of the same kernel is the measurement.',
+    'If sibling readings produce substantially different classifications (e.g., one rope, one snare), the kernel itself is a site of structural contestation — not a single constraint with measurement noise. This validates the ε-invariance decomposition.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(committer_structure_kernel_reading, conceptual, 'Kernel-reading decomposition: this story is one reading of article17_erasure_right; sibling readings instantiate different constraints with different ε.').
+
+omega_variable(
+    coordination_extraction_boundary,
+    'Is the erasure right''s coordination function (individual data control) structurally separable from its extraction on platforms, or does the coordination require the extraction?',
+    'Empirical study of jurisdictions with erasure rights but different enforcement regimes: if individual control outcomes correlate with enforcement intensity on platforms, the functions are coupled; if lightweight enforcement achieves similar subject outcomes, they are separable.',
+    'If inseparable, the measured extraction (0.35) is the price of coordination — the constraint is a genuine rope with necessary overhead. If separable, excess extraction exists and the constraint trends toward tangled_rope.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(coordination_extraction_boundary, empirical, 'Whether coordination and extraction components are structurally separable in Article 17''s operation.').
+
+omega_variable(
+    epistemic_friction_measurement,
+    'Does ''low epistemic friction'' for erasure requests hold in practice, or do controllers impose de facto barriers (identity verification, scope narrowing, delay tactics)?',
+    'Mystery-shopper studies of DPA complaint handling; analysis of controller response times, refusal rates, and ''manifestly unfounded'' invocation patterns; user testing of erasure request portals.',
+    'If friction is high in practice, the reading''s claimed broad interpretation/low friction is aspirational — the operational constraint differs from the statutory text. This would raise suppression and theater_ratio, potentially shifting computed type toward tangled_rope for data_subject seat.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(epistemic_friction_measurement, empirical, 'Whether the reading''s low-friction assumption matches operational reality for data subjects.').
+
+omega_variable(
+    scope_creep_censorship_vector,
+    'Does the broad interpretation this reading advocates create a structural vector for the censorship_mechanism_reading''s concerns?',
+    'Track strategic erasure requests by public figures, politicians, corporations against journalism, criticism, public records. Measure success rates, chilling effects, and DPA/judicial pushback.',
+    'If broad interpretation enables systematic content removal, this reading''s coordination function generates a censorship externality. The constraint family would show influences relation: privacy_fundamental_reading influences censorship_mechanism_reading structurally.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(scope_creep_censorship_vector, empirical, 'Whether this reading''s broad interpretation structurally enables the censorship mechanism its sibling reading identifies.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(article17_erasure_right__privacy_fundamental_reading, 0, 6).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(art17_priv_fund_tr_t0, article17_erasure_right__privacy_fundamental_reading, theater_ratio, 0, 0.2).
+narrative_ontology:measurement(art17_priv_fund_tr_t1, article17_erasure_right__privacy_fundamental_reading, theater_ratio, 1, 0.22).
+narrative_ontology:measurement(art17_priv_fund_tr_t2, article17_erasure_right__privacy_fundamental_reading, theater_ratio, 2, 0.25).
+narrative_ontology:measurement(art17_priv_fund_tr_t3, article17_erasure_right__privacy_fundamental_reading, theater_ratio, 3, 0.27).
+narrative_ontology:measurement(art17_priv_fund_tr_t4, article17_erasure_right__privacy_fundamental_reading, theater_ratio, 4, 0.29).
+narrative_ontology:measurement(art17_priv_fund_tr_t5, article17_erasure_right__privacy_fundamental_reading, theater_ratio, 5, 0.3).
+narrative_ontology:measurement(art17_priv_fund_tr_t6, article17_erasure_right__privacy_fundamental_reading, theater_ratio, 6, 0.3).
+
+% Extraction over time
+narrative_ontology:measurement(art17_priv_fund_be_t0, article17_erasure_right__privacy_fundamental_reading, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(art17_priv_fund_be_t1, article17_erasure_right__privacy_fundamental_reading, base_extractiveness, 1, 0.28).
+narrative_ontology:measurement(art17_priv_fund_be_t2, article17_erasure_right__privacy_fundamental_reading, base_extractiveness, 2, 0.31).
+narrative_ontology:measurement(art17_priv_fund_be_t3, article17_erasure_right__privacy_fundamental_reading, base_extractiveness, 3, 0.33).
+narrative_ontology:measurement(art17_priv_fund_be_t4, article17_erasure_right__privacy_fundamental_reading, base_extractiveness, 4, 0.34).
+narrative_ontology:measurement(art17_priv_fund_be_t5, article17_erasure_right__privacy_fundamental_reading, base_extractiveness, 5, 0.35).
+narrative_ontology:measurement(art17_priv_fund_be_t6, article17_erasure_right__privacy_fundamental_reading, base_extractiveness, 6, 0.35).
+
+% Suppression requirement over time
+narrative_ontology:measurement(art17_priv_fund_su_t0, article17_erasure_right__privacy_fundamental_reading, suppression_requirement, 0, 0.4).
+narrative_ontology:measurement(art17_priv_fund_su_t1, article17_erasure_right__privacy_fundamental_reading, suppression_requirement, 1, 0.42).
+narrative_ontology:measurement(art17_priv_fund_su_t2, article17_erasure_right__privacy_fundamental_reading, suppression_requirement, 2, 0.43).
+narrative_ontology:measurement(art17_priv_fund_su_t3, article17_erasure_right__privacy_fundamental_reading, suppression_requirement, 3, 0.44).
+narrative_ontology:measurement(art17_priv_fund_su_t4, article17_erasure_right__privacy_fundamental_reading, suppression_requirement, 4, 0.45).
+narrative_ontology:measurement(art17_priv_fund_su_t5, article17_erasure_right__privacy_fundamental_reading, suppression_requirement, 5, 0.45).
+narrative_ontology:measurement(art17_priv_fund_su_t6, article17_erasure_right__privacy_fundamental_reading, suppression_requirement, 6, 0.45).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(article17_erasure_right__privacy_fundamental_reading, identity_coordination).
+narrative_ontology:boltzmann_floor_override(article17_erasure_right__privacy_fundamental_reading, 0.08).
+narrative_ontology:affects_constraint(article17_erasure_right__privacy_fundamental_reading, article17_erasure_right__competitive_moat_reading).
+narrative_ontology:affects_constraint(article17_erasure_right__privacy_fundamental_reading, article17_erasure_right__censorship_mechanism_reading).
+
+% DUAL FORMULATION NOTE:
+% Article 17 erasure right decomposes into three constraint stories (constraint family) per ε-invariance: privacy_fundamental_reading (this story, ε≈0.35, claimed rope), competitive_moat_reading (ε higher, platforms as beneficiaries), censorship_mechanism_reading (ε variable, speakers as victims). All three share the same statutory text but instantiate different constraints with different ε, different beneficiary/victim structures, and different computed types. This story links to siblings via affects_constraints; the dual formulation is that a single legal provision generates multiple constraints depending on which normative frame reads it.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

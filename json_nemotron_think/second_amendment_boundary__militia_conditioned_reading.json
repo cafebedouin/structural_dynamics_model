@@ -1,0 +1,458 @@
+{
+  "header": {
+    "constraint_id": "second_amendment_boundary__militia_conditioned_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_second_amendment_boundary__militia_conditioned_reading",
+    "measurement_id_prefix": "sa_militia_reading",
+    "story_uid": "1d746ce8-1e57-404b-a2e4-a17747565dfb"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment Militia-Conditioned Boundary Reading",
+    "topic_domain": "constitutional_law/firearms_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "state_legislatures",
+      "public_safety_advocates",
+      "law_enforcement_agencies"
+    ],
+    "victims": [
+      "restricted_gun_owners",
+      "collectors",
+      "self_defense_claimants_high_regulation_jurisdictions"
+    ],
+    "vindicated_propositions": [
+      "collective_defense_constitutionalism",
+      "state_police_power_primacy",
+      "prefatory_clause_interpretive_primacy"
+    ]
+  },
+  "interval": {
+    "start": 1791,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint one reading of the contested second_amendment_boundary kernel, and does it instantiate a distinct ε from its siblings?",
+      "resolution_mechanism": "Compare beneficiary/victim structures and metric profiles across individual_right_reading, insurrectionist_reading, and this militia_conditioned_reading; distinct ε values confirm separate constraints per DP-001.",
+      "impact": "If ε values converge, the kernel label masks a single constraint; if they diverge, the three readings are properly decomposed into three constraint stories linked by network.affects_constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Commitment to the ε-invariance decomposition of the Second Amendment boundary kernel."
+    },
+    {
+      "id": "prefatory_operative_relationship",
+      "question": "Does the prefatory clause ('well regulated Militia') grammatically and logically bound the operative clause ('keep and bear Arms'), or does it merely announce a purpose?",
+      "resolution_mechanism": "Founding-era linguistic corpus analysis, Madison's drafting history, state ratification convention records, and early judicial commentary (pre-1860).",
+      "impact": "If prefatory bounds operative, this reading's ε reflects genuine coordination (public safety regulation); if merely purposive, the reading's coordination claim is cover for regulatory extraction, shifting classification toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the militia preamble structurally limits the right's scope."
+    },
+    {
+      "id": "regulatory_capture_of_militia_concept",
+      "question": "Has the 'well regulated Militia' concept been captured by state regulatory apparatus to justify restrictions beyond any historical militia function?",
+      "resolution_mechanism": "Trace the evolution of 'militia' from founding-era universal citizen enrollment to modern selective regulatory triggers (e.g., 'dangerous and unusual weapons' test, 'longstanding prohibitions' doctrine); measure gap between historical militia scope and contemporary regulatory reach.",
+      "impact": "If captured, the coordination function is substantially performative — theater_ratio understates extraction; if not, the reading's coordination claim holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the militia concept functions as genuine coordination boundary or regulatory cover."
+    },
+    {
+      "id": "victim_set_boundary",
+      "question": "Are all restricted gun owners (collectors, self-defense claimants in high-regulation jurisdictions) equally positioned as payers, or do sub-classes experience qualitatively different extraction?",
+      "resolution_mechanism": "Disaggregate the victim set by restriction type (possession bans, carry restrictions, registration, waiting periods) and jurisdiction; measure χ per sub-class using directionality derivation from exit_options and spatial_scope.",
+      "impact": "If sub-classes diverge (e.g., collectors face prohibitive exit while self-defense claimants retain mobile exit), the single 'restricted_gun_owners' stakeholder masks seat divergence the engine would compute separately.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Granularity of the victim/payer structure within the restricted gun owner population."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1791,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1820,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1868,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1934,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1939,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1968,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1994,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2004,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1791,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1820,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1868,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1934,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1939,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1968,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1994,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2004,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1791,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1820,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1868,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1934,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1939,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1968,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1994,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2004,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2022,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the militia_conditioned_reading of the second_amendment_boundary kernel. The reading holds that the Second Amendment's prefatory clause ('A well regulated Militia, being necessary to the security of a free State') grammatically and teleologically bounds the operative clause ('the right of the people to keep and bear Arms, shall not be infringed') to a collective defense context — specifically, the preservation of state-organized militia capacity. Consequently, comprehensive firearms regulation is presumptively constitutional, subject only to means-end scrutiny. The constraint's coordination function is public safety through democratic regulation; its extraction falls on gun owners whose possession is restricted (collectors, self-defense claimants in high-regulation jurisdictions). The measurement series traces the reading's operational life from founding (low extraction, minimal theater) through the Miller-era regulatory consensus (peak extraction, rising theater) to its doctrinal displacement by Heller/Bruen (declining extraction, peak theater as the militia rationale becomes performative cover for a rejected framework).",
+    "key_agents": [
+      "state_legislatures: Primary agenda_setter (enact regulation) / beneficiary (regulatory authority validated) — institutional / generational / arbitrage / national",
+      "federal_courts: Agenda_setter (interpretive authority) — institutional / generational / analytical / national",
+      "restricted_gun_owners: Primary payer (bear regulatory costs) — organized / biographical / constrained / national",
+      "collectors: Payer (possession bans, registration) — moderate / biographical / constrained / national",
+      "self_defense_claimants_high_regulation_jurisdictions: Payer (carry restrictions, waiting periods) — moderate / immediate / constrained / regional",
+      "public_safety_advocates: Beneficiary (regulatory tools enabled) — organized / biographical / mobile / national",
+      "law_enforcement_agencies: Beneficiary (regulatory enforcement tools) — institutional / generational / arbitrage / national",
+      "legal_scholars_militia_view: Observer (analytical seat) — analytical / civilizational / analytical / universal",
+      "legal_scholars_individual_right_view: Excluded (would object but reading's framework excludes them) — analytical / civilizational / analytical / universal"
+    ],
+    "logic_rationale": "Extractiveness peaks during the Miller-to-Heller era (1939-2008) when the militia-conditioned reading was the controlling doctrinal framework and federal/state regulation expanded substantially. Theater_ratio rises throughout as the militia justification becomes increasingly decoupled from actual militia organization (the 'well regulated Militia' exists only as a legal fiction). Suppression_requirement tracks enforcement intensity: low at founding (universal militia enrollment made regulation uncontroversial), rising with NFA/GCA/AWB enforcement machinery, declining after Heller as the reading loses authoritative force. The reading's claimed_type is tangled_rope: genuine coordination function (public safety regulation enabled) + asymmetric extraction (gun owners bear costs) + active enforcement (regulatory apparatus). The engine will compute per-seat χ from the declared beneficiaries (state_legislatures, public_safety_advocates, law_enforcement) and victims (restricted_gun_owners, collectors, self_defense_claimants) with their distinct power/exit/scope profiles.",
+    "perspectival_gap": "From the state_legislatures/federal_courts seat (agenda_setter, institutional power, arbitrage exit), the constraint appears as legitimate coordination — the constitutional boundary that enables democratic regulation. From the restricted_gun_owners/collectors/self_defense_claimants seats (payer, organized/moderate power, constrained exit), the same structure operates as enforced extraction — regulatory costs imposed without militia-service reciprocity. The engine computes this divergence from the structural data; the authored claim does not adjudicate it.",
+    "directionality_logic": "Beneficiaries declared: state_legislatures (regulatory authority validated), public_safety_advocates (policy tools enabled), law_enforcement_agencies (enforcement tools). These agents have institutional/organized power, generational/biographical horizons, arbitrage/mobile exit, national scope → derived d near beneficiary end (low χ). Victims declared: restricted_gun_owners, collectors, self_defense_claimants_high_regulation_jurisdictions. These agents have organized/moderate power, biographical/immediate horizons, constrained exit, national/regional scope → derived d near target end (high χ). The excluded seat (legal_scholars_individual_right_view) has analytical power but no structural position in this reading's framework — their exclusion is the reading's boundary-maintenance mechanism.",
+    "mandatrophy_analysis": "The founding problem (founding_problem) was ensuring state militia capacity against federal disarmament — a live problem in 1791. By the late 20th century, the militia institution had atrophied (National Guard federalized, universal enrollment abandoned) while the reading persisted as the doctrinal basis for comprehensive regulation. The mismatch (founding_problem_status = dead, disappearance_verdict = world_rearranges) flags mandatrophy: the arrangement persists after its founding problem vanished, extracting from gun owners without the coordination reciprocity (militia service) that originally justified it. The theater_ratio trajectory (0.05 → 0.62) tracks this decoupling.",
+    "kernel_context": "This constraint is the militia_conditioned_reading of the second_amendment_boundary kernel. Sibling readings: individual_right_reading (operative clause establishes pre-existing individual right; prefatory states purpose but does not limit), insurrectionist_reading (right preserves armed resistance capacity against tyrannical government). This reading's core premise (prefatory bounds operative) logically forecloses both siblings within any single doctrinal framework: if the militia preamble defines the right's scope, the right cannot be an unlimited individual right (forecloses individual_right_reading) nor a right of resistance against the state (forecloses insurrectionist_reading). The kernel contest is live in contemporary jurisprudence — Heller (2008) and Bruen (2022) adopted the individual_right_reading, displacing this reading from authoritative force."
+  },
+  "stakeholders": [
+    {
+      "name": "state_legislatures",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enact firearms regulations under the militia-conditioned reading's constitutional authorization. Their regulatory authority is validated by this reading; they benefit from the interpretive framework that presumes regulatory legitimacy. Exit is arbitrage-grade — they can shift regulatory strategies across jurisdictions and policy domains."
+    },
+    {
+      "name": "federal_courts",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate Second Amendment challenges. Under this reading, courts apply means-end scrutiny to regulations (intermediate or rational basis), deferring to legislative judgments about militia/public safety. Their interpretive authority is the enforcement mechanism. Exit is analytical — they interpret, not bear, the constraint's costs."
+    },
+    {
+      "name": "restricted_gun_owners",
+      "role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the costs of comprehensive regulation (licensing, registration, bans, waiting periods) enabled by this reading. Organized through advocacy groups (NRA, GOA, SAF) but exit is constrained — cannot easily avoid jurisdiction-specific restrictions without relocating or surrendering protected interests. The reading's framework treats their burden as presumptively legitimate."
+    },
+    {
+      "name": "collectors",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face possession bans, registration requirements, and transfer restrictions on categories of firearms deemed outside militia utility (e.g., 'dangerous and unusual weapons'). Their specialized interest lacks the political weight of broader gun owner coalitions; exit is constrained by the specificity of their collecting focus and jurisdiction."
+    },
+    {
+      "name": "self_defense_claimants_high_regulation_jurisdictions",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "In jurisdictions with restrictive carry laws (may-issue, good-cause requirements) enabled by this reading, bear the cost of being unable to carry for self-defense. Time horizon is immediate (threat response); exit is constrained by residency, employment, and family ties. Regional scope reflects patchwork jurisdiction."
+    },
+    {
+      "name": "public_safety_advocates",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Gain regulatory tools (background checks, waiting periods, assault weapon bans, red flag laws) whose constitutional legitimacy this reading secures. Organized through advocacy coalitions; exit is mobile — can shift focus to other policy domains if this reading loses force."
+    },
+    {
+      "name": "law_enforcement_agencies",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Receive enforcement authority and regulatory frameworks (tracing, dealer licensing, prohibited possessor databases) that this reading constitutionally permits. Institutional power and generational horizon; arbitrage exit through intergovernmental cooperation and federal partnership programs."
+    },
+    {
+      "name": "legal_scholars_militia_view",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analytical seat defending the militia-conditioned interpretation through historical linguistics, founding-era sources, and structural constitutional argument. Neither collects nor pays; their role is interpretive contestation within the academy and amicus practice."
+    },
+    {
+      "name": "legal_scholars_individual_right_view",
+      "role": "excluded",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Would object to this reading's exclusion of individual self-defense from the Amendment's core. Under this reading's framework, their position is structurally excluded — the prefatory clause's bounding function logically forecloses the individual-right premise. They operate from outside the reading's interpretive community."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables democratic regulation of firearms for public safety by establishing a constitutional boundary that presumes regulatory legitimacy — solving the collective action problem of balancing individual arms possession against community security through legislative means-end scrutiny rather than judicial invalidation.",
+    "transfer_function": "Moves regulatory authority from gun owners (who would prefer minimal restriction) to state legislatures and law enforcement (who gain presumptive authority to restrict possession, carry, and transfer), with the transfer mediated by federal courts applying deferential scrutiny.",
+    "absent_voices": "The excluded seat (legal_scholars_individual_right_view) and the insurrectionist_reading proponents — both would argue the right protects individual self-defense or anti-tyranny capacity unconnected to militia service. They are absent because this reading's interpretive framework defines them out of the constitutional conversation; they re-enter only when the reading loses authoritative force (post-Heller).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading vanished overnight (as it effectively did in Heller/Bruen), the regulatory presumption flips: restrictions must now satisfy text-history-tradition analysis rather than means-end scrutiny. The firearms regulatory landscape reorganizes — carry regimes shift from may-issue to shall-issue, bans face strict scrutiny, the regulatory floor rises. The world rearranges because arrangements (licensing schemes, possession bans, carry restrictions) depended on this reading's constitutional authorization.",
+    "founding_problem": "The founding problem was the Anti-Federalist fear that the new federal government could disarm state militias by prohibiting individual arms possession, leaving states defenseless against federal overreach. The Second Amendment was adopted to guarantee that the federal government could not destroy the militia institution by disarming the citizenry from which militias were drawn.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The militia institution as founded (universal citizen enrollment, state-organized, federalism check) has been corroborated as dead by: (1) the Militia Act of 1903 (Dick Act) federalizing the militia into the National Guard; (2) the end of universal enrollment; (3) Supreme Court acknowledgment in Heller (Scalia, dissenting in part) and academic consensus (e.g., Cornell, Waldman) that the founding-era militia no longer exists. No corroboration from outside the beneficiary set (state_legislatures, public_safety_advocates) sustains the founding problem as live."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "second_amendment_boundary__individual_right_reading",
+      "second_amendment_boundary__insurrectionist_reading",
+      "national_firearms_act_regulatory_framework",
+      "gun_control_act_regulatory_framework"
+    ],
+    "dual_formulation_note": "This constraint story decomposes the 'Second Amendment scope' natural-language concept into three ε-invariant constraints linked as a kernel family. The militia_conditioned_reading (this story) has ε ≈ 0.68 (substantial extraction on gun owners via regulatory enablement). The individual_right_reading has lower ε on gun owners but higher ε on regulatory authorities (depriving them of presumptive legitimacy). The insurrectionist_reading has distinct victim/beneficiary structures (government as target, resistance-capable citizens as beneficiaries). All three linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.82
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "second_amendment_boundary__kernel"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "founding_era_militia_constitutionalism",
+    "drift_state": {
+      "moment": "post_bruen_era",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "individual_right_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "insurrectionist_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "prefatory_clause_bounds_operative_clause",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "collective_defense_only_purpose",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "state_regulatory_authority_presumed_legitimate",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

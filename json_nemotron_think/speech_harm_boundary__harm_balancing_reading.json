@@ -1,0 +1,383 @@
+{
+  "header": {
+    "constraint_id": "speech_harm_boundary__harm_balancing_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_speech_harm_boundary__harm_balancing_reading",
+    "measurement_id_prefix": "speech_harm_boundary__harm_balancing_reading",
+    "story_uid": "8c2b762d-d51a-49e5-a947-5e2115dad772"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Harm-Balancing Speech Restriction Framework",
+    "topic_domain": "constitutional_law/political_philosophy/communication_ethics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "protected_groups",
+      "vulnerable_populations",
+      "harassment_targets"
+    ],
+    "victims": [
+      "speakers_restricted",
+      "controversial_publishers",
+      "academic_researchers"
+    ],
+    "vindicated_propositions": [
+      "proportionality_principle",
+      "harm_prevention_doctrine",
+      "demonstrated_harm_threshold"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "protected_groups",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Groups historically targeted by hate speech, group libel, and harassment (racial minorities, religious minorities, LGBTQ+ communities, women). They benefit from legal restrictions that suppress speech deemed to cause demonstrable harm. Their exit options are constrained — they cannot individually opt out of the social environment where such speech circulates, but they can organize politically to strengthen protections."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals disproportionately affected by targeted harassment, doxxing, and coordinated abuse campaigns (journalists, activists, public figures from marginalized backgrounds). They gain protection from the balancing test when harm is demonstrated. Their exit from the constraint's effects is constrained — they cannot avoid being targets without withdrawing from public life."
+    },
+    {
+      "name": "harassment_targets",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals experiencing ongoing, personally targeted harassment that meets the demonstrated-harm threshold. They benefit from takedown orders and restraining provisions. They also bear costs — the legal process to prove harm is burdensome, and the publicity of proceedings can amplify the harassment. Exit is nearly impossible: they are already in the harm's grip."
+    },
+    {
+      "name": "speakers_restricted",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Speakers whose expression is restricted after a court or tribunal finds demonstrated harm and applies proportionality balancing. This includes political provocateurs, satirists, academics studying extremism, and ordinary citizens whose speech crosses the evolving line. They bear the cost of self-censorship, legal defense, and lost platforms. Exit is constrained — they can speak in other jurisdictions or private settings, but the national public sphere is partially closed to them."
+    },
+    {
+      "name": "controversial_publishers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Media outlets and platforms that publish edge-case content (investigative journalism on hate groups, philosophical debates on identity, satire targeting protected groups). They face takedown demands, fines, and regulatory pressure. Their power and global reach give them mobile exit options — they can relocate servers, use decentralized distribution, or geofence content — but compliance costs are significant."
+    },
+    {
+      "name": "academic_researchers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Scholars studying extremism, propaganda, hate speech, and historical atrocities who must quote or analyze restricted content. They are payers when their work is flagged or restricted; they are beneficiaries when the framework protects them from harassment. Exit is constrained — academic freedom norms provide some shelter, but institutional risk-aversion chills research."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "High courts and constitutional tribunals that articulate and apply the proportionality balancing test. They set the agenda by defining what counts as 'demonstrated harm,' how the presumption of protection is rebutted, and what proportionality requires in each case. They are not directly subject to the speech restrictions they adjudicate; their exit is analytical — they observe the constraint's operation from the adjudicative seat."
+    },
+    {
+      "name": "legislatures",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Legislative bodies that enact hate-speech laws, harassment statutes, and platform-regulation frameworks implementing the harm-balancing approach. They benefit politically from responding to constituent demands for protection. They have arbitrage-grade exit — they can amend, repeal, or replace the legal framework, and they control the legislative calendar."
+    },
+    {
+      "name": "absolutist_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Civil-liberties organizations and legal scholars who argue for near-absolute speech protection (the absolutist_reading position). They are structurally excluded from the balancing framework's internal logic — the framework presupposes that harm can justify restriction, which their position denies. They cannot 'exit' the constraint's effects because the legal system operates on the balancing premise; they can only litigate to narrow its application."
+    },
+    {
+      "name": "dignity_advocates",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Human-rights organizations and theorists who argue speech protection is subordinate to human dignity (the dignity_reading position). They view the harm-balancing framework as insufficiently protective — it requires individualized harm demonstration rather than recognizing categorical dignity violations. Like absolutist advocates, they are excluded from the framework's operating logic and trapped within a system that does not adopt their premise."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Academic observers who analyze the balancing test's doctrinal evolution, empirical effects, and theoretical coherence across jurisdictions. They neither collect rents nor bear the restriction costs directly. Their exit is analytical — they can study other frameworks, other kernels, or withdraw from the discourse entirely."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a structured legal mechanism to resolve conflicts between speech and protection from harm: a presumption favoring speech that can be overcome only by demonstrated, specific harm assessed through proportionality balancing. This coordinates the pluralistic society's need for both open discourse and protection of vulnerable members without either value categorically trumping the other.",
+    "transfer_function": "Transfers speech opportunities from speakers whose expression is found to cause demonstrable harm (after proportionality balancing) to the protected groups and individuals who would otherwise suffer that harm. The transfer is not monetary but capacitive — the constraint reallocates the 'space to speak' and the 'space to be free from targeted harm.'",
+    "absent_voices": "Future generations who will inherit the precedential landscape shaped by today's balancing decisions; speakers in jurisdictions without harm-balancing frameworks who cannot participate in the doctrinal conversation; and the 'chilled speakers' — those who self-censor below the litigation threshold and therefore never appear in the case law. The excluded stakeholders (absolutist_advocates, dignity_advocates) are present in the discourse but excluded from the framework's internal logic.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the harm-balancing framework vanished overnight, jurisdictions would revert to either near-absolute speech protection (absolutist default) or categorical dignity-based restrictions (dignity default), or legislative majorities would enact ad hoc speech restrictions without proportionality discipline. The legal architecture for calibrating speech vs. harm would disappear, causing immediate doctrinal chaos and a scramble to replace the balancing test with something cruder.",
+    "founding_problem": "Post-war constitutional orders needed to reconcile two commitments: (1) the liberal-democratic premise that free speech is essential to self-government and truth-discovery, and (2) the historical lesson that unchecked propaganda and hate speech can enable authoritarianism and genocide. The harm-balancing framework was built to avoid both the Weimar failure (too little restriction) and the Soviet model (too much restriction).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The founding problem is attested by the constitutional framers' records (e.g., German Basic Law drafters, Canadian Charter architects, European Convention preparatory works) — sources outside the current beneficiary set. However, contemporary beneficiaries (protected_groups, vulnerable_populations) argue the founding problem is live and intensifying (digital amplification of hate). Absolutist_advocates argue the founding problem was misdiagnosed — the Weimar lesson is a categorical error. Dignity_advocates argue the founding problem was incompletely solved — dignity, not harm-balancing, is the proper foundation. No single corroborator speaks for all parties."
+  },
+  "interval": {
+    "start": 1950,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.48
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The harm-balancing reading of the speech-harm boundary kernel instantiates a constitutional framework where speech enjoys a strong presumptive protection that yields only when a specific, demonstrated harm is proven and the restriction survives proportionality review. This is the dominant framework in Canadian, European, and many Commonwealth jurisdictions, and increasingly influential in international human rights law. The constraint is claimed as tangled_rope: it performs genuine coordination (mediating speech/harm conflicts through law rather than violence) but extracts asymmetrically (speakers bear restriction costs, protected groups collect protection benefits). The structural delta from the kernel's other readings is broader unprotected categories (hate speech, group libel, harassment recognized as restrictable) and moderate extraction concentrated on speakers when harm is demonstrated.",
+    "logic_rationale": "Extractiveness (0.52) is moderate because the constraint reallocates speech opportunities from a defined set of speakers to protected beneficiaries, but the presumption of protection and proportionality requirement limit the transfer's scope. Suppression (0.48) reflects active enforcement through courts, tribunals, and platform regulation — the constraint does not self-enforce. Theater ratio (0.28) is low-moderate: the balancing test is a real doctrinal structure with genuine case-by-case application, but a growing share of enforcement targets low-value speech (memes, satire, academic quotation) where the harm demonstration is thin, suggesting some performative expansion. Accessibility collapse (0.58) is moderate: speakers can often reframe or relocate, but the national public sphere is partially closed. Resistance (0.45) is moderate: speakers litigate, platforms resist, and political movements contest the framework's expansion.",
+    "directionality_logic": "Protected groups, vulnerable populations, and harassment targets are structural beneficiaries (d near 0.0-0.2): the constraint subsidizes their protection. Speakers_restricted, controversial_publishers, and academic_researchers are structural payers (d near 0.7-0.9): they bear the restriction costs. Constitutional courts and legislatures are agenda_setters (d near 0.5 analytically, but they administer the constraint). Absolutist and dignity advocates are excluded (d not computable — they reject the framework's premise). The engine derives directionality from these structural positions plus exit options: harassment_targets are trapped (d→1.0), controversial_publishers are mobile (d→0.5), academic_researchers are constrained (d→0.7).",
+    "perspectival_gap": "From the protected_groups seat, the constraint is a rope — it coordinates a pluralistic society's competing claims with minimal coercion. From the speakers_restricted seat, it is a snare — the 'demonstrated harm' threshold drifts downward, proportionality becomes a rubber stamp, and the constraint extracts speech opportunities without accountable limitation. From the constitutional_courts seat, it is a scaffold — a transitional framework meant to stabilize democratic discourse until social norms internalize mutual respect (but the sunset never arrives). The engine computes these divergent seat classifications from the single structural dataset.",
+    "mandatrophy_analysis": "The founding problem (reconciling free speech with protection from hate-fueled authoritarianism) is contested: some say it's live (digital hate amplifies the threat), some say it's dead (Weimar analogy is inapposite), some say it's solved but the framework persists as rent-collection for censorious interests. The mandate has not atrophied into pure inertia (piton) because the balancing test still decides live cases daily, but the theater_ratio creep suggests coordination function is degrading into extraction maintenance. The constraint is not a false summit (mountain) — it is openly a human-made legal framework, not a natural law.",
+    "kernel_context": "This constraint is the harm_balancing_reading of the speech_harm_boundary kernel. The kernel is the persistent commitment that 'speech protection has limits related to harm.' Three readings instantiate different constraints from this kernel: (1) absolutist_reading — speech protection operates near-absolutely; harm override threshold extremely high; (2) dignity_reading — speech protection subordinate to human dignity; personhood-denying speech categorically unprotected; (3) harm_balancing_reading (this constraint) — speech protection presumptive but yields to demonstrated harm; proportionality balancing. The readings coexist as live positions in global constitutional discourse; no single reading forecloses the others within any one jurisdiction's framework, though they compete for doctrinal dominance."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Is the harm-balancing reading a genuine coordination mechanism for pluralistic societies, or an extraction mechanism that expands restrictable speech categories under the cover of balancing?",
+      "resolution_mechanism": "Longitudinal study of restriction outcomes: track whether proportionality balancing actually narrows over time (coordination) or expands categories of restricted speech without corresponding harm reduction (extraction). Compare jurisdictions with harm-balancing vs. absolutist vs. dignity frameworks on speech-chilling metrics and harm incidence.",
+      "impact": "If extraction-dominant, the constraint reclassifies toward snare; if coordination-dominant, it remains tangled_rope or trends toward rope. The kernel's other readings would gain/lose structural legitimacy accordingly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the harm-balancing reading's structural function is coordination or extraction"
+    },
+    {
+      "id": "harm_demonstration_operationalization",
+      "question": "What counts as 'demonstrated harm' in practice, and does the operational threshold drift downward over time?",
+      "resolution_mechanism": "Content analysis of judicial opinions over the interval: code the evidentiary standard for harm demonstration, the types of harm recognized, and the proportionality analysis rigor. Test for systematic drift toward lower thresholds.",
+      "impact": "Downward drift would increase extractiveness and suppression, pushing classification toward snare. Stable or rising thresholds would support the coordination claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the harm threshold is stable or drifting"
+    },
+    {
+      "id": "proportionality_balancing_workability",
+      "question": "Is proportionality balancing a cognitively tractable judicial methodology, or does it inevitably collapse into judicial preference?",
+      "resolution_mechanism": "Inter-judge reliability studies: present identical fact patterns to multiple judges and measure variance in balancing outcomes. High variance suggests the test is not a constraint but a delegation.",
+      "impact": "If balancing collapses to preference, the constraint's coordination function is illusory — it is a snare with a coordination veneer. If reliable, the coordination claim is strengthened.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the core methodological tool of this reading is structurally coherent"
+    },
+    {
+      "id": "cs_framing_ambiguity",
+      "question": "Is the kernel best framed as a constitutional text (formalized), a dignity principle (distributed), or a legislative balancing practice (implicit)?",
+      "resolution_mechanism": "Comparative constitutional analysis: trace whether the harm-balancing reading's authority derives from textual interpretation (formalized), from a freestanding dignity principle (distributed), or from legislative enactment practice (implicit). The framing changes which authority_grounding and interpretation_layer_present values are warranted.",
+      "impact": "Different framings yield different cs_structure classifications and different drift_state assessments. A formalized framing with lineage authority makes axiom_overriding drift structurally significant; a distributed framing makes practice_drift the primary vector.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's codification and authority structure are as declared"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_harm_boundary__absolutist_reading",
+      "speech_harm_boundary__dignity_reading",
+      "platform_content_moderation_regimes",
+      "hate_speech_legislation_family"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the speech_harm_boundary kernel. The absolutist_reading (near-absolute protection) and dignity_reading (categorical dignity-based restriction) are sibling constraints. All three share the kernel commitment that speech-harm relations are legally regulable but differ on the structural form of regulation. This reading's ε (0.52) is moderate — higher than the absolutist_reading's (near 0) but lower than the dignity_reading's (higher, because categorical restriction extracts more). The network edges reflect doctrinal influence: this reading's balancing test shapes platform moderation regimes and hate-speech legislation; the absolutist_reading influences First Amendment jurisdictions; the dignity_reading influences European and Latin American constitutional courts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dignity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_demonstration_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "proportionality_balancing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "speech_presumption",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "postwar_constitutional_compromise",
+    "drift_state": {
+      "moment": "digital_amplification_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__near_miss_as_bridge",
+    "version": "1.0",
+    "generated_date": "2026-08-15",
+    "status": "ACTIVE",
+    "story_uid": "2c263276-cb82-4e58-86ac-0c747ba026e0"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.35,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.48,
+    "claimed_type": "rope",
+    "human_readable": "Near-Miss Bridge: Minor Failures Sufficient for Simulator Validation",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "simulator_vendors",
+      "safety_consultants",
+      "hro_management"
+    ],
+    "victims": [
+      "frontline_operators",
+      "operating_organizations"
+    ],
+    "vindicated_propositions": [
+      "learning_from_failure_without_catastrophe",
+      "simulator_fidelity_through_operational_data"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "near_miss_validity_for_catastrophe",
+      "question": "Do near-miss incidents genuinely capture the cognitive, organizational, and systemic dynamics of catastrophic failures, or do they represent a different regime of failure?",
+      "resolution_mechanism": "Comparative analysis of near-miss causal pathways vs. catastrophe causal pathways across multiple high-reliability domains (nuclear, aviation, chemical, healthcare); experimental studies of simulator transfer from near-miss-trained vs. catastrophe-trained operators.",
+      "impact": "If near-misses miss catastrophic regime dynamics, the bridge claim fails and catastrophe_as_necessary gains support; if they capture sufficient dynamics, near_miss_as_bridge is empirically validated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether near-miss data transfers to catastrophic scenario competence"
+    },
+    {
+      "id": "reporting_burden_as_suppression",
+      "question": "Does the investigative and reporting burden of near-miss systems create de facto suppression of reporting, especially for minor but revealing incidents?",
+      "resolution_mechanism": "Longitudinal analysis of reporting rates vs. investigation depth requirements; anonymous surveys of frontline operators on reporting decisions; comparison of voluntary vs. mandatory reporting systems.",
+      "impact": "If reporting burden suppresses the very data the bridge needs, the constraint becomes self-undermining — higher theater_ratio, higher effective suppression, potential reclassification toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the coordination mechanism suppresses its own data source"
+    },
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is the competence_retention_exercise kernel genuinely contested across three structurally distinct readings, or do simulation_as_sufficient and near_miss_as_bridge occupy compatible positions on a continuum?",
+      "resolution_mechanism": "Trace institutional positions (INPO, IAEA, FAA, CCPS, WHO surgical safety) to see if they endorse one reading exclusively or blend simulator fidelity with near-miss integration; examine whether any organization has formally foreclosed a reading.",
+      "impact": "If readings blend in practice, the kernel may not have three discrete constraints; if they are genuinely foreclosed against each other, each reading instantiates a distinct constraint with its own ε.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the three declared readings are structurally discrete or continuous in practice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "High-reliability organizations (nuclear, aviation, chemical, healthcare) face a competence maintenance problem: catastrophic events are rare but unacceptable, yet the skills to prevent them must stay sharp. This reading of the competence_retention_exercise kernel asserts that near-miss incidents and minor failures provide sufficient real-world feedback to validate and update simulator training, making catastrophic events unnecessary for competence maintenance. The claim structures investment in near-miss reporting systems, simulator procurement, and safety consulting — a coordination mechanism that also extracts resources from frontline operators and operating organizations. The measurement series shows rising extractiveness and theater_ratio as near-miss systems mature from voluntary learning tools into mandatory compliance regimes with growing bureaucratic overhead.",
+    "logic_rationale": "Extractiveness (0.42) reflects real resource transfer: frontline operator time for reporting/investigation, organizational capital for reporting infrastructure and simulator updates, consultant/vendor fees. The coordination function is genuine — near-miss data does improve simulator fidelity for routine and some off-normal scenarios. Suppression (0.35) captures the transition from voluntary reporting cultures to mandatory systems where non-reporting carries career risk. Theater_ratio (0.38) reflects the growing gap between 'learning from near-misses' rhetoric and compliance-driven reporting that fills databases without improving simulator catastrophic scenario validity. Accessibility_collapse (0.42) and resistance (0.48) are moderate: alternatives (pure simulation, catastrophe waiting) exist but are institutionally disfavored; resistance comes from reporting fatigue and skepticism about near-miss relevance to catastrophes.",
+    "directionality_logic": "HRO management (agenda_setter, institutional, generational, arbitrage, global) sets reporting requirements and buys simulators — structural beneficiary (d ~ 0.15). Simulator vendors and safety consultants (beneficiary, powerful/organized, biographical, mobile/arbitrage, global) capture revenue streams — strong beneficiaries (d ~ 0.1). Frontline operators (payer, moderate/powerless, biographical, identity_locked/constrained, local/regional) bear reporting burden and investigation time with limited exit — targets (d ~ 0.7-0.85). Operating organizations (payer, powerful, biographical, constrained, national/global) fund the infrastructure — moderate targets (d ~ 0.55). Regulators (observer, institutional, generational, analytical, national) monitor but don't directly pay or collect. Potential victims (excluded, powerless, generational, trapped, global) would bear catastrophe costs if the bridge fails — excluded from the conversation.",
+    "perspectival_gap": "From the agenda_setter/beneficiary seats, the constraint is a rope: genuine coordination solving a real learning problem with net benefit. From the frontline_operator payer seat, it is a tangled_rope at best — coordination function exists but extraction (time, career risk, identity_lock to safety culture) is asymmetric and enforcement active. From the potential_victim excluded seat, it is a snare if the bridge claim is false — suppression of catastrophic learning behind a coordination facade. The engine computes this divergence from the structural data; the claimed_type (rope) reflects the authoring seat's structural judgment.",
+    "mandatrophy_analysis": "The founding problem (maintaining catastrophe-avoidance competence without catastrophes) remains live. The constraint has not atrophied into piton — active enforcement and investment continue. However, rising theater_ratio and extractiveness suggest mandatrophy risk: if near-miss data proves insufficient for catastrophic regimes, the arrangement persists as ritual compliance (piton) or captures resources without delivering the claimed bridge (snare). The mandatrophy_resolved flag is false — the mandate's function is still contested, not settled.",
+    "kernel_context": "This constraint instantiates the 'near_miss_as_bridge' reading of the 'competence_retention_exercise' kernel. The kernel is contested across three readings: (1) catastrophe_as_necessary — only actual catastrophes provide the visceral stakes and organizational learning for genuine competence; (2) near_miss_as_bridge (this reading) — near-misses plus simulators suffice, catastrophes unnecessary; (3) simulation_as_sufficient — high-fidelity simulation alone constitutes genuine exercise of catastrophe-avoidance competence. This reading asserts a hybrid system: simulators for routine skill preservation plus active near-miss investigation and integration. The structural delta from sibling readings: near_miss_as_bridge requires BOTH simulators AND near-miss data (forecloses pure simulation_as_sufficient's sufficiency claim); it asserts catastrophes are NOT necessary (contradicts catastrophe_as_necessary's necessity claim) but does not claim catastrophes are irrelevant — they remain possible but not required for competence maintenance."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__simulation_as_sufficient",
+      "competence_retention_exercise__catastrophe_as_necessary"
+    ],
+    "dual_formulation_note": "This constraint is one member of the competence_retention_exercise kernel family. The three readings decompose the colloquial 'competence maintenance' label into structurally distinct claims with different ε values, beneficiary/victim structures, and coordination/extraction profiles. simulation_as_sufficient claims lower extractiveness (simulator investment only) but higher accessibility_collapse (no real-world anchor); catastrophe_as_necessary claims near-zero extractiveness (no reporting infrastructure) but infinite suppression (catastrophes cannot be engineered); near_miss_as_bridge occupies the middle with active extraction from operators and organizations to fund the bridge."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "hro_management",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Establishes and enforces near-miss reporting requirements, procures simulators, commissions investigations. Benefits from demonstrated safety culture, regulatory compliance, and reduced catastrophe risk. Can move between organizations or sectors; their professional identity is tied to safety leadership."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Experience near-misses directly; must file reports, participate in root cause analyses, attend simulator updates. Reporting burden competes with operational duties. Professional identity fuses with safety culture — exiting the reporting system feels like abandoning professional responsibility. Career progression depends on compliance."
+    },
+    {
+      "name": "operating_organizations",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Fund reporting infrastructure, simulator time, investigation teams, consultant fees. Bear opportunity cost of operator time diverted to reporting. Regulatory and insurance pressure constrains exit — cannot simply abandon near-miss systems without losing license or coverage. Shareholder pressure limits investment appetite."
+    },
+    {
+      "name": "simulator_vendors",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sell high-fidelity simulators and update packages validated against near-miss data. Revenue depends on the bridge claim — if near-misses validate simulators, demand for frequent updates grows. Can pivot to other training markets if this constraint weakens."
+    },
+    {
+      "name": "safety_consultants",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Provide near-miss investigation methodologies, root cause analysis frameworks, and simulator scenario design services. Their expertise market exists because the bridge claim creates demand for translation of operational events into simulator updates. Portable skills across high-reliability domains."
+    },
+    {
+      "name": "regulators",
+      "role": "observer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Mandate near-miss reporting systems, audit compliance, evaluate simulator adequacy. Do not directly pay for or profit from the constraint. Their legitimacy depends on the bridge claim being true — if near-misses don't prevent catastrophes, regulatory mandate loses justification."
+    },
+    {
+      "name": "potential_victims",
+      "role": "excluded",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Public populations around nuclear plants, under flight paths, downstream of chemical facilities, patients in hospitals. Bear catastrophic consequences if the bridge fails. No voice in near-miss system design, simulator validation criteria, or reporting requirements. Exit is impossible — they cannot avoid the risk."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides real-world operational data to anchor simulator fidelity without requiring catastrophic events, solving the competence maintenance problem in domains where catastrophes are rare but unacceptable.",
+    "transfer_function": "Moves organizational resources (operator time, investigation capital, simulator update budgets) from daily operations into the near-miss reporting and simulator validation pipeline; moves learning from frontline experience into simulator scenario libraries and training curricula.",
+    "absent_voices": "Frontline operators experiencing reporting fatigue and fear of blame; potential victims (public, patients) who would suffer if near-miss bridge fails; critics arguing near-misses lack catastrophic regime dynamics (e.g., Perrow normal accident theorists, some resilience engineering voices); small organizations that cannot afford full near-miss infrastructure.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the near-miss bridge concept disappeared, organizations would face a binary choice: rely purely on simulation (simulation_as_sufficient) with no real-world validation anchor, or accept that competence maintenance requires catastrophic events (catastrophe_as_necessary). Simulator vendors would lose validation data stream; regulators would lose compliance metric; operators would lose reporting burden but gain unvalidated simulators.",
+    "founding_problem": "How to maintain genuine catastrophe-avoidance competence in high-reliability domains where catastrophic events are (thankfully) rare, but the skills to prevent them must remain sharp and validated against reality.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Nuclear industry INPO reports and IAEA safety guides document the competence maintenance problem as ongoing; aviation ASRS and LOSA data show continued investment in near-miss systems; chemical industry CCPS guidelines treat near-miss investigation as essential layer; healthcare WHO surgical safety checklist evolution shows live adaptation. Sources outside simulator vendor/consultant beneficiary set include regulatory bodies, professional societies, and independent safety researchers."
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_sufficient",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "catastrophe_as_necessary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "near_miss_feedback_suffices_for_simulator_validation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "catastrophe_not_required_for_competence_maintenance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "hybrid_simulator_near_miss_system_necessary",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "operational_learning_without_catastrophe",
+    "drift_state": {
+      "moment": "post_fukushima_deepwater_horizon",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

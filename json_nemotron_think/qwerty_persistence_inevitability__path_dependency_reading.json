@@ -1,0 +1,159 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence_inevitability__path_dependency_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "d22e93fe-98fa-435e-8696-c45a70a2797f"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.1,
+    "claimed_type": "mountain",
+    "human_readable": "QWERTY Persistence as Path Dependency",
+    "topic_domain": "technology_history/political_economy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [],
+    "victims": [],
+    "vindicated_propositions": [
+      "path_dependency_theory",
+      "historical_accident_lock_in"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 150
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The QWERTY keyboard layout originated from mechanical constraints of 1870s typewriters (preventing key jamming). Once established, network effects — typist training, manufacturing tooling, software defaults — created massive switching costs. This reading holds that no manufacturer cartel or strategic action engineered the lock-in; manufacturers merely responded to market demand for compatibility. The efficiency loss from QWERTY versus alternatives (e.g., Dvorak) is a diffuse externality borne by all typists, not extracted by a beneficiary group. The constraint is claimed as a mountain: given the initial accident, the outcome was inevitable.",
+    "key_agents": [],
+    "logic_rationale": "Extraction is near-zero (0.05) because no party collects rents from the layout's persistence; suppression is low (0.1) because no active enforcement prevents alternative layouts — they are commercially available but rarely adopted. Theater ratio is negligible (0.05) because there is no performative maintenance of a degraded function. Accessibility collapse is high (0.9) because once the network effects are understood, alternative adoption becomes individually irrational. Resistance is minimal (0.1) because the constraint is not actively defended; it simply persists.",
+    "directionality_logic": "No agent is a structural beneficiary or victim. Manufacturers, typists, and educators all face the same switching costs. The engine's directionality derivation will assign symmetric d ≈ 0.5 to all, yielding effective extraction near zero for every seat — consistent with a mountain.",
+    "kernel_context": "This constraint is the path_dependency_reading of kernel qwerty_persistence_inevitability. The sibling reading strategic_lock_in_reading claims manufacturers engineered lock-in via training partnerships and cartel standardization, creating beneficiaries (manufacturers) and victims (users). This reading denies both: the lock-in is an accident-driven path dependency with no strategic extraction."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_disambiguation",
+      "question": "Is QWERTY persistence a natural inevitability (path dependency) or a constructed lock-in (strategic action)?",
+      "resolution_mechanism": "Historical analysis of manufacturer behavior in late 19th/early 20th century: evidence of cartel standardization vs. passive response to demand.",
+      "impact": "If strategic lock-in is evidenced, the constraint reclassifies from mountain to snare or tangled_rope with manufacturers as beneficiaries and users as victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Disambiguates the kernel's two readings."
+    },
+    {
+      "id": "efficiency_loss_diffuseness",
+      "question": "Is the efficiency loss from QWERTY truly diffuse, or does it concentrate on specific groups (e.g., professional typists, non-English users)?",
+      "resolution_mechanism": "Empirical studies of typing speed/injury rates across layouts and user populations; economic analysis of switching cost distribution.",
+      "impact": "If loss concentrates on identifiable groups, a victim set emerges even without strategic extraction, potentially shifting classification toward tangled_rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the externality is uniformly diffuse or has identifiable bearers."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "diffuse_epistemic",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "strategic_lock_in_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "qwerty_persistence_is_accidental",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "historical_accident_origin",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-23",
+    "source_essay": "no_scope_rebuild_nemotron_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
