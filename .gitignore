@@ -70,3 +70,10 @@ dist/
 audits/**/gate_readout_rows.json
 audits/**/raw/tm_*.json
 audits/**/raw_PREFIX_*/tm_*.json
+
+# OQ-352 report_corpus transit-guard state (lock, journal, backups).
+# DELIBERATELY OUTSIDE outputs/: guard state under outputs/ would violate the
+# driver own write invariant and falsify the selftest isolation post-condition
+# ("the whole of outputs/ byte-identical"), which is how that post-condition
+# would acquire an --exclude flag and stop meaning anything.
+.report_corpus/

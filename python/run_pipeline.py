@@ -9,11 +9,16 @@ Usage:
     from run_pipeline import run_pipeline   # as library
 """
 
+import atexit
 import contextlib
+import fcntl
 import hashlib
 import io
 import json
 import os
+import re
+import shutil
+import signal
 import subprocess
 import sys
 import threading
@@ -468,6 +473,670 @@ def classify_corpus(corpus_path: str, output_name: str,
             f"classify_corpus: seen!=classified — per_constraint={n_pc}, glob={glob_count}, "
             f"manifest.n={manifest['n_constraints']} (a seen file failed to classify; refusing)")
     return manifest
+
+
+# ---------------------------------------------------------------------------
+# OQ-352: the per-leg REPORT driver — report_corpus + its transit guard
+# ---------------------------------------------------------------------------
+#
+# WHY A GUARD AT ALL. Three report stages write a JSON co-product to a path
+# HARD-CODED in the Prolog source (verified 2026-08-23 by reading the .pl files,
+# not the docs — a scan of all 11 stage modules turned up four further
+# `../outputs/...` strings, ALL of which are `%` comment usage-examples, so the
+# transit set is exactly these three):
+#
+#   orbit_report.pl:110              write_orbit_json/1     -> orbit_data.json
+#   abductive_report.pl:393          open(...write)         -> abductive_data.json
+#   giant_component_analysis.pl:1570 write_provenance_split_json/1
+#                                                           -> giant_component_analysis.raw.json
+#
+# They cannot be redirected without an engine change, so an overlay run WILL
+# overwrite the shared artifact. _TransitGuard is the file-level transposition of
+# probe_harness:with_retracted/2 — snapshot, pre-delete, run, relocate the
+# product into out_dir, restore, assert byte-identical restoration.
+#
+# ALL GUARD STATE LIVES OUTSIDE outputs/, in <repo>/.report_corpus/ (gitignored):
+# lock, journal.json, backups/. Putting the lock or journal under outputs/ would
+# violate the driver's own write invariant AND falsify the selftest's isolation
+# post-condition ("the whole of outputs/ byte-identical") — which is how that
+# post-condition eventually acquires an --exclude flag and stops meaning anything.
+#
+# THE WRITE INVARIANT: outside the paths enumerated here, the driver creates
+# nothing under outputs/ except outputs/legs/<leg>/. The enumerated set is:
+#
+#   1. TRANSIT_PATHS above — snapshotted, journalled and restored byte-identical.
+#   2. outputs/legs/<leg>/ — the driver's own output tree.
+#   3. outputs/prolog_children.log — APPEND-ONLY, and enumerated here rather
+#      than excluded. It is written by `run_prolog`, a REUSED helper, not by
+#      driver logic: one line per swipl child with pid, rc and wall-clock bounds.
+#      Suppressing it for report_corpus runs would delete the OQ-301 forensic
+#      channel exactly where it matters most — a sweep that executes
+#      run_giant_component_analysis ~20x at n~1000 is the population that
+#      reported-not-witnessed 7/100 regime would be met in, and correlating a
+#      kernel-log "fatal signal 11, pid NNN" with the stage that died is what
+#      this file exists for. Recorded as a DECLARED append (OQ-352 execution,
+#      2026-08-23), surfaced to the operator rather than adjusted quietly: the
+#      selftest's isolation post-condition found it, and it is a pre-existing
+#      behaviour of a reused helper, not a new escape.
+
+REPORT_STATE_DIR = REPO_ROOT / ".report_corpus"
+TRANSIT_PATHS = (
+    "orbit_data.json",
+    "abductive_data.json",
+    "giant_component_analysis.raw.json",
+)
+
+
+class ReportRefusal(RuntimeError):
+    """A report_corpus refusal. Carries a machine-checkable reason `code`.
+
+    The selftest asserts refusals BY CODE, not by message text: a fixture that
+    refuses for the wrong reason must fail, not pass silently.
+    """
+
+    def __init__(self, code: str, detail: str = ""):
+        self.code = code
+        self.detail = detail
+        super().__init__(f"{code}: {detail}" if detail else code)
+
+
+def _sha256_file(p: Path) -> str:
+    h = hashlib.sha256()
+    with open(p, "rb") as fh:
+        for chunk in iter(lambda: fh.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+class _TransitGuard:
+    """Protect the hard-coded transit artifacts across an overlay stage run.
+
+    Lifecycle, and every step of it exists because the window between pre-delete
+    and restore is one where a SHARED artifact does not exist on disk:
+
+      (a) LOCK. flock-exclusive on .report_corpus/lock, held for the whole run;
+          refuse LOCK_HELD rather than proceed. Serialization is a promise
+          everywhere else in this codebase; here it is enforced, because a
+          concurrent c-orchestrator colliding with a live delete window destroys
+          a shared artifact with no record.
+
+      (b) CRASH PATH. A context manager's `finally` does not survive SIGKILL, so
+          the guard writes an ON-DISK journal BEFORE the first delete and
+          installs signal/atexit handlers. A journal found at startup means
+          restore-then-refuse (TRANSIT_JOURNAL_DIRTY), never silently proceed.
+          Backups live in .report_corpus/backups/ so a stray outputs/ sweep
+          cannot take them. If the journal names a backup that is MISSING or
+          whose sha256 does not match the journalled value, restore is
+          impossible: halt with TRANSIT_BACKUP_LOST, printing the artifact path,
+          its journalled sha256 and the producing stage, so the operator can
+          regenerate rather than discover a silently-absent shared artifact
+          later. NEVER downgrade that to a warning — it is the one case where
+          restore-then-refuse cannot restore.
+
+      (c) NO-EMIT BRANCH. "Reappeared newer" is asserted only for stages that
+          are SUPPOSED to emit a given transit file. A refused or skipped stage
+          emits nothing; restore must still run, and the absence is recorded as
+          a stage outcome (STAGE_NO_EMIT), not as a missing-artifact refusal.
+
+      (d) --resume. A resumed run must not assume a snapshot taken by a prior
+          process: resume reads the journal, and any transit path whose journal
+          state is not `clean` forces the (b) recovery path before any stage runs.
+    """
+
+    def __init__(self, out_dir: Path, paths=TRANSIT_PATHS):
+        self.out_dir = Path(out_dir)
+        self.paths = [OUTPUTS_DIR / n for n in paths]
+        self.state_dir = REPORT_STATE_DIR
+        self.backups = self.state_dir / "backups"
+        self.journal_path = self.state_dir / "journal.json"
+        self.lock_path = self.state_dir / "lock"
+        self._lock_fh = None
+        self._entries: list[dict] = []
+        self._armed = False
+
+    # --- (b) recovery -----------------------------------------------------
+    def recover_if_dirty(self) -> None:
+        """Restore from a journal left by a killed process, then REFUSE.
+
+        Refusing after a successful restore is deliberate: the interrupted run's
+        artifacts are of unknown provenance, and the operator should decide what
+        to re-run. Silently proceeding is how a half-finished sweep becomes a
+        published number.
+        """
+        if not self.journal_path.exists():
+            return
+        journal = json.loads(self.journal_path.read_text(encoding="utf-8"))
+        restored, lost = [], []
+        for e in journal.get("entries", []):
+            if e.get("state") == "clean" or not e.get("existed"):
+                continue
+            backup = Path(e["backup"])
+            if not backup.exists():
+                lost.append((e, "backup file missing"))
+                continue
+            actual = _sha256_file(backup)
+            if actual != e["sha256"]:
+                lost.append((e, f"backup sha256 {actual} != journalled {e['sha256']}"))
+                continue
+            Path(e["path"]).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(backup, e["path"])
+            restored.append(e["path"])
+        if lost:
+            lines = [
+                f"  {e['path']}  sha256={e['sha256']}  stage={e.get('stage', 'unknown')}  ({why})"
+                for e, why in lost
+            ]
+            raise ReportRefusal(
+                "TRANSIT_BACKUP_LOST",
+                "restore is IMPOSSIBLE for the following shared artifact(s); regenerate "
+                "them (a full run_pipeline over the default leg) before trusting "
+                "outputs/:\n" + "\n".join(lines),
+            )
+        self.journal_path.unlink(missing_ok=True)
+        raise ReportRefusal(
+            "TRANSIT_JOURNAL_DIRTY",
+            f"a previous run was killed mid-transit; restored {len(restored)} shared "
+            f"artifact(s) ({', '.join(Path(p).name for p in restored) or 'none'}) and "
+            "refusing rather than proceeding on unknown state — re-run to continue",
+        )
+
+    # --- (a) lock ---------------------------------------------------------
+    def acquire(self) -> None:
+        self.state_dir.mkdir(parents=True, exist_ok=True)
+        self.backups.mkdir(parents=True, exist_ok=True)
+        self._lock_fh = open(self.lock_path, "w")
+        try:
+            fcntl.flock(self._lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError:
+            self._lock_fh.close()
+            self._lock_fh = None
+            raise ReportRefusal(
+                "LOCK_HELD",
+                f"another report_corpus run holds {self.lock_path} — refusing rather "
+                "than racing a live transit delete window",
+            )
+        self.recover_if_dirty()
+
+    def release(self) -> None:
+        if self._lock_fh is not None:
+            fcntl.flock(self._lock_fh, fcntl.LOCK_UN)
+            self._lock_fh.close()
+            self._lock_fh = None
+
+    # --- snapshot / restore ------------------------------------------------
+    def _write_journal(self, state_note: str) -> None:
+        self.journal_path.write_text(json.dumps(
+            {"note": state_note, "entries": self._entries}, indent=2), encoding="utf-8")
+
+    def snapshot(self, stage: str) -> None:
+        """Snapshot + pre-delete every transit path. Journal BEFORE the first delete."""
+        self._entries = []
+        for p in self.paths:
+            e = {"path": str(p), "stage": stage, "existed": p.exists(),
+                 "state": "snapshotted", "sha256": None, "size": None,
+                 "backup": str(self.backups / p.name)}
+            if p.exists():
+                e["sha256"] = _sha256_file(p)
+                e["size"] = p.stat().st_size
+                shutil.copy2(p, e["backup"])
+            self._entries.append(e)
+        # Journal is on disk BEFORE any delete — that ordering is the whole point.
+        self._write_journal(f"in transit for stage {stage}")
+        self._armed = True
+        for p in self.paths:
+            p.unlink(missing_ok=True)
+
+    def collect_and_restore(self, stage: str, expect_emit: tuple) -> dict:
+        """Relocate this stage's products into out_dir, restore the shared files.
+
+        *expect_emit* names the transit files this stage is SUPPOSED to write.
+        A file in expect_emit that did not appear is a stage outcome, never an
+        assertion failure here — branch (c).
+        """
+        outcome = {"emitted": [], "no_emit": []}
+        self.out_dir.mkdir(parents=True, exist_ok=True)
+        for p in self.paths:
+            if p.name in expect_emit:
+                if p.exists():
+                    shutil.copy2(p, self.out_dir / p.name)
+                    outcome["emitted"].append(p.name)
+                else:
+                    outcome["no_emit"].append(p.name)
+        # Restore runs for EVERY path regardless of what the stage emitted.
+        failures = []
+        for e in self._entries:
+            p = Path(e["path"])
+            p.unlink(missing_ok=True)
+            if not e["existed"]:
+                e["state"] = "clean"
+                continue
+            backup = Path(e["backup"])
+            if not backup.exists():
+                failures.append(f"{p} — backup {backup} vanished")
+                continue
+            shutil.copy2(backup, p)
+            actual = _sha256_file(p)
+            if actual != e["sha256"]:
+                failures.append(f"{p} — restored sha256 {actual} != {e['sha256']}")
+                continue
+            e["state"] = "clean"
+        if failures:
+            self._write_journal("restore FAILED")
+            raise ReportRefusal("TRANSIT_RESTORE_FAILED", "; ".join(failures))
+        self._armed = False
+        self.journal_path.unlink(missing_ok=True)
+        return outcome
+
+    def emergency_restore(self) -> None:
+        """atexit/signal path. Best effort, never raises — the process is dying."""
+        if not self._armed:
+            return
+        for e in self._entries:
+            try:
+                if not e["existed"]:
+                    Path(e["path"]).unlink(missing_ok=True)
+                    continue
+                backup = Path(e["backup"])
+                if backup.exists():
+                    shutil.copy2(backup, e["path"])
+            except Exception:
+                pass
+
+
+# --- the stage table --------------------------------------------------------
+#
+# ONE row per report stage the driver runs. This is a DISPATCH table over the
+# stage functions parameterized in commit 1 — NOT a second implementation of
+# them (that would be Build Discipline Pattern 2, the silent fork).
+#
+# Derived from the OQ-352 fact paragraph in ISSUES.md, quoted verbatim and
+# pinned at 0c1191239. Nine of the twelve names it enumerates are built here;
+# three are deferred (see _SCOPE_DEFERRED). Two further stages are built that
+# the quotation does NOT name — `coupling` and `maxent_diag` — because they are
+# overlay-capable report stages in _phase_prolog and excluding them would be an
+# unexplained hole. 9 + 2 = 11.
+#
+# `artifacts`   — what the stage writes into out_dir (gated: exist + non-empty).
+# `transit`     — hard-coded ../outputs/ co-products it is SUPPOSED to emit.
+# `marker`      — an owed section that must appear in the artifact, generalizing
+#                 _prolog_giant_comp's OQ-193 '## Provenance split' guard. A
+#                 stage with no owed marker carries None; that is a DECLARED
+#                 absence, not an oversight.
+_REPORT_STAGES = {
+    "fingerprint":       {"artifacts": ("fingerprint_report.md",), "transit": (), "marker": None},
+    "orbit":             {"artifacts": ("orbit_report.md",), "transit": ("orbit_data.json",), "marker": None},
+    "fpn":               {"artifacts": ("fpn_report.md",), "transit": (), "marker": None},
+    "maxent":            {"artifacts": ("maxent_report.md",), "transit": (), "marker": None},
+    "abductive":         {"artifacts": ("abductive_report.md",), "transit": ("abductive_data.json",), "marker": None},
+    "covering":          {"artifacts": ("covering_analysis.md",), "transit": (), "marker": None},
+    "giant_comp":        {"artifacts": ("giant_component_analysis.md",),
+                          "transit": ("giant_component_analysis.raw.json",),
+                          "marker": "## Provenance split (OQ-193)"},
+    "coupling":          {"artifacts": ("coupling_protocol.md",), "transit": (), "marker": None},
+    "maxent_diag":       {"artifacts": ("maxent_diagnostic_report.md",), "transit": (), "marker": None},
+    "commentary_census": {"artifacts": ("commentary_census.json", "commentary_census.md"),
+                          "transit": (), "marker": None},
+    # trajectory is HAC and must never be co-resident with giant_comp (OQ-182).
+    # The driver runs every stage SERIALLY, which satisfies that for free — do
+    # not "optimize" this into a parallel set.
+    "trajectory":        {"artifacts": ("context_profile_report.md",), "transit": (), "marker": None},
+}
+
+# The three tier-2 analyzers named in the OQ's fact paragraph are DEFERRED, and
+# the deferral is a TESTED REFUSAL, not a gap: the driver refuses them by name
+# and the selftest plants a two-sided fixture pair for it.
+#
+# The reason names the ACTUAL blocker (re-derived 2026-08-23, INVESTIGATIONS P2):
+# the analyzers themselves are already path-parameterized — VarianceAnalyzer and
+# PatternMiner take corpus_data_path, SufficiencyTester takes corpus_data_path +
+# pipeline_data_path, all three also accept an in-memory data=. What blocks them
+# is strictly upstream: _phase_python_tier2 reads outputs/corpus_data.json,
+# produced by extract_corpus_data from outputs/output.txt, produced by
+# _prolog_validation running prolog/validation_suite.pl — a TRACKED file that
+# python_test_suite.build_suite() rewrites from testsets/ ONLY (DATASETS_DIR and
+# OUTPUT_FILE are both hardcoded). Running them per-leg means rewriting a tracked
+# generator, which the pre-committed stop rule forbids.
+#
+# Reversal is therefore cheap and its cost is recorded here rather than discovered.
+_SCOPE_DEFERRED = ("variance_analysis", "pattern_mining", "index_sufficiency")
+
+
+def _leg_overlay(corpus_path: str) -> str:
+    """classify_corpus's overlay prefix, verbatim. Do not switch to bare assertz."""
+    return ("retractall(config:param(corpus_path,_)), "
+            f"assertz(config:param(corpus_path,'{corpus_path}')), ")
+
+
+def _prompt_hash_token(corpus_dir: Path) -> dict:
+    """Recorded outcome (4b), never a refusal on its own.
+
+    Three outcomes, three tokens. PROMPT_HASH_ABSENT is DISTINCT from
+    PROMPT_HASH_UNIFORM on purpose: an empty prompt-hash set must never read as
+    agreement (Build Discipline Pattern 5, absence satisfying the gate).
+    original_v6 carries story_provenance on 0/3380 files, so v6 must COMPLETE
+    with ABSENT recorded — it must not refuse.
+    """
+    rx = re.compile(r"story_provenance\(\s*[^,]+,\s*'([0-9a-f]{40})'", re.S)
+    files = sorted(corpus_dir.glob("*.pl"))
+    counts: dict = {}
+    n_with = 0
+    for f in files:
+        m = rx.search(f.read_text(encoding="utf-8", errors="replace"))
+        if m:
+            n_with += 1
+            counts[m.group(1)] = counts.get(m.group(1), 0) + 1
+    n_total = len(files)
+    coverage = (n_with / n_total) if n_total else 0.0
+    if not counts:
+        token = "PROMPT_HASH_ABSENT"
+    elif len(counts) == 1 and n_with == n_total:
+        token = "PROMPT_HASH_UNIFORM"
+    else:
+        token = "PROMPT_HASH_SPLIT"
+    return {"token": token, "hashes": counts, "n_with": n_with,
+            "n_total": n_total, "coverage": coverage}
+
+
+def _write_sidecar(artifact: Path, out_dir: Path, corpus_dir: Path,
+                   stage: str, run_at: str) -> Path:
+    """One manifest sidecar per artifact, with corpus_hash at TOP LEVEL.
+
+    Top-level and not nested under `manifest`, because corpus_hash.
+    assert_corpus_current reads `data.get("corpus_hash")` at the top level — a
+    sidecar that nests it would make the guard raise "has no corpus_hash" on a
+    perfectly fresh file, i.e. a stamp that cannot be checked by the checker it
+    exists for. Mirrors the orbit_data.manifest.json pattern.
+    """
+    doc = {
+        "corpus_hash": _compute_corpus_hash(corpus_dir),
+        "stage": stage,
+        "artifact": artifact.name,
+        "artifact_sha256": _sha256_file(artifact),
+        "artifact_bytes": artifact.stat().st_size,
+        "manifest": build_manifest(run_at, corpus_dir),
+    }
+    side = out_dir / (artifact.name + ".manifest.json")
+    side.write_text(json.dumps(doc, indent=2), encoding="utf-8")
+    return side
+
+
+def report_corpus(corpus_path: str,
+                  out_dir: Optional[Path] = None,
+                  stages: Optional[list] = None,
+                  expected_model: Optional[str] = None,
+                  declared_prompt_hash: Optional[str] = None,
+                  run_at: Optional[str] = None,
+                  giant_comp_timeout: Optional[int] = None,
+                  require_classify_output: bool = True,
+                  resume: bool = False,
+                  progress=None) -> dict:
+    """Run the Phase-2 REPORT stages against an overlay leg. Sibling of classify_corpus.
+
+    classify_corpus runs only run_json_report, so the per-leg outputs carry
+    per-story fields plus the top-level `diagnostic` block and nothing else. The
+    report-stage tools have only ever run inside the full run_pipeline over the
+    DEFAULT leg, writing shared outputs/ — so every corpus-level number they have
+    published is a k=1 point estimate on one draw of one corpus. This is the
+    missing driver (OQ-352); it gates OQ-353 and OQ-354.
+
+    Per leg:
+      - ONE FRESH SWIPL PROCESS PER STAGE (OQ-246: in-process leg iteration
+        accumulates narrative_ontology facts, and the tell — two legs
+        byte-identical — is WEAKER on same-model redraw pairs, which are expected
+        to be near-identical on marginals, so the per-process rule is the only
+        guard). run_prolog already spawns a fresh child per call; stages run
+        strictly SERIALLY, which also satisfies OQ-182 (trajectory/giant_comp
+        never co-resident) for free.
+      - classify_corpus's refusals reused verbatim, plus the taxonomy below.
+      - GATE THE OUTPUT, not only the input: each artifact must exist, be
+        non-empty, carry its owed marker where one is declared, and carry a
+        manifest sidecar whose top-level corpus_hash assert_corpus_current
+        accepts — asserted same-run, before any cross-leg join.
+      - LEG FINGERPRINT around the run (gotchas section 5): the static legs are
+        frozen, testsets/ is NOT, and operator topic runs land stories mid-session.
+      - RETRY LEDGER per stage per attempt — rc / TIMEOUT / signal / output byte
+        count (the 967-byte truncation signature stays checkable), NEVER absorbed
+        as "ran".
+
+    REFUSALS (4a) halt and carry a machine-checkable code; the selftest asserts
+    each two-sided BY CODE:
+      ZERO_GLOB, LOAD_INCOMPLETE, PROVENANCE_COVERAGE, MODEL_MISMATCH,
+      PROMPT_HASH_DECLARED_MISMATCH, ARTIFACT_ABSENT, ARTIFACT_EMPTY,
+      ARTIFACT_MARKER_MISSING, SIDECAR_HASH_MISMATCH, CORPUS_DRIFT,
+      MISSING_CLASSIFY_OUTPUT, SCOPE_TRACKED_GENERATOR, LOCK_HELD,
+      TRANSIT_JOURNAL_DIRTY, TRANSIT_RESTORE_FAILED, TRANSIT_BACKUP_LOST.
+
+    RECORDED OUTCOME TOKENS (4b) NEVER halt; they are asserted
+    present-and-correctly-valued, not two-sided:
+      PROMPT_HASH_UNIFORM / _SPLIT / _ABSENT, STAGE_OK / _TIMEOUT / _SIGNAL /
+      _NO_EMIT.
+
+    The 4a/4b split is load-bearing, not bookkeeping: v6 depends on it. v6 must
+    COMPLETE with PROMPT_HASH_ABSENT recorded, not refuse — and a two-sided
+    fixture is demanded of every 4a code, which ABSENT has no passing counterpart
+    for.
+    """
+    run_at = run_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    # `stages is not None`, NOT `if stages`. An explicit empty list means "run no
+    # stages" (the input-refusal fixtures use it); a falsy test collapses that
+    # into the None default and silently runs ALL ELEVEN — absence wearing the
+    # shape of a default, which is the whole Build Discipline spine. Caught by
+    # the selftest's isolation post-condition, which saw eleven swipl children
+    # logged by a call that had asked for zero.
+    requested = list(stages) if stages is not None else list(_REPORT_STAGES)
+
+    # --- SCOPE_TRACKED_GENERATOR, checked before any work ------------------
+    deferred = [s for s in requested if s in _SCOPE_DEFERRED]
+    if deferred:
+        raise ReportRefusal(
+            "SCOPE_TRACKED_GENERATOR",
+            f"{', '.join(deferred)} cannot run per-leg: they read "
+            "outputs/corpus_data.json <- outputs/output.txt <- the TRACKED "
+            "prolog/validation_suite.pl, which python_test_suite.build_suite() "
+            "rewrites from testsets/ only. The analyzers are already "
+            "path-parameterized; the blocker is that generator. Deferred to a "
+            "later OQ rather than rewriting a tracked file mid-sweep.")
+    unknown = [s for s in requested if s not in _REPORT_STAGES]
+    if unknown:
+        raise ReportRefusal("UNKNOWN_STAGE", ", ".join(unknown))
+
+    corpus_dir = _resolve_corpus_dir(corpus_path)
+    leg_name = corpus_dir.name
+    out_dir = Path(out_dir) if out_dir else (OUTPUTS_DIR / "legs" / leg_name)
+
+    # --- input refusals, reused verbatim from classify_corpus --------------
+    glob_files = sorted(corpus_dir.glob("*.pl")) if corpus_dir.exists() else []
+    glob_count = len(glob_files)
+    if glob_count == 0:
+        raise ReportRefusal(
+            "ZERO_GLOB",
+            f"zero .pl files at {corpus_dir} (relative path {corpus_path!r} did not "
+            "resolve to a populated corpus)")
+
+    # --- MISSING_CLASSIFY_OUTPUT (precondition P1) -------------------------
+    # Four of OQ-353's pre-registered statistics — orbit_monotonicity,
+    # corpus_wasserstein_fracture, arakelov_threshold and the step-0 diagnostic
+    # block — are json_report.pl products, i.e. classify_corpus outputs, NOT
+    # report-stage outputs. So a leg is only COMPLETE when a SAME-COMMIT classify
+    # output sits beside the report artifacts.
+    #
+    # The exemption route (a CLASSIFY_EXEMPT code letting original_v6 ship a
+    # partial set) was CONSIDERED AND REJECTED, recorded here so nobody weakens
+    # this refusal later to make v6 pass: OQ-353 needs v6's fresh classify run
+    # regardless, since the on-disk pipeline_output_original_v6.json (3b169bb,
+    # schema 2) is explicitly non-comparable.
+    classify_out = OUTPUTS_DIR / f"pipeline_output_{leg_name}.json"
+    if require_classify_output:
+        head = _git_head_sha()
+        if not classify_out.exists():
+            raise ReportRefusal(
+                "MISSING_CLASSIFY_OUTPUT",
+                f"{classify_out.name} absent — three of OQ-353's statistics "
+                "(orbit_monotonicity, corpus_wasserstein_fracture, "
+                "arakelov_threshold) plus the diagnostic block are classify_corpus "
+                "products, so a leg without one is INCOMPLETE, not merely missing a "
+                "file. Run classify_corpus first.")
+        cdoc = json.loads(classify_out.read_text(encoding="utf-8"))
+        ccommit = (cdoc.get("manifest") or {}).get("code_commit", "unknown")
+        if ccommit != head:
+            raise ReportRefusal(
+                "MISSING_CLASSIFY_OUTPUT",
+                f"{classify_out.name} was produced at code_commit {ccommit[:12]} but "
+                f"HEAD is {head[:12]} — a cross-commit pair is not a same-run leg; "
+                "'HEAD yields N' is already ambiguous between engine-regime and "
+                "corpus and has caused a misread (KNOWN_STATE 2026-07-02). "
+                "Re-run classify_corpus at HEAD.")
+
+    # --- 4b: prompt-hash token (recorded, never halts on its own) ----------
+    ph = _prompt_hash_token(corpus_dir)
+    if declared_prompt_hash is not None:
+        # Refusal ONLY when the caller DECLARED a hash. An undeclared leg records
+        # its token and proceeds.
+        if ph["token"] != "PROMPT_HASH_UNIFORM" or declared_prompt_hash not in ph["hashes"]:
+            raise ReportRefusal(
+                "PROMPT_HASH_DECLARED_MISMATCH",
+                f"caller declared {declared_prompt_hash}, leg is {ph['token']} "
+                f"with {sorted(ph['hashes'])} at coverage {ph['coverage']:.4f}")
+
+    # --- leg fingerprint BEFORE ------------------------------------------
+    hash_before = _compute_corpus_hash(corpus_dir)
+
+    overlay = _leg_overlay(corpus_path)
+    guard = _TransitGuard(out_dir)
+    # (d) --resume: a resumed run must NOT assume a snapshot taken by a prior
+    # process. acquire() calls recover_if_dirty() UNCONDITIONALLY, so any transit
+    # path whose journal state is not `clean` forces the (b) recovery path before
+    # a single stage runs — on a resumed run and a fresh one alike. That is why
+    # `resume` needs no branch here: making recovery conditional on the flag is
+    # exactly the shape that lets a fresh run walk past a dirty journal.
+    guard.acquire()
+    atexit.register(guard.emergency_restore)
+    _prev_handlers = {}
+    for sig in (signal.SIGINT, signal.SIGTERM, signal.SIGHUP):
+        try:
+            _prev_handlers[sig] = signal.getsignal(sig)
+            signal.signal(sig, lambda s, f: (guard.emergency_restore(), sys.exit(128 + s)))
+        except (ValueError, OSError):
+            pass
+
+    ledger: list = []
+    stage_outcomes: dict = {}
+    out_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        for stage in requested:
+            spec = _REPORT_STAGES[stage]
+            fn = globals()["_prolog_" + stage]
+            kwargs = {"overlay": overlay, "out_dir": out_dir}
+            if stage == "commentary_census":
+                kwargs["corpus_dir"] = corpus_dir
+            if stage == "giant_comp" and giant_comp_timeout:
+                kwargs["timeout"] = giant_comp_timeout
+                kwargs["soft_timeout"] = max(60, giant_comp_timeout // 2)
+            if progress:
+                progress("report_corpus", f"[{leg_name}] {stage} ...")
+
+            guard.snapshot(stage)
+            t0 = time.time()
+            row = {"leg": leg_name, "stage": stage, "attempt": 1,
+                   "started": datetime.now(timezone.utc).isoformat()}
+            try:
+                fn(**kwargs)
+                row["token"] = "STAGE_OK"
+                row["rc"] = 0
+            except subprocess.TimeoutExpired as e:
+                row["token"] = "STAGE_TIMEOUT"
+                row["detail"] = f"timeout after {e.timeout}s"
+            except PrologError as e:
+                row["token"] = "STAGE_SIGNAL" if getattr(e, "signalled", False) else "STAGE_ERROR"
+                row["detail"] = str(e)[:400]
+            except Exception as e:
+                row["token"] = "STAGE_ERROR"
+                row["detail"] = f"{type(e).__name__}: {str(e)[:400]}"
+            finally:
+                row["duration_s"] = round(time.time() - t0, 3)
+                # Byte counts per artifact, ALWAYS recorded — the 967-byte
+                # truncation signature (OQ-301) stays checkable, and an absorbed
+                # "ran" is exactly what this ledger exists to prevent.
+                row["artifact_bytes"] = {
+                    a: ((out_dir / a).stat().st_size if (out_dir / a).exists() else None)
+                    for a in spec["artifacts"]}
+                transit = guard.collect_and_restore(stage, spec["transit"])
+                row["transit_emitted"] = transit["emitted"]
+                if transit["no_emit"]:
+                    row["transit_no_emit"] = transit["no_emit"]
+                    row.setdefault("tokens", []).append("STAGE_NO_EMIT")
+                ledger.append(row)
+            stage_outcomes[stage] = row["token"]
+
+        # --- OUTPUT GATE, same-run, before any cross-leg join --------------
+        sidecars = []
+        for stage in requested:
+            spec = _REPORT_STAGES[stage]
+            for a in list(spec["artifacts"]) + [t for t in spec["transit"]]:
+                p = out_dir / a
+                if not p.exists():
+                    raise ReportRefusal("ARTIFACT_ABSENT", f"{stage} -> {a} not produced")
+                if p.stat().st_size == 0:
+                    raise ReportRefusal("ARTIFACT_EMPTY", f"{stage} -> {a} is zero bytes")
+            if spec["marker"]:
+                a = spec["artifacts"][0]
+                text = (out_dir / a).read_text(encoding="utf-8", errors="replace")
+                if spec["marker"] not in text:
+                    raise ReportRefusal(
+                        "ARTIFACT_MARKER_MISSING",
+                        f"{stage} -> {a} is missing its owed section {spec['marker']!r} "
+                        "(a soft-fail or catch-wrap regression on the Prolog side)")
+            for a in list(spec["artifacts"]) + list(spec["transit"]):
+                side = _write_sidecar(out_dir / a, out_dir, corpus_dir, stage, run_at)
+                sidecars.append(side)
+
+        # The sidecar must be accepted by the checker it is written for.
+        for side in sidecars:
+            try:
+                assert_corpus_current(side, corpus_dir)
+            except RuntimeError as e:
+                raise ReportRefusal("SIDECAR_HASH_MISMATCH", f"{side.name}: {e}")
+
+        # --- CORPUS_DRIFT: the leg must not have moved under the run -------
+        hash_after = _compute_corpus_hash(corpus_dir)
+        if hash_after != hash_before:
+            raise ReportRefusal(
+                "CORPUS_DRIFT",
+                f"leg {leg_name} moved during the run ({hash_before} -> {hash_after}); "
+                "a witness diff-pair is only valid over a FROZEN corpus (gotchas 5) — "
+                "operator topic runs land stories mid-session")
+    finally:
+        for sig, h in _prev_handlers.items():
+            try:
+                signal.signal(sig, h)
+            except (ValueError, OSError):
+                pass
+        try:
+            atexit.unregister(guard.emergency_restore)
+        except Exception:
+            pass
+        guard.release()
+
+    result = {
+        "leg": leg_name,
+        "corpus_path": corpus_path,
+        "corpus_dir": str(corpus_dir),
+        "out_dir": str(out_dir),
+        "run_at": run_at,
+        "code_commit": _git_head_sha(),
+        "n_files": glob_count,
+        "corpus_hash": hash_before,
+        "corpus_hash_after": hash_after,
+        "prompt_hash": ph,
+        "stages": requested,
+        "stage_outcomes": stage_outcomes,
+        "retry_ledger": ledger,
+        "deferred": list(_SCOPE_DEFERRED),
+        "classify_output": str(classify_out) if require_classify_output else None,
+    }
+    (out_dir / "report_corpus.result.json").write_text(
+        json.dumps(result, indent=2), encoding="utf-8")
+    return result
 
 
 # ---------------------------------------------------------------------------
