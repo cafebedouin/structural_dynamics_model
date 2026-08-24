@@ -690,6 +690,27 @@ attaches to); if `false`, the story is a genuine standalone and gets no kernel_i
 join step transcribes that decision from `kernel_grouping.json` into the `.pl`; it does
 not re-derive it.
 
+## Don't edit the substrate to route around an engine defect (the corpus-side twin of Pattern 4)
+
+Pattern 4 is the engine fabricating a value where the substrate is silent. The twin runs the other
+way: **editing authored data so a defective engine path stops firing** — authoring the field a
+throwing predicate wants, renaming the atom a bad guard rejects, filling the input a crash names.
+The engine then reads clean, and the defect becomes unobservable: the substrate now looks exactly
+like what the broken code expects, so the code is never fixed and every future story meets the same
+trap. Same spine as always — an absence (the engine's missing guard) is papered over by a
+success-shaped presence (data that satisfies it).
+
+Scope: this bars edits made *to route around the defect*. It does not bar authoring the field for
+its own sake (OQ-60's rule that synthetic test constraints needing scorable purity must author
+coordination_type is authoring-for-content, decided at authoring time), and it does not bar repair
+of KNOWN GENERATION DRIFT toward what the model meant (`victim→payer`). The tell is the
+counterfactual: would this edit be made if the engine path were healthy? If no, it is a route-around.
+
+First instance (2026-08-24): `giant_comp` throws on two `testsets_nemotron_think` stories whose
+purity scores the throwing `unknown` atom (OQ-356). Authoring `coordination_type` on those two would
+have made the leg pass before the code fix — offered corpus-side, ruled against: the code fix is the
+lane, the leg ships without `giant_comp` until it lands.
+
 ## Pattern 4: Fabricated default — missing-data fallback that emits a real-looking value
 
 A predicate that lacks its input fabricates a plausible constant rather than failing or

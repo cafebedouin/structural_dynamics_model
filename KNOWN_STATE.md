@@ -99,9 +99,7 @@ for OQ-236's under-authoring census: **5** stories lack `coordination_type`, but
 score the throwing `unknown` atom — the other 3 (`latin_correctness__continuity_reading`,
 `press_reformation_causality__technological_determinism`,
 `qwerty_persistence_inevitability__path_dependency_reading`) score `-1.0`, the gate-fail sentinel,
-which is a number and is excluded safely. Authoring `coordination_type` on the two named stories
-would make the leg pass `giant_comp` even before OQ-356 — that is a corpus-side option, offered,
-not recommended over the code fix.
+which is a number and is excluded safely. RULED (2026-08-24, this landing pass): do NOT author `coordination_type` into the two stories — a generated stratum is not edited to route around an engine defect (build_discipline → *Don't edit the substrate to route around an engine defect*); the OQ-356 code fix is the lane, and the leg ships without `giant_comp` until it lands.
 
 **4. Shared-`outputs/` overlap, disclosed.** `outputs/pipeline_output.raw.json` is a SHARED
 artifact that `classify_corpus` deletes and rewrites; my three classify runs spanned roughly
