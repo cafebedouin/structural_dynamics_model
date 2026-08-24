@@ -125,7 +125,7 @@ STAMPED_FILE_COUNTS = {
     "testsets_haiku3": 993,     # stamped 2026-08-22
     "testsets_stealth3": 1005,  # stamped 2026-08-22
     "testsets_kimi2": 1005,     # stamped 2026-08-22
-    "testsets_nemotron_think": 732,  # stamped 2026-08-23 (growing; auto-resume across the free-tier cap)
+    "testsets_nemotron_think": 1003,  # re-stamped 2026-08-24 (COMPLETE; 2 seed-persistent failures)
     "testsets_flash2": 944,     # stamped 2026-08-23 (leg landed 2026-08-21)
     "testsets_flash3": 958,     # stamped 2026-08-23 (leg landed 2026-08-22)
     "testsets_flash_think": 988,   # stamped 2026-08-23 (leg landed 2026-08-21)

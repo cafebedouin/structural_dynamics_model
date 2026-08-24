@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "2041be82a88ec4d186eef831a0bb8dce00162682",
+    "store_version": "7f1bfbb003a5273a5dce0e86a0c3c8bd4e97eeb5",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-24T00:35:10"
+    "generated_at": "2026-08-24T00:53:46"
   },
-  "issues_sha": "c3fee74dac6b19945ac90a20b488b86b3bee6d1d83b1f9401dc93869ba667d41",
-  "n_entries": 363,
+  "issues_sha": "7db1c1975898722ae6207322cbe7f04966f266435c8c75eead14d6232d8cad85",
+  "n_entries": 364,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 149,
+    "open": 150,
     "partial": 5
   },
   "active": [
@@ -2269,6 +2269,19 @@
         "OQ-352",
         "OQ-353",
         "OQ-356"
+      ]
+    },
+    {
+      "id": "OQ-364",
+      "status": "open",
+      "priority": 3,
+      "summary": "Rename the live leg (`testsets/` → `testsets_live/`, `json/` → `json_live/`): deferred, planned, census attached",
+      "deps": [
+        "splits_from OQ-342"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-342"
       ]
     }
   ],

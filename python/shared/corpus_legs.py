@@ -55,7 +55,7 @@ LIVE_LEGS = (
     "testsets_haiku3",     # 2026-08-22, 993 — the pure haiku floor pair with haiku2
     "testsets_stealth3",   # 2026-08-22, 1005 — the pure thinking-on floor pair with stealth2
     "testsets_kimi2",      # 2026-08-22, 1005 — the kimi floor pair with testsets_kimi
-    "testsets_nemotron_think",  # 2026-08-23, 732 and growing (free-tier cap; auto-resume) — nemotron regime pair
+    "testsets_nemotron_think",  # COMPLETE 2026-08-23 at 1003 (auto-resume loop self-terminated) — nemotron regime pair
     # The four gemini-2.5-flash legs of 2026-08-21 (certified + committed then; registration lagged
     # until 2026-08-23 — the stamp-vs-substance gap noted on OQ-347). flash2/flash3 thinking-off
     # redraws; flash_think/flash_think2 thinking_budget=8192.

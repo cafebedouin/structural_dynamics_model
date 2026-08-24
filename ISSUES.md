@@ -18103,6 +18103,13 @@ prompt said "victim" 10× and named the enum once. Prompt e03e2210 names `payer`
 stealth's 36 hardest seeds then passed 36/36. The repair now counts remaps in `stats`
 (`stakeholder_role_remapped`), so every future run reports the rate per model for free.
 
+**Second instance of the same shape (2026-08-23, arm G again):** gemini-2.5-flash with
+thinking_budget=8192 authored NO `suppression_profile/2` in ~990 stories per leg (flash_think,
+flash_think2), where thinking-off Flash writes it in 2/~950 and other models far more (sonnet2 201,
+kimi2 178, haiku2 28). Both catches came from REGISTERING legs — the pin audit is doing the
+per-model head census for free. Rarely-authored optional heads (`measurement_basis`,
+`suppression_profile`) are themselves a per-model disposition surface; add both to the table.
+
 **Observed 2026-08-22 (arm G of the boundary gate):** kimi-k2.6 under prompt e03e2210 writes NO
 `measurement_basis/2` in 1005 stories (kimi2), where the July kimi leg at becd0f87 wrote it in 3/1005 — an optional head this
 model almost never authors (sonnet 145, haiku2 504, stealth 531 of ~1000 do); pin now `testsets_kimi2:empty`. Add `measurement_basis` to the per-model
@@ -18435,6 +18442,14 @@ mountains (+0.12) and ropes (+0.11), ~zero on snares (−0.01), benign stratum +
 (Flash 16%) — same shape on a second family. nemotron_think's persisted responses carry `message.reasoning`,
 so arm 1 below can run on them now at $0.
 
+**Arm 1 first cut ran 2026-08-23 (`reasoning_text_census.py`, nemotron_think traces, 728 paired):
+PRESENCE is non-discriminating** — 100% of traces in every Δε stratum use the framework vocabulary
+(the prompt supplies it), density flat at ~5.5 terms/kchar. The ORDER cut is suggestive: risers carry
+an explicit type-commitment phrase more often (60% vs 39% flat) and, where a trace has both a
+commitment and an ε number, type precedes ε 88–90% (risers) vs 69% (flat) — but only 8–35 traces
+per stratum have both (the ε-number regex catches 13–24%). The refined instrument owed: a robust
+parse of where the trace first fixes a numeric ε, run over the full leg.
+
 **The fork cannot be settled from inside the framework's outputs.** Three arms, cheapest first:
 1. **Reasoning-text census (free).** OpenRouter returns `message.reasoning`; the nemotron
    thinking-on leg (queued, OQ-347) and stealth persist it. Count, per story whose ε rose ≥0.30
@@ -18735,7 +18750,27 @@ member-by-member; OQ-239 gets its quantitative premise.
 
 ---
 
-*Last updated: 2026-08-23. Add new items with sequential OQ-NN labels. Mark
+## OQ-364 — Rename the live leg (`testsets/` → `testsets_live/`, `json/` → `json_live/`): deferred, planned, census attached
+
+**Ω-type:** Ω_E (mechanical once sequenced; the census is the checklist).
+
+**Status:** open — minted 2026-08-24 from the operator's 2026-08-23 housekeeping proposal.
+**Priority:** 3
+**Deps:** splits_from OQ-342
+**Files:** `docs/technical/bulk_corpus_generation.md` §10 (the plan + per-file reference census), `prolog/config.pl`, `agent/story_generator_base.py`, `agent/generate_kernel_corpus.py`, `python/run_pipeline.py`, `python/shared/corpus_legs.py`, `python/corpus_census_check.py`, `python/module_boundary_check.py`, `prolog/schema_shape.txt`, `prolog/corpus_loader.pl`.
+
+**The ruling-grade findings are in runbook §10:** not `sonnet_live` (the live leg is multi-model —
+132 sonnet-5 / 75 sonnet-4.5 / 28 haiku / 11 flash / 7 sonnet-4 by `story_provenance`); do NOT nest
+legs under a parent (`corpus_empty` on the non-recursive default glob, the linter's
+`dirname(dirname)` resolution, and every leg-name-keyed registry); the narrow two-dir rename touches
+~30 live code files (census in §10, `validation_suite.pl`'s 285 refs regenerate). **Preconditions:**
+all legs landed, no live worktree branch, one writer. **Resolution:** the §10 sequence executed with
+`[GATE]` GREEN as the witness. **What it changes:** the live leg stops masquerading as a peer of the
+model-named legs, and `c-orchestrator` output lands under an honest name.
+
+---
+
+*Last updated: 2026-08-24. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 **PREDICTION MADE AND CONFIRMED ON A FRESH DRAW (2026-08-24).** `testsets_nemotron_think`

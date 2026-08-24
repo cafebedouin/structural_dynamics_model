@@ -8,6 +8,24 @@ query below to reading the whole file.
 **Entry grammar (machine-readable, added 2026-06-04).** Every entry is:
 
 ```
+## 2026-08-24 — [landed] nemotron_think COMPLETE (1003); stale-manifest hazard closed by re-classify; four Flash legs registered late (stamp-vs-substance); OQ-364 minted (live-leg rename, deferred)
+**Files:** prolog/testsets_nemotron_think/, python/shared/corpus_legs.py, python/corpus_census_check.py, prolog/schema_shape.txt, docs/technical/bulk_corpus_generation.md, audits/2026-08-21_flash_regime_vs_redraw/
+**Tier:** landed
+
+`testsets_nemotron_think` finished at 1003/1005 across three free-tier windows (auto-resume loop
+self-terminated). The committed `pipeline_output.nemotron_think.json` described 732/1003 — the
+stale-manifest hazard the OQ-353 instance flagged — re-classified at full n before any ingest; OQ-58
+sweep rerun. Registration debt cleared: the four Flash legs are in LIVE_LEGS + stamps (19 legs,
+census GREEN) and the boundary check prints `CORPUS_DIRS not in LIVE_LEGS`. Arm G caught two
+rarely-authored-head drops on registration (kimi2 `measurement_basis` 3→0, flash_think
+`suppression_profile` 2→0) — recorded on OQ-344. OQ-349 arm 1 first cut: vocabulary PRESENCE is
+non-discriminating (100% everywhere); the ORDER cut (type-commitment before ε: 88–90% risers vs 69%
+flat) is the refined instrument's target. OQ-364 minted for the live-leg rename (runbook §10 holds
+the plan + census). giant_comp throws on nemotron_think (OQ-356): NOT authoring coordination_type
+into model-authored stories; the code fix is the lane.
+
+---
+
 ## YYYY-MM-DD — <title>
 **Files:** <comma-separated paths the entry concerns>
 **Tier:** tripwire | correction-key | landed | history
