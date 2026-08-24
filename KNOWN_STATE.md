@@ -45,6 +45,100 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+
+## 2026-08-23 — [landed] OQ-352: per-leg REPORT driver built; `giant_comp` found dead on 17 of 20 corpora
+**Files:** python/run_pipeline.py, python/report_legs.py, python/report_legs.py, python/sweeps/regenerate_orbits.py, scripts/gate.sh, .gitignore, prolog/giant_component_analysis.pl, audits/2026-08-23_oq352_report_driver/
+**Tier:** landed
+
+**Built.** `run_pipeline.report_corpus(corpus_path, out_dir, ...)`, the sibling of
+`classify_corpus`, running the Phase-2 report stages against an overlay leg into
+`outputs/legs/<leg>/`: 11 stages, one fresh swipl per stage (OQ-246), strictly serial (satisfies
+OQ-182 for free), 16 refusal codes two-sided by reason code, 4 recorded-outcome tokens, per-stage
+retry ledger with byte counts, manifest sidecars carrying a TOP-LEVEL `corpus_hash` that
+`assert_corpus_current` accepts, and `_TransitGuard` (flock + on-disk journal + signal handlers +
+restore-then-refuse) for the three artifacts Prolog hard-codes to `../outputs/`. Gate row
+`report legs`, fixture-only and synthetic, 58 controls, 2.6 s. CLI `python/report_legs.py`.
+
+**TRIPWIRE 1 — `giant_component_analysis` is DEAD on 17 of 20 corpora** (16 of 19 live legs +
+`original_v6`), throwing `>=/2: Arithmetic: 'unknown/0' is not a function`. `count_by_action_band/8`
+(`giant_component_analysis.pl:1276-1281`) calls `effective_purity` DIRECTLY, not through the
+`-1.0`-collapsing `gc_node_purity` cache, and filters `catch(...,_,fail), EP >= 0.0`.
+**`unknown` is a return value, not an exception, so the `catch/3` intercepts nothing.** OQ-60
+guarded two siblings (`drl_purity_network.pl:353`, `giant_component_analysis.pl:365` — the latter
+in the same file, with a comment naming this exact hazard) and missed this one. **OQ-356; NOT
+fixed here** (engine change, above the fix-simple-errors threshold, and the frozen prereg
+pre-committed to routing it to an OQ).
+
+**TRIPWIRE 2 — the Phase-3 contamination block has never run on ANY corpus.** Do not read
+`giant_component_analysis.md`'s contamination sections as `testsets/`-derived numbers; there are
+no numbers. `run_phase3` gates the block on `GCFrac > 0.10` (`:855`) and `testsets`' giant
+component is 12/258 = **4.7%**, so on the only leg the stage was ever run on it prints "No
+significant component found" and returns. Predictor, 20/20 across all corpora:
+**THROW ⟺ (GC > 10% of network) AND (a GC member's `effective_purity` succeeds non-numeric)**.
+The three that pass do so for TWO different reasons — `haiku2`/`haiku3` have zero unknown-purity
+GC members inside the path; `testsets` never enters the path and would throw if it did.
+Giant-component TOPOLOGY is unaffected (`compute_components` ran cleanly on all 20).
+
+**TRIPWIRE 3 — a same-commit constraint on any per-leg sweep.** `MISSING_CLASSIFY_OUTPUT`
+compares the classify output's `manifest.code_commit` to HEAD, so **every `classify_corpus` and
+`report_corpus` in one witness sequence must run at ONE frozen HEAD.** Committing between them
+invalidates the outputs already produced. Freeze, run, then commit.
+
+**TRIPWIRE 4 — `_classify_timeout_for` is miscalibrated above n≈1000.** `classify_corpus` on
+`original_v6` (n=3380) was killed by its own `soft_timeout` at **3701 s without completing** and
+retried (`outputs/prolog_children.log`, `pid=778434 rc=TIMEOUT`). `_CLASSIFY_SECONDS_PER_STORY =
+0.73` (fitted at n≈1000) predicts 41 min; the run exceeded 62 without finishing. And
+`soft_timeout = ceiling // 2` assumes the failure mode is a HANG — for a legitimately slow corpus
+it converts one run into `2 × 61.7 + 123 = 247` minutes. **Escape:** pass `soft_timeout=0`, which
+makes `run_prolog`'s `cap = timeout if (final or not soft_timeout)` give every attempt the full
+ceiling. Ruling owed (OQ-356 second-order).
+
+**TRIPWIRE 5 — THE WITNESS ARTIFACTS ARE `code_dirty: True`; NO COMMIT RECONSTRUCTS THEM.**
+Every manifest from this witness run — both pair legs' classify outputs and report sidecars at
+`909a4cbe0`, and v6's classify at `2041be82a` — carries `code_dirty: True`, because the driver
+fixes were uncommitted while the run executed. **OQ-353 pre-registers against these artifacts and
+must know they describe a tree state no commit reproduces.** RULED (2026-08-24): the **pair arm
+WILL be re-witnessed at the post-commit HEAD** — it costs ~11 min (336 s + 331 s) and it is the
+load-bearing arm, so clean-checkout reproducibility is worth buying; **v6 stays as-is with the
+caveat attached**, because its classify alone is 100 min and its arm is incomplete anyway
+(OQ-356/OQ-363). Not left undecided, which is how it would have been decided by default.
+
+**Cross-commit note, and the delta was VERIFIED not assumed.** HEAD moved from `909a4cbe0` to
+`2041be82a` mid-run (another instance landing `testsets_nemotron_think` COMPLETE). The two arms
+therefore carry different `code_commit` stamps. They remain engine-comparable because
+`git diff --name-only 909a4cbe0 HEAD` was checked to lie **entirely within `json_nemotron_think/`
+and `prolog/testsets_nemotron_think/`** — 543 files, 0 outside those two trees — i.e. the delta was
+verified to be corpus-only by pathspec, not merely observed to contain no engine files. The filled
+leg is one neither arm used.
+
+**Also corrected:** `run_pipeline.py`'s `~6 min at n=3380` comment on `_prolog_giant_comp`
+describes a run that **never completed** — the throw arrives at 221–230 s. It has never been a
+measurement of a successful v6 giant_comp.
+
+**Four driver defects caught by the driver's own controls before any result was published:**
+`stages=[]` falling through a falsy test and running all eleven stages (found by the selftest's
+isolation post-condition seeing eleven swipl children from a call that asked for none);
+`MISSING_CLASSIFY_OUTPUT` resolving `pipeline_output_<leg>.json` while all 22 on disk are
+`pipeline_output.<short>.json`; `outputs/prolog_children.log` written by a reused helper, now
+ENUMERATED in the write invariant rather than excluded (suppressing it would delete the OQ-301
+forensic channel exactly where this driver needs it); and a refusal table documenting three codes
+it could not fire (`expected_model` accepted and never read) — caught by the plan's own
+per-reason-code two-sided requirement, not by anything failing.
+
+**A prediction made and confirmed on a fresh draw, with its mechanism corrected.**
+`testsets_nemotron_think` completed at n=1003 during the run and THREW as predicted (GC
+888/1003 = 88.5%, unknown-in-GC = 2). The invariance is **story-level, not a rate**: both
+unknown-purity GC members (`genesis_creation_cosmology__young_earth_literal`,
+`vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading`) are pre-existing in the 735-story
+set committed at `909a4cbe0`, and across **+271 / -3** stories since, **zero new `unknown`
+appeared**. **CORRECTION to a premise stated earlier in the same arc:** `purity_score` does NOT
+return `unknown` "exactly when `coordination_type` is unauthored" — on this leg 5 stories lack
+`coordination_type` and only 2 score the `unknown` ATOM; the other 3 score **`-1.0`**, the
+epistemic-gate-fail sentinel, which is a NUMBER and is excluded safely by `EP >= 0.0`. Absence of
+`coordination_type` is necessary but NOT sufficient for the throwing token. **Never use "lacks
+`coordination_type`" as the proxy for the unknown count** (over-counts 5 vs 2 here); assert on the
+token — `purity_score` succeeds AND `\+ number(P)`.
+
 ## 2026-08-23 — [landed] OQ-301 RESOLVED: the giant_comp failure regime is ABSENT (0/150) and permanently unattributable — plus a core-capture hazard cleared and an attach instrument that does not work here
 **Files:** ISSUES.md, python/run_pipeline.py, audits/2026-08-17_giant_comp_segv_hang/round2_arms.sh, audits/2026-08-17_giant_comp_segv_hang/PREREGISTRATION.md, audits/2026-08-17_giant_comp_segv_hang/WRITEUP.md, audits/2026-08-17_giant_comp_segv_hang/audit_log.md, audits/README.md, audits/INVESTIGATIONS.md, .claude/skills/plan-review/RUNS.md
 **Tier:** correction-key

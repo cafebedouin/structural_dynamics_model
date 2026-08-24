@@ -843,15 +843,28 @@ def _prompt_hash_token(corpus_dir: Path) -> dict:
     original_v6 carries story_provenance on 0/3380 files, so v6 must COMPLETE
     with ABSENT recorded — it must not refuse.
     """
-    rx = re.compile(r"story_provenance\(\s*[^,]+,\s*'([0-9a-f]{40})'", re.S)
+    # story_provenance/8: (id, prompt_hash, schema_hash, date, run_tag, example,
+    # model, sampling). Arg 2 is the prompt hash, arg 7 the model. The fact is
+    # emitted across several lines, so the pattern spans them (re.S) and the
+    # model is picked out by position, not by guessing at the value's shape.
+    rx = re.compile(
+        r"story_provenance\(\s*[^,]+,\s*'([0-9a-f]{40})'\s*,"
+        r"\s*'[^']*'\s*,\s*'[^']*'\s*,\s*'[^']*'\s*,\s*'[^']*'\s*,\s*'([^']*)'", re.S)
+    rx_any = re.compile(r"story_provenance\(", re.S)
     files = sorted(corpus_dir.glob("*.pl"))
     counts: dict = {}
+    models: dict = {}
     n_with = 0
+    n_any = 0
     for f in files:
-        m = rx.search(f.read_text(encoding="utf-8", errors="replace"))
+        text = f.read_text(encoding="utf-8", errors="replace")
+        if rx_any.search(text):
+            n_any += 1
+        m = rx.search(text)
         if m:
             n_with += 1
             counts[m.group(1)] = counts.get(m.group(1), 0) + 1
+            models[m.group(2)] = models.get(m.group(2), 0) + 1
     n_total = len(files)
     coverage = (n_with / n_total) if n_total else 0.0
     if not counts:
@@ -860,8 +873,8 @@ def _prompt_hash_token(corpus_dir: Path) -> dict:
         token = "PROMPT_HASH_UNIFORM"
     else:
         token = "PROMPT_HASH_SPLIT"
-    return {"token": token, "hashes": counts, "n_with": n_with,
-            "n_total": n_total, "coverage": coverage}
+    return {"token": token, "hashes": counts, "models": models, "n_with": n_with,
+            "n_provenance_any": n_any, "n_total": n_total, "coverage": coverage}
 
 
 def _write_sidecar(artifact: Path, out_dir: Path, corpus_dir: Path,
@@ -1016,6 +1029,47 @@ def report_corpus(corpus_path: str,
 
     # --- 4b: prompt-hash token (recorded, never halts on its own) ----------
     ph = _prompt_hash_token(corpus_dir)
+
+    # --- fingerprint refusals, ACTUALLY WIRED ------------------------------
+    # These three were in the documented taxonomy before they were in the code:
+    # `expected_model` was accepted and never read, so PROVENANCE_COVERAGE and
+    # MODEL_MISMATCH named codes the driver could not produce, and LOAD_INCOMPLETE
+    # had nothing behind it either. A refusal table that over-claims is the same
+    # defect the table exists to catch (Pattern 1, the dangling wire), so they are
+    # wired here rather than trimmed from the docstring.
+    #
+    # LOAD_INCOMPLETE is checked against the REQUIRED same-commit classify output
+    # rather than by re-loading the corpus: classify_corpus already asserted
+    # glob == per_constraint == manifest.n_constraints in Prolog at this commit,
+    # so comparing its manifest to the CURRENT glob count both inherits that
+    # assertion and catches the leg having moved since. Re-loading 3380 files to
+    # re-derive a number another gate already certified would be minutes spent to
+    # learn nothing new.
+    if require_classify_output:
+        n_manifest = (cdoc.get("manifest") or {}).get("n_constraints")
+        if n_manifest != glob_count:
+            raise ReportRefusal(
+                "LOAD_INCOMPLETE",
+                f"classify manifest counts {n_manifest} members but the leg globs "
+                f"{glob_count} now — the corpus moved between the classify run and "
+                "this one, so the report artifacts would describe a different corpus "
+                "than the statistics beside them")
+    if expected_model is not None:
+        # Non-vacuous, exactly as classify_corpus's Prolog gate is: full coverage
+        # is asserted BEFORE the prefix match, so the match cannot pass over an
+        # empty fact set.
+        if ph["n_with"] != glob_count:
+            raise ReportRefusal(
+                "PROVENANCE_COVERAGE",
+                f"{ph['n_with']} of {glob_count} stories carry a parseable "
+                f"story_provenance ({ph['n_provenance_any']} carry the fact at all) — "
+                "a single-model fingerprint over partial coverage is vacuous")
+        bad = sorted(m for m in ph["models"] if not m.startswith(expected_model))
+        if bad:
+            raise ReportRefusal(
+                "MODEL_MISMATCH",
+                f"expected every story_provenance model to start with "
+                f"{expected_model!r}; found {bad}")
     if declared_prompt_hash is not None:
         # Refusal ONLY when the caller DECLARED a hash. An undeclared leg records
         # its token and proceeds.
@@ -1056,7 +1110,11 @@ def report_corpus(corpus_path: str,
             kwargs = {"overlay": overlay, "out_dir": out_dir}
             if stage == "commentary_census":
                 kwargs["corpus_dir"] = corpus_dir
-            if stage == "giant_comp" and giant_comp_timeout:
+            # `is not None`, not bare truthiness — the same falsy-vs-absent shape
+            # that made stages=[] run all eleven stages. An explicit 0 here should
+            # fail LOUDLY (a zero ceiling), never be silently replaced by the 900 s
+            # default. Found by sweeping this driver for siblings of that defect.
+            if stage == "giant_comp" and giant_comp_timeout is not None:
                 kwargs["timeout"] = giant_comp_timeout
                 kwargs["soft_timeout"] = max(60, giant_comp_timeout // 2)
             if progress:

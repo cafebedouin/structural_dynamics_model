@@ -1,0 +1,26 @@
+leg                            actual   gc_size  succ_unk  fails  eff_unk  predicted (eff_unk>0 => THROW)
+--------------------------------------------------------------------------------------------------
+testsets                       OK            12         1      0        1  THROW   <-- MISPREDICTED
+testsets_haiku2                OK           662         0      0        0  OK
+testsets_haiku3                OK           629         0      0        0  OK
+archives/datasets/original_v6  THROW       3014        24      0       24  THROW
+testsets_flash                 THROW        801        71      0       71  THROW
+testsets_flash2                THROW        761        71      0       71  THROW
+testsets_flash3                THROW        710        67      0       67  THROW
+testsets_flash_think           THROW        843        60      0       60  THROW
+testsets_flash_think2          THROW        801        46      0       46  THROW
+testsets_haiku                 THROW        589         4      0        4  THROW
+testsets_kimi                  THROW        537       151      0      151  THROW
+testsets_kimi2                 THROW        396       133      0      133  THROW
+testsets_nemotron              THROW        829         1      0        1  THROW
+testsets_nemotron_think        THROW        888         2      0        2  THROW
+testsets_sonnet                THROW        452        23      0       23  THROW
+testsets_sonnet2               THROW        414        32      0       32  THROW
+testsets_sonnet3               THROW        378        31      0       31  THROW
+testsets_stealth               THROW        675         2      0        2  THROW
+testsets_stealth2              THROW        613         2      0        2  THROW
+testsets_stealth3              THROW        513         4      0        4  THROW
+
+refined predictor 'effective_purity SUCCEEDS non-numeric on a GC member': 19/20
+
+[exited with code 0]

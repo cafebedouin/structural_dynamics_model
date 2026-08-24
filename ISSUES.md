@@ -18461,9 +18461,17 @@ it reports; build_discipline → *a repair that encodes the tested claim into th
 **Ω-type:** Ω_E (a build; its correctness is witnessable by the same refusal gates `classify_corpus`
 already carries).
 
-**Status:** open — minted 2026-08-23 from the leg-expansion recon (19 legs, ~17.3k stories on disk).
+**Status:** partial — the driver is BUILT and gate-green (`audits/2026-08-23_oq352_report_driver/`,
+commits `89194672c`..`3573c5797`): 11 stages, 16 refusal codes two-sided by reason code, transit
+guard, gate row `report legs` (58 controls, 2.6 s). Witness run: **`testsets_sonnet2` and
+`testsets_sonnet3` COMPLETE at 10 of 11 stages** (13 artifacts each, 13/13 sidecars accepted by
+`assert_corpus_current`, leg md5 unchanged, journal clean, `PROMPT_HASH_UNIFORM` @ `e03e2210`);
+**`archives/datasets/original_v6` at 9 of 11** (classify OK, n=3380, 6025 s single attempt).
+The two missing stages are NAMED, not absorbed: `giant_comp` excluded by preregistration because
+it throws on 17 of 20 corpora (**OQ-356**), and `abductive` timed out 3x300 s on v6 (**OQ-363**).
+Minted 2026-08-23 from the leg-expansion recon (19 legs, ~17.3k stories on disk).
 **Priority:** 2
-**Deps:** blocked_on OQ-301, gates OQ-353, gates OQ-354
+**Deps:** blocked_on OQ-301, gates OQ-353, gates OQ-354, gates OQ-363, bundled_with OQ-356, bundled_with OQ-357
 **Files:** `python/run_pipeline.py` (`classify_corpus` :368 — the model; `_prolog_orbit`/`_prolog_fpn`/
 `_prolog_maxent`/`_prolog_giant_comp`/the trajectory step :837–960 — the stages), `prolog/corpus_loader.pl`
 (`corpus_path` overlay, `asserta` only), `python/shared/corpus_legs.py` (`LIVE_LEGS`, 19 as of
@@ -18507,6 +18515,64 @@ and has produced the full artifact set for at least two legs and one archive ove
 that `assert_corpus_current` accepts. **What it changes:** OQ-353/OQ-354 become runnable; OQ-182's
 "unique product" (HAC families) gets its first validation population; OQ-160/170's cluster analyses
 get a corpus larger than `testsets/`.
+
+**What was built (2026-08-23, commits `89194672c` → `3573c5797`; audit
+`audits/2026-08-23_oq352_report_driver/`).**
+
+- `run_pipeline.report_corpus(corpus_path, out_dir, ...)` — the sibling of `classify_corpus`.
+  Eleven report stages, ONE FRESH SWIPL PER STAGE (OQ-246), strictly SERIAL — which satisfies
+  OQ-182 (`trajectory`/`giant_comp` never co-resident) for free. Per-stage retry ledger with
+  per-artifact byte counts, so the 967-byte truncation signature stays checkable and a stage is
+  never absorbed as "ran".
+- The eleven `_prolog_*` stages took defaulted `overlay`/`out_dir`/`corpus_dir`/timeout
+  parameters. **Inert by construction, not by test**: `overlay=""` makes the goal string
+  identical, and every default goal literal was checked VERBATIM against
+  `git show HEAD:python/run_pipeline.py`. Deliberately NOT a stage-table refactor (a second
+  implementation in the driver would be Pattern 2).
+- **A 4a/4b split that is load-bearing, not bookkeeping.** 16 refusal codes HALT and are
+  asserted two-sided BY REASON CODE; 4 recorded-outcome tokens NEVER halt and are asserted
+  present-and-correctly-valued. `original_v6` is what forces the split: it carries
+  `story_provenance` on 0/3380 files and must COMPLETE with `PROMPT_HASH_ABSENT` recorded, not
+  refuse — while every 4a code owes a two-sided fixture, which ABSENT has no passing
+  counterpart for. `PROMPT_HASH_ABSENT` is DISTINCT from `PROMPT_HASH_UNIFORM` so an empty
+  prompt-hash set can never read as agreement (Pattern 5).
+- **`_TransitGuard`** — the file-level transposition of `probe_harness:with_retracted/2`, for
+  the three artifacts the Prolog side hard-codes (`orbit_report.pl:110`,
+  `abductive_report.pl:393`, `giant_component_analysis.pl:1570`; verified by reading all eleven
+  stage modules — four further `../outputs/` strings are `%` comment usage-examples). flock
+  lock, an on-disk journal written BEFORE the first delete, signal/atexit handlers,
+  restore-then-refuse on a dirty journal, and `TRANSIT_BACKUP_LOST` as the never-downgrade
+  branch where restore is impossible. ALL guard state in `.report_corpus/`, never under
+  `outputs/`.
+- Gate row **`report legs`**, fixture-only and synthetic by charter: 49 controls, 2.6 s.
+
+**Three defects the controls caught, each recorded rather than quietly adjusted.**
+
+1. `stages=[]` fell through a falsy test and ran ALL ELEVEN stages instead of zero — absence
+   wearing the shape of a default. Caught by the selftest's own isolation post-condition,
+   which saw eleven swipl children logged by a call that had asked for none.
+2. `MISSING_CLASSIFY_OUTPUT` resolved `pipeline_output_<leg>.json` while all 22 per-leg outputs
+   on disk are `pipeline_output.<short>.json` — a refusal that would have fired on EVERY leg
+   forever while looking like a working gate. Now mirrors
+   `python/audits/leg_diagnostic_table.py:57-59` exactly (the instrument OQ-353 says to extend,
+   not fork) and is pinned by six controls including a literal check against the consumer's
+   source and a two-sided check against disk.
+3. `outputs/prolog_children.log` is appended by `run_prolog`, a reused helper, so a real leg run
+   writes under `outputs/` outside `legs/<leg>/`. **ENUMERATED in the write invariant rather
+   than excluded from the check** — suppressing it would delete the OQ-301 forensic channel
+   exactly where this driver needs it (~20 `run_giant_component_analysis` executions at n≈1000).
+
+**Operational constraint discovered in execution, recorded because a cold reader will trip on
+it:** `MISSING_CLASSIFY_OUTPUT` compares `manifest.code_commit` to HEAD, so **the whole witness
+sequence — every `classify_corpus` and every `report_corpus` — must run at ONE frozen HEAD.**
+Committing between the classify runs and the report runs invalidates the outputs already
+produced. Freeze HEAD, run the sequence, then commit.
+
+**Declared incomplete, with the missing piece named (never "it passed the stages we ran"):**
+`giant_comp` on `original_v6` throws `>=/2: Arithmetic: 'unknown/0' is not a function` at 230 s
+and produces no artifact — **OQ-356**. So no v6 `giant_comp` ceiling could be derived (the timed
+probe HALTED, which is the pre-registered outcome), and `run_pipeline.py`'s `~6 min at n=3380`
+comment is now known to describe a run that never completed.
 
 ---
 
@@ -18672,6 +18738,788 @@ member-by-member; OQ-239 gets its quantitative premise.
 *Last updated: 2026-08-23. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
+**PREDICTION MADE AND CONFIRMED ON A FRESH DRAW (2026-08-24).** `testsets_nemotron_think`
+completed at n=1003 while this audit ran. Recorded per the three-outcome rule:
+
+    THROW — same error, same last section (`### Contamination Collapse Analysis`)
+    GC 888/1003 = 88.5% (above the gate) | unknown-in-GC = 2 | outright failures = 0
+
+Row 1 of the table: confirms the compound predictor on a leg neither probe was tuned on.
+
+**And the invariance is STORY-LEVEL, not a rate** — the distinguishing check, run before the
+claim was made. The two unknown-purity GC members are
+`genesis_creation_cosmology__young_earth_literal` and
+`vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading`, and **both are pre-existing** in
+the 735-story set committed at `909a4cbe0`. Since then **271 stories were added and 3 removed**,
+and **zero new `unknown` appeared**. So this is not "a rate that happened to land on 2 twice"; it
+is two specific persistent stories. (The thinking/non-thinking contrast still does not
+discriminate: base `testsets_nemotron` also throws, GC 83.2%, 1 unknown.)
+
+**MECHANISM CORRECTION, and it matters for the fix.** An earlier note in this arc said
+`purity_score` returns `unknown` "exactly when `coordination_type` is unauthored." **That is
+wrong.** On this leg **5** stories lack `coordination_type` and only **2** score `unknown`:
+
+| story | coordination_type | purity | throws? |
+|---|---|---|---|
+| `genesis_creation_cosmology__young_earth_literal` | none-authored | **`unknown`** (atom) | **YES** |
+| `vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading` | none-authored | **`unknown`** (atom) | **YES** |
+| `latin_correctness__continuity_reading` | none-authored | `-1.0` | no |
+| `press_reformation_causality__technological_determinism` | none-authored | `-1.0` | no |
+| `qwerty_persistence_inevitability__path_dependency_reading` | none-authored | `-1.0` | no |
+
+`-1.0` is the epistemic-gate-fail **sentinel**, a NUMBER, so it survives `number/1` and is
+excluded by `EP >= 0.0`. `unknown` is the no-data **atom** and throws. This is precisely the
+OQ-60 two-absence-token rule, and absence of `coordination_type` is **necessary but not
+sufficient** for the throwing one.
+
+**Consequence for the acceptance criteria below: do NOT use "lacks `coordination_type`" as the
+proxy for the unknown count** — it over-counts 5 vs 2 here (2.5x), and a fixer asserting
+"unknowns non-zero" through that proxy could assert it on a leg where every unknown is actually a
+safe `-1.0`. Assert on the token: `purity_score` succeeds AND `\+ number(P)`.
+
+
+---
+
+## OQ-356 — `giant_component_analysis` DIES on 17 of 20 corpora: `count_by_action_band/8` is the OQ-60 sweep's missed site, and an unguarded `EP >= 0.0` over a raw `effective_purity` throws on `unknown`
+
+**Ω-type:** Ω_E (a one-line guard omission; correctness witnessable by re-running the stage on the corpus that throws).
+
+**Status:** open — minted 2026-08-23 during OQ-352 execution, by the pre-registered
+`giant_comp` timing probe, which HALTED instead of yielding a ceiling.
+**Priority:** 2
+**Deps:** blocked_on_human oq356-purity-guard-scope-ruling, gates OQ-353
+— the fix is a one-word insertion but it is an ENGINE behaviour change (above the
+fix-simple-errors threshold), and OQ-352's FROZEN preregistration (md5
+`fdaed841b0e33f0212513874b255518e`) pre-committed to routing it here rather than repairing
+it in flight. Reversing that mid-execution is exactly what the freeze exists to prevent.
+**Files:** `prolog/giant_component_analysis.pl` (`count_by_action_band/8` :1274–1283 — the
+unguarded site; `precompute_props_loop` :362–369 — the guarded sibling in the SAME file),
+`prolog/drl_purity_network.pl` (:353 — the other guarded sibling, and the verbatim model for
+the fix), `audits/2026-08-23_oq352_report_driver/giant_comp_probe_v6.json` (the evidence).
+
+**THE HEADLINE, and it is not the one this was minted with.** The defect was found on
+`original_v6` and looked like an archive-corpus problem. A full census over every live leg plus
+the archive (`giant_comp_leg_census.py` / `.txt`) shows it is **almost total**:
+
+| | corpora | which |
+|---|---|---|
+| COMPLETE | **3** | `testsets` (n=285), `testsets_haiku2`, `testsets_haiku3` |
+| **THROW** | **17** | haiku, flash, kimi, sonnet, stealth, nemotron, sonnet2, stealth2, sonnet3, stealth3, kimi2, nemotron_think, flash2, flash3, flash_think, flash_think2, original_v6 |
+
+Every throw is the SAME error at the SAME point (last section printed:
+`### Contamination Collapse Analysis`), in 6–10 s on a 1000-story leg and 221 s on v6.
+
+**The census carries its own positive control**: `testsets` — the ONE corpus this stage has
+ever been run on, inside `run_pipeline` — completes in 1.5 s and reaches `### Key Finding`. So
+the harness is right and the throws are real, rather than the scan being misconfigured.
+
+**AND THE INVERSION THAT MATTERS MOST — read this before choosing a leg to validate any fix on.**
+
+> **The 17 legs that throw are EXACTLY the 17 that can witness a repair. All 3 passing legs are
+> non-witnesses.** `testsets` by UNREACHABILITY (GC 4.7%, under the `GCFrac > 0.10` gate — it
+> never enters the block, passes today, passes after, exercises nothing). `haiku2`/`haiku3` by
+> DEGENERACY (zero unknown-purity GC members, so the conservation identity collapses to
+> `|GC| − 0 = |GC|` and holds trivially — it cannot distinguish a correct guard from no guard).
+>
+> **A verification run reporting "green on testsets, haiku2, haiku3" is three passes and zero
+> witnesses.** The evidentiary value is entirely in the legs that currently look broken; the
+> ones that look healthy are the ones that prove nothing. Full criteria below.
+
+**WHY THE THREE PASS — and they do NOT share a property.** Two probes each hit 19/20 and each
+mispredicted `testsets`. The compound predictor is **20/20**:
+
+> THROW ⟺ (giant component > 10% of the network) AND (some GC member's `effective_purity`
+> succeeds with a non-number).
+
+| leg | GC fraction | >10% gate | unknown-purity GC members | outcome |
+|---|---|---|---|---|
+| `testsets` | **4.7%** (12/258) | **NO** | 1 | **OK — block never entered** |
+| `haiku2` / `haiku3` | 66.5% / 63.3% | yes | **0** / **0** | OK — genuinely clean |
+| the other 17 | 37.7–92.8% | yes | 1–151 | THROW |
+
+`haiku2`/`haiku3` pass INSIDE the code path. `testsets` passes because the path is NEVER
+EXECUTED: `run_phase3` gates the whole contamination block on `GCFrac > 0.10`
+(`giant_component_analysis.pl:855`, `% At least 10% to be interesting`), and at 4.7% it prints
+*"No significant component found"* and returns. **`testsets` has an unknown-purity GC member and
+would throw if it ever got there.** The absence hypothesis is refuted outright: `testsets`
+completes with 13 unknown-purity stories while `nemotron` throws with 1.
+
+**THE CONCEALMENT MECHANISM, which is a separate finding from this defect and outranks it.**
+
+> **Phase 3's contamination block has never run on any corpus, ever.** Not "its numbers are
+> `testsets/`-only" — on `testsets` the block is UNREACHABLE behind the fragmentation gate, and
+> `testsets` is the only corpus the stage was ever run on. `report_gc_composition`,
+> `report_contamination_sources`, `report_multihop_contamination`,
+> `report_sound_constraint_exposure` and the collapse sweep have **no published numbers to
+> caveat, because they never produced any.**
+
+That is OQ-352's founding argument arriving as a result: the OQ was minted on the claim that
+corpus-level tools are unaudited k=1 point estimates, and its first use found a whole report
+phase whose k was **zero**.
+
+**Scope boundary, so this does not overreach.** Giant-component TOPOLOGY is unaffected —
+`compute_components` ran cleanly on all 20 corpora (that is where the GC sizes above come from).
+Only the Phase-3 contamination surface is implicated. ISSUES.md:602 independently records that
+the giant_comp headline has **zero downstream consumers**, bounding the blast radius from the
+other side.
+
+**Falsifiable prediction for the leg still filling.** `testsets_nemotron_think` throws today
+(GC 92.8%, 2 unknown members) as does base `testsets_nemotron` (83.2%, 1) — so the
+thinking/non-thinking contrast does NOT discriminate here. When it completes it is a fresh draw
+and **will throw unless its unknown-purity count reaches zero**, its GC fraction being far above
+the gate. Precedent: `haiku` (4 unknowns, throws) → `haiku2`/`haiku3` (0, pass).
+
+**The original witness (2026-08-23, twice, `archives/datasets/original_v6` n=3380).**
+`run_giant_component_analysis` does not merely degrade — it DIES:
+
+```
+wall 230.3 s, rc=2
+ERROR: [Thread main] >=/2: Arithmetic: `unknown/0' is not a function
+```
+
+No `giant_component_analysis.md`, no `.raw.json`. Reproduced a second time under
+`catch_with_backtrace` (the stack did not attach, but the run's own stdout localizes it
+exactly: it prints every section through `### Contamination Collapse Analysis` and throws
+immediately after the sweep's table header — i.e. inside the first
+`count_by_action_band/8` call, `report_contamination_collapse_analysis/2` :1259).
+
+**The mechanism, and it is the OQ-60 dual stated verbatim in CLAUDE.md.**
+`count_by_action_band/8` calls `effective_purity` DIRECTLY — not through the `gc_node_purity`
+cache — and filters:
+
+```prolog
+catch(drl_purity_network:effective_purity(C, Ctx, EP, _), _, fail),
+EP >= 0.0
+```
+
+`effective_purity` can PROPAGATE `unknown` (the OQ-60 0a path). **`unknown` is a return
+value, not an exception, so the `catch/3` does not intercept it**, and `EP >= 0.0` then
+throws on the atom. This is the documented shape: *the guard must come FIRST*, and *a
+`catch` around a soft-failing/atom-returning predicate intercepts nothing*.
+
+**Why this is a MISSED SITE and not a new defect.** The OQ-60 sweep guarded the two
+siblings and skipped this one. Both guarded sites are one grep away from the unguarded one,
+and one of them is in the SAME FILE:
+
+| site | form | state |
+|---|---|---|
+| `drl_purity_network.pl:353` | `effective_purity(...), number(EP), EP >= 0.0` | GUARDED, with an OQ-60 comment |
+| `giant_component_analysis.pl:362–369` | `catch(effective_purity(...), _, EffP0 = -1.0), number(EffP0)` | GUARDED, with an OQ-60 comment naming this exact hazard |
+| `giant_component_analysis.pl:1276–1281` | `catch(effective_purity(...), _, fail), EP >= 0.0` | **UNGUARDED** |
+
+The :362 comment even states the reason: *"effective_purity can now propagate `unknown` (0a)
+— not an exception, so collapse to the gc cache's -1.0 no-data sentinel … so the `EP >= 0.0`
+distribution filters exclude it rather than throwing."* The fix was reasoned, written down,
+and applied to two of three sites.
+
+**Why it stayed invisible for months.** It needs a giant-component MEMBER whose
+`effective_purity` is `unknown`. `testsets/` (n≈285) has none — and **`testsets/` is the only
+corpus this stage had ever been run on**, because the report-stage tools run only inside the
+full `run_pipeline` over the default leg. That is OQ-352's founding observation, and this is
+what was hiding behind it. The defect was not evading detection; nothing had ever looked.
+On v6, 52 of 3380 constraints lack a valid purity score (the run's own header reads
+`3328/3380 constraints with valid scores`), and at least one is a GC member.
+
+**The fix (one word, matching the guarded sibling verbatim) — NOT APPLIED, awaiting ruling:**
+
+```prolog
+catch(drl_purity_network:effective_purity(C, Ctx, EP, _), _, fail),
+number(EP), EP >= 0.0
+```
+
+**What blocks it being taken as a free fix.** It is a single-file, single-revert,
+one-token change with an obvious witness, which is the shape of the standing
+fix-simple-errors permission — but it changes ENGINE behaviour on every corpus where the
+throw currently occurs (crash → a table that excludes unknown-purity members), and CLAUDE.md
+puts engine behaviour changes above the threshold. OQ-352's preregistration was frozen
+BEFORE the probe ran and pre-committed to this routing; honouring it is the point of freezing
+it. **What the ruling needs to settle: instance or class.** (a) apply the one-word guard as-is; or
+(b) adjudicate the class first — **RECOMMENDED, and the argument is stronger than "sweeps miss
+sites".** OQ-60 guarded two siblings — one **in the same file**, carrying a comment naming this
+exact hazard — and still missed this one. That is evidence the sweep's FIND-CRITERION was wrong,
+most likely keyed on the `catch(...)` idiom rather than on *"an `unknown` REACHES an arithmetic
+comparison on this path"*. Fixing the instance leaves the criterion unfixed and the next sweep
+misses the next site the same way.
+
+**This audit's own probes demonstrate the point twice**, which is why it is asserted rather than
+suggested. Probe v1 conflated `purity_score` FAILING (safe: the conjunct fails, the member is
+skipped) with SUCCEEDING as `unknown` (throws). Probe v2 fixed that and was STILL wrong, because
+neither modelled the upstream `GCFrac > 0.10` reachability gate. Both are the same class of error
+as OQ-60's — reasoning about the value's absence instead of about whether it REACHES the
+arithmetic. **A correct find-criterion must model guards and reachability, not idioms or absence
+counts.** That is the part that generalizes, and it is why the class ruling is worth more than
+the one-word fix.
+
+**The class sweep was RUN, and its result is a CANDIDATE LIST, not a finding**
+(`purity_guard_sweep.py` + `.txt` in `audits/2026-08-23_oq352_report_driver/`). It scans every
+`purity_score`/`effective_purity` call site in `prolog/` that does arithmetic on the result
+within a 5-line window and reports whether a `number/1` guard appears: **50 sites, 41
+guarded, 9 unguarded.** It carries its own positive control and DISCRIMINATES — it fires on
+the known-unguarded `count_by_action_band` site and correctly marks BOTH known-guarded
+siblings (`drl_purity_network:353`, `giant_component_analysis:366`) as guarded.
+
+**The 9 must NOT be cited as 9 defects. The sweep has a MEASURED, non-trivial false-positive
+rate: 4 were spot-checked and 2 are clearly false.**
+
+| site | spot-check verdict |
+|---|---|
+| `giant_component_analysis.pl:1278` | **REAL** — the throw witnessed above |
+| `fpn_report.pl:94` | **LIKELY REAL** — `one_hop_ep_safe/3`, identical shape (`catch(...,_,fail) -> true ; EP = -1.0`); a successful `unknown` is returned as EP |
+| `json_report.pl:1427` | **NEEDS ADJUDICATION** — `NP1 \= -1.0` is the documented SILENT DUAL (`\=` does not throw, so it ADMITS `unknown` into a numeric path); it binds rather than computes, so whether it throws depends on the consumer |
+| `genuine_findings_query.pl:101` | **FALSE POSITIVE** — binds `unknown` and only `format('~w')`s it; format does not throw |
+| `drl_purity_network.pl:224` | **FALSE POSITIVE** — guarded at :230 by `( \+ number(Intrinsic) ; Intrinsic < 0.0 )`, six lines down, just outside the sweep's window |
+| remaining 4 | UNADJUDICATED (`abductive_triggers.pl:467`, `:825`, `context_profile_mining.pl:193`, `json_report.pl:2185`) |
+
+So the honest statement is: **the defect is plausibly a CLASS rather than an instance, and
+per-site adjudication is owed.** That is exactly why (b) is the recommendation, and why the
+sweep script is committed as evidence rather than its count published as a headline. Widening
+the window and distinguishing "arithmetic on THIS value" from "arithmetic nearby" is the
+first improvement any adjudicator should make to it.
+
+**What it changes.** `giant_component_analysis` becomes runnable on 17 more corpora, including
+16 of the 19 live legs and `original_v6` — which OQ-353's size × content × edge-semantics
+control REQUIRES, since v6 is that control's whole size arm. It also means **every giant-comp
+statistic currently in circulation is a `testsets/`-only number** and cannot be given a floor
+until this lands; OQ-354 (tool-correctness at scale) inherits the same block.
+
+Until then OQ-352's runs are DECLARED INCOMPLETE at 10 of 11 stages on every leg, with
+`giant_comp` named as the missing one, and the `~6 min at n=3380` estimate in
+`run_pipeline.py`'s `_prolog_giant_comp` comment is **known to describe a run that never
+completed** (the throw arrives at 221–230 s), so no v6 `giant_comp` ceiling can be derived until
+the throw is fixed.
+
+**Second-order finding, same probe (`_classify_timeout_for`).** `classify_corpus` on v6 at
+n=3380 was killed by its own `soft_timeout` at **3701 s without completing**, then retried —
+witnessed in `outputs/prolog_children.log`, the forensic channel OQ-352 deliberately enumerated
+rather than suppressed:
+`pid=778434 ... 3701.29s rc=TIMEOUT`. Two things follow. (1) `_CLASSIFY_SECONDS_PER_STORY =
+0.73` (fitted at n≈1000) UNDER-predicts at n=3380: the linear model says 41 min, the run
+exceeded 62 min without finishing. (2) `soft_timeout = ceiling // 2` assumes the failure mode is
+a HANG; for a corpus that legitimately needs more than half the ceiling it converts one slow run
+into `2 x 61.7 + 123 = 247` minutes of wall clock. Worth its own ruling — reported here rather
+than tuned in flight.
+
+**Control available for free at close (build_discipline → *When a defect is found…*):** the
+current tree is a natural negative control. Run the stage on v6 at this commit (throws) and
+at the fixed commit (completes); the before-commit is preserved deliberately here rather than
+discovered later.
+
+**PRE-COMMITTED ACCEPTANCE CRITERION — what makes the first output CORRECT, not merely PRESENT.**
+Recorded now, while this is still an OQ rather than a patch, because k=0 removes every ordinary
+check: there is no baseline to diff, no prior number to show unchanged, and no consumer whose
+behaviour would visibly break. **"It stopped throwing" is exactly the success-shaped absence this
+whole arc is about, and it is NOT an acceptable witness.** A fix that merely silences the throw
+would produce a table of plausible integers that nobody has ever seen and nobody can check.
+
+The repair therefore owes, in the same change:
+
+1. **A HAND-COMPUTED expected row on one small corpus.** Pick a leg where the giant component is
+   small enough to enumerate (or overlay a synthetic corpus built for it), compute
+   `count_by_action_band`'s four counts BY HAND at one cap value from the members' effective
+   purities, and assert the code reproduces them. One hand-checked row beats a full table nobody
+   verified.
+2. **Conservation.** At every swept cap, `NS + NB + NW + ND` must equal the number of GC members
+   with NUMERIC effective purity — and that total must be `|GC| − (unknown-purity members)`,
+   with the unknown count asserted non-zero on the test leg. This is the invariant that makes the
+   guard's exclusion visible rather than silent, and it is two-sided: it fails if the guard drops
+   too many as well as too few.
+3. **Monotonicity across the cap sweep.** `purity_contamination_cap` rises 0.10 → 1.00, so
+   contamination can only increase; `ND` (degraded) must be non-decreasing and `NS` (sound)
+   non-increasing across the ten rows. A fix that returns plausible-but-wrong numbers is very
+   likely to violate this, and it needs no external oracle.
+4. **The free negative control, preserved deliberately.** The current tree is a natural
+   before-commit: run the stage at HEAD (throws on 17 of 20) and at the fixed commit (completes),
+   and record *fires at N, declines at N−1* per leg. Availability is not automatic — do not let
+   the defective state be cleaned up before the detector exists.
+5. **TWO of the three currently-passing legs CANNOT witness the fix, for two different reasons.**
+   Name both, so nobody selects a "safe" leg to validate against and collects a free pass:
+   - **`testsets` — non-witness by UNREACHABILITY.** GC 4.7%, under the `GCFrac > 0.10` gate, so
+     the block never executes. It passes today, it will pass after, and it exercises nothing.
+   - **`haiku2` / `haiku3` — non-witness by DEGENERACY.** They have ZERO unknown-purity GC
+     members, so criterion 2's identity collapses to `NS+NB+NW+ND = |GC| − 0 = |GC|` and holds
+     **trivially**. The invariant is doing real work only when the subtrahend is non-zero; on
+     these legs it cannot distinguish a correct guard from no guard at all.
+
+   **Therefore the fix must be witnessed on a leg with GC > 10% AND unknown-purity members > 0**
+   — i.e. one of the 17 that currently throw. That is not a limitation, it is the only place the
+   evidence exists. Criterion 2 already requires asserting the unknown count non-zero on the test
+   leg; this is why. A verification run reporting "green on testsets, haiku2, haiku3" would be
+   three passes and zero witnesses.
+
+**And a coverage item the fix should close, surfaced by this audit (OQ-352 WRITEUP §4e):**
+`prolog/tests/test_purity_absence.pl` carries `test(gc_ingest_collapses_unknown_to_sentinel)`,
+which covers the GUARDED ingest (`precompute_props_loop`) and passes while the stage is dead.
+`count_by_action_band` is the second, unguarded ingest of the same value in the same module and
+has no test. Additionally **no gate row runs any `prolog/tests/*.pl`** — `run_pipeline` executes
+only `test_reading_totality`, `test_epsilon_declaration`, `test_residual_signature_inert` and
+`test_agent_beneficiary` — so even the covered half is manual-only. Whether the OQ-60 suite
+should be enforced is its own ruling; noted here because this OQ is where it surfaced.
+
+---
+
+## OQ-357 — 30 of 37 `prolog/tests/` suites are MANUAL-ONLY: controls that exist, are correct, and are never invoked
+
+**Ω-type:** Ω_E (a coverage fact, witnessable by enumerating the call sites).
+
+**Status:** open — minted 2026-08-23 from the OQ-352 execution, split OUT of OQ-356 deliberately
+(see *Why this is not part of OQ-356*).
+**Priority:** 2
+**Deps:** splits_from OQ-356, blocked_on_human oq357-enforcement-scope-ruling
+**Files:** `prolog/tests/` (37 suites), `python/run_pipeline.py`
+(`_prolog_reading_totality_gate`/`_prolog_epsilon_declaration_gate`/
+`_prolog_residual_signature_gate`/`_prolog_agency_gate` — the four executed),
+`python/probe_harness_gate.py` (**the working exemplar**), `scripts/gate.sh`.
+
+**The fact (enumerated 2026-08-23).**
+
+| | count | which |
+|---|---|---|
+| suites in `prolog/tests/` | 37 | |
+| enforced by `run_pipeline` | 4 | `reading_totality`, `epsilon_declaration`, `residual_signature_inert`, `agent_beneficiary` |
+| enforced by a gate row | 1 | `probe_harness`, via `python/probe_harness_gate.py` |
+| declared carve-outs | 2 | `battery_variants` (not a plunit suite), `cs_pattern_detection` (known-red, OQ-266) |
+| **MANUAL-ONLY** | **30 (81%)** | everything else |
+
+**No gate row runs any `prolog/tests/*.pl` directly** — the one enforced suite goes through a
+Python wrapper.
+
+Manual-only suites guarding invariants CLAUDE.md treats as load-bearing include
+`test_h1_spectrum`, `test_h1_stakeholder_spectrum`, `test_purity_absence`, `test_purity_bands`,
+`test_seat_totality`, `test_sheaf_na`, `test_commentary_census`, `test_cs_kernel_registry`,
+`test_phantom_neighbor_filter`.
+
+**Why this is not part of OQ-356, and why filing them together would lose it.** OQ-356's class is
+*a find-criterion bounded one call-site short* — a guard sweep that reasoned about a value's
+absence instead of about whether it REACHES arithmetic. This OQ's class is *controls that exist
+but are never invoked*, and it is **indifferent to correctness**: every one of the 30 could be
+perfectly written and the property would be unchanged. Filed as a detail of OQ-356 it would be
+read as a footnote about unknown-purity and closed with the one-word guard fix, which would
+resolve nothing here. This is the same category the plan's own gate-row requirement was built
+around (build_discipline → *A control must witness that it is CALLED*): a guarded function called
+only from its selftest is an orphan, and control count rises while coverage falls.
+
+**How it surfaced.** OQ-352 found `giant_component_analysis` dead on 17 of 20 corpora (OQ-356).
+`prolog/tests/test_purity_absence.pl` carries `test(gc_ingest_collapses_unknown_to_sentinel)`,
+which plants an `unknown`-purity story and asserts `precompute_props_loop` collapses it to
+`-1.0`. That test is CORRECT and PASSES and covers the GUARDED ingest — and it is also
+manual-only, so even its covered half runs when someone remembers. The defect and the
+non-enforcement are independent: fixing OQ-356 leaves all 30 unrun.
+
+**The remedy already exists in-repo and is used exactly once.** `python/probe_harness_gate.py` is
+the template: it runs the suite, **parses the executed test count and is RED on zero** (a bare
+`run ... swipl -g "... run_tests ..."` row exits 0 when the suite loads no tests or the file is
+missing under the load path — the install-check defect reappearing one layer up), and is **RED
+rather than "skip" when swipl is unavailable**, because an unenforced channel is the filtered
+channel (OQ-96). Any generalization must keep all three properties.
+
+**What the ruling needs to settle (this is the operator's seat, hence `blocked_on_human`).**
+Enforcing 30 suites is not free: each needs its own load chain (CLAUDE.md is explicit that
+`[stack]` alone is NOT sufficient and that a short chain fails LOUD but MISLEADINGLY — the
+2026-07-25 witness of 7 spurious `reading_totality` failures), several need a loaded corpus, and
+`test_purity_absence` needs the 8-module pipeline chain. Options: (a) generalize
+`probe_harness_gate.py` into a table-driven runner over a declared allowlist of suites with their
+chains, added incrementally; (b) enforce a named subset guarding the load-bearing invariants and
+DECLARE the rest as manual, so the boundary is a checked fact rather than an accident; (c) accept
+manual-only and record it in `design_gaps.md` as a declared absence. **(b) or (a) recommended;
+(c) at minimum** — what is not acceptable is the current state, where the boundary between
+enforced and manual is not written down anywhere and looks from the outside like 37 tests.
+
+**What it changes.** Whether a green gate means the Prolog invariants hold, or only that five of
+them do. Today it means the latter, and nothing says so.
+
+---
+
+## OQ-358 — the Seat Theorem corpus: separate the ratified text from its amendments and its apparatus, and give the eight declared residuals one legible surface
+
+**Ω-type:** Ω_P (a form ruling on a canonical law-level document — what its corpora are and where
+a standing falsifier is marked. Not settleable by a run.)
+
+**Status:** open — minted 2026-08-23 as the UMBRELLA for the seat-theorem form work; spawns
+OQ-359..362. Operator framing 2026-08-23. **Nothing applied**: `docs/seat-theorem-v1.md` is
+canonical, and the restructure is explicitly reserved for a focused instance.
+**Priority:** 2
+**Deps:** blocked_on_human oq358-corpus-separation-ruling, gates OQ-359, gates OQ-360, gates OQ-361, gates OQ-362
+**Files:** `docs/seat-theorem-v1.md` (271 lines, internally v2.6),
+`docs/road-to-the-seat-theorem-v1.md` (85 lines — the existing narrative companion),
+`docs/README.md:13` (names the filename canonical), `docs/technical/build_discipline.md:548`
+(cites the amendment record as an **exemplar**), `docs/deferential_realism_paper_v8.md` (§5–§6,
+the operationalization).
+
+**The frame (operator, 2026-08-23).** One document is carrying three jobs with three audiences
+and three revision rates. The constitutional separation names them exactly:
+
+| corpus | role | today |
+|---|---|---|
+| **Constitution** — the ratified text | readable AT THE GATE, no backstory needed | §§1–8, 67% of the file, interleaved with its own corrections |
+| **Amendments** — the ordered change record | shows how the conclusion was reached, so a reader can disagree at the right point | the 52-line *Amendment provenance* tail (19%) + an 11% header changelog |
+| **Federalist Papers** — the persuasive apparatus | argues FOR the text, cited but never required to read it | `road-to-the-seat-theorem-v1.md`, the OQ-253/255 record, `audits/2026-07-25_oq255_seat_cost_measure/` |
+
+**v1 is our Articles of Confederation**: a first working instrument amended past its structural
+capacity, where each amendment was individually right and the accumulation is what needs
+replacing. **You can have both** — a gate-legible text AND a preserved lineage — because the
+Constitution does not erase its amendments, it *relocates* them into an ordered, numbered,
+separately-citable section, and it does not carry the Federalist Papers at all.
+
+**The objection this overturns, recorded because it was mine.** An earlier read of this argued
+against a v2 on the ground that the amendment scars are load-bearing — `build_discipline.md:548`
+cites them as the exemplar of the practice, and this framework's whole claim is
+declared-not-concealed, so a lineage-free rewrite would be *"a small no-seat pose of form"*
+(§4's own warning). **That premise is true and the conclusion did not follow.** It conflated
+*don't erase* with *don't move*. Relocation preserves the lineage and improves its citability;
+only a silent rewrite erases it. Recorded rather than dropped, per the declined-promotions
+convention: this is a reversal on argument, not a discovery of new facts.
+
+**THE RESIDUALS LEDGER — the substantive deliverable, and the reason this is an umbrella rather
+than a rename.** The document declares at least **eight** standing limits, scattered across three
+sections plus the provenance tail. They are **three different kinds**, and a gate-legible text
+must let a reader tell them apart in one place:
+
+**(a) ARMED FALSIFIERS — could fire, have not.** These keep the framework falsifiable and must
+read as *armed*, never as discharged.
+| # | item | where |
+|---|---|---|
+| A1 | **P2's kill condition** — *"exhibit a live parameter that is neither a property of σ nor a standpoint"*; Q is the standing candidate | §2 |
+| A2 | **the cost-present discriminator** — explicitly *"a standing probe, not a completed check"*; one run to date (n=199, 2026-07-25) | §6.2 |
+
+**(b) DECLARED SCOPE LIMITS — cannot fire; stated boundaries on reach.**
+| # | item | where |
+|---|---|---|
+| B1 | the §6.2 gate's warrant is **real but local** — checkable only against a repo a standalone reader cannot open | §6.2 |
+| B2 | the §8 seal is **real but local** — cannot compel a joint-carving realist who denies P3 | §8 |
+| B3 | **2b's selection rule is a declared, contestable premise, not a derivation**; no seat-free ranking of rival selectors | Abstract, §6 |
+| B4 | **the discipline secures the gate, not the honoring** — Corollary 3's confrontation cannot be mandated | §6.2 |
+
+**(c) DECLARED SEATS — the document's own standpoint, declared because the conclusion requires it.**
+| # | item | where |
+|---|---|---|
+| C1 | **the Φ residue** — *"stating §8 at all presupposes a framing of 'the field Φ' … One more seat, declared, not descended"* | §8 |
+| C2 | **the proof's seat is a pair, Q and Π** — declared, not discharged, and declaring it *is* the result | §7 |
+
+**Why the taxonomy is the same finding as OQ-360's.** The provenance rule's missing third class —
+*falsifiable, unfired, must be marked STANDING* — is exactly category (a). A2 already carries that
+marking; A1 does not, and is filed as scope-class. So the misfiling is not a local slip but the
+absence of the category the ledger needs, showing up at the one place it costs most.
+
+**Children (spawned; this OQ is the umbrella and does none of the work).**
+
+| OQ | job | order |
+|---|---|---|
+| **OQ-359** | the filename/version fork: `seat-theorem-v1.md` contains **v2.6**, and `docs/README.md:13` names the filename canonical. Cheap, independent, a real Pattern-2 defect. | first, independent |
+| **OQ-360** | the provenance rule's **third class** + re-file A1 as STANDING (the original finding, with its verbatim evidence) | before 361 — it changes what the amendment corpus *is* |
+| **OQ-361** | extract the Amendment record to its own surface — **the exemplar artifact**, since `build_discipline.md:548` already cites it as one and it deserves better than a 52-line tail | after 360 |
+| **OQ-362** | the **v2 ratified text**: lead with P1/P2, present §4 as the definitional pivot it now admits being (*"proof-costume on a definitional unfolding"*), fold §7 into §8 (which already says *"§7's seat is located, not multiplied"*), and carry the residuals ledger as a numbered section | last |
+
+**Constraints any child must honor, stated here so they are not rediscovered at spend time.**
+- **49 files cite this document; ~18 use §-anchors** (§2, §6, §6.2, §8) in prose that no checker
+  pins — CLAUDE.md's *UNPINNABLE, declared class*. A renumber breaks them SILENTLY. Either keep
+  the section numbering stable across v2, or land a cite-sweep in the same change.
+- **Prove-before-you-replace has no diffable output here.** A philosophy rewrite cannot show
+  identity by diff, so the witness must be constructed: a claim-by-claim correspondence table
+  from v1's §§1–8 to v2, with every *deliberate* difference justified — the N-separate-diffs rule
+  applied to prose.
+- **The lineage must survive relocation, not merely be preserved somewhere.** The Amendments
+  corpus keeps its numbering and stays separately citable, or OQ-28's close and
+  `build_discipline.md:548` both lose their referent.
+- **Do not rewrite the provenance section twice** — OQ-360 lands its third class first, then 361
+  moves it.
+
+**What it changes.** Whether a reader arriving at the gate can get the theory without parsing the
+backstory, whether the eight residuals are legible as a set (today they are findable only by
+reading all 271 lines), and whether the framework's most contestable commitment reads as armed or
+as settled. **Deliberately NOT scoped to this session** — reserved for an instance focused on it
+(operator, 2026-08-23).
+
+---
+
+## OQ-359 — `docs/seat-theorem-v1.md` contains **v2.6**: the filename and the version disagree, and `docs/README.md` names the filename canonical
+
+**Ω-type:** Ω_E (a canonicity defect; witnessable by reading the two lines).
+
+**Status:** open — minted 2026-08-23 (OQ-352 execution).
+**Priority:** 2
+**Deps:** splits_from OQ-358
+**Files:** `docs/seat-theorem-v1.md:5` (`**Version: v2.6**`), `docs/README.md:13`, plus the 49
+files citing the `seat-theorem-v1` filename.
+
+**The fact.** The file is named `seat-theorem-v1.md`; its version line reads **v2.6**.
+`docs/README.md:13` names the *filename* as canonical. So "which version is this" has no
+queryable answer that agrees with itself — **Build Discipline Pattern 2** (one canonical thing
+became two, canonicity not a checked fact), on the document that is the project's law.
+
+Aggravating: the header carries a multi-paragraph changelog spanning v2.5 and v2.6, so the
+version is stated four different ways in the first 25 lines, and a reader citing "the seat
+theorem v1" is citing a document that has been through at least six revisions.
+
+**Why it is filed separately from the restructure.** It is cheap, independent, and needs no
+ruling on form — fixing it does not presuppose any decision about OQ-361/362, and leaving it
+until after them means every intermediate citation inherits the ambiguity.
+
+**Two routes; the choice is the operator's.** (a) **Rename** to match the internal version and
+leave a redirect stub at the old path — cleanest, but touches 49 citing files; or (b) **freeze
+the filename as a stable identifier** and say so explicitly in both the file header and
+`docs/README.md` ("the filename is a permanent identifier; the internal version line is
+authoritative for revision"). **(b) is recommended** — it is one edit in two places, it makes
+canonicity a stated fact rather than an accident, and it avoids a 49-file sweep whose only
+product is a rename. What is not acceptable is the current silence.
+
+**What it changes.** Whether "the seat theorem v1" names a version or a file.
+
+---
+
+## OQ-360 — the amendment-provenance rule has TWO classes and needs THREE: P2's kill condition is filed as scope-narrowing when it is a live, unfired falsifier on the load-bearing premise
+
+**Ω-type:** Ω_P (a ruling on how a standing falsifier is marked; not settleable by a run).
+
+**Status:** open — minted 2026-08-23 (OQ-352 execution); evidence verified verbatim against
+`docs/seat-theorem-v1.md` at HEAD. **NOT APPLIED** — canonical law-level document, escalated.
+**Priority:** 2
+**Deps:** splits_from OQ-358, gates OQ-361, blocked_on_human oq360-provenance-third-class-ruling
+**Files:** `docs/seat-theorem-v1.md` (§2 P2 + kill condition; §6.2 the standing-probe marking —
+**the in-document precedent**; *Amendment provenance* items 1–5 and its rule paragraph).
+
+**The fact (quoted verbatim).** The rule reads:
+
+> *"a run-witness is owed where an edit corrects a claim about a measurable property; an edit
+> that narrows a claim's scope needs declaration, not run-grounding."*
+
+Two bins. Items 2 and 3 (§5 incompleteness-downgrade, §8 P3-locality) sit in bin 2 correctly and
+say why: *"There is no measurable property for a run to witness."*
+
+Item 5 puts **P2's exhaustiveness defense and kill condition** in the same bin — *"all
+declaration/scope-class under the same rule — no run-witness owed"* — with a parenthetical doing
+work the rule has no slot for: *"(a staked commitment, falsifiable by exhibit, not by run)."*
+
+**Why that is a misfiling.** Adding a kill condition is not narrowing a scope. The condition is
+*"exhibit a live parameter that is neither a property of σ nor a standpoint"* — a live truth
+condition on what §2 itself calls *"the load-bearing premise."* It owes no run-witness for a
+**different reason** than §5/§8 do:
+
+| | §5 / §8 items | P2's kill condition |
+|---|---|---|
+| something measurable? | **no** | **yes** — an exhibit settles it |
+| why no run-witness? | no property exists | **the search has no completeness criterion** |
+| correct status | closed (scope narrowed) | **OPEN and ARMED** |
+
+Same non-witnessing, two grounds, collapsed by a two-bin rule. **The consequence is the failure
+the section exists to prevent:** a standalone reader sees "no witness owed, declaration/scope-class"
+and files the framework's most contestable commitment as **settled** — in the section recording
+the document's own honesty rule.
+
+**The remedy is in the document, one section up, unused where it matters most.** §6.2 marks the
+cost-present discriminator *"a **standing probe, not a completed check**"* and states the reason:
+*"an instrument that cannot vote against its theory keeps the theory falsifiable only through that
+probe staying armed."* P2's kill condition has the identical shape and no such marking. In OQ-358's
+residuals ledger these are A2 (marked) and A1 (unmarked) — the same category.
+
+**Proposed amendment (exact; for the operator to rule on — NOT applied).**
+
+*(a) the rule paragraph gains a third class:*
+> The rule this records has three classes. A **run-witness is owed** where an edit corrects a
+> claim about a measurable property (item 1). An edit that **narrows a claim's scope** needs
+> declaration, not run-grounding, because no measurable property is in play (items 2, 3). And an
+> edit that **stakes or sharpens a falsifiable commitment whose falsifier is exhibit-shaped** owes
+> no run-witness either — not for want of something measurable, but because the search for the
+> exhibit has no completeness criterion — and must therefore be marked **STANDING: armed, not
+> passed**, on the model of §6.2's cost-present probe. The three classes are distinguished by
+> *why* no run grounds them; conflating the last two files a live falsifier as a closed scope-note.
+
+*(b) item 5's P2 clause is re-filed:*
+> …one adds P2's exhaustiveness defense and its **kill condition — stake-class, and STANDING**:
+> falsifiable by exhibit, not by run, with no completeness criterion for the search, so it is
+> recorded **armed** rather than discharged. Q is the standing candidate (§2).
+
+*(c) self-application, which the document's own law requires:* this amendment is **scope-class** —
+it corrects the record's form and asserts nothing measurable, the same class as v2.6's §4
+de-staging (*"a form-correction — the staging asserted nothing measurable"*). Declaration, not a run.
+
+**How it surfaced — and why the provenance matters.** OQ-352's audit split its sweep-diagnostic
+into a mechanical half (validate the criterion against a known instance AND a known-clean sibling)
+and a manual half (interrogate what the criterion would miss). A second instance identified the
+split as the σ/seat boundary inside the audit's own apparatus, and it checks out: the first half is
+contentless in §1(7)'s sense *relative to a fixed criterion and case-pair*, hence mechanizable; the
+second asks whether the criterion carves the field correctly, which is a **Π**, never given (§8) —
+and the regress the audit had named independently ("a completeness-checker needs its own
+find-criterion") is the σ-regress verbatim: *"climbing does not buy neutrality, only a new σ with
+the same defect."* The two-sided control is likewise **forced by Corollary 2b**, not borrowed from
+software practice: it is §6.2's balanced-battery requirement, whose diagnosis of a one-sided battery
+(*"falsifiable in each answer, unfalsified by construction in the aggregate"*) applies word for word
+to a sweep validated only against defects it already holds. **The audit reached the law's boundary
+from the tooling side without going looking for it** — convergence, not proof, and scoped as such.
+
+**What it changes.** Whether the load-bearing premise reads as open or closed to a standalone
+reader, and whether the provenance rule can classify a stake-class edit at all — it currently
+cannot. Also grounds `build_discipline.md` → *A guard sweep's find-criterion must model
+REACHABILITY*: the mechanical/manual line there is **immovable by theorem**, not a gap awaiting
+better tooling, and readers will keep proposing to close it until that is written down.
+
+---
+
+## OQ-361 — extract the Amendment record to its own surface (the "Amendments" corpus): it is cited as an EXEMPLAR and currently ships as a 52-line tail
+
+**Ω-type:** Ω_P (a form ruling: what the amendment corpus is and how it is cited).
+
+**Status:** open — minted 2026-08-23 (OQ-352 execution).
+**Priority:** 2
+**Deps:** splits_from OQ-358, blocked_on OQ-360, gates OQ-362
+**Files:** `docs/seat-theorem-v1.md` (*Amendment provenance*, 52 lines = 19% of the file; plus the
+~31-line header changelog, 11%), `docs/technical/build_discipline.md:548` (**the citation that
+makes this an exemplar**), `ISSUES.md` OQ-28 (closed on this record), `KNOWN_STATE.md` 2026-06-09.
+
+**Why it deserves its own surface rather than a tail.** `build_discipline.md:548` cites it as the
+model of a practice:
+
+> *"Amendment provenance in a **derivation** (`seat-theorem-v1.md`) — showing how a conclusion was
+> reached is what lets a reader disagree at the right point. That is load-bearing for a proof and
+> academic for a tool; the same content is not the same artifact in the two places."*
+
+An artifact cited as an exemplar of record-keeping should be structured as one. Today it is
+appended to the text it amends, which is precisely the arrangement the constitutional separation
+(OQ-358) exists to fix: the Constitution carries its amendments **ordered, numbered and separately
+citable**, not woven into the articles.
+
+**Two revision rates in one file, which is the mechanical argument.** The theory sections have
+changed substantively perhaps twice (§4's de-staging to analytic; §3's orthogonality correction).
+The amendment record changes **every review pass** — v2.5 and v2.6 each rewrote it. Binding a
+slow-changing text to a fast-changing record means every provenance edit dirties the law.
+
+**Requirements any extraction must meet — the lineage must survive RELOCATION, not merely exist.**
+1. **Numbering is preserved and stable.** Items 1–5 keep their numbers; new items append. OQ-28's
+   close and `build_discipline.md:548` both point at this record and must keep resolving.
+2. **Separately citable, and cited.** The ratified text names it at the top (the way a constitution
+   references its amendments), so a gate reader knows the lineage exists without having to read it.
+3. **OQ-360's third class lands FIRST** — otherwise the section is rewritten twice, and the second
+   rewrite would be moving a rule known to be incomplete.
+4. **The header changelog moves with it.** The 11% version-history block in the header is the same
+   corpus; leaving it behind recreates the split one level up.
+5. **A reader who opens only the ratified text must not thereby believe nothing was amended.**
+   Silence about the lineage is the failure mode; a pointer is the fix.
+
+**Explicitly NOT in scope.** The Federalist-Papers corpus — `road-to-the-seat-theorem-v1.md`, the
+OQ-253/255 adjudication record, `audits/2026-07-25_oq255_seat_cost_measure/` — already sits outside
+the document and stays there. This OQ moves the Amendments only.
+
+**What it changes.** Whether the exemplar is shaped like one, and whether a provenance edit can be
+made without touching the law.
+
+---
+
+## OQ-362 — the v2 ratified text: a gate-legible Seat Theorem that leads with its premises and carries its residuals as a numbered section
+
+**Ω-type:** Ω_P (a rewrite of a canonical derivation; the structure is a declared choice, not a
+derivation).
+
+**Status:** open — minted 2026-08-23 (OQ-352 execution). **Reserved for an instance focused on
+this task** (operator, 2026-08-23); deliberately not attempted mid-audit.
+**Priority:** 2
+**Deps:** splits_from OQ-358, blocked_on OQ-360, blocked_on OQ-361, blocked_on_human oq362-v2-go
+**Files:** `docs/seat-theorem-v1.md` (the source), `docs/deferential_realism_paper_v8.md` (§5–§6,
+the operationalization whose vocabulary must keep resolving), `docs/README.md:13`.
+
+**The case for it, in the document's own words.** Three structural facts, each stated by v2.6
+itself, that the current arrangement does not reflect:
+
+1. **§4 — the eponymous Theorem — is analytic.** v2.6 declares it: the two sides *"are negations
+   of each other by construction"*, and the earlier proof staging was *"proof-costume on a
+   definitional unfolding — rigor-apparatus in exactly the register this document's own §6.2 warns
+   against, worn at its center."* A reader still meets a "Theorem" and learns from a status note
+   that it is definitional. **v2 should lead with P1/P2 — the actual commitments — and present the
+   Coupling Theorem as the definitional pivot it admits being.**
+2. **§7 is subsumed by §8**, which says so: *"§7's seat is located, not multiplied … §7's declared
+   seat, the framing Π, and the given/standpoint boundary are one object named at its root."* Two
+   sections for one object.
+3. **Corollary 2b is not a corollary**, and the abstract carries the correction as prose:
+   *"Billing 2b as a corollary was a misfiling the framework's own law forbids."* v2 presents the
+   corrected structure instead of narrating the correction — the narration moves to the Amendments.
+
+**Plus the residuals.** OQ-358's ledger enumerates **eight** declared limits of **three kinds**
+(armed falsifiers A1–A2; declared scope limits B1–B4; declared seats C1–C2), findable today only by
+reading all 271 lines. v2 carries them as a numbered section so a gate reader can see in one place
+what is armed, what is a stated boundary, and what is the document's own standpoint. **A1 must
+appear as ARMED**, per OQ-360.
+
+**Constraints, stated here so they are not rediscovered at spend time.**
+- **Citation surface: 49 files, ~18 §-anchored** (§2, §6, §6.2, §8) in prose no checker pins
+  (CLAUDE.md's *UNPINNABLE, declared class*). **A renumber breaks them SILENTLY.** Either hold the
+  section numbering stable across v2, or land a cite-sweep in the same change. Holding it stable is
+  strongly preferred: it costs structure, but a silent-break class is exactly what this project
+  treats as a defect.
+- **Prove-before-you-replace has no diffable output.** A prose rewrite cannot show identity by
+  diff, so the witness must be *constructed*: a claim-by-claim correspondence table from v1 §§1–8
+  to v2, every deliberate difference justified in the same change — the N-separate-diffs rule
+  applied to prose. **A v2 without that table is an unwitnessed replacement of the project's law.**
+- **v8 vocabulary must keep resolving.** The cross-reference block distinguishes this document's
+  *seat* (the broad category) from v8's *seat* (the selected one), with the translation at v8 §5.4.
+  v2 either preserves that distinction exactly or updates v8 in the same change.
+- **The abstract is a single ~1,100-word paragraph** carrying argument and changelog together. v2
+  splits them: the changelog belongs to the Amendments corpus (OQ-361).
+- **Do not erase the lineage — it has already moved.** OQ-361 relocates it; v2 references it. A v2
+  that reads as though it had no history would be the no-seat pose of form, which is the objection
+  that made an earlier read argue against a rewrite at all (see OQ-358).
+
+**Open question the ruling must settle, not the executor.** Whether v2 is a *restructure* (same
+claims, reordered, numbering held) or a *re-derivation* (the argument itself reworked). The case
+above supports only the first. **A re-derivation is a different and larger thing and would need its
+own justification** — structural assessment does not license reworking the philosophy, and the
+instance that finds the structure wanting is not thereby the right seat to rewrite the argument.
+
+**What it changes.** Whether someone can arrive at the gate, read the law, and understand what it
+commits to — without parsing six revisions of backstory to find out which claims are still live.
+
+---
+
+## OQ-363 — `report_corpus` exposes only `giant_comp_timeout`: 8 of its 11 stages sit on `run_prolog`'s 300 s default, which is sized for n≈285 and cost the v6 arm its `abductive` artifact
+
+**Ω-type:** Ω_E (a parameterization gap; witnessed by three ledger rows).
+
+**Status:** open — minted 2026-08-24 from the OQ-352 witness run. **NOT fixed in flight**: the
+three TIMEOUT rows are the retry ledger's first genuine exercise on the largest leg, and a clean
+re-run with a raised ceiling would erase them (operator ruling, 2026-08-24).
+**Priority:** 2
+**Deps:** splits_from OQ-352, gates OQ-353
+**Files:** `python/run_pipeline.py` (`report_corpus` — only `giant_comp_timeout` is forwarded;
+`_prolog_orbit`/`_prolog_fpn`/`_prolog_maxent`/`_prolog_abductive`/`_prolog_coupling`/
+`_prolog_maxent_diag`/`_prolog_commentary_census`/`_prolog_trajectory` call `run_prolog` with no
+timeout argument; `run_prolog` default `timeout=300`), `outputs/prolog_children.log` (the evidence).
+
+**The fact (witnessed, `outputs/prolog_children.log`).** On `archives/datasets/original_v6`
+(n=3380), `run_abductive_report` was killed at the 300 s default three times and then raised:
+
+```
+300.06s  pid=813564  rc=TIMEOUT  run_abductive_report
+300.14s  pid=814208  rc=TIMEOUT  run_abductive_report
+300.13s  pid=814867  rc=TIMEOUT  run_abductive_report
+```
+
+900 s spent, no artifact, and the run correctly refused `ARTIFACT_ABSENT` at the output gate. For
+scale, stages that DID complete on the same leg: `orbit` 235.7 s, `fpn` 93.7 s — i.e. `orbit` came
+in at 78% of the ceiling, so `abductive` was not an outlier so much as the first stage over the
+line.
+
+**Why this is a gap I built, not a pre-existing one.** OQ-352 parameterized timeouts on exactly
+three stages — `_prolog_fingerprint` (300), `_prolog_covering` (900), `_prolog_giant_comp` (900) —
+and `report_corpus` forwards only `giant_comp_timeout`. The other eight stages therefore cannot be
+sized from the driver at all. **It is the same parameterization asymmetry the plan fixed for one
+stage and left for the rest**, and it is the report-stage twin of the `_classify_timeout_for`
+miscalibration recorded on OQ-356: a ceiling fitted at one corpus size applied to a corpus 12x
+larger.
+
+**What to build.** A per-stage timeout map on `report_corpus` — `stage_timeouts: dict | None`,
+defaults inert so every current call site is byte-identical — plus a size-derived default in the
+shape of `_classify_timeout_for` (which already exists and is already known to under-predict above
+n≈1000, so reuse its *form*, not its constant). Two constraints from this arc:
+- **`soft_timeout=0` must remain reachable per stage.** It is what let the v6 classify complete in
+  ONE 6025 s attempt instead of the `2 x 61.7 + 123` minute retry schedule; it works because
+  `run_prolog`'s `cap = timeout if (final or not soft_timeout)` takes the timeout branch on a falsy
+  soft cap. That quirk is documented and deliberately not "fixed" (OQ-352 WRITEUP §3b).
+- **A raised ceiling is not a substitute for measuring.** The v6 `giant_comp` probe HALTED rather
+  than fall back to a floor, on the rule that a failed measurement must not present as a
+  configured ceiling. The same rule applies here: derive `abductive`'s ceiling from a timed probe,
+  do not guess upward.
+
+**What it changes.** Whether OQ-352's driver can run a large archive leg to completion at all.
+Today the v6 arm is **9 of 11 stages** — `giant_comp` excluded by preregistration (OQ-356),
+`abductive` timed out (this OQ) — and OQ-353's size arm needs both closed.
+
 
 *Compress-on-close (added 2026-06-04): when an entry's status transitions to
 resolved/disposed, compress its body in place — keep the header, Ω-type, the canonical

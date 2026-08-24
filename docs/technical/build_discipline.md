@@ -3216,6 +3216,167 @@ sweep is a snapshot; the clause comment is where the next reader will actually b
 
 ---
 
+## A guard sweep's find-criterion must model REACHABILITY, not the value's absence (OQ-352/OQ-356, 2026-08-23)
+
+**The rule.** When you sweep a codebase for "every place this value could break something,"
+the criterion has to answer *does the value REACH the operation, given the guards and gates on
+the path* — not *is the value absent here* and not *does this site use the idiom I associate
+with the bug*. An absence-keyed or idiom-keyed criterion produces a site list that looks
+exhaustive, passes review, and stops one call-site short. The residue is invisible precisely
+because the sweep was real.
+
+**The exemplar.** OQ-60 ruled that purity carries two absence tokens and that `unknown` must
+never reach arithmetic (atoms THROW in `is`/`>=`). The sweep that followed guarded
+`drl_purity_network.pl:353` and `giant_component_analysis.pl:365` — and missed
+`giant_component_analysis.pl:1278`, `count_by_action_band/8`, **in the same file**, thirty lines
+from a comment naming this exact hazard. There `effective_purity` is read DIRECTLY rather than
+through the `-1.0`-collapsing cache, under `catch(..., _, fail), EP >= 0.0`. `unknown` is a
+RETURN VALUE, not an exception, so the `catch/3` intercepts nothing and the comparison throws.
+
+Cost: `run_giant_component_analysis` died on **17 of 20 corpora** — 16 of 19 live legs plus the
+v6 archive — and nobody knew for months.
+
+**Why the criterion, not the diligence, is the thing to fix.** Two guarded siblings were found;
+one was in the same file. That is not inattention. It is a criterion that asked *"where is the
+value absent?"* when the answering question was *"where does the value reach an arithmetic
+comparison?"* — and those two questions have different answer sets whenever a value can be
+absent harmlessly.
+
+**Three independent instances in one arc, which is what licenses stating this as a class.**
+
+1. **The OQ-60 sweep** — guarded two of three ingest sites (above).
+2. **The audit's own probe, v1** — hunting the discriminator, it counted GC members whose purity
+   was "unknown" via `\+ (catch(purity_score(C,P),_,fail), number(P))`. That conflates
+   `purity_score` FAILING (harmless: the conjunct fails, the member is skipped, no arithmetic
+   runs) with SUCCEEDING as `unknown` (throws). 19/20, one leg mispredicted.
+3. **The audit's own probe, v2** — split those two cases correctly and was STILL 19/20, missing
+   the same leg, because neither version modelled the upstream reachability gate:
+   `run_phase3` runs the entire contamination block only when `GCFrac > 0.10`
+   (`giant_component_analysis.pl:855`), and on the default leg the giant component is
+   12/258 = 4.7%. The compound criterion — *(GC > 10% of network) AND (a GC member's
+   `effective_purity` succeeds non-numeric)* — is **20/20**.
+
+The sweep and both probes were correct about absence and wrong about reach.
+
+**The corollary that makes this worth a section rather than a footnote: k can be ZERO, not just
+1.** A path behind a reachability gate may never have executed on ANY corpus. The Phase-3
+contamination block had not — on the only leg the stage was ever run on, the gate is not crossed,
+so `report_gc_composition`, `report_contamination_sources`, `report_multihop_contamination`,
+`report_sound_constraint_exposure` and the collapse sweep produced **no numbers to caveat,
+because they produced none**. "Its numbers come from one corpus" and "it has never run" are
+different claims and demand different responses. **Before citing a report surface, check that it
+executed — an unentered branch and a branch that ran and found nothing are indistinguishable in
+the artifact.** (`testsets` prints *"No significant component found"*, which reads as a finding
+about the corpus and is actually a gate.)
+
+**And the shape a correct test takes when it is bounded short.** `prolog/tests/test_purity_absence.pl`
+carries `test(gc_ingest_collapses_unknown_to_sentinel)`: it plants an `unknown`-purity story, runs
+`precompute_props_loop`, and asserts the `-1.0` collapse AND that the `>= 0.0` filter excludes the
+sentinel. The test is CORRECT, it PASSES, and it will keep passing while the stage is dead on 17
+of 20 corpora — because it covers the GUARDED ingest and `count_by_action_band` is the second,
+unguarded ingest of the same value in the same module. **Its coverage boundary coincides exactly
+with the defect boundary.** This is harder to catch than a vacuous fixture: a vacuous fixture has
+a known remedy, whereas a correct test one call-site short survives review because nothing looks
+wrong. When a value-class ruling lands, enumerate its INGEST SITES and test each, rather than
+testing the one the ruling was written at.
+
+**Diagnostic, in two halves — and they are NOT the same kind of thing.** Stating which is
+mechanical and which is not is part of the rule, because an unrunnable "check" is itself an
+orphaned control (OQ-357): a diagnostic phrased as a check but never invoked decays exactly the
+way this section warns about.
+
+- **MECHANICAL, and owed every time — validate the sweep against a defect you already hold.**
+  Re-run your criterion against the known instance and against a known-clean sibling; it must
+  FIRE on the first and DECLINE the second. A sweep that cannot re-find the defect that
+  motivated it is untested, and its zeros are facts about the sweep, not the code (see *A
+  textual probe's zero is a fact about the probe* and *Every diagnostic needs a positive
+  control*). This audit's own sweep carries such a control inline
+  (`audits/2026-08-23_oq352_report_driver/purity_guard_sweep.py`) — it fires on
+  `count_by_action_band` and correctly marks both guarded siblings as guarded. **Without this
+  half the rule is unenforceable, so it is the half that must be written into the script.**
+
+- **MANUAL BY DESIGN, and STRUCTURALLY so — interrogate your own criterion.** Ask: *what would
+  make this line NOT fire on a site where the bug is real?* If the answer includes "the value is
+  present but harmless there" or "a gate upstream means this never runs," the criterion is
+  absence-keyed and owes a reachability model. It is a reader question, marked as one so nobody
+  files it as a check that was never run.
+
+**The line between those two halves is IMMOVABLE, and that is a theorem, not a tooling gap.**
+Worth stating because otherwise the manual half reads as an engineering deficit awaiting a better
+checker, and readers keep proposing to close it. In `docs/seat-theorem-v1.md`'s vocabulary the
+split is the σ/seat boundary appearing inside our own apparatus:
+
+- *Relative to a fixed find-criterion and a fixed case-pair*, whether the criterion fires and
+  declines is **fixed by the situation** — no live parameter, so **contentless** in §1(7)'s
+  technical sense, and that is exactly why a script can settle it. (The "relative to" is
+  load-bearing: holding criterion and cases as background is itself a framing choice.)
+- The second half asks whether the criterion **carves the field correctly** — which sites are
+  candidate-instances and which are background. That partition is a **Π** (§8), and §8 proves Π
+  is never given: it is a live parameter, hence a seat.
+- The regress named above — a completeness-checker needs its own find-criterion — **is the
+  σ-regress verbatim**, one domain over. §8: *"climbing does not buy neutrality, only a new σ with
+  the same defect."* A meta-checker is a richer system carrying its own uncertifiable
+  find-criterion.
+
+So the second bullet cannot be promoted into the first by any amount of tooling. Certifying a
+framing's completeness from within would be the seat-free contentful verdict the Coupling Theorem
+forbids. **The manual half is a structural residue, not an unfinished feature** — and §6.2 states
+the same boundary for the discipline at large: *"Declaration can be mandated — the law of 2a is
+checkable, since whether a seat is shown is itself a fact about the verdict. What cannot be
+mandated is everything downstream of the gate."* Gate/honoring there is mechanical/manual here.
+
+**And the mechanical half's two-sidedness is FORCED, not borrowed from software practice.** "Fire
+on the known instance AND decline a known-clean sibling" is §6.2's balanced-battery requirement in
+another domain: *"the battery that operationalizes it owes at least one question pointed where the
+seat would prefer not to look."* A criterion validated only against defects it already holds is a
+battery made only of cost-finding questions — §6.2's own diagnosis applies word for word,
+*"falsifiable in each answer, unfalsified by construction in the aggregate."* The clean sibling is
+the question that can return a verdict against the selecting bet. The control is derived from
+Corollary 2b, not adopted from convention.
+
+**Provenance.** OQ-356 (the defect and its 20-corpus census), OQ-357 (the enforcement half),
+`audits/2026-08-23_oq352_report_driver/WRITEUP.md` §4c–§4f, KNOWN_STATE 2026-08-23.
+
+## Promotions CONSIDERED AND DECLINED — a standing ledger (adopted 2026-08-23)
+
+**Why this exists.** The promotion test (CLAUDE.md → *End-of-Session Documentation Review*) asks
+whether a finding should move onto an always-loaded surface. It is applied every session and its
+NEGATIVE results have never been recorded anywhere — so a later reader cannot distinguish
+**"considered and declined"** from **"never considered."** Those are different states with
+different follow-ups: the first is a decision that can be revisited when its premise changes, the
+second is a gap. The demotion pass (the symmetric half, which removes rules whose premise has
+expired) has the same problem in reverse — it cannot tell a rule that survived scrutiny from one
+nobody re-read.
+
+**This is the anti-accretion record.** An always-loaded surface degrades by accumulation, and the
+only defence is a bar that is actually applied and visibly applied. One line per declined
+promotion, with the reason and the destination it went to instead. Append; do not prune on close
+(a declined promotion whose premise later changes is re-proposed as a NEW line citing the old).
+
+**The four standing reasons**, each of which is a CLAUDE.md rule already:
+
+| reason | rule it invokes |
+|---|---|
+| `transient` | it closes with a pending fix; a rule outliving its premise is the demotion-pass failure |
+| `fails-loud` | loud failures are NOT silent → they stay history, never promoted |
+| `pending-ruling` | an unresolved question is not a settled principle |
+| `incidence` | counts/rates/dated instances are pointed to, never published as literals on an always-loaded surface (operator, 2026-08-23) |
+
+### Ledger
+
+| date | candidate | declined because | went to instead |
+|---|---|---|---|
+| 2026-08-23 | `giant_component_analysis` throws on 17 of 20 corpora (OQ-356) | `transient` + `incidence` — OQ-356 closes it, and the count moves as legs are added | KNOWN_STATE 2026-08-23 tripwire 1–2; OQ-356 |
+| 2026-08-23 | every `classify_corpus`/`report_corpus` in one witness sequence must run at ONE frozen HEAD | `fails-loud` — it raises `MISSING_CLASSIFY_OUTPUT` with the two commits named | KNOWN_STATE 2026-08-23 tripwire 3 |
+| 2026-08-23 | `_classify_timeout_for` under-predicts above n≈1000 and its `ceiling // 2` soft cap turns one slow run into a 247-min retry schedule | `pending-ruling` + `incidence` — the escape (`soft_timeout=0`) is documented; the calibration is OQ-356's second-order item | KNOWN_STATE 2026-08-23 tripwire 4; OQ-356 |
+| 2026-08-23 | 30 of 37 `prolog/tests/` suites are manual-only (OQ-357) | `pending-ruling` — the enforced/manual boundary is the operator's seat; it becomes a principle only once a boundary is DECLARED | OQ-357 |
+
+**Promoted in the same pass, for contrast** (so the bar is visible from both sides): *A guard
+sweep's find-criterion must model REACHABILITY, not the value's absence* — promoted as a
+principle-only bullet with no counts, leg names or dates, because a fresh agent would otherwise
+make two silent mistakes: cite a report surface that never executed, and close a value-class
+ruling by testing the site the ruling names while a sibling ingest goes unguarded.
+
 ## The spine: every defect here is an absence that presents as a presence
 
 The seven patterns are one shape seen in seven places. In each, something is **missing** — a

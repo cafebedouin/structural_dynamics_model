@@ -1,0 +1,384 @@
+{
+  "testsets_sonnet2": {
+    "leg": "testsets_sonnet2",
+    "corpus_path": "testsets_sonnet2",
+    "corpus_dir": "/home/scott/bin/structural_dynamics_model/prolog/testsets_sonnet2",
+    "out_dir": "/home/scott/bin/structural_dynamics_model/outputs/legs/testsets_sonnet2",
+    "run_at": "2026-08-24T02:35:28Z",
+    "code_commit": "909a4cbe0b2a332f218226082a5bac0b74e1a3b2",
+    "n_files": 1003,
+    "corpus_hash": "7c9a9e426e97",
+    "corpus_hash_after": "7c9a9e426e97",
+    "prompt_hash": {
+      "token": "PROMPT_HASH_UNIFORM",
+      "hashes": {
+        "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7": 1003
+      },
+      "models": {
+        "claude-sonnet-5": 1003
+      },
+      "n_with": 1003,
+      "n_provenance_any": 1003,
+      "n_total": 1003,
+      "coverage": 1.0
+    },
+    "stages": [
+      "fingerprint",
+      "orbit",
+      "fpn",
+      "maxent",
+      "abductive",
+      "covering",
+      "coupling",
+      "maxent_diag",
+      "commentary_census",
+      "trajectory"
+    ],
+    "stage_outcomes": {
+      "fingerprint": "STAGE_OK",
+      "orbit": "STAGE_OK",
+      "fpn": "STAGE_OK",
+      "maxent": "STAGE_OK",
+      "abductive": "STAGE_OK",
+      "covering": "STAGE_OK",
+      "coupling": "STAGE_OK",
+      "maxent_diag": "STAGE_OK",
+      "commentary_census": "STAGE_OK",
+      "trajectory": "STAGE_OK"
+    },
+    "retry_ledger": [
+      {
+        "leg": "testsets_sonnet2",
+        "stage": "fingerprint",
+        "attempt": 1,
+        "started": "2026-08-24T02:35:29.274355+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 30.517,
+        "artifact_bytes": {
+          "fingerprint_report.md": 94968
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet2",
+        "stage": "orbit",
+        "attempt": 1,
+        "started": "2026-08-24T02:35:59.828245+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 5.364,
+        "artifact_bytes": {
+          "orbit_report.md": 77920
+        },
+        "transit_emitted": [
+          "orbit_data.json"
+        ]
+      },
+      {
+        "leg": "testsets_sonnet2",
+        "stage": "fpn",
+        "attempt": 1,
+        "started": "2026-08-24T02:36:05.196775+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 8.075,
+        "artifact_bytes": {
+          "fpn_report.md": 52282
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet2",
+        "stage": "maxent",
+        "attempt": 1,
+        "started": "2026-08-24T02:36:13.275109+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 22.053,
+        "artifact_bytes": {
+          "maxent_report.md": 43923
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet2",
+        "stage": "abductive",
+        "attempt": 1,
+        "started": "2026-08-24T02:36:35.331769+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 62.446,
+        "artifact_bytes": {
+          "abductive_report.md": 120225
+        },
+        "transit_emitted": [
+          "abductive_data.json"
+        ]
+      },
+      {
+        "leg": "testsets_sonnet2",
+        "stage": "covering",
+        "attempt": 1,
+        "started": "2026-08-24T02:37:37.781975+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 16.575,
+        "artifact_bytes": {
+          "covering_analysis.md": 1034497
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet2",
+        "stage": "coupling",
+        "attempt": 1,
+        "started": "2026-08-24T02:37:54.360019+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 3.618,
+        "artifact_bytes": {
+          "coupling_protocol.md": 3300
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet2",
+        "stage": "maxent_diag",
+        "attempt": 1,
+        "started": "2026-08-24T02:37:57.981624+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 30.217,
+        "artifact_bytes": {
+          "maxent_diagnostic_report.md": 106799
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet2",
+        "stage": "commentary_census",
+        "attempt": 1,
+        "started": "2026-08-24T02:38:28.202274+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 21.234,
+        "artifact_bytes": {
+          "commentary_census.json": 2804,
+          "commentary_census.md": 1814
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet2",
+        "stage": "trajectory",
+        "attempt": 1,
+        "started": "2026-08-24T02:38:49.440410+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 129.279,
+        "artifact_bytes": {
+          "context_profile_report.md": 9678
+        },
+        "transit_emitted": []
+      }
+    ],
+    "deferred": [
+      "variance_analysis",
+      "pattern_mining",
+      "index_sufficiency"
+    ],
+    "classify_output": "/home/scott/bin/structural_dynamics_model/outputs/pipeline_output.sonnet2.json"
+  },
+  "testsets_sonnet3": {
+    "leg": "testsets_sonnet3",
+    "corpus_path": "testsets_sonnet3",
+    "corpus_dir": "/home/scott/bin/structural_dynamics_model/prolog/testsets_sonnet3",
+    "out_dir": "/home/scott/bin/structural_dynamics_model/outputs/legs/testsets_sonnet3",
+    "run_at": "2026-08-24T02:41:04Z",
+    "code_commit": "909a4cbe0b2a332f218226082a5bac0b74e1a3b2",
+    "n_files": 1003,
+    "corpus_hash": "2ab01a6e63d9",
+    "corpus_hash_after": "2ab01a6e63d9",
+    "prompt_hash": {
+      "token": "PROMPT_HASH_UNIFORM",
+      "hashes": {
+        "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7": 1003
+      },
+      "models": {
+        "claude-sonnet-5": 1003
+      },
+      "n_with": 1003,
+      "n_provenance_any": 1003,
+      "n_total": 1003,
+      "coverage": 1.0
+    },
+    "stages": [
+      "fingerprint",
+      "orbit",
+      "fpn",
+      "maxent",
+      "abductive",
+      "covering",
+      "coupling",
+      "maxent_diag",
+      "commentary_census",
+      "trajectory"
+    ],
+    "stage_outcomes": {
+      "fingerprint": "STAGE_OK",
+      "orbit": "STAGE_OK",
+      "fpn": "STAGE_OK",
+      "maxent": "STAGE_OK",
+      "abductive": "STAGE_OK",
+      "covering": "STAGE_OK",
+      "coupling": "STAGE_OK",
+      "maxent_diag": "STAGE_OK",
+      "commentary_census": "STAGE_OK",
+      "trajectory": "STAGE_OK"
+    },
+    "retry_ledger": [
+      {
+        "leg": "testsets_sonnet3",
+        "stage": "fingerprint",
+        "attempt": 1,
+        "started": "2026-08-24T02:41:05.134639+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 25.692,
+        "artifact_bytes": {
+          "fingerprint_report.md": 93885
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet3",
+        "stage": "orbit",
+        "attempt": 1,
+        "started": "2026-08-24T02:41:30.829665+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 5.376,
+        "artifact_bytes": {
+          "orbit_report.md": 78303
+        },
+        "transit_emitted": [
+          "orbit_data.json"
+        ]
+      },
+      {
+        "leg": "testsets_sonnet3",
+        "stage": "fpn",
+        "attempt": 1,
+        "started": "2026-08-24T02:41:36.209543+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 7.925,
+        "artifact_bytes": {
+          "fpn_report.md": 49713
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet3",
+        "stage": "maxent",
+        "attempt": 1,
+        "started": "2026-08-24T02:41:44.138531+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 22.474,
+        "artifact_bytes": {
+          "maxent_report.md": 41372
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet3",
+        "stage": "abductive",
+        "attempt": 1,
+        "started": "2026-08-24T02:42:06.616302+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 61.088,
+        "artifact_bytes": {
+          "abductive_report.md": 118042
+        },
+        "transit_emitted": [
+          "abductive_data.json"
+        ]
+      },
+      {
+        "leg": "testsets_sonnet3",
+        "stage": "covering",
+        "attempt": 1,
+        "started": "2026-08-24T02:43:07.708756+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 16.523,
+        "artifact_bytes": {
+          "covering_analysis.md": 1026453
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet3",
+        "stage": "coupling",
+        "attempt": 1,
+        "started": "2026-08-24T02:43:24.235478+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 3.802,
+        "artifact_bytes": {
+          "coupling_protocol.md": 3298
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet3",
+        "stage": "maxent_diag",
+        "attempt": 1,
+        "started": "2026-08-24T02:43:28.041214+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 30.884,
+        "artifact_bytes": {
+          "maxent_diagnostic_report.md": 112057
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet3",
+        "stage": "commentary_census",
+        "attempt": 1,
+        "started": "2026-08-24T02:43:58.929326+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 21.49,
+        "artifact_bytes": {
+          "commentary_census.json": 2879,
+          "commentary_census.md": 1912
+        },
+        "transit_emitted": []
+      },
+      {
+        "leg": "testsets_sonnet3",
+        "stage": "trajectory",
+        "attempt": 1,
+        "started": "2026-08-24T02:44:20.422750+00:00",
+        "token": "STAGE_OK",
+        "rc": 0,
+        "duration_s": 128.89,
+        "artifact_bytes": {
+          "context_profile_report.md": 9488
+        },
+        "transit_emitted": []
+      }
+    ],
+    "deferred": [
+      "variance_analysis",
+      "pattern_mining",
+      "index_sufficiency"
+    ],
+    "classify_output": "/home/scott/bin/structural_dynamics_model/outputs/pipeline_output.sonnet3.json"
+  }
+}

@@ -270,6 +270,8 @@ def selftest(verbose: bool = True) -> int:
 
         # TRANSIT_JOURNAL_DIRTY / TRANSIT_BACKUP_LOST — the crash path.
         results.extend(_transit_fixtures(outd))
+        # TRANSIT_RESTORE_FAILED — the in-run path, distinct from BACKUP_LOST.
+        results.extend(_transit_restore_failed_fixture(outd))
 
         # ---------------- 4b: present-and-correctly-valued ---------------
         results.append(_expect_value("PROMPT_HASH_UNIFORM token",
@@ -301,6 +303,45 @@ def selftest(verbose: bool = True) -> int:
             "ABSENT leg COMPLETES (v6 shape)",
             lambda: report_corpus(str(noprov), out_dir=outd, stages=[],
                                   require_classify_output=False)))
+
+        # ---------------- fingerprint refusals, two-sided -----------------
+        # These three were DOCUMENTED before they were WIRED (expected_model was
+        # accepted and never read), so the taxonomy named codes the driver could
+        # not produce. Fixtures now hold them to the code.
+        mixed = _mkleg(tmp, "leg_mixed", n=2, model="claude-sonnet-5")
+        _mkleg(tmp, "leg_mixed", n=1, model="gemini-2.5-flash")   # -> MODEL_MISMATCH
+        partial = _mkleg(tmp, "leg_partial", n=2)
+        _mkleg(tmp, "leg_partial", n=1, provenance=False)         # -> PROVENANCE_COVERAGE
+
+        results.append(_expect_refusal(
+            "MODEL_MISMATCH fires (mixed models)", "MODEL_MISMATCH",
+            lambda: report_corpus(str(mixed), out_dir=outd, stages=[],
+                                  expected_model="claude-sonnet-5",
+                                  require_classify_output=False)))
+        results.append(_expect_pass(
+            "MODEL_MISMATCH declines (uniform model)",
+            lambda: report_corpus(str(good), out_dir=outd, stages=[],
+                                  expected_model="claude-sonnet-5",
+                                  require_classify_output=False)))
+        results.append(_expect_refusal(
+            "PROVENANCE_COVERAGE fires (partial coverage)", "PROVENANCE_COVERAGE",
+            lambda: report_corpus(str(partial), out_dir=outd, stages=[],
+                                  expected_model="claude-sonnet-5",
+                                  require_classify_output=False)))
+        results.append(_expect_pass(
+            "PROVENANCE_COVERAGE declines (full coverage)",
+            lambda: report_corpus(str(good), out_dir=outd, stages=[],
+                                  expected_model="claude-sonnet-5",
+                                  require_classify_output=False)))
+        # Non-vacuity: coverage is asserted BEFORE the prefix match, so a
+        # zero-provenance leg must refuse COVERAGE, never pass the model check
+        # over an empty fact set.
+        results.append(_expect_refusal(
+            "coverage checked BEFORE model (non-vacuous)", "PROVENANCE_COVERAGE",
+            lambda: report_corpus(str(noprov), out_dir=outd, stages=[],
+                                  expected_model="claude-sonnet-5",
+                                  require_classify_output=False)))
+        results.extend(_load_incomplete_fixtures(tmp, good))
 
         # ---------------- classify-output naming, pinned to the consumer --
         results.extend(_classify_name_fixtures())
@@ -480,6 +521,95 @@ def _transit_fixtures(outd: Path) -> list:
         g.journal_path.unlink(missing_ok=True)
         (g.backups / "orbit_data.json").unlink(missing_ok=True)
         # Restore the real shared artifact exactly as found (isolation).
+        if had:
+            shared.write_bytes(orig)
+            os.utime(shared, ns=orig_times)
+        else:
+            shared.unlink(missing_ok=True)
+    return out
+
+
+def _load_incomplete_fixtures(tmp: Path, leg: Path) -> list:
+    """LOAD_INCOMPLETE: the classify manifest's member count vs the leg's glob now.
+
+    Two-sided against a synthetic classify output, so the fixture exercises the
+    real comparison rather than a restatement of it.
+    """
+    out = []
+    n = len(list(leg.glob("*.pl")))
+    outputs = REPO_ROOT / "outputs"
+    # Use a leg NAME that cannot collide with a real on-disk output.
+    fake_leg = tmp / "leg_loadchk"
+    shutil.copytree(leg, fake_leg, dirs_exist_ok=True)
+    target = outputs / _classify_output_name(fake_leg.name)
+    existed = target.exists()
+    orig = target.read_bytes() if existed else None
+    orig_times = ((target.stat().st_atime_ns, target.stat().st_mtime_ns)
+                  if existed else None)
+    head = R._git_head_sha()
+    try:
+        def write_manifest(count):
+            target.write_text(json.dumps(
+                {"manifest": {"code_commit": head, "n_constraints": count}}),
+                encoding="utf-8")
+
+        write_manifest(n + 7)     # manifest disagrees with the glob
+        out.append(_expect_refusal(
+            "LOAD_INCOMPLETE fires (manifest != glob)", "LOAD_INCOMPLETE",
+            lambda: report_corpus(str(fake_leg), out_dir=tmp / "out_load",
+                                  stages=[], require_classify_output=True)))
+        write_manifest(n)         # manifest agrees
+        out.append(_expect_pass(
+            "LOAD_INCOMPLETE declines (manifest == glob)",
+            lambda: report_corpus(str(fake_leg), out_dir=tmp / "out_load",
+                                  stages=[], require_classify_output=True)))
+        # ...and a WRONG-COMMIT manifest must refuse MISSING_CLASSIFY_OUTPUT, not
+        # LOAD_INCOMPLETE — the two gates must not shadow each other.
+        target.write_text(json.dumps(
+            {"manifest": {"code_commit": "0" * 40, "n_constraints": n}}),
+            encoding="utf-8")
+        out.append(_expect_refusal(
+            "cross-commit refuses CLASSIFY, not LOAD", "MISSING_CLASSIFY_OUTPUT",
+            lambda: report_corpus(str(fake_leg), out_dir=tmp / "out_load",
+                                  stages=[], require_classify_output=True)))
+    finally:
+        if existed:
+            target.write_bytes(orig)
+            os.utime(target, ns=orig_times)
+        else:
+            target.unlink(missing_ok=True)
+    return out
+
+
+def _transit_restore_failed_fixture(outd: Path) -> list:
+    """TRANSIT_RESTORE_FAILED: the backup vanishes between snapshot and restore.
+
+    Distinct from TRANSIT_BACKUP_LOST, which is the RECOVERY path on a journal
+    found at startup. This is the in-run path, and it had no fixture at all until
+    the taxonomy was audited against the selftest.
+    """
+    out = []
+    shared = R.OUTPUTS_DIR / "orbit_data.json"
+    had = shared.exists()
+    orig = shared.read_bytes() if had else None
+    orig_times = ((shared.stat().st_atime_ns, shared.stat().st_mtime_ns)
+                  if had else None)
+    try:
+        if not had:
+            shared.write_bytes(b'{"selftest":"restore_failed"}\n')
+        g = _TransitGuard(outd)
+        g.acquire()
+        try:
+            g.snapshot("orbit")
+            # Destroy the backup mid-flight.
+            (g.backups / "orbit_data.json").unlink(missing_ok=True)
+            out.append(_expect_refusal(
+                "TRANSIT_RESTORE_FAILED fires", "TRANSIT_RESTORE_FAILED",
+                lambda: g.collect_and_restore("orbit", ())))
+        finally:
+            g.journal_path.unlink(missing_ok=True)
+            g.release()
+    finally:
         if had:
             shared.write_bytes(orig)
             os.utime(shared, ns=orig_times)

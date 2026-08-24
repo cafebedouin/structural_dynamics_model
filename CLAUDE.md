@@ -639,6 +639,18 @@ Each is one sentence here and a full section in `build_discipline.md` under the 
   is an orphan: control count rises while coverage falls. Orphaning arrives through repairs, so
   retire the old control in the same change as its replacement. (*A control must witness that it
   is CALLED*.)
+- **A guard sweep's find-criterion must model REACHABILITY, not absence** — ask *does the value
+  REACH the operation given the guards and gates on the path*, not *is it absent here* or *does
+  this site use the idiom I associate with the bug*; an absence- or idiom-keyed criterion yields a
+  list that looks exhaustive and stops one call-site short, invisibly, because the sweep was real.
+  Two corollaries. **k can be ZERO:** a path behind a reachability gate may never have executed on
+  ANY corpus, so *before citing a report surface, check that it executed* — an unentered branch and
+  a branch that ran and found nothing are indistinguishable in the artifact. And **a correct test
+  can be bounded exactly at the defect boundary** (covering the guarded ingest of a value while an
+  unguarded second ingest sits in the same module) — harder to catch than a vacuous fixture, since
+  nothing looks wrong; when a value-class ruling lands, enumerate and test its INGEST SITES, not
+  the one site the ruling was written at. (*A guard sweep's find-criterion must model
+  REACHABILITY*.)
 - **A found defect's before-commit is a free negative control** — run the detector at N and N−1,
   record *fires at N, declines at N−1*; availability is not automatic (check), and when a detector
   will follow, preserve the defective state deliberately. (*When a defect is found…*.)

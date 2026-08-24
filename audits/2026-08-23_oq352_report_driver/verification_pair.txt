@@ -1,0 +1,58 @@
+========================================================================
+VERIFICATION #3 — per-leg assertions
+========================================================================
+
+--- testsets_sonnet2
+  artifacts               : 13   empty: none
+  sidecars                : 13  assert_corpus_current rejects: none
+  leg md5 across run      : 7c9a9e426e97 -> 7c9a9e426e97 UNCHANGED
+  retry ledger            : present, 10 row(s)
+  prompt-hash token       : PROMPT_HASH_UNIFORM coverage=1.0000 hash=e03e2210...
+  same-commit classify    : pipeline_output.sonnet2.json @ 909a4cbe0b2a (HEAD 909a4cbe0b2a) MATCH
+  transit journal at exit : clean
+  stages OK               : 10/10
+
+--- testsets_sonnet3
+  artifacts               : 13   empty: none
+  sidecars                : 13  assert_corpus_current rejects: none
+  leg md5 across run      : 2ab01a6e63d9 -> 2ab01a6e63d9 UNCHANGED
+  retry ledger            : present, 10 row(s)
+  prompt-hash token       : PROMPT_HASH_UNIFORM coverage=1.0000 hash=e03e2210...
+  same-commit classify    : pipeline_output.sonnet3.json @ 909a4cbe0b2a (HEAD 909a4cbe0b2a) MATCH
+  transit journal at exit : clean
+  stages OK               : 10/10
+
+========================================================================
+VERIFICATION #4 — pre-named subset (PREREGISTRATION §1a/§1b)
+========================================================================
+  R1 corpus_wasserstein_fracture     DIFFERS
+  R2 arakelov_threshold              DIFFERS
+  R3 type_distribution               DIFFERS
+  R4 purity_n_scored/no_data         DIFFERS
+  R5 drift_event_counts              DIFFERS
+  R6 orbit-class histogram           DIFFERS
+  R7 giant-component size/members    UNAVAILABLE — instrument broken on both legs (OQ-356)
+
+  => 6 of 6 available REQUIRED statistics differ (prereg verdict rule: >=5 of R1-R7; R7 unavailable, so >=5 of 6)
+  => PASS
+
+  EXPECTED-SATURATED (identical is a FINDING for OQ-353, never a gate failure):
+    S1 network_stability                 IDENTICAL (as predicted)
+    S2 boltzmann_summary                 DIFFERS (prediction wrong)
+    S3 contextuality.by_type             DIFFERS (prediction wrong)
+    S4 network_cascade_count_threshold   IDENTICAL (as predicted)
+
+  Report-stage artifacts, sonnet2 vs sonnet3 (not pre-named; recorded):
+    abductive_data.json                differs
+    abductive_report.md                differs
+    commentary_census.json             differs
+    commentary_census.md               differs
+    context_profile_report.md          differs
+    coupling_protocol.md               differs
+    covering_analysis.md               differs
+    fingerprint_report.md              differs
+    fpn_report.md                      differs
+    maxent_diagnostic_report.md        differs
+    maxent_report.md                   differs
+    orbit_data.json                    differs
+    orbit_report.md                    differs

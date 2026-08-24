@@ -1,0 +1,61 @@
+call sites reading purity then doing arithmetic: 50  (41 guarded by number/1, 9 UNGUARDED)
+
+--- UNGUARDED ---
+  prolog/abductive_triggers.pl:467  catch(purity_scoring:purity_score(C, Purity), _, (Purity = -1.0)),
+  prolog/abductive_triggers.pl:825  catch(purity_scoring:purity_score(C, Purity), _, (Purity = -1.0)),
+  prolog/context_profile_mining.pl:193  (   catch(purity_scoring:purity_score(C, Purity), _, fail)
+  prolog/drl_purity_network.pl:224  purity_scoring:purity_score(C, Intrinsic),
+  prolog/fpn_report.pl:94  (   catch(drl_purity_network:effective_purity(C, Context, EP, _), _, fail)
+  prolog/genuine_findings_query.pl:101  (purity_scoring:purity_score(C, Purity) -> true ; Purity = unknown),
+  prolog/giant_component_analysis.pl:1278  catch(drl_purity_network:effective_purity(C, Ctx, EP, _), _, fail),
+  prolog/json_report.pl:1427  ;   (   catch(purity_scoring:purity_score(Other, NP1), _, fail), NP1 \= -1.0
+  prolog/json_report.pl:2185  (   catch(once(purity_scoring:purity_score(C, PS0)), _, fail)
+
+--- guarded ---
+  prolog/abductive_triggers.pl:411  catch(purity_scoring:purity_score(C, P), _, fail),
+  prolog/abductive_triggers.pl:577  catch(drl_modal_logic:effective_purity(C, Context, OneHopEP), _, fail),
+  prolog/diagnostic_summary.pl:237  (   catch(purity_scoring:purity_score(C, PScore), _, fail),
+  prolog/drl_boltzmann_analysis.pl:277  purity_scoring:purity_score(C, Purity),
+  prolog/drl_boltzmann_analysis.pl:300  purity_scoring:purity_score(C, CurrentPurity),
+  prolog/drl_boltzmann_analysis.pl:553  purity_scoring:purity_score(C, Purity),
+  prolog/drl_boltzmann_analysis.pl:611  purity_scoring:purity_score(C, Purity),
+  prolog/drl_boltzmann_analysis.pl:626  purity_scoring:purity_score(C, Purity),
+  prolog/drl_boltzmann_analysis.pl:637  purity_scoring:purity_score(C, Purity),
+  prolog/drl_fpn.pl:112  (   purity_scoring:purity_score(C, IP0), number(IP0)
+  prolog/drl_fpn.pl:258  purity_scoring:purity_score(Other, OtherPurity),
+  prolog/drl_purity_network.pl:300  purity_scoring:purity_score(Other, OtherPurity),
+  prolog/drl_purity_network.pl:323  purity_scoring:purity_score(Src, SrcPurity),
+  prolog/drl_purity_network.pl:324  purity_scoring:purity_score(Tgt, TgtPurity),
+  prolog/drl_purity_network.pl:352  effective_purity(C, Context, EP, _),
+  prolog/drl_purity_network.pl:439  effective_purity(C, Context, EP, _), number(EP), !.   % OQ-60: unknown effective → no path
+  prolog/drl_purity_network.pl:441  effective_purity(C, Context, EP, _),
+  prolog/drl_purity_network.pl:464  effective_purity(C, Context, EffPurity, _Components),
+  prolog/drl_purity_network.pl:465  purity_scoring:purity_score(C, Intrinsic),
+  prolog/giant_component_analysis.pl:357  (   catch(purity_scoring:purity_score(C, IntrinsicP0), _, IntrinsicP0 = -1.0),
+  prolog/giant_component_analysis.pl:365  (   catch(drl_purity_network:effective_purity(C, Context, EffP0, _), _, EffP0 = -1.0),
+  prolog/grothendieck_cohomology.pl:800  purity_scoring:purity_score(C, P),
+  prolog/json_report.pl:393  (   catch(purity_scoring:purity_score(C, PScore), _, fail),
+  prolog/json_report.pl:1360  ;   (   catch(purity_scoring:purity_score(C, IP1), _, fail), number(IP1), IP1 \= -1.0
+  prolog/json_report.pl:2273  catch(purity_scoring:purity_score(C, PS), _, fail),
+  prolog/maxent_diagnostic.pl:606  catch(purity_scoring:purity_score(C, P), _, fail),
+  prolog/maxent_diagnostic.pl:616  catch(purity_scoring:purity_score(C, P), _, fail),
+  prolog/maxent_diagnostic.pl:625  catch(purity_scoring:purity_score(C, P), _, fail),
+  prolog/maxent_report.pl:375  catch(purity_scoring:purity_score(C, Purity), _, fail),
+  prolog/metric_drift_events.pl:378  purity_scoring:purity_score(C, Purity),
+  prolog/metric_drift_events.pl:390  purity_scoring:purity_score(C, Purity),
+  prolog/metric_drift_events.pl:399  purity_scoring:purity_score(C, Purity),
+  prolog/metric_drift_events.pl:495  purity_scoring:purity_score(C, Purity),
+  prolog/metric_drift_events.pl:502  purity_scoring:purity_score(C, Purity),
+  prolog/network_dynamics.pl:68  drl_purity_network:effective_purity(C, Context, EP, _Components),
+  prolog/network_dynamics.pl:69  purity_scoring:purity_score(C, IP),
+  prolog/network_dynamics.pl:84  purity_scoring:purity_score(C, MyPurity),
+  prolog/network_dynamics.pl:102  purity_scoring:purity_score(Other, OtherPurity),
+  prolog/network_dynamics.pl:131  purity_scoring:purity_score(C, MyPurity),
+  prolog/network_dynamics.pl:170  drl_purity_network:effective_purity(C, Context, EP, _),
+  prolog/network_dynamics.pl:235  drl_purity_network:effective_purity(CU, Context, EPu, _),
+
+--- positive control: does this sweep discriminate? ---
+  FIRES on the known-unguarded count_by_action_band site : True
+  DECLINES (marks guarded) drl_purity_network:353        : True
+  DECLINES (marks guarded) giant_comp precompute :366    : True
+  => sweep DISCRIMINATES

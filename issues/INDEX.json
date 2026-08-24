@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "f2126a23b0a639ab8bc7c916404b12129e79fd15",
+    "store_version": "2041be82a88ec4d186eef831a0bb8dce00162682",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-23T16:43:24"
+    "generated_at": "2026-08-24T00:35:10"
   },
-  "issues_sha": "bfa5a3d47d47dc8c99d86d850333e2791d4542520931b66c583b913e46f40229",
-  "n_entries": 355,
+  "issues_sha": "c3fee74dac6b19945ac90a20b488b86b3bee6d1d83b1f9401dc93869ba667d41",
+  "n_entries": 363,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,8 +16,8 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 142,
-    "partial": 4
+    "open": 149,
+    "partial": 5
   },
   "active": [
     {
@@ -2043,13 +2043,16 @@
     },
     {
       "id": "OQ-352",
-      "status": "open",
+      "status": "partial",
       "priority": 2,
       "summary": "Per-leg REPORT driver: the corpus-level tools (orbits, FPN, giant comp, HAC, covering, fingerprint, commentary census) have never run on a post-reset 1000-story leg and have no `classify_corpus`-style driver",
       "deps": [
         "blocked_on OQ-301",
         "gates OQ-353",
-        "gates OQ-354"
+        "gates OQ-354",
+        "gates OQ-363",
+        "bundled_with OQ-356",
+        "bundled_with OQ-357"
       ],
       "cross_refs": [],
       "mentioned_in": [
@@ -2058,7 +2061,10 @@
         "OQ-246",
         "OQ-301",
         "OQ-353",
-        "OQ-354"
+        "OQ-354",
+        "OQ-356",
+        "OQ-357",
+        "OQ-363"
       ]
     },
     {
@@ -2115,6 +2121,154 @@
         "OQ-61",
         "OQ-239",
         "OQ-353"
+      ]
+    },
+    {
+      "id": "OQ-356",
+      "status": "open",
+      "priority": 2,
+      "summary": "`giant_component_analysis` DIES on 17 of 20 corpora: `count_by_action_band/8` is the OQ-60 sweep's missed site, and an unguarded `EP >= 0.0` over a raw `effective_purity` throws on `unknown`",
+      "deps": [
+        "blocked_on_human oq356-purity-guard-scope-ruling",
+        "gates OQ-353"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60",
+        "OQ-352",
+        "OQ-353",
+        "OQ-354"
+      ]
+    },
+    {
+      "id": "OQ-357",
+      "status": "open",
+      "priority": 2,
+      "summary": "30 of 37 `prolog/tests/` suites are MANUAL-ONLY: controls that exist, are correct, and are never invoked",
+      "deps": [
+        "splits_from OQ-356",
+        "blocked_on_human oq357-enforcement-scope-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-96",
+        "OQ-266",
+        "OQ-352",
+        "OQ-356"
+      ]
+    },
+    {
+      "id": "OQ-358",
+      "status": "open",
+      "priority": 2,
+      "summary": "the Seat Theorem corpus: separate the ratified text from its amendments and its apparatus, and give the eight declared residuals one legible surface",
+      "deps": [
+        "blocked_on_human oq358-corpus-separation-ruling",
+        "gates OQ-359",
+        "gates OQ-360",
+        "gates OQ-361",
+        "gates OQ-362"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-28",
+        "OQ-253",
+        "OQ-359",
+        "OQ-360",
+        "OQ-361",
+        "OQ-362"
+      ]
+    },
+    {
+      "id": "OQ-359",
+      "status": "open",
+      "priority": 2,
+      "summary": "`docs/seat-theorem-v1.md` contains **v2.6**: the filename and the version disagree, and `docs/README.md` names the filename canonical",
+      "deps": [
+        "splits_from OQ-358"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-352",
+        "OQ-358",
+        "OQ-361"
+      ]
+    },
+    {
+      "id": "OQ-360",
+      "status": "open",
+      "priority": 2,
+      "summary": "the amendment-provenance rule has TWO classes and needs THREE: P2's kill condition is filed as scope-narrowing when it is a live, unfired falsifier on the load-bearing premise",
+      "deps": [
+        "splits_from OQ-358",
+        "gates OQ-361",
+        "blocked_on_human oq360-provenance-third-class-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-352",
+        "OQ-358",
+        "OQ-361"
+      ]
+    },
+    {
+      "id": "OQ-361",
+      "status": "open",
+      "priority": 2,
+      "summary": "extract the Amendment record to its own surface (the \"Amendments\" corpus): it is cited as an EXEMPLAR and currently ships as a 52-line tail",
+      "deps": [
+        "splits_from OQ-358",
+        "blocked_on OQ-360",
+        "gates OQ-362"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-28",
+        "OQ-253",
+        "OQ-352",
+        "OQ-358",
+        "OQ-360",
+        "OQ-362"
+      ]
+    },
+    {
+      "id": "OQ-362",
+      "status": "open",
+      "priority": 2,
+      "summary": "the v2 ratified text: a gate-legible Seat Theorem that leads with its premises and carries its residuals as a numbered section",
+      "deps": [
+        "splits_from OQ-358",
+        "blocked_on OQ-360",
+        "blocked_on OQ-361",
+        "blocked_on_human oq362-v2-go"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-352",
+        "OQ-358",
+        "OQ-360",
+        "OQ-361"
+      ]
+    },
+    {
+      "id": "OQ-363",
+      "status": "open",
+      "priority": 2,
+      "summary": "`report_corpus` exposes only `giant_comp_timeout`: 8 of its 11 stages sit on `run_prolog`'s 300 s default, which is sized for n≈285 and cost the v6 arm its `abductive` artifact",
+      "deps": [
+        "splits_from OQ-352",
+        "gates OQ-353"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51",
+        "OQ-59",
+        "OQ-285",
+        "OQ-288",
+        "OQ-291",
+        "OQ-352",
+        "OQ-353",
+        "OQ-356"
       ]
     }
   ],
