@@ -1,0 +1,22 @@
+engine commits present: ['5603019', '734d587']  <-- NOT coherent; reclassify
+nemotron      n= 996 | h1 band3=21% band0=31% null=12% | red=13.3% green=12.8%
+nemotron_think n=1003 | h1 band3=35% band0=23% null=9% | red=10.9% green=14.3%
+
+pair                            n             h1_band             verdict           signature         purity_band  claimed_type(auth)       epsilon(auth)
+nemotron vs nemotron_think    994                42%                 56%                 66%                 55%                 72%                 21% 
+ε thresholds: {'rope_epsilon_ceiling': 0.45, 'snare_epsilon_floor': 0.46, 'tangled_rope_epsilon_floor': 0.3, 'piton_epsilon_floor': 0.1, 'fpn_epsilon': 0.001}
+nemotron vs nemotron_think n= 994 |Δε| median=0.06 p75=0.10 p90=0.24 max=0.77 | ≥0.10: 28%  ≥0.20: 15%
+nemotron vs nemotron_think n= 994 | type-vector changed: all=77% |Δε|≥.10=94% (n=277) <.10=71% | verdict: ≥.10=70% <.10=34% | h1: ≥.10=77% <.10=50%
+nemotron      n=996 mean ε=0.484 sd=0.254 | mean suppression=0.484
+    powerless     tangled_rope=29% unknown=22% naturalized=15% scaffold=10% rope=10% snare=9% mountain=3% piton=2%
+    moderate      snare=31% rope=20% tangled_rope=20% unknown=13% scaffold=12% piton=2% naturalized=2%
+    institutional rope=75% scaffold=14% naturalized=4% piton=2% tangled_rope=2% snare=2% unknown=1%
+    analytical    snare=32% unknown=22% rope=17% tangled_rope=15% scaffold=9% mountain=3% piton=2% naturalized=0%
+nemotron_think n=1003 mean ε=0.547 sd=0.229 | mean suppression=0.547
+    powerless     tangled_rope=35% snare=18% unknown=14% naturalized=13% rope=9% scaffold=8% mountain=1% piton=1%
+    moderate      snare=38% tangled_rope=27% rope=15% unknown=10% scaffold=8% naturalized=2% piton=1%
+    institutional rope=76% scaffold=11% naturalized=6% snare=2% piton=2% unknown=1% tangled_rope=1%
+    analytical    snare=42% tangled_rope=21% unknown=16% rope=13% scaffold=5% mountain=1% piton=1%
+
+paired Δε (nemotron_think − nemotron): mean=+0.063, up≥.05=39% down≥.05=11%
+benign (off ε≤.15) n=150 mean Δε=+0.139 raised≥.10=33% raised≥.30=17%

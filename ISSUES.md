@@ -18050,6 +18050,11 @@ suppression 0.55→0.64, powerless seat tangled_rope 28%→34–37% / snare 28%�
 institutional seat piton 0%→7–8%; paired Δε up on 38% of seeds, down on 10%. Thinking moves the seat
 TOWARD EXTRACTION, not just around. The generality arms below test whether that is reasoning-general.
 
+**Full-n confirmation (2026-08-24, nemotron_think complete at 1003; 994 shared):** every number held —
+paired Δε mean +0.063 (was +0.061 at 728), |Δε| ≥0.10 on 28%, seat-vector churn 77%, benign stratum
++0.139 with 17% raised ≥0.30 (framing signature intact). Leg certified GREEN at 1003; the 732-seed
+read was not a partial-sample artifact (`nemotron_regime_pair_fullN_2026-08-24.txt`).
+
 **(a) ANSWERED 2026-08-23 — model-general, 2/2 families.** nemotron-3-ultra thinking-off vs thinking-on
 (`testsets_nemotron` 996 vs `testsets_nemotron_think` 732 partial, 728 shared seeds; free): paired Δε mean
 +0.061 (Flash +0.065), up 39% / down 12% (Flash 38/10), mean ε 0.48 → 0.54, suppression 0.48 → 0.54,
