@@ -18651,8 +18651,20 @@ within-pair spread ≥ between-model spread ⇒ **draw noise** (step-0's falsifi
   edge only across kernels (`drl_purity_network.pl:115`; giant_comp per OQ-193). v6 carries no
   `cs_kernel_id` (0/3380 files), so the guard never fires there and every shared-agent edge counts;
   on a leg, sibling readings of one kernel are unlinked by construction. So run the leg arm twice —
-  production, and with the guard overlaid off (`probe_harness:with_overlay`, install witness required,
-  OQ-326) — to read the leg at v6's edge semantics too. The guard-on/off delta is itself the quantity
+  production, and against a **KERNEL-STRIPPED COPY OF THE LEG** — to read the leg at v6's edge
+  semantics too. **AMENDED 2026-08-24 (Phase 1):** this bullet previously named
+  `probe_harness:with_overlay`, which is **KNOWN-UNEXECUTABLE** here — the target
+  `constraint_neighbors_existing/2` is a **static rule** (`drl_purity_network.pl:101`, no
+  `:- dynamic`), and OQ-326's check 5 has NO ESCAPE, so the overlay refuses rather than silently
+  overlaying nothing. The method is therefore DATA-SIDE: remove the
+  `narrative_ontology:cs_kernel_id/2` FACT lines from a leg copy, leaving story records
+  byte-identical and the declaration lines intact, so the whole diff is one table. This tests the
+  same condition v6 already exercises (guard conjunct against an empty fact table) and moves BOTH
+  kernel-reading sites coherently — a config-param version covering only `:115` while leaving
+  giant_comp's OQ-193 strip live would run the leg at NEITHER edge semantics. Built and witnessed
+  2026-08-24: `prolog/oq353_arm_astrip_haiku2/` (996 facts removed, 996 declaration lines preserved,
+  0 unaccounted, `cs_kernel_id` facts = 0 in the DB after load);
+  `audits/2026-08-24_oq353_statistic_floors/PREREGISTRATION.md` §11–§12. The guard-on/off delta is itself the quantity
   that says whether "one giant component" on a leg is kernel-sibling structure or cross-topic coupling.
   Every other tool (FPN, orbits, HAC, covering, fingerprint, Wasserstein/MaxEnt) reads no kernel fact
   (grep witnessed 2026-08-23) — clean 2×2.
@@ -18672,9 +18684,23 @@ giant-component fraction and phantom-node share (OQ-95's metric); HAC family cou
 covering / fingerprint class counts; `corpus_wasserstein_fracture`, `arakelov_threshold` (already
 draw-bound — the 2×2 says whether they are ALSO size-bound); and the step-0 block re-read on (b)/(c).
 
-**Resolution:** one table — statistic × {draw-noise, model-disposition, content, size-bound,
-construction-bound} — with the pair floor and the v6 cells beside every headline the report tools
-publish. **What it changes:** which corpus-level numbers may be cited at all, and in what form; the
+**Resolution:** one table — statistic × the INDEPENDENT BITS **B1–B5** — with the pair floor and
+the v6 cells beside every headline the report tools publish. **AMENDED 2026-08-24 (Phase 1):** this
+line previously named `{draw-noise, model-disposition, content, size-bound, construction-bound}` as
+if they PARTITION. They do not — a statistic can carry content *and* be size-bound — so the labels
+are replaced by five independent bits plus a **derived** construction-bound reading:
+**B1** draw-bound (`within_pure_max ≥ between_model_spread`) · **B2** model-disposition (ratio ≥ R_hi)
+· **B3** content-**or-mixture**-bearing, THREE-VALUED `true`/`false`/`unreadable` and never
+bookkept as `false` when unreadable · **B4** size-bound · **B5** guard-sensitive, read only against a
+MEASURED null floor; *construction-bound* is then DERIVED as ¬B3 ∧ ¬B1, never asserted. B3 carries
+the compound name because arms (a) and (c) differ in three ways (situations, schema vintage,
+within-corpus model heterogeneity) and mixture is irreducible — v6 has `story_provenance` on 0/3380,
+so arm (c) cannot be stratified back. The frozen definitions, the exposure columns that make
+`unreadable` decidable, and the resolution limits live in
+`audits/2026-08-24_oq353_statistic_floors/PREREGISTRATION.md` §7; the cut-points R_hi/R_lo and B1's
+indeterminate band are an OPEN OPERATOR RULING (§8.1/§8.3 — step 0's implicit 3/8 band holds 10 of 52
+statistics, so it is not a gap), and the instrument REFUSES rather than defaulting.
+**What it changes:** which corpus-level numbers may be cited at all, and in what form; the
 size-normalized rewrite list for OQ-355/OQ-239; whether OQ-182's HAC families are a content product.
 
 ---
