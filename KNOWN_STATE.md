@@ -8,6 +8,47 @@ query below to reading the whole file.
 **Entry grammar (machine-readable, added 2026-06-04).** Every entry is:
 
 ```
+## 2026-08-24 — [landed] OQ-352 pair arm re-witnessed clean: 0 substantive diffs; `code_dirty` rescoped fail-closed
+**Files:** python/run_pipeline.py, python/report_legs.py, audits/2026-08-23_oq352_report_driver/compare_dirty_vs_clean.py, audits/2026-08-23_oq352_report_driver/dirty_vs_clean_comparison.txt
+**Tier:** landed
+
+**The pair arm re-witnessed at clean HEAD `86a70f0042dc`** (both legs 10/10 stages, classify
+663 s / 651 s at n=1003, corpus hashes unchanged), with the dirty set PRESERVED rather than
+overwritten so the comparison was possible at all. Result: **24 content artifacts byte-identical,
+28 identical after stripping declared-varying keys, 2 transitively identical, 0 substantive
+differences.** The `code_dirty` caveat on the original artifacts was **bookkeeping, not
+substance** — a tested absence, since the comparator carries a planted-change positive control
+that fires.
+
+**TRIPWIRE — `code_dirty` was rescoped and its MEANING changed (`e9ca54785`, output-changing).**
+It was a bare `git status --porcelain`, which counts every untracked file, so writing an audit
+file stamped `code_dirty: True` on artifacts whose code matched HEAD. It is now a **fail-closed
+denylist**: `*.md`, `audits/**` (by location — an audit's `.py`/`.txt` is a record OF a run, never
+an input to one), corpus trees and `outputs/` are excluded; **everything else counts, including
+paths nobody anticipated.** Denylist not allowlist on purpose: an allowlist fails OPEN, letting a
+new source location read clean on a run no commit reproduces. **Consequence for reading older
+manifests: a pre-`e9ca54785` `code_dirty: True` may mean nothing more than an untracked file was
+present, so do not infer non-reproducibility from it without checking what was actually dirty.**
+16 controls pin the scoping two-sided (selftest 58 -> 74).
+
+**Corpus trees are excluded deliberately** — corpus identity is `corpus_hash`'s job (OQ-29), and
+counting a leg mid-fill would pin the flag True for as long as generation runs, which is when it
+most needs to mean something. This is also why the `testsets_nemotron_think` classify stamped
+dirty while its code matched HEAD.
+
+**Structural note, not repaired:** a sidecar stamping `artifact_sha256` over an artifact that
+itself embeds a run stamp is non-reproducible by construction (`_write_sidecar`) — the hash is of
+the un-normalized file. Surfaced by the comparator over-reporting 2 such sidecars as DIFFERS
+before the transitive-variance class was added.
+
+**Live instance of the same-commit constraint (tripwire 3), on a leg that is not mine:**
+`outputs/pipeline_output.nemotron_think.json` stamps `code_commit 560301910` while HEAD is
+`86a70f0042dc`, so `report_corpus` on that leg would refuse `MISSING_CLASSIFY_OUTPUT`. This is
+structural rather than an oversight — **any pass that commits AFTER classifying leaves its own
+artifact one commit stale.** OQ-353 will meet it on every leg it ingests; the order is
+classify-then-commit, or re-classify after.
+
+
 ## 2026-08-24 — [landed] nemotron_think COMPLETE (1003); stale-manifest hazard closed by re-classify; four Flash legs registered late (stamp-vs-substance); OQ-364 minted (live-leg rename, deferred)
 **Files:** prolog/testsets_nemotron_think/, python/shared/corpus_legs.py, python/corpus_census_check.py, prolog/schema_shape.txt, docs/technical/bulk_corpus_generation.md, audits/2026-08-21_flash_regime_vs_redraw/
 **Tier:** landed

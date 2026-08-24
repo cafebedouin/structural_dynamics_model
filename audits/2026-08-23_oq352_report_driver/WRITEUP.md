@@ -506,6 +506,43 @@ a manufactured finding. Checked against what OQ-355 actually claims:
 named entries.** Recorded as a correction to this audit's instrument, with the original stated
 outcome left standing rather than quietly re-tuned.
 
+### 5c-bis. The pair arm RE-WITNESSED at clean HEAD — the caveat is bookkeeping
+
+The witness artifacts were produced with uncommitted driver fixes in the tree
+(`code_dirty: True`), so no commit reconstructed them. The ruling was to re-witness the pair
+arm at clean HEAD and **keep both sets**, turning the caveat into a measurement rather than an
+annotation.
+
+Re-run at `86a70f0042dc`: both legs **10/10 stages**, classify 663 s / 651 s at n=1003, corpus
+hashes unchanged (`7c9a9e426e97`, `2ab01a6e63d9`).
+
+`compare_dirty_vs_clean.py` (evidence: `dirty_vs_clean_comparison.txt`, dirty hashes pinned in
+`dirty_artifacts_manifest.txt`):
+
+| verdict | n | meaning |
+|---|---|---|
+| `IDENTICAL_RAW` | **24** | every content artifact — byte-identical across both runs, both legs |
+| `IDENTICAL_NORMALIZED` | 28 | identical once the DECLARED varying keys are stripped |
+| `IDENTICAL_TRANSITIVE` | 2 | see below |
+| **`DIFFERS`** | **0** | — |
+
+**VERDICT: the dirty artifacts were SOUND; the `code_dirty` caveat was bookkeeping, not
+substance.** The varying keys were declared in advance (`pipeline_run_at`, `code_commit`,
+`code_commit_short`, `code_dirty`) so a difference elsewhere could not be waved through as
+"probably the timestamp," and a positive control plants a byte change the comparator must flag —
+it does, so the identity verdict is a tested absence rather than an untested one.
+
+**The comparator over-reported on its first run, and the fix is the interesting part.** It
+initially called 2 artifacts `DIFFERS`: both were the sidecar *for* `commentary_census.json`,
+differing only in `artifact_sha256`. That file embeds its own manifest with `pipeline_run_at`, so
+its RAW hash can never be stable — while the file itself compares `IDENTICAL_NORMALIZED`. The
+sidecar's varying keys were stripped; the hash it records *over another file that has its own*
+was not. Reclassified as `IDENTICAL_TRANSITIVE` — a transitive consequence of the same declared
+keys — reported as its own class rather than folded into either, so the distinction stays
+visible. **A structural note falls out: a sidecar stamping `artifact_sha256` over an artifact
+that embeds a run stamp is non-reproducible by construction** (OQ-352's `_write_sidecar`); the
+hash is of the un-normalized file. Not repaired here.
+
 ### 5d. The v6 arm
 
 See §4 and OQ-356. Run with `giant_comp` excluded and every other refusal — including
