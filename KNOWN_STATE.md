@@ -8,6 +8,96 @@ query below to reading the whole file.
 **Entry grammar (machine-readable, added 2026-06-04).** Every entry is:
 
 ```
+## 2026-08-25 — [tripwire] The never-run `gauge_fixed` prediction: REFUTED — and the restricted-view instrument is far weaker than its own accessibility table implies (`partial` == `full`, three types unreachable, beneficiaries discarded)
+**Files:** prolog/constraint_indexing.pl, prolog/dirac_classification.pl, audits/2026-08-25_gauge_fixed_prediction/, ISSUES.md, docs/design/design_gaps.md, blog/2026-08/benter_structural_blindness/
+**Tier:** tripwire
+
+Phase A of the Benter / structural-blindness arc (plan `i-was-thinking-about-toasty-kite`, commits
+`25f92b3f4` + `81e79a013`; full record `audits/2026-08-25_gauge_fixed_prediction/WRITEUP.md`,
+**Fired:** live). The prediction pre-registered in the source comment at
+`constraint_indexing.pl:798-799` — *{(C,Ctx) : `classify_from_restricted` ≠ `dr_type/3`} should
+equal {(C,Ctx) : `gauge_fixed` = true}* — had never been executed. Run over the live leg (258
+stories / 285 members × 4 canonical contexts = 1140 rows, manifest `2026-08-25T02:36:02Z`):
+**REFUTED, globally AND inside its own stratum** — 255 of 261 evaluable stratum rows sit in the
+dissent cell `agree ∧ fixed=true`; 6/261 (2.3%) on the confirming diagonal. Source comment
+annotated after the verdict existed (comment-only; diff over non-comment lines empty, probe re-run
+exit 0 + mtime advanced + `rows.tsv` byte-identical). OQ-381/382/383 minted; GAP-30 note added.
+
+**TRIPWIRE A — `restrict_by_access(partial, …)` is BYTE-IDENTICAL to the `full` clause
+(`constraint_indexing.pl:899-902`).** Both call `get_true_metric/3`. Every `partial` cell in
+`feature_access/3` is therefore a label with **no effect on any value**, so five of the six power
+levels are functionally unrestricted on the continuous metrics and **only `powerless` is genuinely
+restricted** (via `none` → χ fallback and `felt_only` → χ proxy). Anyone reasoning about the
+accessibility table as a graded scale — or adding a row to it — is reasoning about a gradient that
+mostly does not exist in the code.
+
+**TRIPWIRE B — `restricted_classify/7`'s type vocabulary is a STRICT SUBSET of `dr_type`'s, so
+"restricted disagrees with full" is mostly a missing branch, not an epistemic effect.** It emits
+only {mountain, snare, rope, piton, indeterminate}; `scaffold`, `tangled_rope` and `naturalized`
+are **unreachable**, forcing 343/1140 rows to disagree or abstain for vocabulary reasons alone
+(largest single class: `dr=scaffold → restricted=rope`, 105 rows). Symmetrically, its mountain and
+snare thresholds are hardcoded literals **numerically identical** to the config params the real
+cascade reads (7/7 checked: mountain 0.05/0.25, snare 0.66/0.46/0.60, rope 0.35/0.45), which forces
+agreement at exactly the two types `gauge_fixed` fires on — **all 253 snare rows agree, 253/253.**
+Any future comparison of these two classifiers must state both directions or it is scoring an
+instrument against a near-copy of itself.
+
+**TRIPWIRE C — `classify_from_restricted/3` DISCARDS the beneficiaries slot
+(`constraint_indexing.pl:947-953`).** The restricted view computes `KnownBeneficiaries` via
+`restrict_beneficiaries/3` (`:921-931`) and binds it to `_KnownBen`, unused. The `beneficiaries`
+column of `feature_access/3` reaches **no classification path at all** (Pattern 1 shape; not fixed
+— engine change). `observer_accessible/3` has no consumer outside its own module;
+`classify_from_restricted/3` has three (`abductive_triggers.pl:885`, `diagnostic_summary.pl:313`,
+`quantum_verification_report.pl:345`), so these confounds ARE consumer-visible.
+
+**TRIPWIRE D — `dr_type = mountain ⟹ gauge_fixed = true` is a THEOREM of the canonical site, not a
+corpus fact.** Real `mountain` requires `effective_immutability_for_context(Ctx, mountain)`, and
+measured over the canonical four: powerless (biographical,trapped) **yes**, moderate
+(biographical,mobile) **no**, institutional (generational,arbitrage) **no**, analytical
+(civilizational,analytical) **yes**. So a mountain row always has a differing sibling context. All
+8 live mountain rows are `fixed=true` and sit only at powerless/analytical (4+4). Do not read a
+`gauge_fixed=true` on a mountain as evidence of anything.
+
+**CORRECTION-KEY — OQ-205's `get_true_metric` 0.0 fix landed on ONE of three ingest sites.** The
+comment at `:906-910` says *"absence of an authored ε reads `unknown`, never a fabricated 0.0"* and
+sits directly above two sibling clauses that still fabricate `0.0` (`suppression_raw`, `theater`),
+where the real path's `drl_core:get_raw_suppression/2` returns `unknown` and
+`classify_from_metrics/6` fails closed on a non-number. **Exposure measured at ZERO stories over
+two legs (live 27/285 members, all `*_contradictions.pl`; `testsets_kimi` 0/1005) — LATENT, not
+live**, reachable only via a hand-authored or repair-stripped story. Not fixed (engine behavior
+change, forbidden by the plan's rail); no OQ minted yet. This is the *value-class ruling applied at
+one site instead of enumerated across ingest sites* failure named in CLAUDE.md.
+
+**RECURRENCE (not a discovery) — `_step_commit` is cid-scoped, so a topic run that mints a KERNEL
+leaves the kernel's `_contradictions.pl` meta-file UNTRACKED while its own manifest counts it.**
+Phase C (`benter_hkjc_parimutuel_2026`) committed 11 files for 5 stories at `13cd510d2` and left
+`prolog/testsets/beatability_of_the_take_contradictions.pl` untracked; the same run's manifest read
+`n_constraints 291 / axiom_contradiction 28`, so on-disk 291 vs in-git 290 — a fresh clone would
+have disagreed with the committed manifest. Committed at `40c0e2138`. **This has now happened at
+least twice with the same shape**, and the prior instance is recorded in the census baseline's own
+provenance entry 1: *"topic run blind_reviewer_jurisdiction_2026 landed
+blindness_decomposition_kernel_contradictions.pl (commit `2f73ce34` tracked it; the emitting run
+`f32fe86b` did NOT, being cid-scoped)."* The `corpus census` gate row is what catches it — it went
+RED on the 27→28 stratum move and was re-pinned with cause (provenance entry 11) only AFTER the
+file was committed, so the pin records a move that is in git rather than a commitless one. **No OQ
+exists for the underlying `_step_commit` gap.** Counting note: an unfiltered
+`git ls-files 'prolog/testsets/*.pl'` reports 297, not 291 — git's pathspec `*` crosses `/`, so it
+also counts the 7 files in the `gfbatch1/` run-tag subdir that the loader's non-recursive glob
+excludes. Filter to `^prolog/testsets/[^/]*\.pl$` before comparing disk to git.
+
+**Method notes worth reusing.** (1) The plan's four agreement atoms were extended to five: the
+restricted cascade's catch-all returns `indeterminate`, a non-answer that both live consumers
+already treat as one (`trigger_epistemic_trap/3` excludes it; `probe_context_gap/4` maps it to
+`agrees`) — scoring it `disagree` would let a non-answer satisfy the prediction. (2) The planned
+fixtures for cells (a) and (d) were NOT built: both occur naturally **with natural declines**, and
+a natural instance outranks an authored decoy. (3) Cell (c) was attempted with 4 adversarial
+fixtures and declined 16/16 — structurally (tripwire D, plus snare gate identity), not by sparsity.
+(4) Disagreement is **not monotone** in the table's listing order (institutional 54.0% > powerless
+49.2% > moderate 20.4% > analytical 10.6%) — a vocabulary artifact, logged so a later reader does
+not promote it into an epistemic result. (5) `trigger_epistemic_trap/3`'s metric gate is satisfied
+on 107/285 constraints and **48 of those have `dr_type = unknown`** — the full-data classification
+did not happen at all, and the trigger reads that absence as a difference.
+
 ## 2026-08-25 — [tripwire] The coherent 19-leg reclassify: the 15-commit dirty artifacts were BEHAVIORALLY IDENTICAL to clean HEAD; the situation-fixed core is 6/871; OQ-348 landed in its unnamed cell — and two silent stratum-enumeration traps are now measured
 **Files:** outputs/pipeline_output.*.json, python/audits/oq347_coherent_reclassify.py, python/audits/oq347_prereg_diff.py, python/audits/situation_fixed_core.py, python/audits/permutation_null.py, python/audits/oq347_stratum_split.py, python/audits/leg_diagnostic_table.py, audits/2026-08-25_oq347_coherent_reclassify/, prolog/testsets_nemotron/, prolog/testsets_nemotron_think/, audits/2026-08-21_flash_regime_vs_redraw/epsilon_distance.py, audits/2026-08-22_oq345_stakeholder_backfill/backfill_diff.py
 **Tier:** tripwire

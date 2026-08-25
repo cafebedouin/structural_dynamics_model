@@ -2,7 +2,7 @@
   "_comment": "OQ-306 stratum pin. Per-leg counts of KNOWN non-story kinds. Story counts are deliberately NOT pinned (the corpus grows by design). `unknown` and `dual_family` never appear here \u2014 they are arm-1 REDs, not a stratum. Only the `legs` counts are compared; `provenance` is metadata, so editing a cause note can never turn the gate row red. Cause accepts an orchestrator run or topic identifier, not just a commit hash: the stratum moves without commits (see f32fe86b).",
   "legs": {
     "testsets": {
-      "axiom_contradiction": 27
+      "axiom_contradiction": 28
     },
     "testsets_haiku": {},
     "testsets_flash": {},
@@ -359,6 +359,56 @@
       "new": {
         "testsets": {
           "axiom_contradiction": 27
+        },
+        "testsets_haiku": {},
+        "testsets_flash": {},
+        "testsets_kimi": {},
+        "testsets_sonnet": {},
+        "testsets_stealth": {},
+        "testsets_nemotron": {},
+        "testsets_sonnet2": {},
+        "testsets_haiku2": {},
+        "testsets_stealth2": {},
+        "testsets_sonnet3": {},
+        "testsets_haiku3": {},
+        "testsets_stealth3": {},
+        "testsets_kimi2": {},
+        "testsets_nemotron_think": {},
+        "testsets_flash2": {},
+        "testsets_flash3": {},
+        "testsets_flash_think": {},
+        "testsets_flash_think2": {}
+      }
+    },
+    {
+      "cause": "Phase C topic run benter_hkjc_parimutuel_2026 (2026-08-25, manifest tag benter_hkjc_parimutuel_2026_20260825_125025) generated kernel beatability_of_the_take with 5 readings + 1 axiom_contradiction meta-file; testsets axiom_contradiction 27 -> 28. Stories 258 -> 263, members 285 -> 291, read from the run's own pipeline_output.json manifest 2026-08-25T17:53:01Z. The meta-file was left untracked by _step_commit (scoped to story cids) and is committed at 40c0e2138, so this re-pin records a move that IS in git, not a commitless one.",
+      "authorized_by": "operator (authorized the Phase C topic run in-session, 2026-08-25); re-pin executed by the implementing session per the checker's own ordinary-corpus-authoring instruction",
+      "previous": {
+        "testsets": {
+          "axiom_contradiction": 27
+        },
+        "testsets_haiku": {},
+        "testsets_flash": {},
+        "testsets_kimi": {},
+        "testsets_sonnet": {},
+        "testsets_stealth": {},
+        "testsets_nemotron": {},
+        "testsets_sonnet2": {},
+        "testsets_haiku2": {},
+        "testsets_stealth2": {},
+        "testsets_sonnet3": {},
+        "testsets_haiku3": {},
+        "testsets_stealth3": {},
+        "testsets_kimi2": {},
+        "testsets_nemotron_think": {},
+        "testsets_flash2": {},
+        "testsets_flash3": {},
+        "testsets_flash_think": {},
+        "testsets_flash_think2": {}
+      },
+      "new": {
+        "testsets": {
+          "axiom_contradiction": 28
         },
         "testsets_haiku": {},
         "testsets_flash": {},
