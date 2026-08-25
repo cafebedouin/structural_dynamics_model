@@ -194,6 +194,16 @@ PIPELINE_FIELDS = [
     # (field_name, expected_type, nullable)
     # --- Always present, never null ---
     ("id",                          str,          False),
+    # member_kind (OQ-306, emitted 2026-08-21 by `72ec21feb`): corpus membership as a CHECKED
+    # fact, not an inference from the filename. Second key in every entry, from
+    # `corpus_loader:corpus_member_kind/2` via json_report.pl:276-279 — that emit has NO
+    # fallback arm (an unkinded member is a hard refusal upstream, never default-to-story), so
+    # presence and non-nullness are emit-structure-determined. Live census 2026-08-24
+    # (n=285): story 258 / axiom_contradiction 27, 285/285 present, 0 null. The VALUE SET
+    # (story|axiom_contradiction|dual_family|unknown) and its policy — `unknown`/`dual_family`
+    # are RED — are owned by `python/corpus_census_check.py` (gate row `corpus census`); do not
+    # restate the enum here, one canonical location per thing.
+    ("member_kind",                 str,          False),
     ("perspectives",                dict,         False),
     ("perspective_chi",             dict,         False),
     ("perspective_witness",         dict,         False),  # OQ-108: authored stakeholders per power atom (json_report:write_perspective_witness/2)
