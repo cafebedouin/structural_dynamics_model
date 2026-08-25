@@ -58,6 +58,8 @@ Project vocabulary used throughout without re-definition:
   `python3 python/known_state_status.py --file <path>`, never whole-read.
 - **Pattern N** — one of the eight indices of THIS taxonomy (7 members, index 3 vacated); the
   token is overloaded elsewhere in the repo (`CLAUDE.md` → *Numbering is SETTLED*).
+- **Cross-artifact reconciliation** — the ID-keyed join between two artifacts that name the same
+  observational units; its output is *fork found, ruling owed*, never a canonical side (§below).
 
 ## The working method: separated passes (the procedure that prevents the patterns)
 
@@ -1974,6 +1976,81 @@ the count, in the same pass. "N cases of X" is never the finding; "N cases, of w
 content-driven and N−k are one convention" is the finding. This is the positive-control discipline
 applied to your own headline: the breakdown is the control that catches the count standing in for
 the substrate.
+
+---
+
+## Cross-artifact reconciliation: two artifacts naming the same units owe an ID-keyed join (fork found, ruling owed)
+
+**Reader, and the decision it changes.** You are about to trust an agreement between two artifacts
+that describe the same observational units — a spec and its implementation, a catalog and a
+dataset, a tracker and its derived index, a paper's table and the run that produced it — on the
+strength of their *aggregates* matching. Or you are about to write the next bespoke pair-checker
+for one such pair. In the first case this rule decides whether you may cite that agreement at all;
+in the second, whether you write a joiner or another one-off.
+
+**The mechanism: aggregate agreement is not unit agreement, and it conceals the disagreement it
+sits on.** Two artifacts can agree on every total and disagree on most rows — compensating
+per-unit differences leave the marginals identical. Nothing goes red: both artifacts parse, both
+counts are plausible, and the only missing thing is the join that would have asked whether they
+agree *about the same unit*. This is the absence-presenting-as-presence spine applied to a
+comparison — the agreeing total is the success-shaped token, filling the hole where the per-unit
+check should be.
+
+**The rule.** When two artifacts name the same units:
+
+1. **Join on the unit ID the artifacts themselves carry** — never on position, order, count, or a
+   hand-built mapping. Report shared IDs, only-in-A, and only-in-B as three separate sets.
+2. **Compare the declared fields per unit**, reporting agree / disagree / **absent-on-one-side** as
+   three buckets. Absence is its own bucket; coercing it into either of the others is
+   *Absence satisfies the gate* wearing a join.
+3. **Report the matrix, the named mismatch rows, AND both marginals.** The marginals are what a
+   reader would otherwise have compared by eye — publishing them beside the per-unit result is what
+   makes the concealment visible rather than arguable.
+4. **Emit "fork found, ruling owed" — never a winner.** A reconciler that picks a canonical side has
+   adjudicated, and adjudication is not a property of the data.
+
+**The two rulings automation cannot make.** (a) **Unit choice** — what counts as "the same unit" is
+a modelling decision, and a join is only ever as good as it. (b) **Canonical artifact** — which side
+is authoritative when they fork. Both are the operator's seat. A tool answering either has
+manufactured a verdict; a tool surfacing both, named, has done its whole job.
+
+**An introduced reconciler owes its own control**, per *An introduced instrument is itself a claim*
+and *A positive control demonstrates DISCRIMINATION*: a join returning "no disagreement" is
+indistinguishable from a join that never dispatched. The two-sided pair is a **planted agreement**
+(one artifact joined against itself → zero disagreements) and a **planted disagreement** (one field
+mutated → the tool NAMES the mutated unit, not merely goes red). Exemplar in this repo:
+`../../python/audits/oq119_join_diff.py` `run_controls/1` — negative control self-diff = 0 on every
+field for every record; positive control cross-diff > 0 with the moved fields named (re-verified
+2026-08-25).
+
+**Recurrence evidence — this repo already practises the rule and has never named it.** Several gate
+rows are cross-artifact reconciliations, each built one at a time for its own pair: `doc patterns`,
+`spec enums`, `omega index`, `claim cites`, `audit cites`, `paper carriage` (as enumerated in
+`../../scripts/gate.sh`, 2026-08-25 — enumerate it there at the moment of use, never quote this
+list). `doc patterns` is the case that proves the mechanism from inside: `CLAUDE.md` and this file
+published the same numbered taxonomy and disagreed at two indices **for 151 commits**, undetected,
+*because the member counts converged at the exact commit the contents diverged* — aggregate
+agreement sitting on a per-unit fork, exactly.
+
+**Case law.** `../../audits/2026-08-10_oq277_rq2_crosscoding/RECON.md` Finding R2: one author's
+failure-modes catalog and labelled dataset carry the same 22 incident IDs and **agree on class for
+12 of 22 (55% agreement); the remaining 10 disagree** — with per-class marginals diverging on every
+class (catalog A1/B4/C5/D4/E8 vs dataset A4/B3/C4/D5/E6, both summing to 22). Neither artifact was
+wrong on its own terms; the fork was invisible until the IDs were joined, and it retired the
+experiment that depended on it. Live open instance: **OQ-341**, a Phase-1 overlay census that does
+not reconcile with its own raw output.
+
+**Prior art** (grepped `cross-artifact`, `reconcil`, `ID-keyed`, `two artifacts`, `join on` over
+this file, 2026-08-25). **One hit, adjacent and distinct:** *Reconciling two surfaces owes the full
+product table, not the named cells* (:372) governs the **cell space** of a comparison once you are
+already comparing — enumerate every verdict×value cell instead of the ones you predicted. This rule
+sits one step earlier and governs whether a **per-unit comparison exists at all**; read together,
+join on IDs first, then enumerate the full product table over the joined fields. Outside this file:
+`../when_apparatus_sharpens_taxonomy.md` §4 (*Type A Drift Occurs Between Specification and
+Implementation*) and §4.1 (*Not All Cross-Artifact Disagreement Is Type A* — the standing warning
+that a fork may be purpose-relative labelling rather than drift, which is why the output is "ruling
+owed" and not "drift found"); `../comparing_incident_taxonomies.md` Rule 1 (:33), the published
+form of the same demand for an outside audience.
 
 ---
 

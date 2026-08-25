@@ -80,6 +80,8 @@ There are operational consequences. A project that maintains both a specificatio
 
 The deeper point is that Type A drift in implemented systems has a cross-artifact dimension that the trifurcation's reasoning-stage examples don't capture. The repair operation (frame-fix by reconciliation) survives unchanged; what changes is the recognition that frames can drift across boundaries within a project, not only within a chain of reasoning. Operationalizing the trifurcation surfaces this because operationalization requires multiple artifacts and multiple loci where the frame can be specified.
 
+*Build-side counterpart (added 2026-08-25): the project's build-discipline rule derived from this section — that two artifacts naming the same observational units owe an ID-keyed join whose output is "fork found, ruling owed" rather than a canonical side — is `docs/technical/build_discipline.md` → *Cross-artifact reconciliation*. It cites §4 and §4.1 as its prior art; this line makes the link bidirectional.*
+
 ### 4.1 Not All Cross-Artifact Disagreement Is Type A
 
 A subsequent observation, surfaced when reviewing the project's own orientation document against the source papers it summarized, sharpens what the cross-artifact framing does and does not include. The orientation document cited the corpus as having 3,254 constraints, while a later paper cited 3,301, and a still-later document cited 3,335. Read at the surface, this looks like Type A drift — a frame ("the corpus") treated as fixed while operationally allowing it to mutate. The repair would be frame-fix by reconciliation: pick a number, propagate it.
