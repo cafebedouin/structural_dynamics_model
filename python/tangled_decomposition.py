@@ -41,12 +41,54 @@ PROLOG_DIR = ROOT_DIR / "prolog"
 
 MAXENT_REPORT = OUTPUT_DIR / "maxent_report.md"
 
+DIVERGENCE_JSON = OUTPUT_DIR / "maxent_replication_divergence.json"
 DECOMP_JSON = OUTPUT_DIR / "tangled_decomposition_data.json"
 DECOMP_REPORT = OUTPUT_DIR / "tangled_rope_decomposition_report.md"
 
 # ---------------------------------------------------------------------------
 # Validation against maxent_report.md
 # ---------------------------------------------------------------------------
+
+def _write_divergence_artifact(divergences, n_compared, n_discrepancies,
+                               max_dev, n_flips):
+    """Persist the Python-vs-Prolog MaxEnt replication result.
+
+    Gate the OUTPUT, not only the input: this comparison ran for its whole life
+    and left nothing behind but two stderr lines that the next line then made
+    unrecoverable (the merge overwrites the Python side). An unwritten
+    disagreement is indistinguishable from no disagreement the moment the run
+    scrolls away.
+
+    Written unconditionally -- including when the list is empty -- so that
+    "no divergences" is a MEASURED zero on disk with its own denominator,
+    not an absent file that a reader would have to interpret.
+    """
+    payload = {
+        "generated_by": "python/tangled_decomposition.py",
+        "compares": {
+            "a": "python/shared/maxent.py maxent_classify (post-override)",
+            "b": "prolog maxent_classifier:maxent_run/2 via "
+                 "outputs/enriched_pipeline.json per_constraint[].maxent_probs",
+        },
+        "threshold": 0.05,
+        "n_compared": n_compared,
+        "n_discrepancies": n_discrepancies,
+        "n_argmax_flips": n_flips,
+        "max_deviation": round(max_dev, 6),
+        "max_deviation_is_full_scan": True,
+        "adjudicated": False,
+        "note": "Which implementation is correct is NOT decided here. "
+                "argmax_flip=true means the two engines assign different "
+                "constraint types to the same constraint.",
+        "divergences": sorted(divergences, key=lambda d: -d["max_deviation"]),
+    }
+    try:
+        DIVERGENCE_JSON.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        print(f"[TANGLED]   divergence detail -> {DIVERGENCE_JSON}", file=sys.stderr)
+    except OSError as exc:
+        print(f"[TANGLED]   WARNING: could not write {DIVERGENCE_JSON}: {exc}",
+              file=sys.stderr)
+
 
 def parse_maxent_report():
     """Parse the 182 hard disagreement distributions from maxent_report.md.
@@ -349,21 +391,67 @@ def main():
 
     if json_dists:
         print(f"[TANGLED] Found maxent_probs in pipeline_output.json for {len(json_dists)} constraints.", file=sys.stderr)
-        # Cross-validate all distributions
+        # Cross-validate: this is the ONLY independent check in the stage. The two
+        # sides are genuinely separate implementations of MaxEnt + signature
+        # override -- `shared/maxent.py` (Python) vs `maxent_classifier:maxent_run/2`
+        # (Prolog) -- and both are post-override, so a disagreement is a real
+        # replication failure, not a raw-vs-normalized artifact.
+        #
+        # Three things were wrong with how it was measured and reported:
+        #  1. `break` on the first offending type ended the scan, so the printed
+        #     "max deviation" was a LOWER BOUND, not the max (2026-08-24 live
+        #     corpus: printed 0.943640, true 0.967774).
+        #  2. A 0.06 probability wobble and a flipped ARGMAX -- the two engines
+        #     assigning different constraint TYPES -- both counted as one
+        #     "discrepancy". The flips are the consequential stratum and were
+        #     invisible in the count (2026-08-24: 9 of the 21).
+        #  3. The result went to stderr and was then discarded, while the very
+        #     next line overwrote the Python side with the Prolog side, so the
+        #     disagreement left no trace in outputs/ at all.
+        # Fixed here: full scan, flips counted and named, written to an artifact.
+        # NOT fixed here: which engine is right. That is a research ruling.
         discrepancies = 0
         max_dev = 0.0
+        divergences = []
         for cid, jdist in json_dists.items():
             if cid not in distributions:
                 continue
             cdist = distributions[cid]
-            for typ in MAXENT_TYPES:
-                dev = abs(cdist.get(typ, 0.0) - jdist.get(typ, 0.0))
-                max_dev = max(max_dev, dev)
-                if dev > 0.05:
-                    discrepancies += 1
-                    break
-        print(f"[TANGLED] Cross-validation: {discrepancies} discrepancies, max deviation {max_dev:.6f}.", file=sys.stderr)
-        # Use pipeline JSON distributions as primary (authoritative Prolog source)
+            devs = {typ: abs(cdist.get(typ, 0.0) - jdist.get(typ, 0.0))
+                    for typ in MAXENT_TYPES}
+            worst_type = max(devs, key=devs.get)
+            worst = devs[worst_type]
+            max_dev = max(max_dev, worst)          # full scan: no early break
+            if worst > 0.05:
+                discrepancies += 1
+                py_top = max(cdist, key=cdist.get) if cdist else None
+                pl_top = max(jdist, key=jdist.get) if jdist else None
+                divergences.append({
+                    "id": cid,
+                    "max_deviation": round(worst, 6),
+                    "max_deviation_type": worst_type,
+                    "python_top_type": py_top,
+                    "prolog_top_type": pl_top,
+                    "argmax_flip": py_top != pl_top,
+                    "python_probs": {t: round(cdist.get(t, 0.0), 6) for t in MAXENT_TYPES},
+                    "prolog_probs": {t: round(jdist.get(t, 0.0), 6) for t in MAXENT_TYPES},
+                })
+        flips = [d for d in divergences if d["argmax_flip"]]
+        print(f"[TANGLED] Cross-validation (Python shared/maxent.py vs Prolog maxent_run/2): "
+              f"{discrepancies} discrepancies over {len(json_dists)} constraints, "
+              f"max deviation {max_dev:.6f}.", file=sys.stderr)
+        if flips:
+            print(f"[TANGLED]   of which {len(flips)} are ARGMAX FLIPS "
+                  f"(the two engines assign DIFFERENT types): "
+                  f"{', '.join(sorted(d['id'] for d in flips)[:5])}"
+                  f"{' ...' if len(flips) > 5 else ''}", file=sys.stderr)
+        _write_divergence_artifact(divergences, len(json_dists), discrepancies,
+                                   max_dev, len(flips))
+        # Use pipeline JSON distributions as primary (authoritative Prolog source).
+        # NOTE: this overwrites every Python value, so the `validate_maxent` call
+        # below compares Prolog (merged) against maxent_report.md, which is ALSO
+        # Prolog (`maxent_classifier:maxent_run/2`) -- a consistency check, not an
+        # independent one. Labelled accordingly at its print site.
         distributions = {**distributions, **json_dists}
         print(f"[TANGLED] Using pipeline_output.json distributions as primary source.", file=sys.stderr)
 
@@ -373,7 +461,12 @@ def main():
     print(f"[TANGLED] Found {len(known)} known distributions.", file=sys.stderr)
 
     n_tested, n_passed, failures = validate_maxent(distributions, known)
-    print(f"[TANGLED] Validation: {n_passed}/{n_tested} passed (tolerance 0.05).", file=sys.stderr)
+    # Honest label: `distributions` was overwritten with the Prolog values above and
+    # `known` is parsed from the Prolog-generated maxent_report.md, so this is a
+    # Prolog-vs-Prolog CONSISTENCY check (JSON agrees with the report). The
+    # independent replication check is the cross-validation block above.
+    print(f"[TANGLED] Consistency check, Prolog JSON vs Prolog maxent_report.md: "
+          f"{n_passed}/{n_tested} passed (tolerance 0.05).", file=sys.stderr)
 
     if args.validate_only:
         print(f"\nMaxEnt Validation Results:")
