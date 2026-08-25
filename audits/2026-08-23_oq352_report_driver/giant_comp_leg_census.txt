@@ -37,3 +37,37 @@ archives/datasets/original_v6    n=3380    221.4s  rc=2  THROW  last_section=###
                                    ERROR: [Thread main] >=/2: Arithmetic: `unknown/0' is not a function
 
 [exited with code 0]
+
+================================================================================
+SUPERSEDED-AT NOTE (2026-08-24, OQ-356 execution) — the rows above are KEPT, not
+rewritten, and this note says why.
+================================================================================
+The `testsets_nemotron_think  n=732` row above measured a PARTIAL corpus that no
+longer exists: the leg COMPLETED 2026-08-23 at n=1003 (LIVE_LEGS comment,
+"auto-resume loop self-terminated").
+
+OQ-356 pre-registered a falsifiable prediction against that partial draw:
+
+    "When it completes it is a fresh draw and WILL THROW unless its
+     unknown-purity count reaches zero."
+
+RESOLVED 2026-08-24: the prediction HELD. Re-run at n=1003 on the SAME pre-fix
+tree (git HEAD b2782c7f9), the leg still THROWS, same error, same section:
+
+    testsets_nemotron_think   n=1003   10.1s  rc=2  THROW
+                              last_section=### Contamination Collapse Analysis
+                              >=/2: Arithmetic: `unknown/0' is not a function
+
+Post-fix it completes: n=1003, 45.3s, rc=0 OK.
+
+WHY THE n=732 ROW STAYS. Overwriting it would destroy the record of the
+prediction having been made AGAINST A SPECIFIC DRAW, which is the only thing
+that makes its resolution meaningful. A pre-registered prediction that actually
+resolves is cheap evidence and this project does not get many of them.
+Precedent it extends: `haiku` (4 unknowns, throws) -> `haiku2`/`haiku3` (0, pass).
+
+The full pre-fix and post-fix censuses are in
+audits/2026-08-24_oq356_purity_guard/  as census_prefix_HEAD.txt (17 THROW /
+3 OK, partition reproduced, no leg changed side) and census_fixed.txt
+(20 of 20 rc=0 OK).
+================================================================================

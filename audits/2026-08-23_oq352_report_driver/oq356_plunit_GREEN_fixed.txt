@@ -1,0 +1,44 @@
+# V4c — the control's POSITIVE half: test_purity_absence at the FIXED tree
+# executed 2026-08-24, after 1a+1b were applied. Same invocation as V4b.
+
+% Library was moved: library(http/json) --> library(json)
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+ERROR: [Thread main] import/1: No permission to import giant_component_analysis:run_phase1/0 into user (already imported from covering_analysis)
+ERROR: [Thread main] import/1: No permission to import giant_component_analysis:run_phase2/0 into user (already imported from covering_analysis)
+[corpus] Loading 285 testset files...
+[corpus] census: 258 stories, 27 non-story, 0 other.
+[corpus] Loaded 285 testsets successfully.
+% Start unit: purity_absence
+% [1/13] purity_absence:golden_scored_value ......... passed (0.004 sec)
+% [2/13] purity_absence:ga..sentinel_precedence ..... passed (0.000 sec)
+% [3/13] purity_absence:pu..ne_total_on_unknown ..... passed (0.000 sec)
+% [4/13] purity_absence:js..rs_total_on_unknown ..... passed (0.000 sec)
+% [5/13] purity_absence:in.._unknown_end_to_end ..... passed (0.014 sec)
+% [6/13] purity_absence:fp..unknown_to_sentinel ..... passed (0.000 sec)
+% [7/13] purity_absence:gc..unknown_to_sentinel ..... passed (0.000 sec)
+% [8/13] purity_absence:oq..ives_unknown_purity ..... passed (0.175 sec)
+% [9/13] purity_absence:oq..edges_are_half_open ..... passed (0.000 sec)
+% [10/13] purity_absence:oq..d_computed_band_row .... passed (0.000 sec)
+% [11/13] purity_absence:oq..tion_two_identities .... passed (0.217 sec)
+% [12/13] purity_absence:oq..s_land_in_nexcluded .... passed (0.000 sec)
+% [13/13] purity_absence:oq..g_when_all_scorable .... passed (0.205 sec)
+% End unit purity_absence: passed (0.622 sec CPU)
+% All 13 tests passed in 0.623 seconds (0.623 cpu)
+swipl exit code: 0
+
+# ---------------------------------------------------------------------------
+# ELISION, stated rather than silent: 3047 lines matching '^Warning' were removed
+# from this capture. They are SWI-Prolog corpus-load warnings (discontiguous
+# omega_variable/5 clauses in testset files, a weak-import override in
+# giant_component_analysis.pl:328, a singleton at :467) — identical in BOTH
+# halves of this pair, unrelated to the guard, and ~341 KB each if kept.
+# Nothing matching '^ERROR', no plunit line, and no test result was removed;
+# the two 'No permission to import run_phase1/2' ERROR lines are a property of
+# the 8-module load chain and appear in BOTH halves (2 each), verified.
+# ---------------------------------------------------------------------------

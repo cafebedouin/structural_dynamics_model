@@ -1,0 +1,24 @@
+% Library was moved: library(http/json) --> library(json)
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+[corpus] Loading 960 testset files...
+[corpus] census: 960 stories, 0 non-story, 0 other.
+[corpus] Loaded 960 testsets successfully.
+[giant] Pre-computing edges for 960 constraints (threshold=0.01)...
+[giant] Found 0 constraints with gradient data for inferred coupling.
+[giant] Pre-computed 1602 non-inferred + 0 inferred edge records.
+[giant] Computing node properties for 960 constraints...
+corpus 960, giant component 589 (61.35%)
+cause breakdown over the GC members:
+   a_non_number     4
+   d_negative_number6
+   kept             579
+total EXCLUDED: 10   (kept: 589-10)
+excluded for a reason OTHER than 'succeeds with a non-number': 6
+=> an excluded count written as 'count the unknowns' would MISS 6 member(s).
+   Naming the argument NExcluded rather than NUnknown is load-bearing.

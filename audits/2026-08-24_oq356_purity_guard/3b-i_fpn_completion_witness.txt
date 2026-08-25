@@ -1,0 +1,51 @@
+3b-i — does the `fpn` stage COMPLETE on giant_comp-THROWING legs?
+=================================================================
+Executed 2026-08-24 (pre-fix HEAD b2782c7f9). Read-only over OQ-352's run logs
+and per-leg artifacts. This discharges the witness the `fpn_report.pl:94`
+verdict rests on (plan action 3b-i).
+
+WHY IT MATTERS. `one_hop_ep_safe/3` (fpn_report.pl:93-97) is UNGUARDED — it is
+`catch(effective_purity(C,Ctx,EP,_), _, fail) -> true ; EP = -1.0`, with no
+number/1 — so a non-numeric EP binds through and reaches `Diff is OH - FP`
+(fpn_report.pl:66) and `ep_band/2` (:61). The verdict LATENT (rather than REAL)
+rests entirely on CALLER discipline: the row generator gates every row on
+`fpn_intrinsic_safe(C, IP), IP >= 0.0` (:49-50), and drl_fpn.pl:112 collapses a
+non-numeric intrinsic to -1.0 before caching. Combined with S7 (effective_purity
+yields a non-number ONLY when the intrinsic purity_score is non-numeric), a row
+that passes `IP >= 0.0` cannot carry a non-numeric OneHopEP.
+
+That is an argument. Below is the witness — and, critically, it is NOT a k=0
+branch: the code path executed with thousands of rows.
+
+EVIDENCE 1 — completion, from outputs/prolog_children.log
+  All `run_fpn_report` invocations in the log exit rc=0; ZERO non-zero exits.
+  Distinct real legs (excluding the two /tmp selftest fixtures):
+      testsets_sonnet2                3 runs, rc=0  (~8.0s each)
+      testsets_sonnet3                3 runs, rc=0  (~7.9s each)
+      archives/datasets/original_v6   1 run,  rc=0  (235.74s)
+  All three are giant_comp-THROWING legs in the committed census.
+  SCOPE, stated rather than overclaimed: 3 of the 17 throwing legs have an fpn
+  run on record — the other 14 were driven through `giant_comp` only. The claim
+  is "fpn completed on every throwing leg it was run on, including the largest",
+  not "on all 17".
+
+EVIDENCE 2 — the path was ENTERED, with the exact complement
+  outputs/legs/original_v6/fpn_report.md:
+      | **Constraints in corpus** | 3380 |
+      | **Constraints compared**  | 3328 |
+      | **Converged**             | Yes  |
+      | Constraints with significant shift (>0.01) | 2395 |
+  3328 rows passed `IP >= 0.0` and reached `one_hop_ep_safe/3`, `ep_band/2` and
+  `Diff is OH - FP` without throwing.  3380 - 3328 = **52** — exactly the count
+  of original_v6 constraints without a valid purity score named in OQ-356. So
+  the 52 non-scorable constraints are precisely the population the caller-side
+  gate excluded, on the same leg and the same run in which the UNGUARDED
+  count_by_action_band throws on that same population.
+
+VERDICT: `fpn_report.pl:94` = LATENT — unreachable today by caller discipline.
+  NOT "false positive": the predicate itself is unguarded, and the :598
+  principle applies verbatim ("that filter is a property of ONE CALLER, not of
+  the predicate"). A new or changed caller that does not pre-gate on
+  `IP >= 0.0` makes it live. Mints a follow-up OQ at LOW priority (3b-ii').
+  If S7 is ever falsified — i.e. if a contamination-side path can produce a
+  non-number with a numeric intrinsic — this verdict flips to REAL.

@@ -1,0 +1,21 @@
+count_by_action_band_prefix.pl
+==============================
+Frozen PRE-FIX text of count_by_action_band/8, captured 2026-08-24 at
+git HEAD b2782c7f9, BEFORE any edit of this OQ (plan step V3c).
+
+Source region : prolog/giant_component_analysis.pl lines 1272-1285 (inclusive)
+Line offset   : fixture line N  ==  source line (N + 1271)
+                fixture line  7  ==  source line 1278  <- the unguarded
+                                     `catch(effective_purity(...), _, fail)`
+                fixture line  8  ==  source line 1279  <- the bare `EP >= 0.0`
+md5 (fixture) : 7b8a566c2e39d668ffb766ca87beace9
+md5 (source at capture time) : 99d517067f80f71d74be50573be8e284
+
+WHY THIS EXISTS (plan Step 3a, F5). purity_guard_sweep.py's positive control
+asserts "fires on giant_component_analysis.pl:1278, declines on both guarded
+siblings". Commit 1 FIXES :1278. A control scanned against the live tree after
+Commit 1 can no longer fire on its "fires" half, so it would pass VACUOUSLY
+while still printing `=> sweep DISCRIMINATES` — the same defect class this OQ
+is about, reproduced inside the instrument built to detect it. The repaired
+sweep points its "fires" half at THIS FILE. The "declines on guarded siblings"
+half stays on the live tree; those sites are unchanged by this work.

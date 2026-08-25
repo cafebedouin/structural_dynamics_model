@@ -1247,6 +1247,22 @@ report_contamination_collapse_analysis(Members, Ctx) :-
     length(SoundCs, NSound),
     format('Current settings: cap=~2f, attenuation=~2f~n', [OrigCap, OrigAtt]),
     format('Sound constraints in giant component: ~w~n~n', [NSound]),
+    % OQ-356 coverage line. The table below counts only members with a NUMERIC
+    % effective purity, so without this line a shrinking scorable domain reads
+    % as falling contamination — an absence presenting as a presence. Printing
+    % |Members| and both partition halves lets a reader check two identities
+    % rather than one:
+    %   (1) NS + NB + NW + ND == NKept       band coverage of the filtered domain
+    %   (2) NKept + NExcluded == |Members|   the guard's partition
+    % Split deliberately: the four bands cover [-0.01, 1.01) while the filter
+    % admits ANY numeric EP >= 0.0, so a value at or above 1.01 would land in no
+    % band and break (1) — as a false alarm attributed to the guard if the two
+    % were conflated into one identity.
+    length(Members, NMembers),
+    count_by_action_band(Members, Ctx, SoundFloor, DegFloor, _, _, _, _,
+                         NKeptCov, NExcludedCov),
+    format('**Purity coverage**: ~w of ~w giant-component members have a numeric effective purity; ~w excluded (members with no numeric effective purity).~n~n',
+           [NKeptCov, NMembers, NExcludedCov]),
     format('Sweeping contamination_cap from 0.10 to 1.00 (attenuation fixed at ~2f):~n~n', [OrigAtt]),
     format('| Cap | Sound (>=~2f) | Borderline | Warning | Degraded (<~2f) |~n',
            [SoundFloor, DegFloor]),
@@ -1261,7 +1277,7 @@ report_contamination_collapse_analysis(Members, Ctx) :-
         retract(config:param(purity_contamination_cap, _)),
         assertz(config:param(purity_contamination_cap, Cap)),
         % Recompute effective purities for GC members
-        count_by_action_band(Members, Ctx, SoundFloor, DegFloor, NS, NB, NW, ND),
+        count_by_action_band(Members, Ctx, SoundFloor, DegFloor, NS, NB, NW, ND, _, _),
         format('| ~2f | ~w | ~w | ~w | ~w |~n', [Cap, NS, NB, NW, ND])
     )),
     % Restore original cap
@@ -1269,20 +1285,67 @@ report_contamination_collapse_analysis(Members, Ctx) :-
     assertz(config:param(purity_contamination_cap, OrigCap)),
     format('~n').
 
-%% count_by_action_band(+Members, +Ctx, +SoundFloor, +DegFloor, -NS, -NB, -NW, -ND)
-%  Recomputes effective purity for members and counts by zone.
-count_by_action_band(Members, Ctx, SoundFloor, DegFloor, NS, NB, NW, ND) :-
+%% count_by_action_band(+Members, +Ctx, +SoundFloor, +DegFloor, -NS, -NB, -NW, -ND,
+%%                       -NKept, -NExcluded)
+%  Recomputes effective purity for members, counts by zone, and returns the
+%  sizes of the guard's partition alongside.
+%
+%  OQ-356 (2026-08-24): THIRD ingest of effective_purity/4 in this module and
+%  the one OQ-60 missed. `unknown` (no-data, 0a propagation) is a RETURN VALUE,
+%  not an exception, so the catch/3 below intercepts NOTHING and the bare
+%  `EP >= 0.0` threw type_error(evaluable, unknown/0) — killing the entire
+%  Phase-3 contamination block on 17 of 20 corpora (the three that passed did so
+%  by unreachability or by having no unknown-purity GC member, never by being
+%  safe). Guard order is load-bearing: number/1 must come BEFORE the comparison,
+%  because `>=` throws on the atom before any later check could run. The two
+%  siblings already guarded this way are precompute_props_loop/4 at :362-369 in
+%  this file — whose comment names this exact hazard — and
+%  drl_purity_network.pl:352-353.
+%
+%  NKept and NExcluded are ACCUMULATED INDEPENDENTLY by the single pass that
+%  applies the guard. NKept is NOT derived as |Members| - NExcluded: deriving it
+%  would make the caller's conservation identity NKept + NExcluded == |Members|
+%  true by construction, i.e. a check that cannot fail — which is this OQ's own
+%  defect class. Do not "simplify" this back to /8 or /9; that silently deletes
+%  the test while leaving the assertion in place.
+count_by_action_band(Members, Ctx, SoundFloor, DegFloor, NS, NB, NW, ND,
+                     NKept, NExcluded) :-
     config:param(purity_action_escalation_floor, EscFloor),
-    findall(EP,
-        (   member(C, Members),
-            catch(drl_purity_network:effective_purity(C, Ctx, EP, _), _, fail),
-            EP >= 0.0
-        ),
-        EPs),
+    partition_scorable_purity(Members, Ctx, EPs, Excluded),
+    length(EPs, NKept),
+    length(Excluded, NExcluded),
     count_in_zone(EPs, SoundFloor, 1.01, NS),
     count_in_zone(EPs, EscFloor, SoundFloor, NB),
     count_in_zone(EPs, DegFloor, EscFloor, NW),
     count_in_zone(EPs, -0.01, DegFloor, ND).
+
+%% partition_scorable_purity(+Members, +Ctx, -EPs, -Excluded)
+%  ONE pass over Members, split on exactly the conjunction the guard applies —
+%  never a second, independently-written test. A member is KEPT iff
+%  effective_purity/4 succeeds AND yields a number AND that number is >= 0.0.
+%  Everything else is EXCLUDED, and that covers three silently different
+%  populations which a naive "count the unknowns" gets wrong:
+%    (a) effective_purity SUCCEEDS with a non-number  — the OQ-60 defect class
+%    (b) effective_purity THROWS                      — dropped by the catch/3
+%    (c) effective_purity FAILS                       — the conjunct fails
+%  If the excluded count covered only (a) while the guard also drops (b) and
+%  (c), the caller's conservation identity would break on any leg with a
+%  throwing or failing member — and break as a FALSE ALARM attributed to the
+%  guard, which is worse than no check at all.
+%
+%  Behaviour-preserving against the pre-fix findall/3 for every value that used
+%  to survive it: the if-then-else commits to the first solution where findall
+%  took all, and effective_purity/4 was measured SEMIDET on 2,241 members across
+%  three legs (audits/2026-08-24_oq356_purity_guard/determinism_witness.txt,
+%  with a live positive control that the probe can count multiplicity).
+partition_scorable_purity([], _, [], []).
+partition_scorable_purity([C|Cs], Ctx, EPs, Excluded) :-
+    (   catch(drl_purity_network:effective_purity(C, Ctx, EP, _), _, fail),
+        number(EP), EP >= 0.0
+    ->  EPs = [EP|EPs1], Excluded = Excluded1
+    ;   EPs = EPs1,      Excluded = [C|Excluded1]
+    ),
+    partition_scorable_purity(Cs, Ctx, EPs1, Excluded1).
 
 /* ================================================================
    PHASE 4: CONTEXT COMPARISON

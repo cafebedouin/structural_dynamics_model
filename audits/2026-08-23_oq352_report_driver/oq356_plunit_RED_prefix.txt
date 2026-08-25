@@ -1,0 +1,49 @@
+# V4a/V4b — the control's NEGATIVE half: test_purity_absence at PRE-FIX HEAD b2782c7f9
+# executed 2026-08-24, BEFORE 1a/1b were applied. Unobtainable after V4c.
+# invocation (the file's own 8-module chain; [stack] alone is NOT sufficient):
+#   swipl -l stack.pl -l covering_analysis.pl -l maxent_classifier.pl \
+#     -l dirac_classification.pl -l diagnostic_summary.pl -l post_synthesis.pl \
+#     -l json_report.pl -l giant_component_analysis.pl \
+#     -g "[tests/test_purity_absence], run_tests(purity_absence), halt" -t "halt(1)"
+
+% Library was moved: library(http/json) --> library(json)
+
+====================================================
+   STRUCTURAL ANALYSIS STACK INITIALIZED             
+====================================================
+Control:    Scenario Manager Active
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+ERROR: [Thread main] import/1: No permission to import giant_component_analysis:run_phase1/0 into user (already imported from covering_analysis)
+ERROR: [Thread main] import/1: No permission to import giant_component_analysis:run_phase2/0 into user (already imported from covering_analysis)
+[corpus] Loading 285 testset files...
+[corpus] census: 258 stories, 27 non-story, 0 other.
+[corpus] Loaded 285 testsets successfully.
+% Start unit: purity_absence
+% [1/8] purity_absence:golden_scored_value .......... passed (0.004 sec)
+% [2/8] purity_absence:ga..sentinel_precedence ...... passed (0.000 sec)
+% [3/8] purity_absence:pu..ne_total_on_unknown ...... passed (0.000 sec)
+% [4/8] purity_absence:js..rs_total_on_unknown ...... passed (0.000 sec)
+% [5/8] purity_absence:in.._unknown_end_to_end ...... passed (0.013 sec)
+% [6/8] purity_absence:fp..unknown_to_sentinel ...... passed (0.000 sec)
+% [7/8] purity_absence:gc..unknown_to_sentinel ...... passed (0.000 sec)
+% [8/8] purity_absence:oq..ives_unknown_purity .... **FAILED (0.172 sec)
+ERROR: [Thread main] /home/scott/bin/structural_dynamics_model/prolog/tests/test_purity_absence.pl:341:
+ERROR: [Thread main]     test purity_absence:oq356_count_by_action_band_survives_unknown_purity: received error: >=/2: Arithmetic: `unknown/0' is not a function
+% End unit purity_absence: **FAILED (0.195 sec CPU)
+ERROR: [Thread main] 1 test failed
+% 7 tests passed
+% Test run completed in 0.196 seconds (0.196 cpu)
+ERROR: [Thread main] -g [tests/test_purity_absence], run_tests(purity_absence), halt: false
+swipl exit code: 1
+
+# ---------------------------------------------------------------------------
+# ELISION, stated rather than silent: 3047 lines matching '^Warning' were removed
+# from this capture. They are SWI-Prolog corpus-load warnings (discontiguous
+# omega_variable/5 clauses in testset files, a weak-import override in
+# giant_component_analysis.pl:328, a singleton at :467) — identical in BOTH
+# halves of this pair, unrelated to the guard, and ~341 KB each if kept.
+# Nothing matching '^ERROR', no plunit line, and no test result was removed;
+# the two 'No permission to import run_phase1/2' ERROR lines are a property of
+# the 8-module load chain and appear in BOTH halves (2 each), verified.
+# ---------------------------------------------------------------------------

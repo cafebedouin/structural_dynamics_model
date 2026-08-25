@@ -1,0 +1,34 @@
+# Behaviour-preservation premise for the 1a/1b single-pass partition:
+# is drl_purity_network:effective_purity/4 SEMIDET per member?
+# The pre-fix code collected with findall/3 (ALL solutions); the partition
+# takes the FIRST. Those differ iff the predicate is nondet.
+# Two-sided: the same aggregate_all idiom over a known-nondet goal must report >1,
+# or a zero means 'the probe cannot count', not 'det'.
+
+######## testsets ########
+[corpus] Loading 285 testset files...
+[corpus] census: 258 stories, 27 non-story, 0 other.
+[corpus] Loaded 285 testsets successfully.
+members: 285
+members whose effective_purity/4 solution-count is NOT exactly 1: 0
+positive control (member/2 over a 3-list, same aggregate_all idiom): 3
+CONTROL OK — the probe CAN count multiple solutions, so the zero above is a measurement
+control 2 (per-member nondet, must be 2): 2
+######## testsets_haiku ########
+[corpus] Loading 960 testset files...
+[corpus] census: 960 stories, 0 non-story, 0 other.
+[corpus] Loaded 960 testsets successfully.
+members: 960
+members whose effective_purity/4 solution-count is NOT exactly 1: 0
+positive control (member/2 over a 3-list, same aggregate_all idiom): 3
+CONTROL OK — the probe CAN count multiple solutions, so the zero above is a measurement
+control 2 (per-member nondet, must be 2): 2
+######## testsets_haiku2 ########
+[corpus] Loading 996 testset files...
+[corpus] census: 996 stories, 0 non-story, 0 other.
+[corpus] Loaded 996 testsets successfully.
+members: 996
+members whose effective_purity/4 solution-count is NOT exactly 1: 0
+positive control (member/2 over a 3-list, same aggregate_all idiom): 3
+CONTROL OK — the probe CAN count multiple solutions, so the zero above is a measurement
+control 2 (per-member nondet, must be 2): 2

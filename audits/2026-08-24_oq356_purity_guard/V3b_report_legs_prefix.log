@@ -1,0 +1,6 @@
+
+=== testsets_haiku2 ===
+  REFUSED MISSING_CLASSIFY_OUTPUT: pipeline_output.haiku2.json was produced at code_commit 637c98c19f31 but HEAD is b2782c7f9304, and 33 engine-relevant file(s) changed between them: ['.gitignore', 'agent/generate_kernel_corpus.py', 'agent/run_no_scope_gemini.py', 'agent/run_no_scope_kimi.py', 'agent/run_no_scope_sonnet.py', 'prolog/beta_processed_flash.txt'] — a real cross-commit pair, not a stamp lag. 'HEAD yields N' is already ambiguous between engine-regime and corpus and has caused a misread (KNOWN_STATE 2026-07-02). Re-run classify_corpus at HEAD.
+
+=== testsets_haiku3 ===
+  REFUSED MISSING_CLASSIFY_OUTPUT: pipeline_output.haiku3.json was produced at code_commit 7786416fd980 but HEAD is b2782c7f9304, and 27 engine-relevant file(s) changed between them: ['.gitignore', 'agent/generate_kernel_corpus.py', 'agent/run_no_scope_kimi.py', 'prolog/beta_processed_flash.txt', 'prolog/beta_processed_kimi2.txt', 'prolog/beta_processed_nemotron.txt'] — a real cross-commit pair, not a stamp lag. 'HEAD yields N' is already ambiguous between engine-regime and corpus and has caused a misread (KNOWN_STATE 2026-07-02). Re-run classify_corpus at HEAD.

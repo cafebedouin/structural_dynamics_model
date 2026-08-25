@@ -79,6 +79,105 @@ oq60_retract_bare(C) :-
     retractall(constraint_indexing:constraint_classification(C, _, _)),
     cache_registry:clear_all_caches.
 
+% ============================================================================
+% OQ-356 — the THIRD ingest of effective_purity/4 in giant_component_analysis.
+%
+% SITED next to gc_ingest_collapses_unknown_to_sentinel below: same value
+% (`unknown` out of purity_scoring), same hazard (arithmetic on an atom), same
+% module, two INGESTS. That test pins the guarded one (precompute_props_loop/4,
+% giant_component_analysis.pl:362-369). These pin the one OQ-60 missed, at
+% :1278 inside count_by_action_band/8, which killed the whole Phase-3
+% contamination block on 17 of 20 corpora.
+%
+% WHY THE INJECTION TARGET IS excess_extraction_subscore/2 AND NOT
+% purity_score/2 OR effective_purity/4: this file's swap idiom (abolish +
+% re-assert a COPY of the original clause) forks whatever it targets. The EX
+% subscore's copy already exists above — oq60_original_ex_clause/1, 5 lines.
+% Targeting purity_score/2 or effective_purity/4 would copy 18 or 25 lines of
+% engine logic into a test file (including effective_purity's
+% CONVERGENCE-CRITICAL comment), a canonical fork with a larger blast radius
+% than the thing it would witness. Every population these tests need is
+% reachable through the existing 5-line target.
+%
+% THREE-WAY DISPATCH, and the three cases are the point. The guard's rejecting
+% conjunction is `catch(effective_purity(...), _, fail), number(EP), EP >= 0.0`,
+% and it drops THREE silently different populations:
+%   (a) effective_purity SUCCEEDS with a non-number  -> the OQ-60 defect class
+%   (b) effective_purity THROWS                      -> dropped by catch/3
+%   (c) effective_purity FAILS                       -> the conjunct fails
+% A hand-written "count the unknowns" gets (b) and (c) wrong, and the resulting
+% conservation identity then breaks as a FALSE ALARM attributed to the guard.
+% Asserting that all three land in NExcluded is the two-sided half of that.
+% ============================================================================
+
+:- dynamic oq356_unknown_target/1.
+:- dynamic oq356_throw_target/1.
+:- dynamic oq356_fail_target/1.
+
+oq356_swap_in :-
+    abolish(purity_scoring:excess_extraction_subscore/2),
+    assertz((purity_scoring:excess_extraction_subscore(C, EX) :-
+        user:oq356_unknown_target(C), !, EX = unknown)),
+    assertz((purity_scoring:excess_extraction_subscore(C, _) :-
+        user:oq356_throw_target(C), !, throw(oq356_synthetic_producer_error))),
+    assertz((purity_scoring:excess_extraction_subscore(C, _) :-
+        user:oq356_fail_target(C), !, fail)),
+    oq60_original_ex_clause(Orig),
+    assertz(Orig),
+    cache_registry:clear_all_caches.
+
+oq356_swap_out :-
+    abolish(purity_scoring:excess_extraction_subscore/2),
+    oq60_original_ex_clause(Orig),
+    assertz(Orig),
+    retractall(user:oq356_unknown_target(_)),
+    retractall(user:oq356_throw_target(_)),
+    retractall(user:oq356_fail_target(_)),
+    cache_registry:clear_all_caches.
+
+% The three synthetic members, one per exclusion cause. Each needs the bare
+% gate-passing template so purity_score/2's clause 1 (and therefore the EX
+% subscore) is actually reached rather than short-circuiting to the -1.0
+% epistemic-gate-fail sentinel.
+oq356_fixture_in :-
+    oq60_assert_bare(oq356_member_unknown),
+    oq60_assert_bare(oq356_member_throw),
+    oq60_assert_bare(oq356_member_fail),
+    assertz(user:oq356_unknown_target(oq356_member_unknown)),
+    assertz(user:oq356_throw_target(oq356_member_throw)),
+    assertz(user:oq356_fail_target(oq356_member_fail)),
+    oq356_swap_in.
+
+oq356_fixture_out :-
+    oq356_swap_out,
+    oq60_retract_bare(oq356_member_unknown),
+    oq60_retract_bare(oq356_member_throw),
+    oq60_retract_bare(oq356_member_fail).
+
+% N real corpus members whose effective purity is a number >= 0.0, i.e. members
+% the guard must KEEP. Selected by PROPERTY, not by name: a name-pinned list
+% rots as the live leg grows (`prolog/testsets/` carries no count by ruling),
+% and the point of these members is only that they are real and scorable.
+oq356_scorable_members(N, Ms) :-
+    constraint_indexing:default_context(Ctx),
+    findall(C, ( corpus_loader:corpus_constraint(C),
+                 catch(drl_purity_network:effective_purity(C, Ctx, EP, _), _, fail),
+                 number(EP), EP >= 0.0 ),
+            All),
+    length(All, NAll),
+    (   NAll >= N
+    ->  length(Ms, N), append(Ms, _, All)
+    ;   throw(error(oq356_fixture_too_small(NAll, N),
+                    'the live corpus has too few scorable members for this fixture'))
+    ).
+
+% The fixture member list: 4 real scorable members + the three synthetic
+% exclusion causes. |Members| = 7, NKept = 4, NExcluded = 3.
+oq356_fixture_members(Ms) :-
+    oq356_scorable_members(4, Keep),
+    append(Keep, [oq356_member_unknown, oq356_member_throw, oq356_member_fail], Ms).
+
+
 :- begin_tests(purity_absence).
 
 % ----------------------------------------------------------------------------
@@ -224,6 +323,164 @@ test(gc_ingest_collapses_unknown_to_sentinel, [
         )),
         oq60_swap_out
     ).
+
+% ----------------------------------------------------------------------------
+% (e) OQ-356 — count_by_action_band's purity guard
+% ----------------------------------------------------------------------------
+
+% THE THROW WITNESS. RED at pre-fix HEAD with
+%   type_error(evaluable, unknown/0)
+% raised by the bare `EP >= 0.0` at giant_component_analysis.pl:1278 — the
+% catch/3 one line above intercepts NOTHING, because `unknown` is a RETURN
+% VALUE (OQ-60 path 0a), not an exception. GREEN once number(EP) lands ahead of
+% the comparison.
+%
+% CHECK THE ERROR TERM, NOT THE COLOUR: an existence_error here would mean the
+% test was written against a predicate arity that does not exist yet, and the
+% reading would be worthless.
+test(oq356_count_by_action_band_survives_unknown_purity, [
+        setup(oq356_fixture_in),
+        cleanup(oq356_fixture_out)
+    ]) :-
+    constraint_indexing:default_context(Ctx),
+    config:param(purity_action_sound_floor, SF),
+    config:param(purity_action_degraded_floor, DF),
+    oq356_fixture_members(Ms),
+    giant_component_analysis:count_by_action_band(Ms, Ctx, SF, DF, NS, NB, NW, ND, _, _),
+    integer(NS), integer(NB), integer(NW), integer(ND).
+
+% CRITERION 1 — THE HAND-COMPUTED ROW, at the two edges where a hand
+% computation and the code most easily disagree.
+%
+% count_in_zone/4 -> in_float_range/3 is HALF-OPEN [Lo, Hi), so a member at
+% exactly the sound floor lands in Sound (not Borderline) and a member at
+% exactly the degraded floor lands in Warning (not Degraded). Both sides are
+% asserted: it is not enough that the value lands where expected, it must also
+% NOT land in the neighbouring band. Floors are read from config:param/2 at test
+% time, never hardcoded — config.pl is the single source of truth and these are
+% tunable.
+%
+% This is a literal, drift-proof hand computation. Deviation from the plan,
+% stated rather than absorbed (WRITEUP.md "deviation D1"): the plan sited the
+% hand-computed row inside a count_by_action_band call over members with
+% injected exact purities. Pinning exact effective purities through the real
+% chain would require abolishing and re-copying purity_score/2's or
+% effective_purity/4's body into this file — a canonical fork with a larger
+% blast radius than the thing it would witness. The row is therefore computed
+% over a literal EP list through the same count_in_zone/4 the predicate uses,
+% and the guard/partition half is carried by the tests below on the real
+% predicate. Nothing the plan asked the row to establish is dropped; only the
+% injection point differs.
+test(oq356_band_edges_are_half_open) :-
+    config:param(purity_action_sound_floor, SF),
+    config:param(purity_action_escalation_floor, EF),
+    config:param(purity_action_degraded_floor, DF),
+    % exactly the sound floor -> Sound, and NOT Borderline
+    giant_component_analysis:count_in_zone([SF], SF, 1.01, S1), S1 =:= 1,
+    giant_component_analysis:count_in_zone([SF], EF, SF,   S2), S2 =:= 0,
+    % exactly the degraded floor -> Warning, and NOT Degraded
+    giant_component_analysis:count_in_zone([DF], DF, EF,    W1), W1 =:= 1,
+    giant_component_analysis:count_in_zone([DF], -0.01, DF, W2), W2 =:= 0.
+
+% CRITERION 1 (cont.) — the full hand-computed row over a literal EP list.
+% Hand computation, from config.pl:467-469 + the literal 1.01/-0.01 bounds:
+%   0.70 -> Sound      [0.70, 1.01)   (exactly the floor; half-open at Lo)
+%   1.00 -> Sound      [0.70, 1.01)
+%   0.55 -> Borderline [0.50, 0.70)
+%   0.30 -> Warning    [0.30, 0.50)   (exactly the floor)
+%   0.05 -> Degraded   [-0.01, 0.30)
+%   0.00 -> Degraded   [-0.01, 0.30)  (exactly 0.0 is a real score, bands worst)
+% => NS=2, NB=1, NW=1, ND=2, and the four bands are TOTAL over the list (6).
+test(oq356_hand_computed_band_row) :-
+    config:param(purity_action_sound_floor, SF),
+    config:param(purity_action_escalation_floor, EF),
+    config:param(purity_action_degraded_floor, DF),
+    EPs = [0.70, 1.00, 0.55, 0.30, 0.05, 0.00],
+    giant_component_analysis:count_in_zone(EPs, SF, 1.01, NS), NS =:= 2,
+    giant_component_analysis:count_in_zone(EPs, EF, SF,   NB), NB =:= 1,
+    giant_component_analysis:count_in_zone(EPs, DF, EF,   NW), NW =:= 1,
+    giant_component_analysis:count_in_zone(EPs, -0.01, DF, ND), ND =:= 2,
+    Total is NS + NB + NW + ND,
+    length(EPs, Total).
+
+% CRITERION 2 — CONSERVATION, AS TWO IDENTITIES, with a NON-ZERO subtrahend.
+%   (1) NS + NB + NW + ND == NKept        band coverage of the filtered domain
+%   (2) NKept + NExcluded == |Members|    the guard's partition is TOTAL
+% Identity (2) is only meaningful because NKept is accumulated independently of
+% NExcluded in partition_scorable_purity/4. Were NKept derived as
+% |Members| - NExcluded, (2) would be true by construction and would test
+% nothing. As written it fires if a member falls through both branches or is
+% counted twice.
+% Two-sided: it fails if the guard drops numeric members as well as if it keeps
+% atoms; and a band-coverage bug fails (1) rather than masquerading as a guard
+% bug.
+test(oq356_conservation_two_identities, [
+        setup(oq356_fixture_in),
+        cleanup(oq356_fixture_out)
+    ]) :-
+    constraint_indexing:default_context(Ctx),
+    config:param(purity_action_sound_floor, SF),
+    config:param(purity_action_degraded_floor, DF),
+    oq356_fixture_members(Ms),
+    length(Ms, NMembers),
+    giant_component_analysis:count_by_action_band(Ms, Ctx, SF, DF,
+                                                  NS, NB, NW, ND, NKept, NExcluded),
+    Bands is NS + NB + NW + ND,
+    Bands =:= NKept,                    % identity (1)
+    NKept + NExcluded =:= NMembers,     % identity (2)
+    NExcluded > 0,                      % NOT a degenerate pass (criterion 5)
+    NExcluded =:= 3,                    % exactly the three synthetic members
+    NKept =:= 4.                        % exactly the four real scorable ones
+
+% THE EQUIVALENCE REQUIREMENT, MADE TESTABLE PER CAUSE. The excluded count must
+% be produced by the SAME conjunction the guard rejects, which drops three
+% different populations. Each cause is asserted on its own so a regression names
+% which one broke: a run where only (a) is counted passes a bulk conservation
+% check on a corpus with no throwing or failing member, and fails here.
+test(oq356_all_three_exclusion_causes_land_in_nexcluded, [
+        setup(oq356_fixture_in),
+        cleanup(oq356_fixture_out)
+    ]) :-
+    constraint_indexing:default_context(Ctx),
+    config:param(purity_action_sound_floor, SF),
+    config:param(purity_action_degraded_floor, DF),
+    % (a) SUCCEEDS with a non-number -- and the precondition is witnessed, so a
+    %     fixture that silently stopped producing `unknown` cannot pass here.
+    purity_scoring:purity_score(oq356_member_unknown, PU), PU == unknown,
+    drl_purity_network:effective_purity(oq356_member_unknown, Ctx, EPU, _),
+    EPU == unknown,
+    giant_component_analysis:count_by_action_band([oq356_member_unknown], Ctx,
+                                                  SF, DF, _, _, _, _, KA, XA),
+    KA =:= 0, XA =:= 1,
+    % (b) THROWS -- dropped by the catch/3, must still be counted
+    catch(purity_scoring:purity_score(oq356_member_throw, _), ET, true),
+    ET == oq356_synthetic_producer_error,
+    giant_component_analysis:count_by_action_band([oq356_member_throw], Ctx,
+                                                  SF, DF, _, _, _, _, KB, XB),
+    KB =:= 0, XB =:= 1,
+    % (c) FAILS -- the conjunct fails, must still be counted
+    \+ drl_purity_network:effective_purity(oq356_member_fail, Ctx, _, _),
+    giant_component_analysis:count_by_action_band([oq356_member_fail], Ctx,
+                                                  SF, DF, _, _, _, _, KC, XC),
+    KC =:= 0, XC =:= 1.
+
+% The guard must EXCLUDE NON-NUMBERS AND NOTHING ELSE. Two-sided against the
+% test above: on a member list with no absence at all, NExcluded must be 0 and
+% every member kept. A guard that over-rejects passes every conservation check
+% in this file and fails here. This is the unit-level twin of the haiku2/haiku3
+% leg invariance control (V6c).
+test(oq356_guard_excludes_nothing_when_all_scorable) :-
+    constraint_indexing:default_context(Ctx),
+    config:param(purity_action_sound_floor, SF),
+    config:param(purity_action_degraded_floor, DF),
+    oq356_scorable_members(6, Ms),
+    length(Ms, NMembers),
+    giant_component_analysis:count_by_action_band(Ms, Ctx, SF, DF,
+                                                  NS, NB, NW, ND, NKept, NExcluded),
+    NExcluded =:= 0,
+    NKept =:= NMembers,
+    Bands is NS + NB + NW + ND,
+    Bands =:= NKept.
 
 :- end_tests(purity_absence).
 
