@@ -8,6 +8,43 @@ query below to reading the whole file.
 **Entry grammar (machine-readable, added 2026-06-04).** Every entry is:
 
 ```
+## YYYY-MM-DD — <title>
+**Files:** <comma-separated paths the entry concerns>
+**Tier:** tripwire | correction-key | landed | history
+```
+
+Tiers: `tripwire` = standing do-not / silent-mistake warning; `correction-key` =
+corrects prior claims or qualifies how results may be cited; `landed` = change/audit
+shipped and witnessed; `history` = narrative/archival (roll-off candidate). Checker:
+`python3 python/known_state_status.py --check` (run after editing this file; sibling of
+`issues_status.py`).
+
+**Before touching a file, query instead of reading everything:**
+`python3 python/known_state_status.py --file <path>` lists the entries whose `Files:`
+line names it — read those. (The old hand-maintained "read before touching" list is
+superseded by the `Files:` lines; high-traffic files currently include
+`signature_detection.pl`, `drl_composition.pl`, `json_report.pl`,
+`generate_kernel_corpus.py`, `enhanced_report.py`.)
+
+**Roll-off rule (monthly, with the CLAUDE.md "Memory Consolidation Review"):** entries
+older than ~30 days get the CLAUDE.md promotion test once more, then are **compressed in
+place** — keep the header + `Files:`/`Tier:` lines + a 2–4 line verdict + pointers
+(commit hash, `audits/<date>_<slug>/`, OQ number); drop the body. Full text stays in
+this file's git history; never create a separate archive file (Build Discipline
+Pattern 2). `tripwire` entries are compressed only if their warning is promoted to an
+always-loaded CLAUDE.md section or superseded.
+
+**Standing warnings lifted into auto-loaded `CLAUDE.md` sections** (the tripwire lives there;
+full provenance stays here):
+- Green cut `product_site_export.pl:75–77` → `CLAUDE.md` Architecture Invariants.
+- Run-tagged subdir glob isolation → `CLAUDE.md` Corpus Loading.
+- Corpus is 223 not 3,337 / cite the manifest → `CLAUDE.md` Critical Distinctions.
+
+Entries are roughly chronological. New session findings go here (see `CLAUDE.md`
+End-of-Session Documentation Review), not in CLAUDE.md.
+
+---
+
 ## 2026-08-25 — [tripwire] The never-run `gauge_fixed` prediction: REFUTED — and the restricted-view instrument is far weaker than its own accessibility table implies (`partial` == `full`, three types unreachable, beneficiaries discarded)
 **Files:** prolog/constraint_indexing.pl, prolog/dirac_classification.pl, audits/2026-08-25_gauge_fixed_prediction/, ISSUES.md, docs/design/design_gaps.md, blog/2026-08/benter_structural_blindness/
 **Tier:** tripwire
@@ -440,46 +477,6 @@ non-discriminating (100% everywhere); the ORDER cut (type-commitment before ε: 
 flat) is the refined instrument's target. OQ-364 minted for the live-leg rename (runbook §10 holds
 the plan + census). giant_comp throws on nemotron_think (OQ-356): NOT authoring coordination_type
 into model-authored stories; the code fix is the lane.
-
----
-
-## YYYY-MM-DD — <title>
-**Files:** <comma-separated paths the entry concerns>
-**Tier:** tripwire | correction-key | landed | history
-```
-
-Tiers: `tripwire` = standing do-not / silent-mistake warning; `correction-key` =
-corrects prior claims or qualifies how results may be cited; `landed` = change/audit
-shipped and witnessed; `history` = narrative/archival (roll-off candidate). Checker:
-`python3 python/known_state_status.py --check` (run after editing this file; sibling of
-`issues_status.py`).
-
-**Before touching a file, query instead of reading everything:**
-`python3 python/known_state_status.py --file <path>` lists the entries whose `Files:`
-line names it — read those. (The old hand-maintained "read before touching" list is
-superseded by the `Files:` lines; high-traffic files currently include
-`signature_detection.pl`, `drl_composition.pl`, `json_report.pl`,
-`generate_kernel_corpus.py`, `enhanced_report.py`.)
-
-**Roll-off rule (monthly, with the CLAUDE.md "Memory Consolidation Review"):** entries
-older than ~30 days get the CLAUDE.md promotion test once more, then are **compressed in
-place** — keep the header + `Files:`/`Tier:` lines + a 2–4 line verdict + pointers
-(commit hash, `audits/<date>_<slug>/`, OQ number); drop the body. Full text stays in
-this file's git history; never create a separate archive file (Build Discipline
-Pattern 2). `tripwire` entries are compressed only if their warning is promoted to an
-always-loaded CLAUDE.md section or superseded.
-
-**Standing warnings lifted into auto-loaded `CLAUDE.md` sections** (the tripwire lives there;
-full provenance stays here):
-- Green cut `product_site_export.pl:75–77` → `CLAUDE.md` Architecture Invariants.
-- Run-tagged subdir glob isolation → `CLAUDE.md` Corpus Loading.
-- Corpus is 223 not 3,337 / cite the manifest → `CLAUDE.md` Critical Distinctions.
-
-Entries are roughly chronological. New session findings go here (see `CLAUDE.md`
-End-of-Session Documentation Review), not in CLAUDE.md.
-
----
-
 
 ## 2026-08-25 — [tripwire] Cross-artifact reconciliation named, built and gate-wired (OQ-375) — and the plan's own red-semantics were a branch that could not fire
 **Files:** docs/technical/build_discipline.md, docs/when_apparatus_sharpens_taxonomy.md, python/shared/recon.py, python/audits/oq375_wu_recon.py, scripts/gate.sh, ISSUES.md, audits/2026-08-10_oq277_rq2_crosscoding/WRITEUP.md, audits/INVESTIGATIONS.md, docs/amnesiac_institution/amnesiac_institution_v0_6.md, .claude/skills/plan-review/RUNS.md
