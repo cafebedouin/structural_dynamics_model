@@ -797,6 +797,33 @@ perspective_gap(Constraint, Gap) :-
 %
 % Testable prediction: the set of constraints where classify_from_restricted
 % differs from dr_type/3 should match the set with gauge_fixed = true.
+%
+% RUN 2026-08-25 -- REFUTED. audits/2026-08-25_gauge_fixed_prediction/WRITEUP.md
+% (live leg, manifest 2026-08-25T02:36:02Z, 258 stories / 285 members, 4 canonical
+% contexts, 1140 rows). gauge_fixed/3's firing domain is EXACTLY {mountain, snare}
+% (dirac_classification.pl:213), so the equality above is false globally by
+% construction; its readable mountain/snare restriction is ALSO false, and by a wide
+% margin -- 255 of 261 evaluable stratum rows sit in the dissent cell
+% (agree AND fixed=true), only 6/261 on the confirming diagonal.
+%
+% The prediction is not scoreable as written, for two measured reasons that push in
+% OPPOSITE directions:
+%   * restricted_classify/7 (:962-975) cannot emit scaffold, tangled_rope or
+%     naturalized, so 343/1140 rows disagree or abstain for VOCABULARY reasons alone
+%     -- manufactured disagreement (largest class: dr=scaffold -> restricted=rope,
+%     105 rows).
+%   * its mountain and snare thresholds are hardcoded literals NUMERICALLY IDENTICAL
+%     to the config params the real cascade reads (7/7 checked), which forces
+%     agreement at exactly the two types gauge_fixed fires on -- all 253 snare rows
+%     agree, 253/253. Manufactured agreement.
+% Also: dr_type = mountain IMPLIES gauge_fixed = true is a theorem of the canonical
+% site (ctx2/ctx3 cannot perceive `mountain` at all), not a corpus fact.
+%
+% Do not re-derive this from the comment above. If you want the underlying idea
+% tested, the instrument needs a type vocabulary matching dr_type's and thresholds
+% that are not copies of the ones it is being compared against. The one place the
+% restriction genuinely bites is the powerless seat's chi-for-suppression proxy
+% (2 corpus rows; constructed fire/decline pair in the audit's fixtures/).
 % ============================================================================
 
 % ----------------------------------------------------------------------------

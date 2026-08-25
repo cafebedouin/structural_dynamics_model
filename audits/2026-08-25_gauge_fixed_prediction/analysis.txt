@@ -1,0 +1,52 @@
+total rows: 1140
+kinds: Counter({'story': 1032, 'axiom_contradiction': 108})
+
+=== dr_type distribution (all rows) ===
+  snare            253
+  rope             242
+  unknown          237
+  tangled_rope     187
+  scaffold         141
+  piton            57
+  naturalized      15
+  mountain         8
+=== restricted_type distribution (all rows) ===
+  indeterminate    480
+  rope             312
+  snare            280
+  mountain         61
+  piton            7
+=== agreement column ===
+  stratum_indeterminate  372
+  agree                  364
+  stratum_unknown        237
+  disagree               167
+=== gauge_fixed ===
+  false    883
+  true     257
+
+=== GLOBAL 2x2 : agreement x gauge_fixed (all 1140 rows) ===
+                          fixed=true  fixed=false
+  disagree                         2          165
+  agree                          255          109
+  stratum_indeterminate            0          372
+  stratum_unknown                  0          237
+  stratum_failed                   0            0
+
+=== STRATUM (local dr_type in firing domain {mountain,snare}): n=261 ===
+                          fixed=true  fixed=false
+  disagree                         2            0
+  agree                          255            4
+
+  both-real rows in stratum: 261
+    disagree & fixed=true  : 2   <- confirming diagonal
+    agree    & fixed=false : 4   <- confirming diagonal
+    disagree & fixed=false : 0   <- DISSENT
+    agree    & fixed=true  : 255   <- DISSENT
+    prediction holds on 6/261 = 2.3% of both-real stratum rows
+
+=== COMPLEMENT stratum (local dr_type NOT mountain/snare): n=879 ===
+  disagree                         0          165
+  agree                            0          105
+  stratum_indeterminate            0          372
+  stratum_unknown                  0          237

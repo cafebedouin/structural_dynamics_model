@@ -1,0 +1,61 @@
+=== agreement x agent_power (all rows) ===
+seat                       agree        disagree  stratum_indete  stratum_unknow
+powerless                     61              59              94              71
+moderate                     125              32              71              57
+institutional                 52              61             144              28
+analytical                   126              15              63              81
+
+=== disagreement rate among BOTH-REAL rows, by seat ===
+  powerless        59/120 = 49.2%
+  moderate         32/157 = 20.4%
+  institutional    61/113 = 54.0%
+  analytical       15/141 = 10.6%
+
+=== the 2 rows: stratum disagree & fixed=true (cell a, NATURAL) ===
+   {'constraint': 'alpha_m_supercriticality_kernel_flat_control', 'kind': 'story', 'ctx_idx': '1', 'agent_power': 'powerless', 'dr_type': 'mountain', 'restricted_type': 'rope', 'gauge_fixed': 'true', 'agreement': 'disagree'}
+   {'constraint': 'protein_anabolic_resistance', 'kind': 'story', 'ctx_idx': '1', 'agent_power': 'powerless', 'dr_type': 'mountain', 'restricted_type': 'rope', 'gauge_fixed': 'true', 'agreement': 'disagree'}
+
+=== the 4 rows: stratum agree & fixed=false (confirming diagonal, NATURAL) ===
+   {'constraint': 'press_reformation_causation__strategic_deployment', 'kind': 'story', 'ctx_idx': '1', 'agent_power': 'powerless', 'dr_type': 'snare', 'restricted_type': 'snare', 'gauge_fixed': 'false', 'agreement': 'agree'}
+   {'constraint': 'press_reformation_causation__strategic_deployment', 'kind': 'story', 'ctx_idx': '2', 'agent_power': 'moderate', 'dr_type': 'snare', 'restricted_type': 'snare', 'gauge_fixed': 'false', 'agreement': 'agree'}
+   {'constraint': 'press_reformation_causation__strategic_deployment', 'kind': 'story', 'ctx_idx': '3', 'agent_power': 'institutional', 'dr_type': 'snare', 'restricted_type': 'snare', 'gauge_fixed': 'false', 'agreement': 'agree'}
+   {'constraint': 'press_reformation_causation__strategic_deployment', 'kind': 'story', 'ctx_idx': '4', 'agent_power': 'analytical', 'dr_type': 'snare', 'restricted_type': 'snare', 'gauge_fixed': 'false', 'agreement': 'agree'}
+
+=== stratum agree & fixed=true (cell d DISSENT, NATURAL) : first 5 of 255 ===
+   {'constraint': 'ability_ceiling_reading', 'kind': 'story', 'ctx_idx': '1', 'agent_power': 'powerless', 'dr_type': 'snare', 'restricted_type': 'snare', 'gauge_fixed': 'true', 'agreement': 'agree'}
+   {'constraint': 'ability_ceiling_reading', 'kind': 'story', 'ctx_idx': '2', 'agent_power': 'moderate', 'dr_type': 'snare', 'restricted_type': 'snare', 'gauge_fixed': 'true', 'agreement': 'agree'}
+   {'constraint': 'ability_ceiling_reading', 'kind': 'story', 'ctx_idx': '4', 'agent_power': 'analytical', 'dr_type': 'snare', 'restricted_type': 'snare', 'gauge_fixed': 'true', 'agreement': 'agree'}
+   {'constraint': 'access_barrier_reading', 'kind': 'story', 'ctx_idx': '2', 'agent_power': 'moderate', 'dr_type': 'snare', 'restricted_type': 'snare', 'gauge_fixed': 'true', 'agreement': 'agree'}
+   {'constraint': 'access_barrier_reading', 'kind': 'story', 'ctx_idx': '4', 'agent_power': 'analytical', 'dr_type': 'snare', 'restricted_type': 'snare', 'gauge_fixed': 'true', 'agreement': 'agree'}
+  ... total 255
+
+=== stratum disagree & fixed=false (cell c) : count ===
+   0
+
+=== where does global 'disagree' live? by dr_type ===
+  dr=scaffold       restricted=rope           105
+  dr=piton          restricted=rope           24
+  dr=tangled_rope   restricted=snare          18
+  dr=naturalized    restricted=rope           9
+  dr=rope           restricted=piton          7
+  dr=mountain       restricted=rope           2
+  dr=rope           restricted=snare          1
+  dr=scaffold       restricted=mountain       1
+observed restricted vocabulary: ['indeterminate', 'mountain', 'piton', 'rope', 'snare']
+observed dr_type vocabulary   : ['mountain', 'naturalized', 'piton', 'rope', 'scaffold', 'snare', 'tangled_rope', 'unknown']
+dr types UNREACHABLE from the restricted side: ['naturalized', 'scaffold', 'tangled_rope']
+rows where agreement is IMPOSSIBLE by vocabulary: 343 / 1140
+   of those, agreement column: {'stratum_indeterminate': 210, 'disagree': 133}
+
+trigger_epistemic_trap/3 metric-gate firing set (powerless, rest!=dr, rest!=indeterminate): 107 / 285
+   dr_type breakdown: {'unknown': 48, 'piton': 5, 'tangled_rope': 18, 'mountain': 2, 'scaffold': 24, 'naturalized': 9, 'rope': 1}
+   of those with dr_type=unknown (real side FAILED, restricted still answers): 48
+
+stratum n=261  snare=253  mountain=8
+snare rows: agreement = {'agree': 253}
+mountain rows: agreement = {'agree': 6, 'disagree': 2}
+mountain rows: gauge_fixed = {'true': 8}
+mountain rows: seats = {'powerless': 4, 'analytical': 4}
+
+distinct constraints contributing to the stratum: 110
+distinct constraints with any disagree row: 87
