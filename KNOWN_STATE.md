@@ -8,6 +8,93 @@ query below to reading the whole file.
 **Entry grammar (machine-readable, added 2026-06-04).** Every entry is:
 
 ```
+## 2026-08-24 — [tripwire] Orchestrator-log debug: five warning classes, four of them real defects; ~3,400 lines of drift noise were hiding a framework verdict computed from zero data
+**Files:** python/shared/schemas.py, python/boundary_normality.py, python/tangled_decomposition.py, python/extract_corpus_data.py, python/reports/queries/sufficiency_test.py, agent/generate_kernel_corpus.py, prolog/json_report.pl, ISSUES.md
+**Tier:** tripwire
+
+A ZEUGE topic run exited 1 and produced a log dominated by repeated warnings. Triaged as five
+classes; **one was cosmetic, four were defects, and the noise was load-bearing** — it is what kept
+the other four unread. Pipeline log after: **288 lines, 49/49 steps, exit 0** (was ~3,400+ lines
+of warnings alone). `[GATE]` GREEN.
+
+**TRIPWIRE — a `per_constraint` key added to `json_report.pl` MUST be registered in
+`python/shared/schemas.py` `PIPELINE_FIELDS` in the SAME commit, and skipping it is SILENT.**
+`72ec21feb` (OQ-306 C2+C3, 2026-08-21) added `member_kind` and touched four files, not
+`schemas.py`. The contract is a consumer of the emit (Pattern 1); the only signal is a warn-only
+stderr line. **This is the FOURTH occurrence** (2026-05-30 audit ~2,164/run; 2026-06-04
+`sheaf_status` 1,107/run; 2026-07-25 three OQ-205/53/91 fields, ~3 weeks) — and the 2026-07-25
+entry ALREADY STATES this rule and already diagnoses the channel as Pattern-6. It was violated 27
+days later. **A stated convention did not survive a commit that had four other files to get
+right**, which is the argument for a mechanical guard; warn-vs-fatal is a workflow ruling, filed
+as **OQ-368** with the measured bounded-extraction result (source-side scans over-read by 4 /
+under-read by 2; the exact artifact-side check would SKIP on a fresh clone). Fixed:
+registration `ace24a24f`; legibility `1d1607db4` — one aggregated line per field carrying `n/N`,
+which separates an unconditional emit (N/N, a missing registration) from a branch emit (n<N),
+a distinction 285 identical lines could not express. `_warn_unexpected_fields` was retired in the
+same commit as its replacement (both call sites moved; the sidecar path prints inline).
+
+**TRIPWIRE — `outputs/index_sufficiency.md` published `SUFFICIENT — Indices explain most
+variance. Current framework adequate.` computed from ZERO data, every pipeline run.**
+`detect_index_collisions` does `if not classifications: continue`; the authored-classification
+surface was retired at Phase C (2026-06-12, `9a992459a`), so all 285 were skipped, all four rates
+were 0, and `_calculate_verdict(0,0,0,0)` fell through to the SUFFICIENT branch. Pattern 5 issuing
+a framework-adequacy verdict at exit 0. Now gates on coverage and returns `INCONCLUSIVE (no_data)`
+(`e6ce56ecb`); controls two-sided — still SUFFICIENT/INSUFFICIENT at real coverage.
+**The surface is dead corpus-wide and has ~12 other consumers (OQ-370).** Witnessed against the
+engine, not inferred: exactly ONE asserted `constraint_classification/3` fact exists and it is
+`catholic_church_1200`, the engine demo, which `corpus_constraint/1` says is not a member — so
+0/285. Positive control that the read path can see such facts at all: `kernel_v1` carries 10,216.
+**Same surface as OQ-129** (2026-06-14), which killed `omega_from_gap/5` silently — *"a probe over
+it reads 'no gaps' when it means 'no facts'"*. `with_classifications: 0 (0.0%)` in the summary is
+therefore NOT a measurement; `extract_corpus_data.py` now ships
+`CLASSIFICATIONS_PROVENANCE` beside it and reports `with_perspectives` (285/285) as the live
+carrier (`af48741ff`). Note `variance_ratio` null / `index_configs` 0 / `types_produced` 0 on all
+285 are UNDETERMINED, not measured zeros.
+
+**The MaxEnt replication check was discarding its own result (OQ-367, P1).** Python
+`shared/maxent.py` vs Prolog `maxent_run/2`, both post-override: **21 discrepancies over 258, of
+which 9 are ARGMAX FLIPS** — different TYPES for the same constraint, 7 clustered on
+`signature = false_ci_rope` (py=scaffold vs pl=rope|piton). Three defects, all repaired
+(`b0a7c5e11`), the divergence itself deliberately NOT: `break` truncated the scan so the printed
+max was a lower bound (0.943640 printed, **0.967774 true**); a probability wobble and a type flip
+counted the same; the result went to stderr and the next line overwrote Python with Prolog,
+leaving nothing on disk. **And `Validation: 28/28 passed` was Prolog-vs-Prolog** — it runs AFTER
+the merge, against the Prolog-generated `maxent_report.md`, standing exactly where a reader takes
+it for the replication result. Relabelled; divergence now persisted to
+`outputs/maxent_replication_divergence.json` with `adjudicated: false`.
+
+**scipy `anderson` was a silent future breakage, not a cosmetic FutureWarning.** The code read
+`.critical_values` / `.significance_level` — removed in scipy ≥ 1.19 — inside a bare
+`except Exception: pass`, and the report's "Normal?" column ORs `reject_at_005` across three
+tests, so on upgrade a boundary that only AD rejects would have flipped NOT NORMAL → yes with no
+error. Migrated to `method="interpolate"` + `p_value` (`c1101901f`), witnessed under
+`-W error::FutureWarning`: all 6 populations' verdicts identical, statistics reproduce the
+published values, **plus a DECLINING control** (synthetic normal n=200 → p=0.15, fail-to-reject)
+so the agreement is not "both methods say True about everything". Failure path now stores the
+error and prints, verified by monkeypatching the 1.19 removal.
+
+**`Override-affected: 91, Non-affected: 0` is a missing control arm rendered as a comparison.**
+Nothing was numerically wrong; the report printed the 0 and then silently omitted that arm's
+heading. All 91 carry `constructed_high_extraction`, which is what the split exists to test and
+cannot at N_control=0. Now declares `comparison_available` + reason in JSON, report and stderr
+(`110b1fc4b`); control DECLINES on a forced two-arm split.
+
+**Generation: a single transient 500 on `batches.create` cost all 7 declared stories.**
+`poll_batch` retried `InternalServerError` up to 30× with the comment "must NOT kill a long run";
+the create three lines away had no retry at all. Now shares `BATCH_TRANSIENT`, and **all four
+sites in the module were routed, not just the one that failed** (`a975ad142`) — stopping at the
+observed site is the bounded-at-the-defect-boundary error. Controls include a **declining** arm
+(a 400 is not retried). OPEN: recovery is witnessed by simulation, not by a live 500. ~13 sites in
+other modules, plus the wave scheduler treating a FAILED upstream as satisfied (so dependents
+generate context-starved, silently) → **OQ-369**.
+
+**Promotion test applied.** The schema-contract rule PASSES (silent, stable, high-traffic file,
+four recurrences, not in an always-loaded section) → promoted to CLAUDE.md **Architecture
+Invariants** as one line carrying the principle and pointing here + OQ-368, per the 2026-08-23
+always-loaded-carries-the-principle ruling. The other four stay history: each is either already
+fixed with a two-sided control in place, or filed as an OQ a fresh agent reaches through the
+router.
+
 ## 2026-08-24 — [landed] OQ-352 pair arm re-witnessed clean: 0 substantive diffs; `code_dirty` rescoped fail-closed
 **Files:** python/run_pipeline.py, python/report_legs.py, audits/2026-08-23_oq352_report_driver/compare_dirty_vs_clean.py, audits/2026-08-23_oq352_report_driver/dirty_vs_clean_comparison.txt
 **Tier:** landed

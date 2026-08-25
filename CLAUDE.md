@@ -427,6 +427,13 @@ meaningful only relative to a timestamp. See `when_apparatus_sharpens_taxonomy.m
   under compressed-ceiling sigmoid variants. It looks removable (normal exports pass without it)
   but removing it silently regresses to OOM on those variants. Choice-point question is OQ-02;
   zero-diff proof and history in KNOWN_STATE.md.
+- **A new `per_constraint` key in `json_report.pl` must be registered in
+  `python/shared/schemas.py` `PIPELINE_FIELDS` in the SAME commit — skipping it is SILENT.** The
+  contract is a consumer of the emit (Pattern 1); a mismatch only warns, into a stderr stream
+  nobody reads, so the field ships un-contracted and every consumer's drift check fires forever
+  without escalating. Stated in KNOWN_STATE 2026-07-25 and violated 27 days later, four
+  recurrences to date; the warn-vs-fatal escalation is the open ruling OQ-368. Incidences and the
+  bounded-extraction measurements: KNOWN_STATE 2026-08-24.
 - **Headline verdict = `verdict_join.verdict`; `diagnostic_verdict.verdict` is a raw input,
   never a headline** (OQ-98, 2026-06-11). `verdict_join` is computed in
   `diagnostic_summary:verdict_join/3` (base verdict + severity-floored alerts + grid/measurement
