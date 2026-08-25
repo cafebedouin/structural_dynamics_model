@@ -338,7 +338,9 @@ FINDING was retired with it, the METHOD was not. Landed: the principle (`build_d
 *Cross-artifact reconciliation*, deliberately UN-NUMBERED — `doc patterns` pins the OQ-278 index
 set, and this is a positive discipline rather than a defect pattern), the library
 `python/shared/recon.py`, the seed adapter `python/audits/oq375_wu_recon.py`, and gate row
-`wu recon`. Tracking, riders and five open rulings: **OQ-375**.
+`wu recon`. Tracking, riders and four open rulings: **OQ-375**. *(This line originally said
+"five" against its own close line's four — caught by the post-impl evaluation, run 2026-08-25-1,
+as its gap 2; a count discrepancy inside the entry about count reconciliation.)*
 
 **FIRST-RUN ADJUDICATION: NO FORK.** An independent machine parse of the two md5-frozen Wu sources
 reproduced RECON.md Finding R2 on every pin — 22 shared incidents, 12 agreeing on class (55%
@@ -431,7 +433,10 @@ history; over-promotion defeats the purpose. **R1 (should CLAUDE.md carry an ent
 principle at all) is UNRULED and shipped as "no line"**, with the `when_apparatus_sharpens_taxonomy.md`
 §4 reverse pointer as the non-ruling discovery path. Open rulings at close: R1, R2 (OQ-375's
 `Priority: 3` is a proposal), R5 (the `oq277 freeze` row's fate), R6. R3 did not fire; R4 collapsed
-by measurement; R7 and R8 shipped as directed. Nothing was pushed.
+by measurement; R7 and R8 shipped as directed. Nothing was pushed. *(Ruled later the same day,
+2026-08-25: R1 no CLAUDE.md line; R2 confirmed at 3; R5 deferred to the 2026-09-10 consolidation
+pass via a `**Sunset:**` line on OQ-375; R6 `live` stands — landed in OQ-375 riders 3–6 and the
+WRITEUP `## Close`, commit `9ba4782ef`.)*
 
 ## 2026-08-24 — [HANDOFF] to the corpus-building instance: what the OQ-352 session owes it on `testsets_nemotron_think`
 **Files:** python/shared/corpus_legs.py, outputs/pipeline_output.nemotron_think.json, python/audits/leg_diagnostic_table.py, prolog/testsets_nemotron_think/, outputs/pipeline_output.raw.json
