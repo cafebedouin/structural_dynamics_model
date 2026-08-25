@@ -200,6 +200,31 @@ run "ledger grammar" "$PY" python/runs_ledger_check.py --check
 # See ISSUES OQ-277 → CLOSE (2026-08-12) and its Disposals block before touching this row.
 run "oq277 freeze"   "$PY" python/audits/oq277_build_prereg.py --check
 
+# OQ-375. The generic cross-artifact reconciler's SEED ADAPTER, run as a gate row rather
+# than on demand. Deciding argument: *a control must witness that it is CALLED* — an
+# on-demand tool's controls orphan on day one, and this one carries five. It regenerates
+# RECON.md Finding R2 (and the paper's §14 figure) from the two md5-frozen Wu sources:
+# 22 shared incidents, 12 agreeing on class / 10 disagreeing.
+# WHAT A RED MEANS — the causes are disjoint and the report names which fired:
+#   · source md5 != its recorded pin  -> THE SOURCES MOVED; re-adjudicate against
+#     RECON.md. Checked BY THIS TOOL, not read off `oq277 freeze`'s colour: that row is
+#     post-freeze and reports pinned-SOURCE drift as INFO with exit 0 BY DESIGN, so a
+#     "freeze row is red" cross-read is unreachable and would misattribute every source
+#     move to the instrument. Do not re-introduce it (see the tool's docstring).
+#   · an aggregate pin no longer reproduces -> the INSTRUMENT changed (parser
+#     regression). Fix the instrument; NEVER edit a pin to match a new parse.
+#   · the per-unit cross-check against `packets/wu_unit_id_map.json` mismatches -> the
+#     hand-derived map or the parse moved. That map is NOT under the freeze pin, so this
+#     assertion is its only watcher, and compensating per-unit errors leave every
+#     aggregate identical — which is why it is asserted rather than reported.
+#   · a control failed to discriminate -> the instrument is broken; fix it, not the
+#     sources.
+#   · a source is missing -> fail closed.
+# NOT red, ever: the seed pair's own 10 disagreements. "Fork found, ruling owed" is data
+# about Wu's sources, not a failure of this check; gating it would make the row
+# permanently red, which trains its reader to route around it.
+run "wu recon"       "$PY" python/audits/oq375_wu_recon.py --check
+
 # OQ-352. The per-leg REPORT driver's refusal taxonomy and transit guard.
 # FIXTURE-ONLY AND SYNTHETIC BY CHARTER: tiny corpora in a temp dir, no real leg,
 # no swipl over 1000 stories -- 2.6s on a ~55s gate. A real-leg pair inside a

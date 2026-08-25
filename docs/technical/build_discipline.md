@@ -2025,8 +2025,8 @@ field for every record; positive control cross-diff > 0 with the moved fields na
 
 **Recurrence evidence — this repo already practises the rule and has never named it.** Several gate
 rows are cross-artifact reconciliations, each built one at a time for its own pair: `doc patterns`,
-`spec enums`, `omega index`, `claim cites`, `audit cites`, `paper carriage` (as enumerated in
-`../../scripts/gate.sh`, 2026-08-25 — enumerate it there at the moment of use, never quote this
+`spec enums`, `omega index`, `claim cites`, `audit cites`, `paper carriage`, and now `wu recon`
+(as enumerated in `../../scripts/gate.sh`, 2026-08-25 — enumerate it there at the moment of use, never quote this
 list). `doc patterns` is the case that proves the mechanism from inside: `CLAUDE.md` and this file
 published the same numbered taxonomy and disagreed at two indices **for 151 commits**, undetected,
 *because the member counts converged at the exact commit the contents diverged* — aggregate
@@ -2039,6 +2039,20 @@ class (catalog A1/B4/C5/D4/E8 vs dataset A4/B3/C4/D5/E6, both summing to 22). Ne
 wrong on its own terms; the fork was invisible until the IDs were joined, and it retired the
 experiment that depended on it. Live open instance: **OQ-341**, a Phase-1 overlay census that does
 not reconcile with its own raw output.
+
+**The instrument.** `../../python/shared/recon.py` is the generic ID-keyed reconciler —
+`reconcile(a_pairs, b_pairs, fields)` over two SEQUENCES of `(unit_id, {field: value})`
+pairs (sequences, not dicts, so duplicate unit IDs survive ingest and the refusal is
+reachable in the library rather than pre-empted in the caller), returning shared /
+only-A / only-B, per-field agree / disagree / absent-on-one-side, named mismatch rows and
+both marginals; `render_report()` renders it and ends "fork found, ruling owed". It never
+adjudicates canonicity. Duplicate unit IDs raise by default, and the downgrade is
+MECHANICAL rather than a norm — `allow_duplicates={ids}` takes the expected ids as its
+value, so naming them IS the report and any duplicate not named still raises. The seed
+adapter is `../../python/audits/oq375_wu_recon.py`, over the Wu pair above:
+`.venv/bin/python python/audits/oq375_wu_recon.py --check`, wired as gate row `wu recon`
+so its five controls witness that they are CALLED rather than orphaning on day one.
+Tracking, riders and the open rulings: **OQ-375**.
 
 **Prior art** (grepped `cross-artifact`, `reconcil`, `ID-keyed`, `two artifacts`, `join on` over
 this file, 2026-08-25). **One hit, adjacent and distinct:** *Reconciling two surfaces owes the full
