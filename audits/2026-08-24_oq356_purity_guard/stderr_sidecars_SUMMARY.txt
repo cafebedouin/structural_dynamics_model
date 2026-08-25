@@ -1,0 +1,56 @@
+# stderr sidecars from the OQ-356 leg runs — SUMMARISED, not committed raw.
+# Each run_giant_comp_leg.py invocation writes a <out>.md.stderr.txt sidecar.
+# Total raw size 16,964,239 bytes across 8 files; ~99.9% is SWI-Prolog corpus-load
+# noise (discontiguous omega_variable/5 clauses in testset files, a weak-import
+# override at giant_component_analysis.pl:328, a singleton at :467).
+#
+# CHECKED BEFORE DISCARDING, both sides:
+#   ZERO lines matching '^ERROR' in any of the eight files.
+#   The only non-Warning lines are the [corpus]/[giant] progress echoes.
+# The throws themselves are NOT here and are not lost: they are captured in
+# census_prefix_HEAD.txt, which is the artifact that records them.
+
+V3b_haiku2_PREFIX.md.stderr.txt                bytes=2218147    ERROR=0  non-Warning=82
+      % Library was moved: library(http/json) --> library(json)
+      [corpus] Loaded 996 testsets successfully.
+      [corpus] Loading 996 testset files...
+      [corpus] census: 996 stories, 0 non-story, 0 other.
+      [giant]   100/996 nodes processed
+      [giant]   100/996 properties computed
+V3b_haiku3_PREFIX.md.stderr.txt                bytes=2173189    ERROR=0  non-Warning=82
+      % Library was moved: library(http/json) --> library(json)
+      [corpus] Loaded 993 testsets successfully.
+      [corpus] Loading 993 testset files...
+      [corpus] census: 993 stories, 0 non-story, 0 other.
+      [giant]   100/993 nodes processed
+      [giant]   100/993 properties computed
+V5_haiku_FIXED.md.stderr.txt                   bytes=2150195    ERROR=0  non-Warning=82
+      % Library was moved: library(http/json) --> library(json)
+      [corpus] Loaded 960 testsets successfully.
+      [corpus] Loading 960 testset files...
+      [corpus] census: 960 stories, 0 non-story, 0 other.
+      [giant]   100/960 nodes processed
+      [giant]   100/960 properties computed
+V5_original_v6_FIXED.md.stderr.txt             bytes=6031372    ERROR=0  non-Warning=250
+      % Library was moved: library(http/json) --> library(json)
+      [corpus] Loaded 3380 testsets successfully.
+      [corpus] Loading 3380 testset files...
+      [corpus] census: 3380 stories, 0 non-story, 0 other.
+      [giant]   100/3380 nodes processed
+      [giant]   100/3380 properties computed
+V6c_haiku2_FIXED.md.stderr.txt                 bytes=2218147    ERROR=0  non-Warning=82
+      % Library was moved: library(http/json) --> library(json)
+      [corpus] Loaded 996 testsets successfully.
+      [corpus] Loading 996 testset files...
+      [corpus] census: 996 stories, 0 non-story, 0 other.
+      [giant]   100/996 nodes processed
+      [giant]   100/996 properties computed
+V6c_haiku3_FIXED.md.stderr.txt                 bytes=2173189    ERROR=0  non-Warning=82
+      % Library was moved: library(http/json) --> library(json)
+      [corpus] Loaded 993 testsets successfully.
+      [corpus] Loading 993 testset files...
+      [corpus] census: 993 stories, 0 non-story, 0 other.
+      [giant]   100/993 nodes processed
+      [giant]   100/993 properties computed
+census_fixed.stderr.txt                        bytes=0          ERROR=0  non-Warning=0
+census_prefix_HEAD.stderr.txt                  bytes=0          ERROR=0  non-Warning=0
