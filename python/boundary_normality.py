@@ -409,9 +409,26 @@ def override_subpopulation_analysis(members):
         else:
             unaffected.append(m)
 
+    # The point of this split is to test whether the conditional 3x tangled_rope
+    # boost is what DRIVES constraints into the tangled_rope->snare boundary.
+    # That test needs both arms. When either arm is empty the split answers
+    # nothing, and the empty-arm `continue` below used to leave that fact
+    # implicit -- the report then rendered only the surviving arm, which reads
+    # exactly like a comparison that ran and came out one-sided. Declare it.
+    comparable = bool(affected) and bool(unaffected)
+    if not comparable:
+        empty = "unaffected" if not unaffected else "affected"
+        reason = (f"degenerate split: the '{empty}' arm is empty "
+                  f"(affected={len(affected)}, unaffected={len(unaffected)}), "
+                  f"so no override-vs-control contrast is available for this run")
+    else:
+        reason = None
+
     result = {
         "affected_count": len(affected),
         "unaffected_count": len(unaffected),
+        "comparison_available": comparable,
+        "comparison_unavailable_reason": reason,
         "affected": {},
         "unaffected": {},
     }
@@ -741,6 +758,14 @@ def generate_report(boundaries, boundary_results, override_sub, coalition_crosst
         lines.append(f"- Override-affected: **{override_sub['affected_count']}** constraints")
         lines.append(f"- Non-override-affected: **{override_sub['unaffected_count']}** constraints")
         lines.append("")
+        if not override_sub.get("comparison_available", True):
+            lines.append("> **NO CONTRAST AVAILABLE — this section is not a comparison.**")
+            lines.append("> " + str(override_sub.get("comparison_unavailable_reason", "")))
+            lines.append("> Only the non-empty arm is tabulated below; its statistics")
+            lines.append("> describe the boundary population, and say nothing about whether")
+            lines.append("> the override is what produced it. Read the single arm as a")
+            lines.append("> description, never as an override-vs-control result.")
+            lines.append("")
 
         for label, title in [("affected", "Override-Affected Sub-Population"),
                              ("unaffected", "Non-Override-Affected Sub-Population")]:
@@ -995,6 +1020,9 @@ def main():
         override_sub = override_subpopulation_analysis(boundaries[tr_snare_key])
         print(f"[BOUNDARY]   Override-affected: {override_sub['affected_count']}, "
               f"Non-affected: {override_sub['unaffected_count']}", file=sys.stderr)
+        if not override_sub.get("comparison_available", True):
+            print(f"[BOUNDARY]   NOTE: {override_sub['comparison_unavailable_reason']}",
+                  file=sys.stderr)
 
     # --- Step 6: Coalition × snare cluster cross-tabulation ---
     coalition_crosstab = None
