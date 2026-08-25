@@ -675,14 +675,56 @@ def _check_enriched_structure(entry, cid):
     return errors
 
 
-def _warn_unexpected_fields(entry, known_fields, cid):
-    """Print stderr warnings for unexpected fields (schema drift detection).
+# `_warn_unexpected_fields` (per-entry printer) was RETIRED here together with
+# its replacement landing: both of its call sites moved to
+# `_collect_unexpected` + `_report_drift`, leaving it with zero callers.  The
+# report-sidecar validator does NOT use it -- that path prints its own
+# "sidecar unexpected field" line inline (see `validate_report_sidecar`).
+# Retiring it in the same change is the rule from build_discipline.md
+# ("A control must witness that it is CALLED"): a helper kept alive with no
+# caller raises the apparent control count while coverage falls.
 
-    Does NOT return errors -- unexpected fields warn but don't fail.
+
+def _collect_unexpected(entry, known_fields, cid, drift):
+    """Accumulate unexpected field names into `drift` = {field: [cids]}."""
+    for f in set(entry.keys()) - known_fields:
+        drift.setdefault(f, []).append(cid)
+
+
+def _report_drift(drift, n_entries, artifact, contract):
+    """Emit ONE aggregated drift block instead of one line per entry.
+
+    Why aggregated: the per-entry form emitted an identical line for every
+    constraint -- 285 copies of the same fact per validator call, and
+    `enriched_pipeline.json` is re-validated by ~12 consumers, ~11 of them
+    concurrently on one stderr (run_pipeline `_run_parallel`).  A single
+    additive field therefore produced ~3,400 interleaved lines per pipeline
+    run.  That is the Pattern-6 shape KNOWN_STATE 2026-07-25 already named:
+    the check DISCRIMINATES correctly (contract-complete vs contract-lagging)
+    and then buries both outcomes in the same ignored stream.  It has now been
+    the only thing that noticed a missing registration twice (sheaf_status
+    2026-06-04; member_kind 2026-08-21, unnoticed for 3 days) -- so the
+    signal is real and only its LEGIBILITY was failing.
+
+    The count is not cosmetic: `n/N entries` distinguishes a field the emitter
+    writes unconditionally (N/N -- a missing registration) from one written on
+    a branch (n<N -- possibly a conditional emit), which the repeated
+    per-entry line could not.
+
+    Escalation from warn to hard error is deliberately NOT done here: it is a
+    workflow ruling (it would hard-stop any pipeline run whose Prolog side
+    gained a field first), filed rather than assumed.
     """
-    unexpected = set(entry.keys()) - known_fields
-    for f in sorted(unexpected):
-        print(f"  [WARN] [{cid}] unexpected field: {f}", file=sys.stderr)
+    if not drift:
+        return
+    plural = "field" if len(drift) == 1 else "fields"
+    print(f"Schema drift warnings ({artifact}): "
+          f"{len(drift)} unregistered {plural} over {n_entries} entries",
+          file=sys.stderr)
+    for f in sorted(drift):
+        cids = drift[f]
+        print(f"  [WARN] unexpected field: {f} — {len(cids)}/{n_entries} entries "
+              f"(e.g. {cids[0]}) — not in {contract}", file=sys.stderr)
 
 
 # ===================================================================
@@ -711,7 +753,7 @@ def validate_pipeline_output(data):
         return ["'per_constraint' is empty"]
 
     seen_ids = set()
-    has_unexpected = False
+    drift = {}
     for i, entry in enumerate(per_constraint):
         if not isinstance(entry, dict):
             errors.append(f"per_constraint[{i}] is not a dict")
@@ -731,13 +773,10 @@ def validate_pipeline_output(data):
         # Structural invariants
         errors.extend(_check_structure(entry, cid))
 
-        # Unexpected fields (warn only, first occurrence triggers header)
-        unexpected = set(entry.keys()) - _PIPELINE_FIELD_NAMES
-        if unexpected and not has_unexpected:
-            print("Schema drift warnings (pipeline_output.json):", file=sys.stderr)
-            has_unexpected = True
-        if unexpected:
-            _warn_unexpected_fields(entry, _PIPELINE_FIELD_NAMES, cid)
+        # Unexpected fields (warn only; aggregated once below)
+        _collect_unexpected(entry, _PIPELINE_FIELD_NAMES, cid, drift)
+
+    _report_drift(drift, len(per_constraint), "pipeline_output.json", "PIPELINE_FIELDS")
 
     return errors
 
@@ -770,7 +809,7 @@ def validate_enriched_pipeline(data):
         return ["'per_constraint' is empty"]
 
     seen_ids = set()
-    has_unexpected = False
+    drift = {}
     for i, entry in enumerate(per_constraint):
         if not isinstance(entry, dict):
             errors.append(f"per_constraint[{i}] is not a dict")
@@ -797,13 +836,11 @@ def validate_enriched_pipeline(data):
         # Enrichment structural invariants
         errors.extend(_check_enriched_structure(entry, cid))
 
-        # Unexpected fields (warn only)
-        unexpected = set(entry.keys()) - _ALL_ENRICHED_FIELD_NAMES
-        if unexpected and not has_unexpected:
-            print("Schema drift warnings (enriched_pipeline.json):", file=sys.stderr)
-            has_unexpected = True
-        if unexpected:
-            _warn_unexpected_fields(entry, _ALL_ENRICHED_FIELD_NAMES, cid)
+        # Unexpected fields (warn only; aggregated once below)
+        _collect_unexpected(entry, _ALL_ENRICHED_FIELD_NAMES, cid, drift)
+
+    _report_drift(drift, len(per_constraint), "enriched_pipeline.json",
+                  "PIPELINE_FIELDS + ENRICHED_EXTRA_FIELDS")
 
     return errors
 
