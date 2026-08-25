@@ -190,21 +190,44 @@ def normality_tests(values):
         except Exception:
             pass
 
-    # Anderson-Darling
+    # Anderson-Darling.
+    #
+    # `method="interpolate"` is REQUIRED, not stylistic. Called without it,
+    # scipy >= 1.17 emits a FutureWarning (6x per pipeline run, one per
+    # boundary population) and scipy >= 1.19 REMOVES `critical_values` /
+    # `significance_level` / `fit_result` from the result object. The previous
+    # code read exactly those two attributes inside a bare `except Exception:
+    # pass`, so on the 1.19 upgrade the AD test would have vanished SILENTLY —
+    # and because the Section-1/Section-5 "Normal?" verdict ORs
+    # `reject_at_005` across shapiro/dagostino/anderson, a boundary that only
+    # AD rejects would have flipped NO -> yes with no error and no log line.
+    # Installed here: scipy 1.18.0 (the last version where both forms work),
+    # which is what made the two-form equivalence witness below possible.
+    #
+    # Migration witness (2026-08-24, n=285 corpus, the 6 populations with
+    # n >= 8 and non-zero range): reject decisions identical under both forms
+    # for all 6, statistics identical to the already-published values; and on
+    # a synthetic normal control both forms agree on FAIL-TO-REJECT, so the
+    # agreement is not an artifact of every real population rejecting.
+    #
+    # `p_value` REPLACES the stored `critical_values` map (no reader existed;
+    # `format_test_result` already looks for `p_value` and had been printing
+    # `p=?` for this test alone). Note the interpolation table is CLIPPED:
+    # p is reported in [0.01, 0.25], so 0.01 means "<= 0.01", not exactly.
     try:
-        ad_result = scipy.stats.anderson(values, dist='norm')
-        # Compare statistic against critical values at 5% level
-        crit_5pct = ad_result.critical_values[2] if len(ad_result.critical_values) > 2 else None
+        ad_result = scipy.stats.anderson(values, dist='norm', method='interpolate')
         results["anderson_darling"] = {
-            "statistic": round(ad_result.statistic, 6),
-            "critical_values": {
-                f"{sig}%": round(cv, 6)
-                for sig, cv in zip(ad_result.significance_level, ad_result.critical_values)
-            },
-            "reject_at_005": ad_result.statistic > crit_5pct if crit_5pct else None,
+            "statistic": round(float(ad_result.statistic), 6),
+            "p_value": round(float(ad_result.pvalue), 6),
+            "p_value_clipped": True,   # interpolation table floor/ceiling: [0.01, 0.25]
+            "reject_at_005": bool(ad_result.pvalue < 0.05),
         }
-    except Exception:
-        pass
+    except Exception as exc:
+        # Do NOT swallow silently: a missing AD row weakens the any-test-rejects
+        # verdict without changing anything visible in the report.
+        results["anderson_darling"] = {"error": f"{type(exc).__name__}: {exc}"}
+        print(f"[BOUNDARY]   WARNING: Anderson-Darling failed on n={n}: "
+              f"{type(exc).__name__}: {exc}", file=sys.stderr)
 
     # Skewness and kurtosis
     try:
