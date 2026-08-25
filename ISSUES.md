@@ -20745,6 +20745,225 @@ structure…), so the surviving excess is *seed-keyed structure beyond exact-ε 
 upper bound on engine amplification, not proof the engine adds it all. A null conditioning on
 the full authored record would tighten it; whether that spend is wanted is OQ-348's reading.
 
+## OQ-381 — The blindness×beneficiary join: no observable pairs a blindness surface with who is invariant to it
+
+**Ω-type:** Ω_C for the definition (which join counts as "the beneficiary of a blindness" is a
+framework selection, and it is now made — below), with an Ω_E tail once the observable exists (does
+the join fire on the corpus, and on what).
+
+**Status:** open — minted 2026-08-25 out of the Benter / structural-blindness arc.
+**Priority:** 3
+**Deps:** bundled_with OQ-382
+**Origin:** operator session 2026-08-25, reading Bill Benter's Hong Kong parimutuel result through
+the seat/gauge machinery. Benter did not beat the house: in a parimutuel the Jockey Club's take is
+outcome-invariant, his money came from other bettors, and the Club profited from his volume.
+
+**The definition, RULED (operator, 2026-08-25 — form (c) plus the structural restatement, adopted
+regardless of how the no-intent rail is scoped because it is strictly safer and costs nothing):**
+
+> *The beneficiary of a blindness is the position whose extraction is positive and invariant to the
+> outcome on which the blind seat's payoff depends, while the blind seat's own position is
+> outcome-dependent.*
+
+This excludes zero-extraction bystanders — the absence-satisfies-the-gate defect in the looser
+phrasing, where anyone not harmed counted as benefiting — and ties the beneficiary to the blind
+seat's stake, which is the point of the join. **No intent is imputed at either end.**
+
+**The three positions (operator ruling, same session) are positions RELATIVE TO A BLINDNESS, not
+new type atoms:**
+- **flow extractor** — revenue is outcome-invariant. It genuinely cannot be beaten on pricing,
+  because it isn't pricing. Its exposure is participation collapse: it needs the losing seats to
+  stay seated.
+- **risk-holder** — does price, does carry model error, and can bleed for years without knowing,
+  because the feedback is slow and pooled. Its balance sheet is long structural blindness.
+- **blind seat** — has accepted the mountain reading ("you can't beat the races") and therefore
+  perceives no bet at all. Type misperception does not merely misprice the option; it deletes the
+  option from the action space.
+
+**Benter is not a fourth position. He is the seat that reclassified** — that is the essay's
+subject, not a cell in the typology.
+
+**The claim: no existing observable performs this join.** The blindness surfaces exist
+(`feature_access/3` none-rows, `constraint_indexing.pl:814-859`; `extraction_blindness`,
+`report_generator.pl:368-372`) and the beneficiary surface exists
+(`narrative_ontology:constraint_beneficiary/2`), but nothing pairs them with the invariance test the
+definition requires. Adjacent evidence from the same arc: `audits/2026-08-25_gauge_fixed_prediction/`
+found that `classify_from_restricted/3` **discards the beneficiary slot entirely** — the restricted
+view computes `KnownBeneficiaries` and binds it to `_KnownBen` (`constraint_indexing.pl:947-953`),
+so the `beneficiaries` column of the accessibility table reaches no classification path at all.
+The one place where a blindness surface and a beneficiary surface sit in the same term, they are
+not joined.
+
+**Candidate computable shape (proposal, not a spec):** `constraint_beneficiary/2` × directionality
+`d` (`constraint_indexing.pl:405`, `derive_directionality/3`) × the restricted-view disagreement,
+with the invariance conjunct read off `d`'s stability across the outcome the blind seat is exposed
+to. The hard part is that last conjunct: outcome-invariance is a claim about a *distribution over
+outcomes*, and the engine has no outcome variable — this may be where the OQ discovers it needs a
+GAP entry rather than a build.
+
+**Fences that bound any build (all three, named so a later session does not rediscover them):**
+
+1. **The no-intent rail** — `docs/design/design_discipline.md:411-423`, quoted verbatim with its
+   pin so a later reader can check it themselves:
+
+   > **The engine reads effect and self-declaration, never imputed intent (operator, 2026-06-23).**
+   > The two axes above exhaust what the engine is permitted to read: *structural effect* (the
+   > observer axis, computed from the situation) and *authored self-declaration* (the committer
+   > axis — the author committing their *own* reading, the CS structure). Neither attributes a
+   > mental state to a third party. A logic engine cannot know another agent's intent; only an agent
+   > can declare its own, and the only self-declaration channel in this system is the authored
+   > commitment structure. So "did this actor *intend* to extract / suppress / reject the
+   > alternative" is **out of scope by construction — not a missing feature.**
+
+   The definition above is written to clear this rail on either scoping: it quantifies over
+   *extraction* and *invariance*, both computed from effect, and imputes no mental state to the
+   flow extractor. That is why the structural restatement was adopted.
+2. **The positive-control bar** — `docs/design/design_discipline.md:567-590`: a category whose
+   positive control cannot exist is not admissible, and the witness is a case the instrument
+   **declined**. Concretely, this OQ may not ship an observable without naming **one corpus case
+   expected to fire and one expected to decline**, written down before the run.
+3. **GAP-26** (`docs/design/design_gaps.md:1376`) — price-shaped things are built BESIDE the engine,
+   never inside it. A parimutuel take is price-shaped.
+
+**What resolution changes:** a computable blindness×beneficiary join would let the engine say *who
+is invariant to a given seat's blindness*, which is the observable the three-position typology
+needs. Failing that, the honest output is a `design_gaps.md` entry recording why the join is not
+constructible here (most likely: no outcome variable).
+
+## OQ-382 — The false-wager signature: perceived voluntary-and-exitable, computed compulsory-and-outcome-invariant
+
+**Ω-type:** Ω_C — the decomposition and its naming are a framework selection; whether the corpus
+populates it is the Ω_E tail.
+
+**Status:** open — minted 2026-08-25 out of the Benter / structural-blindness arc.
+**Priority:** 3
+**Deps:** bundled_with OQ-381
+**Origin:** operator session 2026-08-25, same arc as OQ-381.
+
+**The decomposition (operator, verbatim):** *"A wager needs two things: a decline option, and
+outcome-dependent settlement."* Drop either and it is not a wager:
+
+- **Drop the decline option** → negative EV converts from a *risk* into a *certainty*. Operator:
+  *"the variance that lets a one-shot player win is exactly what compelled volume launders away."*
+  A single bet has variance; compelled repetition integrates it out, so what a participant
+  experiences as luck is arithmetic.
+- **Drop outcome-dependence** → it was never a wager to begin with; it is a levy wearing a wager's
+  clothes. Operator: *"the take never presents as a price. It presents as weather."*
+
+**Signature sibling to FNL/FSM.** The shape is the established one: an authored/perceived reading
+that the computed structure contradicts. Template to build against —
+`signature_detection.pl:1734` (`false_summit_mountain/2`). **It ROUTES, it does not reclassify**
+(`config:param(false_natural_law_override_enabled, 0)`, `config.pl:507`, OQ-138 ruling 2026-07-03):
+the metric type stands at cascade-winner seats and the discriminated severity carries the diagnostic
+into `verdict_join`. Any implementation here inherits that discipline — a new signature that
+overrides classification is a different and much larger ask.
+
+**Naming.** Operator's rule: *"'tax' carries valence your other type-atoms don't. Consider naming
+the computed side rather than the felt side."* Proposals, **final naming deliberately left open in
+this OQ**: `false_wager/2` for the signature, `outcome_invariant_extraction` for the computed side.
+
+Two naming constraints, both verified 2026-08-25:
+- **`arbitrage` is TAKEN** — it is an `exit_options` gauge atom in the U₃ context tuple
+  (`docs/logic.md:295`, table row `:402`, gloss `:419`). Do not reuse it for the extractor position.
+- **`wager` is already in ratified text non-financially** — `docs/seat-theorem-v1.md:156` and
+  `docs/deferential_realism_paper_v8.md:912-913` both use "wager" for the seat-battery's directional
+  bet. A `false_wager` atom would not collide mechanically, but a reader of the papers meets the
+  word in a different sense first; weigh that at naming time.
+
+**Implementation note (opt-in guard, easy to miss).** If this lands as a new CS enumeration, the
+`spec_enum_check` guard is **opt-in**: a new enumeration is unguarded until its sentinel block AND
+its checker-manifest entry land in the same change (`docs/technical/spec_enum_check.md`). Same
+silent-escape shape as reading-registry registration.
+
+**What resolution changes:** a signature that fires on constraints presenting as voluntary-and-
+exitable while computing compulsory-and-outcome-invariant. The positive-control bar applies as in
+OQ-381: name the case expected to fire and the case expected to decline before running.
+
+## OQ-383 — `feature_access/3` has no self-position feature: should a seventh feature run AGAINST the table's gradient?
+
+**Ω-type:** Ω_P — the question is whether the framework SHOULD represent a seat's own contingency
+as an accessible feature, which is a value-decision about what the engine is for, not a fact the
+corpus can settle. Routes `blocked_on_human` by design.
+
+**Status:** open — minted 2026-08-25. **This is the arc's real open design question.**
+**Priority:** 2
+**Deps:** blocked_on_human operator ruling — should `own_position_contingency` exist as a seventh
+`feature_access/3` feature (see *The question* below)
+**Origin:** operator session 2026-08-25, Benter / structural-blindness arc.
+
+**The finding (verified at HEAD `25f92b3f4`, 2026-08-25).** `feature_access/3`
+(`prolog/constraint_indexing.pl:814-859`) is keyed by the engine's `agent_power` context slot —
+`observer_accessible/3` binds it from `context(agent_power(Power), _, _, _)` at `:874` — and the
+table lists those atoms in the sequence powerless, moderate, powerful, organized, institutional,
+analytical. **What that sequence orders is the `agent_power` atom set; it is NOT established as a
+single ordered power scale** — powerless/moderate/powerful reads as one dimension, while
+organized/institutional/analytical is not obviously the same dimension continued. Stated in the same
+sentence as the monotonicity claim, as it must be: **along the table's own listing order**, access
+is non-decreasing and no feature scores lower at a later level; `institutional` is `full` on five
+with `cross_context: none`; `analytical` is `full` on all six.
+
+**Six features, all of which view the constraint from a position. None views the viewing position's
+own contingency.** Scope: `feature_access/3` and its restriction pipeline only — this says nothing
+about other subsystems.
+
+*Adjacency, not evidence:* institutional π = −0.2 (`docs/deferential_realism_paper_v6.md:65-67`)
+encodes the house *experiencing* extraction inverted — what others experience as extraction, this
+observer experiences as coordination working in their favour — with no epistemic representation of
+its own position's contingency anywhere in the table.
+
+**The sweep (this OQ's precondition), run 2026-08-25 — full artifact:
+`audits/2026-08-25_gauge_fixed_prediction/self_position_sweep.md`.** Criterion was *reachability*:
+does any surface carry a value about the mutability of the observer's own position to any read site?
+Searched: `observer_accessible/3`, `trigger_epistemic_trap/3`, `seat_perceived_vs_real/4`,
+`extraction_blindness`, plus a repo-wide term sweep over `prolog/` and `python/`.
+
+- **All four named surfaces key on observer coordinates `(T, E)` and return a judgement about the
+  CONSTRAINT**, never about the position. `observer_accessible/3`'s six-slot view is
+  `view(Chi, VisEps, VisSupp, VisTheater, KnownBeneficiaries, PerceivedMutability)` — the last slot
+  is the *constraint's* mutability as perceived from there (`:888`).
+- **Term sweep: 0 files** for `own_position`, `self_position`, `observer_contingency`,
+  `seat_contingency`, `own_contingency`, `position_mutability`, `observer_mutability`,
+  `seat_mutability`, `own_revisability`, `position_revisability`, `viewing_position`. The only hits
+  — `position_contingency` (2), `observer_position_` (4) — are **authored story content**
+  (`omega_variable/3` facts in testsets/archives) and one linter doc reference, not engine surfaces.
+  So the concept exists in the corpus as something a story can *declare*, and nowhere as something
+  the engine *computes*.
+- **Positive control, same procedure, no planted decoy:** `effective_immutability` 96 files,
+  `effective_immutability_for_context` 29 files. The search finds the near-miss — an observer-keyed,
+  mutability-valued predicate read into a live classification path — so the zeros above are zeros,
+  not a failure to dispatch.
+- **Grade: liveness.** This licenses *no surface under these names carries it*, not *the engine
+  cannot express it*. **A later surface discovery reopens this OQ** — that is its standing
+  falsifier, not a caveat on it.
+
+**The operator's framing, quoted:**
+
+> "feature_access is probably monotone in power, and your house argument says it shouldn't be. The
+> top seat has full access to raw_extraction and beneficiaries and none on the contingency of its
+> own position — it inherited the mountain and reads it as one too."
+
+**THE QUESTION (the ruling this OQ is blocked on): should a seventh feature
+`own_position_contingency` exist, whose access runs AGAINST the table's existing gradient** — i.e.
+`none` or `felt_only` at `institutional`/`analytical` and higher at the lower-power seats, inverting
+every other row?
+
+**Empirical note from the same arc, which complicates the premise rather than settling it.**
+`audits/2026-08-25_gauge_fixed_prediction/` measured, over 1140 (constraint, context) rows on the
+live leg, that disagreement between the restricted and full classifications is **not monotone in the
+table's gradient**: institutional 54.0% > powerless 49.2% > moderate 20.4% > analytical 10.6%. That
+is mostly a vocabulary artifact of `restricted_classify/7` and is **not** an epistemic result — it
+is logged here only so the next reader does not treat "monotone in power" as an established
+property of the pipeline. The same audit found that `partial` access is implemented **identically**
+to `full` (`:899-902`, byte-identical clause bodies), so five of the six power levels are
+functionally unrestricted on the continuous metrics and only `powerless` is genuinely restricted.
+**Any seventh-feature design inherits that: adding a row to a table whose middle grades do nothing
+would add a row that does nothing.**
+
+**Close condition, checked by the session that closes this OQ.** If the ruling is
+**design-absence**, this OQ closes with a pointer to a NEW `design_gaps.md` entry recording the
+against-the-gradient prediction as a condition of any future revival. If it stays an OQ, **no GAP
+entry is minted.** Never both open — the closing session performs that check.
+
 ---
 
 *Compress-on-close (added 2026-06-04): when an entry's status transitions to

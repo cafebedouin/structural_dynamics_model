@@ -1566,6 +1566,32 @@ v8 §9.4 prohibitions, model provenance stays first-class, and a fresh instance 
 novel gap. Related: v8 §9.2/§9.4, `docs/seat-theorem-v1.md` §2 (P2 defense) and §6.2 (the
 real-but-local warrant shape this ruling shares).
 
+**Note added 2026-08-25 (Benter / structural-blindness arc) — conjunct (ii) has TWO possible
+referents, and a proposal must DECLARE which one it means.** Conjunct (ii) above asks for
+"predictive validity against an out-of-corpus outcome." A market-based proposal (odds, prices,
+implied probabilities) is the tempting instance, and it hides an ambiguity that decides whether
+the conjunct fires at all: **what does authored ε claim predictive validity *about*?**
+
+1. **Outcomes in the world** — ε predicts something that happens independently of any seat's
+   estimate. This is the reading that could fire (ii).
+2. **Other seats' gauges** — ε predicts the pooled estimate (the market price, the consensus).
+   **Operator ruling, 2026-08-25: this does NOT fire (ii).** The residual between a seat's
+   estimate and the pooled gauge is a quantity you would *measure*, not a referent ε claims to be
+   *about*; a market price is other seats' gauges pooled, so scoring ε against it is two seats
+   disagreeing — which the standing falsifier already excludes ("difference alone does not fire
+   it"). The seat-theorem grounds in (b) above apply unchanged: pooling relocates the assigning
+   seat, it does not remove it.
+
+**Fires when:** a proposal offers market data as a GAP-30 conjunct-(ii) scored outcome.
+**Observer:** any session reading this entry before proposing external grounding for ε.
+
+The distinction is not academic. A parimutuel pool is the clean case: the take is
+outcome-invariant, so the pool price is a pure aggregate of other bettors' gauges and predicts
+the *settlement* only through them — reading (2) wearing reading (1)'s clothes. A proposal that
+does not say which referent it means has not specified conjunct (ii). Related: the arc's OQs
+OQ-381 (the blindness×beneficiary join) and OQ-382 (the false-wager signature); GAP-30's own
+falsifier remains as written above — this note constrains what satisfies it, and relaxes nothing.
+
 ## GAP-31 — No cross-story seat identity: stakeholder seats are story-local, so no family-level seat presheaf exists to section
 
 **Declared:** 2026-08-08 (OQ-261 close + post-hoc symmetric read,

@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "954775fc2e1c8baa3aa86111d4a0a94a66e25e4a",
+    "store_version": "25f92b3f49594c888b7e6f23ea367be73c2c1ab3",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-25T08:39:20"
+    "generated_at": "2026-08-25T12:20:18"
   },
-  "issues_sha": "be73d1b904a9c4c75a87177c01e3da3674c16e7aa4c09b136298ffc21d5fb03d",
-  "n_entries": 380,
+  "issues_sha": "cc707eebe25b680036fd92abeff52203dd070d623ebecbeb596492026e90f4ec",
+  "n_entries": 383,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 162,
+    "open": 165,
     "partial": 5
   },
   "active": [
@@ -2454,6 +2454,50 @@
       "mentioned_in": [
         "OQ-337",
         "OQ-347"
+      ]
+    },
+    {
+      "id": "OQ-381",
+      "status": "open",
+      "priority": 3,
+      "summary": "The blindness×beneficiary join: no observable pairs a blindness surface with who is invariant to it",
+      "deps": [
+        "bundled_with OQ-382"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-382"
+      ]
+    },
+    {
+      "id": "OQ-382",
+      "status": "open",
+      "priority": 3,
+      "summary": "The false-wager signature: perceived voluntary-and-exitable, computed compulsory-and-outcome-invariant",
+      "deps": [
+        "bundled_with OQ-381"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-138",
+        "OQ-381"
+      ]
+    },
+    {
+      "id": "OQ-383",
+      "status": "open",
+      "priority": 2,
+      "summary": "`feature_access/3` has no self-position feature: should a seventh feature run AGAINST the table's gradient?",
+      "deps": [
+        "blocked_on_human operator ruling — should `own_position_contingency` exist as a seventh"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51",
+        "OQ-59",
+        "OQ-285",
+        "OQ-288",
+        "OQ-291"
       ]
     }
   ],
@@ -5529,11 +5573,6 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-51",
-        "OQ-59",
-        "OQ-285",
-        "OQ-288",
-        "OQ-291",
         "OQ-348"
       ]
     }
