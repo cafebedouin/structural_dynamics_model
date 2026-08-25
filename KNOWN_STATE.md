@@ -45,6 +45,60 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-25 — [landed] `plan-review` recalibrated on its first NEGATIVE falsifier reading: 2-round cap, fixer proportionality + an explicit decline, a plan size budget, a required falsifiability pass, and post-impl annotation now GATED
+**Files:** .claude/skills/plan-review/SKILL.md, .claude/agents/repo-blind-reviewer.md, .claude/skills/plan-review/RUNS.md, python/runs_ledger_check.py
+**Tier:** landed
+
+Prompted by run `2026-08-25-3` (the Benter arc), whose planning loop delivered a plan the
+operator cut by ~60% — and **every cut item was loop-generated**. The skill's own falsifier
+(*"do the plans the operator receives read as better?"*) read NEGATIVE for the first time. It
+was recalibrated, not retired, because the same run's evidence is that the reviewers earned
+their keep: the definition-fires-on-absence catch, the liability-not-discharged catch, a
+framing correction the operator adopted against his own sentence, and — decisively — **the rule
+that later caught the operator's own fixture error came from loop round 2.**
+
+**The measurement that set the cap (first run to instrument per-round cost).** Cost/finding:
+r1 2,503 → r2 4,075 → r3 10,930 → r4 14,977 tokens; the **fresh-eyes pass 3,111**, cheaper than
+every loop round after the first while producing 27 findings — more than rounds 3 and 4
+combined. **6× degradation across four rounds**, and the fresh-pass yield does not fall as loop
+rounds accumulate (`2026-08-23-1` fresh 29 after 6 rounds; `2026-08-21-4` fresh 18 after 45 loop
+findings; `2026-08-21-3` fresh 8 including 2 blocking that survived all six). Cap is now **2**.
+
+**The bloat is measured and it is the SKILL, not the period.** Over `~/.claude/plans`, a
+fingerprint probe (`fresh-eyes` / `repo-blind` / `allocated-at-append`) fires on 11 of 22 plans
+from 2026-08-20 on and on **0 of 29** before — so it discriminates. Mean plan size: pre-skill
+19,447 B (n=29); same period **without** the skill 20,948 B (n=6); same period **with** it
+**51,508 B** (n=11). Contemporaneous non-skill plans are indistinguishable from baseline, so the
+2.5× is not a period effect. Nine of eleven exceed the pre-skill maximum. **NOT shown: that
+larger plans execute worse** — there is no pre-skill outcome data, which is why the outcome
+column is now gated.
+
+**The defective component is the FIXER, not the reviewer.** Reviewer findings were
+overwhelmingly real; each fix was two sizes too big (coverage floors invented where "report `n`"
+suffices; a copy-freeze that spawned a ruling, a label form, a verification row and a
+cross-phase reach; a decoy risking a corpus denominator to buy a negative statable at liveness
+grade). Every finding drew a fix and **none drew a decline** — the round cap does not constrain
+that, so two new obligations sit at the fix step: state the SMALLEST change that closes the
+finding, and DECLINE is an available per-item disposition.
+
+**`post-impl gaps` is now enforced, not merely instructed.** It was 40% empty (4 of 10 rows)
+under a prose-only obligation, and it is the only outcome-bearing column and the only one that
+has produced findings the loop could not — the *"check that cannot fail / name that does not
+match what it counts"* species was found there across `2026-08-21-3` and `2026-08-24-1` and
+promoted into CLAUDE.md on 2026-08-24. `runs_ledger_check.py` gained a second arm: a landed row
+still empty **more than 7 days past its planning date is a FINDING**. It is clock-dependent and
+therefore kept SEPARATE from the grammar arm with its own date-relative fixtures — merging them
+would rot the grammar fixtures' pinned dates. Four-way two-sided control: fires on a 30-day-old
+empty row; declines on the same row dated today, annotated, or annotated `UNRECORDED`.
+
+**Also: the reviewer now owes a falsifiability pass** (*what value would make this FAIL?* and
+*is the NAME true of everything it counts?*, asked of the plan's own repairs too), reported as
+its own `FALSIFIABILITY:` block. The ledger's verdict is that neither reviewer has ever asked
+either unprompted across three runs. And **landing-chain link 1 fired for the first time** —
+plan mode released in-session, so the planning session allocated and appended its own row.
+
+Gate GREEN after the change (`ledger grammar OK: 11 rows, ids unique, grammar clean`).
+
 ## 2026-08-25 — [tripwire] The never-run `gauge_fixed` prediction: REFUTED — and the restricted-view instrument is far weaker than its own accessibility table implies (`partial` == `full`, three types unreachable, beneficiaries discarded)
 **Files:** prolog/constraint_indexing.pl, prolog/dirac_classification.pl, audits/2026-08-25_gauge_fixed_prediction/, ISSUES.md, docs/design/design_gaps.md, blog/2026-08/benter_structural_blindness/
 **Tier:** tripwire

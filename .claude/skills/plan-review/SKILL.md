@@ -52,6 +52,27 @@ damper on blind-review false positives — the reviewer checks that the list exi
 are checkable, instead of flagging every repo dependency as a gap and pressing the plan toward
 inlining repo contents.
 
+**Record the pre-review draft's size, and treat it as a budget (added 2026-08-25).** Before the
+first spawn, note the byte size of the draft. **A plan that leaves review more than ~50% larger
+owes one sentence per increment saying what would break without it** — carried in the checkpoint
+deliverable, so the operator sees what the loop added rather than only what it produced.
+
+Why there is a number here at all. Measured across all plans in `~/.claude/plans` (a natural
+experiment, since a fingerprint probe for `fresh-eyes` / `repo-blind` / `allocated-at-append`
+fires on 11 of 22 plans from 2026-08-20 on and on **0 of 29** before it):
+
+| population | n | mean size |
+|---|---|---|
+| pre-skill (Aug 1–19) | 29 | 19,447 B |
+| same period, **without** plan-review | 6 | 20,948 B |
+| same period, **with** plan-review | 11 | **51,508 B** |
+
+Contemporaneous plans that skipped the skill are indistinguishable from the pre-skill baseline,
+so the 2.5× is the skill and not the period. Nine of the eleven exceed the pre-skill maximum
+(32,569 B). **Not yet shown: that larger plans execute worse.** There is no pre-skill outcome
+data and the `post-impl gaps` column was 40% empty when this was measured — which is why that
+column is now gated (below). Until it fills, the budget is a discipline, not a verdict.
+
 **Clocks and pilots are incompatible by construction — reconcile them in the plan, not at
 execution (witnessed 2026-08-25, run `2026-08-25-2`).** A viability clock measured from FIRST
 launch and a mandated pilot-first sequence cannot coexist: the pilot is deliberately one seed —
@@ -67,6 +88,16 @@ sequencing consume its own clock before the clock's subject has been tested?*
    (b) your questions and/or plan verbatim, (c) on later rounds, the reviewer's prior round. Nothing
    else — no file excerpts, no command output, no planning-context summary. If the reviewer flags
    leakage, fix the payload, not the flag.
+
+   **Require the falsifiability pass explicitly in the spawn prompt (added 2026-08-25).** Ask the
+   reviewer to run, over every criterion, control, gate, printed label and pre-registered expected
+   value in the plan: **(i) what value would make this FAIL?** and **(ii) is the NAME true of
+   everything it counts?** The mandate is also in the agent's own definition, but state it in the
+   payload too — an unstated instruction is not exercised. This is not a new idea; it is the
+   find-criterion CLAUDE.md promoted on 2026-08-24, and the ledger's own reading is that **neither
+   reviewer has ever asked either question unprompted**, across three recorded instances
+   (`2026-08-21-3`, `2026-08-24-1`, `2026-08-25-3`). Every instance was a control-structure defect,
+   invisible to review-for-correctness and immediate under review-for-falsifiability.
 4. **Model rule (two independence axes, §4.1), claimed at its altitude:** the reviewer must run on a
    different model than this session (definition defaults to `opus`; if this session IS Opus, pass a
    `model` override). A different Anthropic model buys fresh context plus a different capability
@@ -75,11 +106,48 @@ sequencing consume its own clock before the clock's subject has been tested?*
    deliverable: the operator's relay to a non-Anthropic model remains the path for it.
 5. Respond to findings **per item** — numbered dispositions, never "all addressed". Questions the
    reviewer marks `RULING:` go on the escalation list untouched; do not argue them down.
+
+   **The fixer's two obligations, added 2026-08-25 because the fixer is the component that
+   actually failed.** A four-round run plus fresh pass produced a plan the operator cut by ~60%,
+   and *every* cut item was loop-generated: coverage floors invented where "report `n`" would
+   do; a copy-freeze that then spawned a ruling, a label form, a verification row and a reach
+   into a later phase; a decoy control that risked a corpus denominator to buy a negative
+   statable at liveness grade; a preregistration artifact and hash chain on a check the operator
+   had called free. **Each finding was real. Each fix was two sizes too big.** Nothing in the
+   loop asked whether a fix was proportionate, and no disposition existed except "changed".
+
+   - **State the SMALLEST change that closes the finding, and take it.** If you take a larger
+     one, say in one sentence what breaks without the extra. A fix that adds an artifact, a
+     phase, a freeze, or a control-protecting-a-control needs that sentence or it is not
+     warranted.
+   - **DECLINE is an available disposition.** "This finding is real and the plan should not
+     change" is a legitimate per-item answer — record it with its reason. Without an explicit
+     decline the loop has no exit at the fix step, only at the round step, and the plan can only
+     grow. (Which is the false-wager shape: no decline option, extraction invariant to whether
+     the artifact improves.)
 6. Iterate by SendMessage to the same reviewer (a send resumes it from its transcript — witnessed,
    not assumed; if continuation ever proves unavailable, carry the full prior negotiation in each
-   round's payload instead). **Cap at 6 rounds.** If not converged, stop and report the sticking
-   points to the operator rather than grinding — see *the fixer is a source of rounds* below, which
-   is why the cap is a bound and not a target.
+   round's payload instead). **Cap at 2 rounds** (was 6 until 2026-08-25). If not converged, stop
+   and report the sticking points to the operator rather than grinding — see *the fixer is a source
+   of rounds* below, which is why the cap is a bound and not a target.
+
+   **Why 2, measured on run `2026-08-25-3`** (the first run to instrument per-round cost):
+
+   | round | subagent tokens | findings | cost/finding |
+   |---|---|---|---|
+   | loop r1 | 72,583 | 29 | 2,503 |
+   | loop r2 | 93,722 | 23 | 4,075 |
+   | loop r3 | 131,155 | 12 | 10,930 |
+   | loop r4 | 164,741 | 11 | 14,977 |
+   | **fresh pass** | **84,002** | **27** | **3,111** |
+
+   Rounds grow monotonically in cost while yield falls — a **6× degradation in cost-per-finding
+   across four rounds** — and the fresh reviewer is ~5× more efficient than the fourth loop round
+   while finding more than rounds 3 and 4 combined. The fresh-pass yield does **not** fall as loop
+   rounds accumulate (corroborated: `2026-08-23-1` fresh 29 after 6 rounds; `2026-08-21-4` fresh 18
+   after 45 loop findings; `2026-08-21-3` fresh 8 *including 2 blocking that had survived all six
+   negotiated rounds*). So extra loop rounds do not buy a cleaner fresh pass — they buy expensive
+   polish. **Spend the saved rounds on the fresh seat, not on the loop.**
 7. **Fresh-eyes pass — MANDATORY, and a PRODUCTION step, not a test of the loop** (witnessed
    2026-08-20, `audits/2026-08-20_plan_review_shakedown/`). When the loop reviewer says ready, spawn
    a **NEW** `repo-blind-reviewer` holding only the OQ + final plan, never the negotiation.
@@ -99,12 +167,19 @@ list** (each stated neutrally — no quality claim wearing a jurisdictional argu
 reviewer's **CAUTIONS**; and any post-fresh-pass amendments, marked unreviewed. Then stop.
 Implementation happens in a fresh session (§4.1, and seat 3 above).
 
-**COMPOSE the run row here. Do NOT append it — you cannot.** A session running this skill is in
-plan mode and structurally cannot write to `.claude/skills/plan-review/RUNS.md`. Four appends to
-this ledger have now failed, three of them consecutive planning-time blocks, and every one was
-discovered late or by a human re-derivation rather than by anything going red (OQ-337). An
-obligation placed on a session that cannot discharge it is unenforceable by construction, so
-Phase 3 **composes** the row and a write-capable session **lands** it.
+**COMPOSE the run row here. Do NOT append it *while in plan mode* — you cannot.** A session running
+this skill is in plan mode and structurally cannot write to `.claude/skills/plan-review/RUNS.md`.
+Four appends to this ledger have now failed, three of them consecutive planning-time blocks, and
+every one was discovered late or by a human re-derivation rather than by anything going red
+(OQ-337). An obligation placed on a session that cannot discharge it is unenforceable by
+construction, so Phase 3 **composes** the row and a write-capable session **lands** it.
+
+**Landing-chain link 1 fired for the first time on 2026-08-25** (`2026-08-25-3`): plan mode was
+released in-session — the operator diverted from executing the plan to revising this skill — and
+the planning session allocated and appended its own row before the executor ever existed. So link 1
+is not theoretical. **If plan mode releases in your session for any reason, land the row then**,
+deriving the id with both instruments at that moment exactly as any other lander would; do not
+carry an unlanded row out of a session that became capable of landing it.
 
 Compose it on ONE line, in these 10 columns:
 
@@ -322,6 +397,20 @@ artifact it describes; classify every zero (tested absence / untested instrument
 **Then find this run's row and annotate it: `post-impl gaps: N (what)`.** Locate it with the
 pinned `id -> target` derivation, never by reading the file.
 
+**This is now GATED, not merely instructed (2026-08-25).** `runs_ledger_check.py` carries a second
+arm: a landed row still empty after `post-impl gaps:` **more than 7 days past its planning date is
+a FINDING**, and `ledger grammar` goes red. Discharge is always available and cheap — the real
+gaps, or `post-impl gaps: UNRECORDED` when they cannot be reconstructed. The prose obligation alone
+had been 40% unmet (4 of 10 rows, measured 2026-08-25), which is the produced-but-not-consumed
+shape applied to the apparatus's own meter.
+
+**Why this column and not another.** It is the only outcome-bearing field in the ledger and the
+only one that has produced findings the review loop could not: the *"a check that cannot fail, or
+a check whose name does not match what it measures"* species was identified across rows
+`2026-08-21-3` and `2026-08-24-1` and promoted into CLAUDE.md on 2026-08-24. The reviews did not
+find that; the annotations did. An empty column is indistinguishable from *no gaps were found*,
+so leaving it empty makes the one instrument that works unreadable.
+
 **If the row is not there, that absence is itself a post-impl gap.** You are the last link in the
 landing chain: register the run retroactively, marking every column you cannot reconstruct from
 the plan artifact as `UNRECORDED` — marked, never estimated. Note the retroactive registration in
@@ -349,14 +438,29 @@ silent shape.
 - **Falsifier (direct, and it needs no instrument): do the plans the operator receives read as
   better?** The operator sees every plan and is the read-site. If the loop stops improving them, say
   so at the checkpoint and propose retiring or revising this skill.
-- **The fixer is a source of rounds, not just the reviewer (witnessed 2026-08-20).** In one measured
-  round on a complex plan, 13 of 22 findings closed and **15 new ones opened**, two of them defects
-  the revising instance introduced while fixing — including a **fix-label attached to a non-fix**.
-  These counts are transcriptions of the primed reviewer's own report — the instrument that produced
-  them held the shakedown spec in its system prompt (the contaminated arm; OQ-334, R5 ruling
-  2026-08-20) — so read them as a qualitative lesson, never as a clean measurement.
-  The loop can feed itself, so **the cap is the only bound on it.** Hit the cap, stop, report.
+  **First negative reading, 2026-08-25 (`2026-08-25-3`):** the operator cut the delivered plan by
+  ~60% and every cut item was loop-generated. That is not a failure to improve; it is degradation
+  along the axis the operator reads, while the axes the reviewers check improved. Diagnosis and
+  remedies: the fixer bullet below, the Phase-1 size budget, and the 2-round cap. **This did NOT
+  license retirement** — the same run's evidence is that the reviewers earned their keep (the
+  definition-fires-on-absence catch, the liability-not-discharged catch, the framing correction the
+  operator adopted against his own sentence, and — decisively — *the rule that later caught the
+  operator's own error came from loop round 2*). Recalibrated, not retired.
+- **The fixer is a source of rounds, not just the reviewer (witnessed 2026-08-20; confirmed as the
+  PRIMARY defect 2026-08-25).** In one measured round on a complex plan, 13 of 22 findings closed
+  and **15 new ones opened**, two of them defects the revising instance introduced while fixing —
+  including a **fix-label attached to a non-fix**. Those counts came from a contaminated instrument
+  (the primed reviewer held the shakedown spec; OQ-334 R5) — a qualitative lesson, not a clean
+  measurement. The clean measurement is `2026-08-25-3`: reviewer findings were overwhelmingly real,
+  and the plan still bloated 2.5×, because **every finding got a fix and no finding got a decline**.
+  The loop can feed itself, and the round cap does not constrain a fixer that over-builds — a
+  smaller pile of over-built responses is still over-built. The constraints that bite are at the
+  **fix** step (smallest-change + explicit decline, Phase 2 step 5) and on the **artifact**
+  (the size budget, Phase 1). Hit the round cap, stop, report.
 - **Intended evolution, named:** Phase 1's checklist graduation is *designed* to erode the reviewer's
   marginal value on shape/record/reviver — that erosion is success, not failure. As it happens,
-  narrow the reviewer's mandate toward the **specification test alone**: the one axis the sender
-  structurally cannot run on itself, because it cannot un-know its own context.
+  narrow the reviewer's mandate toward the **two axes the sender structurally cannot run on
+  itself**: the **specification test** (it cannot un-know its own context) and the
+  **falsifiability pass** (it wrote the criteria, so it reads them as it meant them). Amended
+  2026-08-25 — this bullet previously named the specification test *alone*, and the ledger's
+  three-instance record says the falsifiability axis is the scarcer of the two.

@@ -21,9 +21,21 @@ removed by construction (executor prompts carry no ids — the id is allocated a
 that prevention claim is itself uncontrolled. The burden is recorded UNMET in OQ-337, not
 claimed covered here.
 
+ONE THING BEYOND GRAMMAR, ADDED 2026-08-25: annotation debt. The `post-impl gaps` column is the
+only outcome-bearing field in the ledger and the only one that has ever produced a finding the
+review loop could not (the "check that cannot fail / name that does not match what it counts"
+species, discovered across rows 2026-08-21-3 and 2026-08-24-1 and promoted into CLAUDE.md). It
+was 40% empty when measured (4 of 10 rows, 2026-08-25) under a prose-only obligation. Empty is
+indistinguishable from "no gaps were found", so the column was silently unreadable. It is now a
+FINDING once a row is 7 days past its planning date with nothing written. This arm is
+clock-dependent and therefore NOT decidable from the file alone — it is kept separate from the
+grammar arm for that reason, and carries its own date-relative fixtures.
+
 DISCRIMINATION RECORD (this checker's own two-sided control, in --check's selftest):
   FIRES    on a planted duplicate `2026-08-21-1` — the reconstructed OQ-337 instance-3 state,
            the collision that actually occurred and was caught only by a human re-derivation.
+  FIRES    on a 30-day-old row with an empty `post-impl gaps:`; DECLINES on the same row dated
+           today (inside grace), annotated, or annotated `UNRECORDED` (the escape).
   FIRES    on a missing file, a not-in-index file, a placeholder-bearing row, a wrong-arity
            row, `UNRECORDED` in field 1/2, and a bare `UNRECORDED` in the last field.
   DECLINES on a clean fixture AND on the live file at its current state.
@@ -84,6 +96,10 @@ DECLARATION = """\
                   passes here.
   residue       : a stray `|` that yields exactly 11 fields PASSES -- it is indistinguishable
                   from a legitimate provenance row. Declared, not hidden.
+  also enforced : ANNOTATION DEBT -- a landed row whose `post-impl gaps:` is still empty more
+                  than 7 days after its PLANNING date. Separate arm, own date-relative
+                  fixtures, clock-dependent (so not decidable from the file alone). Discharge
+                  with the real gaps or `post-impl gaps: UNRECORDED`; both always available.
   not checked   : whether any run is MISSING from the ledger. See this file's docstring."""
 
 
@@ -212,6 +228,56 @@ def _real_date(s):
         return False
 
 
+ANNOTATION_GRACE_DAYS = 7
+
+
+def check_annotation_debt(path, today=None, grace_days=ANNOTATION_GRACE_DAYS):
+    """Rows whose `post-impl gaps:` is still EMPTY more than `grace_days` after planning.
+
+    Separate from the grammar arm on purpose. Grammar is decidable from the file alone and its
+    fixtures pin literal dates; this arm is decidable only against a clock, so a shared fixture
+    set would rot the moment those literal dates aged past the window.
+
+    Why it is a FINDING and not a report: the obligation already existed in SKILL.md prose and
+    was 40% unmet (4 of 10 rows, measured 2026-08-25). An empty column is indistinguishable
+    from `no gaps were found`, which makes the ledger's one outcome-bearing column silently
+    unreadable -- and that column is where every novel finding this apparatus has produced came
+    from. The discharge is cheap and always available: annotate with the real gaps, or write
+    `post-impl gaps: UNRECORDED` when they cannot be reconstructed. Neither is ever blocked.
+    """
+    findings = []
+    if not os.path.isfile(path):
+        return findings  # absence is the grammar arm's finding; not double-reported here
+    today = today or datetime.date.today()
+    disp = os.path.relpath(path, REPO) if path.startswith(REPO) else path
+
+    with open(path, "r", encoding="utf-8") as fh:
+        lines = fh.read().split("\n")
+
+    for n, line in enumerate(lines, 1):
+        if not ROW_RE.match(line):
+            continue
+        fields = [f.strip() for f in line.split("|")]
+        if len(fields) not in (10, 11):
+            continue  # arity is the grammar arm's finding; positional reads are meaningless
+        last = fields[-1]
+        if not last.startswith(LAST_PREFIX):
+            continue  # likewise
+        if last[len(LAST_PREFIX):].strip():
+            continue  # annotated (any value, including UNRECORDED, discharges the obligation)
+        if not DATE_RE.match(fields[0]) or not _real_date(fields[0]):
+            continue
+        age = (today - datetime.date.fromisoformat(fields[0])).days
+        if age > grace_days:
+            findings.append(
+                "%s:%d: run %s (%s) planned %d days ago and its `post-impl gaps:` is still "
+                "EMPTY -- empty is indistinguishable from `no gaps were found`. Annotate it "
+                "with the real gaps, or `post-impl gaps: UNRECORDED` if they cannot be "
+                "reconstructed. Grace is %d days."
+                % (disp, n, fields[1], fields[2][:40], age, grace_days))
+    return findings
+
+
 # --------------------------------------------------------------------------------------
 # Selftest. Rides every --check run (the audit_writeup_gate.py pattern): a checker whose
 # controls are only run on request is a checker whose red-capability is a memory.
@@ -304,6 +370,41 @@ def selftest(verbose=True):
                   % ("outside-repo", st2, "ok" if ok2 else "MISMATCH"))
         os.remove(outside)
 
+        # --- the annotation-debt arm, two-sided, on DATE-RELATIVE fixtures ---
+        # Its own fixtures because the grammar fixtures pin literal dates: a shared set would
+        # start firing here the moment those dates aged past the window, and the failure would
+        # read as a checker bug rather than as fixture rot.
+        today = datetime.date.today()
+        old = (today - datetime.timedelta(days=30)).isoformat()
+        row = ("%s | %s-1 | target A | 3 rounds | 2 agents | f: 1 | d: 0 | rulings 1 | "
+               "fresh-pass finds: 0 | post-impl gaps:%s\n")
+        debt_cases = [
+            ("debt-stale-empty", row % (old, today.isoformat(), ""), True,
+             "planned 30 days ago, still unannotated"),
+            ("debt-fresh-empty", row % (today.isoformat(), today.isoformat(), ""), False,
+             "planned today -- inside grace, not yet owed"),
+            ("debt-stale-filled", row % (old, today.isoformat(), " 3 (things)"), False,
+             "annotated: obligation discharged"),
+            ("debt-stale-unrecorded", row % (old, today.isoformat(), " UNRECORDED"), False,
+             "the always-available escape discharges it too"),
+        ]
+        for name, content, expect_fire, note in debt_cases:
+            p = os.path.join(tmp, "RUNS.md")
+            # the id embeds today's date while field 1 may be `old`: date-skew is the GRAMMAR
+            # arm's finding and is irrelevant here -- this arm is called directly, not through
+            # check_ledger, so the two arms cannot mask one another.
+            with open(p, "w", encoding="utf-8") as fh:
+                fh.write("# ledger\n\n" + content)
+            d = check_annotation_debt(p, today=today)
+            fired = bool(d)
+            ok = fired == expect_fire
+            if not ok:
+                failures.append("%s: expected %s, got %d finding(s)"
+                                % (name, "FIRE" if expect_fire else "DECLINE", len(d)))
+            if verbose:
+                print("    %-22s %-8s %s  (%s)"
+                      % (name, "FIRES" if fired else "declines", "ok" if ok else "MISMATCH", note))
+
         # --- and it must DECLINE on the live file: a control that only fires is one-sided ---
         live = os.path.join(REPO, LEDGER)
         lf, _li = check_ledger(live, check_index=True)
@@ -344,6 +445,7 @@ def main(argv):
     st_failures = selftest(verbose=True)
 
     findings, instrument = check_ledger(os.path.join(REPO, LEDGER), check_index=True)
+    findings.extend(check_annotation_debt(os.path.join(REPO, LEDGER)))
 
     print("  -- live file --")
     for i in instrument:
