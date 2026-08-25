@@ -3428,8 +3428,87 @@ battery made only of cost-finding questions — §6.2's own diagnosis applies wo
 the question that can return a verdict against the selecting bet. The control is derived from
 Corollary 2b, not adopted from convention.
 
+**THE REPAIRED CRITERION, BUILT AND ACCEPTED AGAINST A HELD-OUT CASE (2026-08-24).**
+`purity_guard_sweep_v3.py` replaces the idiom-keyed v2. It binds the producer's OUTPUT variable
+and flags arithmetic only on that value; it recognises guards including **clause-order
+fail-closed guards** (a preceding clause that cuts on `\+ number(V)`); taint flows FORWARD only;
+and it follows the value **across predicate boundaries** and out of a collected list into
+element-level arithmetic reached through `include`/`exclude`/`maplist`/`member`.
+
+**The acceptance test was pre-committed and held out, which is the part worth copying.**
+`giant_component_analysis.pl:596` — `in_float_range(Lo, Hi, V) :- V >= Lo, V < Hi.`, a SECOND
+unguarded arithmetic on the same value one predicate downstream — was found BY HAND and
+deliberately withheld from every expected-findings list. The repaired criterion was required to
+surface it unaided. It did, with the chain `count_in_zone/4 arg1` → `in_float_range/3 applied by
+include/3`. **v2 was structurally blind to it at ANY window width**, because it only ever
+inspected lines CONTAINING a purity call — so widening the window, the improvement the OQ itself
+proposed, would never have found it. A find-criterion that cannot cross a predicate boundary
+cannot be fixed by looking further down the same clause.
+
+**Four defects in the repaired instrument, three of them caught by its own control** — recorded
+because they are what "reachability-keyed" costs, and because two are the OLD bug wearing new
+clothes:
+
+| defect | why it matters |
+|---|---|
+| a lookbehind excluding `:` skipped every MODULE-QUALIFIED call | i.e. every producer in the codebase; the sweep reported 2 findings and looked fine |
+| `>` matched the `>` of `->` | **v2's own bug in a new surface.** Fixed by MASKING arrows once, centrally, rather than guarding each operator — the class dies in one place |
+| goals spanning LINES parsed at the wrong arity (`findall(EP,` read as `findall/1`) | killed the whole interprocedural chain silently; the sweep still emitted a clean-looking 4 rows |
+| clause-order guards and backward taint flow unmodelled | two false positives (`network_dynamics.pl:285/287`, `drl_fpn.pl:311`), both explainable, both REPAIRED rather than documented — a criterion that fires where it should not trains bypass |
+
+**And the instrument's DECLARED BOUNDS are published with its zeros, because "zero unexplained
+fires" is not "no missed sites".** Taint is not propagated OUT of a callee's output argument — so
+`fpn_report.pl:94` is declined for a LIMITATION, not because the guard was modelled, and its
+verdict rests on a manual trace plus an artifact witness. Recursive list construction is not
+tracked. Interprocedural depth is capped. **No gate row was promoted on the strength of this**:
+promotion is earned by a post-repair discrimination record and is filed with a machine-readable
+watcher (OQ-373), verified BY EXECUTION to route to BLOCKED rather than back to the human queue.
+
 **Provenance.** OQ-356 (the defect and its 20-corpus census), OQ-357 (the enforcement half),
-`audits/2026-08-23_oq352_report_driver/WRITEUP.md` §4c–§4f, KNOWN_STATE 2026-08-23.
+OQ-371 (`in_float_range/3`), OQ-372 (`one_hop_ep_safe/3`, the LATENT verdict), OQ-373 (the
+gate-promotion trigger), `audits/2026-08-23_oq352_report_driver/WRITEUP.md` §4c–§4f,
+`audits/2026-08-24_oq356_purity_guard/` (the repair, its adjudication table and its bounds),
+KNOWN_STATE 2026-08-23 + 2026-08-24.
+
+## PROPOSED (2026-08-24, awaiting operator ruling) — freeze a fixture for any control whose trigger is a LIVE-TREE DEFECT
+
+> **Status: PROPOSED, not adopted.** Landed here rather than stated in a session, so it is not a
+> handoff that did not happen; it is marked so nobody cites it as a standing rule. The ruling it
+> awaits: does this become a member of the *A control must witness that it is CALLED* family, or
+> stay a note on the OQ-356 sweep?
+
+**The proposed rule.** When a control's POSITIVE half is "it fires on the defect at `file:line`",
+and that defect is scheduled to be FIXED, the control must be pointed at a **frozen snapshot** of
+the defective text — captured before the fix — not at the live tree. Otherwise the fix silently
+converts the control into a check that cannot fire.
+
+**The mechanism, and why it is one level in from the existing rule.** *A control must witness that
+it is CALLED* catches an ORPHAN — a control nothing invokes. This catches a control that IS
+invoked, DOES run, and passes **vacuously**, because the thing it was built to detect no longer
+exists to be detected. The failure surface is worse: an orphan shows up as a coverage question,
+while this one keeps printing its success line. `purity_guard_sweep.py`'s control ends
+`=> sweep DISCRIMINATES`, and it would have kept printing that after OQ-356 fixed the site the
+"fires" half names.
+
+**Two instances in ONE instrument, which is what makes it a pattern rather than an anecdote.**
+Both `giant_component_analysis.pl:1278` (fixed by the commit the control was meant to validate)
+and `:596` (adjudicated real, held out by ruling) would evaporate from a live-tree scan, for
+different reasons — one repaired, one deliberately unrepaired.
+
+**The repair.** Snapshot the pre-fix text into the audit's `fixtures/` directory with a
+line-offset map and an md5, scan the FIXTURE for the "fires" half, and leave the "declines" half
+on the live tree (those sites are unchanged, and a decline that can be checked against the real
+thing should be). Fail CLOSED if the fixture is missing — a control whose fixture has been
+deleted must refuse, not pass.
+
+**Why it generalizes past this sweep.** This is criterion-4's rule — *availability is not
+automatic; when a detector will follow, preserve the defective state deliberately* — applied to
+the INSTRUMENT instead of to the corpus. The existing rule tells you to preserve the defective
+state long enough to run the detector once. This one says: if the detector is going to keep
+running after the defect is gone, it needs its own copy of the defect.
+
+**Provenance.** OQ-356, `audits/2026-08-24_oq356_purity_guard/fixtures/PROVENANCE.txt`,
+KNOWN_STATE 2026-08-24 tripwire 2.
 
 ## Promotions CONSIDERED AND DECLINED — a standing ledger (adopted 2026-08-23)
 
@@ -3467,6 +3546,9 @@ promotion, with the reason and the destination it went to instead. Append; do no
 | 2026-08-24 | a name chosen to fall OUTSIDE one convention falls outside every consumer of that convention (OQ-353's arm dirs were named off the `testsets*` prefix to dodge `leg_dirs()`'s glob, and thereby dropped out of every repo checker that narrows by that same prefix) | `fails-loud` — `module bounds` went RED on the next gate run, naming the directories and the 6447 sites | `python/module_boundary_check.py` `CORPUS_DIRS`, declared with the reason and the two-way pull recorded at the site |
 | 2026-08-24 | `git diff --name-only` output must be split on LINES, not whitespace — paths may contain spaces (37,553 lines → 37,757 tokens on this repo, fragments incl. a literal `-` reaching `_is_code_path`) | already covered — *A consistency check is not a discrimination check* → "never positionally parse another tool's output without pinning the shape that makes the index correct"; whitespace-splitting a line-oriented stream is that rule's sibling | the live defect at `run_pipeline.py:1092` still needs its own tracking (OQ-352 surface; not fixed in flight) |
 | 2026-08-24 | a checker's ±N-LINE context window is a ±N-ENTRY window in a file where one line is one record (`pattern_citation_check` recovered a false `bound-probe` citation across three unrelated `INVESTIGATIONS.md` entries) | `fails-loud` + `incidence` — the gate went red immediately, and the window size is one checker's parameter rather than a principle | diagnosed in commit `e01951de2`; the C1 ledger line was restated to remove the adjacency |
+| 2026-08-24 | the Phase-3 collapse table is CONSTANT on 3 of 4 legs, so a monotonicity criterion over it cannot fail | `incidence` + already covered — *A check that CANNOT fail witnesses nothing* is already the always-loaded rule; this is one more instance of it, and the per-leg row counts move as legs are added | KNOWN_STATE 2026-08-24 tripwire 1; **OQ-374** (the sweep saturates at or below its default cap) |
+| 2026-08-24 | an excluded-count at a purity filter spans FOUR distinguishable causes (succeeds-non-number / throws / fails / numeric-below-zero) and naming it `NUnknown` breaks the conservation identity as a false alarm | `incidence` — the always-loaded OQ-60 invariant already carries the two-absence-token rule and "never coerce"; the four-cause refinement is a site fact, and the 4+6 split is a per-leg number | KNOWN_STATE 2026-08-24 tripwire 3; OQ-356's landed-fix block |
+| 2026-08-24 | freeze a fixture for any control whose trigger is a live-tree defect | `pending-ruling` — proposed above as a build_discipline section, explicitly NOT adopted; the operator rules whether it joins the *control must witness that it is CALLED* family | this file, *PROPOSED (2026-08-24)*; KNOWN_STATE 2026-08-24 tripwire 2 |
 | 2026-08-24 | the DP-001/OQ-25 seal is vacuous on 14 corpora and partial on 9 more | **NOT declined — DEFERRED** by operator ruling to the Phase-2 `KNOWN_STATE.md` batch, recorded here so the deferral is not mistaken for a decline | OQ-365; the generalizable half IS promoted, as *PARTIAL coverage is worse than ZERO coverage* under Pattern 6 |
 
 **Promoted in the same pass, 2026-08-24** (so the bar is visible from both sides): two

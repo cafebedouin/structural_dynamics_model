@@ -1,22 +1,22 @@
 {
   "manifest": {
-    "store_version": "d91ebd8b4dfcddb5f2010f39c837332e34c728db",
+    "store_version": "69d3060c269c765eb78679dccad54962a85d9aa4",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-24T21:38:32"
+    "generated_at": "2026-08-24T23:15:39"
   },
-  "issues_sha": "4301a441474d25d277935b224307b033c7b00a0a0c4b539bb499ef5c950f374a",
-  "n_entries": 370,
+  "issues_sha": "912756b249ffe98447e6adb758f68bdf2d5cf7b1c89ce8cc9272d14cd3cdb164",
+  "n_entries": 374,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 171,
+    "resolved": 172,
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 156,
+    "open": 159,
     "partial": 5
   },
   "active": [
@@ -2064,7 +2064,8 @@
         "OQ-354",
         "OQ-356",
         "OQ-357",
-        "OQ-363"
+        "OQ-363",
+        "OQ-374"
       ]
     },
     {
@@ -2087,7 +2088,10 @@
         "OQ-326",
         "OQ-347",
         "OQ-352",
-        "OQ-355"
+        "OQ-355",
+        "OQ-356",
+        "OQ-363",
+        "OQ-374"
       ]
     },
     {
@@ -2121,23 +2125,6 @@
         "OQ-61",
         "OQ-239",
         "OQ-353"
-      ]
-    },
-    {
-      "id": "OQ-356",
-      "status": "open",
-      "priority": 2,
-      "summary": "`giant_component_analysis` DIES on 17 of 20 corpora: `count_by_action_band/8` is the OQ-60 sweep's missed site, and an unguarded `EP >= 0.0` over a raw `effective_purity` throws on `unknown`",
-      "deps": [
-        "blocked_on_human oq356-purity-guard-scope-ruling",
-        "gates OQ-353"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-60",
-        "OQ-352",
-        "OQ-353",
-        "OQ-354"
       ]
     },
     {
@@ -2357,13 +2344,72 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-109",
+        "OQ-129"
+      ]
+    },
+    {
+      "id": "OQ-371",
+      "status": "open",
+      "priority": 3,
+      "summary": "`in_float_range/3` is the SECOND unguarded arithmetic on the same purity value, one predicate downstream, and no window width can see it",
+      "deps": [
+        "splits_from OQ-356"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60",
+        "OQ-356"
+      ]
+    },
+    {
+      "id": "OQ-372",
+      "status": "open",
+      "priority": 5,
+      "summary": "`one_hop_ep_safe/3` is unguarded and safe only by CALLER discipline (the third verdict: latent, not false-positive)",
+      "deps": [
+        "splits_from OQ-356"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-356"
+      ]
+    },
+    {
+      "id": "OQ-373",
+      "status": "open",
+      "priority": 4,
+      "summary": "Gate-promotion trigger for the repaired purity find-criterion (NOT promoted; the trigger is filed, not exercised)",
+      "deps": [
+        "splits_from OQ-356",
+        "blocked_on_condition `audits/2026-08-24_oq356_purity_guard/adjudication_table.md` carries an adjudication table in which EVERY row the repaired sweep emits has a verdict AND a named in-file witness — zero rows marked INFERRED, zero rows with no verdict — watcher: re-run `audits/2026-08-23_oq352_report_driver/purity_guard_sweep_v3.py --acceptance` and read that table"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-356",
+        "OQ-371"
+      ]
+    },
+    {
+      "id": "OQ-374",
+      "status": "open",
+      "priority": 3,
+      "summary": "The Phase-3 contamination collapse sweep SATURATES at or below its default cap: caps 0.40–1.00 reproduce the 0.30 row exactly on every leg measured",
+      "deps": [
+        "splits_from OQ-356",
+        "bundled_with OQ-353",
+        "bundled_with OQ-354"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
         "OQ-51",
         "OQ-59",
-        "OQ-109",
-        "OQ-129",
         "OQ-285",
         "OQ-288",
-        "OQ-291"
+        "OQ-291",
+        "OQ-353",
+        "OQ-354",
+        "OQ-356"
       ]
     }
   ],
@@ -5374,6 +5420,27 @@
         "OQ-306",
         "OQ-326",
         "OQ-338"
+      ]
+    },
+    {
+      "id": "OQ-356",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "`giant_component_analysis` DIES on 17 of 20 corpora: `count_by_action_band/8` is the OQ-60 sweep's missed site, and an unguarded `EP >= 0.0` over a raw `effective_purity` throws on `unknown`",
+      "deps": [
+        "gates OQ-353"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60",
+        "OQ-352",
+        "OQ-353",
+        "OQ-354",
+        "OQ-363",
+        "OQ-371",
+        "OQ-372",
+        "OQ-373",
+        "OQ-374"
       ]
     }
   ]

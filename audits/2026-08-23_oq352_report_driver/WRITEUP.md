@@ -618,3 +618,33 @@ See §4 and OQ-356. Run with `giant_comp` excluded and every other refusal — i
 - `audit_log.md` — step-by-step execution record with the HEAD stamp and every witness pasted.
 - `giant_comp_probe_v6.json` — the halted timing probe (§4).
 - `purity_guard_sweep.py` / `.txt` — the class sweep and its positive control (§4a).
+
+---
+
+**2026-08-24 — OQ-356 resolved; two artifacts added to THIS directory by operator ruling.**
+`oq356_plunit_RED_prefix.txt` and `oq356_plunit_GREEN_fixed.txt` are the
+`run_tests(purity_absence)` discrimination pair for the `count_by_action_band`
+purity guard — RED at pre-fix HEAD `b2782c7f9` with
+`type_error(evaluable, unknown/0)` (7 passed, 1 failed, exit 1), GREEN at the
+fixed tree (13 passed, exit 0). They live here rather than in OQ-356's own dated
+dir because the operator ruled this directory by name, the census
+(`giant_comp_leg_census.py`/`.txt`) and the find-criterion sweep already living
+here. **The full OQ-356 writeup and the rest of its evidence are in
+`audits/2026-08-24_oq356_purity_guard/`** — neither directory is complete on its
+own, and the pointer is deliberately two-way.
+
+Also added here: `purity_guard_sweep_v3.py`, the REPAIRED find-criterion that
+supersedes `purity_guard_sweep.py` (v2 kept for the record). v2's criterion was
+idiom-keyed; v3 is reachability-keyed and interprocedural, and it passes the
+pre-committed held-out acceptance test (it surfaces
+`giant_component_analysis.pl:596` unaided). Its positive control scans a FROZEN
+PRE-FIX fixture, not the live tree — OQ-356's fix would otherwise make the
+control's "fires" half pass vacuously.
+
+**One correction to this writeup's own headline, landed on OQ-356:** "Phase 3's
+contamination block has never run on any corpus, ever" is too strong. The
+narrower and sufficient form is *no persisted numbers, and the block has reached
+completion exactly twice — both inside this audit's own census, both on legs the
+OQ classifies as degenerate*. This directory's founding claim in OQ-352 (the
+report tools "have never run on a post-reset 1000-story leg") is narrower and
+stands unchanged.

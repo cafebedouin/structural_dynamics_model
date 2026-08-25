@@ -18489,6 +18489,16 @@ guard, gate row `report legs` (58 controls, 2.6 s). Witness run: **`testsets_son
 **`archives/datasets/original_v6` at 9 of 11** (classify OK, n=3380, 6025 s single attempt).
 The two missing stages are NAMED, not absorbed: `giant_comp` excluded by preregistration because
 it throws on 17 of 20 corpora (**OQ-356**), and `abductive` timed out 3x300 s on v6 (**OQ-363**).
+
+> **UPDATE 2026-08-24 — one of the two is closed. OQ-356 RESOLVED: `giant_comp` now completes on
+> every corpus it was throwing on**, re-measured by the same census script at the fixed tree
+> (`audits/2026-08-24_oq356_purity_guard/census_fixed.txt`; the pre-fix control is
+> `census_prefix_HEAD.txt` in the same dir). So the sonnet2/sonnet3 arms are **11 of 11** and the
+> v6 arm is **10 of 11**, with `abductive` (OQ-363) the sole remaining named absence. Both counts
+> derived live from `run_pipeline._REPORT_STAGES` (11 members, 2026-08-24), not copied forward.
+> **The newly-produced Phase-3 contamination numbers are DECLARED UNVALIDATED** — they are
+> reported, not citable; their floor is OQ-353/OQ-354's job. Read OQ-374 first: the collapse
+> table SATURATES at or below its default cap, so its upper two-thirds are eight identical rows.
 Minted 2026-08-23 from the leg-expansion recon (19 legs, ~17.3k stories on disk).
 **Priority:** 2
 **Deps:** blocked_on OQ-301, gates OQ-353, gates OQ-354, gates OQ-363, bundled_with OQ-356, bundled_with OQ-357
@@ -18605,6 +18615,30 @@ corpus-level surface that already exists per leg): `audits/2026-08-23_leg_diagno
 KNOWN_STATE 2026-08-23 correction-key.
 **Priority:** 2
 **Deps:** blocked_on OQ-352
+
+**SIZE-ARM UNBLOCK, 2026-08-24 — and it unblocked on the WITNESS, not on the code.** The v6
+size arm was blocked by OQ-356 (`giant_comp` threw on `archives/datasets/original_v6` at 221 s,
+producing no artifact). OQ-356 is RESOLVED and **`original_v6` now completes rc=0 in 1247 s with
+a full Phase-3 contamination surface**: `audits/2026-08-24_oq356_purity_guard/V5_original_v6_FIXED.md`
+(coverage line `2989 of 3014`, 25 excluded; both conservation identities hold on all ten rows).
+Deliberately edited only AFTER OQ-356's Commit 1 landed with its leg witness — "it stopped
+throwing" was refused as a witness there and must not become one here.
+
+**THREE THINGS THIS ARM MUST CARRY FORWARD, or it will put a floor under a constant.**
+1. **The Phase-3 numbers are DECLARED UNVALIDATED** (OQ-356). Nobody has ever seen them; they are
+   reported, not citable. Putting a floor under them is THIS OQ's job, and it starts from zero
+   prior.
+2. **Read OQ-374 first.** The contamination collapse table SATURATES at or below its default cap
+   0.30: caps 0.40–1.00 reproduce the 0.30 row EXACTLY on every leg measured (8 of 10 rows on v6,
+   10 of 10 on the three haiku legs). A statistic computed across those ten rows is computed
+   across two distinct values and eight copies.
+3. **A monotonicity criterion over that table is a check that cannot fail wherever it is flat.**
+   OQ-356 pre-registered one and had to report it rather than cite it. Any floor-setting design
+   here that keys on cross-row variation owes the same check that variation EXISTS on the leg it
+   is run on.
+
+**The v6 arm is now 10 of 11 stages**, `abductive` (OQ-363) the sole remaining named absence.
+
 **Instrument note (2026-08-24, from OQ-352 execution).** `leg_diagnostic_table.py` prints a
 `[note]` when a leg's on-disk file count differs from its classify manifest and **emits the row
 anyway**, with `n_stories` from the stale manifest. It should adopt `report_corpus`'s softened
@@ -18996,10 +19030,33 @@ legitimate close, not a failure.
 
 **Ω-type:** Ω_E (a one-line guard omission; correctness witnessable by re-running the stage on the corpus that throws).
 
-**Status:** open — minted 2026-08-23 during OQ-352 execution, by the pre-registered
-`giant_comp` timing probe, which HALTED instead of yielding a ceiling.
+**Status:** resolved — 2026-08-24. Guard landed as a single-pass partition
+(`count_by_action_band/8` → `/10`, `partition_scorable_purity/4`), coverage line emitted,
+6 plunit controls added, and the leg-level witness taken on `testsets_haiku` and
+`archives/datasets/original_v6`. Evidence: `audits/2026-08-24_oq356_purity_guard/WRITEUP.md`
+(**Fired:** live) + the plunit RED/GREEN pair committed to
+`audits/2026-08-23_oq352_report_driver/` per the operator's siting ruling; KNOWN_STATE
+2026-08-24. Minted 2026-08-23 during OQ-352 execution, by the pre-registered `giant_comp`
+timing probe, which HALTED instead of yielding a ceiling.
+
+**Criterion 3 (monotonicity) needed correcting in BOTH directions, and the correction is the
+finding.** On the three haiku legs it holds VACUOUSLY — all ten cap rows are IDENTICAL, so a
+constant sequence satisfies "ND non-decreasing, NS non-increasing" trivially and no value of the
+guard could make it fail. On `archives/datasets/original_v6` it is a LIVE, PASSING discriminator:
+NS runs 225 → 215 → 214 and ND runs 431 → 456 → 459 across caps 0.10/0.20/0.30, with 11 members
+genuinely changing band. Measured cause of the flat legs, two-sided: `Contam is min(Cap,
+RawContam)` binds only above the cap, there is no memoization in `drl_purity_network`, and
+sweeping cap 0.10 → 1.00 moves 1 of 995 members on haiku2 (max delta 0.017) and 3 of 993 on
+haiku3 (max delta 0.033) — never across a band edge — while max RawContam (0.134 / 0.136)
+EXCEEDS the lowest cap, so this is not an empty network. **The claim that survives is about the
+sweep's RANGE, not its existence: on every leg measured the table SATURATES at or below the
+default cap 0.30, so caps 0.40–1.00 reproduce the 0.30 row exactly — 8 of 10 rows on v6, 10 of 10
+on the haiku legs.** Routed to OQ-374.
+
 **Priority:** 2
-**Deps:** blocked_on_human oq356-purity-guard-scope-ruling, gates OQ-353
+**Deps:** gates OQ-353
+(the four children carry the edge in the authored direction: OQ-371, OQ-372, OQ-373 and OQ-374 each
+declare `splits_from OQ-356`.)
 — the fix is a one-word insertion but it is an ENGINE behaviour change (above the
 fix-simple-errors threshold), and OQ-352's FROZEN preregistration (md5
 `fdaed841b0e33f0212513874b255518e`) pre-committed to routing it here rather than repairing
@@ -19058,12 +19115,37 @@ completes with 13 unknown-purity stories while `nemotron` throws with 1.
 
 **THE CONCEALMENT MECHANISM, which is a separate finding from this defect and outranks it.**
 
-> **Phase 3's contamination block has never run on any corpus, ever.** Not "its numbers are
-> `testsets/`-only" — on `testsets` the block is UNREACHABLE behind the fragmentation gate, and
-> `testsets` is the only corpus the stage was ever run on. `report_gc_composition`,
-> `report_contamination_sources`, `report_multihop_contamination`,
-> `report_sound_constraint_exposure` and the collapse sweep have **no published numbers to
-> caveat, because they never produced any.**
+> **CORRECTED 2026-08-24 (OQ-356 execution). The original wording — "Phase 3's contamination
+> block has never run on any corpus, ever" — is too strong in two independent ways, and the
+> narrower form below is still fully sufficient for everything this OQ argues.**
+>
+> **Phase 3's contamination block has NO PERSISTED NUMBERS, and has reached completion exactly
+> twice — both inside this audit's own census, both on legs this OQ itself classifies as
+> DEGENERATE.** `haiku2` and `haiku3` pass the `GCFrac > 0.10` gate at 66.5% / 63.3% and
+> completed rc=0, collapse sweep included; their output was not persisted because the census
+> captured stdout to a pipe. So "no published numbers to caveat" holds; "never ran" does not.
+> Separately, on the 17 THROWING legs the four EARLIER reports DO execute — every throw's last
+> printed section is `### Contamination Collapse Analysis`, i.e. the four prior sections printed
+> — but nothing persists, because the stage dies before the artifact write. The fix therefore
+> newly PERSISTS four already-executing reports and newly PRODUCES one.
+>
+> **And the `testsets` unreachability claim is now WITNESSED rather than inferred** — a straight
+> upgrade: the live artifact prints both declines in sequence, *"No significant component found
+> at threshold 0.500"* then *"No giant component (>25% of nodes) found at any threshold from
+> 0.10 to 0.50."* (preserved as
+> `audits/2026-08-24_oq356_purity_guard/S5c_testsets_giant_component_analysis_PREFIX.md`).
+>
+> **Checked, and recorded rather than left unstated: OQ-352's founding argument does NOT cite
+> the stronger form.** Its title claims the corpus-level tools "have never run on a post-reset
+> 1000-story leg" — a narrower and true claim. No correction is owed there.
+>
+> **A SECOND CALL SITE, also missed by the original wording.** `find_first_giant/4` (:882-898)
+> calls `report_gc_composition`, `report_contamination_sources`,
+> `report_multihop_contamination` and `report_sound_constraint_exposure` — **but NOT**
+> `report_contamination_collapse_analysis` — behind `LFrac > 0.25` at a lower coupling
+> threshold. So the collapse sweep's k=0 rests on ONE gate (`GCFrac > 0.10`, :855→:862); the
+> other four sit behind two gates in series. Reading "the fragmentation gate" as singular misses
+> this.
 
 That is OQ-352's founding argument arriving as a result: the OQ was minted on the claim that
 corpus-level tools are unaudited k=1 point estimates, and its first use found a whole report
@@ -19132,12 +19214,43 @@ what was hiding behind it. The defect was not evading detection; nothing had eve
 On v6, 52 of 3380 constraints lack a valid purity score (the run's own header reads
 `3328/3380 constraints with valid scores`), and at least one is a GC member.
 
-**The fix (one word, matching the guarded sibling verbatim) — NOT APPLIED, awaiting ruling:**
+**THE FIX AS LANDED (2026-08-24) — ONE BEHAVIOURAL CHANGE, IMPLEMENTED AS A SINGLE-PASS
+PARTITION. It is NOT the one-token insertion this OQ described.** That description was true of
+the guard considered ALONE and stopped being true once the coverage line was ruled in: the
+excluded count must be produced by **the same conjunction the guard rejects**, in one pass over
+`Members`, and implementing that IS the guard — there is no version of the coverage line that
+does not test `number(EP)`.
 
 ```prolog
-catch(drl_purity_network:effective_purity(C, Ctx, EP, _), _, fail),
-number(EP), EP >= 0.0
+count_by_action_band(Members, Ctx, SoundFloor, DegFloor, NS, NB, NW, ND, NKept, NExcluded)
+    partition_scorable_purity/4:
+        catch(drl_purity_network:effective_purity(C, Ctx, EP, _), _, fail),
+        number(EP), EP >= 0.0        % kept
+    ;   otherwise                     % excluded
 ```
+
+**`NKept` is ACCUMULATED, never derived as `|Members| - NExcluded`.** Derived, the conservation
+identity would be true by construction — a check that cannot fail, i.e. this OQ's own defect
+class. Do not collapse `/10` to `/9`: that silently deletes the test while leaving the assertion
+in place.
+
+**TWO identities at the read site, not one** — because the four bands cover `[-0.01, 1.01)`
+while the filter admits ANY numeric `EP >= 0.0`, so a value at/above 1.01 lands in no band:
+`(1) NS+NB+NW+ND == NKept` (band coverage) and `(2) NKept+NExcluded == |Members|` (partition
+totality). Conflated, a band-coverage bug would report as a guard bug.
+
+**THE NAME `NExcluded` (not `NUnknown`) IS SETTLED BY MEASUREMENT.** The rejecting conjunction
+drops three silently different populations — (a) `effective_purity` succeeds with a NON-NUMBER,
+(b) it THROWS, (c) it FAILS — and a fourth was already being dropped by the pre-existing filter,
+(d) a NUMBER below 0.0 (the -1.0 gate-fail sentinel). On `testsets_haiku`'s giant component the
+10 excluded split **4 (a) + 6 (d)**. The 4 are exactly the "4 unknown-purity GC members" named
+above, so that figure and `NExcluded=10` are two different populations, not a discrepancy — and
+**an excluded count written as "count the unknowns" would have missed 6, breaking the
+conservation identity as a FALSE ALARM attributed to the guard.**
+
+**Behaviour preservation:** the pre-fix `findall/3` took ALL solutions per member, the partition
+commits to the first. `effective_purity/4` measured SEMIDET on 2,241 members across three legs,
+with a live positive control that the probe can count multiplicity.
 
 **What blocks it being taken as a free fix.** It is a single-file, single-revert,
 one-token change with an obvious witness, which is the shape of the standing
@@ -19194,11 +19307,20 @@ control REQUIRES, since v6 is that control's whole size arm. It also means **eve
 statistic currently in circulation is a `testsets/`-only number** and cannot be given a floor
 until this lands; OQ-354 (tool-correctness at scale) inherits the same block.
 
-Until then OQ-352's runs are DECLARED INCOMPLETE at 10 of 11 stages on every leg, with
-`giant_comp` named as the missing one, and the `~6 min at n=3380` estimate in
-`run_pipeline.py`'s `_prolog_giant_comp` comment is **known to describe a run that never
-completed** (the throw arrives at 221–230 s), so no v6 `giant_comp` ceiling can be derived until
-the throw is fixed.
+~~Until then OQ-352's runs are DECLARED INCOMPLETE at 10 of 11 stages on every leg~~ —
+**DISCHARGED 2026-08-24.** With the guard landed, `giant_comp` completes and the OQ-352 arms move
+to 11 of 11 (sonnet2/sonnet3) and 10 of 11 (v6, `abductive`/OQ-363 remaining).
+
+**And the v6 `giant_comp` ceiling is now DERIVABLE, which it was not before — with a large
+correction to the estimate in the code.** The `~6 min at n=3380` comment in `run_pipeline.py`'s
+`_prolog_giant_comp` described a run that never completed (the throw arrived at 221–230 s).
+Measured end-to-end at the fixed tree, `archives/datasets/original_v6` (n=3380, giant component
+3014 members) completes in **1247 s ≈ 20.8 min** — roughly **3.5x the commented estimate**, and
+the estimate was never an observation of a completed run. Anyone setting a `--giant-comp-timeout`
+for v6 should size it from 1247 s, not from the comment. Note this run INCLUDES the coverage
+line's extra pass over the giant component (an 11th pass alongside the sweep's ten), so a
+pre-guard comparison is not available and 1247 s is the honest post-fix figure rather than a
+regression measurement.
 
 **Second-order finding, same probe (`_classify_timeout_for`).** `classify_corpus` on v6 at
 n=3380 was killed by its own `soft_timeout` at **3701 s without completing**, then retried —
@@ -19291,6 +19413,21 @@ should be enforced is its own ruling; noted here because this OQ is where it sur
 | enforced by a gate row | 1 | `probe_harness`, via `python/probe_harness_gate.py` |
 | declared carve-outs | 2 | `battery_variants` (not a plunit suite), `cs_pattern_detection` (known-red, OQ-266) |
 | **MANUAL-ONLY** | **30 (81%)** | everything else |
+
+> **2026-08-24, filed as an INPUT to this ruling rather than a resolution of it (OQ-356
+> execution).** `test_purity_absence.pl` now carries a **load-bearing control for a fix whose
+> acceptance depended on it**: six new tests pin `count_by_action_band/10`'s purity guard, its
+> two conservation identities, the half-open band edges, and all three exclusion causes, and
+> their RED/GREEN pair is the unit half of OQ-356's discrimination record
+> (`audits/2026-08-23_oq352_report_driver/oq356_plunit_{RED_prefix,GREEN_fixed}.txt`).
+>
+> **That suite is in the MANUAL-ONLY 30.** So an engine change was accepted on evidence from a
+> control that nothing will ever run again unless a human remembers to. This does not decide the
+> enforcement-scope ruling — it is exactly the kind of fact the ruling should weigh, and it
+> raises this OQ's priority as an input rather than by fiat. Precedent it strengthens: the same
+> file's `gc_ingest_collapses_unknown_to_sentinel` covered the GUARDED ingest and **passed for
+> months while the stage it protects was dead on 17 of 20 corpora** — a control that is correct,
+> invoked, and pointed one predicate away from the defect.
 
 **No gate row runs any `prolog/tests/*.pl` directly** — the one enforced suite goes through a
 Python wrapper.
@@ -19729,8 +19866,10 @@ n≈1000, so reuse its *form*, not its constant). Two constraints from this arc:
   do not guess upward.
 
 **What it changes.** Whether OQ-352's driver can run a large archive leg to completion at all.
-Today the v6 arm is **9 of 11 stages** — `giant_comp` excluded by preregistration (OQ-356),
-`abductive` timed out (this OQ) — and OQ-353's size arm needs both closed.
+~~Today the v6 arm is **9 of 11 stages**~~ — **as of 2026-08-24 the v6 arm is 10 of 11**:
+`giant_comp` is CLOSED (OQ-356 resolved; v6 completes rc=0 in 1247 s, witness
+`audits/2026-08-24_oq356_purity_guard/V5_original_v6_FIXED.md`), and `abductive` (this OQ) is
+now the SOLE remaining named absence on the v6 arm. OQ-353's size arm needed both; one is done.
 
 
 ---
@@ -19927,6 +20066,205 @@ carrier, 285/285), fail-closed on absence, or retire the report. `Unwired ≠ wo
 adjudicate by the product, do not delete on sight.
 
 **What it changes.** Whether the tier-2 report set may be cited at all.
+
+
+## OQ-371 — `in_float_range/3` is the SECOND unguarded arithmetic on the same purity value, one predicate downstream, and no window width can see it
+
+**Ω-type:** Ω_E (an unguarded comparison; correctness witnessable by a direct unit call).
+
+**Status:** open — minted 2026-08-24 from the OQ-356 execution. Adjudicated **REAL**, and
+deliberately NOT patched in OQ-356's Commit 1 — on WITNESSABILITY, not on scope.
+**Priority:** 3
+**Deps:** splits_from OQ-356
+**Files:** `prolog/giant_component_analysis.pl` (`in_float_range/3` :596; `count_in_zone/4` :592–593;
+the `action_band/2` principle comment :598–602)
+
+**The site.** `in_float_range(Lo, Hi, V) :- V >= Lo, V < Hi.` — a bare comparison with no
+`number/1`. It is the second arithmetic ingest of the same value OQ-356 guarded at :1278:
+`count_by_action_band` hands its collected EPs to `count_in_zone/4` (:592), which `include`s
+`in_float_range(Lo, Hi)` over them.
+
+**And the governing principle is written six lines below it, and was not applied here.** The
+`action_band/2` comment at :598–602 says: *"The sole call site (:584-585) pre-filters with
+`IP >= 0.0, EP >= 0.0`, so this is defense in depth — but that filter is a property of ONE
+CALLER, not of the predicate."* `count_in_zone/4` has **two** caller groups — :560–568 (fed from
+the OQ-60-guarded `gc_node_purity` cache AND caller-side pre-filtered) and :1282–1285. The exact
+reasoning that produced the `action_band/2` guard applies verbatim here, in the same file.
+
+**Why it was held out of OQ-356's Commit 1 (operator ruling, 2026-08-24).** A guard at :596 has
+**no witness by construction**: once `number(EP)` lands at :1278, and given the :560–568 path is
+already cache-guarded *and* caller-filtered, no input reaches :596 with a non-number. Commit 1's
+whole premise was that a guard is acceptable only if something can check it — that is why "it
+stopped throwing" was refused as a witness. Adding an unfalsifiable one-token change inside the
+one commit whose purpose was falsifiability would ship a line no acceptance criterion could
+touch. The `:598` principle says the PREDICATE must not rely on caller discipline; it does not
+say the repair belongs in a commit where the repair cannot be observed.
+
+**The V3d tripwire was CHECKED and is CLEAR** (the no-patch ruling was conditional on it):
+`in_float_range/3` has exactly ONE caller (`count_in_zone/4` :593) and no use outside
+`giant_component_analysis.pl`; `count_in_zone/4` has exactly the two caller groups named. Had a
+third, unguarded caller existed, this would have entered Commit 1 under :1278's criteria.
+
+**What resolution needs — the witness Commit 1 could not provide.** A DIRECT unit call on
+`in_float_range/3` with `unknown`, asserting it fails closed rather than throwing. That is
+trivially constructible and does not depend on the call chain. Site it next to the OQ-356
+controls in `prolog/tests/test_purity_absence.pl`.
+
+**How it was found, which is the part that generalizes.** By hand — NOT by the sweep. It then
+became the pre-committed HELD-OUT ACCEPTANCE TEST for OQ-356's repaired find-criterion: withheld
+from every expected-findings list, and the repaired sweep was required to surface it unaided. It
+did, with the full chain (`via count_in_zone/4 arg1` → `via in_float_range/3 applied by
+include/3`). v2's criterion was structurally blind to it at ANY window width, because it only
+inspected lines CONTAINING a purity call. Evidence:
+`audits/2026-08-24_oq356_purity_guard/adjudication_table.md`, `sweep_v3_output.txt`.
+
+---
+
+## OQ-372 — `one_hop_ep_safe/3` is unguarded and safe only by CALLER discipline (the third verdict: latent, not false-positive)
+
+**Ω-type:** Ω_E (a reachability fact about one predicate and its callers).
+
+**Status:** open — minted 2026-08-24 from the OQ-356 execution. Adjudicated
+**LATENT — unreachable today by caller discipline.**
+**Priority:** 5
+**Deps:** splits_from OQ-356
+**Files:** `prolog/fpn_report.pl` (`one_hop_ep_safe/3` :93–97; the row gate :49–51; `ep_band/2`
+:61; `Diff is OH - FP` :66), `prolog/drl_fpn.pl` (:112)
+
+**Why this is filed at all, rather than closed as safe.** "Safe by reachability" and "false
+positive" are **not the same finding**, and recording both as "safe" reproduces the exact
+equivalence trap that OQ-356's `NExcluded`-vs-`NUnknown` naming note warns about. The `:598`
+principle cuts here: *a filter that is a property of ONE CALLER is not a property of the
+predicate.* Structural tell — this site is safe today for the **same reason `testsets` passes
+`giant_comp` today**, and OQ-356 says plainly that `testsets` *would throw if it ever got there*.
+
+**The site.** `one_hop_ep_safe(C, Context, EP) :- ( catch(effective_purity(C,Context,EP,_), _,
+fail) -> true ; EP = -1.0 ).` No `number/1`. A successful `unknown` binds straight through, and
+`EP` then reaches `ep_band/2` (:61) and `Diff is OH - FP` (:66).
+
+**Why it cannot fire today.** The row generator gates every row on `fpn_intrinsic_safe(C, IP),
+IP >= 0.0` (:49–51), and `drl_fpn.pl:112` collapses a non-numeric intrinsic to `-1.0` before
+caching. With OQ-356's S7 — `effective_purity/4` yields a non-number ONLY when the intrinsic
+`purity_score` is non-numeric — a row that passes `IP >= 0.0` cannot carry a non-numeric
+`OneHopEP`.
+
+**Witnessed, not merely argued, and NOT a k=0 branch.**
+`audits/2026-08-24_oq356_purity_guard/3b-i_fpn_completion_witness.txt`: every `run_fpn_report`
+in `outputs/prolog_children.log` exits rc=0 (zero failures), on 3 distinct giant_comp-THROWING
+legs including `original_v6` (235.7 s). On v6 the artifact reads `Constraints in corpus 3380 /
+Constraints compared 3328` — 3328 rows reached that arithmetic without throwing — and
+`3380 − 3328 = 52`, exactly the count of v6 constraints without a valid purity score. The 52
+non-scorable constraints are precisely the population the caller-side gate excluded, on the same
+leg and the same run where the unguarded `count_by_action_band` threw on that same population.
+SCOPE: 3 of the 17 throwing legs have an fpn run on record, not all 17.
+
+**Its falsifier is a CALLER change.** A new or changed caller of `one_hop_ep_safe/3` that does
+not pre-gate on `IP >= 0.0` makes this live. So does a falsification of S7 — if a
+contamination-side path can produce a non-number with a numeric intrinsic, this flips to REAL.
+
+**What resolution needs.** Either a `number/1` guard in the predicate (defense in depth, matching
+`action_band/2`'s reasoning) with a direct unit witness, or a recorded ruling that caller
+discipline is the intended contract here — in which case the contract belongs in a comment at
+the predicate, not in the callers' heads.
+
+---
+
+## OQ-373 — Gate-promotion trigger for the repaired purity find-criterion (NOT promoted; the trigger is filed, not exercised)
+
+**Ω-type:** Ω_P (whether an instrument has earned enforcement — the operator's seat).
+
+**Status:** open — minted 2026-08-24 from the OQ-356 execution.
+**Priority:** 4
+**Deps:** splits_from OQ-356, blocked_on_condition `audits/2026-08-24_oq356_purity_guard/adjudication_table.md` carries an adjudication table in which EVERY row the repaired sweep emits has a verdict AND a named in-file witness — zero rows marked INFERRED, zero rows with no verdict — watcher: re-run `audits/2026-08-23_oq352_report_driver/purity_guard_sweep_v3.py --acceptance` and read that table
+**Files:** `audits/2026-08-23_oq352_report_driver/purity_guard_sweep_v3.py`, `scripts/gate.sh`
+
+**Why NO gate row shipped with OQ-356 (ruled 2026-08-24).** v2's measured false-positive rate was
+2-of-4 on spot-check. A gate that reddens on `genuine_findings_query.pl:101` trains bypass, and a
+bypassed gate is worse than no gate. **Gate promotion is EARNED by a post-repair discrimination
+record, not asserted from a repair.** So the trigger is pre-committed here instead of the row
+being added.
+
+**The trigger.** When the repaired sweep re-runs and EVERY ROW IT EMITS carries a verdict and a
+named in-file witness — zero INFERRED, zero verdict-less — mint the promotion OQ for a
+`scripts/gate.sh` row in the shape of `bound selector` / `codewalk caller`, carrying its
+discrimination record.
+
+**"Every row it emits", NOT "every one of the 9" — deliberately.** Those two sets diverge by
+construction: the repaired criterion GAINED `giant_component_analysis.pl:596` (interprocedural
+reach) and DROPPED the sites that were only `->` false-matches. Pinning the trigger to a frozen
+count of 9 would either block on a site the repair correctly stopped emitting, or pass while
+ignoring one it newly found.
+
+**Standing as of minting, stated so the next reader does not have to re-derive it.** The repaired
+sweep emits **2** rows — the frozen pre-fix fixture (REAL, fixed in OQ-356) and
+`giant_component_analysis.pl:596` (REAL, OQ-371) — both with verdicts and in-file witnesses, and
+the 7 v2 candidates it now declines were each verified first-hand. So the condition appears MET
+by OQ-356's own run. **Whether that earns a gate row is the operator's seat, which is why this is
+filed rather than promoted.** Two things a promoter must read first:
+
+1. **The instrument's DECLARED BOUNDS** (`adjudication_table.md` → *DECLARED BOUNDS*): taint is
+   not propagated OUT of a callee's output argument (which is why `fpn_report.pl:94` is declined
+   for a LIMITATION, not because the guard was modelled); recursive list construction is not
+   tracked; interprocedural depth is capped at 4. **Zero unexplained fires is NOT the same as no
+   missed sites**, and a gate row would encode the first while readers infer the second.
+2. **The positive control depends on a FROZEN FIXTURE** and passes vacuously without it. A gate
+   row must fail closed if `audits/2026-08-24_oq356_purity_guard/fixtures/` goes missing — the
+   script already refuses in that case; keep it that way.
+
+---
+
+## OQ-374 — The Phase-3 contamination collapse sweep SATURATES at or below its default cap: caps 0.40–1.00 reproduce the 0.30 row exactly on every leg measured
+
+**Ω-type:** Ω_E (a property of the instrument, witnessable by re-running the sweep and diffing rows).
+
+**Status:** open — minted 2026-08-24 from the OQ-356 execution, where criterion 3 (monotonicity)
+was found to hold VACUOUSLY on three of four legs.
+**Priority:** 3
+**Deps:** splits_from OQ-356, bundled_with OQ-353, bundled_with OQ-354
+**Files:** `prolog/giant_component_analysis.pl` (`report_contamination_collapse_analysis/2`
+:1237–1270, the `numlist_float(0.10, 0.10, 1.00, ...)` sweep), `prolog/drl_purity_network.pl`
+(:306 `Contam is min(Cap, RawContam)`), `prolog/config.pl` (:483 `purity_contamination_cap` 0.30,
+:484 `purity_attenuation_factor` 0.50)
+
+**The finding, at the altitude the evidence supports.** The ten-row sweep varies `purity_contamination_cap`
+0.10 → 1.00. Measured post-fix:
+
+| leg | rows that differ from the cap-0.30 row |
+|---|---|
+| `archives/datasets/original_v6` (n=3380, GC 3014) | 2 of 10 (caps 0.10, 0.20) — the sweep genuinely moves, NS 225→215→214, ND 431→456→459 |
+| `testsets_haiku` (n=960, GC 589) | **0 of 10** — all ten rows identical |
+| `testsets_haiku2` (n=996, GC 662) | **0 of 10** |
+| `testsets_haiku3` (n=993, GC 629) | **0 of 10** |
+
+So **caps 0.40–1.00 — the upper two-thirds of the sweep — carry no information on any leg
+measured**, and on three of the four legs the whole sweep carries none.
+
+**Not "the cap never binds" — that was checked and refuted.** `Contam is min(Cap, RawContam)`
+binds only above the cap, and the observed max RawContam is 0.134250 (haiku2) / 0.136200
+(haiku3), both ABOVE the sweep's lowest cap of 0.10. There is no memoization in
+`drl_purity_network` (grepped), so this is not a stale cache. The cap binds; it binds on a
+handful of edges with an effect far below one band width. Sweeping 0.10 → 1.00 moves the
+effective purity of **1 of 995** members on haiku2 (max |delta| 0.017125) and **3 of 993** on
+haiku3 (max |delta| 0.032580), never across a band edge. Two-sided probe committed:
+`audits/2026-08-24_oq356_purity_guard/cap_inertness_probe.pl`, output
+`V3b_cap_inertness_prefix.txt`.
+
+**Why it matters, and to whom.** (1) A reader of the collapse table sees ten rows and infers a
+sensitivity analysis; on three of four legs it is one row printed ten times. (2) A verification
+criterion keyed on monotonicity across those rows is a **check that cannot fail** wherever the
+table is flat — that is what OQ-356 hit, and it is why OQ-356 reports criterion 3 rather than
+citing it. (3) OQ-353/OQ-354, which must put a floor under corpus-level statistics, would be
+putting a floor under a constant.
+
+**What resolution needs.** Either a swept range that actually spans the binding region (the
+evidence says the interesting band is below ~0.15, not 0.10–1.00), or a recorded ruling that the
+sweep is a saturation demonstration rather than a sensitivity analysis — in which case the table
+should say so and stop printing eight identical rows. **`Unwired ≠ worthless` applies: adjudicate
+by the product, do not delete on sight.**
+
+**Bounded honestly:** measured on 4 legs post-fix (v6 + three haiku). The other 16 legs now run to
+completion and their tables are available for the same diff — that is the cheap next step, and it
+is what would tell whether v6's behaviour or haiku's is typical.
 
 
 *Compress-on-close (added 2026-06-04): when an entry's status transitions to

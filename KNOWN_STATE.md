@@ -8,6 +8,84 @@ query below to reading the whole file.
 **Entry grammar (machine-readable, added 2026-06-04).** Every entry is:
 
 ```
+## 2026-08-24 — [tripwire] OQ-356 RESOLVED: the OQ-60 sweep's third ingest guarded — and TWO of this fix's own acceptance criteria turned out to be checks that could not fail
+**Files:** prolog/giant_component_analysis.pl, prolog/tests/test_purity_absence.pl, audits/2026-08-23_oq352_report_driver/purity_guard_sweep_v3.py, audits/2026-08-24_oq356_purity_guard/, ISSUES.md
+**Tier:** tripwire
+
+`giant_component_analysis.pl:1278` compared `effective_purity/4`'s result with `EP >= 0.0` and no
+`number/1`. Under OQ-60 path 0a `unknown` is a RETURN VALUE, so the `catch(..., _, fail)` one line
+above intercepted nothing and the comparison threw `type_error(evaluable, unknown/0)` — killing the
+whole Phase-3 contamination block on **17 of 20 corpora**. Landed as a single-pass partition
+(`count_by_action_band/8` → `/10`, `partition_scorable_purity/4`) plus a coverage line and six
+plunit controls. `giant_comp` now completes everywhere it was throwing; `archives/datasets/original_v6`
+runs rc=0 in **1247 s** where it threw at 221 s. Full evidence: `audits/2026-08-24_oq356_purity_guard/WRITEUP.md`
+(**Fired:** live). Sibling artifacts sited in `audits/2026-08-23_oq352_report_driver/` by operator ruling.
+
+**TRIPWIRE 1 — a MONOTONICITY criterion over the Phase-3 collapse table is a CHECK THAT CANNOT
+FAIL on most legs, because the table is CONSTANT.** OQ-356 pre-registered "ND non-decreasing, NS
+non-increasing across the ten cap rows" as the criterion that would catch plausible-but-wrong
+numbers. Measured: on `testsets_haiku`, `testsets_haiku2` and `testsets_haiku3` **all ten cap rows
+are IDENTICAL**, so the invariant is satisfied by a constant sequence and no value of the guard
+could violate it. It is a live, PASSING discriminator only on `archives/datasets/original_v6`
+(NS 225→215→214, ND 431→456→459 over caps 0.10–0.30). Cause measured two-sided, not guessed:
+`Contam is min(Cap, RawContam)` binds only above the cap; there is NO memoization in
+`drl_purity_network`; max observed RawContam is 0.134/0.136 — ABOVE the sweep's lowest cap, so the
+cap does bind — yet sweeping 0.10→1.00 moves 1 of 995 members (haiku2) and 3 of 993 (haiku3), never
+across a band edge. **The surviving claim is about the sweep's RANGE: on every leg measured the
+table SATURATES at or below the default cap 0.30, so caps 0.40–1.00 reproduce the 0.30 row exactly
+— 8 of 10 rows on v6, 10 of 10 on the haiku legs.** Filed as OQ-374. Anyone citing a Phase-3
+contamination number needs this first; those numbers are DECLARED UNVALIDATED (OQ-353/OQ-354).
+
+**TRIPWIRE 2 — the instrument's own positive control is a RATCHET unless its fixture is frozen,
+and this is now the second instance in one instrument.** `purity_guard_sweep.py`'s control asserted
+*"fires on `giant_component_analysis.pl:1278`, declines on both guarded siblings."* This commit
+FIXES `:1278`. Scanned against the live tree afterwards, the "fires" half CANNOT fire, the control
+passes **vacuously**, and it still prints `=> sweep DISCRIMINATES` — the same defect class the OQ is
+about, reproduced inside the instrument built to detect it. Repair: the pre-fix predicate text was
+snapshotted BEFORE the edit (`audits/2026-08-24_oq356_purity_guard/fixtures/count_by_action_band_prefix.pl`,
+with a line-offset map and md5) and the control's "fires" half points at the FIXTURE; the "declines"
+half stays on the live tree. **Generalizes: freeze a fixture for any control whose trigger is a
+live-tree defect** — proposed as a `build_discipline.md` addition, in the *A control must witness
+that it is CALLED* / *availability is not automatic* family, one level in: not "was the control
+invoked" but "can its trigger still EXIST". Two instances surfaced here (`:1278`, fixed; `:596`,
+held out by ruling), and both would evaporate from a live-tree scan for different reasons.
+
+**TRIPWIRE 3 — an excluded-count is BROADER than "unknown", and naming it `NUnknown` would break
+the conservation identity as a FALSE ALARM ATTRIBUTED TO THE GUARD.** The rejecting conjunction
+drops three silently different populations — (a) `effective_purity` succeeds with a NON-NUMBER,
+(b) it THROWS, (c) it FAILS — and a fourth the pre-existing filter already dropped, (d) a NUMBER
+below 0.0 (the -1.0 gate-fail sentinel). Measured on `testsets_haiku`'s giant component: the 10
+excluded split **4 (a) + 6 (d)**, 0 (b), 0 (c). The 4 are exactly the "4 unknown-purity GC members"
+OQ-356 names, so that figure and `NExcluded=10` are two different populations rather than a
+discrepancy. **The same conflation appeared in the PLAN's own expected value** and would have read
+as a stop-and-ask: V6c required `NExcluded == 0` on the two degenerate legs, reasoning from "zero
+unknown-purity members"; measured 1 and 2, every one of them cause (d). Cause (a) is 0 on both, as
+predicted — so the invariance argument held (all ten count rows byte-identical pre/post, machine-
+checked) and no count moved. **When you write an expectation about an excluded set, name which of
+the four causes you mean.**
+
+**Also landed / recorded.** (i) The `count_by_action_band` widening returns `NKept` and `NExcluded`
+**accumulated independently** — deriving `NKept` as `|Members| - NExcluded` would make the partition
+identity true by construction, i.e. this OQ's own defect class; do not collapse `/10` to `/9`.
+(ii) TWO identities, not one — `NS+NB+NW+ND == NKept` (band coverage) and `NKept+NExcluded ==
+|Members|` (partition totality) — so a band-coverage bug cannot masquerade as a guard bug.
+(iii) `effective_purity/4` measured SEMIDET on 2,241 members across three legs (with a live
+multiplicity control), which is what licenses replacing `findall/3` with a single-pass if-then-else.
+(iv) The repaired find-criterion is reachability-keyed and interprocedural and PASSES its
+pre-committed held-out acceptance test: it surfaces `giant_component_analysis.pl:596`
+(`in_float_range/3`, found by hand and withheld from every expected-findings list) unaided, with the
+full chain. v2's criterion was structurally blind to it at ANY window width. **No gate row shipped**
+— promotion is earned by a post-repair discrimination record and is filed as OQ-373 with a
+machine-readable `blocked_on_condition` watcher, verified BY EXECUTION to route to BLOCKED (not
+BLOCKED-ON-YOU, not WORKABLE NOW). (v) OQ-356's headline overclaim corrected in place: the block has
+reached completion exactly twice, both on degenerate legs; checked and recorded that OQ-352's
+founding argument does NOT inherit the stronger form. (vi) v6's `giant_comp` ceiling is now
+derivable at **1247 s**, ~3.5x the `~6 min at n=3380` comment in `run_pipeline.py`, which described
+a run that never completed. (vii) New OQs: **OQ-371** (`in_float_range/3`, REAL, held out on
+witnessability — a guard there has no witness once `:1278` is guarded), **OQ-372**
+(`one_hop_ep_safe/3`, LATENT — unreachable today by CALLER discipline, witnessed by fpn completing
+3328/3380 rows on v6), **OQ-373**, **OQ-374**.
+
 ## 2026-08-24 — [tripwire] Orchestrator-log debug: five warning classes, four of them real defects; ~3,400 lines of drift noise were hiding a framework verdict computed from zero data
 **Files:** python/shared/schemas.py, python/boundary_normality.py, python/tangled_decomposition.py, python/extract_corpus_data.py, python/reports/queries/sufficiency_test.py, agent/generate_kernel_corpus.py, prolog/json_report.pl, ISSUES.md
 **Tier:** tripwire

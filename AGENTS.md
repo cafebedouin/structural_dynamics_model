@@ -560,6 +560,29 @@ descriptive stats carry `n_scored`/`n_total` (json `diagnostic.purity_n_scored/_
 `coordination_type` (+ `extractiveness`). Rulings R1–R4: ISSUES.md OQ-60; witnesses:
 `audits/2026-07-17_oq60_purity_absence/`.
 
+**Counting what a purity guard EXCLUDES: name which of FOUR causes you mean (OQ-356,
+2026-08-24).** The canonical rejecting conjunction is
+`catch(effective_purity(C,Ctx,EP,_), _, fail), number(EP), EP >= 0.0`, and it drops four
+distinguishable populations: **(a)** `effective_purity` SUCCEEDS with a non-number (the `unknown`
+defect class), **(b)** it THROWS (dropped by the `catch/3`), **(c)** it FAILS (the conjunct
+fails), **(d)** it returns a NUMBER below 0.0 (the `-1.0` gate-fail sentinel, dropped by the
+comparison, not by the guard). An excluded-count written as "count the unknowns" covers only (a).
+Measured on `testsets_haiku`'s giant component the split is **4 (a) + 6 (d)** — so such a count
+would have missed 6 members and any `kept + excluded == total` identity would then break **as a
+false alarm attributed to the guard**, which is worse than no check. Name the variable for what
+it holds (`NExcluded`, never `NUnknown`), derive it from the SAME conjunction the guard rejects
+in ONE pass (never a second, independently-written test), and if you write an EXPECTED value for
+it, say which causes you are predicting: the OQ-356 plan itself predicted 0 on two legs from
+"zero unknown-purity members" and measured 1 and 2, all cause (d). Witness:
+`audits/2026-08-24_oq356_purity_guard/` (`exclusion_cause_census.pl` + WRITEUP).
+
+**And a conservation check over such counts needs TWO identities, not one.** With four action
+bands covering `[-0.01, 1.01)` while the filter admits ANY numeric `EP >= 0.0`, a value at or
+above 1.01 lands in no band. Assert `NS+NB+NW+ND == NKept` (band coverage) and
+`NKept + NExcluded == |Members|` (partition totality) separately, and **accumulate `NKept`
+independently rather than deriving it as `|Members| - NExcluded`** — derived, the second identity
+is true by construction and tests nothing.
+
 **Band vocabularies are disjoint by design (OQ-62, 2026-07-25).** Four predicates band a purity
 scalar and they are NOT interchangeable: `logical_fingerprint:purity_zone/2` is the canonical
 spec bander and the only one still called `purity_zone` (.9/.7/.5/.3); the others are

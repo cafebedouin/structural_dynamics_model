@@ -1,0 +1,35 @@
+REPAIRED SWEEP v3 — reachability-keyed, interprocedural
+
+sites where a possibly-non-number purity value REACHES arithmetic: 5
+
+  audits/2026-08-24_oq356_purity_guard/fixtures/count_by_action_band_prefix.pl:8  [comparison on EP]
+      EP >= 0.0
+  prolog/drl_fpn.pl:311  [is/2 on EP]
+      TotalContam is max(0.0, IP - EP),
+  prolog/giant_component_analysis.pl:596  [comparison on V]
+      in_float_range(Lo, Hi, V) :- V >= Lo, V < Hi.
+      via count_in_zone/4 arg1 from audits/2026-08-24_oq356_purity_guard/fixtures/count_by_action_band_prefix.pl:11
+      via in_float_range/3 applied by include/3 at prolog/giant_component_analysis.pl:593
+  prolog/network_dynamics.pl:285  [comparison on EP]
+      ep_base_severity(EP, T) :- EP < 0.30, !,
+      via ep_base_severity/2 arg1 from prolog/network_dynamics.pl:261
+  prolog/network_dynamics.pl:287  [comparison on EP]
+      ep_base_severity(EP, T) :- EP < 0.70, !,
+      via ep_base_severity/2 arg1 from prolog/network_dynamics.pl:261
+      via ep_base_severity/2 arg1 from prolog/network_dynamics.pl:285
+
+--- positive control: does this sweep DISCRIMINATE? ---
+  FIRES on the FROZEN PRE-FIX count_by_action_band fixture      : True
+    (audits/2026-08-24_oq356_purity_guard/fixtures/count_by_action_band_prefix.pl)
+    scanned frozen, NOT live: Commit 1 fixed the live :1278, so a
+    live-tree scan would pass this half vacuously.
+  DECLINES (guarded) prolog/drl_purity_network.pl:352: True
+  DECLINES (guarded) prolog/giant_component_analysis.pl:365: True
+  DECLINES the LIVE (now-guarded) count_by_action_band          : True
+  => sweep DISCRIMINATES
+
+--- HELD-OUT ACCEPTANCE TEST (pre-committed in the OQ-356 plan) ---
+  `:596` (in_float_range/3) was found BY HAND, and is deliberately NOT
+  in any expected-findings list here. A criterion with real
+  interprocedural reach must surface it unaided; no window width can.
+  repaired sweep surfaces giant_component_analysis.pl:596 on its own: True
