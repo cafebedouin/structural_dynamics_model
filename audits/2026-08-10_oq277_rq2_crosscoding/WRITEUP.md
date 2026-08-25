@@ -51,14 +51,13 @@ so a cold reader arriving here first is not misled. In summary, as recorded ther
 
 **On the `Fired:` line above, for the cold reader.** The `live` bit records that the cross-coding
 discovery flipped the experiment's *premise* — it does **not** record that results were produced,
-and the two are consistent rather than contradictory. The bit's criterion in this case is open as
-**RULING R6** and is the operator's seat; it is deliberately left as authored rather than
-"corrected", because silently re-scoring a landed bit corrupts the rolling catch rate the
-instrument exists to measure. One fact bearing on that ruling postdates this line and is recorded
-here rather than acted on: the 2026-08-23 operator refinement in `../README.md` → *The `Fired:`
-bit* states that the bit tracks **the OQ's own question**, not apparatus self-test or record
-hygiene. OQ-277's own question was never measured. Whether the plan-stage findings (OQ-278, OQ-280)
-count as that question's catch or as record hygiene is exactly what R6 must decide.
+and the two are consistent rather than contradictory. **RULED (operator, 2026-08-25): `live`
+stands.** The bit's criterion was RULING R6 (ISSUES OQ-375 rider 6); the ruling weighed the
+2026-08-23 refinement in `../README.md` → *The `Fired:` bit* — that the bit tracks **the OQ's own
+question**, and OQ-277's own question was never measured — and held that the plan-stage findings
+(OQ-278, OQ-280, the denominator catch) flipped the experiment's premise, which counts as claims
+flipping. The line above is authored history and is never silently re-scored: re-scoring a landed
+bit corrupts the rolling catch rate the instrument exists to measure.
 
 ## Residue
 

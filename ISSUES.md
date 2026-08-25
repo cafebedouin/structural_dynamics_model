@@ -20355,8 +20355,9 @@ is canonical, and what counts as "the same unit", are the two rulings the tool d
 not make. Nothing here rules them.
 
 **Status:** open — minted 2026-08-25, splitting the reusable half out of OQ-277's close.
-**Priority:** 3
+**Priority:** 3 — confirmed by operator ruling 2026-08-25 (was authored as a proposal; R2 discharged).
 **Deps:** splits_from OQ-277
+**Sunset:** 2026-09-10
 
 **Origin.** OQ-277 was retired 2026-08-12 because its comparison set self-disagreed under its own
 author's hand. The *finding* was retired with it; the *method* was not. A ChatGPT reading of the
@@ -20432,24 +20433,24 @@ ruling becomes a listed rider rather than a silent passenger.
    artifacts that both name units, and OQ-341 has one. The residue there is human work —
    reconstructing what the extractor dropped — not a reconciler run. A pointer to this decline is
    recorded at OQ-341's own entry, so it is findable from the side that will need it.
-3. **RULING R5 — the `oq277 freeze` row's own fate.** Its retire-by condition ("when OQ-277 closes")
-   FIRED on 2026-08-12. Retire, promote to a general frozen-artifact check, or defer to a named
-   event? The drifted marker was moved back beside its row on 2026-08-25 and annotated as reserved
-   (`36d320098`; provenance `c23042181`), and the row's fate was left untouched. **Coupling:**
-   retiring the row does NOT break `wu recon` — that tool checks the two source md5s itself against
-   the frozen PREREGISTRATION.md's pin table, precisely so it does not depend on another row's exit
-   code. What retiring it WOULD remove is the standing INFO report on the other pinned sources.
-4. **RULING R1 — discoverability.** Should an always-loaded surface (`CLAUDE.md`) carry a
-   one-sentence entry point to the principle? Default shipped: NO CLAUDE.md line; the
-   `when_apparatus_sharpens_taxonomy.md` §4 reverse pointer is the non-ruling discovery path.
-5. **RULING R2 — this entry's `**Priority:** 3`** is a PROPOSAL. Priority is the operator's declared
-   seat, surfaced and never computed; confirm or re-rank.
-6. **RULING R6 — the OQ-277 `Fired:` bit.** Does the rewritten verdict ("retired pre-spend, no
-   results") keep `live` as the correct bit? The line's text was left UNCHANGED and explained rather
-   than re-scored, because silently re-scoring a landed bit corrupts the rolling catch rate. One
-   fact bears on it and is recorded rather than acted on: the 2026-08-23 refinement
-   (`audits/README.md` → *The `Fired:` bit*) says the bit tracks the OQ's OWN QUESTION, not record
-   hygiene, and OQ-277's question was never measured.
+3. **RULING R5 — the `oq277 freeze` row's own fate. RULED 2026-08-25: DEFERRED to the 2026-09-10
+   consolidation pass** (this entry's `**Sunset:** 2026-09-10` line is the mechanical trigger — the
+   `sunset` gate row goes red on the day; update or remove the Sunset line when the pass decides).
+   Background: the retire-by condition ("when OQ-277 closes") FIRED on 2026-08-12. The drifted
+   marker was moved back beside its row on 2026-08-25 and annotated as reserved (`36d320098`;
+   provenance `c23042181`), and the row's fate was left untouched. **Coupling:** retiring the row
+   does NOT break `wu recon` — that tool checks the two source md5s itself against the frozen
+   PREREGISTRATION.md's pin table, precisely so it does not depend on another row's exit code. What
+   retiring it WOULD remove is the standing INFO report on the other pinned sources.
+4. **RULING R1 — discoverability. RULED 2026-08-25, DISCHARGED: NO CLAUDE.md line** (operator).
+   The `when_apparatus_sharpens_taxonomy.md` §4 reverse pointer stands as the discovery path; the
+   promotion test at close also promoted nothing.
+5. **RULING R2 — this entry's `**Priority:** 3`. RULED 2026-08-25, DISCHARGED: CONFIRMED at 3**
+   (operator; the Priority line above now records the confirmation).
+6. **RULING R6 — the OQ-277 `Fired:` bit. RULED 2026-08-25, DISCHARGED: `live` STANDS** (operator).
+   The design-stage discoveries flipped the experiment's premise, and that counts as claims flipping
+   even though the OQ's own question never ran; the 2026-08-23 own-question refinement was weighed
+   in the ruling, not overlooked. The WRITEUP's `## Close` paragraph records the ruling in place.
 7. **The plan's `wu recon` red-semantics were WRONG AS WRITTEN, and the repair is recorded here
    because it is the kind of thing that gets re-introduced.** The plan specified reading source
    drift off `oq277 freeze`'s colour ("pins red while `oq277 freeze` is ALSO RED → the sources
