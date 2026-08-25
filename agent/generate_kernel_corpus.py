@@ -563,12 +563,47 @@ def build_indexed_batch_requests(gen_seeds):
     return reqs, id_map
 
 
+# Transient-error set, shared by batch CREATE and batch POLL. Kept as one name
+# because the asymmetry between them is exactly what broke the 2026-08-24 ZEUGE
+# run: `poll_batch` retried InternalServerError up to 30 times, while the
+# `batches.create` three lines away had no retry at all, so a single 500 on
+# create killed the whole wave — all 7 declared stories, 0 landed, exit 1.
+BATCH_TRANSIENT = (anthropic.InternalServerError, anthropic.APIConnectionError,
+                   anthropic.RateLimitError, anthropic.APITimeoutError)
+
+
+def create_batch_with_retry(client, requests, max_retries=3, base_delay=4):
+    """Submit a Message Batch, retrying transient API errors.
+
+    Non-transient errors (400s: bad params, oversize payload, auth) are raised
+    immediately — retrying those just burns time and hides the real cause.
+
+    Idempotency note, stated because it is a real cost and not zero: if a create
+    SUCCEEDS server-side but its response is lost, the retry submits a second
+    batch and the first is stranded (it still bills). We accept that: the
+    observed failure mode is a 500 with no batch created, and the alternative —
+    what happened on 2026-08-24 — is losing every story in the wave. Duplicate
+    output cannot corrupt the corpus (`process_batch_results` writes with
+    overwrite=True keyed on constraint_id, and only the returned batch id is
+    ever polled); the exposure is wasted spend, not bad data.
+    """
+    for attempt in range(1, max_retries + 1):
+        try:
+            return client.messages.batches.create(requests=requests)
+        except BATCH_TRANSIENT as e:
+            if attempt == max_retries:
+                raise
+            delay = base_delay * (2 ** (attempt - 1))
+            print(f"  transient batch-create error ({type(e).__name__}); "
+                  f"retry {attempt}/{max_retries - 1} in {delay}s")
+            time.sleep(delay)
+
+
 def poll_batch(client, batch_id, poll_interval):
     terminal = {"ended", "canceled", "expired"}
     # Transient API errors (503 overloaded, rate limit, connection/timeout) must NOT kill a
     # long run mid-poll — the batch keeps processing server-side. Retry the poll instead.
-    transient = (anthropic.InternalServerError, anthropic.APIConnectionError,
-                 anthropic.RateLimitError, anthropic.APITimeoutError)
+    transient = BATCH_TRANSIENT
     fails = 0
     while True:
         try:
@@ -1103,7 +1138,7 @@ def generate_from_manifests(manifests, json_dir, testsets_dir, processed_log, *,
 
         progress("generate", f"Wave {wave_no}: batch of {len(requests)} ({', '.join(idmap.values())})")
         try:
-            batch = client.messages.batches.create(requests=requests)
+            batch = create_batch_with_retry(client, requests)
             poll_batch(client, batch.id, 15)
         except Exception as e:
             progress("generate", f"Wave {wave_no} batch failed: {e}")
@@ -1566,7 +1601,7 @@ def run_decompose(args):
     scope_prompt = _load_context_file(str(SCOPE_PROMPT_PATH))
     client = get_client()
     reqs, idmap = build_scope_batch_requests(pending, scope_prompt, args.axes)
-    batch = client.messages.batches.create(requests=reqs)
+    batch = create_batch_with_retry(client, reqs)
     print(f"SCOPE batch created: {batch.id}")
     poll_batch(client, batch.id, args.poll_interval)
 
@@ -1691,7 +1726,7 @@ def run_no_scope(args):
         gen_by_id = {s["constraint_id"]: s for s in remaining}
         reqs, id_map = build_indexed_batch_requests(remaining)
         print(f"\n[attempt {attempt}/3] submitting {len(reqs)} generation requests...")
-        batch = client.messages.batches.create(requests=reqs)
+        batch = create_batch_with_retry(client, reqs)
         print(f"  batch {batch.id}")
         poll_batch(client, batch.id, args.poll_interval)
         process_batch_results(
@@ -1885,7 +1920,7 @@ def main():
     client = get_client()
     reqs = build_batch_requests(gen_seeds)
     print(f"\nSubmitting batch of {len(reqs)} generation requests...")
-    batch = client.messages.batches.create(requests=reqs)
+    batch = create_batch_with_retry(client, reqs)
     print(f"Batch created: {batch.id}")
     poll_batch(client, batch.id, args.poll_interval)
 
