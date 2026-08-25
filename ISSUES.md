@@ -19739,7 +19739,7 @@ Today the v6 arm is **9 of 11 stages** — `giant_comp` excluded by preregistrat
 
 **Ω-type:** Ω_E (which implementation is correct is settleable by evidence; the divergence is measured, the cause is not).
 
-**Status:** open — minted 2026-08-25 while debugging the 2026-08-24 orchestrator log.
+**Status:** open — minted 2026-08-24 while debugging that day's orchestrator log.
 **Priority:** 1
 **Deps:** blocked_on_human oq367-which-engine-is-authoritative
 **Files:** `python/shared/maxent.py` (`maxent_classify`, `apply_signature_override`),
@@ -19796,7 +19796,7 @@ constraints, and whether `shared/maxent.py` may be cited as an independent repli
 
 **Ω-type:** Ω_P (a workflow ruling: what a contract-vs-emitter mismatch should DO, which no evidence settles).
 
-**Status:** open — minted 2026-08-25.
+**Status:** open — minted 2026-08-24.
 **Priority:** 2
 **Deps:** blocked_on_human oq368-warn-vs-fatal-is-a-workflow-ruling, bundled_with OQ-306
 **Files:** `python/shared/schemas.py` (`PIPELINE_FIELDS`, `_report_drift`,
@@ -19827,7 +19827,7 @@ in a repo where the Prolog side routinely lands first. Options: (a) fatal in
 aggregated line is legible.
 
 **Measured constraint on option (b), so the next executor does not rediscover it.** A gate row
-wanting the emitted key set from source hits a bounded-extraction problem, measured 2026-08-25:
+wanting the emitted key set from source hits a bounded-extraction problem, measured 2026-08-24:
 a whole-file scan of `format(S, '      "key":` over-reads by 4 (`cs_verdicts_fired`,
 `fields_absent`, `pattern_counts`, `total_with_cs_fields` — 6-space-indented keys belonging to a
 different object at `json_report.pl:1965-1970`); bounding to the `write_per_constraint_entry/4`
@@ -19845,7 +19845,7 @@ being the same Pattern-6 shape this OQ is about.
 
 **Ω-type:** Ω_C (design choice — how a generation run should degrade when a wave dies).
 
-**Status:** open — minted 2026-08-25 from the ZEUGE run that landed 0 of 7 declared stories.
+**Status:** open — minted 2026-08-24 from the ZEUGE run that landed 0 of 7 declared stories.
 **Priority:** 2
 **Deps:** bundled_with OQ-80
 **Files:** `agent/generate_kernel_corpus.py` (`create_batch_with_retry`, the wave loop `:1141`,
@@ -19888,7 +19888,7 @@ generation silently produces context-starved stories.
 
 **Ω-type:** Ω_E (which consumers are genuinely dead vs repointable is answerable per site).
 
-**Status:** open — minted 2026-08-25.
+**Status:** open — minted 2026-08-24.
 **Priority:** 1
 **Deps:** blocked_on OQ-129, bundled_with OQ-109
 **Files:** `python/reports/queries/sufficiency_test.py` (fail-closed `af48741ff`+),
