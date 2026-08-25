@@ -20964,6 +20964,140 @@ would add a row that does nothing.**
 against-the-gradient prediction as a condition of any future revival. If it stays an OQ, **no GAP
 entry is minted.** Never both open — the closing session performs that check.
 
+## OQ-384 — DEFECT: `_step_commit` is cid-scoped, so every topic run that mints a KERNEL leaves its `*_contradictions.pl` untracked while the same run's manifest counts it
+
+**Ω-type:** Ω_E (defect witnessed, attributed, and reproduced; the fix is a pathspec widening plus
+a decision about which non-cid artifacts travel with a run — no open empirical question).
+
+**Status:** open — minted 2026-08-25.
+**Priority:** 2
+**Deps:** splits_from OQ-306
+**Origin:** second witnessed instance, Phase C of the Benter arc (2026-08-25). **This is a defect
+entry, not a question.** The mechanism is known, the fix location is known, and nothing here awaits
+evidence — it awaits a change.
+
+**The mechanism, read off the source.** `agent/c-orchestrator.py:975` `_step_commit` stages a
+pathspec built *only* from the run's story cids:
+
+```python
+for cid in constraint_ids:                      # = generated_ids, story cids only (:356)
+    for p in (self._json_dir / f"{cid}.json", self._testsets_dir / f"{cid}.pl"):
+```
+
+A kernel's contradictions file is written by
+`agent/generate_kernel_corpus.py:1533` as `<kernel_id>_contradictions.pl`. It is **not a run cid**
+and has **no `.json` twin**, so it can never enter that pathspec. The drop is structural and
+unconditional: it happens every time a topic run emits a kernel, not occasionally.
+
+**Two witnessed instances, same shape:**
+
+| run | committed the stories | left untracked | tracked later by |
+|---|---|---|---|
+| `blind_reviewer_jurisdiction_2026` | `f32fe86b` | `blindness_decomposition_kernel_contradictions.pl` | `2f73ce34` |
+| `benter_hkjc_parimutuel_2026` | `13cd510d2` | `beatability_of_the_take_contradictions.pl` | `40c0e2138` |
+
+Both were caught downstream and swept up by a *different* commit. Neither was caught by the
+emitter.
+
+**Why it matters, stated precisely.** The untracked file **is** a corpus member and **is** counted
+by the manifest the same run writes. After Phase C: on-disk top-level `prolog/testsets/*.pl` = 291,
+in-git = 290; `*_contradictions.pl` on-disk 28, tracked 27; manifest `n_constraints 291`,
+`axiom_contradiction 28`. **A fresh clone loads 290 members and disagrees with the manifest that
+run committed.** Since `n_constraints` is a same-run key (OQ-306), a denominator computed from a
+clone silently differs from one computed in the emitting working tree.
+
+**The guard is a backstop, and the window is real — the fix belongs at the emitter.** The
+`corpus census` gate row (OQ-306) DID fire on the 27 → 28 stratum move and is what surfaced this
+instance. But it fires *after* the commit, so between emit and catch there is a window in which the
+repo is internally inconsistent, and the catch depends on someone running the gate before pushing.
+Twice the sweep-up happened; the third time it does not is a corpus that disagrees with its own
+manifest in a clone. **Widen the emitter's pathspec (or give kernel artifacts a run-scoped
+manifest of their own); keep the gate as backstop, do not treat it as the fix.**
+
+**Prior art — the diagnosis already existed and was never filed.**
+`python/corpus_census_check.py:57-60` states the mechanism verbatim: *"`f32fe86b` committed a topic
+run's 5 story cids and left the `*_contradictions.pl` it emitted untracked, because a contradictions
+file is not a run cid and the auto-commit's pathspec is cid-scoped."* That comment is why the
+`--cause` field accepts a run identifier rather than only a hash. So the defect has been understood
+at the guard since 2026-08-21 and has never had an entry against the emitter. This entry is that.
+
+**Named observer (the point of minting it):** *the next session that runs
+`python3 agent/c-orchestrator.py` on a topic that mints a kernel.* Check `git status` against
+`prolog/testsets/` after `_step_commit` reports success, before trusting the run's manifest or
+running `[PUSH]`.
+
+**Counting note, so a checker of this entry does not mis-measure it.** An unfiltered
+`git ls-files 'prolog/testsets/*.pl'` reports 297, not 291: git's pathspec `*` crosses `/`, so it
+also counts the 7 tracked files in the `gfbatch1/` run-tag subdir, which `corpus_loader`'s
+non-recursive glob excludes. Filter to `^prolog/testsets/[^/]*\.pl$` before comparing disk to git.
+
+**What resolution changes:** topic runs that mint kernels become self-consistent at the moment of
+commit, and the census gate returns to being a guard against the thing nobody predicted rather than
+a sweeper for a known omission.
+
+## OQ-385 — OQ-205's `get_true_metric` fabrication fix landed on ONE of three ingest sites (LATENT: 0/1,290 exposure measured)
+
+**Ω-type:** Ω_E (defect witnessed and quantified; the fix is mechanical, but it is output-changing
+and therefore owes the OQ-205 witness discipline).
+
+**Status:** open — minted 2026-08-25.
+**Priority:** 4 — LATENT with measured-zero exposure; real, small, and not urgent.
+**Deps:** splits_from OQ-205
+**Origin:** incidental finding of `audits/2026-08-25_gauge_fixed_prediction/` (Phase A of the
+Benter arc), found while auditing `classify_from_restricted/3`'s inputs.
+
+**The defect.** `constraint_indexing.pl:906-918` `get_true_metric/3` carries the OQ-205 comment —
+*"OQ-205 (spec §3): absence of an authored ε reads `unknown`, never a fabricated 0.0 (a
+mountain-shaped ε that passes every floor)"* — directly above two sibling clauses that still
+fabricate `0.0`:
+
+```prolog
+get_true_metric(C, extractiveness,   Val) :- (… -> true ; Val = unknown).   % OQ-205 U1: FIXED
+get_true_metric(C, suppression_raw,  Val) :- (… -> true ; Val = 0.0).       % still fabricates
+get_true_metric(C, theater,          Val) :- (… -> true ; Val = 0.0).       % still fabricates
+```
+
+The real path's counterpart, `drl_core:get_raw_suppression/2`, returns `unknown` on absence, and
+`classify_from_metrics/6`'s first clause fails closed on a non-number `Supp`. So on a story with no
+authored `suppression_requirement` the **real** classifier refuses while the **restricted** one
+proceeds on a fabricated `0.0` — which clears the mountain suppression ceiling (0.05) outright.
+Build Discipline Pattern 4, in the sibling clauses of a clause where it was already fixed.
+
+**Measured side by side** on the 27 live-leg members lacking the fact: `drl_core=unknown` vs
+`constraint_indexing=0.0`, 27/27.
+
+**LATENT, with the exposure measured rather than assumed — this is the load-bearing fact.**
+
+| leg | members | lacking authored `suppression_requirement` | of which STORIES |
+|---|---:|---:|---:|
+| `testsets` (live) | 285 | 27 (all `*_contradictions.pl` meta-files) | **0** |
+| `testsets_kimi` | 1005 | 0 | **0** |
+| **total** | **1,290** | 27 | **0** |
+
+`theater` and `base_extractiveness` were checked in the same pass: 0 absent on kimi, the same 27
+meta-files on the live leg. **So the trigger — a STORY missing `suppression_requirement` — does not
+occur on either leg measured.** The generation pipeline authors all three metrics. The defect is
+reachable by a hand-authored story, or by a repair path that strips the field (cf. the
+`story_repair.py` TOP_LEVEL_ALLOWED incident, KNOWN_STATE 2026-08-22, where repair deleted authored
+fields from every story entering it).
+
+**This zero is recorded so it is not mistaken for an unchecked zero.** A later session that hits a
+story exposing this should know the exposure was measured at 1,290 members and found empty — not
+that nobody looked. Scope: two legs, one manifest; the other 17 legs were not swept.
+
+**Why it was not fixed on discovery.** It is an engine behavior change, which Phase A's
+no-engine-change rail forbade. It is also output-changing on any corpus that *does* expose it, so
+it inherits OQ-205's discipline: own commit, before/after witness on all corpora, split from any
+behavior-preserving change.
+
+**The generalizable point, already promoted.** CLAUDE.md carries the rule this instance violates —
+*when a value-class ruling lands, enumerate and test its INGEST SITES, not the one site the ruling
+was written at* (BD → *A guard sweep's find-criterion must model REACHABILITY*). This entry is an
+incidence of it, and the incidence is what a future OQ-205-style close should be checked against.
+
+**What resolution changes:** the restricted and real classification paths agree on what absence
+means, and `classify_from_restricted/3` stops being able to answer where `dr_type/3` refuses.
+
 ---
 
 *Compress-on-close (added 2026-06-04): when an entry's status transitions to

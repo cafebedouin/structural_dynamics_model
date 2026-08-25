@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "25f92b3f49594c888b7e6f23ea367be73c2c1ab3",
+    "store_version": "0eda1ee3838a1aa0416e202d5d2a70d3bdb0354d",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-25T12:20:18"
+    "generated_at": "2026-08-25T13:59:32"
   },
-  "issues_sha": "cc707eebe25b680036fd92abeff52203dd070d623ebecbeb596492026e90f4ec",
-  "n_entries": 383,
+  "issues_sha": "d72a63d25740a75519cb525bd540fa7b5de7e22352d0b35477f8f032a00e1bed",
+  "n_entries": 385,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 165,
+    "open": 167,
     "partial": 5
   },
   "active": [
@@ -2492,9 +2492,34 @@
         "blocked_on_human operator ruling — should `own_position_contingency` exist as a seventh"
       ],
       "cross_refs": [],
+      "mentioned_in": []
+    },
+    {
+      "id": "OQ-384",
+      "status": "open",
+      "priority": 2,
+      "summary": "DEFECT: `_step_commit` is cid-scoped, so every topic run that mints a KERNEL leaves its `*_contradictions.pl` untracked while the same run's manifest counts it",
+      "deps": [
+        "splits_from OQ-306"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-306"
+      ]
+    },
+    {
+      "id": "OQ-385",
+      "status": "open",
+      "priority": 4,
+      "summary": "OQ-205's `get_true_metric` fabrication fix landed on ONE of three ingest sites (LATENT: 0/1,290 exposure measured)",
+      "deps": [
+        "splits_from OQ-205"
+      ],
+      "cross_refs": [],
       "mentioned_in": [
         "OQ-51",
         "OQ-59",
+        "OQ-205",
         "OQ-285",
         "OQ-288",
         "OQ-291"

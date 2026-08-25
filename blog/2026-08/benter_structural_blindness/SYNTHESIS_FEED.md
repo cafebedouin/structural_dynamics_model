@@ -26,8 +26,28 @@ through the decompose step intact — each reading is one of the arc's positions
 | `meta_prediction_reading` | the seat that reclassified |
 | `beatability_of_the_take_flat_control` | flat control |
 
-Note the kernel is named for the **computed** side (`beatability_of_the_take`), not the felt side —
-which is the naming rule OQ-382 records, arrived at independently by the generator.
+**The naming is PRIMED, not convergent — do not cite it as independent confirmation.** The kernel
+is named for the computed side (`beatability_of_the_take`), which is the rule OQ-382 records — but
+the generator was handed that vocabulary in the prompt. The topic string contains *"the flow
+extractor whose **take** is outcome-invariant"*, *"the **mountain reading** of 'you can't **beat**
+the races'"*, *"the **risk**-holder"*, and *"reclassified the mountain as a **beatable
+extraction**"*. Token-level, four of the five cids are near-verbatim liftings:
+
+| cid | source tokens in the topic string |
+|---|---|
+| `flow_extraction_reading` | "flow extractor" |
+| `beatability_of_the_take` | "beatable extraction" + "whose take is" |
+| `folk_mountain_reading` | "the mountain reading" |
+| `public_risk_reading` | "the risk-holder" |
+| `meta_prediction_reading` | **none** — the only genuine coinage |
+
+So the run shows the decompose step **faithfully carried the typology it was given**, which is what
+the string was edited to do. It does **not** show a generator independently arriving at
+computed-side naming, and an essay or later OQ that says so is asserting something the substrate
+cannot carry. This is the same confound shape Phase A's verdict line exists to name — an instrument
+scored against vocabulary it was handed — so getting it wrong here would be the arc contradicting
+its own finding. An unprimed test would need a topic string in felt-side vocabulary only; none was
+run.
 
 - `outputs/constraint_reports/<cid>_report.md` — 5 reports, all present on disk (verified).
 - `outputs/tensions_ledger.md` — 5 blocks, deterministic extraction, **not an essay** (OQ-101: the
@@ -104,3 +124,31 @@ under GAP-30 — which also records why a market price cannot serve as the out-o
 (a pooled price is other seats' gauges, so scoring ε against it is two seats disagreeing, which
 GAP-30's standing falsifier already excludes). **The essay may use the parimutuel as an image;
 it may not present it as a grounding test for ε.**
+
+## 7. Three checks from this arc's own production that could not have failed
+
+Offered as essay material, not as a finding. The arc's subject is a reading that looks like a fact
+about the world and is actually a fact about the position doing the reading. Its own production
+generated three instances, none of them noticed by the party who built them:
+
+1. **The rev-7 fixture set** (planning): both required fixtures sat on the confirming diagonal, so
+   a CONFIRMED verdict would have come from an instrument only ever shown able to agree with the
+   prediction. Caught by the operator at rev 8.
+2. **The rev-6 decoy control** (planning): a planted decoy found by construction by the same party
+   that chose the terms it would be found by. Cut in the rev-7 subtraction pass.
+3. **The Phase C liveness monitor** (execution): a loop whose exit test was
+   `pgrep -f "agent/c-orchestrator.py"` — a pattern that appears in the monitor's own command line,
+   so `pgrep` matched the monitor's own shell and the exit branch was unreachable. The run's
+   completion was learned from the task notification and verified against `git show` and the
+   manifest instead. Nothing downstream depended on it.
+
+And a fourth, which is the same shape one level up: **the naming convergence in §1**, where the
+prompt supplied the vocabulary the result was then read as confirming.
+
+The common form is *a check whose result is fixed independently of the thing it checks*. Each was
+built by someone trying to be careful, and each returned the answer its own construction
+guaranteed. That is the essay's mountain — a reading whose stability comes from the position rather
+than the terrain — arriving in the machinery built to study it. The repo's own name for the
+general rule is in `docs/technical/build_discipline.md` → *A consistency check is not a
+discrimination check* (and its second question, added 2026-08-24: *is the NAME true of everything
+it counts?*). Not an OQ; the rule already exists and these are incidences of it.
