@@ -328,6 +328,111 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 
+## 2026-08-25 — [tripwire] Cross-artifact reconciliation named, built and gate-wired (OQ-375) — and the plan's own red-semantics were a branch that could not fire
+**Files:** docs/technical/build_discipline.md, docs/when_apparatus_sharpens_taxonomy.md, python/shared/recon.py, python/audits/oq375_wu_recon.py, scripts/gate.sh, ISSUES.md, audits/2026-08-10_oq277_rq2_crosscoding/WRITEUP.md, audits/INVESTIGATIONS.md, docs/amnesiac_institution/amnesiac_institution_v0_6.md, .claude/skills/plan-review/RUNS.md
+**Tier:** tripwire
+
+Four commits (`5cb9c2132`, `621f52f6b`, `36d320098`, `e930eb7aa`), gate GREEN after each. OQ-277
+was retired 2026-08-12 because its comparison set self-disagreed under its own author's hand; the
+FINDING was retired with it, the METHOD was not. Landed: the principle (`build_discipline.md` →
+*Cross-artifact reconciliation*, deliberately UN-NUMBERED — `doc patterns` pins the OQ-278 index
+set, and this is a positive discipline rather than a defect pattern), the library
+`python/shared/recon.py`, the seed adapter `python/audits/oq375_wu_recon.py`, and gate row
+`wu recon`. Tracking, riders and five open rulings: **OQ-375**.
+
+**FIRST-RUN ADJUDICATION: NO FORK.** An independent machine parse of the two md5-frozen Wu sources
+reproduced RECON.md Finding R2 on every pin — 22 shared incidents, 12 agreeing on class (55%
+agreement) / 10 disagreeing, the same 10 units, marginals catalog A1/B4/C5/D4/E8 vs dataset
+A4/B3/C4/D5/E6 — and **per unit, 22 of 22** against the hand-derived `wu_unit_id_map.json` on both
+class fields and the `agreeing` bit. `INVESTIGATIONS.md` line opened before the run, closed
+**`Fired: no`**: pure confirmation of the hand derivation. Pins are now a regression baseline —
+**if one goes red, fix the instrument; never edit a pin to match a new parse.**
+
+**TRIPWIRE 1 — `oq277 freeze` DOES NOT GO RED WHEN A PINNED SOURCE MOVES, and a plan built on the
+assumption that it does specified a branch that can never fire.** The plan for `wu recon` fixed its
+red-semantics as a cross-read of that row's COLOUR: *"pins red while `oq277 freeze` is ALSO RED →
+the sources moved; pins red while it is GREEN → the instrument changed."* `oq277_build_prereg.py`
+is POST-FREEZE: it verifies `PREREGISTRATION.md` against its recorded stamp (fatal on mismatch) and
+reports pinned-SOURCE drift as an **INFO block with exit 0**, deliberately — the check was rebuilt
+2026-08-11 precisely so drift would stop being red, because a permanently-red row trains its reader
+to route around it. Witnessed BY EXECUTION this session, not by code-read: two pinned sources
+(`CLAUDE.md`, `docs/technical/build_discipline.md`) are drifted right now and the row prints GREEN
+with both named in INFO. So the second branch is unreachable and the FIRST would have absorbed
+every source move, diagnosing it as "the instrument changed" — the discrimination inverted in
+exactly the case it was built for. **Repair: the adapter checks the two md5s ITSELF** against the
+frozen prereg's pin table, so both branches are reachable and neither depends on another row's exit
+code. Do not replace it with a cross-row colour read (OQ-375 rider 7). Generalises: *a gate row's
+COLOUR is a poor channel for a second row to reason over* — the colour is a policy decision about
+what should stop the gate, not a fact about the world, and it is free to change without notice.
+
+**TRIPWIRE 2 — a `_case.md`-keyed parser over Wu's catalog silently reports Class E as 7 and the
+total as 21.** The catalog's filename convention is NOT uniform: one of the 22 rows ends
+`_closure.md`. This was hit during the build and is preserved as control (d) — a free negative
+control, asserting the defective criterion DECLINES where the correct one fires. Related: the two
+sources do NOT share a literal id space (the dataset's `id` diverges from the catalog's filename
+for 3 of 22 units), but they DO share the case-document FILENAME, which the dataset carries in its
+own `file:` field — so the join is mechanical and needs no hand map. R2's "the same 22 incident IDs"
+is true; the key is not the one a reader would guess.
+
+**TRIPWIRE 3 — `report legs` legitimately moved 79/79 → 78/78 controls this session, with
+report_legs.py UNTOUCHED, and the drop is CORRECT.** Its "stamp: engine-free control" searches back
+40 commits for one whose diff to HEAD contains no code path. This session's commits added
+`python/shared/recon.py`, `python/audits/oq375_wu_recon.py` and `scripts/gate.sh`, so no such commit
+remains in range and the control emits one DECLARED-UNAVAILABLE row instead of its two real rows.
+**It declares rather than silently skipping, which is why this is legible at all** — but the visible
+consequence is that the row's control TOTAL is history-dependent, so a bare count delta on that row
+is not evidence of anything. Diagnosed by two-sided probe (dirty-tree dependence ruled out; count
+stable at 78 across repeated runs).
+
+**A defect in this session's own output, caught by the run's find-criterion** (*what value would
+make this fail, and is the name true of everything it counts?*): `wu recon`'s GREEN summary printed
+"54% agreement" from integer floor division while its own report line and every citing text say
+55%. Fixed to round, with a comment saying why. Recorded because it is the third consecutive run
+in which the label-vs-measurement question caught something review did not.
+
+**Consistency read at close (CONTEXT-SIGHTED, NOT a blind test — a spawned reader receives
+CLAUDE.md and gitStatus by harness injection, OQ-334, and this session's commit subjects name the
+reconciler).** A fresh reader was given only the new section text and the OQ-375 entry and asked
+three questions. **VERDICT: PASS, 3/3.** The executor wrote the text it is grading, so the answers
+are recorded verbatim rather than only the verdict — the operator's own no-context read is the only
+real control:
+
+> **Q1** (where is the reusable code / worked example): "The reusable code is `python/shared/recon.py`
+> (`reconcile(a_pairs, b_pairs, fields)` + `render_report()`); the worked example using it is the
+> seed adapter `python/audits/oq375_wu_recon.py`, run via `.venv/bin/python
+> python/audits/oq375_wu_recon.py --check`."
+>
+> **Q2** (seed instance + regenerating command): "The seed instance is the two md5-frozen Wu sources
+> (a failure-modes catalog and a labelled dataset sharing 22 incident IDs, per
+> `audits/2026-08-10_oq277_rq2_crosscoding/RECON.md` Finding R2); the regenerating command is
+> `.venv/bin/python python/audits/oq375_wu_recon.py --check`."
+>
+> **Q3** (second candidate + status): "OQ-341 is named as the next adapter candidate, but its status
+> is DECLINED for now — its mismatch is count-level (44 sites/27 files vs. 57 matches/28 files) with
+> only one side emitting per-unit rows, so there is no two-sided join for `reconcile()` to run; the
+> decline reason is recorded at OQ-341's own entry."
+
+**Also landed.** The OQ-277 WRITEUP read "IN PROGRESS, pre-spend / NO RESULTS YET" for 13 days after
+the OQ closed; rewritten to the real outcome with `## Close` and `## Residue`, `matrices/` marked
+permanently absent by retirement, and the evidence map completed (checked by joining the map against
+`ls` with a positive control). `**Fired:** live` left UNCHANGED and explained rather than re-scored —
+silently re-scoring a landed bit corrupts the rolling catch rate (RULING R6). The drifted
+"RETIRE WHEN OQ-277 CLOSES" marker in `gate.sh` was re-seated beside its row and annotated as a
+RESERVED ruling with its provenance hash in the comment text (`c23042181`), because its condition
+FIRED on 2026-08-12 and a fired unconditioned retire-instruction is what fix-on-sight permission
+executes. Appendix C row 6.2 of `amnesiac_institution_v0_6.md` said the 55% figure was "regenerated
+by no repository command"; now false on one side, dated update appended, original kept as history,
+`paper carriage` GREEN (EXPECTATIONS re-verified clear of that row before editing).
+
+**PROMOTION TEST: nothing promoted to CLAUDE.md.** Tripwire 1 is the only candidate, and it is
+narrow — one gate row, one audit — and is already carried at the three places someone would actually
+be standing: the adapter's docstring, the `wu recon` row comment, and OQ-375 rider 7. Bias to
+history; over-promotion defeats the purpose. **R1 (should CLAUDE.md carry an entry point to the
+principle at all) is UNRULED and shipped as "no line"**, with the `when_apparatus_sharpens_taxonomy.md`
+§4 reverse pointer as the non-ruling discovery path. Open rulings at close: R1, R2 (OQ-375's
+`Priority: 3` is a proposal), R5 (the `oq277 freeze` row's fate), R6. R3 did not fire; R4 collapsed
+by measurement; R7 and R8 shipped as directed. Nothing was pushed.
+
 ## 2026-08-24 — [HANDOFF] to the corpus-building instance: what the OQ-352 session owes it on `testsets_nemotron_think`
 **Files:** python/shared/corpus_legs.py, outputs/pipeline_output.nemotron_think.json, python/audits/leg_diagnostic_table.py, prolog/testsets_nemotron_think/, outputs/pipeline_output.raw.json
 **Tier:** landed
