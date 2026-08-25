@@ -152,3 +152,35 @@ than the terrain — arriving in the machinery built to study it. The repo's own
 general rule is in `docs/technical/build_discipline.md` → *A consistency check is not a
 discrimination check* (and its second question, added 2026-08-24: *is the NAME true of everything
 it counts?*). Not an OQ; the rule already exists and these are incidences of it.
+
+**Where this sits against ratified text — Corollary 1, in instrument form.** Take Q = *"does this
+instrument discriminate on σ?"*. In each of the four the verdict is constant over σ: varying the
+thing under test changes nothing, because the construction fixed the answer. That is
+`docs/seat-theorem-v1.md:46` (a parameter is **live** iff varying it while holding σ fixed changes
+V) applied to the situation itself — **σ was not a live parameter**. Corollary 1 (`:90`) then puts
+each in the seat-free region, and the seat-free region *is* the contentless region: *"Neutrality
+and triviality are one point."* This is why they read as rigorous. A check whose result is
+guaranteed returns an answer that appears to come from nowhere, and appearing-to-come-from-nowhere
+is exactly what a void verdict looks like. What each implicitly asserted is the one conjunction the
+system cannot hold — *contentful and seat-free* — which `:108` names the **no-seat pose**.
+
+**Keep one distinction rather than collapsing it.** The Seat Theorem's subject is the
+*ineliminability of the seat*; these four are the *disappearance of the situation*. Duals, not the
+same claim. The transfer runs through Corollary 1 and the no-seat pose and is a genuine
+instantiation — a check IS a verdict-producing function — but "a check that cannot fail" is not
+*derived* from the theorem. It is an instance of Corollary 1 under that specific reading of Q. An
+essay should claim that and not more.
+
+**A fifth instance, and the one that matters most: the theorem caught itself.** The v2.6 amendment
+(`:84`) struck its own two-direction proof of the Coupling Theorem — *"the former (⇐)/(⇒) apparatus
+was proof-costume on a definitional unfolding — rigor-apparatus in exactly the register this
+document's own §6.2 warns against, worn at its center"* — because the biconditional is analytic and
+the staged proof examined nothing. A proof whose conclusion was fixed independently of anything it
+inspected is the same shape as a fixture on the confirming diagonal. So the count is five, across
+the theorem's own proof, two plan revisions, one runtime probe, and one naming claim. **The
+distribution is the point: none was produced by carelessness.** Each was someone reaching for
+rigor, and the form of the check was correct every time — a decoy is a real control, a liveness
+probe is a real check. What failed was invisible from inside the construction, because the thing
+fixing the result was the same position that chose the terms. That is a cleaner statement of the
+essay's mountain than the machinery reaching for it managed, and it came from the machinery
+failing.
