@@ -39,6 +39,29 @@ stories — 47% coverage presenting as complete (Pattern 6). haiku = 505 + 455 =
 pattern; a single-line grep returns empty, which reads exactly like "no strata found". Promoted
 to CLAUDE.md (Critical Distinctions, live-legs paragraph) as one pointer line.
 
+**RULING ROUND (operator, same day) — the unnamed cell was the correct result and the null was
+MIS-SPECIFIED, not a third hypothesis.** ε is downstream of the shared 1005-seed pool, so it
+cannot be the negative-control arm a marginals-only permutation needs; cell (beats, beats) was
+predictable from the design. Re-specified and RE-RUN rather than reasoned over: (1) the
+ε-conditioned permutation (within exact (ε_A,ε_B) strata, invariance control asserted) shows the
+engine-side excess SURVIVES on all 3 cross-model pairs — small (h1 +1.5 to +2.6pp over the
+conditioned null) but consistently significant; most raw same-seed agreement is input
+passthrough. → OQ-380 (resolved at mint), OQ-348 open for the operator's reading. (2) The core
+independence null: marginals predict a core of **0** (max 0 in 2000 permutations) vs observed 6,
+p=0.0005 — the core is real joint structure; report the EXCESS, never the bare count. The
+zero-diff result (17 legs identical) is INDEPENDENT of this reframe and unqualified. Prior-art
+sweep run: the "9%≈chance" family corrected at KNOWN_STATE 2026-08-22 (stealth line), OQ-343's
+"only 12%", and OQ-348 itself.
+
+**TRIPWIRE C — a whole-record diff on a GROWN corpus cannot satisfy "n_changed == 0 outside
+<field>": the ensemble-refit keys move BY CONSTRUCTION.** Adding stories refits
+MaxEnt/Wasserstein/Arakelov for every pre-existing record (14 corpus-relative keys moved on
+996/996 and 1003/1003 pre-existing ids here, with ZERO structural-field changes). An unqualified
+n_changed==0 assertion contradicts its own carve-out one sentence later — the same defect class
+the plan's round-1 fresh seat caught in prose. Check grown-corpus diffs against the STRUCTURAL
+fields (h1_band, signature, claimed_type, base_extractiveness, verdict_join) and report the
+refit keys with counts; `python/audits/oq347_prereg_diff.py` is the template.
+
 **Also landed:** ε absence-coercion fixed at `epsilon_distance.py` + `backfill_diff.py`
 (exclude-and-count, two-sided selftests; 0 numbers changed — absent ε is 0 on every model leg).
 NEW: the CANONICAL `outputs/pipeline_output.json` carries **27 absent-ε records** (raw twin 27;
@@ -1016,7 +1039,10 @@ in runbook §9.
   (`--leg-suffix 3`) launches when stealth2 exits — the same-commit thinking-on floor.
 - **DONE 01:50: `testsets_stealth` COMPLETE 1005/1005** (rescue1 36/36 under prompt `e03e2210`), OQ-58 quarantine 15 edges,
   `classify_corpus` GREEN n=1005 at `033b095`; registered in LIVE_LEGS + census (7 legs GREEN). First read: h1 band-3 34%,
-  red 4.1% — not the kimi signature; stealth-vs-nemotron same-seed ε agreement 9%.
+  red 4.1% — not the kimi signature; stealth-vs-nemotron same-seed ε agreement 9%. (Correction
+  key 2026-08-25: this 9% was later read as "near chance" in OQ-348's framing — it is NOT; the
+  marginal chance rate for that pair is ~2%, so 9% is ~4× chance. Permutation evidence:
+  KNOWN_STATE 2026-08-25 / OQ-348 + OQ-380.)
 - **Queued, in order:** (1) ~~stealth residue~~ done; next: OQ-58
   sweep + `classify_corpus('testsets_stealth','pipeline_output.stealth.json','stealth/ox-alpha')`
   + commit. (2) nemotron residue 153 → same command as the run (`--leg-name nemotron --model

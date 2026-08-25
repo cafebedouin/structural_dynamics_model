@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "a3966e7c64e90bd9de4a5a3b77fab118b9f6591f",
+    "store_version": "954775fc2e1c8baa3aa86111d4a0a94a66e25e4a",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-25T05:38:59"
+    "generated_at": "2026-08-25T08:39:20"
   },
-  "issues_sha": "7ddae4b1c665a2728d94ed351c16a7c3b0435c9c71ec79eb57d9bb5d08600929",
-  "n_entries": 379,
+  "issues_sha": "be73d1b904a9c4c75a87177c01e3da3674c16e7aa4c09b136298ffc21d5fb03d",
+  "n_entries": 380,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 174,
+    "resolved": 175,
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
@@ -1927,7 +1927,9 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-78",
-        "OQ-342"
+        "OQ-342",
+        "OQ-348",
+        "OQ-380"
       ]
     },
     {
@@ -1963,12 +1965,12 @@
       "priority": 2,
       "summary": "The engine's outputs agree across models more than its inputs do (h1 37% vs authored ε 9%, stealth vs nemotron): routing, or band coarseness?",
       "deps": [
-        "splits_from OQ-343",
-        "blocked_on_human oq348-unnamed-cell-reading"
+        "splits_from OQ-343"
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-343"
+        "OQ-343",
+        "OQ-380"
       ]
     },
     {
@@ -2450,11 +2452,6 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-51",
-        "OQ-59",
-        "OQ-285",
-        "OQ-288",
-        "OQ-291",
         "OQ-337",
         "OQ-347"
       ]
@@ -5520,6 +5517,24 @@
         "OQ-372",
         "OQ-373",
         "OQ-374"
+      ]
+    },
+    {
+      "id": "OQ-380",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "The ε-conditioned permutation: does cross-model output agreement exceed seed-keyed input passthrough?",
+      "deps": [
+        "splits_from OQ-348"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51",
+        "OQ-59",
+        "OQ-285",
+        "OQ-288",
+        "OQ-291",
+        "OQ-348"
       ]
     }
   ]

@@ -52,6 +52,15 @@ damper on blind-review false positives — the reviewer checks that the list exi
 are checkable, instead of flagging every repo dependency as a gap and pressing the plan toward
 inlining repo contents.
 
+**Clocks and pilots are incompatible by construction — reconcile them in the plan, not at
+execution (witnessed 2026-08-25, run `2026-08-25-2`).** A viability clock measured from FIRST
+launch and a mandated pilot-first sequence cannot coexist: the pilot is deliberately one seed —
+often the hard one — so it can consume the whole viability window while proving nothing about
+the mechanism, and a literal executor then abandons a working phase at the deadline. If a plan
+carries both, it must say which: either the viability clock starts at first POST-pilot launch,
+or the pilot does not count toward viability. The self-check question: *can the plan's own
+sequencing consume its own clock before the clock's subject has been tested?*
+
 ## Phase 2 — review rounds
 
 3. Spawn `repo-blind-reviewer`. **Payload composition rule:** exactly (a) the OQ/task text verbatim,

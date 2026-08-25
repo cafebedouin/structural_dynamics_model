@@ -18105,6 +18105,8 @@ regime's instability has a model-specific magnitude. Still no thinking-off arm f
 63%, paired Δε mean +0.003 (no direction) — identical to the prompt-confounded pair, so the prompt change moved
 nothing and this is the regime's own floor on a second reasoning model. ε exact-agreement is only 12% because
 this model authors ε continuously (no last-digit rail) — OQ-78's rail reading does not apply to it.
+(Chance calibration, 2026-08-25: a low ε exact-agreement is NOT near-chance — cross-leg marginal
+chance is ~2–7%, so even single-digit agreements sit above it; permutation evidence in OQ-348/OQ-380.)
 
 **Generality, first arm (stealth, reasoning mandatory, k=2 on 2026-08-22):** |Δε| ≥0.10 on 20% of seeds between
 draws (Flash thinking-on: 22%), seat-vector churn 66% — the thinking-on instability is not Flash-specific.
@@ -18121,7 +18123,14 @@ no off arm; nemotron thinking-on vs its thinking-off leg (free) and a kimi-off l
 tests. (b) How much reaches `dr_type` / `verdict_join`? Count per-seed type flips between the
 two thinking-on draws vs the two thinking-off draws, and whether flips concentrate near band
 edges. (c) Does a non-max budget (1024 / 24576) scale it — dose-response on Flash (~$15–20 each).
-**Resolution:** (a)+(b) witnessed on ≥2 models; (c) optional. **What it changes:** whether
+**Resolution:** (a)+(b) witnessed on ≥2 models; (c) optional.
+**Arm disposal (operator-endorsed, 2026-08-25 — recorded here so it does not read as
+abandonment):** the **kimi-off arm** and the **Flash dose-response (c)** are DISPOSED, not
+deferred, because both sit beyond this entry's own stated Resolution bar: (c) is marked optional
+by the line above, and the kimi-off spend (~$25–35) is redundant to the FREE nemotron
+thinking-on/off pair for (a)'s "≥2 models" — both nemotron legs are complete as of 2026-08-25
+(nemotron 1000, nemotron_think 1005, coherent at `a3966e7`), so (a)/(b) are answerable from
+existing legs with no new generation. **What it changes:** whether
 thinking-on legs may be pooled with thinking-off legs in any ε-keyed statistic (currently: no,
 per the per-Author-stratum rule), and whether the rebuild generates thinking-off by default.
 
@@ -18258,6 +18267,13 @@ artifacts `outputs/coherent_a3966e7/situation_fixed_core.json` + `stratum_split_
 tool `python/audits/situation_fixed_core.py`. The floor rows below were measured on the
 pre-coherent artifacts and are VALIDATED by the zero-diff (identical `per_constraint`), so they
 stand as the floor table the Resolution names.
+**Core-vs-independence (operator-directed, run 2026-08-25 before anyone treats 6/871 as a
+floor):** under per-leg seed-label permutation (marginals preserved, 2000 iters, seed 3471,
+`python/audits/oq347_core_null.py`) the null core is **0 — max 0 across all 2000 iterations**
+(p = 0.0005). The core is REAL seed-level joint structure, not a marginals artifact; the
+reportable number is the excess (6 observed vs ~0 expected under independence), not the bare
+count. Artifact: `outputs/coherent_a3966e7/core_null_report.txt` (reproduction control:
+recomputed core == recorded 6).
 **Priority:** 1
 **Deps:** splits_from OQ-342
 **Files:** `agent/run_no_scope_kimi.py` (`--leg-suffix`), `agent/run_no_scope_sonnet.py` (`--leg-name/--leg-suffix`), `agent/run_no_scope_stealth.py`, `python/audits/five_leg_twin_comparison.py` (`LEGS` dict hardcoded — extend to N), `audits/2026-08-21_flash_regime_vs_redraw/paired_agreement.py`.
@@ -18457,10 +18473,26 @@ Evidence: `audits/2026-08-21_oq120_epsilon_boundary/WRITEUP.md`.
 
 **Ω-type:** Ω_E.
 
-**Status:** open — minted 2026-08-22; MEASURED 2026-08-25, now blocked on an operator ruling:
-the permutation landed in a cell the OQ did not name.
+**Status:** open — minted 2026-08-22; measured 2026-08-25 (unnamed cell); RULED the same day
+(the blocked_on_human is discharged); the re-specified test lives in child OQ-380, already run.
+What remains open here is the operator's final reading of §11's "map vs territory" consequence
+with OQ-380's numbers in hand.
 **Priority:** 2
-**Deps:** splits_from OQ-343, blocked_on_human oq348-unnamed-cell-reading
+**Deps:** splits_from OQ-343
+
+**RULING (operator, 2026-08-25) — the unnamed cell is the correct result, and the honest reading
+is that THE NULL WAS MIS-SPECIFIED FOR THE QUESTION, not that a third substantive hypothesis
+appeared.** Numbered framing finding, recorded at its own altitude: a marginals-only seed-label
+permutation asks *is there ANY seed-keyed dependence between legs* — and since every leg is
+authored from the same 1005-seed pool, that answer was fixed before the run. ε is a property of
+the authored text and covaries across legs at the same seed BY CONSTRUCTION, so it cannot serve
+as the negative-control arm the 2×2 was built on. Cell (beats, beats) is what the design should
+have predicted — a finding about the instrument's framing, not a surprising empirical result.
+What survives is the amplification claim (output gaps exceed ε's), which needs a null that
+already CONTAINS the seed-keyed input structure. That re-specified test is **OQ-380** (minted
+rather than editing the hypothesis above in place, so the record that the original contrast was
+unavailable is kept). Its result: the engine-side excess SURVIVES ε-conditioning on all 3
+cross-model pairs — small but consistently significant.
 
 **MEASURED 2026-08-25 — the pre-registered UNNAMED cell {h1/verdict beats null, ε beats null}.
 RULING OWED: the OQ named only two cells (A: engine routes idiom to structure; B: bands are
@@ -18747,9 +18779,11 @@ a reader who treats it as a content control makes the OQ-78 marginal-vs-paired e
 - (c) v6 random subsamples at n≈1000, k=3 (symlink dirs under a `corpus_path` overlay — free);
 - (d) the situation-fixed core (OQ-347 step 4) vs its complement — **the population EXISTS as of
   2026-08-25: core = 6 of 871 over the coherent set at `a3966e7`, member ids + 134 excluded ids
-  in `outputs/coherent_a3966e7/situation_fixed_core.json`. n=6 is far below any statistic's
-  floor — arm (d) as designed likely needs the core's DEFINITION relaxed (fewer pairs, or
-  pure-redraw pairs only) before it carries a contrast; that is a design choice, not this OQ's.**
+  in `outputs/coherent_a3966e7/situation_fixed_core.json`, and it is REAL joint structure — the
+  marginals-only null core is 0 (max 0 in 2000 permutations, p=0.0005; `core_null_report.txt`).
+  Still, n=6 is far below any statistic's floor — arm (d) as designed likely needs the core's
+  DEFINITION relaxed (fewer pairs, or pure-redraw pairs only) before it carries a contrast; that
+  is a design choice, not this OQ's.**
 Readings, pre-committed: same on (a) and (c) despite zero shared situations ⇒ **construction-bound
 (saturated)** — demote from headline, needs a size-normalized form; differs (b) vs (c) ⇒ **size-bound**;
 separates (a) from (c) but not (b) from (c) ⇒ **carries content** (the headline the tool was built for);
@@ -20676,6 +20710,40 @@ Step-0 derivation ran the file's own text and allocated `2026-08-25-2` correctly
 restructure the snippet (e.g. `awk -v` or a helper script) so it carries no interpolatable
 positionals; plus a control that a with-arguments invocation still derives a non-empty id set on
 a non-empty ledger.
+
+---
+
+## OQ-380 — The ε-conditioned permutation: does cross-model output agreement exceed seed-keyed input passthrough?
+
+**Ω-type:** Ω_E.
+
+**Status:** resolved — minted AND run 2026-08-25 (the re-specification of OQ-348's null,
+operator ruling of the same day; minted as a child so OQ-348's original hypothesis record stays
+intact).
+**Priority:** 2
+**Deps:** splits_from OQ-348
+
+**The test.** Seed-label permutation of leg B **within exact (ε_A, ε_B) strata** — the null
+retains the full seed-keyed ε structure, so observed excess is structure beyond ε passthrough.
+`python/audits/permutation_null.py --condition-on-eps` (seed 348, 2000 iters, coherent set at
+`a3966e7`); built-in invariance control (ε observed == null EXACTLY, asserted, passed on all 8
+pairs); singleton strata freeze in place (5–40% of ids per pair, printed), biasing the null
+TOWARD observed — conservative.
+
+**Result (artifact `outputs/coherent_a3966e7/permutation_null_oq348_eps_conditioned.json`):
+the engine-side excess SURVIVES on all 3 cross-model pairs, small but consistently significant**
+— h1_band: 0.411 vs 0.391 (p=.006) / 0.514 vs 0.488 (p=.002) / 0.365 vs 0.350 (p=.028);
+verdict: p=.0005/.033/.0005; signature: p=.002/.046/.0035. The within-model floors beat far more
+strongly (e.g. sonnet2×sonnet3 h1 0.717 vs 0.532). Compared with the marginals-only null
+(OQ-348), MOST of the raw same-seed agreement is input passthrough — e.g. haiku2×sonnet2 h1's
+gap shrinks from +0.196 (vs 0.215) to +0.020 (vs 0.391) — and the residual excess is what the
+amplification claim now rests on.
+
+**Scoped altitude, stated so the number is not over-read:** this null conditions on ε ONLY. ε is
+one authored input among several that covary by seed (claimed_type, coordination_type, seat
+structure…), so the surviving excess is *seed-keyed structure beyond exact-ε passthrough* — an
+upper bound on engine amplification, not proof the engine adds it all. A null conditioning on
+the full authored record would tighten it; whether that spend is wanted is OQ-348's reading.
 
 ---
 

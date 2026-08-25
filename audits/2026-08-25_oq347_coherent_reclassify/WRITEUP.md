@@ -24,7 +24,9 @@ S8 extension — 27 absent-ε records on the canonical artifact, OQ-377.)
    all 17, `oq347_prereg_diff.py` output pasted in session). The 15-commit, 16-dirty artifact
    set was behaviorally identical to clean HEAD — S5/S6's warrant (only
    `giant_component_analysis.pl` differed, and `json_report.pl` does not load it) held, and no
-   OQ-112-class non-determinism surfaced anywhere in ~18,800 records.
+   OQ-112-class non-determinism surfaced anywhere in ~18,800 records. **This result is
+   INDEPENDENT of the OQ-348 reframe (findings 8–10): nothing in the null-specification question
+   touches per_constraint identity. It stands unqualified.**
 2. **The rescued legs changed exactly as pre-registered.** nemotron: nothing vanished, +4 new ids
    (== the driver's provenance-tagged count); nemotron_think: +2 (leg COMPLETE at 1005).
    Pre-existing-id changes confined to 14 corpus-relative keys (arakelov, maxent family,
@@ -64,6 +66,34 @@ S8 extension — 27 absent-ε records on the canonical artifact, OQ-377.)
 7. **S8 extension (latent, OQ-377):** absent ε = 0 on every model-leg artifact, but the CANONICAL
    `outputs/pipeline_output.json` carries 27 absent-ε records (raw twin 27, one dead `_head`
    file 11) — a live input for any of the 22 remaining coercion sites that reads the canonical.
+
+## Findings 8–10 — the ruling round (operator, 2026-08-25, same day)
+
+8. **The framing finding (its own altitude): OQ-348's null was MIS-SPECIFIED, not surprised.**
+   A marginals-only seed-label permutation asks *is there any seed-keyed dependence* — an answer
+   fixed before the run, since every leg is authored from the same 1005-seed pool. ε is a
+   property of the authored text and covaries by seed BY CONSTRUCTION; it cannot be the
+   negative-control arm the 2×2 was built on, so cell (beats, beats) is what the design should
+   have predicted. Recorded in OQ-348 with the original hypothesis left intact; the re-specified
+   test minted as child OQ-380. Corollary correction propagated (prior-art sweep, not a note):
+   the "9% ε agreement ≈ chance" family — chance is ~2–7%, so 9% was ~4× chance. Corrected at
+   KNOWN_STATE 2026-08-22 (stealth first-read line), OQ-343 ("only 12%"), and OQ-348's body.
+9. **The re-specified test (OQ-380): the engine-side excess SURVIVES ε-conditioning.**
+   Permutation within exact (ε_A, ε_B) strata (invariance control: ε observed == null exactly,
+   asserted, passed on all 8 pairs; singleton freezing 5–40% per pair, conservative). All 3
+   cross-model pairs still beat the conditioned null on h1_band (p=.006/.002/.028), verdict
+   (p=.0005/.033/.0005) and signature (p=.002/.046/.0035) — but the gaps shrink from ~+15–20pp
+   (marginals-only) to ~+1–3pp: MOST raw same-seed agreement is input passthrough, and a small
+   consistent engine-side excess remains. Scoped: this conditions on ε ONLY — the excess is
+   seed-keyed structure beyond exact-ε passthrough, an upper bound on engine amplification
+   (other authored fields also covary by seed). Artifact:
+   `outputs/coherent_a3966e7/permutation_null_oq348_eps_conditioned.json`.
+10. **The core is real structure, not a marginals artifact.** Per-leg seed-label permutation
+    (records shuffled as units, 2000 iters, seed 3471) yields a null core of **0 — max 0 across
+    all 2000 iterations** vs observed 6 (p=0.0005; reproduction control: recomputed == recorded).
+    Independent pairwise rates predict essentially zero joint survivors across 21 pairs, so the
+    reportable number is the EXCESS (6 vs ~0), not the bare count. Artifact:
+    `outputs/coherent_a3966e7/core_null_report.txt`; tool `python/audits/oq347_core_null.py`.
 
 ## Evidence map
 
