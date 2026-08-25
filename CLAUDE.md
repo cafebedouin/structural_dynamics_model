@@ -644,6 +644,18 @@ Each is one sentence here and a full section in `build_discipline.md` under the 
   occurring 0 times there cannot fail however right its prose is. **Pin `/usr/bin/grep`, not `grep`, in any
   script computing a reported count** (a green "73 + 101 = 174" concealed a positional parse,
   2026-08-10). (*A consistency check is not a discrimination check*.)
+  **SECOND QUESTION, same breath (promoted 2026-08-24): *is the NAME true of everything it
+  counts?*** A check can be perfectly falsifiable and still lie, because the label, the variable
+  or the expected value names a narrower population than the thing measures — and unlike a
+  vacuous check, this one publishes. Ask it of every criterion, control, printed label and
+  pre-registered expected value, **including of your own repair**: the first clause of a
+  corrected line is as suspect as the parenthetical. Both questions are one habit, and neither
+  reviewer nor author asks them by default — four instances in a single OQ (a control pair that
+  could not exist, an identity true by construction, a criterion that held only because its input
+  was constant, and a count named right whose printed label meant something else), two of them
+  invisible to review and caught only at execution. Incidences and the review-loop falsifier:
+  BD → *A consistency check is not a discrimination check*; `.claude/skills/plan-review/RUNS.md`
+  runs `2026-08-21-3` and `2026-08-24-1`.
 - **A control you ADD is itself a claim** — same-path, two-sided, riskiest-shape,
   substrate-anchored, write-free-if-pre-write. (*An introduced instrument is itself a claim*.)
 - **A control must witness that it is CALLED** — a guarded function called only from its selftest

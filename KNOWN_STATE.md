@@ -111,6 +111,39 @@ witnessability — a guard there has no witness once `:1278` is guarded), **OQ-3
 (`one_hop_ep_safe/3`, LATENT — unreachable today by CALLER discipline, witnessed by fpn completing
 3328/3380 rows on v6), **OQ-373**, **OQ-374**.
 
+**ONE PROMOTION TO CLAUDE.md, and it is the find-criterion this arc yielded rather than any of its
+four defects.** *A check that CANNOT fail witnesses nothing* was already always-loaded and carries
+the falsifiability question (*what value would make this line fail?*). Appended as a clause: the
+**SECOND** question, ***is the NAME true of everything it counts?*** A check can be perfectly
+falsifiable and still lie, because the label, the variable or the pre-registered expected value
+names a narrower population than the thing measures — and unlike a vacuous check, **this failure
+mode PUBLISHES**. Ask both of every criterion, control, printed label and expected value,
+INCLUDING of your own repair: the first clause of a corrected line is as suspect as the
+parenthetical (the coverage line's *"N of M have a numeric effective purity"* was false too, not
+just its parenthetical). Warrant for promotion: four instances inside this one OQ — a control pair
+that could not exist, an identity true by construction, a criterion holding only because its input
+was constant, and a count named right whose label meant something else — two of them invisible to
+review and caught only at execution; plus a second recorded run with the same shape
+(`.claude/skills/plan-review/RUNS.md` `2026-08-21-3` gap (1)). It lands as a CLAUSE on an existing
+bullet, not a new section — the cheapest form, and the one most likely to actually get asked.
+
+**AND ONE ADOPTION THAT WAS DELIBERATELY *NOT* PROMOTED.** *Freeze a fixture for any control whose
+trigger is a live-tree defect* (tripwire 2 above) was ruled ripe by the operator and is now ADOPTED
+as case law in `build_discipline.md` — but declined for CLAUDE.md under bias-to-history: the
+trigger is narrow, and its adjacent principle (*when a detector will follow, preserve the defective
+state deliberately*) is already always-loaded. Both decisions are recorded in that file's
+declined-promotions ledger, which now shows the bar being CLEARED as well as applied.
+
+**AND A FRAMING CORRECTION ON OQ-374, which changes who it is blocked on.** The saturation finding
+is a claim about the CORPORA's contamination distribution, not about the sweep's code: the loop,
+`numlist_float/4` and the retract/assertz are all correct, and an executor who opens them will find
+nothing wrong. What is mis-specified is the RANGE — max observed RawContam is 0.134/0.136, barely
+above the sweep's LOWEST cap of 0.10 and far below its other nine, so nine of ten cap values sit
+above anything these corpora can produce. That makes it a config/design ruling with no default
+(re-specify the range / declare it a saturation demonstration / move the contamination model's
+scale), not a defect, so OQ-374 now carries `blocked_on_human oq374-cap-range-scope-ruling` and
+routes to BLOCKED-ON-YOU — verified by execution, not by reading.
+
 ## 2026-08-24 — [tripwire] Orchestrator-log debug: five warning classes, four of them real defects; ~3,400 lines of drift noise were hiding a framework verdict computed from zero data
 **Files:** python/shared/schemas.py, python/boundary_normality.py, python/tangled_decomposition.py, python/extract_corpus_data.py, python/reports/queries/sufficiency_test.py, agent/generate_kernel_corpus.py, prolog/json_report.pl, ISSUES.md
 **Tier:** tripwire

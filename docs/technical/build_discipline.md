@@ -3470,12 +3470,15 @@ gate-promotion trigger), `audits/2026-08-23_oq352_report_driver/WRITEUP.md` §4c
 `audits/2026-08-24_oq356_purity_guard/` (the repair, its adjudication table and its bounds),
 KNOWN_STATE 2026-08-23 + 2026-08-24.
 
-## PROPOSED (2026-08-24, awaiting operator ruling) — freeze a fixture for any control whose trigger is a LIVE-TREE DEFECT
+## Freeze a fixture for any control whose trigger is a LIVE-TREE DEFECT (adopted 2026-08-24)
 
-> **Status: PROPOSED, not adopted.** Landed here rather than stated in a session, so it is not a
-> handoff that did not happen; it is marked so nobody cites it as a standing rule. The ruling it
-> awaits: does this become a member of the *A control must witness that it is CALLED* family, or
-> stay a note on the OQ-356 sweep?
+> **ADOPTED 2026-08-24 (operator ruled it ripe), as a member of the *A control must witness that
+> it is CALLED* family — case law here, NOT promoted to CLAUDE.md.** Bias to history: the trigger
+> is narrow (you are building a control whose positive half names a defect scheduled to be
+> fixed), and the adjacent principle — *when a detector will follow, preserve the defective state
+> deliberately* — is already always-loaded. What this adds is the case where the detector KEEPS
+> RUNNING after the defect is gone, which is a fact about instruments rather than about corpora
+> and belongs where the instrument case law lives.
 
 **The proposed rule.** When a control's POSITIVE half is "it fires on the defect at `file:line`",
 and that defect is scheduled to be FIXED, the control must be pointed at a **frozen snapshot** of
@@ -3548,7 +3551,8 @@ promotion, with the reason and the destination it went to instead. Append; do no
 | 2026-08-24 | a checker's ±N-LINE context window is a ±N-ENTRY window in a file where one line is one record (`pattern_citation_check` recovered a false `bound-probe` citation across three unrelated `INVESTIGATIONS.md` entries) | `fails-loud` + `incidence` — the gate went red immediately, and the window size is one checker's parameter rather than a principle | diagnosed in commit `e01951de2`; the C1 ledger line was restated to remove the adjacency |
 | 2026-08-24 | the Phase-3 collapse table is CONSTANT on 3 of 4 legs, so a monotonicity criterion over it cannot fail | `incidence` + already covered — *A check that CANNOT fail witnesses nothing* is already the always-loaded rule; this is one more instance of it, and the per-leg row counts move as legs are added | KNOWN_STATE 2026-08-24 tripwire 1; **OQ-374** (the sweep saturates at or below its default cap) |
 | 2026-08-24 | an excluded-count at a purity filter spans FOUR distinguishable causes (succeeds-non-number / throws / fails / numeric-below-zero) and naming it `NUnknown` breaks the conservation identity as a false alarm | `incidence` — the always-loaded OQ-60 invariant already carries the two-absence-token rule and "never coerce"; the four-cause refinement is a site fact, and the 4+6 split is a per-leg number | KNOWN_STATE 2026-08-24 tripwire 3; OQ-356's landed-fix block |
-| 2026-08-24 | freeze a fixture for any control whose trigger is a live-tree defect | `pending-ruling` — proposed above as a build_discipline section, explicitly NOT adopted; the operator rules whether it joins the *control must witness that it is CALLED* family | this file, *PROPOSED (2026-08-24)*; KNOWN_STATE 2026-08-24 tripwire 2 |
+| 2026-08-24 | freeze a fixture for any control whose trigger is a live-tree defect | RESOLVED — operator ruled it ripe 2026-08-24 and it is now ADOPTED as case law in this file, but still DECLINED for CLAUDE.md: narrow trigger, and its adjacent principle (*when a detector will follow, preserve the defective state deliberately*) is already always-loaded | this file, *Freeze a fixture…* (adopted); KNOWN_STATE 2026-08-24 tripwire 2 |
+| 2026-08-24 | **PROMOTED, not declined** — *is the NAME true of everything it counts?*, as the second question paired with *what value would make this fail?* | recorded here so the ledger shows the bar being cleared as well as applied. Warrant: two recorded runs, four instances inside one OQ, a stated falsifier, and it plugs a hole in a rule ALREADY always-loaded — so it lands as a clause on an existing bullet rather than a new section, the cheapest possible promotion. Unlike a vacuous check, this failure mode PUBLISHES | CLAUDE.md → *A check that CANNOT fail witnesses nothing*; incidences stay here and in RUNS.md |
 | 2026-08-24 | the DP-001/OQ-25 seal is vacuous on 14 corpora and partial on 9 more | **NOT declined — DEFERRED** by operator ruling to the Phase-2 `KNOWN_STATE.md` batch, recorded here so the deferral is not mistaken for a decline | OQ-365; the generalizable half IS promoted, as *PARTIAL coverage is worse than ZERO coverage* under Pattern 6 |
 
 **Promoted in the same pass, 2026-08-24** (so the bar is visible from both sides): two

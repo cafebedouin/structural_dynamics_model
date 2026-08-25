@@ -20243,12 +20243,39 @@ filed rather than promoted.** Two things a promoter must read first:
 
 ## OQ-374 — The Phase-3 contamination collapse sweep SATURATES at or below its default cap: caps 0.40–1.00 reproduce the 0.30 row exactly on every leg measured
 
-**Ω-type:** Ω_E (a property of the instrument, witnessable by re-running the sweep and diffing rows).
+**Ω-type:** Ω_E (a property of the instrument, witnessable by re-running the sweep and diffing rows)
+— **but the RESOLUTION is Ω_P**: what the cap range should be is a design decision, not a
+measurement. See the framing pin below, which decides who this is blocked on.
 
 **Status:** open — minted 2026-08-24 from the OQ-356 execution, where criterion 3 (monotonicity)
 was found to hold VACUOUSLY on three of four legs.
 **Priority:** 3
-**Deps:** splits_from OQ-356, bundled_with OQ-353, bundled_with OQ-354
+**Deps:** splits_from OQ-356, bundled_with OQ-353, bundled_with OQ-354, blocked_on_human oq374-cap-range-scope-ruling
+
+> **FRAMING PIN — READ BEFORE OPENING `numlist_float/4` (recorded 2026-08-24, at the operator's
+> correction). THIS IS NOT A CODE DEFECT IN THE SWEEP LOOP, AND DEBUGGING THE LOOP WILL FIND
+> NOTHING WRONG WITH IT.** The loop does exactly what it says: it varies
+> `purity_contamination_cap` 0.10 → 1.00 in ten steps and re-counts. The retract/assertz is
+> correct, `numlist_float/4` is correct, and `count_by_action_band/10` recomputes honestly at
+> every step.
+>
+> **What is mis-specified is the RANGE, and the reason is a fact about the CORPORA, not about the
+> code.** `Contam is min(Cap, RawContam)` binds only where `RawContam > Cap`. The largest
+> RawContam observed on ANY edge is **0.134** (haiku2) / **0.136** (haiku3) — barely above the
+> sweep's LOWEST cap of 0.10, and far below its other nine. So nine of the ten cap values sit
+> above everything the corpus can produce, and the sweep spends 90% of its range asking a
+> question these corpora cannot answer. **The interesting band is below ~0.15; the sweep starts
+> at 0.10 and goes up.**
+>
+> **Consequence for who this is blocked on.** A defect would be blocked on a fix. This is blocked
+> on a DECISION with no default: either (a) re-specify the swept range to span the binding region
+> — which changes a published (if never-cited) instrument's meaning and needs a seat, or (b) rule
+> that the sweep is a SATURATION DEMONSTRATION rather than a sensitivity analysis, in which case
+> it should say so and stop printing eight identical rows, or (c) rule that the contamination
+> model's own scale (`purity_attenuation_factor` 0.50 × `type_contamination_strength` ≤ 1.0
+> bounds RawContam at 0.50 by construction, and the observed max is a quarter of that) is what
+> should move instead. **`Unwired ≠ worthless` applies to all three: adjudicate by the product,
+> do not delete on sight.**
 **Files:** `prolog/giant_component_analysis.pl` (`report_contamination_collapse_analysis/2`
 :1237–1270, the `numlist_float(0.10, 0.10, 1.00, ...)` sweep), `prolog/drl_purity_network.pl`
 (:306 `Contam is min(Cap, RawContam)`), `prolog/config.pl` (:483 `purity_contamination_cap` 0.30,
@@ -20301,11 +20328,9 @@ pre/post"* is **one distinct row compared ten times**. The oracle is real and it
 and it must never be cited as ten independent checks. Any statistic, floor or replication test
 this project later computes across those rows inherits the same factor.
 
-**What resolution needs.** Either a swept range that actually spans the binding region (the
-evidence says the interesting band is below ~0.15, not 0.10–1.00), or a recorded ruling that the
-sweep is a saturation demonstration rather than a sensitivity analysis — in which case the table
-should say so and stop printing eight identical rows. **`Unwired ≠ worthless` applies: adjudicate
-by the product, do not delete on sight.**
+**What resolution needs.** One of the three rulings in the framing pin above, then the
+implementation that follows from it. **Not a debugging pass over the loop** — the loop is
+correct, and an executor who starts there will spend the session confirming that.
 
 **Bounded honestly:** measured on 4 legs post-fix (v6 + three haiku). The other 16 legs now run to
 completion and their tables are available for the same diff — that is the cheap next step, and it
