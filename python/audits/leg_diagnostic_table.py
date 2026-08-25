@@ -268,8 +268,15 @@ def declared_roster() -> list:
     return roster, {"globbed": globbed, "only_in_glob": only_glob, "only_in_declaration": only_decl}
 
 
+def output_name_for(leg: str) -> str:
+    """The leg's classify-output BASENAME. One home for the mapping (the live `testsets` leg
+    maps to pipeline_output.json, NOT pipeline_output.testsets.json) so a caller writing to a
+    different directory (e.g. the OQ-347 coherent sweep) cannot fork it."""
+    return "pipeline_output.json" if leg == "testsets" else f"pipeline_output.{leg[len('testsets_'):]}.json"
+
+
 def output_for(leg: str) -> Optional[Path]:
-    p = OUT / "pipeline_output.json" if leg == "testsets" else OUT / f"pipeline_output.{leg[len('testsets_'):]}.json"
+    p = OUT / output_name_for(leg)
     return p if p.exists() else None
 
 

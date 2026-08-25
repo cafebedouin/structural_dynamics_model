@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "249cf1bbf2e8ff06140535f1d0ab4fd91ca4cb70",
+    "store_version": "7fc4b8c59e1395b4faf7c5f44b077be18e61231d",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-25T01:40:29"
+    "generated_at": "2026-08-25T01:59:59"
   },
-  "issues_sha": "202f92a60648f7bb2620d535524f4693254c7676996a278219bb75b1a5130f5c",
-  "n_entries": 375,
+  "issues_sha": "382eca680e1101ea6974e152aad8043d82f1d914e2c29e9f6d4f0290fc2c8931",
+  "n_entries": 378,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 160,
+    "open": 163,
     "partial": 5
   },
   "active": [
@@ -2419,14 +2419,58 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-51",
-        "OQ-59",
         "OQ-277",
         "OQ-278",
+        "OQ-341"
+      ]
+    },
+    {
+      "id": "OQ-376",
+      "status": "open",
+      "priority": 3,
+      "summary": "five_leg_twin_comparison.py: dead filename family + five-ness baked into pairing logic",
+      "deps": [
+        "splits_from OQ-347"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-342",
+        "OQ-347"
+      ]
+    },
+    {
+      "id": "OQ-377",
+      "status": "open",
+      "priority": 3,
+      "summary": "ε absence-coercion sweep: 22 remaining sites across 14 files coerce absent `base_extractiveness` to 0",
+      "deps": [
+        "splits_from OQ-60"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60",
+        "OQ-347"
+      ]
+    },
+    {
+      "id": "OQ-378",
+      "status": "open",
+      "priority": 3,
+      "summary": "Batch-family seed rescues: ~257 residue seeds reachable only through batch APIs",
+      "deps": [
+        "splits_from OQ-345"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51",
+        "OQ-58",
+        "OQ-59",
         "OQ-285",
         "OQ-288",
         "OQ-291",
-        "OQ-341"
+        "OQ-342",
+        "OQ-345",
+        "OQ-347"
       ]
     }
   ],

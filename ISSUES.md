@@ -20476,6 +20476,119 @@ ruling becomes a listed rider rather than a silent passenger.
   CALLED.* This adapter carries five controls; run on demand they orphan on day one, and the control
   count rises while coverage falls.
 
+---
+
+## OQ-376 — five_leg_twin_comparison.py: dead filename family + five-ness baked into pairing logic
+
+**Ω-type:** Ω_P (apparatus repair — no ruling, no empirical unknown; the harness either reads the
+live artifacts or it does not).
+
+**Status:** open — minted 2026-08-25 by the OQ-347 coherent-reclassify session.
+**Priority:** 3
+**Deps:** splits_from OQ-347
+
+**Origin.** The OQ-342/347 leg-program ruling asked whether this harness blocks the
+situation-fixed core. Measured (plan `next-ethereal-clarke.md`, Correction 1): it does NOT — it
+computes a *different* measurement (cross-model **4-way** all-agree intersection over
+`("haiku","flash","sonnet","kimi")`, the literal tuple at `main()` :98) whereas the core is
+same-model pairs, computed directly off `paired_agreement.py`'s loader idiom in
+`python/audits/situation_fixed_core.py`. So the harness became its own OQ instead of a blocker.
+
+**The two defects (verified 2026-08-25):**
+1. Its `LEGS` dict (:29–34) points at the DEAD filename family `pipeline_output_<leg>_head.json`
+   (live names are `pipeline_output.<leg>.json`) — every leg silently missing unless stale files
+   linger, which they currently do (e.g. `pipeline_output_haiku_head.json`, frozen at an old
+   commit), which is worse: it runs and reads STALE data without error.
+2. Five-ness is baked into pairing logic (the literal 4-tuple at :98 plus `testsets`), not
+   config — the 19-leg roster (`shared.corpus_legs.LIVE_LEGS`) cannot reach it.
+
+**Resolution:** either re-point at the live family + roster-driven legs, or retire the script
+with a pointer to `paired_agreement.py`/`situation_fixed_core.py` (adjudicate by unique product —
+build_discipline → *Unwired ≠ worthless*: its 4-way cross-model all-agree intersection is not
+computed elsewhere; if that measurement is wanted, port it rather than delete).
+
+---
+
+## OQ-377 — ε absence-coercion sweep: 22 remaining sites across 14 files coerce absent `base_extractiveness` to 0
+
+**Ω-type:** Ω_E per site (the question is REACHABILITY — *can an absent ε reach this operation* —
+not idiom presence; each site's answer is empirical against the artifacts it reads).
+
+**Status:** open — minted 2026-08-25 by the OQ-347 coherent-reclassify session.
+**Priority:** 3
+**Deps:** splits_from OQ-60
+
+**Origin.** OQ-60 ruled absent ≠ zero for purity; the same class exists on ε. Two sites were
+fixed 2026-08-25 on the fix-simple-errors rule (both now exclude-and-count, with a two-sided
+`--selftest`: null excluded-and-counted, genuine 0.0 kept):
+`audits/2026-08-21_flash_regime_vs_redraw/epsilon_distance.py` and
+`audits/2026-08-22_oq345_stakeholder_backfill/backfill_diff.py`. The remaining census is
+multi-file and above the threshold — hence this OQ, not an inline sweep.
+
+**Census (re-derived 2026-08-25, `/usr/bin/grep -rn base_extractiveness --include=*.py`), two
+shapes.** `or 0`/`or 0.0` (12 sites): `noticing_vs_framing.py`:10, `reasoning_text_census.py`:23,45,
+`delta_reach.py`:12, `seat_direction.py`:13,23 (all under `audits/2026-08-21_flash_regime_vs_redraw/`),
+`audits/2026-02-25_spectral_laplacian/phase0_data.py`:87 (carries BOTH shapes in one line),
+`python/audits/g_channel_flip_audit.py`:74, `g_beneficiary_channel_audit.py`:217,
+`scaffold_piton_gate_audit.py`:318. `.get("base_extractiveness", 0/0.0)` (10 sites):
+`python/cluster_space_phase4.py`:78,107, `cluster_space_phase5.py`:84,106,
+`python/sweeps/epsilon_sensitivity.py`:156, `python/audits/cluster_space_audit.py`:191,
+`coordination_vitality_diagnostic.py`:385,648,679,706,791, `g_orbit_proximity_probe.py`:103.
+(The stale worktree `.claude/worktrees/oq-48-recalibration/` duplicates many — out of census.)
+
+**Reachability status (measured 2026-08-25):** absent ε = **0 records on every model-leg
+artifact** (all `outputs/pipeline_output.<leg>.json`), so any site reading only leg artifacts is
+LATENT. **But the canonical `outputs/pipeline_output.json` (live `testsets` leg) carries 27
+absent-ε records** (its `.raw` twin 27; dead `pipeline_output_testsets_head.json` 11) — a site
+reading the CANONICAL output has a live absent-ε input today, coerced to 0.0 silently. The
+find-criterion for the sweep must therefore ask, per site, *which artifact does this site read
+and can an absent ε reach the arithmetic* — not *does the file use the idiom*.
+
+---
+
+## OQ-378 — Batch-family seed rescues: ~257 residue seeds reachable only through batch APIs
+
+**Ω-type:** Ω_P (a generation spend with a settled recipe; the only judgment — the tag — is
+already ruled).
+
+**Status:** open — minted 2026-08-25 by the OQ-347 coherent-reclassify session (RULING-2
+condition (iii): the rescues get their own OQ so "pending seed rescue" stops dangling in OQ-345).
+**Priority:** 3
+**Deps:** splits_from OQ-345
+**Blocked_on_condition:** none mechanical — but MUST NOT run while any classify freeze window is
+open (a batch landing mid-sweep mutates a leg inside the freeze; witnessed reasoning in the
+2026-08-25 plan, Phase 1).
+
+**RULING-1 (operator, 2026-08-25), restated because it governs every pass here: the rescue tag is
+`seed_rescue1`, passed BARE (`--run-tag seed_rescue1`; the driver prepends the `+`), yielding
+stratum `no_scope_rebuild_<leg>+seed_rescue1`.** `+rescue1` — OQ-342's original literal — is
+OCCUPIED (`testsets_nemotron` 144, `testsets_stealth` 36) and reusing it would merge two distinct
+generation events; `stakeholder_backfill` shows the naming convention is defect-named, not
+ordinal. Occupancy re-verify before any pass (the error class is demonstrated — no candidate is
+exempt): `rescue1` 180 files, `stakeholder_backfill` 661, `seed_rescue1` 0 at 2026-08-25.
+
+**Why these seeds were not closed in the 2026-08-25 session (record so nobody re-plans the same
+45-minute pass):** `run_no_scope_sonnet.py` (sonnet+haiku families) and `run_no_scope_gemini.py`
+(flash family) are **batch-only** (`client.messages.batches.create` / `client.batches.create`;
+no sync path), so no wall clock reaches them — 257 of the 268 residue seeds are batch-only.
+Only the OpenRouter driver is sync; its 11 nemotron seeds were attempted that session (result:
+`audits/2026-08-25_oq347_coherent_reclassify/leg_shortfall.md`).
+
+**Shortfalls vs the 1005-seed pool (`prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json`),
+batch-only families:** flash 45, flash2 61, flash3 47, flash_think 17, flash_think2 13, haiku 45,
+haiku2 9, haiku3 12, sonnet 4, sonnet2 2, sonnet3 2 (= 257). These are seeds that already failed
+at least once (the flash backfill needed three passes to reach 206/210 and 4 never landed) —
+expect a tail that never closes; declare short uniformly, one pass per leg.
+
+**Recipe per leg:** driver with `--run-tag seed_rescue1` + `--n 0` (ladder-driven), serialize
+drivers; READ-BACK the tag from a written story's `story_provenance` field 5 before committing
+any leg whose driver name does not match its leg name (haiku via the sonnet driver); then OQ-58
+sweep, `STAMPED_FILE_COUNTS` re-pin, and a per-leg `classify_corpus` re-run + adoption so the
+coherent set (OQ-347) stays coherent — the post-rescue rerun of the situation-fixed core is a
+COMPARISON against the excluded-id list recorded in the 2026-08-25 core artifact, not a fresh
+computation.
+
+---
 
 *Compress-on-close (added 2026-06-04): when an entry's status transitions to
 resolved/disposed, compress its body in place — keep the header, Ω-type, the canonical
