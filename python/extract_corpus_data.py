@@ -43,6 +43,62 @@ IS_CONSTRUCTED_PROVENANCE = {
 }
 
 
+# ---------------------------------------------------------------------------
+# `classifications` is a RETIRED surface, not a corpus property. Shipped with
+# the count for the same reason IS_CONSTRUCTED_PROVENANCE is: a bare 0 in the
+# summary reads as a measurement of the corpus when it is a fact about a
+# feeder that no longer exists.
+# ---------------------------------------------------------------------------
+CLASSIFICATIONS_PROVENANCE = {
+    "status": "structurally_empty",
+    "observed_value": [],
+    "measured": (
+        "0/285 corpus members carry a non-empty `classifications` array "
+        "(outputs/pipeline_output.json, manifest run_at=2026-08-24T20:05:12Z). "
+        "The engine holds exactly ONE asserted "
+        "constraint_indexing:constraint_classification/3 fact corpus-wide, and "
+        "it belongs to `catholic_church_1200` — the engine demo constraint, "
+        "not a corpus member (corpus_constraint/1 says no), so it never "
+        "reaches per_constraint."
+    ),
+    "derivation": (
+        "json_report.pl findall over constraint_indexing:constraint_classification/3, "
+        "a multifile/dynamic predicate populated ONLY by authored cells in the "
+        "testsets."
+    ),
+    "reason_feeder_dark": (
+        "Section 3 (INDEXED CLASSIFICATIONS) was retired from the generator at "
+        "Phase C (2026-06-12 cohort-zero ruling, removal commit 9a992459a): "
+        "authored perspectives[] left the schema and the live corpus together "
+        "and per-seat types became ENGINE-COMPUTED. Every story generated since "
+        "the 2026-06-05 rebuild therefore emits zero cells. The archived "
+        "corpora keep theirs under the archived schema."
+    ),
+    "live_replacement": (
+        "per-seat types now live in `perspectives` / `perspective_chi` / "
+        "`perspective_witness`, populated 285/285 — see `with_perspectives` in "
+        "this summary."
+    ),
+    "do_not_interpret_as": (
+        "evidence that the corpus is unclassified, or that classification "
+        "coverage fell to zero. Nothing was lost; the carrier moved."
+    ),
+    "known_precedent": (
+        "OQ-129 (KNOWN_STATE 2026-06-14): omega_from_gap/5 was silently dead "
+        "corpus-wide because its feeder queried this same retired surface — "
+        "'a probe over it reads \"no gaps\" when it means \"no facts\"'. "
+        "Same surface, different consumer."
+    ),
+    "derived_fields_inheriting_this": (
+        "analysis.variance_ratio (null 285/285), analysis.index_configs "
+        "(0 285/285), analysis.types_produced (0 285/285) — all computed by "
+        "calculate_variance() from `classifications`, so these are UNDETERMINED, "
+        "not measured zeros."
+    ),
+    "issues": ["OQ-129", "OQ-109"],
+}
+
+
 class ConstraintData:
     """Unified constraint data structure"""
 
@@ -65,6 +121,10 @@ class ConstraintData:
 
         # Classifications (multiple per constraint)
         self.classifications = []  # [(type, context), ...]
+        # The LIVE per-seat carrier since Phase C retired the authored
+        # classification cells (see CLASSIFICATIONS_PROVENANCE). Extracted so the
+        # summary can report real coverage instead of the pinned-at-0 count.
+        self.perspectives = {}     # {seat: type}
 
         # From pipeline analysis
         self.structural_signature = None
@@ -215,12 +275,18 @@ class CorpusExtractor:
                     'type': omega['type']
                 })
 
-            # Classifications from authoritative classifications array
+            # Classifications from authoritative classifications array.
+            # Structurally empty since 2026-06-12 — see CLASSIFICATIONS_PROVENANCE.
             for cls in entry.get('classifications', []):
                 constraint.classifications.append((
                     cls['type'],
                     cls['context']
                 ))
+
+            # Engine-computed per-seat types — the live replacement carrier.
+            persp = entry.get('perspectives')
+            if isinstance(persp, dict):
+                constraint.perspectives = persp
 
     def calculate_variance(self):
         """Calculate variance ratios for each constraint"""
@@ -325,14 +391,20 @@ class CorpusExtractor:
                 cid: constraint.to_dict()
                 for cid, constraint in self.constraints.items()
             },
+            'classifications_provenance': CLASSIFICATIONS_PROVENANCE,
             'summary': {
                 'total_constraints': len(self.constraints),
                 'with_extractiveness': sum(1 for c in self.constraints.values()
                                           if c.extractiveness is not None),
                 'with_suppression': sum(1 for c in self.constraints.values()
                                        if c.suppression is not None),
+                # Structurally pinned at 0 since the 2026-06-12 Phase-C retirement.
+                # Kept for shape stability; read CLASSIFICATIONS_PROVENANCE before
+                # interpreting it, and read `with_perspectives` for live coverage.
                 'with_classifications': sum(1 for c in self.constraints.values()
                                           if c.classifications),
+                'with_perspectives': sum(1 for c in self.constraints.values()
+                                         if c.perspectives),
                 'with_domain': sum(1 for c in self.constraints.values()
                                   if c.domain is not None),
                 'with_orbit_data': sum(1 for c in self.constraints.values()
@@ -347,7 +419,11 @@ class CorpusExtractor:
         print(f"Summary:")
         for key, value in data['summary'].items():
             pct = (value / data['summary']['total_constraints'] * 100) if data['summary']['total_constraints'] > 0 else 0
-            print(f"  {key}: {value} ({pct:.1f}%)")
+            note = ""
+            if key == 'with_classifications' and value == 0:
+                note = ("   <- RETIRED surface (Phase C, 2026-06-12), not a measured "
+                        "zero; live carrier is with_perspectives")
+            print(f"  {key}: {value} ({pct:.1f}%){note}")
 
 def main():
     import argparse
