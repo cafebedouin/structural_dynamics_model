@@ -111,7 +111,7 @@ population is one nobody constructed. Neither subsumes the other.
 - **Unit:** 7 members = 4 real scorable + 3 synthetic (one per exclusion cause).
   `NKept=4`, `NExcluded=3`, both identities hold.
 - **Leg (`testsets_haiku`, 960 files, post-fix):** `**Purity coverage**: 579 of 589
-  giant-component members have a numeric effective purity; 10 excluded`.
+  giant-component members are banded below; 10 excluded from the bands`.
   Identity (1) holds on all ten rows; identity (2) holds; subtrahend 10 ≠ 0.
 - **Leg (`archives/datasets/original_v6`, n=3380, post-fix)** — the size arm
   OQ-353 needs: `NKept=2989`, `|Members|=3014`, `NExcluded=25`. Both identities
@@ -122,13 +122,52 @@ population is one nobody constructed. Neither subsumes the other.
 `run_phase3`'s setup exactly and gets GC=589, kept=579, excluded=10 — matching
 the emitted coverage line.
 
+### The LABEL was wrong too — the same trap, one level down (corrected before publication)
+
+The first implementation printed *"N of M giant-component members **have a numeric
+effective purity**; K excluded (**members with no numeric effective purity**)."*
+**Both clauses are false.** `NExcluded` is the complement of the WHOLE rejecting
+conjunction — `number(EP), EP >= 0.0` — so it also counts members whose effective
+purity IS numeric but sits below the floor. On `testsets_haiku`, **6 of the 10
+excluded members have a perfectly numeric effective purity** (the `-1.0`
+epistemic-gate-fail sentinel); only 4 are non-numeric. So the artifact asserted
+something false about its own number, on 17 legs that have never published a
+Phase-3 figure before.
+
+**This is the `NExcluded`-vs-`NUnknown` equivalence trap reappearing one level
+down, and it is the fourth instance of the species in this one OQ.** The plan
+caught that the COUNT must not be called `NUnknown`, enumerated causes (a)/(b)/(c),
+named the variable correctly — and then wrote a printed LABEL that means
+`NUnknown`. The enumeration was missing the cause that turns out to be the
+LARGEST in practice: **(d) numeric but below the filter floor**, which is dropped
+by the `EP >= 0.0` half rather than by `number/1`, and which PRE-DATES this guard
+entirely.
+
+Corrected before push, as a string change with no behaviour change:
+
+```
+**Purity coverage**: 579 of 589 giant-component members are banded below;
+10 excluded from the bands (no effective purity, non-numeric, or numeric
+below the 0.0 floor).
+```
+
+**Certified by the control that already existed.** V6c was re-run on both
+degenerate legs after the relabel: count rows byte-identical to the pre-fix
+capture *and* to the pre-relabel post-fix capture (`V6c_haiku2_RELABEL.md`,
+`V6c_haiku3_RELABEL.md`). The parser was re-anchored on the two counts and the
+word `excluded` rather than on the prose, with a comment saying why — a parser
+keyed on the label would have gone silently blind at this correction instead of
+loud.
+
 ### The equivalence requirement — and the naming ruling vindicated by data
 
-The guard drops three silently different populations, and a fourth was already
-being dropped: (a) `effective_purity` succeeds with a NON-NUMBER, (b) it THROWS,
-(c) it FAILS, (d) it returns a NUMBER below 0.0 (the `-1.0` gate-fail sentinel,
-excluded pre-fix by the existing filter). Each is asserted separately in the unit
-control, so a regression names which one broke.
+The rejecting conjunction drops **four** distinguishable populations, and the plan's
+equivalence note enumerated only the first three: (a) `effective_purity` succeeds
+with a NON-NUMBER — the OQ-60 defect class; (b) it THROWS; (c) it FAILS; **(d) it
+returns a NUMBER below 0.0** — the `-1.0` gate-fail sentinel, dropped by the
+`EP >= 0.0` half and therefore excluded pre-fix too. (a)–(c) are asserted
+separately in the unit control, so a regression names which one broke; (d) is what
+the leg measurements below turn out to be dominated by.
 
 On `testsets_haiku`'s giant component the 10 excluded split **4 (a) + 6 (d)**,
 0 (b), 0 (c). The 4 are exactly the "4 unknown-purity GC members" OQ-356 names —
@@ -268,14 +307,53 @@ deleting two live controls:
 | leg | why it passed pre-fix | role 1: criterion 2 | role 2: criterion 3 | role 3: invariance (V6c) |
 |---|---|---|---|---|
 | `testsets` | **unreachability** — GC 4.7%, under `run_phase3`'s `GCFrac > 0.10` gate at `:855`. It has an unknown-purity member and *would* throw if it got there | non-witness | n/a (never enters the block) | n/a |
-| `testsets_haiku2` | **degeneracy** — 0 unknown-purity GC members, so the conservation subtrahend is 0 and identity (2) holds trivially | non-witness (degenerate) | **informative** — monotonicity needs no subtrahend, so its HEAD reading calibrates the invariant (and is what exposed the vacuity above) | **load-bearing** — the guard must change nothing, making its table an exact before/after oracle |
-| `testsets_haiku3` | same | non-witness (degenerate) | **informative** | **load-bearing** |
+| `testsets_haiku2` | **degeneracy** — 0 cause-(a) GC members, so the guard excludes nothing NEW | non-witness for the GUARD (see the correction below) | **informative** — monotonicity needs no subtrahend, so its HEAD reading calibrates the invariant (and is what exposed the vacuity above) | **load-bearing** — the guard must change nothing, making its table an exact before/after oracle, width 1 |
+| `testsets_haiku3` | same | non-witness for the GUARD | **informative** | **load-bearing**, width 1 |
+
+> **CORRECTION to the taxonomy's own wording (2026-08-24) — a future reader applying
+> it as written will misclassify.** The OQ defines degeneracy against the
+> **unknown-purity** count: *"zero unknown-purity GC members, so the conservation
+> identity collapses to `|GC| − 0 = |GC|` and holds trivially."* Measured, that
+> premise is false as stated. `NExcluded` is **1** on haiku2 and **2** on haiku3 —
+> so the conservation subtrahend is NOT zero and identity (2) is not vacuous there.
+> Against the *actual* exclusion population these legs are **weakly
+> non-degenerate**.
+>
+> What remains true, and is the property the taxonomy was reaching for: they have
+> **zero cause-(a) members**, so *the guard changes nothing on them* — which is
+> exactly what makes them non-witnesses for the guard and perfect invariance
+> oracles. The distinction matters because the two readings come apart: a leg can
+> exercise the conservation identity non-trivially while telling you nothing about
+> `number/1`. **Degeneracy must be defined against cause (a), never against
+> `NExcluded`.**
 
 **Witnessed positive control for `testsets`'s unreachability**, so the k=0 claim is
-a fact about the run rather than about a search: the live artifact prints both
-declines in sequence — *"No significant component found at threshold 0.500"* then
-*"No giant component (>25% of nodes) found at any threshold from 0.10 to 0.50."*
-(preserved as `S5c_testsets_giant_component_analysis_PREFIX.md`).
+a fact about the run rather than about a search: the artifact prints both declines
+in sequence — *"No significant component found at threshold 0.500"* then *"No giant
+component (>25% of nodes) found at any threshold from 0.10 to 0.50."*
+
+> **S5c pre-committed a consequence — *if this artifact has been overwritten by a
+> later run, the claim reverts to inferred and owes a fresh control* — so which of
+> the two happened is recorded here rather than left to be re-derived.** Both
+> checks were run:
+>
+> 1. **A copy was captured BEFORE any leg run** and is committed in Commit 1 as
+>    `S5c_testsets_giant_component_analysis_PREFIX.md`, with both declines at
+>    :170 and :176. The evidence map points at that copy.
+> 2. **The live `outputs/giant_component_analysis.md` was never overwritten at
+>    all** — md5 `eeb89386…` identical to the committed copy, mtime `21:36:23`,
+>    i.e. before this session's first leg run. Reason: `run_giant_component_analysis`
+>    only FORMATS to stdout, so the `.md` exists only where a caller redirects it,
+>    and both `run_giant_comp_leg.py` and the census write elsewhere. What *was*
+>    overwritten is `outputs/giant_component_analysis.raw.json` (mtime `23:06:31`),
+>    because `run_provenance_split` writes to `../outputs/` unconditionally.
+>
+> **So the witness survived on both routes, and the claim stays WITNESSED rather
+> than reverting to inferred.** A closing summary earlier in this session said the
+> `.md` "now reflects the last leg run" — that was wrong, and it is corrected here
+> because the difference is exactly the one S5c was written to force: *the witness
+> survived* is not the same claim as *the witness was destroyed but I have a copy*,
+> and only the second would have owed a re-derivation.
 
 ### V6c — the exact invariance oracle: **PASS on both legs**
 
@@ -286,6 +364,26 @@ nothing new. Machine-checked, scoped to the count rows:
 haiku2: all 10 count rows IDENTICAL pre/post
 haiku3: all 10 count rows IDENTICAL pre/post
 ```
+
+> **HOW WIDE THIS ORACLE ACTUALLY IS — state it plainly so "ten rows machine-checked"
+> is never later cited as ten independent checks.** Criterion 3's vacuity deflates
+> V6c by exactly the same factor. If the ten cap rows are identical *to each other*,
+> then "ten rows byte-identical before and after" is **one distinct row compared ten
+> times.** Measured:
+>
+> | leg | printed rows | DISTINCT count rows |
+> |---|---|---|
+> | `testsets_haiku2` | 10 | **1** |
+> | `testsets_haiku3` | 10 | **1** |
+> | `testsets_haiku` | 10 | **1** |
+> | `archives/datasets/original_v6` | 10 | **3** |
+>
+> The oracle is real — an exact expected-output check that costs no hand-computation,
+> and it did its job twice (pre/post fix, and again pre/post relabel) — but its width
+> is 1, not 10. **The same deflation applies to anything downstream built on the
+> sweep's SHAPE rather than its row count**, which is the part of OQ-374 that matters
+> beyond "the table is uninformative": saturation below the default cap makes every
+> cross-row check thinner than its row count advertises.
 
 > **The plan's stated expectation here was mis-derived, and the correction is
 > itself an instance of this OQ's defect class.** The plan required `NExcluded`
@@ -398,7 +496,8 @@ exactly — 8 of 10 rows on v6, 10 of 10 on the haiku legs.
 | `../2026-08-23_oq352_report_driver/oq356_plunit_GREEN_fixed.txt` | **V4c** the positive half: all 13 tests pass, exit 0. Same ruled siting |
 | `V5_haiku_FIXED.md` | **V5** primary leg witness: coverage line + collapse table, criterion 2 with a non-zero subtrahend |
 | `V5_original_v6_FIXED.md` | **V5** the n=3380 leg OQ-353's size arm needs |
-| `V6c_haiku2_FIXED.md`, `V6c_haiku3_FIXED.md` | **V6c** post-fix tables for the exact invariance diff |
+| `V6c_haiku2_FIXED.md`, `V6c_haiku3_FIXED.md` | **V6c** post-fix tables for the exact invariance diff (oracle width **1**, not 10 — see the box under V6c) |
+| `V6c_haiku2_RELABEL.md`, `V6c_haiku3_RELABEL.md` | **V6c re-run after the coverage-label correction** — count rows byte-identical to BOTH the pre-fix capture and the pre-relabel post-fix run, certifying the string change as behaviour-free |
 | `parse_collapse_table.py` | the read-site checker (criteria 2, 3, V6c), with a 7-case planted-fixture selftest: 1 pass, 5 declines, 1 unparseable |
 | `run_giant_comp_leg.py` | the per-leg runner — the census invocation VERBATIM, with stdout persisted; unchanged between the pre-fix and post-fix halves, which is what makes criterion 4 signature-stable |
 | `exclusion_cause_census.pl`, `exclusion_cause_census_haiku.txt`, `exclusion_cause_census_degenerate_legs.txt` | the (a)/(b)/(c)/(d) split that settles the `NExcluded` naming and explains V6c's non-zero counts |
@@ -407,7 +506,7 @@ exactly — 8 of 10 rows on v6, 10 of 10 on the haiku legs.
 | `fixtures/count_by_action_band_prefix.pl` + `fixtures/PROVENANCE.txt` | **V3c** the frozen pre-fix predicate text, line-offset map and md5 — what keeps the sweep's positive control from going vacuous |
 | `adjudication_table.md` | Step 3b: every candidate, three verdicts, in-file witnesses, and the instrument's DECLARED BOUNDS |
 | `sweep_v3_output.txt` | the repaired sweep's run, its positive control, and the held-out acceptance test |
-| `S5c_testsets_giant_component_analysis_PREFIX.md` | the witnessed positive control for `testsets`'s unreachability (both declines printed in sequence) |
+| `S5c_testsets_giant_component_analysis_PREFIX.md` | the witnessed positive control for `testsets`'s unreachability (both declines printed in sequence), captured BEFORE any leg run; the live artifact was additionally verified never to have been overwritten (md5 match) |
 | **the plunit output committed to `audits/2026-08-23_oq352_report_driver/`** | per the operator's ruling siting it there; see the note below |
 
 > **Cross-directory note (deliberate exception, ruled).** The operator ruled by

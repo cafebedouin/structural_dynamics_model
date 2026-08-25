@@ -64,6 +64,31 @@ predicted — so the invariance argument held (all ten count rows byte-identical
 checked) and no count moved. **When you write an expectation about an excluded set, name which of
 the four causes you mean.**
 
+**AND THE TRAP RECURRED ONCE MORE, IN THE PRINTED LABEL — caught before publication, corrected in
+a fifth commit rather than after push.** The first implementation named the VARIABLE correctly
+(`NExcluded`, not `NUnknown`) and then printed *"members with no numeric effective purity"*,
+which means `NUnknown` and is FALSE of 6 of those 10 members. An artifact asserting something
+false about its own number, on 17 legs that had never published a Phase-3 figure. Corrected to
+*"excluded from the bands (no effective purity, non-numeric, or numeric below the 0.0 floor)"*.
+**Naming the count correctly does not name the label correctly — they are two separate acts, and
+the second is the one a reader sees.** Re-certified with the control that already existed: V6c
+re-run on both degenerate legs, count rows byte-identical to the pre-fix capture AND to the
+pre-relabel post-fix run. The parser was re-anchored on the two counts and the word `excluded`
+rather than on the prose, so a future label change fails LOUD rather than reading blind.
+
+**TRIPWIRE 3b — DEGENERACY MUST BE DEFINED AGAINST CAUSE (a), NEVER AGAINST `NExcluded`, and the
+invariance oracle is ONE TENTH as wide as it reads.** OQ-356's non-witness taxonomy defines
+`haiku2`/`haiku3` as degenerate because they have "zero unknown-purity GC members, so the
+conservation subtrahend is zero". Measured, that premise is false: `NExcluded` is 1 and 2, all
+cause (d), so identity (2) is NOT vacuous there — against the actual exclusion population those
+legs are **weakly non-degenerate**. What is true is that they have zero cause-(a) members, so the
+guard changes nothing on them: that is what makes them non-witnesses *for the guard* and perfect
+*invariance oracles*, and the two readings come apart. Separately, because the ten cap rows are
+identical to each other (tripwire 1), **"all ten count rows byte-identical pre/post" is ONE
+DISTINCT ROW compared ten times** (3 distinct on v6). The oracle is real and fired twice; its
+width is 1, not 10. Anything later computed across those rows inherits the same factor — filed on
+OQ-374, because saturation deflates every downstream check built on the table's SHAPE.
+
 **Also landed / recorded.** (i) The `count_by_action_band` widening returns `NKept` and `NExcluded`
 **accumulated independently** — deriving `NKept` as `|Members| - NExcluded` would make the partition
 identity true by construction, i.e. this OQ's own defect class; do not collapse `/10` to `/9`.

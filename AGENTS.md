@@ -573,7 +573,17 @@ false alarm attributed to the guard**, which is worse than no check. Name the va
 it holds (`NExcluded`, never `NUnknown`), derive it from the SAME conjunction the guard rejects
 in ONE pass (never a second, independently-written test), and if you write an EXPECTED value for
 it, say which causes you are predicting: the OQ-356 plan itself predicted 0 on two legs from
-"zero unknown-purity members" and measured 1 and 2, all cause (d). Witness:
+"zero unknown-purity members" and measured 1 and 2, all cause (d).
+
+**Naming the COUNT correctly does not name the LABEL correctly — they are two separate acts, and
+the label is the one a reader sees.** OQ-356's first implementation got the variable right and
+then printed *"members with no numeric effective purity"*, which means `NUnknown` and was false
+of 6 of the 10 members it counted. Whatever you print next to such a count must be true of ALL
+four causes. Corollary for anything that classifies legs by their exclusion behaviour:
+**define degeneracy against cause (a), never against `NExcluded`** — a leg with zero cause-(a)
+members (so the guard changes nothing on it, making it a perfect invariance oracle) can still
+have a non-zero `NExcluded` and exercise the conservation identity non-trivially. The two
+readings come apart. Witness:
 `audits/2026-08-24_oq356_purity_guard/` (`exclusion_cause_census.pl` + WRITEUP).
 
 **And a conservation check over such counts needs TWO identities, not one.** With four action

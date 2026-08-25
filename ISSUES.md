@@ -19239,14 +19239,26 @@ while the filter admits ANY numeric `EP >= 0.0`, so a value at/above 1.01 lands 
 `(1) NS+NB+NW+ND == NKept` (band coverage) and `(2) NKept+NExcluded == |Members|` (partition
 totality). Conflated, a band-coverage bug would report as a guard bug.
 
-**THE NAME `NExcluded` (not `NUnknown`) IS SETTLED BY MEASUREMENT.** The rejecting conjunction
-drops three silently different populations — (a) `effective_purity` succeeds with a NON-NUMBER,
-(b) it THROWS, (c) it FAILS — and a fourth was already being dropped by the pre-existing filter,
-(d) a NUMBER below 0.0 (the -1.0 gate-fail sentinel). On `testsets_haiku`'s giant component the
-10 excluded split **4 (a) + 6 (d)**. The 4 are exactly the "4 unknown-purity GC members" named
-above, so that figure and `NExcluded=10` are two different populations, not a discrepancy — and
-**an excluded count written as "count the unknowns" would have missed 6, breaking the
-conservation identity as a FALSE ALARM attributed to the guard.**
+**THE NAME `NExcluded` (not `NUnknown`) IS SETTLED BY MEASUREMENT — AND SO IS THE PRINTED
+LABEL, which was wrong in the first implementation and corrected before publication.** The
+rejecting conjunction `number(EP), EP >= 0.0` drops **FOUR** distinguishable populations, not
+three: (a) `effective_purity` succeeds with a NON-NUMBER — the OQ-60 defect class; (b) it THROWS;
+(c) it FAILS; **(d) it returns a NUMBER below 0.0** — the -1.0 epistemic-gate-fail sentinel,
+dropped by the `EP >= 0.0` half rather than by `number/1`, and therefore excluded PRE-FIX as well.
+On `testsets_haiku`'s giant component the 10 excluded split **4 (a) + 6 (d)**, 0 (b), 0 (c). The 4
+are exactly the "4 unknown-purity GC members" named above, so that figure and `NExcluded=10` are
+two different populations, not a discrepancy — and **an excluded count written as "count the
+unknowns" would have missed 6, breaking the conservation identity as a FALSE ALARM attributed to
+the guard.**
+
+> **THE TRAP REAPPEARED ONE LEVEL DOWN, and the fourth cause is why.** The first implementation
+> named the VARIABLE correctly and then printed the label *"members with no numeric effective
+> purity"* — which means `NUnknown`, and is FALSE of 6 of those 10 members. Corrected to
+> *"excluded from the bands (no effective purity, non-numeric, or numeric below the 0.0 floor)"*
+> before any leg published a Phase-3 figure. Re-certified by re-running V6c on both degenerate
+> legs: count rows byte-identical to the pre-fix capture AND to the pre-relabel post-fix run.
+> **Degeneracy must be defined against cause (a), never against `NExcluded`** — see the
+> criterion-5 correction below.
 
 **Behaviour preservation:** the pre-fix `findall/3` took ALL solutions per member, the partition
 commits to the first. `effective_purity/4` measured SEMIDET on 2,241 members across three legs,
@@ -19373,6 +19385,22 @@ The repair therefore owes, in the same change:
      members, so criterion 2's identity collapses to `NS+NB+NW+ND = |GC| − 0 = |GC|` and holds
      **trivially**. The invariant is doing real work only when the subtrahend is non-zero; on
      these legs it cannot distinguish a correct guard from no guard at all.
+
+     > **CORRECTED 2026-08-24 BY MEASUREMENT — apply the corrected form, not the one above.**
+     > The premise "the subtrahend is zero on these legs" is FALSE as stated. `NExcluded` is
+     > **1** on haiku2 and **2** on haiku3, so identity (2) is NOT vacuous there: against the
+     > actual exclusion population both legs are **weakly non-degenerate**. What is true — and
+     > is the property this bullet was reaching for — is that they have **zero cause-(a)
+     > members**, so the `number(EP)` guard changes NOTHING on them. That is what makes them
+     > non-witnesses *for the guard* and simultaneously perfect *invariance oracles*.
+     > **Degeneracy must be defined against cause (a), never against `NExcluded`** — the two
+     > come apart, and a leg can exercise the conservation identity non-trivially while telling
+     > you nothing about `number/1`. A reader applying the uncorrected wording will misclassify.
+     >
+     > **And the invariance oracle is one tenth as wide as it reads.** "All ten count rows
+     > byte-identical pre/post" is **one DISTINCT row compared ten times** on haiku2, haiku3 and
+     > haiku alike (3 distinct on v6) — see OQ-374. The check is real and it fired twice, but
+     > "ten rows machine-checked" must never be cited as ten independent checks.
 
    **Therefore the fix must be witnessed on a leg with GC > 10% AND unknown-purity members > 0**
    — i.e. one of the 17 that currently throw. That is not a limitation, it is the only place the
@@ -20255,6 +20283,23 @@ criterion keyed on monotonicity across those rows is a **check that cannot fail*
 table is flat — that is what OQ-356 hit, and it is why OQ-356 reports criterion 3 rather than
 citing it. (3) OQ-353/OQ-354, which must put a floor under corpus-level statistics, would be
 putting a floor under a constant.
+
+**(4) THE DEFLATION IS GENERAL, and this is the part that outlives the sweep: saturation does not
+merely make the table uninformative, it makes EVERY downstream check built on the table's SHAPE
+thinner than its row count advertises.** Measured distinct count rows, out of ten printed:
+
+| leg | printed rows | DISTINCT count rows |
+|---|---|---|
+| `testsets_haiku` | 10 | **1** |
+| `testsets_haiku2` | 10 | **1** |
+| `testsets_haiku3` | 10 | **1** |
+| `archives/datasets/original_v6` | 10 | **3** |
+
+OQ-356's own V6c invariance oracle is the worked example: *"all ten count rows byte-identical
+pre/post"* is **one distinct row compared ten times**. The oracle is real and it fired twice
+(pre/post fix, and again pre/post the coverage-label correction) — but its width is 1, not 10,
+and it must never be cited as ten independent checks. Any statistic, floor or replication test
+this project later computes across those rows inherits the same factor.
 
 **What resolution needs.** Either a swept range that actually spans the binding region (the
 evidence says the interesting band is below ~0.15, not 0.10–1.00), or a recorded ruling that the

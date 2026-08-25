@@ -1258,10 +1258,20 @@ report_contamination_collapse_analysis(Members, Ctx) :-
     % admits ANY numeric EP >= 0.0, so a value at or above 1.01 would land in no
     % band and break (1) — as a false alarm attributed to the guard if the two
     % were conflated into one identity.
+    %
+    % THE PRINTED LABEL MUST NOT SAY "no numeric effective purity" (corrected
+    % 2026-08-24, before first publication). NExcluded is the complement of the
+    % WHOLE rejecting conjunction, `number(EP), EP >= 0.0` — so it also counts
+    % members whose effective purity IS numeric but sits below the floor (the
+    % -1.0 epistemic-gate-fail sentinel). On testsets_haiku 6 of the 10 excluded
+    % are exactly that. A label naming only the non-numeric case asserts
+    % something FALSE about its own number, and it is the NExcluded-vs-NUnknown
+    % equivalence trap one level down: the count was named correctly and the
+    % LABEL still meant NUnknown.
     length(Members, NMembers),
     count_by_action_band(Members, Ctx, SoundFloor, DegFloor, _, _, _, _,
                          NKeptCov, NExcludedCov),
-    format('**Purity coverage**: ~w of ~w giant-component members have a numeric effective purity; ~w excluded (members with no numeric effective purity).~n~n',
+    format('**Purity coverage**: ~w of ~w giant-component members are banded below; ~w excluded from the bands (no effective purity, non-numeric, or numeric below the 0.0 floor).~n~n',
            [NKeptCov, NMembers, NExcludedCov]),
     format('Sweeping contamination_cap from 0.10 to 1.00 (attenuation fixed at ~2f):~n~n', [OrigAtt]),
     format('| Cap | Sound (>=~2f) | Borderline | Warning | Degraded (<~2f) |~n',
@@ -1328,10 +1338,17 @@ count_by_action_band(Members, Ctx, SoundFloor, DegFloor, NS, NB, NW, ND,
 %    (a) effective_purity SUCCEEDS with a non-number  — the OQ-60 defect class
 %    (b) effective_purity THROWS                      — dropped by the catch/3
 %    (c) effective_purity FAILS                       — the conjunct fails
-%  If the excluded count covered only (a) while the guard also drops (b) and
-%  (c), the caller's conservation identity would break on any leg with a
-%  throwing or failing member — and break as a FALSE ALARM attributed to the
-%  guard, which is worse than no check at all.
+%    (d) effective_purity returns a NUMBER below 0.0  — the -1.0 gate-fail
+%        sentinel, dropped by the `EP >= 0.0` half rather than by number/1;
+%        this half PRE-DATES the guard, and it is the LARGEST cause in practice
+%        (6 of 10 excluded on testsets_haiku; ALL of the 1 and 2 excluded on
+%        haiku2/haiku3, which is why those legs have zero cause-(a) members and
+%        still report a non-zero NExcluded)
+%  If the excluded count covered only (a) while the guard also drops (b), (c)
+%  and (d), the caller's conservation identity would break on any leg with a
+%  throwing, failing or gate-failed member — and break as a FALSE ALARM
+%  attributed to the guard, which is worse than no check at all. The same trap
+%  applies to the printed LABEL, not just the variable name: see the caller.
 %
 %  Behaviour-preserving against the pre-fix findall/3 for every value that used
 %  to survive it: the if-then-else commits to the first solution where findall

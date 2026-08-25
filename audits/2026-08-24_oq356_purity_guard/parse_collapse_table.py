@@ -29,7 +29,12 @@ import argparse, re, sys
 SECTION = "### Contamination Collapse Analysis"
 # data row: | 0.10 | 12 | 3 | 4 | 5 |   (header + separator rejected by int())
 ROW = re.compile(r"^\|\s*([0-9]*\.?[0-9]+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*$")
-# coverage line emitted by report_contamination_collapse_analysis/2 (OQ-356)
+# Coverage line emitted by report_contamination_collapse_analysis/2 (OQ-356).
+# Anchored on the STABLE part of the line (the two counts and the word "excluded"),
+# deliberately not on the prose: the label was corrected once already, before first
+# publication, because it named only the non-numeric cause while NExcluded counts
+# the complement of the whole conjunction. A parser keyed on the prose would have
+# gone silently blind at that correction rather than loud.
 COV = re.compile(r"\*\*Purity coverage\*\*:\s*(\d+)\s*of\s*(\d+)\s*giant-component members.*?"
                  r"(\d+)\s*excluded", re.S)
 
@@ -176,8 +181,8 @@ _CLEAN = """## Phase 3
 ### Contamination Collapse Analysis
 
 Current settings: cap=0.30, attenuation=0.50
-**Purity coverage**: 8 of 10 giant-component members have a numeric effective
-purity; 2 excluded (members with no numeric effective purity).
+**Purity coverage**: 8 of 10 giant-component members are banded below; 2 excluded
+from the bands (no effective purity, non-numeric, or numeric below the 0.0 floor).
 
 | Cap | Sound (>=0.70) | Borderline | Warning | Degraded (<0.30) |
 |-----|--------|------------|---------|---------|
