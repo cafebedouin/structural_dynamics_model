@@ -337,7 +337,24 @@ class SufficiencyTester:
         genuine_constraints = set(
             c['constraint_id'] for c in results['genuine_collisions'])
 
+        # COVERAGE, carried to the read site. Every rate above is computed over
+        # constraints that actually carry authored `classifications` cells; a
+        # constraint without them is `continue`d in detect_index_collisions and
+        # contributes to no numerator and no denominator. Since the Phase-C
+        # retirement (2026-06-12) that is ALL of them, so all four rates are 0
+        # because nothing was examined -- and `_calculate_verdict(0,0,0,0)` fell
+        # through to "SUFFICIENT ... Current framework adequate."
+        #
+        # An absent input satisfying a gate is Pattern 5, and the project's
+        # standing write rule (OQ-60 R1) is that a dispositive aggregate gates at
+        # coverage and abstains rather than passing on absence.
+        n_scored = sum(1 for c in self.constraints.values()
+                       if c.get('classifications'))
+        coverage = (n_scored / total_constraints) if total_constraints else 0.0
+
         return {
+            'n_scored': n_scored,
+            'coverage': round(coverage, 6),
             'total_collisions': total_collisions,
             'total_constraints': total_constraints,
             'classification_failures': n_failures,
@@ -354,14 +371,31 @@ class SufficiencyTester:
                 classification_failure_rate,
                 genuine_collision_rate,
                 non_mountain_anomaly_rate,
-                expected_variance_rate
+                expected_variance_rate,
+                n_scored,
             ),
             'domain_consolidation': dict(self.domain_consolidation),
         }
 
     def _calculate_verdict(self, failure_rate, genuine_rate,
-                           anomaly_rate, perspectival_rate):
-        """Determine overall verdict based on four rates"""
+                           anomaly_rate, perspectival_rate, n_scored=None):
+        """Determine overall verdict based on four rates.
+
+        Fail-closed on absence: with nothing scored, the four rates are 0
+        because no constraint was examined, not because none collided. Return
+        the abstention token instead of the SUFFICIENT branch those zeros
+        would otherwise reach.
+        """
+        if n_scored is not None and n_scored == 0:
+            return ("INCONCLUSIVE (no_data) \u2014 no constraint carries authored "
+                    "`classifications` cells, so no index collision could be "
+                    "detected and the four rates below are undetermined, not "
+                    "measured zeros. The authored-classification surface was "
+                    "retired at Phase C (2026-06-12); per-seat types are now "
+                    "engine-computed in `perspectives`. This test has no live "
+                    "feeder and cannot pronounce on index sufficiency until it "
+                    "is repointed.")
+
         issues = []
 
         if failure_rate > 5:
