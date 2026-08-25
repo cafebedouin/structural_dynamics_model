@@ -150,7 +150,6 @@ run "gap surfaces"   "$PY" python/check_gap_status_surfaces.py
 run "sunset"         "$PY" python/sunset_check.py
 run "cli selftest"   "$PY" python/cli.py selftest
 run "tripwire hook"  "$PY" python/pretooluse_tripwires.py --selftest
-# RETIRE WHEN OQ-277 CLOSES (added 2026-08-11, operator ruling; expiry is deliberate).
 # OQ-326. The install-witness suite for probe_harness. NOT a bare `run ... swipl ...`
 # row: that exits 0 when the suite loads zero tests or the file is not found under the
 # load path, which is the acceptance criterion's clause 1 (snapshot non-empty) reappearing
@@ -187,6 +186,18 @@ run "ledger grammar" "$PY" python/runs_ledger_check.py --check
 # This is the one audit-specific entry here: when OQ-277 closes, delete this line and the
 # tool, or promote it to a general frozen-artifact check if a second audit needs one.
 # Next consolidation pass owns the call — see CLAUDE.md "Memory Consolidation Review".
+# RETIRE WHEN OQ-277 CLOSES (added 2026-08-11, operator ruling; expiry is deliberate).
+# ^ MOVED BACK BESIDE ITS ROW 2026-08-25. It had drifted ~37 lines up, above the OQ-326
+# block, where `git log -L` on that line reported its history and `git blame` here reported
+# none — an instruction with no visible owner. Originally attached by `c23042181` ("Gate:
+# standing detection that OQ-277's frozen preregistration is unaltered (expires at close)");
+# the hash is carried IN THE TEXT because moving the line re-attributes it under `git log -L`
+# and would otherwise orphan the archaeology a second time.
+# ITS CONDITION HAS FIRED: OQ-277 CLOSED 2026-08-12. DO NOT ACT ON THIS COMMENT.
+# Retire-vs-promote is a RESERVED operator ruling (R5), NOT a fix-on-sight cleanup: a fired,
+# unconditioned retire-instruction is exactly what a future instance under standing
+# fix-on-sight permission would execute, and executing it occupies the operator's seat.
+# See ISSUES OQ-277 → CLOSE (2026-08-12) and its Disposals block before touching this row.
 run "oq277 freeze"   "$PY" python/audits/oq277_build_prereg.py --check
 
 # OQ-352. The per-leg REPORT driver's refusal taxonomy and transit guard.
