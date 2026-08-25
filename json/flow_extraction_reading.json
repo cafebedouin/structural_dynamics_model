@@ -1,0 +1,272 @@
+{
+  "header": {
+    "constraint_id": "flow_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "fb4ae3cc-6731-46da-ac5f-4039f201e0df"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.35,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Pari-Mutuel Takeout as Outcome-Invariant Liquidity Toll",
+    "topic_domain": "quantitative_finance/gambling_theory/market_microstructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "track_operators",
+      "state_racing_authorities",
+      "tote_system_vendors"
+    ],
+    "victims": [
+      "recreational_bettors",
+      "professional_handicappers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "track_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Sets the takeout rate on every pool (win, place, show, exotics) and collects it automatically regardless of which horse wins, which bettor is skilled, or how sharp the closing odds turn out to be. The rate is negotiated with regulators and is structurally the same whether the pool is efficient or wildly mispriced. Exit for the operator is arbitrage-grade: it can raise exotic-wager takeout, shift toward simulcast/ADW volume, or exit unprofitable meets entirely."
+    },
+    {
+      "name": "state_racing_authorities",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Levies a statutory share of the takeout for purses, breeding funds, and general revenue. Has a structural interest in the pool's continued existence, not in any bettor's outcome; its cut arrives identically whether the favorite or the longshot wins."
+    },
+    {
+      "name": "tote_system_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Operates the pooling infrastructure and is paid per-transaction or as a percentage of handle. Indifferent to race outcomes by design; the vendor's revenue is a function of volume flowing through the pool, not of who cashes tickets."
+    },
+    {
+      "name": "recreational_bettors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Wagers into pools where a fixed percentage is removed before payouts are calculated, on every bet, win or lose. Can walk away from the track entirely (mobile exit at the individual level) but cannot negotiate the rate or avoid it while participating; the toll is levied on the act of betting, not on being wrong."
+    },
+    {
+      "name": "professional_handicappers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Attempts to find structurally mispriced pools and bet large volume against public money. Even a bettor who correctly predicts outcomes at a rate that would be profitable in a zero-toll market can be driven net-negative by the takeout compounding across the volume required to exploit small edges. Exit means leaving pari-mutuel wagering for fixed-odds or private markets, which are themselves scarce or illegal in many jurisdictions."
+    },
+    {
+      "name": "market_microstructure_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Studies the take as a structural feature of pooled-liquidity markets comparable to bid-ask spread or exchange fees — a toll on flow, not a bet on outcomes. Does not participate in the pool and has no stake in who wins any given race."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Pools dispersed, uncoordinated wagers into a single liquidity structure so that odds can be derived endogenously from bettor behavior rather than requiring a bookmaker to set and defend prices against informed action; the take funds the infrastructure (tote systems, regulatory oversight, purse structures) that makes pooling possible at scale.",
+    "transfer_function": "Moves a fixed percentage of every dollar wagered — independent of race outcome — from the pool of bettors collectively to track operators, racing authorities, and infrastructure vendors, before any payout is calculated.",
+    "absent_voices": "Bettors as a class have no seat in setting the takeout rate; the rate is negotiated between track operators and regulators without a bettor representative present in most jurisdictions. Professional handicappers occasionally testify at rate hearings but rarely alter outcomes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the takeout vanished overnight, tracks would lose their primary revenue mechanism, purses would collapse without an alternate funding source, and the pool structure itself would likely be replaced by fixed-odds or exchange-based wagering within a short period — the arrangement is load-bearing for the entire pari-mutuel industry's existence, not incidental to it.",
+    "founding_problem": "Early horse racing wagering had no reliable mechanism to aggregate dispersed bets into fair odds or to fund track operations and purses; the pari-mutuel pool solved both by letting the crowd set prices and skimming a fixed share to fund the infrastructure.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent market microstructure researchers and gaming economists outside the racing industry corroborate that pooled-liquidity funding remains structurally necessary wherever no counterparty is willing to hold outcome risk at scale; however, several state auditors' reports (outside track-operator or regulator self-interest) note that takeout rates have risen well above what infrastructure cost alone would require, suggesting the funding function persists alongside a rent component."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story authors the 'flow extraction' reading of the beatability-of-the-take kernel: the pari-mutuel takeout is a structural, outcome-invariant toll levied on liquidity moving through the wagering pool, not a wager the house makes against bettors' predictive skill. Under this reading the house (track operator, tote vendor, regulator) is categorically indifferent to which horse wins — its revenue is a fixed percentage of handle regardless of outcome distribution. The question 'can the take be beaten' is treated here as a category error: the house was never playing the prediction game, so no victim/beneficiary structure attaches to outcome accuracy itself. The victims of THIS reading's extraction are bettors as flow-generators (their money passing through the pool triggers the toll), not bettors as failed predictors. Sibling readings — public_risk_reading (house as risk-bearer against informed bettors), folk_mountain_reading (takeout as an unchangeable fact of wagering), and meta_prediction_reading (the take as itself a bet on aggregate bettor behavior) — are separate constraints with their own ε and stakeholder structures; this file does not average over them.",
+    "key_agents": [
+      "track_operators: agenda_setter/beneficiary (institutional/arbitrage) — sets and collects the outcome-invariant toll",
+      "state_racing_authorities: beneficiary (institutional/constrained) — statutory share of takeout",
+      "tote_system_vendors: beneficiary (organized/mobile) — paid per-transaction on volume, indifferent to outcomes",
+      "recreational_bettors: payer (powerless/mobile) — pays toll on every wager regardless of skill",
+      "professional_handicappers: payer (moderate/constrained) — toll compounds against any edge, structural rather than outcome-based extraction",
+      "market_microstructure_analysts: observer (analytical/analytical) — treats take as a spread-like structural fee"
+    ],
+    "logic_rationale": "Extraction is authored at 0.68 by interval end because the take removes a fixed percentage of all handle before any payout math occurs — this is a volume tax, not a skill tax, and it compounds against every bettor including those with genuine predictive edges. Suppression is moderate (0.35): bettors are not coerced into wagering, but once in the pool there is no mechanism to avoid the toll on the wagered dollar, and jurisdictions restrict fixed-odds alternatives that would let bettors escape pooled pricing. Theater ratio rises across the interval (0.20 to 0.42) as takeout increasingly funds general state revenue and administrative overhead rather than the purse/infrastructure functions it was originally levied to support — a Goodhart-style drift from funding mechanism toward embedded revenue stream. Accessibility collapse is moderate (0.40): alternatives exist (fixed-odds books, exchanges, offshore markets) but are legally restricted or unavailable in most US racing jurisdictions, so alternatives are suppressed by regulation rather than eliminated by necessity.",
+    "directionality_logic": "Track operators, racing authorities, and tote vendors sit at the beneficiary end of directionality: their revenue is a direct, guaranteed function of handle, decoupled from any bettor's success. Recreational bettors and professional handicappers sit toward the target end: the take extracts from the wagered dollar regardless of the bettor's skill, meaning even a handicapper with genuine positive expected value pre-takeout can be rendered net-negative by the structural toll. This is the reading's key move: the extraction is defined over FLOW (dollars wagered), not over OUTCOME (predictions correct), so the victim/beneficiary structure tracks participation in the pool, not accuracy of forecasts.",
+    "mandatrophy_analysis": "The founding problem (funding pari-mutuel infrastructure and purses through a crowd-priced pool) remains partially live, which prevents a clean mandatrophy verdict — but the rising theater_ratio and the auditor-corroborated gap between infrastructure cost and current takeout rates suggest the mandate has partially drifted from its founding function toward embedded state and operator revenue. Classifying this as tangled_rope rather than snare preserves the genuine coordination function (pooled pricing without a bookmaker) while still registering the asymmetric extraction that the enforcement (regulatory takeout floors, restrictions on alternative markets) makes possible.",
+    "kernel_context": "This is the flow_extraction_reading of the beatability_of_the_take kernel. The kernel concerns whether pari-mutuel wagering can be 'beaten' — whether skilled prediction can overcome the house's structural edge. This reading holds that the question is malformed: the house's position is defined by indifference to outcomes, not by any claim about predictability, so 'beatability' in the outcome-accuracy sense does not apply to it. Sibling readings — public_risk_reading (the house as a genuine risk-bearing counterparty exposed to informed money), folk_mountain_reading (the take as an immutable, unchallengeable fact of the game), and meta_prediction_reading (the take itself as an implicit bet on aggregate market efficiency) — are separate constraint files with their own beneficiary/victim structures and ε values; they are linked here via network.affects_constraints but not merged into this reading's classification."
+  },
+  "omegas": [
+    {
+      "id": "flow_toll_vs_prediction_market_category",
+      "question": "Is the pari-mutuel take structurally more like an exchange fee (levied on flow, indifferent to outcome) or more like a bookmaker's vigorish (levied in a way that is sensitive to informed betting pressure)?",
+      "resolution_mechanism": "Compare takeout behavior across pool types: if takeout rates and structures are invariant to the presence of sharp/informed money in the pool (i.e., tracks do not adjust takeout in response to detected skilled action), the flow-toll reading is supported; if takeout or rule changes correlate with skilled-bettor activity, the public_risk_reading gains support instead.",
+      "impact": "If the flow-toll reading is vindicated, no victim/beneficiary structure should attach to outcome-prediction accuracy at all — professional handicappers are not 'targets' because they predict well or poorly, only because they generate flow. If the public_risk_reading is vindicated instead, the victim structure would need to be re-authored around informed-vs-uninformed bettor asymmetry, which is a structurally different constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the take's structural target is flow or informed prediction — the central kernel disagreement this reading resolves one way."
+    },
+    {
+      "id": "takeout_rate_setting_capture",
+      "question": "Are takeout rates set primarily to cover the genuine coordination costs of pooling (tote infrastructure, regulatory oversight, purses) or do they reflect regulatory capture by track operators seeking rent beyond those costs?",
+      "resolution_mechanism": "Independent cost-accounting audit of tote infrastructure and purse funding requirements versus actual takeout revenue collected, compared across jurisdictions with different regulatory capture profiles.",
+      "impact": "If takeout tracks cost closely, the coordination function dominates and a rope classification would be more defensible; if takeout substantially exceeds funding need, the tangled_rope (or even snare) reading is reinforced and the rising theater_ratio measurement is diagnostic of extraction rather than noise.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the takeout rate reflects genuine funding need or captured rent-setting."
+    },
+    {
+      "id": "sibling_reading_boundary_location",
+      "question": "Where exactly does the flow_extraction_reading's premise (outcome-invariant toll) stop being defensible and the public_risk_reading's premise (house as risk-bearing counterparty) become more accurate — e.g., in exotic wagers (trifectas, superfectas) where takeout is often higher and pool dynamics are more sensitive to sharp money concentrating on specific combinations?",
+      "resolution_mechanism": "Disaggregate takeout structural analysis by bet type (win/place/show vs. exotic wagers) and test whether the outcome-invariance premise holds equally across bet types, or whether exotic pools show behavior more consistent with the public_risk_reading.",
+      "impact": "If exotic wagers behave differently, this constraint's scope may need to be narrowed to win/place/show pools specifically, with a separate constraint story authored for exotic-wager takeout under a different reading.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Where the flow-extraction premise's applicability boundary sits within the broader pari-mutuel system."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.15
+  },
+  "network": {
+    "affects_constraints": [
+      "public_risk_reading",
+      "folk_mountain_reading",
+      "meta_prediction_reading"
+    ],
+    "dual_formulation_note": "This story is one of four constraints decomposed from the colloquial 'beatability of the take' kernel (beatability_of_the_take). Each reading treats a structurally distinct claim: flow_extraction_reading (this file) holds the take is an outcome-invariant liquidity toll with no accuracy-linked victim structure; public_risk_reading holds the house is a genuine risk-bearing counterparty exposed to informed betting; folk_mountain_reading holds the take is an unchallengeable structural fact of wagering (candidate false-summit mountain); meta_prediction_reading holds the take is itself an implicit bet on aggregate market efficiency. Each carries its own ε, beneficiary/victim structure, and classification per the ε-invariance principle; they are linked via network edges, not merged."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_risk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "folk_mountain_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "meta_prediction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "house_indifference_to_outcome_distribution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "extraction_indexed_to_flow_not_accuracy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "pooled_pricing_without_bookmaker_counterparty",
+    "drift_state": {
+      "moment": "contemporary_takeout_rate_environment",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-25",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "benter_hkjc_parimutuel_2026_20260825_125025"
+  }
+}

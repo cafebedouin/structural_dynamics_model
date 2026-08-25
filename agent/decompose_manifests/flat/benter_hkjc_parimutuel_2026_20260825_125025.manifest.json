@@ -1,0 +1,219 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Quantitative Finance / Gambling Theory / Market Microstructure",
+  "family_id": "benter_hkjc_parimutuel_2026",
+  "topic_summary": "Analysis of Bill Benter's algorithmic betting operation against the Hong Kong Jockey Club's parimutuel monopoly, structured around four positions relative to a single shared claim — 'you can't beat the races' — read differently by the house, the public, conventional wisdom, and Benter's syndicate. The disagreement is not four independent axes but four incompatible readings of what the parimutuel take actually constrains.",
+  "extraction_summary": {
+    "entity_count": 5,
+    "claim_count": 4,
+    "tension_count": 3,
+    "mechanism_count": 3,
+    "absence_count": 2,
+    "key_entities": [
+      "Bill Benter (algorithmic bettor, syndicate architect)",
+      "Alan Woods (bankroll, co-founder)",
+      "Hong Kong Jockey Club (monopoly operator, flow extractor)",
+      "General betting public (aggregate odds-setter, unwitting risk-holder)",
+      "Conventional wisdom / folk epistemics ('you can't beat the races')"
+    ],
+    "key_tensions": [
+      "House's outcome-invariant take vs. bettor's outcome-dependent edge",
+      "Public's aggregated probability estimate vs. algorithm's refined probability estimate",
+      "Folk mountain reading ('unbeatable') vs. reclassified extraction reading ('beatable via meta-prediction')"
+    ]
+  },
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment is the parimutuel take structure itself: a fixed percentage (~20%) is extracted from the pool before payout, and this structural fact is universally acknowledged by all four positions. What differs is what each position takes this fixed extraction to imply about the *action space* — whether betting is a mug's game, a flow-mechanics non-event, an unknowing liability, or a beatable meta-prediction problem.",
+    "authority_description": "No single interpretive authority; the kernel's reading is determined by each actor's model of what the take constrains — HKJC statute defines the take mechanically, but says nothing about whether it forecloses profitable action. That inferential gap is where readings diverge.",
+    "drift_status": "absent",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "beatability_of_the_take",
+    "readings": [
+      {
+        "reading_id": "flow_extraction_reading",
+        "commitment": "The take is a structural, outcome-invariant toll on liquidity flow; the house's position is defined by indifference to who wins, not by any claim about predictability of race outcomes.",
+        "authority_grounding": "institutional / mechanical — HKJC's monopoly charter and pool-settlement math",
+        "sibling_readings": [
+          "public_risk_reading",
+          "folk_mountain_reading",
+          "meta_prediction_reading"
+        ],
+        "expected_structural_delta": "No victim/beneficiary structure attaches to outcome accuracy; the house's constraint is on volume and pool integrity, not on truth of predictions. This reading treats 'beatability' as a category error — the house was never playing the same game as the bettors."
+      },
+      {
+        "reading_id": "public_risk_reading",
+        "commitment": "The take is survivable in expectation only if one's probability estimate is unbiased; the public's aggregate odds silently encode systematic error (favourite-longshot bias, overconfidence), so the public is a risk-holder carrying model error it cannot detect.",
+        "authority_grounding": "behavioral/statistical — revealed by divergence between market-implied probability and realized frequency",
+        "sibling_readings": [
+          "flow_extraction_reading",
+          "folk_mountain_reading",
+          "meta_prediction_reading"
+        ],
+        "expected_structural_delta": "Victim set = public bettors as a class; beneficiary = whoever can measure and exploit the divergence. The take is not the primary threat to this reading's holder — the invisible bias is."
+      },
+      {
+        "reading_id": "folk_mountain_reading",
+        "commitment": "The take plus the intrinsic unpredictability of horse racing jointly make sustained profit impossible for anyone; 'you can't beat the races' is read as a near-physical law, not a claim about any specific actor's model quality.",
+        "authority_grounding": "folk/conventional — inherited heuristic treated as settled fact, unfalsified because untested by those who hold it",
+        "sibling_readings": [
+          "flow_extraction_reading",
+          "public_risk_reading",
+          "meta_prediction_reading"
+        ],
+        "expected_structural_delta": "This reading deletes the bet from the action space entirely for its holders. No beneficiary/victim structure — it is a null action, structurally a mountain-as-foreclosure rather than mountain-as-physics. Its holders never test whether the take is beatable because the question is precluded before being asked."
+      },
+      {
+        "reading_id": "meta_prediction_reading",
+        "commitment": "The take is fixed and unbeatable at the level of individual outcome-prediction, but beatable at the level of predicting the *public's* prediction error; the actionable target is not 'which horse wins' but 'where does the public's implied probability diverge from true probability by more than the take.'",
+        "authority_grounding": "quantitative/statistical — multinomial logit modeling, Kelly-criterion staking, iterative refinement against realized outcomes",
+        "sibling_readings": [
+          "flow_extraction_reading",
+          "public_risk_reading",
+          "folk_mountain_reading"
+        ],
+        "expected_structural_delta": "Beneficiary = the modeler (Benter/Woods syndicate); victim = the public pool from which the syndicate's edge is drawn net of take. This reading recovers an action (profitable betting) that the other three readings structurally cannot see — not because they lack information, but because their reading of the kernel forecloses the question the fourth reading asks."
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "folk_mountain_reading",
+        "reading_b": "meta_prediction_reading",
+        "basis": "Folk_mountain holds that no model can systematically exceed the market's implied probabilities net of take; meta_prediction holds that the market's implied probabilities are demonstrably and exploitably biased. A framework cannot simultaneously treat the take-adjusted market as efficient (folk_mountain's implicit axiom) and as containing extractable inefficiency (meta_prediction's foundational axiom) — accepting one requires rejecting the other's premise about what the market price represents."
+      },
+      {
+        "reading_a": "flow_extraction_reading",
+        "reading_b": "meta_prediction_reading",
+        "basis": "Flow_extraction's axiom is that house revenue and profitability questions are category-separate from outcome-prediction accuracy (the house doesn't care who wins). Meta_prediction's axiom is that the entire game is defined by outcome-prediction accuracy relative to the public. These are not merely different emphases: flow_extraction denies that 'beatability' is even a coherent question about the house's position, while meta_prediction treats beatability as the only question that matters. No single framework can hold that beatability is both a category error and the central fact."
+      }
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "beatability_of_the_take",
+      "human_readable": "Contested Kernel: Is the Parimutuel Take Beatable? (Four Readings)",
+      "structural_delta": "Not a single delta — four incompatible readings of what the fixed ~20% take implies about the action space of betting",
+      "primary_observable": "Which action (extract flow / hold undetected risk / delete the bet / recover a meta-prediction edge) each reading licenses given identical institutional facts",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "meta_prediction_reading holder (syndicate)",
+      "victim": "public_risk_reading holder (aggregate public pool)",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Contested kernel — counts as one axis; expands to four readings covering the entire structural space named in the prompt (flow extractor, risk-holder, blind seat, reclassifying seat)"
+    },
+    {
+      "claim_id": "informational_capital_asymmetry",
+      "human_readable": "Informational/Computational Capital as Entry Barrier to Meta-Prediction",
+      "structural_delta": "The gap between the public's analytical capacity and the syndicate's (120+ variable multinomial logit model, iterative refinement, Kelly staking) is a resource-and-capability barrier independent of which reading of the kernel one holds",
+      "primary_observable": "Cost/scale of data infrastructure and modeling talent required to detect and exploit the public's probability error (e.g., 300-employee syndicates per Ziemba 2020)",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "well-capitalized quantitative syndicates",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Fails independence test as a distinct axis: this is the mechanism by which meta_prediction_reading is instantiated, not a separate structural claim about the kernel. Folding it into the meta_prediction reading avoids double-counting (Type A overlap — same structural delta, different framing level)."
+    },
+    {
+      "claim_id": "institutional_countermeasure_response",
+      "human_readable": "HKJC's Adaptive Countermeasures Against Benter (Bans, Runner Networks)",
+      "structural_delta": "The house's behavioral response (banning phone betting, revoking privileges) once flow_extraction_reading holders detect they are being selected against",
+      "primary_observable": "Sequence of institutional rule changes correlated with syndicate detection",
+      "epsilon_bin": "low",
+      "hypothesis": "scaffold",
+      "beneficiary": "HKJC (short-term pool integrity)",
+      "victim": "Benter syndicate (operational friction)",
+      "downstream_of": [
+        "beatability_of_the_take"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: downstream elaboration of the flow_extraction/meta_prediction collision already captured within the kernel's reading set; adds narrative color but no independent ε"
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "flow_extraction_reading",
+      "kernel_id": "beatability_of_the_take",
+      "reading_id": "flow_extraction_reading"
+    },
+    {
+      "claim_id": "public_risk_reading",
+      "kernel_id": "beatability_of_the_take",
+      "reading_id": "public_risk_reading"
+    },
+    {
+      "claim_id": "folk_mountain_reading",
+      "kernel_id": "beatability_of_the_take",
+      "reading_id": "folk_mountain_reading"
+    },
+    {
+      "claim_id": "meta_prediction_reading",
+      "kernel_id": "beatability_of_the_take",
+      "reading_id": "meta_prediction_reading"
+    }
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "informational_capital_asymmetry",
+      "structural_delta": "Computational/data barrier to entry for meta-prediction",
+      "hypothesis": "rope",
+      "deferral_reason": "Collapses into meta_prediction_reading as its enabling mechanism rather than a structurally independent axis"
+    },
+    {
+      "claim_id": "institutional_countermeasure_response",
+      "structural_delta": "HKJC's rule changes in response to detected syndicate activity",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Downstream narrative elaboration of the flow_extraction vs meta_prediction collision; no independent ε beyond kernel readings"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_kernel_boundary_stability",
+      "description": "Does the kernel hold in other parimutuel-adjacent domains (lotteries, prediction markets, sports spread betting) or is it specific to the take-plus-folk-wisdom structure of horse racing? If the kernel doesn't generalize, 'beatability_of_the_take' may be a family of domain-local kernels rather than one universal kernel.",
+      "source": "§1.3-K kernel/not-kernel decision boundary check"
+    },
+    {
+      "id": "omega_public_reading_heterogeneity",
+      "description": "public_risk_reading treats 'the public' as a single reading-holder, but bettor sophistication is a spectrum (casual bettors vs. semi-serious handicappers vs. small-scale quants). A finer decomposition might split this into two readings; collapsed here for parsimony pending evidence the sub-populations diverge structurally rather than just quantitatively.",
+      "source": "F15 (Premature Closure) self-check on reading granularity"
+    },
+    {
+      "id": "omega_house_as_potential_fifth_reading",
+      "description": "flow_extraction_reading assumes the HKJC is purely indifferent to outcome-prediction, but the institutional countermeasure evidence (bans, privilege revocation) suggests the house DOES have an implicit reading of beatability once its monopoly rents are threatened — possibly a fifth reading ('threatened_monopolist_reading') where the house's true axiom is 'the take must remain effectively unbeatable at scale for pool integrity,' collapsing flow indifference under sufficient syndicate pressure.",
+      "source": "Dark Matter Probe 3 (Beneficiary Scan) — F03 candidate, not elevated to full reading due to insufficient evidence the HKJC's institutional response reflects a coherent alternative axiom vs. ordinary rent-protection behavior"
+    },
+    {
+      "id": "omega_mountain_reclassification_direction",
+      "description": "The prompt's synthesis frames Benter as reclassifying a mountain into a beatable extraction. An alternative bounding: folk_mountain_reading was never wrong about the take being effectively unbeatable via outcome-prediction — meta_prediction_reading succeeded by changing the prediction target, not by falsifying the mountain. Whether this constitutes 'reclassification' or 'target substitution' is left open; both readings remain individually coherent and holdable regardless of which historical narrative is preferred.",
+      "source": "Kernel coherence check (§1.3-K) — readings retained as individually holdable rather than merged"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 flagged on omega_house_as_potential_fifth_reading: institutional countermeasure evidence (bans, runner networks) could suggest HKJC holds a fifth implicit reading rather than pure flow_extraction indifference. Insufficient evidence to elevate to a full reading — generalizing from rent-protection behavior to a coherent alternative axiom would be premature. Bounded as omega rather than promoted. Two axiom_contradictions declared using the selectivity test (folk_mountain vs meta_prediction; flow_extraction vs meta_prediction) — both pairs verified as true contradictions (no coherent single framework holds both), distinguished from the non-contradictory pairing of flow_extraction and public_risk_reading, which can coexist (the house's indifference and the public's blindness are compatible claims, not competing axioms)."
+  },
+  "_generation_run_id": "benter_hkjc_parimutuel_2026_20260825_125025",
+  "_provenance": {
+    "scope_model": "claude-sonnet-5",
+    "scope_prompt_commit": "d179423dc12550308c604592b1d199a951739c4c",
+    "scope_schema_commit": "43ee9613b2ccba5f278157c4cbe534645e1f544e",
+    "persisted_at": "2026-08-25T12:50:27",
+    "axes_ceiling": null,
+    "topic": "Bill Benter and Hong Kong parimutuel betting: three positions relative to a structural blindness — the flow extractor whose take is outcome-invariant, the risk-holder who carries model error unknowingly, and the blind seat for whom the mountain reading of 'you can't beat the races' deletes the bet from the action space — and the seat that reclassified the mountain as a beatable extraction and thereby recovered an action the other seats could not see."
+  }
+}
