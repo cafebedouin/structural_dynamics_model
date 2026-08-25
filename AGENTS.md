@@ -1404,7 +1404,7 @@ This chains seven steps automatically:
 | 4 Corpus update | Runs `python/run_pipeline.py` to re-classify full corpus | `outputs/pipeline_output.json` |
 | 5 Reports | `python/enhanced_report.py` writes per-constraint reports | `outputs/constraint_reports/<id>_report.md` |
 | 6 Tensions ledger | Deterministic extraction (`python/tensions_ledger.py`) — NOT an essay (OQ-101, 2026-06-10) | `outputs/tensions_ledger.md` |
-| 7 Commit | `_step_commit` git-commits this run's `json/<cid>.json` + `prolog/testsets/<cid>.pl`. GATED (skips on `--no-commit`, run-tag, or failed corpus update) and SCOPED to the run's cids — never `git add -A`, refuses if the index already holds unrelated staged changes; local commit only, never pushes | git (local) |
+| 7 Commit | `_step_commit` git-commits this run's `json/<cid>.json` + `prolog/testsets/<cid>.pl`. GATED (skips on `--no-commit`, run-tag, or failed corpus update) and SCOPED to the run's cids — never `git add -A`, refuses if the index already holds unrelated staged changes; local commit only, never pushes. **KNOWN DEFECT (OQ-384):** because the pathspec is built from STORY cids, a run that mints a KERNEL leaves `prolog/testsets/<kernel_id>_contradictions.pl` UNTRACKED — it is not a run cid and has no `.json` twin — while the same run's manifest counts it, so disk and git disagree until someone sweeps it up. Witnessed twice (`f32fe86b`, `13cd510d2`). **Check `git status prolog/testsets/` after step 7 reports success.** | git (local) |
 
 **Big or refusing source files** (e.g. a 1.6 MB S-1, a paper the safety classifier refuses):
 the orchestrator auto-compresses to a NEUTRAL brief only when the topic exceeds its MEASURED
