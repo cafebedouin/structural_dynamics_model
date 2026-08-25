@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "8b0664e43601f034e02791f0107fba60864df6b3",
+    "store_version": "af48741fffc071f8ba1abff6a3ef1a9492bc75ac",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-24T14:55:48"
+    "generated_at": "2026-08-24T21:33:46"
   },
-  "issues_sha": "add01fdfa3512cabeccdd6bb0d185fd7437e8dc8f37a042910edfc1ba6dc312d",
-  "n_entries": 366,
+  "issues_sha": "0b2ce876db817688e4ae117f251f308eb2fc97f0587b3a7da38c98abf71eacff",
+  "n_entries": 370,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 152,
+    "open": 156,
     "partial": 5
   },
   "active": [
@@ -2261,11 +2261,6 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-51",
-        "OQ-59",
-        "OQ-285",
-        "OQ-288",
-        "OQ-291",
         "OQ-352",
         "OQ-353",
         "OQ-356"
@@ -2311,6 +2306,64 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-353"
+      ]
+    },
+    {
+      "id": "OQ-367",
+      "status": "open",
+      "priority": 1,
+      "summary": "Python and Prolog MaxEnt disagree on the TYPE of 9 constraints, and the only check that could see it was discarding its own result",
+      "deps": [
+        "blocked_on_human oq367-which-engine-is-authoritative"
+      ],
+      "cross_refs": [],
+      "mentioned_in": []
+    },
+    {
+      "id": "OQ-368",
+      "status": "open",
+      "priority": 2,
+      "summary": "The schema-drift channel has been the only thing that noticed FOUR times, and it has never once escalated",
+      "deps": [
+        "blocked_on_human oq368-warn-vs-fatal-is-a-workflow-ruling",
+        "bundled_with OQ-306"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-306"
+      ]
+    },
+    {
+      "id": "OQ-369",
+      "status": "open",
+      "priority": 2,
+      "summary": "~13 unretried `batches.create` sites, and a wave scheduler that treats a FAILED upstream as a satisfied dependency",
+      "deps": [
+        "bundled_with OQ-80"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-80"
+      ]
+    },
+    {
+      "id": "OQ-370",
+      "status": "open",
+      "priority": 1,
+      "summary": "The retired `classifications` surface has ~12 live consumers, and one of them PUBLISHES A VERDICT off zero data",
+      "deps": [
+        "blocked_on OQ-129",
+        "bundled_with OQ-109"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51",
+        "OQ-59",
+        "OQ-109",
+        "OQ-129",
+        "OQ-285",
+        "OQ-288",
+        "OQ-291"
       ]
     }
   ],

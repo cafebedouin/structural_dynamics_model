@@ -19733,6 +19733,202 @@ Today the v6 arm is **9 of 11 stages** — `giant_comp` excluded by preregistrat
 `abductive` timed out (this OQ) — and OQ-353's size arm needs both closed.
 
 
+---
+
+## OQ-367 — Python and Prolog MaxEnt disagree on the TYPE of 9 constraints, and the only check that could see it was discarding its own result
+
+**Ω-type:** Ω_E (which implementation is correct is settleable by evidence; the divergence is measured, the cause is not).
+
+**Status:** open — minted 2026-08-25 while debugging the 2026-08-24 orchestrator log.
+**Priority:** 1
+**Deps:** blocked_on_human oq367-which-engine-is-authoritative
+**Files:** `python/shared/maxent.py` (`maxent_classify`, `apply_signature_override`),
+`prolog/maxent_classifier.pl` (`maxent_run/2`), `python/tangled_decomposition.py`
+(cross-validation block, repaired `b0a7c5e11`),
+`outputs/maxent_replication_divergence.json` (the artifact this OQ exists to read).
+
+**The fact.** `shared/maxent.py` and `maxent_classifier:maxent_run/2` are two independent
+implementations of MaxEnt + signature override. Both post-override, so a disagreement is a real
+replication failure, not a raw-vs-normalized artifact. Over 258 compared constraints
+(manifest `run_at=2026-08-24T20:05:12Z`, n=285): **21 discrepancies > 0.05, of which 9 are ARGMAX
+FLIPS** — the two engines assign different constraint TYPES to the same constraint:
+
+```
+0.9678  organization_floor_c0                            py=tangled_rope  pl=piton
+0.6779  phenomenological_program_reading                 py=scaffold      pl=rope
+0.6317  deferred_consent_reading                         py=scaffold      pl=rope
+0.5987  benign_dictator_reading                          py=scaffold      pl=piton
+0.5466  installed_authorship_reading                     py=scaffold      pl=piton
+0.5451  gita_kurukshetra_discourse__gandhian_allegorical py=scaffold      pl=rope
+0.5382  presentation_audit_reading                       py=scaffold      pl=rope
+0.2653  developmental_harm_reading                       py=tangled_rope  pl=snare
+0.2652  institutional_trust_erosion_c0                   py=tangled_rope  pl=snare
+```
+
+Seven of the nine cluster on `signature = false_ci_rope` with py=scaffold against pl=rope|piton,
+which points at `apply_signature_override`'s handling of that signature rather than at MaxEnt
+itself. The `false_natural_law` case (`organization_floor_c0`, 0.9678) is the outlier and may be
+a second mechanism.
+
+**Why it was invisible.** Three defects, all repaired in `b0a7c5e11` — the divergence itself is
+NOT repaired: (a) `break` truncated the per-type scan so the reported max was a lower bound
+(printed 0.943640, true 0.967774); (b) a 0.06 probability wobble and a flipped argmax both
+counted as one "discrepancy", so the consequential stratum had no number; (c) the result went to
+stderr and the next line overwrote the Python side with the Prolog side, leaving nothing in
+`outputs/`. Worse, `validate_maxent` then ran on the MERGED values against
+`outputs/maxent_report.md`, which is also Prolog-generated — so the reassuring
+`Validation: 28/28 passed` was Prolog against Prolog and stood exactly where a reader would take
+it for the replication result.
+
+**What resolution needs.** (1) Diagnose the `false_ci_rope` override path on both sides — this is
+answerable from code. (2) Then the RULING: which side is authoritative. `pipeline_output.json`
+(Prolog) is what every downstream consumer reads, so if Prolog is wrong the corpus types are
+wrong; if Python is wrong, `shared/maxent.py` is a broken oracle used by several analysis scripts.
+The engine is NOT to be "fixed" toward agreement before that is ruled — silently converging them
+would destroy the only independent check the stage has.
+
+**What it changes.** Whether a constraint's published type is trustworthy for the 9 named
+constraints, and whether `shared/maxent.py` may be cited as an independent replication at all.
+
+---
+
+## OQ-368 — The schema-drift channel has been the only thing that noticed FOUR times, and it has never once escalated
+
+**Ω-type:** Ω_P (a workflow ruling: what a contract-vs-emitter mismatch should DO, which no evidence settles).
+
+**Status:** open — minted 2026-08-25.
+**Priority:** 2
+**Deps:** blocked_on_human oq368-warn-vs-fatal-is-a-workflow-ruling, bundled_with OQ-306
+**Files:** `python/shared/schemas.py` (`PIPELINE_FIELDS`, `_report_drift`,
+`validate_pipeline_output`, `validate_enriched_pipeline`), `prolog/json_report.pl`
+(`write_per_constraint_entry/4`), `scripts/gate.sh`.
+
+**The incidence record.** A Prolog emit field that is not registered in `PIPELINE_FIELDS` produces
+a stderr warning and nothing else. Four occurrences:
+
+- 2026-05-30 — `audits/2026-05-30_schema_drift/`, ~2,164 warnings/run.
+- 2026-06-04 — `sheaf_status`, 1,107 warnings/run (KNOWN_STATE).
+- 2026-07-25 — `epsilon_provenance` / `fingerprint_shift` / `repair_transitions`, ~3 weeks
+  unregistered. That entry states the rule — *"Registering a field in `python/shared/schemas.py`
+  belongs in the same commit as the `json_report.pl` emit"* — and diagnoses the channel:
+  *"A drift warning that never escalates is a Pattern-6 channel."*
+- 2026-08-21 — `member_kind` (OQ-306 R3, commit `72ec21feb` touched four files, not `schemas.py`),
+  ~3,400 lines/run, unnoticed until the 2026-08-24 orchestrator log was read by hand.
+
+**The rule was stated and then violated 27 days later.** That is the finding: a stated convention
+did not survive contact with a commit that had four other files to get right. Registration
+(`ace24a24f`) and legibility (`1d1607db4`, one aggregated line per field carrying `n/N`) are
+landed; escalation is not, because it is a ruling.
+
+**The ruling needed.** Should an unregistered emit field be a HARD ERROR? It would stop any
+pipeline run whose Prolog side gained a field first — which is the intent, and also real friction
+in a repo where the Prolog side routinely lands first. Options: (a) fatal in
+`validate_pipeline_output`; (b) a `scripts/gate.sh` row; (c) leave it warn-only now that one
+aggregated line is legible.
+
+**Measured constraint on option (b), so the next executor does not rediscover it.** A gate row
+wanting the emitted key set from source hits a bounded-extraction problem, measured 2026-08-25:
+a whole-file scan of `format(S, '      "key":` over-reads by 4 (`cs_verdicts_fired`,
+`fields_absent`, `pattern_counts`, `total_with_cs_fields` — 6-space-indented keys belonging to a
+different object at `json_report.pl:1965-1970`); bounding to the `write_per_constraint_entry/4`
+clause span under-reads by 2 (`maxent_entropy`, `maxent_top_type`, emitted by helper predicates
+outside the clause). Neither bound is exact, and a fragile extractor inside a gate is worse than
+none. Reading `outputs/pipeline_output.json` instead is exact (`artifact − source` is empty) but
+`outputs/` is gitignored, so the row would SKIP on a fresh clone — a silently-skipping gate row
+being the same Pattern-6 shape this OQ is about.
+
+**What it changes.** Whether a fifth occurrence is possible.
+
+---
+
+## OQ-369 — ~13 unretried `batches.create` sites, and a wave scheduler that treats a FAILED upstream as a satisfied dependency
+
+**Ω-type:** Ω_C (design choice — how a generation run should degrade when a wave dies).
+
+**Status:** open — minted 2026-08-25 from the ZEUGE run that landed 0 of 7 declared stories.
+**Priority:** 2
+**Deps:** bundled_with OQ-80
+**Files:** `agent/generate_kernel_corpus.py` (`create_batch_with_retry`, the wave loop `:1141`,
+`generate_from_manifests` upstream predicate `:1076-1078`), plus the unswept sites below.
+
+**Limb A — the sweep.** `a975ad142` gave `client.messages.batches.create` the transient retry that
+`poll_batch` three lines away already had, and routed all four sites in
+`generate_kernel_corpus.py`. The same unretried call remains in: `agent/generate_json_haiku.py:258`,
+`agent/generate_json.py:255`, `agent/cohort_replicate_batch.py:124`,
+`agent/run_no_scope_gemini.py:336`, `agent/run_no_scope_sonnet.py:201`,
+`python/partition_probe.py:256,309`, `python/regenerate_stories.py:731`,
+`python/sotu_scope_batch.py:212`, `python/sotu_generate_batch.py:367`,
+`python/recover_historical_seeds.py:94`, `python/audits/.../oq117_spend_driver.py:133`. Two use a
+different client shape (`client.batches.create(model=..., src=...)`, Gemini) and cannot share the
+helper as written. Enumerated rather than left implicit: a sweep that stops at the module where
+the bug appeared reads exhaustive and is not.
+
+**Limb B — the scheduler question (a genuine design call, not a bug to fix on sight).** The
+wave-eligibility predicate is
+
+```python
+wave = [s for s in remaining
+        if not any(u in run_ids and u not in generated_by_id and u not in failed_ids
+                   for u in (s.get("downstream_of") or []))]
+```
+
+`u not in failed_ids` means a FAILED upstream UNBLOCKS its dependents. Downstream waves then
+generate without the upstream story context they declared a dependency on — quietly, producing
+stories that are structurally valid and contextually impoverished. On 2026-08-24 all 7 seeds were
+in wave 1 so nothing downstream survived to demonstrate it, which is why this is filed rather than
+witnessed. The alternative (hold dependents when an upstream fails) trades silent quality loss for
+a louder, larger shortfall. Which is right is the operator's call.
+
+**What it changes.** Whether a transient API error can cost a topic run, and whether a partial
+generation silently produces context-starved stories.
+
+---
+
+## OQ-370 — The retired `classifications` surface has ~12 live consumers, and one of them PUBLISHES A VERDICT off zero data
+
+**Ω-type:** Ω_E (which consumers are genuinely dead vs repointable is answerable per site).
+
+**Status:** open — minted 2026-08-25.
+**Priority:** 1
+**Deps:** blocked_on OQ-129, bundled_with OQ-109
+**Files:** `python/reports/queries/sufficiency_test.py` (fail-closed `af48741ff`+),
+`python/reports/queries/variance_analysis.py`, `classification_audit.py`, `conflict_map.py`,
+`omega_enricher.py`, `python/orbit_characterization.py`, `python/idea_site_exploration.py`,
+`python/sotu_mountain_decoupling.py`, `python/audits/sheaf_audit.py`,
+`python/audits/schema_sieve.py`, `python/extract_corpus_data.py` (`calculate_variance`).
+
+**The fact.** `constraint_indexing:constraint_classification/3` was retired at Phase C (2026-06-12,
+removal commit `9a992459a`); per-seat types became engine-computed. The live corpus holds exactly
+ONE asserted fact and it is `catholic_church_1200`, the engine demo, which
+`corpus_loader:corpus_constraint/1` says is not a member — so **0/285 corpus members** carry a
+cell. (Control that the read path CAN see such facts: the `kernel_v1` archive carries 10,216.)
+
+**Why this is not just dead code.** `outputs/index_sufficiency.md` is regenerated every pipeline
+run and stated:
+
+> **Verdict:** SUFFICIENT — Indices explain most variance. Current framework adequate.
+
+`detect_index_collisions` does `if not classifications: continue`, so all 285 were skipped, all
+four rates were 0, and `_calculate_verdict(0,0,0,0)` fell through to the SUFFICIENT branch. An
+absent input satisfying a gate is Pattern 5 in its purest form, and this one published a
+framework-adequacy verdict, exit 0, every run. Fixed here only for THIS surface: the verdict now
+gates on coverage and returns `INCONCLUSIVE (no_data)` (controls: abstains at `n_scored=0`,
+still SUFFICIENT at `n_scored=50` with clean rates, still INSUFFICIENT on bad rates).
+`outputs/variance_analysis.md` is milder — it shows `null | 285 | 100.0%` — but still reports
+"High variance (>0.5): 0 (0.0%)" as a finding.
+
+**Precedent, same surface.** OQ-129 (KNOWN_STATE 2026-06-14): `omega_from_gap/5` was silently dead
+corpus-wide because its feeder queried this predicate — *"a probe over it reads 'no gaps' when it
+means 'no facts'"*. This is the same surface killing a different consumer two months later, which
+is the argument for sweeping the remaining sites rather than fixing them as they surface.
+
+**What resolution needs.** Per site: repoint to `perspectives`/`perspective_chi` (the live
+carrier, 285/285), fail-closed on absence, or retire the report. `Unwired ≠ worthless` applies —
+adjudicate by the product, do not delete on sight.
+
+**What it changes.** Whether the tier-2 report set may be cited at all.
+
+
 *Compress-on-close (added 2026-06-04): when an entry's status transitions to
 resolved/disposed, compress its body in place — keep the header, Ω-type, the canonical
 Status line, Origin, and a short resolution note with evidence pointers (commit hash,
