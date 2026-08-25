@@ -110,3 +110,36 @@ is the situation-fixed core?*
   06:57:38Z with **T+45 = 07:34:53Z as the binding hard stop**.
 - Full nemotron pass (`--n 0`, 9 seeds, tag `seed_rescue1` bare): running; read-back PASSED on
   first landed story. nemotron_think (2 seeds) to follow, serialized.
+- FINAL: nemotron 4/9 landed (996→1000, 5 declared short), nemotron_think 2/2 (1003→1005,
+  COMPLETE) — both inside T+45. Detail: leg_shortfall.md.
+
+## Phase 3–8 log
+
+- **Freeze commit `a3966e7c6`** (Phase 1 stories + ladders + quarantines + Phase 2 code + OQ
+  mints + this audit dir + the leftover 2026-08-24 decompose manifest, which sat at a code path
+  and would have flipped `code_dirty` for the whole sweep). GATE GREEN at the frozen HEAD after
+  two self-caused reds resolved: `audit writeup`/`apparatus` (this dir needed its WRITEUP.md +
+  Fired: line the moment it existed) and `audit cites` (the WRITEUP cites the four new scripts,
+  untracked until this very commit — self-resolving by ordering).
+- **Phase 4**: all 19 legs classified serially at `a3966e7`, ~2h50m wall, dest
+  `outputs/coherent_a3966e7/`. Coherence table: 19/19 one commit, `dirty=False`, n_man==n_disk,
+  0 hard failures (task b9de5gvpq output). Derived `expected_model` per leg matched every
+  directory's family; `testsets` derived MIXED (6 models) → None, classified LAST at n=285
+  stamped at the moment of its call. **No repo write occurred inside the freeze window** (tree
+  clean at close of Phase 4, `git status` empty).
+- **Phase 5**: pre-registered diff — all 17 unchanged legs IDENTICAL (0/0/0); changed legs
+  exactly +4/+2 only-new, 0 only-old, pre-existing changes confined to 14 corpus-relative keys,
+  verdict_join 0, stop fields 0. ADOPTED into `outputs/pipeline_output.<leg>.json` (18 legs;
+  the canonical `pipeline_output.json` NOT replaced — testsets is not a coherent-set member).
+- **Phase 6**: OQ-348 permutation (seed 348, 2000 iters) — floors all beat (instrument
+  discriminates); all 3 cross-model pairs beat on ALL fields including ε → the UNNAMED cell;
+  trigger 6: recorded in OQ-348 (`blocked_on_human`), not forced into A/B.
+- **Phase 7**: core = 6/871 (0.7%), agreed-on-null 0, excluded 134 recorded.
+- **Phase 8**: split moves nothing (core 0.6–0.8% per stratum n≥30; stealth2×nemotron beats null
+  in both large strata). Pooled numbers are artifact and result.
+
+## HEAD stamp at CLOSE
+
+Open `7fc4b8c59` → freeze `a3966e7c6` (this session's own commit, accounted) → close-out commit
+follows this edit. The only writers between stamps were this executor's witnessed commits; no
+second-writer artifact appeared during the freeze window.

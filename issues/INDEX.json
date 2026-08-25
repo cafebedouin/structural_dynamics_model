@@ -1,22 +1,22 @@
 {
   "manifest": {
-    "store_version": "7fc4b8c59e1395b4faf7c5f44b077be18e61231d",
+    "store_version": "a3966e7c64e90bd9de4a5a3b77fab118b9f6591f",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-25T01:59:59"
+    "generated_at": "2026-08-25T05:38:59"
   },
-  "issues_sha": "382eca680e1101ea6974e152aad8043d82f1d914e2c29e9f6d4f0290fc2c8931",
-  "n_entries": 378,
+  "issues_sha": "7ddae4b1c665a2728d94ed351c16a7c3b0435c9c71ec79eb57d9bb5d08600929",
+  "n_entries": 379,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 172,
+    "resolved": 174,
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 163,
+    "open": 162,
     "partial": 5
   },
   "active": [
@@ -1912,7 +1912,8 @@
         "OQ-345",
         "OQ-346",
         "OQ-347",
-        "OQ-348"
+        "OQ-348",
+        "OQ-378"
       ]
     },
     {
@@ -1943,19 +1944,6 @@
       ]
     },
     {
-      "id": "OQ-345",
-      "status": "open",
-      "priority": 1,
-      "summary": "Backfill: regenerate the June haiku (465) / flash (212) stakeholder-less stories and every leg's missing seeds under the new prompt, provenance-tagged",
-      "deps": [
-        "splits_from OQ-342"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-342"
-      ]
-    },
-    {
       "id": "OQ-346",
       "status": "open",
       "priority": 3,
@@ -1970,29 +1958,13 @@
       ]
     },
     {
-      "id": "OQ-347",
-      "status": "open",
-      "priority": 1,
-      "summary": "Within-model floors for every leg (kimi2, sonnet2, haiku2, stealth3, nemotron_think), then reclassify-all and the situation-fixed core",
-      "deps": [
-        "splits_from OQ-342"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-58",
-        "OQ-342",
-        "OQ-343",
-        "OQ-346",
-        "OQ-348"
-      ]
-    },
-    {
       "id": "OQ-348",
       "status": "open",
       "priority": 2,
       "summary": "The engine's outputs agree across models more than its inputs do (h1 37% vs authored ε 9%, stealth vs nemotron): routing, or band coarseness?",
       "deps": [
-        "splits_from OQ-343"
+        "splits_from OQ-343",
+        "blocked_on_human oq348-unnamed-cell-reading"
       ],
       "cross_refs": [],
       "mentioned_in": [
@@ -2462,14 +2434,28 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-51",
         "OQ-58",
+        "OQ-342",
+        "OQ-345",
+        "OQ-347"
+      ]
+    },
+    {
+      "id": "OQ-379",
+      "status": "open",
+      "priority": 3,
+      "summary": "/plan-review argument interpolation substitutes positional words for `$2`/`$3` in the pinned RUNS.md awk instrument",
+      "deps": [
+        "splits_from OQ-337"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51",
         "OQ-59",
         "OQ-285",
         "OQ-288",
         "OQ-291",
-        "OQ-342",
-        "OQ-345",
+        "OQ-337",
         "OQ-347"
       ]
     }
@@ -5481,6 +5467,38 @@
         "OQ-306",
         "OQ-326",
         "OQ-338"
+      ]
+    },
+    {
+      "id": "OQ-345",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Backfill: regenerate the June haiku (465) / flash (212) stakeholder-less stories and every leg's missing seeds under the new prompt, provenance-tagged",
+      "deps": [
+        "splits_from OQ-342"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-342",
+        "OQ-378"
+      ]
+    },
+    {
+      "id": "OQ-347",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Within-model floors for every leg (kimi2, sonnet2, haiku2, stealth3, nemotron_think), then reclassify-all and the situation-fixed core",
+      "deps": [
+        "splits_from OQ-342"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-58",
+        "OQ-342",
+        "OQ-343",
+        "OQ-346",
+        "OQ-348",
+        "OQ-378"
       ]
     },
     {

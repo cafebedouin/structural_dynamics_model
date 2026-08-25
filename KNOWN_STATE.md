@@ -8,6 +8,46 @@ query below to reading the whole file.
 **Entry grammar (machine-readable, added 2026-06-04).** Every entry is:
 
 ```
+## 2026-08-25 — [tripwire] The coherent 19-leg reclassify: the 15-commit dirty artifacts were BEHAVIORALLY IDENTICAL to clean HEAD; the situation-fixed core is 6/871; OQ-348 landed in its unnamed cell — and two silent stratum-enumeration traps are now measured
+**Files:** outputs/pipeline_output.*.json, python/audits/oq347_coherent_reclassify.py, python/audits/oq347_prereg_diff.py, python/audits/situation_fixed_core.py, python/audits/permutation_null.py, python/audits/oq347_stratum_split.py, python/audits/leg_diagnostic_table.py, audits/2026-08-25_oq347_coherent_reclassify/, prolog/testsets_nemotron/, prolog/testsets_nemotron_think/, audits/2026-08-21_flash_regime_vs_redraw/epsilon_distance.py, audits/2026-08-22_oq345_stakeholder_backfill/backfill_diff.py
+**Tier:** tripwire
+
+OQ-342 step (3) / OQ-347 steps 2–4 executed (plan `next-ethereal-clarke`, run row `2026-08-25-2`;
+full record `audits/2026-08-25_oq347_coherent_reclassify/WRITEUP.md`, **Fired:** live). All 19
+legs reclassified at ONE clean HEAD **`a3966e7`** and ADOPTED at
+`outputs/pipeline_output.<leg>.json` — **TRIPWIRE 5 of 2026-08-23 is DISCHARGED: every leg
+output is now reproducible from a commit.** The pre-registered diff read `per_constraint`
+IDENTICAL (0/0/0) on all 17 unchanged legs, so every number measured on the old 15-commit /
+16-dirty set stands. The rescued legs (nemotron +4 → 1000, 5 seeds declared short;
+nemotron_think +2 → 1005 COMPLETE, tag `+seed_rescue1`) changed only in the 14 corpus-relative
+ensemble-refit keys; verdict_join/h1_band/signature/claimed_type/ε: 0 changes on pre-existing
+ids. Situation-fixed core: **6 of 871 (0.7%)**, stratum-stable, excluded-id list recorded for
+the OQ-378 rerun. OQ-348's permutation landed in the UNNAMED cell — authored ε itself beats the
+seed-permutation null on all 3 cross-model pairs — OQ-348 is now `blocked_on_human`. OQ-345 and
+OQ-347 resolved; OQ-376/377/378/379 minted.
+
+**TRIPWIRE A — a stratum join keyed on the DIRECTORY name reads dead on the whole Flash family,
+silently.** `story_provenance` field 5 carries the DRIVER name: `testsets_flash*` stories carry
+`no_scope_rebuild_gemini*` (five legs, ~4,800 stories, no error raised). Measured 2026-08-25:
+flash = 754 `no_scope_rebuild_gemini` + 206 `+stakeholder_backfill`.
+
+**TRIPWIRE B — haiku's 505 June-originals carry BARE `no_scope_rebuild`, no leg suffix at all.**
+A pattern requiring `no_scope_rebuild_<something>` misses all 505 and reports the leg as 455
+stories — 47% coverage presenting as complete (Pattern 6). haiku = 505 + 455 = 960 ✓. Both traps
+(A, B): enumerate strata by parsing field 5 of the multi-line `story_provenance/8` term
+(`leg_diagnostic_table.PROV_RE`, `re.S`) — never a line-oriented grep on a leg-name-derived
+pattern; a single-line grep returns empty, which reads exactly like "no strata found". Promoted
+to CLAUDE.md (Critical Distinctions, live-legs paragraph) as one pointer line.
+
+**Also landed:** ε absence-coercion fixed at `epsilon_distance.py` + `backfill_diff.py`
+(exclude-and-count, two-sided selftests; 0 numbers changed — absent ε is 0 on every model leg).
+NEW: the CANONICAL `outputs/pipeline_output.json` carries **27 absent-ε records** (raw twin 27;
+dead `pipeline_output_testsets_head.json` 11) — live input for any OQ-377 census site reading
+the canonical. `backfill_diff.py`'s AFTER arm now defaults to the PRESERVED §9 copy
+(`outputs/_arms_oq345_2026-08-25/`, md5s in the audit dir) — §9 is pinned to
+`pipeline_output.haiku.json` @ `0f432fb` / `pipeline_output.flash.json` @ `2ce8e18`, NOT to the
+adopted coherent files.
+
 ## 2026-08-24 — [tripwire] OQ-356 RESOLVED: the OQ-60 sweep's third ingest guarded — and TWO of this fix's own acceptance criteria turned out to be checks that could not fail
 **Files:** prolog/giant_component_analysis.pl, prolog/tests/test_purity_absence.pl, audits/2026-08-23_oq352_report_driver/purity_guard_sweep_v3.py, audits/2026-08-24_oq356_purity_guard/, ISSUES.md
 **Tier:** tripwire

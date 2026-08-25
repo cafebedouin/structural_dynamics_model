@@ -770,6 +770,11 @@ question, and a leg still filling is not a finished corpus. The per-leg diagnost
 shows which statistics carry a model fingerprint vs draw noise:
 `audits/2026-08-23_leg_diagnostic_table/WRITEUP.md`. No count of legs is published here by
 design — the one this paragraph would have carried has already changed twice this month.
+**Stratifying a leg by provenance: parse field 5 of the multi-line `story_provenance/8` term
+(`leg_diagnostic_table.PROV_RE`), never a leg-name-derived grep** — field 5 carries the DRIVER
+name (`testsets_flash*` → `gemini*`), haiku's June originals carry bare `no_scope_rebuild` with
+no suffix, and a single-line grep returns empty, which reads as "no strata". All three
+mis-stratify silently; measured ground truth: KNOWN_STATE 2026-08-25.
 
 **Static-leg file counts (disk-verified 2026-08-18): `testsets_haiku` 960, `testsets_flash` 960,
 `testsets_kimi` 1005, `testsets_sonnet` 1001.** Finished corpora; a number here is usable. The

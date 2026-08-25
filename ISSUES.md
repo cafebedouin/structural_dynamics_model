@@ -5168,6 +5168,12 @@ OQ-117 ((c) parent), OQ-83 (exemption deliberate).
 2026-08-23** after Phase 0 measured the boundary (gate branch **G1b**, no spend).
 **Priority:** 1
 **Deps:** splits_from OQ-117
+**Substrate note (2026-08-25):** the prereg's declared absence
+(`audits/2026-08-21_oq120_epsilon_boundary/substrate_check.md:36` — no situation-fixed core) is
+DISCHARGED: the core now exists (6 of 871 over the coherent set at `a3966e7`,
+`outputs/coherent_a3966e7/situation_fixed_core.json`; OQ-347 resolved 2026-08-25). At n=6 it is
+too small to serve as a stratifier here without a relaxed definition — note carried, prereg
+unchanged.
 
 **The boundary claim as filed, and why it is restated.** OQ-117's engine run tested the fed claim =
 **mountain** only and ruled (c) document-as-condition; its scope bound routed the rope/snare case
@@ -18028,11 +18034,28 @@ generating (kimi2, sonnet2, haiku2). The operator's ruling (2026-08-22): *fixing
 evaluation is the task; comparability serves it and is tracked by `prompt_commit`/`schema_commit`,
 not frozen.* Sequence: (1) floors — kimi2, sonnet2, haiku2, stealth3, nemotron thinking-on
 (OQ-347); (2) backfill the June haiku/flash stakeholder-less stories and the missing seeds of every
-leg under the new prompt, tagged `+rescue1` / `+stakeholder_backfill` (OQ-345); (3) reclassify ALL
+leg under the new prompt, tagged `+seed_rescue1` / `+stakeholder_backfill` (OQ-345) — **RULING-1
+(operator, 2026-08-25): the missing-seed tag is `+seed_rescue1`, NOT this entry's original literal
+`+rescue1`, which is OCCUPIED (`testsets_nemotron` 144 / `testsets_stealth` 36, a distinct
+2026-08-22 generation event) — reusing it would merge two generation events on the two legs
+carrying the largest residues; the convention is defect-named, not ordinal (parallel to
+`stakeholder_backfill`)**; (3) reclassify ALL
 legs at one commit and run the §9 before/after diff; (4) only then decide the new-family pairs —
 OpenAI current + an older OpenAI model, DeepSeek — and possibly wait for the stealth model's reveal
 (OQ-346). Measurements that ride the program: thinking-on ε instability (OQ-343), the
 `victim`/`payer` prompt-interpretation split (OQ-344), engine-compresses-idiom (OQ-348).
+
+**Step (3) EXECUTED 2026-08-25** (`audits/2026-08-25_oq347_coherent_reclassify/WRITEUP.md`,
+`Fired: live`): all 19 legs reclassified at one clean HEAD `a3966e7`; the pre-registered diff
+read **IDENTICAL `per_constraint` on all 17 unchanged legs** (the 15-commit / 16-dirty artifact
+set was behaviorally identical to clean HEAD — TRIPWIRE 5's incoherence removed), and the two
+rescued legs changed only by their new ids + the corpus-relative ensemble-refit keys
+(verdict_join / h1_band / signature / claimed_type / ε: 0 changes on pre-existing ids). The
+coherent set is ADOPTED at `outputs/pipeline_output.<leg>.json`. Children moved this session:
+OQ-347 resolved (core = 6/871), OQ-345 resolved (rescue residue → OQ-378), OQ-348 measured and
+BLOCKED on an operator ruling (unnamed 2×2 cell). The §9 WRITEUP prose remains the open
+deliverable of this umbrella; its four arms are preserved
+(`audits/2026-08-25_oq347_coherent_reclassify/preserved_arms.md`).
 
 **Resolution:** every child closed or disposed, and the diff of step (3) written up with a
 `Fired:` bit. **What it changes:** whether the five-leg fingerprints (2026-07-20) are read with
@@ -18146,7 +18169,16 @@ the rebuild pins enums in-line everywhere.
 
 **Ω-type:** Ω_E (operator ruled the backfill 2026-08-22; this is execution + the diff).
 
-**Status:** open — minted 2026-08-22.
+**Status:** resolved — 2026-08-25. The stakeholder backfill landed 2026-08-22 (haiku 455, flash
+206/210 over three passes; diffs committed as `backfill_diff_{haiku,flash}_2026-08-22.txt`) and
+its four §9 arms are now PRESERVED out of the coherent reclassify's write path
+(`audits/2026-08-25_oq347_coherent_reclassify/preserved_arms.md`: §9 pinned to
+`pipeline_output.haiku.json` @ `0f432fb`, `pipeline_output.flash.json` @ `2ce8e18`;
+`backfill_diff.py` AFTER arm parameterized to the preserved copies). The missing-seed clause —
+this entry's dangling half — is SPLIT into its own OQ: the 2026-08-25 sync pass closed
+nemotron_think (1003→1005 COMPLETE) and landed 4/9 on nemotron (5 declared short); the
+remaining 5 + the 257 batch-only seeds live in **OQ-378** (tag `+seed_rescue1`, RULING-1),
+shortfall table + ids in `audits/2026-08-25_oq347_coherent_reclassify/leg_shortfall.md`.
 **Priority:** 1
 **Deps:** splits_from OQ-342
 **Files:** `agent/run_no_scope_sonnet.py`, `agent/run_no_scope_gemini.py`, `agent/run_no_scope_stealth.py`, `prolog/testsets_haiku/`, `prolog/testsets_flash/`, `docs/technical/bulk_corpus_generation.md` §9.
@@ -18216,7 +18248,16 @@ a cross-model delta must exceed. **What it changes:** the September corpus compo
 
 **Ω-type:** Ω_E.
 
-**Status:** open — minted 2026-08-22; kimi2 (batch 1/3), sonnet2, haiku2 launched the same day.
+**Status:** resolved — 2026-08-25: steps 2–4 delivered. All 19 legs reclassified at ONE clean
+HEAD `a3966e7` (coherent set ADOPTED; pre-registered diff IDENTICAL on every unchanged leg), and
+the **situation-fixed core = 6 of 871 (0.7%)** — seeds where all 21 derived same-model pairs
+agree on non-null h1_band ∧ verdict ∧ signature; agreed-on-null 0; 134 excluded ids RECORDED so
+the OQ-378 post-rescue rerun is a comparison. Stratum-stable (0.6–0.8% in every stratum with
+n≥30). Witness: `audits/2026-08-25_oq347_coherent_reclassify/WRITEUP.md` (`Fired: live`);
+artifacts `outputs/coherent_a3966e7/situation_fixed_core.json` + `stratum_split_report.txt`;
+tool `python/audits/situation_fixed_core.py`. The floor rows below were measured on the
+pre-coherent artifacts and are VALIDATED by the zero-diff (identical `per_constraint`), so they
+stand as the floor table the Resolution names.
 **Priority:** 1
 **Deps:** splits_from OQ-342
 **Files:** `agent/run_no_scope_kimi.py` (`--leg-suffix`), `agent/run_no_scope_sonnet.py` (`--leg-name/--leg-suffix`), `agent/run_no_scope_stealth.py`, `python/audits/five_leg_twin_comparison.py` (`LEGS` dict hardcoded — extend to N), `audits/2026-08-21_flash_regime_vs_redraw/paired_agreement.py`.
@@ -18416,9 +18457,26 @@ Evidence: `audits/2026-08-21_oq120_epsilon_boundary/WRITEUP.md`.
 
 **Ω-type:** Ω_E.
 
-**Status:** open — minted 2026-08-22 from the first stealth/nemotron read.
+**Status:** open — minted 2026-08-22; MEASURED 2026-08-25, now blocked on an operator ruling:
+the permutation landed in a cell the OQ did not name.
 **Priority:** 2
-**Deps:** splits_from OQ-343
+**Deps:** splits_from OQ-343, blocked_on_human oq348-unnamed-cell-reading
+
+**MEASURED 2026-08-25 — the pre-registered UNNAMED cell {h1/verdict beats null, ε beats null}.
+RULING OWED: the OQ named only two cells (A: engine routes idiom to structure; B: bands are
+coarse), and the data sit in neither.** Seed-label permutation (seed 348, 2000 iterations,
+`python/audits/permutation_null.py`, artifact
+`outputs/coherent_a3966e7/permutation_null_oq348.json`, coherent set at `a3966e7`):
+the within-model floors (5 pure pairs) ALL beat the null decisively — the instrument
+discriminates — and on ALL 3 cross-model pairs EVERY field beats the null, **including authored
+ε** (haiku2×sonnet2: 0.148 obs vs 0.067 null; flash2×kimi: 0.101 vs 0.023; stealth2×nemotron:
+0.081 vs 0.024; h1/verdict/signature all p=0.0005). Stratum-stable: both large nemotron strata
+show the same pattern separately. So the legs share seed-keyed structure at the INPUT — the
+original "9%" ε read was exact-match marginal AGAINST a ~2–7% chance rate, i.e. ε agreement was
+always above chance and the OQ's routing-vs-coarseness contrast does not exist as framed. The
+engine still AMPLIFIES: output-field observed/null gaps are larger than ε's. What reading
+replaces A/B — e.g. "the engine amplifies a real seed-keyed input signal" vs a re-framed
+contrast conditioning on ε — is the operator's seat; not resolved here (plan trigger 6).
 **Files:** `audits/2026-08-21_flash_regime_vs_redraw/paired_agreement.py`, `outputs/pipeline_output.{stealth,nemotron}.json`.
 
 **The observation.** Same-seed, cross-model: authored ε exact-agreement 9%, |Δε| ≥0.10 on 43% of
@@ -18687,7 +18745,11 @@ a reader who treats it as a content control makes the OQ-78 marginal-vs-paired e
 - (a) the legs at n≈1000 (19 draws; pair floors from the five pure pairs);
 - (b) v6 whole at 3,380 (`expected_model=None`; mixed-model, so ε-keyed stats stay per-author-stratum);
 - (c) v6 random subsamples at n≈1000, k=3 (symlink dirs under a `corpus_path` overlay — free);
-- (d) the situation-fixed core (OQ-347 step 4) vs its complement, once it exists.
+- (d) the situation-fixed core (OQ-347 step 4) vs its complement — **the population EXISTS as of
+  2026-08-25: core = 6 of 871 over the coherent set at `a3966e7`, member ids + 134 excluded ids
+  in `outputs/coherent_a3966e7/situation_fixed_core.json`. n=6 is far below any statistic's
+  floor — arm (d) as designed likely needs the core's DEFINITION relaxed (fewer pairs, or
+  pure-redraw pairs only) before it carries a contrast; that is a design choice, not this OQ's.**
 Readings, pre-committed: same on (a) and (c) despite zero shared situations ⇒ **construction-bound
 (saturated)** — demote from headline, needs a size-normalized form; differs (b) vs (c) ⇒ **size-bound**;
 separates (a) from (c) but not (b) from (c) ⇒ **carries content** (the headline the tool was built for);
@@ -20587,6 +20649,33 @@ sweep, `STAMPED_FILE_COUNTS` re-pin, and a per-leg `classify_corpus` re-run + ad
 coherent set (OQ-347) stays coherent — the post-rescue rerun of the situation-fixed core is a
 COMPARISON against the excluded-id list recorded in the 2026-08-25 core artifact, not a fresh
 computation.
+
+---
+
+## OQ-379 — /plan-review argument interpolation substitutes positional words for `$2`/`$3` in the pinned RUNS.md awk instrument
+
+**Ω-type:** Ω_P (harness/skill defect; nothing empirical or ruled).
+
+**Status:** open — minted 2026-08-25 by the OQ-347 coherent-reclassify session (plan Phase 9;
+unrelated to that plan's substrate).
+**Priority:** 3
+**Deps:** splits_from OQ-337
+
+**The defect.** Invoking the `/plan-review` skill WITH arguments substitutes positional words
+from the argument string for `$2`/`$3` in the RENDERED copy of the pinned RUNS.md id-derivation
+awk (`.claude/skills/plan-review/SKILL.md:163`). The source file is correct; a rendered copy in
+a checkpoint or prompt yields an **empty id set**, which reads exactly like "empty ledger" and
+allocates a colliding `-1` — precisely the failure the snippet's own warnings (year-agnostic
+anchor, no `{4}` interval) exist to prevent, arriving through a channel none of them cover.
+
+**Standing rule until fixed:** treat `SKILL.md:163` as the SOLE source of the awk; never paste
+that command from a rendered checkpoint or prompt. (The 2026-08-25 run followed this rule; its
+Step-0 derivation ran the file's own text and allocated `2026-08-25-2` correctly.)
+
+**Resolution:** either escape the `$` in SKILL.md so argument interpolation cannot touch it, or
+restructure the snippet (e.g. `awk -v` or a helper script) so it carries no interpolatable
+positionals; plus a control that a with-arguments invocation still derives a non-empty id set on
+a non-empty ledger.
 
 ---
 
