@@ -7,8 +7,9 @@
 **Verdict, at its scoped altitude:** on the two legs carrying an occupied `+rescue1` stratum
 (`testsets_nemotron` 144, `testsets_stealth` 36), a model's hard seeds are **not structurally
 different stories** — their per-seat type-share vector sits *closer* to the first-pass stratum
-than two random first-pass halves sit to each other (R = 0.60 / 0.59 against each leg's own
-size-matched null; 0/1000 and 7/1000 draws exceeded T95). This is a **tested absence**, not a
+than two random first-pass halves sit to each other (**R = 0.599 / 0.582** against each leg's own
+size-matched, **variance-matched** null; 3/1000 draws exceeded T95 on each — see *Which R is the
+reported figure*). This is a **tested absence**, not a
 failure to look: the same instrument, at the same m and computed the same way, resolves a
 known-real between-model difference at 1.91 against a T95 of 1.11. Scoped to the seat-type
 distribution on these two legs at `a3966e7`; it is not a claim that rescue and first-pass stories
@@ -71,14 +72,37 @@ this data (Flash carries `no_scope_rebuild_gemini*`; haiku's June originals carr
 Primary statistic: **L1 between per-seat type-share vectors** (4 seats × 8 pre-registered types,
 zero-filled; range [0,8]). R = observed mean L1 ÷ that leg's own size-matched T95.
 
-| arm | m | n_target | n_firstpass | observed mean L1 | null mean | T95 | **R** | draws > T95 |
+**R below is the VARIANCE-MATCHED figure** — the null built with the same noise structure as its
+own observed arm. The pre-registered (noise-asymmetric) R is carried alongside it, never alone; see
+*Which R is the reported figure*.
+
+| arm | m | n_target | n_firstpass | observed mean L1 | T95 (var-matched) | **R (var-matched)** | R (pre-reg) | draws > T95 |
 |---|---|---|---|---|---|---|---|---|
-| **nemotron `+rescue1`** (primary) | 144 | 144 | 852 | 0.668 ± 0.140 | 0.784 | 1.112 | **0.601** | 0/1000 |
-| stealth `+rescue1` (corroboration) | 36 | 36 | 969 | 1.112 ± 0.276 | 1.255 | 1.889 | **0.589** | 7/1000 |
-| haiku `+stakeholder_backfill` (C1) | 252 | 455† | 505 | 0.717 ± 0.138 | 0.565 | 0.810 | **0.886** | 247/1000 |
-| flash `+stakeholder_backfill` (C1) | 206 | 206 | 754 | 0.835 ± 0.162 | 0.578 | 0.884 | **0.945** | 368/1000 |
+| **nemotron `+rescue1`** (primary) | 144 | 144 | 852 | 0.674 ± 0.141 | 1.126 | **0.599** | 0.601 | 3/1000 |
+| stealth `+rescue1` (corroboration) | 36 | 36 | 969 | 1.100 ± 0.262 | 1.889 | **0.582** | 0.589 | 3/1000 |
+| haiku `+stakeholder_backfill` (C1) | 252 | 455† | 505 | 0.715 ± 0.135 | 0.786 | **0.910** | 0.886 | 306/1000 |
+| flash `+stakeholder_backfill` (C1) | 206 | 206 | 754 | 0.840 ± 0.165 | 0.942 | **0.892** | 0.945 | 255/1000 |
 
 † haiku's C1 runs at m=252, not 455 — see *Declared deviations*.
+
+### Which R is the reported figure — and why it is not the pre-registered one
+
+The pre-registered C2 null is **noise-asymmetric with its own observed arm**: observed compares a
+*fixed* target against a *random* first-pass sample (one random side), while the null compares two
+*random* first-pass samples (two random sides). Two random sides carry more sampling noise, so the
+null is wider, T95 is inflated, and R is biased **downward — toward row 4, the outcome this
+pre-registration itself calls "the valuable null."** A design biased toward its author's convenient
+answer is one to correct, not to footnote.
+
+So the **variance-matched** null is the reported figure: it fixes one first-pass subset and
+randomises the other (50 fixed choices × 20 draws), giving the null exactly the observed arm's
+structure. Instrument: `arm_b_variance_matched_null.py`.
+
+**It changes nothing, and that is the point of reporting it rather than the reverse.** R_nemotron
+0.599 vs 0.601; T95 1.126 vs 1.112 — the asymmetry is worth about 1% of T95. Both are tabled above,
+so the correction is visible without a later reader having to rediscover the concern in order to
+learn that it was handled. The pre-registered numbers are not withdrawn; they are simply not the
+headline.
 
 **Power check (row 1, computed before the arms were read).** MDE anchor = mean L1 between the
 nemotron and stealth **first-pass** strata, computed the same way at the same m=144: **1.914 ±
@@ -86,10 +110,12 @@ nemotron and stealth **first-pass** strata, computed the same way at the same m=
 cross-model difference at this m with room to spare. Row 1 does **not** fire; rows 2–4 are
 evaluable.
 
-**Outcome: row 4 — `just_misauthored`.** R_nemotron = 0.601 ≤ 1. Reported whatever fires:
-R_nemotron **0.601**, R_C1(haiku) **0.886**, R_C1(flash) **0.945**, R_stealth **0.589**.
+**Outcome: row 4 — `just_misauthored`.** R_nemotron = 0.599 ≤ 1 (pre-reg 0.601 — the row fires
+identically under both nulls). Reported whatever fires, variance-matched with pre-reg in
+parentheses: R_nemotron **0.599** (0.601), R_C1(haiku) **0.910** (0.886), R_C1(flash) **0.892**
+(0.945), R_stealth **0.582** (0.589).
 
-stealth corroborates in direction (R 0.589, concordant with nemotron's 0.601) at n=36, and it
+stealth corroborates in direction (R 0.582, concordant with nemotron's 0.599) at n=36, and it
 neither set, blocked, nor downgraded the call — the verdict is nemotron's alone.
 
 ### The result is stronger than "no difference detected"
@@ -108,7 +134,7 @@ what it counts).
 ### What *does* move: the C1 arms, not the rescue arms
 
 Both C1 arms sit closer to their own nulls (R 0.886 / 0.945, with 25–37% of draws exceeding T95)
-than either rescue arm does (0.601 / 0.589, 0–0.7%). ε moves the same way and in the same
+than either rescue arm does (0.599 / 0.582, 0.3% each). ε moves the same way and in the same
 direction: the backfill strata author **higher** ε than their first-pass (haiku 0.593 vs 0.555;
 flash 0.548 vs 0.501) while the rescue strata author **lower** ε (nemotron 0.458 vs 0.489;
 stealth 0.508 vs 0.548). So whatever structural movement exists in this data is on the
@@ -137,19 +163,16 @@ verdict; it is consistent with it. The 5 ids are recorded in `arm_b_results.json
    that it and T95 are the same estimator. A full-stratum anchor compared against an m=144 T95
    would compare two different things.
 
-### Post-hoc sensitivity — the one place this design could have flattered itself
+### Provenance of the correction
 
-The pre-registered C2 null is **noise-asymmetric with its own observed arm**: observed compares a
-*fixed* target against a *random* first-pass sample (one random side), while the null compares two
-*random* first-pass samples (two random sides). Two random sides carry more sampling noise, so the
-null is wider, T95 is inflated, and R is biased **downward — toward row 4, the outcome the
-pre-registration calls "the valuable null."** A criterion biased toward the author's convenient
-answer is one to test, not to name and keep.
-
-Tested (`arm_b_variance_matched_null.py`, declared post-hoc): a variance-matched null that fixes
-one first-pass subset and randomises the other, over 50 fixed choices × 20 draws, reproduces the
-result almost exactly — T95_nemotron 1.126 vs 1.112, R_nemotron **0.599 vs 0.601**. The asymmetry
-contributes about 1% of T95 and moves no verdict. Row 4 is robust to it.
+The variance-matched null was written **after** the primary result was seen, and is declared
+post-hoc for that reason — the concern was raised by the observed-below-null pattern in the
+pre-registered arms, not anticipated at freeze time. It is promoted to the reported figure
+nonetheless (*Which R is the reported figure*) because it is the better-specified estimator on its
+own merits, and because it moves the verdict nowhere: had it flipped the row, the honest report
+would have been a FAILED pre-registration, not a corrected one. The pre-registration is preserved
+unedited in `PREREGISTRATION.md` (md5 `1989b5536578a4e7ce2503baacbfd4ad`) so the asymmetry it froze
+stays on the record.
 
 ### Zero classification
 

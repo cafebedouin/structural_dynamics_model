@@ -8119,6 +8119,25 @@ audit_log.md, stratum_series.txt, rb_skew_rederived.txt, load-time timings).
 **Status:** mitigated — 2026-08-23. The grammar half is built and gated (compose-at-planning /
 allocate-at-landing + gate row `ledger grammar`); the shared-vs-local adjudication and the stated
 control burden stay open. See **Mitigation** below.
+
+**FIRST FALSE POSITIVE ON THE ANGLE-BRACKET BAN (2026-08-25), routed per the checker's own
+instruction.** `runs_ledger_check.py:181` rejects any `<...>` pair in a row, to catch a landed row
+still carrying `<allocated-at-append>` — a real defect class with five recorded collisions in this
+ledger's history. It fired on run `2026-08-25-4`'s `post-impl gaps:` text, which used the repo's
+standard filename-pattern notation `pipeline_output.<leg>.json`. That is genuine prose, and the
+checker's message anticipates exactly this: *"if the text is genuine prose, that is a finding about
+THIS RULE — route it, do not rephrase the row to satisfy the checker."* So it is routed here.
+
+Resolved for that row by the lossless glob form `pipeline_output.*.json` (the notation the shell
+commands and CLAUDE.md already use), **and recorded rather than silently swapped** — a rephrase
+that leaves no trace is precisely how a blunt rule stops looking blunt. The structural point: the
+`post-impl gaps:` column is free prose about repo internals, filename patterns are the natural way
+to name a family of artifacts there, and this column is the one most likely to contain them. The
+ban is arity-blind to position — it applies to the placeholder-bearing fields and the prose field
+alike, though only the former can carry the defect. A narrower rule (ban `<...>` in fields 1–9;
+in field 10 ban only the KNOWN placeholder literals) would keep the catch and drop the false
+positive. Not fixed here: it is a checker change, the workaround is one word, and the frequency is
+one instance — but the next occurrence makes it a pattern rather than an incident.
 **Priority:** 3
 **Deps:** splits_from OQ-306, blocked_on_condition OQ-338's remedy is DESIGNED — that is, its
 entry carries a design rather than the current one-line sketch. Watcher: the ripening sentence
@@ -18075,9 +18094,12 @@ on is the operator's sequence and this umbrella's own artifact:
    tripwire) PASSES — the preserved arms reproduce the committed 2026-08-22 diff byte-for-byte in
    their measurement body. Arm B answers the question §9 actually asked and that nothing had
    measured: **a model's hard seeds are mis-authored, not structurally different** (row 4,
-   `just_misauthored`; R = 0.601 nemotron / 0.589 stealth against each leg's own size-matched null,
-   0/1000 draws exceeding, with the instrument witnessed able to resolve a between-model difference
-   of 1.914 at the same m).
+   `just_misauthored`; R = **0.599** nemotron / **0.582** stealth against each leg's own
+   size-matched, variance-matched null — 3/1000 draws exceeding, with the instrument witnessed able
+   to resolve a between-model difference of 1.914 at the same m. The pre-registered null was
+   noise-asymmetric with its own observed arm in the direction of this very verdict; the reported R
+   is the corrected one, and the pre-reg figures (0.601 / 0.589) are carried beside it, not
+   withdrawn).
 4. **New-family pairs decided** — dispatched, not deferred: OQ-346 keeps the OpenAI within-vendor
    pair as a RIPE `blocked_on_human` spend-go, and the non-Western-lineage arm — the only part that
    ever depended on the stealth reveal — is split to **OQ-387** under a `blocked_on_condition` with
@@ -18087,8 +18109,9 @@ on is the operator's sequence and this umbrella's own artifact:
 set, residue → OQ-388. OQ-344 narrowed to what raw responses support, wire fixed, successor →
 OQ-386. OQ-346 split (→ OQ-387). OQ-348 ripe with a named operator key.
 
-**What it changed:** the five-leg fingerprints (2026-07-20) are now read against a coherent 19-leg
-set with within-model floors; and one September spend has its warrant moved — OQ-378's residue
+**What it changed:** the five-leg fingerprints (2026-07-20) are now read against the reclassified
+leg set at `a3966e7` — **18 model legs**, the live leg having since moved off it (see the currency
+note at OQ-347) — with within-model floors; and one September spend has its warrant moved — OQ-378's residue
 rescue is a **composition nicety, not a bias correction**, because the rescued stratum was measured
 and is statistically indistinguishable from first pass.
 
@@ -18339,7 +18362,7 @@ statistics on the two June legs, and the matched-seed intersection (currently 95
 
 ---
 
-## OQ-346 — New-family pairs: OpenAI (current + an older model) and DeepSeek — decided after the floors, and possibly after the stealth reveal
+## OQ-346 — New-family pair: a TIER-MATCHED OpenAI within-vendor generation contrast (mini pair ~$145), with the claim statistics pre-registered against the redraw floors
 
 **Ω-type:** Ω_P (a spend the operator sequences; the evidence it waits on is OQ-347/OQ-345).
 
@@ -18361,20 +18384,62 @@ very likely a Chinese lab's pre-release; if the reveal says which, the DeepSeek 
 change.~~ **→ moved to OQ-387 (2026-08-25).** That sentence is the entry's own statement that
 the reveal dependency reaches exactly one arm; the OpenAI within-vendor pair never depended on it.
 
-**Scope after the split: the OpenAI arm only.** A new lineage at k=1 is a fingerprint without
-error bars, so the unit of purchase is a PAIR: `openai/gpt-5.4` ~$330 or `gpt-5.4-mini` ~$100 for
-the current model, and an older OpenAI model (`gpt-4.1` ~$220–380, `gpt-4.1-mini` ~$45–75) for the
-within-vendor *generation* contrast — i.e. does the same vendor's older generation carry the same
-fingerprint. Re-fetch the OpenRouter price list before spending; the 2026-08-21 numbers were a
-scratch fetch and prices move.
+**Scope after the split: the OpenAI arm only — and the contrast is GENERATION, so TIER MUST BE
+HELD CONSTANT (operator, 2026-08-25).** The originally-listed candidate set mixed tiers, and
+`gpt-5.4` + `gpt-4.1-mini` would confound generation with tier and answer nothing. Two clean buys:
 
-**What the delta must exceed, now that the floors exist (OQ-347 resolved 2026-08-25).** The
-within-model floors and the coherent 19-leg set at `a3966e7` are the comparison base: a
-cross-model claim has to beat the same-model redraw floor for the statistic it is made on, and
-the per-leg diagnostic contrast showing which statistics carry a model fingerprint vs draw noise
-is `audits/2026-08-23_leg_diagnostic_table/WRITEUP.md`. **Resolution:** an operator spend-go on a
-named OpenAI pair. **What it changes:** the September corpus composition, and whether
-within-vendor generation is a smaller axis than across-vendor.
+| buy | pair | ~cost | reads |
+|---|---|---|---|
+| **mini (TAKE THIS FIRST)** | `gpt-5.4-mini` + `gpt-4.1-mini` | **~$145** | generation, tier held at mini |
+| full | `gpt-5.4` + `gpt-4.1` | ~$550 | generation, tier held at full |
+
+**The mini pair answers the stated question at roughly a quarter the cost, and is the one to take
+first: if the fingerprint is generation-borne it should show at mini, and if it does not, that is
+learned for $145 rather than $550.** Re-fetch the OpenRouter price list before spending — the
+2026-08-21 numbers were a scratch fetch and prices move.
+
+**PRE-REGISTER THE STATISTICS BEFORE THE SPEND — the floors exist now, so this is checkable rather
+than hopeful.** Floors are the same-model pure-redraw spreads in
+`audits/2026-08-23_leg_diagnostic_table/leg_diagnostic_pairs.tsv` (5 pure pairs); the question is
+whether ANY statistic has a floor narrow enough that a within-vendor generation gap would clear it.
+
+| statistic | between-model spread | redraw floor (`within_pure_max`) | ratio | gap needed to READ at 2× floor |
+|---|---|---|---|---|
+| `drift_events_per_story.warning` | 0.587 | **0.0156** | 37.7 | 0.031 — **5.3%** of the between-model spread |
+| `purity.coverage` | 0.299 | **0.0104** | 28.7 | 0.021 — 7.0% |
+| `network.drifting_share` | 0.328 | **0.0163** | 20.1 | 0.033 — 10.0% |
+| `coupling.strongly_coupled` | 0.198 | **0.0126** | 15.7 | 0.025 — 12.7% |
+| `type.mountain` | 0.092 | **0.0077** | 11.9 | 0.015 — 16.8% |
+
+**Verdict of the check: at least one statistic qualifies, comfortably — so the spend buys a
+fingerprint that can be read, and the ruling is not "not yet".** On
+`drift_events_per_story.warning` a generation gap need only reach **5.3%** of the observed
+between-model spread to clear its redraw floor with a 2× margin. Declare the claim on the top
+three rows, pre-registered here, before generating.
+
+**DO NOT make the claim on** `wasserstein.fracture_per_story` (floor 0.518, ratio 2.6) or
+`arakelov.threshold` (floor 0.089, ratio 2.8) — F3 shows both are draw-dominated via the MaxEnt
+ensemble refit; their draw floor is the size of their signal. Nor on `purity.degraded` or
+`coupling.nonsensically_coupled` (F8, ratio < 2).
+
+**One transfer assumption, declared because it is the weak joint.** Buying two DIFFERENT models
+gives k=1 for each and therefore **no within-model floor for either OpenAI leg** — the floors above
+are borrowed from the 5 existing pure pairs (haiku/flash/sonnet/stealth/kimi families). That
+transfer is the same shape as C1's in the §9 read and carries the same caveat: it generates the
+readability estimate, it does not license "the OpenAI floor is 0.0156". Buying redraws too (4 legs,
+~$290 at mini) would measure the floor in-vendor instead of borrowing it. **Whether to pay for the
+in-vendor floor or accept the borrowed one is part of the spend-go, not a detail below it.**
+
+**Comparison base.** The within-model floors plus the reclassified leg set at `a3966e7` —
+**18 model legs at `a3966e7` / `code_dirty False`, NOT 19**: the 19th leg of that set is the LIVE
+leg, whose `outputs/pipeline_output.json` is stamped `81e79a0` / `code_dirty True` (re-run
+2026-08-25T17:53Z, after the coherent reclassify). Corrected in place here rather than left to a
+cross-reference, since this entry is where the phrase would be acted on.
+
+**Resolution:** an operator spend-go on a named, tier-matched OpenAI pair, with the claim
+statistics fixed from the table above and the borrowed-vs-measured floor decided. **What it
+changes:** the September corpus composition, and whether within-vendor generation is a smaller axis
+than across-vendor.
 
 ---
 
@@ -18384,6 +18449,19 @@ within-vendor generation is a smaller axis than across-vendor.
 
 **Status:** resolved — 2026-08-25: steps 2–4 delivered. All 19 legs reclassified at ONE clean
 HEAD `a3966e7` (coherent set ADOPTED; pre-registered diff IDENTICAL on every unchanged leg), and
+
+> **CURRENCY OF "THE COHERENT 19-LEG SET" (added 2026-08-25, since this entry is where the phrase
+> is established and therefore where it gets quoted from).** All 19 legs WERE reclassified at
+> `a3966e7` — that is what happened and it stays true. But the phrase describes an EVENT, not a
+> standing property of the artifacts: **as of 2026-08-25 only 18 of the 19 `pipeline_output.*.json`
+> still carry `a3966e7` / `code_dirty False`.** The 19th is the LIVE leg, whose
+> `outputs/pipeline_output.json` was re-run at `81e79a0` / `code_dirty True` later the same day
+> (2026-08-25T17:53Z) — expected, since operator topic runs land stories in `prolog/testsets/`
+> continuously. **Anyone reading a statistic off "the coherent set" is reading 18 model legs**; the
+> live leg has moved and will keep moving, and re-freezing it is a re-run, not a citation. Verify
+> with the manifest rather than the phrase.
+
+
 the **situation-fixed core = 6 of 871 (0.7%)** — seeds where all 21 derived same-model pairs
 agree on non-null h1_band ∧ verdict ∧ signature; agreed-on-null 0; 134 excluded ids RECORDED so
 the OQ-378 post-rescue rerun is a comparison. Stratum-stable (0.6–0.8% in every stratum with
@@ -18594,7 +18672,7 @@ Evidence: `audits/2026-08-21_oq120_epsilon_boundary/WRITEUP.md`.
 
 ---
 
-## OQ-348 — The engine's outputs agree across models more than its inputs do (h1 37% vs authored ε 9%, stealth vs nemotron): routing, or band coarseness?
+## OQ-348 — Residual seed-keyed output agreement not explained by ε: real but small, and NOT attributable to the engine by this corpus's design
 
 **Ω-type:** Ω_E.
 
@@ -18605,6 +18683,45 @@ with OQ-380's numbers in hand — a ruling, not a measurement, and RIPE (2026-08
 `gates` edge that was holding it in BLOCKED is discharged, and OQ-380's numbers are in hand).
 **Priority:** 2
 **Deps:** splits_from OQ-343, blocked_on_human oq348-unnamed-cell-map-vs-territory-reading
+
+**SECOND FRAMING FINDING (operator, 2026-08-25), recorded at the SAME ALTITUDE as the
+mis-specified-null one below, because it bounds what OQ-380 established.** OQ-380 shows an
+engine-side excess surviving ε-conditioning on all 3 cross-model pairs. The reading that wants to
+follow is *"the engine AMPLIFIES a real seed-keyed input signal."* **That inference is not
+available, and the design cannot make it available.** It requires ε to be a **sufficient statistic
+for the input**, and ε is one scalar over the authored text. The seed also fixes topic, entities
+and scenario shape — none of which ε captures. Two legs authored from the same seed share all of
+that, so their outputs can agree beyond ε-conditioning **with the engine contributing nothing at
+all**.
+
+**What OQ-380 actually establishes, stated at its own altitude: residual seed-keyed output
+agreement not explained by ε.** Amplification is ONE explanation. Shared input structure orthogonal
+to ε is another. The design separates neither, and it cannot: every leg is authored from the same
+1005-seed pool, so input-side sharing is **structural and permanent for this corpus**, not a
+confound that a better analysis could partial out.
+
+**DECLARED DESIGN LIMIT, deliberately NOT minted as an open question.** The design that could
+attribute the excess to the engine is **disjoint-seed authoring** — legs drawn from
+non-overlapping seed pools, so cross-leg agreement cannot ride shared input. That is a full
+regeneration spend and it is not worth minting while the amplification claim carries no weight
+elsewhere. Naming the limit is cheaper than chasing it. **If the amplification claim ever starts
+doing work in a paper section, an essay, or another OQ, that is the moment this becomes a question
+rather than a footnote** — and the correct move then is a disjoint-seed arm, not another
+re-analysis of these legs. The §11 line this supports: *this corpus can measure within-seed
+cross-model agreement, but cannot cleanly attribute it to the engine.*
+
+**HEADLINE RETIRED (2026-08-25) — do not quote "h1 37% vs authored ε 9%", including the version in
+this entry's own title.** It compares **exact-match agreement on a near-continuous authored value**
+(ε) against **banded categorical agreement** (h1), which have different chance rates by
+construction, so the ratio measures the comparison's own asymmetry as much as anything about the
+engine. This entry's ruling already concedes the load-bearing half — ε was always above chance
+(cross-leg marginal chance ~2–7%, OQ-343/OQ-380) — which leaves the 37-vs-9 framing with nothing
+behind it. The corrected statement is much more modest and is the one to carry: **after
+conditioning on exact ε strata, a small, consistent, statistically significant cross-model
+agreement excess remains in h1 / verdict / signature (p ≈ .0005–.046 over 3 pairs), and the raw
+gaps shrink from ~+15–20pp to ~+1–3pp under that conditioning.** The shrinkage is the finding; the
+residue is real but small, and its cause is open per the paragraph above. Any §11 prose still
+carrying the old ratio should be rewritten to that sentence, or it will be quoted back.
 
 **RULING (operator, 2026-08-25) — the unnamed cell is the correct result, and the honest reading
 is that THE NULL WAS MIS-SPECIFIED FOR THE QUESTION, not that a third substantive hypothesis
@@ -20799,8 +20916,10 @@ population one round earlier:
 
 - On the two legs carrying an occupied `+rescue1` stratum (`testsets_nemotron` 144,
   `testsets_stealth` 36), the rescued stories' per-seat type-share vector sits **closer** to the
-  first-pass stratum than two random first-pass halves sit to each other — R = 0.601 and 0.589
-  against each leg's own size-matched permutation T95, with **0/1000** and 7/1000 draws exceeding.
+  first-pass stratum than two random first-pass halves sit to each other — R = **0.599** and
+  **0.582** against each leg's own size-matched, variance-matched permutation T95, with 3/1000 draws
+  exceeding on each (pre-registered null: 0.601 / 0.589 — that null was noise-asymmetric in the
+  direction of this verdict, so the corrected figure is the one reported).
 - The instrument is witnessed able to discriminate at the same m: a between-model first-pass
   anchor reads **1.914** against T95 1.112, and the `+stakeholder_backfill` control arms produce
   25–37% exceedance. So the zero is a **tested absence**, not a stuck instrument.
@@ -21327,9 +21446,11 @@ the "non-Western lineage" cell of the model matrix is genuinely occupied or doub
 
 **Ω-type:** Ω_P (two generation spends; the analysis recipe is settled, only the spend is open).
 
-**Status:** open — minted 2026-08-25 at OQ-343's close, carrying the two sub-questions a re-read cannot answer.
-**Priority:** 4
-**Deps:** splits_from OQ-343
+**Status:** open — minted 2026-08-25 at OQ-343's close, carrying the two sub-questions a re-read
+cannot answer. **Repaired the same day** with the doses verified against the driver and an owner
+named per arm (a mint without either is a wish, and this one had neither).
+**Priority:** 3
+**Deps:** splits_from OQ-343, blocked_on_human oq388-flash-dose-arms-spend-go
 **Files:** `agent/run_no_scope_gemini.py` (budget flag), `agent/run_no_scope_kimi.py` (`thinking:{type:disabled}`), `audits/2026-08-21_flash_regime_vs_redraw/` (the instruments, unchanged).
 
 **Why this exists.** OQ-343 closed 2026-08-25 on sub-questions (a) and (b), both re-confirmed on
@@ -21337,14 +21458,54 @@ the coherent 19-leg set at `a3966e7` with every headline figure inside its mecha
 `**Open.**` paragraph carried a **third** sub-question that no re-read of existing artifacts can
 touch, and one residual arm of (a) in the same shape:
 
-- **(c) dose-response.** *Does a non-max thinking budget (1024 / 24576) scale the ε instability, or
-  is it a step function of thinking-on?* Flash, ~$15–20 per budget arm. The whole OQ-343 finding is
-  measured at budget 8192 vs 0 — a two-point contrast — so "thinking moves ε" is currently
-  indistinguishable from "any thinking at all moves ε by a fixed amount."
-- **(a) residue: a kimi thinking-off leg** (~$25–35). kimi-k2.6 accepts `thinking:{type:disabled}`
-  — verified two-sided 2026-08-21 (INVESTIGATIONS: 200 with 0 reasoning chars vs 187 chars without
-  the flag), so the leg is constructible. Without it, kimi is a thinking-ON leg with no off arm and
-  contributes to generality only as a magnitude, not as a direction.
+- **(c) dose-response.** *Does a non-max thinking budget scale the ε instability, or is it a step
+  function of thinking-on?* The whole OQ-343 finding is measured at budget 8192 vs 0 — a two-point
+  contrast — so "thinking moves ε" is currently indistinguishable from "any thinking at all moves ε
+  by a fixed amount."
+- **(a) residue: a kimi thinking-off leg**, so kimi contributes a DIRECTION and not merely a
+  magnitude to the generality claim.
+
+### The doses, verified against the driver rather than named in the abstract (2026-08-25)
+
+`agent/run_no_scope_gemini.py` takes **`--thinking-budget N`** (int, default 0), plumbed to
+`thinking_config.thinking_budget` and adding N to `max_output_tokens` (`:154`, `:158-159`, `:382`,
+`:389`). gemini-2.5-flash accepts **0 … 24576**, so both proposed doses are real and in range —
+**1024 is a low dose, 24576 is the model's maximum**, and neither needs a code change.
+
+**Two arms complete a FOUR-point curve, because two points already exist at $0.** On disk:
+budget **0** (`testsets_flash2`, `testsets_flash3`) and budget **8192** (`testsets_flash_think`,
+`testsets_flash_think2`), each with a same-model redraw partner. Adding **1024** and **24576**
+gives 0 / 1024 / 8192 / 24576 — enough to distinguish a step from a dial, which two points cannot.
+That is the argument for buying both arms rather than one. Cost: OQ-343's own estimate, ~$15–20 per
+arm (re-derive before spending; not re-measured here).
+
+**Owner: the operator's spend-go, and NOTHING ELSE is required.** The driver runs this today —
+`python3 -m agent.run_no_scope_gemini --seeds <pool> --leg-name testsets_flash_think_lo
+--thinking-budget 1024` and the same at 24576. No code, no design, no ruling. This arm is a
+purchase decision, full stop.
+
+### The kimi-off arm is NOT purchasable as written — it needs a driver change first
+
+**This is the finding that keeps this from being a wish.** `agent/run_no_scope_kimi.py` `_body/3`
+(`:177-181`) sends exactly `{model, messages, max_tokens}` — **there is no thinking toggle in the
+payload and no CLI flag for one**, and its comment justifies the omission as *"K3 forbids disabling
+it"* while the driver's `DEFAULT_MODEL` is **`kimi-k2.6`** (`:65`), a different model with a
+different capability. The 2026-08-21 two-sided check (INVESTIGATIONS) established that **k2.6 DOES
+accept `thinking:{type:disabled}`** — HTTP 200 with 0 `reasoning_content` chars / 8 completion
+tokens, against 187 chars / 47 tokens without the flag. So the leg is constructible **in principle
+and not in practice**: the capability exists at the API and is not wired at the driver.
+
+**Owner, split because the two halves have different seats:**
+1. **Driver change (implementation seat, unassigned — this is the half that was missing at mint).**
+   Plumb a `--thinking` / `--reasoning` flag into `_body/3` as `thinking: {type: "disabled"}`, gated
+   to non-K3 models, and correct the `:178-179` comment, whose premise is scoped to K3 while the
+   default is k2.6. Small and self-contained; it is a prerequisite, not part of the spend.
+2. **Spend-go (operator seat)** — ~$25–35, and only reachable after (1).
+
+**Sequencing, so this does not sit at P4 forever:** arm (c) is buyable today and needs nobody;
+the kimi arm needs one small driver change before the spend-go is even a well-formed question.
+Taking (c) alone is a coherent, complete purchase — it answers the dose question on its own, and
+does not depend on the kimi arm at all.
 
 **What is NOT open.** Generality is answered at 2/2 model families (Flash and nemotron-3-ultra,
 same shape and magnitude) and the reach question (b) is answered and re-confirmed: a |Δε| ≥ 0.10

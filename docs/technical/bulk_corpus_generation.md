@@ -298,8 +298,11 @@ the two legs carrying an occupied `+rescue1` stratum (`testsets_nemotron` 144, `
 36 — **not** `+seed_rescue1`, nemotron 4 / nemotron_think 2, a distinct generation event one token
 away), the per-seat type-share vector sits *closer* to the first-pass stratum than two random
 first-pass halves sit to each other: R = observed mean L1 ÷ the leg's own size-matched permutation
-T95 = **0.601** (nemotron, 0/1000 draws exceeding) and **0.589** (stealth, 7/1000, corroboration
-only at n=36). The instrument is witnessed able to discriminate at the same m: the between-model
+T95 = **0.599** (nemotron) and **0.582** (stealth, corroboration only at n=36), 3/1000 draws
+exceeding on each. Those are the **variance-matched** figures: the pre-registered null was
+noise-asymmetric with its own observed arm (two random sides vs one), which inflates T95 and biases
+R downward — toward this very verdict — so the corrected estimator is the one reported and the
+pre-reg values (0.601 / 0.589) are carried beside it, not withdrawn. The instrument is witnessed able to discriminate at the same m: the between-model
 first-pass anchor reads **1.914** against T95 1.112. So a model's hard seeds are **mis-authored,
 not structurally different** — on the seat-type distribution, at these two legs, at `a3966e7`.
 

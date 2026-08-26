@@ -57,11 +57,12 @@ minted (OQ-386/387/388), and one instrument defect fixed.
 §9 asks whether a model's hard seeds are structurally different stories or just mis-authored ones.
 The stakeholder-backfill stratum does NOT answer it (those stories were authored fine; they merely
 predate the `stakeholders` gate) — the stratum that answers it is the occupied `+rescue1`, and
-nothing had contrasted it with anything. Measured on the coherent 19-leg set at `a3966e7`: the
+nothing had contrasted it with anything. Measured on four legs of the reclassified set — nemotron, stealth, haiku, flash, all four verified at `a3966e7` / `code_dirty False` at read time (see item 4 on why "19-leg" is the wrong phrase for a current artifact state): the
 rescued stratum's per-seat type-share vector sits **closer to first-pass than two random first-pass
 halves sit to each other** — R = observed mean L1 ÷ the leg's own size-matched permutation T95 =
-**0.601** (nemotron 144, **0/1000** draws exceeding) and **0.589** (stealth 36, 7/1000,
-corroboration only). Discrimination witnessed two-sided at the same m: the between-model first-pass
+**0.599** (nemotron 144) and **0.582** (stealth 36, corroboration only), 3/1000 draws exceeding
+on each — the **variance-matched** figures, promoted over the pre-registered 0.601 / 0.589 because
+that null was noise-asymmetric in the direction of this very verdict (see below). Discrimination witnessed two-sided at the same m: the between-model first-pass
 anchor reads **1.914** vs T95 1.112, and the `+stakeholder_backfill` control arms exceed 25–37% of
 the time. Movement in this data is on the **regeneration** side, not the hardness side (C1 R =
 0.886/0.945; backfill strata author HIGHER ε than first-pass, rescue strata LOWER) — the direction

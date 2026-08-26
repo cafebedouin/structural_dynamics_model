@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "804919afe6bfb29a9279297dc3c71f723ee4d594",
+    "store_version": "6f2a8a81c2405eb08dc6eca316fdf197280184b0",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-26T00:07:23"
+    "generated_at": "2026-08-26T03:21:52"
   },
-  "issues_sha": "fe9c180f064a23dc4fef8d20188217b2e58e7a806ff65e4b3726d26b870d1d5d",
+  "issues_sha": "0b449091a97723500c08422743ad4a6457ea5a5f774015c847d6891085364576",
   "n_entries": 388,
   "active_token_set": [
     "investigating",
@@ -1911,7 +1911,7 @@
       "id": "OQ-346",
       "status": "open",
       "priority": 3,
-      "summary": "New-family pairs: OpenAI (current + an older model) and DeepSeek — decided after the floors, and possibly after the stealth reveal",
+      "summary": "New-family pair: a TIER-MATCHED OpenAI within-vendor generation contrast (mini pair ~$145), with the claim statistics pre-registered against the redraw floors",
       "deps": [
         "splits_from OQ-342",
         "bundled_with OQ-387",
@@ -1929,7 +1929,7 @@
       "id": "OQ-348",
       "status": "open",
       "priority": 2,
-      "summary": "The engine's outputs agree across models more than its inputs do (h1 37% vs authored ε 9%, stealth vs nemotron): routing, or band coarseness?",
+      "summary": "Residual seed-keyed output agreement not explained by ε: real but small, and NOT attributable to the engine by this corpus's design",
       "deps": [
         "splits_from OQ-343",
         "blocked_on_human oq348-unnamed-cell-map-vs-territory-reading"
@@ -2517,10 +2517,11 @@
     {
       "id": "OQ-388",
       "status": "open",
-      "priority": 4,
+      "priority": 3,
       "summary": "OQ-343's residual generation arms: the thinking dose-response (c), and the kimi thinking-off leg",
       "deps": [
-        "splits_from OQ-343"
+        "splits_from OQ-343",
+        "blocked_on_human oq388-flash-dose-arms-spend-go"
       ],
       "cross_refs": [],
       "mentioned_in": [
