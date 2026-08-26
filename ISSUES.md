@@ -8138,6 +8138,36 @@ alike, though only the former can carry the defect. A narrower rule (ban `<...>`
 in field 10 ban only the KNOWN placeholder literals) would keep the catch and drop the false
 positive. Not fixed here: it is a checker change, the workaround is one word, and the frequency is
 one instance — but the next occurrence makes it a pattern rather than an incident.
+
+**MEASURED BEFORE ADOPTING THE NARROWER RULE (2026-08-26), both directions, because a denylist with
+no update trigger decays SILENTLY and its failure mode is the opposite of the current one — the
+checker stops firing when it should.**
+
+- **Direction 1 — legitimate field-10 prose the CURRENT rule fires on: 0 across 12 landed rows.**
+  **This zero is an artifact and must not be read as "no problem": the true count for today is 1
+  (run `2026-08-25-4`), and it reads 0 only because that row was rephrased to the glob form.** An
+  untested instrument, not a tested absence.
+- **Direction 2 — placeholder literals a denylist would have to catch, present in landed rows: 0.**
+  Correct, and it is the current rule working. By the stated criterion (*if the second number is
+  nonzero at authoring time, the list needs an owner*) an owner is **not** required today.
+
+**But the drift argument survives the measurement, and the vocabulary breadth is why.** The
+placeholder forms already in use across `SKILL.md`, `RUNS.md` and the checker are **six**:
+`<allocated-at-append>`, `<rounds -- planner supplies>`, `<target -- planner supplies>`,
+`<the allocated id>`, `<date>`, `<n>`. **Four of the six are ad-hoc free text** and two (`<date>`,
+`<n>`) are generic enough that new variants (`<slug>`, `<oq>`, `<count>`) are inventable without
+anyone noticing they have invented one. A literal denylist over an **open** vocabulary is the wrong
+shape — it is a closed list guarding a set that grows by authoring convenience.
+
+**So the narrower rule should be STRUCTURAL, not a literal list.** The load-bearing property of a
+placeholder is not its text but its POSITION: fields 1–9 are typed values and must never contain
+`<...>` at all (that half needs no list and catches every collision this ledger has recorded).
+Field 10 is free prose about repo internals, where filename patterns are the natural notation. A
+rule of the shape *"ban `<...>` in fields 1–9; in field 10 fire only on a bracket whose content is
+NOT inside backticks"* keeps the catch, needs no vocabulary list, and needs no owner — because it
+predicts nothing about future placeholder names. **Recorded as a design sketch, not adopted:** it
+is a checker change with its own two-sided control burden, and at frequency 1 the workaround is one
+word.
 **Priority:** 3
 **Deps:** splits_from OQ-306, blocked_on_condition OQ-338's remedy is DESIGNED — that is, its
 entry carries a design rather than the current one-line sketch. Watcher: the ripening sentence
@@ -18373,6 +18403,7 @@ entry named is discharged and the OpenAI within-vendor pair is **ripe now**. The
 share one entry — a `blocked_on_condition` edge routes to BLOCKED and would hide this ripe spend-go
 from BLOCKED-ON-YOU, the exact mislabeling the 2026-08-25 umbrella close existed to remove.
 **Priority:** 3
+**Sunset:** 2026-09-26
 **Deps:** splits_from OQ-342, bundled_with OQ-387, blocked_on_human oq346-openai-pair-spend-go
 **Files:** `agent/run_no_scope_stealth.py` (any OpenRouter model via `--leg-name --model`), OpenRouter price list fetched 2026-08-21 (scratch; re-fetch).
 
@@ -18389,15 +18420,32 @@ the reveal dependency reaches exactly one arm; the OpenAI within-vendor pair nev
 HELD CONSTANT (operator, 2026-08-25).** The originally-listed candidate set mixed tiers, and
 `gpt-5.4` + `gpt-4.1-mini` would confound generation with tier and answer nothing. Two clean buys:
 
-| buy | pair | ~cost | reads |
+| buy | legs | ~cost | in-vendor draw floor? |
 |---|---|---|---|
-| **mini (TAKE THIS FIRST)** | `gpt-5.4-mini` + `gpt-4.1-mini` | **~$145** | generation, tier held at mini |
-| full | `gpt-5.4` + `gpt-4.1` | ~$550 | generation, tier held at full |
+| 2-leg mini | `gpt-5.4-mini` + `gpt-4.1-mini` | ~$145 | **NO — borrowed** |
+| **4-leg mini (RECOMMENDED)** | the above **+ one redraw of each** | **~$290** | **YES — measured in-vendor** |
+| 4-leg full | `gpt-5.4` ×2 + `gpt-4.1` ×2 | ~$1,100 | yes, at full tier |
 
-**The mini pair answers the stated question at roughly a quarter the cost, and is the one to take
-first: if the fingerprint is generation-borne it should show at mini, and if it does not, that is
-learned for $145 rather than $550.** Re-fetch the OpenRouter price list before spending — the
-2026-08-21 numbers were a scratch fetch and prices move.
+**The choice is NOT base-plus-optional; it is $145-unreadable vs $290-self-floored — and this
+entry's own opening principle decides it (operator, 2026-08-26).** That principle is *a new lineage
+at k=1 is a fingerprint without error bars; the unit of purchase is a PAIR*. Buying
+`gpt-5.4-mini` + `gpt-4.1-mini` at k=1 each **applies that principle one level up and violates it
+one level down**: two lineage points with no in-vendor draw floor. That is the very defect this
+entry was minted to prevent, relocated rather than avoided.
+
+**Why the borrowed floor is the weak joint, quantitatively.** The 0.0156 bar comes from five pure
+pairs in *other* lineages (haiku/flash/sonnet/stealth/kimi). Whether redraw variance transfers
+across vendor is **not established** — and OpenAI models having different intrinsic draw variance
+is exactly the kind of thing a generation contrast would want to learn. The margin cannot absorb
+being wrong: the best statistic needs a gap of only **5.3%** of the between-model spread to clear
+2× its floor, so **a borrowed floor that is wrong by a factor of two turns a read into a
+misread.** At $145 you would be testing an assumption with an instrument calibrated by that same
+assumption.
+
+**Recommendation: the 4-leg mini buy at ~$290.** The cheap version does not clear this entry's own
+bar; the mini tier still answers the stated question at a quarter of the full-tier cost. Re-fetch
+the OpenRouter price list before spending — the 2026-08-21 numbers were a scratch fetch, prices
+move, and this entry now carries a **Sunset** for that reason.
 
 **PRE-REGISTER THE STATISTICS BEFORE THE SPEND — the floors exist now, so this is checkable rather
 than hopeful.** Floors are the same-model pure-redraw spreads in
@@ -18412,24 +18460,57 @@ whether ANY statistic has a floor narrow enough that a within-vendor generation 
 | `coupling.strongly_coupled` | 0.198 | **0.0126** | 15.7 | 0.025 — 12.7% |
 | `type.mountain` | 0.092 | **0.0077** | 11.9 | 0.015 — 16.8% |
 
-**Verdict of the check: at least one statistic qualifies, comfortably — so the spend buys a
-fingerprint that can be read, and the ruling is not "not yet".** On
-`drift_events_per_story.warning` a generation gap need only reach **5.3%** of the observed
-between-model spread to clear its redraw floor with a 2× margin. Declare the claim on the top
-three rows, pre-registered here, before generating.
+**Verdict of the check: at least one statistic qualifies comfortably — so the spend buys a
+readable fingerprint and the ruling is not "not yet".**
+
+### The pre-registered statistic set — FOUR, named before the spend, with the reading rule
+
+**Why more than one, stated as the hazard it defuses.** `drift_events_per_story.warning` was
+chosen by scanning the diagnostic table for the best floor-to-spread ratio. **That is a forking
+path**: a post-spend write-up arguing from the one statistic picked *for looking favourable* is
+arguing from a selection, not a measurement. Naming the set in advance is the same discipline the
+§9 read applied to C2's null, and it belongs on the spend-go too.
+
+**Chosen for SUBSYSTEM DIVERSITY, not for the best four ratios.** Four `type.*` shares would be
+pseudo-replication — they are shares of one simplex and move together, so "3 of 4 cleared" would
+be one fact counted three times. These four read different machinery:
+
+| # | statistic | subsystem | redraw floor | **clears at (2× floor)** |
+|---|---|---|---|---|
+| S1 | `drift_events_per_story.warning` | drift detection | 0.0156 | **0.031** |
+| S2 | `purity.coverage` | authoring completeness (`coordination_type` present) | 0.0104 | **0.021** |
+| S3 | `network.drifting_share` | contamination network | 0.0163 | **0.033** |
+| S4 | `coupling.strongly_coupled` | Boltzmann coupling | 0.0126 | **0.025** |
+
+**Direction: TWO-SIDED, and pre-committed as such.** There is no principled prior on whether
+`gpt-5.4-mini` drifts more or less than `gpt-4.1-mini` — a generation contrast is not a dose
+contrast. So each statistic's bar is **|gap| > 2 × floor**, sign unconstrained. Declaring a
+direction we cannot justify and then "confirming" it would be worse than declaring none.
+
+**What a split reads as — fixed NOW, because deciding after seeing it is where interpretation goes
+soft, and 2-of-4 is the likely outcome:**
+
+| cleared | reading |
+|---|---|
+| **4/4 or 3/4** | generation carries a fingerprint at mini tier. Report per-statistic gaps with signs; a coherent sign pattern across subsystems is additional evidence, not required |
+| **2/4** | **AMBIGUOUS, and reported as ambiguous — not as a positive.** Name which two and whether they share machinery (S1/S3 both ride drift/contamination and are the likeliest correlated pair). Licenses a follow-up at full tier, licenses no claim |
+| **1/4** | **NOT a positive result.** Four two-sided tests at a 2× bar will produce an occasional clear from draw noise; a single clearing statistic is the expected tail, not a finding. Report as a null naming the one |
+| **0/4** | no detectable generation fingerprint at mini tier — a BOUNDED null: report each statistic's observed gap against its bar, so the ceiling on any undetected effect is on the page |
+
+**Fixed before the spend:** the four statistics, the 2× bar, the two-sidedness, and this table.
+Adding a fifth statistic after seeing the results, or promoting a statistic not listed here,
+re-opens the forking path and must be reported as post-hoc if done.
 
 **DO NOT make the claim on** `wasserstein.fracture_per_story` (floor 0.518, ratio 2.6) or
 `arakelov.threshold` (floor 0.089, ratio 2.8) — F3 shows both are draw-dominated via the MaxEnt
 ensemble refit; their draw floor is the size of their signal. Nor on `purity.degraded` or
 `coupling.nonsensically_coupled` (F8, ratio < 2).
 
-**One transfer assumption, declared because it is the weak joint.** Buying two DIFFERENT models
-gives k=1 for each and therefore **no within-model floor for either OpenAI leg** — the floors above
-are borrowed from the 5 existing pure pairs (haiku/flash/sonnet/stealth/kimi families). That
-transfer is the same shape as C1's in the §9 read and carries the same caveat: it generates the
-readability estimate, it does not license "the OpenAI floor is 0.0156". Buying redraws too (4 legs,
-~$290 at mini) would measure the floor in-vendor instead of borrowing it. **Whether to pay for the
-in-vendor floor or accept the borrowed one is part of the spend-go, not a detail below it.**
+**The transfer assumption, and why it drives the buy recommendation above.** The floors in the
+table are borrowed from 5 pure pairs in other lineages; they generate the readability estimate and
+do **not** license "the OpenAI floor is 0.0156". Same shape as C1's cross-leg transfer in the §9
+read, same caveat — except here it is load-bearing for a purchase rather than for a caveat, which
+is why the 4-leg buy is recommended instead of noted as an option.
 
 **Comparison base.** The within-model floors plus the reclassified leg set at `a3966e7` —
 **18 model legs at `a3966e7` / `code_dirty False`, NOT 19**: the 19th leg of that set is the LIVE
@@ -18437,8 +18518,11 @@ leg, whose `outputs/pipeline_output.json` is stamped `81e79a0` / `code_dirty Tru
 2026-08-25T17:53Z, after the coherent reclassify). Corrected in place here rather than left to a
 cross-reference, since this entry is where the phrase would be acted on.
 
-**Resolution:** an operator spend-go on a named, tier-matched OpenAI pair, with the claim
-statistics fixed from the table above and the borrowed-vs-measured floor decided. **What it
+**Resolution:** an operator spend-go on a named, tier-matched OpenAI buy — recommended 4-leg mini
+(~$290) so the floor is measured in-vendor rather than borrowed — with the four pre-registered
+statistics, the 2× two-sided bar and the split-reading table above fixed before generation.
+**Sunset 2026-09-26:** the prices are a 2026-08-21 scratch fetch, so a ruling made against them
+much later is a ruling made twice; re-fetch or re-date at that point. **What it
 changes:** the September corpus composition, and whether within-vendor generation is a smaller axis
 than across-vendor.
 
