@@ -1406,6 +1406,22 @@ This chains seven steps automatically:
 | 6 Tensions ledger | Deterministic extraction (`python/tensions_ledger.py`) — NOT an essay (OQ-101, 2026-06-10) | `outputs/tensions_ledger.md` |
 | 7 Commit | `_step_commit` git-commits this run's `json/<cid>.json` + `prolog/testsets/<cid>.pl`. GATED (skips on `--no-commit`, run-tag, or failed corpus update) and SCOPED to the run's cids — never `git add -A`, refuses if the index already holds unrelated staged changes; local commit only, never pushes. **KNOWN DEFECT (OQ-384):** because the pathspec is built from STORY cids, a run that mints a KERNEL leaves `prolog/testsets/<kernel_id>_contradictions.pl` UNTRACKED — it is not a run cid and has no `.json` twin — while the same run's manifest counts it, so disk and git disagree until someone sweeps it up. Witnessed twice (`f32fe86b`, `13cd510d2`). **Check `git status prolog/testsets/` after step 7 reports success.** | git (local) |
 
+**Per-run repair telemetry — `repair_stats.json` (added 2026-08-25, OQ-344).** Every no_scope
+driver (`run_no_scope_{stealth,gemini,kimi,sonnet}.py`) routes its results through
+`generate_kernel_corpus.process_batch_results`, which now accumulates the deterministic-repair
+counters into **`<OUT_DIR>/repair_stats.json`**, a sibling of that run's `rejections.json`:
+per-run entries (utc stamp, batch id, `provenance_source`, succeeded/failed) plus merged `totals`.
+It records WHICH value was coerced (e.g. `role=victim`), not just how many.
+
+**Why it exists, and the tripwire:** `stakeholder_role_remapped` was incremented in
+`python/story_repair.py` and read by **nothing** — a producer with no consumer, which made OQ-344's
+prompt-interpretation measurement unsatisfiable from disk at any n while the OQ's own text claimed
+it was "free for every future run". **It is FORWARD-ONLY: it cannot reconstruct any leg generated
+before 2026-08-25.** If you add a new repair counter, it rides this artifact automatically — but if
+you add a new CALLER of `repair_story`, pass it a stats dict, or the counter silently goes nowhere
+again (`python/recover_historical_seeds.py` passes none, by design — it repairs one story ad hoc).
+A missing `rejections_path` prints a loud NOT-PERSISTED warning rather than dropping the datum.
+
 **Big or refusing source files** (e.g. a 1.6 MB S-1, a paper the safety classifier refuses):
 the orchestrator auto-compresses to a NEUTRAL brief only when the topic exceeds its MEASURED
 ingest ceiling (`--brief`/`--no-brief` to force/suppress). A content safety-refusal STOPs by
