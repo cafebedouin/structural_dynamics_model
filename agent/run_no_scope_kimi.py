@@ -29,8 +29,14 @@ spend-go. Seed pool: prolog/kernels/rebuild_2026-06-13/never_generated_seeds.jso
 ladder skips the 5 pilot). Needs MOONSHOT_API_KEY or KIMI_API_KEY in env. Runbook §6/§7b.
 
 CAVEAT — this is a *thinking-model* twin. Unlike the haiku/flash/sonnet twins (run thinking-off for
-fairness), every kimi-k2.6 story carries mandatory reasoning tokens (~11.7k/story), so per-story
-output runs higher. We extract only the final `content` (the story JSON); `reasoning_content` is
+fairness), every kimi-k2.6 story carries reasoning tokens (~11.7k/story), so per-story
+output runs higher. **NOT "mandatory" — DEFAULT-ON, and that distinction is load-bearing
+(witnessed live 2026-08-26).** k2.6 reasons when sent no toggle at all, which is all this driver
+has ever sent (`_body/3`); three-arm check on the live API: no toggle -> 930 reasoning chars,
+`thinking:{type:"disabled"}` -> 0, `thinking:{type:"enabled"}` -> 861 (positive control). So the
+legs ARE correctly labelled thinking-ON — but reasoning is DISABLEABLE on k2.6, and calling it
+mandatory is why no kimi thinking-off arm was ever built: it read as impossible rather than as
+merely unplumbed. See `_body/3` for the missing toggle, and OQ-388. We extract only the final `content` (the story JSON); `reasoning_content` is
 discarded. Cross-twin comparisons must carry that asymmetry (stamped in provenance as kimi-k2.6).
 
 Key: reads MOONSHOT_API_KEY (or KIMI_API_KEY) from the environment (never hard-code it).
@@ -176,7 +182,17 @@ def build_messages(seed, static):
 
 def _body(seed, static, model):
     # No temperature: kimi-k3 is reasoning-only and (like Sonnet-5/Opus-4.7+) rejects a
-    # non-default sampling temperature. No thinking toggle: K3 forbids disabling it.
+    # non-default sampling temperature.
+    #
+    # No thinking toggle — and the reason recorded here was STALE (corrected 2026-08-26).
+    # It read "K3 forbids disabling it", which is true of K3 and NOT of this function's
+    # DEFAULT_MODEL, kimi-k2.6: k2.6 accepts `thinking: {"type": "disabled"}` (HTTP 200,
+    # 0 reasoning chars) and reasons when sent nothing (930 reasoning chars) — witnessed
+    # two-sided on the live API 2026-08-26, and consistent with the ~11.7k reasoning
+    # tok/story measured at the 2026-07-19 pilot. Consequence: every kimi leg is a
+    # thinking-ON leg (correctly labelled everywhere), but a kimi thinking-OFF arm is
+    # CONSTRUCTIBLE and merely unwired. Plumbing a --thinking flag here is the prerequisite
+    # for OQ-388's (a) residue; do NOT send the toggle to K3, which rejects it.
     return {"model": model, "messages": build_messages(seed, static),
             "max_tokens": MAX_OUTPUT_TOKENS}
 

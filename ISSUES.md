@@ -10255,7 +10255,8 @@ standing caveat that survives the experiment either way).
 cross-model marginals must know:
 
 1. **Inference-regime confound.** The structural legs were generated with the Claude twins
-   **thinking-off** but kimi-k2.6 **thinking-on** (mandatory ~11.7k reasoning tok/story). So a
+   **thinking-off** but kimi-k2.6 **thinking-on** (~11.7k reasoning tok/story — DEFAULT-on, not
+   mandatory; k2.6 accepts `thinking:{type:disabled}`, witnessed 2026-08-26). So a
    cross-model marginal ("kimi 63% H¹ band-3, least-differentiated observer authoring; patterns
    near gemini-flash, far from sonnet") is confounded by regime, not cleanly attributable to the
    model. The **battery-level** version of this confound was CLOSED (`PARITY_WRITEUP.md`: giving
@@ -21487,19 +21488,46 @@ purchase decision, full stop.
 ### The kimi-off arm is NOT purchasable as written — it needs a driver change first
 
 **This is the finding that keeps this from being a wish.** `agent/run_no_scope_kimi.py` `_body/3`
-(`:177-181`) sends exactly `{model, messages, max_tokens}` — **there is no thinking toggle in the
-payload and no CLI flag for one**, and its comment justifies the omission as *"K3 forbids disabling
-it"* while the driver's `DEFAULT_MODEL` is **`kimi-k2.6`** (`:65`), a different model with a
-different capability. The 2026-08-21 two-sided check (INVESTIGATIONS) established that **k2.6 DOES
-accept `thinking:{type:disabled}`** — HTTP 200 with 0 `reasoning_content` chars / 8 completion
-tokens, against 187 chars / 47 tokens without the flag. So the leg is constructible **in principle
-and not in practice**: the capability exists at the API and is not wired at the driver.
+sends exactly `{model, messages, max_tokens}` — **there is no thinking toggle in the payload and no
+CLI flag for one**, and its comment justified the omission as *"K3 forbids disabling it"* while the
+driver's `DEFAULT_MODEL` is **`kimi-k2.6`** (`:65`), a different model with a different capability.
+A stale justification carried across a model change.
+
+**RESOLVED EMPIRICALLY 2026-08-26, three arms on the live API** (`kimi_default_check.py` +
+`kimi_default_check_output.txt` in `audits/2026-08-25_oq342_section9_hard_seed_read/`), because the
+question it raised was bigger than this spend — *if k2.6's no-toggle default were thinking-OFF, the
+kimi legs would be mislabelled in the adopted coherent set*:
+
+| arm | sent | `reasoning_content` chars | completion tokens |
+|---|---|---|---|
+| **A — no toggle** (what every kimi leg was generated with) | bare body | **887** | 274 |
+| B — `thinking:{type:disabled}` | explicit off | **0** | 7 |
+| C — `thinking:{type:enabled}` (positive control) | explicit on | **842** | 266 |
+
+Figures are the archived run (`kimi_default_check_output.txt`). The check was run **twice**; arm A
+returned 930 then 887 reasoning chars and arm C 861 then 842 — generation is stochastic, so the
+CHAR COUNTS do not reproduce, and only the three-way SEPARATION does. That separation is the
+result: arm B is exactly 0 on both runs while A and C are in the high hundreds on both.
+
+**k2.6's default is thinking-ON**, consistent with the ~11.7k reasoning tok/story measured at the
+2026-07-19 pilot. **NO labelling defect: the kimi legs are thinking-ON and are read as thinking-ON
+everywhere** — `AGENTS.md:1185`, `bulk_corpus_generation.md` §7b, OQ-343's "third thinking-on
+model", the driver's own caveat. **OQ-343's close does not need revisiting.**
+
+**What the check DID overturn is the word "mandatory".** Arm B proves reasoning is *disableable* on
+k2.6 — DEFAULT-on, not mandatory — and that mislabel is why no kimi-off arm was ever built: it read
+as **impossible** rather than as **unplumbed**, which converts a cheap missing arm into an apparent
+law of nature. Corrected at every live site (`run_no_scope_kimi.py` caveat + `_body/3`,
+`python/audits/kimi_profile_battery.py`, ISSUES OQ-78's regime note); dated audit dirs left as the
+point-in-time records they are. So the leg is constructible **in principle and not in practice**:
+the capability exists at the API, is now witnessed live, and is still not wired at the driver.
 
 **Owner, split because the two halves have different seats:**
 1. **Driver change (implementation seat, unassigned — this is the half that was missing at mint).**
    Plumb a `--thinking` / `--reasoning` flag into `_body/3` as `thinking: {type: "disabled"}`, gated
-   to non-K3 models, and correct the `:178-179` comment, whose premise is scoped to K3 while the
-   default is k2.6. Small and self-contained; it is a prerequisite, not part of the spend.
+   to non-K3 models (K3 rejects it). The stale comment is already corrected and now carries the
+   live witness, so the remaining work is the flag itself — small and self-contained, and a
+   prerequisite rather than part of the spend.
 2. **Spend-go (operator seat)** — ~$25–35, and only reachable after (1).
 
 **Sequencing, so this does not sit at P4 forever:** arm (c) is buyable today and needs nobody;

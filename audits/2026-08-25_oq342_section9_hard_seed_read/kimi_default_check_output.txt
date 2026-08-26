@@ -1,0 +1,30 @@
+==============================================================================
+ARM A -- NO TOGGLE (what every kimi leg was generated with)
+    sent          : (nothing -- bare body)
+    reasoning_content chars : 887
+    content chars           : 3
+    completion_tokens       : 274
+    usage keys              : ['cached_tokens', 'completion_tokens', 'completion_tokens_details', 'prompt_tokens', 'prompt_tokens_details', 'total_tokens']
+    reasoning head          : 'The user is asking a classic algebra word problem about two trains on the same track. Let me solve it.\n\nFirst '
+
+ARM B -- thinking DISABLED
+    sent          : {"thinking": {"type": "disabled"}}
+    reasoning_content chars : 0
+    content chars           : 6
+    completion_tokens       : 7
+    usage keys              : ['cached_tokens', 'completion_tokens', 'completion_tokens_details', 'prompt_tokens', 'prompt_tokens_details', 'total_tokens']
+
+ARM C -- thinking ENABLED (positive control)
+    sent          : {"thinking": {"type": "enabled"}}
+    reasoning_content chars : 842
+    content chars           : 3
+    completion_tokens       : 266
+    usage keys              : ['cached_tokens', 'completion_tokens', 'completion_tokens_details', 'prompt_tokens', 'prompt_tokens_details', 'total_tokens']
+    reasoning head          : 'The user wants me to solve a classic train problem and answer with the time only.\n\nFirst train leaves at 3pm g'
+==============================================================================
+
+VERDICT
+  no-toggle reasoning chars = 887
+  disabled  reasoning chars = 0
+  enabled   reasoning chars = 842
+  => k2.6 DEFAULT IS THINKING-ON. Every kimi leg is a thinking-ON leg.

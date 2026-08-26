@@ -12,7 +12,8 @@ Probes (each maps to a structural finding):
   P3 perspective_diff    -> perspective differentiation (deeper-cuts headline)
 
 Arms: kimi-k2.6 (Moonshot), claude-sonnet-5 (Anthropic via llm_call), gemini-2.5-flash (Google REST).
-CAVEAT: kimi-k2.6 runs mandatory reasoning; the others run at default. We read final content only.
+CAVEAT: kimi-k2.6 runs reasoning BY DEFAULT (not "mandatory" — it accepts
+thinking:{type:disabled}; witnessed 2026-08-26); the others run at default. We read final content only.
 
 Usage: python3 python/audits/kimi_profile_battery.py
 Writes: audits/2026-07-20_five_leg_twin_comparison/battery/responses.json (+ per-response .txt)
