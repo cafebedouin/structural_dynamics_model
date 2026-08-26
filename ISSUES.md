@@ -18023,9 +18023,11 @@ buildability/dissolution-event authored field is minted (typed deferred-Ω_E at 
 
 **Ω-type:** Ω_C (a program of spends and regime changes the operator sequenced; the children are the measurements).
 
-**Status:** open — minted 2026-08-22 from the 2026-08-21/22 chat; operator ruled the order.
+**Status:** resolved — 2026-08-25. Sequence (1)–(4) dispatched and the step-(3) diff written up
+with a `Fired:` bit (`audits/2026-08-25_oq342_section9_hard_seed_read/`, `Fired: live`). Closed on
+this umbrella's OWN bar, not on its children's: see *Closing note*.
 **Priority:** 1
-**Deps:** gates OQ-343, gates OQ-344, gates OQ-345, gates OQ-346, gates OQ-347, gates OQ-348
+**Deps (dropped on close):** was `gates OQ-343, gates OQ-344, gates OQ-345, gates OQ-346, gates OQ-347, gates OQ-348` — all six DISCHARGED, not abandoned. The gate condition was always the SUBSTRATE (a coherent leg set to measure against), never this entry's prose: measuring ε instability or the victim/payer split against a corpus about to be reclassified at one commit would have produced numbers that moved underneath them. It fired 2026-08-25 when the 19-leg coherent set was adopted at `a3966e7` (`audits/2026-08-25_oq347_coherent_reclassify/WRITEUP.md`). OQ-345 and OQ-347 resolved the same day on their own bars; OQ-343/344/346/348 are released to their own tracks.
 **Files:** `docs/technical/bulk_corpus_generation.md` §7c/§9, KNOWN_STATE 2026-08-22 HANDOFF, `agent/run_no_scope_stealth.py`, `agent/run_no_scope_gemini.py`, `agent/run_no_scope_kimi.py`, `agent/run_no_scope_sonnet.py`, `audits/2026-08-21_flash_regime_vs_redraw/`.
 
 **What this is.** Eleven legs now share the 1005-seed pool (haiku, flash, sonnet, kimi, flash2, flash3,
@@ -18057,9 +18059,45 @@ BLOCKED on an operator ruling (unnamed 2×2 cell). The §9 WRITEUP prose remains
 deliverable of this umbrella; its four arms are preserved
 (`audits/2026-08-25_oq347_coherent_reclassify/preserved_arms.md`).
 
-**Resolution:** every child closed or disposed, and the diff of step (3) written up with a
-`Fired:` bit. **What it changes:** whether the five-leg fingerprints (2026-07-20) are read with
-error bars, and which of the September new-family spends are worth making.
+**Resolution (rewritten at close, 2026-08-25 — this umbrella's OWN deliverables).** The original
+wording, *"every child closed or disposed, and the diff of step (3) written up"*, was **circular**:
+its own `gates` edges held four children in BLOCKED, and it could not close until they did. The
+gate was never this entry's prose — it was the substrate (see the Deps note). The bar it is closed
+on is the operator's sequence and this umbrella's own artifact:
+
+1. **Floors** — OQ-347 resolved 2026-08-25 (all 19 legs, within-model floors, situation-fixed core 6/871).
+2. **Backfill** — OQ-345 resolved 2026-08-25 (haiku 455 / flash 206 `+stakeholder_backfill`; the
+   `+seed_rescue1` sync rescues landed; batch-family residue → OQ-378). RULING-1's tag distinction
+   (`+seed_rescue1` ≠ the OCCUPIED `+rescue1`) held through every downstream read.
+3. **Reclassify-all at one commit + the §9 before/after diff** — reclassify executed 2026-08-25 at
+   `a3966e7`; **the §9 write-up, this umbrella's own open deliverable, is DELIVERED**:
+   `audits/2026-08-25_oq342_section9_hard_seed_read/WRITEUP.md`, `Fired: live`. Arm A (pinned-arm
+   tripwire) PASSES — the preserved arms reproduce the committed 2026-08-22 diff byte-for-byte in
+   their measurement body. Arm B answers the question §9 actually asked and that nothing had
+   measured: **a model's hard seeds are mis-authored, not structurally different** (row 4,
+   `just_misauthored`; R = 0.601 nemotron / 0.589 stealth against each leg's own size-matched null,
+   0/1000 draws exceeding, with the instrument witnessed able to resolve a between-model difference
+   of 1.914 at the same m).
+4. **New-family pairs decided** — dispatched, not deferred: OQ-346 keeps the OpenAI within-vendor
+   pair as a RIPE `blocked_on_human` spend-go, and the non-Western-lineage arm — the only part that
+   ever depended on the stealth reveal — is split to **OQ-387** under a `blocked_on_condition` with
+   a named watcher.
+
+**Children released to their own tracks:** OQ-343 resolved on (a)+(b), re-derived on the coherent
+set, residue → OQ-388. OQ-344 narrowed to what raw responses support, wire fixed, successor →
+OQ-386. OQ-346 split (→ OQ-387). OQ-348 ripe with a named operator key.
+
+**What it changed:** the five-leg fingerprints (2026-07-20) are now read against a coherent 19-leg
+set with within-model floors; and one September spend has its warrant moved — OQ-378's residue
+rescue is a **composition nicety, not a bias correction**, because the rescued stratum was measured
+and is statistically indistinguishable from first pass.
+
+**Closing note — what this close does NOT claim.** It does not claim every child is answered; four
+are open on their own bars with their own priorities, which is the point of releasing them. It does
+not claim the §9 result generalizes past the two legs carrying an occupied `+rescue1` stratum, nor
+to the **never-generated** seed pool, which is a third hardness stratum that cannot be measured
+without generating it (declared, not built). And the row-4 reading is a *tested absence* on the
+seat-type distribution — not a claim that rescued and first-pass stories are alike on every axis.
 
 ---
 
@@ -18067,9 +18105,14 @@ error bars, and which of the September new-family spends are worth making.
 
 **Ω-type:** Ω_E (measurable on legs that exist or are free to make).
 
-**Status:** open — minted 2026-08-22; the Flash instance is witnessed, generality is not.
+**Status:** resolved — 2026-08-25 on sub-questions (a) and (b), re-derived on the COHERENT 19-leg
+set at `a3966e7` after the prior headline was found to rest on an artifact whose own first line
+reads `engine commits present: ['5603019','734d587'] <-- NOT coherent; reclassify`. Every headline
+figure held inside its pre-set mechanical bound at the new n; the residual generation arms —
+(c) dose-response and (a)'s kimi thinking-off leg — are split to **OQ-388** rather than shrunk in
+place. Witness: `audits/2026-08-25_oq342_section9_hard_seed_read/oq343_rerun_coherent_2026-08-25.txt`.
 **Priority:** 1
-**Deps:** splits_from OQ-342
+**Deps:** splits_from OQ-342, bundled_with OQ-388
 **Files:** `audits/2026-08-21_flash_regime_vs_redraw/WRITEUP.md` (+ addendum), `epsilon_distance.py`, `paired_agreement.py`, `outputs/pipeline_output.flash{2,3,_think,_think2}.json`.
 
 **Witnessed.** gemini-2.5-flash, 1005 seeds, one commit: a thinking-off redraw pins ε (median
@@ -18117,7 +18160,36 @@ time — not damped; AND with |Δε| < 0.10 the thinking-on floor still flips th
 thinking-off, so the instability is broader than ε. Classification floor with ε pinned: type vector 19%,
 verdict 8%, h1 13%.
 
-**Open.** (a) Is it general? The stealth (reasoning mandatory) and kimi legs are thinking-on with
+**RE-RUN ON THE COHERENT SET, 2026-08-25 — the 2026-08-24 headline was NOT an artifact of the
+incoherent engine-commit mix.** n moved on exactly the two rescued legs: **nemotron 996 → 1000,
+nemotron_think 1003 → 1005** (shared 994 → 1000). OQ-377 precondition re-asserted live rather than
+assumed: **absent-ε records = 0 on both legs** (4 and 6 records carry a genuine authored ε = 0, which
+is precisely why the `or 0` coercion had to be checked — an absence would be indistinguishable from
+them). All 38 headline figures plus all 60 per-seat type-mix cells re-derived old-vs-new:
+
+- **Shares/rates** (bound ≤ 2pp): largest move **1.0pp** (paired up≥.05, 39% → 40%). h1 band
+  shares, red/green rates, all six paired-agreement columns, |Δε| ≥0.10 (28%) and ≥0.20 (15%),
+  seat-vector churn (77%), verdict and h1 change rates — **every one unchanged to the printed digit**
+  except nemotron_think red (10.9% → 10.8%).
+- **Paired Δε mean** (bound ≤ 0.01 ε-units): **+0.063 → +0.064**, Δ = +0.001. **Sign held.**
+- **Per-seat type mixes:** 58 of 60 cells identical; 2 moved by 1pp (nemotron moderate `unknown`
+  13→12, nemotron analytical `tangled_rope` 15→16).
+- **No signed quantity flipped sign anywhere.**
+
+So the mechanical close condition was met, and it was met by a wide margin — the reclassify at one
+commit plus the +4/+2 rescued stories moved nothing above 1pp.
+
+**Split out at close, NOT shrunk in place → OQ-388.** The `**Open.**` paragraph below carried a
+THIRD sub-question, (c), that no re-read of existing artifacts can answer, plus one residual arm of
+(a) in the same shape. Both are generation spends:
+- **(c)** dose-response at non-max thinking budget (1024 / 24576), Flash ~$15–20 per arm — the
+  whole finding rests on a two-point contrast (8192 vs 0), so "thinking moves ε" is currently
+  indistinguishable from "any thinking at all moves ε by a fixed amount."
+- **(a) residue** — a kimi thinking-off leg (~$25–35; k2.6 accepts `thinking:{type:disabled}`,
+  verified two-sided 2026-08-21). Without it kimi contributes a magnitude but no direction.
+The paragraph below is preserved verbatim as the record of what was asked.
+
+**Open (AS ORIGINALLY WRITTEN 2026-08-22 — (a) and (b) are now answered; (c) and (a)'s kimi arm live at OQ-388).** (a) Is it general? The stealth (reasoning mandatory) and kimi legs are thinking-on with
 no off arm; nemotron thinking-on vs its thinking-off leg (free) and a kimi-off leg (k2.6 accepts
 `thinking:{type:disabled}`, INVESTIGATIONS 2026-08-21; ~$25–35) are the two cheap generality
 tests. (b) How much reaches `dr_type` / `verdict_join`? Count per-seed type flips between the
@@ -18140,16 +18212,47 @@ per the per-Author-stratum rule), and whether the rebuild generates thinking-off
 
 **Ω-type:** Ω_E.
 
-**Status:** open — minted 2026-08-22 from the story_repair correction (KNOWN_STATE 2026-08-22).
+**Status:** open — NARROWED 2026-08-25 to what the persisted raw responses actually support; the
+full-coverage ≥6-**model** measurement it was minted for is **OQ-386**, minted rather than shrunk
+in place. The instrument defect that made it unsatisfiable at any n is FIXED (see *The wire*).
 **Priority:** 2
-**Deps:** splits_from OQ-342
+**Deps:** splits_from OQ-342, bundled_with OQ-386
 **Files:** `python/story_repair.py` (STAKEHOLDER_ROLE_REMAP + stats), `prompts/constraint_story_generation_prompt_json.md` (e03e2210), `outputs/no_scope_runs_<leg>/responses/`, `outputs/no_scope_runs_<leg>/failures.json`.
 
 **Witnessed.** Under prompt 685ed7cf, role=`victim` was the ONLY out-of-enum stakeholder role
 (301 uses / 291 nemotron draws); Flash and Nemotron write it, Claude and Kimi write `payer`; the
-prompt said "victim" 10× and named the enum once. Prompt e03e2210 names `payer` at four sites;
-stealth's 36 hardest seeds then passed 36/36. The repair now counts remaps in `stats`
-(`stakeholder_role_remapped`), so every future run reports the rate per model for free.
+prompt said "victim" 10× and named the enum once. Prompt e03e2210 names `payer` at every
+role-declaration site (`:505` enum definition, `:133`/`:134` gates, `:233` mapping row, `:791`
+checklist, plus `:101`/`:136`/`:262`; `base_properties.victims[]` stays "victim" **by design** — it
+is an array name, not a StakeholderRole); stealth's 36 hardest seeds then passed 36/36.
+
+**CORRECTION 2026-08-25 — this entry's own closing sentence was false, and it was the load-bearing
+one.** It read: *"The repair now counts remaps in `stats` (`stakeholder_role_remapped`), so every
+future run reports the rate per model for free."* It counted; it reported **nothing**. The counter
+was incremented at `python/story_repair.py:169` and read by **zero** call sites — a textbook
+Pattern-1 dangling wire. Of the three `repair_story(` callers, `recover_historical_seeds.py:39`
+passes no stats dict at all, and the only one that does (`agent/generate_kernel_corpus.py:751 → 796`)
+reads that dict at exactly two lines (`:936`, `:938`), both for the unrelated `axiom_status_fallback`
+key, printed to stdout and never persisted. So no run has EVER reported this rate, and no artifact
+on disk carries it. "Free for every future run" was an assertion of delivery, not a delivery.
+
+**The wire — FIXED 2026-08-25** (commit on `agent/generate_kernel_corpus.py` + `python/story_repair.py`).
+`repair_stats` is now accumulated into a `repair_stats.json` sibling of each run's `rejections.json`,
+with per-run entries (utc stamp, batch id, `provenance_source`, succeeded/failed) and merged totals,
+and the remapped value is recorded (`role=victim`), not just counted — the count alone cannot say
+*which* models follow prose vs enum, which is this entry's question. It is written from inside
+`process_batch_results`, the one function **all four** no_scope drivers (stealth/gemini/kimi/sonnet)
+route through, and all four supply `rejections_path`, so it covers every leg. A missing
+`rejections_path` prints a loud NOT-PERSISTED warning rather than dropping the datum. Two-sided
+control GREEN 6/6 against the real function on its real path
+(`audits/2026-08-25_oq342_section9_hard_seed_read/oq344_wire_control.py`): FIRES on `role=victim`,
+DECLINES on `role=payer`. **Forward-only — it cannot reconstruct any leg already generated.**
+
+**The narrowing, stated so the denominator is not misread.** Raw responses persist for exactly
+**6 legs** — `flash` 210, `nemotron` 1005, `nemotron_think` 1005, `stealth`/`stealth2`/`stealth3`
+1005 each. Six legs, but only **three model families** (gemini / nvidia-nemotron / ox-alpha), so a
+per-LEG table across 6 legs is reachable retrospectively and a per-MODEL table across ≥6 models is
+not. This entry is narrowed to the former; the latter is **OQ-386**.
 
 **Second instance of the same shape (2026-08-23, arm G again):** gemini-2.5-flash with
 thinking_budget=8192 authored NO `suppression_profile/2` in ~990 stories per leg (flash_think,
@@ -18168,9 +18271,12 @@ prose-followers, or only reduce them?) — read off the rescue passes. (b) The o
 drift classes are the next enum/type sites: negative `time_horizon` (-500: years authored as a
 signed offset), `organizational` as `spatial_scope`, `agent: True` where a string is typed — each
 is a candidate remap-or-prompt-fix with the same A/B. (c) Is "prose-following" a model trait that
-predicts other drift (lineage-stable)? **Resolution:** a per-model table of remap + residual-drift
-rates under e03e2210 across ≥6 legs. **What it changes:** the prompt's enum sites, and whether
-the rebuild pins enums in-line everywhere.
+predicts other drift (lineage-stable)? **Resolution (NARROWED 2026-08-25):** a **per-LEG** table of
+remap + residual-drift rates under e03e2210 across the **6 legs whose raw responses persist**
+(3 model families), derived by re-processing those responses offline at $0 via
+`--from-responses`. The per-MODEL version across ≥6 models is **OQ-386** and is gated on
+generation, not on analysis. **What it changes:** the prompt's enum sites, and whether the rebuild
+pins enums in-line everywhere.
 
 ---
 
@@ -18237,19 +18343,38 @@ statistics on the two June legs, and the matched-seed intersection (currently 95
 
 **Ω-type:** Ω_P (a spend the operator sequences; the evidence it waits on is OQ-347/OQ-345).
 
-**Status:** open — minted 2026-08-22; not ripe until OQ-347 lands.
+**Status:** open — SPLIT 2026-08-25. OQ-347 landed (resolved 2026-08-25), so the blocker this
+entry named is discharged and the OpenAI within-vendor pair is **ripe now**. The non-Western-lineage
+(DeepSeek) arm, and ONLY that arm, waits on the stealth reveal; it is **OQ-387**. The two must not
+share one entry — a `blocked_on_condition` edge routes to BLOCKED and would hide this ripe spend-go
+from BLOCKED-ON-YOU, the exact mislabeling the 2026-08-25 umbrella close existed to remove.
 **Priority:** 3
-**Deps:** blocked_on OQ-347
+**Deps:** splits_from OQ-342, bundled_with OQ-387, blocked_on_human oq346-openai-pair-spend-go
 **Files:** `agent/run_no_scope_stealth.py` (any OpenRouter model via `--leg-name --model`), OpenRouter price list fetched 2026-08-21 (scratch; re-fetch).
 
 **The question.** A new lineage at k=1 is a fingerprint without error bars; the unit of
 purchase is a PAIR. Candidates and list-price pair costs (2026-08-21 fetch, ~35k in / 5–15k out
 per story): `openai/gpt-5.4` ~$330, `gpt-5.4-mini` ~$100, an older OpenAI model (`gpt-4.1`
-~$220–380, `gpt-4.1-mini` ~$45–75) for a within-vendor *generation* contrast, `deepseek-v4-pro`
+~$220–380, `gpt-4.1-mini` ~$45–75) for a within-vendor *generation* contrast. ~~`deepseek-v4-pro`
 ~$145 — a non-Western lineage distinct from Kimi. The stealth model (`stealth/ox-alpha`) is
 very likely a Chinese lab's pre-release; if the reveal says which, the DeepSeek choice may
-change. **Resolution:** an operator spend-go on a named pair set after OQ-347's floors show what
-a cross-model delta must exceed. **What it changes:** the September corpus composition.
+change.~~ **→ moved to OQ-387 (2026-08-25).** That sentence is the entry's own statement that
+the reveal dependency reaches exactly one arm; the OpenAI within-vendor pair never depended on it.
+
+**Scope after the split: the OpenAI arm only.** A new lineage at k=1 is a fingerprint without
+error bars, so the unit of purchase is a PAIR: `openai/gpt-5.4` ~$330 or `gpt-5.4-mini` ~$100 for
+the current model, and an older OpenAI model (`gpt-4.1` ~$220–380, `gpt-4.1-mini` ~$45–75) for the
+within-vendor *generation* contrast — i.e. does the same vendor's older generation carry the same
+fingerprint. Re-fetch the OpenRouter price list before spending; the 2026-08-21 numbers were a
+scratch fetch and prices move.
+
+**What the delta must exceed, now that the floors exist (OQ-347 resolved 2026-08-25).** The
+within-model floors and the coherent 19-leg set at `a3966e7` are the comparison base: a
+cross-model claim has to beat the same-model redraw floor for the statistic it is made on, and
+the per-leg diagnostic contrast showing which statistics carry a model fingerprint vs draw noise
+is `audits/2026-08-23_leg_diagnostic_table/WRITEUP.md`. **Resolution:** an operator spend-go on a
+named OpenAI pair. **What it changes:** the September corpus composition, and whether
+within-vendor generation is a smaller axis than across-vendor.
 
 ---
 
@@ -18476,9 +18601,10 @@ Evidence: `audits/2026-08-21_oq120_epsilon_boundary/WRITEUP.md`.
 **Status:** open — minted 2026-08-22; measured 2026-08-25 (unnamed cell); RULED the same day
 (the blocked_on_human is discharged); the re-specified test lives in child OQ-380, already run.
 What remains open here is the operator's final reading of §11's "map vs territory" consequence
-with OQ-380's numbers in hand.
+with OQ-380's numbers in hand — a ruling, not a measurement, and RIPE (2026-08-25: the umbrella
+`gates` edge that was holding it in BLOCKED is discharged, and OQ-380's numbers are in hand).
 **Priority:** 2
-**Deps:** splits_from OQ-343
+**Deps:** splits_from OQ-343, blocked_on_human oq348-unnamed-cell-map-vs-territory-reading
 
 **RULING (operator, 2026-08-25) — the unnamed cell is the correct result, and the honest reading
 is that THE NULL WAS MIS-SPECIFIED FOR THE QUESTION, not that a third substantive hypothesis
@@ -20649,6 +20775,8 @@ already ruled).
 
 **Status:** open — minted 2026-08-25 by the OQ-347 coherent-reclassify session (RULING-2
 condition (iii): the rescues get their own OQ so "pending seed rescue" stops dangling in OQ-345).
+**WARRANT MOVED 2026-08-25** — see *What the §9 hard-seed read did to this spend*; the entry stays
+open and the spend stays available, but its justification is now composition, not bias.
 **Priority:** 3
 **Deps:** splits_from OQ-345
 **Blocked_on_condition:** none mechanical — but MUST NOT run while any classify freeze window is
@@ -20662,6 +20790,33 @@ OCCUPIED (`testsets_nemotron` 144, `testsets_stealth` 36) and reusing it would m
 generation events; `stakeholder_backfill` shows the naming convention is defect-named, not
 ordinal. Occupancy re-verify before any pass (the error class is demonstrated — no candidate is
 exempt): `rescue1` 180 files, `stakeholder_backfill` 661, `seed_rescue1` 0 at 2026-08-25.
+
+**What the §9 hard-seed read did to this spend (2026-08-25, `audits/2026-08-25_oq342_section9_hard_seed_read/`).**
+This entry predicts "a tail that never closes," and the missing warrant for spending on it was
+whether an un-rescued residue **biases** a leg or merely **shortens** it. That is now measured, on
+the only stratum where it is measurable — the ALREADY-rescued `+rescue1` seeds, which are the same
+population one round earlier:
+
+- On the two legs carrying an occupied `+rescue1` stratum (`testsets_nemotron` 144,
+  `testsets_stealth` 36), the rescued stories' per-seat type-share vector sits **closer** to the
+  first-pass stratum than two random first-pass halves sit to each other — R = 0.601 and 0.589
+  against each leg's own size-matched permutation T95, with **0/1000** and 7/1000 draws exceeding.
+- The instrument is witnessed able to discriminate at the same m: a between-model first-pass
+  anchor reads **1.914** against T95 1.112, and the `+stakeholder_backfill` control arms produce
+  25–37% exceedance. So the zero is a **tested absence**, not a stuck instrument.
+- Descriptive agreement: h1-null share 12.5% vs 12.3%, red-verdict rate 13.2% vs 13.3% (nemotron).
+
+**Consequence, stated as a warrant change and not as a ruling:** rescuing the residue is a
+**composition nicety** — it makes legs the same size — rather than a **bias correction**. It does
+NOT argue for dropping the spend (equal n across legs has its own value for every paired statistic,
+and cheap arms may still be worth taking); it removes the "the corpus is skewed until we do this"
+argument for prioritizing it. Whether to spend remains the operator's seat.
+
+**Scope limit, so this is not over-read:** the measurement covers the RESCUED residue, which is the
+only residue that exists as stories. The **never-generated** seeds this entry is about are a third
+hardness stratum and cannot be measured without generating them — that is the circularity, and it
+is declared rather than argued around. The evidence is that seeds hard enough to fail one pass and
+succeed on a retry are not structurally distinctive; seeds that failed *every* pass are untested.
 
 **Why these seeds were not closed in the 2026-08-25 session (record so nobody re-plans the same
 45-minute pass):** `run_no_scope_sonnet.py` (sonnet+haiku families) and `run_no_scope_gemini.py`
@@ -21099,6 +21254,111 @@ incidence of it, and the incidence is what a future OQ-205-style close should be
 means, and `classify_from_restricted/3` stops being able to answer where `dr_type/3` refuses.
 
 ---
+
+## OQ-386 — The `victim`/`payer` split across ≥6 MODELS: the full-coverage successor to OQ-344
+
+**Ω-type:** Ω_E (measurable, but only on legs generated AFTER the wire fix — or on the 6 legs whose raw responses persist).
+
+**Status:** open — minted 2026-08-25 by the OQ-342 umbrella close, as OQ-344's explicit successor.
+**Priority:** 3
+**Deps:** splits_from OQ-344
+**Files:** `agent/generate_kernel_corpus.py` (the `repair_stats.json` writer), `python/story_repair.py`, `outputs/no_scope_runs_*/repair_stats.json` (forward-only).
+
+**Why this exists as a separate entry.** OQ-344 asked which models follow prose vs enum *on how
+many instructions*, across the model set. That is not satisfiable from disk: raw responses persist
+for exactly **6 legs** (`flash` 210, `nemotron` 1005, `nemotron_think` 1005, `stealth`/`stealth2`/
+`stealth3` 1005 each), 3 of them one model family and 2 another, so the ≥6-**model** bar cannot be
+met retrospectively at any n. OQ-344 is therefore narrowed to what the raw responses DO support,
+and this entry carries the wider measurement that was once wanted — minted rather than shrunk in
+place, so the record that the wider question was asked survives and something will prompt asking
+it again.
+
+**What changed on 2026-08-25 that makes it reachable going forward.** The counter was a Pattern-1
+dangling wire (`stakeholder_role_remapped` incremented at `story_repair.py:169`, read by nothing);
+it is now serialized to a `repair_stats.json` sibling of each run's `rejections.json`, with the
+remapped value recorded (`role=victim`), from inside `process_batch_results` — the one function all
+four no_scope drivers route through. So every leg generated from now on carries this datum for
+free. Two-sided control GREEN 6/6 (`audits/2026-08-25_oq342_section9_hard_seed_read/oq344_wire_control.py`).
+
+**Resolution:** the prose-vs-enum split reported across ≥6 models on legs carrying
+`repair_stats.json`, with per-model instruction counts. **What it changes:** whether
+prompt-interpretation fidelity is a stable model fingerprint or a per-draw accident — and, if the
+former, whether enum-naming is worth doing at every authored enum site rather than just the
+StakeholderRole one (§9 item 1's generalization).
+
+**Sequencing note for a cold reader:** this is gated on GENERATION, not on analysis. It becomes
+answerable when ≥6 models have been run post-2026-08-25; until then it is correctly BLOCKED behind
+new legs, and there is nothing to do on it but wait. Do not re-derive it from the 6 raw-response
+legs — that is OQ-344's narrowed scope, and doing it here would silently re-import the same
+family-collapsed denominator OQ-344 was narrowed to avoid.
+
+---
+
+## OQ-387 — New-family pair, non-Western lineage (DeepSeek or successor): the arm of OQ-346 that waits on the stealth reveal
+
+**Ω-type:** Ω_P (a spend the operator sequences; the evidence it waits on is external).
+
+**Status:** open — minted 2026-08-25, split out of OQ-346 so a conditional wait stops hiding a ripe spend-go.
+**Priority:** 3
+**Deps:** blocked_on_condition stealth-reveal-watcher — re-fetch the OpenRouter model listing for `stealth/ox-alpha`; the condition fires when that slug is RETIRED or resolves to a NAMED vendor. Watcher and read-site: `docs/technical/bulk_corpus_generation.md` §7c, where the stealth leg's provenance already lives.
+**Files:** `agent/run_no_scope_stealth.py` (any OpenRouter model via `--leg-name --model`), `docs/technical/bulk_corpus_generation.md` §7c.
+
+**Why it split from OQ-346.** OQ-346's own text confines the reveal's effect to exactly one arm:
+*"The stealth model (`stealth/ox-alpha`) is very likely a Chinese lab's pre-release; if the reveal
+says which, the DeepSeek choice may change."* The OpenAI within-vendor pair does **not** depend on
+the reveal. Kept in one entry, the `blocked_on_condition` edge routes the whole thing to BLOCKED
+and hides a ripe operator spend-go from BLOCKED-ON-YOU — the exact mislabeling the 2026-08-25
+umbrella close existed to remove. One entry cannot carry two blockers of different kinds.
+
+**The question.** A non-Western lineage distinct from Kimi, at k=1, is a fingerprint without error
+bars; the unit of purchase is a PAIR. `deepseek-v4-pro` ~$145/pair at the 2026-08-21 list-price
+fetch (re-fetch before spending — prices move and that fetch was scratch). If the reveal names
+`stealth/ox-alpha` as a DeepSeek pre-release, buying DeepSeek buys a second draw of a lineage
+already in the corpus and the choice should move to a genuinely distinct lab.
+
+**Resolution:** an operator spend-go on a named non-Western pair, decided after the reveal (or
+after the watcher fires on retirement, which resolves the question negatively — the slug is gone
+and the lineage stays unknown). **What it changes:** the September corpus composition, and whether
+the "non-Western lineage" cell of the model matrix is genuinely occupied or double-counted.
+
+---
+
+## OQ-388 — OQ-343's residual generation arms: the thinking dose-response (c), and the kimi thinking-off leg
+
+**Ω-type:** Ω_P (two generation spends; the analysis recipe is settled, only the spend is open).
+
+**Status:** open — minted 2026-08-25 at OQ-343's close, carrying the two sub-questions a re-read cannot answer.
+**Priority:** 4
+**Deps:** splits_from OQ-343
+**Files:** `agent/run_no_scope_gemini.py` (budget flag), `agent/run_no_scope_kimi.py` (`thinking:{type:disabled}`), `audits/2026-08-21_flash_regime_vs_redraw/` (the instruments, unchanged).
+
+**Why this exists.** OQ-343 closed 2026-08-25 on sub-questions (a) and (b), both re-confirmed on
+the coherent 19-leg set at `a3966e7` with every headline figure inside its mechanical bound. Its
+`**Open.**` paragraph carried a **third** sub-question that no re-read of existing artifacts can
+touch, and one residual arm of (a) in the same shape:
+
+- **(c) dose-response.** *Does a non-max thinking budget (1024 / 24576) scale the ε instability, or
+  is it a step function of thinking-on?* Flash, ~$15–20 per budget arm. The whole OQ-343 finding is
+  measured at budget 8192 vs 0 — a two-point contrast — so "thinking moves ε" is currently
+  indistinguishable from "any thinking at all moves ε by a fixed amount."
+- **(a) residue: a kimi thinking-off leg** (~$25–35). kimi-k2.6 accepts `thinking:{type:disabled}`
+  — verified two-sided 2026-08-21 (INVESTIGATIONS: 200 with 0 reasoning chars vs 187 chars without
+  the flag), so the leg is constructible. Without it, kimi is a thinking-ON leg with no off arm and
+  contributes to generality only as a magnitude, not as a direction.
+
+**What is NOT open.** Generality is answered at 2/2 model families (Flash and nemotron-3-ultra,
+same shape and magnitude) and the reach question (b) is answered and re-confirmed: a |Δε| ≥ 0.10
+move changes the seat-type vector 94% of the time on the nemotron pair, and even |Δε| < 0.10 moves
+it 71%. This entry is the *dose* and the *third family direction*, not the effect.
+
+**Resolution:** an operator spend-go on either arm, then the existing instruments
+(`epsilon_distance.py`, `delta_reach.py`, `seat_direction.py`) re-run unchanged. **What it
+changes:** whether the thinking regime is a dial or a switch — which decides whether a cheaper
+budget buys most of the effect, and therefore what every future thinking-on leg should be
+generated at.
+
+---
+
 
 *Compress-on-close (added 2026-06-04): when an entry's status transitions to
 resolved/disposed, compress its body in place — keep the header, Ω-type, the canonical

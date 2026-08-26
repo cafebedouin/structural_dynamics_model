@@ -45,6 +45,92 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-25 — [landed] OQ-342 umbrella CLOSED on its own bar: §9's hard-seed question answered (a TESTED absence), OQ-344's counter had no consumer at all, and OQ-343's headline held on the coherent set
+**Files:** ISSUES.md, docs/technical/bulk_corpus_generation.md, python/story_repair.py, agent/generate_kernel_corpus.py, audits/2026-08-25_oq342_section9_hard_seed_read/WRITEUP.md, audits/INVESTIGATIONS.md, .claude/skills/plan-review/RUNS.md
+**Tier:** correction-key
+
+The umbrella's own deliverable — the §9 write-up — was the last open item, and **§9's actual
+question had never been measured**. Closed 2026-08-25 with three children disposed, three OQs
+minted (OQ-386/387/388), and one instrument defect fixed.
+
+**1. The §9 hard-seed read: row 4, `just_misauthored` — a TESTED absence, not a failure to look.**
+§9 asks whether a model's hard seeds are structurally different stories or just mis-authored ones.
+The stakeholder-backfill stratum does NOT answer it (those stories were authored fine; they merely
+predate the `stakeholders` gate) — the stratum that answers it is the occupied `+rescue1`, and
+nothing had contrasted it with anything. Measured on the coherent 19-leg set at `a3966e7`: the
+rescued stratum's per-seat type-share vector sits **closer to first-pass than two random first-pass
+halves sit to each other** — R = observed mean L1 ÷ the leg's own size-matched permutation T95 =
+**0.601** (nemotron 144, **0/1000** draws exceeding) and **0.589** (stealth 36, 7/1000,
+corroboration only). Discrimination witnessed two-sided at the same m: the between-model first-pass
+anchor reads **1.914** vs T95 1.112, and the `+stakeholder_backfill` control arms exceed 25–37% of
+the time. Movement in this data is on the **regeneration** side, not the hardness side (C1 R =
+0.886/0.945; backfill strata author HIGHER ε than first-pass, rescue strata LOWER) — the direction
+that supports the null rather than threatening it. Consumer: **OQ-378's warrant moved from bias
+correction to composition nicety** (a warrant change, not a ruling — the spend stays the operator's).
+
+**How the design could have flattered itself, and the check that says it did not.** The
+pre-registered null is noise-asymmetric with its own observed arm (observed = fixed target vs
+random sample, ONE random side; null = two random samples, TWO), which widens the null, inflates
+T95, and biases R **downward — toward row 4, the convenient answer**. Tested rather than argued: a
+variance-matched null reproduces R_nemotron **0.599 vs 0.601**. The asymmetry is worth ~1% of T95.
+
+**2. TRIPWIRE — `stakeholder_role_remapped` was a Pattern-1 dangling wire, and OQ-344's own entry
+asserted the opposite.** That entry read *"the repair now counts remaps in `stats`, so every future
+run reports the rate per model for free."* It counted; it reported **nothing**. The counter was
+incremented at `python/story_repair.py:169` and read by **zero** call sites — the only caller
+passing a stats dict (`agent/generate_kernel_corpus.py:751 → 796`) reads it at exactly two lines
+(`:936`, `:938`), both for the unrelated `axiom_status_fallback` key, printed to stdout and never
+persisted. **No run has ever reported this rate and no artifact on disk carries it.** FIXED: it now
+serializes to a `repair_stats.json` sibling of each run's `rejections.json` from inside
+`process_batch_results` — the one function all four no_scope drivers route through, all of which
+supply `rejections_path` — recording WHICH value was remapped (`role=victim`), not just how many.
+Two-sided control GREEN 6/6 against the real function on its real path. **Forward-only: it cannot
+reconstruct any leg already generated.** The generalizable bit is the one CLAUDE.md already carries
+(*a producer is not done until something consumes its output*), and the tell here was a documented
+claim of delivery standing in for a delivery.
+
+**3. OQ-343's headline was NOT an artifact of the incoherent engine-commit mix.** Its published
+figures rested on `nemotron_regime_pair_fullN_2026-08-24.txt`, whose own first line reads
+`engine commits present: ['5603019','734d587'] <-- NOT coherent; reclassify`. Re-run on the
+coherent set at the new n (**nemotron 996 → 1000, nemotron_think 1003 → 1005**; shared 994 → 1000):
+all 38 headline figures and all 60 per-seat type-mix cells inside their pre-set mechanical bounds —
+largest move anywhere **1.0pp**, paired Δε mean +0.063 → +0.064 (bound 0.01 ε-units), **no signed
+quantity flipped sign**. OQ-377 precondition re-asserted live, not assumed: absent-ε = 0 on both
+legs (4 and 6 records carry a genuine authored ε = 0, which is exactly why it had to be checked).
+
+**4. Two substrate rows the plan asserted did not hold as written — both benign, both worth the
+next reader's attention.** (a) The "19 `pipeline_output.<leg>.json` all at `a3966e7`" claim is
+true of **18**: the 19th leg is the LIVE leg, whose `outputs/pipeline_output.json` is stamped
+`81e79a0` / `code_dirty: True` (re-run 2026-08-25T17:53Z, after the coherent reclassify). The
+coherent set is **18 model legs + a live leg that has since moved** — no step of this work read the
+live leg, so nothing was affected, but a future reader citing "the 19-leg coherent set" should know
+the 19th is not in it. (b) The `prolog/` diff from `a3966e7` to HEAD is not `constraint_indexing.pl`
+alone: it also carries `validation_suite.pl` (**auto-generated** — `python/python_gap_suite.py:75`
+writes it; the diff is `test_case`/comment lines only) and 6 new live-leg testset stories.
+`constraint_indexing.pl` IS comment-only (27 changed lines, zero non-comment, verified). **No engine
+change** — S2's substance holds even though its letter does not.
+
+**5. The umbrella's Deps line was a mislabeled edge, not a circular one.** OQ-342 declared **six**
+`gates` edges while its Resolution said it closed when every child closed — reading as circular. The
+gate condition was always the SUBSTRATE (a coherent leg set to measure against), never the entry's
+prose; it fired 2026-08-25 when the 19-leg set was adopted. All six are recorded **DISCHARGED, not
+abandoned**, in a `Deps (dropped on close)` line naming `a3966e7` as the release point, so a future
+reader sees six discharged gates rather than four abandoned ones.
+
+**Minted:** OQ-386 (the ≥6-MODEL victim/payer successor — gated on GENERATION, not analysis; the 6
+raw-response legs span only 3 model families, so a per-MODEL table is not reachable retrospectively
+and OQ-344 is narrowed to the per-LEG version). OQ-387 (the non-Western-lineage pair — split out
+because a `blocked_on_condition` edge routes to BLOCKED and was hiding OQ-346's RIPE OpenAI
+spend-go from BLOCKED-ON-YOU; watcher named with a read-site in `bulk_corpus_generation.md` §7c).
+OQ-388 (OQ-343's residual generation arms — sub-question **(c)**, the thinking dose-response, which
+no re-read can answer, plus (a)'s kimi thinking-off leg; split rather than shrunk in place, since
+the plan's close condition covered only (a) and (b)).
+
+**Also:** §9 item 1's checkbox ticked on a re-derived witness (`e03e2210e` names `payer` at every
+role-declaration site; `base_properties.victims[]` stays "victim" **by design** — it is an array
+name, not a StakeholderRole).
+
+
 ## 2026-08-25 — [landed] `plan-review` recalibrated on its first NEGATIVE falsifier reading: 2-round cap, fixer proportionality + an explicit decline, a plan size budget, a required falsifiability pass, and post-impl annotation now GATED
 **Files:** .claude/skills/plan-review/SKILL.md, .claude/agents/repo-blind-reviewer.md, .claude/skills/plan-review/RUNS.md, python/runs_ledger_check.py
 **Tier:** landed

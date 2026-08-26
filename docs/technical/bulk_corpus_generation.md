@@ -252,10 +252,18 @@ Fixing generation/evaluation is the task; comparability serves it. `prompt_commi
 allowed mid-series — but **never while a driver is running** (drivers re-read the prompt file per
 attempt, which would make a leg mixed-regime). Log each change with its motivating witness:
 
-- [ ] **Prompt: name the StakeholderRole enum at every "victim" site** (e.g. "at least one
+- [x] **Prompt: name the StakeholderRole enum at every "victim" site** (e.g. "at least one
   victim (stakeholder role: `payer`)"). Witness: 301 `victim` role values across 291 nemotron
   draws, the only out-of-enum value (KNOWN_STATE 2026-08-22). Held until stealth #1 and nemotron
   exit. Repair already remaps `victim→payer`, so this is about authoring fidelity, not rescue.
+  **DONE — commit `e03e2210e`** ("prompt: name the stakeholder role `payer` at every "victim"
+  site"), ticked 2026-08-25 on a re-derived witness. `payer` is named at every role-declaration
+  site in `prompts/constraint_story_generation_prompt_json.md`: the enum definition (`:505`, which
+  also says *"this is the role for every agent you list in `base_properties.victims[]`; never
+  write `victim` here"*), the two gate lines (`:133` tangled_rope, `:134` snare), the mapping row
+  (`:233`), the authoring checklist (`:791`), plus `:101`, `:136`, `:262`.
+  `base_properties.victims[]` still reads "victim" **by design** — it is an array name, not a
+  StakeholderRole, and `:233`/`:505` are precisely the lines that bridge the two.
 
 **Per-model A/B loop (operator, 2026-08-22).** The seed pool is shared, so every leg's failing
 seeds are a standing regression set for that model. Two halves: (1) **repair/validation changes
@@ -282,6 +290,31 @@ the rescued stratum vs the rest is the finding, the whole-leg marginal shift is 
 Prompt-interpretation signal, already available without backfill: which models author
 role=`victim` (prose-following: Flash, Nemotron) vs `payer` (enum-following: Claude, Kimi) —
 one instruction, a clean cross-model split; extend to other enum sites as they surface.
+
+**(3) EXECUTED 2026-08-25 — and the answer is `just_misauthored`
+(`audits/2026-08-25_oq342_section9_hard_seed_read/`, `Fired: live`).** Stratified per leg by
+`story_provenance` field 5, the rescued stratum is **not** the finding it was expected to be: on
+the two legs carrying an occupied `+rescue1` stratum (`testsets_nemotron` 144, `testsets_stealth`
+36 — **not** `+seed_rescue1`, nemotron 4 / nemotron_think 2, a distinct generation event one token
+away), the per-seat type-share vector sits *closer* to the first-pass stratum than two random
+first-pass halves sit to each other: R = observed mean L1 ÷ the leg's own size-matched permutation
+T95 = **0.601** (nemotron, 0/1000 draws exceeding) and **0.589** (stealth, 7/1000, corroboration
+only at n=36). The instrument is witnessed able to discriminate at the same m: the between-model
+first-pass anchor reads **1.914** against T95 1.112. So a model's hard seeds are **mis-authored,
+not structurally different** — on the seat-type distribution, at these two legs, at `a3966e7`.
+
+What *does* move is the other stratum. Both `+stakeholder_backfill` arms (haiku 455, flash 206)
+sit nearer their own nulls (R 0.886 / 0.945, 25–37% exceedance) and author **higher** ε than their
+first pass (0.593 vs 0.555; 0.548 vs 0.501), while the rescue strata author **lower** (0.458 vs
+0.489; 0.508 vs 0.548). The movement in this data is regeneration-under-a-new-prompt, not
+hardness — which is the direction that supports the null rather than threatening it. Neither C1
+arm exceeds its own null either.
+
+Consequence for the caveat this protocol names: the whole-leg marginal shift stays the caveat, but
+**the rescued stratum is not the finding** — it is a tested absence. `OQ-378`'s residue spend is
+therefore a composition nicety rather than a bias correction (the warrant, not the ruling; the
+operator's seat). The **never-generated** seed pool remains a third hardness stratum and is not
+measurable without generating it — declared, not built.
 
 ## 10. Live-leg rename (`testsets/` → `testsets_live/`, `json/` → `json_live/`) — DEFERRED plan + reference census (2026-08-23)
 

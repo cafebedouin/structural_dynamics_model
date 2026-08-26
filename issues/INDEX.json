@@ -1,22 +1,22 @@
 {
   "manifest": {
-    "store_version": "0eda1ee3838a1aa0416e202d5d2a70d3bdb0354d",
+    "store_version": "804919afe6bfb29a9279297dc3c71f723ee4d594",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-25T13:59:32"
+    "generated_at": "2026-08-26T00:07:23"
   },
-  "issues_sha": "d72a63d25740a75519cb525bd540fa7b5de7e22352d0b35477f8f032a00e1bed",
-  "n_entries": 385,
+  "issues_sha": "fe9c180f064a23dc4fef8d20188217b2e58e7a806ff65e4b3726d26b870d1d5d",
+  "n_entries": 388,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 175,
+    "resolved": 177,
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 167,
+    "open": 168,
     "partial": 5
   },
   "active": [
@@ -1893,56 +1893,18 @@
       ]
     },
     {
-      "id": "OQ-342",
-      "status": "open",
-      "priority": 1,
-      "summary": "Leg program 2026-08: within-model floors, stakeholder backfill, new-family pairs — the umbrella (operator-ruled sequence)",
-      "deps": [
-        "gates OQ-343",
-        "gates OQ-344",
-        "gates OQ-345",
-        "gates OQ-346",
-        "gates OQ-347",
-        "gates OQ-348"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-343",
-        "OQ-344",
-        "OQ-345",
-        "OQ-346",
-        "OQ-347",
-        "OQ-348",
-        "OQ-378"
-      ]
-    },
-    {
-      "id": "OQ-343",
-      "status": "open",
-      "priority": 1,
-      "summary": "Thinking-on makes authored ε unstable at band-crossing magnitude: is it model-general, and how much of it reaches `dr_type`?",
-      "deps": [
-        "splits_from OQ-342"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-78",
-        "OQ-342",
-        "OQ-348",
-        "OQ-380"
-      ]
-    },
-    {
       "id": "OQ-344",
       "status": "open",
       "priority": 2,
       "summary": "The `victim`/`payer` split is a prompt-interpretation probe: which models follow prose vs enum, on how many instructions?",
       "deps": [
-        "splits_from OQ-342"
+        "splits_from OQ-342",
+        "bundled_with OQ-386"
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-342"
+        "OQ-342",
+        "OQ-386"
       ]
     },
     {
@@ -1951,12 +1913,16 @@
       "priority": 3,
       "summary": "New-family pairs: OpenAI (current + an older model) and DeepSeek — decided after the floors, and possibly after the stealth reveal",
       "deps": [
-        "blocked_on OQ-347"
+        "splits_from OQ-342",
+        "bundled_with OQ-387",
+        "blocked_on_human oq346-openai-pair-spend-go"
       ],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-342",
         "OQ-345",
-        "OQ-347"
+        "OQ-347",
+        "OQ-387"
       ]
     },
     {
@@ -1965,7 +1931,8 @@
       "priority": 2,
       "summary": "The engine's outputs agree across models more than its inputs do (h1 37% vs authored ε 9%, stealth vs nemotron): routing, or band coarseness?",
       "deps": [
-        "splits_from OQ-343"
+        "splits_from OQ-343",
+        "blocked_on_human oq348-unnamed-cell-map-vs-territory-reading"
       ],
       "cross_refs": [],
       "mentioned_in": [
@@ -2517,12 +2484,52 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-205"
+      ]
+    },
+    {
+      "id": "OQ-386",
+      "status": "open",
+      "priority": 3,
+      "summary": "The `victim`/`payer` split across ≥6 MODELS: the full-coverage successor to OQ-344",
+      "deps": [
+        "splits_from OQ-344"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-342",
+        "OQ-344"
+      ]
+    },
+    {
+      "id": "OQ-387",
+      "status": "open",
+      "priority": 3,
+      "summary": "New-family pair, non-Western lineage (DeepSeek or successor): the arm of OQ-346 that waits on the stealth reveal",
+      "deps": [
+        "blocked_on_condition stealth-reveal-watcher — re-fetch the OpenRouter model listing for `stealth/ox-alpha`; the condition fires when that slug is RETIRED or resolves to a NAMED vendor. Watcher and read-site: `docs/technical/bulk_corpus_generation.md` §7c, where the stealth leg's provenance already lives."
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-346"
+      ]
+    },
+    {
+      "id": "OQ-388",
+      "status": "open",
+      "priority": 4,
+      "summary": "OQ-343's residual generation arms: the thinking dose-response (c), and the kimi thinking-off leg",
+      "deps": [
+        "splits_from OQ-343"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
         "OQ-51",
         "OQ-59",
-        "OQ-205",
         "OQ-285",
         "OQ-288",
-        "OQ-291"
+        "OQ-291",
+        "OQ-343"
       ]
     }
   ],
@@ -5533,6 +5540,45 @@
         "OQ-306",
         "OQ-326",
         "OQ-338"
+      ]
+    },
+    {
+      "id": "OQ-342",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Leg program 2026-08: within-model floors, stakeholder backfill, new-family pairs — the umbrella (operator-ruled sequence)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-343",
+        "OQ-344",
+        "OQ-345",
+        "OQ-346",
+        "OQ-347",
+        "OQ-348",
+        "OQ-378",
+        "OQ-386",
+        "OQ-387",
+        "OQ-388"
+      ]
+    },
+    {
+      "id": "OQ-343",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Thinking-on makes authored ε unstable at band-crossing magnitude: is it model-general, and how much of it reaches `dr_type`?",
+      "deps": [
+        "splits_from OQ-342",
+        "bundled_with OQ-388"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-78",
+        "OQ-342",
+        "OQ-348",
+        "OQ-377",
+        "OQ-380",
+        "OQ-388"
       ]
     },
     {
