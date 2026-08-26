@@ -45,6 +45,49 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-25 — [tripwire] OQ-380 does NOT establish that the engine AMPLIFIES: ε is one scalar, the seed fixes far more, and this corpus can never separate them
+**Files:** ISSUES.md, audits/2026-08-25_oq342_section9_hard_seed_read/WRITEUP.md, docs/technical/bulk_corpus_generation.md
+**Tier:** tripwire
+
+**The inference to refuse.** OQ-380 shows an engine-side agreement excess surviving ε-conditioning
+on all 3 cross-model pairs (h1 p=.006/.002/.028, verdict p=.0005/.033/.0005, signature
+p=.002/.046/.0035). The reading that wants to follow is *"the engine amplifies a real seed-keyed
+input signal."* **It does not follow.** That inference requires ε to be a **sufficient statistic
+for the input**, and ε is a single scalar over the authored text. The seed also fixes topic,
+entities and scenario shape — none of which ε captures. Two legs authored from the same seed share
+all of that, so their outputs can agree beyond ε-conditioning **with the engine contributing
+nothing**.
+
+**What OQ-380 actually establishes:** *residual seed-keyed output agreement not explained by ε.*
+Amplification is one explanation; shared input structure orthogonal to ε is another; the design
+separates neither. **And it cannot be fixed by re-analysis** — every leg is authored from the same
+1005-seed pool, so input-side sharing is structural and permanent for this corpus, not a confound
+to partial out. The design that could attribute the excess to the engine is **disjoint-seed
+authoring** (non-overlapping pools). That is a full regeneration spend and is DECLARED AS A DESIGN
+LIMIT rather than minted: naming it is cheaper than chasing it. **Trigger for revisiting:** the
+moment the amplification claim starts doing work in a paper section, an essay, or another OQ.
+
+**§11 line this supports:** *this corpus can measure within-seed cross-model agreement, but cannot
+cleanly attribute it to the engine.*
+
+**HEADLINE RETIRED — do not quote "h1 37% vs authored ε 9%"** (it was in OQ-348's own title until
+today). It compares **exact-match on a near-continuous authored value** against **banded
+categorical**, which have different chance rates by construction, so the ratio partly measures its
+own asymmetry; and OQ-348's ruling already concedes ε was always above chance (~2–7% cross-leg
+marginal). Carry this instead: **after conditioning on exact ε strata a small, consistent,
+significant excess remains in h1 / verdict / signature (p ≈ .0005–.046 over 3 pairs), and the raw
+gaps shrink from ~+15–20pp to ~+1–3pp.** The shrinkage is the finding.
+
+**Same-day companion correction (§9, OQ-342).** The reported hard-seed figure is now the
+**variance-matched** R (**0.599** nemotron / **0.582** stealth), not the pre-registered 0.601 /
+0.589. The pre-registered null was noise-asymmetric with its own observed arm — one random side vs
+two — which inflates T95 and biases R toward row 4, the verdict it produced. Both are tabled; the
+pre-registration is preserved unedited. **The rule this instances:** when an in-session correction
+shows a design was tilted toward its own result, the corrected estimator becomes the headline —
+leaving the original as the headline forces the next reader to rediscover the concern in order to
+learn it was handled.
+
+
 ## 2026-08-25 — [landed] OQ-342 umbrella CLOSED on its own bar: §9's hard-seed question answered (a TESTED absence), OQ-344's counter had no consumer at all, and OQ-343's headline held on the coherent set
 **Files:** ISSUES.md, docs/technical/bulk_corpus_generation.md, python/story_repair.py, agent/generate_kernel_corpus.py, audits/2026-08-25_oq342_section9_hard_seed_read/WRITEUP.md, audits/INVESTIGATIONS.md, .claude/skills/plan-review/RUNS.md
 **Tier:** correction-key
