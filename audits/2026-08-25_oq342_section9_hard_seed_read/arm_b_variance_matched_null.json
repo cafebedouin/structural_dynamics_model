@@ -1,0 +1,49 @@
+{
+  "design": "variance-matched null (one fixed side, one random side)",
+  "J_fixed_A": 50,
+  "K": 1000,
+  "seed": 20260825,
+  "arms": {
+    "nemotron": {
+      "m": 144,
+      "observed_mean": 0.6743055555555554,
+      "observed_sd": 0.14118484239542933,
+      "null_mean": 0.8025833333333334,
+      "null_sd": 0.18721078723734028,
+      "T95": 1.125694444444444,
+      "R": 0.5990129549660703,
+      "exceedance_frac": 0.003
+    },
+    "stealth": {
+      "m": 36,
+      "observed_mean": 1.1,
+      "observed_sd": 0.2620668089355823,
+      "null_mean": 1.239111111111111,
+      "null_sd": 0.3648252752777438,
+      "T95": 1.8888888888888888,
+      "R": 0.5823529411764706,
+      "exceedance_frac": 0.003
+    },
+    "haiku(C1)": {
+      "m": 252,
+      "observed_mean": 0.715,
+      "observed_sd": 0.13453911979177724,
+      "null_mean": 0.5672777777777779,
+      "null_sd": 0.12087889671881386,
+      "T95": 0.7857142857142856,
+      "R": 0.9100000000000001,
+      "exceedance_frac": 0.306
+    },
+    "flash(C1)": {
+      "m": 206,
+      "observed_mean": 0.8404368932038834,
+      "observed_sd": 0.1651980405186337,
+      "null_mean": 0.5825631067961164,
+      "null_sd": 0.1788986066781746,
+      "T95": 0.941747572815534,
+      "R": 0.8924226804123709,
+      "exceedance_frac": 0.255
+    }
+  },
+  "verdict_under_variance_matched_null": "row 4 just_misauthored"
+}

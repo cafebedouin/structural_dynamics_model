@@ -1,0 +1,558 @@
+{
+  "seed": 20260825,
+  "K": 1000,
+  "vocab": [
+    "mountain",
+    "naturalized",
+    "piton",
+    "rope",
+    "scaffold",
+    "snare",
+    "tangled_rope",
+    "unknown"
+  ],
+  "seats": [
+    "powerless",
+    "moderate",
+    "institutional",
+    "analytical"
+  ],
+  "arm_order": [
+    "nemotron",
+    "stealth",
+    "haiku(C1)",
+    "flash(C1)",
+    "MDE_anchor"
+  ],
+  "manifests": {
+    "nemotron": {
+      "code_commit_short": "a3966e7",
+      "code_dirty": false,
+      "n_stories": 1000,
+      "pipeline_run_at": "2026-08-25T09:03:25Z"
+    },
+    "stealth": {
+      "code_commit_short": "a3966e7",
+      "code_dirty": false,
+      "n_stories": 1005,
+      "pipeline_run_at": "2026-08-25T10:02:57Z"
+    },
+    "haiku": {
+      "code_commit_short": "a3966e7",
+      "code_dirty": false,
+      "n_stories": 960,
+      "pipeline_run_at": "2026-08-25T08:26:37Z"
+    },
+    "flash": {
+      "code_commit_short": "a3966e7",
+      "code_dirty": false,
+      "n_stories": 960,
+      "pipeline_run_at": "2026-08-25T07:33:08Z"
+    }
+  },
+  "strata": {
+    "nemotron": {
+      "no_scope_rebuild_nemotron": 852,
+      "no_scope_rebuild_nemotron+rescue1": 144,
+      "no_scope_rebuild_nemotron+seed_rescue1": 4
+    },
+    "stealth": {
+      "no_scope_rebuild_stealth": 969,
+      "no_scope_rebuild_stealth+rescue1": 36
+    },
+    "haiku": {
+      "no_scope_rebuild": 505,
+      "no_scope_rebuild_haiku+stakeholder_backfill": 455
+    },
+    "flash": {
+      "no_scope_rebuild_gemini": 754,
+      "no_scope_rebuild_gemini+stakeholder_backfill": 206
+    }
+  },
+  "arms": {
+    "nemotron": {
+      "arm": "nemotron",
+      "m": 144,
+      "n_target": 144,
+      "n_firstpass": 852,
+      "subsampled_target": false,
+      "observed_mean": 0.6681111111111111,
+      "observed_sd": 0.14032808778794867,
+      "null_mean": 0.7834861111111111,
+      "null_sd": 0.1942271002557713,
+      "T95": 1.1118055555555553,
+      "R": 0.6009244222361025,
+      "exceedance_frac": 0.0,
+      "target_stratum": "no_scope_rebuild_nemotron+rescue1",
+      "firstpass_stratum": "no_scope_rebuild_nemotron"
+    },
+    "stealth": {
+      "arm": "stealth",
+      "m": 36,
+      "n_target": 36,
+      "n_firstpass": 969,
+      "subsampled_target": false,
+      "observed_mean": 1.112,
+      "observed_sd": 0.2755451610942735,
+      "null_mean": 1.255277777777778,
+      "null_sd": 0.3377621295717439,
+      "T95": 1.8888888888888888,
+      "R": 0.5887058823529412,
+      "exceedance_frac": 0.007,
+      "target_stratum": "no_scope_rebuild_stealth+rescue1",
+      "firstpass_stratum": "no_scope_rebuild_stealth"
+    },
+    "haiku(C1)": {
+      "arm": "haiku(C1)",
+      "m": 252,
+      "n_target": 455,
+      "n_firstpass": 505,
+      "subsampled_target": true,
+      "observed_mean": 0.7170238095238094,
+      "observed_sd": 0.13793458430170896,
+      "null_mean": 0.5652619047619049,
+      "null_sd": 0.13450104480323566,
+      "T95": 0.8095238095238095,
+      "R": 0.8857352941176468,
+      "exceedance_frac": 0.247,
+      "target_stratum": "no_scope_rebuild_haiku+stakeholder_backfill",
+      "firstpass_stratum": "no_scope_rebuild"
+    },
+    "flash(C1)": {
+      "arm": "flash(C1)",
+      "m": 206,
+      "n_target": 206,
+      "n_firstpass": 754,
+      "subsampled_target": false,
+      "observed_mean": 0.8345825242718444,
+      "observed_sd": 0.1619784585057185,
+      "null_mean": 0.577990291262136,
+      "null_sd": 0.16401242771365904,
+      "T95": 0.8834951456310678,
+      "R": 0.9446373626373625,
+      "exceedance_frac": 0.368,
+      "target_stratum": "no_scope_rebuild_gemini+stakeholder_backfill",
+      "firstpass_stratum": "no_scope_rebuild_gemini"
+    }
+  },
+  "MDE_anchor": {
+    "what": "mean L1(nemotron first-pass m-sample, stealth first-pass m-sample)",
+    "m": 144,
+    "mean": 1.9136666666666664,
+    "sd": 0.261302140523141,
+    "p05": 1.4861111111111112
+  },
+  "C3": {
+    "pool": 1005,
+    "n_nemotron_rescue": 144,
+    "n_stealth_rescue": 36,
+    "observed_overlap": 5,
+    "expected_overlap": 5.158208955223881,
+    "p_one_sided_enrichment": 0.6055355546315833,
+    "overlap_ids": [
+      "coercion_legitimacy_boundary__proportionality_reading",
+      "competence_exercise_validity__continuous_refresh_hybrid",
+      "gita_kurukshetra_discourse__orthodox_literal_reading",
+      "quran_9_5_scope__abrogating_universal",
+      "tenure_contract__demographic_reproduction_reading"
+    ],
+    "declared": "low-powered by construction; directional only. A null here is `underpowered`, not `no enrichment`."
+  },
+  "descriptives": [
+    {
+      "label": "nemotron:no_scope_rebuild_nemotron+rescue1",
+      "n": 144,
+      "eps_n": 144,
+      "eps_mean": 0.45763888888888893,
+      "eps_sd": 0.26573792987931405,
+      "eps_band3_share": 0.4583333333333333,
+      "h1_band": {
+        "5": 30,
+        "0": 47,
+        "null": 18,
+        "2": 10,
+        "3": 28,
+        "4": 9,
+        "6": 2
+      },
+      "h1_null_share": 0.125,
+      "verdict": {
+        "yellow": 87,
+        "ABSENT": 18,
+        "red": 19,
+        "green": 20
+      },
+      "signature_top5": {
+        "constructed_high_extraction": 64,
+        "false_ci_rope": 57,
+        "coupling_invariant_rope": 12,
+        "false_summit_mountain": 8,
+        "constructed_low_extraction": 2
+      },
+      "purity_band": {
+        "contaminated": 54,
+        "borderline": 40,
+        "sound": 15,
+        "pristine": 35
+      },
+      "purity_n_scored": 144,
+      "purity_n_total": 144,
+      "claimed_type": {
+        "tangled_rope": 72,
+        "rope": 26,
+        "snare": 15,
+        "piton": 7,
+        "mountain": 16,
+        "scaffold": 8
+      }
+    },
+    {
+      "label": "nemotron:no_scope_rebuild_nemotron",
+      "n": 852,
+      "eps_n": 852,
+      "eps_mean": 0.488744131455399,
+      "eps_sd": 0.25190205130462057,
+      "eps_band3_share": 0.5023474178403756,
+      "h1_band": {
+        "3": 177,
+        "6": 18,
+        "5": 191,
+        "2": 50,
+        "0": 265,
+        "null": 105,
+        "4": 43,
+        "1": 3
+      },
+      "h1_null_share": 0.12323943661971831,
+      "verdict": {
+        "green": 107,
+        "yellow": 532,
+        "ABSENT": 100,
+        "red": 113
+      },
+      "signature_top5": {
+        "constructed_high_extraction": 407,
+        "false_ci_rope": 334,
+        "coupling_invariant_rope": 77,
+        "false_summit_mountain": 12,
+        "ambiguous": 11
+      },
+      "purity_band": {
+        "borderline": 293,
+        "contaminated": 315,
+        "pristine": 154,
+        "sound": 78,
+        "null": 8,
+        "degraded": 4
+      },
+      "purity_n_scored": 844,
+      "purity_n_total": 852,
+      "claimed_type": {
+        "tangled_rope": 493,
+        "snare": 95,
+        "mountain": 64,
+        "rope": 149,
+        "piton": 19,
+        "scaffold": 32
+      }
+    },
+    {
+      "label": "stealth:no_scope_rebuild_stealth+rescue1",
+      "n": 36,
+      "eps_n": 36,
+      "eps_mean": 0.5080555555555555,
+      "eps_sd": 0.19217786096976308,
+      "eps_band3_share": 0.5833333333333334,
+      "h1_band": {
+        "0": 9,
+        "3": 15,
+        "5": 8,
+        "null": 2,
+        "2": 1,
+        "6": 1
+      },
+      "h1_null_share": 0.05555555555555555,
+      "verdict": {
+        "yellow": 26,
+        "green": 8,
+        "ABSENT": 2
+      },
+      "signature_top5": {
+        "constructed_high_extraction": 20,
+        "false_ci_rope": 14,
+        "false_natural_law": 1,
+        "coupling_invariant_rope": 1
+      },
+      "purity_band": {
+        "sound": 4,
+        "contaminated": 20,
+        "borderline": 10,
+        "pristine": 2
+      },
+      "purity_n_scored": 36,
+      "purity_n_total": 36,
+      "claimed_type": {
+        "rope": 6,
+        "tangled_rope": 26,
+        "snare": 2,
+        "mountain": 1,
+        "scaffold": 1
+      }
+    },
+    {
+      "label": "stealth:no_scope_rebuild_stealth",
+      "n": 969,
+      "eps_n": 969,
+      "eps_mean": 0.547905056759546,
+      "eps_sd": 0.19539710370802296,
+      "eps_band3_share": 0.7461300309597523,
+      "h1_band": {
+        "5": 273,
+        "3": 324,
+        "0": 145,
+        "2": 66,
+        "null": 92,
+        "6": 55,
+        "1": 4,
+        "4": 10
+      },
+      "h1_null_share": 0.09494324045407637,
+      "verdict": {
+        "yellow": 690,
+        "green": 146,
+        "ABSENT": 92,
+        "red": 41
+      },
+      "signature_top5": {
+        "constructed_high_extraction": 700,
+        "false_ci_rope": 222,
+        "false_natural_law": 22,
+        "coupling_invariant_rope": 15,
+        "constructed_low_extraction": 5
+      },
+      "purity_band": {
+        "contaminated": 565,
+        "borderline": 288,
+        "sound": 64,
+        "null": 7,
+        "pristine": 43,
+        "degraded": 2
+      },
+      "purity_n_scored": 962,
+      "purity_n_total": 969,
+      "claimed_type": {
+        "tangled_rope": 709,
+        "snare": 65,
+        "scaffold": 23,
+        "rope": 115,
+        "mountain": 42,
+        "piton": 15
+      }
+    },
+    {
+      "label": "haiku:no_scope_rebuild_haiku+stakeholder_backfill",
+      "n": 455,
+      "eps_n": 455,
+      "eps_mean": 0.5933626373626374,
+      "eps_sd": 0.2028302769346726,
+      "eps_band3_share": 0.7516483516483516,
+      "h1_band": {
+        "5": 154,
+        "null": 37,
+        "0": 79,
+        "2": 22,
+        "3": 142,
+        "4": 14,
+        "6": 7
+      },
+      "h1_null_share": 0.08131868131868132,
+      "verdict": {
+        "yellow": 344,
+        "ABSENT": 36,
+        "red": 29,
+        "green": 46
+      },
+      "signature_top5": {
+        "constructed_high_extraction": 318,
+        "false_ci_rope": 113,
+        "false_natural_law": 9,
+        "coupling_invariant_rope": 7,
+        "false_summit_mountain": 4
+      },
+      "purity_band": {
+        "contaminated": 289,
+        "borderline": 117,
+        "sound": 18,
+        "pristine": 20,
+        "null": 8,
+        "degraded": 3
+      },
+      "purity_n_scored": 447,
+      "purity_n_total": 455,
+      "claimed_type": {
+        "tangled_rope": 287,
+        "snare": 46,
+        "rope": 82,
+        "mountain": 22,
+        "piton": 11,
+        "scaffold": 7
+      }
+    },
+    {
+      "label": "haiku:no_scope_rebuild",
+      "n": 505,
+      "eps_n": 505,
+      "eps_mean": 0.5551485148514852,
+      "eps_sd": 0.2047234979590917,
+      "eps_band3_share": 0.700990099009901,
+      "h1_band": {
+        "3": 130,
+        "0": 109,
+        "null": 40,
+        "5": 172,
+        "4": 19,
+        "6": 12,
+        "2": 21,
+        "1": 2
+      },
+      "h1_null_share": 0.07920792079207921,
+      "verdict": {
+        "yellow": 392,
+        "ABSENT": 35,
+        "green": 54,
+        "red": 24
+      },
+      "signature_top5": {
+        "constructed_high_extraction": 336,
+        "false_ci_rope": 126,
+        "coupling_invariant_rope": 18,
+        "false_natural_law": 13,
+        "ambiguous": 6
+      },
+      "purity_band": {
+        "contaminated": 315,
+        "pristine": 37,
+        "borderline": 104,
+        "sound": 29,
+        "null": 13,
+        "degraded": 7
+      },
+      "purity_n_scored": 492,
+      "purity_n_total": 505,
+      "claimed_type": {
+        "tangled_rope": 302,
+        "mountain": 38,
+        "rope": 98,
+        "scaffold": 7,
+        "snare": 49,
+        "piton": 11
+      }
+    },
+    {
+      "label": "flash:no_scope_rebuild_gemini+stakeholder_backfill",
+      "n": 206,
+      "eps_n": 206,
+      "eps_mean": 0.5480097087378641,
+      "eps_sd": 0.2471908580309756,
+      "eps_band3_share": 0.5825242718446602,
+      "h1_band": {
+        "3": 95,
+        "5": 48,
+        "0": 40,
+        "null": 14,
+        "2": 2,
+        "4": 6,
+        "6": 1
+      },
+      "h1_null_share": 0.06796116504854369,
+      "verdict": {
+        "yellow": 152,
+        "green": 30,
+        "ABSENT": 14,
+        "red": 10
+      },
+      "signature_top5": {
+        "constructed_high_extraction": 119,
+        "false_ci_rope": 66,
+        "coupling_invariant_rope": 12,
+        "false_summit_mountain": 6,
+        "false_natural_law": 3
+      },
+      "purity_band": {
+        "contaminated": 100,
+        "sound": 13,
+        "null": 9,
+        "pristine": 25,
+        "borderline": 59
+      },
+      "purity_n_scored": 197,
+      "purity_n_total": 206,
+      "claimed_type": {
+        "tangled_rope": 94,
+        "snare": 47,
+        "rope": 38,
+        "piton": 7,
+        "mountain": 18,
+        "scaffold": 2
+      }
+    },
+    {
+      "label": "flash:no_scope_rebuild_gemini",
+      "n": 754,
+      "eps_n": 754,
+      "eps_mean": 0.5012997347480106,
+      "eps_sd": 0.26179326045581996,
+      "eps_band3_share": 0.5251989389920424,
+      "h1_band": {
+        "3": 244,
+        "4": 38,
+        "0": 189,
+        "5": 189,
+        "2": 22,
+        "null": 72
+      },
+      "h1_null_share": 0.09549071618037135,
+      "verdict": {
+        "yellow": 569,
+        "green": 62,
+        "red": 51,
+        "ABSENT": 72
+      },
+      "signature_top5": {
+        "constructed_high_extraction": 389,
+        "false_ci_rope": 274,
+        "coupling_invariant_rope": 41,
+        "false_summit_mountain": 33,
+        "false_natural_law": 8
+      },
+      "purity_band": {
+        "borderline": 177,
+        "null": 86,
+        "sound": 60,
+        "contaminated": 326,
+        "pristine": 105
+      },
+      "purity_n_scored": 668,
+      "purity_n_total": 754,
+      "claimed_type": {
+        "snare": 138,
+        "mountain": 86,
+        "rope": 191,
+        "tangled_rope": 317,
+        "piton": 14,
+        "scaffold": 8
+      }
+    }
+  ],
+  "verdict": {
+    "row": 4,
+    "outcome": "just_misauthored",
+    "R_nemotron": 0.6009244222361025,
+    "R_C1_haiku": 0.8857352941176468,
+    "R_C1_flash": 0.9446373626373625,
+    "R_stealth_corroboration": 0.5887058823529412,
+    "T95_nemotron": 1.1118055555555553,
+    "MDE_anchor_mean": 1.9136666666666664,
+    "power_check": "PASS - T95 is below the between-model anchor, so the instrument resolves a known-real difference at this m"
+  }
+}
