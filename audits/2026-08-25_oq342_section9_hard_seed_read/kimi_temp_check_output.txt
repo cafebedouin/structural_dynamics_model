@@ -1,0 +1,18 @@
+==========================================================================
+ARM A -- temperature 0.2, genuinely NON-DEFAULT (the claim's subject)
+    sent: {"temperature": 0.2}
+    HTTP 400 -- REJECTED: {"error":{"message":"invalid temperature: only 1 is allowed for this model","type":"invalid_request_error"}}
+
+ARM B -- temperature 1.0 == THE DEFAULT (known-good control, NOT evidence)
+    sent: {"temperature": 1.0}
+    HTTP 200 -- ACCEPTED. content=''
+
+ARM C -- no temperature at all (what the driver actually sends; control)
+    sent: {}
+    HTTP 200 -- ACCEPTED. content='ping'
+==========================================================================
+
+VERDICT
+  => k2.6 REJECTS a non-default temperature (only 1 permitted), so the :184 CLAIM
+     HOLDS for k2.6 even though its JUSTIFICATION names K3. Mis-attributed but
+     correct: no capability is foreclosed, so this is NOT a consequential instance.

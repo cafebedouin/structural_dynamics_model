@@ -180,21 +180,61 @@ def build_messages(seed, static):
     ]
 
 
+# --thinking: the reasoning regime is a property of THE RUN, never inherited from whatever
+# the vendor's server-side default happens to be that week.
+#   enabled | disabled -> send `thinking: {"type": ...}` explicitly
+#   omit               -> send nothing (pre-2026-08-26 behaviour; the K3 path)
+#   auto (default)     -> send an explicit toggle ONLY on models where it is WITNESSED to work
+THINKING = "auto"
+
+# Models on which the toggle is witnessed working, with the witness. `auto` sends an explicit
+# `enabled` on these and omits elsewhere: it is a whitelist, so a NEW model silently inherits
+# the vendor default (loud in the stamp as `reasoning=inherited_default`) rather than being
+# sent a parameter nobody has tested on it.
+_THINKING_WITNESSED = {
+    # kimi-k2.6: no toggle -> 887 reasoning chars; disabled -> 0; enabled -> 842. Two-sided
+    # with a positive control, 2026-08-26 (audits/2026-08-25_oq342_section9_hard_seed_read/
+    # kimi_default_check_output.txt). Default is thinking-ON, which is why every existing
+    # kimi leg is a thinking-ON leg.
+    "kimi-k2.6": "enabled",
+}
+
+
+def _thinking_for(model, mode=None):
+    """(param_or_None, stamp_token). Explicit beats inherited -- see WHY below."""
+    mode = mode or THINKING
+    if mode == "omit":
+        return None, "inherited_default"
+    if mode in ("enabled", "disabled"):
+        return {"type": mode}, mode
+    for prefix, default_mode in _THINKING_WITNESSED.items():   # auto
+        if model.startswith(prefix):
+            return {"type": default_mode}, default_mode
+    return None, "inherited_default"
+
+
 def _body(seed, static, model):
-    # No temperature: kimi-k3 is reasoning-only and (like Sonnet-5/Opus-4.7+) rejects a
-    # non-default sampling temperature.
+    # TEMPERATURE — omitted, and the justification is now attributed correctly. It read
+    # "kimi-k3 is reasoning-only and (like Sonnet-5/Opus-4.7+) rejects a non-default sampling
+    # temperature": a claim about K3 guarding a function whose DEFAULT_MODEL is k2.6. Checked
+    # 2026-08-26 rather than left inherited: k2.6 returns HTTP 400 `invalid temperature: only 1
+    # is allowed for this model` on 0.2, and 200 on 1.0 (== its default). So the CLAIM holds for
+    # k2.6 even though its subject was the wrong model — mis-attributed, nothing foreclosed.
     #
-    # No thinking toggle — and the reason recorded here was STALE (corrected 2026-08-26).
-    # It read "K3 forbids disabling it", which is true of K3 and NOT of this function's
-    # DEFAULT_MODEL, kimi-k2.6: k2.6 accepts `thinking: {"type": "disabled"}` (HTTP 200,
-    # 0 reasoning chars) and reasons when sent nothing (930 reasoning chars) — witnessed
-    # two-sided on the live API 2026-08-26, and consistent with the ~11.7k reasoning
-    # tok/story measured at the 2026-07-19 pilot. Consequence: every kimi leg is a
-    # thinking-ON leg (correctly labelled everywhere), but a kimi thinking-OFF arm is
-    # CONSTRUCTIBLE and merely unwired. Plumbing a --thinking flag here is the prerequisite
-    # for OQ-388's (a) residue; do NOT send the toggle to K3, which rejects it.
-    return {"model": model, "messages": build_messages(seed, static),
+    # THINKING — sent EXPLICITLY (2026-08-26), not inherited. WHY THIS MATTERS: the kimi legs
+    # are thinking-ON because k2.6's SERVER-SIDE default is thinking-on, which is true today and
+    # unpinned. A provider-side default change, or a DEFAULT_MODEL bump to a model with a
+    # different default, would flip the regime for every future run — and NOTHING in the
+    # artifacts would disagree, because no toggle sent means no toggle recorded, so the leg
+    # would still read thinking-ON at every surface that labels it. Sending it explicitly costs
+    # one key, makes the regime a property of the run, and puts it in the request record and the
+    # provenance stamp where a future reader can check it instead of trusting a vendor default.
+    body = {"model": model, "messages": build_messages(seed, static),
             "max_tokens": MAX_OUTPUT_TOKENS}
+    think, _ = _thinking_for(model)
+    if think is not None:
+        body["thinking"] = think
+    return body
 
 
 def _extract(body):
@@ -447,7 +487,7 @@ def run(args):
             gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
             overwrite=True, id_map=id_map, token_acc=token_acc,
             provenance_source=PROVENANCE_SOURCE,
-            sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=model_default,reasoning=model_default")
+            sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=model_default,reasoning={_thinking_for(model)[1]}")
         done = load_processed_log(KIMI_LADDER)
         got = [s for s in final_seeds if s["constraint_id"] in done]
         it, ot = token_acc["input_tokens"], token_acc["output_tokens"]
@@ -474,7 +514,7 @@ def run(args):
             provenance_source=PROVENANCE_SOURCE,
             # we send only max_tokens; temperature + reasoning are the model's own defaults
             # (k3 forces max reasoning, k2.7-code uses its default) — stamp reflects what we set.
-            sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=model_default,reasoning=model_default")
+            sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=model_default,reasoning={_thinking_for(model)[1]}")
         done = load_processed_log(KIMI_LADDER)
         remaining = [s for s in remaining if s["constraint_id"] not in done]
         if not remaining:
@@ -506,9 +546,24 @@ def main():
     ap.add_argument("--resume-batch", default=None,
                     help="reprocess an already-completed batch id (no generation); pass same --n")
     ap.add_argument("--leg-suffix", default="", help="sibling leg testsets_kimi<S>/ (same-model redraw)")
+    ap.add_argument("--thinking", choices=["auto", "enabled", "disabled", "omit"], default="auto",
+                    help="reasoning regime, sent EXPLICITLY (auto = explicit on witnessed "
+                         "models, omit elsewhere). `disabled` builds the kimi thinking-OFF "
+                         "arm (OQ-388); `omit` is the pre-2026-08-26 inherit-the-default "
+                         "behaviour and is NOT recommended -- it records nothing.")
     args = ap.parse_args()
     apply_leg_suffix(args.leg_suffix)
+    global THINKING
+    THINKING = args.thinking
+    _think, _stamp = _thinking_for(args.model)
     print(f"  leg: {KIMI_TESTSETS.relative_to(REPO_ROOT)} | provenance_source={PROVENANCE_SOURCE}")
+    # Print the regime that will actually be SENT, resolved against this run's model -- so the
+    # operator sees `inherited_default` when that is what is happening, rather than assuming.
+    print(f"  thinking: --thinking={args.thinking} -> sends {_think!r} "
+          f"(provenance stamp: reasoning={_stamp})")
+    if _stamp == "inherited_default":
+        print(f"  \u26a0 regime INHERITED from {args.model}'s server-side default and NOT recorded "
+              f"in the request. A vendor default change would flip it silently.")
     if not args.sync and not args.batch:
         args.sync = True  # default to sync for safety on small runs
     run(args)
