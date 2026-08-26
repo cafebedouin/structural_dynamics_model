@@ -44,8 +44,8 @@ instrument change with a git witness, not a pinning failure.
 
 §9 asks whether a model's hard seeds are structurally different stories or just mis-authored
 ones. The stakeholder-backfill stratum does not answer it — those stories were authored fine, they
-merely predate the `stakeholders` gate. The stratum that answers it is `+rescue1`, and it had not
-been contrasted with anything.
+merely predate the `stakeholders` gate. The stratum that answers it is `+rescue1`
+(`testsets_nemotron` 144, `testsets_stealth` 36), and it had not been contrasted with anything.
 
 **Tag discipline (RULING-1).** Arm B slices the **occupied `+rescue1`** stratum —
 `testsets_nemotron` **144**, `testsets_stealth` **36** — and NOT `+seed_rescue1`
@@ -179,8 +179,8 @@ is noted, not built.
 
 ## Selection confound, stated explicitly
 
-Seeds land in `+rescue1` **because they failed the first pass**, so any structural difference
-would have been confounded with selection. The confound matters for a positive result; this is a
+Seeds land in `+rescue1` (`testsets_nemotron` 144, `testsets_stealth` 36) **because they failed
+the first pass**, so any structural difference would have been confounded with selection. The confound matters for a positive result; this is a
 null, and a null under selection is the *stronger* direction — the stratum most likely to differ,
 by construction, does not. C1 addresses the complementary channel (regeneration without hardness)
 and also fails to exceed its own null. **Residual, declared:** C1 is a cross-leg transfer (haiku
