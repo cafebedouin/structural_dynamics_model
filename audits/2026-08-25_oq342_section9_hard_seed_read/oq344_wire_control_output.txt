@@ -1,0 +1,52 @@
+  FAIL oq344_wire_control: 10 error(s) after repair: ["'base_properties' is a required property", "'interval' is a required property"]
+  repair_stats → /tmp/tmpb3fhwrc_/repair_stats.json (1 stakeholder role remap(s) this batch)
+  FAIL oq344_wire_control: 10 error(s) after repair: ["'base_properties' is a required property", "'interval' is a required property"]
+=== ARM 1 (FIRES): stakeholders[].role = 'victim' ===
+{
+  "role": "victim",
+  "succeeded": 0,
+  "failed": 1,
+  "repair_stats_json_exists": true,
+  "payload": {
+    "runs": [
+      {
+        "recorded_at": "2026-08-26T05:03:34Z",
+        "batch_id": "control-batch",
+        "provenance_source": "oq344_control+fires",
+        "succeeded": 0,
+        "failed": 1,
+        "stats": {
+          "stakeholder_role_remapped": 1,
+          "stakeholder_role_remapped_values": [
+            "role=victim"
+          ]
+        }
+      }
+    ],
+    "totals": {
+      "stakeholder_role_remapped": 1,
+      "stakeholder_role_remapped_values": [
+        "role=victim"
+      ]
+    }
+  }
+}
+
+=== ARM 2 (DECLINES): stakeholders[].role = 'payer' ===
+{
+  "role": "payer",
+  "succeeded": 0,
+  "failed": 1,
+  "repair_stats_json_exists": false,
+  "payload": null
+}
+
+=== CONTROL VERDICT ===
+  PASS  fires: repair_stats.json written
+  PASS  fires: stakeholder_role_remapped == 1
+  PASS  fires: values list records the field+value
+  PASS  fires: run entry carries provenance_source
+  PASS  declines: no stakeholder_role_remapped key
+  PASS  both arms rejected before the .pl writer (0 succeeded)
+
+CONTROL GREEN — the wire fires and declines two-sided.

@@ -164,9 +164,15 @@ def repair_story(story, schema=None, stats=None):
                 continue
             for field in ("role", "secondary_role"):   # both carry the StakeholderRole enum
                 if item.get(field) in STAKEHOLDER_ROLE_REMAP:
-                    item[field] = STAKEHOLDER_ROLE_REMAP[item[field]]
+                    was = item[field]
+                    item[field] = STAKEHOLDER_ROLE_REMAP[was]
                     if stats is not None:
                         stats["stakeholder_role_remapped"] = stats.get("stakeholder_role_remapped", 0) + 1
+                        # Which value, on which field — the datum OQ-344 needs to say WHICH
+                        # models follow prose vs enum, not merely how many did. Same idiom as
+                        # axiom_status_fallback_values below.
+                        stats.setdefault("stakeholder_role_remapped_values", []).append(
+                            f"{field}={was}")
 
     c = story.get("commentary")
     if isinstance(c, dict):

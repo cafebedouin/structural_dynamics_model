@@ -1,0 +1,111 @@
+OQ-343 re-run on the COHERENT 19-leg set (a3966e7, code_dirty=False)
+executed 2026-08-25 | legs: nemotron n=1000 (was 996), nemotron_think n=1005 (was 1003)
+prior artifact: nemotron_regime_pair_fullN_2026-08-24.txt, whose own line 1 reads
+  "engine commits present: ['5603019', '734d587']  <-- NOT coherent; reclassify"
+OQ-377 precondition re-asserted live: epsilon ABSENT = 0 on BOTH legs
+  (4 / 6 records carry a genuine authored epsilon == 0; the 'or 0' coercion cannot fire)
+================================================================================
+
+### paired_agreement.py nemotron nemotron_think
+engine commits present: ['a3966e7']  (coherent)
+nemotron      n=1000 | h1 band3=21% band0=31% null=12% | red=13.3% green=12.8%
+nemotron_think n=1005 | h1 band3=35% band0=23% null=9% | red=10.8% green=14.3%
+
+pair                            n             h1_band             verdict           signature         purity_band  claimed_type(auth)       epsilon(auth)
+nemotron vs nemotron_think   1000                42%                 56%                 66%                 55%                 72%                 21% 
+
+### epsilon_distance.py nemotron nemotron_think
+ε thresholds: {'rope_epsilon_ceiling': 0.45, 'snare_epsilon_floor': 0.46, 'tangled_rope_epsilon_floor': 0.3, 'piton_epsilon_floor': 0.1, 'fpn_epsilon': 0.001}
+nemotron vs nemotron_think n=1000 |Δε| median=0.06 p75=0.10 p90=0.24 max=0.77 | ≥0.10: 28%  ≥0.20: 15%
+
+### delta_reach.py nemotron nemotron_think   [OQ-343 sub-question (b)]
+nemotron vs nemotron_think n=1000 | type-vector changed: all=77% |Δε|≥.10=94% (n=281) <.10=71% | verdict: ≥.10=70% <.10=34% | h1: ≥.10=77% <.10=50%
+
+### seat_direction.py nemotron nemotron_think --pair nemotron nemotron_think
+nemotron      n=1000 mean ε=0.483 sd=0.254 | mean suppression=0.483
+    powerless     tangled_rope=29% unknown=22% naturalized=15% scaffold=10% rope=10% snare=9% mountain=3% piton=2%
+    moderate      snare=31% rope=20% tangled_rope=20% unknown=12% scaffold=12% piton=2% naturalized=2%
+    institutional rope=75% scaffold=14% naturalized=4% piton=2% tangled_rope=2% snare=2% unknown=1%
+    analytical    snare=32% unknown=22% rope=17% tangled_rope=16% scaffold=9% mountain=3% piton=2% naturalized=0%
+nemotron_think n=1005 mean ε=0.546 sd=0.229 | mean suppression=0.547
+    powerless     tangled_rope=35% snare=18% unknown=14% naturalized=13% rope=9% scaffold=8% mountain=1% piton=1%
+    moderate      snare=38% tangled_rope=27% rope=15% unknown=10% scaffold=8% naturalized=2% piton=1%
+    institutional rope=76% scaffold=11% naturalized=6% snare=2% piton=2% unknown=1% tangled_rope=1%
+    analytical    snare=42% tangled_rope=21% unknown=16% rope=13% scaffold=5% mountain=1% piton=1%
+
+paired Δε (nemotron_think − nemotron): mean=+0.064, up≥.05=40% down≥.05=11%
+
+================================================================================
+MECHANICAL DELTA TABLE — every headline figure, old vs new, against its own bound
+================================================================================
+OLD = nemotron_regime_pair_fullN_2026-08-24.txt (engine commits ['5603019','734d587'],
+      declared NOT coherent by its own line 1; n 996 / 1003, shared 994)
+NEW = this run on the coherent set (a3966e7, code_dirty=False; n 1000 / 1005, shared 1000)
+
+BOUNDS (from the plan, mechanical — not judged at run time):
+  shares / rates ......... |change| <= 2 percentage points
+  paired dE mean ......... |change| <= 0.01 EPSILON UNITS (not pp; bands are ~0.15 apart)
+  any signed quantity .... must not flip sign
+
+figure                                        OLD        NEW      delta   bound   ok
+---------------------------------------------------------------------------------
+nemotron h1 band3                             21%        21%      0.0pp   2pp     ok
+nemotron h1 band0                             31%        31%      0.0pp   2pp     ok
+nemotron h1 null                              12%        12%      0.0pp   2pp     ok
+nemotron red                                13.3%      13.3%      0.0pp   2pp     ok
+nemotron green                              12.8%      12.8%      0.0pp   2pp     ok
+nemotron_think h1 band3                       35%        35%      0.0pp   2pp     ok
+nemotron_think h1 band0                       23%        23%      0.0pp   2pp     ok
+nemotron_think h1 null                         9%         9%      0.0pp   2pp     ok
+nemotron_think red                          10.9%      10.8%     -0.1pp   2pp     ok
+nemotron_think green                        14.3%      14.3%      0.0pp   2pp     ok
+paired agreement h1_band                      42%        42%      0.0pp   2pp     ok
+paired agreement verdict                      56%        56%      0.0pp   2pp     ok
+paired agreement signature                    66%        66%      0.0pp   2pp     ok
+paired agreement purity_band                  55%        55%      0.0pp   2pp     ok
+paired agreement claimed_type                 72%        72%      0.0pp   2pp     ok
+paired agreement epsilon                      21%        21%      0.0pp   2pp     ok
+|dE| median                                 0.06       0.06      0.000   0.01    ok
+|dE| p75                                    0.10       0.10      0.000   0.01    ok
+|dE| p90                                    0.24       0.24      0.000   0.01    ok
+|dE| max                                    0.77       0.77      0.000   0.01    ok
+|dE| >=0.10 share                             28%        28%      0.0pp   2pp     ok
+|dE| >=0.20 share                             15%        15%      0.0pp   2pp     ok
+type-vector changed, all                      77%        77%      0.0pp   2pp     ok
+type-vector changed, |dE|>=.10                94%        94%      0.0pp   2pp     ok   (n 277 -> 281)
+type-vector changed, |dE|<.10                 71%        71%      0.0pp   2pp     ok
+verdict change rate >=.10                     70%        70%      0.0pp   2pp     ok
+verdict change rate <.10                      34%        34%      0.0pp   2pp     ok
+h1 change rate >=.10                          77%        77%      0.0pp   2pp     ok
+h1 change rate <.10                           50%        50%      0.0pp   2pp     ok
+nemotron mean epsilon                      0.484      0.483     -0.001   0.01    ok
+nemotron sd epsilon                        0.254      0.254      0.000   0.01    ok
+nemotron mean suppression                  0.484      0.483     -0.001   0.01    ok
+nemotron_think mean epsilon                0.547      0.546     -0.001   0.01    ok
+nemotron_think sd epsilon                  0.229      0.229      0.000   0.01    ok
+nemotron_think mean suppression            0.547      0.547      0.000   0.01    ok
+paired dE mean                            +0.063     +0.064     +0.001   0.01    ok   SIGN HELD (+)
+paired up >= .05                              39%        40%     +1.0pp   2pp     ok
+paired dn >= .05                              11%        11%      0.0pp   2pp     ok
+
+PER-SEAT TYPE MIXES (all 8 seat x leg blocks compared cell by cell):
+  nemotron powerless ......... IDENTICAL on all 8 types
+  nemotron moderate .......... unknown 13% -> 12%   (-1pp)   ok
+  nemotron institutional ..... IDENTICAL on all 7 types
+  nemotron analytical ........ tangled_rope 15% -> 16% (+1pp) ok
+  nemotron_think powerless ... IDENTICAL
+  nemotron_think moderate .... IDENTICAL
+  nemotron_think institutional IDENTICAL
+  nemotron_think analytical .. IDENTICAL
+  max per-seat move = 1pp, on 2 of 60 cells.
+
+RESULT: every figure holds within its own bound; NO signed quantity flipped sign.
+        Largest single move anywhere = 1.0pp (paired up>=.05, and two seat cells).
+        The 2026-08-24 headline was NOT an artifact of the incoherent engine-commit mix:
+        the +4 / +2 stories and the reclassify at one commit moved nothing above 1pp.
+
+NOT CLOSED BY THIS RUN, and named rather than buried: OQ-343's Open paragraph carries a
+THIRD sub-question (c) -- "Does a non-max budget (1024 / 24576) scale it -- dose-response on
+Flash (~$15-20 each)" -- which is a GENERATION SPEND and cannot be answered by any re-read of
+existing artifacts. (a)'s kimi-off leg (~$25-35) is the same shape. Both are split out rather
+than shrunk in place.

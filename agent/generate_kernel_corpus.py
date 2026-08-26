@@ -939,6 +939,44 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
         print(f"  ⚠ {n_fallback} novel out-of-enum cs_axiom status(es) coerced to holdable "
               f"(ESCALATE): {vals}")
 
+    # OQ-344: PERSIST repair_stats. Until 2026-08-25 this dict was a textbook Pattern-1
+    # dangling wire — `stakeholder_role_remapped` was incremented in story_repair.py and read
+    # by NOTHING (the only reader here takes `axiom_status_fallback` and prints it), so the
+    # `victim`-vs-`payer` prompt-interpretation split could not be measured from disk at any n.
+    # Every no_scope driver (stealth/gemini/kimi/sonnet) routes through THIS function and all
+    # supply rejections_path, so a sibling artifact here covers every model leg.
+    if repair_stats:
+        if rejections_path:
+            stats_path = rejections_path.parent / "repair_stats.json"
+            acc = {"runs": [], "totals": {}}
+            if stats_path.exists():
+                try:
+                    acc = json.loads(stats_path.read_text(encoding="utf-8"))
+                except Exception:
+                    pass                      # corrupt prior file: start fresh, never crash a run
+            acc.setdefault("runs", []).append({
+                "recorded_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                "batch_id": str(batch_id),
+                "provenance_source": provenance_source,
+                "succeeded": succeeded, "failed": failed,
+                "stats": repair_stats,
+            })
+            totals = acc.setdefault("totals", {})
+            for k, v in repair_stats.items():
+                if isinstance(v, (int, float)) and not isinstance(v, bool):
+                    totals[k] = totals.get(k, 0) + v
+                elif isinstance(v, list):
+                    totals.setdefault(k, []).extend(v)
+            stats_path.write_text(json.dumps(acc, indent=2, ensure_ascii=False),
+                                  encoding="utf-8")
+            n_remap = repair_stats.get("stakeholder_role_remapped", 0)
+            print(f"  repair_stats → {stats_path}"
+                  + (f" ({n_remap} stakeholder role remap(s) this batch)" if n_remap else ""))
+        else:
+            # Fail LOUD rather than dropping the measurement silently — the whole point of
+            # this block is that a silently-unpersisted counter is indistinguishable from zero.
+            print(f"  ⚠ repair_stats NOT PERSISTED (no rejections_path): {repair_stats}")
+
     return succeeded, failed, kernel_membership, rejected
 
 
