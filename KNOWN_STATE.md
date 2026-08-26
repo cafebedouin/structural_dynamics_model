@@ -45,6 +45,53 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-26 — [tripwire] kimi-k2.6 reasons BY DEFAULT (not "mandatory"): the legs are labelled right, but a stale capability claim suppressed an experiment for months
+**Files:** agent/run_no_scope_kimi.py, python/audits/kimi_profile_battery.py, ISSUES.md, audits/2026-08-25_oq342_section9_hard_seed_read/kimi_default_check.py
+**Tier:** tripwire
+
+**The question, and why it was worth an API call.** `run_no_scope_kimi.py` `_body/3` has only ever
+sent `{model, messages, max_tokens}` — no thinking toggle, ever. So what does k2.6 DO with no
+toggle? If its server-side default were thinking-OFF, `testsets_kimi` / `testsets_kimi2` would be
+thinking-**unspecified** legs that had been read as off — a corpus-labelling defect baked into the
+adopted coherent set, reaching OQ-343's just-closed (a)+(b).
+
+**Measured live, three arms** (`audits/2026-08-25_oq342_section9_hard_seed_read/kimi_default_check.py`):
+
+| arm | sent | `reasoning_content` chars | completion tokens |
+|---|---|---|---|
+| **no toggle** (what every kimi leg was generated with) | bare body | **887** | 274 |
+| `thinking:{type:disabled}` | explicit off | **0** | 7 |
+| `thinking:{type:enabled}` (positive control) | explicit on | **842** | 266 |
+
+**k2.6's default is thinking-ON**, matching the ~11.7k reasoning tok/story measured at the
+2026-07-19 pilot. The positive control makes arm B's zero a *tested* absence rather than a blind
+probe. **Reproducibility, recorded rather than smoothed:** the check ran twice and the char counts
+did NOT reproduce (887/842 vs 930/861) — generation is stochastic, so only the three-way SEPARATION
+is the result; arm B was exactly 0 on both runs.
+
+**THE FEARED DEFECT IS ABSENT.** The kimi legs are thinking-ON and are read as thinking-ON at every
+live surface — `AGENTS.md:1185`, `bulk_corpus_generation.md` §6 + §7b, ISSUES OQ-78's regime note,
+OQ-343's "third thinking-on model", the driver's own header. **OQ-343's close stands and the
+coherent set is unaffected.**
+
+**WHAT IS REAL, and it is the more interesting half: the word "mandatory" was false, and a false
+capability claim is worse than a false measurement because it stops anyone looking.** Arm B proves
+reasoning is *disableable* on k2.6. The claim entered as a statement about **K3** (which genuinely
+forbids disabling) and was carried across a model change into a driver whose `DEFAULT_MODEL` is
+**k2.6** — then propagated into `kimi_profile_battery.py`, OQ-78's regime note, and OQ-343's prose.
+Its effect: **no kimi thinking-off arm was ever built, because "mandatory" reads as IMPOSSIBLE
+rather than as UNPLUMBED.** A cheap missing arm became an apparent law of nature. Corrected at
+every live site; dated audit dirs left as the point-in-time records they are.
+
+**The generalizable tripwire:** *a capability claim about model A, carried into code whose default
+is model B, is a claim nobody re-checked.* The tell is a justification whose named subject is not
+the code's actual target — here the comment said "K3" three lines above `DEFAULT_MODEL = "kimi-k2.6"`.
+Unlike a wrong number, this class produces NO wrong output; it produces an experiment that is never
+run, so nothing goes red and no artifact disagrees with anything. Route: the kimi thinking-off arm
+is a small driver change (plumb `--thinking` into `_body/3`, gated to non-K3) plus a spend-go —
+**OQ-388**.
+
+
 ## 2026-08-25 — [tripwire] OQ-380 does NOT establish that the engine AMPLIFIES: ε is one scalar, the seed fixes far more, and this corpus can never separate them
 **Files:** ISSUES.md, audits/2026-08-25_oq342_section9_hard_seed_read/WRITEUP.md, docs/technical/bulk_corpus_generation.md
 **Tier:** tripwire
