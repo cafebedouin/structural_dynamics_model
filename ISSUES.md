@@ -8168,6 +8168,23 @@ NOT inside backticks"* keeps the catch, needs no vocabulary list, and needs no o
 predicts nothing about future placeholder names. **Recorded as a design sketch, not adopted:** it
 is a checker change with its own two-sided control burden, and at frequency 1 the workaround is one
 word.
+
+**PRECONDITION OF ADOPTION, stated here so whoever picks this up at frequency 3 does not adopt on
+the argument alone.** The structural rule shifts the burden onto **backtick discipline in field
+10**, and its failure modes are the *inverse* of the denylist's — so the measurement that justifies
+it is a DIFFERENT measurement from the one taken above, and neither half of it has been run:
+
+| failure mode | direction | loudness |
+|---|---|---|
+| a genuine path/pattern written WITHOUT backticks | fires when it should not | **loud** — the author sees a red gate and fixes it |
+| a placeholder written INSIDE backticks | does NOT fire when it should | **silent — this is the one that matters** |
+
+**A rule whose miss is SILENT must be shown to miss nothing before it replaces a rule whose miss is
+LOUD.** Run both counts over the landed rows at adoption time and record them the way the first
+pair was recorded — including whether a zero is a *tested absence* or an artifact of nobody having
+written that shape yet. **The zero measured above was the latter** (it read 0 only because the one
+offending row had already been rephrased), and adopting on it would have certified the rule with an
+instrument that had never fired.
 **Priority:** 3
 **Deps:** splits_from OQ-306, blocked_on_condition OQ-338's remedy is DESIGNED — that is, its
 entry carries a design rather than the current one-line sketch. Watcher: the ripening sentence
@@ -18397,14 +18414,13 @@ statistics on the two June legs, and the matched-seed intersection (currently 95
 
 **Ω-type:** Ω_P (a spend the operator sequences; the evidence it waits on is OQ-347/OQ-345).
 
-**Status:** open — SPLIT 2026-08-25. OQ-347 landed (resolved 2026-08-25), so the blocker this
-entry named is discharged and the OpenAI within-vendor pair is **ripe now**. The non-Western-lineage
-(DeepSeek) arm, and ONLY that arm, waits on the stealth reveal; it is **OQ-387**. The two must not
-share one entry — a `blocked_on_condition` edge routes to BLOCKED and would hide this ripe spend-go
-from BLOCKED-ON-YOU, the exact mislabeling the 2026-08-25 umbrella close existed to remove.
+**Status:** future — 2026-08-26 (operator). **The corpus just gained 14 legs and has not been
+mined; generating more before learning what those teach is the wrong order.** A real question,
+deliberately not slated, kept searchable and full-bodied so it can be revived — see *Revival
+conditions*. The split that produced this entry stands: OQ-347's blocker was discharged and the
+OpenAI arm WAS ripe, so this is a sequencing ruling, not a judgment that the question is bad.
 **Priority:** 3
-**Sunset:** 2026-09-26
-**Deps:** splits_from OQ-342, bundled_with OQ-387, blocked_on_human oq346-openai-pair-spend-go
+**Deps:** splits_from OQ-342, bundled_with OQ-387
 **Files:** `agent/run_no_scope_stealth.py` (any OpenRouter model via `--leg-name --model`), OpenRouter price list fetched 2026-08-21 (scratch; re-fetch).
 
 **The question.** A new lineage at k=1 is a fingerprint without error bars; the unit of
@@ -18518,11 +18534,60 @@ leg, whose `outputs/pipeline_output.json` is stamped `81e79a0` / `code_dirty Tru
 2026-08-25T17:53Z, after the coherent reclassify). Corrected in place here rather than left to a
 cross-reference, since this entry is where the phrase would be acted on.
 
-**Resolution:** an operator spend-go on a named, tier-matched OpenAI buy — recommended 4-leg mini
-(~$290) so the floor is measured in-vendor rather than borrowed — with the four pre-registered
-statistics, the 2× two-sided bar and the split-reading table above fixed before generation.
-**Sunset 2026-09-26:** the prices are a 2026-08-21 scratch fetch, so a ruling made against them
-much later is a ruling made twice; re-fetch or re-date at that point. **What it
+## Why `future` and not a pending spend-go (operator ruling, 2026-08-26)
+
+**Mine the 14 new legs before buying a 20th.** The roster went from 5 legs to 19 in about a week
+(OpenRouter legs, four Flash regime/redraw legs, five floor pairs). Their yield is barely touched:
+`leg_diagnostic_table` F1–F8 is one pass over them, the situation-fixed core is 6/871, and the
+within-model floors have been used to *license* claims but not yet to *make* any. Buying another
+lineage before that is drawn down adds rows to a table nobody has finished reading.
+
+**Three narrower reasons this particular buy is weak right now**, recorded so a reviver does not
+re-derive them:
+
+1. **It is a BUNDLE serving two goods and optimal for neither.** Good A is a new vendor lineage
+   (OpenAI is absent, and it is the most-used family in the world — real presentational weight for
+   an outside reader, but a credibility argument, not an empirical one). Good B is the
+   tier-matched **generation** axis. Good A wants redraws of a CURRENT model; good B does not want
+   OpenAI at all. The 4-leg mini buy delivers both partially.
+2. **k=1 vendor — the entry's own error, one level up again.** A generation finding from a single
+   vendor does not generalize, which is precisely what *"a new lineage at k=1 is a fingerprint
+   without error bars"* says. The tier ruling fixed this at the draw-floor level and it recurs at
+   the vendor level.
+3. **A cheaper competitor exists for good B, and it comes with a floor already paid.**
+   `claude-sonnet-4-5-20250929` (75 stories) and `claude-sonnet-4-20250514` (7) are already in the
+   live leg, so older Anthropic models at the SAME tier have been reachable. A `sonnet-5` vs
+   `sonnet-4-5` contrast is tier-matched, and the in-vendor floor for the sonnet-5 arm is already
+   measured (`testsets_sonnet`/`sonnet2`/`sonnet3`). That is one-to-two new legs against four
+   existing ones, with a three-point series available rather than a pair.
+
+**What the corpus still cannot do, and this buy would NOT have fixed:** it does not touch OQ-348's
+attribution limit (new legs draw the same 1005-seed pool, inheriting the input-sharing exactly), it
+adds no matched-seed structure (already present), and a 7th model is marginal confirmation of an F1
+fingerprint already at 8–38×.
+
+### Revival conditions — what would move this back to `open`
+
+Stated because a closing token with no revival condition is a deletion with extra steps, and
+because the **Sunset was REMOVED**: `sunset_check.py` tracks Sunset only on ACTIVE entries, so a
+date left here would sit inert while reading as tracked. Its intent is carried as condition (0):
+
+0. **The price basis is stale and lapses by default.** The costs above are a 2026-08-21 scratch
+   fetch and have now gone stale twice. **If this is revived at any point, the standing default is
+   "not yet — re-fetch prices and re-derive the floors before reopening"**; a spend-go ruled
+   against these numbers is a ruling that will have to be made again.
+1. **The 14 legs have been mined** — concretely, the F1 statistics used to make a claim rather
+   than to license one, and the within-model floors consumed by at least one finished read.
+2. **Good A and good B have been separated** into distinct asks, each with its own bar. They do
+   not belong in one purchase.
+3. **For good B specifically:** the Anthropic route checked first — one call settling whether
+   `claude-sonnet-4-5` / `claude-sonnet-4` are still API-reachable, since those 75 stories may be
+   months old. If they are, good B is cheaper and better-powered there and this entry is not the
+   vehicle for it.
+
+**What it would change if revived:** the September corpus composition, and whether within-vendor
+generation is a smaller axis than across-vendor. The pre-registered statistic table above stays
+valid and should be reused as-is — it was fixed before any spend, and that is its whole value. **What it
 changes:** the September corpus composition, and whether within-vendor generation is a smaller axis
 than across-vendor.
 
@@ -21520,6 +21585,13 @@ fetch (re-fetch before spending — prices move and that fetch was scratch). If 
 `stealth/ox-alpha` as a DeepSeek pre-release, buying DeepSeek buys a second draw of a lineage
 already in the corpus and the choice should move to a genuinely distinct lab.
 
+**Note 2026-08-26:** its bundle partner OQ-346 went **`future`** on the operator's *mine the 14
+new legs before generating more* ruling. That sequencing logic applies here with equal force, and
+this entry is additionally gated on an external condition — so it is left `open`/BLOCKED rather
+than followed to `future`, on the ground that the watcher is what should wake it, not a spend
+decision. Flagging rather than deciding: if the reveal fires while the mine-first ruling still
+holds, this is a candidate for `future` too.
+
 **Resolution:** an operator spend-go on a named non-Western pair, decided after the reveal (or
 after the watcher fires on retirement, which resolves the question negatively — the slug is gone
 and the lineage stays unknown). **What it changes:** the September corpus composition, and whether
@@ -21569,7 +21641,7 @@ arm (re-derive before spending; not re-measured here).
 --thinking-budget 1024` and the same at 24576. No code, no design, no ruling. This arm is a
 purchase decision, full stop.
 
-### The kimi-off arm is NOT purchasable as written — it needs a driver change first
+### The kimi-off arm WAS not purchasable as written — the driver change has since landed
 
 **This is the finding that keeps this from being a wish.** `agent/run_no_scope_kimi.py` `_body/3`
 sends exactly `{model, messages, max_tokens}` — **there is no thinking toggle in the payload and no
@@ -21606,18 +21678,42 @@ law of nature. Corrected at every live site (`run_no_scope_kimi.py` caveat + `_b
 point-in-time records they are. So the leg is constructible **in principle and not in practice**:
 the capability exists at the API, is now witnessed live, and is still not wired at the driver.
 
-**Owner, split because the two halves have different seats:**
-1. **Driver change (implementation seat, unassigned — this is the half that was missing at mint).**
-   Plumb a `--thinking` / `--reasoning` flag into `_body/3` as `thinking: {type: "disabled"}`, gated
-   to non-K3 models (K3 rejects it). The stale comment is already corrected and now carries the
-   live witness, so the remaining work is the flag itself — small and self-contained, and a
-   prerequisite rather than part of the spend.
-2. **Spend-go (operator seat)** — ~$25–35, and only reachable after (1).
+### REPRICED 2026-08-26 — the kimi arm is now a COMPLETE purchase, and may be the better one
 
-**Sequencing, so this does not sit at P4 forever:** arm (c) is buyable today and needs nobody;
-the kimi arm needs one small driver change before the spend-go is even a well-formed question.
-Taking (c) alone is a coherent, complete purchase — it answers the dose question on its own, and
-does not depend on the kimi arm at all.
+**The driver change LANDED**, for a reason independent of this OQ: the kimi thinking regime was
+being *inherited* from k2.6's server-side default rather than sent, so a vendor default change (or
+a `DEFAULT_MODEL` bump) would flip the regime for every future run with nothing in the artifacts
+disagreeing — no toggle sent means no toggle recorded. `run_no_scope_kimi.py` now sends
+`thinking:{type:...}` explicitly via **`--thinking {auto,enabled,disabled,omit}`**, stamps what was
+actually sent into provenance (`reasoning=enabled` rather than `reasoning=model_default`), and says
+`inherited_default` loudly when it omits. **`--thinking disabled` IS the kimi off-arm**, so the
+prerequisite is discharged and the flag was most of it.
+
+**So this entry's own framing was stale within a day and is corrected rather than left:** the kimi
+arm is no longer "not purchasable as written". It is one leg, one command, operator seat only:
+
+```
+python3 -m agent.run_no_scope_kimi --seeds <pool> --leg-suffix _off --thinking disabled --batch
+```
+
+**And on the merits it now outranks the dose arms, which is the part worth saying plainly:**
+
+| arm | cost | what it buys | floor |
+|---|---|---|---|
+| **kimi thinking-OFF** (1 leg) | ~$43 (recorded k2.6 batch $0.043/story × 1005) | a regime contrast in a **THIRD model family** — OQ-343's generality question is at 2/2 families (flash, nemotron) and this makes it 3/3 | **already paid** — kimi/kimi2 are the on-side pure pair |
+| flash dose 1024 + 24576 (2 legs) | ~$30–40 | resolution WITHIN a family that already has the contrast: step vs dial | already paid (flash2/flash3, flash_think/flash_think2) |
+
+**The asymmetry that decides it.** kimi currently contributes a *magnitude* and no *direction* —
+its |Δε| ≥0.10 = 17% comes from `kimi` vs `kimi2`, a same-model REDRAW pair with a prompt change
+confounded in, not a regime pair. The off-arm converts kimi from magnitude-only to a directional
+third family, which is exactly what OQ-343's sub-question (a) asks for. The dose arms sharpen a
+question already answered in shape. **Recommendation: if only one arm is bought, buy the kimi
+off-arm.**
+
+**Sequencing flag, not a decision.** The operator's 2026-08-26 ruling on OQ-346 — *mine the 14 new
+legs before generating more* — applies to this entry with equal force, and nothing here is urgent.
+This repricing exists so the arm is not priced as BLOCKED when it is merely UNBOUGHT; whether to
+buy now is the same seat that ruled OQ-346 `future`.
 
 **What is NOT open.** Generality is answered at 2/2 model families (Flash and nemotron-3-ultra,
 same shape and magnitude) and the reach question (b) is answered and re-confirmed: a |Δε| ≥ 0.10

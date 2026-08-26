@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "dc7efbdf1769a9826f08283a6cc7af5e824ec547",
+    "store_version": "d3f3c69f2ac21400fde2c212ca4972c540c43e78",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-26T03:51:19"
+    "generated_at": "2026-08-26T16:41:04"
   },
-  "issues_sha": "2acc5bd6b6f49e9d0814d8e729309938045b89a1d1c2577e566a933464fc6c98",
+  "issues_sha": "e2d3f69588df7cb10a536a0d8927beb5767b2b7d9968b6400309a91bc06554a7",
   "n_entries": 388,
   "active_token_set": [
     "investigating",
@@ -15,8 +15,8 @@
     "resolved": 177,
     "mitigated": 19,
     "disposed": 6,
-    "future": 13,
-    "open": 168,
+    "future": 14,
+    "open": 167,
     "partial": 5
   },
   "active": [
@@ -1908,24 +1908,6 @@
       ]
     },
     {
-      "id": "OQ-346",
-      "status": "open",
-      "priority": 3,
-      "summary": "New-family pair: a TIER-MATCHED OpenAI within-vendor generation contrast (mini pair ~$145), with the claim statistics pre-registered against the redraw floors",
-      "deps": [
-        "splits_from OQ-342",
-        "bundled_with OQ-387",
-        "blocked_on_human oq346-openai-pair-spend-go"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-342",
-        "OQ-345",
-        "OQ-347",
-        "OQ-387"
-      ]
-    },
-    {
       "id": "OQ-348",
       "status": "open",
       "priority": 2,
@@ -2531,7 +2513,8 @@
         "OQ-285",
         "OQ-288",
         "OQ-291",
-        "OQ-343"
+        "OQ-343",
+        "OQ-346"
       ]
     }
   ],
@@ -5595,6 +5578,24 @@
       "mentioned_in": [
         "OQ-342",
         "OQ-378"
+      ]
+    },
+    {
+      "id": "OQ-346",
+      "status": "future",
+      "priority": 3,
+      "summary": "New-family pair: a TIER-MATCHED OpenAI within-vendor generation contrast (mini pair ~$145), with the claim statistics pre-registered against the redraw floors",
+      "deps": [
+        "splits_from OQ-342",
+        "bundled_with OQ-387"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-342",
+        "OQ-345",
+        "OQ-347",
+        "OQ-348",
+        "OQ-387"
       ]
     },
     {

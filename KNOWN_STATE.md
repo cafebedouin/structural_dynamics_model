@@ -45,6 +45,62 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-26 — [landed] Mine-the-14-legs ruling: OQ-346 → `future`; kimi regime made EXPLICIT in the driver; the retarget class swept (1 file, tested absence elsewhere)
+**Files:** ISSUES.md, agent/run_no_scope_kimi.py, audits/2026-08-25_oq342_section9_hard_seed_read/driver_capability_sweep.md
+**Tier:** landed
+
+**Operator ruling (sequencing):** *the corpus just gained 14 legs and has not been mined; generating
+more before learning what those teach is the wrong order.* OQ-346 (the OpenAI spend) → **`future`**
+with revival conditions, not deleted. The evaluation behind it, recorded on the entry so a reviver
+does not re-derive it: the buy is a **bundle** (new vendor lineage vs the tier-matched generation
+axis) optimal for neither; it repeats the entry's own **k=1** error one level up, at the vendor
+level; and a **cheaper competitor exists for the generation axis** — `claude-sonnet-4-5-20250929`
+(75 stories) and `claude-sonnet-4-20250514` (7) are already in the live leg, so a tier-matched
+`sonnet-5` vs `sonnet-4-5` contrast reuses the in-vendor floor already paid for by
+sonnet/sonnet2/sonnet3. **Sunset REMOVED rather than left**: `sunset_check.py` tracks Sunset only on
+ACTIVE entries, so a date on a `future` entry sits inert while reading as tracked; its intent is
+carried as revival condition (0), *the price basis lapses to "not yet — re-fetch first"*.
+
+**TRIPWIRE, and it is the same class as the previous entry's, caught one turn later: the kimi
+thinking regime was INHERITED, not sent.** The legs are thinking-ON because k2.6's *server-side
+default* is thinking-on — true today and **unpinned**. A provider-side default change, or a
+`DEFAULT_MODEL` bump to a model with a different default, would flip the regime for every future run
+and **nothing in the artifacts would disagree**: no toggle sent means no toggle recorded, so the leg
+would still read thinking-ON at all five surfaces that label it. `run_no_scope_kimi.py` now sends
+`thinking:{type:...}` explicitly (`--thinking {auto,enabled,disabled,omit}`), stamps what was
+actually sent into provenance (`reasoning=enabled`, not `reasoning=model_default`), and prints
+`inherited_default` loudly when it omits. `auto` is a **whitelist** keyed on models where the toggle
+is witnessed, so a new model omits rather than receiving an untested parameter. **General rule: a
+regime that matters is a property of the RUN, sent and stamped — never inherited from a vendor
+default, because an inherited default leaves no trace to contradict.**
+
+**The retarget class SWEPT (`driver_capability_sweep.md`), and the sweep's own instrument failed
+first.** Its first version scanned comments only and would NOT have caught the known instance — the
+`mandatory` claim lives in a module **docstring** — so it was rebuilt on `tokenize` + `ast` before
+any result was believed. Result over 7 drivers: **the other six carry ZERO capability claims naming
+any model.** The class is **one file**, and the mechanism is now nameable: **a model RETARGET**
+(kimi was built for K3, retargeted to k2.6 on 2026-07-19; the K3-era justifications stayed). So the
+sharper, more findable tell is *a capability claim that survived a retarget* — one candidate site in
+this repo today, rather than an open-ended grep.
+
+**The one remaining kimi claim, checked not assumed:** `:184`'s *"kimi-k3 … rejects a non-default
+sampling temperature"* guards a k2.6 default. Live: 0.2 → **HTTP 400** `invalid temperature: only 1
+is allowed for this model`; 1.0 → 200. **Mis-attributed but TRUE** — nothing foreclosed, so not a
+consequential instance; justification corrected to name k2.6 with the witness. **And that check's own
+first verdict was WRONG**: it labelled arm B `temperature 1.0` and read acceptance from it, but the
+API's own error says only 1 is allowed, so 1.0 *is* the default and arm B is a control, not
+evidence. The label was not true of what it measured — the exact class the sweep exists for,
+committed inside the sweep's instrument, caught before it was reported anywhere.
+
+**OQ-388 repriced:** the kimi off-arm went from "not purchasable as written" to a complete
+one-command purchase (the `--thinking` flag was most of the driver change), and on the merits it now
+**outranks the flash dose arms** — ~$43 for a regime contrast in a THIRD model family with the
+on-side floor already paid (kimi/kimi2), versus ~$30–40 for extra resolution in a family that
+already has the contrast. kimi currently contributes a magnitude and no direction (its 17% comes
+from a redraw pair with a prompt confound, not a regime pair). Not bought: the mine-first ruling
+applies here too.
+
+
 ## 2026-08-26 — [tripwire] kimi-k2.6 reasons BY DEFAULT (not "mandatory"): the legs are labelled right, but a stale capability claim suppressed an experiment for months
 **Files:** agent/run_no_scope_kimi.py, python/audits/kimi_profile_battery.py, ISSUES.md, audits/2026-08-25_oq342_section9_hard_seed_read/kimi_default_check.py
 **Tier:** tripwire
