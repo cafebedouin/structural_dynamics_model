@@ -18584,6 +18584,15 @@ date left here would sit inert while reading as tracked. Its intent is carried a
    `claude-sonnet-4-5` / `claude-sonnet-4` are still API-reachable, since those 75 stories may be
    months old. If they are, good B is cheaper and better-powered there and this entry is not the
    vehicle for it.
+4. **The borrowed floor is a TEMPERATURE MIXTURE — checked 2026-08-26, and it is not what it was
+   first suspected to be.** Two of the five pure pairs are Flash at an explicitly-set temperature
+   0.1; the other three run at vendor defaults. (kimi, the initially suspected outlier, is **not
+   in the table at all** — kimi/kimi2 is `confounded:prompt`, not pure, so nothing needs excluding
+   on its account.) Measured: 3 of 6 statistics tighter under low temperature and 3 wider, and
+   `within_pure_max` is set by a default-temperature pair on 4 of 6 — **no detectable systematic
+   bias, on a 2-vs-3 comparison that is too weak to exclude a modest one.** A reviver should carry
+   that as a declared property of the borrowed floor, not re-derive it:
+   `audits/2026-08-25_oq342_section9_hard_seed_read/temperature_regime_check.md`.
 
 **What it would change if revived:** the September corpus composition, and whether within-vendor
 generation is a smaller axis than across-vendor. The pre-registered statistic table above stays
@@ -21599,7 +21608,7 @@ the "non-Western lineage" cell of the model matrix is genuinely occupied or doub
 
 ---
 
-## OQ-388 — OQ-343's residual generation arms: the thinking dose-response (c), and the kimi thinking-off leg
+## OQ-388 — The Flash thinking DOSE-RESPONSE (OQ-343 sub-question (c)): is the regime a step or a dial?
 
 **Ω-type:** Ω_P (two generation spends; the analysis recipe is settled, only the spend is open).
 
@@ -21607,7 +21616,7 @@ the "non-Western lineage" cell of the model matrix is genuinely occupied or doub
 cannot answer. **Repaired the same day** with the doses verified against the driver and an owner
 named per arm (a mint without either is a wish, and this one had neither).
 **Priority:** 3
-**Deps:** splits_from OQ-343, blocked_on_human oq388-flash-dose-arms-spend-go
+**Deps:** splits_from OQ-343, bundled_with OQ-389, blocked_on_human oq388-flash-dose-arms-spend-go
 **Files:** `agent/run_no_scope_gemini.py` (budget flag), `agent/run_no_scope_kimi.py` (`thinking:{type:disabled}`), `audits/2026-08-21_flash_regime_vs_redraw/` (the instruments, unchanged).
 
 **Why this exists.** OQ-343 closed 2026-08-25 on sub-questions (a) and (b), both re-confirmed on
@@ -21619,8 +21628,13 @@ touch, and one residual arm of (a) in the same shape:
   function of thinking-on?* The whole OQ-343 finding is measured at budget 8192 vs 0 — a two-point
   contrast — so "thinking moves ε" is currently indistinguishable from "any thinking at all moves ε
   by a fixed amount."
-- **(a) residue: a kimi thinking-off leg**, so kimi contributes a DIRECTION and not merely a
-  magnitude to the generality claim.
+- **(a) residue: a kimi thinking-off leg** — **SPLIT OUT 2026-08-26 → OQ-389.** It is a different
+  question (does a THIRD family show a regime *direction*) in a different family, and holding it
+  here would have left this entry's seat key `oq388-flash-dose-arms-spend-go` not naming what the
+  entry contains. **On the merits OQ-389 outranks these dose arms** — ~$43 for a directional third
+  family with its on-side floor already paid, versus ~$30–40 for extra resolution where the
+  contrast already exists; the comparison table is recorded on both entries. Its driver blocker is
+  discharged (`--thinking disabled`).
 
 ### The doses, verified against the driver rather than named in the abstract (2026-08-25)
 
@@ -21678,55 +21692,93 @@ law of nature. Corrected at every live site (`run_no_scope_kimi.py` caveat + `_b
 point-in-time records they are. So the leg is constructible **in principle and not in practice**:
 the capability exists at the API, is now witnessed live, and is still not wired at the driver.
 
-### REPRICED 2026-08-26 — the kimi arm is now a COMPLETE purchase, and may be the better one
+### Scope after the 2026-08-26 split
 
-**The driver change LANDED**, for a reason independent of this OQ: the kimi thinking regime was
-being *inherited* from k2.6's server-side default rather than sent, so a vendor default change (or
-a `DEFAULT_MODEL` bump) would flip the regime for every future run with nothing in the artifacts
-disagreeing — no toggle sent means no toggle recorded. `run_no_scope_kimi.py` now sends
-`thinking:{type:...}` explicitly via **`--thinking {auto,enabled,disabled,omit}`**, stamps what was
-actually sent into provenance (`reasoning=enabled` rather than `reasoning=model_default`), and says
-`inherited_default` loudly when it omits. **`--thinking disabled` IS the kimi off-arm**, so the
-prerequisite is discharged and the flag was most of it.
+This entry is **the Flash dose arms only**: budgets **1024** and **24576**, completing the
+0 / 1024 / 8192 / 24576 curve. The kimi thinking-off leg is **OQ-389**, bundled but separately
+ruled, and if only one of the two is bought it should be that one (see its table). Keeping them
+apart means each seat key names its own entry and each spend can be ruled without implying the
+other.
 
-**So this entry's own framing was stale within a day and is corrected rather than left:** the kimi
-arm is no longer "not purchasable as written". It is one leg, one command, operator seat only:
+**Resolution:** an operator spend-go on the two Flash dose arms, then the existing instruments
+(`epsilon_distance.py`, `delta_reach.py`, `seat_direction.py`) re-run unchanged across the
+four-point curve. **What it changes:** whether the thinking regime is a dial or a switch — which
+decides whether a cheaper budget buys most of the effect, and therefore what every future
+thinking-on leg should be generated at.
+
+**Sequencing:** the operator's 2026-08-26 *mine the 14 new legs before generating more* ruling
+applies here too; this entry is priced, not argued for.
+
+---
+
+## OQ-389 — A kimi thinking-OFF leg: does a THIRD model family show a regime DIRECTION? (one leg, ~$43, driver ready)
+
+**Ω-type:** Ω_P (a generation spend with a settled recipe and a built driver; only the spend is open).
+
+**Status:** open — minted 2026-08-26, SPLIT OUT OF OQ-388 rather than left to expand it.
+**Priority:** 3
+**Deps:** splits_from OQ-343, bundled_with OQ-388, blocked_on_human oq389-kimi-off-arm-spend-go
+**Files:** `agent/run_no_scope_kimi.py` (`--thinking disabled`), `agent/probe_thinking_support.py`, `prolog/testsets_kimi/`, `prolog/testsets_kimi2/`.
+
+**Why this is its own entry and not part of OQ-388.** OQ-388 was minted for the Flash thinking
+**dose-response** — a resolution question on a curve that already exists (0 and 8192 are on disk;
+1024 and 24576 would complete it). This is a different question in a different family: **does a
+third model family show a regime DIRECTION at all.** Expanding OQ-388 to hold it would violate the
+mint-don't-reshape precedent (OQ-344→386, OQ-343→388) in the other direction, and would leave the
+seat key `oq388-flash-dose-arms-spend-go` no longer naming what is in the entry — a ruling made
+harder by its own filing.
+
+**The question.** OQ-343 established the thinking-on ε instability at **2/2 model families with the
+same shape and magnitude** (gemini-2.5-flash, nvidia-nemotron-3-ultra: paired Δε mean +0.065 /
++0.064, |Δε| ≥0.10 on 22% / 28%, seat moving toward extraction in both). kimi is the third
+reasoning family in the corpus and contributes **a magnitude but no direction**: its |Δε| ≥0.10 =
+17% comes from `testsets_kimi` vs `testsets_kimi2`, a same-model **redraw** pair with a prompt
+change confounded in — NOT a regime pair. There is no kimi thinking-off arm, so the regime's
+*direction* has never been read on this family.
+
+**Why it is now a complete purchase (it was not, four days ago).** The blocker was that
+`run_no_scope_kimi.py` sent no thinking toggle and had no flag for one — its omission justified by
+a claim about K3 in a driver whose `DEFAULT_MODEL` is k2.6. Fixed 2026-08-26: the driver sends the
+regime explicitly and `--thinking disabled` builds this leg. One leg, one command, operator seat
+only:
 
 ```
 python3 -m agent.run_no_scope_kimi --seeds <pool> --leg-suffix _off --thinking disabled --batch
 ```
 
-**And on the merits it now outranks the dose arms, which is the part worth saying plainly:**
+**Cost ~$43** (recorded k2.6 batch rate $0.043/story × 1005; re-estimate before spending).
 
-| arm | cost | what it buys | floor |
+**Value, recorded here and on OQ-388 so the comparison is visible from both:**
+
+| arm | cost | buys | on-side floor |
 |---|---|---|---|
-| **kimi thinking-OFF** (1 leg) | ~$43 (recorded k2.6 batch $0.043/story × 1005) | a regime contrast in a **THIRD model family** — OQ-343's generality question is at 2/2 families (flash, nemotron) and this makes it 3/3 | **already paid** — kimi/kimi2 are the on-side pure pair |
-| flash dose 1024 + 24576 (2 legs) | ~$30–40 | resolution WITHIN a family that already has the contrast: step vs dial | already paid (flash2/flash3, flash_think/flash_think2) |
+| **this (kimi off, 1 leg)** | ~$43 | regime **direction** in a THIRD family → OQ-343 generality 2/2 becomes 3/3 | **already paid** — kimi/kimi2 |
+| OQ-388 (flash dose, 2 legs) | ~$30–40 | **resolution** within a family that already has the contrast (step vs dial) | already paid |
 
-**The asymmetry that decides it.** kimi currently contributes a *magnitude* and no *direction* —
-its |Δε| ≥0.10 = 17% comes from `kimi` vs `kimi2`, a same-model REDRAW pair with a prompt change
-confounded in, not a regime pair. The off-arm converts kimi from magnitude-only to a directional
-third family, which is exactly what OQ-343's sub-question (a) asks for. The dose arms sharpen a
-question already answered in shape. **Recommendation: if only one arm is bought, buy the kimi
-off-arm.**
+The asymmetry: this converts a family from magnitude-only to directional, which is what OQ-343's
+sub-question (a) actually asks. The dose arms sharpen a question already answered in shape. **If
+only one arm is bought, buy this one.**
 
-**Sequencing flag, not a decision.** The operator's 2026-08-26 ruling on OQ-346 — *mine the 14 new
-legs before generating more* — applies to this entry with equal force, and nothing here is urgent.
-This repricing exists so the arm is not priced as BLOCKED when it is merely UNBOUGHT; whether to
-buy now is the same seat that ruled OQ-346 `future`.
+**One caveat that shrinks the claim, declared at mint.** The existing kimi legs are thinking-ON at
+k2.6's *default*; the off-leg would be the first kimi leg with the regime **explicitly sent**. So
+the contrast is `default-on` vs `explicitly-off`, not `explicitly-on` vs `explicitly-off`. The
+default was witnessed thinking-on (887 / 0 / 842 reasoning chars, two-sided with a positive
+control), so this is a documented rather than unknown asymmetry — but a strict pair would
+regenerate one on-side leg with `--thinking enabled`, doubling the cost. **Recommendation: accept
+the asymmetry and state it**; the witness makes it legible, and a second on-side leg buys precision
+this question does not need.
 
-**What is NOT open.** Generality is answered at 2/2 model families (Flash and nemotron-3-ultra,
-same shape and magnitude) and the reach question (b) is answered and re-confirmed: a |Δε| ≥ 0.10
-move changes the seat-type vector 94% of the time on the nemotron pair, and even |Δε| < 0.10 moves
-it 71%. This entry is the *dose* and the *third family direction*, not the effect.
+**Resolution:** an operator spend-go, then `epsilon_distance.py` / `delta_reach.py` /
+`seat_direction.py` run unchanged on `kimi kimi_off`. **What it changes:** whether "thinking moves
+the seat toward extraction" is a property of reasoning models generally (3/3) or of the two
+families it has so far been measured on.
 
-**Resolution:** an operator spend-go on either arm, then the existing instruments
-(`epsilon_distance.py`, `delta_reach.py`, `seat_direction.py`) re-run unchanged. **What it
-changes:** whether the thinking regime is a dial or a switch — which decides whether a cheaper
-budget buys most of the effect, and therefore what every future thinking-on leg should be
-generated at.
+**Sequencing:** the operator's 2026-08-26 *mine the 14 new legs before generating more* ruling
+applies here as much as to OQ-346. This entry exists so the arm is priced correctly, not to argue
+it should be bought now.
 
 ---
+
 
 
 *Compress-on-close (added 2026-06-04): when an entry's status transitions to

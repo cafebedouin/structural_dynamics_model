@@ -187,15 +187,31 @@ def build_messages(seed, static):
 #   auto (default)     -> send an explicit toggle ONLY on models where it is WITNESSED to work
 THINKING = "auto"
 
-# Models on which the toggle is witnessed working, with the witness. `auto` sends an explicit
-# `enabled` on these and omits elsewhere: it is a whitelist, so a NEW model silently inherits
-# the vendor default (loud in the stamp as `reasoning=inherited_default`) rather than being
-# sent a parameter nobody has tested on it.
+# Models on which the toggle is WITNESSED working, each entry carrying its own evidence.
+# `auto` sends an explicit toggle on these and omits elsewhere: a whitelist, so a NEW model
+# inherits the vendor default (loud in the stamp as `reasoning=inherited_default`) rather than
+# receiving a parameter nobody has tested on it. That direction is deliberate — it fails safe.
+#
+# TO ADD A MODEL, DO NOT HAND-WRITE AN ENTRY. Run:
+#
+#     python3 agent/probe_thinking_support.py <model> [--api openrouter]
+#
+# It runs three arms (no toggle / disabled / enabled), prints the exact REQUEST BODY it sent for
+# each, refuses to certify when its positive control does not reason, and emits a paste-ready
+# line with the counts. This exists because the whitelist is a set of model-keyed capability
+# claims — the same shape as the `mandatory` comment that cost this project an experiment that
+# never ran — and the way such a list decays is someone extending it from memory. Witnessing has
+# to be cheaper than guessing or the list rots.
+#
+# NOTE ON THE COUNTS: reasoning length is a GENERATION and does not reproduce (successive runs of
+# the same probe gave arm A 930 / 887 / 946 chars). Only the three-way SEPARATION is the result —
+# arm B is exactly 0 every time while A and C are in the high hundreds. Do not treat a changed
+# count as a regression.
 _THINKING_WITNESSED = {
-    # kimi-k2.6: no toggle -> 887 reasoning chars; disabled -> 0; enabled -> 842. Two-sided
-    # with a positive control, 2026-08-26 (audits/2026-08-25_oq342_section9_hard_seed_read/
-    # kimi_default_check_output.txt). Default is thinking-ON, which is why every existing
-    # kimi leg is a thinking-ON leg.
+    # kimi-k2.6: no toggle -> 887 reasoning chars; disabled -> 0; enabled -> 842. Two-sided with
+    # a positive control, 2026-08-26; archived run at audits/2026-08-25_oq342_section9_hard_seed_read/
+    # kimi_default_check_output.txt. Default is thinking-ON, which is why every existing kimi leg
+    # is a thinking-ON leg (and correctly labelled as one).
     "kimi-k2.6": "enabled",
 }
 

@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "d3f3c69f2ac21400fde2c212ca4972c540c43e78",
+    "store_version": "6f4c79698026f349d3ff7dd01af3536da8fc4f00",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-26T16:41:04"
+    "generated_at": "2026-08-26T17:14:31"
   },
-  "issues_sha": "e2d3f69588df7cb10a536a0d8927beb5767b2b7d9968b6400309a91bc06554a7",
-  "n_entries": 388,
+  "issues_sha": "ecbdc8859c8595b47e61e855bdd9fb2565d97e8998ce07a3802b40caaaf18ec6",
+  "n_entries": 389,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 14,
-    "open": 167,
+    "open": 168,
     "partial": 5
   },
   "active": [
@@ -2500,21 +2500,40 @@
       "id": "OQ-388",
       "status": "open",
       "priority": 3,
-      "summary": "OQ-343's residual generation arms: the thinking dose-response (c), and the kimi thinking-off leg",
+      "summary": "The Flash thinking DOSE-RESPONSE (OQ-343 sub-question (c)): is the regime a step or a dial?",
       "deps": [
         "splits_from OQ-343",
+        "bundled_with OQ-389",
         "blocked_on_human oq388-flash-dose-arms-spend-go"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-78",
+        "OQ-343",
+        "OQ-389"
+      ]
+    },
+    {
+      "id": "OQ-389",
+      "status": "open",
+      "priority": 3,
+      "summary": "A kimi thinking-OFF leg: does a THIRD model family show a regime DIRECTION? (one leg, ~$43, driver ready)",
+      "deps": [
+        "splits_from OQ-343",
+        "bundled_with OQ-388",
+        "blocked_on_human oq389-kimi-off-arm-spend-go"
       ],
       "cross_refs": [],
       "mentioned_in": [
         "OQ-51",
         "OQ-59",
-        "OQ-78",
         "OQ-285",
         "OQ-288",
         "OQ-291",
         "OQ-343",
-        "OQ-346"
+        "OQ-344",
+        "OQ-346",
+        "OQ-388"
       ]
     }
   ],

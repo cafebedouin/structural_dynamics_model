@@ -51,6 +51,18 @@ a cross-model read would have cited as corpus structure are shown to be draw noi
 
 ## Findings
 
+> **NOTE ADDED 2026-08-26 — the five pure pairs are a TEMPERATURE MIXTURE.** Two of them
+> (flash2/flash3, flash_think/flash_think2) were generated at an explicitly-set **temperature
+> 0.1**; the other three (haiku2/haiku3, sonnet2/sonnet3, stealth2/stealth3) at vendor defaults.
+> "5 pure pairs" therefore reads as five draws from one population and is not. **Measured, and
+> the mixture shows no detectable bias:** 3 of 6 key statistics are tighter under low
+> temperature and 3 are wider, and `within_pure_max` — the quantity the borrowed-floor argument
+> uses — is set by the default-temperature haiku pair on 4 of 6. **But that is a 2-vs-3
+> comparison over five pairs and is very low-powered**; it cannot exclude a modest effect, so
+> read it as *no detectable systematic bias*, never as *no bias*. Detail and the per-pair table:
+> `audits/2026-08-25_oq342_section9_hard_seed_read/temperature_regime_check.md`. (kimi is NOT
+> among the pure pairs — kimi/kimi2 is `confounded:prompt` — so it contributes no floor at all.)
+
 **F1. The model fingerprint is real and reproduces at corpus level.** Ratio (between-model /
 within-pure-max) ≥ 8 for: `drift_events_per_story.warning` 38, `purity.coverage` 29,
 `network.drifting_share` 20, `coupling.strongly_coupled` 16, `network.severe_share` 14,
